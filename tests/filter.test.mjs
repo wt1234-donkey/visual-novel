@@ -734,3 +734,40 @@ test('Applique dossier includes the narrative Fan Disc and explicit pending evid
   assert.ok(!/undefined|NaN|Infinity/.test(page));
   assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="applique.html"'));
 });
+
+test('Clochette aliases and Chinese titles find its ten independent works',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='clochette');
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  assert.equal(dossier.workIds.length,10);
+  for(const name of ['Clochette','クロシェット','CLOCHETTE']) assert.deepEqual(new Set(filterCatalogue(data,{company:aliases[name]}).map(({work})=>work.id)),new Set(dossier.workIds));
+  assert.equal(publisherWorkCounts(data).get('Clochette'),10);
+  for(const [query,id] of [['铃音七重奏！甜蜜恋人协奏曲','g877'],['在天津御空之中','g878'],['Kokonatsu','g882'],['心音＝钟摆！','g884']]) assert.equal(filterCatalogue(data,{query})[0].work.id,id);
+});
+
+test('Clochette enhanced ports retain original identity and actual publishers',()=>{
+  for(const [id,company,platform,year] of [['g876','Alchemist','PlayStation 2',2010],['g876','Alchemist','PSP',2014],['g878','PROTOTYPE','PSP',2012],['g878','PROTOTYPE','PlayStation Vita',2015]]){
+    const row=filterCatalogue(data,{company,platform}).find(({work})=>work.id===id);
+    assert.ok(row);assert.equal(row.versions.length,1);assert.equal(row.versions[0].year,year);assert.equal(row.versions[0].voice,'有');
+  }
+  assert.equal(filterCatalogue(data,{query:'Suzunone Seven!',company:'PROTOTYPE'}).length,0);
+  assert.equal(filterCatalogue(data,{query:'Amatsumi Sora ni!',company:'Alchemist'}).length,0);
+  assert.equal(data.works.filter(w=>w.originalTitle.includes('Rebirth knot')).length,0);
+  assert.equal(data.versions.filter(v=>v.workId==='g877').length,1);
+  assert.ok(data.works.find(w=>w.id==='g877').notes.includes('八组故事'));
+});
+
+test('Clochette dossier distinguishes downloads, in-fiction games and non-game media',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='clochette');
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,17);
+  for(const [id,year] of [['g882',2018],['g883',2018],['g884',2019]]){
+    const rows=data.versions.filter(v=>v.workId===id);assert.equal(rows.length,2);assert.equal(rows[1].year,year);
+  }
+  assert.ok(data.works.find(w=>w.id==='g881').notes.includes('剧情内'));
+  assert.equal(data.works.filter(w=>w.originalTitle==='Wizard Generation').length,0);
+  assert.deepEqual(dossier.entries.find(e=>e.title==='ASMR、漫画、音乐与游戏联动').workIds,[]);
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)&&v.year===2026).length,0);
+  const page=readFileSync(new URL('../clochette.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="clochette.html"'));
+});
