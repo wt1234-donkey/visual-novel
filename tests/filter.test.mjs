@@ -687,3 +687,50 @@ test('Laplacian pending projects and non-game media stay outside shipped counts'
   for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(!/undefined|NaN|Infinity/.test(page));
 });
+
+test('Applique main brand, sister brand and port publishers remain distinct',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='applique');
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  assert.equal(dossier.workIds.length,13);
+  for(const name of ['あっぷりけ','Applique','APPLIQUE']) assert.deepEqual(new Set(filterCatalogue(data,{company:aliases[name]||name}).map(({work})=>work.id)),new Set(dossier.publisherWorkIds));
+  assert.deepEqual(new Set(filterCatalogue(data,{company:'あっぷりけ-妹-'}).map(({work})=>work.id)),new Set(['g871','g872','g873','g874']));
+  assert.equal(publisherWorkCounts(data).get('あっぷりけ'),9);
+  for(const [company,platform,year] of [['萌えAPP','Android',2011],['CyberFront','PSP',2013]]){
+    const row=filterCatalogue(data,{query:'妹药',company,platform})[0];
+    assert.equal(row.work.id,'g864');assert.equal(row.work.firstYear,2010);
+    assert.equal(row.versions.length,1);assert.equal(row.versions[0].year,year);
+  }
+  for(const id of ['g867','g869','g870']){
+    const row=filterCatalogue(data,{company:'HIKARI FIELD',platform:'Steam'}).find(({work})=>work.id===id);
+    assert.equal(row.versions.length,1);assert.equal(row.versions[0].voice,'有');
+  }
+  assert.equal(filterCatalogue(data,{query:'编织时间的约定',company:'HIKARI FIELD'}).length,0);
+});
+
+test('Applique free LVN, expansion and compilations retain original work identity',()=>{
+  for(const query of ['月影魅像-解放之羽-','月影のシミュラクル -解放の羽-']){
+    const row=filterCatalogue(data,{query}).find(({work})=>work.id==='g869');assert.ok(row);assert.equal(row.work.firstYear,2016);
+  }
+  assert.equal(data.versions.filter(v=>v.workId==='g869'&&v.year===2016).length,2);
+  assert.equal(data.versions.filter(v=>v.workId==='g869'&&v.kind==='解放の羽扩充版')[0].year,2017);
+  for(const [kind,ids] of [['あっぷりけコレクション合集收录',['g862','g863','g864']],['あっぷりけコレクション2合集收录',['g867','g868','g869']]]) assert.deepEqual(new Set(data.versions.filter(v=>v.kind===kind).map(v=>v.workId)),new Set(ids));
+  assert.equal(data.works.filter(w=>w.originalTitle.startsWith('あっぷりけコレクション')).length,0);
+  assert.equal(filterCatalogue(data,{query:'Fake Azure Arcology'})[0].work.id,'g872');
+  assert.equal(filterCatalogue(data,{query:'Rebirth colony'})[0].work.id,'g865');
+  const cross=data.versions.filter(v=>v.workId==='g870');
+  assert.equal(cross.length,3);assert.ok(cross.find(v=>v.kind==='众筹回报实体版').differences.includes('2019/09/27'));
+  assert.ok(cross.find(v=>v.kind==='Windows日文原版').differences.includes('2019/10/25'));
+});
+
+test('Applique dossier includes the narrative Fan Disc and explicit pending evidence',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='applique');
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,29);
+  const fd=data.works.find(w=>w.id==='g866');assert.ok(fd.notes.includes('麻将为可关闭'));
+  assert.equal(data.works.filter(w=>w.originalTitle==='Wish After').length,0);
+  assert.ok(dossier.entries.find(e=>e.title==='Cross众筹下载与Append').status.includes('待核'));
+  assert.equal(data.versions.filter(v=>['g867','g870'].includes(v.workId)&&v.year===2026).length,0);
+  const page=readFileSync(new URL('../applique.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="applique.html"'));
+});
