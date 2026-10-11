@@ -5,6 +5,49 @@ import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from '../filter.mj
 
 const data=JSON.parse(readFileSync(new URL('../data/games.json',import.meta.url),'utf8'));
 
+test('HULOTTE brand family and Chinese aliases find the completed catalogue',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='hulotte');
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  for(const company of ['HULOTTE','ユロット','HULOTTE ROI']){
+    assert.deepEqual(new Set(filterCatalogue(data,{company:aliases[company]||company}).map(({work})=>work.id)),new Set(dossier.workIds));
+  }
+  assert.equal(dossier.workIds.length,11);
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,23);
+  assert.equal(filterCatalogue(data,{query:'心之形、色与音'})[0].work.id,'g850');
+  assert.equal(data.versions.find(v=>v.workId==='g850').publisher,'HULOTTE ROI');
+});
+
+test('HULOTTE international versions preserve actual publisher and language evidence',()=>{
+  for(const [query,id,company,year] of [['KamiYaba','g847','Shiravune',2022],['My Klutzy Cupid','g851','NekoNyan Ltd.',2023]]){
+    const row=filterCatalogue(data,{query,company})[0];
+    assert.equal(row.work.id,id);
+    assert.equal(row.versions.length,1);
+    assert.equal(row.versions[0].year,year);
+    assert.equal(row.versions[0].platform,'Windows（Steam）');
+    assert.equal(row.versions[0].voice,'有');
+  }
+  assert.equal(filterCatalogue(data,{query:'KamiYaba',company:'NekoNyan Ltd.'}).length,0);
+  assert.equal(filterCatalogue(data,{query:'My Klutzy Cupid',company:'Shiravune'}).length,0);
+});
+
+test('HULOTTE standalone stories differ from patches and compilation entries reuse identities',()=>{
+  const base=data.versions.filter(v=>v.workId==='g843');
+  assert.equal(base.length,2);
+  assert.equal(base.find(v=>v.kind==='四话追加剧情补丁').year,2011);
+  const standalone=data.works.find(w=>w.id==='g853');
+  assert.equal(standalone.firstYear,2012);
+  assert.equal(data.versions.find(v=>v.workId==='g853').kind,'免费独立短篇集');
+  assert.equal(data.versions.find(v=>v.workId==='g853').voice,'未核实');
+  const pack=data.versions.filter(v=>v.kind==='ヤバいComplete Pack合集收录');
+  assert.deepEqual(new Set(pack.map(v=>v.workId)),new Set(['g844','g845','g846','g847']));
+  assert.ok(pack.every(v=>v.year===2020));
+  assert.equal(data.works.filter(w=>w.originalTitle.includes('ヤバいコンプリートパック')).length,0);
+  const page=readFileSync(new URL('../hulotte.html',import.meta.url),'utf8');
+  for(let id=843;id<=853;id++) assert.equal(page.split(`<article class="card" id="g${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="hulotte.html"'));
+});
+
 test('Nitroplus completion separates shipped platforms, planned releases and publisher credits',()=>{
   const reboot=filterCatalogue(data,{query:'STEINS;GATE RE:BOOT',from:'2026',company:'MAGES.'});
   assert.deepEqual(reboot.map(({work})=>work.id),['g054']);
