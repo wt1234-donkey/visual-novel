@@ -647,3 +647,43 @@ test('Cabbage future releases and music remain outside shipped version counts',(
   assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="cabbage.html"'));
   assert.ok(!/undefined|NaN|Infinity/.test(page));
 });
+
+test('Laplacian catalogue preserves original and international publisher filters',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='laplacian');
+  assert.deepEqual(new Set(filterCatalogue(data,{company:'Laplacian'}).map(({work})=>work.id)),new Set(dossier.workIds));
+  assert.equal(dossier.workIds.length,8);
+  for(const [query,id,company,count] of [['牛顿与苹果树','g855','Sol Press',3],['牛顿与苹果树','g855','Syawase Works China',1],['未来广播与人工鸽','g856','HIKARI FIELD',1],['工口伦子','g857','JAST USA',1]]){
+    const row=filterCatalogue(data,{query,company})[0];
+    assert.equal(row.work.id,id);assert.equal(row.versions.length,count);
+  }
+  assert.equal(filterCatalogue(data,{query:'花坂结衣',company:'Laplacian'})[0].work.id,'g859');
+  assert.equal(filterCatalogue(data,{query:'花坂结衣',company:'株式会社さかさうま工房'}).length,0);
+});
+
+test('Laplacian DLC and regional releases retain work identity',()=>{
+  const rows=data.versions.filter(v=>v.workId==='g855');
+  assert.equal(rows.length,5);
+  assert.equal(rows.filter(v=>v.kind.includes('内容恢复DLC')).length,2);
+  assert.equal(data.works.filter(w=>w.title.includes('内容恢复DLC')).length,0);
+  const white=data.versions.filter(v=>v.workId==='g858'&&v.platform==='Nintendo Switch');
+  assert.equal(white.length,3);
+  assert.deepEqual(white.map(v=>v.year),[2022,2026,2026]);
+  assert.ok(white[1].differences.includes('2026/03/12'));
+  assert.ok(white[2].differences.includes('2026/03/19'));
+  assert.equal(data.works.find(w=>w.id==='g858').firstYear,2020);
+  assert.equal(filterCatalogue(data,{query:'Harmonic Reflections'})[0].work.id,'g860');
+});
+
+test('Laplacian pending projects and non-game media stay outside shipped counts',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='laplacian');
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,20);
+  for(const title of ['MONOCHROME SERENADE','アイソメリカ']){
+    assert.deepEqual(dossier.entries.find(e=>e.title===title).workIds,[]);
+    assert.equal(data.works.filter(w=>w.title===title).length,0);
+  }
+  assert.ok(dossier.entries.find(e=>e.title==='MONOCHROME SERENADE').reason.includes('2027'));
+  assert.equal(data.works.filter(w=>w.title==='ラビとラビとのガッタイ作戦').length,0);
+  const page=readFileSync(new URL('../laplacian.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
+});
