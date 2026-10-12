@@ -4,13 +4,15 @@
 
 ## 数据范围
 
-当前收录 **915 部代表作品、1986 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **920 部代表作品、1995 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
-现有 572 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
+现有 577 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
 
 ## 厂商集中整理
+
+已新增 [德间书店社专题](tokuma.html)：官网创立日1954/03/19，优先复用原库《烈火少女缠组》，新增五部叙事作品和九条首发／内容版记录；专题六部主库相关作品、三部RPG关联作。母公司、1985年成立的Intermedia及品牌署名分开。电脑天使追加故事与重绘、初恋SS新剧本、续初恋PS新路线构成单列依据；后发续初恋SS未确认比PS再增内容，不重复列版本。未知移植差异与其余历史清单见[核对说明](data/tokuma-audit.md)。原915部、1986条及42个专题保留。
 
 已新增 [NEC Home Electronics社专题](nec_he.html)：**12部主库相关作品、4部跨类型关联作**。公司成立于1953/06/01，早于太东；补齐此前成立顺序漏项，区分母公司、Avenue及Interchannel。复用旧库三作，新增九部叙事作品、十三条首发／新增内容记录；我的女神新增配音、Working Love FX新故事、First Kiss及Fire Woman PS版新增事件分别说明，实际发行署名不由合作身份覆盖。旧906部／1973条和41专题保留。历史授权与其余跨类型游戏仍有待核项目，见[审计](data/nec-he-audit.md)。
 
