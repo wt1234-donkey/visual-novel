@@ -771,3 +771,45 @@ test('Clochette dossier distinguishes downloads, in-fiction games and non-game m
   assert.ok(!/undefined|NaN|Infinity/.test(page));
   assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="clochette.html"'));
 });
+
+test('NanaWind dossier keeps its ten releases and four Luna System collaborations distinct',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='nanawind');
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  assert.equal(dossier.workIds.length,14);
+  assert.equal(publisherWorkCounts(data).get('NanaWind'),10);
+  for(const name of ['NanaWind','ナナウィンド','七风社']) assert.deepEqual(new Set(filterCatalogue(data,{company:aliases[name]}).map(({work})=>work.id)),new Set(dossier.publisherWorkIds));
+  assert.deepEqual(new Set(filterCatalogue(data,{company:'Luna System'}).map(({work})=>work.id)),new Set(['g895','g896','g897','g898']));
+  assert.equal(filterCatalogue(data,{query:'草津',company:'NanaWind'}).length,0);
+  assert.equal(filterCatalogue(data,{query:'草津',company:'Luna System'})[0].work.id,'g898');
+  for(const [id,cn] of [['g886','爱丽娅的明日盛典！'],['g888','春音爱丽丝＊篇章'],['g893','花钟奏鸣＊篇章 第4章 绫世奏 -最终章-']]) assert.equal(filterCatalogue(data,{query:cn})[0].work.id,id);
+});
+
+test('NanaWind independent chapters and Fan Discs are not duplicated by W packages or update discs',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='nanawind');
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,41);
+  assert.deepEqual(data.works.filter(w=>['g890','g891','g892','g893'].includes(w.id)).map(w=>w.firstYear),[2021,2022,2024,2026]);
+  assert.ok(data.versions.find(v=>v.workId==='g890').differences.includes('2021/11/26'));
+  assert.ok(data.versions.find(v=>v.workId==='g893').differences.includes('2026/01/30'));
+  assert.deepEqual(new Set(data.versions.filter(v=>v.kind==='十周年W化DISK追加更新').map(v=>v.workId)),new Set(['g886','g887','g888','g889']));
+  assert.equal(data.works.filter(w=>w.originalTitle==='春音アリス＊グラムＷパッケージ化DISK').length,0);
+  assert.equal(data.works.filter(w=>w.originalTitle==='花鐘カナデ＊グラム').length,0);
+  assert.equal(data.works.find(w=>w.id==='g894').firstYear,2023);
+  for(const id of ['g895','g896','g897','g898']) assert.ok(data.versions.filter(v=>v.workId===id).every(v=>v.voice==='无'));
+});
+
+test('NanaWind ports, localized releases and mobile batches preserve publisher and evidence',()=>{
+  for(const [id,company,platform,year] of [['g886','dramatic create','PlayStation Vita',2015],['g887','dramatic create','PlayStation 4',2019],['g888','ENTERGRAM','PlayStation Vita',2019],['g889','ENTERGRAM','Nintendo Switch',2025],['g886','HIKARI FIELD','Steam',2019],['g887','HIKARI FIELD','Steam',2023]]){
+    const row=filterCatalogue(data,{company,platform}).find(({work})=>work.id===id);
+    assert.ok(row);assert.equal(row.versions.length,1);assert.equal(row.versions[0].year,year);
+  }
+  assert.equal(filterCatalogue(data,{query:'Haruoto',company:'HIKARI FIELD'}).length,0);
+  const mobile=data.versions.filter(v=>v.workId==='g886'&&v.publisher==='萌えAPP');
+  assert.equal(mobile.length,3);assert.ok(mobile[0].differences.includes('2015/04/24'));assert.ok(mobile.slice(1).every(v=>v.differences.includes('2015/06/12')));
+  assert.ok(mobile.every(v=>v.voice==='未核实'));
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='nanawind');
+  assert.ok(dossier.entries.find(e=>e.title==='当前iMel销售与移管时间').status.includes('日期待核'));
+  const page=readFileSync(new URL('../nanawind.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="nanawind.html"'));
+});
