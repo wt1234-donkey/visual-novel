@@ -5,6 +5,40 @@ import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from '../filter.mj
 
 const data=JSON.parse(readFileSync(new URL('../data/games.json',import.meta.url),'utf8'));
 
+test('SORAHANE three originals preserve names, publisher filters and original years',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='sorahane');
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  assert.equal(dossier.workIds.length,3);assert.equal(publisherWorkCounts(data).get('SORAHANE'),3);
+  for(const name of ['SORAHANE','ソラハネ','SORAHANE-ソラハネ-','Sorahane'])assert.deepEqual(new Set(filterCatalogue(data,{company:aliases[name]}).map(({work})=>work.id)),new Set(dossier.workIds));
+  for(const [query,id] of [['水之羁绊 AQUA','g903'],['樱花已然绽放。','g904'],['遥远彼方','g905']])assert.equal(filterCatalogue(data,{query})[0].work.id,id);
+  assert.deepEqual(data.works.filter(w=>dossier.workIds.includes(w.id)).map(w=>w.firstYear),[2011,2012,2014]);
+  assert.ok(data.works.find(w=>w.id==='g905').characters.includes('七海かなた'));
+});
+
+test('SORAHANE mobile batches preserve actual historical credits and differing voice states',()=>{
+  const aqua=filterCatalogue(data,{company:'萌えAPP'}).find(({work})=>work.id==='g903');assert.equal(aqua.versions.length,3);
+  for(const [platform,date] of [['Android','2015/04/10'],['Android（Google Play）','2015/08/21'],['iOS','2016/04/28']]){
+    const v=aqua.versions.find(v=>v.platform===platform);assert.ok(v.differences.includes(date));assert.equal(v.voice,'有');assert.ok(v.publisher.includes('ハブロッツ'));
+  }
+  const saku=filterCatalogue(data,{company:'萌えAPP'}).find(({work})=>work.id==='g904');assert.equal(saku.versions.length,1);assert.equal(saku.versions[0].voice,'无');assert.ok(saku.versions[0].publisher.includes('ジャックインザボックス'));assert.ok(saku.versions[0].differences.includes('2013/12/20'));
+  assert.equal(data.versions.find(v=>v.workId==='g904'&&v.kind==='Windows日文原版').voice,'有');
+  assert.equal(data.versions.filter(v=>v.workId==='g904'&&v.platform==='iOS').length,0);
+  assert.equal(filterCatalogue(data,{company:'SORAHANE',platform:'iOS'}).length,0);
+});
+
+test('SORAHANE extra stories use the original program and exclude visual patches and plans',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='sorahane');
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,11);
+  const stories=data.versions.filter(v=>v.workId==='g904'&&v.kind.startsWith('本体内免费追加'));assert.equal(stories.length,3);
+  assert.ok(stories.every(v=>v.voice==='有'&&v.differences.includes('不是独立程序')));
+  for(const date of ['2013/06/28','2013/07/19','2013/08/09'])assert.ok(stories.some(v=>v.differences.includes(date)));
+  assert.equal(data.works.filter(w=>w.originalTitle==='Dream of Human'||w.originalTitle==='TOKI＊SORA').length,0);
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)&&/macOS|Steam/.test(v.platform)).length,0);
+  assert.deepEqual(dossier.entries.find(e=>e.title==='SORAKAZE与TOKI＊SORA').workIds,[]);
+  const page=readFileSync(new URL('../sorahane.html',import.meta.url),'utf8');for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="sorahane.html"'));
+});
+
 test('HARUKAZE four originals are searchable without replacing actual port publishers',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='harukaze');
   const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;

@@ -3,6 +3,7 @@
 import csv
 import json
 from pathlib import Path
+from source_urls import source_url_valid
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
@@ -23,7 +24,7 @@ assert all(work['subcategory'] not in {'纯文本指令', '图文指令'}
 assert all(any(work['subcategory'] == value for work in works) for category in taxonomy['subcategories']
            for value in taxonomy['subcategories'][category]), '存在空的细分类'
 assert all(1976 <= version['year'] <= 2026 and version['workId'] in work_ids for version in versions)
-assert all(version['publisher'] and version['platform'] and version['source'].startswith('https://')
+assert all(version['publisher'] and version['platform'] and source_url_valid(version['source'])
            and version['voice'] in {'有', '无', '未核实', '有（部分）', '有（主角部分）'} for version in versions)
 for version in versions:
     companies = version['publisherCompanies']
@@ -36,7 +37,7 @@ for version in versions:
         assert companies == taxonomy['jointCredits'][raw], f'{version["id"]} 联名发行厂商不一致'
     else:
         assert companies == [taxonomy['publisherAliases'].get(raw, raw)], f'{version["id"]} 厂商别名不一致'
-assert all(work['source'].startswith('https://') and isinstance(work['characters'], list)
+assert all(source_url_valid(work['source']) and isinstance(work['characters'], list)
            and work['characters'] and all(name and '待核实' not in name for name in work['characters'])
            and work['genre'] for work in works), '每部作品必须有可显示的角色或原作身份'
 assert all(not work.get('charactersNote', '').find('待核实') >= 0 for work in works)
@@ -71,7 +72,7 @@ for company in coverage['companies']:
     profile = company['creativeProfile']
     assert profile['thesis'] and len(profile['phases']) >= 2
     assert all(p['period'] and p['heading'] and p['analysis'] and
-               p['basis'] in {'厂商说明', '编辑观察'} and p['source'].startswith('https://')
+               p['basis'] in {'厂商说明', '编辑观察'} and source_url_valid(p['source'])
                for p in profile['phases'])
     ids = company['workIds']
     assert len(ids) == len(set(ids)) and set(ids) <= work_ids, '厂商专题作品 ID 不正确'
@@ -86,17 +87,17 @@ for company in coverage['companies']:
     assert set(legacy_anchors.values()) <= set(ids), '旧作品链接缺少主库记录'
     assert not set(legacy_anchors) & (work_ids | related_ids), '转入主库的作品仍保留重复副本'
     for game in related:
-        assert game['source'].startswith('https://') and game['genre'] and game['characters']
+        assert source_url_valid(game['source']) and game['genre'] and game['characters']
         assert all(name and '待核实' not in name for name in game['characters'])
         assert game['category'] not in taxonomy['subcategories'], '跨类型游戏应放在四类主目录之外'
         assert game['versions'] and min(v['year'] for v in game['versions']) == game['firstYear']
         assert all(v['platform'] and v['publisher'] and v['differences'] and
-                   v['source'].startswith('https://') and v['voice'] in {'有', '无', '未核实', '有（部分）'}
+                   source_url_valid(v['source']) and v['voice'] in {'有', '无', '未核实', '有（部分）'}
                    for v in game['versions'])
     assert company['catalogueEntryCount'] <= len(company['entries'])
     covered, related_covered = set(), set()
     for entry in company['entries']:
-        assert entry['source'].startswith('https://') and entry['reason']
+        assert source_url_valid(entry['source']) and entry['reason']
         assert set(entry['workIds']) <= set(ids), '核对清单与专题作品不一致'
         assert set(entry.get('relatedIds', [])) <= related_ids, '核对清单的跨类型作品不存在'
         covered.update(entry['workIds'])

@@ -3,6 +3,7 @@ import argparse
 import html
 import json
 from pathlib import Path
+from source_urls import source_url_valid
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
@@ -12,7 +13,7 @@ escape = html.escape
 
 
 def link(url, title):
-    assert url.startswith('https://')
+    assert source_url_valid(url)
     return f'<a class="source-link" href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)} ↗</a>'
 
 
