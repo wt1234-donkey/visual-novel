@@ -5,6 +5,45 @@ import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from '../filter.mj
 
 const data=JSON.parse(readFileSync(new URL('../data/games.json',import.meta.url),'utf8'));
 
+test('HARUKAZE four originals are searchable without replacing actual port publishers',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='harukaze');
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  assert.equal(dossier.workIds.length,4);
+  for(const name of ['HARUKAZE','HARU❀KAZE','HARU*KAZE','はるかぜ','ハルカゼ']) assert.deepEqual(new Set(filterCatalogue(data,{company:aliases[name]}).map(({work})=>work.id)),new Set(dossier.workIds));
+  assert.equal(publisherWorkCounts(data).get('HARUKAZE'),4);
+  for(const [query,id] of [['恋爱皇帝 of LOVE!','g899'],['野良与皇女与流浪猫之心2','g901'],['猴子们！','g902']]) assert.equal(filterCatalogue(data,{query})[0].work.id,id);
+  for(const [company,platform,date] of [['ENTERGRAM','PlayStation Vita','2017/05/25'],['iMel','Nintendo Switch','2022/03/17']]){
+    const row=filterCatalogue(data,{company,platform}).find(({work})=>work.id==='g899');assert.equal(row.versions.length,1);assert.ok(row.versions[0].differences.includes(date));assert.equal(row.work.firstYear,2013);
+  }
+  for(const company of ['TOKYOTOON','Fruitbat Factory']) for(const id of ['g900','g901']){
+    const row=filterCatalogue(data,{company,platform:'Steam'}).find(({work})=>work.id===id);assert.equal(row.versions.length,1);assert.equal(row.versions[0].voice,'有');
+  }
+});
+
+test('HARUKAZE compilations, VFB and paid stories keep explicit content identities',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='harukaze');
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,26);
+  for(const kind of ['1+2パック合集收录','五周年1+2完整套装收录']) assert.deepEqual(new Set(data.versions.filter(v=>v.kind===kind).map(v=>v.workId)),new Set(['g900','g901']));
+  const hundred=data.versions.filter(v=>v.kind==='猫的想法100连发付费追加');assert.equal(hundred.length,1);assert.equal(hundred[0].workId,'g900');assert.ok(hundred[0].differences.includes('不能独立启动'));
+  const vfb=data.versions.find(v=>v.kind==='VFB附属短篇内容');assert.equal(vfb.year,2016);assert.equal(vfb.voice,'有');assert.ok(vfb.differences.includes('是否无需本体待核'));
+  assert.equal(data.works.filter(w=>w.originalTitle.includes('1+2パック')).length,0);
+  const noel=data.versions.filter(v=>v.workId==='g901'&&['PlayStation Vita','PlayStation 4','Nintendo Switch'].includes(v.platform));assert.equal(noel.length,3);assert.ok(noel.every(v=>v.year===2019&&v.publisher==='HARUKAZE'&&v.differences.includes('诺艾尔新路线')));
+  const page=readFileSync(new URL('../harukaze.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="harukaze.html"'));
+});
+
+test('HARUKAZE future Steam and browser devices do not become shipped native versions',()=>{
+  const monkeys=data.versions.filter(v=>v.workId==='g902');assert.equal(monkeys.length,3);assert.ok(monkeys.every(v=>v.year===2021));
+  assert.equal(monkeys.filter(v=>/Steam|Android|iOS|macOS/.test(v.platform)).length,0);
+  const web=monkeys.find(v=>v.platform.startsWith('Web'));assert.equal(web.voice,'未核实');assert.ok(web.differences.includes('2021/10/29'));
+  const android=data.versions.filter(v=>v.workId==='g900'&&v.platform==='Android');assert.equal(android.length,1);assert.ok(android[0].differences.includes('2017/03/30'));assert.equal(android[0].voice,'未核实');
+  assert.deepEqual(data.works.filter(w=>['g899','g900','g901','g902'].includes(w.id)).map(w=>w.firstYear),[2013,2016,2017,2021]);
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='harukaze');
+  const future=dossier.entries.find(e=>e.title==='Monkeys!¡ Steam版与试玩');assert.ok(future.status.includes('未来'));assert.ok(future.reason.includes('2026/11/16'));
+  assert.deepEqual(dossier.entries.find(e=>e.title==='ネコのお考え特別編、录音剧与跨游戏联动').workIds,[]);
+});
+
 test('HULOTTE brand family and Chinese aliases find the completed catalogue',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='hulotte');
   const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
