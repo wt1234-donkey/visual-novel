@@ -347,7 +347,8 @@ test('shared FM tape is a single version while Alice has a separate original mac
 
 test('subcategories select only works within the chosen parent class',()=>{
   const matches=filterCatalogue(data,{category:'互动动画',subcategory:'激光影碟·射击／驾驶'});
-  assert.equal(matches.length,3);
+  assert.equal(matches.length,4);
+  assert.ok(matches.some(({work})=>work.id==='g906'));
   assert.ok(matches.every(({work})=>work.category==='互动动画' && work.subcategory==='激光影碟·射击／驾驶'));
   assert.equal(filterCatalogue(data,{category:'视觉小说',subcategory:'激光影碟·射击／驾驶'}).length,0);
 });

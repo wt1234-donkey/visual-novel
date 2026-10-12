@@ -17,7 +17,7 @@ def link(url, title):
     return f'<a class="source-link" href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)} ↗</a>'
 
 
-def card(work, versions=None, anchors=()):
+def card(work, versions=None, anchors=(), version_label='个平台版本'):
     if versions is None:
         versions = [v for v in data['versions'] if v['workId'] == work['id']]
     versions = sorted(versions, key=lambda v: v['year'])
@@ -39,7 +39,7 @@ def card(work, versions=None, anchors=()):
 <p class="intro">{escape(work['synopsis'])}</p>
 <div class="card-meta"><span>{escape(work['subcategory'])} · {escape(work['genre'])}</span><span>主要角色 · {escape(' / '.join(work['characters']))}</span></div>
 {f'<p class="character-evidence">{link(work["charactersSource"], "角色依据")}{(" · " + escape(work["charactersNote"])) if work.get("charactersNote") else ""}</p>' if work.get('charactersSource') else ''}
-<details class="version-panel"><summary>查看 {len(versions)} 个平台版本</summary><div class="version-list">{''.join(release_rows)}</div></details>
+<details class="version-panel"><summary>查看 {len(versions)} {escape(version_label)}</summary><div class="version-list">{''.join(release_rows)}</div></details>
 <div class="card-bottom">{link(work['source'], '作品来源')}<span class="card-note">{escape(work['notes'])}</span></div></article>'''
 
 
@@ -62,7 +62,7 @@ def build(company):
     if related:
         related_section = f'''<section class="related-games" id="related-games"><div class="section-heading"><div><p class="eyebrow">OTHER GAMES</p><h2>{escape(company.get('relatedSectionTitle', '跨类型合作游戏'))}</h2></div><p>{len(related)} 部 · {escape(company.get('relatedCountLabel', '按官方类型标注'))}</p></div>
 <p class="related-intro">{escape(company.get('relatedIntro', '涵盖官方年表收录的手机游戏、WFS 合作 RPG，以及 Index 制作、Key 官网宣传的授权作品。每款游戏按实际类型、发行公司与平台标注；顶部总数包含本节。'))}</p>
-<div class="cards">{''.join(card(g, g['versions']) for g in related)}</div></section>'''
+<div class="cards">{''.join(card(g, g['versions'], version_label=company.get('versionPanelLabel', '个平台版本')) for g in related)}</div></section>'''
     section_title = company.get('sectionTitle') or (f"从 {selected[0]['title']} 到 {selected[-1]['title']}" if selected else '游戏作品核查')
     all_games = selected + related
     year_span = f"{min(w['firstYear'] for w in all_games)}—{max(w['firstYear'] for w in all_games)}" if all_games else '—'
@@ -96,7 +96,7 @@ def build(company):
 <div class="hero-links"><a class="primary-link" href="#identity">阅读创作风格</a><a class="secondary-link" href="#works">按年份阅读作品</a></div></section>
 {profile_section}
 <section id="works"><div class="section-heading"><div><p class="eyebrow">GAME CATALOGUE</p><h2>{escape(section_title)}</h2></div><p>{len(selected)} 部四类作品 · 增强版合并计数</p></div>
-<nav class="work-index" aria-label="按年份跳转作品">{toc}</nav>{empty_note}<div class="cards">{''.join(card(w, anchors=legacy_anchors.get(w['id'], ())) for w in selected)}</div></section>
+<nav class="work-index" aria-label="按年份跳转作品">{toc}</nav>{empty_note}<div class="cards">{''.join(card(w, anchors=legacy_anchors.get(w['id'], ()), version_label=company.get('versionPanelLabel', '个平台版本')) for w in selected)}</div></section>
 {related_section}
 <section class="company-audit" id="coverage"><p class="eyebrow">CATALOGUE AUDIT</p><h2>{escape(audit_title)}</h2>
 <p>核对日期：{escape(company['checkedAt'])} · {escape(audit_label)} {link(company['source'], audit_source_label)}</p>
