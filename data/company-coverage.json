@@ -29358,6 +29358,137 @@
       ]
     },
     {
+      "id": "hokubu",
+      "name": "北部通信工業",
+      "foundedAt": "1969-03",
+      "foundedPrecision": "month",
+      "foundedSource": "https://www.sekonic.co.jp/company/history/",
+      "checkedAt": "2026-10-13",
+      "status": "补齐1969年厂商遗漏，复用2部、补入1部及4条首发／新增内容记录",
+      "scope": "聚焦北部通信工业SharRock品牌可核的三部3DO养成作品及其原作：《毕业》《毕业II》《诞生》。人物事件与成长结局纳入广义Galgame，不把通信设备制造商的全部业务解释成叙事游戏创作。三个主库作品各有一个ID；其它发行商版本为原作关联记录。",
+      "versionScope": "复用两部毕业的18条旧记录，字段保持。诞生新增电脑首发和3条能指出新增游戏内音频素材的后版（PCE声乐、3DO独有BGM、Saturn新歌曲）。仅换平台、标题、包装和音质不增行，普通编曲不自动认定新增内容；未完成增量对照的版本列在核对说明，不追溯清理旧版。",
+      "versionPanelLabel": "条发行／内容记录",
+      "versionCountLabel": "首发、既有记录与新增内容版",
+      "publisherNote": "Sekonic官方沿革确认北部通信工业1969年3月成立，2024年10月合并。依成立月份补入1969年组，具体日未确认，与同月创业的Konami不作日级先后断言。1990年代3DO品牌为SharRock／シャーロック；开发公司、电脑原发行方和其它移植发行商分别保留。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>3部主库作品、22条关联记录；其中北部通信工业实际发行3部3DO作品。复用2部旧作及18条记录，新增《诞生》1部与4条首发／内容版。未将全部22条都归为北部发行。</strong></p>",
+      "workIds": [
+        "g830",
+        "g959",
+        "g831"
+      ],
+      "publisherWorkIds": [
+        "g830",
+        "g959",
+        "g831"
+      ],
+      "catalogueEntryCount": 3,
+      "source": "https://www.sekonic.co.jp/company/history/",
+      "auditTitle": "成立月份、历史品牌与新增内容核对",
+      "auditSourceLabel": "Sekonic官方公司沿革",
+      "auditLabel": "三款可核3DO产品及原作、移植关联；不是公司全部软件目录。",
+      "auditNote": "具体来源、日期异文、版本增量和未核项目见data/hokubu-audit.md；爱好者曲目比较和原片尾署名转录分别标明证据性质。",
+      "sectionTitle": "从学园成长到偶像出道",
+      "description": "北部通信工业社SharRock作品专题：依1969年3月成立月份补齐遗漏，复用毕业两代，补入诞生原作与明确新增音频内容的后版。",
+      "creativeProfile": {
+        "thesis": "编辑观察：可核的SharRock叙事相关产品集中于既有美少女养成游戏的3DO发行，依靠课程、工作与人物事件组织不同成长结局。它体现发行品牌的选品方向，不能据此把HEADROOM的原作创意归为通信设备制造商独立创作。",
+        "phases": [
+          {
+            "period": "1969—1990年代初",
+            "heading": "通信制造企业与后来的游戏业务分开",
+            "analysis": "官方沿革记1969年3月成立，随后建设电子设备制造基地。本专题使用这一法人时间；并入Sekonic后存续公司的1951年成立日不能替代历史发行商的时间。",
+            "basis": "厂商说明",
+            "source": "https://www.sekonic.co.jp/company/history/"
+          },
+          {
+            "period": "1994—1996",
+            "heading": "以养成移植构成3DO发行样本",
+            "analysis": "可核目录依次列毕业FINAL、毕业II SPECIAL与诞生PURE。前两款以教师指导学生成长为核心，后者换成经纪人培养三位偶像；均是既有作品的移植／内容版，题名变化不增加独立作品数。",
+            "basis": "编辑观察",
+            "source": "https://digandrescue.com/software/sharrock/3do-sharrock/"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "公司成立月份与顺序",
+          "status": "1969年3月；具体日未确认",
+          "reason": "合并后的存续公司Sekonic官方沿革明确记载北部通信工业于1969年3月成立，2024年10月并入Sekonic。按月份补入1969年组；与1969/03/21创业的Konami同月，无法据此断言日级先后，不把2024存续公司的1951年成立日套到该游戏发行方。",
+          "source": "https://www.sekonic.co.jp/company/history/",
+          "workIds": []
+        },
+        {
+          "title": "SharRock与相近名称",
+          "status": "历史品牌身份分开",
+          "reason": "3DO产品目录将SharRock／シャーロック对应北部通信工业。本专题仅使用这一身份；Natural2 GBA来源署シャルラク，缺乏同一法人证据，不将其改归北部通信工业，也不把Sekonic合并后的业务记成当年的游戏发行。",
+          "source": "https://digandrescue.com/software/sharrock/3do-sharrock/",
+          "workIds": []
+        },
+        {
+          "title": "毕业 ～Graduation～／FINAL",
+          "status": "复用g830，9条旧记录保留",
+          "reason": "沿用JHV专题中的同一作品与9条历史记录，包括北部通信工业的3DO FINAL。首作由HEADROOM制作、JHV发行，不能因为后续3DO移植就把原作归为北部开发。既有移植记录不追溯删除，原字段不改写。",
+          "source": "https://digandrescue.com/software/sharrock/3do-sharrock/",
+          "workIds": [
+            "g830"
+          ]
+        },
+        {
+          "title": "毕业II ～Neo Generation～／SPECIAL",
+          "status": "复用g831，9条旧记录保留",
+          "reason": "沿用主库二代及9条历史记录，包含1995/11/22的北部通信工业3DO SPECIAL。它与一代是两部独立作品；同一代的移植、增强标题不再次创建作品。",
+          "source": "https://digandrescue.com/software/sharrock/3do-sharrock/",
+          "workIds": [
+            "g831"
+          ]
+        },
+        {
+          "title": "诞生 ～Debut～／PURE",
+          "status": "新增g959；原作与移植共用ID",
+          "reason": "总监竹内信和的个人产品回顾确认1993年NEC Avenue电脑原作、经纪人育成三位偶像的玩法与HEADROOM制作身份。3DO PURE由北部通信工业发行，既非独立续作，也非本公司电脑原作。月份异文保留。",
+          "source": "https://www.namura.net/xkd.com/product/debut.html",
+          "workIds": [
+            "g959"
+          ]
+        },
+        {
+          "title": "1994 PCE新增声乐素材",
+          "status": "新增内容版",
+          "reason": "原片尾提供「ヴィーナスの誕生」「トライアングル・マジック」和人物形象歌曲，曲目比较明确其相对电脑版增加游戏内声乐；记录NEC Avenue实际发行署名。原作已有角色人声，不使用“CD版才第一次配音”的概括。",
+          "source": "https://raido.moe/staff/pce/pce_tanjou_debut.html",
+          "workIds": [
+            "g959"
+          ]
+        },
+        {
+          "title": "1996 3DO PURE新增曲目",
+          "status": "新增内容版，证据层级明确",
+          "reason": "曲目比较将组名登记、竞猜答对、时装比赛、运动会及才艺大会等BGM标为3DO独有，故单列新增音频素材版。只认具体曲目，不根据副标题推断新增人物、路线或故事；爱好者比较不是厂商声明。",
+          "source": "https://w.atwiki.jp/gamemusicbest100/pages/11648.html",
+          "workIds": [
+            "g959"
+          ]
+        },
+        {
+          "title": "1996 Saturn S新增歌曲",
+          "status": "新增内容版；实际署名NEC Interchannel",
+          "reason": "世嘉目录确认1996/06/28发售；PCE／Saturn曲目对照列出Saturn新增歌曲「新しい風に吹かれて」「セレスト～星空を見上げて～」，按内容增量列行。该版本不属于北部发行，专题关联记录不改变按发行方筛选。",
+          "source": "https://w.atwiki.jp/gamemusicbest100/pages/11649.html",
+          "workIds": [
+            "g959"
+          ]
+        },
+        {
+          "title": "其余移植、廉价版、OVA与后续作品",
+          "status": "不因发售项目增加版本",
+          "reason": "FM Towns／PC-9821、Macintosh、WonderSwan的曲目和素材仍须逐项与全部先行版确认新增关系，本批不穷尽。OVA、音乐CD与同内容再发行不建游戏记录；DEBUT21是NEC Interchannel发行的独立后续作品，非SharRock目录，留待对应厂商。",
+          "source": "https://w.atwiki.jp/gamemusicbest100/pages/11648.html",
+          "workIds": [
+            "g959"
+          ]
+        }
+      ]
+    },
+    {
       "id": "konami",
       "name": "Konami",
       "foundedAt": "1969-03-21",
