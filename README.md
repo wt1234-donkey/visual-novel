@@ -4,13 +4,15 @@
 
 ## 数据范围
 
-当前收录 **932 部代表作品、2011 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **932 部代表作品、2012 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
 现有 589 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
 
 ## 厂商集中整理
+
+已新增 [Data East专题](dataeast.html)：依1976/04/20开始营业日期接续Sinclair Research，复用原库三部互动动画；为《公路追击》补入1992年Mega-CD版新增的J-WALK片头主题曲，记一条Wolf Team内容版。同名的1988年《Cobra Command》另作区分；未证实新增游戏内容的移植与再版不重复列行。原932部作品与2011条既有记录保留，只新增一条版本，专题增至46个。公司主要产品及逐项核对见[核对说明](data/dataeast-audit.md)。
 
 已新增 [Sinclair Research专题](sinclair.html)：按Companies House同一法人1973/09/19登记日排序，与1961年的Sinclair Radionics分开。复用原库《霍比特人》《棋子》两部作品，为《棋子》追加1986年Atari ST插图版与Amiga语音合成版两条新增内容记录；同内容移植和仅界面更新不另列。原932部作品与2009条旧记录保持不变。成立沿革、版本差异与收录边界见[核对说明](data/sinclair-audit.md)。
 

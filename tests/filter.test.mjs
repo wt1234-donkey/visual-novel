@@ -887,3 +887,24 @@ test('NanaWind ports, localized releases and mobile batches preserve publisher a
   assert.ok(!/undefined|NaN|Infinity/.test(page));
   assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="nanawind.html"'));
 });
+
+test('Data East reuses three interactive animations and lists only the content-added Mega-CD edition',()=>{
+  const coverage=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8'));
+  const dossier=coverage.companies.find(c=>c.id==='dataeast');
+  assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
+  assert.deepEqual(dossier.workIds,['g082','g083','g085']);
+  assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
+  assert.equal(data.works.length,932);assert.equal(data.versions.length,2012);
+  for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
+    assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
+  }
+  const road=data.versions.filter(v=>v.workId==='g085');assert.deepEqual(road.map(v=>v.id),['g085-v1','g085-v2']);
+  const cd=road[1];assert.equal(cd.platform,'Mega-CD');assert.equal(cd.publisher,'Wolf Team');assert.ok(cd.differences.includes('J-WALK'));
+  const dataEast=filterCatalogue(data,{company:'Data East'}).find(({work})=>work.id==='g085');
+  assert.equal(dataEast.versions.length,1);assert.equal(dataEast.versions[0].id,'g085-v1');
+  const wolfTeam=filterCatalogue(data,{company:'Wolf Team'}).find(({work})=>work.id==='g085');
+  assert.equal(wolfTeam.versions.length,1);assert.equal(wolfTeam.versions[0].id,'g085-v2');
+  const page=readFileSync(new URL('../dataeast.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds)assert.equal(page.split(`<article class=\"card\" id=\"${id}\">`).length-1,1);
+  assert.ok(page.includes('J-WALK'));assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href=\"dataeast.html\"'));
+});
