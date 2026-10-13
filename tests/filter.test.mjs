@@ -390,7 +390,7 @@ test('publisher aliases preserve historical credit and count games across platfo
   assert.ok(filterCatalogue(data,{company:'Capcom'}).some(({work})=>work.id==='g049'));
   assert.equal(counts.has('CAPCOM'),false);
   assert.equal(counts.has('CHUNSOFT'),false);
-  assert.equal(filterCatalogue(data,{company:'Konami'}).filter(({work})=>work.originalTitle.startsWith('ときめきメモリアル')).length,4);
+  assert.deepEqual(new Set(filterCatalogue(data,{company:'Konami'}).filter(({work})=>work.originalTitle.startsWith('ときめきメモリアル')).map(({work})=>work.id)),new Set(['g023','g175','g176','g177','g937','g938','g939','g940']));
 });
 
 test('Silkys Plus dossier, Chinese searches and original-brand separation',()=>{
@@ -894,7 +894,7 @@ test('Data East reuses three interactive animations and lists only the content-a
   assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
   assert.deepEqual(dossier.workIds,['g082','g083','g085']);
   assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
-  assert.equal(data.works.length,932);assert.equal(data.versions.length,2012);
+  assert.equal(data.works.length,938);assert.equal(data.versions.length,2039);
   for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
@@ -907,4 +907,32 @@ test('Data East reuses three interactive animations and lists only the content-a
   const page=readFileSync(new URL('../dataeast.html',import.meta.url),'utf8');
   for(const id of dossier.workIds)assert.equal(page.split(`<article class=\"card\" id=\"${id}\">`).length-1,1);
   assert.ok(page.includes('J-WALK'));assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href=\"dataeast.html\"'));
+});
+
+test('Konami content chronology avoids recycled characters and previously released DLC bundles',()=>{
+  const coverage=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies;
+  const dossier=coverage.find(c=>c.id==='konami');
+  assert.equal(dossier.foundedAt,'1969-03-21');
+  assert.ok(coverage.indexOf(dossier)<coverage.findIndex(c=>c.id==='sinclair'));
+  assert.equal(dossier.workIds.length,11);
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,36);
+  const premium=data.versions.find(v=>v.id==='g939-v2');
+  assert.equal(premium.year,2012);assert.ok(premium.differences.includes('蓮見達也'));
+  assert.ok(!data.versions.some(v=>['g937','g938','g939'].includes(v.workId)&&v.year===2024));
+  assert.ok(dossier.entries.find(e=>e.title==='Girl’s Side 2024 Switch高清版').reason.includes('2012'));
+  const music=data.versions.filter(v=>v.workId==='g177').slice(1);
+  assert.equal(music.length,4);assert.ok(music.every(v=>v.differences.includes('依赖本体')));
+  assert.ok(!music.some(v=>v.differences.includes('2010/01/14')));
+  const gs4=data.versions.filter(v=>v.workId==='g940');
+  assert.equal(gs4.length,8);assert.ok(gs4.slice(1).every(v=>v.differences.includes('不是独立游戏')));
+  assert.ok(gs4.some(v=>v.differences.includes('巴征道')));
+  assert.ok(gs4.some(v=>v.differences.includes('大成功')));
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  assert.equal(aliases['科乐美'],'Konami');assert.equal(aliases['Konami Digital Entertainment'],'Konami');
+  const filtered=filterCatalogue(data,{company:aliases['科乐美']});
+  for(const id of dossier.workIds)assert.ok(filtered.some(({work})=>work.id===id));
+  assert.equal(data.versions.find(v=>v.id==='g940-v1').publisher,'Konami Digital Entertainment');
+  const page=readFileSync(new URL('../konami.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="konami.html"'));
 });
