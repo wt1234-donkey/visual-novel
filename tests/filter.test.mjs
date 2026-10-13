@@ -894,7 +894,7 @@ test('Data East reuses three interactive animations and lists only the content-a
   assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
   assert.deepEqual(dossier.workIds,['g082','g083','g085']);
   assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
-  assert.equal(data.works.length,938);assert.equal(data.versions.length,2039);
+  assert.equal(data.works.length,955);assert.equal(data.versions.length,2058);
   for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
@@ -935,4 +935,32 @@ test('Konami content chronology avoids recycled characters and previously releas
   const page=readFileSync(new URL('../konami.html',import.meta.url),'utf8');
   for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="konami.html"'));
+});
+
+test('Hudson reuses originals, separates independent afterstories and credits content-added ports',()=>{
+  const coverage=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies;
+  const dossier=coverage.find(c=>c.id==='hudson');
+  assert.equal(dossier.foundedAt,'1973-05-18');
+  assert.ok(coverage.indexOf(dossier)>coverage.findIndex(c=>c.id==='konami'));
+  assert.ok(coverage.indexOf(dossier)<coverage.findIndex(c=>c.id==='sinclair'));
+  assert.equal(dossier.workIds.length,21);
+  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,26);
+  assert.equal(publisherWorkCounts(data).get('Hudson Soft（哈德森）'),21);
+  for(const id of ['g074','g077','g019','g020'])assert.ok(dossier.workIds.includes(id));
+  const murder=data.versions.filter(v=>v.workId==='g942');
+  assert.equal(murder.length,2);
+  assert.deepEqual(murder.map(v=>v.publisherCompanies[0]),['リバーヒルソフト','Hudson Soft（哈德森）']);
+  assert.equal(filterCatalogue(data,{query:'殺人倶楽部',company:'Hudson Soft（哈德森）'})[0].versions[0].year,1990);
+  const remix=data.versions.find(v=>v.id==='g948-v2');
+  assert.ok(remix.differences.includes('お月様とダンス'));assert.equal(remix.year,1996);
+  assert.ok(!data.versions.some(v=>['g948','g950'].includes(v.workId)&&v.platform==='PSP'));
+  for(const id of ['g953','g956','g958'])assert.equal(data.versions.filter(v=>v.workId===id).length,1);
+  assert.equal(data.works.find(w=>w.id==='g956').firstYear,1999);
+  assert.ok(data.works.find(w=>w.id==='g958').notes.includes('可单独享受')||data.works.find(w=>w.id==='g958').notes.includes('单独体验'));
+  for(const id of ['g943','g944'])assert.equal(data.works.find(w=>w.id===id).subcategory,'图文选项／调查');
+  const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
+  for(const name of ['Hudson Soft','HUDSON','ハドソン','哈德森'])assert.equal(aliases[name],dossier.name);
+  const page=readFileSync(new URL('../hudson.html',import.meta.url),'utf8');
+  for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="hudson.html"'));
 });

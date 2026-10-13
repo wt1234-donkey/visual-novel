@@ -4,13 +4,15 @@
 
 ## 数据范围
 
-当前收录 **938 部代表作品、2039 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **955 部代表作品、2058 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
-现有 595 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
+现有 612 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
 
 ## 厂商集中整理
+
+已新增 [哈德森社专题](hudson.html)：SEC公告确认1973/05/18成立，依时间接在科乐美之后、Sinclair之前。复用原库4部，首批补入17部独立叙事作品与19条首发／内容记录；专题21部、26条，专题总数48个。Murder Club保留Riverhill Soft原发行并登记Hudson新增录音版；Yuna REMIX明确新增游戏内曲目才单列，同内容PSP合集及普通复刻不增行。北へ两部独立后日谈及百物语独立续作分别建档。原938部、2039条记录保持，具体来源和未整理范围见[核对记录](data/hudson-audit.md)。
 
 已新增 [科乐美专题](konami.html)：官网记载1969/03/21创业、1973/03/19法人设立，补齐此前成立顺序漏项。复用原库5部，补入《宇宙警探》、Girl’s Side四作和《爱相随》6部，新增27条首发／内容记录；专题11部作品、36条记录，共47专题。新人物、剧情、动画、配音、旅行、游戏内素材与DLC有明确增量才计版；2024年高清移植与已经配信内容的合集不重复。保留原932部作品和2012条记录；实际子公司发行署名与品牌归档分开。并非公司完整目录，详见[核对说明](data/konami-audit.md)。
 
