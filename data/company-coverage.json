@@ -30290,6 +30290,155 @@
       ]
     },
     {
+      "id": "cinematronics",
+      "name": "Cinematronics",
+      "foundedAt": "1975-04",
+      "foundedSource": "https://allincolorforaquarter.blogspot.com/2012/11/the-ultimate-so-far-history-of.html",
+      "incorporatedAt": "1975-05-13",
+      "incorporatedSource": "https://allincolorforaquarter.blogspot.com/2013/10/the-ultimate-so-far-history-of-allied.html",
+      "checkedAt": "2026-10-13",
+      "status": "复用3部作品，新增1条有内容增量的版本",
+      "scope": "聚焦Cinematronics的两部已发行激光影碟互动动画，并关联后继公司Leland发行的龙穴II。三部作品均复用原库；不是全公司街机产品目录，也不将系列所有他社改编归给本公司。",
+      "versionScope": "保留3条既有首发记录，仅为龙穴历险记补入2002年20周年版新增可玩场景记录。后发版须有可核实的新内容；普通移植、高清修复、同捆、难度与按键调整不凭发售次数增行，未核差异列核对清单。",
+      "versionPanelLabel": "条发行／内容记录",
+      "versionCountLabel": "首发与新增内容记录",
+      "publisherNote": "史家Keith Smith据历史材料将创业时间记为1975年4月；所展示公司章程的州登记章为1975/05/13，创业与法人登记分开。专题按创业月份接在1973年厂商之后；与同年4月的Microsoft不推定日级先后。这里指美国街机公司，不是1994年的同名Cinematronics, LLC。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>3部相关作品、4条记录。Cinematronics实际发行2部、2条；龙穴II首发保留Leland署名，2002年内容版署Digital Leisure。</strong></p>",
+      "workIds": [
+        "g010",
+        "g044",
+        "g045"
+      ],
+      "publisherWorkIds": [
+        "g010",
+        "g044"
+      ],
+      "catalogueEntryCount": 3,
+      "source": "https://allincolorforaquarter.blogspot.com/2012/11/the-ultimate-so-far-history-of.html",
+      "auditTitle": "成立时间、实际发行与新增场景核对",
+      "auditSourceLabel": "公司历史研究",
+      "auditLabel": "三部共享作品及后版、同名公司与非叙事产品的边界。",
+      "auditNote": "公司史采用历史研究与原始章程扫描，版本增量采用原版说明书和发行商访谈。详细核对见data/cinematronics-audit.md。",
+      "sectionTitle": "从奇幻城堡、太空营救到时间旅行",
+      "description": "Cinematronics社专题：复用龙穴历险记、太空王牌及后继时期龙穴II，新增2002周年版可玩场景记录，实际发行方分别归档。",
+      "creativeProfile": {
+        "thesis": "编辑观察：这组三部互动动画把连续手绘表演切分成需要及时回应的场景。玩家通过方向和动作输入避开失败，而不是自由控制画面中的每一步。动画、玩法方案与街机制造来自合作团队，不能全部归功于发行商。",
+        "phases": [
+          {
+            "period": "1983—1984",
+            "heading": "手绘演出与动作选择",
+            "analysis": "龙穴以城堡机关、营救与夸张失败演出构成奇幻冒险；太空王牌转向科幻追逐和人物变身，难度档影响所经历场景。两作依赖Bluth动画团队与AMS／RDI等合作方，Cinematronics负责街机产品环节。",
+            "basis": "编辑观察",
+            "source": "https://www.dragons-lair-project.com/games/pages/sa.asp"
+          },
+          {
+            "period": "1991",
+            "heading": "后继时期的连续时间旅行",
+            "analysis": "龙穴II以德克追赶莫德罗克和达芙妮的时间旅行为主线。原计划与早期动画制作不能当作已发行版本；本库沿用1991年Leland街机记录，作为后继时期关联作展示。",
+            "basis": "编辑观察",
+            "source": "https://www.dragons-lair-project.com/games/pages/dl2.asp"
+          },
+          {
+            "period": "2002",
+            "heading": "恢复未发行素材成为可玩场景",
+            "analysis": "20周年版说明书明确允许选择New Scenes，并将原来停留在线稿阶段的Gargoyle场景完成上色和交互。这个内容增量与提高影像清晰度、附访谈及合集包装分别判断。",
+            "basis": "厂商说明",
+            "source": "https://mocagh.org/miscgame/dragonslair20th-manual.pdf"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "1975年创业与法人登记",
+          "status": "采用月份，不推定具体创业日",
+          "reason": "历史研究记创业于1975年4月，章程扫描的州登记章为5月13日。网上常见4月1日不能由这份扫描直接证实；本轮不把它写成精确成立日。同月Microsoft为后续候选，两者不作未经核实的日级排序。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/10/the-ultimate-so-far-history-of-allied.html",
+          "workIds": []
+        },
+        {
+          "title": "龙穴历险记",
+          "status": "复用g010／新增g010-v2",
+          "reason": "1983年Cinematronics街机首发及作品字段保留。2002年内容版仍归同一作品，按实际发行Digital Leisure登记，不创建“周年版”新作品。",
+          "source": "https://www.dragons-lair-project.com/games/pages/dl.asp",
+          "workIds": [
+            "g010"
+          ]
+        },
+        {
+          "title": "太空王牌",
+          "status": "复用g044／保留原首发",
+          "reason": "1984年本社发行互动动画；动画在1983年完成不等于游戏当年已发行。原始难度档已有不同场景覆盖，不把这些选项拆成版本。",
+          "source": "https://www.dragons-lair-project.com/games/pages/sa.asp",
+          "workIds": [
+            "g044"
+          ]
+        },
+        {
+          "title": "龙穴历险记II：时间扭曲",
+          "status": "复用g045／后继Leland关联",
+          "reason": "已存在的独立续作，不重复新增。1991年街机制造／发行方为Leland，保留原字段；不能因早年曾在Cinematronics时期筹备而改成该公司已发行作品。",
+          "source": "https://www.dragons-lair-project.com/games/pages/dl2.asp",
+          "workIds": [
+            "g045"
+          ]
+        },
+        {
+          "title": "龙穴20周年特别版",
+          "status": "2002年／确认新增可玩内容",
+          "reason": "原版说明书第1页明确New Scenes含此前未进入发行影碟的动画，及新完成上色、完整互动的Gargoyle场景；发行商Paul Gold访谈交叉确认其重建过程。新增依据是游戏内场景，不是宣传花絮。",
+          "source": "https://mocagh.org/miscgame/dragonslair20th-manual.pdf",
+          "workIds": [
+            "g010"
+          ]
+        },
+        {
+          "title": "1987年资产承接与后继署名",
+          "status": "Cinematronics、Leland分开筛选",
+          "reason": "同期Play Meter公司介绍说明Tradewest收购固定资产及产品业务，后续以Leland运营。本专题关联沿革，不将两个发行字段设为同一个厂商别名。",
+          "source": "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf",
+          "workIds": [
+            "g045"
+          ]
+        },
+        {
+          "title": "太空王牌1991转换套件",
+          "status": "输入与难度调整／不新增版本",
+          "reason": "资料确认Leland转换套件改用部分斜向输入并取消难度选择，未证实新增动画、人物或剧情，因此本轮不增行。",
+          "source": "https://www.dragons-lair-project.com/games/pages/sa.asp",
+          "workIds": [
+            "g044"
+          ]
+        },
+        {
+          "title": "DVD、高清与现代平台再发行",
+          "status": "仅画质／载体／同捆不增行",
+          "reason": "发行商说明高清处理包括逐帧清理与调色；这些工作本身不作为新增故事或素材。三作同捆不能自动为太空王牌与龙穴II补出两条内容版本。",
+          "source": "https://www.capsulecomputers.com.au/2010/01/interview-with-digital-leisure/",
+          "workIds": [
+            "g010",
+            "g044",
+            "g045"
+          ]
+        },
+        {
+          "title": "龙穴II蓝光删减分镜与导演剪辑",
+          "status": "新增可玩内容及首次出现时间待核",
+          "reason": "访谈确认蓝光附有Pirate Ship动画分镜，但未证实属于可玩章节；导演剪辑的场景差异及首次收录时间仍需对照。补充影片、采访和既有素材重组不自动计一条内容版。",
+          "source": "https://www.capsulecomputers.com.au/2010/01/interview-with-digital-leisure/",
+          "workIds": [
+            "g045"
+          ]
+        },
+        {
+          "title": "原型、同IP他社改编与非叙事街机",
+          "status": "边界说明／不凑新增作品数",
+          "reason": "未发行原型不计发行。龙穴家用动作改编、他社Escape from Singe’s Castle等需另查作品身份；矢量射击、体育和赛车不因同一厂商自动纳入四类叙事库。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        }
+      ]
+    },
+    {
       "id": "dataeast",
       "name": "Data East",
       "foundedAt": "1976-04-20",
