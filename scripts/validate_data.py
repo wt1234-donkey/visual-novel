@@ -12,6 +12,8 @@ coverage = json.loads((ROOT / 'data/company-coverage.json').read_text(encoding='
 command_work_ids = {wid for company in coverage['companies']
                     if company['id'] in {'alicesoft', 'nitroplus'} and company.get('includeCommandGames') is True
                     for wid in company['workIds']}
+command_work_ids.update(wid for company in coverage['companies']
+                        for wid in company.get('legacyCommandWorkIds', []))
 works, versions = data['works'], data['versions']
 work_ids = {work['id'] for work in works}
 version_ids = {version['id'] for version in versions}
@@ -103,7 +105,13 @@ for company in coverage['companies']:
         covered.update(entry['workIds'])
         related_covered.update(entry.get('relatedIds', []))
     assert covered == set(ids) and related_covered == related_ids, '专题存在缺少核对来源的作品'
-    # User-authorized complete company catalogues include historical command games.
-    if not (company['id'] in {'alicesoft', 'nitroplus'} and company.get('includeCommandGames') is True):
-        assert all(work['subcategory'] not in {'纯文本指令', '图文指令'} for work in works if work['id'] in ids)
+    # Complete catalogues may include authorized command games; a company topic may also
+    # reuse specifically named legacy command-game records without opening that scope to new works.
+    if company['id'] in {'alicesoft', 'nitroplus'} and company.get('includeCommandGames') is True:
+        allowed_command_ids = set(ids)
+    else:
+        allowed_command_ids = set(company.get('legacyCommandWorkIds', []))
+        assert allowed_command_ids <= set(ids), '旧指令冒险例外必须对应专题已有作品'
+    assert all(work['subcategory'] not in {'纯文本指令', '图文指令'}
+               for work in works if work['id'] in set(ids) - allowed_command_ids)
 print(f"校验通过：{len(works)} 部作品，{len(versions)} 个平台版本；厂商专题引用一致")

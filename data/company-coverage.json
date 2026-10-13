@@ -29356,6 +29356,132 @@
           "workIds": []
         }
       ]
+    },
+    {
+      "id": "sinclair",
+      "name": "Sinclair Research",
+      "foundedAt": "1973-09-19",
+      "foundedSource": "https://find-and-update.company-information.service.gov.uk/company/01135105",
+      "checkedAt": "2026-10-13",
+      "status": "复用原库两部作品；补记两种有新增视听内容的后版",
+      "scope": "本专题复用原库《霍比特人》《棋子》两部叙事冒险，并记录The Pawn的图像版与Amiga语音合成版。专题只按可核实的发行署名收录，不把所有Sinclair电脑平台作品都归给Sinclair Research，也不代表该公司的完整软件目录。",
+      "versionScope": "旧记录保持原样。后发版本只有证实加入剧情、图像、语音或其他游戏内容时才新增：《棋子》QL版之后的Atari ST插图版、Amiga可选语音合成版分别单列；相同故事与图像的普通平台移植不逐平台重复。合成语音不算演员角色配音。",
+      "versionPanelLabel": "条作品发行／内容记录",
+      "versionCountLabel": "原库发行记录及新增内容版",
+      "publisherNote": "Companies House登记显示该法人1973年9月19日注册，早期名称为Westminster Mail Order，后来先后改名；采用登记法人起点排序。1961年的Sinclair Radionics是另一家公司。Sinclair Research在本专题中的作品发行署名与Melbourne House、Magnetic Scrolls、Rainbird的原作、开发和后版发行角色分开。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>两部作品均有Sinclair Research发行记录：《霍比特人》为其同平台再版，《棋子》QL版为首次发行；后续Rainbird版仅在新增图像和语音合成输出时另列。</strong></p>",
+      "workIds": [
+        "g113",
+        "g135"
+      ],
+      "legacyCommandWorkIds": [
+        "g113",
+        "g135"
+      ],
+      "catalogueEntryCount": 2,
+      "source": "https://find-and-update.company-information.service.gov.uk/company/01135105",
+      "auditTitle": "公司沿革与作品版本核对",
+      "auditSourceLabel": "Companies House公司记录",
+      "auditLabel": "两部原库作品、两条内容版及范围说明。",
+      "auditNote": "这里核对的是本数据库涉及的叙事游戏发行，不是Sinclair电脑软件全目录。The Pawn的发行关系、版本先后及新增素材按盒装手册、同期资料与保存档案分别注明。",
+      "sectionTitle": "从中洲旅程到凯罗夫尼亚",
+      "description": "Sinclair Research叙事游戏专题：复用原库《霍比特人》和《棋子》，核对公司成立口径以及QL纯文本、插图和Amiga语音合成版本。",
+      "creativeProfile": {
+        "thesis": "编辑观察：原库两部作品展示了Sinclair Research在叙事游戏中的两种发行关系：为《霍比特人》提供同平台再版，以及发行Magnetic Scrolls的QL原版《The Pawn》。后者转由Rainbird发行后加入插图和可选语音合成；开发、出版与版本内容分别记录。",
+        "phases": [
+          {
+            "period": "1982",
+            "heading": "同平台再版的奇幻冒险",
+            "analysis": "Melbourne House首先发行《The Hobbit》，Sinclair Research同年在ZX Spectrum上推出再版。旧数据库的三个发行行直接复用，本轮不因相同内容的旧再版新增一行。",
+            "basis": "编辑观察",
+            "source": "https://worldofspectrum.org/software?id=0006440"
+          },
+          {
+            "period": "1985—1986",
+            "heading": "QL文字冒险扩展为图文和语音输出",
+            "analysis": "《QL-Pawn》首发为纯文本指令冒险。Rainbird后续Atari ST版加入彩色场景插图，Amiga版再提供可选文字语音合成；核心故事不变，新增的视听素材才构成单列依据。",
+            "basis": "编辑观察",
+            "source": "https://www.mocagh.org/rainbird/pawn-amigaguide.pdf"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "法人登记与厂商顺序",
+          "status": "登记日期",
+          "reason": "Companies House登记该法人于1973/09/19注册，前名包括Westminster Mail Order、Sinclair Instruments、Science of Cambridge与Sinclair Computers，后来使用Sinclair Research名称。按同一法人登记起点纳入1949年后的厂商顺序。",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/01135105",
+          "workIds": []
+        },
+        {
+          "title": "Sinclair Radionics（1961）",
+          "status": "不同公司／不沿用其日期",
+          "reason": "科学博物馆将Sinclair Radionics Limited单列为1961—1980公司；不能把Clive Sinclair更早成立的该公司日期套用到1973年注册的Sinclair Research法人。",
+          "source": "https://collection.sciencemuseumgroup.org.uk/people/cp21554/sinclair-radionics-limited",
+          "workIds": []
+        },
+        {
+          "title": "The Hobbit / 霍比特人",
+          "status": "复用原库",
+          "reason": "保留原库作品及三条既有记录。Melbourne House是1982年原始发行，Sinclair Research的同平台再版行属于历史旧记录；本轮没有再造同内容版本。",
+          "source": "https://worldofspectrum.org/software?id=0006440",
+          "workIds": [
+            "g113"
+          ]
+        },
+        {
+          "title": "QL-Pawn / The Pawn",
+          "status": "复用原库首发",
+          "reason": "保留原库1985年Sinclair QL纯文本首发。原版手册注明程序与文档版权属Magnetic Scrolls，包装与设计版权属Sinclair Research，开发和发行角色据此区分。",
+          "source": "https://www.mocagh.org/rainbird/qlpawn-manual.pdf",
+          "workIds": [
+            "g135"
+          ]
+        },
+        {
+          "title": "The Pawn：Atari ST插图版",
+          "status": "新增图像内容单列",
+          "reason": "Rainbird档案将该版列为1986年Atari ST发行并署Geoff Quilley场景图；QL原版没有场景图。虽沿用同一故事，新增的彩色画面是实质内容，故作为第二条记录。",
+          "source": "https://birdsanctuary.co.uk/the-pawn/5/",
+          "workIds": [
+            "g135"
+          ]
+        },
+        {
+          "title": "The Pawn：Amiga语音合成版",
+          "status": "新增音频呈现单列",
+          "reason": "1986年Amiga手册含可开关的Speech Synthesiser操作；同期报道称Amiga版在Atari ST版之后推出并包含spoken text。此处标记无真人角色配音，差异栏说明合成器读屏。",
+          "source": "https://www.mocagh.org/rainbird/pawn-amigaguide.pdf",
+          "workIds": [
+            "g135"
+          ]
+        },
+        {
+          "title": "The Pawn：其余同故事平台移植",
+          "status": "未证明新增剧情，不逐平台重复",
+          "reason": "Rainbird还发行了C64、Mac、PC、Spectrum等版本。平台和图像格式变化本身不各算新条目；本轮不声称这些版本全部内容完全相同，只有找到进一步新增游戏内容时再单列。",
+          "source": "https://www.mobygames.com/game/1322/the-pawn/releases/",
+          "workIds": [
+            "g135"
+          ]
+        },
+        {
+          "title": "The Pawn：2017重制／触屏界面",
+          "status": "界面更新，不作为新增游戏内容版",
+          "reason": "当前Magnetic Scrolls产品页说明其触屏友好界面与独立附加资料；没有证据表明本次重制新增剧情、人物、路线或游戏内场景素材，故不新增版本。",
+          "source": "https://www.magneticscrolls.com/magnetic-scrolls/thepawn",
+          "workIds": [
+            "g135"
+          ]
+        },
+        {
+          "title": "数据库边界",
+          "status": "范围说明",
+          "reason": "Sinclair电脑上运行的第三方冒险不会因平台品牌自动归入Sinclair Research；开发者、游戏原作出版方及后续版权／重制署名保留各自身份。",
+          "source": "https://www.computinghistory.org.uk/det/5856/Clive-Sinclair-founds-Sinclair-Radionics/",
+          "workIds": []
+        }
+      ]
     }
   ]
 }
