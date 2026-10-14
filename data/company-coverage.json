@@ -30775,7 +30775,7 @@
       "foundedAt": "1975-09-22",
       "foundedSource": "https://www.hd.square-enix.com/jpn/company/outline.html",
       "checkedAt": "2026-10-14",
-      "status": "复用13部，新增8部叙事作品，另列1部冒险RPG",
+      "status": "保留原21部，按指定主表补齐7部；另列七风岛物语",
       "workIds": [
         "g007",
         "g008",
@@ -30797,7 +30797,14 @@
         "g983",
         "g984",
         "g985",
-        "g986"
+        "g986",
+        "g996",
+        "g997",
+        "g998",
+        "g999",
+        "g1000",
+        "g1001",
+        "g1002"
       ],
       "publisherWorkIds": [
         "g007",
@@ -30820,7 +30827,14 @@
         "g983",
         "g984",
         "g985",
-        "g986"
+        "g986",
+        "g996",
+        "g997",
+        "g998",
+        "g999",
+        "g1000",
+        "g1001",
+        "g1002"
       ],
       "legacyCommandWorkIds": [
         "g007",
@@ -30831,20 +30845,20 @@
         "g127",
         "g128"
       ],
-      "catalogueEntryCount": 22,
+      "catalogueEntryCount": 29,
       "source": "https://www.hd.square-enix.com/jpn/company/history.html",
-      "scope": "首批复用原库13部1983—1985作品，补入五部1987—1991菜单式冒险和三部1998—2001 Cinema Active实拍作品；另列官方冒险RPG七风岛物语。合计22部关联作品，其中21部在四类主库；不是Enix全部游戏或全部叙事目录。",
-      "versionScope": "原13部及15条历史记录原样保留，新八部各登记一条已核首发；普通后移植、同内容再售、磁盘与光盘数量不增行。独立续作JESUS II有新故事单建作品。追加内容未核清的后版和计划作品列说明。",
+      "scope": "原专题21部主库作品／23条旧记录保持，按用户指定的主表七部补入翼人2、北斗神拳电脑版、动物乐园杀人事件、翼人Special、古村物语、Riven及幻影剧场；新增7部／8条原作或内容增补。主库关联28部／31条，另列七风岛物语1部／1条，专题合计29部／32条。为主表补齐，不宣称Enix所有RPG及跨类型目录完整。",
+      "versionScope": "原23条主库记录及七风岛1条原样保留。七部各记已核原作或Enix首批发行；Riven2024新谜题与扩展叙事另列并署Cyan。普通同内容平台、廉价版、多个光盘和合集不增行；单纯接口变化不作新增故事证据。独立续作保持作品身份。",
       "versionPanelLabel": "条首发／内容记录",
       "versionCountLabel": "首发、内容更新与保留旧记录",
       "publisherNote": "官方公司概要给出1975/09/22前身设立日，1982年8月改用Enix商号，按公司前身时间接在Microsoft之后。1989年的吸收合并、2003年Square合并及2008年公司分拆在沿革中分开；旧作品保持エニックス发行，不把所有Square或后来Square Enix作品倒归Enix。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>22部关联作品、24条记录：主库21部／23条，专题补充1部／1条。本批新增8部主库作品及8条首发，原库13部及15条不改。</strong></p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>29部关联作品／32条记录：主库28部／31条，专题补充1部／1条。主库Enix实际发行28部／30条；Riven2024新增内容由Cyan发行。新增7部、8条，原专题作品与版本保持。</strong></p>",
       "auditTitle": "成立顺序、操作形式与内容版本核对",
       "auditSourceLabel": "官方公司沿革",
-      "auditLabel": "13部原库作品、八部本批新作、一部跨类型游戏及未收项目。",
-      "auditNote": "详细来源与边界见data/enix-audit.md。原库七部指令细分类仅作具名历史例外；新五部PC作品均为固定菜单，不开放新增词句键入作品。",
-      "sectionTitle": "从早期个人电脑作品到菜单调查与Cinema Active",
-      "description": "Enix（艾尼克斯）首批作品专题：13部旧作、五部菜单冒险、三部实拍叙事及七风岛物语的跨类型归档。",
+      "auditLabel": "原21部、主表指定七部补录、七风岛补充及内容增量边界。",
+      "auditNote": "详见data/enix-audit.md第二批。用户本次具名授权翼人2与Special两部新指令冒险，原七部历史指令例外另列；幻影剧场按动作解谜融合标注。主表已补齐，其他跨类型候选和全RPG目录尚未完成。",
+      "sectionTitle": "从早期指令、菜单调查到环境解谜与Cinema Active",
+      "description": "Enix专题主表七部补齐：28部主库关联作品、七风岛物语及Riven首次内容重制，实际发行与操作类型分别归档。",
       "relatedSectionTitle": "官方冒险RPG：七风岛物语",
       "relatedIntro": "按厂商公开类型保留冒险RPG身份，只在专题补充，不并入四类主数据库。",
       "relatedCountLabel": "按官方类型归档",
@@ -30903,6 +30917,13 @@
             "analysis": "七风岛物语按官方冒险RPG单列。Cinema Active的列车推理、灵魂恋爱及洋馆恐怖把选择嵌入真人演出，光盘数量仍只是一部作品的载体；三作路径来自发布资料及制作人访谈，不推断成统一厂商风格。",
             "basis": "编辑观察",
             "source": "https://dengekionline.com/data/news/2001/7/11/6912c2130460179f71b3596a7f8c0676.html"
+          },
+          {
+            "period": "1986—1999／2024增补",
+            "heading": "漫画续作、环境解谜与三维剧场",
+            "analysis": "翼人两部续作保留词句指令，北斗和动物乐园以调查推进；古村采用俯视事件探索，Riven由环境线索组织叙事，幻影剧场融合道具谜题与动作。Riven新谜题和扩展故事有原创团队明示，后版实际署Cyan，既不合并前作Myst，也不倒归Enix。",
+            "basis": "编辑观察",
+            "source": "https://cyan.com/2024/03/19/a-classic-reimagined-riven-set-for-2024-release-for-flatscreen-and-vr-platforms/"
           }
         ]
       },
@@ -31141,12 +31162,123 @@
         },
         {
           "title": "其他叙事、RPG和未发行计划",
-          "status": "未完成全目录／待续",
-          "reason": "Wingman后续、Riven日本发行、Wonder Trek、Planet Laika及Enix各RPG尚未在首批完整核对；Holy Night、LEVEL DIVE需核最终发行，公布／拍摄完成不作发售证据。",
+          "status": "主表七部已补／其他跨类型待续",
+          "reason": "翼人两部后续、Riven和幻影剧场已在第二批按用户指定补入。Wonder Trek原发行Sony，不归Enix；Planet Laika、Wonder Project J系列、Endonesia等与其他RPG仍待逐项归类。Holy Night、LEVEL DIVE不能把公布或拍摄完成当成实发。",
           "source": "https://dengekionline.com/data/news/2001/7/11/6912c2130460179f71b3596a7f8c0676.html",
           "workIds": []
+        },
+        {
+          "title": "翼人2：基塔克拉复活",
+          "status": "指定主表补录",
+          "reason": "TAM・TAM制作的独立第二作，不是1984翼人的增强版本。仍有词句指令、画面指示与战斗模式；按2026/10/14用户明确指定的七部补录授权具名收录，不改成固定菜单类型。后机种未核新增内容，不复制行。",
+          "source": "https://www.gamepres.org/pc88/library/1986/1986_4.html",
+          "workIds": [
+            "g996"
+          ]
+        },
+        {
+          "title": "北斗神拳：剧画冒险",
+          "status": "指定主表补录",
+          "reason": "本条专指1986年Enix电脑版ADV，有菜单调查及实时战斗，区别于其他厂商同名街机、FC动作游戏；没有按漫画同名把不同游戏合成版本。调查是主要叙事入口，战斗成分明确保留。",
+          "source": "https://www.gamepres.org/pc88/library/1986/1986_5.html",
+          "workIds": [
+            "g997"
+          ]
+        },
+        {
+          "title": "动物乐园杀人事件",
+          "status": "指定主表补录",
+          "reason": "1987年MSX独立推理ADV；固定命令选择，后段含地图调查，原叙事身份不因拟人动物而变成普通动作游戏。1989年小说化为另一媒介，不计游戏续作或版本；介绍不提前揭露结局。",
+          "source": "https://www.gamepres.org/catalog/?id=8811002158000",
+          "workIds": [
+            "g998"
+          ]
+        },
+        {
+          "title": "翼人 Special：告别梦战士",
+          "status": "指定主表补录",
+          "reason": "系列独立第三作，Special不是仅指再售或资料盘。PC-88原作仍须词句指令与画面指示，按本次具名授权补入；1988MSX2是后移植，不后移本作首年。后来非官方移植不能自动署Enix。",
+          "source": "https://www.gamepres.org/pc88/library/1987/1987_12.html",
+          "workIds": [
+            "g999"
+          ]
+        },
+        {
+          "title": "古村物语",
+          "status": "指定主表补录",
+          "reason": "1988年独立奇幻ADV，采用俯视地图和事件推进；保存资料明确RPG风味不等于以战斗成长为核心的传统RPG。没有因画面像Ys而误并同名RPG，其他机种只在核出新内容后追加。",
+          "source": "https://www.gamepres.org/pc88/library/1988/1988_12.html",
+          "workIds": [
+            "g1000"
+          ]
+        },
+        {
+          "title": "裂痕：Riven",
+          "status": "指定主表补录",
+          "reason": "Cyan原作，Enix参与日本主机发行；1997日本PS与1998Saturn相关发行不等于全部全球原版都由Enix发行。只记已核Enix首批主机内容行；2024重制有新谜题和扩展故事，归原作增补且署Cyan。Myst是前作，不与本作合成一部游戏。",
+          "source": "https://psxdatacenter.com/games/J/R/SLPS-01180.html",
+          "workIds": [
+            "g1001"
+          ]
+        },
+        {
+          "title": "神秘方舟：幻影剧场",
+          "status": "指定主表补录",
+          "reason": "1999年独立3D冒险，区别于1995年SFC RPG Mystic Ark，也不是它的高清版本。按用户指定进入主数据库，文字冒险是本站检索入口；新增动作解谜融合细分类明确人物移动、攻击与道具交互，不称纯文字或传统VN。",
+          "source": "https://psxdatacenter.com/games/J/M/SLPM-86147.html",
+          "workIds": [
+            "g1002"
+          ]
+        },
+        {
+          "title": "新增指令作品的具名授权",
+          "status": "用户指定范围／具名授权",
+          "reason": "用户2026/10/14明确要求补入主表七部；翼人2和Special真实类型为图文指令，本次授权IDs具名登记。它们不是原库旧记录，不写入legacyCommandWorkIds，也不修改全库默认排除边界。",
+          "source": "https://www.gamepres.org/pc88/library/1987/1987_12.html",
+          "workIds": [
+            "g996",
+            "g999"
+          ]
+        },
+        {
+          "title": "Riven2024真实内容与发行",
+          "status": "新增内容行／发行分开",
+          "reason": "Cyan原团队确认新谜题和扩展故事，6/25发布Windows、Mac与Quest；同批内容合列一行，实际署Cyan。1997日本PS保留Enix，1998SS同内容不加行，不将PC发行Sunsoft误作日本主机共同发行。",
+          "source": "https://cyan.com/2024/03/19/a-classic-reimagined-riven-set-for-2024-release-for-flatscreen-and-vr-platforms/",
+          "workIds": [
+            "g1001"
+          ]
+        },
+        {
+          "title": "幻影剧场：直接动作与解谜",
+          "status": "指定补录／新增细分类",
+          "reason": "该作确有三维移动、攻击与道具谜题。依用户指定加入主库，动作解谜融合细分类显示实际玩法，不把1995 RPG合成版本，也不抹去动作属性。",
+          "source": "https://psxdatacenter.com/games/J/M/SLPM-86147.html",
+          "workIds": [
+            "g1002"
+          ]
+        },
+        {
+          "title": "配音与当代原生平台",
+          "status": "逐版记录／译语不重复",
+          "reason": "旧七版没有直接逐版录音清单，暂未核；Riven2024官方商店明确英语完整音频、日语及中文等为字幕，不能把英语录音等同多语配音。新配音行只是该内容版的属性，不追加语言版本。",
+          "source": "https://store.steampowered.com/app/1712350/Riven/",
+          "workIds": [
+            "g996",
+            "g997",
+            "g998",
+            "g999",
+            "g1000",
+            "g1001",
+            "g1002"
+          ]
         }
-      ]
+      ],
+      "authorizedCommandWorkIds": [
+        "g996",
+        "g999"
+      ],
+      "commandAuthorizationNote": "2026-10-14用户明确要求将主表指定七部补入数据库和专题；翼人2与翼人Special按本次具名授权收录。仅此两部新指令作品，原七部指令历史例外仍单列，不扩为Enix全部词句输入目录。"
     },
     {
       "id": "dataeast",

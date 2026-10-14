@@ -894,7 +894,7 @@ test('Data East reuses three interactive animations and lists only the content-a
   assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
   assert.deepEqual(dossier.workIds,['g082','g083','g085']);
   assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
-  assert.equal(data.works.length,992);assert.equal(data.versions.length,2131);
+  assert.equal(data.works.length,999);assert.equal(data.versions.length,2139);
   for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
@@ -963,4 +963,30 @@ test('Hudson reuses originals, separates independent afterstories and credits co
   const page=readFileSync(new URL('../hudson.html',import.meta.url),'utf8');
   for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="hudson.html"'));
+});
+
+
+test('Enix seven specified additions preserve command scope, action subtype and actual Riven publisher',()=>{
+  const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='enix');
+  const ids=['g996','g997','g998','g999','g1000','g1001','g1002'];
+  assert.equal(dossier.workIds.length,28);
+  assert.ok(ids.every(id=>dossier.workIds.includes(id)));
+  assert.deepEqual(dossier.authorizedCommandWorkIds,['g996','g999']);
+  assert.ok(dossier.commandAuthorizationNote);
+  assert.ok(!dossier.includeCommandGames);
+  assert.ok(ids.every(id=>!dossier.legacyCommandWorkIds.includes(id)));
+  assert.deepEqual(data.works.filter(w=>ids.includes(w.id)&&w.subcategory==='图文指令').map(w=>w.id),['g996','g999']);
+  assert.equal(data.works.find(w=>w.id==='g1002').subcategory,'动作解谜融合');
+  assert.equal(data.versions.filter(v=>ids.includes(v.workId)).length,8);
+  const enix=filterCatalogue(data,{company:'Enix（艾尼克斯）'});
+  assert.ok(ids.every(id=>enix.some(({work})=>work.id===id)));
+  const old=enix.find(({work})=>work.id==='g1001').versions;
+  assert.equal(old.length,1);assert.equal(old[0].year,1997);assert.equal(old[0].platform,'PlayStation（日本）');
+  const remake=filterCatalogue(data,{company:'Cyan Worlds'}).find(({work})=>work.id==='g1001');
+  assert.equal(remake.versions.length,1);assert.equal(remake.versions[0].year,2024);assert.equal(remake.versions[0].voice,'有');
+  assert.match(remake.versions[0].differences,/新谜题|扩展叙事/);
+  assert.equal(data.versions.filter(v=>v.workId==='g1001').length,2);
+  const page=readFileSync(new URL('../enix.html',import.meta.url),'utf8');
+  for(const id of ids)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
 });

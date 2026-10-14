@@ -44,7 +44,7 @@ function readFilters(){return Object.fromEntries(Object.entries(fields).map(([ke
 
 async function main(){
   try {
-    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261014-koei'),fetch('./data/taxonomy.json?v=20261014-koei')]);
+    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261014-enix-seven'),fetch('./data/taxonomy.json?v=20261014-enix-seven')]);
     if(!response.ok||!taxonomyResponse.ok)throw Error('HTTP '+(response.ok?taxonomyResponse.status:response.status));
     const [data,taxonomy]=await Promise.all([response.json(),taxonomyResponse.json()]);
     $('stat-works').textContent=data.works.length;
