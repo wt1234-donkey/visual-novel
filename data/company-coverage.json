@@ -30770,6 +30770,385 @@
       ]
     },
     {
+      "id": "enix",
+      "name": "Enix（艾尼克斯）",
+      "foundedAt": "1975-09-22",
+      "foundedSource": "https://www.hd.square-enix.com/jpn/company/outline.html",
+      "checkedAt": "2026-10-14",
+      "status": "复用13部，新增8部叙事作品，另列1部冒险RPG",
+      "workIds": [
+        "g007",
+        "g008",
+        "g118",
+        "g119",
+        "g120",
+        "g078",
+        "g079",
+        "g126",
+        "g127",
+        "g128",
+        "g016",
+        "g017",
+        "g018",
+        "g979",
+        "g980",
+        "g981",
+        "g982",
+        "g983",
+        "g984",
+        "g985",
+        "g986"
+      ],
+      "publisherWorkIds": [
+        "g007",
+        "g008",
+        "g118",
+        "g119",
+        "g120",
+        "g078",
+        "g079",
+        "g126",
+        "g127",
+        "g128",
+        "g016",
+        "g017",
+        "g018",
+        "g979",
+        "g980",
+        "g981",
+        "g982",
+        "g983",
+        "g984",
+        "g985",
+        "g986"
+      ],
+      "legacyCommandWorkIds": [
+        "g007",
+        "g120",
+        "g078",
+        "g079",
+        "g126",
+        "g127",
+        "g128"
+      ],
+      "catalogueEntryCount": 22,
+      "source": "https://www.hd.square-enix.com/jpn/company/history.html",
+      "scope": "首批复用原库13部1983—1985作品，补入五部1987—1991菜单式冒险和三部1998—2001 Cinema Active实拍作品；另列官方冒险RPG七风岛物语。合计22部关联作品，其中21部在四类主库；不是Enix全部游戏或全部叙事目录。",
+      "versionScope": "原13部及15条历史记录原样保留，新八部各登记一条已核首发；普通后移植、同内容再售、磁盘与光盘数量不增行。独立续作JESUS II有新故事单建作品。追加内容未核清的后版和计划作品列说明。",
+      "versionPanelLabel": "条首发／内容记录",
+      "versionCountLabel": "首发、内容更新与保留旧记录",
+      "publisherNote": "官方公司概要给出1975/09/22前身设立日，1982年8月改用Enix商号，按公司前身时间接在Microsoft之后。1989年的吸收合并、2003年Square合并及2008年公司分拆在沿革中分开；旧作品保持エニックス发行，不把所有Square或后来Square Enix作品倒归Enix。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>22部关联作品、24条记录：主库21部／23条，专题补充1部／1条。本批新增8部主库作品及8条首发，原库13部及15条不改。</strong></p>",
+      "auditTitle": "成立顺序、操作形式与内容版本核对",
+      "auditSourceLabel": "官方公司沿革",
+      "auditLabel": "13部原库作品、八部本批新作、一部跨类型游戏及未收项目。",
+      "auditNote": "详细来源与边界见data/enix-audit.md。原库七部指令细分类仅作具名历史例外；新五部PC作品均为固定菜单，不开放新增词句键入作品。",
+      "sectionTitle": "从早期个人电脑作品到菜单调查与Cinema Active",
+      "description": "Enix（艾尼克斯）首批作品专题：13部旧作、五部菜单冒险、三部实拍叙事及七风岛物语的跨类型归档。",
+      "relatedSectionTitle": "官方冒险RPG：七风岛物语",
+      "relatedIntro": "按厂商公开类型保留冒险RPG身份，只在专题补充，不并入四类主数据库。",
+      "relatedCountLabel": "按官方类型归档",
+      "relatedGames": [
+        {
+          "id": "enix-nanatsukaze",
+          "title": "七风岛物语",
+          "originalTitle": "七ツ風の島物語",
+          "chineseTitle": "七风岛物语",
+          "chineseTitleType": "站内编辑译名",
+          "firstYear": 1997,
+          "category": "冒险RPG",
+          "subcategory": "絵本式岛屿探索",
+          "genre": "黑风之谜／岛屿故事／风之力量",
+          "characters": [
+            "竜神ガープ"
+          ],
+          "charactersSource": "https://segasaturn-life.com/review-seven-wind/",
+          "charactersNote": "人物采用有原作画面支持的玩法考证；官方现行产品页直接核类型、平台与年代。",
+          "synopsis": "玩家探索绘本般的七风岛，与居民合作，调查不断破坏岛屿的黑风并了解岛上的秘密。",
+          "notes": "官方明确归冒险RPG，放专题跨类型区，不进入四类主库，也不把其他Enix RPG一概改为文字冒险。",
+          "source": "https://www.jp.square-enix.com/game/detail/nanatukaze/",
+          "versions": [
+            {
+              "year": 1997,
+              "platform": "Sega Saturn",
+              "publisher": "エニックス",
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1997/11/27首发，日期、Sega Saturn与冒险RPG类型取官方产品页动态game.json。角色配音没有直接演职员证据暂未核实；后来的介绍页面和版权更新不是新内容版。",
+              "source": "https://www.jp.square-enix.com/game/detail/nanatukaze/"
+            }
+          ]
+        }
+      ],
+      "creativeProfile": {
+        "thesis": "编辑观察：首批样本呈现从早期个人电脑冒险到固定菜单与电影式演出的转变，随后Cinema Active三作以真人演出组织推理、恋爱与恐怖。这个目录包含不同作者与合作团队的作品，不能把发行方等同于统一开发团队。",
+        "phases": [
+          {
+            "period": "1983—1985",
+            "heading": "原库的早期电脑样本",
+            "analysis": "13部旧作包含推理、漫画改编、成人向探索和人生故事；纯文本或图文指令历史记录按原对象保留。作品和移植没有因建立专题重建ID，旧备注中的姓名与日期疑点也不被补造答案覆盖。",
+            "basis": "编辑观察",
+            "source": "https://fm-7.com/museum/products/k6sufaqm/"
+          },
+          {
+            "period": "1987—1991",
+            "heading": "固定菜单与戏剧化调查",
+            "analysis": "JESUS系列、ANGELUS、Burning Point和Misty Blue以既定选项组织对话和调查，减少词句键入。它们分别处理宇宙危机、怪病、侦探家族谜案和音乐人情感；数码动画或声卡支持与配音是否存在分开核实。",
+            "basis": "编辑观察",
+            "source": "https://www.gamepres.org/pc88/library/adv.html"
+          },
+          {
+            "period": "1997—2001",
+            "heading": "岛屿探索与真人Cinema Active",
+            "analysis": "七风岛物语按官方冒险RPG单列。Cinema Active的列车推理、灵魂恋爱及洋馆恐怖把选择嵌入真人演出，光盘数量仍只是一部作品的载体；三作路径来自发布资料及制作人访谈，不推断成统一厂商风格。",
+            "basis": "编辑观察",
+            "source": "https://dengekionline.com/data/news/2001/7/11/6912c2130460179f71b3596a7f8c0676.html"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "1975前身、1982商号与后来合并",
+          "status": "核对／已收录",
+          "reason": "概要1975/09/22；沿革1982商号、1989吸收合并、2003 Square合并分开。此专题为旧Enix发行，不把当前公司域名当旧产品实际署名。",
+          "source": "https://www.hd.square-enix.com/jpn/company/history.html",
+          "workIds": []
+        },
+        {
+          "title": "波多比亚连续杀人事件",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/k6sufaqm/",
+          "workIds": [
+            "g007"
+          ]
+        },
+        {
+          "title": "玛丽酱危机一发",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/1paitdl4/",
+          "workIds": [
+            "g008"
+          ]
+        },
+        {
+          "title": "女子宿舍危机",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/vj1bitct/releases",
+          "workIds": [
+            "g118"
+          ]
+        },
+        {
+          "title": "飞鸟之恋",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/l2zkgfa5/",
+          "workIds": [
+            "g119"
+          ]
+        },
+        {
+          "title": "不可思议之旅",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/qto4u7tq/",
+          "workIds": [
+            "g120"
+          ]
+        },
+        {
+          "title": "扎斯：夺回人工智能猎户座",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/3txek9px/",
+          "workIds": [
+            "g078"
+          ]
+        },
+        {
+          "title": "翼人",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/aao3ghzi/",
+          "workIds": [
+            "g079"
+          ]
+        },
+        {
+          "title": "高校大冒险",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/e2w2qqkl/",
+          "workIds": [
+            "g126"
+          ]
+        },
+        {
+          "title": "暗黑城：创世神加利安的复活",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/om904bko/",
+          "workIds": [
+            "g127"
+          ]
+        },
+        {
+          "title": "再一次：成功人生故事",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/2oqhpy7x/",
+          "workIds": [
+            "g128"
+          ]
+        },
+        {
+          "title": "东京搭讪街",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/vt0km2jr/",
+          "workIds": [
+            "g016"
+          ]
+        },
+        {
+          "title": "轻井泽诱拐指南",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/iq8kysdi/",
+          "workIds": [
+            "g017"
+          ]
+        },
+        {
+          "title": "黄金国传奇",
+          "status": "复用原库",
+          "reason": "复用原作品ID、剧情、人物与历史版本对象；建立专题关系不追溯删除或重写旧记录。",
+          "source": "https://fm-7.com/museum/products/333wukd2/",
+          "workIds": [
+            "g018"
+          ]
+        },
+        {
+          "title": "耶稣号：彗星危机",
+          "status": "新增作品／一条首发",
+          "reason": "标题指宇宙空间站JESUS，不是宗教题材。通过数字键选择现成菜单推进，不需要键入词句。1989 FC由キングレコード发行；已知删改和伙伴固定不自动证明新内容加入，本批不增行。原作内附Space Mouse不单计新叙事作品。",
+          "source": "https://www.gamepres.org/pc88/library/1987/1987_4.htm",
+          "workIds": [
+            "g979"
+          ]
+        },
+        {
+          "title": "安杰拉斯：恶魔的福音",
+          "status": "新增作品／一条首发",
+          "reason": "F1—F10选择既定命令，归图文选项／调查；画面口型动画不证明人物配音。通关后自动欣赏故事是原版机制，不另建一个版本；未发行续作Holy Night不补造已发行作品。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_D03BjeRqNf3gPXfA.php",
+          "workIds": [
+            "g980"
+          ]
+        },
+        {
+          "title": "燃烧点",
+          "status": "新增作品／一条首发",
+          "reason": "固定菜单与选择式调查作品，非词句输入。独立完结冒险，不是ANGELUS的续集。平台再发行与不同磁盘容量不等于新的剧情版本，配音缺直接证据暂未核实。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_TIHY9VixG9xTFdW5.php",
+          "workIds": [
+            "g981"
+          ]
+        },
+        {
+          "title": "迷雾之蓝",
+          "status": "新增作品／一条首发",
+          "reason": "菜单选择式；多对象对话与人物心情影响交流，归图文选项／调查，不因感情主题自动归Galgame。原版同捆的高校生回想与Enix Quest附加内容先列产品关系，不拆成新的发行作品；音乐唱片不是游戏配音或新版本。",
+          "source": "https://www.gamepres.org/pc88/library/1990/1990_4.htm",
+          "workIds": [
+            "g982"
+          ]
+        },
+        {
+          "title": "耶稣号2",
+          "status": "新增作品／一条首发",
+          "reason": "具有新人物与新故事的独立续作，单建作品而非JESUS普通移植版。数字键选菜单。X68000后版已确认发行但没有核到追加剧情或新素材，不列第二条；剧情中机械师／赛车服设定差异不补造解释。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_r4Gwg8GGTHL3GW7D.php",
+          "workIds": [
+            "g983"
+          ]
+        },
+        {
+          "title": "欧亚特快杀人事件",
+          "status": "新增作品／一条首发",
+          "reason": "Cinema Active第一部实拍冒险。演员参与拍摄并录制台词，人物名和演员名分别记；多张光盘是同一完整故事，不拆多部或多次发行。制作与游戏系统团队按访谈、片尾分别说明，不将开发合作方当发行公司。",
+          "source": "https://psxdatacenter.com/games/J/M/SLPM-86135.html",
+          "workIds": [
+            "g984"
+          ]
+        },
+        {
+          "title": "零度恋爱：0STORY",
+          "status": "新增作品／一条首发",
+          "reason": "Cinema Active第二部，General Entertainment开发、Enix原发行。官网页面现今版权署名SQUARE ENIX不等于2000年已由合并后公司发行。原产品明确全影片与全人声，包含限时事件；不是单纯观看的真人电影。",
+          "source": "https://www.jp.square-enix.com/game/detail/0story/",
+          "workIds": [
+            "g985"
+          ]
+        },
+        {
+          "title": "恐惧：the FEAR",
+          "status": "新增作品／一条首发",
+          "reason": "Cinema Active第三部。实拍与CG场景结合，有演员现场台词；四张DVD构成一部作品，不计四条首发。日期取发布会明确的7/26，不沿用演职员转录页页头7/29异文。LEVEL DIVE制作发表与本作独立处理，不把公布或拍完当成发售证明。",
+          "source": "https://dengekionline.com/data/news/2001/7/11/6912c2130460179f71b3596a7f8c0676.html",
+          "workIds": [
+            "g986"
+          ]
+        },
+        {
+          "title": "七风岛物语：跨类型",
+          "status": "新增专题补充",
+          "reason": "官方归冒险RPG，日期由官网动态产品数据支持；只列专题补充，不当传统VN或主库文字冒险。",
+          "source": "https://www.jp.square-enix.com/game/detail/nanatukaze/",
+          "workIds": [],
+          "relatedIds": [
+            "enix-nanatsukaze"
+          ]
+        },
+        {
+          "title": "普通平台移植及JESUS FC删改",
+          "status": "内容增量未核／不增行",
+          "reason": "JESUS FC署名キングレコード而非Enix；删改、伙伴固定或操作适配不自动证明新故事加入。JESUS II X68000日期已核，暂无新增叙事素材，均不复制版本行。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_r4Gwg8GGTHL3GW7D.php",
+          "workIds": [
+            "g979",
+            "g983"
+          ]
+        },
+        {
+          "title": "原库Portopia与后续技术体验",
+          "status": "旧行保留／后版待核",
+          "reason": "1985家庭机旧行保留；2005手机新图像与通关特典细节尚待逐项核，2023官网定位AI技术体验，不仅因新渠道增行。2027计划不计实发。",
+          "source": "https://www.jp.square-enix.com/ai-tech-preview/portopia/jp/",
+          "workIds": [
+            "g007"
+          ]
+        },
+        {
+          "title": "PS金田一两作：非Enix发行",
+          "status": "排除误归属",
+          "reason": "悲报岛及地狱乐园PS署名讲谈社；Hudson星见岛旧专题已存在。不能以漫画题材或印象误归Enix，本批不补它们到本厂商。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9484",
+          "workIds": []
+        },
+        {
+          "title": "其他叙事、RPG和未发行计划",
+          "status": "未完成全目录／待续",
+          "reason": "Wingman后续、Riven日本发行、Wonder Trek、Planet Laika及Enix各RPG尚未在首批完整核对；Holy Night、LEVEL DIVE需核最终发行，公布／拍摄完成不作发售证据。",
+          "source": "https://dengekionline.com/data/news/2001/7/11/6912c2130460179f71b3596a7f8c0676.html",
+          "workIds": []
+        }
+      ]
+    },
+    {
       "id": "dataeast",
       "name": "Data East",
       "foundedAt": "1976-04-20",
