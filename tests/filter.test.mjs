@@ -894,7 +894,7 @@ test('Data East reuses three interactive animations and lists only the content-a
   assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
   assert.deepEqual(dossier.workIds,['g082','g083','g085']);
   assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
-  assert.equal(data.works.length,1014);assert.equal(data.versions.length,2154);
+  assert.equal(data.works.length,1027);assert.equal(data.versions.length,2168);
   for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
@@ -1038,5 +1038,47 @@ test('ASCII rendered dossier exposes edition sources without duplicating cards o
   for(const id of [...co.workIds,...co.relatedGames.map(g=>g.id)])assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(page.includes('相关发行（不重复计内容版本）'));assert.ok(page.includes('发行依据'));
   assert.ok(page.includes('ASCII Something Good'));assert.ok(page.includes('ASCII Entertainment Software, Inc.'));
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
+});
+
+test('Melbourne narrative searches preserve independent stories, same-name boundaries and actual publishers',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='melbournehouse');
+  for(const [query,id] of [['大盗案','g1019'],['Merry Christmas','g1020'],['The Fellowship of the Ring: A Software Adventure','g1021'],['Kwah?','g1024'],['末日裂隙','g1028'],['The Dame Was Loaded','g1030']]){
+    const result=filterCatalogue(data,{query});assert.equal(result.length,1,query);assert.equal(result[0].work.id,id);
+  }
+  const credited=new Set(filterCatalogue(data,{company:'Melbourne House'}).map(({work})=>work.id));
+  assert.deepEqual(credited,new Set(co.publisherWorkIds));assert.equal(credited.size,17);
+  for(const [id,pub] of [['g1028','Addison-Wesley'],['g1029','Ultra Games'],['g1030','Philips Interactive Media, Inc.']]){
+    assert.ok(!credited.has(id));assert.equal(filterCatalogue(data,{company:pub}).find(({work})=>work.id===id).versions.length,1);
+  }
+  assert.ok(!credited.has('g089'));assert.deepEqual(co.adaptationWorkIds,['g089']);
+  assert.equal(data.works.filter(w=>w.originalTitle==='Colossal Cave Adventure').length,1);
+  const dame=data.works.find(w=>w.id==='g1030');assert.equal(dame.firstYear,1996);assert.equal(dame.category,'互动动画');
+  assert.equal(data.works.find(w=>w.id==='g1027').subcategory,'图文选项／调查');
+});
+
+test('Melbourne content additions avoid duplicating ordinary ports, bundled originals and external video gifts',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='melbournehouse');
+  assert.equal(co.authorizedCommandWorkIds.length,10);assert.ok(co.commandAuthorizationNote.includes('完整叙述作品目录'));
+  assert.ok(co.authorizedCommandWorkIds.every(id=>!co.legacyCommandWorkIds.includes(id)&&data.works.find(w=>w.id===id).subcategory==='图文指令'));
+  const hobbit=data.versions.filter(v=>v.workId==='g113');assert.equal(hobbit.length,4);assert.equal(hobbit[3].year,1985);assert.ok(hobbit[3].differences.includes('增加场景、谜题'));assert.equal(hobbit[3].publisher,'Melbourne House');
+  const sinclair=filterCatalogue(data,{company:'Sinclair Research'}).find(({work})=>work.id==='g113');assert.equal(sinclair.versions.length,1);
+  const byId=new Map(co.relatedGames.map(g=>[g.id,g]));
+  const kknd=byId.get('melbournehouse-kknd');assert.equal(kknd.versions.length,2);assert.ok(kknd.versions[1].differences.includes('20个新任务'));
+  assert.equal(byId.get('melbournehouse-kknd2').versions.length,1);assert.equal(byId.get('melbournehouse-transformers').versions.length,1);assert.equal(byId.get('melbournehouse-transformers').editionCredits[0].year,2005);
+  assert.equal(byId.get('melbournehouse-demo').category,'书籍附带纯文字冒险');
+  assert.equal(byId.get('melbournehouse-wizard-princess').firstYear,1982);assert.ok(byId.get('melbournehouse-wizard-princess').notes.includes('不是Sierra'));
+  assert.equal(byId.get('melbournehouse-shadowrun').versions[0].publisher,'Data East');assert.equal(byId.get('melbournehouse-riders-rohan').versions[0].publisher,'Konami');
+  assert.ok(co.relatedGames.every(g=>!data.works.some(w=>w.id===g.id)));
+});
+
+test('Melbourne dossier renders each catalogue identity once and shares new Hobbit content with Sinclair',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='melbournehouse');
+  const page=readFileSync(new URL('../melbournehouse.html',import.meta.url),'utf8');
+  assert.equal(page.split('<article class="card" id=').length-1,44);assert.equal(page.split('<div class="version">').length-1,55);
+  for(const id of [...co.workIds,...co.relatedGames.map(g=>g.id)])assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.equal(co.catalogueEntryCount,44);assert.equal(co.workIds.length,21);assert.equal(co.relatedGames.length,23);
+  assert.ok(page.includes('实际内容行发行17部／23条'));assert.ok(page.includes('相关发行（不重复计内容版本）'));
+  const sinclair=readFileSync(new URL('../sinclair.html',import.meta.url),'utf8');assert.ok(sinclair.includes('Enhanced Version／新增场景与文本'));assert.ok(sinclair.includes('发行／出版：Melbourne House'));
   assert.ok(!/undefined|NaN|Infinity/.test(page));
 });
