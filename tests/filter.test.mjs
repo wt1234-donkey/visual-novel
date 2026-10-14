@@ -894,7 +894,7 @@ test('Data East reuses three interactive animations and lists only the content-a
   assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
   assert.deepEqual(dossier.workIds,['g082','g083','g085']);
   assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
-  assert.equal(data.works.length,1027);assert.equal(data.versions.length,2168);
+  assert.equal(data.works.length,1057);assert.equal(data.versions.length,2232);
   for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
@@ -1081,4 +1081,54 @@ test('Melbourne dossier renders each catalogue identity once and shares new Hobb
   assert.ok(page.includes('实际内容行发行17部／23条'));assert.ok(page.includes('相关发行（不重复计内容版本）'));
   const sinclair=readFileSync(new URL('../sinclair.html',import.meta.url),'utf8');assert.ok(sinclair.includes('Enhanced Version／新增场景与文本'));assert.ok(sinclair.includes('发行／出版：Melbourne House'));
   assert.ok(!/undefined|NaN|Infinity/.test(page));
+});
+
+test('KOEI catalogue keeps original, successor and associated publishers separate',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='koei');
+  assert.equal(co.workIds.length,37);assert.equal(co.relatedGames.length,35);
+  assert.equal(data.versions.filter(v=>co.workIds.includes(v.workId)).length,83);
+  assert.equal(co.relatedGames.reduce((n,w)=>n+w.versions.length,0),50);
+  const selected=filterCatalogue(data,{company:'光荣'}).filter(({work})=>co.workIds.includes(work.id));
+  assert.deepEqual(new Set(selected.map(({work})=>work.id)),new Set(co.publisherWorkIds));
+  assert.equal(selected.length,20);
+  for(const [query,publisher] of [['搭档任务：BOND','Nintendo'],['安琪莉可：魔恋六骑士','IDEA FACTORY'],['新安琪莉可：天使之泪','IDEA FACTORY'],['神秘岛：MYST','Brøderbund']]){
+    const row=filterCatalogue(data,{query})[0];assert.ok(row,query);assert.equal(row.versions[0].publisher,publisher);
+    assert.ok(co.associatedPublisherWorkIds.includes(row.work.id));assert.ok(!co.publisherWorkIds.includes(row.work.id));
+  }
+  const corda3=co.relatedGames.find(w=>w.originalTitle==='金色のコルダ３');
+  assert.equal(corda3.versions[0].publisher,'コーエー');assert.equal(corda3.versions[0].year,2010);
+  assert.equal(co.relatedGames.find(w=>w.originalTitle==='ときめきレストラン☆☆☆').versions[0].publisher,'Konami');
+});
+
+test('KOEI versions keep early routes and DLC before later recorded enhancements',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='koei');
+  const h3=data.works.find(w=>w.originalTitle==='遙かなる時空の中で３');
+  assert.equal(data.versions.filter(v=>v.workId===h3.id).length,14);
+  assert.equal(data.works.filter(w=>w.originalTitle==='遙かなる時空の中で３ 十六夜記').length,0);
+  const april=data.versions.find(v=>v.workId===h3.id&&v.kind.includes('第2批'));
+  assert.ok(april.differences.includes('首发特典重售'));
+  const rondo=data.works.find(w=>w.originalTitle==='遙かなる時空の中で６ 幻燈ロンド');
+  const rv=data.versions.filter(v=>v.workId===rondo.id);assert.deepEqual(rv.map(v=>v.year).sort(),[2016,2016,2017,2019]);
+  assert.ok(rv.find(v=>v.year===2019).differences.includes('故事本身不称2019首次创作'));
+  const ff=co.relatedGames.find(w=>w.originalTitle==='金色のコルダ２');
+  assert.ok(ff.versions.find(v=>v.year===2018&&v.kind.includes('2月')).differences.includes('2017首发Box特典'));
+  const myst=data.works.find(w=>w.originalTitle==='Myst');assert.equal(myst.firstYear,1993);
+  assert.equal(data.versions.filter(v=>v.workId===myst.id).length,1);
+  assert.deepEqual(myst.editionCredits.map(c=>c.year),[1994,1997]);
+  assert.ok(co.relatedGames.find(w=>w.originalTitle==='アンジェリーク').versions.some(v=>v.kind.includes('Duet')));
+  assert.equal(co.relatedGames.filter(w=>w.originalTitle==='アンジェリーク デュエット').length,0);
+});
+
+test('KOEI dossier renders the named catalogue once with cross-genre and pending boundaries',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='koei');
+  const page=readFileSync(new URL('../koei.html',import.meta.url),'utf8');
+  for(const id of [...co.workIds,...co.relatedGames.map(w=>w.id)])assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1,id);
+  assert.ok(!/undefined|NaN|WFS 合作 RPG|Index 制作/.test(page));
+  assert.ok(page.includes('跨类型作品与具名附带情景'));assert.ok(page.includes('尚未穷尽'));
+  assert.equal(co.relatedGames.filter(w=>w.category==='附带下载情景').length,3);
+  assert.ok(co.relatedGames.some(w=>w.originalTitle==='FabStyle'));
+  assert.ok(co.relatedGames.some(w=>w.originalTitle==='ポケットシナリオシリーズ 遙かなる時空の中で 舞一夜'));
+  const dark=data.works.filter(w=>w.originalTitle.startsWith('ダークハンター'));assert.equal(dark.length,2);
+  assert.ok(dark.some(w=>w.originalTitle.endsWith('妖魔の森')));
+  assert.ok(page.includes('1994 · Sega Saturn（日本） · Sunsoft'));
 });
