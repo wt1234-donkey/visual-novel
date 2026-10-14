@@ -4,13 +4,15 @@
 
 ## 数据范围
 
-当前收录 **988 部代表作品、2115 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **992 部代表作品、2131 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
-现有 645 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
+现有 649 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
 
 ## 厂商集中整理
+
+已新增 [光荣沿革专题](koei.html)：官方确认1978年7月成立；复用原库3部／3条，补入《下天之华》、独立续篇《梦灯》、MISS PRINCESS及Project TRISTARS四部／16条首发或首次内容。专题7部／19条，全库992部／2131条、56个专题。原光荣3部／3条与后继光荣特库摩游戏4部／16条保留各自发行署名。2014追加剧情、2016新结局与录音、2018九批DLC分别归档；同内容下载、移动端重复内容和合集不增行。旧988部、2115条及其他55个专题对象保持。成立排序精度、日期异文及首批待续范围见[核对记录](data/koei-audit.md)。
 
 已新增 [Melbourne House专题](melbournehouse.html)：沿革资料1977／1978成立异文明确保留，不强排与ASCII的日级顺序。复用原库6部／12条，补入菜单驱动且保留部分文字输入的《阿卡姆庄园之谜》1部／1条；另列Asterix动作探索1部／1条。专题8部／14条，主库关联7部／13条，Melbourne House实际主库发行7部／12条；全库988部／2115条，55个专题。普通CPC移植不新增平台行，取消C64不计实发，美国Ardok角色改绘留待核。旧987部、2114条及其他54个专题对象保持。首批范围和界面边界见[核对记录](data/melbournehouse-audit.md)。
 
