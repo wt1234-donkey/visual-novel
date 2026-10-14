@@ -1,4 +1,147 @@
-# ASCII首批核对（2026-10-14）
+# ASCII整理目录补齐（2026-10-14）
+
+## 本次范围与当前数量
+
+按用户“根据你整理的目录完成ASCII的数据库和专题补充”执行。以main提交1bbfb1995d166afb5752031dd2483bfd39eb15da为基线，新增主库15项／15条：五部独立主表缺口、六篇工具内置小说、四部关联发行作品。主库1014项／2154条、厂商专题仍56个。其他55个专题与原999部作品、2139条版本对象逐项保持。
+
+ASCII现有22项主库引用／29条内容记录：独立ASCII主表12部，附带完整小说6篇，其他实际发行主体关联作品4部。实际ASCII主库署名18项／22条；旧G-MODE与NIS America等保持原署名。另列46项跨类型作品／50条，含原moon不变；专题合计68项／79条。新增45项跨类型、49条记录，不计入四类主库。工具小说明确不是独立零售游戏，“作品／附带小说篇目”统计不能理解为68款独立零售产品。
+
+没有要求原有纯文本记录改型。新主库不需要新增自由词句输入例外：阿里昂采用菜单；贤者的遗言可选择预设动词／名词，虽然允许键入，但不能仅凭允许键入就判定必须自由输入。EMMY两作属于会话程序，保留于跨类型目录，不伪装有固定完整故事。
+
+## 主库新增15项
+
+| ID | 篇目／作品 | 原年 | 发行身份 | 首批平台 | 来源 |
+| --- | --- | --- | --- | --- | --- |
+| g1003 | 阿里昂／アリオン | 1986 | 独立作品；アスキー | PC-8801 | [记录依据](https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1394899.html) |
+| g1004 | 冒险者们：贤者的遗言／冒険者達 賢者の遺言 | 1986 | 独立作品；アスキー | PC-8801 | [记录依据](https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1319403.html) |
+| g1005 | 时空侦探DD：幻之罗蕾莱／時空探偵DD ～幻のローレライ～ | 1996 | 独立作品；アスキー | PlayStation／Sega Saturn | [记录依据](https://psxdatacenter.com/games/J/J/SLPS-00397.html) |
+| g1006 | 时空侦探DD2：叛逆的阿普萨拉尔／時空探偵DD2 叛逆のアプサラル | 1998 | 独立作品；アスキー | PlayStation | [记录依据](https://psxdatacenter.com/games/J/J/SLPS-01533.html) |
+| g1007 | 特里菲尔斯魔法学园／対戦恋愛シミュレーション トリフェルズ魔法学園 | 2000 | 独立作品；アスキー | PlayStation | [记录依据](https://psxdatacenter.com/games/J/T/SLPS-02672.html) |
+| g1008 | 夏日之树的妖精／夏の樹に棲む妖精（ニンフ） | 1996 | 工具内置小说，非独立零售；アスキー | Super Famicom | [记录依据](https://w.atwiki.jp/gcmatome/pages/1200.html) |
+| g1009 | 毕业证书／卒業証書 | 1997 | 工具内置小说，非独立零售；アスキー | PlayStation | [记录依据](https://w.atwiki.jp/gcmatome/pages/6989.html) |
+| g1010 | 地下的记忆／地下の記憶 | 1997 | 工具内置小说，非独立零售；アスキー | PlayStation／Sega Saturn | [记录依据](https://w.atwiki.jp/gcmatome/pages/6989.html) |
+| g1011 | 回忆之花／おもいでの花 | 1997 | 工具内置小说，非独立零售；アスキー | PlayStation／Sega Saturn | [记录依据](https://w.atwiki.jp/gcmatome/pages/6989.html) |
+| g1012 | 逆版天堂／逆版パラダイス | 1997 | 工具内置小说，非独立零售；アスキー | PlayStation／Sega Saturn | [记录依据](https://w.atwiki.jp/gcmatome/pages/6989.html) |
+| g1013 | 由纪皮的三分钟或三世纪料理／ユキピーの最短で三分、ヘタすりゃ三世紀クッキング | 1997 | 工具内置小说，非独立零售；アスキー | Sega Saturn | [记录依据](https://w.atwiki.jp/gcmatome/pages/6989.html) |
+| g1014 | 好奇心会杀死猫吗：DogDay／DogDay | 1996 | 关联发行主体作品；Impact Interactive Publishing | Windows | [记录依据](https://psxdatacenter.com/games/J/C/SLPS-01711.html) |
+| g1015 | 钟楼2／クロックタワー2 | 1996 | 关联发行主体作品；ヒューマン | PlayStation（日本） | [记录依据](https://psxdatacenter.com/games/J/C/SLPS-00657.html) |
+| g1016 | 真实恋爱故事3／トゥルーラブストーリー3 | 2001 | 关联发行主体作品；エンターブレイン | PlayStation 2 | [记录依据](https://raido.moe/staff/ps2/ps2_true_love_story_3.html) |
+| g1017 | 真实恋爱故事：夏日与未尽之语／トゥルーラブストーリー サマーデイズ アンド イエット... | 2003 | 关联发行主体作品；エンターブレイン | PlayStation 2 | [记录依据](https://raido.moe/staff/ps2/ps2_true_love_story_summer.html) |
+
+### 五部独立缺口
+
+《阿里昂》原画面和说明书回顾核菜单及等待机制；《贤者的遗言》原说明书、功能键词表和鼠标操作核调查组合。后机种没有第一次新增内容证据不增行。《时空侦探DD》PS／SS原批次合列，两张CD不拆版本；发行档案采用7/26，片尾资料表头7/29保留为异文。《DD2》为新独立故事，本作演员与录音有原片尾支持；梗概中的2231／2232异文不填为可靠剧情年代。《魔法学园》采用原盘SLPS-02672及2000/04/20，不以2001廉价盘的日期替代原年；漫画“初等部”不是独立游戏。
+
+### 工具小说的内容身份
+
+每篇有releaseContext=bundledSample及bundledWith所属产品。原作工具编辑器不另算叙事作品，同一小说在PS／SS收录不重复行；PS《毕业证书》与SS料理篇是独立不同故事。逆版天堂原产品内的两种稿件合列一次首批内容，不能凭两稿制造后来版本。角色录音仅在本篇有直接依据时记有，工具片尾的素材演员不证明全部篇目均有配音。[现行工具官方档案](https://rpgmakerofficial.com/product/support/oldproducts.html)、[PS原片尾](https://raido.moe/staff/ps1/ps1_sound_novel_tkool_2.html)及[SS原片尾](https://raido.moe/staff/sat/sat_sound_novel_tkool_2.html)分别支持所属产品与具名样例；[SFC玩法记录](https://w.atwiki.jp/gcmatome/pages/1200.html)和[两机种样例比较](https://w.atwiki.jp/gcmatome/pages/6989.html)辅助核剧情和内容身份。
+
+### 四部关联发行作品
+
+- DogDay首年采用1996美国PC发行档案，原行署Impact Interactive Publishing。1998日本PS《好奇心会杀死猫吗》原片尾和实物资料明确ASCII Something Good；不把1997其他地区时间改作全球首发，也不因日文译名建第二部作品。
+- 本次Clock Tower对应1996日本《钟楼2》，原行署Human；1997北美Clock Tower实际ASCII Entertainment Software。它不是1995SFC初代，也不能把初代2024复刻当作本次续作版本。
+- TLS3及Summer Days原片尾分别核2001/04/05、2003/07/24，实际Enterbrain。片尾的ASCII包装工作人员、现行集团网页及系列关系不能回写发行方。普通再售、OVA和2004手机分篇尚未证明相较前版第一次新增素材，不复制内容版本。
+
+这两项代理关系用editionCredits记录年份、平台、实际主体、来源和原因；卡片显示“相关发行（不重复计内容版本）”并提供可点击依据。它不是额外版本行，也不用于把原作发行筛选虚构成ASCII。两个TLS后续版本可按Enterbrain筛选。
+
+## 跨类型46项
+
+以下原作年与实际首条发行方分列；ASCII后代理的记录不会倒改原作。每项有剧情、玩家／角色身份、原作版本及来源，不是无内容的待补标题。
+
+| ID | 作品 | 原年 | 类型 | 首条实际发行方 | 来源 |
+| --- | --- | --- | --- | --- | --- |
+| ascii-rogue | 盗贼：Rogue／Rogue | 1980 | 程序生成迷宫RPG | Michael Toy／Glenn Wichman（原作者传播） | [作品依据](https://www.mobygames.com/game/1743/rogue/) |
+| ascii-wizardry-1 | 巫术：狂王的试炼场／Wizardry: Proving Grounds of the Mad Overlord | 1981 | 迷宫角色扮演 | Sir-tech Software, Inc. | [作品依据](https://www.mobygames.com/game/1209/wizardry-proving-grounds-of-the-mad-overlord/) |
+| ascii-wizardry-2 | 巫术2：钻石骑士／Wizardry: Knight of Diamonds - The Second Scenario | 1982 | 迷宫角色扮演 | Sir-tech Software, Inc. | [作品依据](https://www.mobygames.com/game/1304/wizardry-knight-of-diamonds-the-second-scenario/) |
+| ascii-arfgaldt | 阿尔夫加尔德／アルフガルド | 1983 | 纯文本RPG | アスキー | [作品依据](https://fm-7.com/museum/products/kxzhanuu/) |
+| ascii-wizardry-3 | 巫术3：利尔加明的遗产／Wizardry: Legacy of Llylgamyn - The Third Scenario | 1983 | 迷宫角色扮演 | Sir-tech Software, Inc. | [作品依据](https://www.mobygames.com/game/3984/wizardry-legacy-of-llylgamyn-the-third-scenario/) |
+| ascii-black-onyx | 黑色玛瑙／The Black Onyx | 1984 | 迷宫RPG | BPS | [作品依据](https://www.mobygames.com/game/18757/the-black-onyx/) |
+| ascii-dragon-slayer | 屠龙者／ドラゴンスレイヤー | 1984 | 动作RPG | 日本ファルコム | [作品依据](https://www.falcom.co.jp/history) |
+| ascii-emmy | 艾米：EMMY／EMMY | 1984 | 输入式会话模拟 | アスキー | [作品依据](https://www.gamepres.org/pc88/library/1984/1984_8.html) |
+| ascii-emmy-2 | 艾米2：EMMY II／EMMY II | 1984 | 输入式会话模拟 | アスキー | [作品依据](https://www.gamepres.org/pc88/library/1984/1984_11.html) |
+| ascii-fire-crystal | 火焰水晶：黑色玛瑙2／The Fire Crystal | 1984 | 迷宫RPG | BPS | [作品依据](https://www.gamepres.org/pc88/library/1984/firecry.html) |
+| ascii-gorg | 巨神高格／巨神ゴーグ | 1985 | 角色扮演 | アスキー | [作品依据](https://www.gamepres.org/pc88/library/1985/1985_8.html) |
+| ascii-screamer | 尖叫者：The Screamer／ザ・スクリーマー | 1985 | 动作RPG | マジカルズゥ | [作品依据](https://www.gamepres.org/pc88/library/1985/1985_5.html) |
+| ascii-yamato | 英雄大和武尊／英雄ヤマトタケル | 1985 | 动作RPG | ログインソフト | [作品依据](https://www.gamepres.org/pc88/library/1985/1985_10.html) |
+| ascii-haja | 霸邪之封印／覇邪の封印 | 1986 | 角色扮演 | 工画堂スタジオ | [作品依据](https://www.gamepres.org/pc88/library/1986/1986_7.html) |
+| ascii-highlander | 高地人：Highlander／ハイランダー | 1986 | 探索RPG | ログイン | [作品依据](https://www.gamepres.org/pc88/library/1986/1986_10.html) |
+| ascii-wizardry-4 | 巫术4：沃德纳的归来／Wizardry: The Return of Werdna - The Fourth Scenario | 1987 | 迷宫角色扮演 | Sir-tech Software, Inc. | [作品依据](https://www.mobygames.com/game/1272/wizardry-the-return-of-werdna-the-fourth-scenario/) |
+| ascii-chaos-angels | 混沌天使／カオスエンジェルズ | 1988 | 成人向迷宫RPG | アスキー | [作品依据](https://www.gamepres.org/pc88/library/1988/1988_7.html) |
+| ascii-insiders | 内行者：魔王哈鲁顿的陷阱／インサイダーズ 魔王ハルトンの罠 | 1988 | 教育探索RPG | アスキー | [作品依据](https://github.com/mamedev/mame/blob/master/hash/pc98.xml) |
+| ascii-wizardry-5 | 巫术5：灾祸的中心／Wizardry V: Heart of the Maelstrom | 1988 | 迷宫角色扮演 | Sir-tech Software, Inc. | [作品依据](https://www.mobygames.com/game/3983/wizardry-v-heart-of-the-maelstrom/) |
+| ascii-ninja | 忍者来了！痛快忍法传／忍者らホイ! 痛快うんがちょこ忍法伝!! | 1990 | 角色扮演 | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=4153) |
+| ascii-wizardry-6 | 巫术6：禁断的魔笔／Wizardry: Bane of the Cosmic Forge | 1990 | 迷宫角色扮演 | Sir-tech Software, Inc. | [作品依据](https://www.mobygames.com/game/724/wizardry-bane-of-the-cosmic-forge/) |
+| ascii-wizardry-gaiden-1 | 巫术外传1：女王的受难／ウィザードリィ・外伝I 女王の受難 | 1991 | 迷宫角色扮演 | アスキー | [作品依据](https://www.mobygames.com/game/59795/wizardry-the-first-episode-suffering-of-the-queen/) |
+| ascii-wizardry-7 | 巫术7：暗黑贤者的十字军／Wizardry: Crusaders of the Dark Savant | 1992 | 迷宫角色扮演 | Sir-tech Software, Inc. | [作品依据](https://www.mobygames.com/game/715/wizardry-crusaders-of-the-dark-savant/) |
+| ascii-wizardry-gaiden-2 | 巫术外传2：古代皇帝的诅咒／ウィザードリィ・外伝II 古代皇帝の呪い | 1992 | 迷宫角色扮演 | アスキー | [作品依据](https://www.mobygames.com/game/61124/wizardry-the-second-episode-curse-of-the-ancient-emperor/) |
+| ascii-insiders-network | 内行者：网络冒险——伊芙失踪／インサイダーズ ネットワークの冒険 イヴがいない | 1993 | 教育探索RPG | アスキー | [作品依据](https://www.arcade-history.com/?id=95234&page=detail) |
+| ascii-wizardry-gaiden-3 | 巫术外传3：暗之圣典／ウィザードリィ・外伝III 闇の聖典 | 1993 | 迷宫角色扮演 | アスキー | [作品依据](https://www.mobygames.com/game/175203/wizardry-the-third-episode-scripture-of-the-dark/) |
+| ascii-wondrous | 奇妙魔法／ワンダラスマジック | 1993 | 角色扮演 | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=2126) |
+| ascii-down-world | Down the World：梅尔维尔的野望／ダウン・ザ・ワールド MERVIL’S AMBITION | 1994 | 故事型RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=2162) |
+| ascii-power-dolls-2 | 动力装甲部队2／パワードール2 | 1994 | 剧情战术模拟 | 工画堂スタジオ | [作品依据](https://d4e.co.jp/20160628/2216) |
+| ascii-wizap | Wizap！暗黑之王／ウィザップ 暗黒の王 | 1994 | 事件探索RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=2161) |
+| ascii-anearth | 圣夜物语：AnEarth Fantasy Stories／聖夜物語 AnEarth Fantasy Stories | 1995 | 角色扮演 | ハドソン | [作品依据](https://www.gavas.jp/products/detail.php?product_id=6082) |
+| ascii-linda | 琳达立方／リンダキューブ | 1995 | 心理惊悚与狩猎RPG | NECホームエレクトロニクス | [作品依据](https://www.gavas.jp/products/detail.php?product_id=6090) |
+| ascii-wizardry-gaiden-4 | 巫术外传4：胎魔的鼓动／ウィザードリィ・外伝IV 胎魔の鼓動 | 1996 | 迷宫角色扮演 | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=2256) |
+| ascii-dark-law | 暗之法则：死亡的意义／ダークロウ Meaning of Death | 1997 | 事件探索RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=2265) |
+| ascii-milandra | 米兰德拉／ミランドラ | 1997 | 迷宫RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=2263) |
+| ascii-moon | 月亮：moon／moon | 1997 | 反RPG探索冒险 | アスキー | [作品依据](https://oniongames.jp/press/sheet.php?p=moon) |
+| ascii-shin-kaitei | 新海底军舰：钢铁的孤独／新海底軍艦 鋼鉄の孤独 | 1997 | 剧情战术模拟 | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=1200) |
+| ascii-solid-runner | 机甲疾行者／ソリッドランナー | 1997 | 故事型RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=2264) |
+| ascii-end-sector | 终末领域：End Sector／エンドセクター | 1998 | 声音小说型RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=8109) |
+| ascii-mars | 火星物语／火星物語 | 1998 | 分章故事RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=8130) |
+| ascii-berserk | 剑风传奇：千年帝国之鹰篇·丧失花之章／ベルセルク 千年帝国の鷹篇 喪失花の章 | 1999 | 剧情动作游戏 | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=766) |
+| ascii-eden | 悠久的伊甸／悠久のエデン | 1999 | 战术RPG | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=8138) |
+| ascii-galerians | 超能少年：Galerians／ガレリアンズ | 1999 | 恐怖动作冒险 | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=8110) |
+| ascii-ufo | UFO：日常的一天／UFO -A day in the life- | 1999 | 观察探索冒险 | アスキー | [作品依据](https://psxdatacenter.com/games/J/U/SLPS-02032.html) |
+| ascii-lol | L.O.L.：爱的缺失／L.O.L. LACK OF LOVE | 2000 | 无文字共生探索RPG | アスキー | [作品依据](https://ascii.jp/elem/000/000/316/316955/) |
+| ascii-wizardry-dimguil | 巫术：DIMGUIL／ウィザードリィ ～DIMGUIL～ | 2000 | 迷宫角色扮演 | アスキー | [作品依据](https://www.gavas.jp/products/detail.php?product_id=8107) |
+
+## 普通移植的实际发行关系
+
+这些记录不计额外内容版本，但保留署名和可复核来源。它们与原作首条相区别，不能用代理年“重设”作品首发年。
+
+| 作品 | 后发行年 | 平台 | 实际主体 | 来源 |
+| --- | --- | --- | --- | --- |
+| 好奇心会杀死猫吗：DogDay | 1998 | PlayStation（日本） | ASCII Something Good | [发行依据](https://raido.moe/staff/ps1/ps1_curiosity_kills_the_cat.html) |
+| 钟楼2 | 1997 | PlayStation（北美） | ASCII Entertainment Software, Inc. | [发行依据](https://www.mobygames.com/game/3532/clock-tower/releases/) |
+| 黑色玛瑙 | 1985 | MSX | ASCII | [发行依据](https://generation-msx.nl/company/ascii-corporation/9/software) |
+| 火焰水晶：黑色玛瑙2 | 1986 | MSX | ASCII | [发行依据](https://generation-msx.nl/software/bps/the-black-onyx-ii/841) |
+| 盗贼：Rogue | 1986 | PC-8801／PC-9801 | ASCII | [发行依据](https://www.gamepres.org/pc88/library/ascii.html) |
+| 尖叫者：The Screamer | 1986 | PC-9801 | ASCII | [发行依据](https://www.gamepres.org/catalog/?id=8811002407009) |
+| 屠龙者 | 1986 | 电脑LOGIN版 | ASCII／LOGIN SOFT | [发行依据](https://www.gamepres.org/pc88/library/1986/1986_4.html) |
+| 霸邪之封印 | 1987 | Famicom | ASCII | [发行依据](https://www.gavas.jp/products/detail.php?product_id=4082) |
+| 圣夜物语：AnEarth Fantasy Stories | 1997 | Sega Saturn | ASCII | [发行依据](https://segaretro.org/images/e/e2/AFSTFV_Saturn_JP_Flyer.pdf) |
+| 动力装甲部队2 | 1997 | PlayStation | ASCII | [发行依据](https://www.gavas.jp/products/detail.php?product_id=8127) |
+| 巫术：狂王的试炼场 | 1985 | PC-8801／PC-9801 | ASCII | [发行依据](https://www.gamepres.org/pc88/library/ascii.html) |
+| 巫术2：钻石骑士 | 1986 | PC-9801 | ASCII | [发行依据](https://kopenguin.com/post-8165/) |
+| 巫术3：利尔加明的遗产 | 1987 | PC-8801／PC-9801 | ASCII | [发行依据](https://www.gamepres.org/pc88/library/ascii.html) |
+| 巫术4：沃德纳的归来 | 1988 | PC-8801／PC-9801 | ASCII | [发行依据](https://www.gamepres.org/pc88/library/ascii.html) |
+| 巫术5：灾祸的中心 | 1990 | PC-8801／PC-9801 | ASCII | [发行依据](https://www.gamepres.org/pc88/library/ascii.html) |
+| 巫术6：禁断的魔笔 | 1991 | PC-9801 | ASCII | [发行依据](https://kopenguin.com/post-8165/) |
+| 巫术7：暗黑贤者的十字军 | 1994 | PC-9801／FM TOWNS | ASCII | [发行依据](https://www.4gamer.net/games/008/G000896/20080422023/) |
+
+## 首年纠正与明确内容增量
+
+- Fire Crystal的1985／1984异文不能忽略。[保存协会专门回顾](https://www.gamepres.org/pc88/library/1984/firecry.html)与[分机种发行档案](https://www.mobygames.com/game/18758/the-fire-crystal/releases/)支持1984原作，现按1984。部分馆藏商品记1985并保留异文；MSX 1986商品名Black Onyx II仍为同一作。MSX采样发声资料未完成相对原PC录音的逐项比较，暂不制造新增音声版本。
+- Screamer电脑原版为1985年5月；[保存协会ASCII PC-98馆藏](https://www.gamepres.org/catalog/?id=8811002407009)核1986后发行。原作与代理年分开。
+- Linda原版1995为NEC Home Electronics，非Hudson。1997Again的新增情境／动画和1998ASCII完全版的新挑战及鉴赏模式分别列增量；[版本比较](https://w.atwiki.jp/gcmatome/pages/3850.html)及[完全版资料](https://segasaturn-life.com/db1998061801/)支持。1997已存在的内容不再次标成1998首次加入，附赠原声CD不拆游戏。
+- Highlander的[保存资料](https://www.gamepres.org/pc88/library/1986/1986_10.html)明确1986年10月第一部、随后11月第二与第三部。后两分部按独立新增内容行，不制造未知副标题；未核独立启动要求，专题一项保留这种边界，也不与Ocean同名动作游戏合并。
+- INSIDERS保存原项目清单核1988初代、1994重制以及1993独立网络后续。重制名称本身不证明新增剧情；新增网络篇独立记录。[MAME项目清单](https://github.com/mamedev/mame/blob/master/hash/pc98.xml)及[历史产品档案](https://www.arcade-history.com/?id=95234&page=detail)支持。
+- Wizardry I—VII按原情境及全球原年保留，FC II／III的发行次序不制造另一套作品；外传I—IV及DIMGUIL为独立情境。日本代理、合集以及后高清重做须取得具体首次新增内容证据才增版本，本批不以重制标签泛增行。
+- UFO 2026复刻的[官方产品说明](https://store.playstation.com/ja-jp/concept/10017994)明确再现日本ROM；便利存档等不当作新故事。moon旧记录保持，Onion Games复刻同样不凭平台增行。
+
+## 范围完成与排除
+
+上次目录列出的独立作品、六篇具名样例、会话／跨类型／RPG及四部关联主体作品均有对应记录。ASCII Media Works全部作品及未枚举的全量杂志投稿没有具名目录，本批不虚构它们，也不宣称历史全部投稿已绝对穷尽。Maria为Axela／Break等其他主体；其他误归ASCII的作品不补错发行。取消或未核实发售的Chaos Angels 2、冒险者们II、Moonstone等计划不造已发行记录。
+
+## 验证
+
+验证JSON／CSV一致、首年、版本归属、附带故事和关联主体分组、发行关系字段及页面同步。测试检查12部独立主表、6篇附带小说、4部关联作品、46项跨类型／50条及68卡／79条页面；发行关系有依据链接而不重复计算内容版。与基线按ID比较原999部／2139条及其他55个专题对象，并确认其他55个生成页逐字不变。
+
+以下为第一批历史记录，其当时计数和待续说明不代表当前状态。
+
+# 第一批历史核对（2026-10-14）
 
 ## 顺序与发行主体
 

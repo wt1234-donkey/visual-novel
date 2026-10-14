@@ -894,7 +894,7 @@ test('Data East reuses three interactive animations and lists only the content-a
   assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
   assert.deepEqual(dossier.workIds,['g082','g083','g085']);
   assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
-  assert.equal(data.works.length,999);assert.equal(data.versions.length,2139);
+  assert.equal(data.works.length,1014);assert.equal(data.versions.length,2154);
   for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
@@ -988,5 +988,55 @@ test('Enix seven specified additions preserve command scope, action subtype and 
   assert.equal(data.versions.filter(v=>v.workId==='g1001').length,2);
   const page=readFileSync(new URL('../enix.html',import.meta.url),'utf8');
   for(const id of ids)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(!/undefined|NaN|Infinity/.test(page));
+});
+
+
+test('ASCII catalogue additions distinguish retail works, bundled stories and associated publishers',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='ascii');
+  assert.equal(co.independentAsciiWorkIds.length,12);
+  assert.equal(co.bundledSampleWorkIds.length,6);assert.equal(co.associatedPublisherWorkIds.length,4);
+  assert.equal(co.workIds.length,22);assert.equal(co.publisherWorkIds.length,18);
+  for(const id of ['g1003','g1004','g1005','g1006','g1007'])assert.ok(co.independentAsciiWorkIds.includes(id));
+  assert.equal(data.works.find(w=>w.id==='g1004').subcategory,'图文选项／调查');
+  for(const id of co.bundledSampleWorkIds){
+    const w=data.works.find(w=>w.id===id);assert.equal(w.releaseContext,'bundledSample');assert.ok(w.bundledWith);
+    const vs=data.versions.filter(v=>v.workId===id);assert.equal(vs.length,1);assert.ok(vs[0].kind.includes('非独立零售'));
+  }
+  const ascii=filterCatalogue(data,{company:'ASCII'});
+  assert.equal(ascii.length,18);assert.ok(co.associatedPublisherWorkIds.every(id=>!ascii.some(({work})=>work.id===id)));
+  assert.deepEqual(filterCatalogue(data,{company:'Enterbrain'}).map(({work})=>work.id),['g1016','g1017']);
+  assert.equal(data.works.find(w=>w.id==='g1014').firstYear,1996);
+  assert.equal(data.versions.filter(v=>v.workId==='g1014').length,1);
+  assert.equal(data.versions.find(v=>v.workId==='g1014').publisher,'Impact Interactive Publishing');
+  assert.equal(data.works.find(w=>w.id==='g1014').editionCredits[0].publisher,'ASCII Something Good');
+  assert.equal(data.versions.find(v=>v.workId==='g1015').publisherCompanies[0],'Human Entertainment');
+  assert.equal(data.works.find(w=>w.id==='g1015').editionCredits[0].year,1997);
+});
+
+test('ASCII cross-type records retain original chronology and count only supported new content',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='ascii');
+  assert.equal(co.relatedGames.length,46);assert.equal(co.relatedGames.reduce((n,g)=>n+g.versions.length,0),50);
+  const byId=new Map(co.relatedGames.map(g=>[g.id,g]));
+  for(const [id,year,pub] of [['ascii-rogue',1980,'Michael Toy／Glenn Wichman（原作者传播）'],['ascii-black-onyx',1984,'BPS'],['ascii-fire-crystal',1984,'BPS'],['ascii-power-dolls-2',1994,'工画堂スタジオ'],['ascii-anearth',1995,'ハドソン']]){
+    const g=byId.get(id);assert.equal(g.firstYear,year);assert.equal(g.versions[0].publisher,pub);assert.equal(g.versions.length,1);assert.ok(g.editionCredits[0].year>=year);
+  }
+  const linda=byId.get('ascii-linda');assert.equal(linda.versions[0].publisher,'NECホームエレクトロニクス');
+  assert.deepEqual(linda.versions.map(v=>v.year),[1995,1997,1998]);assert.equal(linda.versions[2].publisher,'アスキー');
+  const highlander=byId.get('ascii-highlander');assert.equal(highlander.versions.length,3);assert.ok(highlander.versions[1].kind.includes('第二部'));assert.ok(highlander.versions[2].kind.includes('第三部'));
+  assert.equal(byId.get('ascii-insiders').versions.length,1);assert.equal(byId.get('ascii-insiders-network').firstYear,1993);
+  assert.equal(byId.get('ascii-wizardry-2').firstYear,1982);assert.equal(byId.get('ascii-wizardry-3').firstYear,1983);assert.equal(byId.get('ascii-wizardry-7').firstYear,1992);
+  assert.ok(co.relatedGames.every(g=>!data.works.some(w=>w.id===g.id)));
+  assert.equal(byId.get('ascii-ufo').versions.length,1);
+});
+
+test('ASCII rendered dossier exposes edition sources without duplicating cards or version counts',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='ascii');
+  const page=readFileSync(new URL('../ascii.html',import.meta.url),'utf8');
+  assert.equal(page.split('<article class="card" id=').length-1,68);
+  assert.equal(page.split('<div class="version">').length-1,79);
+  for(const id of [...co.workIds,...co.relatedGames.map(g=>g.id)])assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
+  assert.ok(page.includes('相关发行（不重复计内容版本）'));assert.ok(page.includes('发行依据'));
+  assert.ok(page.includes('ASCII Something Good'));assert.ok(page.includes('ASCII Entertainment Software, Inc.'));
   assert.ok(!/undefined|NaN|Infinity/.test(page));
 });

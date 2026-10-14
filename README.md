@@ -4,13 +4,15 @@
 
 ## 数据范围
 
-当前收录 **999 部代表作品、2139 个平台版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **1014 部作品／附带叙事篇目、2154 个版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
-现有 656 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
+现有 671 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
 
 ## 厂商集中整理
+
+ASCII第二批已按[整理目录](ascii.html)补齐：新增主库15项／15条，包含独立主表缺口5部、工具内置小说6篇、实际发行主体关联作品4部；另外新增45项跨类型作品／49条，原moon保持。专题现68项／79条，主库22项／29条、跨类型46项／50条；原作年、代理年、附带故事与零售身份分别说明。普通移植发行关系不复制内容版本，详见[第二批审计](data/ascii-audit.md)。全库1014项／2154条、56个专题，旧999部／2139条与其他55个专题对象保持。
 
 Enix第二批已按指定主表补齐[七部作品](enix.html)：翼人2、北斗神拳电脑版、动物乐园杀人事件、翼人Special、古村物语、Riven及幻影剧场，新增7部／8条首发或首次内容。两部新图文指令按本次具名授权收录，原七部历史例外保持；幻影剧场新增动作解谜融合细分类。Riven2024有官方新谜题和叙事扩展，实际署Cyan，不倒归Enix，同内容后平台不重复列行。专题29部／32条（主库28部／31条，Enix实际28部／30条，七风岛补充1部／1条）；全库999部／2139条、56个专题。原992部、2131条及其他55个专题对象保持。主表补齐不等于全RPG目录完整，详见[第二批核对](data/enix-audit.md)。
 
