@@ -32,6 +32,11 @@ def card(work, versions=None, anchors=(), version_label='个平台版本'):
     original_line = f'<p class="original">原名 · {escape(work["originalTitle"])}</p>' if display_title != work['originalTitle'] else ''
     if work.get('chineseTitleType') == '站内编辑译名':
         original_line = original_line.replace('</p>', ' · 中文名为站内编辑译名</p>')
+    edition_credits = ''.join(
+        f'<p class="character-evidence">相关发行（不重复计内容版本）：{credit["year"]} · '
+        f'{escape(credit["platform"])} · {escape(credit["publisher"])}。'
+        f'{escape(credit["reason"])}。{link(credit["source"], "发行依据")}</p>\n'
+        for credit in work.get('editionCredits', []))
     legacy_anchors = ''.join(f'<span id="{escape(anchor, quote=True)}" aria-hidden="true"></span>' for anchor in anchors)
     return f'''<article class="card" id="{work['id']}">{legacy_anchors}
 <div class="card-top"><span class="year">{work['firstYear']}</span><span class="category">{escape(work['category'])}</span></div>
@@ -39,7 +44,7 @@ def card(work, versions=None, anchors=(), version_label='个平台版本'):
 <p class="intro">{escape(work['synopsis'])}</p>
 <div class="card-meta"><span>{escape(work['subcategory'])} · {escape(work['genre'])}</span><span>主要角色 · {escape(' / '.join(work['characters']))}</span></div>
 {f'<p class="character-evidence">{link(work["charactersSource"], "角色依据")}{(" · " + escape(work["charactersNote"])) if work.get("charactersNote") else ""}</p>' if work.get('charactersSource') else ''}
-<details class="version-panel"><summary>查看 {len(versions)} {escape(version_label)}</summary><div class="version-list">{''.join(release_rows)}</div></details>
+{edition_credits}<details class="version-panel"><summary>查看 {len(versions)} {escape(version_label)}</summary><div class="version-list">{''.join(release_rows)}</div></details>
 <div class="card-bottom">{link(work['source'], '作品来源')}<span class="card-note">{escape(work['notes'])}</span></div></article>'''
 
 

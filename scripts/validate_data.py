@@ -17,6 +17,13 @@ command_work_ids.update(wid for company in coverage['companies']
 command_work_ids.update(wid for company in coverage['companies']
                         for wid in company.get('authorizedCommandWorkIds', []))
 works, versions = data['works'], data['versions']
+
+def validate_edition_credits(work):
+    credits = work.get('editionCredits', [])
+    assert len(credits) == len({(x['year'], x['platform'], x['publisher']) for x in credits}), '发行关系重复'
+    assert all(work['firstYear'] <= x['year'] <= 2026 and x['platform'] and x['publisher']
+               and x['reason'] and source_url_valid(x['source']) for x in credits), '发行关系字段不完整或早于原作'
+
 work_ids = {work['id'] for work in works}
 version_ids = {version['id'] for version in versions}
 assert len(work_ids) == len(works) and len(version_ids) == len(versions), '重复 ID'
@@ -50,6 +57,10 @@ assert all(isinstance(work.get('chineseTitle', ''), str) and
 assert all(work.get('chineseTitleType', '通行译名') in {'通行译名', '站内编辑译名'}
            and (not work.get('chineseTitleType') or work.get('chineseTitle')) for work in works)
 for work in works:
+    validate_edition_credits(work)
+    if 'releaseContext' in work:
+        assert work['releaseContext'] in {'standalone', 'bundledSample', 'associatedPublisher'}
+        assert bool(work.get('bundledWith')) == (work['releaseContext'] == 'bundledSample'), '附带小说缺少所属产品或身份不一致'
     years = [version['year'] for version in versions if version['workId'] == work['id']]
     assert years and min(years) == work['firstYear'], f"{work['title']} 首发年份与平台版本冲突"
 
@@ -80,6 +91,12 @@ for company in coverage['companies']:
                for p in profile['phases'])
     ids = company['workIds']
     assert len(ids) == len(set(ids)) and set(ids) <= work_ids, '厂商专题作品 ID 不正确'
+    for field, context in [('bundledSampleWorkIds', 'bundledSample'),
+                           ('associatedPublisherWorkIds', 'associatedPublisher')]:
+        if field in company:
+            scoped = company[field]
+            assert len(scoped) == len(set(scoped)) and set(scoped) <= set(ids)
+            assert set(scoped) == {w['id'] for w in works if w['id'] in ids and w.get('releaseContext') == context}, '厂商作品身份分组不一致'
     if 'publisherWorkIds' in company:
         credited = {version['workId'] for version in versions
                     if company['name'] in version['publisherCompanies'] and version['workId'] in ids}
@@ -91,6 +108,7 @@ for company in coverage['companies']:
     assert set(legacy_anchors.values()) <= set(ids), '旧作品链接缺少主库记录'
     assert not set(legacy_anchors) & (work_ids | related_ids), '转入主库的作品仍保留重复副本'
     for game in related:
+        validate_edition_credits(game)
         assert source_url_valid(game['source']) and game['genre'] and game['characters']
         assert all(name and '待核实' not in name for name in game['characters'])
         assert game['category'] not in taxonomy['subcategories'], '跨类型游戏应放在四类主目录之外'
