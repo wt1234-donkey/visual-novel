@@ -31489,6 +31489,231 @@
           "workIds": []
         }
       ]
+    },
+    {
+      "id": "melbournehouse",
+      "name": "Melbourne House",
+      "foundedAt": "1977",
+      "foundedSource": "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html",
+      "checkedAt": "2026-10-14",
+      "status": "复用6部旧作，补入1部菜单调查作品，另列1部动作冒险",
+      "workIds": [
+        "g113",
+        "g129",
+        "g130",
+        "g132",
+        "g136",
+        "g137",
+        "g991"
+      ],
+      "publisherWorkIds": [
+        "g113",
+        "g129",
+        "g130",
+        "g132",
+        "g136",
+        "g137",
+        "g991"
+      ],
+      "legacyCommandWorkIds": [
+        "g113",
+        "g129",
+        "g130",
+        "g132",
+        "g136",
+        "g137"
+      ],
+      "catalogueEntryCount": 8,
+      "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html",
+      "scope": "首批复用原库6部作品／12条旧记录，补入阿卡姆庄园之谜1部／1条；另列动作探索Asterix 1部／1条。专题8部／14条，主库关联7部／13条、专题补充1部／1条。不是全部Melbourne House、Beam或后期同名工作室目录。",
+      "versionScope": "原库12条对象原样保留，包括同内容再版及旧平台移植；新增部分只记已核原作内容。有新故事、角色、录音或其他首次加入的游戏内容才增加后版，普通移植、翻译、再售及合集不增行。未证实新增不等于断言完全相同；C64取消计划不列实发。",
+      "versionPanelLabel": "条首发／内容记录",
+      "versionCountLabel": "原作、内容更新与保留旧记录",
+      "publisherNote": "以Play It Again公司页所记1977年进入1977—1978候选组；同项目创办者页写1978，成立月份与异文未决，不宣称与ASCII的日级先后。Melbourne House原出版发行、1980年Beam开发工作室、1987年出售及1997年工作室重用名称分开说明，Beam与其他发行方不设为Melbourne House别名。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>8部关联作品／14条记录；主库7部／13条，跨类型补充1部／1条。按已登记主库Melbourne House实际发行署名为7部／12条；The Hobbit同年Sinclair Research再版仍署Sinclair。</strong></p>",
+      "auditTitle": "成立异文、旧记录与新作内容边界",
+      "auditSourceLabel": "数字遗产项目沿革资料",
+      "auditLabel": "6部旧作、1部菜单调查作品及1部动作冒险。",
+      "auditNote": "逐项来源、菜单与文字输入边界见data/melbournehouse-audit.md。旧指令冒险只引用已有ID，不继续补入通用词句指令作品。首批核对不替代旧记录的全面逐版复核。",
+      "sectionTitle": "从原库文学冒险到菜单调查",
+      "description": "Melbourne House首批专题：复用六部旧冒险，补录阿卡姆庄园之谜，另列Asterix动作探索。",
+      "relatedSectionTitle": "跨类型：Asterix动作探索",
+      "relatedIntro": "保留战斗与探索的主要类型；此作计入专题总数，四类主数据库不包含。",
+      "relatedCountLabel": "动作冒险另列",
+      "relatedGames": [
+        {
+          "id": "melbournehouse-asterix",
+          "title": "阿斯泰利克斯与魔法锅",
+          "originalTitle": "Asterix and the Magic Cauldron",
+          "chineseTitle": "阿斯泰利克斯与魔法锅",
+          "chineseTitleType": "站内编辑译名",
+          "firstYear": 1986,
+          "category": "动作探索冒险",
+          "subcategory": "战斗／漫画改编",
+          "genre": "高卢冒险／碎片收集／动作战斗",
+          "characters": [
+            "Asterix",
+            "Obelix",
+            "Getafix"
+          ],
+          "charactersSource": "https://ourdigitalheritage.org/hostedArchives/playitagain/games/asterix-and-the-magic-cauldron/index.html",
+          "charactersNote": "采用数字遗产项目的原作人物与任务说明，不把美国改名版人物反套原作。",
+          "synopsis": "Asterix与Obelix在被罗马占领的高卢探索，收集Getafix魔法锅的七块碎片，并通过寻找食物、战斗和获取钥匙继续旅程。",
+          "notes": "Beam Software开发、Melbourne House发行。战斗和探索为主要操作，放跨类型专题，不强归四类主库。数字遗产项目报告原构建存在碎片缺失问题；剧情目标不等于已证实全部碎片都可取得。美国Ardok the Barbarian据该项目有改绘角色，发行日期、主体及内容差异仍待逐项核，不计新独立作品或已核增补行。",
+          "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/games/asterix-and-the-magic-cauldron/index.html",
+          "versions": [
+            {
+              "year": 1986,
+              "platform": "Commodore 64",
+              "publisher": "Melbourne House",
+              "kind": "原作／首批已核发行",
+              "voice": "未核实",
+              "differences": "1986年原作，数字遗产项目明确Beam开发与Melbourne House发行，保存C64包装及画面。Spectrum同年版本未核独有新增内容，不因平台增加行；美国Ardok的角色改绘可能是内容差异，待核发行主体与时间后再判断，不直接当作同内容移植。配乐署名不作为角色配音证据。",
+              "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/games/asterix-and-the-magic-cauldron/index.html"
+            }
+          ]
+        }
+      ],
+      "creativeProfile": {
+        "thesis": "编辑观察：这组样本从文学与侦探题材的词句指令冒险，延伸到上下文菜单、记者调查工具及漫画动作探索。出版发行和开发团队的角色不同，只据这组作品讨论互动方法，不把全部作品归为单一公司创作风格。",
+        "phases": [
+          {
+            "period": "1982—1985",
+            "heading": "原库文学、侦探与社会讽刺",
+            "analysis": "霍比特人、福尔摩斯、汉普斯特德及三部旧作共用原ID。它们属于早期指令冒险历史；保留旧对象是延续可追溯关系，不说明同内容移植符合本轮新增版本规则，也不重新认证每条旧日期。",
+            "basis": "编辑观察",
+            "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html"
+          },
+          {
+            "period": "1987",
+            "heading": "上下文菜单与记者调查",
+            "analysis": "Mike Lewis访谈说明上下文菜单使GET只显示可取物品，减少输入猜词；记者工具让线索组织与调查同时发生。作品仍保留部分文字输入，不以菜单标签掩盖这一混合界面。",
+            "basis": "编辑观察",
+            "source": "https://classicadventurer.co.uk/pdf/06-a4.pdf"
+          },
+          {
+            "period": "1986及后版待核",
+            "heading": "漫画动作探索与改绘边界",
+            "analysis": "Asterix的搜集任务由战斗、食物和探索推动，按跨类型单列。美国改名版有角色改绘的线索，属于可能的素材变化，需核时间与实际发行方；不能仅按新名称造作品，也不能把它默认当作无内容差异移植。",
+            "basis": "编辑观察",
+            "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/games/asterix-and-the-magic-cauldron/index.html"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "1977／1978成立异文",
+          "status": "年份异文保留",
+          "reason": "公司页1977与同项目创办者页1978冲突，采用年级候选标识并明确异文，不伪造月份或与ASCII的严格日序。出版发行与后来的同名工作室分开。",
+          "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html",
+          "workIds": []
+        },
+        {
+          "title": "霍比特人",
+          "status": "复用原库",
+          "reason": "复用原库作品与旧版本对象；日期、配音及移植差异仍按原记录，首批专题不宣称逐条重新认证。",
+          "source": "https://worldofspectrum.org/software?id=0006440",
+          "workIds": [
+            "g113"
+          ]
+        },
+        {
+          "title": "福尔摩斯",
+          "status": "复用原库",
+          "reason": "复用原库作品与旧版本对象；日期、配音及移植差异仍按原记录，首批专题不宣称逐条重新认证。",
+          "source": "https://worldofspectrum.org/archive/software/text-adventures/sherlock-melbourne-house",
+          "workIds": [
+            "g129"
+          ]
+        },
+        {
+          "title": "汉普斯特德",
+          "status": "复用原库",
+          "reason": "复用原库作品与旧版本对象；日期、配音及移植差异仍按原记录，首批专题不宣称逐条重新认证。",
+          "source": "https://worldofspectrum.org/archive/software/text-adventures/hampstead-melbourne-house",
+          "workIds": [
+            "g130"
+          ]
+        },
+        {
+          "title": "恐怖城堡",
+          "status": "复用原库",
+          "reason": "复用原库作品与旧版本对象；日期、配音及移植差异仍按原记录，首批专题不宣称逐条重新认证。",
+          "source": "https://worldofspectrum.org/archive/software/text-adventures/castle-of-terror-melbourne-house",
+          "workIds": [
+            "g132"
+          ]
+        },
+        {
+          "title": "恐怖海滨度假",
+          "status": "复用原库",
+          "reason": "复用原库作品与旧版本对象；日期、配音及移植差异仍按原记录，首批专题不宣称逐条重新认证。",
+          "source": "https://www.gamesdatabase.org/Media/SYSTEM/Sinclair_ZX_Spectrum/Manual/formated/Terrormolinos_-_1985_-_Melbourne_House.htm",
+          "workIds": [
+            "g136"
+          ]
+        },
+        {
+          "title": "莫登的任务",
+          "status": "复用原库",
+          "reason": "复用原库作品与旧版本对象；日期、配音及移植差异仍按原记录，首批专题不宣称逐条重新认证。",
+          "source": "https://www.mobygames.com/game/29926/mordons-quest/",
+          "workIds": [
+            "g137"
+          ]
+        },
+        {
+          "title": "阿卡姆庄园之谜",
+          "status": "新增主库",
+          "reason": "Mike Lewis设计与编程、Carl Cropley绘图，Melbourne House发行。设计者访谈明确用上下文菜单减少猜词；调查按菜单选择，并保留SAY、笔记、电报与写稿文字输入，不能称全程纯点击。双面磁带的两部分属同一作品；同年CPC无已核独有内容不增行，C64计划取消不计实发。",
+          "source": "https://worldofspectrum.org/archive/software/games/the-mystery-of-arkham-manor-melbourne-house",
+          "workIds": [
+            "g991"
+          ]
+        },
+        {
+          "title": "Asterix and the Magic Cauldron",
+          "status": "新增专题补充",
+          "reason": "原作动作探索另列专题；美国改名和改绘版本待核，不能按名字创建重复原作。",
+          "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/games/asterix-and-the-magic-cauldron/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "melbournehouse-asterix"
+          ]
+        },
+        {
+          "title": "同年CPC与取消C64",
+          "status": "普通平台不增行／取消不计",
+          "reason": "CPC实发但未核独有内容，不另建平台行。说明书提前印有C64操作与人员，开发者回顾确认未发售；不能用说明书中的加载指令推断已实发。",
+          "source": "https://www.gamesthatwerent.com/gtw64/the-mystery-of-arkham-manor/",
+          "workIds": [
+            "g991"
+          ]
+        },
+        {
+          "title": "菜单与文字输入",
+          "status": "已核对",
+          "reason": "设计者直接说明上下文菜单替代复杂解析器；SAY、笔记、电报与稿件仍有文字输入，详细标注界面，区别于以OPEN DOOR等通用词句驱动动作的指令冒险。",
+          "source": "https://classicadventurer.co.uk/pdf/06-a4.pdf",
+          "workIds": [
+            "g991"
+          ]
+        },
+        {
+          "title": "Zim Sala Bim、Redhawk、Kwah及其他文字指令目录",
+          "status": "排除通用指令／其他目录待续",
+          "reason": "Zim Sala Bim说明书及Redhawk原手册明确词句动作指令，未补主库。Lord of the Rings、Shadows of Mordor、Dodgy Geezers等未在首批完成全目录核对，不把未收录解释为作品不存在。",
+          "source": "https://www.mocagh.org/miscgame/zimsalabimaus.pdf",
+          "workIds": []
+        },
+        {
+          "title": "1987出售与1997名称重用",
+          "status": "发行主体分开",
+          "reason": "原发行品牌出售及Beam后来重新取得名称分别记载；DreamWeb、Rocky Horror、How to Be a Complete Bastard等不能只凭类型或记忆归入Melbourne House。后期开发作品仍需按实际发行方核对。",
+          "source": "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html",
+          "workIds": []
+        }
+      ]
     }
   ]
 }
