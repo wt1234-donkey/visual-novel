@@ -31270,6 +31270,225 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ascii",
+      "name": "ASCII",
+      "foundedAt": "1977-05-24",
+      "foundedSource": "https://weekly.ascii.jp/elem/000/002/615/2615668/",
+      "checkedAt": "2026-10-14",
+      "status": "复用3部，新增4部叙事作品及6条内容记录，另列moon",
+      "workIds": [
+        "g096",
+        "g100",
+        "g012",
+        "g987",
+        "g988",
+        "g989",
+        "g990"
+      ],
+      "publisherWorkIds": [
+        "g096",
+        "g100",
+        "g012",
+        "g987",
+        "g988",
+        "g989",
+        "g990"
+      ],
+      "legacyCommandWorkIds": [
+        "g096",
+        "g100"
+      ],
+      "catalogueEntryCount": 8,
+      "source": "https://weekly.ascii.jp/elem/000/002/615/2615668/",
+      "scope": "首批复用原库3部文字冒险及8条旧记录，补入True Love Story本篇、独立续作与Fan Disc以及银色事件四部；另列反RPG moon。合计8部关联作品／15条记录，主库7部／14条、专题补充1部／1条；不是ASCII全游戏或全部叙事目录。",
+      "versionScope": "原8条记录原样保留，包括旧文本杂志机种适配与G-MODE两条重制平台行。新作品先记首发；Remember My Heart新增事件、录音，银色事件2017新章节才单列。Windows完全移植、廉价版、合集、桌面附件及后平台重复同内容不增行。",
+      "versionPanelLabel": "条首发／内容记录",
+      "versionCountLabel": "首发、内容更新与保留旧记录",
+      "publisherNote": "ASCII自家编辑部记1977/05/24アスキー出版成立，1982改称アスキー；按此日期进入1977候选组。Melbourne House存在1977／1978异文且未核月份，本批不宣称两家日级先后。ASCII、后来的Enterbrain、ASCII Media Works及NIS America等实际发行主体分别保留，不以集团、系列或现行域名追溯合并。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>8部关联作品／15条记录；主库7部／14条，专题补充moon 1部／1条。主库已有内容行按ASCII实际发行署名为7部／11条，其余两条G-MODE重制及一条NIS America内容版保留各自署名。</strong></p>",
+      "auditTitle": "厂商沿革、内容增量与发行归属核对",
+      "auditSourceLabel": "ASCII编辑部沿革资料",
+      "auditLabel": "3部旧作、4部新叙事作品、moon及版本边界。",
+      "auditNote": "来源与逐项差异见data/ascii-audit.md。两部旧纯文本作品仅为历史引用，不开放新增词句输入作品；后续系列、署名异文及未核目录列待续。",
+      "sectionTitle": "从杂志文本冒险到下校对话与都市犯罪叙事",
+      "description": "ASCII首批作品专题：三部原库冒险、True Love Story三款独立游戏、银色事件与moon跨类型补充。",
+      "relatedSectionTitle": "跨类型：moon反RPG探索",
+      "relatedIntro": "按原团队官方anti-RPG定义保留类型；专题总数包含此作，主库四类检索不包含。",
+      "relatedCountLabel": "保留官方类型",
+      "relatedGames": [
+        {
+          "id": "ascii-moon",
+          "title": "月亮：moon",
+          "originalTitle": "moon",
+          "chineseTitle": "月亮：moon",
+          "chineseTitleType": "站内编辑译名",
+          "firstYear": 1997,
+          "category": "反RPG探索冒险",
+          "subcategory": "生活观察／灵魂救助",
+          "genre": "反传统RPG／爱与日常／怪物灵魂",
+          "characters": [
+            "进入Moon World的少年（玩家）"
+          ],
+          "charactersSource": "https://oniongames.jp/press/sheet.php?p=moon",
+          "charactersNote": "采用原创团队现行产品介绍支持的主人公身份，不补造姓名。",
+          "synopsis": "少年被吸入自己游玩的RPG世界，跟随勇者的足迹帮助居民、救助被杀怪物的灵魂，收集爱而非靠战斗升级，寻找失落的月光。",
+          "notes": "Love-de-Lic原作、ASCII发行；原团队后由Onion Games复刻。官方称anti-RPG，按跨类型补充，不进入四类主库，也不与Tactics成人作品MOON.混同。",
+          "source": "https://oniongames.jp/press/sheet.php?p=moon",
+          "versions": [
+            {
+              "year": 1997,
+              "platform": "PlayStation",
+              "publisher": "アスキー",
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1997/10/16原作，SLPS-01031产品及说明支持ASCII发行。2019与2020以后Onion Games跨平台复刻及英语翻译未核新增故事或首次加入的游戏内容，不另建同内容平台行；人物音效与一般录音配音需分开核，暂记未核实。",
+              "source": "https://psxdatacenter.com/games/J/M/SLPS-01031.html"
+            }
+          ]
+        }
+      ],
+      "creativeProfile": {
+        "thesis": "编辑观察：这组发行样本从杂志程序和菜单推理转向日常校园会话，以及Film Window的都市犯罪叙事；moon则反转传统RPG的战斗与奖励逻辑。它们来自不同作者和团队，只能描述这些作品的互动方法，不推断统一的公司创作手法。",
+        "phases": [
+          {
+            "period": "1982—1987",
+            "heading": "杂志程序与菜单推理",
+            "analysis": "表参道、南青山两部文本作品及鄂霍次克沿用主库旧ID。杂志机种适配不等于独立商业发行，旧平台对象本批不重写；当代G-MODE内容也不因为原作曾由ASCII发行就改署ASCII。",
+            "basis": "编辑观察",
+            "source": "https://www.gamepres.org/pc88/library/1984/ohotsuku.htm"
+          },
+          {
+            "period": "1996—1999",
+            "heading": "对话关系与临别的一个月",
+            "analysis": "True Love Story强调短期交流、下校话题与约会；独立续作更换人物和舞台，Fan Disc增加两位妹妹的交互会话。制作人直接说明Windows迟发造成其成为既有增补PS版移植，这为不重复计算平台提供依据。",
+            "basis": "编辑观察",
+            "source": "https://pc.watch.impress.co.jp/docs/article/980803/game.htm"
+          },
+          {
+            "period": "1997—2017",
+            "heading": "观察日常与拼合犯罪叙事",
+            "analysis": "moon收集爱和救助灵魂而非战斗经验，作为反RPG另列；银色事件的画面窗口、文字与调查形成独特叙事。其2017新章节有发行方明确增量证据，不能把所有高清重制、再售或合集都按新增剧情计算。",
+            "basis": "编辑观察",
+            "source": "https://playism.com/en/news/2017/0601/two-new-scenarios-added-to-the-silver-case/"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "1977成立与同年候选边界",
+          "status": "已核对",
+          "reason": "采用ASCII自家5/24成立纪念资料；Melbourne House只有1977／1978异文和未核月份，不能排日级顺序。",
+          "source": "https://weekly.ascii.jp/elem/000/002/615/2615668/",
+          "workIds": []
+        },
+        {
+          "title": "表参道冒险",
+          "status": "复用原库",
+          "reason": "原库对象和版本保留，引用同一ID。",
+          "source": "https://ascii.jp/elem/000/000/341/341643/",
+          "workIds": [
+            "g096"
+          ]
+        },
+        {
+          "title": "南青山冒险",
+          "status": "复用原库",
+          "reason": "原库对象和版本保留，引用同一ID。",
+          "source": "https://www.gamepres.org/pc88/library/1983/1983_4.htm",
+          "workIds": [
+            "g100"
+          ]
+        },
+        {
+          "title": "北海道连锁杀人：鄂霍次克消失",
+          "status": "复用原库",
+          "reason": "原库对象和版本保留，引用同一ID。",
+          "source": "https://www.gamepres.org/pc88/library/1984/ohotsuku.htm",
+          "workIds": [
+            "g012"
+          ]
+        },
+        {
+          "title": "真实恋爱故事",
+          "status": "新增主库",
+          "reason": "Bits Laboratory开发、ASCII发行。1997 Remember My Heart有新增事件和男角色录音，归原作版本；1998 Windows采用该已增补内容，制作人明确为完整移植，不再增行。外附桌面工具、原声和广播剧不计新游戏。",
+          "source": "https://pc.watch.impress.co.jp/docs/article/980803/game.htm",
+          "workIds": [
+            "g987"
+          ]
+        },
+        {
+          "title": "真实恋爱故事2",
+          "status": "新增主库",
+          "reason": "舞台与人物更新的独立续作，由ASCII发行、Bits Laboratory制作。三张CD承载同一游戏，不拆三部或三条首发；2001 TLS3及2003 Summer Days由Enterbrain发行，不能只因系列连续便把发行方改成ASCII。",
+          "source": "https://raido.moe/staff/ps1/ps1_true_love_story_2.html",
+          "workIds": [
+            "g988"
+          ]
+        },
+        {
+          "title": "真实恋爱故事：Fan Disc",
+          "status": "新增主库",
+          "reason": "1999年独立发售的补充游戏，包含可操作角色对话，区别于只播音声或观看图集。图库和既有存档解锁不单独构成新作，本条收录理由为新的独立对话游戏模块；PocketStation小游戏是附件，未另计独立平台叙事版。逐版人物录音未拿到直接片尾清单，暂记未核实。",
+          "source": "https://psxdatacenter.com/games/J/T/SLPS-02404.html",
+          "workIds": [
+            "g989"
+          ]
+        },
+        {
+          "title": "银色事件",
+          "status": "新增主库",
+          "reason": "Grasshopper Manufacture开发、ASCII1999发行。后续重制及新增章节由NIS America／PLAYISM等发行，保留当时署名；不是ASCII全部重制。2017新增Yami与White Out章节归原作，不与独立续作The 25th Ward合成同一游戏。声音小说类型或影片演员不自动证明逐版角色配音，暂未核实。",
+          "source": "https://playism.com/en/game/the-silver-case/",
+          "workIds": [
+            "g990"
+          ]
+        },
+        {
+          "title": "moon：反RPG",
+          "status": "新增专题补充",
+          "reason": "保留原产品ASCII发行，当前复刻主体Onion Games不倒写1997；跨类型单列，MOON.为另一作品。",
+          "source": "https://psxdatacenter.com/games/J/M/SLPS-01031.html",
+          "workIds": [],
+          "relatedIds": [
+            "ascii-moon"
+          ]
+        },
+        {
+          "title": "TLS增补、Windows与桌面附件",
+          "status": "增补列行／普通移植不增行",
+          "reason": "制作人确认增补事件先在PS发布，Windows为完整移植；背景色深、窗口和桌面工具不产生再新增剧情。原片尾差异支持男角色录音首次加入。",
+          "source": "https://pc.watch.impress.co.jp/docs/article/980803/game.htm",
+          "workIds": [
+            "g987"
+          ]
+        },
+        {
+          "title": "银色事件2017与后平台",
+          "status": "新章节列行／重复移入不增行",
+          "reason": "PS4首次添加两章，PLAYISM随后明确电脑的是相同章节；首次内容记NIS America，不倒归ASCII。2016高清版、Silver 2425合售及后来Switch未核独有新本篇故事不增行。",
+          "source": "https://playism.com/en/news/2017/0601/two-new-scenarios-added-to-the-silver-case/",
+          "workIds": [
+            "g990"
+          ]
+        },
+        {
+          "title": "TLS3及Summer Days",
+          "status": "待续／实际发行分开",
+          "reason": "PS2后续首发署名Enterbrain，系列关系不等于ASCII发行；本批尚未完整整理后期系列，不设为ASCII别名。",
+          "source": "https://raido.moe/staff/ps2/ps2_true_love_story_3.html",
+          "workIds": []
+        },
+        {
+          "title": "其他候选、指令类与非叙事产品",
+          "status": "边界及未完成目录",
+          "reason": "EMMY等词句输入不新增；Maria原作及续作需按Axela／Break署名核实，不能依据攻略书出版社误归ASCII。好奇心、Galerians、UFO、Wizardry及其他目录未在首批穷尽。",
+          "source": "https://www.gavas.jp/products/list.php?category_id=0&disp_number=15&maker_id=34&name=&orderby=date_desc&pageno=1",
+          "workIds": []
+        }
+      ]
     }
   ]
 }
