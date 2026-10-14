@@ -14,6 +14,8 @@ command_work_ids = {wid for company in coverage['companies']
                     for wid in company['workIds']}
 command_work_ids.update(wid for company in coverage['companies']
                         for wid in company.get('legacyCommandWorkIds', []))
+command_work_ids.update(wid for company in coverage['companies']
+                        for wid in company.get('authorizedCommandWorkIds', []))
 works, versions = data['works'], data['versions']
 work_ids = {work['id'] for work in works}
 version_ids = {version['id'] for version in versions}
@@ -22,7 +24,7 @@ assert {work['category'] for work in works} == {'文字冒险', '视觉小说', 
 assert set(taxonomy['subcategories']) == {work['category'] for work in works}
 assert all(work['subcategory'] in taxonomy['subcategories'][work['category']] for work in works)
 assert all(work['subcategory'] not in {'纯文本指令', '图文指令'}
-           for work in works if int(work['id'][1:]) >= 152 and work['id'] not in command_work_ids), '指令类续补仅适用于用户授权的 Alicesoft／Nitroplus 专题作品'
+           for work in works if int(work['id'][1:]) >= 152 and work['id'] not in command_work_ids), '新增指令冒险须有具名授权或已授权完整目录范围'
 assert all(any(work['subcategory'] == value for work in works) for category in taxonomy['subcategories']
            for value in taxonomy['subcategories'][category]), '存在空的细分类'
 assert all(1976 <= version['year'] <= 2026 and version['workId'] in work_ids for version in versions)
@@ -105,13 +107,21 @@ for company in coverage['companies']:
         covered.update(entry['workIds'])
         related_covered.update(entry.get('relatedIds', []))
     assert covered == set(ids) and related_covered == related_ids, '专题存在缺少核对来源的作品'
-    # Complete catalogues may include authorized command games; a company topic may also
-    # reuse specifically named legacy command-game records without opening that scope to new works.
+    # Keep new, explicitly authorized command works separate from legacy references.
+    authorized = company.get('authorizedCommandWorkIds', [])
+    assert len(authorized) == len(set(authorized)), '具名指令冒险授权存在重复ID'
+    assert set(authorized) <= set(ids), '具名指令冒险授权必须对应专题作品'
+    assert not set(authorized) & set(company.get('legacyCommandWorkIds', [])), '新增授权与旧记录例外不能混用'
+    if authorized:
+        assert company.get('commandAuthorizationNote'), '具名指令冒险授权缺少范围说明'
+        assert all(work['subcategory'] in {'纯文本指令', '图文指令'}
+                   for work in works if work['id'] in set(authorized)), '授权清单应只包含指令冒险'
     if company['id'] in {'alicesoft', 'nitroplus'} and company.get('includeCommandGames') is True:
         allowed_command_ids = set(ids)
     else:
         allowed_command_ids = set(company.get('legacyCommandWorkIds', []))
         assert allowed_command_ids <= set(ids), '旧指令冒险例外必须对应专题已有作品'
+        allowed_command_ids.update(authorized)
     assert all(work['subcategory'] not in {'纯文本指令', '图文指令'}
                for work in works if work['id'] in set(ids) - allowed_command_ids)
 print(f"校验通过：{len(works)} 部作品，{len(versions)} 个平台版本；厂商专题引用一致")

@@ -1,4 +1,40 @@
-# Enix（艾尼克斯）首批核对（2026-10-14）
+# Enix（艾尼克斯）主表七部补齐（2026-10-14）
+
+## 本次补录与当前数量
+
+按用户“将主表的那7部补充进数据库和专题”的具名指示，补录以下七部独立作品及八条内容版本。现主库999部作品／2139条版本、56个厂商专题；Enix主库关联28部／31条版本，连同原跨类型《七风岛物语》为29部／32条。28部主库作品都有Enix发行记录，其中30条版本实际归档Enix，另1条《Riven》2024重制版归档Cyan Worlds。
+
+| 新增作品 | ID | 已核首条记录 | 操作与内容边界 |
+| --- | --- | --- | --- |
+| 翼人2：基塔克拉复活 | g996 | 1986 PC-8801 | 图文指令；独立续作 |
+| 北斗神拳：剧画冒险 | g997 | 1986 PC-8801 | 菜单调查、实时战斗；区分同名动作游戏 |
+| 动物乐园杀人事件 | g998 | 1987 MSX | 菜单调查；小说不列游戏版本 |
+| 翼人 Special：告别梦战士 | g999 | 1987 PC-8801mkIISR以降 | 图文指令；第三部独立故事，非前作加强版 |
+| 古村物语 | g1000 | 1988 PC-8801mkIISR以降 | 菜单、俯视探索及事件冒险 |
+| 裂痕：Riven | g1001 | 1997 PlayStation（日本） | Enix日版首批；另记2024新谜题与扩展叙事重制 |
+| 神秘方舟：幻影剧场 | g1002 | 1999 PlayStation | 动作解谜融合；非1995《Mystic Ark》的普通移植 |
+
+两个新指令作品g996、g999通过`authorizedCommandWorkIds`具名登记，附本次指示的范围说明；原七个`legacyCommandWorkIds`保持不变，也不启用全厂商指令游戏的广泛例外。《幻影剧场》明确标为“动作解谜融合”，不将实际动作操作隐藏为纯文字选择。新中文名均标站内编辑译名。
+
+## 来源与版本判断
+
+- **翼人2：** [游戏保存协会1986年4月目录](https://www.gamepres.org/pc88/library/1986/1986_4.html)及[FM-7资料](https://fm-7.com/museum/products/vryaz12r/)支持PC-8801原作、Enix及人物／剧情；FM-7为同年6月后版，未核新增内容不另列。
+- **北斗神拳：** [协会1986年5月目录](https://www.gamepres.org/pc88/library/1986/1986_5.html)支持Enix电脑冒险版与角色故事；[操作资料](https://w.atwiki.jp/retroadventure/pages/94.html)辅助核菜单选择。与其他厂商发行的同名家庭机、街机动作作品分开。
+- **动物乐园杀人事件：** [协会馆藏目录](https://www.gamepres.org/catalog/?id=8811002158000)支持Enix、1987和MSX；[玩法资料](https://w.atwiki.jp/gcmatome/pages/7312.html)辅助核警探、警犬おいどん与菜单调查。1989小说属于其他媒介。
+- **翼人Special：** [协会1987年12月目录](https://www.gamepres.org/pc88/library/1987/1987_12.html)说明输入指令、两段故事及角色；[平台资料](https://www.8-bits.info/gamelist/PC88/info/info_fyTNpnZXBKtAgKsX.php)交叉核发行。1988 MSX2无新增内容证据，不追加；两段故事不拆为两个游戏。
+- **古村物语：** [协会1988年12月目录](https://www.gamepres.org/pc88/library/1988/1988_12.html)支持Enix、俯视探索冒险及シオン／カイザー王；PC-98无已核新增叙事不另列。
+- **Riven：** [日本PS产品档案](https://www.suruga-ya.jp/product/detail/140001086)核1997/12/23及エニックス；[原版故事与产品资料](https://psxdatacenter.com/games/J/R/SLPS-01180.html)支持人物与环境解谜。首条是Enix日本PS发行，不能代表全球电脑版的发行署名；五张CD是一部完整作品，1998日本Saturn普通移植不另列。Cyan[2024开发说明](https://cyan.com/2024/03/19/a-classic-reimagined-riven-set-for-2024-release-for-flatscreen-and-vr-platforms/)明确新谜题与扩展叙事，所以追加内容版本；[上市公告](https://cyan.com/2024/06/03/riven-launch-date/)核2024/06/25及Windows、macOS、Meta Quest。同批平台合为一行；[Steam产品页](https://store.steampowered.com/app/1712350/Riven/)核Cyan Worlds, Inc.发行与英语人声，中文、日文不能据此标为有配音。图像重做和VR本身不是增行理由。
+- **幻影剧场：** [PS产品与操作资料](https://psxdatacenter.com/games/J/M/SLPM-86147.html)核1999/03/18、Enix、少年／少女选角、港城剧场故事及物品使用／攻击／跑动等动作。保留动作解谜细分类，区分1995年RPG原作。
+
+除2024《Riven》已核英语人声外，其余七条首批记录的角色配音保持“未核实”。不把芯片音源、动画口型、同捆音带直接当人物录音。普通移植、重售、下载渠道没有已核新增内容不追加版本；未发行计划不计。
+
+## 校验与历史保护
+
+本次以提交396409505fdd6f8c13b23f51e6addedc9e122d21为基线，检查原992部作品、2131条版本以及其他55个厂商专题逐对象不变。JSON与CSV同步，56个专题页面同步；测试覆盖七部独立身份、具名指令范围、动作细分类、Enix与Cyan发行筛选，以及Riven只有两条有依据的内容记录。当前28部是已核主表范围，不表示Enix全部RPG及跨类型叙事游戏均已穷尽。
+
+以下为第一批历史审计，当时数量与范围仅描述该批。
+
+# 第一批历史核对（2026-10-14）
 
 ## 成立顺序与历史署名
 
@@ -74,7 +110,7 @@
 - ANGELUS和JESUS II等普通电脑平台移植，没有已核第一次加入的剧情、场景、人物或录音，不因机种不同追加版本。廉价重售、下载渠道和不同光盘数量同样处理。
 - 原g007的1985 FC行原样保留；[2005手机报道](https://k-tai.watch.impress.co.jp/cda/article/news_toppage/22125.html)提到新图像、提示和通关特典，但特典内容与首次加入的素材尚待具体核，暂不制造后版记录。[2023官网](https://www.jp.square-enix.com/ai-tech-preview/portopia/jp/)定位为AI技术体验，不能仅凭新平台和技术功能增加叙事版本。2027预告不计已发售。
 - PS《金田一少年事件簿：悲报岛》《地狱乐园》发行方为讲谈社；Hudson《星见岛》已在原库专题。漫画题材或厂商印象不能替代发行署名，因此不收入Enix清单。
-- Wingman后续、Riven日本发行、Wonder Trek、Planet Laika及Enix RPG未在本批完成全目录整理。首批只对本次明确列出的八部新作及一部跨类型作品做完整落库。
+- Wingman后续、Riven日本发行在第二批补齐；Planet Laika及Enix RPG仍未完成全目录整理。Wonder Trek为Sony发行，不收入Enix发行清单。以下首批计数及范围保留为历史记录。
 - LEVEL DIVE在发布会上公布且拍摄完成，不证明已经发售。Holy Night等取消或未完成计划不补造版本。外附音声、动画、攻略书和商品原声不是独立叙事游戏。
 
 ## 验证
