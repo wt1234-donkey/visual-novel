@@ -1,10 +1,27 @@
 # 叙事游戏年鉴
 
-文字冒险、视觉小说、互动动画与 Galgame 的可检索资料库。每部作品有一条作品记录和一个细分类；首发及有新增内容的后发行版本单独记录（既有历史平台记录保留） **年份、发行公司、归档厂商、类型、主要角色、配音、移植／重制差异与来源**。网页支持主分类 → 细分类、发行厂商、平台与年份联动筛选。
+> **维护目标：`wt1234-donkey/visual-novel`。** 自 2026-10-15 起，所有修改、新增、合并和 Pages 发布均在此仓库进行；原 `wwangtao833-dev/visual-novel` 保留，不回写。
+
+## 当前记录结构（2026-10-15）
+
+**1057 部作品 · 1240 个内容版本 · 2232 条平台发行 · 56 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
+
+| 层级 | JSON 字段 | CSV |
+|---|---|---|
+| 作品 | `works` | 两表通过作品 ID 关联 |
+| 内容版本 | `contentVersions` | [content-versions.csv](data/content-versions.csv) |
+| 平台发行 | `platformReleases` | [platform-releases.csv](data/platform-releases.csv) |
+
+新独立作品保留原作内容；后续只在确认首次新增剧情、人物、路线、关卡、美术、游戏内音乐或角色录音时增加内容版本。普通移植、翻译、再版、合售包装、兼容更新与仅提高分辨率不增版，以后也不主动补录纯平台发行。新内容必须填写具体增量、比较对象、来源及首次发行证据。同批多平台不重复计内容。
+
+详细字段、录入流程、历史待核边界与导出检查见 [content-model.md](data/content-model.md)；待核列表见 [content-review.csv](data/content-review.csv)。下方厂商历次审计中的版本数字保留当时口径，以当前分层统计为准。
+
+
+文字冒险、视觉小说、互动动画与 Galgame 的可检索资料库。每部作品有唯一作品记录和细分类；内容版本与平台发行分别记录（历史发行资料保留） **年份、发行公司、归档厂商、类型、主要角色、配音、移植／重制差异与来源**。网页支持主分类 → 细分类、发行厂商、平台与年份联动筛选。
 
 ## 数据范围
 
-当前收录 **1057 部作品／附带叙事篇目、2232 个版本／关联内容记录**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **1057 部作品／附带叙事篇目、1240 个内容版本、2232 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
@@ -130,7 +147,7 @@ Enix第二批已按指定主表补齐[七部作品](enix.html)：翼人2、北�
 
 ## 文件
 
-- [`data/games.json`](data/games.json)：作品 `works` 与平台版本 `versions`，以 `workId` 关联；适合程序读取。
+- [`data/games.json`](data/games.json)：作品 `works`、内容版本 `contentVersions` 与平台发行 `platformReleases`，以 `workId` 和 `contentVersionId` 关联；适合程序读取。
 - [`data/taxonomy.json`](data/taxonomy.json)：四大分类下的细分类、发行厂商别名与联名署名映射。
 - [`data/versions.csv`](data/versions.csv)：一行一个版本，含作品及版本 ID、作品字段与核查来源；适合 Excel。
 - [`data/early-era-notes.md`](data/early-era-notes.md)：1985 年及以前的增补范围、日期异文与待核项目。
@@ -148,8 +165,8 @@ Enix第二批已按指定主表补齐[七部作品](enix.html)：翼人2、北�
 ## 扩充规则
 
 1. 为新作品添加唯一 `id`，提供首发年份、主分类、`subcategory`、主要角色及作品来源。细分类必须列于 `data/taxonomy.json` 对应主分类下；无可靠姓名资料时注明来源支持的玩家或人物身份，保留姓名未核实说明，不补造姓名。
-2. 新平台版本添加唯一 `id` 和 `workId`；记录**该版本**发行年份、平台、当时发行方、`publisherCompanies` 厂商归档列表、语音状态、版本差异和来源。多厂商联合发行依据来源标注；作者传播记 `[]`。不要把移植年份或新增配音套在原版上。
-3. 运行 `python3 scripts/sync_versions_csv.py` 更新 CSV，再运行 `python3 scripts/validate_data.py` 与 `node --test tests/filter.test.mjs`；更新专题时运行 `python3 scripts/build_company_pages.py`，再运行同一命令加 `--check`；检查页面筛选是否显示新版本。
+2. 新增原作或首次内容批次的发行添加唯一 `id` 和 `workId`；记录**该版本**发行年份、平台、当时发行方、`publisherCompanies` 厂商归档列表、语音状态、版本差异和来源。多厂商联合发行依据来源标注；作者传播记 `[]`。不要把移植年份或新增配音套在原版上。
+3. 运行 `python3 scripts/sync_versions_csv.py` 与 `python3 scripts/export_content_csv.py` 更新两个 CSV，再运行 `python3 scripts/validate_data.py` 与 `node --test tests/filter.test.mjs`；更新专题时运行 `python3 scripts/build_company_pages.py`，再运行同一命令加 `--check`；检查页面筛选是否显示新版本。
 4. 后续优先逐个厂商完成作品目录核对；按厂商扩充时，**不新增“图文指令”和“纯文本指令”作品**；既有历史条目继续保留供查询。 Alicesoft专题按用户要求将叙事指令型游戏纳入主库，历史前身关联一并收录；具体操作形式、混合玩法与资料疑点保留于备注。JAST、ELF、Cocktail Soft 与 Macadamia Soft 按 2026-10-08 用户要求补入菜单／点击式图文指令冒险，映射为“图文选项／调查”，排除键入词句的指令输入；已有记录不修改。“图文选项／调查”及其他符合范围的视觉小说、Galgame 与互动动画可继续核查收录。
 5. 历史发行厂商按作品当年的署名保留。例如《善人シボウデス》2012 年版本署名 **CHUNSOFT**，筛选索引统一归入 **Chunsoft**；不得因现今官网域名属于 Spike Chunsoft 而合并两个不同历史厂商。
 

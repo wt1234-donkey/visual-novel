@@ -16,7 +16,9 @@ command_work_ids.update(wid for company in coverage['companies']
                         for wid in company.get('legacyCommandWorkIds', []))
 command_work_ids.update(wid for company in coverage['companies']
                         for wid in company.get('authorizedCommandWorkIds', []))
-works, versions = data['works'], data['versions']
+from content_model import validate_content_model
+validate_content_model(data, coverage)
+works, versions = data['works'], data['platformReleases']
 
 def validate_edition_credits(work):
     credits = work.get('editionCredits', [])
@@ -67,10 +69,13 @@ for work in works:
 with (ROOT / 'data/versions.csv').open(encoding='utf-8-sig', newline='') as file:
     rows = list(csv.DictReader(file))
 assert len(rows) == len(versions), 'CSV 与 JSON 条数不一致'
-assert len({row['版本ID'] for row in rows}) == len(rows), 'CSV 中版本 ID 重复'
+assert len({row['发行ID'] for row in rows}) == len(rows), 'CSV 中版本 ID 重复'
 for version, row in zip(versions, rows):
+    assert row['内容版本ID'] == (version['contentVersionId'] or '')
+    assert row['内容关系'] == version['contentRelation']
+    assert row['内容核对说明'] == version['contentNote']
     work = next(work for work in works if work['id'] == version['workId'])
-    assert row['作品ID'] == work['id'] and row['版本ID'] == version['id']
+    assert row['作品ID'] == work['id'] and row['发行ID'] == version['id']
     assert row['作品名称'] == work['title'] and row['主分类'] == work['category']
     assert row['中文名称'] == work.get('chineseTitle', '')
     assert row['细分类'] == work['subcategory']
@@ -80,8 +85,8 @@ for version, row in zip(versions, rows):
     assert str(version['year']) == row['发行年份']
     assert row['角色配音标注'] == ('无角色配音' if version['voice'] == '无' else '')
     for key, field in [('platform', '平台'), ('publisher', '发行公司'),
-                       ('kind', '版本类型'),
-                       ('differences', '版本差异'), ('source', '来源')]:
+                       ('kind', '发行类型'),
+                       ('differences', '发行备注'), ('source', '来源')]:
         assert version[key] == row[field], f"{version['id']} 的 {field} 与 JSON 不一致"
 for company in coverage['companies']:
     profile = company['creativeProfile']
@@ -112,10 +117,10 @@ for company in coverage['companies']:
         assert source_url_valid(game['source']) and game['genre'] and game['characters']
         assert all(name and '待核实' not in name for name in game['characters'])
         assert game['category'] not in taxonomy['subcategories'], '跨类型游戏应放在四类主目录之外'
-        assert game['versions'] and min(v['year'] for v in game['versions']) == game['firstYear']
+        assert game['platformReleases'] and min(v['year'] for v in game['platformReleases']) == game['firstYear']
         assert all(v['platform'] and v['publisher'] and v['differences'] and
                    source_url_valid(v['source']) and v['voice'] in {'有', '无', '未核实', '有（部分）'}
-                   for v in game['versions'])
+                   for v in game['platformReleases'])
     assert company['catalogueEntryCount'] <= len(company['entries'])
     covered, related_covered = set(), set()
     for entry in company['entries']:
@@ -142,4 +147,4 @@ for company in coverage['companies']:
         allowed_command_ids.update(authorized)
     assert all(work['subcategory'] not in {'纯文本指令', '图文指令'}
                for work in works if work['id'] in set(ids) - allowed_command_ids)
-print(f"校验通过：{len(works)} 部作品，{len(versions)} 个平台版本；厂商专题引用一致")
+print(f"校验通过：{len(works)} 部作品，{len(data['contentVersions'])} 个内容版本，{len(versions)} 条平台发行；厂商专题引用一致")
