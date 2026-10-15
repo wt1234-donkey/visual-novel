@@ -27,6 +27,8 @@ test('unverified historical releases stay visible without content version inflat
 test('clearing filters returns all preserved releases and distinct content identities',()=>{
   const result=filterCatalogue(data);
   assert.equal(result.length,data.works.length);
-  assert.equal(result.reduce((sum,x)=>sum+x.platformReleases.length,0),2232);
-  assert.equal(result.reduce((sum,x)=>sum+x.contentVersions.length,0),1240);
+  assert.deepEqual(result.flatMap(x=>x.platformReleases.map(r=>r.id)).sort(),
+    data.platformReleases.map(r=>r.id).sort());
+  assert.deepEqual(result.flatMap(x=>x.contentVersions.map(c=>c.id)).sort(),
+    data.contentVersions.map(c=>c.id).sort());
 });
