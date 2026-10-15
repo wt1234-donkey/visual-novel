@@ -4,9 +4,9 @@
 
 ## 当前记录结构（2026-10-15）
 
-**1057 部作品 · 1240 个内容版本 · 2232 条平台发行 · 56 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
+**1060 部作品 · 1244 个内容版本 · 2236 条平台发行 · 57 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
 
-全部 1057 部主目录作品与 359 部专题附录作品现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
+全部 1060 部主目录作品与 368 部专题附录作品现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
 
 | 层级 | JSON 字段 | CSV |
 |---|---|---|
@@ -23,7 +23,7 @@
 
 ## 数据范围
 
-当前收录 **1057 部作品／附带叙事篇目、1240 个内容版本、2232 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **1060 部作品／附带叙事篇目、1244 个内容版本、2236 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
@@ -229,3 +229,8 @@ Alicesoft 叙事作品转入主库（2026-10-04）：按专题现有“叙事／
 **Cocktail Soft 专题（2026-10-08）：** 新增 [Cocktail Soft社专题](cocktailsoft.html)，按《Can Can Bunny》所属品牌核对现行官网 **109 项产品**及历史／授权补充，共 **143 条核对说明**。主库追加 **56 部作品、147 条版本**，专题另列 **14 部跨类型作品与杂集、28 条版本**，共 **70 部关联作品／175 条版本**。菜单、点击及图标指令均纳入，只排除词句键入；原有686部作品、1387条版本和26个专题完全保留。1・Primo、G.O.SE、REFRESH与合集沿用原作ID，PetitBox及独立Fan Disc另计。原品牌与集团其他品牌、实际授权发行方分开说明；已取消的MSX2计划不补成发售版本，欠缺原始资料的字段明确保留疑点。具体边界、逐产品去向与证据见 [`data/cocktailsoft-audit.md`](data/cocktailsoft-audit.md)。全库现为 **742 部作品／1534 条版本**。
 
 **FairyTale 专题（2026-10-08）：** 新增 [FairyTale社专题](fairytale.html)，覆盖《沙織 -美少女達の館-》所属品牌及X指定、花月組、月星組、ETHIX支线。官网151项商品逐项归档；主库追加 **64部作品／144条版本**，另列 **27部跨类型游戏／55条版本**，专题共92部关联作品。菜单、图标、点击、按键阅读与动作保留，只排除词句输入游戏；纯CG展示、试玩、配件与独立集团品牌列明边界。已有744部作品、1539条版本与28个专题保持不变。Lipstick V2玩法、部分移植和特别盘年份仍缺资料，不补造字段。详见 [核对记录](data/fairytale-audit.md)。全库 **808部／1683条版本**。
+
+
+## 万普首批剧情与RPG专题（2026-10-15）
+
+新增[万普社专题](banpresto.html)，按旧游戏公司1977/04/30成立日回补早期缺项。复用《我的女神》，新增3部怪谈主库作品与9部剧情RPG，共新增12部、16个内容身份及16条首次内容发行。新增互动标签附核对来源；学校怪谈S、召唤之夜2 DS及3／4 PSP按具体剧情、召唤兽、插画或录音增量建版。普通再版、翻译与同内容移植不追加；纯日常养成、麻将和纯对战不新增。厂商全目录仍待分批核实，见[data/banpresto-audit.md](data/banpresto-audit.md)。
