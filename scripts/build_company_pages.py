@@ -48,11 +48,14 @@ def card(work, versions=None, anchors=(), version_label='个平台版本'):
         f'{escape(credit["platform"])} · {escape(credit["publisher"])}。'
         f'{escape(credit["reason"])}。{link(credit["source"], "发行依据")}</p>\n'
         for credit in work.get('editionCredits', []))
+    interaction_tags = ''.join(f'<span class="interaction-tag{" pending-tag" if mode == "待核实" else ""}">{escape(mode)}</span>' for mode in work['interactionModes'])
+    interaction_evidence = f'<details class="interaction-evidence"><summary>互动方式依据 · {escape(work["interactionBasis"])}</summary><p class="changes">{escape(work["interactionNote"])}</p>{" ".join(link(url, "玩法资料") for url in work["interactionSources"])}</details>'
     legacy_anchors = ''.join(f'<span id="{escape(anchor, quote=True)}" aria-hidden="true"></span>' for anchor in anchors)
     return f'''<article class="card" id="{work['id']}">{legacy_anchors}
 <div class="card-top"><span class="year">{work['firstYear']}</span><span class="category">{escape(work['category'])}</span></div>
 <h3>{escape(display_title)}</h3>{original_line}
 <p class="intro">{escape(work['synopsis'])}</p>
+<div class="interaction-tags" aria-label="互动方式">{interaction_tags}</div>{interaction_evidence}
 <div class="card-meta"><span>{escape(work['subcategory'])} · {escape(work['genre'])}</span><span>主要角色 · {escape(' / '.join(work['characters']))}</span></div>
 {f'<p class="character-evidence">{link(work["charactersSource"], "角色依据")}{(" · " + escape(work["charactersNote"])) if work.get("charactersNote") else ""}</p>' if work.get('charactersSource') else ''}
 {edition_credits}<details class="version-panel"><summary>查看 {len(contents)} 个内容版本 · {len(versions)} 条平台发行</summary><div class="version-list">{''.join(content_rows)}</div></details>
@@ -111,6 +114,7 @@ def build(company):
 <div class="overview"><div><strong>{len(selected) + len(related)}</strong><span>{overview_label}</span></div><div><strong>{count_contents} / {count_versions}</strong><span>内容版本 / 平台发行</span></div><div><strong>{year_span}</strong><span>作品首发跨度</span></div></div>
 <p class="scope-note">{escape(company['scope'])}</p><p class="scope-note">{escape(company['versionScope'])}</p>
 <div class="hero-links"><a class="primary-link" href="#identity">阅读创作风格</a><a class="secondary-link" href="#works">按年份阅读作品</a></div></section>
+<p class="scope-note">互动方式为可多选的作品层玩法概览，各平台操作可能不同；依据现有资料归纳，操作不明时标待核实。<a href="index.html#interaction-guide">查看互动方式定义</a> · <a href="data/interaction-modes.csv">下载互动清单</a>。</p>
 <p class="scope-note">当前采用作品 → 内容版本 → 平台发行三层记录。同内容跨平台不增加内容版本；仅确认首次新增剧情、人物、路线、可玩内容、美术或音频时新增。内容关系待核的历史发行另列，不计为新增内容。下方旧核对说明中的版本数保留其当时口径。</p>
 {profile_section}
 <section id="works"><div class="section-heading"><div><p class="eyebrow">GAME CATALOGUE</p><h2>{escape(section_title)}</h2></div><p>{len(selected)} 部四类作品 · 增强版合并计数</p></div>

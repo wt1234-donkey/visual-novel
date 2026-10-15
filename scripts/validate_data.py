@@ -16,6 +16,8 @@ command_work_ids.update(wid for company in coverage['companies']
                         for wid in company.get('legacyCommandWorkIds', []))
 command_work_ids.update(wid for company in coverage['companies']
                         for wid in company.get('authorizedCommandWorkIds', []))
+from interaction_model import validate_interactions
+validate_interactions(data, coverage, taxonomy)
 from content_model import validate_content_model
 validate_content_model(data, coverage)
 works, versions = data['works'], data['platformReleases']
@@ -79,6 +81,7 @@ for version, row in zip(versions, rows):
     assert row['作品名称'] == work['title'] and row['主分类'] == work['category']
     assert row['中文名称'] == work.get('chineseTitle', '')
     assert row['细分类'] == work['subcategory']
+    assert row['互动方式（作品概览）'] == '、'.join(work['interactionModes'])
     assert row['游戏类型'] == work['genre']
     assert row['发行厂商归档'] == ('、'.join(version['publisherCompanies']) or '非商业／未署商业厂商')
     assert row['主要角色'] == '、'.join(work['characters'])

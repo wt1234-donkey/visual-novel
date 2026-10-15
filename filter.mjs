@@ -22,7 +22,8 @@ export function filterCatalogue(data, filters={}) {
   for(const work of data.works) {
     if(filters.category && work.category!==filters.category) continue;
     if(filters.subcategory && work.subcategory!==filters.subcategory) continue;
-    const ownMatch=!query || normalize([work.title,work.chineseTitle,work.originalTitle,...(work.titleAliases||[]),work.genre,work.category,work.subcategory,work.synopsis,...work.characters].join(' ')).includes(query);
+    if(filters.interaction && !(work.interactionModes||[]).includes(filters.interaction)) continue;
+    const ownMatch=!query || normalize([work.title,work.chineseTitle,work.originalTitle,...(work.titleAliases||[]),work.genre,work.category,work.subcategory,...(work.interactionModes||[]),work.synopsis,...work.characters].join(' ')).includes(query);
     const versions=(versionByWork.get(work.id) || []).filter(v=>{
       if(filters.contentStatus==='linked' && !v.contentVersionId) return false;
       if(filters.contentStatus==='unverified' && v.contentVersionId) return false;

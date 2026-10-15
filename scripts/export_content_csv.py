@@ -12,6 +12,7 @@ def content_rows(data):
         yield {
             '作品ID': content['workId'], '内容版本ID': content['id'],
             '作品名称': works[content['workId']].get('chineseTitle') or works[content['workId']]['title'],
+            '互动方式（作品概览）': '、'.join(works[content['workId']]['interactionModes']),
             '内容名称': content['label'], '内容首次年份': content['firstYear'],
             '收录依据': '原作／首批内容' if content['basis'] == 'original' else '新增内容',
             '比较对象': content.get('comparedTo', ''),
