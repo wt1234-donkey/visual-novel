@@ -21,7 +21,7 @@ def digest(value):
 
 class ContentModelTests(unittest.TestCase):
     def test_all_historical_fields_and_sources_survive(self):
-        current = {w['id']: digest(w) for w in DATA['works']}
+        current = {w['id']: digest({k:v for k,v in w.items() if k not in {'interactionModes','interactionNote','interactionBasis','interactionSources'}}) for w in DATA['works']}
         self.assertEqual({wid: current.get(wid) for wid in BASELINE['works']}, BASELINE['works'])
         self.assertTrue(set(BASELINE['releases']) <= {r['id'] for r in DATA['platformReleases']})
         for r in DATA['platformReleases']:
@@ -31,7 +31,7 @@ class ContentModelTests(unittest.TestCase):
             self.assertEqual(digest({key: r[key] for key in b['keys']}), b['sha256'], r['id'])
         for company in COVERAGE['companies']:
             for work in company.get('relatedGames', []):
-                old = {k: v for k, v in work.items() if k not in {'contentVersions', 'platformReleases'}}
+                old = {k: v for k, v in work.items() if k not in {'contentVersions', 'platformReleases', 'interactionModes', 'interactionNote', 'interactionBasis', 'interactionSources'}}
                 if work['id'] in BASELINE['relatedWorks']:
                     self.assertEqual(digest(old), BASELINE['relatedWorks'][work['id']])
                 for r in work['platformReleases']:
