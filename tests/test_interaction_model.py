@@ -33,6 +33,10 @@ class InteractionTests(unittest.TestCase):
         main={w['id']:w for w in D['works']};related={w['id']:w for _,w in iter_interaction_works(D,C) if w['id'] not in main}
         self.assertEqual(main['g490']['interactionModes'],['选项分支','日程养成'])
         self.assertNotIn('即时动作',main['g616']['interactionModes'])
+        self.assertEqual(main['g597']['interactionModes'],['选项分支'])
+        self.assertEqual(main['g599']['interactionModes'],['选项分支'])
+        self.assertIn('卡牌棋盘',main['g598']['interactionModes'])
+        self.assertEqual(main['g595']['interactionModes'],['待核实'])
         self.assertEqual(related['ascii-rogue']['interactionModes'],['菜单指令','直接移动'])
         self.assertEqual(related['nitroplus-extra-togainu-typing']['interactionModes'],['打字操作'])
         self.assertEqual(related['koei-gitaroo']['interactionModes'],['节奏演奏'])
