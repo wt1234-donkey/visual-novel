@@ -1,7 +1,7 @@
-import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261015-content-model';
+import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261015-interaction-tags';
 
 const $=id=>document.getElementById(id);
-const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('company-select'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort'),contentStatus:$('content-status')};
+const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('company-select'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort'),contentStatus:$('content-status'),interaction:$('interaction')};
 const label=(tag,className,text)=>{const el=document.createElement(tag);if(className)el.className=className;el.textContent=text;return el};
 const safeLink=(url,title)=>{const a=label('a','source-link',title);try{const u=new URL(url);if(['https:','http:'].includes(u.protocol)){a.href=u.href;a.target='_blank';a.rel='noopener noreferrer'}}catch{}return a};
 
@@ -19,6 +19,13 @@ function renderCard({work,platformReleases:versions,contentVersions}){
   const publisherLabel=companies.length ? companies.slice(0,2).join(' / ')+(companies.length>2?` 等 ${companies.length} 家`:'') : '非商业／未署商业厂商';
   meta.append(label('span','',`细分类 · ${work.subcategory}`),label('span','',work.genre),label('span','','主要角色 · '+work.characters.join(' / ')),label('span','','发行厂商 · '+publisherLabel));
   card.append(top,title,original,intro,meta);
+  const tags=label('div','interaction-tags','');tags.setAttribute('aria-label','互动方式');
+  for(const mode of work.interactionModes||[])tags.append(label('span','interaction-tag'+(mode==='待核实'?' pending-tag':''),mode));
+  card.append(tags);
+  const interactionEvidence=document.createElement('details');interactionEvidence.className='interaction-evidence';
+  interactionEvidence.append(label('summary','','互动方式依据 · '+work.interactionBasis),label('p','changes',work.interactionNote));
+  for(const source of work.interactionSources||[])interactionEvidence.append(safeLink(source,'玩法资料 ↗'));
+  card.append(interactionEvidence);
   const detail=document.createElement('details');detail.className='version-panel';
   detail.append(label('summary','',`查看 ${contentVersions.length} 个内容版本 · ${versions.length} 条平台发行`));
   const container=label('div','version-list','');
@@ -56,7 +63,7 @@ function readFilters(){return Object.fromEntries(Object.entries(fields).map(([ke
 
 async function main(){
   try {
-    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261015-content-model'),fetch('./data/taxonomy.json?v=20261015-content-model')]);
+    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261015-interaction-tags'),fetch('./data/taxonomy.json?v=20261015-interaction-tags')]);
     if(!response.ok||!taxonomyResponse.ok)throw Error('HTTP '+(response.ok?taxonomyResponse.status:response.status));
     const [data,taxonomy]=await Promise.all([response.json(),taxonomyResponse.json()]);
     $('stat-works').textContent=data.works.length;
@@ -64,6 +71,12 @@ async function main(){
     $('stat-releases').textContent=data.platformReleases.length;
     $('content-policy-status').textContent=`${data.platformReleases.filter(v=>!v.contentVersionId).length} 条历史发行的内容关系尚待核实，不计为新增内容版本。`;
     const years=data.platformReleases.map(v=>v.year);$('stat-years').textContent=Math.min(...years)+'—'+Math.max(...years);
+    const modeCounts=new Map();for(const work of data.works)for(const mode of work.interactionModes||[])modeCounts.set(mode,(modeCounts.get(mode)||0)+1);
+    for(const [mode,description] of Object.entries(taxonomy.interactionModes)){
+      if(modeCounts.has(mode)){const option=label('option','',`${mode} · ${modeCounts.get(mode)} 部`);option.value=mode;fields.interaction.append(option)}
+      const row=label('div','interaction-definition','');row.append(label('dt','',mode),label('dd','',description));$('interaction-definitions').append(row);
+    }
+    $('interaction-policy-status').textContent=`互动方式可多选，按作品统计；${modeCounts.get('待核实')||0} 部主目录作品的具体操作待核实。标签为已记录玩法概览，不代表每个机种都有这些操作。`;
     const platforms=[...new Set(data.platformReleases.map(v=>v.platform.trim()))].sort((a,b)=>a.localeCompare(b,'zh'));
     for(const p of platforms){const option=label('option','',p);option.value=p;fields.platform.append(option)}
     const companyCounts=publisherWorkCounts(data);
