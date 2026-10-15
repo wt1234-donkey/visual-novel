@@ -16,24 +16,24 @@ test('SORAHANE three originals preserve names, publisher filters and original ye
 });
 
 test('SORAHANE mobile batches preserve actual historical credits and differing voice states',()=>{
-  const aqua=filterCatalogue(data,{company:'萌えAPP'}).find(({work})=>work.id==='g903');assert.equal(aqua.versions.length,3);
+  const aqua=filterCatalogue(data,{company:'萌えAPP'}).find(({work})=>work.id==='g903');assert.equal(aqua.platformReleases.length,3);
   for(const [platform,date] of [['Android','2015/04/10'],['Android（Google Play）','2015/08/21'],['iOS','2016/04/28']]){
-    const v=aqua.versions.find(v=>v.platform===platform);assert.ok(v.differences.includes(date));assert.equal(v.voice,'有');assert.ok(v.publisher.includes('ハブロッツ'));
+    const v=aqua.platformReleases.find(v=>v.platform===platform);assert.ok(v.differences.includes(date));assert.equal(v.voice,'有');assert.ok(v.publisher.includes('ハブロッツ'));
   }
-  const saku=filterCatalogue(data,{company:'萌えAPP'}).find(({work})=>work.id==='g904');assert.equal(saku.versions.length,1);assert.equal(saku.versions[0].voice,'无');assert.ok(saku.versions[0].publisher.includes('ジャックインザボックス'));assert.ok(saku.versions[0].differences.includes('2013/12/20'));
-  assert.equal(data.versions.find(v=>v.workId==='g904'&&v.kind==='Windows日文原版').voice,'有');
-  assert.equal(data.versions.filter(v=>v.workId==='g904'&&v.platform==='iOS').length,0);
+  const saku=filterCatalogue(data,{company:'萌えAPP'}).find(({work})=>work.id==='g904');assert.equal(saku.platformReleases.length,1);assert.equal(saku.platformReleases[0].voice,'无');assert.ok(saku.platformReleases[0].publisher.includes('ジャックインザボックス'));assert.ok(saku.platformReleases[0].differences.includes('2013/12/20'));
+  assert.equal(data.platformReleases.find(v=>v.workId==='g904'&&v.kind==='Windows日文原版').voice,'有');
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g904'&&v.platform==='iOS').length,0);
   assert.equal(filterCatalogue(data,{company:'SORAHANE',platform:'iOS'}).length,0);
 });
 
 test('SORAHANE extra stories use the original program and exclude visual patches and plans',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='sorahane');
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,11);
-  const stories=data.versions.filter(v=>v.workId==='g904'&&v.kind.startsWith('本体内免费追加'));assert.equal(stories.length,3);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,11);
+  const stories=data.platformReleases.filter(v=>v.workId==='g904'&&v.kind.startsWith('本体内免费追加'));assert.equal(stories.length,3);
   assert.ok(stories.every(v=>v.voice==='有'&&v.differences.includes('不是独立程序')));
   for(const date of ['2013/06/28','2013/07/19','2013/08/09'])assert.ok(stories.some(v=>v.differences.includes(date)));
   assert.equal(data.works.filter(w=>w.originalTitle==='Dream of Human'||w.originalTitle==='TOKI＊SORA').length,0);
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)&&/macOS|Steam/.test(v.platform)).length,0);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)&&/macOS|Steam/.test(v.platform)).length,0);
   assert.deepEqual(dossier.entries.find(e=>e.title==='SORAKAZE与TOKI＊SORA').workIds,[]);
   const page=readFileSync(new URL('../sorahane.html',import.meta.url),'utf8');for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(!/undefined|NaN|Infinity/.test(page));assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="sorahane.html"'));
@@ -47,31 +47,31 @@ test('HARUKAZE four originals are searchable without replacing actual port publi
   assert.equal(publisherWorkCounts(data).get('HARUKAZE'),4);
   for(const [query,id] of [['恋爱皇帝 of LOVE!','g899'],['野良与皇女与流浪猫之心2','g901'],['猴子们！','g902']]) assert.equal(filterCatalogue(data,{query})[0].work.id,id);
   for(const [company,platform,date] of [['ENTERGRAM','PlayStation Vita','2017/05/25'],['iMel','Nintendo Switch','2022/03/17']]){
-    const row=filterCatalogue(data,{company,platform}).find(({work})=>work.id==='g899');assert.equal(row.versions.length,1);assert.ok(row.versions[0].differences.includes(date));assert.equal(row.work.firstYear,2013);
+    const row=filterCatalogue(data,{company,platform}).find(({work})=>work.id==='g899');assert.equal(row.platformReleases.length,1);assert.ok(row.platformReleases[0].differences.includes(date));assert.equal(row.work.firstYear,2013);
   }
   for(const company of ['TOKYOTOON','Fruitbat Factory']) for(const id of ['g900','g901']){
-    const row=filterCatalogue(data,{company,platform:'Steam'}).find(({work})=>work.id===id);assert.equal(row.versions.length,1);assert.equal(row.versions[0].voice,'有');
+    const row=filterCatalogue(data,{company,platform:'Steam'}).find(({work})=>work.id===id);assert.equal(row.platformReleases.length,1);assert.equal(row.platformReleases[0].voice,'有');
   }
 });
 
 test('HARUKAZE compilations, VFB and paid stories keep explicit content identities',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='harukaze');
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,26);
-  for(const kind of ['1+2パック合集收录','五周年1+2完整套装收录']) assert.deepEqual(new Set(data.versions.filter(v=>v.kind===kind).map(v=>v.workId)),new Set(['g900','g901']));
-  const hundred=data.versions.filter(v=>v.kind==='猫的想法100连发付费追加');assert.equal(hundred.length,1);assert.equal(hundred[0].workId,'g900');assert.ok(hundred[0].differences.includes('不能独立启动'));
-  const vfb=data.versions.find(v=>v.kind==='VFB附属短篇内容');assert.equal(vfb.year,2016);assert.equal(vfb.voice,'有');assert.ok(vfb.differences.includes('是否无需本体待核'));
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,26);
+  for(const kind of ['1+2パック合集收录','五周年1+2完整套装收录']) assert.deepEqual(new Set(data.platformReleases.filter(v=>v.kind===kind).map(v=>v.workId)),new Set(['g900','g901']));
+  const hundred=data.platformReleases.filter(v=>v.kind==='猫的想法100连发付费追加');assert.equal(hundred.length,1);assert.equal(hundred[0].workId,'g900');assert.ok(hundred[0].differences.includes('不能独立启动'));
+  const vfb=data.platformReleases.find(v=>v.kind==='VFB附属短篇内容');assert.equal(vfb.year,2016);assert.equal(vfb.voice,'有');assert.ok(vfb.differences.includes('是否无需本体待核'));
   assert.equal(data.works.filter(w=>w.originalTitle.includes('1+2パック')).length,0);
-  const noel=data.versions.filter(v=>v.workId==='g901'&&['PlayStation Vita','PlayStation 4','Nintendo Switch'].includes(v.platform));assert.equal(noel.length,3);assert.ok(noel.every(v=>v.year===2019&&v.publisher==='HARUKAZE'&&v.differences.includes('诺艾尔新路线')));
+  const noel=data.platformReleases.filter(v=>v.workId==='g901'&&['PlayStation Vita','PlayStation 4','Nintendo Switch'].includes(v.platform));assert.equal(noel.length,3);assert.ok(noel.every(v=>v.year===2019&&v.publisher==='HARUKAZE'&&v.differences.includes('诺艾尔新路线')));
   const page=readFileSync(new URL('../harukaze.html',import.meta.url),'utf8');
   for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(!/undefined|NaN|Infinity/.test(page));assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="harukaze.html"'));
 });
 
 test('HARUKAZE future Steam and browser devices do not become shipped native versions',()=>{
-  const monkeys=data.versions.filter(v=>v.workId==='g902');assert.equal(monkeys.length,3);assert.ok(monkeys.every(v=>v.year===2021));
+  const monkeys=data.platformReleases.filter(v=>v.workId==='g902');assert.equal(monkeys.length,3);assert.ok(monkeys.every(v=>v.year===2021));
   assert.equal(monkeys.filter(v=>/Steam|Android|iOS|macOS/.test(v.platform)).length,0);
   const web=monkeys.find(v=>v.platform.startsWith('Web'));assert.equal(web.voice,'未核实');assert.ok(web.differences.includes('2021/10/29'));
-  const android=data.versions.filter(v=>v.workId==='g900'&&v.platform==='Android');assert.equal(android.length,1);assert.ok(android[0].differences.includes('2017/03/30'));assert.equal(android[0].voice,'未核实');
+  const android=data.platformReleases.filter(v=>v.workId==='g900'&&v.platform==='Android');assert.equal(android.length,1);assert.ok(android[0].differences.includes('2017/03/30'));assert.equal(android[0].voice,'未核实');
   assert.deepEqual(data.works.filter(w=>['g899','g900','g901','g902'].includes(w.id)).map(w=>w.firstYear),[2013,2016,2017,2021]);
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='harukaze');
   const future=dossier.entries.find(e=>e.title==='Monkeys!¡ Steam版与试玩');assert.ok(future.status.includes('未来'));assert.ok(future.reason.includes('2026/11/16'));
@@ -85,33 +85,33 @@ test('HULOTTE brand family and Chinese aliases find the completed catalogue',()=
     assert.deepEqual(new Set(filterCatalogue(data,{company:aliases[company]||company}).map(({work})=>work.id)),new Set(dossier.workIds));
   }
   assert.equal(dossier.workIds.length,11);
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,23);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,23);
   assert.equal(filterCatalogue(data,{query:'心之形、色与音'})[0].work.id,'g850');
-  assert.equal(data.versions.find(v=>v.workId==='g850').publisher,'HULOTTE ROI');
+  assert.equal(data.platformReleases.find(v=>v.workId==='g850').publisher,'HULOTTE ROI');
 });
 
 test('HULOTTE international versions preserve actual publisher and language evidence',()=>{
   for(const [query,id,company,year] of [['KamiYaba','g847','Shiravune',2022],['My Klutzy Cupid','g851','NekoNyan Ltd.',2023]]){
     const row=filterCatalogue(data,{query,company})[0];
     assert.equal(row.work.id,id);
-    assert.equal(row.versions.length,1);
-    assert.equal(row.versions[0].year,year);
-    assert.equal(row.versions[0].platform,'Windows（Steam）');
-    assert.equal(row.versions[0].voice,'有');
+    assert.equal(row.platformReleases.length,1);
+    assert.equal(row.platformReleases[0].year,year);
+    assert.equal(row.platformReleases[0].platform,'Windows（Steam）');
+    assert.equal(row.platformReleases[0].voice,'有');
   }
   assert.equal(filterCatalogue(data,{query:'KamiYaba',company:'NekoNyan Ltd.'}).length,0);
   assert.equal(filterCatalogue(data,{query:'My Klutzy Cupid',company:'Shiravune'}).length,0);
 });
 
 test('HULOTTE standalone stories differ from patches and compilation entries reuse identities',()=>{
-  const base=data.versions.filter(v=>v.workId==='g843');
+  const base=data.platformReleases.filter(v=>v.workId==='g843');
   assert.equal(base.length,2);
   assert.equal(base.find(v=>v.kind==='四话追加剧情补丁').year,2011);
   const standalone=data.works.find(w=>w.id==='g853');
   assert.equal(standalone.firstYear,2012);
-  assert.equal(data.versions.find(v=>v.workId==='g853').kind,'免费独立短篇集');
-  assert.equal(data.versions.find(v=>v.workId==='g853').voice,'未核实');
-  const pack=data.versions.filter(v=>v.kind==='ヤバいComplete Pack合集收录');
+  assert.equal(data.platformReleases.find(v=>v.workId==='g853').kind,'免费独立短篇集');
+  assert.equal(data.platformReleases.find(v=>v.workId==='g853').voice,'未核实');
+  const pack=data.platformReleases.filter(v=>v.kind==='ヤバいComplete Pack合集收录');
   assert.deepEqual(new Set(pack.map(v=>v.workId)),new Set(['g844','g845','g846','g847']));
   assert.ok(pack.every(v=>v.year===2020));
   assert.equal(data.works.filter(w=>w.originalTitle.includes('ヤバいコンプリートパック')).length,0);
@@ -124,18 +124,18 @@ test('HULOTTE standalone stories differ from patches and compilation entries reu
 test('Nitroplus completion separates shipped platforms, planned releases and publisher credits',()=>{
   const reboot=filterCatalogue(data,{query:'STEINS;GATE RE:BOOT',from:'2026',company:'MAGES.'});
   assert.deepEqual(reboot.map(({work})=>work.id),['g054']);
-  assert.deepEqual(new Set(reboot[0].versions.map(v=>v.platform)),new Set(['Nintendo Switch 2','Nintendo Switch','PlayStation 5','PlayStation 4']));
+  assert.deepEqual(new Set(reboot[0].platformReleases.map(v=>v.platform)),new Set(['Nintendo Switch 2','Nintendo Switch','PlayStation 5','PlayStation 4']));
   assert.equal(filterCatalogue(data,{query:'RE:BOOT',from:'2026',platform:'Xbox Series'}).length,0);
   const steam=filterCatalogue(data,{query:'RE:BOOT',from:'2026',company:'Spike Chunsoft'});
   assert.deepEqual(steam.map(({work})=>work.id),['g054']);
-  assert.equal(steam[0].versions.length,1);
-  assert.equal(steam[0].versions[0].platform,'Windows（Steam）');
-  assert.ok(data.versions.filter(v=>v.workId==='g054').every(v=>v.platform!=='PlayStation 4 / Steam'));
+  assert.equal(steam[0].platformReleases.length,1);
+  assert.equal(steam[0].platformReleases[0].platform,'Windows（Steam）');
+  assert.ok(data.platformReleases.filter(v=>v.workId==='g054').every(v=>v.platform!=='PlayStation 4 / Steam'));
   assert.deepEqual(filterCatalogue(data,{query:'機神咆吼デモンベイン'}).map(({work})=>work.id),['g600']);
   assert.deepEqual(filterCatalogue(data,{query:'ROBOTICS;NOTES ELITE',company:'Spike Chunsoft'}).map(({work})=>work.id),['g619']);
   assert.ok(filterCatalogue(data,{query:'咲畑梨深'}).some(({work})=>work.id==='g618'));
-  for(const id of ['g603-v1','g608-v1','g610-v1','g611-v2','g621-v1']) assert.equal(data.versions.find(v=>v.id===id).voice,'有');
-  for(const id of ['g597-v1','g613-v1','g615-v1']) assert.equal(data.versions.find(v=>v.id===id).voice,'未核实');
+  for(const id of ['g603-v1','g608-v1','g610-v1','g611-v2','g621-v1']) assert.equal(data.platformReleases.find(v=>v.id===id).voice,'有');
+  for(const id of ['g597-v1','g613-v1','g615-v1']) assert.equal(data.platformReleases.find(v=>v.id===id).voice,'未核实');
 });
 
 test('Nitroplus dossier reuses originals and keeps remakes, aliases and actual publishers together',()=>{
@@ -146,19 +146,19 @@ test('Nitroplus dossier reuses originals and keeps remakes, aliases and actual p
   for(const [query,id] of [['幻灵：地狱之影','g597'],['Phantom INTEGRATION','g597'],['CHAOS;HEAD NOAH','g618'],['你与她与她之恋。','g614'],['君と彼女と彼女の恋。','g614']]){
     assert.deepEqual(filterCatalogue(data,{query}).map(({work})=>work.id),[id]);
   }
-  assert.equal(data.versions.filter(v=>v.workId==='g597').length,8);
-  assert.deepEqual(filterCatalogue(data,{query:'Phantom',company:'プリンセスソフト'}).map(({versions})=>versions.map(v=>v.year)),[[2003]]);
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g597').length,8);
+  assert.deepEqual(filterCatalogue(data,{query:'Phantom',company:'プリンセスソフト'}).map(({platformReleases:versions})=>versions.map(v=>v.year)),[[2003]]);
   assert.equal(filterCatalogue(data,{query:'ROBOTICS;NOTES',company:'Nitroplus'}).length,0);
   assert.equal(filterCatalogue(data,{query:'ROBOTICS;NOTES',company:'5pb.'}).length,2);
   assert.deepEqual(new Set(dossier.publisherWorkIds),new Set(filterCatalogue(data,{company:'Nitroplus'}).map(({work})=>work.id)));
-  assert.equal(data.versions.find(v=>v.id==='g600-v1').voice,'有（部分）');
-  assert.equal(data.versions.find(v=>v.workId==='g163'&&v.platform==='Android').publisher,'株式会社エイシス');
+  assert.equal(data.platformReleases.find(v=>v.id==='g600-v1').voice,'有（部分）');
+  assert.equal(data.platformReleases.find(v=>v.workId==='g163'&&v.platform==='Android').publisher,'株式会社エイシス');
   assert.equal(dossier.relatedGames.length,25);
   assert.ok(!data.works.some(w=>w.originalTitle==='機神飛翔デモンベイン'));
   assert.equal(data.works.filter(w=>w.originalTitle.includes('変移空間')).length,1);
   assert.deepEqual(filterCatalogue(data,{query:'缓慢损伤：清扫者'}).map(({work})=>work.id),['g628']);
   assert.deepEqual(filterCatalogue(data,{query:'咎狗の血 True Blood'}).map(({work})=>work.id),['g622']);
-  assert.equal(data.versions.filter(v=>v.workId==='g625'&&v.kind.includes('re:code')&&v.platform.includes('Steam')).length,0);
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g625'&&v.kind.includes('re:code')&&v.platform.includes('Steam')).length,0);
   const page=readFileSync(new URL('../nitroplus.html',import.meta.url),'utf8');
   for(const id of dossier.workIds) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   const links=[...readFileSync(new URL('../index.html',import.meta.url),'utf8').matchAll(/class="secondary-link" href="[^\"]+\.html">([^<]+)<\/a>/g)];
@@ -176,15 +176,15 @@ test('historical Japanese JAST and international publishers stay independent',()
   const japanese=filterCatalogue(data,{query:'Runaway City',company:'JAST（日本）'})[0];
   const english=filterCatalogue(data,{query:'Runaway City',company:'JAST USA'})[0];
   assert.equal(japanese.work.id,english.work.id);
-  assert.ok(japanese.versions.every(v=>v.publisher==='Tiare'));
-  assert.ok(english.versions.every(v=>v.publisher==='JAST USA'));
-  assert.ok(!old.some(({versions})=>versions.some(v=>v.publisher==='JAST')));
+  assert.ok(japanese.platformReleases.every(v=>v.publisher==='Tiare'));
+  assert.ok(english.platformReleases.every(v=>v.publisher==='JAST USA'));
+  assert.ok(!old.some(({platformReleases:versions})=>versions.some(v=>v.publisher==='JAST')));
 });
 
 test('JAST remakes, collections and non-narrative discs preserve work identity',()=>{
   const original=filterCatalogue(data,{query:'天使们的午后：转校生'})[0];
   assert.deepEqual(filterCatalogue(data,{query:'もんもん学園'}).map(({work})=>work.id),[original.work.id]);
-  assert.equal(original.versions.filter(v=>v.kind.startsWith('重制')).length,1);
+  assert.equal(original.platformReleases.filter(v=>v.kind.startsWith('重制')).length,1);
   assert.equal(filterCatalogue(data,{query:'エロでん'}).length,2);
   assert.equal(data.works.filter(w=>w.originalTitle==='エロでん').length,0);
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='jast');
@@ -195,9 +195,9 @@ test('JAST remakes, collections and non-narrative discs preserve work identity',
   for(const id of [...dossier.workIds,...dossier.relatedGames.map(w=>w.id)]) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   const pride=filterCatalogue(data,{query:'梦日记：遥远的天空之下'})[0];
   assert.equal(pride.work.firstYear,2000);
-  assert.equal(pride.versions[0].publisher,'pride');
-  assert.equal(pride.versions[0].voice,'有');
-  const upgrade=data.versions.find(v=>v.workId==='g015'&&v.kind==='语音外设对应升级版');
+  assert.equal(pride.platformReleases[0].publisher,'pride');
+  assert.equal(pride.platformReleases[0].voice,'有');
+  const upgrade=data.platformReleases.find(v=>v.workId==='g015'&&v.kind==='语音外设对应升级版');
   assert.equal(upgrade.voice,'有（部分）');
   assert.ok(upgrade.differences.includes('另购 JAST SOUND'));
 });
@@ -247,23 +247,23 @@ test('Silky’s audit keeps narrative games and removes command adventures',()=>
   assert.ok(filterCatalogue(data,{query:'清洗四肢'}).some(({work})=>work.id==='g452'));
   const remake=filterCatalogue(data,{query:'野野村',company:'FG REMAKE'});
   assert.equal(remake.length,1);
-  assert.ok(remake[0].versions.every(v=>v.year===2025));
+  assert.ok(remake[0].platformReleases.every(v=>v.year===2025));
 });
 
 test('a 1999 PlayStation query selects ToHeart port, not its 1997 Windows original',()=>{
   const result=filterCatalogue(data,{query:'ToHeart',platform:'PlayStation',from:1999,to:1999});
   assert.equal(result.length,1);
   assert.equal(result[0].work.title,'ToHeart');
-  assert.deepEqual(result[0].versions.map(v=>v.year),[1999]);
-  assert.equal(result[0].versions[0].voice,'有');
-  const original=data.versions.find(v=>v.workId===result[0].work.id && v.year===1997);
+  assert.deepEqual(result[0].platformReleases.map(v=>v.year),[1999]);
+  assert.equal(result[0].platformReleases[0].voice,'有');
+  const original=data.platformReleases.find(v=>v.workId===result[0].work.id && v.year===1997);
   assert.equal(original.voice,'无');
 });
 
 test('all cross-era interactive animation versions can be filtered independently',()=>{
   const r=filterCatalogue(data,{category:'互动动画',platform:'Nintendo Switch',from:2023,to:2025});
   assert.ok(r.some(({work})=>work.title==='时间少女'));
-  assert.ok(r.every(({versions})=>versions.every(v=>v.platform.includes('Nintendo Switch') && v.year>=2023)));
+  assert.ok(r.every(({platformReleases:versions})=>versions.every(v=>v.platform.includes('Nintendo Switch') && v.year>=2023)));
 });
 
 test('publisher and main character are independently searchable',()=>{
@@ -274,17 +274,17 @@ test('publisher and main character are independently searchable',()=>{
 test('999 first edition and voiced collection keep separate years and voice states',()=>{
   const original=filterCatalogue(data,{query:'9 小时 9 人 9 扇门',platform:'Nintendo DS',from:2009,to:2009});
   assert.equal(original.length,1);
-  assert.deepEqual(original[0].versions.map(v=>v.voice),['无']);
+  assert.deepEqual(original[0].platformReleases.map(v=>v.voice),['无']);
   const collection=filterCatalogue(data,{query:'9 小时 9 人 9 扇门',platform:'Steam',from:2017,to:2017});
   assert.equal(collection.length,1);
-  assert.deepEqual(collection[0].versions.map(v=>v.voice),['有']);
+  assert.deepEqual(collection[0].platformReleases.map(v=>v.voice),['有']);
 });
 
 test('Dōkyūsei original and console remake remain distinct',()=>{
   const original=filterCatalogue(data,{query:'同级生',platform:'PC-9800',from:1992,to:1992});
   const remake=filterCatalogue(data,{query:'同级生',platform:'Nintendo Switch',from:2024,to:2024});
-  assert.equal(original[0].versions[0].voice,'无');
-  assert.equal(remake[0].versions[0].voice,'有');
+  assert.equal(original[0].platformReleases[0].voice,'无');
+  assert.equal(remake[0].platformReleases[0].voice,'有');
 });
 
 test('early Wingman versions retain their distinct PC-8801 and FM-7 years',()=>{
@@ -292,8 +292,8 @@ test('early Wingman versions retain their distinct PC-8801 and FM-7 years',()=>{
   const fm=filterCatalogue(data,{query:'ウイングマン',platform:'FM-7',from:1985,to:1985});
   assert.equal(pc.length,1);
   assert.equal(fm.length,1);
-  assert.deepEqual(pc[0].versions.map(v=>v.year),[1984]);
-  assert.deepEqual(fm[0].versions.map(v=>v.year),[1985]);
+  assert.deepEqual(pc[0].platformReleases.map(v=>v.year),[1984]);
+  assert.deepEqual(fm[0].platformReleases.map(v=>v.year),[1985]);
 });
 
 test('an early PC work and its later console adaptation have separate dates',()=>{
@@ -301,7 +301,7 @@ test('an early PC work and its later console adaptation have separate dates',()=
   const consoleVersion=filterCatalogue(data,{query:'サラダの国のトマト姫',platform:'红白机',from:1988,to:1988});
   assert.equal(pc.length,1);
   assert.equal(consoleVersion.length,1);
-  assert.equal(consoleVersion[0].versions[0].kind,'主机改编');
+  assert.equal(consoleVersion[0].platformReleases[0].kind,'主机改编');
 });
 
 test('1970s origins and later commercial edition are separate works',()=>{
@@ -310,7 +310,7 @@ test('1970s origins and later commercial edition are separate works',()=>{
   assert.equal(original.length,1);
   assert.equal(commercial.length,1);
   assert.notEqual(original[0].work.id,commercial[0].work.id);
-  assert.deepEqual(original[0].versions.map(v=>v.platform),['PDP-10']);
+  assert.deepEqual(original[0].platformReleases.map(v=>v.platform),['PDP-10']);
 });
 
 test('identical Mystery House names do not merge two different games',()=>{
@@ -326,23 +326,23 @@ test('Mystery House II uses dated FM-8 and FM-7 releases independently',()=>{
   const fm7=filterCatalogue(data,{query:'ミステリーハウスⅡ',platform:'FM-7',from:1983,to:1983});
   assert.equal(fm8.length,1);
   assert.equal(fm7.length,1);
-  assert.deepEqual(fm8[0].versions.map(v=>v.year),[1982]);
-  assert.deepEqual(fm7[0].versions.map(v=>v.year),[1983]);
+  assert.deepEqual(fm8[0].platformReleases.map(v=>v.year),[1982]);
+  assert.deepEqual(fm7[0].platformReleases.map(v=>v.year),[1983]);
 });
 
 test('Sherlock separates its 1984 Spectrum and 1985 Commodore releases',()=>{
   const zx=filterCatalogue(data,{query:'Sherlock',platform:'ZX Spectrum',from:1984,to:1984});
   const c64=filterCatalogue(data,{query:'Sherlock',platform:'Commodore 64',from:1985,to:1985});
-  assert.deepEqual(zx[0].versions.map(v=>v.year),[1984]);
-  assert.deepEqual(c64[0].versions.map(v=>v.year),[1985]);
+  assert.deepEqual(zx[0].platformReleases.map(v=>v.year),[1984]);
+  assert.deepEqual(c64[0].platformReleases.map(v=>v.year),[1985]);
   assert.equal(filterCatalogue(data,{query:'Sherlock',platform:'Commodore 64',from:1984,to:1984}).length,0);
 });
 
 test('shared FM tape is a single version while Alice has a separate original machine',()=>{
   const dorm=filterCatalogue(data,{query:'女子寮パニック',from:1983,to:1983});
-  assert.deepEqual(dorm[0].versions.map(v=>v.platform),['FM-8／FM-7']);
+  assert.deepEqual(dorm[0].platformReleases.map(v=>v.platform),['FM-8／FM-7']);
   const alice=filterCatalogue(data,{query:'不思議の国のアリス',platform:'PC-8001',from:1984,to:1984});
-  assert.deepEqual(alice[0].versions.map(v=>v.publisher),['マイクロキャビン']);
+  assert.deepEqual(alice[0].platformReleases.map(v=>v.publisher),['マイクロキャビン']);
 });
 
 test('subcategories select only works within the chosen parent class',()=>{
@@ -357,22 +357,22 @@ test('publisher aliases group versions without replacing their original credit',
   const matches=filterCatalogue(data,{company:'Enix（艾尼克斯）'});
   assert.ok(matches.some(({work})=>work.title==='波多比亚连续杀人事件'));
   assert.ok(matches.some(({work})=>work.title==='女子宿舍危机'));
-  assert.ok(matches.flatMap(({versions})=>versions).some(v=>v.publisher==='エニックス'));
-  assert.ok(matches.flatMap(({versions})=>versions).some(v=>v.publisher==='艾尼克斯'));
+  assert.ok(matches.flatMap(({platformReleases:versions})=>versions).some(v=>v.publisher==='エニックス'));
+  assert.ok(matches.flatMap(({platformReleases:versions})=>versions).some(v=>v.publisher==='艾尼克斯'));
 });
 
 test('joint publisher filtering keeps only credited versions of each work',()=>{
   const matches=filterCatalogue(data,{query:'ToHeart',company:'AQUAPLUS'});
   assert.ok(matches.length>0);
-  assert.ok(matches.every(({versions})=>versions.every(v=>v.publisherCompanies.includes('AQUAPLUS'))));
+  assert.ok(matches.every(({platformReleases:versions})=>versions.every(v=>v.publisherCompanies.includes('AQUAPLUS'))));
   const original=filterCatalogue(data,{query:'Colossal Cave Adventure',company:'__unattributed__',from:1976,to:1977});
-  assert.deepEqual(original[0].versions.map(v=>v.year),[1976,1977]);
+  assert.deepEqual(original[0].platformReleases.map(v=>v.year),[1976,1977]);
 });
 
 test('publisher index counts unique games across platforms and credits the actual port publisher',()=>{
   const counts=publisherWorkCounts(data);
   assert.equal(counts.get('Key'),filterCatalogue(data,{company:'Key'}).length);
-  assert.ok(data.versions.filter(v=>v.workId==='g148').length>1);
+  assert.ok(data.platformReleases.filter(v=>v.workId==='g148').length>1);
   assert.equal(counts.get('PROTOTYPE'),filterCatalogue(data,{company:'PROTOTYPE'}).length);
   assert.ok(counts.get('PROTOTYPE')>=1);
   assert.equal(counts.get('__unattributed__'),filterCatalogue(data,{company:'__unattributed__'}).length);
@@ -381,8 +381,8 @@ test('publisher index counts unique games across platforms and credits the actua
 test('publisher aliases preserve historical credit and count games across platform releases',()=>{
   const historical=filterCatalogue(data,{query:'善人シボウデス',company:'Chunsoft'});
   assert.equal(historical.length,1);
-  assert.deepEqual(historical[0].versions.map(v=>v.platform),['Nintendo 3DS','PS Vita']);
-  assert.ok(historical[0].versions.every(v=>v.publisher==='CHUNSOFT'));
+  assert.deepEqual(historical[0].platformReleases.map(v=>v.platform),['Nintendo 3DS','PS Vita']);
+  assert.ok(historical[0].platformReleases.every(v=>v.publisher==='CHUNSOFT'));
   assert.equal(filterCatalogue(data,{query:'善人シボウデス',company:'Spike Chunsoft'}).length,0);
   const counts=publisherWorkCounts(data);
   assert.equal(counts.get('Chunsoft'),filterCatalogue(data,{company:'Chunsoft'}).length);
@@ -412,15 +412,15 @@ test('Alicesoft batches are searchable in Chinese and retain their Japanese titl
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
   assert.ok(found.some(({work})=>work.subcategory==='图文指令'));
-  assert.equal(visibleVoiceNote(data.versions.find(v=>v.id==='g501-v1')),'无角色配音');
-  assert.equal(visibleVoiceNote(data.versions.find(v=>v.id==='g501-v2')),'');
-  assert.equal(visibleVoiceNote(data.versions.find(v=>v.id==='g499-v1')),'');
+  assert.equal(visibleVoiceNote(data.platformReleases.find(v=>v.id==='g501-v1')),'无角色配音');
+  assert.equal(visibleVoiceNote(data.platformReleases.find(v=>v.id==='g501-v2')),'');
+  assert.equal(visibleVoiceNote(data.platformReleases.find(v=>v.id==='g499-v1')),'');
   for (const [query,id] of [['Atlach-Nacha','g498'],['迪亚波利卡','g499'],['海之青','g500'],['妻中蜜','g501'],['超昂天使','g502'],['妻中蜜2','g503'],['雪尔·克莱尔','g504'],['魔女的赎罪','g505'],['妻榨','g506'],['只有我的保健室','g507'],['巫女的圣域','g508']]) {
     assert.ok(filterCatalogue(data,{query,company:'Alicesoft'}).some(({work})=>work.id===id),query);
   }
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='alicesoft');
   assert.deepEqual(new Set(dossier.publisherWorkIds),new Set(found.map(({work})=>work.id)));
-  const predecessorIds = new Set(data.versions.filter(v=>v.publisherCompanies.includes('チャンピオンソフト')).map(v=>v.workId));
+  const predecessorIds = new Set(data.platformReleases.filter(v=>v.publisherCompanies.includes('チャンピオンソフト')).map(v=>v.workId));
   assert.equal(predecessorIds.size,30);
   assert.equal(dossier.workIds.length,126);
   assert.ok([...predecessorIds].every(id=>dossier.workIds.includes(id)));
@@ -434,7 +434,7 @@ test('Alicesoft narrative migration has one searchable record per work and keeps
   const page=readFileSync(new URL('../alicesoft.html',import.meta.url),'utf8');
   assert.equal(anchors.length,88);
   assert.equal(movedIds.size,88);
-  assert.equal(data.versions.filter(v=>movedIds.has(v.workId)).length,186);
+  assert.equal(data.platformReleases.filter(v=>movedIds.has(v.workId)).length,186);
   for(const [oldId,id] of anchors){
     const records=data.works.filter(w=>w.id===id);
     assert.equal(records.length,1,id);
@@ -456,16 +456,16 @@ test('Alicesoft narrative migration has one searchable record per work and keeps
 test('OVERDRIVE separates independent stories from enhanced releases and original publishers',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='overdrive');
   assert.equal(dossier.workIds.length,11);
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,31);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,31);
   for(const [query,id] of [['超電激ストライカー','g646'],['煌煌舞台：谢幕','g643'],['Cross the Future','g648'],['Go! Go! Nippon! 2016','g647'],['OVERDRIVE EDITION','g650']]){
     assert.deepEqual(filterCatalogue(data,{query}).map(({work})=>work.id),[id]);
   }
   assert.equal(data.works.find(w=>w.id==='g650').firstYear,2001);
-  assert.equal(data.versions.find(v=>v.id==='g650-v1').publisher,'GROOVER');
-  assert.equal(data.versions.find(v=>v.id==='g650-v2').publisher,'OVERDRIVE');
+  assert.equal(data.platformReleases.find(v=>v.id==='g650-v1').publisher,'GROOVER');
+  assert.equal(data.platformReleases.find(v=>v.id==='g650-v2').publisher,'OVERDRIVE');
   assert.equal(filterCatalogue(data,{query:'Go! Go! Nippon!',company:'OVERDRIVE'}).length,0);
   assert.equal(dossier.publisherWorkIds.length,10);
-  assert.equal(data.versions.find(v=>v.id==='g647-v3').voice,'无');
+  assert.equal(data.platformReleases.find(v=>v.id==='g647-v3').voice,'无');
   const page=readFileSync(new URL('../overdrive.html',import.meta.url),'utf8');
   for(const id of dossier.workIds){
     assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
@@ -480,10 +480,10 @@ test('Cocktail Soft menu games, remasters and publisher credits remain distinct'
   const primo=filterCatalogue(data,{query:'Can Can Bunny Primo'});
   assert.equal(primo.length,1);
   assert.equal(primo[0].work.firstYear,1989);
-  assert.ok(primo[0].versions.some(v=>v.year===1997 && v.kind==='重制'));
-  assert.ok(!primo[0].versions.some(v=>v.platform==='MSX2'));
+  assert.ok(primo[0].platformReleases.some(v=>v.year===1997 && v.kind==='重制'));
+  assert.ok(!primo[0].platformReleases.some(v=>v.platform==='MSX2'));
   const premiere=data.works.find(w=>w.originalTitle==='きゃんきゃんバニープルミエール');
-  assert.ok(!data.versions.some(v=>v.workId===premiere.id && v.platform==='MSX2'));
+  assert.ok(!data.platformReleases.some(v=>v.workId===premiere.id && v.platform==='MSX2'));
   const chat=filterCatalogue(data,{query:'CHATのススメ'});
   assert.equal(chat.length,1);
   assert.equal(chat[0].work.subcategory,'图文选项／调查');
@@ -491,7 +491,7 @@ test('Cocktail Soft menu games, remasters and publisher credits remain distinct'
   const se=filterCatalogue(data,{query:'Pia♥キャロットへようこそ!!G.O.SE'});
   assert.equal(se.length,1);
   assert.equal(se[0].work.firstYear,2006);
-  assert.ok(se[0].versions.some(v=>v.year===2008 && v.kind==='增强版'));
+  assert.ok(se[0].platformReleases.some(v=>v.year===2008 && v.kind==='增强版'));
   const pia22=filterCatalogue(data,{query:'Pia♥キャロットへようこそ!!2.2'});
   assert.equal(pia22.length,1);
   assert.equal(filterCatalogue(data,{query:'Pia♥キャロットへようこそ!!2.2',company:'Cocktail Soft'}).length,0);
@@ -515,13 +515,13 @@ test('Macadamia icon and action works retain platform credit and exclude typed c
   }
   const parent=filterCatalogue(data,{query:'二人爱戏',company:'dB-SOFT'});
   const brand=filterCatalogue(data,{query:'二人爱戏',company:'Macadamia Soft'});
-  assert.deepEqual(parent[0].versions.map(v=>v.platform),['PC-88']);
-  assert.deepEqual(brand[0].versions.map(v=>v.platform),['PC-98']);
+  assert.deepEqual(parent[0].platformReleases.map(v=>v.platform),['PC-88']);
+  assert.deepEqual(brand[0].platformReleases.map(v=>v.platform),['PC-98']);
   const game177=filterCatalogue(data,{query:'１７７',company:'Macadamia Soft'});
   assert.equal(game177.length,1);
-  assert.deepEqual(new Set(game177[0].versions.map(v=>v.platform)),new Set(['PC-88','PC-98','X1']));
+  assert.deepEqual(new Set(game177[0].platformReleases.map(v=>v.platform)),new Set(['PC-88','PC-98','X1']));
   assert.ok(game177[0].work.genre.includes('动作'));
-  assert.ok(!macadam[0].versions.some(v=>v.platform==='MZ-2500'));
+  assert.ok(!macadam[0].platformReleases.some(v=>v.platform==='MZ-2500'));
   assert.ok(dossier.entries.some(e=>e.title.includes('MZ-2500')&&e.reason.includes('年份')));
   assert.ok(dossier.entries.some(e=>e.title.includes('Don Juan')&&e.workIds.length===0&&e.status.includes('排除')));
   assert.ok(!data.works.some(w=>w.originalTitle==='ドンファン'));
@@ -536,13 +536,13 @@ test('FairyTale keeps menu adventures, credited ports and separate playable volu
   const saori=filterCatalogue(data,{query:'沙织'})[0];
   assert.equal(saori.work.originalTitle,'沙織 -美少女達の館-');
   assert.equal(saori.work.subcategory,'图文选项／调查');
-  assert.ok(saori.versions.some(v=>v.platform==='X68000'&&v.year===1991));
+  assert.ok(saori.platformReleases.some(v=>v.platform==='X68000'&&v.year===1991));
   assert.ok(dossier.workIds.includes('g690'));
   assert.equal(data.works.filter(w=>w.originalTitle==='きゃんきゃんバニー').length,1);
   const natural=filterCatalogue(data,{query:'ナチュラル２デュオ～桜色の季節～',company:'KADOKAWA'})[0];
   assert.equal(natural.work.originalTitle,'Natural2 -DUO-');
-  assert.equal(natural.versions[0].platform,'PlayStation 2');
-  assert.ok(!natural.versions.some(v=>v.publisherCompanies.includes('フェアリーテール')));
+  assert.equal(natural.platformReleases[0].platform,'PlayStation 2');
+  assert.ok(!natural.platformReleases.some(v=>v.publisherCompanies.includes('フェアリーテール')));
   assert.equal(data.works.filter(w=>w.originalTitle.startsWith('セーラー服美少女図鑑 其の')).length,6);
   assert.equal(data.works.filter(w=>w.originalTitle.startsWith('校内写生')).length,3);
   assert.ok(dossier.relatedGames.some(w=>w.originalTitle==='MOON GATE'&&w.category==='策略游戏'));
@@ -580,7 +580,7 @@ test('GAINAX collaboration dossiers retain actual publisher filtering',()=>{
   assert.equal(steel.length,2);
   const second=filterCatalogue(data,{query:'钢铁女友2nd',platform:'PlayStation 2',company:'BROCCOLI'});
   assert.equal(second.length,1);
-  assert.equal(second[0].versions[0].year,2005);
+  assert.equal(second[0].platformReleases[0].year,2005);
   assert.equal(filterCatalogue(data,{query:'钢铁女友2nd',platform:'PlayStation 2',company:'GAINAX'}).length,0);
 });
 
@@ -591,13 +591,13 @@ test('GAINAX enhanced editions and Nadia mobile chapters preserve work identity'
   const nadia=filterCatalogue(data,{query:'蓝宝石之谜',company:'TinMachine'});
   assert.equal(nadia.length,1);
   assert.equal(nadia[0].work.firstYear,1992);
-  assert.equal(nadia[0].versions.length,3);
-  assert.ok(nadia[0].versions.every(v=>v.year===2006&&v.kind.startsWith('分割移植')));
+  assert.equal(nadia[0].platformReleases.length,3);
+  assert.ok(nadia[0].platformReleases.every(v=>v.year===2006&&v.kind.startsWith('分割移植')));
   const three=filterCatalogue(data,{query:'Princess Maker 3',platform:'Windows',from:1997,to:1997});
   assert.equal(three.length,0);
   assert.equal(filterCatalogue(data,{query:'Princess Maker 3',platform:'Windows',from:1998,to:1998}).length,1);
   const five=filterCatalogue(data,{query:'Princess Maker 5',platform:'PSP'})[0];
-  assert.equal(five.versions[0].year,2008);
+  assert.equal(five.platformReleases[0].year,2008);
 });
 
 test('GAINAX related games have explicit non-VN categories and unique page anchors',()=>{
@@ -619,7 +619,7 @@ test('Japan Home Video filtering preserves other publishers and original release
   assert.equal(publisherWorkCounts(data).get('Japan Home Video'),5);
   const cross=filterCatalogue(data,{query:'Crossworld',company:'Japan Home Video'})[0];
   assert.equal(cross.work.firstYear,1996);
-  assert.deepEqual(cross.versions.map(v=>[v.year,v.platform]),[[1997,'Windows']]);
+  assert.deepEqual(cross.platformReleases.map(v=>[v.year,v.platform]),[[1997,'Windows']]);
   assert.equal(filterCatalogue(data,{query:'Crossworld',platform:'PlayStation',company:'Japan Home Video'}).length,0);
   const fx=filterCatalogue(data,{query:'Neo Generation',platform:'PC-FX',company:'NEC Home Electronics'});
   assert.equal(fx.length,1);
@@ -632,8 +632,8 @@ test('JHV enhanced names, English localization and compilation reuse original wo
     assert.deepEqual(filterCatalogue(data,{query}).map(({work})=>work.id),[id]);
   }
   for(const id of ['g830','g831']){
-    assert.equal(data.versions.filter(v=>v.workId===id).length,9);
-    const reprint=data.versions.filter(v=>v.workId===id&&v.kind==='卒業復刻版合集收录');
+    assert.equal(data.platformReleases.filter(v=>v.workId===id).length,9);
+    const reprint=data.platformReleases.filter(v=>v.workId===id&&v.kind==='卒業復刻版合集收录');
     assert.equal(reprint.length,1);
     assert.equal(reprint[0].year,2004);
     assert.deepEqual(reprint[0].publisherCompanies,['IRIコマース&テクノロジー']);
@@ -641,15 +641,15 @@ test('JHV enhanced names, English localization and compilation reuse original wo
   assert.equal(data.works.filter(w=>w.originalTitle==='卒業復刻版').length,0);
   const urm=filterCatalogue(data,{query:'URM M15'})[0];
   assert.equal(urm.work.firstYear,1994);
-  assert.equal(urm.versions.filter(v=>v.platform==='FM TOWNS').length,1);
-  assert.ok(urm.versions.find(v=>v.platform==='FM TOWNS').differences.includes('1995/01/27'));
+  assert.equal(urm.platformReleases.filter(v=>v.platform==='FM TOWNS').length,1);
+  assert.ok(urm.platformReleases.find(v=>v.platform==='FM TOWNS').differences.includes('1995/01/27'));
 });
 
 test('JHV separates cross genres, pending evidence and unrelated same-IP titles',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='jhv');
   assert.equal(dossier.relatedGames.length,4);
-  assert.equal(dossier.relatedGames.flatMap(w=>w.versions).length,8);
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,25);
+  assert.equal(dossier.relatedGames.flatMap(w=>w.platformReleases).length,8);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,25);
   for(const related of dossier.relatedGames){
     assert.ok(!data.works.some(w=>w.id===related.id));
     assert.ok(!['文字冒险','视觉小说','互动动画','Galgame'].includes(related.category));
@@ -660,8 +660,8 @@ test('JHV separates cross genres, pending evidence and unrelated same-IP titles'
   assert.ok(pending.status.includes('待核'));
   const star=dossier.relatedGames.find(w=>w.id==='jhv-star2');
   assert.equal(star.firstYear,1993);
-  assert.equal(star.versions.find(v=>v.year===1993).publisher,'Arsys Software');
-  assert.equal(star.versions.filter(v=>v.publisher==='JHV').length,2);
+  assert.equal(star.platformReleases.find(v=>v.year===1993).publisher,'Arsys Software');
+  assert.equal(star.platformReleases.filter(v=>v.publisher==='JHV').length,2);
   const page=readFileSync(new URL('../jhv.html',import.meta.url),'utf8');
   for(const id of [...dossier.workIds,...dossier.relatedGames.map(w=>w.id)]) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(!/undefined|NaN|Infinity/.test(page));
@@ -674,21 +674,21 @@ test('Cabbage Soft original catalogue and localized versions retain publisher cr
   assert.equal(originals.length,8);
   const grace=filterCatalogue(data,{query:'奇异恩典',company:'Shiravune'})[0];
   assert.equal(grace.work.id,'g836');
-  assert.equal(grace.versions.length,1);
-  assert.equal(grace.versions[0].year,2024);
+  assert.equal(grace.platformReleases.length,1);
+  assert.equal(grace.platformReleases[0].year,2024);
   assert.equal(filterCatalogue(data,{query:'奇异恩典',company:'Sekai Project'}).length,0);
   for(const [query,id,year] of [['巧克甜恋','g837',2020],['巧克甜恋2','g839',2023],['巧克甜恋3','g841',2025]]){
     const row=filterCatalogue(data,{query,company:'Sekai Project'}).find(({work})=>work.id===id);
-    assert.equal(row.versions.length,1);
-    assert.equal(row.versions[0].year,year);
-    assert.equal(row.versions[0].platform,'Windows（Steam）');
+    assert.equal(row.platformReleases.length,1);
+    assert.equal(row.platformReleases[0].year,year);
+    assert.equal(row.platformReleases[0].platform,'Windows（Steam）');
   }
 });
 
 test('Cabbage console publisher transitions and compilations reuse work identity',()=>{
   for(const [id,firstYear,portYear] of [['g838',2020,2021],['g840',2022,2024]]){
     assert.equal(data.works.find(w=>w.id===id).firstYear,firstYear);
-    const credited=data.versions.filter(v=>v.workId===id);
+    const credited=data.platformReleases.filter(v=>v.workId===id);
     assert.deepEqual(credited.filter(v=>v.kind==='主机移植').map(v=>[v.year,v.publisher]),[[portYear,'ENTERGRAM'],[portYear,'ENTERGRAM']]);
     const moved=credited.filter(v=>v.kind==='下载版销售移行');
     assert.equal(moved.length,2);
@@ -701,14 +701,14 @@ test('Cabbage console publisher transitions and compilations reuse work identity
   }
   const hune=filterCatalogue(data,{query:'宝石心学院',company:'HuneX'})[0];
   assert.equal(hune.work.id,'g840');
-  assert.equal(hune.versions.length,2);
-  for(const id of ['g837','g839','g841']) assert.equal(data.versions.filter(v=>v.workId===id&&v.kind==='1・2・3 Complete Pack合集收录').length,1);
+  assert.equal(hune.platformReleases.length,2);
+  for(const id of ['g837','g839','g841']) assert.equal(data.platformReleases.filter(v=>v.workId===id&&v.kind==='1・2・3 Complete Pack合集收录').length,1);
   assert.equal(data.works.filter(w=>w.originalTitle.includes('Complete Pack')).length,0);
 });
 
 test('Cabbage future releases and music remain outside shipped version counts',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='cabbage');
-  const shipped=data.versions.filter(v=>dossier.workIds.includes(v.workId));
+  const shipped=data.platformReleases.filter(v=>dossier.workIds.includes(v.workId));
   assert.equal(shipped.length,29);
   assert.ok(shipped.every(v=>v.year<2026));
   assert.equal(shipped.filter(v=>v.workId==='g840'&&v.platform==='Windows（Steam）').length,0);
@@ -728,18 +728,18 @@ test('Laplacian catalogue preserves original and international publisher filters
   assert.equal(dossier.workIds.length,8);
   for(const [query,id,company,count] of [['牛顿与苹果树','g855','Sol Press',3],['牛顿与苹果树','g855','Syawase Works China',1],['未来广播与人工鸽','g856','HIKARI FIELD',1],['工口伦子','g857','JAST USA',1]]){
     const row=filterCatalogue(data,{query,company})[0];
-    assert.equal(row.work.id,id);assert.equal(row.versions.length,count);
+    assert.equal(row.work.id,id);assert.equal(row.platformReleases.length,count);
   }
   assert.equal(filterCatalogue(data,{query:'花坂结衣',company:'Laplacian'})[0].work.id,'g859');
   assert.equal(filterCatalogue(data,{query:'花坂结衣',company:'株式会社さかさうま工房'}).length,0);
 });
 
 test('Laplacian DLC and regional releases retain work identity',()=>{
-  const rows=data.versions.filter(v=>v.workId==='g855');
+  const rows=data.platformReleases.filter(v=>v.workId==='g855');
   assert.equal(rows.length,5);
   assert.equal(rows.filter(v=>v.kind.includes('内容恢复DLC')).length,2);
   assert.equal(data.works.filter(w=>w.title.includes('内容恢复DLC')).length,0);
-  const white=data.versions.filter(v=>v.workId==='g858'&&v.platform==='Nintendo Switch');
+  const white=data.platformReleases.filter(v=>v.workId==='g858'&&v.platform==='Nintendo Switch');
   assert.equal(white.length,3);
   assert.deepEqual(white.map(v=>v.year),[2022,2026,2026]);
   assert.ok(white[1].differences.includes('2026/03/12'));
@@ -750,7 +750,7 @@ test('Laplacian DLC and regional releases retain work identity',()=>{
 
 test('Laplacian pending projects and non-game media stay outside shipped counts',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='laplacian');
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,20);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,20);
   for(const title of ['MONOCHROME SERENADE','アイソメリカ']){
     assert.deepEqual(dossier.entries.find(e=>e.title===title).workIds,[]);
     assert.equal(data.works.filter(w=>w.title===title).length,0);
@@ -772,11 +772,11 @@ test('Applique main brand, sister brand and port publishers remain distinct',()=
   for(const [company,platform,year] of [['萌えAPP','Android',2011],['CyberFront','PSP',2013]]){
     const row=filterCatalogue(data,{query:'妹药',company,platform})[0];
     assert.equal(row.work.id,'g864');assert.equal(row.work.firstYear,2010);
-    assert.equal(row.versions.length,1);assert.equal(row.versions[0].year,year);
+    assert.equal(row.platformReleases.length,1);assert.equal(row.platformReleases[0].year,year);
   }
   for(const id of ['g867','g869','g870']){
     const row=filterCatalogue(data,{company:'HIKARI FIELD',platform:'Steam'}).find(({work})=>work.id===id);
-    assert.equal(row.versions.length,1);assert.equal(row.versions[0].voice,'有');
+    assert.equal(row.platformReleases.length,1);assert.equal(row.platformReleases[0].voice,'有');
   }
   assert.equal(filterCatalogue(data,{query:'编织时间的约定',company:'HIKARI FIELD'}).length,0);
 });
@@ -785,24 +785,24 @@ test('Applique free LVN, expansion and compilations retain original work identit
   for(const query of ['月影魅像-解放之羽-','月影のシミュラクル -解放の羽-']){
     const row=filterCatalogue(data,{query}).find(({work})=>work.id==='g869');assert.ok(row);assert.equal(row.work.firstYear,2016);
   }
-  assert.equal(data.versions.filter(v=>v.workId==='g869'&&v.year===2016).length,2);
-  assert.equal(data.versions.filter(v=>v.workId==='g869'&&v.kind==='解放の羽扩充版')[0].year,2017);
-  for(const [kind,ids] of [['あっぷりけコレクション合集收录',['g862','g863','g864']],['あっぷりけコレクション2合集收录',['g867','g868','g869']]]) assert.deepEqual(new Set(data.versions.filter(v=>v.kind===kind).map(v=>v.workId)),new Set(ids));
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g869'&&v.year===2016).length,2);
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g869'&&v.kind==='解放の羽扩充版')[0].year,2017);
+  for(const [kind,ids] of [['あっぷりけコレクション合集收录',['g862','g863','g864']],['あっぷりけコレクション2合集收录',['g867','g868','g869']]]) assert.deepEqual(new Set(data.platformReleases.filter(v=>v.kind===kind).map(v=>v.workId)),new Set(ids));
   assert.equal(data.works.filter(w=>w.originalTitle.startsWith('あっぷりけコレクション')).length,0);
   assert.equal(filterCatalogue(data,{query:'Fake Azure Arcology'})[0].work.id,'g872');
   assert.equal(filterCatalogue(data,{query:'Rebirth colony'})[0].work.id,'g865');
-  const cross=data.versions.filter(v=>v.workId==='g870');
+  const cross=data.platformReleases.filter(v=>v.workId==='g870');
   assert.equal(cross.length,3);assert.ok(cross.find(v=>v.kind==='众筹回报实体版').differences.includes('2019/09/27'));
   assert.ok(cross.find(v=>v.kind==='Windows日文原版').differences.includes('2019/10/25'));
 });
 
 test('Applique dossier includes the narrative Fan Disc and explicit pending evidence',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='applique');
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,29);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,29);
   const fd=data.works.find(w=>w.id==='g866');assert.ok(fd.notes.includes('麻将为可关闭'));
   assert.equal(data.works.filter(w=>w.originalTitle==='Wish After').length,0);
   assert.ok(dossier.entries.find(e=>e.title==='Cross众筹下载与Append').status.includes('待核'));
-  assert.equal(data.versions.filter(v=>['g867','g870'].includes(v.workId)&&v.year===2026).length,0);
+  assert.equal(data.platformReleases.filter(v=>['g867','g870'].includes(v.workId)&&v.year===2026).length,0);
   const page=readFileSync(new URL('../applique.html',import.meta.url),'utf8');
   for(const id of dossier.workIds) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(!/undefined|NaN|Infinity/.test(page));
@@ -821,25 +821,25 @@ test('Clochette aliases and Chinese titles find its ten independent works',()=>{
 test('Clochette enhanced ports retain original identity and actual publishers',()=>{
   for(const [id,company,platform,year] of [['g876','Alchemist','PlayStation 2',2010],['g876','Alchemist','PSP',2014],['g878','PROTOTYPE','PSP',2012],['g878','PROTOTYPE','PlayStation Vita',2015]]){
     const row=filterCatalogue(data,{company,platform}).find(({work})=>work.id===id);
-    assert.ok(row);assert.equal(row.versions.length,1);assert.equal(row.versions[0].year,year);assert.equal(row.versions[0].voice,'有');
+    assert.ok(row);assert.equal(row.platformReleases.length,1);assert.equal(row.platformReleases[0].year,year);assert.equal(row.platformReleases[0].voice,'有');
   }
   assert.equal(filterCatalogue(data,{query:'Suzunone Seven!',company:'PROTOTYPE'}).length,0);
   assert.equal(filterCatalogue(data,{query:'Amatsumi Sora ni!',company:'Alchemist'}).length,0);
   assert.equal(data.works.filter(w=>w.originalTitle.includes('Rebirth knot')).length,0);
-  assert.equal(data.versions.filter(v=>v.workId==='g877').length,1);
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g877').length,1);
   assert.ok(data.works.find(w=>w.id==='g877').notes.includes('八组故事'));
 });
 
 test('Clochette dossier distinguishes downloads, in-fiction games and non-game media',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='clochette');
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,17);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,17);
   for(const [id,year] of [['g882',2018],['g883',2018],['g884',2019]]){
-    const rows=data.versions.filter(v=>v.workId===id);assert.equal(rows.length,2);assert.equal(rows[1].year,year);
+    const rows=data.platformReleases.filter(v=>v.workId===id);assert.equal(rows.length,2);assert.equal(rows[1].year,year);
   }
   assert.ok(data.works.find(w=>w.id==='g881').notes.includes('剧情内'));
   assert.equal(data.works.filter(w=>w.originalTitle==='Wizard Generation').length,0);
   assert.deepEqual(dossier.entries.find(e=>e.title==='ASMR、漫画、音乐与游戏联动').workIds,[]);
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)&&v.year===2026).length,0);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)&&v.year===2026).length,0);
   const page=readFileSync(new URL('../clochette.html',import.meta.url),'utf8');
   for(const id of dossier.workIds) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(!/undefined|NaN|Infinity/.test(page));
@@ -860,24 +860,24 @@ test('NanaWind dossier keeps its ten releases and four Luna System collaboration
 
 test('NanaWind independent chapters and Fan Discs are not duplicated by W packages or update discs',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='nanawind');
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,41);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,41);
   assert.deepEqual(data.works.filter(w=>['g890','g891','g892','g893'].includes(w.id)).map(w=>w.firstYear),[2021,2022,2024,2026]);
-  assert.ok(data.versions.find(v=>v.workId==='g890').differences.includes('2021/11/26'));
-  assert.ok(data.versions.find(v=>v.workId==='g893').differences.includes('2026/01/30'));
-  assert.deepEqual(new Set(data.versions.filter(v=>v.kind==='十周年W化DISK追加更新').map(v=>v.workId)),new Set(['g886','g887','g888','g889']));
+  assert.ok(data.platformReleases.find(v=>v.workId==='g890').differences.includes('2021/11/26'));
+  assert.ok(data.platformReleases.find(v=>v.workId==='g893').differences.includes('2026/01/30'));
+  assert.deepEqual(new Set(data.platformReleases.filter(v=>v.kind==='十周年W化DISK追加更新').map(v=>v.workId)),new Set(['g886','g887','g888','g889']));
   assert.equal(data.works.filter(w=>w.originalTitle==='春音アリス＊グラムＷパッケージ化DISK').length,0);
   assert.equal(data.works.filter(w=>w.originalTitle==='花鐘カナデ＊グラム').length,0);
   assert.equal(data.works.find(w=>w.id==='g894').firstYear,2023);
-  for(const id of ['g895','g896','g897','g898']) assert.ok(data.versions.filter(v=>v.workId===id).every(v=>v.voice==='无'));
+  for(const id of ['g895','g896','g897','g898']) assert.ok(data.platformReleases.filter(v=>v.workId===id).every(v=>v.voice==='无'));
 });
 
 test('NanaWind ports, localized releases and mobile batches preserve publisher and evidence',()=>{
   for(const [id,company,platform,year] of [['g886','dramatic create','PlayStation Vita',2015],['g887','dramatic create','PlayStation 4',2019],['g888','ENTERGRAM','PlayStation Vita',2019],['g889','ENTERGRAM','Nintendo Switch',2025],['g886','HIKARI FIELD','Steam',2019],['g887','HIKARI FIELD','Steam',2023]]){
     const row=filterCatalogue(data,{company,platform}).find(({work})=>work.id===id);
-    assert.ok(row);assert.equal(row.versions.length,1);assert.equal(row.versions[0].year,year);
+    assert.ok(row);assert.equal(row.platformReleases.length,1);assert.equal(row.platformReleases[0].year,year);
   }
   assert.equal(filterCatalogue(data,{query:'Haruoto',company:'HIKARI FIELD'}).length,0);
-  const mobile=data.versions.filter(v=>v.workId==='g886'&&v.publisher==='萌えAPP');
+  const mobile=data.platformReleases.filter(v=>v.workId==='g886'&&v.publisher==='萌えAPP');
   assert.equal(mobile.length,3);assert.ok(mobile[0].differences.includes('2015/04/24'));assert.ok(mobile.slice(1).every(v=>v.differences.includes('2015/06/12')));
   assert.ok(mobile.every(v=>v.voice==='未核实'));
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='nanawind');
@@ -894,16 +894,16 @@ test('Data East reuses three interactive animations and lists only the content-a
   assert.ok(dossier);assert.equal(dossier.foundedAt,'1976-04-20');
   assert.deepEqual(dossier.workIds,['g082','g083','g085']);
   assert.deepEqual(dossier.publisherWorkIds,['g082','g083','g085']);
-  assert.equal(data.works.length,1057);assert.equal(data.versions.length,2232);
+  assert.equal(data.works.length,1057);assert.equal(data.platformReleases.length,2232);
   for(const [query,id] of [['幻魔大战','g082'],['贝加之战','g082'],['Thunder Storm','g083'],['Road Avenger','g085']]){
     assert.ok(filterCatalogue(data,{query}).some(({work})=>work.id===id),query);
   }
-  const road=data.versions.filter(v=>v.workId==='g085');assert.deepEqual(road.map(v=>v.id),['g085-v1','g085-v2']);
+  const road=data.platformReleases.filter(v=>v.workId==='g085');assert.deepEqual(road.map(v=>v.id),['g085-v1','g085-v2']);
   const cd=road[1];assert.equal(cd.platform,'Mega-CD');assert.equal(cd.publisher,'Wolf Team');assert.ok(cd.differences.includes('J-WALK'));
   const dataEast=filterCatalogue(data,{company:'Data East'}).find(({work})=>work.id==='g085');
-  assert.equal(dataEast.versions.length,1);assert.equal(dataEast.versions[0].id,'g085-v1');
+  assert.equal(dataEast.platformReleases.length,1);assert.equal(dataEast.platformReleases[0].id,'g085-v1');
   const wolfTeam=filterCatalogue(data,{company:'Wolf Team'}).find(({work})=>work.id==='g085');
-  assert.equal(wolfTeam.versions.length,1);assert.equal(wolfTeam.versions[0].id,'g085-v2');
+  assert.equal(wolfTeam.platformReleases.length,1);assert.equal(wolfTeam.platformReleases[0].id,'g085-v2');
   const page=readFileSync(new URL('../dataeast.html',import.meta.url),'utf8');
   for(const id of dossier.workIds)assert.equal(page.split(`<article class=\"card\" id=\"${id}\">`).length-1,1);
   assert.ok(page.includes('J-WALK'));assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href=\"dataeast.html\"'));
@@ -915,15 +915,15 @@ test('Konami content chronology avoids recycled characters and previously releas
   assert.equal(dossier.foundedAt,'1969-03-21');
   assert.ok(coverage.indexOf(dossier)<coverage.findIndex(c=>c.id==='sinclair'));
   assert.equal(dossier.workIds.length,11);
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,36);
-  const premium=data.versions.find(v=>v.id==='g939-v2');
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,36);
+  const premium=data.platformReleases.find(v=>v.id==='g939-v2');
   assert.equal(premium.year,2012);assert.ok(premium.differences.includes('蓮見達也'));
-  assert.ok(!data.versions.some(v=>['g937','g938','g939'].includes(v.workId)&&v.year===2024));
+  assert.ok(!data.platformReleases.some(v=>['g937','g938','g939'].includes(v.workId)&&v.year===2024));
   assert.ok(dossier.entries.find(e=>e.title==='Girl’s Side 2024 Switch高清版').reason.includes('2012'));
-  const music=data.versions.filter(v=>v.workId==='g177').slice(1);
+  const music=data.platformReleases.filter(v=>v.workId==='g177').slice(1);
   assert.equal(music.length,4);assert.ok(music.every(v=>v.differences.includes('依赖本体')));
   assert.ok(!music.some(v=>v.differences.includes('2010/01/14')));
-  const gs4=data.versions.filter(v=>v.workId==='g940');
+  const gs4=data.platformReleases.filter(v=>v.workId==='g940');
   assert.equal(gs4.length,8);assert.ok(gs4.slice(1).every(v=>v.differences.includes('不是独立游戏')));
   assert.ok(gs4.some(v=>v.differences.includes('巴征道')));
   assert.ok(gs4.some(v=>v.differences.includes('大成功')));
@@ -931,7 +931,7 @@ test('Konami content chronology avoids recycled characters and previously releas
   assert.equal(aliases['科乐美'],'Konami');assert.equal(aliases['Konami Digital Entertainment'],'Konami');
   const filtered=filterCatalogue(data,{company:aliases['科乐美']});
   for(const id of dossier.workIds)assert.ok(filtered.some(({work})=>work.id===id));
-  assert.equal(data.versions.find(v=>v.id==='g940-v1').publisher,'Konami Digital Entertainment');
+  assert.equal(data.platformReleases.find(v=>v.id==='g940-v1').publisher,'Konami Digital Entertainment');
   const page=readFileSync(new URL('../konami.html',import.meta.url),'utf8');
   for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="konami.html"'));
@@ -944,17 +944,17 @@ test('Hudson reuses originals, separates independent afterstories and credits co
   assert.ok(coverage.indexOf(dossier)>coverage.findIndex(c=>c.id==='konami'));
   assert.ok(coverage.indexOf(dossier)<coverage.findIndex(c=>c.id==='sinclair'));
   assert.equal(dossier.workIds.length,21);
-  assert.equal(data.versions.filter(v=>dossier.workIds.includes(v.workId)).length,26);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,26);
   assert.equal(publisherWorkCounts(data).get('Hudson Soft（哈德森）'),21);
   for(const id of ['g074','g077','g019','g020'])assert.ok(dossier.workIds.includes(id));
-  const murder=data.versions.filter(v=>v.workId==='g942');
+  const murder=data.platformReleases.filter(v=>v.workId==='g942');
   assert.equal(murder.length,2);
   assert.deepEqual(murder.map(v=>v.publisherCompanies[0]),['リバーヒルソフト','Hudson Soft（哈德森）']);
-  assert.equal(filterCatalogue(data,{query:'殺人倶楽部',company:'Hudson Soft（哈德森）'})[0].versions[0].year,1990);
-  const remix=data.versions.find(v=>v.id==='g948-v2');
+  assert.equal(filterCatalogue(data,{query:'殺人倶楽部',company:'Hudson Soft（哈德森）'})[0].platformReleases[0].year,1990);
+  const remix=data.platformReleases.find(v=>v.id==='g948-v2');
   assert.ok(remix.differences.includes('お月様とダンス'));assert.equal(remix.year,1996);
-  assert.ok(!data.versions.some(v=>['g948','g950'].includes(v.workId)&&v.platform==='PSP'));
-  for(const id of ['g953','g956','g958'])assert.equal(data.versions.filter(v=>v.workId===id).length,1);
+  assert.ok(!data.platformReleases.some(v=>['g948','g950'].includes(v.workId)&&v.platform==='PSP'));
+  for(const id of ['g953','g956','g958'])assert.equal(data.platformReleases.filter(v=>v.workId===id).length,1);
   assert.equal(data.works.find(w=>w.id==='g956').firstYear,1999);
   assert.ok(data.works.find(w=>w.id==='g958').notes.includes('可单独享受')||data.works.find(w=>w.id==='g958').notes.includes('单独体验'));
   for(const id of ['g943','g944'])assert.equal(data.works.find(w=>w.id===id).subcategory,'图文选项／调查');
@@ -977,15 +977,15 @@ test('Enix seven specified additions preserve command scope, action subtype and 
   assert.ok(ids.every(id=>!dossier.legacyCommandWorkIds.includes(id)));
   assert.deepEqual(data.works.filter(w=>ids.includes(w.id)&&w.subcategory==='图文指令').map(w=>w.id),['g996','g999']);
   assert.equal(data.works.find(w=>w.id==='g1002').subcategory,'动作解谜融合');
-  assert.equal(data.versions.filter(v=>ids.includes(v.workId)).length,8);
+  assert.equal(data.platformReleases.filter(v=>ids.includes(v.workId)).length,8);
   const enix=filterCatalogue(data,{company:'Enix（艾尼克斯）'});
   assert.ok(ids.every(id=>enix.some(({work})=>work.id===id)));
-  const old=enix.find(({work})=>work.id==='g1001').versions;
+  const old=enix.find(({work})=>work.id==='g1001').platformReleases;
   assert.equal(old.length,1);assert.equal(old[0].year,1997);assert.equal(old[0].platform,'PlayStation（日本）');
   const remake=filterCatalogue(data,{company:'Cyan Worlds'}).find(({work})=>work.id==='g1001');
-  assert.equal(remake.versions.length,1);assert.equal(remake.versions[0].year,2024);assert.equal(remake.versions[0].voice,'有');
-  assert.match(remake.versions[0].differences,/新谜题|扩展叙事/);
-  assert.equal(data.versions.filter(v=>v.workId==='g1001').length,2);
+  assert.equal(remake.platformReleases.length,1);assert.equal(remake.platformReleases[0].year,2024);assert.equal(remake.platformReleases[0].voice,'有');
+  assert.match(remake.platformReleases[0].differences,/新谜题|扩展叙事/);
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g1001').length,2);
   const page=readFileSync(new URL('../enix.html',import.meta.url),'utf8');
   for(const id of ids)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(!/undefined|NaN|Infinity/.test(page));
@@ -1001,40 +1001,40 @@ test('ASCII catalogue additions distinguish retail works, bundled stories and as
   assert.equal(data.works.find(w=>w.id==='g1004').subcategory,'图文选项／调查');
   for(const id of co.bundledSampleWorkIds){
     const w=data.works.find(w=>w.id===id);assert.equal(w.releaseContext,'bundledSample');assert.ok(w.bundledWith);
-    const vs=data.versions.filter(v=>v.workId===id);assert.equal(vs.length,1);assert.ok(vs[0].kind.includes('非独立零售'));
+    const vs=data.platformReleases.filter(v=>v.workId===id);assert.equal(vs.length,1);assert.ok(vs[0].kind.includes('非独立零售'));
   }
   const ascii=filterCatalogue(data,{company:'ASCII'});
   assert.equal(ascii.length,18);assert.ok(co.associatedPublisherWorkIds.every(id=>!ascii.some(({work})=>work.id===id)));
   assert.deepEqual(filterCatalogue(data,{company:'Enterbrain'}).map(({work})=>work.id),['g1016','g1017']);
   assert.equal(data.works.find(w=>w.id==='g1014').firstYear,1996);
-  assert.equal(data.versions.filter(v=>v.workId==='g1014').length,1);
-  assert.equal(data.versions.find(v=>v.workId==='g1014').publisher,'Impact Interactive Publishing');
+  assert.equal(data.platformReleases.filter(v=>v.workId==='g1014').length,1);
+  assert.equal(data.platformReleases.find(v=>v.workId==='g1014').publisher,'Impact Interactive Publishing');
   assert.equal(data.works.find(w=>w.id==='g1014').editionCredits[0].publisher,'ASCII Something Good');
-  assert.equal(data.versions.find(v=>v.workId==='g1015').publisherCompanies[0],'Human Entertainment');
+  assert.equal(data.platformReleases.find(v=>v.workId==='g1015').publisherCompanies[0],'Human Entertainment');
   assert.equal(data.works.find(w=>w.id==='g1015').editionCredits[0].year,1997);
 });
 
 test('ASCII cross-type records retain original chronology and count only supported new content',()=>{
   const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='ascii');
-  assert.equal(co.relatedGames.length,46);assert.equal(co.relatedGames.reduce((n,g)=>n+g.versions.length,0),50);
+  assert.equal(co.relatedGames.length,46);assert.equal(co.relatedGames.reduce((n,g)=>n+g.platformReleases.length,0),50);
   const byId=new Map(co.relatedGames.map(g=>[g.id,g]));
   for(const [id,year,pub] of [['ascii-rogue',1980,'Michael Toy／Glenn Wichman（原作者传播）'],['ascii-black-onyx',1984,'BPS'],['ascii-fire-crystal',1984,'BPS'],['ascii-power-dolls-2',1994,'工画堂スタジオ'],['ascii-anearth',1995,'ハドソン']]){
-    const g=byId.get(id);assert.equal(g.firstYear,year);assert.equal(g.versions[0].publisher,pub);assert.equal(g.versions.length,1);assert.ok(g.editionCredits[0].year>=year);
+    const g=byId.get(id);assert.equal(g.firstYear,year);assert.equal(g.platformReleases[0].publisher,pub);assert.equal(g.platformReleases.length,1);assert.ok(g.editionCredits[0].year>=year);
   }
-  const linda=byId.get('ascii-linda');assert.equal(linda.versions[0].publisher,'NECホームエレクトロニクス');
-  assert.deepEqual(linda.versions.map(v=>v.year),[1995,1997,1998]);assert.equal(linda.versions[2].publisher,'アスキー');
-  const highlander=byId.get('ascii-highlander');assert.equal(highlander.versions.length,3);assert.ok(highlander.versions[1].kind.includes('第二部'));assert.ok(highlander.versions[2].kind.includes('第三部'));
-  assert.equal(byId.get('ascii-insiders').versions.length,1);assert.equal(byId.get('ascii-insiders-network').firstYear,1993);
+  const linda=byId.get('ascii-linda');assert.equal(linda.platformReleases[0].publisher,'NECホームエレクトロニクス');
+  assert.deepEqual(linda.platformReleases.map(v=>v.year),[1995,1997,1998]);assert.equal(linda.platformReleases[2].publisher,'アスキー');
+  const highlander=byId.get('ascii-highlander');assert.equal(highlander.platformReleases.length,3);assert.ok(highlander.platformReleases[1].kind.includes('第二部'));assert.ok(highlander.platformReleases[2].kind.includes('第三部'));
+  assert.equal(byId.get('ascii-insiders').platformReleases.length,1);assert.equal(byId.get('ascii-insiders-network').firstYear,1993);
   assert.equal(byId.get('ascii-wizardry-2').firstYear,1982);assert.equal(byId.get('ascii-wizardry-3').firstYear,1983);assert.equal(byId.get('ascii-wizardry-7').firstYear,1992);
   assert.ok(co.relatedGames.every(g=>!data.works.some(w=>w.id===g.id)));
-  assert.equal(byId.get('ascii-ufo').versions.length,1);
+  assert.equal(byId.get('ascii-ufo').platformReleases.length,1);
 });
 
 test('ASCII rendered dossier exposes edition sources without duplicating cards or version counts',()=>{
   const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='ascii');
   const page=readFileSync(new URL('../ascii.html',import.meta.url),'utf8');
   assert.equal(page.split('<article class="card" id=').length-1,68);
-  assert.equal(page.split('<div class="version">').length-1,79);
+  assert.equal(page.split('<div class="version release-row">').length-1,79);
   for(const id of [...co.workIds,...co.relatedGames.map(g=>g.id)])assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.ok(page.includes('相关发行（不重复计内容版本）'));assert.ok(page.includes('发行依据'));
   assert.ok(page.includes('ASCII Something Good'));assert.ok(page.includes('ASCII Entertainment Software, Inc.'));
@@ -1049,7 +1049,7 @@ test('Melbourne narrative searches preserve independent stories, same-name bound
   const credited=new Set(filterCatalogue(data,{company:'Melbourne House'}).map(({work})=>work.id));
   assert.deepEqual(credited,new Set(co.publisherWorkIds));assert.equal(credited.size,17);
   for(const [id,pub] of [['g1028','Addison-Wesley'],['g1029','Ultra Games'],['g1030','Philips Interactive Media, Inc.']]){
-    assert.ok(!credited.has(id));assert.equal(filterCatalogue(data,{company:pub}).find(({work})=>work.id===id).versions.length,1);
+    assert.ok(!credited.has(id));assert.equal(filterCatalogue(data,{company:pub}).find(({work})=>work.id===id).platformReleases.length,1);
   }
   assert.ok(!credited.has('g089'));assert.deepEqual(co.adaptationWorkIds,['g089']);
   assert.equal(data.works.filter(w=>w.originalTitle==='Colossal Cave Adventure').length,1);
@@ -1061,21 +1061,21 @@ test('Melbourne content additions avoid duplicating ordinary ports, bundled orig
   const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='melbournehouse');
   assert.equal(co.authorizedCommandWorkIds.length,10);assert.ok(co.commandAuthorizationNote.includes('完整叙述作品目录'));
   assert.ok(co.authorizedCommandWorkIds.every(id=>!co.legacyCommandWorkIds.includes(id)&&data.works.find(w=>w.id===id).subcategory==='图文指令'));
-  const hobbit=data.versions.filter(v=>v.workId==='g113');assert.equal(hobbit.length,4);assert.equal(hobbit[3].year,1985);assert.ok(hobbit[3].differences.includes('增加场景、谜题'));assert.equal(hobbit[3].publisher,'Melbourne House');
-  const sinclair=filterCatalogue(data,{company:'Sinclair Research'}).find(({work})=>work.id==='g113');assert.equal(sinclair.versions.length,1);
+  const hobbit=data.platformReleases.filter(v=>v.workId==='g113');assert.equal(hobbit.length,4);assert.equal(hobbit[3].year,1985);assert.ok(hobbit[3].differences.includes('增加场景、谜题'));assert.equal(hobbit[3].publisher,'Melbourne House');
+  const sinclair=filterCatalogue(data,{company:'Sinclair Research'}).find(({work})=>work.id==='g113');assert.equal(sinclair.platformReleases.length,1);
   const byId=new Map(co.relatedGames.map(g=>[g.id,g]));
-  const kknd=byId.get('melbournehouse-kknd');assert.equal(kknd.versions.length,2);assert.ok(kknd.versions[1].differences.includes('20个新任务'));
-  assert.equal(byId.get('melbournehouse-kknd2').versions.length,1);assert.equal(byId.get('melbournehouse-transformers').versions.length,1);assert.equal(byId.get('melbournehouse-transformers').editionCredits[0].year,2005);
+  const kknd=byId.get('melbournehouse-kknd');assert.equal(kknd.platformReleases.length,2);assert.ok(kknd.platformReleases[1].differences.includes('20个新任务'));
+  assert.equal(byId.get('melbournehouse-kknd2').platformReleases.length,1);assert.equal(byId.get('melbournehouse-transformers').platformReleases.length,1);assert.equal(byId.get('melbournehouse-transformers').editionCredits[0].year,2005);
   assert.equal(byId.get('melbournehouse-demo').category,'书籍附带纯文字冒险');
   assert.equal(byId.get('melbournehouse-wizard-princess').firstYear,1982);assert.ok(byId.get('melbournehouse-wizard-princess').notes.includes('不是Sierra'));
-  assert.equal(byId.get('melbournehouse-shadowrun').versions[0].publisher,'Data East');assert.equal(byId.get('melbournehouse-riders-rohan').versions[0].publisher,'Konami');
+  assert.equal(byId.get('melbournehouse-shadowrun').platformReleases[0].publisher,'Data East');assert.equal(byId.get('melbournehouse-riders-rohan').platformReleases[0].publisher,'Konami');
   assert.ok(co.relatedGames.every(g=>!data.works.some(w=>w.id===g.id)));
 });
 
 test('Melbourne dossier renders each catalogue identity once and shares new Hobbit content with Sinclair',()=>{
   const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='melbournehouse');
   const page=readFileSync(new URL('../melbournehouse.html',import.meta.url),'utf8');
-  assert.equal(page.split('<article class="card" id=').length-1,44);assert.equal(page.split('<div class="version">').length-1,55);
+  assert.equal(page.split('<article class="card" id=').length-1,44);assert.equal(page.split('<div class="version release-row">').length-1,55);
   for(const id of [...co.workIds,...co.relatedGames.map(g=>g.id)])assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   assert.equal(co.catalogueEntryCount,44);assert.equal(co.workIds.length,21);assert.equal(co.relatedGames.length,23);
   assert.ok(page.includes('实际内容行发行17部／23条'));assert.ok(page.includes('相关发行（不重复计内容版本）'));
@@ -1086,36 +1086,36 @@ test('Melbourne dossier renders each catalogue identity once and shares new Hobb
 test('KOEI catalogue keeps original, successor and associated publishers separate',()=>{
   const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='koei');
   assert.equal(co.workIds.length,37);assert.equal(co.relatedGames.length,35);
-  assert.equal(data.versions.filter(v=>co.workIds.includes(v.workId)).length,83);
-  assert.equal(co.relatedGames.reduce((n,w)=>n+w.versions.length,0),50);
+  assert.equal(data.platformReleases.filter(v=>co.workIds.includes(v.workId)).length,83);
+  assert.equal(co.relatedGames.reduce((n,w)=>n+w.platformReleases.length,0),50);
   const selected=filterCatalogue(data,{company:'光荣'}).filter(({work})=>co.workIds.includes(work.id));
   assert.deepEqual(new Set(selected.map(({work})=>work.id)),new Set(co.publisherWorkIds));
   assert.equal(selected.length,20);
   for(const [query,publisher] of [['搭档任务：BOND','Nintendo'],['安琪莉可：魔恋六骑士','IDEA FACTORY'],['新安琪莉可：天使之泪','IDEA FACTORY'],['神秘岛：MYST','Brøderbund']]){
-    const row=filterCatalogue(data,{query})[0];assert.ok(row,query);assert.equal(row.versions[0].publisher,publisher);
+    const row=filterCatalogue(data,{query})[0];assert.ok(row,query);assert.equal(row.platformReleases[0].publisher,publisher);
     assert.ok(co.associatedPublisherWorkIds.includes(row.work.id));assert.ok(!co.publisherWorkIds.includes(row.work.id));
   }
   const corda3=co.relatedGames.find(w=>w.originalTitle==='金色のコルダ３');
-  assert.equal(corda3.versions[0].publisher,'コーエー');assert.equal(corda3.versions[0].year,2010);
-  assert.equal(co.relatedGames.find(w=>w.originalTitle==='ときめきレストラン☆☆☆').versions[0].publisher,'Konami');
+  assert.equal(corda3.platformReleases[0].publisher,'コーエー');assert.equal(corda3.platformReleases[0].year,2010);
+  assert.equal(co.relatedGames.find(w=>w.originalTitle==='ときめきレストラン☆☆☆').platformReleases[0].publisher,'Konami');
 });
 
 test('KOEI versions keep early routes and DLC before later recorded enhancements',()=>{
   const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='koei');
   const h3=data.works.find(w=>w.originalTitle==='遙かなる時空の中で３');
-  assert.equal(data.versions.filter(v=>v.workId===h3.id).length,14);
+  assert.equal(data.platformReleases.filter(v=>v.workId===h3.id).length,14);
   assert.equal(data.works.filter(w=>w.originalTitle==='遙かなる時空の中で３ 十六夜記').length,0);
-  const april=data.versions.find(v=>v.workId===h3.id&&v.kind.includes('第2批'));
+  const april=data.platformReleases.find(v=>v.workId===h3.id&&v.kind.includes('第2批'));
   assert.ok(april.differences.includes('首发特典重售'));
   const rondo=data.works.find(w=>w.originalTitle==='遙かなる時空の中で６ 幻燈ロンド');
-  const rv=data.versions.filter(v=>v.workId===rondo.id);assert.deepEqual(rv.map(v=>v.year).sort(),[2016,2016,2017,2019]);
+  const rv=data.platformReleases.filter(v=>v.workId===rondo.id);assert.deepEqual(rv.map(v=>v.year).sort(),[2016,2016,2017,2019]);
   assert.ok(rv.find(v=>v.year===2019).differences.includes('故事本身不称2019首次创作'));
   const ff=co.relatedGames.find(w=>w.originalTitle==='金色のコルダ２');
-  assert.ok(ff.versions.find(v=>v.year===2018&&v.kind.includes('2月')).differences.includes('2017首发Box特典'));
+  assert.ok(ff.platformReleases.find(v=>v.year===2018&&v.kind.includes('2月')).differences.includes('2017首发Box特典'));
   const myst=data.works.find(w=>w.originalTitle==='Myst');assert.equal(myst.firstYear,1993);
-  assert.equal(data.versions.filter(v=>v.workId===myst.id).length,1);
+  assert.equal(data.platformReleases.filter(v=>v.workId===myst.id).length,1);
   assert.deepEqual(myst.editionCredits.map(c=>c.year),[1994,1997]);
-  assert.ok(co.relatedGames.find(w=>w.originalTitle==='アンジェリーク').versions.some(v=>v.kind.includes('Duet')));
+  assert.ok(co.relatedGames.find(w=>w.originalTitle==='アンジェリーク').platformReleases.some(v=>v.kind.includes('Duet')));
   assert.equal(co.relatedGames.filter(w=>w.originalTitle==='アンジェリーク デュエット').length,0);
 });
 
