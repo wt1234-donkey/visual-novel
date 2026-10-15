@@ -1,0 +1,52 @@
+# 内容版本与平台发行
+
+维护仓库：**wt1234-donkey/visual-novel**。原 `wwangtao833-dev` 仓库保留，本次和以后均不回写。
+
+## 三层记录
+
+| 层级 | 数据字段 | 记录什么 |
+|---|---|---|
+| 作品 | `works` | 唯一作品 ID、名称、原作年、分类、剧情、人物与作品来源 |
+| 内容版本 | `contentVersions` | 内容身份、内容首次年份、原作或增补、具体差异、比较对象与内容证据 |
+| 平台发行 | `platformReleases` | 发行 ID、作品 ID、内容版本 ID、该次发行的年份、平台、实际发行方、配音状态与来源 |
+
+专题跨类型作品也使用 `contentVersions` 和 `platformReleases`，不复制进主库。旧 `editionCredits` 是保留的历史发行补充说明，属于平台发行证据，不计内容版本；新资料不再新增此旧字段。
+
+`platformReleases.contentVersionId` 指向同一作品的内容版本。一个内容版本可以对应多个平台发行，不以平台数增加内容计数。配音可能因平台删减，保留在发行层，不能一律倒填到原版。
+
+`contentRelation`：`original` 原作内容；`added` 已有明确增量的内容版本；`same` 已核同内容；`unverified` 尚未能确定与既有内容的关系。最后一种的内容 ID 必须为空，不计内容版本，也不声称一定与原版相同。筛选“内容关联”可查看这些历史记录。
+
+## 新增规则
+
+1. 新独立作品先建立一个 `basis: original` 的内容记录及其首次发行。
+2. 后发版本只有**具体、可核查的新剧情、人物、路线、关卡、CG／重绘素材、游戏内音乐或新配音**才另建 `basis: added` 的内容版本。填写 `comparedTo`（同一作品先行内容 ID）、`addedContent`（具体增量与来源）、`evidenceReleaseIds`（首次发行证据），不可只写“重制／移植／增强”。
+3. 同内容换平台、翻译、商店上架、普通移植、廉价再版、合售包装、兼容修正和仅提高分辨率，不新增内容版本；以后也不主动补纯平台发行。首次新增内容批次的发行才使用 `releaseRole: contentDebut`。同批多平台共用一个内容 ID。该标记是编辑对首次批次的声明，不是仅凭同年份就可自动判断同期；不确定先后时暂缓录入。
+4. 将既有增补移到新平台时，须先比较是否又有首次加入的内容。已有路线、CG、配音、DLC的再整合不是新增依据；新作、独立续篇与依赖本体的增补也须区分。
+5. 历史未核内容先保留发行证据；补核后可关联已有内容 ID，或在证据支持时建立新的内容身份。迁移不代表所有发行差异重新查证完毕。
+
+## 迁移边界
+
+迁移以 `9505ca75ab27280bd559354f82ea8d83f8553a7c` 为基准，旧作品与旧发行字段不删改。原有“版本”全部改为平台发行；内容身份只从原作和明确审核的增量建立。迁移脚本内的分组是逐项审阅旧差异说明后的明确清单，不按“重制”“新”等关键词自动判版。部分旧记录只说明“移植”或改编，缺少具体差异，保留待核。
+
+主库内容版本数包含原作及已明确的增补，**不表示内容目录已经穷尽**。旧厂商介绍、历史审计中的版本计数是当时口径，保留为历史说明；当前卡片和顶部统计使用分层后的实时数据。
+
+`content-migration-baseline.json` 保存原字段列表及 SHA-256，供迁移完整性回归核对，不能用来给新记录冒充历史例外。后续确需订正旧资料时，须一并审查订正证据及对应回归断言。
+
+## 导出与检查
+
+- `content-versions.csv`：一行一个内容身份，不按平台复制。
+- `platform-releases.csv`：一行一个历史／首次内容发行，含可空的内容 ID、内容关系和核对说明。
+- `versions.csv`：平台发行 CSV 的过渡路径，表头已明确为发行 ID／发行类型，并非内容版本表。
+- `content-review.csv`：主库及专题中内容关系尚未核实的历史发行及证据，供后续逐项核查。
+
+运行：
+
+```sh
+python3 scripts/sync_versions_csv.py
+python3 scripts/export_content_csv.py
+python3 scripts/build_company_pages.py
+python3 scripts/validate_data.py
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/*.test.mjs
+python3 scripts/build_company_pages.py --check
+```
