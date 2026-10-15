@@ -1,11 +1,11 @@
-import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261008-fairytale';
+import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261015-content-model';
 
 const $=id=>document.getElementById(id);
-const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('company-select'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort')};
+const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('company-select'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort'),contentStatus:$('content-status')};
 const label=(tag,className,text)=>{const el=document.createElement(tag);if(className)el.className=className;el.textContent=text;return el};
 const safeLink=(url,title)=>{const a=label('a','source-link',title);try{const u=new URL(url);if(['https:','http:'].includes(u.protocol)){a.href=u.href;a.target='_blank';a.rel='noopener noreferrer'}}catch{}return a};
 
-function renderCard({work,versions}){
+function renderCard({work,platformReleases:versions,contentVersions}){
   const card=label('article','card','');
   const top=label('div','card-top','');
   top.append(label('span','year',String(work.firstYear)),label('span','category category-'+work.category,work.category));
@@ -20,18 +20,30 @@ function renderCard({work,versions}){
   meta.append(label('span','',`细分类 · ${work.subcategory}`),label('span','',work.genre),label('span','','主要角色 · '+work.characters.join(' / ')),label('span','','发行厂商 · '+publisherLabel));
   card.append(top,title,original,intro,meta);
   const detail=document.createElement('details');detail.className='version-panel';
-  const summary=label('summary','','查看 '+versions.length+' 个平台版本');detail.append(summary);
+  detail.append(label('summary','',`查看 ${contentVersions.length} 个内容版本 · ${versions.length} 条平台发行`));
   const container=label('div','version-list','');
-  for(const version of versions){
-    const v=label('div','version','');
+  const releaseRow=(release)=>{
+    const row=label('div','version release-row','');
     const line=label('div','version-line','');
-    line.append(label('strong','',String(version.year)),label('span','platform-name',version.platform),label('span','version-kind',version.kind));
-    const voiceNote=visibleVoiceNote(version);
-    const publisher=label('p','publisher','发行／出版：'+version.publisher+(voiceNote?'　·　'+voiceNote:''));
-    const changes=label('p','changes',version.differences);
-    v.append(line,publisher,changes,safeLink(version.source,'版本来源 ↗'));
-    container.append(v);
+    line.append(label('strong','',String(release.year)),label('span','platform-name',release.platform),label('span','version-kind',release.kind));
+    row.append(line,label('p','publisher','发行／出版：'+release.publisher+(visibleVoiceNote(release)?' · '+visibleVoiceNote(release):'')),label('p','changes',release.differences),safeLink(release.source,'发行来源 ↗'));
+    return row;
+  };
+  for(const content of contentVersions.sort((a,b)=>a.firstYear-b.firstYear)){
+    const group=label('section','content-group','');
+    group.append(label('h4','content-heading',`${content.firstYear} · ${content.label}`),label('p','content-basis',content.basis==='original'?'原作／首批内容':'有新增内容 · '+content.id),label('p','changes',content.evidence),safeLink(content.source,'内容依据 ↗'));
+    const releases=document.createElement('details');releases.className='release-panel';
+    const rows=versions.filter(v=>v.contentVersionId===content.id);
+    releases.append(label('summary','',`关联平台发行 ${rows.length} 条`),...rows.map(releaseRow));
+    group.append(releases);container.append(group);
   }
+  const pending=versions.filter(v=>!v.contentVersionId);
+  if(pending.length){
+    const group=document.createElement('details');group.className='release-panel pending-releases';
+    group.append(label('summary','',`内容关系待核实：${pending.length} 条历史发行（不计内容版本）`),label('p','changes','保留旧发行资料。尚未确认新增内容，也未证明与已有内容完全相同。'),...pending.map(releaseRow));
+    container.append(group);
+  }
+  for(const credit of work.editionCredits||[])container.append(label('p','changes',`历史发行补充：${credit.year} · ${credit.platform} · ${credit.publisher}。${credit.reason}`),safeLink(credit.source,'发行补充依据 ↗'));
   detail.append(container);card.append(detail);
   const bottom=label('div','card-bottom','');bottom.append(safeLink(work.source,'作品来源 ↗'));
   if(work.charactersSource)bottom.append(safeLink(work.charactersSource,'角色依据 ↗'));
@@ -44,13 +56,15 @@ function readFilters(){return Object.fromEntries(Object.entries(fields).map(([ke
 
 async function main(){
   try {
-    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261014-koei-catalogue'),fetch('./data/taxonomy.json?v=20261014-koei-catalogue')]);
+    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261015-content-model'),fetch('./data/taxonomy.json?v=20261015-content-model')]);
     if(!response.ok||!taxonomyResponse.ok)throw Error('HTTP '+(response.ok?taxonomyResponse.status:response.status));
     const [data,taxonomy]=await Promise.all([response.json(),taxonomyResponse.json()]);
     $('stat-works').textContent=data.works.length;
-    $('stat-versions').textContent=data.versions.length;
-    const years=data.versions.map(v=>v.year);$('stat-years').textContent=Math.min(...years)+'—'+Math.max(...years);
-    const platforms=[...new Set(data.versions.map(v=>v.platform.trim()))].sort((a,b)=>a.localeCompare(b,'zh'));
+    $('stat-versions').textContent=data.contentVersions.length;
+    $('stat-releases').textContent=data.platformReleases.length;
+    $('content-policy-status').textContent=`${data.platformReleases.filter(v=>!v.contentVersionId).length} 条历史发行的内容关系尚待核实，不计为新增内容版本。`;
+    const years=data.platformReleases.map(v=>v.year);$('stat-years').textContent=Math.min(...years)+'—'+Math.max(...years);
+    const platforms=[...new Set(data.platformReleases.map(v=>v.platform.trim()))].sort((a,b)=>a.localeCompare(b,'zh'));
     for(const p of platforms){const option=label('option','',p);option.value=p;fields.platform.append(option)}
     const companyCounts=publisherWorkCounts(data);
     const unattributed=companyCounts.get('__unattributed__')||0;
@@ -76,8 +90,8 @@ async function main(){
     fillSubcategories();
     const render=()=>{
       const matches=filterCatalogue(data,readFilters());
-      const count=matches.reduce((n,item)=>n+item.versions.length,0);
-      $('result-count').textContent=`显示 ${matches.length} 部作品 · ${count} 个平台版本`;
+      const count=matches.reduce((n,item)=>n+item.platformReleases.length,0);
+      $('result-count').textContent=`显示 ${matches.length} 部作品 · ${matches.reduce((n,item)=>n+item.contentVersions.length,0)} 个内容版本 · ${count} 条平台发行`;
       $('empty').hidden=matches.length>0;
       $('cards').replaceChildren(...matches.map(renderCard));
       for(const button of $('company-quick-list').querySelectorAll('button')){
