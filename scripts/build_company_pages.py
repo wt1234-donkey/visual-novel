@@ -17,7 +17,7 @@ def link(url, title):
     return f'<a class="source-link" href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)} ↗</a>'
 
 
-def card(work, versions=None, anchors=(), version_label='个平台版本', context_label=''):
+def card(work, versions=None, anchors=(), version_label='个平台版本', context_label='', context_note='', catalogue_only=False):
     if versions is None:
         versions = [v for v in data['platformReleases'] if v['workId'] == work['id']]
     versions = sorted(versions, key=lambda v: v['year'])
@@ -51,32 +51,38 @@ def card(work, versions=None, anchors=(), version_label='个平台版本', conte
     interaction_tags = ''.join(f'<span class="interaction-tag{" pending-tag" if mode == "待核实" else ""}">{escape(mode)}</span>' for mode in work['interactionModes'])
     interaction_evidence = f'<details class="interaction-evidence"><summary>互动方式依据 · {escape(work["interactionBasis"])}</summary><p class="changes">{escape(work["interactionNote"])}</p>{" ".join(link(url, "玩法资料") for url in work["interactionSources"])}</details>'
     legacy_anchors = ''.join(f'<span id="{escape(anchor, quote=True)}" aria-hidden="true"></span>' for anchor in anchors)
+    version_panel = ('<p class="scope-note">仅专题收录 · 含文字输入玩法，不新增至主数据库。</p>' if catalogue_only else
+                     f'<details class="version-panel"><summary>查看 {len(contents)} 个内容版本 · {len(versions)} 条平台发行</summary><div class="version-list">{"".join(content_rows)}</div></details>')
+    context = f'<p class="scope-note">{escape(context_note)}</p>' if context_note else ''
     return f'''<article class="card" id="{work['id']}">{legacy_anchors}
 <div class="card-top"><span class="year">{work['firstYear']}</span><span class="category">{escape(work['category'])}{' · ' + escape(context_label) if context_label else ''}</span></div>
-<h3>{escape(display_title)}</h3>{original_line}
+<h3>{escape(display_title)}</h3>{original_line}{context}
 <p class="intro">{escape(work['synopsis'])}</p>
 <div class="interaction-tags" aria-label="互动方式">{interaction_tags}</div>{interaction_evidence}
 <div class="card-meta"><span>{escape(work['subcategory'])} · {escape(work['genre'])}</span><span>主要角色 · {escape(' / '.join(work['characters']))}</span></div>
 {f'<p class="character-evidence">{link(work["charactersSource"], "角色依据")}{(" · " + escape(work["charactersNote"])) if work.get("charactersNote") else ""}</p>' if work.get('charactersSource') else ''}
-{edition_credits}<details class="version-panel"><summary>查看 {len(contents)} 个内容版本 · {len(versions)} 条平台发行</summary><div class="version-list">{''.join(content_rows)}</div></details>
+{edition_credits}{version_panel}
 <div class="card-bottom">{link(work['source'], '作品来源')}<span class="card-note">{escape(work['notes'])}</span></div></article>'''
 
 
 def build(company):
     selected = sorted((works[wid] for wid in company['workIds']), key=lambda w: (w['firstYear'], w['id']))
     related = sorted(company.get('relatedGames', []), key=lambda w: (w['firstYear'], w['id']))
+    dossier_only = company.get('dossierOnlyWorks', [])
     legacy_anchors = {}
     for anchor, wid in company.get('legacyAnchors', {}).items():
         legacy_anchors.setdefault(wid, []).append(anchor)
     count_versions = sum(v['workId'] in company['workIds'] for v in data['platformReleases']) + sum(len(g['platformReleases']) for g in related)
     count_contents = sum(c['workId'] in company['workIds'] for c in data['contentVersions']) + sum(len(g['contentVersions']) for g in related)
     toc = ''.join(f'<a href="#{w["id"]}"><span>{w["firstYear"]}</span>{escape(w.get("chineseTitle") or w["title"])}</a>'
-                  for w in sorted(selected + related, key=lambda w: (w['firstYear'], w['id'])))
+                  for w in sorted(selected + related + dossier_only, key=lambda w: (w['firstYear'], w['id'])))
     related_by_id = {game['id']: game for game in related}
+    dossier_by_id = {game['id']: game for game in dossier_only}
     audit_rows = []
     for item in company['entries']:
         references = ' / '.join([*(f'<a href="#{wid}">{escape(works[wid].get("chineseTitle") or works[wid]["title"])}</a>' for wid in item['workIds']),
-                                *(f'<a href="#{rid}">{escape(related_by_id[rid]["title"])}</a>' for rid in item.get('relatedIds', []))])
+                                *(f'<a href="#{rid}">{escape(related_by_id[rid]["title"])}</a>' for rid in item.get('relatedIds', [])),
+                                *(f'<a href="#{did}">{escape(dossier_by_id[did]["title"])}</a>' for did in item.get('dossierIds', []))])
         audit_rows.append(f'<tr><th scope="row">{escape(item["title"])}</th><td>{escape(item["status"])}</td><td>{escape(item["reason"])}<div>{references}</div></td><td>{link(item["source"], "来源")}</td></tr>')
     related_section = ''
     if related:
@@ -84,7 +90,7 @@ def build(company):
 <p class="related-intro">{escape(company.get('relatedIntro', '涵盖官方年表收录的手机游戏、WFS 合作 RPG，以及 Index 制作、Key 官网宣传的授权作品。每款游戏按实际类型、发行公司与平台标注；顶部总数包含本节。'))}</p>
 <div class="cards">{''.join(card(g, g['platformReleases'], version_label=company.get('versionPanelLabel', '个平台版本')) for g in related)}</div></section>'''
     section_title = company.get('sectionTitle') or (f"从 {selected[0]['title']} 到 {selected[-1]['title']}" if selected else '游戏作品核查')
-    all_games = selected + related
+    all_games = selected + related + dossier_only
     year_span = f"{min(w['firstYear'] for w in all_games)}—{max(w['firstYear'] for w in all_games)}" if all_games else '—'
     empty_note = f'<p class="scope-note">{escape(company.get("emptyWorksNote", "本次核查尚无可确认的游戏记录。"))}</p>' if not all_games else ''
     audit_label = company.get('auditLabel', f"官方作品清单 {company['catalogueEntryCount']} 项及范围说明。")
@@ -112,6 +118,20 @@ def build(company):
             + ''.join(card(w, anchors=legacy_anchors.get(w['id'], ()), context_label=group.get('cardLabel', ''))
                       for w in sorted((works[wid] for wid in group['workIds']), key=lambda w: (w['firstYear'], w['id'])))
             + '</div></section>' for group in company['workGroups'])
+    if company.get('dossierGroups'):
+        all_by_id = {w['id']: w for w in all_games}
+        grouped_ids = [wid for group in company['dossierGroups'] for wid in group['workIds']]
+        assert len(grouped_ids) == len(set(grouped_ids)) and set(grouped_ids) == set(all_by_id), '专题分组必须完整且不重复覆盖全部作品'
+        contexts = company.get('workContexts', {})
+        def dossier_card(wid, label):
+            w = all_by_id[wid]
+            return card(w, w.get('platformReleases') if wid in related_by_id else None,
+                        context_label=label, context_note=contexts.get(wid, ''), catalogue_only=wid in dossier_by_id)
+        work_cards = ''.join(
+            f'<section class="dossier-period" id="{escape(group["id"], quote=True)}"><h3>{escape(group["title"])}</h3><p class="scope-note">{escape(group["description"])}</p><div class="cards">'
+            + ''.join(dossier_card(wid, group.get('cardLabel', '')) for wid in group['workIds'])
+            + '</div></section>' for group in company['dossierGroups'])
+        related_section = ''
     historical_section = ''
     if archive := company.get('historicalArchive'):
         path = Path(archive['path'])
@@ -126,20 +146,20 @@ def build(company):
 <body><div class="app-shell"><header class="masthead"><a class="brand" href="index.html"><span class="brand-mark">N.</span><span>叙事游戏年鉴</span></a><nav aria-label="专题导航"><a href="#identity">创作风格</a><a href="#works">全部作品</a><a href="#coverage">核对清单</a><a href="index.html#catalogue">返回数据库</a></nav></header>
 <main><section class="company-hero"><p class="eyebrow">COMPANY DOSSIER · {escape(company['checkedAt'])}</p><h1>{escape(company['name'])} 作品专题</h1>
 <p class="lead">{escape(company['publisherNote'])}</p>{publisher_count}
-<div class="overview"><div><strong>{len(selected) + len(related)}</strong><span>{overview_label}</span></div><div><strong>{count_contents} / {count_versions}</strong><span>内容版本 / 平台发行</span></div><div><strong>{year_span}</strong><span>作品首发跨度</span></div></div>
+<div class="overview"><div><strong>{len(all_games)}</strong><span>{overview_label}</span></div><div><strong>{count_contents} / {count_versions}</strong><span>{escape(company.get('contentCountLabel', '内容版本 / 平台发行'))}</span></div><div><strong>{escape(company.get('yearSpanLabel', year_span))}</strong><span>{escape(company.get('yearSpanCaption', '作品首发跨度'))}</span></div></div>
 <p class="scope-note">{escape(company['scope'])}</p><p class="scope-note">{escape(company['versionScope'])}</p>
 <div class="hero-links"><a class="primary-link" href="#identity">阅读创作风格</a><a class="secondary-link" href="#works">按年份阅读作品</a></div></section>
 <p class="scope-note">互动方式为可多选的作品层玩法概览，各平台操作可能不同；依据现有资料归纳，操作不明时标待核实。<a href="index.html#interaction-guide">查看互动方式定义</a> · <a href="data/interaction-modes.csv">下载互动清单</a>。</p>
 <p class="scope-note">当前采用作品 → 内容版本 → 平台发行三层记录。同内容跨平台不增加内容版本；仅确认首次新增剧情、人物、路线、可玩内容、美术或音频时新增。内容关系待核的历史发行另列，不计为新增内容。下方旧核对说明中的版本数保留其当时口径。</p>
 {profile_section}
-<section id="works"><div class="section-heading"><div><p class="eyebrow">GAME CATALOGUE</p><h2>{escape(section_title)}</h2></div><p>{len(selected)} 部四类作品 · 增强版合并计数</p></div>
+<section id="works"><div class="section-heading"><div><p class="eyebrow">GAME CATALOGUE</p><h2>{escape(section_title)}</h2></div><p>{escape(company.get('catalogueCountLabel', f'{len(selected)} 部四类作品 · 增强版合并计数'))}</p></div>
 <nav class="work-index" aria-label="按年份跳转作品">{toc}</nav>{empty_note}{work_cards}</section>
 {related_section}{historical_section}
 <section class="company-audit" id="coverage"><p class="eyebrow">CATALOGUE AUDIT</p><h2>{escape(audit_title)}</h2>
 <p>核对日期：{escape(company['checkedAt'])} · {escape(audit_label)} {link(company['source'], audit_source_label)}</p>
 <p class="scope-note">{escape(audit_note)}</p>
 <div class="audit-scroll"><table><thead><tr><th>官网项目／补充项目</th><th>处理</th><th>说明与对应作品</th><th>证据</th></tr></thead><tbody>{''.join(audit_rows)}</tbody></table></div></section>
-</main><footer><span>{escape(company['name'])} 专题 · 与主数据库共用作品、内容版本和平台发行记录</span><a href="index.html#catalogue">返回数据库 ↑</a></footer></div></body></html>
+</main><footer><span>{escape(company.get('footerNote', company['name'] + ' 专题 · 与主数据库共用作品、内容版本和平台发行记录'))}</span><a href="index.html#catalogue">返回数据库 ↑</a></footer></div></body></html>
 '''
 
 
@@ -154,4 +174,4 @@ if __name__ == '__main__':
             assert target.read_text(encoding='utf-8') == output, f'{target.name} 未与 JSON 同步'
         else:
             target.write_text(output, encoding='utf-8')
-        print(f'{target.name}: {len(company["workIds"]) + len(company.get("relatedGames", []))} 部相关游戏，已同步')
+        print(f'{target.name}: {len(company["workIds"]) + len(company.get("relatedGames", [])) + len(company.get("dossierOnlyWorks", []))} 部相关游戏，已同步')

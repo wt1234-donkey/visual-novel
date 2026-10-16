@@ -128,6 +128,21 @@ for company in coverage['companies']:
     related = company.get('relatedGames', [])
     related_ids = {game['id'] for game in related}
     assert len(related_ids) == len(related) and not related_ids & work_ids, '跨类型作品 ID 冲突'
+    dossier_only = company.get('dossierOnlyWorks', [])
+    dossier_ids = {w['id'] for w in dossier_only}
+    assert len(dossier_ids) == len(dossier_only) and not dossier_ids & (work_ids | related_ids), '仅专题作品ID冲突'
+    for w in dossier_only:
+        assert source_url_valid(w['source']) and w['synopsis'] and w['characters'] and w['genre']
+        assert isinstance(w['firstYear'], int) and 1976 <= w['firstYear'] <= 2026
+        assert all(name and '待核实' not in name for name in w['characters'])
+        assert '文字输入' in w['interactionModes'], '仅专题输入式冒险必须标明文字输入'
+        assert not any(k in w for k in ['versions', 'platformReleases', 'contentVersions']), '仅专题书目不制造主库内容与发行记录'
+    if groups := company.get('dossierGroups'):
+        grouped = [wid for g in groups for wid in g['workIds']]
+        assert len(grouped) == len(set(grouped)) and set(grouped) == set(ids) | related_ids | dossier_ids, '专题分组缺项或重复'
+        assert len({g['id'] for g in groups}) == len(groups)
+        assert all(g['title'] and g['description'] and g['workIds'] for g in groups)
+        assert set(company.get('workContexts', {})) <= set(grouped)
     legacy_anchors = company.get('legacyAnchors', {})
     assert set(legacy_anchors.values()) <= set(ids), '旧作品链接缺少主库记录'
     assert not set(legacy_anchors) & (work_ids | related_ids), '转入主库的作品仍保留重复副本'
@@ -141,14 +156,17 @@ for company in coverage['companies']:
                    source_url_valid(v['source']) and v['voice'] in {'有', '无', '未核实', '有（部分）'}
                    for v in game['platformReleases'])
     assert company['catalogueEntryCount'] <= len(company['entries'])
-    covered, related_covered = set(), set()
+    covered, related_covered, dossier_covered = set(), set(), set()
     for entry in company['entries']:
         assert source_url_valid(entry['source']) and entry['reason']
         assert set(entry['workIds']) <= set(ids), '核对清单与专题作品不一致'
         assert set(entry.get('relatedIds', [])) <= related_ids, '核对清单的跨类型作品不存在'
+        assert set(entry.get('dossierIds', [])) <= dossier_ids, '核对清单的仅专题作品不存在'
         covered.update(entry['workIds'])
         related_covered.update(entry.get('relatedIds', []))
+        dossier_covered.update(entry.get('dossierIds', []))
     assert covered == set(ids) and related_covered == related_ids, '专题存在缺少核对来源的作品'
+    assert dossier_covered == dossier_ids, '仅专题作品缺少核对来源'
     # Keep new, explicitly authorized command works separate from legacy references.
     authorized = company.get('authorizedCommandWorkIds', [])
     assert len(authorized) == len(set(authorized)), '具名指令冒险授权存在重复ID'

@@ -42,3 +42,7 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 node --test tests/*.test.mjs
 python3 scripts/build_company_pages.py --check
 ```
+
+## 输入式冒险的仅专题书目
+
+2026-10-16 Adventure International专题增加`dossierOnlyWorks`：保存34部含文字输入的叙事书目与操作依据，不进入`games.json.works`，不制造内容版本或平台发行。互动CSV仍包含这些书目，范围以“（仅专题）”注明。`dossierGroups`可以将主库引用和仅专题书目分组展示；UK标记属于专题上下文，不改写原发行公司。当前主库1077部、旧跨类型附录359部与仅专题书目34部互不复制。
