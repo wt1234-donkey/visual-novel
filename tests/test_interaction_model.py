@@ -14,7 +14,7 @@ T=json.loads((ROOT/'data/taxonomy.json').read_text())
 class InteractionTests(unittest.TestCase):
     def test_all_main_and_related_works_have_valid_labels_and_evidence(self):
         validate_interactions(D,C,T)
-        self.assertEqual(len(list(iter_interaction_works(D,C))),len(D['works'])+sum(len(c.get('relatedGames',[])) for c in C['companies']))
+        self.assertEqual(len(list(iter_interaction_works(D,C))),len(D['works'])+sum(len(c.get('relatedGames',[]))+len(c.get('dossierOnlyWorks',[])) for c in C['companies']))
     def test_misspelled_unknown_or_unexplained_labels_rejected(self):
         for modes in [[],['文字輸入'],['待核实','菜单指令'],['菜单指令','菜单指令']]:
             data=copy.deepcopy(D);data['works'][0]['interactionModes']=modes
@@ -26,7 +26,7 @@ class InteractionTests(unittest.TestCase):
         works={w['id']:w for w in D['works']}
         for company in C['companies']:
             page=(ROOT/(company['id']+'.html')).read_text()
-            for w in [*(works[wid] for wid in company['workIds']),*company.get('relatedGames',[])]:
+            for w in [*(works[wid] for wid in company['workIds']),*company.get('relatedGames',[]),*company.get('dossierOnlyWorks',[])]:
                 card=page.split(f'<article class="card" id="{w["id"]}">')[1].split('</article>')[0]
                 for mode in w['interactionModes']:self.assertIn('>'+mode+'</span>',card)
     def test_mixed_and_non_novel_controls_are_not_inferred_from_story_theme(self):
