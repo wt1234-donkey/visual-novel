@@ -5,6 +5,63 @@ import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from '../filter.mj
 
 const data=JSON.parse(readFileSync(new URL('../data/games.json',import.meta.url),'utf8'));
 
+test('Banpresto narrative additions are searchable and reuse the existing Doukyuusei work',()=>{
+  for(const [query,id] of [['电影少女','g1069'],['土器王纪','g1067'],['机关寺院','g1070'],['十年后的邀请函','g1072']]){
+    const results=filterCatalogue(data,{query,company:'Banpresto'});
+    assert.deepEqual(results.map(x=>x.work.id),[id]);
+    assert.ok(results[0].work.interactionModes.length);
+  }
+  const doukyu=filterCatalogue(data,{query:'同级生2',company:'Banpresto'});
+  assert.deepEqual(doukyu.map(x=>x.work.id),['g304']);
+  assert.equal(doukyu[0].work.firstYear,1995);
+  assert.deepEqual(new Set(doukyu[0].platformReleases.map(r=>r.platform)),new Set(['PlayStation','Super Famicom（Nintendo Power）']));
+  assert.equal(data.platformReleases.find(r=>r.id==='g304-v1').publisher,'ELF');
+});
+
+test('Banpresto brand continuation is visible without rewriting the actual publisher',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='banpresto');
+  const brand=co.workGroups.find(g=>g.id==='brand-continuation');
+  const bn=new Set(filterCatalogue(data,{company:'Bandai Namco Games'}).map(x=>x.work.id));
+  const old=new Set(filterCatalogue(data,{company:'Banpresto'}).map(x=>x.work.id));
+  const page=readFileSync(new URL('../banpresto.html',import.meta.url),'utf8');
+  for(const id of brand.workIds){
+    assert.ok(bn.has(id));assert.ok(!old.has(id));
+    const card=page.split(`<article class="card" id="${id}">`)[1].split('</article>')[0];
+    assert.ok(card.includes(' · 品牌延续</span>'));
+    assert.ok(card.includes('发行／出版：Bandai Namco Games'));
+  }
+  assert.deepEqual(new Set(co.publisherWorkIds),old);
+  const grouped=co.workGroups.flatMap(g=>g.workIds);
+  assert.equal(grouped.length,new Set(grouped).size);
+  assert.deepEqual(new Set(grouped),new Set(co.workIds));
+});
+
+test('Banpresto narrative scope preserves RPG evidence in a separate linked archive',()=>{
+  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='banpresto');
+  const archive=JSON.parse(readFileSync(new URL('../'+co.historicalArchive.path,import.meta.url),'utf8'));
+  const page=readFileSync(new URL('../banpresto.html',import.meta.url),'utf8');
+  assert.equal(co.relatedGames.length,0);
+  assert.ok(page.includes(`href="${co.historicalArchive.path}"`));
+  for(const w of archive.relatedGames){
+    assert.ok(w.contentVersions.length&&w.platformReleases.length&&w.interactionSources.length);
+    assert.ok(!co.workIds.includes(w.id));
+    assert.ok(!page.includes(`<article class="card" id="${w.id}">`));
+    assert.ok(page.includes(`<li id="${w.id}">`));
+  }
+  assert.equal((page.match(/<article class="card"/g)||[]).length,co.workIds.length);
+});
+
+test('Oreimo bundle discs and Kokoro DLC keep independent content identities',()=>{
+  const refine=data.contentVersions.find(v=>v.id==='g1076-c-refine');
+  assert.equal(refine.comparedTo,'g1076-c-original');
+  assert.ok(refine.addedContent.some(x=>x.description.includes('独白')&&x.description.includes('录音')));
+  assert.equal(data.contentVersions.find(v=>v.workId==='g1077').basis,'original');
+  const kokoro=data.contentVersions.filter(v=>v.workId==='g1078');
+  assert.equal(kokoro.filter(v=>v.basis==='original').length,1);
+  assert.deepEqual(new Set(kokoro.filter(v=>v.basis==='added').map(v=>v.label)),new Set(['首发追加剧情：文研部员的日常篇','追加剧情：新增伙伴篇','追加剧情：去海边吧篇']));
+  assert.equal(data.works.filter(w=>/ヨチランダム/.test(w.originalTitle)).length,1);
+});
+
 test('SORAHANE three originals preserve names, publisher filters and original years',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='sorahane');
   const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
