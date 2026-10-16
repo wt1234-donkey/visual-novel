@@ -1,0 +1,42 @@
+# 专题末尾的作品与玩法类型附录
+
+核对与整理：2026-10-16。维护目标：`wt1234-donkey/visual-novel`。
+
+将“游戏玩法分类梳理”中六厂商的已整理清单，与现有专题的具名作品资料汇编为各页末尾的参考表。附录不是逐字聊天备份，也不宣称厂商全球各地区／平台／杂志程序的全目录。原清单中的类别、系列、合集、工具及后继时期关联均保留其身份；未逐项核定的年份不补造。
+
+| 专题 | 清单项目 | 分组 |
+|---|---:|---:|
+| Adventure International | 114 | 11 |
+| Infocom | 61 | 6 |
+| On-Line Systems／Sierra On-Line | 35 | 4 |
+| 光荣（KOEI） | 195 | 9 |
+| ASCII | 159 | 7 |
+| Melbourne House | 103 | 5 |
+| 合计 | 667 | 42 |
+
+这里的项目行可能是独立游戏、系列参考、改编、合集、软件工具或未发行计划，不能将667行当作667部独立已发行游戏。
+
+## 数据与展示
+
+`gameplay-catalogues.json`独立于主库和公司收录配置。六份附录使用相同的`#gameplay-catalogue`锚点，位于既有核对清单之后、页脚之前，顶部增加“玩法总表”入口。
+
+- `workId`引用本专题已经存在的主库、跨类型或仅专题书目，直接采用正文原名、中文检索名、类型、互动标签与来源，链接回原卡片。
+- 自由行只包含`title`、`type`、`relation`、`note`及可选的`source`、`anchor`，不建立游戏身份、内容版本、平台发行或互动标签。
+- 分组级`source`是目录与沿革参考，展示时标“分组资料”；不能冒充该行所有平台的逐项操作验证。现有作品操作依据仍查正文手册。
+- 附录中的麻将、育成、动作、策略、体育、工具等不会改变正文原有收录规则；旧专题历史例外保持。
+- KOEI后继KT／Gust／Team NINJA与合作项目、ASCII地区代理及Enterbrain、Melbourne House后继Beam等明确标注，不能据表格位置倒写开发与发行署名。
+- AI UK原创、Kid Venture三部、Infocom品牌／Zork系列延续、On-Line到Sierra早期过渡按已整理范围分组。
+
+## 本次验证
+
+主库`games.json`、厂商`company-coverage.json`与所有既有CSV保持原样，仍为1091部／1284个内容／2276条平台发行、60个专题。正文卡片与作品ID不变，附录表行不计入顶部作品统计。
+
+生成器只给这六页增加附录，其他54页生成结果不变。检查包括末尾位置、全部正文引用完整且不重复、卡片数保持、排除项与工具只在表中、HTML转义及未知引用拒绝。
+
+```sh
+python3 scripts/build_company_pages.py
+python3 scripts/validate_data.py
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/*.test.mjs
+python3 scripts/build_company_pages.py --check
+```

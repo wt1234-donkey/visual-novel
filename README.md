@@ -31,6 +31,9 @@
 
 ## 厂商集中整理
 
+
+六个专题末尾新增“游戏作品与玩法类型清单”附录：Adventure International 114项、Infocom 61项、On-Line Systems／Sierra 35项、KOEI 195项、ASCII 159项、Melbourne House 103项，共667个参考项目。表中区分正文主库引用、跨类型／关联、仅专题书目、非叙事类型、制作工具、合集与后继品牌参考，已有作品可跳转卡片；不把附录行数视为独立游戏数。本次不增删主库、内容版本、发行或公司配置。附录来源为“游戏玩法分类梳理”已整理条目与现有专题资料的汇编，并非逐字聊天备份或厂商全球全目录。新增数据见[data/gameplay-catalogues.json](data/gameplay-catalogues.json)，维护说明见[data/gameplay-catalogues.md](data/gameplay-catalogues.md)。
+
 新增[On-Line Systems —— Sierra On-Line早期专题](sierra.html)：沿原清单与1982—1984过渡作品核对35项，14个叙事／RPG目录项目合13部身份。复用8部旧主库，新增Dragon’s Keep、Troll’s Tale、Mickey’s Space Adventure三部菜单式叙事／3个原作内容／3条首次发行；Mission: Asteroid与Ultima II仅专题，Gelfling复用黑水晶g099及既有改编发行，不重复建作或虚构内容增量。动作、射击、体育、益智及纯纸牌21项只列排除理由。非后期Sierra全目录；成立年、作者年表和实际发行署名异文见[玩法与范围清单](data/sierra-audit.md)。
 
 新增 [Infocom社专题](infocom.html)：对照此前玩法清单52项，收录50部叙事／RPG身份，排除棋盘策略Fooblitzky与实时战术BattleTech Revenge。35部经典互动小说中Journey为菜单式例外；4部Infocomics以阅读和视角切换单列。复用18部旧主库，新增11部无文字输入叙事作品、13个原作／新增内容与13条首次发行；19部输入式新书目只存专题，2部剧情RPG存专题关联数据。后期品牌与Zork系列延续分组，Tombs & Treasure与Mars Saga按原作身份归并，普通翻译不追加。详见[完整玩法与范围清单](data/infocom-audit.md)。
