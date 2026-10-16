@@ -50874,6 +50874,1492 @@
         ]
       },
       "contentCountLabel": "主库关联内容 / 平台发行"
+    },
+    {
+      "id": "infocom",
+      "name": "Infocom",
+      "foundedAt": "1979-06-22",
+      "foundedSource": "https://mirrors.ibiblio.org/interactive-fiction/infocom/info/infocom-paper.pdf",
+      "checkedAt": "2026-10-16",
+      "status": "原清单52项及边界核对；内容增量非穷尽",
+      "workIds": [
+        "g002",
+        "g062",
+        "g003",
+        "g063",
+        "g064",
+        "g041",
+        "g065",
+        "g006",
+        "g042",
+        "g066",
+        "g067",
+        "g068",
+        "g069",
+        "g011",
+        "g070",
+        "g071",
+        "g043",
+        "g072",
+        "g1081",
+        "g1082",
+        "g1083",
+        "g1084",
+        "g1085",
+        "g1086",
+        "g1087",
+        "g1088",
+        "g1089",
+        "g1090",
+        "g1091"
+      ],
+      "legacyCommandWorkIds": [
+        "g002",
+        "g062",
+        "g003",
+        "g063",
+        "g064",
+        "g041",
+        "g065",
+        "g006",
+        "g042",
+        "g066",
+        "g067",
+        "g068",
+        "g069",
+        "g011",
+        "g070",
+        "g071",
+        "g043",
+        "g072"
+      ],
+      "relatedGames": [
+        {
+          "id": "infocom-battletech",
+          "title": "机甲战士：新月鹰的开端",
+          "chineseTitle": "机甲战士：新月鹰的开端",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "BattleTech: The Crescent Hawk’s Inception",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "角色扮演",
+          "subcategory": "队伍探索RPG",
+          "genre": "剧情RPG／任务探索／指令战斗",
+          "synopsis": "Jason Youngblood在家乡遭到袭击后寻找父亲，并集结同伴与机甲。",
+          "characters": [
+            "Jason Youngblood",
+            "Jeremiah Youngblood"
+          ],
+          "source": "https://www.mocagh.org/infocom/battletech-manual.pdf",
+          "notes": "Westwood开发的有连续人物与任务线的RPG；与强调实时战术的Revenge分开。",
+          "charactersSource": "https://www.mocagh.org/infocom/battletech-manual.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "直接移动",
+            "战斗指令",
+            "战术策略"
+          ],
+          "interactionNote": "原厂说明书以方向键移动，菜单选择人物、技能与行动，在回合战斗中安排移动和攻击；命名、数值或包装校验不属于词句输入玩法。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/battletech-manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "infocom-battletech-c-original",
+              "workId": "infocom-battletech",
+              "label": "原作／首批内容",
+              "firstYear": 1988,
+              "basis": "original",
+              "evidence": "1988年DOS原作内容与首次发行；以原厂资料确认故事及操作，以发行目录交叉核对年份。后续移植不自动产生新内容。",
+              "source": "https://www.mobygames.com/game/170/battletech-the-crescent-hawks-inception/",
+              "evidenceReleaseIds": [
+                "infocom-battletech-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "infocom-battletech-v-original",
+              "workId": "infocom-battletech",
+              "year": 1988,
+              "platform": "DOS",
+              "publisher": "Infocom",
+              "publisherCompanies": [
+                "Infocom"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1988年DOS原作内容与首次发行；以原厂资料确认故事及操作，以发行目录交叉核对年份。后续移植不自动产生新内容。",
+              "source": "https://www.mobygames.com/game/170/battletech-the-crescent-hawks-inception/",
+              "contentVersionId": "infocom-battletech-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作首次批次；不把后期品牌署名倒填原作。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "infocom-mars-saga",
+          "title": "火星传奇／泰坦矿井",
+          "chineseTitle": "火星传奇／泰坦矿井",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Mars Saga / Mines of Titan",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "角色扮演",
+          "subcategory": "队伍探索RPG",
+          "genre": "剧情RPG／任务探索／指令战斗",
+          "synopsis": "滞留殖民星的运输员招募同伴，调查失联城市与地下矿区的秘密。",
+          "characters": [
+            "滞留殖民地的运输员（玩家）",
+            "招募的调查队员"
+          ],
+          "source": "https://www.mocagh.org/ea/marssaga-manual.pdf",
+          "notes": "1988年Mars Saga原作由Electronic Arts发行；1989年Infocom以Mines of Titan推出关联改编。更换标题和星球不构成第二部独立作品；该改编新增区域的首次批次尚未逐项核定，本次不虚构增量内容行。",
+          "charactersSource": "https://www.mocagh.org/ea/marssaga-manual.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "直接移动",
+            "战斗指令",
+            "战术策略"
+          ],
+          "interactionNote": "原厂说明书以方向键移动，菜单选择人物、技能与行动，在回合战斗中安排移动和攻击；命名、数值或包装校验不属于词句输入玩法。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/ea/marssaga-manual.pdf",
+            "https://www.mocagh.org/infocom/minestitan-manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "infocom-mars-saga-c-original",
+              "workId": "infocom-mars-saga",
+              "label": "原作／首批内容",
+              "firstYear": 1988,
+              "basis": "original",
+              "evidence": "1988年Commodore 64原作内容与首次发行；以原厂资料确认故事及操作，以发行目录交叉核对年份。后续移植不自动产生新内容。",
+              "source": "https://www.mobygames.com/game/1242/mars-saga/",
+              "evidenceReleaseIds": [
+                "infocom-mars-saga-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "infocom-mars-saga-v-original",
+              "workId": "infocom-mars-saga",
+              "year": 1988,
+              "platform": "Commodore 64",
+              "publisher": "Electronic Arts",
+              "publisherCompanies": [
+                "Electronic Arts"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1988年Commodore 64原作内容与首次发行；以原厂资料确认故事及操作，以发行目录交叉核对年份。后续移植不自动产生新内容。",
+              "source": "https://www.mobygames.com/game/1242/mars-saga/",
+              "contentVersionId": "infocom-mars-saga-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作首次批次；不把后期品牌署名倒填原作。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "dossierOnlyWorks": [
+        {
+          "id": "infocom-ballyhoo",
+          "title": "马戏团迷案",
+          "chineseTitle": "马戏团迷案",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Ballyhoo",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "马戏团／失踪调查",
+          "synopsis": "观众留在散场后的马戏团，追查团主女儿失踪背后的秘密。",
+          "characters": [
+            "调查失踪案的观众（玩家）",
+            "被绑架的团主女儿"
+          ],
+          "source": "https://www.mocagh.org/infocom/ballyhoo-manual.pdf",
+          "notes": "部分资料按1985年版权／开发日期编目；本专题沿原清单采用1986年发行年，不制造另一版本。",
+          "charactersSource": "https://www.mocagh.org/infocom/ballyhoo-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/ballyhoo-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-trinity",
+          "title": "三位一体",
+          "chineseTitle": "三位一体",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Trinity",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "核时代寓言／时空冒险",
+          "synopsis": "从伦敦花园进入跨越核爆历史的奇异旅程，寻找改变灾难的可能。",
+          "characters": [
+            "游历核时代的旅行者（玩家）"
+          ],
+          "source": "https://www.mocagh.org/infocom/trinity-manual.pdf",
+          "notes": "",
+          "charactersSource": "https://www.mocagh.org/infocom/trinity-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/trinity-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-lgop",
+          "title": "火卫一皮革女神",
+          "chineseTitle": "火卫一皮革女神",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Leather Goddesses of Phobos",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "太空喜剧／科幻冒险",
+          "synopsis": "被火卫一势力绑架的地球人与同伴穿越行星，设法阻止入侵。",
+          "characters": [
+            "被绑架的地球人（玩家）",
+            "Trent",
+            "Tiffany"
+          ],
+          "source": "https://www.mocagh.org/infocom/lgop-manual.pdf",
+          "notes": "与1992年图形点击续篇分列独立作品。",
+          "charactersSource": "https://www.mocagh.org/infocom/lgop-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/lgop-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-moonmist",
+          "title": "月雾",
+          "chineseTitle": "月雾",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Moonmist",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "古堡／幽灵推理",
+          "synopsis": "受邀来到英国古堡，调查幽灵传闻与朋友身边的危险。",
+          "characters": [
+            "受邀的调查者（玩家）",
+            "Tamara Lynd"
+          ],
+          "source": "https://www.mocagh.org/infocom/moonmist-manual.pdf",
+          "notes": "四种颜色对应本作内的谜案变体，不拆成四部独立商品。",
+          "charactersSource": "https://www.mocagh.org/infocom/moonmist-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/moonmist-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-hijinx",
+          "title": "好莱坞奇谋",
+          "chineseTitle": "好莱坞奇谋",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Hollywood Hijinx",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "遗产寻宝／喜剧解谜",
+          "synopsis": "在电影人亲属留下的宅邸中寻找线索，通过考验取得遗产。",
+          "characters": [
+            "继承人（玩家）",
+            "Buddy Burbank",
+            "Hildegarde Burbank"
+          ],
+          "source": "https://www.mocagh.org/infocom/hhijinx-manual.pdf",
+          "notes": "",
+          "charactersSource": "https://www.mocagh.org/infocom/hhijinx-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/hhijinx-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-bureaucracy",
+          "title": "官僚主义",
+          "chineseTitle": "官僚主义",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Bureaucracy",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "荒诞喜剧／流程困境",
+          "synopsis": "一次地址变更引发连串荒诞麻烦，玩家设法摆脱失控的行政程序。",
+          "characters": [
+            "卷入官僚程序的当事人（玩家）"
+          ],
+          "source": "https://www.mocagh.org/infocom/bureaucracy-manual.pdf",
+          "notes": "表格和会话的自由文字输入属于玩法，不因菜单或表格画面放行。",
+          "charactersSource": "https://www.mocagh.org/infocom/bureaucracy-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/bureaucracy-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-stationfall",
+          "title": "空间站惊魂",
+          "chineseTitle": "空间站惊魂",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Stationfall",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "科幻／空间站调查",
+          "synopsis": "与机器人Floyd来到异常安静的空间站，追查威胁整个星区的危机。",
+          "characters": [
+            "星际巡逻员（玩家）",
+            "Floyd"
+          ],
+          "source": "https://www.mocagh.org/infocom/stationfall-manual.pdf",
+          "notes": "独立续篇，不是Planetfall的普通移植。",
+          "charactersSource": "https://www.mocagh.org/infocom/stationfall-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/stationfall-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-lurking-horror",
+          "title": "潜伏的恐怖",
+          "chineseTitle": "潜伏的恐怖",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Lurking Horror",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "校园／克苏鲁式恐怖",
+          "synopsis": "暴风雪困住大学校园，学生在地下设施中面对苏醒的恐怖。",
+          "characters": [
+            "大学生（玩家）",
+            "校园中的黑客"
+          ],
+          "source": "https://www.mocagh.org/infocom/lurkinghorror-manual.pdf",
+          "notes": "部分平台有声音素材，但不据声音存在推断角色配音或新作品。",
+          "charactersSource": "https://www.mocagh.org/infocom/lurkinghorror-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/lurkinghorror-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-nord-bert",
+          "title": "诺德与伯特：摸不着头脑",
+          "chineseTitle": "诺德与伯特：摸不着头脑",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Nord and Bert Couldn't Make Head or Tail of It",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "语言谜题／互动小说",
+          "synopsis": "在各个荒诞小镇情境中运用同音、成语与文字游戏解决问题。",
+          "characters": [
+            "穿梭文字谜题的玩家角色",
+            "Nord",
+            "Bert"
+          ],
+          "source": "https://www.mocagh.org/infocom/nordbert-manual.pdf",
+          "notes": "语言解谜是核心互动，仍是输入式叙事；八个情境按原商品合为一部。",
+          "charactersSource": "https://www.mocagh.org/infocom/nordbert-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/nordbert-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-plundered-hearts",
+          "title": "被掠夺的芳心",
+          "chineseTitle": "被掠夺的芳心",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Plundered Hearts",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "海盗／浪漫冒险",
+          "synopsis": "一名年轻女子被卷入加勒比海的劫持与阴谋，设法营救父亲并决定自己的道路。",
+          "characters": [
+            "年轻女子（玩家）",
+            "Nicholas Jamison",
+            "Lafond"
+          ],
+          "source": "https://www.mocagh.org/infocom/plunder-manual.pdf",
+          "notes": "",
+          "charactersSource": "https://www.mocagh.org/infocom/plunder-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/plunder-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-beyond-zork",
+          "title": "超越佐克：昆多尔的椰子",
+          "chineseTitle": "超越佐克：昆多尔的椰子",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Beyond Zork: The Coconut of Quendor",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "文字冒险／角色扮演融合",
+          "synopsis": "在昆多尔探索异变，寻找拥有非凡力量的椰子。",
+          "characters": [
+            "昆多尔冒险者（玩家）"
+          ],
+          "source": "https://www.mocagh.org/infocom/beyondzork-manual.pdf",
+          "notes": "有能力数值、战斗与地图，但行动仍包含文字解释器；专题保留，主库不新增。",
+          "charactersSource": "https://www.mocagh.org/infocom/beyondzork-manual.pdf",
+          "interactionModes": [
+            "文字输入",
+            "战斗指令"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/beyondzork-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-border-zone",
+          "title": "边境地带",
+          "chineseTitle": "边境地带",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Border Zone",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "实时谍报／多角色冒险",
+          "synopsis": "从列车上的偶遇出发，分别体验三个角色卷入的边境谍报行动。",
+          "characters": [
+            "美国商人",
+            "西方特工",
+            "东欧特工"
+          ],
+          "source": "https://www.mocagh.org/infocom/borderzone-manual.pdf",
+          "notes": "实时流逝与危险要求及时响应，但不把它误列为纯动作游戏。",
+          "charactersSource": "https://www.mocagh.org/infocom/borderzone-manual.pdf",
+          "interactionModes": [
+            "文字输入",
+            "限时反应"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/borderzone-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-sherlock",
+          "title": "福尔摩斯：王室珠宝之谜",
+          "chineseTitle": "福尔摩斯：王室珠宝之谜",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Sherlock: The Riddle of the Crown Jewels",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "侦探／历史推理",
+          "synopsis": "华生与福尔摩斯追索失窃的王室珠宝，赶在庆典前揭开阴谋。",
+          "characters": [
+            "Dr. Watson",
+            "Sherlock Holmes"
+          ],
+          "source": "https://www.mocagh.org/infocom/sherlock-manual.pdf",
+          "notes": "采用原清单1988发行年；1987版权／编译日期见部分资料。与原库1984年Melbourne House的Sherlock（g129）不是同一作品。",
+          "charactersSource": "https://www.mocagh.org/infocom/sherlock-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/sherlock-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-zork-zero",
+          "title": "佐克零：梅加博兹的复仇",
+          "chineseTitle": "佐克零：梅加博兹的复仇",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Zork Zero: The Revenge of Megaboz",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图文冒险／逻辑小游戏",
+          "synopsis": "在帝国覆灭前寻找解除Megaboz诅咒所需的物品与方法。",
+          "characters": [
+            "解除诅咒的冒险者（玩家）",
+            "Megaboz",
+            "Dimwit Flathead"
+          ],
+          "source": "https://www.mocagh.org/infocom/zorkzero-manual.pdf",
+          "notes": "采用原清单及开发源档1988；部分发行目录从1989 Macintosh起列，不把年代异文算新增版本。",
+          "charactersSource": "https://www.mocagh.org/infocom/zorkzero-manual.pdf",
+          "interactionModes": [
+            "文字输入",
+            "谜题操作",
+            "卡牌棋盘"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/zorkzero-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-shogun",
+          "title": "将军：克拉维尔原著改编",
+          "chineseTitle": "将军：克拉维尔原著改编",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "James Clavell’s Shōgun",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图文冒险／历史小说改编",
+          "synopsis": "英国领航员John Blackthorne抵达日本，卷入封建势力与外来贸易的冲突。",
+          "characters": [
+            "John Blackthorne",
+            "Toranaga",
+            "Mariko"
+          ],
+          "source": "https://www.mocagh.org/infocom/shogun-manual.pdf",
+          "notes": "Dave Lebling改编；有插图仍要求输入文字命令。",
+          "charactersSource": "https://www.mocagh.org/infocom/shogun-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/shogun-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-arthur",
+          "title": "亚瑟：王者之剑的追寻",
+          "chineseTitle": "亚瑟：王者之剑的追寻",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Arthur: The Quest for Excalibur",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图文冒险／亚瑟王传说",
+          "synopsis": "年轻的亚瑟在Merlin帮助下寻找失落的Excalibur，证明自己的王者资格。",
+          "characters": [
+            "Arthur",
+            "Merlin"
+          ],
+          "source": "https://www.mocagh.org/infocom/arthur-manual.pdf",
+          "notes": "图形、提示与选单不消除文字解释器，按含文字输入处理。",
+          "charactersSource": "https://www.mocagh.org/infocom/arthur-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂说明书的Communicating／Talking to the Story部分要求键入动作、对象或会话；图形、提示或辅助菜单不替代主体文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/arthur-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-quarterstaff",
+          "title": "长棍：塞特莫斯之墓",
+          "chineseTitle": "长棍：塞特莫斯之墓",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Quarterstaff / Quarterstaff: The Tomb of Setmoth",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "角色扮演",
+          "subcategory": "图文指令",
+          "genre": "队伍RPG／地牢探索／文字输入",
+          "synopsis": "受命调查失踪的Tree Druids，逐步招募同伴深入地下据点。",
+          "characters": [
+            "Titus",
+            "Bruno",
+            "Jaroo",
+            "Eolene"
+          ],
+          "source": "https://www.mocagh.org/infocom/quarterstaff-manual.pdf",
+          "notes": "原版由Simulated Environment Systems于1987年推出，Infocom于1988年发行扩充版；按同一作品关联，不当作Infocom于1987年创作。",
+          "charactersSource": "https://www.mocagh.org/infocom/quarterstaff-manual.pdf",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "原手册第6—7页明确plain English sentences，并给出WIELD、OPEN、GIVE等完整句子。图形菜单与地图仅为辅助，仍含文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/quarterstaff-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-circuits-edge",
+          "title": "电路边缘",
+          "chineseTitle": "电路边缘",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Circuit’s Edge",
+          "titleAliases": [
+            "Circuit's Edge"
+          ],
+          "firstYear": 1990,
+          "category": "角色扮演",
+          "subcategory": "图文选项／调查",
+          "genre": "赛博朋克／侦探冒险／RPG",
+          "synopsis": "Marid Audran在Budayeen街区调查谋杀与阴谋，利用人格芯片追查线索。",
+          "characters": [
+            "Marid Audran",
+            "Friedlander Bey"
+          ],
+          "source": "https://www.mocagh.org/infocom/circuitsedge-manual.pdf",
+          "notes": "品牌延续：Westwood Associates开发、Infocom品牌发行，原手册署1990；不能因菜单丰富误判为无输入。",
+          "charactersSource": "https://www.mocagh.org/infocom/circuitsedge-manual.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "选项分支",
+            "直接移动",
+            "战斗指令",
+            "文字输入",
+            "卡牌棋盘"
+          ],
+          "interactionNote": "原手册第12页Talk about要求Type in the name of whatever it is；同时支持菜单交谈、移动、指令战斗及轮盘／百家乐。话题输入已足以排除主库新增。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/infocom/circuitsedge-manual.pdf"
+          ]
+        },
+        {
+          "id": "infocom-undiscovered-underground",
+          "title": "佐克：未发现的地下世界",
+          "chineseTitle": "佐克：未发现的地下世界",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Zork: The Undiscovered Underground",
+          "titleAliases": [],
+          "firstYear": 1997,
+          "category": "文字冒险",
+          "subcategory": "纯文本指令",
+          "genre": "免费独立短篇／奇幻解谜",
+          "synopsis": "冒险者进入地下帝国遗迹，在短篇旅程中寻找宝藏并遭遇古怪障碍。",
+          "characters": [
+            "进入地下帝国的冒险者（玩家）"
+          ],
+          "source": "https://ifdb.org/viewgame?id=40hswtkhap88gzvn",
+          "notes": "系列延续：Michael Berlyn、Marc Blank与G. Kevin Wilson参与，作为Grand Inquisitor宣传独立发布；不是商业游戏的截取试玩，也不是1980年代旧Infocom开发。",
+          "charactersSource": "https://ifdb.org/viewgame?id=40hswtkhap88gzvn",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "独立短篇使用Z-code文字解释器，需要键入动作和对象；不是图形点击冒险。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ifdb.org/viewgame?id=40hswtkhap88gzvn"
+          ]
+        }
+      ],
+      "dossierGroups": [
+        {
+          "id": "infocom-classics",
+          "title": "原公司：35部经典互动小说",
+          "description": "34部含文字输入，Journey为菜单选择例外。已在主库的18部沿用原记录，其余16部输入式作品仅专题。",
+          "workIds": [
+            "g002",
+            "g062",
+            "g003",
+            "g063",
+            "g064",
+            "g041",
+            "g065",
+            "g006",
+            "g042",
+            "g066",
+            "g067",
+            "g068",
+            "g069",
+            "g011",
+            "g070",
+            "g071",
+            "g043",
+            "g072",
+            "infocom-ballyhoo",
+            "infocom-trinity",
+            "infocom-lgop",
+            "infocom-moonmist",
+            "infocom-hijinx",
+            "infocom-bureaucracy",
+            "infocom-stationfall",
+            "infocom-lurking-horror",
+            "infocom-nord-bert",
+            "infocom-plundered-hearts",
+            "infocom-beyond-zork",
+            "infocom-border-zone",
+            "infocom-sherlock",
+            "infocom-zork-zero",
+            "infocom-shogun",
+            "infocom-arthur",
+            "g1081"
+          ]
+        },
+        {
+          "id": "infocom-comics",
+          "title": "原公司：Infocomics互动漫画",
+          "description": "4部独立电子叙事商品。通过播放与视角切换阅读固定故事，不把阅读路径误写为改变结局。",
+          "workIds": [
+            "g1082",
+            "g1083",
+            "g1084",
+            "g1085"
+          ]
+        },
+        {
+          "id": "infocom-rpg",
+          "title": "原公司及关联原作：剧情RPG",
+          "description": "Quarterstaff含文字输入，仅专题；BattleTech初作和Mars Saga／Mines of Titan按RPG存入专题关联数据，未混入四类主目录。原作与Infocom关联发行的年份分开。",
+          "workIds": [
+            "infocom-quarterstaff",
+            "infocom-battletech",
+            "infocom-mars-saga"
+          ]
+        },
+        {
+          "id": "infocom-brand",
+          "title": "后期：Infocom品牌及关联发行",
+          "description": "5部。Circuit’s Edge有自由话题输入仅专题；Tombs & Treasure及Simon沿用实际原作身份与发行公司。",
+          "workIds": [
+            "infocom-circuits-edge",
+            "g1086",
+            "g1087",
+            "g1088",
+            "g1089"
+          ],
+          "cardLabel": "品牌延续"
+        },
+        {
+          "id": "infocom-series",
+          "title": "后期：Zork系列延续",
+          "description": "3部。实际发行Activision；与Infocom品牌署名分开。Undiscovered Underground是独立宣传短篇，含文字输入。",
+          "workIds": [
+            "g1090",
+            "infocom-undiscovered-underground",
+            "g1091"
+          ],
+          "cardLabel": "系列延续"
+        }
+      ],
+      "workContexts": {
+        "g002": "原公司开发。沿用原库Personal Software首发等历史署名，不将后续Infocom包装倒填到1980年。",
+        "infocom-quarterstaff": "Infocom关联发行：1988年The Tomb of Setmoth。卡片1987为Simulated Environment Systems原作年，两者按同一作品整理。",
+        "infocom-mars-saga": "品牌关联：1989年Mines of Titan；卡片1988为Electronic Arts发行的Mars Saga原作，不把EA发行改署Infocom。",
+        "g1086": "品牌延续关联：1991年Infocom的英文NES发行Tombs & Treasure；卡片1986为Falcom原作、1988为Tokyo Shoseki新增内容的FC改编。英文普通移植不再追加平台行。",
+        "g1089": "品牌关联：Infocom北美版说明书保留真实署名；本卡采用Adventure Soft于1993年的原作身份。",
+        "g1088": "1993年品牌／系列延续：原手册保留Infocom品牌，实际发行主体Activision。"
+      },
+      "catalogueEntryCount": 57,
+      "entries": [
+        {
+          "title": "Zork I: The Great Underground Empire",
+          "status": "复用既有主库",
+          "reason": "1980 · 纯文本／奇幻解谜；互动：文字输入。原公司开发。沿用原库Personal Software首发等历史署名，不将后续Infocom包装倒填到1980年。",
+          "workIds": [
+            "g002"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://infocom-if.org/company/company.html"
+        },
+        {
+          "title": "Zork II: The Wizard of Frobozz",
+          "status": "复用既有主库",
+          "reason": "1981 · 纯文本／奇幻解谜；互动：文字输入。",
+          "workIds": [
+            "g062"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/zork2/zork2.html"
+        },
+        {
+          "title": "Deadline",
+          "status": "复用既有主库",
+          "reason": "1982 · 纯文本／推理；互动：文字输入。",
+          "workIds": [
+            "g003"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://infocom-if.org/games/games.html"
+        },
+        {
+          "title": "Zork III: The Dungeon Master",
+          "status": "复用既有主库",
+          "reason": "1982 · 纯文本／奇幻解谜；互动：文字输入。",
+          "workIds": [
+            "g063"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/zork3/zork3.html"
+        },
+        {
+          "title": "Starcross",
+          "status": "复用既有主库",
+          "reason": "1982 · 纯文本／科幻探索；互动：文字输入。",
+          "workIds": [
+            "g064"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/starcross/starcross.html"
+        },
+        {
+          "title": "Suspended",
+          "status": "复用既有主库",
+          "reason": "1983 · 纯文本／科幻解谜；互动：文字输入。角色栏列出代表性机器人；玩家本人在故事中无法自由移动。",
+          "workIds": [
+            "g041"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/suspended/suspended.html"
+        },
+        {
+          "title": "The Witness",
+          "status": "复用既有主库",
+          "reason": "1983 · 纯文本／侦探推理；互动：文字输入。同一档案的作品介绍页写 1984 年，年表与作者页写 1983 年；保留异文。",
+          "workIds": [
+            "g065"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/games.html"
+        },
+        {
+          "title": "Planetfall",
+          "status": "复用既有主库",
+          "reason": "1983 · 纯文本／科幻；互动：文字输入。",
+          "workIds": [
+            "g006"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/authors/meretzky.html"
+        },
+        {
+          "title": "Enchanter",
+          "status": "复用既有主库",
+          "reason": "1983 · 纯文本／奇幻解谜；互动：文字输入。",
+          "workIds": [
+            "g042"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/enchanter/enchanter.html"
+        },
+        {
+          "title": "Infidel",
+          "status": "复用既有主库",
+          "reason": "1983 · 纯文本／考古冒险；互动：文字输入。",
+          "workIds": [
+            "g066"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/infidel/infidel.html"
+        },
+        {
+          "title": "Sorcerer",
+          "status": "复用既有主库",
+          "reason": "1984 · 纯文本／奇幻解谜；互动：文字输入。",
+          "workIds": [
+            "g067"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/sorcerer/sorcerer.html"
+        },
+        {
+          "title": "Seastalker",
+          "status": "复用既有主库",
+          "reason": "1984 · 纯文本／海底科幻；互动：文字输入。",
+          "workIds": [
+            "g068"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/seastalker/seastalker.html"
+        },
+        {
+          "title": "Cutthroats",
+          "status": "复用既有主库",
+          "reason": "1984 · 纯文本／沉船寻宝；互动：文字输入。",
+          "workIds": [
+            "g069"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/cutthroats/cutthroats.html"
+        },
+        {
+          "title": "The Hitchhiker’s Guide to the Galaxy",
+          "status": "复用既有主库",
+          "reason": "1984 · 纯文本／科幻喜剧；互动：文字输入。",
+          "workIds": [
+            "g011"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://infocom-if.org/games/games.html"
+        },
+        {
+          "title": "Suspect",
+          "status": "复用既有主库",
+          "reason": "1984 · 纯文本／推理；互动：文字输入。",
+          "workIds": [
+            "g070"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/suspect/suspect.html"
+        },
+        {
+          "title": "Wishbringer",
+          "status": "复用既有主库",
+          "reason": "1985 · 纯文本／轻奇幻；互动：文字输入。",
+          "workIds": [
+            "g071"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/wishbringer/wishbringer.html"
+        },
+        {
+          "title": "A Mind Forever Voyaging",
+          "status": "复用既有主库",
+          "reason": "1985 · 纯文本／科幻叙事；互动：文字输入。以观察与叙事为重；与常见的物品解谜冒险不同。",
+          "workIds": [
+            "g043"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/amfv/amfv.html"
+        },
+        {
+          "title": "Spellbreaker",
+          "status": "复用既有主库",
+          "reason": "1985 · 纯文本／奇幻解谜；互动：文字输入。",
+          "workIds": [
+            "g072"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.infocom-if.org/games/spellbreaker/spellbreaker.html"
+        },
+        {
+          "title": "Ballyhoo",
+          "status": "仅专题（含文字输入）",
+          "reason": "1986 · 马戏团／失踪调查；互动：文字输入。部分资料按1985年版权／开发日期编目；本专题沿原清单采用1986年发行年，不制造另一版本。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-ballyhoo"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/ballyhoo-manual.pdf"
+        },
+        {
+          "title": "Trinity",
+          "status": "仅专题（含文字输入）",
+          "reason": "1986 · 核时代寓言／时空冒险；互动：文字输入。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-trinity"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/trinity-manual.pdf"
+        },
+        {
+          "title": "Leather Goddesses of Phobos",
+          "status": "仅专题（含文字输入）",
+          "reason": "1986 · 太空喜剧／科幻冒险；互动：文字输入。与1992年图形点击续篇分列独立作品。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-lgop"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/lgop-manual.pdf"
+        },
+        {
+          "title": "Moonmist",
+          "status": "仅专题（含文字输入）",
+          "reason": "1986 · 古堡／幽灵推理；互动：文字输入。四种颜色对应本作内的谜案变体，不拆成四部独立商品。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-moonmist"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/moonmist-manual.pdf"
+        },
+        {
+          "title": "Hollywood Hijinx",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 遗产寻宝／喜剧解谜；互动：文字输入。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-hijinx"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/hhijinx-manual.pdf"
+        },
+        {
+          "title": "Bureaucracy",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 荒诞喜剧／流程困境；互动：文字输入。表格和会话的自由文字输入属于玩法，不因菜单或表格画面放行。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-bureaucracy"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/bureaucracy-manual.pdf"
+        },
+        {
+          "title": "Stationfall",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 科幻／空间站调查；互动：文字输入。独立续篇，不是Planetfall的普通移植。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-stationfall"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/stationfall-manual.pdf"
+        },
+        {
+          "title": "The Lurking Horror",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 校园／克苏鲁式恐怖；互动：文字输入。部分平台有声音素材，但不据声音存在推断角色配音或新作品。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-lurking-horror"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/lurkinghorror-manual.pdf"
+        },
+        {
+          "title": "Nord and Bert Couldn't Make Head or Tail of It",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 语言谜题／互动小说；互动：文字输入。语言解谜是核心互动，仍是输入式叙事；八个情境按原商品合为一部。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-nord-bert"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/nordbert-manual.pdf"
+        },
+        {
+          "title": "Plundered Hearts",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 海盗／浪漫冒险；互动：文字输入。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-plundered-hearts"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/plunder-manual.pdf"
+        },
+        {
+          "title": "Beyond Zork: The Coconut of Quendor",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 文字冒险／角色扮演融合；互动：文字输入、战斗指令。有能力数值、战斗与地图，但行动仍包含文字解释器；专题保留，主库不新增。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-beyond-zork"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/beyondzork-manual.pdf"
+        },
+        {
+          "title": "Border Zone",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 实时谍报／多角色冒险；互动：文字输入、限时反应。实时流逝与危险要求及时响应，但不把它误列为纯动作游戏。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-border-zone"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/borderzone-manual.pdf"
+        },
+        {
+          "title": "Sherlock: The Riddle of the Crown Jewels",
+          "status": "仅专题（含文字输入）",
+          "reason": "1988 · 侦探／历史推理；互动：文字输入。采用原清单1988发行年；1987版权／编译日期见部分资料。与原库1984年Melbourne House的Sherlock（g129）不是同一作品。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-sherlock"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/sherlock-manual.pdf"
+        },
+        {
+          "title": "Zork Zero: The Revenge of Megaboz",
+          "status": "仅专题（含文字输入）",
+          "reason": "1988 · 图文冒险／逻辑小游戏；互动：文字输入、谜题操作、卡牌棋盘。采用原清单及开发源档1988；部分发行目录从1989 Macintosh起列，不把年代异文算新增版本。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-zork-zero"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/zorkzero-manual.pdf"
+        },
+        {
+          "title": "James Clavell’s Shōgun",
+          "status": "仅专题（含文字输入）",
+          "reason": "1989 · 图文冒险／历史小说改编；互动：文字输入。Dave Lebling改编；有插图仍要求输入文字命令。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-shogun"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/shogun-manual.pdf"
+        },
+        {
+          "title": "Arthur: The Quest for Excalibur",
+          "status": "仅专题（含文字输入）",
+          "reason": "1989 · 图文冒险／亚瑟王传说；互动：文字输入。图形、提示与选单不消除文字解释器，按含文字输入处理。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-arthur"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/arthur-manual.pdf"
+        },
+        {
+          "title": "Journey: The Quest Begins",
+          "status": "新增主库",
+          "reason": "1989 · 队伍叙事／奇幻解谜；互动：菜单指令、选项分支、阅读推进。Marc Blank作品。队伍与魔法服务于叙事解谜，不因队伍外观归为数值成长RPG。",
+          "workIds": [
+            "g1081"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/journey-manual.pdf"
+        },
+        {
+          "title": "Lane Mastodon vs. the Blubbermen",
+          "status": "新增主库",
+          "reason": "1988 · 互动漫画／固定故事／多视角；互动：阅读推进、视角切换。Infocom与Tom Snyder Productions合作的独立电子叙事商品；不是LGOP包装里附赠的纸质Lane Mastodon漫画。",
+          "workIds": [
+            "g1082"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/loadpage.php?getgame=lanemastodon"
+        },
+        {
+          "title": "Gamma Force in Pit of a Thousand Screams",
+          "status": "新增主库",
+          "reason": "1988 · 互动漫画／固定故事／多视角；互动：阅读推进、视角切换。Infocom与Tom Snyder Productions合作的独立电子叙事商品；不是LGOP包装里附赠的纸质Lane Mastodon漫画。",
+          "workIds": [
+            "g1083"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/loadpage.php?getgame=gammaforce"
+        },
+        {
+          "title": "ZorkQuest: Assault on Egreth Castle",
+          "status": "新增主库",
+          "reason": "1988 · 互动漫画／固定故事／多视角；互动：阅读推进、视角切换。Infocom与Tom Snyder Productions合作的独立电子叙事商品；不是LGOP包装里附赠的纸质Lane Mastodon漫画。",
+          "workIds": [
+            "g1084"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/loadpage.php?getgame=zorkquest1"
+        },
+        {
+          "title": "ZorkQuest II: The Crystal of Doom",
+          "status": "新增主库",
+          "reason": "1988 · 互动漫画／固定故事／多视角；互动：阅读推进、视角切换。Infocom与Tom Snyder Productions合作的独立电子叙事商品；不是LGOP包装里附赠的纸质Lane Mastodon漫画。",
+          "workIds": [
+            "g1085"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/loadpage.php?getgame=zorkquest2"
+        },
+        {
+          "title": "Quarterstaff / Quarterstaff: The Tomb of Setmoth",
+          "status": "仅专题（含文字输入）",
+          "reason": "1987 · 队伍RPG／地牢探索／文字输入；互动：文字输入、菜单指令、战斗指令。Infocom关联发行：1988年The Tomb of Setmoth。卡片1987为Simulated Environment Systems原作年，两者按同一作品整理。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-quarterstaff"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/quarterstaff-manual.pdf"
+        },
+        {
+          "title": "BattleTech: The Crescent Hawk’s Inception",
+          "status": "专题RPG关联数据",
+          "reason": "1988 · 剧情RPG／任务探索／指令战斗；互动：菜单指令、直接移动、战斗指令、战术策略。Westwood开发的有连续人物与任务线的RPG；与强调实时战术的Revenge分开。",
+          "workIds": [],
+          "dossierIds": [],
+          "relatedIds": [
+            "infocom-battletech"
+          ],
+          "source": "https://www.mocagh.org/infocom/battletech-manual.pdf"
+        },
+        {
+          "title": "Mars Saga / Mines of Titan",
+          "status": "专题RPG关联数据",
+          "reason": "1988 · 剧情RPG／任务探索／指令战斗；互动：菜单指令、直接移动、战斗指令、战术策略。品牌关联：1989年Mines of Titan；卡片1988为Electronic Arts发行的Mars Saga原作，不把EA发行改署Infocom。",
+          "workIds": [],
+          "dossierIds": [],
+          "relatedIds": [
+            "infocom-mars-saga"
+          ],
+          "source": "https://www.mocagh.org/ea/marssaga-manual.pdf"
+        },
+        {
+          "title": "Circuit’s Edge",
+          "status": "仅专题（含文字输入）",
+          "reason": "1990 · 赛博朋克／侦探冒险／RPG；互动：菜单指令、选项分支、直接移动、战斗指令、文字输入、卡牌棋盘。品牌延续：Westwood Associates开发、Infocom品牌发行，原手册署1990；不能因菜单丰富误判为无输入。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-circuits-edge"
+          ],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/circuitsedge-manual.pdf"
+        },
+        {
+          "title": "太陽の神殿 -ASTEKA II- / Tombs & Treasure",
+          "status": "新增主库",
+          "reason": "1986 · 考古调查／图标冒险／FC版RPG融合；互动：菜单指令、点击调查、直接移动、战斗指令。品牌延续关联：1991年Infocom的英文NES发行Tombs & Treasure；卡片1986为Falcom原作、1988为Tokyo Shoseki新增内容的FC改编。英文普通移植不再追加平台行。",
+          "workIds": [
+            "g1086"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.falcom.co.jp/games-data/switch_egg_asteka2_pc8801"
+        },
+        {
+          "title": "Leather Goddesses of Phobos! 2: Gas Pump Girls Meet the Pulsating Inconvenience from Planet X",
+          "status": "新增主库",
+          "reason": "1992 · 科幻喜剧／图形点击冒险；互动：菜单指令、点击调查、选项分支。品牌延续：Steve Meretzky创作、Infocom品牌发行的独立续篇。手册明确全部对话录音超过一小时，不把有声与CD介质等同。",
+          "workIds": [
+            "g1087"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/lgop2-manual.pdf"
+        },
+        {
+          "title": "Return to Zork",
+          "status": "新增主库",
+          "reason": "1993 · 第一人称调查／实拍角色／奇幻；互动：点击调查、菜单指令、选项分支。1993年品牌／系列延续：原手册保留Infocom品牌，实际发行主体Activision。",
+          "workIds": [
+            "g1088"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/returntozork-manual.pdf"
+        },
+        {
+          "title": "Simon the Sorcerer",
+          "status": "新增主库",
+          "reason": "1993 · 童话戏仿／图形点击冒险；互动：菜单指令、点击调查、选项分支。品牌关联：Infocom北美版说明书保留真实署名；本卡采用Adventure Soft于1993年的原作身份。",
+          "workIds": [
+            "g1089"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.mocagh.org/infocom/simon-manual.pdf"
+        },
+        {
+          "title": "Zork Nemesis: The Forbidden Lands",
+          "status": "新增主库",
+          "reason": "1996 · 第一人称图形调查／奇幻解谜；互动：点击调查、谜题操作。系列延续：Activision实际发行，不能仅因属于Zork就算旧Infocom公司开发或Infocom署名发行。只收原作首批，不追加同内容数字商店再售。",
+          "workIds": [
+            "g1090"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.gog.com/en/game/zork_nemesis_the_forbidden_lands"
+        },
+        {
+          "title": "Zork: The Undiscovered Underground",
+          "status": "仅专题（含文字输入）",
+          "reason": "1997 · 免费独立短篇／奇幻解谜；互动：文字输入。系列延续：Michael Berlyn、Marc Blank与G. Kevin Wilson参与，作为Grand Inquisitor宣传独立发布；不是商业游戏的截取试玩，也不是1980年代旧Infocom开发。",
+          "workIds": [],
+          "dossierIds": [
+            "infocom-undiscovered-underground"
+          ],
+          "relatedIds": [],
+          "source": "https://ifdb.org/viewgame?id=40hswtkhap88gzvn"
+        },
+        {
+          "title": "Zork: Grand Inquisitor",
+          "status": "新增主库",
+          "reason": "1997 · 第一人称图形调查／奇幻解谜；互动：点击调查、菜单指令、谜题操作。系列延续：Activision实际发行，不能仅因属于Zork就算旧Infocom公司开发或Infocom署名发行。只收原作首批，不追加同内容数字商店再售。",
+          "workIds": [
+            "g1091"
+          ],
+          "dossierIds": [],
+          "relatedIds": [],
+          "source": "https://www.gog.com/en/game/zork_grand_inquisitor"
+        },
+        {
+          "title": "Fooblitzky",
+          "status": "排除：棋盘策略",
+          "reason": "1985／1986日期异文；多人棋盘推理、物品搜集与竞争为核心，不以叙事冒险建卡。",
+          "source": "https://www.mocagh.org/infocom/fooblitzky-rules.pdf",
+          "workIds": []
+        },
+        {
+          "title": "BattleTech: The Crescent Hawks’ Revenge",
+          "status": "排除：实时战术",
+          "reason": "1990年后期品牌作品；重心为指挥机甲战斗，与初作剧情RPG分开，不进入叙事专题卡片。",
+          "source": "https://www.mobygames.com/game/233/battletech-the-crescent-hawks-revenge/",
+          "workIds": []
+        },
+        {
+          "title": "Cornerstone",
+          "status": "排除：非游戏软件",
+          "reason": "1985年数据库软件，不属于游戏目录。",
+          "source": "https://www.eblong.com/infocom/",
+          "workIds": []
+        },
+        {
+          "title": "The Zork Trilogy／Lost Treasures／Masterpieces等合集",
+          "status": "不新增作品",
+          "reason": "合集、翻译、普通移植和包装不重复计作品。含新内容的版本须逐项证据核对后再建内容行。",
+          "source": "https://www.eblong.com/infocom/",
+          "workIds": []
+        },
+        {
+          "title": "Mini-Zork／Infocom Sampler",
+          "status": "不新增作品",
+          "reason": "缩减、试玩与采样程序不当独立叙事新作；与1997年独立写作的宣传短篇区别。",
+          "source": "https://www.eblong.com/infocom/",
+          "workIds": []
+        },
+        {
+          "title": "Planetfall: The Search for Floyd等取消项目",
+          "status": "未发行不收录",
+          "reason": "仅有宣布或未完成开发，不计已发行作品。",
+          "source": "https://www.eblong.com/infocom/",
+          "workIds": []
+        },
+        {
+          "title": "Zork (MIT PDP-10 original)",
+          "status": "前史说明",
+          "reason": "1977年MIT主机版已在原库g090，属于创立前的前史。本专题35部经典清单从商业Zork I起，不重复纳入35部计数或新建副本。",
+          "source": "https://www.eblong.com/infocom/",
+          "workIds": []
+        }
+      ],
+      "source": "https://www.eblong.com/infocom/",
+      "publisherNote": "Infocom于1979年6月22日成立，1986年并入Activision，1989年原Cambridge团队结束。专题分别标明原公司、后期Infocom品牌及Zork系列延续；开发者、实际发行公司、原作年和关联发行年不混同。",
+      "scope": "沿此前玩法清单逐项核对：35部经典互动小说＋4部Infocomics＋2部原公司剧情RPG＋9部后期品牌／系列关联，共50个叙事／RPG作品身份。原清单另外2部Fooblitzky和BattleTech Revenge按棋盘策略／实时战术排除。含任何文字输入的新书目仅专题，不新增主库；原有18部输入式主库记录保留。",
+      "versionScope": "本次主库新增11部无文字输入叙事作品，复用18部既有记录；19部输入式新书目只保留专题，2部无输入剧情RPG按现行分类存专题关联数据。顶部内容／发行数只统计主库引用与RPG关联数据，不是50部完整版本总数。Tombs & Treasure与Mars Saga按同一作品归并。仅原作和核实首次增量列版本；普通移植、翻译、合集不增行。",
+      "sectionTitle": "按玩法与厂商时期阅读作品",
+      "overviewLabel": "叙事与RPG作品身份",
+      "contentCountLabel": "已记录内容 / 平台发行",
+      "catalogueCountLabel": "50部 · 主库关联29 / 输入式仅专题19 / RPG关联2",
+      "description": "Infocom叙事专题：35部经典互动小说、4部Infocomics与剧情RPG；后期品牌与Zork系列延续分组，主库新增排除文字输入。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>原清单52项逐项处理 · 50部收录 · 2部玩法核心排除。</strong>35部经典并非35部文字输入：Journey为菜单式冒险。Infocomics切换的是阅读视角，不改写故事结局。</p>",
+      "auditTitle": "作品与玩法类型核对清单",
+      "auditSourceLabel": "Infocom源档目录",
+      "auditLabel": "原清单52个游戏项目，以及5组身份／合集／前史边界说明。",
+      "auditNote": "作品卡片和下表逐项列玩法、互动方式与处理。年份异文在备注保留；原厂版权／编译日期不直接等于零售日期。后期系列延续不等于Infocom署名发行。",
+      "footerNote": "Infocom专题 · 主库、输入式书目及RPG关联数据分开记录，品牌与实际发行署名分别说明",
+      "creativeProfile": {
+        "thesis": "编辑观察：Infocom从自然语言输入与文学化情境出发，逐步试验图形、声音、菜单叙事和多视角电子漫画。原公司结束后，品牌发行和Zork系列仍继续，操作与制作团队发生变化，不能沿用同一种玩法判断。",
+        "phases": [
+          {
+            "period": "1980—1987",
+            "heading": "语言、角色与情境谜题",
+            "analysis": "奇幻寻宝之外，侦探、科幻、恐怖和爱情成为文字指令叙事的不同方向。地图、状态数值或限时机制不自动消除解释器输入。",
+            "basis": "编辑观察",
+            "source": "https://www.eblong.com/infocom/"
+          },
+          {
+            "period": "1988—1989",
+            "heading": "菜单冒险与多视角漫画",
+            "analysis": "Journey把团体行动和个人行动放进选择列表；Infocomics用播放和视角跳转展示固定故事。文字画面、文字输入、故事分支与阅读路径须分别分类。",
+            "basis": "编辑观察",
+            "source": "https://www.mocagh.org/infocom/journey-manual.pdf"
+          },
+          {
+            "period": "1989—1997",
+            "heading": "后期品牌与系列延续",
+            "analysis": "Westwood的RPG、图形点击续篇与Activision的Zork影像冒险拓宽目录。Circuit’s Edge虽采用菜单，仍须键入调查话题；Zork系列名也不能替代实际发行署名。",
+            "basis": "编辑观察",
+            "source": "https://www.mocagh.org/infocom/circuitsedge-manual.pdf"
+          }
+        ]
+      }
     }
   ],
   "schemaVersion": 2,
