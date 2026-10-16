@@ -8,6 +8,7 @@ def iter_interaction_works(data, coverage):
     yield from (('主目录', w) for w in data['works'])
     for company in coverage['companies']:
         yield from ((company['id'], w) for w in company.get('relatedGames', []))
+        yield from ((company['id'] + '（仅专题）', w) for w in company.get('dossierOnlyWorks', []))
 
 
 def validate_interactions(data, coverage, taxonomy):
