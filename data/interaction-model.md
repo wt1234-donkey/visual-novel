@@ -50,3 +50,7 @@ python3 scripts/build_company_pages.py --check
 ## Infocom多视角叙事与输入边界（2026-10-16）
 
 新增受控标签“视角切换”：在固定故事的角色、回忆、内心或时间视角间选择阅读路径，不等于改变事件或结局。4部Infocomics使用“阅读推进＋视角切换”，细分类为“动画漫画·视角切换”。Journey使用菜单和故事选择；Quarterstaff的英文句子与Circuit’s Edge的自由话题均为文字输入。19部新输入式书目仍仅专题，2部剧情RPG存既有专题关联结构。当前1088部主库、361部RPG等专题附录、53部仅专题输入式书目互不复制。
+
+## On-Line Systems／Sierra早期专题（2026-10-16）
+
+Dragon's Keep、Troll's Tale与Mickey's Space Adventure按原厂手册登记菜单指令，英文命令的屏幕组合不标文字输入。Mission: Asteroid仅专题。Ultima II以固定按键为主，另有不改变结果的Yell自由文字功能，专题书目明确记录边界。Gelfling沿用黑水晶g099；其菜单操作差异在专题上下文说明，不重建作品或虚构新增内容。旧作品标签与发行对象保持。当前1091部主库、361部专题附录、55部仅专题书目。
