@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
 coverage = json.loads((ROOT / 'data/company-coverage.json').read_text(encoding='utf-8'))
 works = {work['id']: work for work in data['works']}
+gameplay_catalogues = json.loads((ROOT / 'data/gameplay-catalogues.json').read_text(encoding='utf-8'))
 escape = html.escape
 
 
@@ -63,6 +64,59 @@ def card(work, versions=None, anchors=(), version_label='个平台版本', conte
 {f'<p class="character-evidence">{link(work["charactersSource"], "角色依据")}{(" · " + escape(work["charactersNote"])) if work.get("charactersNote") else ""}</p>' if work.get('charactersSource') else ''}
 {edition_credits}{version_panel}
 <div class="card-bottom">{link(work['source'], '作品来源')}<span class="card-note">{escape(work['notes'])}</span></div></article>'''
+
+
+def gameplay_appendix(company):
+    """Reference tables do not add catalogue works or change admission rules."""
+    appendix = gameplay_catalogues['companies'].get(company['id'])
+    if not appendix:
+        return ''
+    local = {**{wid: works[wid] for wid in company['workIds']},
+             **{w['id']: w for w in company.get('relatedGames', [])},
+             **{w['id']: w for w in company.get('dossierOnlyWorks', [])}}
+    related_ids = {w['id'] for w in company.get('relatedGames', [])}
+    dossier_ids = {w['id'] for w in company.get('dossierOnlyWorks', [])}
+    groups = []
+    for index, group in enumerate(appendix['groups'], 1):
+        rows = []
+        for item in group['rows']:
+            if 'workId' in item:
+                w = local[item['workId']]
+                name = w.get('chineseTitle') or w['title']
+                title = f'<a href="#{escape(w["id"], quote=True)}">{escape(name)}</a>'
+                if name != w['originalTitle']:
+                    title += f'<br><span class="original">{escape(w["originalTitle"])}</span>'
+                kind = w['subcategory'] + ' · ' + w['genre'].replace('／角色与探索', '').replace('／探索与故事背景', '')
+                relation = ('正文 · 仅专题书目' if w['id'] in dossier_ids else
+                            '正文 · 跨类型／关联项目' if w['id'] in related_ids else '正文 · 主库引用')
+                note = company.get('workContexts', {}).get(w['id'], '')
+                if w['id'] in related_ids:
+                    note = note or w['notes']
+                controls = '、'.join(w['interactionModes'])
+                note = f'互动方式：{controls}。' + note
+                source = w['source']
+                source_label = '作品资料'
+            else:
+                assert item['title'] and item['type'] and item['relation']
+                title = escape(item['title'])
+                if anchor := item.get('anchor'):
+                    assert anchor in local, '附录作品锚点不在本专题'
+                    title = f'<a href="#{escape(anchor, quote=True)}">{title}</a>'
+                kind, relation, note = item['type'], item['relation'], item.get('note', '')
+                source = item.get('source', group['source'])
+                source_label = '资料' if 'source' in item else '分组资料'
+            details = escape(relation) + (f'<p>{escape(note)}</p>' if note else '')
+            rows.append(f'<tr><th scope="row">{title}</th><td>{escape(kind)}</td><td>{details}</td><td>{link(source, source_label)}</td></tr>')
+        groups.append(f'<section id="gameplay-group-{index}"><h3>{escape(group["title"])}</h3>'
+                      f'<p class="scope-note">{escape(group.get("note", ""))}</p>'
+                      '<div class="audit-scroll"><table><thead><tr><th>作品／项目</th><th>玩法／游戏类型</th><th>专题关系与说明</th><th>资料</th></tr></thead>'
+                      f'<tbody>\n{"\n".join(rows)}\n</tbody></table></div></section>')
+    count = sum(len(g['rows']) for g in appendix['groups'])
+    return (f'<section class="company-audit gameplay-appendix" id="gameplay-catalogue"><p class="eyebrow">GAMEPLAY REFERENCE · {escape(gameplay_catalogues["updated"])}</p>'
+            f'<h2>{escape(appendix["title"])}</h2><p>{escape(appendix["scope"])}</p>'
+            f'<p class="scope-note">{count}个清单项目 · {len(appendix["groups"])}组。{escape(gameplay_catalogues["note"])}</p>'
+            '<p class="scope-note">类型为此前清单与现有资料的玩法概览，不宣称本次对每个平台逐项重新验证。分组资料用于目录与归属参考；具体操作依据见有正文记录的作品。未逐项核定的年份不补造。</p>'
+            f'{"\n".join(groups)}</section>')
 
 
 def build(company):
@@ -138,12 +192,14 @@ def build(company):
         assert path.parts[0] == 'data' and '..' not in path.parts and (ROOT / path).is_file(), '历史存档路径不正确'
         archived_links = ''.join(f'<li id="{escape(w["id"], quote=True)}">{escape(w["title"])}</li>' for w in archive['works'])
         historical_section = f'<details class="scope-note" id="historical-archive"><summary>{escape(archive["title"])}</summary><p>{escape(archive["note"])}</p><a href="{escape(archive["path"], quote=True)}">查看完整历史记录（JSON）</a><ul>{archived_links}</ul></details>'
+    appendix = gameplay_appendix(company)
+    appendix_nav = '<a href="#gameplay-catalogue">玩法总表</a>' if appendix else ''
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description)}">
 <title>{escape(company['name'])} 作品专题 · 叙事游戏年鉴</title>
 <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="company.css"></head>
-<body><div class="app-shell"><header class="masthead"><a class="brand" href="index.html"><span class="brand-mark">N.</span><span>叙事游戏年鉴</span></a><nav aria-label="专题导航"><a href="#identity">创作风格</a><a href="#works">全部作品</a><a href="#coverage">核对清单</a><a href="index.html#catalogue">返回数据库</a></nav></header>
+<body><div class="app-shell"><header class="masthead"><a class="brand" href="index.html"><span class="brand-mark">N.</span><span>叙事游戏年鉴</span></a><nav aria-label="专题导航"><a href="#identity">创作风格</a><a href="#works">全部作品</a><a href="#coverage">核对清单</a>{appendix_nav}<a href="index.html#catalogue">返回数据库</a></nav></header>
 <main><section class="company-hero"><p class="eyebrow">COMPANY DOSSIER · {escape(company['checkedAt'])}</p><h1>{escape(company['name'])} 作品专题</h1>
 <p class="lead">{escape(company['publisherNote'])}</p>{publisher_count}
 <div class="overview"><div><strong>{len(all_games)}</strong><span>{overview_label}</span></div><div><strong>{count_contents} / {count_versions}</strong><span>{escape(company.get('contentCountLabel', '内容版本 / 平台发行'))}</span></div><div><strong>{escape(company.get('yearSpanLabel', year_span))}</strong><span>{escape(company.get('yearSpanCaption', '作品首发跨度'))}</span></div></div>
@@ -158,7 +214,7 @@ def build(company):
 <section class="company-audit" id="coverage"><p class="eyebrow">CATALOGUE AUDIT</p><h2>{escape(audit_title)}</h2>
 <p>核对日期：{escape(company['checkedAt'])} · {escape(audit_label)} {link(company['source'], audit_source_label)}</p>
 <p class="scope-note">{escape(audit_note)}</p>
-<div class="audit-scroll"><table><thead><tr><th>官网项目／补充项目</th><th>处理</th><th>说明与对应作品</th><th>证据</th></tr></thead><tbody>{''.join(audit_rows)}</tbody></table></div></section>
+<div class="audit-scroll"><table><thead><tr><th>官网项目／补充项目</th><th>处理</th><th>说明与对应作品</th><th>证据</th></tr></thead><tbody>{''.join(audit_rows)}</tbody></table></div></section>{appendix}
 </main><footer><span>{escape(company.get('footerNote', company['name'] + ' 专题 · 与主数据库共用作品、内容版本和平台发行记录'))}</span><a href="index.html#catalogue">返回数据库 ↑</a></footer></div></body></html>
 '''
 
