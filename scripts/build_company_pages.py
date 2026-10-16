@@ -17,7 +17,7 @@ def link(url, title):
     return f'<a class="source-link" href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)} ↗</a>'
 
 
-def card(work, versions=None, anchors=(), version_label='个平台版本'):
+def card(work, versions=None, anchors=(), version_label='个平台版本', context_label=''):
     if versions is None:
         versions = [v for v in data['platformReleases'] if v['workId'] == work['id']]
     versions = sorted(versions, key=lambda v: v['year'])
@@ -52,7 +52,7 @@ def card(work, versions=None, anchors=(), version_label='个平台版本'):
     interaction_evidence = f'<details class="interaction-evidence"><summary>互动方式依据 · {escape(work["interactionBasis"])}</summary><p class="changes">{escape(work["interactionNote"])}</p>{" ".join(link(url, "玩法资料") for url in work["interactionSources"])}</details>'
     legacy_anchors = ''.join(f'<span id="{escape(anchor, quote=True)}" aria-hidden="true"></span>' for anchor in anchors)
     return f'''<article class="card" id="{work['id']}">{legacy_anchors}
-<div class="card-top"><span class="year">{work['firstYear']}</span><span class="category">{escape(work['category'])}</span></div>
+<div class="card-top"><span class="year">{work['firstYear']}</span><span class="category">{escape(work['category'])}{' · ' + escape(context_label) if context_label else ''}</span></div>
 <h3>{escape(display_title)}</h3>{original_line}
 <p class="intro">{escape(work['synopsis'])}</p>
 <div class="interaction-tags" aria-label="互动方式">{interaction_tags}</div>{interaction_evidence}
@@ -103,6 +103,21 @@ def build(company):
     profile_section = f'''<section class="creative-profile" id="identity"><div class="section-heading"><div><p class="eyebrow">CREATIVE PROFILE</p><h2>作品怎样形成自己的风格</h2></div></div>
 <p class="profile-lead">{escape(profile['thesis'])}</p><div class="profile-phases">{profile_rows}</div>
 <p class="profile-caveat">时期划分是依据作品目录与厂商资料所做的编辑归纳；“厂商说明”引用其公开文字。“编辑观察”仅说明作品中可见的变化，不推断未经证实的经营或创作动机。</p></section>'''
+    work_cards = '<div class="cards">' + ''.join(card(w, anchors=legacy_anchors.get(w['id'], ()), version_label=company.get('versionPanelLabel', '个平台版本')) for w in selected) + '</div>'
+    if company.get('workGroups'):
+        grouped_ids = [wid for group in company['workGroups'] for wid in group['workIds']]
+        assert len(grouped_ids) == len(set(grouped_ids)) and set(grouped_ids) == set(company['workIds']), '专题分期必须完整且不重复覆盖作品'
+        work_cards = ''.join(
+            f'<section class="dossier-period" id="{escape(group["id"], quote=True)}"><h3>{escape(group["title"])}</h3><p class="scope-note">{escape(group["description"])}</p><div class="cards">'
+            + ''.join(card(w, anchors=legacy_anchors.get(w['id'], ()), context_label=group.get('cardLabel', ''))
+                      for w in sorted((works[wid] for wid in group['workIds']), key=lambda w: (w['firstYear'], w['id'])))
+            + '</div></section>' for group in company['workGroups'])
+    historical_section = ''
+    if archive := company.get('historicalArchive'):
+        path = Path(archive['path'])
+        assert path.parts[0] == 'data' and '..' not in path.parts and (ROOT / path).is_file(), '历史存档路径不正确'
+        archived_links = ''.join(f'<li id="{escape(w["id"], quote=True)}">{escape(w["title"])}</li>' for w in archive['works'])
+        historical_section = f'<details class="scope-note" id="historical-archive"><summary>{escape(archive["title"])}</summary><p>{escape(archive["note"])}</p><a href="{escape(archive["path"], quote=True)}">查看完整历史记录（JSON）</a><ul>{archived_links}</ul></details>'
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description)}">
@@ -118,8 +133,8 @@ def build(company):
 <p class="scope-note">当前采用作品 → 内容版本 → 平台发行三层记录。同内容跨平台不增加内容版本；仅确认首次新增剧情、人物、路线、可玩内容、美术或音频时新增。内容关系待核的历史发行另列，不计为新增内容。下方旧核对说明中的版本数保留其当时口径。</p>
 {profile_section}
 <section id="works"><div class="section-heading"><div><p class="eyebrow">GAME CATALOGUE</p><h2>{escape(section_title)}</h2></div><p>{len(selected)} 部四类作品 · 增强版合并计数</p></div>
-<nav class="work-index" aria-label="按年份跳转作品">{toc}</nav>{empty_note}<div class="cards">{''.join(card(w, anchors=legacy_anchors.get(w['id'], ()), version_label=company.get('versionPanelLabel', '个平台版本')) for w in selected)}</div></section>
-{related_section}
+<nav class="work-index" aria-label="按年份跳转作品">{toc}</nav>{empty_note}{work_cards}</section>
+{related_section}{historical_section}
 <section class="company-audit" id="coverage"><p class="eyebrow">CATALOGUE AUDIT</p><h2>{escape(audit_title)}</h2>
 <p>核对日期：{escape(company['checkedAt'])} · {escape(audit_label)} {link(company['source'], audit_source_label)}</p>
 <p class="scope-note">{escape(audit_note)}</p>

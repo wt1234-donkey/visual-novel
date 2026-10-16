@@ -99,6 +99,22 @@ for company in coverage['companies']:
                for p in profile['phases'])
     ids = company['workIds']
     assert len(ids) == len(set(ids)) and set(ids) <= work_ids, '厂商专题作品 ID 不正确'
+    if groups := company.get('workGroups'):
+        grouped = [wid for group in groups for wid in group['workIds']]
+        assert len(grouped) == len(set(grouped)) and set(grouped) == set(ids), '专题分期必须完整且不重复覆盖作品'
+        assert len({group['id'] for group in groups}) == len(groups), '专题分期锚点重复'
+        assert all(group['title'] and group['description'] and group['workIds'] for group in groups)
+        assert not {group['id'] for group in groups} & work_ids, '分期锚点与作品ID冲突'
+    if archive := company.get('historicalArchive'):
+        path = Path(archive['path'])
+        assert path.parts[0] == 'data' and '..' not in path.parts and (ROOT / path).is_file()
+        archived = json.loads((ROOT / path).read_text(encoding='utf-8'))
+        assert archived['companyId'] == company['id'] and archived['reason']
+        assert {(w['id'], w['title']) for w in archive['works']} == {(w['id'], w['title']) for w in archived['relatedGames']}
+        assert not {w['id'] for w in archive['works']} & (work_ids | set(ids)), '历史存档不应重复计入主库'
+        from content_model import validate_collection
+        for work in archived['relatedGames']:
+            validate_collection([work], work['contentVersions'], work['platformReleases'])
     for field, context in [('bundledSampleWorkIds', 'bundledSample'),
                            ('associatedPublisherWorkIds', 'associatedPublisher')]:
         if field in company:
