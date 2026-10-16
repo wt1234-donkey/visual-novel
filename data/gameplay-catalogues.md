@@ -40,3 +40,7 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 node --test tests/*.test.mjs
 python3 scripts/build_company_pages.py --check
 ```
+
+## PSK新增（2026-10-16）
+
+PSK末尾增加13部正式游戏的2组玩法表：8部引用正文（含输入会话边界及RPG），5部为排除类型自由行。与既有6份合计680个参考项目／44组；6份旧表不改。新增作品及内容统计见README与psk-audit.md，前述“本次验证”数字是2026-10-16批次历史记录。

@@ -54,3 +54,7 @@ python3 scripts/build_company_pages.py --check
 ## On-Line Systems／Sierra早期专题（2026-10-16）
 
 Dragon's Keep、Troll's Tale与Mickey's Space Adventure按原厂手册登记菜单指令，英文命令的屏幕组合不标文字输入。Mission: Asteroid仅专题。Ultima II以固定按键为主，另有不改变结果的Yell自由文字功能，专题书目明确记录边界。Gelfling沿用黑水晶g099；其菜单操作差异在专题上下文说明，不重建作品或虚构新增内容。旧作品标签与发行对象保持。当前1091部主库、361部专题附录、55部仅专题书目。
+
+## PSK输入与菜单边界（2026-10-16）
+
+Christine、The Byoin、SKAPON为菜单式叙事，新增主库；Lolita II、ALICE、Cosmo Angel与Yellow Lemon仅专题，后者注明关键词会话边界。Final Lolita地图与数值驱动，普通战斗自动，不标战斗指令；RPG单列关联。启动代码、传递密码及数值谜题不等于自由词句输入。全部旧记录保留；主库1094、关联362、仅专题59。具体控制证据及不确定性见psk-audit.md。
