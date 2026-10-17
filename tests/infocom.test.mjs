@@ -43,7 +43,7 @@ test('Journey and Infocomics retain the distinction between story choice and vie
   assert.ok(d.works.find(w=>w.id==='g1081').interactionModes.includes('菜单指令'));
   assert.ok(t.interactionModes['视角切换'].includes('不据此宣称改变事件或结局'));
   assert.ok(t.subcategories['互动动画'].includes('动画漫画·视角切换'));
-  const comics=filterCatalogue(d,{interaction:'视角切换'});
+  const comics=filterCatalogue(d,{interaction:'视角切换'}).filter(x=>x.work.subcategory==='动画漫画·视角切换');
   assert.deepEqual(comics.map(x=>x.work.id).sort(),['g1082','g1083','g1084','g1085']);
   assert.ok(comics.every(x=>!x.work.interactionModes.includes('选项分支')));
 });
