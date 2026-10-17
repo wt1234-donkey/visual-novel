@@ -70543,6 +70543,2493 @@
           ]
         }
       ]
+    },
+    {
+      "id": "te_soft",
+      "name": "T&E SOFT",
+      "foundedAt": "1982-10",
+      "foundedSource": "https://www.daikokuya-ghd.jp/about.html?page_id=49",
+      "checkedAt": "2026-10-18",
+      "status": "日本T&E SOFT专题：新增2部无文字输入主库、20部RPG／策略关联，复用4部既有作品",
+      "publisherNote": "本清单对应日本名古屋的T&E SOFT，并非英国厂商。原法人于1982年10月成立；2002年后原法人更名、Deep与2008年新T&E法人及品牌继承分开看待，不把它们视为从未中断的同一开发主体。Crystal Soft合并前作品与后继品牌体育游戏只在参考表说明。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>新增2部无文字输入主库 · 20部RPG／策略关联 · 复用4部既有作品。</strong>三部星亚瑟旧输入记录保留，本轮未新增输入式作品；共26个正文档案。</p>",
+      "scope": "根据“列出PSK游戏类型清单”项目的T&E SOFT清单整理，并补核官方版权目录。冒险与恋爱叙事进入四类主库，剧情RPG／DAIVA战记另列关联。纯体育、射击、益智、工具和后继时期项目只在末尾玩法表保留。",
+      "versionScope": "原1169部主库、1367个内容身份、2361条发行及65个专题对象不删改。本轮主库新增2部／2个内容／2条首批发行；关联20部／27个内容／27条首批发行。Hydlide四项增补、Hydlide3两项增补与Sword World SFC独有剧本共七项，均比较到相应原作。",
+      "workIds": [
+        "g1173",
+        "g1174",
+        "g073",
+        "g087",
+        "g088",
+        "g010"
+      ],
+      "publisherWorkIds": [
+        "g1173",
+        "g1174",
+        "g073",
+        "g087",
+        "g088"
+      ],
+      "relatedGames": [
+        {
+          "id": "te-soft-hydlide",
+          "title": "梦幻仙境",
+          "chineseTitle": "梦幻仙境",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ハイドライド / Hydlide",
+          "titleAliases": [],
+          "firstYear": 1984,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作RPG",
+          "genre": "妖精王国／探索与成长",
+          "characters": [
+            "ジム（Jim）",
+            "バラリス（Varalys）"
+          ],
+          "charactersSource": "https://www.8-bits.info/gamelist/PC88/info/info_Wr1gtw9n1yZNx3uL.php",
+          "synopsis": "王国的宝石失窃后恶魔复苏，Jim探索妖精王国，寻找恢复和平的方法。",
+          "notes": "原作与Hydlide Special、异次元版、Virtual Hydlide和Windows重绘版共用作品身份；续作II、3各自独立。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_Wr1gtw9n1yZNx3uL.php",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "原作直接控制Jim移动，以攻防状态和接触战斗探索地图；后续重制改用三维操作。固定按键、角色命名与密码不算行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://prtimes.jp/main/html/rd/p/000000165.000069696.html",
+            "https://www.amusement-center.com/project/egg/special/tande-xtal/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-hydlide-c-original",
+              "workId": "te-soft-hydlide",
+              "label": "原作／首批内容",
+              "firstYear": 1984,
+              "basis": "original",
+              "evidence": "原作首次内容。原作与Hydlide Special、异次元版、Virtual Hydlide和Windows重绘版共用作品身份；续作II、3各自独立。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_Wr1gtw9n1yZNx3uL.php",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "te-soft-hydlide-c-special",
+              "workId": "te-soft-hydlide",
+              "label": "Hydlide Special／新增魔法",
+              "firstYear": 1986,
+              "basis": "added",
+              "evidence": "1986 Famicom版在1984原作上首次加入可用魔法系统；独立作品身份不增加。",
+              "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-v-special"
+              ],
+              "addedContent": [
+                {
+                  "description": "新增可由玩家使用的魔法能力及其游戏内容。",
+                  "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/"
+                }
+              ],
+              "comparedTo": "te-soft-hydlide-c-original"
+            },
+            {
+              "id": "te-soft-hydlide-c-x1-alternate",
+              "workId": "te-soft-hydlide",
+              "label": "异次元版／重新绘制图像",
+              "firstYear": 1987,
+              "basis": "added",
+              "evidence": "1987年3月经TAKERU供应的X1异次元版，在先行X1版基础上更新图像；滚屏与提速本身不是新内容依据。",
+              "source": "https://prtimes.jp/main/html/rd/p/000000165.000069696.html",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-v-x1-alternate"
+              ],
+              "addedContent": [
+                {
+                  "description": "重新绘制游戏图像；依据官方明确的图像更新，不把X1普通版或提速单独计内容。",
+                  "source": "https://prtimes.jp/main/html/rd/p/000000165.000069696.html"
+                }
+              ],
+              "comparedTo": "te-soft-hydlide-c-original"
+            },
+            {
+              "id": "te-soft-hydlide-c-virtual",
+              "workId": "te-soft-hydlide",
+              "label": "Virtual Hydlide／三维重制",
+              "firstYear": 1995,
+              "basis": "added",
+              "evidence": "1995 Saturn重述初代救援故事，采用新的三维场景、角色影像与随机地图；属于同一作品的重制内容分支。",
+              "source": "https://www.mobygames.com/game/13525/virtual-hydlide/",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-v-virtual"
+              ],
+              "addedContent": [
+                {
+                  "description": "新增三维可探索场景和角色影像素材，以新的地图生成呈现原作世界。",
+                  "source": "https://www.mobygames.com/game/13525/virtual-hydlide/"
+                }
+              ],
+              "comparedTo": "te-soft-hydlide-c-original"
+            },
+            {
+              "id": "te-soft-hydlide-c-windows-arrange",
+              "workId": "te-soft-hydlide",
+              "label": "Windows Arrange／重绘与编曲",
+              "firstYear": 1999,
+              "basis": "added",
+              "evidence": "1999 Windows原作重制提供原版与Arrange切换；新图像和游戏内编曲是增量，壁纸、屏保和附赠CD不计。",
+              "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-v-windows-arrange"
+              ],
+              "addedContent": [
+                {
+                  "description": "Arrange模式重新绘制图像，并加入以MSX音乐为基础的游戏内改编配乐。",
+                  "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm"
+                }
+              ],
+              "comparedTo": "te-soft-hydlide-c-original"
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-hydlide-v-original",
+              "workId": "te-soft-hydlide",
+              "year": 1984,
+              "platform": "PC-8801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。原作与Hydlide Special、异次元版、Virtual Hydlide和Windows重绘版共用作品身份；续作II、3各自独立。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_Wr1gtw9n1yZNx3uL.php",
+              "contentVersionId": "te-soft-hydlide-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "te-soft-hydlide-v-special",
+              "workId": "te-soft-hydlide",
+              "year": 1986,
+              "platform": "Famicom",
+              "publisher": "東芝EMI",
+              "publisherCompanies": [
+                "東芝EMI"
+              ],
+              "kind": "Hydlide Special／新增魔法",
+              "voice": "未核实",
+              "differences": "1986 Famicom版在1984原作上首次加入可用魔法系统；独立作品身份不增加。",
+              "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+              "contentVersionId": "te-soft-hydlide-c-special",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "te-soft-hydlide-v-x1-alternate",
+              "workId": "te-soft-hydlide",
+              "year": 1987,
+              "platform": "X1",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "异次元版／重新绘制图像",
+              "voice": "未核实",
+              "differences": "1987年3月经TAKERU供应的X1异次元版，在先行X1版基础上更新图像；滚屏与提速本身不是新内容依据。",
+              "source": "https://prtimes.jp/main/html/rd/p/000000165.000069696.html",
+              "contentVersionId": "te-soft-hydlide-c-x1-alternate",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "te-soft-hydlide-v-virtual",
+              "workId": "te-soft-hydlide",
+              "year": 1995,
+              "platform": "Sega Saturn",
+              "publisher": "世嘉",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "Virtual Hydlide／三维重制",
+              "voice": "未核实",
+              "differences": "1995 Saturn重述初代救援故事，采用新的三维场景、角色影像与随机地图；属于同一作品的重制内容分支。",
+              "source": "https://www.mobygames.com/game/13525/virtual-hydlide/",
+              "contentVersionId": "te-soft-hydlide-c-virtual",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "te-soft-hydlide-v-windows-arrange",
+              "workId": "te-soft-hydlide",
+              "year": 1999,
+              "platform": "Windows",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "Windows Arrange／重绘与编曲",
+              "voice": "未核实",
+              "differences": "1999 Windows原作重制提供原版与Arrange切换；新图像和游戏内编曲是增量，壁纸、屏保和附赠CD不计。",
+              "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm",
+              "contentVersionId": "te-soft-hydlide-c-windows-arrange",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-hydlide-2",
+          "title": "梦幻仙境2：暗黑之光",
+          "chineseTitle": "梦幻仙境2：暗黑之光",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ハイドライドII SHINE OF DARKNESS",
+          "titleAliases": [],
+          "firstYear": 1985,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作RPG",
+          "genre": "异世界探索／善恶与魔法",
+          "characters": [
+            "神选中的少年（玩家）",
+            "妖精王国的居民"
+          ],
+          "charactersSource": "https://www.8-bits.info/gamelist/PC88/info/info_DZHY519PqwafmxIE.php",
+          "synopsis": "邪恶意识再次威胁妖精王国，心地纯洁的少年被选中，踏上重新封印黑暗的旅程。",
+          "notes": "II为独立续作；Gold Pack附带的II沿用原版，没有Arrange模式，不重复建立增补。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_DZHY519PqwafmxIE.php",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "以方向移动和接触战斗为基础，另有固定魔法选择、装备与道具操作；FORTH善恶值不等于自由词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://store.steampowered.com/app/4555570/EGGCONSOLE_HYDLIDE_II_PC8801/?l=japanese",
+            "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-hydlide-2-c-original",
+              "workId": "te-soft-hydlide-2",
+              "label": "原作／首批内容",
+              "firstYear": 1985,
+              "basis": "original",
+              "evidence": "原作首次内容。II为独立续作；Gold Pack附带的II沿用原版，没有Arrange模式，不重复建立增补。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_DZHY519PqwafmxIE.php",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-hydlide-2-v-original",
+              "workId": "te-soft-hydlide-2",
+              "year": 1985,
+              "platform": "PC-8801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。II为独立续作；Gold Pack附带的II沿用原版，没有Arrange模式，不重复建立增补。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_DZHY519PqwafmxIE.php",
+              "contentVersionId": "te-soft-hydlide-2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-hydlide-3",
+          "title": "梦幻仙境3：异次元的回忆",
+          "chineseTitle": "梦幻仙境3：异次元的回忆",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ハイドライド3 THE SPACE MEMORIES",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作RPG",
+          "genre": "时间与重量管理／异世界调查",
+          "characters": [
+            "年轻冒险者（玩家）",
+            "妖精王国的居民"
+          ],
+          "charactersSource": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+          "synopsis": "异变打破妖精王国的平静，冒险者追查异常根源，在旅程中逐步接触世界的秘密。",
+          "notes": "原作首批以1987 PC-88记录；1989 Special Version及1999 Gold Pack的新增场景／人物／图像音乐分层。普通移植不扩列。",
+          "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "直接移动、按键攻击和预设道具／装备／魔法菜单；引入时间、负重等机制。与初代接触战斗不同，不以RPG题材推定键入指令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+            "https://w.atwiki.jp/gcmatome/pages/4337.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-hydlide-3-c-original",
+              "workId": "te-soft-hydlide-3",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "原作首次内容。原作首批以1987 PC-88记录；1989 Special Version及1999 Gold Pack的新增场景／人物／图像音乐分层。普通移植不扩列。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/4337.html",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-3-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "te-soft-hydlide-3-c-special-version",
+              "workId": "te-soft-hydlide-3",
+              "label": "Special Version／新增世界与人物",
+              "firstYear": 1989,
+              "basis": "added",
+              "evidence": "1989 PC-98 Special Version相对1987原作增加世界、人物与视觉场景；后发X68000版不冒充同日首批。",
+              "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-3-v-special-version"
+              ],
+              "addedContent": [
+                {
+                  "description": "增加新的世界、登场人物与视觉场景。",
+                  "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/"
+                }
+              ],
+              "comparedTo": "te-soft-hydlide-3-c-original"
+            },
+            {
+              "id": "te-soft-hydlide-3-c-gold-arrange",
+              "workId": "te-soft-hydlide-3",
+              "label": "Gold Pack Arrange／重绘与编曲",
+              "firstYear": 1999,
+              "basis": "added",
+              "evidence": "1999 Gold Pack以1987 PC-88内容为基础，另含图像及声音改编的Arrange模式；不是把1989 Special Version搬到Windows。",
+              "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm",
+              "evidenceReleaseIds": [
+                "te-soft-hydlide-3-v-gold-arrange"
+              ],
+              "addedContent": [
+                {
+                  "description": "相对PC-88原作新增Arrange图像与游戏内声音编排；附带的II与外部壁纸不计增量。",
+                  "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm"
+                }
+              ],
+              "comparedTo": "te-soft-hydlide-3-c-original"
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-hydlide-3-v-original",
+              "workId": "te-soft-hydlide-3",
+              "year": 1987,
+              "platform": "PC-8801mkIISR",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。原作首批以1987 PC-88记录；1989 Special Version及1999 Gold Pack的新增场景／人物／图像音乐分层。普通移植不扩列。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/4337.html",
+              "contentVersionId": "te-soft-hydlide-3-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "te-soft-hydlide-3-v-special-version",
+              "workId": "te-soft-hydlide-3",
+              "year": 1989,
+              "platform": "PC-9801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "Special Version／新增世界与人物",
+              "voice": "未核实",
+              "differences": "1989 PC-98 Special Version相对1987原作增加世界、人物与视觉场景；后发X68000版不冒充同日首批。",
+              "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+              "contentVersionId": "te-soft-hydlide-3-c-special-version",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "te-soft-hydlide-3-v-gold-arrange",
+              "workId": "te-soft-hydlide-3",
+              "year": 1999,
+              "platform": "Windows",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "Gold Pack Arrange／重绘与编曲",
+              "voice": "未核实",
+              "differences": "1999 Gold Pack以1987 PC-88内容为基础，另含图像及声音改编的Arrange模式；不是把1989 Special Version搬到Windows。",
+              "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm",
+              "contentVersionId": "te-soft-hydlide-3-c-gold-arrange",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-daiva-1",
+          "title": "DAIVA 故事1：弗栗多之炎",
+          "chineseTitle": "DAIVA 故事1：弗栗多之炎",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "DAIVA STORY1 ヴリトラの炎",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "策略／叙事关联",
+          "subcategory": "太空战略／动作战",
+          "genre": "多主角科幻战记",
+          "characters": [
+            "ルシャナ・パティー"
+          ],
+          "charactersSource": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "synopsis": "失去故乡与未婚妻的舰队幸存者追击毁灭家园的敌人。",
+          "notes": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "资源经营",
+            "战术策略",
+            "直接移动",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "战略阶段通过固定菜单指挥舰队、航行与资源配置；行星战直接操纵装甲移动、跳跃与射击。固定选择、传递密码不等于自由词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+            "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-daiva-1-c-original",
+              "workId": "te-soft-daiva-1",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-daiva-1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-daiva-1-v-original",
+              "workId": "te-soft-daiva-1",
+              "year": 1987,
+              "platform": "PC-8801mkIISR",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "contentVersionId": "te-soft-daiva-1-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-daiva-2",
+          "title": "DAIVA 故事2：杜尔迦的记忆",
+          "chineseTitle": "DAIVA 故事2：杜尔迦的记忆",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "DAIVA STORY2 ドゥルガーの記憶",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "策略／叙事关联",
+          "subcategory": "太空战略／动作战",
+          "genre": "多主角科幻战记",
+          "characters": [
+            "ア・ミターバ"
+          ],
+          "charactersSource": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "synopsis": "家族舰队逃离战火后失散，舰长寻找载着妻子的船。",
+          "notes": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "资源经营",
+            "战术策略",
+            "直接移动",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "战略阶段通过固定菜单指挥舰队、航行与资源配置；行星战直接操纵装甲移动、跳跃与射击。固定选择、传递密码不等于自由词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+            "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-daiva-2-c-original",
+              "workId": "te-soft-daiva-2",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-daiva-2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-daiva-2-v-original",
+              "workId": "te-soft-daiva-2",
+              "year": 1987,
+              "platform": "FM-77AV",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "contentVersionId": "te-soft-daiva-2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-daiva-3",
+          "title": "DAIVA 故事3：涅槃的试炼",
+          "chineseTitle": "DAIVA 故事3：涅槃的试炼",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "DAIVA STORY3 ニルヴァーナの試練",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "策略／叙事关联",
+          "subcategory": "太空战略／动作战",
+          "genre": "多主角科幻战记",
+          "characters": [
+            "アモーガ・シッディ"
+          ],
+          "charactersSource": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "synopsis": "离开帝国的舰长与舰载生体电脑共同面对追击。",
+          "notes": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "资源经营",
+            "战术策略",
+            "直接移动",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "战略阶段通过固定菜单指挥舰队、航行与资源配置；行星战直接操纵装甲移动、跳跃与射击。固定选择、传递密码不等于自由词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+            "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-daiva-3-c-original",
+              "workId": "te-soft-daiva-3",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-daiva-3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-daiva-3-v-original",
+              "workId": "te-soft-daiva-3",
+              "year": 1987,
+              "platform": "X1",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "contentVersionId": "te-soft-daiva-3-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-daiva-4",
+          "title": "DAIVA 故事4：阿修罗的血流",
+          "chineseTitle": "DAIVA 故事4：阿修罗的血流",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "DAIVA STORY4 アスラの血流",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "策略／叙事关联",
+          "subcategory": "太空战略／动作战",
+          "genre": "多主角科幻战记",
+          "characters": [
+            "ラトナ・サンバ"
+          ],
+          "charactersSource": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "synopsis": "突遭袭击的驾驶员在逃亡中调查宗教与战争的联系。",
+          "notes": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "资源经营",
+            "战术策略",
+            "直接移动",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "战略阶段通过固定菜单指挥舰队、航行与资源配置；行星战直接操纵装甲移动、跳跃与射击。固定选择、传递密码不等于自由词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+            "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-daiva-4-c-original",
+              "workId": "te-soft-daiva-4",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-daiva-4-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-daiva-4-v-original",
+              "workId": "te-soft-daiva-4",
+              "year": 1987,
+              "platform": "MSX",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "contentVersionId": "te-soft-daiva-4-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-daiva-5",
+          "title": "DAIVA 故事5：苏摩之杯",
+          "chineseTitle": "DAIVA 故事5：苏摩之杯",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "DAIVA STORY5 ソーマの杯",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "策略／叙事关联",
+          "subcategory": "太空战略／动作战",
+          "genre": "多主角科幻战记",
+          "characters": [
+            "アクショー・ビア"
+          ],
+          "charactersSource": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "synopsis": "科学家追寻助手及失落研究资料。",
+          "notes": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "资源经营",
+            "战术策略",
+            "直接移动",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "战略阶段通过固定菜单指挥舰队、航行与资源配置；行星战直接操纵装甲移动、跳跃与射击。固定选择、传递密码不等于自由词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+            "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-daiva-5-c-original",
+              "workId": "te-soft-daiva-5",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-daiva-5-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-daiva-5-v-original",
+              "workId": "te-soft-daiva-5",
+              "year": 1987,
+              "platform": "MSX2",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "contentVersionId": "te-soft-daiva-5-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-daiva-6",
+          "title": "DAIVA 故事6：那萨提亚的王座",
+          "chineseTitle": "DAIVA 故事6：那萨提亚的王座",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "DAIVA STORY6 ナーサティアの玉座",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "策略／叙事关联",
+          "subcategory": "太空战略／动作战",
+          "genre": "多主角科幻战记",
+          "characters": [
+            "マータリ・シュバン"
+          ],
+          "charactersSource": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "synopsis": "年轻海盗舰长率队突破封锁，向帝国核心进军。",
+          "notes": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。FC由東芝EMI发行。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "资源经营",
+            "战术策略",
+            "直接移动",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "战略阶段通过固定菜单指挥舰队、航行与资源配置；行星战直接操纵装甲移动、跳跃与射击。固定选择、传递密码不等于自由词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+            "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-daiva-6-c-original",
+              "workId": "te-soft-daiva-6",
+              "label": "原作／首批内容",
+              "firstYear": 1986,
+              "basis": "original",
+              "evidence": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。FC由東芝EMI发行。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-daiva-6-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-daiva-6-v-original",
+              "workId": "te-soft-daiva-6",
+              "year": 1986,
+              "platform": "Famicom",
+              "publisher": "東芝EMI",
+              "publisherCompanies": [
+                "東芝EMI"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。FC由東芝EMI发行。",
+              "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+              "contentVersionId": "te-soft-daiva-6-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-daiva-7",
+          "title": "DAIVA 故事7：迦梨时代的光辉",
+          "chineseTitle": "DAIVA 故事7：迦梨时代的光辉",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "DAIVA STORY7 カリ・ユガの光輝",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "策略／叙事关联",
+          "subcategory": "太空战略",
+          "genre": "多主角科幻战记",
+          "characters": [
+            "クリシュナ・シャーク"
+          ],
+          "charactersSource": "https://gyusyabu.ddo.jp/MP3/1988/DAIVA98.html",
+          "synopsis": "黑市购得的货船留下机密资料，舰长由此探查战争全貌。",
+          "notes": "七篇是不同人物与故事，不按普通移植合一。终章采用战略系统，没有前六篇的横向动作战；1988实发资料与1987预告分开。由T&E SOFT发行。",
+          "source": "https://gyusyabu.ddo.jp/MP3/1988/DAIVA98.html",
+          "interactionModes": [
+            "菜单指令",
+            "资源经营",
+            "战术策略"
+          ],
+          "interactionNote": "战略阶段通过固定菜单指挥舰队、航行与资源配置；本篇为纯战略终章，不沿用前六篇的动作标签。原包装列鼠标支持；指挥官命名与传递数据不当作行动解析器。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://gyusyabu.ddo.jp/MP3/1988/DAIVA98.html",
+            "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-daiva-7-c-original",
+              "workId": "te-soft-daiva-7",
+              "label": "原作／首批内容",
+              "firstYear": 1988,
+              "basis": "original",
+              "evidence": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。终章采用战略系统，没有前六篇的横向动作战；1988实发资料与1987预告分开。由T&E SOFT发行。",
+              "source": "https://gyusyabu.ddo.jp/MP3/1988/DAIVA98.html",
+              "evidenceReleaseIds": [
+                "te-soft-daiva-7-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-daiva-7-v-original",
+              "workId": "te-soft-daiva-7",
+              "year": 1988,
+              "platform": "PC-9801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。七篇是不同人物与故事，不按普通移植合一。终章采用战略系统，没有前六篇的横向动作战；1988实发资料与1987预告分开。由T&E SOFT发行。",
+              "source": "https://gyusyabu.ddo.jp/MP3/1988/DAIVA98.html",
+              "contentVersionId": "te-soft-daiva-7-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-runeworth",
+          "title": "符文世界：黑衣贵公子",
+          "chineseTitle": "符文世界：黑衣贵公子",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ルーンワース 黒衣の貴公子",
+          "titleAliases": [],
+          "firstYear": 1990,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作RPG",
+          "genre": "事件成长／咒文咏唱",
+          "characters": [
+            "年轻旅人（玩家）"
+          ],
+          "charactersSource": "https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0063",
+          "synopsis": "年轻旅人走入符文世界，在各地事件中接近神力与世界异变的秘密。",
+          "notes": "PC-98首发取1990；官方页面正文偶写1989，与页面基本资料1990冲突，保留异文说明，不把后发MSX2或X68000当首批。",
+          "source": "https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0063",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "直接移动、按键攻击；从预设菜单选魔法后等待咏唱，咏唱不是玩家逐字键入。资料集回答／起名与自由行动解析器分开；原说明书仅核对可检索的菜单章节。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0063",
+            "https://w.atwiki.jp/runeworth123/pages/31.html",
+            "https://www.gamingalexandria.com/highquality/x68000/Rune%20Worth%20-%20Kokui%20no%20Kikoushi/Rune%20Worth%20-%20Kokui%20no%20Kikoushi%20-%20Manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-runeworth-c-original",
+              "workId": "te-soft-runeworth",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "原作首次内容。PC-98首发取1990；官方页面正文偶写1989，与页面基本资料1990冲突，保留异文说明，不把后发MSX2或X68000当首批。",
+              "source": "https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0063",
+              "evidenceReleaseIds": [
+                "te-soft-runeworth-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-runeworth-v-original",
+              "workId": "te-soft-runeworth",
+              "year": 1990,
+              "platform": "PC-9801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。PC-98首发取1990；官方页面正文偶写1989，与页面基本资料1990冲突，保留异文说明，不把后发MSX2或X68000当首批。",
+              "source": "https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0063",
+              "contentVersionId": "te-soft-runeworth-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-runeworth-2",
+          "title": "符文世界2：时空神战",
+          "chineseTitle": "符文世界2：时空神战",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ルーンワース2 時空の神戦",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作RPG",
+          "genre": "连续世界观／事件成长",
+          "characters": [
+            "リーン・カシュア（Lean Kashua）"
+          ],
+          "charactersSource": "https://prtimes.jp/main/html/rd/p/000000458.000069696.html",
+          "synopsis": "神力逐渐消失的世界中，Lean Kashua与同行者追寻危机的来源。本篇展开新的神战旅程。",
+          "notes": "独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+          "source": "https://prtimes.jp/main/html/rd/p/000000458.000069696.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "方向移动、固定攻击按键，ESC打开施法／装备／物品等行动菜单；II、III沿用菜单系统。人物姓名输入不属于自由行动或会话输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/runeworth123/pages/57.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-runeworth-2-c-original",
+              "workId": "te-soft-runeworth-2",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "原作首次内容。独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+              "source": "https://prtimes.jp/main/html/rd/p/000000458.000069696.html",
+              "evidenceReleaseIds": [
+                "te-soft-runeworth-2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-runeworth-2-v-original",
+              "workId": "te-soft-runeworth-2",
+              "year": 1991,
+              "platform": "PC-9801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+              "source": "https://prtimes.jp/main/html/rd/p/000000458.000069696.html",
+              "contentVersionId": "te-soft-runeworth-2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-runeworth-3",
+          "title": "符文世界3：神圣纪降临",
+          "chineseTitle": "符文世界3：神圣纪降临",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ルーンワース3 神聖紀光臨",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作RPG",
+          "genre": "连续世界观／事件成长",
+          "characters": [
+            "リーン・カシュア（Lean Kashua）"
+          ],
+          "charactersSource": "https://w.atwiki.jp/runeworth123/pages/104.html",
+          "synopsis": "神力逐渐消失的世界中，Lean Kashua与同行者追寻危机的来源。本篇完成三部曲的最终冲突。",
+          "notes": "独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+          "source": "https://w.atwiki.jp/runeworth123/pages/104.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "方向移动、固定攻击按键，ESC打开施法／装备／物品等行动菜单；II、III沿用菜单系统。人物姓名输入不属于自由行动或会话输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/runeworth123/pages/57.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-runeworth-3-c-original",
+              "workId": "te-soft-runeworth-3",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "原作首次内容。独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+              "source": "https://w.atwiki.jp/runeworth123/pages/104.html",
+              "evidenceReleaseIds": [
+                "te-soft-runeworth-3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-runeworth-3-v-original",
+              "workId": "te-soft-runeworth-3",
+              "year": 1991,
+              "platform": "PC-9801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+              "source": "https://w.atwiki.jp/runeworth123/pages/104.html",
+              "contentVersionId": "te-soft-runeworth-3-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-sword-world",
+          "title": "剑世界",
+          "chineseTitle": "剑世界",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ソード・ワールドPC / ソード・ワールドSFC",
+          "titleAliases": [],
+          "firstYear": 1992,
+          "category": "RPG／叙事关联",
+          "subcategory": "队伍RPG／任务分支",
+          "genre": "TRPG改编／自由委托与战术战斗",
+          "characters": [
+            "冒险者（玩家创建）",
+            "冒险者之店的委托人"
+          ],
+          "charactersSource": "https://www.gamingalexandria.com/highquality/pc98/Sword%20World%20PC/Sword%20World%20PC%20-%20Manual%202.pdf",
+          "synopsis": "玩家在Forcelia组建冒险队，接受委托、探索遗迹，并逐步卷入“死去诸神之岛”相关事件。",
+          "notes": "PC为1992原作；1993 SFC保留共同主线又有不同剧本，作为同一作品的内容分支。非把所有SFC任务都称为新增。",
+          "source": "https://www.gamingalexandria.com/highquality/pc98/Sword%20World%20PC/Sword%20World%20PC%20-%20Manual%202.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "选项分支",
+            "直接移动",
+            "战斗指令",
+            "战术策略"
+          ],
+          "interactionNote": "城镇与行动使用固定菜单；建筑／洞窟直接移动，战斗选择队员行动与位置。角色创建的姓名输入不算行动词句输入。原PC手册索引章节与SFC官方说明交叉核对。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gamingalexandria.com/highquality/pc98/Sword%20World%20PC/Sword%20World%20PC%20-%20Manual%202.pdf",
+            "https://prtimes.jp/main/html/rd/p/000000185.000069696.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-sword-world-c-original",
+              "workId": "te-soft-sword-world",
+              "label": "原作／首批内容",
+              "firstYear": 1992,
+              "basis": "original",
+              "evidence": "原作首次内容。PC为1992原作；1993 SFC保留共同主线又有不同剧本，作为同一作品的内容分支。非把所有SFC任务都称为新增。",
+              "source": "https://www.gamingalexandria.com/highquality/pc98/Sword%20World%20PC/Sword%20World%20PC%20-%20Manual%202.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-sword-world-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "te-soft-sword-world-c-sfc-scenarios",
+              "workId": "te-soft-sword-world",
+              "label": "SFC／独有剧本分支",
+              "firstYear": 1993,
+              "basis": "added",
+              "evidence": "官方说明SFC与PC有共同剧本，也有不同剧本；共同主线沿用同一作品，独有剧本建立内容增补。",
+              "source": "https://prtimes.jp/main/html/rd/p/000000185.000069696.html",
+              "evidenceReleaseIds": [
+                "te-soft-sword-world-v-sfc-scenarios"
+              ],
+              "addedContent": [
+                {
+                  "description": "增加不同于PC版的独有任务／剧本；没有把被删去的PC任务或单纯手柄操作当成增量。",
+                  "source": "https://prtimes.jp/main/html/rd/p/000000185.000069696.html"
+                }
+              ],
+              "comparedTo": "te-soft-sword-world-c-original"
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-sword-world-v-original",
+              "workId": "te-soft-sword-world",
+              "year": 1992,
+              "platform": "PC-9801",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。PC为1992原作；1993 SFC保留共同主线又有不同剧本，作为同一作品的内容分支。非把所有SFC任务都称为新增。",
+              "source": "https://www.gamingalexandria.com/highquality/pc98/Sword%20World%20PC/Sword%20World%20PC%20-%20Manual%202.pdf",
+              "contentVersionId": "te-soft-sword-world-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "te-soft-sword-world-v-sfc-scenarios",
+              "workId": "te-soft-sword-world",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "SFC／独有剧本分支",
+              "voice": "未核实",
+              "differences": "官方说明SFC与PC有共同剧本，也有不同剧本；共同主线沿用同一作品，独有剧本建立内容增补。",
+              "source": "https://prtimes.jp/main/html/rd/p/000000185.000069696.html",
+              "contentVersionId": "te-soft-sword-world-c-sfc-scenarios",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-sword-world-2",
+          "title": "剑世界SFC2：远古巨人传说",
+          "chineseTitle": "剑世界SFC2：远古巨人传说",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ソード・ワールドSFC2 いにしえの巨人伝説",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "RPG／叙事关联",
+          "subcategory": "队伍RPG／战术战斗",
+          "genre": "自由街道冒险／双结局",
+          "characters": [
+            "アーヴェル・セレダイン",
+            "サレム",
+            "マティアラ",
+            "パーミア"
+          ],
+          "charactersSource": "https://www.d4e.co.jp/info/media/20230228_d4e_newsrelease.pdf",
+          "synopsis": "冒险者与骑士、魔术师、半精灵等伙伴沿自由街道旅行，探查古老巨人的遗产。",
+          "notes": "1994独立续作；终盘选择有两个结局。现代EGG复刻不另建新内容。",
+          "source": "https://www.d4e.co.jp/info/media/20230228_d4e_newsrelease.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "直接移动",
+            "战斗指令",
+            "战术策略",
+            "选项分支"
+          ],
+          "interactionNote": "城镇／地图选地点，洞窟直接移动；接触敌人进入利用原地图的战术战斗，终盘有结局选择。没有自由动词解析。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d4e.co.jp/info/media/20230228_d4e_newsrelease.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-sword-world-2-c-original",
+              "workId": "te-soft-sword-world-2",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "原作首次内容。1994独立续作；终盘选择有两个结局。现代EGG复刻不另建新内容。",
+              "source": "https://www.d4e.co.jp/info/media/20230228_d4e_newsrelease.pdf",
+              "evidenceReleaseIds": [
+                "te-soft-sword-world-2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-sword-world-2-v-original",
+              "workId": "te-soft-sword-world-2",
+              "year": 1994,
+              "platform": "Super Famicom",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。1994独立续作；终盘选择有两个结局。现代EGG复刻不另建新内容。",
+              "source": "https://www.d4e.co.jp/info/media/20230228_d4e_newsrelease.pdf",
+              "contentVersionId": "te-soft-sword-world-2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-ashguine-2",
+          "title": "阿修基尼故事2：虚空牙城",
+          "chineseTitle": "阿修基尼故事2：虚空牙城",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "アシュギーネ STORY II 虚空の牙城",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作冒险／RPG",
+          "genre": "异星战士／探索与成长",
+          "characters": [
+            "アシュギーネ（AshGuine）"
+          ],
+          "charactersSource": "https://gyusyabu.ddo.jp/mp3/1987/ASH2.html",
+          "synopsis": "异星战士AshGuine深入敌方据点，在探索与战斗中寻找突破危机的方法。",
+          "notes": "本作由T&E SOFT开发、Panasoft（松下电器产业）发行。三部AshGuine分别由不同团队制作，不把I、III全部归为T&E作品。",
+          "source": "https://gyusyabu.ddo.jp/mp3/1987/ASH2.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "方向键／摇杆直接移动和实时战斗，并操作固定物品等菜单；依据MSX资料与画面说明，不因角色名字是外星文字便标文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://gyusyabu.ddo.jp/mp3/1987/ASH2.html",
+            "https://www.8-bits.info/gamelist/MSX2/info/info_0BAKjruZKsjHidr5.php"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-ashguine-2-c-original",
+              "workId": "te-soft-ashguine-2",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "原作首次内容。本作由T&E SOFT开发、Panasoft（松下电器产业）发行。三部AshGuine分别由不同团队制作，不把I、III全部归为T&E作品。",
+              "source": "https://gyusyabu.ddo.jp/mp3/1987/ASH2.html",
+              "evidenceReleaseIds": [
+                "te-soft-ashguine-2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-ashguine-2-v-original",
+              "workId": "te-soft-ashguine-2",
+              "year": 1987,
+              "platform": "MSX2",
+              "publisher": "松下電器産業（Panasoft）",
+              "publisherCompanies": [
+                "松下電器産業（Panasoft）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。本作由T&E SOFT开发、Panasoft（松下电器产业）发行。三部AshGuine分别由不同团队制作，不把I、III全部归为T&E作品。",
+              "source": "https://gyusyabu.ddo.jp/mp3/1987/ASH2.html",
+              "contentVersionId": "te-soft-ashguine-2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-bushi",
+          "title": "武士青龙传：两位勇者",
+          "chineseTitle": "武士青龙传：两位勇者",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "BUSHI青龍伝 ～二人の勇者～",
+          "titleAliases": [],
+          "firstYear": 1997,
+          "category": "RPG／叙事关联",
+          "subcategory": "相对时间动作RPG",
+          "genre": "日本神话世界／双人协作",
+          "characters": [
+            "ジン",
+            "ナミ",
+            "ヲクウ"
+          ],
+          "charactersSource": "https://www.gamefreak.co.jp/works/page/3/",
+          "synopsis": "少年为寻找遭掳走的姐姐，与变成魔物的少女ヲクウ一同冒险。",
+          "notes": "Game Freak开发、T&E SOFT发行；不是T&E自行开发。敌我行动交替，不笼统当成全程即时战斗。",
+          "source": "https://www.gamefreak.co.jp/works/page/3/",
+          "interactionModes": [
+            "直接移动",
+            "战术策略",
+            "谜题操作",
+            "即时动作"
+          ],
+          "interactionNote": "主角每行动一次敌人也行动一次；接敌转为横向场景，需规划步数、利用伙伴跨越地形；个别坠落／首领段落有动作操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gamefreak.co.jp/works/page/3/",
+            "https://w.atwiki.jp/gcmatome/pages/3662.html",
+            "https://w.atwiki.jp/sfcall/pages/1423.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-bushi-c-original",
+              "workId": "te-soft-bushi",
+              "label": "原作／首批内容",
+              "firstYear": 1997,
+              "basis": "original",
+              "evidence": "原作首次内容。Game Freak开发、T&E SOFT发行；不是T&E自行开发。敌我行动交替，不笼统当成全程即时战斗。",
+              "source": "https://www.gamefreak.co.jp/works/page/3/",
+              "evidenceReleaseIds": [
+                "te-soft-bushi-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-bushi-v-original",
+              "workId": "te-soft-bushi",
+              "year": 1997,
+              "platform": "Super Famicom",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。Game Freak开发、T&E SOFT发行；不是T&E自行开发。敌我行动交替，不笼统当成全程即时战斗。",
+              "source": "https://www.gamefreak.co.jp/works/page/3/",
+              "contentVersionId": "te-soft-bushi-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-blaze-blade",
+          "title": "烈焰与利刃：永恒探索",
+          "chineseTitle": "烈焰与利刃：永恒探索",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Blaze & Blade ～Eternal Quest～",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "RPG／叙事关联",
+          "subcategory": "多人动作RPG",
+          "genre": "职业队伍／任务与机关",
+          "characters": [
+            "冒险者队伍（玩家创建）"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/3909.html",
+          "synopsis": "玩家创建冒险者队伍，从旅店出发探索危险区域、完成任务与机关挑战。",
+          "notes": "T&E SOFT发行。首次PS批次；后发Windows移植未有新增内容证据，不主动扩列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/3909.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "谜题操作"
+          ],
+          "interactionNote": "直接操纵角色移动、攻击、职业技能和机关；旅店／物品等固定菜单。角色命名、魔法按键组合不等于键入自由行动语句。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/3909.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-blaze-blade-c-original",
+              "workId": "te-soft-blaze-blade",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "原作首次内容。T&E SOFT发行。首次PS批次；后发Windows移植未有新增内容证据，不主动扩列。",
+              "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+              "evidenceReleaseIds": [
+                "te-soft-blaze-blade-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-blaze-blade-v-original",
+              "workId": "te-soft-blaze-blade",
+              "year": 1998,
+              "platform": "PlayStation",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。T&E SOFT发行。首次PS批次；后发Windows移植未有新增内容证据，不主动扩列。",
+              "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+              "contentVersionId": "te-soft-blaze-blade-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-blaze-busters",
+          "title": "烈焰与利刃：突击者",
+          "chineseTitle": "烈焰与利刃：突击者",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Blaze & Blade Busters",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "RPG／叙事关联",
+          "subcategory": "多人动作RPG",
+          "genre": "职业队伍／任务与机关",
+          "characters": [
+            "冒险者队伍（玩家创建）"
+          ],
+          "charactersSource": "https://www.gavas.jp/products/detail.php?product_id=9916",
+          "synopsis": "冒险者再次从路边旅店接受探索任务，进入新的地下城与挑战区域。",
+          "notes": "T&E SOFT发行。可导入前作角色的独立后续产品；故事较弱，按RPG关联处理，不伪装成四类主库叙事。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9916",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "谜题操作"
+          ],
+          "interactionNote": "直接操纵角色移动、攻击、职业技能和机关；旅店／物品等固定菜单。角色命名、魔法按键组合不等于键入自由行动语句。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=9916",
+            "https://www.gamesdatabase.org/game/sony-playstation/blaze-and-blade-busters"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-blaze-busters-c-original",
+              "workId": "te-soft-blaze-busters",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "原作首次内容。T&E SOFT发行。可导入前作角色的独立后续产品；故事较弱，按RPG关联处理，不伪装成四类主库叙事。",
+              "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+              "evidenceReleaseIds": [
+                "te-soft-blaze-busters-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-blaze-busters-v-original",
+              "workId": "te-soft-blaze-busters",
+              "year": 1998,
+              "platform": "PlayStation",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。T&E SOFT发行。可导入前作角色的独立后续产品；故事较弱，按RPG关联处理，不伪装成四类主库叙事。",
+              "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+              "contentVersionId": "te-soft-blaze-busters-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "te-soft-sonata",
+          "title": "奏鸣曲",
+          "chineseTitle": "奏鸣曲",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Sonata（ソナタ）",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "RPG／叙事关联",
+          "subcategory": "恋爱RPG",
+          "genre": "平行世界／队伍冒险",
+          "characters": [
+            "失忆的男主角（玩家）",
+            "ミズホ（Mizuho）",
+            "八位平行世界女主角"
+          ],
+          "charactersSource": "https://www.hardcoregaming101.net/sonata/",
+          "synopsis": "观影归途中的神秘光芒将主角卷入学园、幻想与网络三种现实。他在轮回和失忆中寻找失散恋人，与不同世界的少女结伴冒险。",
+          "notes": "T&E SOFT发行的恋爱RPG；战斗、队伍与成长属于核心玩法，单列关联。内含Hydlide Special解锁游戏不再复制该作。",
+          "source": "https://www.hardcoregaming101.net/sonata/",
+          "interactionModes": [
+            "菜单指令",
+            "选项分支",
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "直接探索地下城，随机遇敌后用预设指令进行回合战斗；对话选择和战斗表现影响好感。主角命名不算自由会话输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.hardcoregaming101.net/sonata/"
+          ],
+          "contentVersions": [
+            {
+              "id": "te-soft-sonata-c-original",
+              "workId": "te-soft-sonata",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "原作首次内容。T&E SOFT发行的恋爱RPG；战斗、队伍与成长属于核心玩法，单列关联。内含Hydlide Special解锁游戏不再复制该作。",
+              "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+              "evidenceReleaseIds": [
+                "te-soft-sonata-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "te-soft-sonata-v-original",
+              "workId": "te-soft-sonata",
+              "year": 1999,
+              "platform": "PlayStation",
+              "publisher": "T&E SOFT",
+              "publisherCompanies": [
+                "T&E SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "原作首次内容。T&E SOFT发行的恋爱RPG；战斗、队伍与成长属于核心玩法，单列关联。内含Hydlide Special解锁游戏不再复制该作。",
+              "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+              "contentVersionId": "te-soft-sonata-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、合集与再版不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+      "sectionTitle": "T&E SOFT：指令冒险、菜单叙事与RPG世界",
+      "catalogueCountLabel": "26个正文档案 · 作品、内容分支与类型参考分层",
+      "overviewLabel": "叙事作品与RPG关联",
+      "auditTitle": "作品身份、控制方式与清单归属核对",
+      "auditSourceLabel": "T&E SOFT历史版权目录",
+      "auditLabel": "正文作品及末尾清单项目逐项给出处理；参考表行数不是独立叙事作品数量。",
+      "auditNote": "只登记有证据的原作／首次新增内容批次；没有声称各平台、地区、手机版本及杂志程序全部穷尽。旧作品年份及互动对象原样保留，异文在专题说明。",
+      "creativeProfile": {
+        "thesis": "编辑观察：T&E SOFT的叙事由早期键入冒险延伸到菜单演出、连续世界的动作RPG，以及多机种多主角的科幻战记。体育和技术实验另有大量作品，不能据此全部扩充叙事库。",
+        "phases": [
+          {
+            "period": "1982—1984",
+            "heading": "画面、指令与约会回应",
+            "analysis": "星亚瑟三部曲保留词句输入；Playboy则用固定会话选项表现约会。相近年代和图文画面并不意味着相同控制方式。",
+            "basis": "编辑观察",
+            "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/"
+          },
+          {
+            "period": "1984—1994",
+            "heading": "动作RPG与多线战记",
+            "analysis": "Hydlide突出直接探索，RuneWorth以事件和咏唱节奏组织冒险；DAIVA七名主角分担故事，终章转为战略系统。",
+            "basis": "编辑观察",
+            "source": "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/"
+          },
+          {
+            "period": "1995—2002及后继品牌",
+            "heading": "三维重制、队伍与平行世界",
+            "analysis": "Virtual Hydlide重述旧作，Blaze & Blade强调队伍探索，Sonata将恋爱选择放入RPG世界；后继品牌的大量高尔夫项目只作类型脉络。",
+            "basis": "编辑观察",
+            "source": "https://d4e.co.jp/lights_cat/t_and_e_soft"
+          }
+        ]
+      },
+      "workContexts": {
+        "g073": "已有文字输入式作品，仅复用旧身份；本轮不新增或更改其内容与发行。",
+        "g087": "已有FM-7记录首年1983保持；此前PC机种清单常写1984，不能据单一平台日期改写原记录。",
+        "g088": "已有文字输入式作品，仅复用旧身份；不因合集收录重建。",
+        "g010": "原作由Cinematronics开发。T&E SOFT曾出版日本3DO版，见其官方历史版权目录；既有作品身份和实际原作署名不变，普通3DO移植不新建内容。"
+      },
+      "dossierGroups": [
+        {
+          "id": "te-soft-adventures",
+          "title": "无文字输入的主库新增",
+          "description": "菜单科幻冒险与固定回答的约会模拟。",
+          "cardLabel": "主库新增",
+          "workIds": [
+            "g1174",
+            "g1173"
+          ]
+        },
+        {
+          "id": "te-soft-roleplaying",
+          "title": "RPG与科幻战记关联",
+          "description": "20个独立作品身份；重制、独有剧本与新增素材另在内容层记录。",
+          "cardLabel": "叙事关联",
+          "workIds": [
+            "te-soft-hydlide",
+            "te-soft-hydlide-2",
+            "te-soft-hydlide-3",
+            "te-soft-daiva-1",
+            "te-soft-daiva-2",
+            "te-soft-daiva-3",
+            "te-soft-daiva-4",
+            "te-soft-daiva-5",
+            "te-soft-daiva-6",
+            "te-soft-daiva-7",
+            "te-soft-runeworth",
+            "te-soft-runeworth-2",
+            "te-soft-runeworth-3",
+            "te-soft-sword-world",
+            "te-soft-sword-world-2",
+            "te-soft-ashguine-2",
+            "te-soft-bushi",
+            "te-soft-blaze-blade",
+            "te-soft-blaze-busters",
+            "te-soft-sonata"
+          ]
+        },
+        {
+          "id": "te-soft-existing",
+          "title": "既有作品：输入边界与地区发行",
+          "description": "三部星亚瑟保留原来的文字输入记录；龙穴历险记复用Cinematronics原身份。均未重建旧数据。",
+          "cardLabel": "旧库引用",
+          "workIds": [
+            "g073",
+            "g087",
+            "g088",
+            "g010"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "title": "惑星メフィウス（1983）",
+          "status": "复用旧作品／不改原记录",
+          "reason": "已有文字输入式作品，仅复用旧身份；本轮不新增或更改其内容与发行。",
+          "source": "https://fm-7.com/museum/products/tocvx2b8/",
+          "workIds": [
+            "g073"
+          ]
+        },
+        {
+          "title": "暗黒星雲（1983）",
+          "status": "复用旧作品／不改原记录",
+          "reason": "已有FM-7记录首年1983保持；此前PC机种清单常写1984，不能据单一平台日期改写原记录。",
+          "source": "https://fm-7.com/museum/products/gttnk7za/",
+          "workIds": [
+            "g087"
+          ]
+        },
+        {
+          "title": "テラ4001（1984）",
+          "status": "复用旧作品／不改原记录",
+          "reason": "已有文字输入式作品，仅复用旧身份；不因合集收录重建。",
+          "source": "https://fm-7.com/museum/products/crs8l0ue/",
+          "workIds": [
+            "g088"
+          ]
+        },
+        {
+          "title": "ラブアドベンチャー プレイボーイ（1983）",
+          "status": "新增无输入主库",
+          "reason": "早期约会模拟，按恋爱事件及回应纳入Galgame，不称长篇视觉小说。日期／生日输入与选择地点的P键不是自由行动解析器。",
+          "source": "https://www.gamepres.org/en/catalog/?cat=1&id=8811003654006&nav=brand",
+          "workIds": [
+            "g1174"
+          ]
+        },
+        {
+          "title": "サイオブレード / PSY-O-BLADE（1988）",
+          "status": "新增无输入主库",
+          "reason": "T&E SOFT原作；中文名为站内检索译名。音乐外设Melody Module不自动等于角色配音；1990 Mega Drive删改移植不因换平台另计内容。",
+          "source": "https://d4e.co.jp/20240109/4393",
+          "workIds": [
+            "g1173"
+          ]
+        },
+        {
+          "title": "Dragon’s Lair（1983）",
+          "status": "复用旧作品／不改原记录",
+          "reason": "原作由Cinematronics开发。T&E SOFT曾出版日本3DO版，见其官方历史版权目录；既有作品身份和实际原作署名不变，普通3DO移植不新建内容。",
+          "source": "https://www.arcade-history.com/game/702/",
+          "workIds": [
+            "g010"
+          ]
+        },
+        {
+          "title": "ハイドライド / Hydlide（1984）",
+          "status": "新增跨类型关联",
+          "reason": "原作与Hydlide Special、异次元版、Virtual Hydlide和Windows重绘版共用作品身份；续作II、3各自独立。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_Wr1gtw9n1yZNx3uL.php",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-hydlide"
+          ]
+        },
+        {
+          "title": "ハイドライドII SHINE OF DARKNESS（1985）",
+          "status": "新增跨类型关联",
+          "reason": "II为独立续作；Gold Pack附带的II沿用原版，没有Arrange模式，不重复建立增补。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_DZHY519PqwafmxIE.php",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-hydlide-2"
+          ]
+        },
+        {
+          "title": "ハイドライド3 THE SPACE MEMORIES（1987）",
+          "status": "新增跨类型关联",
+          "reason": "原作首批以1987 PC-88记录；1989 Special Version及1999 Gold Pack的新增场景／人物／图像音乐分层。普通移植不扩列。",
+          "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-hydlide-3"
+          ]
+        },
+        {
+          "title": "Hydlide Special（1986）",
+          "status": "新增内容／同一作品",
+          "reason": "FC新增魔法，归初代内容分支；Sonata解锁收录不重计。",
+          "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+          "workIds": []
+        },
+        {
+          "title": "Hydlide 异次元版（1987）",
+          "status": "新增内容／同一作品",
+          "reason": "TAKERU发行渠道；1987新图像符合增补，滚屏并非首次于此版出现。",
+          "source": "https://prtimes.jp/main/html/rd/p/000000165.000069696.html",
+          "workIds": []
+        },
+        {
+          "title": "Virtual Hydlide（1995）",
+          "status": "新增内容／同一作品",
+          "reason": "初代故事的三维重制，归Hydlide内容分支，不建立第四部独立续作。",
+          "source": "https://www.mobygames.com/game/13525/virtual-hydlide/",
+          "workIds": []
+        },
+        {
+          "title": "Hydlide Windows Arrange（1999）",
+          "status": "新增内容／同一作品",
+          "reason": "新图像及游戏内编曲计增补；附赠CD、壁纸不计。",
+          "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm",
+          "workIds": []
+        },
+        {
+          "title": "Hydlide3 Special Version（1989）",
+          "status": "新增内容／同一作品",
+          "reason": "PC-98新增世界、人物和视觉场景；后发X68000不冒充同时首批。",
+          "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+          "workIds": []
+        },
+        {
+          "title": "Hydlide3 Gold Pack（1999）",
+          "status": "新增内容／同一作品",
+          "reason": "Arrange以PC-88原作另作改编；II没有Arrange，不新增II内容。",
+          "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm",
+          "workIds": []
+        },
+        {
+          "title": "Super Hydlide／Hydlide3 FC及手机版本",
+          "status": "版本参考／增量待进一步核对",
+          "reason": "与Hydlide3同一作品；逐曲新增音乐及手机重绘的首批关系尚未在本轮完整核定，不补造内容记录。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "DAIVA STORY1 ヴリトラの炎（1987）",
+          "status": "新增跨类型关联",
+          "reason": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-daiva-1"
+          ]
+        },
+        {
+          "title": "DAIVA STORY2 ドゥルガーの記憶（1987）",
+          "status": "新增跨类型关联",
+          "reason": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-daiva-2"
+          ]
+        },
+        {
+          "title": "DAIVA STORY3 ニルヴァーナの試練（1987）",
+          "status": "新增跨类型关联",
+          "reason": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-daiva-3"
+          ]
+        },
+        {
+          "title": "DAIVA STORY4 アスラの血流（1987）",
+          "status": "新增跨类型关联",
+          "reason": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-daiva-4"
+          ]
+        },
+        {
+          "title": "DAIVA STORY5 ソーマの杯（1987）",
+          "status": "新增跨类型关联",
+          "reason": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。由T&E SOFT发行。 首发年采用1987实际发行，未采用1986预定年。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-daiva-5"
+          ]
+        },
+        {
+          "title": "DAIVA STORY6 ナーサティアの玉座（1986）",
+          "status": "新增跨类型关联",
+          "reason": "七篇是不同人物与故事，不按普通移植合一。本篇保留舰队指挥与行星动作战。FC由東芝EMI发行。",
+          "source": "https://www.d4e.co.jp/info/media/20190920_d4e_newsrelease.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-daiva-6"
+          ]
+        },
+        {
+          "title": "DAIVA STORY7 カリ・ユガの光輝（1988）",
+          "status": "新增跨类型关联",
+          "reason": "七篇是不同人物与故事，不按普通移植合一。终章采用战略系统，没有前六篇的横向动作战；1988实发资料与1987预告分开。由T&E SOFT发行。",
+          "source": "https://gyusyabu.ddo.jp/MP3/1988/DAIVA98.html",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-daiva-7"
+          ]
+        },
+        {
+          "title": "ルーンワース 黒衣の貴公子（1990）",
+          "status": "新增跨类型关联",
+          "reason": "PC-98首发取1990；官方页面正文偶写1989，与页面基本资料1990冲突，保留异文说明，不把后发MSX2或X68000当首批。",
+          "source": "https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0063",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-runeworth"
+          ]
+        },
+        {
+          "title": "ルーンワース2 時空の神戦（1991）",
+          "status": "新增跨类型关联",
+          "reason": "独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+          "source": "https://prtimes.jp/main/html/rd/p/000000458.000069696.html",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-runeworth-2"
+          ]
+        },
+        {
+          "title": "ルーンワース3 神聖紀光臨（1991）",
+          "status": "新增跨类型关联",
+          "reason": "独立续作，不因与前作同引擎或合集收录而合并。控制依据为攻略站整理的系统资料，非本次逐页完整手册核对。",
+          "source": "https://w.atwiki.jp/runeworth123/pages/104.html",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-runeworth-3"
+          ]
+        },
+        {
+          "title": "ソード・ワールドPC / ソード・ワールドSFC（1992）",
+          "status": "新增跨类型关联",
+          "reason": "PC为1992原作；1993 SFC保留共同主线又有不同剧本，作为同一作品的内容分支。非把所有SFC任务都称为新增。",
+          "source": "https://www.gamingalexandria.com/highquality/pc98/Sword%20World%20PC/Sword%20World%20PC%20-%20Manual%202.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-sword-world"
+          ]
+        },
+        {
+          "title": "ソード・ワールドSFC2 いにしえの巨人伝説（1994）",
+          "status": "新增跨类型关联",
+          "reason": "1994独立续作；终盘选择有两个结局。现代EGG复刻不另建新内容。",
+          "source": "https://www.d4e.co.jp/info/media/20230228_d4e_newsrelease.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-sword-world-2"
+          ]
+        },
+        {
+          "title": "アシュギーネ STORY II 虚空の牙城（1987）",
+          "status": "新增跨类型关联",
+          "reason": "本作由T&E SOFT开发、Panasoft（松下电器产业）发行。三部AshGuine分别由不同团队制作，不把I、III全部归为T&E作品。",
+          "source": "https://gyusyabu.ddo.jp/mp3/1987/ASH2.html",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-ashguine-2"
+          ]
+        },
+        {
+          "title": "BUSHI青龍伝 ～二人の勇者～（1997）",
+          "status": "新增跨类型关联",
+          "reason": "Game Freak开发、T&E SOFT发行；不是T&E自行开发。敌我行动交替，不笼统当成全程即时战斗。",
+          "source": "https://www.gamefreak.co.jp/works/page/3/",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-bushi"
+          ]
+        },
+        {
+          "title": "Blaze & Blade ～Eternal Quest～（1998）",
+          "status": "新增跨类型关联",
+          "reason": "T&E SOFT发行。首次PS批次；后发Windows移植未有新增内容证据，不主动扩列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/3909.html",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-blaze-blade"
+          ]
+        },
+        {
+          "title": "Blaze & Blade Busters（1998）",
+          "status": "新增跨类型关联",
+          "reason": "T&E SOFT发行。可导入前作角色的独立后续产品；故事较弱，按RPG关联处理，不伪装成四类主库叙事。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9916",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-blaze-busters"
+          ]
+        },
+        {
+          "title": "Sonata（ソナタ）（1999）",
+          "status": "新增跨类型关联",
+          "reason": "T&E SOFT发行的恋爱RPG；战斗、队伍与成长属于核心玩法，单列关联。内含Hydlide Special解锁游戏不再复制该作。",
+          "source": "https://www.hardcoregaming101.net/sonata/",
+          "workIds": [],
+          "relatedIds": [
+            "te-soft-sonata"
+          ]
+        },
+        {
+          "title": "Sword World SFC（1993）",
+          "status": "新增内容／同一作品",
+          "reason": "与PC共同主线归一个作品；独有任务建新增内容，SFC2为独立续作。",
+          "source": "https://prtimes.jp/main/html/rd/p/000000185.000069696.html",
+          "workIds": []
+        },
+        {
+          "title": "3D Asteroid Fire",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Missile Phantom",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Tower Panic",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Marine Shooter",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Pyramid／Pyramid II／Pyramid Warp",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Star Destroyer",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Battleship Clapton II",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Zero Fighter",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Red Zone",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Trick Boy",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Cosmo Mutar",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Paranoia 88",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Square Dancer",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Laydock",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Super Laydock",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Laydock 2",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "あーぱーみゃあどっく（名古屋风味Laydock）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Undeadline",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "幻獣鬼 Undeadline",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "地球解放軍 ZAS",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Red Alarm",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Floating Runner",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Real Golf Game",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "3D Golf Simulation",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "3D Golf Simulation Part 2／Super Version",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Greatest Driver",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "遥远的奥古斯塔／Harukanaru Augusta",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Eight Lakes Golf",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Waialae no Kiseki",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Pebble Beach no Hatou",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Mr. Pro Yakyu Perfect",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Devil’s Course",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Masters Augusta 2",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "World Green",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Masters Augusta 3及New版",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Virtual Boy Golf／The Hyper Golf",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Golf Paradise／Golf Paradise DX",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Disney Golf",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "じゃんけんWar Game",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Lode Runner Twin",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Rise of the Robots（日版）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Para Rancho",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "3D Tetris",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Cu-On-Pa SFC",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "The Lost Vikings（日版）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Novastorm（日版）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Microcosm（日版）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Shadow: War of Succession（日版）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Super Graphic Editor",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Pixel 2／Pixel 3",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "DD Club",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "T&E Special／T&E Magazine Disk Special",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        },
+        {
+          "title": "Hydlide Bronze Pack／Hydlide 1・2・3",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "保留此前玩法清单中的类型与关系，不据此新增主库、内容身份或平台发行。",
+          "source": "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm",
+          "workIds": []
+        },
+        {
+          "title": "DAIVA Chronicle（2003）／Chronicle RE:（2019）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "漫画PDF、资料和音乐CD是游戏外特典；无第八篇游戏故事。",
+          "source": "https://www.amusement-center.com/project/egg/special/package_daivachronicle-re/",
+          "workIds": []
+        },
+        {
+          "title": "The Trilogies（2022）",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "2020为预约，实际2022-04-08发售；Crystal Soft合并前作品不自动改署T&E，VHD开场视频是外部资料。",
+          "source": "https://www.amusement-center.com/project/egg/special/tande-xtal/",
+          "workIds": []
+        },
+        {
+          "title": "Super Real Golf／True Swing Golf",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "后继品牌时期体育作品；不入叙事库。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "GolTomo",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "后继品牌关联；纯体育。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "Minna no Golf-jou GPS／Round Leader",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "场地导航工具，非叙事游戏。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "You, Me, and the Cubes",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "后继团队开发关联，任天堂出版；不作为原法人原创叙事。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "A Little Bit of… Nintendo Touch Golf",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "DSiWare体育，后继团队关联。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "Hyakusen Open Golf",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "后继时期体育参考。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "Bingo Break Online",
+          "status": "玩法参考／不进入叙事正文",
+          "reason": "规则对战／在线服务，只参考。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "Shiren the Wanderer 3 Portable（2010）",
+          "status": "原作归属／普通移植参考",
+          "reason": "此前清单2009与实际2010 PSP发行分开；原作为Chunsoft作品，未核首次新增内容，不主动补普通移植。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "Blade Chronicle（2009）",
+          "status": "叙事／控制待核参考",
+          "reason": "联网会话与故事控制边界尚未完整核定，只留参考，不推定无文字输入。",
+          "source": "https://ja.wikipedia.org/wiki/T%26E_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "Advanced Dungeons & Dragons: Slayer（日版）",
+          "status": "地区发行／控制待核参考",
+          "reason": "官方版权目录确认T&E日本3DO出版关系；原作与地区版内容关系及控制仍待另批核对，不仅凭RPG标签入库。",
+          "source": "https://d4e.co.jp/lights_cat/t_and_e_soft",
+          "workIds": []
+        }
+      ],
+      "catalogueEntryCount": 99,
+      "legacyCommandWorkIds": [
+        "g073",
+        "g087",
+        "g088"
+      ],
+      "legacyCommandNote": "仅复用三部原有星亚瑟输入式记录；本轮未新增输入式主库或修改旧对象。"
     }
   ],
   "schemaVersion": 2,

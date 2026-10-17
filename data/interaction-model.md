@@ -90,3 +90,7 @@ Saga轮换预设英文指令，Seilane选择固定行动；均可入主库。9�
 ## 美国Legend Entertainment输入与图形冒险边界（2026-10-17）
 
 新增4部主库与5部跨类型叙事关联；七部早期解析器、Callahan的谜底输入及Blackstone的患者人名检索共9部仅专题。固定动词构句、Shannara交物品答谜、魔法符文与系统存档名分别判断，不能按图形界面推定无文字输入。Unreal本体实际开发者和Legend制作的Na Pali新战役分开；XMP竞技仅参考。当前主库1169、跨类型关联484、仅专题109，见legend-entertainment-audit.md。
+
+## T&E SOFT菜单、数值输入与RPG边界（2026-10-18）
+
+Playboy的生日／数值设置与固定会话选项不算自由词句输入；PSY-O-BLADE以预设菜单与动作段落推进。新增2部主库、20部RPG／策略关联均无已知自由行动解析器；星亚瑟旧三作保持文字输入。RuneWorth咏唱为菜单选咒后等待，Sword World命名不是解析器；DAIVA第七篇纯策略，不复制前六篇动作标签。资料不足的Blade Chronicle、Slayer只列参考，见te-soft-audit.md。
