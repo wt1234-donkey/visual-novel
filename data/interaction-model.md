@@ -66,3 +66,7 @@ Christine、The Byoin、SKAPON为菜单式叙事，新增主库；Lolita II、AL
 ## Sinclair Research输入边界（2026-10-17）
 
 Fantasy Games两作原内页要求用英文词语回答；Adventure A—D同属文字指令，新增6部仅专题书目，主库无新作。QL Classic Adventures的程序选择菜单不构成游戏内菜单指令；The Adventure与Mordon’s Quest引用旧身份，不改原有互动对象。Journey into Danger控制证据不足，只在玩法参考表注明；不用RPG标签推定无输入。当前主库1138、关联375、仅专题91。
+
+## Micro Cabin菜单与输入边界（2026-10-17）
+
+Saga轮换预设英文指令，Seilane选择固定行动；均可入主库。9部新增叙事不含文字输入；13部RPG关联的控制为既有清单归纳。7部输入式书目仅专题，旧3部输入记录复用身份。Puppet Tale未宣称逐页说明书核对；Galpo Club等控制未足仅列参考，不推定无输入。详见microcabin-audit.md。
