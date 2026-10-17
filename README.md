@@ -4,9 +4,9 @@
 
 ## 当前记录结构（2026-10-17）
 
-**1158 部作品 · 1355 个内容版本 · 2349 条平台发行 · 63 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
+**1159 部作品 · 1356 个内容版本 · 2350 条平台发行 · 63 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
 
-全部 1158 部主目录作品、397 部专题附录作品及98部仅专题输入式冒险书目现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
+全部 1159 部主目录作品、441 部专题附录作品及99部仅专题输入式冒险书目现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
 
 | 层级 | JSON 字段 | CSV |
 |---|---|---|
@@ -23,7 +23,9 @@
 
 ## 数据范围
 
-当前收录 **1158 部作品／附带叙事篇目、1355 个内容版本、2349 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+Enix专题已按1983—2003玩法清单扩充：新增《铃木爆发》1部主库叙事、44部剧情RPG／沟通冒险关联及《星子的冒险》1部仅专题输入书目。现专题主库29部、跨类型45部、输入书目1部，末尾174项玩法参考（含系列、合集，不当独立作品数）。旧输入作品保留历史身份，轻井泽混合键入边界另作说明；新增内容版本记录DQM2伊尔、Wonder Project J2手机会话／插图及SO3导演版角色／事件。详见[本轮核对](data/enix-audit.md)及[专题](enix.html)。
+
+当前收录 **1159 部作品／附带叙事篇目、1356 个内容版本、2350 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 

@@ -1,3 +1,94 @@
+# Enix玩法清单同步（2026-10-17）
+
+本轮基线：main `72179f85585583a15e081942c4c05e794ee3e57d`。原Enix专题已经存在，故在原专题增补；未创建重复专题。收录对象为2003年合并前的原Enix作品及其有依据的后续内容版本，不将Square作品或合并后的新系列倒归Enix。
+
+## 本轮结果
+
+- 主库新增1部：《铃木爆发》g1162，2000年PS原作；实拍故事＋限时拆弹，归现有“动作解谜融合”。
+- 跨类型关联新增44部：剧情RPG、沟通冒险、动作冒险；与现有四类主库分开，沿用各厂商专题的数据库结构。
+- 新输入书目《星子的冒险》仅专题，不建主库作品、内容或发行记录。
+- 专题当前29部主库关联＋45部跨类型关联＋1部仅专题，共75张独立身份卡；比原29张多46张。输入书目不计主库／RPG内容统计。
+- 新增主库1个原作内容／1条发行；新增关联44个原作及3个增补内容／47条发行。专题共77个内容身份、80条平台发行。
+- 174项玩法总表放页面末尾，逐项指向正文或明确列为参考；系列和合集行不算独立作品数。全库1159部主库作品、1356内容、2350平台；441部跨类型关联、99部输入式仅专题书目。
+
+## 输入与类型边界
+
+[星子的冒险键位资料](https://www.8-bits.info/gamelist/PC88/info/info_0QULUVGXqvG2T7TL.php)明确假名键入指令、回车确认，故只留书目。原波多比亚、扎斯、翼人、翼人2／Special等输入身份按历史要求保留，专题上下文注明其不是本轮无输入新增。原作品／发行对象均未改写。
+
+[轻井泽资料](https://ja.wikipedia.org/wiki/軽井沢誘拐案内)记载菜单之外仍有人名、地名推理键入；不以旧菜单标签证明全过程无文字输入。旧对象保持，专题上下文与审计新增说明。
+
+[地球战士莱扎原作考证](https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/2123993.html)区分FM-7原作与PC-88移植，采用预设航行／战斗菜单；[FANGS键位](https://www.8-bits.info/gamelist/PC88/info/info_mXVH5r9hV2L7xrn8.php)明确方向移动、物品栏与回车菜单。以键盘操作不等于词句解析输入。
+
+Wonder Project J两作有固定章节及后半故事，按沟通冒险关联，不将纯日常养成一起纳入。其他RPG标签为现有玩法清单及作品资料的编辑归纳，字段如实标“既有资料归纳”，没有宣称逐机种实机核验。
+
+[莱卡星球](https://ja.wikipedia.org/wiki/プラネットライカ)战斗操控光球，不贴回合制“战斗指令”；[Endonesia](https://w.atwiki.jp/gcmatome/pages/1760.html)无通常战斗／经验值，使用情感解谜，不贴战斗标签。[莱卡片尾](https://raido.moe/staff/ps1/ps1_planet_laika.html)直接列旁白与Voice of Illusion，记部分人声；其余新RPG未取得具体录音清单时保留未核实配音。
+
+[Command Master](https://w.atwiki.jp/gball/pages/862.html)目录虽归RPG，操作核心为一对一倾斜感应对战且无角色成长，改列玩法参考。Parallel World、手天童子、Reichsritter等控制／叙事证据不足的项目不推定为无输入作品。在线自由会话、邮件游戏、体育、麻将、纯生活养成、未发行企划均不扩正文。
+
+## 内容版本
+
+- DQM2为一部作品。2001/03/09“路卡启程”原作、4/12“伊尔冒险”分别记录主角及可遇怪兽差异；不拆两部独立作品，不声称新增整套主线。[版本及差异资料](https://ja.wikipedia.org/wiki/ドラゴンクエストモンスターズ2_マルタのふしぎな鍵)。
+- Wonder Project J2的1996 N64原作和2010 i-mode新增会话、动作场景及新绘插图分内容。第1／2部是同一作品的两段，不拆续作。[同期报道](https://game.watch.impress.co.jp/docs/news/360731.html)。
+- SO3的2003原作、2004导演剪辑版分内容，开发商明确新角色与追加事件。2004发行归Square Enix，不能归原Enix。[开发商产品页](https://www.tri-ace.co.jp/products/consumer.html)。
+- 普通移植、译版、重售、合集及未有具体增量证据的重制不因新平台自动增内容。后续内容目录未宣称穷尽。
+- Paladin’s Quest、Ogre Battle、Grandia II及Tomb Raider III有Enix地区／后平台发行关联，原作由他社发行；本轮只列关系说明，不制造Enix原作或无增量的普通平台记录。特鲁尼克首作由Chunsoft发行，与Enix发行的2、3分清。
+- 原清单中《北海道连续杀人事件》归Enix不准确；[保存协会](https://www.gamepres.org/pc88/library/1984/ohotsuku.html)与[原发行沿革回顾](https://info.gmodecorp.com/cs/okhotsk/birthstory4/)支持ASCII／Login Soft身份，只在参考中说明，不新增错误署名。
+
+## 新增关联作品
+
+| 年 | 作品 | ID | 类型 | 资料 |
+|---|---|---|---|---|
+| 1985 | 地球战士莱扎 | enix-rayieza | 科幻机器人RPG | [来源](https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/2123993.html) |
+| 1987 | 犍陀罗：佛陀的圣战 | enix-gandhara | 宗教奇幻动作RPG | [来源](https://www.8-bits.info/gamelist/PC88/info/info_sIhUtPTQqEzYQmET.php) |
+| 1990 | 46亿年物语：进化论 | enix-evo-pc | 进化主题指令RPG | [来源](https://ja.wikipedia.org/wiki/46%E5%84%84%E5%B9%B4%E7%89%A9%E8%AA%9E) |
+| 1991 | 獠牙：狼血传奇 | enix-fangs | 奇幻RPG | [来源](https://www.8-bits.info/gamelist/PC88/info/info_mXVH5r9hV2L7xrn8.php) |
+| 1986 | 勇者斗恶龙I | enix-dq1 | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_(video_game)) |
+| 1987 | 勇者斗恶龙II：恶灵的众神 | enix-dq2 | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_II) |
+| 1988 | 勇者斗恶龙III：传说的起点 | enix-dq3 | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_III) |
+| 1990 | 勇者斗恶龙IV：被引导的人们 | enix-dq4 | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_IV) |
+| 1992 | 勇者斗恶龙V：天空的新娘 | enix-dq5 | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_V) |
+| 1995 | 勇者斗恶龙VI：幻之大地 | enix-dq6 | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_VI) |
+| 2000 | 勇者斗恶龙VII：伊甸的战士们 | enix-dq7 | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_VII) |
+| 1992 | 灵魂开拓者 | enix-soulblazer | 动作RPG | [来源](https://www.jp.square-enix.com/game/detail/soulblader/) |
+| 1992 | 正统之战 | enix-justbreed | 战术RPG | [来源](https://en.wikipedia.org/wiki/Just_Breed) |
+| 1992 | 46亿年物语：遥远的伊甸 | enix-evo-sfc | 进化主题动作RPG | [来源](https://en.wikipedia.org/wiki/E.V.O.:_Search_for_Eden) |
+| 1993 | 第七封印：艾尔纳德 | enix-7thsaga | 回合制剧情RPG | [来源](https://en.wikipedia.org/wiki/The_7th_Saga) |
+| 1993 | 树帝战记 | enix-jyutei | 战术RPG | [来源](https://en.wikipedia.org/wiki/Jyutei_Senki) |
+| 1993 | 盖亚幻想纪 | enix-gaia | 动作RPG | [来源](https://www.jp.square-enix.com/archive/gaia/) |
+| 1994 | 智慧之王 | enix-brainlord | 动作解谜RPG | [来源](https://www.famitsu.com/game/title/17108/page/1) |
+| 1994 | 机器人冒险：发明工坊 | enix-robotrek | 发明与机器人战斗RPG | [来源](https://en.wikipedia.org/wiki/Robotrek) |
+| 1994 | 奇迹计划J：机械少年皮诺 | enix-wonderj | 沟通式剧情养成冒险 | [来源](https://en.wikipedia.org/wiki/Wonder_Project_J) |
+| 1995 | 热血大陆：燃烧的英雄们 | enix-burningheroes | 多主人公剧情RPG | [来源](https://ja.wikipedia.org/wiki/%E7%86%B1%E8%A1%80%E5%A4%A7%E9%99%B8%E3%83%90%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%BA) |
+| 1995 | 咕噜咕噜魔法阵 | enix-guruguru | 迷宫探索RPG | [来源](https://www.gavas.jp/products/detail.php?product_id=2188) |
+| 1995 | 亚瑟王与正义骑士 | enix-arthur | 动画改编动作RPG | [来源](https://en.wikipedia.org/wiki/King_Arthur_%26_the_Knights_of_Justice_(video_game)) |
+| 1995 | 神秘方舟 | enix-mysticark | 解谜与回合制RPG | [来源](https://en.wikipedia.org/wiki/Mystic_Ark) |
+| 1995 | 天地创造 | enix-terranigma | 动作RPG | [来源](https://en.wikipedia.org/wiki/Terranigma) |
+| 1996 | 咕噜咕噜魔法阵2 | enix-guru2 | 动作迷宫RPG | [来源](https://w.atwiki.jp/gcmatome/pages/1867.html) |
+| 1996 | 黑暗之半 | enix-darkhalf | 双线视角剧情RPG | [来源](https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%BC%E3%82%AF%E3%83%8F%E3%83%BC%E3%83%95) |
+| 1996 | 星之海洋 | enix-so1 | 即时战斗剧情RPG | [来源](https://www.tri-ace.co.jp/products/consumer.html) |
+| 1996 | 奇迹计划J2：科尔罗森林的乔塞特 | enix-wonderj2 | 沟通式剧情养成冒险 | [来源](https://en.wikipedia.org/wiki/Wonder_Project_J2) |
+| 1998 | 星之海洋：第二个故事 | enix-so2 | 双主人公即时战斗RPG | [来源](https://www.tri-ace.co.jp/products/consumer.html) |
+| 1998 | 勇者斗恶龙怪兽篇：特里的仙境 | enix-dqm1 | 怪兽收集剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Warrior_Monsters) |
+| 1999 | 特鲁尼克大冒险2：不可思议的迷宫 | enix-torneko2 | 随机迷宫剧情RPG | [来源](https://en.wikipedia.org/wiki/Torneko:_The_Last_Hope) |
+| 1999 | 莱卡星球 | enix-laika | 心理剧RPG／人格变容 | [来源](https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%A9%E3%83%8D%E3%83%83%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AB) |
+| 1999 | 女神侧身像 | enix-valkyrie | 北欧神话剧情RPG | [来源](https://www.tri-ace.co.jp/products/consumer.html) |
+| 2000 | 剑术：黄昏之都鲁莱耶 | enix-blade | 剑斗动作冒险 | [来源](https://www.jp.square-enix.com/game/detail/blade/) |
+| 2000 | 心跳传说：咕噜咕噜魔法阵 | enix-dokiguru | 漫画改编剧情RPG | [来源](https://w.atwiki.jp/gball/pages/1263.html) |
+| 2001 | 勇者斗恶龙怪兽篇2：玛尔塔的不可思议之钥 | enix-dqm2 | 怪兽收集剧情RPG | [来源](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA2_%E3%83%9E%E3%83%AB%E3%82%BF%E3%81%AE%E3%81%B5%E3%81%97%E3%81%8E%E3%81%AA%E9%8D%B5) |
+| 2001 | 恩多尼西亚 | enix-endonesia | 无经验值的情感冒险RPG | [来源](https://w.atwiki.jp/gcmatome/pages/1760.html) |
+| 2001 | 星之海洋：蔚蓝星球 | enix-sobs | 即时战斗剧情RPG | [来源](https://www.tri-ace.co.jp/products/consumer.html) |
+| 2002 | 格兰蒂亚：极限 | enix-grandiax | 战斗与地城剧情RPG | [来源](https://en.wikipedia.org/wiki/Grandia_Xtreme) |
+| 2002 | 特鲁尼克大冒险3：不可思议的迷宫 | enix-torneko3 | 双角色随机迷宫RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_Characters:_Torneko_no_Daib%C5%8Dken_3) |
+| 2002 | 武士进化：樱国盖斯特 | enix-samurai | 武士与英灵收集RPG | [来源](https://game.watch.impress.co.jp/docs/20020719/evo.htm) |
+| 2003 | 星之海洋3：直到时间尽头 | enix-so3 | 即时战斗剧情RPG | [来源](https://www.tri-ace.co.jp/products/consumer.html) |
+| 2003 | 勇者斗恶龙怪兽篇：旅团之心 | enix-caravan | 旅团编成剧情RPG | [来源](https://en.wikipedia.org/wiki/Dragon_Quest_Monsters:_Caravan_Heart) |
+
+## 数据保护与检查
+
+原1158部主库作品、1355个内容身份、2349条发行对象逐对象保持；原Enix《七风岛物语》关联对象和其他62个厂商对象保持。新增记录无重复ID，新增主库／关联均不含文字输入标签。JSON、平台与内容CSV、互动CSV、静态专题同步，运行仓库要求的Python验证、Python单测、Node测试及生成页面一致性检查。以下保留旧批次审计，其计数是历史口径。
+
+---
+
 # Enix（艾尼克斯）主表七部补齐（2026-10-14）
 
 ## 本次补录与当前数量
