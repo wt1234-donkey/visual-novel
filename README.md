@@ -4,9 +4,9 @@
 
 ## 当前记录结构（2026-10-17）
 
-**1147 部作品 · 1342 个内容版本 · 2334 条平台发行 · 63 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
+**1158 部作品 · 1355 个内容版本 · 2349 条平台发行 · 63 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
 
-全部 1147 部主目录作品、388 部专题附录作品及98部仅专题输入式冒险书目现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
+全部 1158 部主目录作品、397 部专题附录作品及98部仅专题输入式冒险书目现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
 
 | 层级 | JSON 字段 | CSV |
 |---|---|---|
@@ -23,13 +23,15 @@
 
 ## 数据范围
 
-当前收录 **1147 部作品／附带叙事篇目、1342 个内容版本、2334 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **1158 部作品／附带叙事篇目、1355 个内容版本、2349 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
 现有 780 部作品设有单独中文检索名（含《雫》等容易漏检的日文汉字标题），原名继续保留。已有通行译名优先采用；缺少通行译名的中文称呼是本站编辑译名，方便检索，不代表官方定名。搜索支持中文检索名、原名和别名，例如“白色相簿”“白色相册”都能找到《WHITE ALBUM2》。网页版本卡片只在确认无角色配音时显示“无角色配音”；JSON 仍保留原始配音状态供筛选，CSV 则只导出无配音标记。
 
 ## 厂商集中整理
+
+已扩充 [Data East专题](dataeast.html)：正文23部身份，新增11部无文字输入叙事、复用3部互动动画、9部剧情RPG另列。末尾附238行／13组玩法表；危险的两人后篇为依赖增补，普通移植不扩列。旧库及其他专题保持，见[核对说明](data/dataeast-audit.md)。
 
 已扩充 [Cinematronics专题](cinematronics.html)：补齐80行／9组末尾玩法类型清单，区分本社、Vectorbeam、Leland、未发行项目及1994年同名LLC。正文三部无文字输入互动动画已在原库，全部复用；本轮新增作品／内容版本／发行均为0。原2002新增场景内容版保持，普通移植不扩列。详见[范围核对](data/cinematronics-audit.md)。
 
