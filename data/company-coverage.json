@@ -37593,14 +37593,14 @@
       "name": "Hudson Soft（哈德森）",
       "foundedAt": "1973-05-18",
       "foundedSource": "https://www.sec.gov/Archives/edgar/data/1191141/000119312505073349/d6k.htm",
-      "checkedAt": "2026-10-13",
-      "status": "复用4部原库作品，新增17部独立叙事作品与19条首发／新增内容记录",
-      "scope": "首批21部文字／光盘冒险、声音小说与恋爱冒险。聚焦叙事产品，不是Hudson所有游戏目录；既有键入指令作品复用保留，新作品使用菜单、选择或图像调查。",
-      "versionScope": "原库7条发行记录保留。本批新增后版只有明确新内容才单列：Murder Club新人物录音、Yuna REMIX新增游戏内曲目。同内容移植、EGGCONSOLE复刻、PSP合集、廉价再版与外附CD不增行。独立新故事／后日谈按作品建档，DLC与移植不混计。",
+      "checkedAt": "2026-10-17",
+      "status": "沿用21部旧作，新增6部无文字输入叙事、37部剧情RPG／战略关联与1部输入式书目",
+      "scope": "按此前Hudson Soft玩法清单扩充早期电脑、光盘数字漫画、后期冒险与剧情RPG；含文字输入的新作品不入数据库。旧记录保留，纯动作竞技、麻将、体育与日常养成留末尾参考。",
+      "versionScope": "作品、内容版本与平台发行分开；独立新故事单列作品。新增后版仅记录首次增加游戏内美术、音乐等明确内容的批次，普通移植、译版、廉价版与合集不另增。旧发行对象保留。",
       "versionPanelLabel": "条发行／内容记录",
       "versionCountLabel": "首发、既有版本与新增内容版",
       "publisherNote": "Hudson于1973/05/18成立，SEC公司公告直接确认日期。按成立时间接续科乐美（1969创业／1973法人），排在Sinclair Research之前。2012年并入Konami Digital Entertainment后品牌权利与历史署名分别处理；Riverhill Soft电脑原作及Hudson有声移植保留各自发行方。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>21部主库作品、26条发行／内容记录；复用4部，新增17部与19条记录。Murder Club的电脑首发保留Riverhill Soft署名。</strong></p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>27部主库关联 · 37部剧情RPG等跨类型 · 1部输入式仅专题。新叙事排除文字输入；已发表历史输入记录保留。</strong></p>",
       "workIds": [
         "g074",
         "g077",
@@ -37622,7 +37622,13 @@
         "g955",
         "g956",
         "g957",
-        "g958"
+        "g958",
+        "g1163",
+        "g1164",
+        "g1165",
+        "g1166",
+        "g1167",
+        "g1168"
       ],
       "publisherWorkIds": [
         "g074",
@@ -37645,18 +37651,23 @@
         "g955",
         "g956",
         "g957",
-        "g958"
+        "g958",
+        "g1163",
+        "g1164",
+        "g1165",
+        "g1166",
+        "g1168"
       ],
-      "catalogueEntryCount": 21,
+      "catalogueEntryCount": 27,
       "source": "https://www.sec.gov/Archives/edgar/data/1191141/000119312505073349/d6k.htm",
       "auditTitle": "成立顺序、独立作品与内容增量核对",
       "auditSourceLabel": "科乐美向SEC提交的公司公告",
-      "auditLabel": "首批代表作品与明确新增内容，历史缺项另列。",
-      "auditNote": "详细来源及证据层级见data/hudson-audit.md；未宣称完整目录。配音不从CD载体推断，未确认字段不在卡片中展示。",
-      "sectionTitle": "从菜单调查、数字漫画到北国恋爱旅行",
-      "description": "哈德森社核心叙事作品专题：复用原库四作，补入侦探、学园、科幻数字漫画、怪谈与北へ恋爱系列；只将确认新增内容的后版单列。",
+      "auditLabel": "原玩法清单逐项归类，内容身份、发行角色及输入边界分开核对。",
+      "auditNote": "本轮核对详见data/hudson-audit.md。首批与本轮审计分开保留；玩法表可含系列和包装，项目数不是独立游戏总数。",
+      "sectionTitle": "Hudson Soft叙事作品与玩法类型专题",
+      "description": "哈德森社专题按作品身份组织菜单冒险、动画与声音叙事、调查解谜及剧情RPG，并附不同类型产品的玩法参考。",
       "creativeProfile": {
-        "thesis": "编辑观察：本批作品展现Hudson叙事产品由菜单调查扩展至CD数字漫画、真人影像和声音小说，再以北海道实景旅行承载恋爱人物交流。它是叙事样本的变化，不概括公司全部动作、射击和RPG产品。",
+        "thesis": "编辑观察：Hudson的叙事产品横跨输入式电脑冒险、菜单调查、动画与真人素材、声音怪谈、自由情境RPG和后期空间解谜。不同开发团队与发行合作带来不同系统，不能以硬件平台或公司品牌推断成统一玩法。",
         "phases": [
           {
             "period": "1983—1989",
@@ -37678,6 +37689,20 @@
             "analysis": "北へ系列以北海道实景和会话系统组织恋爱故事。Diamond Dust改用新的主要人物与五城旅行，Kiss is Beginning则以恋人重逢扩展独立后日谈。",
             "basis": "编辑观察",
             "source": "https://game.watch.impress.co.jp/docs/20031010/kita.htm"
+          },
+          {
+            "period": "1987—2005",
+            "heading": "民话、架空历史与剧情RPG",
+            "analysis": "桃太郎传说与天外魔境通过队伍旅行承载民话或架空世界；动作RPG、半自动战斗与多角色战术各有控制逻辑，不把它们合称文字冒险。",
+            "basis": "编辑观察",
+            "source": "https://www.nintendo.co.jp/n08/aorj/index_mid.html"
+          },
+          {
+            "period": "1993—2009",
+            "heading": "场景调查、三维探索与设备化恐怖",
+            "analysis": "PCE娜迪亚、纯真小队、VIRUS、蔚蓝和后期迈阿密危机、CALLING分别通过菜单、光标、直接移动与体感提示组织事件；连续动画演出并不等于互动动画分支。",
+            "basis": "编辑观察",
+            "source": "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_blue_arch_arch/"
           }
         ]
       },
@@ -37910,15 +37935,3080 @@
         },
         {
           "title": "其余历史产品与待补核范围",
-          "status": "首批代表叙事作品，非完整目录",
-          "reason": "本批收21部主库作品。Maria系列、VIRUS、1993年PCE Nadia及更多授权、移动端和其他J.B.Harold移植仍待逐项核查；Yuna3以策略战斗为主，后续按跨类型关联作品整理。电脑键入指令旧作不追溯删除，也不在本轮新增同类。一般动作、射击、体育、RPG和多媒体画集不自动纳入四类主库。",
+          "status": "本轮已扩充／仍非穷尽目录",
+          "reason": "2026-10-13首批21作保留。本轮补入PCE娜迪亚、Team Innocent、VIRUS、B.L.U.E.、Miami Law、CALLING及剧情RPG。Maria系列实物目录署Accela，不能继续推作Hudson待收作品。更多移动与授权目录仍须按具体身份核定。",
           "source": "https://en.wikipedia.org/wiki/List_of_Hudson_Soft_games",
           "workIds": []
+        },
+        {
+          "title": "蓝宝石之谜：娜迪亚的南岛冒险",
+          "status": "本轮新增无文字输入叙事",
+          "reason": "让、娜迪亚等人在南方岛屿遇到新的事件；以动画角色对话与调查组织独立冒险。 1993/01/29 Hudson PCE独立故事，与1992 GAINAX电脑版g814不同；不把同IP跨平台作品自动合并。",
+          "source": "https://lunchbox360.livedoor.biz/archives/9664699.html",
+          "workIds": [
+            "g1163"
+          ]
+        },
+        {
+          "title": "纯真小队：不归点",
+          "status": "本轮新增无文字输入叙事",
+          "reason": "经过基因改造的少女小队执行宇宙船与空间站任务，在调查事件时面对生命伦理与身份问题。 独立叙事作品；中文名为站内检索译名。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/789.html",
+          "workIds": [
+            "g1164"
+          ]
+        },
+        {
+          "title": "病毒：VIRUS",
+          "status": "本轮新增无文字输入叙事",
+          "reason": "在未来的封闭都市与殖民地中，调查人员追查病毒引发的异常，在事件探索与实时战斗之间推进故事。 Hudson、Sega与Avex合作企划，实际游戏发行署Hudson。动画改编与游戏故事不自动视为相同。",
+          "source": "https://scrap-cliff.sakuraweb.com/game/game_075.html",
+          "workIds": [
+            "g1165"
+          ]
+        },
+        {
+          "title": "蔚蓝：水之传说",
+          "status": "本轮新增无文字输入叙事",
+          "reason": "少女玛雅与海豚伙伴潜入海底遗迹，协作破解机关并逐步了解遗迹的秘密。 1998年PS原作；2008游戏档案版没有已核首次新增内容，不增加发行。日期采用片尾转录及GameFAQs的1998/07/09，个别二手目录作09/07。",
+          "source": "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_blue_arch_arch/",
+          "workIds": [
+            "g1166"
+          ]
+        },
+        {
+          "title": "迈阿密危机",
+          "status": "本轮新增无文字输入叙事",
+          "reason": "迈阿密刑警与FBI探员合作追查犯罪组织；两位调查者通过不同方式逐步揭开事件。 首发为2009/06/09北美版，由Hudson Entertainment发行、Gaijinworks参与本地化；Hudson Soft开发，日本版由Hudson发行。只记原作首批，不因8月日文版新增内容。",
+          "source": "https://www.nintendo.co.jp/ds/software/ynkj/index.html",
+          "workIds": [
+            "g1167"
+          ]
+        },
+        {
+          "title": "凶铃：黑暗来电",
+          "status": "本轮新增无文字输入叙事",
+          "reason": "访问黑色网页的数人落入由死者记忆形成的空间，借手机联系、追查经历并寻找出口。 2009/11/19日本首发；后续地区发行不因译文差异增加内容身份。",
+          "source": "https://dengekionline.com/elem/000/000/208/208936/",
+          "workIds": [
+            "g1168"
+          ]
+        },
+        {
+          "title": "法萨纳杜",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "归乡的旅行者发现故乡衰败，沿世界树追查精灵与矮人灾难的根源。 获得Falcom名称授权的独立FC动作RPG，不把1985电脑Xanadu当Hudson原作；续关咒文非行动输入。",
+          "source": "https://en.wikipedia.org/wiki/Faxanadu",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-faxanadu"
+          ]
+        },
+        {
+          "title": "桃太郎传说",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "桃太郎与民话中的伙伴踏上讨鬼旅程，帮助各地居民。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-momotaro"
+          ]
+        },
+        {
+          "title": "邪圣剑：死灵法师",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "冒险者寻找拥有邪恶力量的圣剑，试图抵御威胁世界的恶魔。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Jaseiken_Necromancer",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-necromancer"
+          ]
+        },
+        {
+          "title": "天外魔境：自来也",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "自来也与纲手、大蛇丸在架空日本吉邦格旅行，对抗大门教的阴谋。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4717.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-ziria"
+          ]
+        },
+        {
+          "title": "地牢探索者",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "冒险者探索地下迷宫，追寻可改变王国命运的奥拉之石。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_(1989_video_game)",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-dungeon"
+          ]
+        },
+        {
+          "title": "纽托邦：玉章之谜",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "贾泽塔寻找八枚纹章，营救公主并从恶魔手中恢复王国。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Neutopia",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-neutopia"
+          ]
+        },
+        {
+          "title": "凄之王传说",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "在荒废世界中，朱砂真悟追寻从自身分离的魔神，面对人类与超能力的灾难。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://retrogameen.seesaa.net/article/387866295.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-susano"
+          ]
+        },
+        {
+          "title": "桃太郎传说II",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "桃太郎再次踏上讨鬼之旅，召集民话伙伴共同面对新的敌人。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/9030.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-momotaro2"
+          ]
+        },
+        {
+          "title": "魔神英雄传：外传",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "少年进入魔神世界，寻找失踪的渡，并与龙神丸及熟悉的伙伴协力冒险。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/3104.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-wataru"
+          ]
+        },
+        {
+          "title": "桃太郎传说外传",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "通过伙伴与鬼族等不同立场的篇章，展开桃太郎世界的外传故事。 先登记1991 GB原作。后续FC、PCE与合集的差异须有具体证据，不按平台重复建外传。",
+          "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-momotaro-gaiden"
+          ]
+        },
+        {
+          "title": "时空战记：姆大陆",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "村庄少年因帮助逃亡的国王而卷入姆大陆危机，并逐渐集合众多伙伴。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/275.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-mu"
+          ]
+        },
+        {
+          "title": "纽托邦II",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "贾泽塔失踪后，他的儿子出发追寻父亲，并面对再度出现的魔物。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Neutopia_II",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-neutopia2"
+          ]
+        },
+        {
+          "title": "天外魔境II：卍丸",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "卍丸与伙伴寻找圣剑，阻止黑暗兰与根之一族吞噬故乡。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D_II:_Manji_Maru",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-tengai2"
+          ]
+        },
+        {
+          "title": "艾尔法利亚：受祝福之岛",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "帕因与伙伴面对入侵的魔物，通过解放城镇逐步追查世界的变化。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/1842.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-elfaria"
+          ]
+        },
+        {
+          "title": "天外魔境：风云歌舞伎传",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "歌舞伎团十郎带领伙伴远赴异国，卷入歌舞、魔族与救援的独立故事。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-kabuki"
+          ]
+        },
+        {
+          "title": "新桃太郎传说",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "桃太郎在鬼族纷争中重新集合伙伴，经历各地居民与同伴的命运。 日文为「新」，中文采用新桃太郎传说；原清单中的「真」不作为另一部作品。",
+          "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-shin-momotaro"
+          ]
+        },
+        {
+          "title": "地牢探索者II",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "前作多年后，新的冒险者调查王国再起的危机并挑战地下迷宫。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_II",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-dungeon2"
+          ]
+        },
+        {
+          "title": "大贝兽物语",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "持火之贝的勇者在谢尔多拉多与贝兽伙伴相会，阻止大魔王复活。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Daikaij%C5%AB_Monogatari",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-daikaiju"
+          ]
+        },
+        {
+          "title": "血之机甲",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "机甲驾驶者在战争中的世界探索，通过战斗和调查沿故事逐步解决谜团。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=6609",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-bloodgear"
+          ]
+        },
+        {
+          "title": "空想科学世界：格列佛男孩",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "格列佛在科学与魔法共存的世界踏上旅行，与伙伴协力迎战危机。 此处为PCE剧情RPG；同名SFC游戏玩法不同，Saturn移植也不自动增加内容版本。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=6081",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-gulliver"
+          ]
+        },
+        {
+          "title": "天外魔境ZERO",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "火眼与伙伴踏上旅途，拯救受到地狱军团威胁的诸国。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Far_East_of_Eden_Zero",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-zero"
+          ]
+        },
+        {
+          "title": "水晶豆：地牢探索者外传",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "冒险者为遭到黑暗力量侵袭的王国战斗，沿迷宫追寻水晶与和平。 属于Dungeon Explorer系的新故事与系统改编，不是大贝兽物语外传；原清单错误归类在此订正。",
+          "source": "https://gamemanual.midnightmeattrain.com/entry/クリスタルビーンズ",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-crystalbeans"
+          ]
+        },
+        {
+          "title": "艾尔法利亚II：梅尔德之旅",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "前作百年后，基巴与伙伴在新的魔物危机中追寻身世与世界的真相。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://consoledictionary.com/games/2588",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-elfaria2"
+          ]
+        },
+        {
+          "title": "大贝兽物语II",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "再次被召至谢尔多拉多的勇者与伙伴对抗暗黑魔导师，追寻灾难背后的原因。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/2485.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-daikaiju2"
+          ]
+        },
+        {
+          "title": "地球之光：月面突击",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "宇宙移民组织与地球联邦的抗争中，指挥官与机师们在连续战役里作出选择。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/sfcall/pages/20.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-luna"
+          ]
+        },
+        {
+          "title": "天外魔境：第四默示录",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "雷神与伙伴穿越架空美国，面对暗黑教团与各地离奇危机。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D:_Daiyon_no_Mokushiroku",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-apocalypse"
+          ]
+        },
+        {
+          "title": "银河大小姐传说优奈3：闪电天使",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "优奈与银河伙伴面对新的机械化敌人，在冒险对话与多角色战术战斗之间推进故事。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4694.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-yuna3"
+          ]
+        },
+        {
+          "title": "炸弹人战争",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "国王炸弹人带领部队收复国土，最终面对巴古拉及其部下。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Bomberman_Wars",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-bomberwars"
+          ]
+        },
+        {
+          "title": "伊斯特利亚：自织之旅",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "由玩家创建的主人公在各地与人物相遇、恋爱和战斗，逐步织出自己的冒险。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_estleia_arch/",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-weltorv"
+          ]
+        },
+        {
+          "title": "元素机关装甲",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "失忆的沉睡者醒来后驾驶机关装甲，探索古代遗迹并追查自身与世界的过去。 独立Dreamcast原作；日本Hudson、北美Vatical的实际发行主体分开，不另补普通译版。",
+          "source": "https://en.wikipedia.org/wiki/Elemental_Gimmick_Gear",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-egg"
+          ]
+        },
+        {
+          "title": "炸弹人故事",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "炸弹人前往受袭星球寻找失踪的Max，并与伙伴合作解除危机。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://en.wikipedia.org/wiki/Bomberman_Tournament",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-bomberstory"
+          ]
+        },
+        {
+          "title": "机器人波恩科茨2",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "机器人使在新的大陆与时代中旅行，组合电池创造伙伴并应对对手和阴谋。 Ring与Cross是同一基础作品的分售差异，不建两个作品。先登记2001/09/13 Ring首批代表；Cross的具体新增组合清单未逐项核定，未虚构第二内容。与1998年带GB Kiss自由消息功能的前作分开。 所引实机资料确认GBA作删去前作红外线联动，队伍战斗改为4对4。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/1504.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-robopon2"
+          ]
+        },
+        {
+          "title": "东方蓝：青之天外",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "少年或少女在动荡的东方幻想世界旅行，结识伙伴并以不同顺序卷入各地事件。 Hudson／RED开发关联，2003/10/24原作由任天堂发行，保留实际署名；廉价Value Selection不增加内容版本。",
+          "source": "https://www.nintendo.co.jp/n08/aorj/index_mid.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-orientalblue"
+          ]
+        },
+        {
+          "title": "天外魔境III：泪",
+          "status": "剧情RPG／战略叙事关联",
+          "reason": "少年纳米达在九洲地方与同伴相遇，踏上围绕神与人的宿命之旅。 独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13513",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-namida"
+          ]
+        },
+        {
+          "title": "德泽尼世界",
+          "status": "含文字输入／仅专题书目",
+          "reason": "含自由行动词句输入，仅专题书目，不加入叙事数据库。首发采用PC-88档案1985年12月，原清单1986对应部分机种资料。",
+          "source": "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1484385.html",
+          "workIds": [],
+          "dossierIds": [
+            "hudson-dezeni-world"
+          ]
+        },
+        {
+          "title": "圣夜物语复用已有身份",
+          "status": "参照ASCII已有档案，不重建",
+          "reason": "1995 PCE原作在ASCII专题已存ascii-anearth及Hudson原作发行。此处玩法表链接既有档案，未复制内容或平台发行。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=6082",
+          "workIds": []
+        },
+        {
+          "title": "伊苏IV：伊苏的黎明",
+          "status": "剧情RPG关联",
+          "reason": "亚特鲁前往塞尔塞塔，与当地伙伴追寻古代王国及森林的秘密。 与Tonkin House的Mask of the Sun是共享起点而事件、地点与系统不同的两部游戏，不把它们误合并为普通跨平台发行。",
+          "source": "https://en.wikipedia.org/wiki/Ys_IV:_The_Dawn_of_Ys",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-ys4"
+          ]
+        },
+        {
+          "title": "圣龙传说：蒙比特",
+          "status": "剧情RPG关联",
+          "reason": "蒙比特族少年与伙伴在五个大陆旅行，挑战邪王并面对邪帝的威胁。 首发1991/08/30；原清单误写青龙，按实物标题订正为圣龙。固定行动与战斗菜单结合龙成长，非纯日常养成。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=6072",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-monbit"
+          ]
+        },
+        {
+          "title": "圣魔世界：激斗圣战士",
+          "status": "剧情RPG关联",
+          "reason": "大和王子与圣战士们穿越各界寻找通往次界的道路，阻止恶魔的侵扰。 独立FC剧情RPG，与1987 PCE换角色改编的动作游戏不同，不因同系列名合并身份。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/9157.html",
+          "workIds": [],
+          "relatedIds": [
+            "hudson-bikkuriman-fc"
+          ]
         }
       ],
       "legacyCommandWorkIds": [
         "g074",
         "g077"
+      ],
+      "relatedGames": [
+        {
+          "id": "hudson-faxanadu",
+          "title": "法萨纳杜",
+          "chineseTitle": "法萨纳杜",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ファザナドゥ / Faxanadu",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "横向动作RPG",
+          "genre": "横向动作RPG",
+          "synopsis": "归乡的旅行者发现故乡衰败，沿世界树追查精灵与矮人灾难的根源。",
+          "characters": [
+            "归乡的旅行者",
+            "精灵王"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Faxanadu",
+          "source": "https://en.wikipedia.org/wiki/Faxanadu",
+          "notes": "获得Falcom名称授权的独立FC动作RPG，不把1985电脑Xanadu当Hudson原作；续关咒文非行动输入。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Faxanadu"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-faxanadu-c-original",
+              "workId": "hudson-faxanadu",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Faxanadu",
+              "evidenceReleaseIds": [
+                "hudson-faxanadu-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-faxanadu-v-original",
+              "workId": "hudson-faxanadu",
+              "year": 1987,
+              "platform": "Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1987年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Faxanadu",
+              "contentVersionId": "hudson-faxanadu-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-momotaro",
+          "title": "桃太郎传说",
+          "chineseTitle": "桃太郎传说",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "桃太郎伝説",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "民话剧情RPG",
+          "genre": "民话剧情RPG",
+          "synopsis": "桃太郎与民话中的伙伴踏上讨鬼旅程，帮助各地居民。",
+          "characters": [
+            "桃太郎",
+            "金太郎",
+            "浦島太郎"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Momotaro_Densetsu"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-momotaro-c-original",
+              "workId": "hudson-momotaro",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+              "evidenceReleaseIds": [
+                "hudson-momotaro-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-momotaro-v-original",
+              "workId": "hudson-momotaro",
+              "year": 1987,
+              "platform": "Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1987年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+              "contentVersionId": "hudson-momotaro-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-necromancer",
+          "title": "邪圣剑：死灵法师",
+          "chineseTitle": "邪圣剑：死灵法师",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "邪聖剣ネクロマンサー",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "哥特幻想RPG",
+          "genre": "哥特幻想RPG",
+          "synopsis": "冒险者寻找拥有邪恶力量的圣剑，试图抵御威胁世界的恶魔。",
+          "characters": [
+            "寻找邪圣剑的主人公及同伴"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Jaseiken_Necromancer",
+          "source": "https://en.wikipedia.org/wiki/Jaseiken_Necromancer",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Jaseiken_Necromancer"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-necromancer-c-original",
+              "workId": "hudson-necromancer",
+              "label": "原作／首批内容",
+              "firstYear": 1988,
+              "basis": "original",
+              "evidence": "1988年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Jaseiken_Necromancer",
+              "evidenceReleaseIds": [
+                "hudson-necromancer-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-necromancer-v-original",
+              "workId": "hudson-necromancer",
+              "year": 1988,
+              "platform": "PC Engine",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1988年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Jaseiken_Necromancer",
+              "contentVersionId": "hudson-necromancer-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-ziria",
+          "title": "天外魔境：自来也",
+          "chineseTitle": "天外魔境：自来也",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天外魔境 ZIRIA",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "synopsis": "自来也与纲手、大蛇丸在架空日本吉邦格旅行，对抗大门教的阴谋。",
+          "characters": [
+            "ジライア",
+            "ツナデ",
+            "オロチ丸"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/4717.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4717.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/4717.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-ziria-c-original",
+              "workId": "hudson-ziria",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/4717.html",
+              "evidenceReleaseIds": [
+                "hudson-ziria-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "hudson-ziria-c-2006",
+              "workId": "hudson-ziria",
+              "label": "遥远吉邦格：新增游戏内乐曲",
+              "firstYear": 2006,
+              "basis": "added",
+              "comparedTo": "hudson-ziria-c-original",
+              "evidence": "相较1989 PCE原作，2006重制重新制作场景与人物并加入游戏内新曲；曲目比较表明确将「ミニゲーム1」标为新规追加曲。单列依据为新美术／音乐素材，不是分辨率或普通平台移植。",
+              "source": "https://w.atwiki.jp/gamemusicbest100/pages/513.html",
+              "evidenceReleaseIds": [
+                "hudson-ziria-v-2006"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较1989 PCE原作，2006重制重新制作场景与人物并加入游戏内新曲；曲目比较表明确将「ミニゲーム1」标为新规追加曲。单列依据为新美术／音乐素材，不是分辨率或普通平台移植。",
+                  "source": "https://w.atwiki.jp/gamemusicbest100/pages/513.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-ziria-v-original",
+              "workId": "hudson-ziria",
+              "year": 1989,
+              "platform": "PC Engine CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/4717.html",
+              "contentVersionId": "hudson-ziria-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "hudson-ziria-v-2006",
+              "workId": "hudson-ziria",
+              "year": 2006,
+              "platform": "Xbox 360",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "遥远吉邦格：新增游戏内乐曲",
+              "voice": "未核实",
+              "differences": "相较1989 PCE原作，2006重制重新制作场景与人物并加入游戏内新曲；曲目比较表明确将「ミニゲーム1」标为新规追加曲。单列依据为新美术／音乐素材，不是分辨率或普通平台移植。",
+              "source": "https://w.atwiki.jp/gamemusicbest100/pages/513.html",
+              "contentVersionId": "hudson-ziria-c-2006",
+              "contentRelation": "added",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-dungeon",
+          "title": "地牢探索者",
+          "chineseTitle": "地牢探索者",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ダンジョンエクスプローラー / Dungeon Explorer",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "多人动作RPG",
+          "genre": "多人动作RPG",
+          "synopsis": "冒险者探索地下迷宫，追寻可改变王国命运的奥拉之石。",
+          "characters": [
+            "玩家选择职业的冒险者"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Dungeon_Explorer_(1989_video_game)",
+          "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_(1989_video_game)",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "方向键移动，攻击键发射武器并使用职业魔法；即时地牢战斗，不标为菜单回合战斗。支持多人不等于自由文字聊天。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Dungeon_Explorer_(1989_video_game)",
+            "https://dds.konami.com/games/manual/pcemini/jp_Dungeon.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-dungeon-c-original",
+              "workId": "hudson-dungeon",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_(1989_video_game)",
+              "evidenceReleaseIds": [
+                "hudson-dungeon-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-dungeon-v-original",
+              "workId": "hudson-dungeon",
+              "year": 1989,
+              "platform": "PC Engine",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_(1989_video_game)",
+              "contentVersionId": "hudson-dungeon-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-neutopia",
+          "title": "纽托邦：玉章之谜",
+          "chineseTitle": "纽托邦：玉章之谜",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ニュートピア",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "俯视动作探索",
+          "genre": "俯视动作探索",
+          "synopsis": "贾泽塔寻找八枚纹章，营救公主并从恶魔手中恢复王国。",
+          "characters": [
+            "ジャゼタ",
+            "オーロラ姫"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Neutopia",
+          "source": "https://en.wikipedia.org/wiki/Neutopia",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Neutopia"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-neutopia-c-original",
+              "workId": "hudson-neutopia",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Neutopia",
+              "evidenceReleaseIds": [
+                "hudson-neutopia-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-neutopia-v-original",
+              "workId": "hudson-neutopia",
+              "year": 1989,
+              "platform": "PC Engine",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Neutopia",
+              "contentVersionId": "hudson-neutopia-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-susano",
+          "title": "凄之王传说",
+          "chineseTitle": "凄之王传说",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "凄ノ王伝説",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "漫画改编剧情RPG",
+          "genre": "漫画改编剧情RPG",
+          "synopsis": "在荒废世界中，朱砂真悟追寻从自身分离的魔神，面对人类与超能力的灾难。",
+          "characters": [
+            "朱紗真悟"
+          ],
+          "charactersSource": "https://retrogameen.seesaa.net/article/387866295.html",
+          "source": "https://retrogameen.seesaa.net/article/387866295.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://retrogameen.seesaa.net/article/387866295.html",
+            "https://www.gamespark.jp/article/2015/05/29/57316.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-susano-c-original",
+              "workId": "hudson-susano",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://retrogameen.seesaa.net/article/387866295.html",
+              "evidenceReleaseIds": [
+                "hudson-susano-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-susano-v-original",
+              "workId": "hudson-susano",
+              "year": 1989,
+              "platform": "PC Engine",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://retrogameen.seesaa.net/article/387866295.html",
+              "contentVersionId": "hudson-susano-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-momotaro2",
+          "title": "桃太郎传说II",
+          "chineseTitle": "桃太郎传说II",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "桃太郎伝説II",
+          "titleAliases": [],
+          "firstYear": 1990,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "民话队伍RPG",
+          "genre": "民话队伍RPG",
+          "synopsis": "桃太郎再次踏上讨鬼之旅，召集民话伙伴共同面对新的敌人。",
+          "characters": [
+            "桃太郎",
+            "金太郎",
+            "浦島太郎"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/9030.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/9030.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/9030.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-momotaro2-c-original",
+              "workId": "hudson-momotaro2",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "1990年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/9030.html",
+              "evidenceReleaseIds": [
+                "hudson-momotaro2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-momotaro2-v-original",
+              "workId": "hudson-momotaro2",
+              "year": 1990,
+              "platform": "PC Engine",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1990年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/9030.html",
+              "contentVersionId": "hudson-momotaro2-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-wataru",
+          "title": "魔神英雄传：外传",
+          "chineseTitle": "魔神英雄传：外传",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "魔神英雄伝ワタル外伝",
+          "titleAliases": [],
+          "firstYear": 1990,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "探索与横向动作RPG",
+          "genre": "探索与横向动作RPG",
+          "synopsis": "少年进入魔神世界，寻找失踪的渡，并与龙神丸及熟悉的伙伴协力冒险。",
+          "characters": [
+            "玩家扮演的少年",
+            "戦部ワタル",
+            "龍神丸"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/3104.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/3104.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "俯视地图探索与横向即时动作战斗分开；玩家选择并驾驶魔神参战。并非仅因题材有战斗就标战斗指令。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/3104.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-wataru-c-original",
+              "workId": "hudson-wataru",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "1990年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/3104.html",
+              "evidenceReleaseIds": [
+                "hudson-wataru-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-wataru-v-original",
+              "workId": "hudson-wataru",
+              "year": 1990,
+              "platform": "Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1990年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/3104.html",
+              "contentVersionId": "hudson-wataru-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-momotaro-gaiden",
+          "title": "桃太郎传说外传",
+          "chineseTitle": "桃太郎传说外传",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "桃太郎伝説外伝",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "民话外传RPG",
+          "genre": "民话外传RPG",
+          "synopsis": "通过伙伴与鬼族等不同立场的篇章，展开桃太郎世界的外传故事。",
+          "characters": [
+            "夜叉姫",
+            "浦島太郎",
+            "貧乏神"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "notes": "先登记1991 GB原作。后续FC、PCE与合集的差异须有具体证据，不按平台重复建外传。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Momotaro_Densetsu"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-momotaro-gaiden-c-original",
+              "workId": "hudson-momotaro-gaiden",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+              "evidenceReleaseIds": [
+                "hudson-momotaro-gaiden-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-momotaro-gaiden-v-original",
+              "workId": "hudson-momotaro-gaiden",
+              "year": 1991,
+              "platform": "Game Boy",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+              "contentVersionId": "hudson-momotaro-gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-mu",
+          "title": "时空战记：姆大陆",
+          "chineseTitle": "时空战记：姆大陆",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "時空戦記ムー",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "多队伍剧情RPG",
+          "genre": "多队伍剧情RPG",
+          "synopsis": "村庄少年因帮助逃亡的国王而卷入姆大陆危机，并逐渐集合众多伙伴。",
+          "characters": [
+            "玩家创建的主人公",
+            "プリナ王"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/275.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/275.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/275.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-mu-c-original",
+              "workId": "hudson-mu",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/275.html",
+              "evidenceReleaseIds": [
+                "hudson-mu-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-mu-v-original",
+              "workId": "hudson-mu",
+              "year": 1991,
+              "platform": "Game Boy",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/275.html",
+              "contentVersionId": "hudson-mu-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-neutopia2",
+          "title": "纽托邦II",
+          "chineseTitle": "纽托邦II",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ニュートピアII",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "俯视动作探索",
+          "genre": "俯视动作探索",
+          "synopsis": "贾泽塔失踪后，他的儿子出发追寻父亲，并面对再度出现的魔物。",
+          "characters": [
+            "ジャゼタの息子"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Neutopia_II",
+          "source": "https://en.wikipedia.org/wiki/Neutopia_II",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Neutopia_II"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-neutopia2-c-original",
+              "workId": "hudson-neutopia2",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Neutopia_II",
+              "evidenceReleaseIds": [
+                "hudson-neutopia2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-neutopia2-v-original",
+              "workId": "hudson-neutopia2",
+              "year": 1991,
+              "platform": "PC Engine",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Neutopia_II",
+              "contentVersionId": "hudson-neutopia2-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-tengai2",
+          "title": "天外魔境II：卍丸",
+          "chineseTitle": "天外魔境II：卍丸",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天外魔境II 卍MARU",
+          "titleAliases": [],
+          "firstYear": 1992,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "和风队伍剧情RPG",
+          "genre": "和风队伍剧情RPG",
+          "synopsis": "卍丸与伙伴寻找圣剑，阻止黑暗兰与根之一族吞噬故乡。",
+          "characters": [
+            "卍丸",
+            "カブキ団十郎",
+            "極楽太郎",
+            "絹"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D_II:_Manji_Maru",
+          "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D_II:_Manji_Maru",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D_II:_Manji_Maru"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-tengai2-c-original",
+              "workId": "hudson-tengai2",
+              "label": "原作／首批内容",
+              "firstYear": 1992,
+              "basis": "original",
+              "evidence": "1992年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D_II:_Manji_Maru",
+              "evidenceReleaseIds": [
+                "hudson-tengai2-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "hudson-tengai2-c-2003",
+              "workId": "hudson-tengai2",
+              "label": "重制版新增三维场景美术",
+              "firstYear": 2003,
+              "basis": "added",
+              "comparedTo": "hudson-tengai2-c-original",
+              "evidence": "相较1992原作，重制重新建立三维原野、城镇与人物美术，包含新的角色表现和动画素材。只记2003/09/25 GameCube首次批次；10/02 PS2及后来DS、PSP不因换平台自动增列。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/5085.html",
+              "evidenceReleaseIds": [
+                "hudson-tengai2-v-2003"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较1992原作，重制重新建立三维原野、城镇与人物美术，包含新的角色表现和动画素材。只记2003/09/25 GameCube首次批次；10/02 PS2及后来DS、PSP不因换平台自动增列。",
+                  "source": "https://w.atwiki.jp/gcmatome/pages/5085.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-tengai2-v-original",
+              "workId": "hudson-tengai2",
+              "year": 1992,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1992年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D_II:_Manji_Maru",
+              "contentVersionId": "hudson-tengai2-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "hudson-tengai2-v-2003",
+              "workId": "hudson-tengai2",
+              "year": 2003,
+              "platform": "Nintendo GameCube",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "重制版新增三维场景美术",
+              "voice": "未核实",
+              "differences": "相较1992原作，重制重新建立三维原野、城镇与人物美术，包含新的角色表现和动画素材。只记2003/09/25 GameCube首次批次；10/02 PS2及后来DS、PSP不因换平台自动增列。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/5085.html",
+              "contentVersionId": "hudson-tengai2-c-2003",
+              "contentRelation": "added",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-elfaria",
+          "title": "艾尔法利亚：受祝福之岛",
+          "chineseTitle": "艾尔法利亚：受祝福之岛",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エルファリア THE ISLE OF THE BLEST",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "合成与半自动战斗RPG",
+          "genre": "合成与半自动战斗RPG",
+          "synopsis": "帕因与伙伴面对入侵的魔物，通过解放城镇逐步追查世界的变化。",
+          "characters": [
+            "パイン",
+            "エルル"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/1842.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/1842.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "普通攻击自动进行，玩家管理队伍、元素与合成，并能指定魔法；战斗指令不表示每次普通攻击都手动选择。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/1842.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-elfaria-c-original",
+              "workId": "hudson-elfaria",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/1842.html",
+              "evidenceReleaseIds": [
+                "hudson-elfaria-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-elfaria-v-original",
+              "workId": "hudson-elfaria",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/1842.html",
+              "contentVersionId": "hudson-elfaria-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-kabuki",
+          "title": "天外魔境：风云歌舞伎传",
+          "chineseTitle": "天外魔境：风云歌舞伎传",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天外魔境 風雲カブキ伝",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "和风歌剧剧情RPG",
+          "genre": "和风歌剧剧情RPG",
+          "synopsis": "歌舞伎团十郎带领伙伴远赴异国，卷入歌舞、魔族与救援的独立故事。",
+          "characters": [
+            "カブキ団十郎",
+            "阿国"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D",
+          "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-kabuki-c-original",
+              "workId": "hudson-kabuki",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D",
+              "evidenceReleaseIds": [
+                "hudson-kabuki-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-kabuki-v-original",
+              "workId": "hudson-kabuki",
+              "year": 1993,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D",
+              "contentVersionId": "hudson-kabuki-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-shin-momotaro",
+          "title": "新桃太郎传说",
+          "chineseTitle": "新桃太郎传说",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "新桃太郎伝説",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "民话群像剧情RPG",
+          "genre": "民话群像剧情RPG",
+          "synopsis": "桃太郎在鬼族纷争中重新集合伙伴，经历各地居民与同伴的命运。",
+          "characters": [
+            "桃太郎",
+            "夜叉姫",
+            "カルラ"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+          "notes": "日文为「新」，中文采用新桃太郎传说；原清单中的「真」不作为另一部作品。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Momotaro_Densetsu"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-shin-momotaro-c-original",
+              "workId": "hudson-shin-momotaro",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+              "evidenceReleaseIds": [
+                "hudson-shin-momotaro-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-shin-momotaro-v-original",
+              "workId": "hudson-shin-momotaro",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Momotaro_Densetsu",
+              "contentVersionId": "hudson-shin-momotaro-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-dungeon2",
+          "title": "地牢探索者II",
+          "chineseTitle": "地牢探索者II",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ダンジョンエクスプローラーII",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "多人动作RPG",
+          "genre": "多人动作RPG",
+          "synopsis": "前作多年后，新的冒险者调查王国再起的危机并挑战地下迷宫。",
+          "characters": [
+            "玩家选择职业的冒险者"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Dungeon_Explorer_II",
+          "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_II",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Dungeon_Explorer_II"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-dungeon2-c-original",
+              "workId": "hudson-dungeon2",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_II",
+              "evidenceReleaseIds": [
+                "hudson-dungeon2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-dungeon2-v-original",
+              "workId": "hudson-dungeon2",
+              "year": 1993,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Dungeon_Explorer_II",
+              "contentVersionId": "hudson-dungeon2-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-daikaiju",
+          "title": "大贝兽物语",
+          "chineseTitle": "大贝兽物语",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "大貝獣物語",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "贝兽队伍剧情RPG",
+          "genre": "贝兽队伍剧情RPG",
+          "synopsis": "持火之贝的勇者在谢尔多拉多与贝兽伙伴相会，阻止大魔王复活。",
+          "characters": [
+            "火の貝の勇者",
+            "バブ",
+            "クピクピ",
+            "ポヨン"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Daikaij%C5%AB_Monogatari",
+          "source": "https://en.wikipedia.org/wiki/Daikaij%C5%AB_Monogatari",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Daikaij%C5%AB_Monogatari"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-daikaiju-c-original",
+              "workId": "hudson-daikaiju",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Daikaij%C5%AB_Monogatari",
+              "evidenceReleaseIds": [
+                "hudson-daikaiju-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-daikaiju-v-original",
+              "workId": "hudson-daikaiju",
+              "year": 1994,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1994年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Daikaij%C5%AB_Monogatari",
+              "contentVersionId": "hudson-daikaiju-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-bloodgear",
+          "title": "血之机甲",
+          "chineseTitle": "血之机甲",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ブラッド・ギア",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "机甲动作RPG",
+          "genre": "机甲动作RPG",
+          "synopsis": "机甲驾驶者在战争中的世界探索，通过战斗和调查沿故事逐步解决谜团。",
+          "characters": [
+            "驾驶Power Gear的主人公"
+          ],
+          "charactersSource": "https://www.gavas.jp/products/detail.php?product_id=6609",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=6609",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=6609"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-bloodgear-c-original",
+              "workId": "hudson-bloodgear",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=6609",
+              "evidenceReleaseIds": [
+                "hudson-bloodgear-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-bloodgear-v-original",
+              "workId": "hudson-bloodgear",
+              "year": 1994,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1994年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=6609",
+              "contentVersionId": "hudson-bloodgear-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-gulliver",
+          "title": "空想科学世界：格列佛男孩",
+          "chineseTitle": "空想科学世界：格列佛男孩",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "空想科学世界ガリバーボーイ",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "动画叙事RPG",
+          "genre": "动画叙事RPG",
+          "synopsis": "格列佛在科学与魔法共存的世界踏上旅行，与伙伴协力迎战危机。",
+          "characters": [
+            "ガリバー",
+            "エジソン",
+            "ミスティ"
+          ],
+          "charactersSource": "https://www.gavas.jp/products/detail.php?product_id=6081",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=6081",
+          "notes": "此处为PCE剧情RPG；同名SFC游戏玩法不同，Saturn移植也不自动增加内容版本。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=6081"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-gulliver-c-original",
+              "workId": "hudson-gulliver",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=6081",
+              "evidenceReleaseIds": [
+                "hudson-gulliver-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-gulliver-v-original",
+              "workId": "hudson-gulliver",
+              "year": 1995,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=6081",
+              "contentVersionId": "hudson-gulliver-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-zero",
+          "title": "天外魔境ZERO",
+          "chineseTitle": "天外魔境ZERO",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天外魔境ZERO",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "时钟事件剧情RPG",
+          "genre": "时钟事件剧情RPG",
+          "synopsis": "火眼与伙伴踏上旅途，拯救受到地狱军团威胁的诸国。",
+          "characters": [
+            "ヒガン",
+            "スバル",
+            "テンジン"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Far_East_of_Eden_Zero",
+          "source": "https://en.wikipedia.org/wiki/Far_East_of_Eden_Zero",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Far_East_of_Eden_Zero"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-zero-c-original",
+              "workId": "hudson-zero",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Far_East_of_Eden_Zero",
+              "evidenceReleaseIds": [
+                "hudson-zero-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-zero-v-original",
+              "workId": "hudson-zero",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Far_East_of_Eden_Zero",
+              "contentVersionId": "hudson-zero-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-crystalbeans",
+          "title": "水晶豆：地牢探索者外传",
+          "chineseTitle": "水晶豆：地牢探索者外传",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "クリスタルビーンズ from ダンジョンエクスプローラー",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "多人动作RPG",
+          "genre": "多人动作RPG",
+          "synopsis": "冒险者为遭到黑暗力量侵袭的王国战斗，沿迷宫追寻水晶与和平。",
+          "characters": [
+            "玩家选择的八职业冒险者"
+          ],
+          "charactersSource": "https://gamemanual.midnightmeattrain.com/entry/クリスタルビーンズ",
+          "source": "https://gamemanual.midnightmeattrain.com/entry/クリスタルビーンズ",
+          "notes": "属于Dungeon Explorer系的新故事与系统改编，不是大贝兽物语外传；原清单错误归类在此订正。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://gamemanual.midnightmeattrain.com/entry/クリスタルビーンズ"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-crystalbeans-c-original",
+              "workId": "hudson-crystalbeans",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://gamemanual.midnightmeattrain.com/entry/クリスタルビーンズ",
+              "evidenceReleaseIds": [
+                "hudson-crystalbeans-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-crystalbeans-v-original",
+              "workId": "hudson-crystalbeans",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://gamemanual.midnightmeattrain.com/entry/クリスタルビーンズ",
+              "contentVersionId": "hudson-crystalbeans-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-elfaria2",
+          "title": "艾尔法利亚II：梅尔德之旅",
+          "chineseTitle": "艾尔法利亚II：梅尔德之旅",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エルファリアII ザ・クエスト・オブ・ザ・メルド",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "合成与队形剧情RPG",
+          "genre": "合成与队形剧情RPG",
+          "synopsis": "前作百年后，基巴与伙伴在新的魔物危机中追寻身世与世界的真相。",
+          "characters": [
+            "キバ",
+            "リーファ"
+          ],
+          "charactersSource": "https://consoledictionary.com/games/2588",
+          "source": "https://consoledictionary.com/games/2588",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "探索与物品合成结合半自动战斗；通过队形、属性和战斗指示影响战况，未标为全手动攻击。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://consoledictionary.com/games/2588"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-elfaria2-c-original",
+              "workId": "hudson-elfaria2",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://consoledictionary.com/games/2588",
+              "evidenceReleaseIds": [
+                "hudson-elfaria2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-elfaria2-v-original",
+              "workId": "hudson-elfaria2",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://consoledictionary.com/games/2588",
+              "contentVersionId": "hudson-elfaria2-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-daikaiju2",
+          "title": "大贝兽物语II",
+          "chineseTitle": "大贝兽物语II",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "大貝獣物語II",
+          "titleAliases": [],
+          "firstYear": 1996,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "贝兽队伍剧情RPG",
+          "genre": "贝兽队伍剧情RPG",
+          "synopsis": "再次被召至谢尔多拉多的勇者与伙伴对抗暗黑魔导师，追寻灾难背后的原因。",
+          "characters": [
+            "火の貝の勇者",
+            "ポヨン"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/2485.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/2485.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/2485.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-daikaiju2-c-original",
+              "workId": "hudson-daikaiju2",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/2485.html",
+              "evidenceReleaseIds": [
+                "hudson-daikaiju2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-daikaiju2-v-original",
+              "workId": "hudson-daikaiju2",
+              "year": 1996,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1996年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/2485.html",
+              "contentVersionId": "hudson-daikaiju2-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-luna",
+          "title": "地球之光：月面突击",
+          "chineseTitle": "地球之光：月面突击",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "アースライト ルナ・ストライク",
+          "titleAliases": [],
+          "firstYear": 1996,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "角色与战役战略叙事",
+          "genre": "角色与战役战略叙事",
+          "synopsis": "宇宙移民组织与地球联邦的抗争中，指挥官与机师们在连续战役里作出选择。",
+          "characters": [
+            "舰队指挥官与机师"
+          ],
+          "charactersSource": "https://w.atwiki.jp/sfcall/pages/20.html",
+          "source": "https://w.atwiki.jp/sfcall/pages/20.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "战术策略",
+            "菜单指令"
+          ],
+          "interactionNote": "指挥战舰与机师单位在战术地图移动和攻击；不从战争剧情推断成第一人称射击或普通回合RPG。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/sfcall/pages/20.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-luna-c-original",
+              "workId": "hudson-luna",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/sfcall/pages/20.html",
+              "evidenceReleaseIds": [
+                "hudson-luna-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-luna-v-original",
+              "workId": "hudson-luna",
+              "year": 1996,
+              "platform": "Super Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1996年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/sfcall/pages/20.html",
+              "contentVersionId": "hudson-luna-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-apocalypse",
+          "title": "天外魔境：第四默示录",
+          "chineseTitle": "天外魔境：第四默示录",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天外魔境 第四の黙示録",
+          "titleAliases": [],
+          "firstYear": 1997,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "架空美国剧情RPG",
+          "genre": "架空美国剧情RPG",
+          "synopsis": "雷神与伙伴穿越架空美国，面对暗黑教团与各地离奇危机。",
+          "characters": [
+            "雷神",
+            "夢見",
+            "エース"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D:_Daiyon_no_Mokushiroku",
+          "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D:_Daiyon_no_Mokushiroku",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D:_Daiyon_no_Mokushiroku"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-apocalypse-c-original",
+              "workId": "hudson-apocalypse",
+              "label": "原作／首批内容",
+              "firstYear": 1997,
+              "basis": "original",
+              "evidence": "1997年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D:_Daiyon_no_Mokushiroku",
+              "evidenceReleaseIds": [
+                "hudson-apocalypse-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-apocalypse-v-original",
+              "workId": "hudson-apocalypse",
+              "year": 1997,
+              "platform": "Sega Saturn",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1997年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Tengai_Maky%C5%8D:_Daiyon_no_Mokushiroku",
+              "contentVersionId": "hudson-apocalypse-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-yuna3",
+          "title": "银河大小姐传说优奈3：闪电天使",
+          "chineseTitle": "银河大小姐传说优奈3：闪电天使",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "銀河お嬢様伝説ユナ3 LIGHTNING ANGEL",
+          "titleAliases": [],
+          "firstYear": 1997,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "战术冒险／策略RPG",
+          "genre": "战术冒险／策略RPG",
+          "synopsis": "优奈与银河伙伴面对新的机械化敌人，在冒险对话与多角色战术战斗之间推进故事。",
+          "characters": [
+            "神楽坂ユナ",
+            "ユーリィ",
+            "詩織"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/4694.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4694.html",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "菜单指令",
+            "选项分支",
+            "战术策略"
+          ],
+          "interactionNote": "剧情部分采用预设对话，战斗在网格地图指挥多名角色移动与攻击。不同于前作的一对一指令战斗。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/4694.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-yuna3-c-original",
+              "workId": "hudson-yuna3",
+              "label": "原作／首批内容",
+              "firstYear": 1997,
+              "basis": "original",
+              "evidence": "1997年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/4694.html",
+              "evidenceReleaseIds": [
+                "hudson-yuna3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-yuna3-v-original",
+              "workId": "hudson-yuna3",
+              "year": 1997,
+              "platform": "Sega Saturn",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1997年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/4694.html",
+              "contentVersionId": "hudson-yuna3-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-bomberwars",
+          "title": "炸弹人战争",
+          "chineseTitle": "炸弹人战争",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ボンバーマンウォーズ",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "剧情任务策略RPG",
+          "genre": "剧情任务策略RPG",
+          "synopsis": "国王炸弹人带领部队收复国土，最终面对巴古拉及其部下。",
+          "characters": [
+            "King Bomber",
+            "Bagular"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Bomberman_Wars",
+          "source": "https://en.wikipedia.org/wiki/Bomberman_Wars",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "战术策略",
+            "菜单指令"
+          ],
+          "interactionNote": "回合制网格指挥、放置炸弹与部队战术；有剧情Quest模式。两个平台1998/04/16同日首发共用一个内容身份，不计两部游戏。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Bomberman_Wars"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-bomberwars-c-original",
+              "workId": "hudson-bomberwars",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "1998/04/16 PlayStation与Sega Saturn同日首发，共用原作内容身份，平台发行分别记录。",
+              "source": "https://en.wikipedia.org/wiki/Bomberman_Wars",
+              "evidenceReleaseIds": [
+                "hudson-bomberwars-v-ps",
+                "hudson-bomberwars-v-saturn"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-bomberwars-v-ps",
+              "workId": "hudson-bomberwars",
+              "year": 1998,
+              "platform": "PlayStation",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1998年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Bomberman_Wars",
+              "contentVersionId": "hudson-bomberwars-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "hudson-bomberwars-v-saturn",
+              "workId": "hudson-bomberwars",
+              "year": 1998,
+              "platform": "Sega Saturn",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1998年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Bomberman_Wars",
+              "contentVersionId": "hudson-bomberwars-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-weltorv",
+          "title": "伊斯特利亚：自织之旅",
+          "chineseTitle": "伊斯特利亚：自织之旅",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ウェルトオブ・イストリア",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "自由情境剧情RPG",
+          "genre": "自由情境剧情RPG",
+          "synopsis": "由玩家创建的主人公在各地与人物相遇、恋爱和战斗，逐步织出自己的冒险。",
+          "characters": [
+            "玩家创建的主人公"
+          ],
+          "charactersSource": "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_estleia_arch/",
+          "source": "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_estleia_arch/",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_estleia_arch/"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-weltorv-c-original",
+              "workId": "hudson-weltorv",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "1999年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_estleia_arch/",
+              "evidenceReleaseIds": [
+                "hudson-weltorv-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-weltorv-v-original",
+              "workId": "hudson-weltorv",
+              "year": 1999,
+              "platform": "PlayStation",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1999年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.konami.com/games/jp/ja/products/dl_pspps3vita_estleia_arch/",
+              "contentVersionId": "hudson-weltorv-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-egg",
+          "title": "元素机关装甲",
+          "chineseTitle": "元素机关装甲",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エレメンタル ギミック ギア / E.G.G.",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "机甲探索动作RPG",
+          "genre": "机甲探索动作RPG",
+          "synopsis": "失忆的沉睡者醒来后驾驶机关装甲，探索古代遗迹并追查自身与世界的过去。",
+          "characters": [
+            "Leon",
+            "Selen"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Elemental_Gimmick_Gear",
+          "source": "https://en.wikipedia.org/wiki/Elemental_Gimmick_Gear",
+          "notes": "独立Dreamcast原作；日本Hudson、北美Vatical的实际发行主体分开，不另补普通译版。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Elemental_Gimmick_Gear"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-egg-c-original",
+              "workId": "hudson-egg",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "1999年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Elemental_Gimmick_Gear",
+              "evidenceReleaseIds": [
+                "hudson-egg-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-egg-v-original",
+              "workId": "hudson-egg",
+              "year": 1999,
+              "platform": "Dreamcast",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1999年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Elemental_Gimmick_Gear",
+              "contentVersionId": "hudson-egg-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-bomberstory",
+          "title": "炸弹人故事",
+          "chineseTitle": "炸弹人故事",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ボンバーマンストーリー / Bomberman Tournament",
+          "titleAliases": [],
+          "firstYear": 2001,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "剧情探索动作RPG",
+          "genre": "剧情探索动作RPG",
+          "synopsis": "炸弹人前往受袭星球寻找失踪的Max，并与伙伴合作解除危机。",
+          "characters": [
+            "Bomberman",
+            "Max"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Bomberman_Tournament",
+          "source": "https://en.wikipedia.org/wiki/Bomberman_Tournament",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "Quest模式探索地图、放置炸弹、使用伙伴能力解机关；另有竞技模式。收录依据为独立剧情探索，未把全系列竞技游戏一并纳入。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Bomberman_Tournament"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-bomberstory-c-original",
+              "workId": "hudson-bomberstory",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Bomberman_Tournament",
+              "evidenceReleaseIds": [
+                "hudson-bomberstory-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-bomberstory-v-original",
+              "workId": "hudson-bomberstory",
+              "year": 2001,
+              "platform": "Game Boy Advance",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2001年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Bomberman_Tournament",
+              "contentVersionId": "hudson-bomberstory-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-robopon2",
+          "title": "机器人波恩科茨2",
+          "chineseTitle": "机器人波恩科茨2",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ロボットポンコッツ2 リングバージョン／クロスバージョン",
+          "titleAliases": [],
+          "firstYear": 2001,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "机器人队伍剧情RPG",
+          "genre": "机器人队伍剧情RPG",
+          "synopsis": "机器人使在新的大陆与时代中旅行，组合电池创造伙伴并应对对手和阴谋。",
+          "characters": [
+            "ユースケ",
+            "机器人伙伴"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/1504.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/1504.html",
+          "notes": "Ring与Cross是同一基础作品的分售差异，不建两个作品。先登记2001/09/13 Ring首批代表；Cross的具体新增组合清单未逐项核定，未虚构第二内容。与1998年带GB Kiss自由消息功能的前作分开。 所引实机资料确认GBA作删去前作红外线联动，队伍战斗改为4对4。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/1504.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-robopon2-c-original",
+              "workId": "hudson-robopon2",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/1504.html",
+              "evidenceReleaseIds": [
+                "hudson-robopon2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-robopon2-v-original",
+              "workId": "hudson-robopon2",
+              "year": 2001,
+              "platform": "Game Boy Advance",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2001年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/1504.html",
+              "contentVersionId": "hudson-robopon2-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-orientalblue",
+          "title": "东方蓝：青之天外",
+          "chineseTitle": "东方蓝：青之天外",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "オリエンタルブルー 青の天外",
+          "titleAliases": [],
+          "firstYear": 2003,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "自由情境和风RPG",
+          "genre": "自由情境和风RPG",
+          "synopsis": "少年或少女在动荡的东方幻想世界旅行，结识伙伴并以不同顺序卷入各地事件。",
+          "characters": [
+            "玩家选择的少年",
+            "少女"
+          ],
+          "charactersSource": "https://www.nintendo.co.jp/n08/aorj/index_mid.html",
+          "source": "https://www.nintendo.co.jp/n08/aorj/index_mid.html",
+          "notes": "Hudson／RED开发关联，2003/10/24原作由任天堂发行，保留实际署名；廉价Value Selection不增加内容版本。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/n08/aorj/index_mid.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-orientalblue-c-original",
+              "workId": "hudson-orientalblue",
+              "label": "原作／首批内容",
+              "firstYear": 2003,
+              "basis": "original",
+              "evidence": "2003年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.nintendo.co.jp/n08/aorj/index_mid.html",
+              "evidenceReleaseIds": [
+                "hudson-orientalblue-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-orientalblue-v-original",
+              "workId": "hudson-orientalblue",
+              "year": 2003,
+              "platform": "Game Boy Advance",
+              "publisher": "任天堂",
+              "publisherCompanies": [
+                "任天堂"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2003年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.nintendo.co.jp/n08/aorj/index_mid.html",
+              "contentVersionId": "hudson-orientalblue-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-namida",
+          "title": "天外魔境III：泪",
+          "chineseTitle": "天外魔境III：泪",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天外魔境III NAMIDA",
+          "titleAliases": [],
+          "firstYear": 2005,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "synopsis": "少年纳米达在九洲地方与同伴相遇，踏上围绕神与人的宿命之旅。",
+          "characters": [
+            "ナミダ",
+            "壱与"
+          ],
+          "charactersSource": "https://www.gavas.jp/products/detail.php?product_id=13513",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13513",
+          "notes": "独立剧情作品，放专题跨类型关联区；后发版本只有明确新增内容才另列。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=13513"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-namida-c-original",
+              "workId": "hudson-namida",
+              "label": "原作／首批内容",
+              "firstYear": 2005,
+              "basis": "original",
+              "evidence": "2005年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=13513",
+              "evidenceReleaseIds": [
+                "hudson-namida-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-namida-v-original",
+              "workId": "hudson-namida",
+              "year": 2005,
+              "platform": "PlayStation 2",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2005年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=13513",
+              "contentVersionId": "hudson-namida-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-ys4",
+          "title": "伊苏IV：伊苏的黎明",
+          "chineseTitle": "伊苏IV：伊苏的黎明",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "イースIV The Dawn of Ys",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "碰撞战斗动作RPG",
+          "genre": "碰撞战斗动作RPG",
+          "synopsis": "亚特鲁前往塞尔塞塔，与当地伙伴追寻古代王国及森林的秘密。",
+          "characters": [
+            "アドル",
+            "ドギ"
+          ],
+          "charactersSource": "https://en.wikipedia.org/wiki/Ys_IV:_The_Dawn_of_Ys",
+          "source": "https://en.wikipedia.org/wiki/Ys_IV:_The_Dawn_of_Ys",
+          "notes": "与Tonkin House的Mask of the Sun是共享起点而事件、地点与系统不同的两部游戏，不把它们误合并为普通跨平台发行。",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "俯视移动并以接触碰撞攻击敌人，魔法和物品由固定菜单管理；不是输入动作词句。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://en.wikipedia.org/wiki/Ys_IV:_The_Dawn_of_Ys"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-ys4-c-original",
+              "workId": "hudson-ys4",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Ys_IV:_The_Dawn_of_Ys",
+              "evidenceReleaseIds": [
+                "hudson-ys4-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-ys4-v-original",
+              "workId": "hudson-ys4",
+              "year": 1993,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://en.wikipedia.org/wiki/Ys_IV:_The_Dawn_of_Ys",
+              "contentVersionId": "hudson-ys4-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-monbit",
+          "title": "圣龙传说：蒙比特",
+          "chineseTitle": "圣龙传说：蒙比特",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "聖竜伝説モンビット",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "龙成长与队伍剧情RPG",
+          "genre": "龙成长与队伍剧情RPG",
+          "synopsis": "蒙比特族少年与伙伴在五个大陆旅行，挑战邪王并面对邪帝的威胁。",
+          "characters": [
+            "蒙比特族主人公",
+            "圣龙伙伴"
+          ],
+          "charactersSource": "https://www.gavas.jp/products/detail.php?product_id=6072",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=6072",
+          "notes": "首发1991/08/30；原清单误写青龙，按实物标题订正为圣龙。固定行动与战斗菜单结合龙成长，非纯日常养成。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=6072",
+            "https://dotama.blog3.fc2.com/blog-entry-7137.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-monbit-c-original",
+              "workId": "hudson-monbit",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=6072",
+              "evidenceReleaseIds": [
+                "hudson-monbit-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-monbit-v-original",
+              "workId": "hudson-monbit",
+              "year": 1991,
+              "platform": "PC Engine CD-ROM²",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1991年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=6072",
+              "contentVersionId": "hudson-monbit-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "hudson-bikkuriman-fc",
+          "title": "圣魔世界：激斗圣战士",
+          "chineseTitle": "圣魔世界：激斗圣战士",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ビックリマンワールド 激闘聖戦士",
+          "titleAliases": [],
+          "firstYear": 1990,
+          "category": "角色扮演／剧情关联",
+          "subcategory": "授权队伍剧情RPG",
+          "genre": "授权队伍剧情RPG",
+          "synopsis": "大和王子与圣战士们穿越各界寻找通往次界的道路，阻止恶魔的侵扰。",
+          "characters": [
+            "ヤマト王子",
+            "圣战士伙伴"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/9157.html",
+          "source": "https://w.atwiki.jp/gcmatome/pages/9157.html",
+          "notes": "独立FC剧情RPG，与1987 PCE换角色改编的动作游戏不同，不因同系列名合并身份。",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "依据原玩法清单和所列作品资料归纳地图探索、固定行动菜单及战斗操作；角色起名、存档名和续关密码不算自由行动词句输入。标签为作品概览，未宣称每个机种操作一致。",
+          "interactionBasis": "既有资料归纳",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/9157.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "hudson-bikkuriman-fc-c-original",
+              "workId": "hudson-bikkuriman-fc",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "1990年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/9157.html",
+              "evidenceReleaseIds": [
+                "hudson-bikkuriman-fc-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "hudson-bikkuriman-fc-v-original",
+              "workId": "hudson-bikkuriman-fc",
+              "year": 1990,
+              "platform": "Famicom",
+              "publisher": "ハドソン",
+              "publisherCompanies": [
+                "Hudson Soft（哈德森）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1990年原作首批内容，登记有依据的首发平台。独立续作与普通移植分开；不因同年、同IP或合集包装增加内容身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/9157.html",
+              "contentVersionId": "hudson-bikkuriman-fc-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记原作或已核新增内容的首次发行；普通移植、译版和再售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "dossierOnlyWorks": [
+        {
+          "id": "hudson-dezeni-world",
+          "title": "德泽尼世界",
+          "chineseTitle": "德泽尼世界",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "デゼニワールド",
+          "titleAliases": [],
+          "firstYear": 1985,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图文指令",
+          "synopsis": "德泽尼人在名古屋的游乐园调查失控电脑HAL3，以电影和旧作的戏仿贯穿旅程。",
+          "characters": [
+            "デゼニマン"
+          ],
+          "charactersSource": "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1484385.html",
+          "source": "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1484385.html",
+          "notes": "含自由行动词句输入，仅专题书目，不加入叙事数据库。首发采用PC-88档案1985年12月，原清单1986对应部分机种资料。",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原说明书与回顾明确：使用英文或片假名键入行动命令，由程序判断并解释；不将开始画面或菜单误当无输入玩法。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1484385.html"
+          ]
+        }
+      ],
+      "workContexts": {
+        "g074": "历史输入式作品，沿用原身份；不属于本轮新增。",
+        "g077": "1984电脑原作为文字输入，1988 FC为菜单改编；沿用既有同一作品和三条历史发行，不复制一个新无输入作品。"
+      },
+      "dossierGroups": [
+        {
+          "id": "hudson-early",
+          "title": "1983—1991：早期电脑与菜单调查",
+          "description": "旧输入作品保留；新输入书目只留专题。",
+          "workIds": [
+            "g074",
+            "g077",
+            "g942",
+            "g019",
+            "g943",
+            "g020",
+            "g944",
+            "g945",
+            "g946",
+            "g947",
+            "hudson-dezeni-world"
+          ]
+        },
+        {
+          "id": "hudson-disc",
+          "title": "1992—2009：光盘叙事、恋爱与调查探索",
+          "description": "独立故事、后日谈与多媒体包装分开。",
+          "workIds": [
+            "g948",
+            "g949",
+            "g950",
+            "g951",
+            "g952",
+            "g953",
+            "g954",
+            "g955",
+            "g956",
+            "g957",
+            "g958",
+            "g1163",
+            "g1164",
+            "g1165",
+            "g1166",
+            "g1167",
+            "g1168"
+          ]
+        },
+        {
+          "id": "hudson-rpg",
+          "title": "1987—2005：剧情RPG、动作与战术关联",
+          "description": "有剧情的跨类型作品单列，实际开发与发行署名分开；普通移植不扩大版本数。",
+          "workIds": [
+            "hudson-faxanadu",
+            "hudson-momotaro",
+            "hudson-necromancer",
+            "hudson-ziria",
+            "hudson-dungeon",
+            "hudson-neutopia",
+            "hudson-susano",
+            "hudson-momotaro2",
+            "hudson-wataru",
+            "hudson-momotaro-gaiden",
+            "hudson-mu",
+            "hudson-neutopia2",
+            "hudson-tengai2",
+            "hudson-elfaria",
+            "hudson-kabuki",
+            "hudson-shin-momotaro",
+            "hudson-dungeon2",
+            "hudson-daikaiju",
+            "hudson-bloodgear",
+            "hudson-gulliver",
+            "hudson-zero",
+            "hudson-crystalbeans",
+            "hudson-elfaria2",
+            "hudson-daikaiju2",
+            "hudson-luna",
+            "hudson-apocalypse",
+            "hudson-yuna3",
+            "hudson-bomberwars",
+            "hudson-weltorv",
+            "hudson-egg",
+            "hudson-bomberstory",
+            "hudson-robopon2",
+            "hudson-orientalblue",
+            "hudson-namida",
+            "hudson-ys4",
+            "hudson-monbit",
+            "hudson-bikkuriman-fc"
+          ]
+        }
       ]
     },
     {
