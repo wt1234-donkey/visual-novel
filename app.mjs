@@ -1,4 +1,4 @@
-import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261016-psk-v1';
+import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261017-sierra-on-line-v1';
 
 const $=id=>document.getElementById(id);
 const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('company-select'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort'),contentStatus:$('content-status'),interaction:$('interaction')};
@@ -63,7 +63,7 @@ function readFilters(){return Object.fromEntries(Object.entries(fields).map(([ke
 
 async function main(){
   try {
-    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261016-psk-v1'),fetch('./data/taxonomy.json?v=20261016-psk-v1')]);
+    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261017-sierra-on-line-v1'),fetch('./data/taxonomy.json?v=20261017-sierra-on-line-v1')]);
     if(!response.ok||!taxonomyResponse.ok)throw Error('HTTP '+(response.ok?taxonomyResponse.status:response.status));
     const [data,taxonomy]=await Promise.all([response.json(),taxonomyResponse.json()]);
     $('stat-works').textContent=data.works.length;
