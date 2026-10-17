@@ -4,9 +4,9 @@
 
 ## 当前记录结构（2026-10-17）
 
-**1165 部作品 · 1362 个内容版本 · 2356 条平台发行 · 64 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
+**1169 部作品 · 1367 个内容版本 · 2361 条平台发行 · 65 个专题。** 原作与内容增补按内容 ID 计数，同一内容的多个平台发行共用 ID。964 条历史发行尚未完成内容关系核对，保留原字段与证据，不计为新增内容版本。
 
-全部 1165 部主目录作品、479 部专题附录作品及100部仅专题输入式冒险书目现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
+全部 1169 部主目录作品、484 部专题附录作品及109部仅专题输入式冒险书目现有可多选的互动方式字段。以文字输入、选项分支、菜单指令、点击调查为基础，另记录阅读、移动、动作、养成、战斗、解谜、节奏等实际操作。首页可按标签筛选，卡片可展开依据；主目录 12 部、附录 7 部资料不足，明确标待核实。本次主要根据既有玩法资料作编辑归纳，并非全部逐版本实机重新核对。定义和维护见 [interaction-model.md](data/interaction-model.md)，全部作品清单见 [interaction-modes.csv](data/interaction-modes.csv)。
 
 | 层级 | JSON 字段 | CSV |
 |---|---|---|
@@ -25,7 +25,7 @@
 
 Enix专题已按1983—2003玩法清单扩充：新增《铃木爆发》1部主库叙事、44部剧情RPG／沟通冒险关联及《星子的冒险》1部仅专题输入书目。现专题主库29部、跨类型45部、输入书目1部，末尾174项玩法参考（含系列、合集，不当独立作品数）。旧输入作品保留历史身份，轻井泽混合键入边界另作说明；新增内容版本记录DQM2伊尔、Wonder Project J2手机会话／插图及SO3导演版角色／事件。详见[本轮核对](data/enix-audit.md)及[专题](enix.html)。
 
-当前收录 **1165 部作品／附带叙事篇目、1362 个内容版本、2356 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
+当前收录 **1169 部作品／附带叙事篇目、1367 个内容版本、2361 条平台发行**，覆盖 1976—2026 年，重点补充了 1970 年代文字冒险的起点、1980—1985 年的早期作品，以及按发行厂商核查的 KID、TYPE-MOON、Key、NOVECT、ANIPLEX.EXE、sprite、まどそふと、ゆずソフト、Innocent Grey、minori、AUGUST、tone work’s、ASa Project、ELF、Silky’s、Leaf、SAGA PLANETS、SMEE、FAVORITE、CUFFS、CUBE、Sphere、ぱれっと、AQUAPLUS、Konami、Chunsoft、世嘉、Spike Chunsoft、Capcom、Sinclair Research、Data East、Nitroplus 和 07th Expansion 等作品。此项目不是完整历史清单；缺乏可靠版本信息的地方保持“待核实”。首发年份取所收录的最早版本；平台移植与重制按所引来源的发行地区记录，尚未逐一列出所有地区的发售时间。早期作品的日期异文与收录原则见 [`data/early-era-notes.md`](data/early-era-notes.md)。
 
 作品主分类是一种检索入口，并非互斥的学术分类：一部恋爱视觉小说也可能属于广义 Galgame。视觉小说的“有声小说”可能只有音乐和音效，配音字段专指游戏内角色人声。
 
@@ -263,3 +263,5 @@ Alicesoft 叙事作品转入主库（2026-10-04）：按专题现有“叙事／
 2026-10-17 [Hudson Soft专题](hudson.html)按原玩法清单扩充至65个作品档案与138项玩法参考：27部主库关联、37部剧情RPG等跨类型、1部输入式书目。新增6部主库叙事与37部关联作，保留旧记录；新增版本仅列ZIRIA的2006新素材与天外II的2003新美术首次批次。圣夜物语沿用ASCII既有身份；Nadia PCE作独立于GAINAX电脑版，Maria归属与Crystal Beans系列名称已核对。详见[审核记录](data/hudson-audit.md)。
 
 2026-10-17 新建[英国Legend专题](legend_uk.html)：按此前三作清单复用《英灵殿》g114，新增《太空大竞赛》1部菜单驱动的角色／策略跨类型关联及1个原作内容身份／1条首批发行。正文2档案、末尾7项参考；《Komplex》仅射击玩法参考，未发行续作和C64计划不作商业发行。新主库叙事0部，主库全部记录与原63专题对象保持；前身1981年9月创业与1983年首作分开，见[核对记录](data/legend-uk-audit.md)。
+
+2026-10-17 新建[美国Legend Entertainment专题](legend_entertainment.html)：按此前17部独立游戏与2项扩展清单核对，新增4部无文字输入主库叙事、5部跨类型关联及9部仅专题输入书目。两部点击冒险也因谜底／人名检索需要输入而排除主库；Xanth、Hoboken首次配音与Return to Na Pali新战役分层归档，XMP竞技及合辑只参考。正文18档案、末尾26行；英国Legend与所有旧记录保持，见[核对记录](data/legend-entertainment-audit.md)。

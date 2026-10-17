@@ -10187,6 +10187,161 @@
           ]
         }
       ]
+    },
+    "legend_entertainment": {
+      "updated": "2026-10-17",
+      "title": "附录：美国Legend Entertainment作品与玩法类型清单",
+      "scope": "17部原清单独立游戏、Return to Na Pali与XMP两项扩展，另列所需Unreal本体、两项CD增补、三项合集与一项技术支援；26行不是26部独立游戏。与英国Legend清单分开。",
+      "groups": [
+        {
+          "title": "早期解析器叙事（1990—1993）",
+          "note": "七作均含文字输入，即使可用词表辅助也仅专题。",
+          "source": "https://www.ifwiki.org/Legend_Entertainment",
+          "rows": [
+            {
+              "workId": "legend-entertainment-spellcasting-101"
+            },
+            {
+              "workId": "legend-entertainment-spellcasting-201"
+            },
+            {
+              "workId": "legend-entertainment-timequest"
+            },
+            {
+              "workId": "legend-entertainment-gateway"
+            },
+            {
+              "workId": "legend-entertainment-spellcasting-301"
+            },
+            {
+              "workId": "legend-entertainment-eric-the-unready"
+            },
+            {
+              "workId": "legend-entertainment-gateway-ii"
+            }
+          ]
+        },
+        {
+          "title": "图形冒险与RPG过渡（1993—1998）",
+          "note": "四部主库、一部RPG关联、两部含文字输入的仅专题书目。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=deathgate",
+          "rows": [
+            {
+              "workId": "g1169"
+            },
+            {
+              "workId": "g1170"
+            },
+            {
+              "workId": "legend-entertainment-hoboken"
+            },
+            {
+              "workId": "g1171"
+            },
+            {
+              "workId": "g1172"
+            },
+            {
+              "workId": "legend-entertainment-callahans"
+            },
+            {
+              "workId": "legend-entertainment-blackstone"
+            }
+          ]
+        },
+        {
+          "title": "太空策略与第一人称剧情战役（1996—2003）",
+          "note": "保持跨类型叙事身份，不混入四类主库。",
+          "source": "https://kathleenbober.com/my-start-in-the-computer-gaming-industry-with-legend-entertainment-company/",
+          "rows": [
+            {
+              "workId": "legend-entertainment-star-control-3"
+            },
+            {
+              "workId": "legend-entertainment-wheel-of-time"
+            },
+            {
+              "workId": "legend-entertainment-unreal-ii"
+            }
+          ]
+        },
+        {
+          "title": "本体归属、内容增补与多人边界",
+          "note": "资料片依附原作，CD新增录音另计内容；竞技扩展不计叙事增补。",
+          "source": "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+          "rows": [
+            {
+              "workId": "legend-entertainment-unreal-na-pali"
+            },
+            {
+              "title": "Companions of Xanth：1994 CD-ROM版",
+              "type": "点击冒险／首次配音增补",
+              "relation": "同一作品新增内容",
+              "note": "相对1993软盘版新增专业演员角色语音；不是仅因CD介质建版。",
+              "source": "https://mocagh.org/legend/legend-catalog6.pdf",
+              "anchor": "g1169"
+            },
+            {
+              "title": "Superhero League of Hoboken：1995 CD-ROM版",
+              "type": "队伍RPG／首次配音增补",
+              "relation": "同一作品新增内容",
+              "note": "CD手册有角色配音表；1995实物发行证据与1994软盘作分开。",
+              "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+              "anchor": "legend-entertainment-hoboken"
+            },
+            {
+              "title": "Unreal Mission Pack I: Return to Na Pali（1999）",
+              "type": "第一人称动作／追加剧情战役",
+              "relation": "Unreal新增内容",
+              "note": "Legend制作的新战役归1998 Unreal本体；本体开发方不是Legend。",
+              "source": "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+              "anchor": "legend-entertainment-unreal-na-pali"
+            },
+            {
+              "title": "Unreal II: eXpanded MultiPlayer（XMP，2003）",
+              "type": "职业与载具／团队竞技",
+              "relation": "玩法参考／排除纯多人对战",
+              "note": "没有新的单人故事战役；与原作合售的Special Edition不重复建作品或叙事内容。",
+              "source": "https://forums.beyondunreal.com/threads/atari-announces-unreal-ii-special-edition.121879/"
+            }
+          ]
+        },
+        {
+          "title": "合集、再版与技术支持",
+          "note": "包装和引擎支援不能扩大独立叙事作品数量。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=lostadventures",
+          "rows": [
+            {
+              "title": "Spellcasting Collection／Spellcasting Party Pak（1993）",
+              "type": "三部解析器冒险合集",
+              "relation": "合集参考／不重复建作",
+              "note": "101、201、301沿用各自书目；集合包装不去掉输入玩法。",
+              "source": "https://mocagh.org/legend/legend-catalog6.pdf"
+            },
+            {
+              "title": "The Lost Adventures of Legend（1996）",
+              "type": "既有冒险合集",
+              "relation": "合集参考／不重复建作",
+              "note": "按原手册所列子作品处理；不因同一张CD再计作品。",
+              "source": "https://www.mocagh.org/legend/lostadv-manual.pdf"
+            },
+            {
+              "title": "The Trophy Case II（1997）",
+              "type": "多厂商游戏合辑",
+              "relation": "合集参考／不重复建作",
+              "note": "内含Shannara等既有游戏；不冒充Legend独立开发新故事。",
+              "source": "https://www.mobygames.com/game/3208/shannara/"
+            },
+            {
+              "title": "Terminator 3: Rise of the Machines（2003）",
+              "type": "动作射击／引擎技术支援",
+              "relation": "仅技术关联／不入叙事正文",
+              "note": "主要开发方Black Ops Entertainment；Legend技术／引擎支援不等于独立开发或发行该作。",
+              "source": "https://www.mobygames.com/company/117/legend-entertainment-company/"
+            }
+          ]
+        }
+      ]
     }
   }
 }
