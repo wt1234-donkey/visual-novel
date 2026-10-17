@@ -58,3 +58,7 @@ Dragon's Keep、Troll's Tale与Mickey's Space Adventure按原厂手册登记菜�
 ## PSK输入与菜单边界（2026-10-16）
 
 Christine、The Byoin、SKAPON为菜单式叙事，新增主库；Lolita II、ALICE、Cosmo Angel与Yellow Lemon仅专题，后者注明关键词会话边界。Final Lolita地图与数值驱动，普通战斗自动，不标战斗指令；RPG单列关联。启动代码、传递密码及数值谜题不等于自由词句输入。全部旧记录保留；主库1094、关联362、仅专题59。具体控制证据及不确定性见psk-audit.md。
+
+## Sierra On-Line独立专题（2026-10-17）
+
+旧35项不重收；新增44部无自由词句输入叙事／预制绘本。Manhunter两作MAD人名查询、Police Quest III／IV警务电脑、Larry 7的Other动词／话题和Gabriel Knight 3的SIDNEY关键词均标文字输入，仅专题。GK1的符号板和鼓语短语表、RAMA数制及固定锁码记谜题操作；安装命令、存档、起名、单次密码不作为解析器。4部在线RPG自由聊天与单机命令解析区分，仍仅专题；Playtoons只归档已有预制故事，共用创作编辑器不重复建作。互动动画细分类增加“互动绘本”，对应翻页／朗读与场景热点，不能伪标剧情分支或视角切换。新主库与RPG发行为原作及已核首次增补；当前主库1138、RPG等关联375、仅专题85。
