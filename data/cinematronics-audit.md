@@ -41,3 +41,15 @@
 ## 验证范围
 
 执行共享数据校验、CSV同步、专题生成一致性与既有筛选测试；确认新专题链接、三个共享作品引用、Cinematronics与Digital Leisure实际发行筛选。原有记录通过ID逐条比较，避免将新规则追溯套用为旧版本删除。
+
+## 玩法清单扩充（2026-10-17）
+
+沿“列出PSK游戏类型清单”原回答的七个范围恢复并补核，末尾共80行／9组。正文仍为g010、g044、g045三部；本轮新增主库作品、内容版本、平台发行均为0。三部原记录已符合无文字输入的叙事范围，不能因“补充数据库”而重建身份。旧输入字段不变，未把直接按键动作误标为自由文字输入。
+
+本社部分保留原清单全部名称，Brix与Zzyzzyxx、Alley Master与Up Your Alley、棒球系列名／再售分别说明，不将参考行统计当作游戏数量。Space Wars展示与商业年、Freeze的1982馆藏与1984—1985年表、Armor Attack及Boxing Bugs的日期异文保留。Freeze的馆藏标签与动作描述冲突，显式说明。
+
+Vectorbeam、后继Leland及同名Cinematronics LLC分别成组；同一创作者或机柜转换不改写发行归属。Thayer’s Quest是RDI作品，故只列归属参考；其膜键盘选择预设项不应直接判为文字解析器。参见[原操作说明](https://dragons-lair-project.com/games/pages/images/tq/TQ%20arcade%20instructions.pdf)。
+
+未发行、原型与仅有宣传单的争议记录不造上市日期。Express Delivery有原厂宣传单，并不足以独立证明量产；Viper原公司史附有疑问，本表保留。1994年LLC的Full Tilt／Space Cadet、Maxis South的益智和未发行Crucible不属于旧厂商叙事补库。
+
+普通再版、高清修复与同捆不扩列；2002新增可玩Gargoyle场景已登记，沿用原证据。全库仍1147部／1342个内容版本／2334条平台发行，63个专题；其余62个专题配置和原10份玩法表保持。

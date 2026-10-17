@@ -31,6 +31,8 @@
 
 ## 厂商集中整理
 
+已扩充 [Cinematronics专题](cinematronics.html)：补齐80行／9组末尾玩法类型清单，区分本社、Vectorbeam、Leland、未发行项目及1994年同名LLC。正文三部无文字输入互动动画已在原库，全部复用；本轮新增作品／内容版本／发行均为0。原2002新增场景内容版保持，普通移植不扩列。详见[范围核对](data/cinematronics-audit.md)。
+
 已扩充[Sinclair Research专题](sinclair.html)：按原游戏类型清单整理117项／9组末尾玩法表；正文10部，复用旧库4部，6部输入式叙事仅专题。Fantasy Games原厂说明确认双篇均须英文词语输入；QL The Adventure与Mordon’s Quest分别复用g089／g137。未确认可新增的无文字输入叙事作品，故主库新增0部、0内容／发行；Journey into Danger保留待核参考。旧作品与其他专题保持，见[核对说明](data/sinclair-audit.md)。
 
 新增[Sierra On-Line独立专题](sierra_on_line.html)：根据“列出PSK游戏类型清单”中的Sierra表及原厂资料补核1983—2001品牌／发行关联，剔除旧早期专题35项。正文84部：复用g061，新增44部无自由词句输入的叙事／预制互动故事，26部混合输入或自由会话书目仅专题，13部剧情RPG／本体增补关联。170项玩法主导或非游戏项目只列参考表；Mother Goose Deluxe与Hellfire有具体新增才计内容。开发／原发行／美国代理年、Playtoons故事与编辑器分开。见[操作、版本与范围审计](data/sierra-on-line-audit.md)。
