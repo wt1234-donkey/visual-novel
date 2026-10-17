@@ -70,3 +70,7 @@ Fantasy Games两作原内页要求用英文词语回答；Adventure A—D同属�
 ## Micro Cabin菜单与输入边界（2026-10-17）
 
 Saga轮换预设英文指令，Seilane选择固定行动；均可入主库。9部新增叙事不含文字输入；13部RPG关联的控制为既有清单归纳。7部输入式书目仅专题，旧3部输入记录复用身份。Puppet Tale未宣称逐页说明书核对；Galpo Club等控制未足仅列参考，不推定无输入。详见microcabin-audit.md。
+
+## Data East输入边界（2026-10-17）
+
+神宫寺七案、Be-Bop为预设菜单；存档续关密码与PASS WORD资料解锁码不算行动文字输入。时之流逝视点自动转换不标可选视角；Mikan／Yume可选视点分别记录。恸哭与Revive用光标、物品和选择推进，Triad Stone为限时动作回应。新增11部主库均无文字输入；9部剧情RPG关联，角色／战车命名不等于解析器。资料不足及玩法核心项目仅列末尾参考，详见dataeast-audit.md。
