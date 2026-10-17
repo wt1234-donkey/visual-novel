@@ -73030,6 +73030,320 @@
         "g088"
       ],
       "legacyCommandNote": "仅复用三部原有星亚瑟输入式记录；本轮未新增输入式主库或修改旧对象。"
+    },
+    {
+      "id": "carry_lab",
+      "name": "Carry Lab（キャリーラボ）",
+      "foundedAt": "1981-05",
+      "foundedSource": "https://www.gamepres.org/pc88/library/carry.htm",
+      "checkedAt": "2026-10-18",
+      "status": "新建Carry Lab专题：复用1部旧作，新增2部无文字输入动作叙事关联、1部仅专题输入书目；主库新增0部",
+      "publisherNote": "Carry Lab于1981年5月在日本成立；本专题按PC-88历史目录与公司资料的月级记录，不补造成立日。它同时经营原创、受托移植和软件工具。Nidecom Carry是与Nideco／Taito合作的发行关联，D4为现存权利目录来源，均不能倒填为所有历史作品的开发方或发行方。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>1部旧主库引用 · 2部新增动作叙事关联 · 1部仅专题输入书目。新增关联共2个原作内容、2条首次发行；主库新增0部。</strong></p>",
+      "scope": "根据“列出Carry Lab（キャリーラボ）游戏类型清单”已整理作品与玩法，补查原厂说明书、FM馆藏与PC历史目录。正文以叙事作品为中心；含文字输入的新作不入主库，动作探索保留跨类型身份；纯射击、体育、棋盘与工具只列末尾参考。",
+      "versionScope": "旧库g103、全部1171部主目录作品、1369个内容版本与2363条平台发行保持原样。两部新增动作关联各登记原作1个内容与1条FDS首发；Mystery Quest海外版与Hydlide系列MZ普通移植未核新内容，不增内容版本或平台发行。",
+      "workIds": [
+        "g103"
+      ],
+      "legacyCommandWorkIds": [
+        "g103"
+      ],
+      "catalogueEntryCount": 7,
+      "entries": [
+        {
+          "title": "Starlight Adventure／星光冒险 PART 1（1983）",
+          "status": "复用旧库身份／不新增输入作品",
+          "reason": "原库g103及全部内容和发行保持；FM馆藏将开发方列为Zero Soft、发行方列为Carry Lab，不能一概写成本社原创。",
+          "source": "https://fm-7.com/museum/products/vjg12a36/",
+          "workIds": [
+            "g103"
+          ]
+        },
+        {
+          "title": "Starlight Adventure II／星光冒险II（FM 1983；PC-88 1984）",
+          "status": "新增仅专题书目",
+          "reason": "含物品词语／命令键入；不新增至主库。不同机种首发年份分别说明。",
+          "source": "https://fm-7.com/museum/products/39yynpef/",
+          "workIds": [],
+          "dossierIds": [
+            "carry-lab-starlight-2"
+          ]
+        },
+        {
+          "title": "ハオ君の不思議な旅（1987）",
+          "status": "新增无文字输入的动作叙事关联",
+          "reason": "魔法学徒试炼、城堡探索与道具收集，以方向键和按钮操作；保留Carry Lab开发与Square／DOG发行的区别。",
+          "source": "https://gamegear.net/media/canonical/console/fds/manual/hao-kun-no-fushigi-na-tabi-japan__32531.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "carry-lab-hao"
+          ]
+        },
+        {
+          "title": "魔塔の崩壊（1988）",
+          "status": "新增无文字输入的动作叙事关联",
+          "reason": "救援、成长装备与限时逃脱；固定按键及物品菜单，不按类型强归文字冒险。",
+          "source": "https://gamemanual.midnightmeattrain.com/entry/%E9%AD%94%E5%A1%94%E3%81%AE%E5%B4%A9%E5%A3%8A",
+          "workIds": [],
+          "relatedIds": [
+            "carry-lab-matou"
+          ]
+        },
+        {
+          "title": "Mystery Quest（北美NES，1989）",
+          "status": "海外调整／只作版本参考",
+          "reason": "与Hao君为同一作品的海外卡带版；修改、删减和地区发行本身不能证明新增叙事或关卡。本轮未建立第二作品／内容版／发行行。",
+          "source": "https://www.thegameisafootarcade.com/wp-content/uploads/2017/02/Mystery-Quest-Game-Manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "carry-lab-hao"
+          ]
+        },
+        {
+          "title": "Hydlide／Hydlide II：MZ移植关联",
+          "status": "第三方RPG／移植参考",
+          "reason": "原作由T&E SOFT制作；Carry Lab负责MZ移植，首作另有本社销售关联。未核MZ首次新增内容，故不以普通移植新建作品或追加发行。",
+          "source": "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1276312.html",
+          "workIds": []
+        },
+        {
+          "title": "动作、射击、体育、棋盘、模拟及实用软件",
+          "status": "末尾玩法参考／不扩叙事正文",
+          "reason": "保留前次类型清单与目录交叉核对，纯玩法作品只列参考。JET、BASE／WICS、Missワープロ等实用或开发工具不当游戏。",
+          "source": "https://d4e.co.jp/lights_cat/carry_lab",
+          "workIds": []
+        }
+      ],
+      "source": "https://d4e.co.jp/lights_cat/carry_lab",
+      "sectionTitle": "从星际营救到魔法试炼与魔塔救援",
+      "catalogueCountLabel": "4个正文档案：1旧库引用＋2动作关联＋1输入书目",
+      "overviewLabel": "正文作品档案（含旧作及输入书目）",
+      "auditTitle": "叙事准入、开发发行与版本边界核对",
+      "auditSourceLabel": "D4历史发行／权利目录",
+      "auditLabel": "4个作品身份及海外版、MZ移植、非叙事类别的范围说明。",
+      "auditNote": "参考表汇编此前清单与已核目录，非逐字聊天备份，也不是厂商全球完整目录。平台年份、目录行数、独立作品数与新增内容数分别计算；不凭游戏英文反馈或画面判断是否需要键入。",
+      "creativeProfile": {
+        "thesis": "编辑观察：Carry Lab的目录以实时动作、射击与移植技术见长；叙事作品呈现从星际营救的文本／图文交互，到家用机上用动作和空间探索完成试炼与救援的变化。",
+        "phases": [
+          {
+            "period": "1981—1984",
+            "heading": "早期微机业务与星际冒险",
+            "analysis": "软件工具、线框射击和街机移植并行；Starlight系列提供营救与道具线索。FM版首作馆藏单列Zero Soft开发，说明本社发行目录不等于本社原创目录。",
+            "basis": "编辑观察",
+            "source": "https://fm-7.com/museum/products/vjg12a36/"
+          },
+          {
+            "period": "1985—1986",
+            "heading": "移植目录中的第三方RPG",
+            "analysis": "Hydlide与II的MZ版本显示Carry Lab的移植参与；T&E SOFT原作的剧情和内容身份仍归原作，普通移植关联不自动增加叙事作品数量。",
+            "basis": "编辑观察",
+            "source": "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1276312.html"
+          },
+          {
+            "period": "1987—1989",
+            "heading": "动作探索承载试炼与救援",
+            "analysis": "Hao君用魔法学徒试炼组织城堡探索，魔塔崩坏用救援、装备和限时逃脱形成目标。动作流程服务于简单故事，但不能因此写成视觉小说；北美Mystery Quest按同一作品关联处理。",
+            "basis": "编辑观察",
+            "source": "https://gamegear.net/media/canonical/console/fds/manual/hao-kun-no-fushigi-na-tabi-japan__32531.pdf"
+          }
+        ]
+      },
+      "workContexts": {
+        "g103": "复用旧库g103及原发行；原来的输入标签与内容对象保持。FM馆藏注明Zero Soft开发、Carry Lab发行；PC版1983年10月是机种目录日期。",
+        "carry-lab-starlight-2": "仅专题输入式书目，不新增至主库，也不建立内容或平台发行数组。FM馆藏记1983年；PC-8801目录记1984年2月，该机种日期不冒充全作品首次年份。",
+        "carry-lab-hao": "无文字输入的跨类型动作叙事，保留实际开发及Square／DOG发行署名。",
+        "carry-lab-matou": "无文字输入的跨类型动作叙事；Pony Canyon发行与说明书Bothtec署名分开。"
+      },
+      "dossierGroups": [
+        {
+          "id": "carry-lab-early",
+          "title": "星光冒险：旧库引用与仅专题书目",
+          "description": "第一作沿用已有身份；第二作含文字输入，只作专题书目，不增主库。FM与PC平台日期另述。",
+          "cardLabel": "输入式书目／历史引用",
+          "workIds": [
+            "g103",
+            "carry-lab-starlight-2"
+          ]
+        },
+        {
+          "id": "carry-lab-action-stories",
+          "title": "新增无文字输入叙事：动作探索与救援",
+          "description": "两部作品存入跨类型叙事关联数据与互动清单，按原作内容及首次发行记录。",
+          "cardLabel": "新增动作叙事关联",
+          "workIds": [
+            "carry-lab-hao",
+            "carry-lab-matou"
+          ]
+        }
+      ],
+      "relatedGames": [
+        {
+          "id": "carry-lab-hao",
+          "title": "Hao君的不可思议之旅",
+          "chineseTitle": "Hao君的不可思议之旅",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ハオ君の不思議な旅",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "动作／叙事关联",
+          "subcategory": "横版平台动作／探索冒险",
+          "genre": "魔法学徒试炼／城堡探索",
+          "characters": [
+            "ハオ（Hao）",
+            "ウィザーズ先生"
+          ],
+          "charactersSource": "https://gamegear.net/media/canonical/console/fds/manual/hao-kun-no-fushigi-na-tabi-japan__32531.pdf",
+          "synopsis": "魔法学徒Hao接受师父的试炼，出发寻找世间最重要的东西；在地表、地下和城堡中探索，收集象征物并学习魔法。",
+          "notes": "Carry Lab开发，DOG品牌／Square发行。以动作和探索推进试炼故事，作为跨类型叙事关联，不归入四类主目录。日本日期采用目录常见的1987-05-11；另有5月1日异文，数据库只登记无争议的年份。1989美版Mystery Quest仅作版本参考，未核新增内容不增版。",
+          "source": "https://gamegear.net/media/canonical/console/fds/manual/hao-kun-no-fushigi-na-tabi-japan__32531.pdf",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "日版原厂说明书的操作页列方向键移动／蹲伏、A跳跃和B施放魔法，城堡中通过平台、破坏方块及收集道具探索；攻略记录道具和象征物的进程。没有键入行动词句的解析器。启动／存档界面不作为文字输入玩法；未将魔法弹自动归为玩家准星瞄准。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://gamegear.net/media/canonical/console/fds/manual/hao-kun-no-fushigi-na-tabi-japan__32531.pdf",
+            "https://w.atwiki.jp/famicomall/pages/859.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "carry-lab-hao-c-original",
+              "workId": "carry-lab-hao",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987年日本Famicom Disk System原作首批内容；Carry Lab开发，Square的DOG品牌发行。仅登记年份，保留5月1日与5月11日的目录日期异文，不把1989北美卡带版年份当作原作年份。",
+              "source": "https://gamefaqs.gamespot.com/games/company/75841-carry-lab",
+              "evidenceReleaseIds": [
+                "carry-lab-hao-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "carry-lab-hao-v-original",
+              "workId": "carry-lab-hao",
+              "year": 1987,
+              "platform": "Famicom Disk System",
+              "publisher": "Square",
+              "publisherCompanies": [
+                "Square"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1987年日本Famicom Disk System原作首批内容；Carry Lab开发，Square的DOG品牌发行。仅登记年份，保留5月1日与5月11日的目录日期异文，不把1989北美卡带版年份当作原作年份。",
+              "source": "https://gamefaqs.gamespot.com/games/company/75841-carry-lab",
+              "contentVersionId": "carry-lab-hao-c-original",
+              "contentRelation": "original",
+              "contentNote": "只记录原作首批；未核具体首次内容增量的移植、海外调整或再发行不追加。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "carry-lab-matou",
+          "title": "魔塔崩坏",
+          "chineseTitle": "魔塔崩坏",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "魔塔の崩壊",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "动作／叙事关联",
+          "subcategory": "横版动作冒险／成长探索",
+          "genre": "巴别塔救援／限时逃脱",
+          "characters": [
+            "塔中救援者（玩家）",
+            "被囚的恋人"
+          ],
+          "charactersSource": "https://gamemanual.midnightmeattrain.com/entry/%E9%AD%94%E5%A1%94%E3%81%AE%E5%B4%A9%E5%A3%8A",
+          "synopsis": "玩家为救出被囚的恋人进入魔物盘踞的巴别塔，寻找武器与通路，在最终对决后赶在魔塔崩塌前逃离。",
+          "notes": "Carry Lab开发，Pony Canyon发行；说明书另有Bothtec署名，开发／协力与发行不能互换。拥有成长、装备及救援结局，以动作探索为主，单列跨类型叙事。未为后续镜像、汉化或重发建立内容版本。",
+          "source": "https://gamemanual.midnightmeattrain.com/entry/%E9%AD%94%E5%A1%94%E3%81%AE%E5%B4%A9%E5%A3%8A",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "原厂说明书操作页列方向键移动、攀爬、蹲伏与开宝箱，A跳跃、B攻击、下+B使用攻击道具；SELECT打开道具／装备指令。救援后需在倒计时内完成最终战并逃出。使用固定动作和物品菜单，无自由词句解析器；成长数值不等于回合战斗指令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://cdn-ak.f.st-hatena.com/images/fotolife/j/jackallsasaki/20210929/20210929003439.jpg",
+            "https://w.atwiki.jp/famicomall/pages/815.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "carry-lab-matou-c-original",
+              "workId": "carry-lab-matou",
+              "label": "原作／首批内容",
+              "firstYear": 1988,
+              "basis": "original",
+              "evidence": "1988年9月2日日本Famicom Disk System原作首批；Carry Lab开发、Pony Canyon发行。原厂说明书与实机操作记录支持动作探索、装备与救援／逃脱结局；本轮不据画面音乐推断角色配音。",
+              "source": "https://gamefaqs.gamespot.com/games/company/75841-carry-lab",
+              "evidenceReleaseIds": [
+                "carry-lab-matou-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "carry-lab-matou-v-original",
+              "workId": "carry-lab-matou",
+              "year": 1988,
+              "platform": "Famicom Disk System",
+              "publisher": "Pony Canyon",
+              "publisherCompanies": [
+                "Pony Canyon"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1988年9月2日日本Famicom Disk System原作首批；Carry Lab开发、Pony Canyon发行。原厂说明书与实机操作记录支持动作探索、装备与救援／逃脱结局；本轮不据画面音乐推断角色配音。",
+              "source": "https://gamefaqs.gamespot.com/games/company/75841-carry-lab",
+              "contentVersionId": "carry-lab-matou-c-original",
+              "contentRelation": "original",
+              "contentNote": "只记录原作首批；未核具体首次内容增量的移植、海外调整或再发行不追加。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "dossierOnlyWorks": [
+        {
+          "id": "carry-lab-starlight-2",
+          "title": "星光冒险II",
+          "chineseTitle": "星光冒险II",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "スターライト・アドベンチャーⅡ",
+          "titleAliases": [],
+          "firstYear": 1983,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "科幻营救／指令与道具解谜",
+          "characters": [
+            "旅行者（玩家）",
+            "シャン",
+            "シェリル"
+          ],
+          "charactersSource": "https://fm-7.com/museum/products/39yynpef/",
+          "synopsis": "旅行者往返アイリス与RANDOM，向沿途人物交换道具，营救シャン和シェリル，并设法关闭危险的行星系统。",
+          "notes": "仅专题输入式书目，不新增至主库，也不建立内容或平台发行数组。FM馆藏记1983年；PC-8801目录记1984年2月，该机种日期不冒充全作品首次年份。",
+          "source": "https://fm-7.com/museum/products/39yynpef/",
+          "interactionModes": [
+            "文字输入",
+            "选项分支",
+            "谜题操作"
+          ],
+          "interactionNote": "图文流程包含方向／Y-N回答及键入所需物品LEFEX等词语的交互；另有计算机指令。按物品词语／命令键入判为文字输入，不仅凭角色起名、牢门密码或一次性代码作判断。主要操作参考图文攻略，未声称逐平台实机验证。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www5d.biglobe.ne.jp/~object/sla2clip/sla2.html",
+            "https://oldavg.blog.shinobi.jp/さ～そ%20-18-%E3%80%80スターライトアドベンチャー2/スターライトアドベンチャー2攻略%E3%80%80-完全ネタバレ-"
+          ]
+        }
+      ]
     }
   ],
   "schemaVersion": 2,
