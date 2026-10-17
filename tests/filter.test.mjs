@@ -1028,7 +1028,7 @@ test('Hudson reuses originals, separates independent afterstories and credits co
 test('Enix seven specified additions preserve command scope, action subtype and actual Riven publisher',()=>{
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='enix');
   const ids=['g996','g997','g998','g999','g1000','g1001','g1002'];
-  assert.equal(dossier.workIds.length,28);
+  assert.equal(dossier.workIds.length,29);
   assert.ok(ids.every(id=>dossier.workIds.includes(id)));
   assert.deepEqual(dossier.authorizedCommandWorkIds,['g996','g999']);
   assert.ok(dossier.commandAuthorizationNote);
