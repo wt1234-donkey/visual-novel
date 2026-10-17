@@ -112,7 +112,7 @@ def gameplay_appendix(company):
                       '<div class="audit-scroll"><table><thead><tr><th>作品／项目</th><th>玩法／游戏类型</th><th>专题关系与说明</th><th>资料</th></tr></thead>'
                       f'<tbody>\n{"\n".join(rows)}\n</tbody></table></div></section>')
     count = sum(len(g['rows']) for g in appendix['groups'])
-    return (f'<section class="company-audit gameplay-appendix" id="gameplay-catalogue"><p class="eyebrow">GAMEPLAY REFERENCE · {escape(gameplay_catalogues["updated"])}</p>'
+    return (f'<section class="company-audit gameplay-appendix" id="gameplay-catalogue"><p class="eyebrow">GAMEPLAY REFERENCE · {escape(appendix.get("updated", gameplay_catalogues["updated"]))}</p>'
             f'<h2>{escape(appendix["title"])}</h2><p>{escape(appendix["scope"])}</p>'
             f'<p class="scope-note">{count}个清单项目 · {len(appendix["groups"])}组。{escape(gameplay_catalogues["note"])}</p>'
             '<p class="scope-note">类型为此前清单与现有资料的玩法概览，不宣称本次对每个平台逐项重新验证。分组资料用于目录与归属参考；具体操作依据见有正文记录的作品。未逐项核定的年份不补造。</p>'
