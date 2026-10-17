@@ -1002,9 +1002,9 @@ test('Hudson reuses originals, separates independent afterstories and credits co
   assert.equal(dossier.foundedAt,'1973-05-18');
   assert.ok(coverage.indexOf(dossier)>coverage.findIndex(c=>c.id==='konami'));
   assert.ok(coverage.indexOf(dossier)<coverage.findIndex(c=>c.id==='sinclair'));
-  assert.equal(dossier.workIds.length,21);
-  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,26);
-  assert.equal(publisherWorkCounts(data).get('Hudson Soft（哈德森）'),21);
+  assert.equal(dossier.workIds.length,27);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,32);
+  assert.equal(publisherWorkCounts(data).get('Hudson Soft（哈德森）'),26);
   for(const id of ['g074','g077','g019','g020'])assert.ok(dossier.workIds.includes(id));
   const murder=data.platformReleases.filter(v=>v.workId==='g942');
   assert.equal(murder.length,2);
