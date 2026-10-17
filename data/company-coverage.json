@@ -38388,9 +38388,9 @@
       "foundedSource": "https://allincolorforaquarter.blogspot.com/2012/11/the-ultimate-so-far-history-of.html",
       "incorporatedAt": "1975-05-13",
       "incorporatedSource": "https://allincolorforaquarter.blogspot.com/2013/10/the-ultimate-so-far-history-of-allied.html",
-      "checkedAt": "2026-10-13",
-      "status": "复用3部作品，新增1条有内容增量的版本",
-      "scope": "聚焦Cinematronics的两部已发行激光影碟互动动画，并关联后继公司Leland发行的龙穴II。三部作品均复用原库；不是全公司街机产品目录，也不将系列所有他社改编归给本公司。",
+      "checkedAt": "2026-10-17",
+      "status": "三部叙事身份已入库；补齐末尾玩法分类清单",
+      "scope": "正文保留三部无文字输入互动动画：Cinematronics发行两部与后继Leland的一部。末尾新增80行／9组玩法参考，动作、射击、体育、赛车、棋盘、益智及未发行项目不扩入正文；1994年同名公司单独标识。本轮未发现此范围尚缺的已发行叙事，主库不重复新增。",
       "versionScope": "保留3条既有首发记录，仅为龙穴历险记补入2002年20周年版新增可玩场景记录。后发版须有可核实的新内容；普通移植、高清修复、同捆、难度与按键调整不凭发售次数增行，未核差异列核对清单。",
       "versionPanelLabel": "条发行／内容记录",
       "versionCountLabel": "首发与新增内容记录",
@@ -38407,10 +38407,10 @@
       ],
       "catalogueEntryCount": 3,
       "source": "https://allincolorforaquarter.blogspot.com/2012/11/the-ultimate-so-far-history-of.html",
-      "auditTitle": "成立时间、实际发行与新增场景核对",
+      "auditTitle": "作品范围、实际发行与新增场景核对",
       "auditSourceLabel": "公司历史研究",
-      "auditLabel": "三部共享作品及后版、同名公司与非叙事产品的边界。",
-      "auditNote": "公司史采用历史研究与原始章程扫描，版本增量采用原版说明书和发行商访谈。详细核对见data/cinematronics-audit.md。",
+      "auditLabel": "三部正文及末尾完整玩法分类参考；本轮无重复补库。",
+      "auditNote": "沿用原有内容差异与来源证据；原清单的名称、别名、授权、原型与后继关系在末尾表逐项说明。年份异文不作无依据统一。详细见data/cinematronics-audit.md。",
       "sectionTitle": "从奇幻城堡、太空营救到时间旅行",
       "description": "Cinematronics社专题：复用龙穴历险记、太空王牌及后继时期龙穴II，新增2002周年版可玩场景记录，实际发行方分别归档。",
       "creativeProfile": {
@@ -38527,6 +38527,572 @@
           "reason": "未发行原型不计发行。龙穴家用动作改编、他社Escape from Singe’s Castle等需另查作品身份；矢量射击、体育和赛车不因同一厂商自动纳入四类叙事库。",
           "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
           "workIds": []
+        },
+        {
+          "title": "Video Amusement Game Table",
+          "status": "玩法参考／不收正文",
+          "reason": "球拍对打／Pong类；1975；早期桌式产品；存在未具名Pong克隆的记载，不据名称单建叙事身份。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Flipper Ball",
+          "status": "玩法参考／不收正文",
+          "reason": "电子弹珠；1976（部分年表存疑）；挡板控制与碰撞计分。",
+          "source": "https://www.arcade-museum.com/Videogame/flipper-ball",
+          "workIds": []
+        },
+        {
+          "title": "Embargo",
+          "status": "玩法参考／不收正文",
+          "reason": "海战／迷宫对抗；1977；船只交锋与得分为核心。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Space Wars",
+          "status": "玩法参考／不收正文",
+          "reason": "双人太空对射；1977展示／1978商业年表；Larry Rosenthal设计；展示与上市日期区分。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Starhawk",
+          "status": "玩法参考／不收正文",
+          "reason": "太空射击；1979；准星射击与生存得分。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Sundance",
+          "status": "玩法参考／不收正文",
+          "reason": "反应／消除射击；1979；上下网格间捕捉目标、射击与计分。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Warrior",
+          "status": "玩法参考／不收正文",
+          "reason": "双人剑斗；1979；实时近身对战；有奇幻角色不等于剧情RPG。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Tail Gunner",
+          "status": "玩法参考／不收正文",
+          "reason": "第一人称防御射击；1979／1980异文；Vectorbeam开发沿革；发行时间与标签归属保留异文。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Rip Off",
+          "status": "玩法参考／不收正文",
+          "reason": "合作防御射击；1980；保护资源并击退敌人。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Star Castle",
+          "status": "玩法参考／不收正文",
+          "reason": "环形防御射击；1980；击穿旋转防护圈、射击目标。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Armor Attack",
+          "status": "玩法参考／不收正文",
+          "reason": "俯视坦克射击；1981（馆藏有1980）；城镇地形中的即时射击，不是文字或菜单叙事。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Solar Quest",
+          "status": "玩法参考／不收正文",
+          "reason": "多方向太空射击；1981；躲避恒星并消灭敌机。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Vanguard（桌式授权）",
+          "status": "玩法参考／不收正文",
+          "reason": "横向／多方向射击；1981；开发与其他地区／机柜授权不能合并为本社原创；补充桌式发行边界。",
+          "source": "https://en.wikipedia.org/wiki/Cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Boxing Bugs",
+          "status": "玩法参考／不收正文",
+          "reason": "固定防御射击；1982（馆藏有1981）；昆虫题材与射击计分。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Naughty Boy",
+          "status": "玩法参考／不收正文",
+          "reason": "迷宫动作／投掷；1982；Jaleco开发的授权街机。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Jack the Giantkiller",
+          "status": "玩法参考／不收正文",
+          "reason": "平台动作；1982；童话营救背景，核心为跳跃与动作过关，不据题材补叙事主库。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Zzyzzyxx",
+          "status": "玩法参考／不收正文",
+          "reason": "迷宫／收集动作；1982；AMS开发；后改名Brix，同一身份的名称分列参考。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Brix",
+          "status": "玩法参考／不收正文",
+          "reason": "迷宫／收集动作；1983目录标签；Zzyzzyxx的改名，不作为独立续作或新内容版本。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "War of the Worlds",
+          "status": "玩法参考／不收正文",
+          "reason": "矢量射击；1982／1983异文；原清单1982；商业年表另记1983，套件发行不等于新剧情。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Cosmic Chasm",
+          "status": "玩法参考／不收正文",
+          "reason": "迷宫射击；1983；从GCE作品发展而来；探索空间以射击关卡为核心。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Scion",
+          "status": "玩法参考／不收正文",
+          "reason": "纵向卷轴射击；1984；Seibu Denshi授权作品，保留原开发关系。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Freeze",
+          "status": "玩法参考／不收正文",
+          "reason": "平台动作／资源补充；1984—1985（馆藏另记1982）；喷火器与喷气背包脱离冰地；馆藏类型标益智，与场景描述不一致，本表以实际动作概览并保留争议。",
+          "source": "https://www.arcade-museum.com/Videogame/freeze--cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "World Series Baseball",
+          "status": "玩法参考／不收正文",
+          "reason": "棒球体育；1984原清单标签；与World Series: The Season／Baseball: The Season的目录命名与年份交叉，暂不强行认定另一部独立作品。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Cerberus",
+          "status": "玩法参考／不收正文",
+          "reason": "射击；1985；射击与关卡得分。",
+          "source": "https://flyers.arcade-museum.com/videogames/show/180",
+          "workIds": []
+        },
+        {
+          "title": "Mayhem 2002",
+          "status": "玩法参考／不收正文",
+          "reason": "未来竞技／球类对抗；1985；核心为竞技规则；2002是标题，不是上市年份。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Power Play",
+          "status": "玩法参考／不收正文",
+          "reason": "冰球体育；1985；以球场对抗为主。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "World Series: The Season",
+          "status": "玩法参考／不收正文",
+          "reason": "棒球体育；1985；运动规则与比赛模拟。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Baseball: The Season",
+          "status": "玩法参考／不收正文",
+          "reason": "棒球体育／名称对照；1985原清单标签；馆藏另有此名，不把标题差异直接认定新内容。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Alley Master",
+          "status": "玩法参考／不收正文",
+          "reason": "保龄球体育；1986（馆藏有1988）；原清单与发行年表采用1986，保留馆藏异文。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Danger Zone",
+          "status": "玩法参考／不收正文",
+          "reason": "瞄准射击；1986；以移动火力／准星射击为主。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Redline Racer",
+          "status": "玩法参考／不收正文",
+          "reason": "赛车竞速；1986；驾驶竞速与计时。",
+          "source": "https://www.arcade-museum.com/company/cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Up Your Alley",
+          "status": "玩法参考／不收正文",
+          "reason": "保龄球体育／别名对照；1986—1987原清单标签；历史年表与Alley Master并记，不将别名造为新增叙事身份。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Baseball: The Season II",
+          "status": "玩法参考／不收正文",
+          "reason": "棒球体育／后继发行；1987；Leland时期记录，历史年表指出与World Series: The Season同游戏；不作为剧情续篇。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Space War（Vectorbeam）",
+          "status": "玩法参考／不收正文",
+          "reason": "双人太空对射；1978；Vectorbeam标题与Cinematronics的Space Wars分别说明，非叙事。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Scramble（Vectorbeam）",
+          "status": "玩法参考／不收正文",
+          "reason": "矢量动作／射击；1978；不是Konami于1981年推出的同名卷轴射击。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Speed Freak",
+          "status": "玩法参考／不收正文",
+          "reason": "第一人称赛车；1979；Vectorbeam驾驶竞速。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Barrier",
+          "status": "玩法参考／不收正文",
+          "reason": "躲避／网格动作；1979；Vectorbeam发行标签，保留公司关系。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Tailgunner II",
+          "status": "玩法参考／不收正文",
+          "reason": "第一人称射击／后续改装；1980；Exidy承接Vectorbeam后的产品，不是Cinematronics叙事新作。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Quarterback",
+          "status": "玩法参考／不收正文",
+          "reason": "美式足球；1987；后继Leland。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Double Play: Super Baseball Home Run Derby",
+          "status": "玩法参考／不收正文",
+          "reason": "棒球体育；1987；后继Leland；名称排列存在差异。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Strike Zone Baseball",
+          "status": "玩法参考／不收正文",
+          "reason": "棒球体育；1988；后继Leland。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "John Elway’s Team Quarterback",
+          "status": "玩法参考／不收正文",
+          "reason": "美式足球；1988；后继Leland。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "All American Football",
+          "status": "玩法参考／不收正文",
+          "reason": "美式足球；1988／1989异文；沿用后继身份，年份争议不改变类型。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Ironman Ivan Stewart’s Super Off Road",
+          "status": "玩法参考／不收正文",
+          "reason": "越野赛车；1989；后继Leland。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "World Soccer Finals",
+          "status": "玩法参考／不收正文",
+          "reason": "足球体育；1990；后继Leland。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Pig Out: Dine Like a Swine",
+          "status": "玩法参考／不收正文",
+          "reason": "平台动作；1990；多人平台动作，不因角色设定补为叙事作品。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Ataxx / Attax",
+          "status": "玩法参考／不收正文",
+          "reason": "棋盘策略；1990／1991目录异文；黑白棋式规则对战；本表保留年表拼写差异。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Brute Force",
+          "status": "玩法参考／不收正文",
+          "reason": "清版动作；1991；后继Leland的即时动作。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Danny Sullivan’s Indy Heat",
+          "status": "玩法参考／不收正文",
+          "reason": "赛车竞速；1991；后继Leland。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Oops!（Vectorbeam）",
+          "status": "玩法参考／不收正文",
+          "reason": "原型／玩法待核；未发行；矢量项目，未据技术推定完整玩法。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Doctor Strange",
+          "status": "玩法参考／不收正文",
+          "reason": "角色战斗概念；约1980／未发行；以漫画人物为题材的方案，不是已发行叙事。",
+          "source": "https://en.wikipedia.org/wiki/Cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Catch and Throw",
+          "status": "玩法参考／不收正文",
+          "reason": "动作概念；约1980／未发行；早期玩法概念；不把后来的Reactor倒记为Cinematronics发行。",
+          "source": "https://en.wikipedia.org/wiki/Cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Sentinel",
+          "status": "玩法参考／不收正文",
+          "reason": "固定炮塔射击；约1981／未发行；与Boxing Bugs开发沿革相关，不视作已发售独立叙事。",
+          "source": "https://en.wikipedia.org/wiki/Cinematronics",
+          "workIds": []
+        },
+        {
+          "title": "Clown Skeet",
+          "status": "玩法参考／不收正文",
+          "reason": "射击原型；约1981／未发行；仅列原型参考。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Outpost",
+          "status": "玩法参考／不收正文",
+          "reason": "原型／玩法待核；约1980—1982／未发行；资料不足，不推定剧情性质。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Cutter",
+          "status": "玩法参考／不收正文",
+          "reason": "动作／破坏蛛网概念；约1982—1983／未发行；商业首发未确认。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Intrepid",
+          "status": "玩法参考／不收正文",
+          "reason": "原型／玩法待核；约1982／未发行；不与其他厂商同名已发行游戏混同。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "未具名鱼雷艇项目",
+          "status": "玩法参考／不收正文",
+          "reason": "原型／玩法待核；约1982／未发行；历史叙述中的描述性标签，不作为正式游戏名。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "未具名自生成迷宫项目",
+          "status": "玩法参考／不收正文",
+          "reason": "迷宫概念／细节待核；约1982／未发行；不以描述性名称建立正式作品。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Hovercraft",
+          "status": "玩法参考／不收正文",
+          "reason": "矢量动作／立体显示原型；约1983／未发行；曾测试的原型，不以馆藏条目推定商业发售。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Express Delivery",
+          "status": "玩法参考／不收正文",
+          "reason": "俯视驾驶／迷宫动作；1984／商业状态争议；有原厂宣传单，但宣传不直接证明量产发行；列争议参考。",
+          "source": "https://flyers.arcade-museum.com/videogames/show/3391",
+          "workIds": []
+        },
+        {
+          "title": "Striker",
+          "status": "玩法参考／不收正文",
+          "reason": "四人竞技／冰球原型；约1986／未发行；Power Play四人方案。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Side Gunner",
+          "status": "玩法参考／不收正文",
+          "reason": "射击改装计划；约1987／计划；Danger Zone相关改装，预告不计上市。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Viper",
+          "status": "玩法参考／不收正文",
+          "reason": "原型／玩法待核；约1988／状态存疑；原历史年表本身附发行疑问，不删除疑问。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Asylum",
+          "status": "玩法参考／不收正文",
+          "reason": "原型／玩法待核；约1991／未发行；后继阶段记录；未确认已发行叙事。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Infomania / Reflex",
+          "status": "玩法参考／不收正文",
+          "reason": "原型／玩法待核；年份未核／状态存疑；仅见开发署名记录，不能据名称猜成知识问答或叙事。",
+          "source": "https://allincolorforaquarter.blogspot.com/2013/02/the-ultimate-so-far-history-of_19.html",
+          "workIds": []
+        },
+        {
+          "title": "Full Tilt! Pinball",
+          "status": "玩法参考／不收正文",
+          "reason": "弹珠模拟；1995／1996地区目录异文；同名LLC开发，Maxis发行；非旧街机公司。",
+          "source": "https://www.mobygames.com/company/11402/maxis-south/",
+          "workIds": []
+        },
+        {
+          "title": "3D Pinball for Windows – Space Cadet",
+          "status": "玩法参考／不收正文",
+          "reason": "弹珠模拟／单桌版；1995起；同名LLC相关Windows产品；无叙事卡。",
+          "source": "https://www.pcgamingwiki.com/wiki/Company%3AMaxis_South",
+          "workIds": []
+        },
+        {
+          "title": "Full Tilt! 2 Pinball",
+          "status": "玩法参考／不收正文",
+          "reason": "弹珠模拟；1996；同名LLC／Maxis South沿革。",
+          "source": "https://www.mobygames.com/company/11402/maxis-south/",
+          "workIds": []
+        },
+        {
+          "title": "Tritryst",
+          "status": "玩法参考／不收正文",
+          "reason": "方块益智；1996；同名LLC开发，非旧街机公司。",
+          "source": "https://www.classicdosgames.com/company/cinematronics.html",
+          "workIds": []
+        },
+        {
+          "title": "Jack Nicklaus 4",
+          "status": "玩法参考／不收正文",
+          "reason": "高尔夫模拟；1997；同名LLC开发关联，Accolade发行，不倒归1975年厂商。",
+          "source": "https://www.classicdosgames.com/company/cinematronics.html",
+          "workIds": []
+        },
+        {
+          "title": "Marble Drop",
+          "status": "玩法参考／不收正文",
+          "reason": "轨道／物理益智；1997；Maxis South时期，非叙事。",
+          "source": "https://www.mobygames.com/company/11402/maxis-south/",
+          "workIds": []
+        },
+        {
+          "title": "Crucible",
+          "status": "玩法参考／不收正文",
+          "reason": "动作RPG计划；未发行；同名公司后继阶段未发行项目，不补为已发行剧情RPG。",
+          "source": "https://videogamegeek.com/videogamepublisher/13417/cinematronics-llc",
+          "workIds": []
+        },
+        {
+          "title": "Thayer’s Quest",
+          "status": "玩法参考／不收正文",
+          "reason": "RDI选择式激光影碟冒险；1984；RDI Video Systems作品；可转换Dragon’s Lair机柜不等于Cinematronics发行。膜键盘按预设项选择，不能仅因有键盘就认定行动文字输入；本轮因公司归属只列参考。",
+          "source": "https://www.dragons-lair-project.com/games/pages/tq.asp",
+          "workIds": []
+        },
+        {
+          "title": "Space Ace（Leland转换套件）",
+          "status": "玩法参考／不收正文",
+          "reason": "互动动画／限时反应；1991；复用g044身份；调整斜向输入与难度选项，不据此新建内容版本。",
+          "source": "https://www.dragons-lair-project.com/games/pages/sa.asp",
+          "workIds": []
+        },
+        {
+          "title": "Dragon’s Lair 20th Anniversary Special Edition",
+          "status": "玩法参考／不收正文",
+          "reason": "互动动画／新增可玩场景；2002；新增Gargoyle内容已在g010登记，沿用旧版，不能重复补录。",
+          "source": "https://mocagh.org/miscgame/dragonslair20th-manual.pdf",
+          "workIds": []
+        },
+        {
+          "title": "DVD／高清／现代平台及三部曲合集",
+          "status": "玩法参考／不收正文",
+          "reason": "载体／再发行参考；各年；普通移植、清理调色、分辨率与合集包装不直接等于新增游戏内内容。",
+          "source": "https://www.dragons-lair-project.com/games/pages/sa.asp",
+          "workIds": []
+        }
+      ],
+      "catalogueCountLabel": "3部旧库复用 · 本轮0部新增 · 末尾玩法表",
+      "workContexts": {
+        "g010": "Cinematronics 1983年发行；手绘动画中的限时动作回应，非文字指令输入。2002年已登记新增场景不重复增列。",
+        "g044": "Cinematronics 1984年发行；1983年动画完成不作为商业发售年。以限时动作回应推进，非自由输入解析器。",
+        "g045": "后继Leland 1991年发行，沿用旧库身份与署名；早期制作／测试不改写为Cinematronics已发行版本。"
+      },
+      "dossierGroups": [
+        {
+          "id": "cinema-original",
+          "title": "Cinematronics本社时期",
+          "description": "两部已发行互动动画；输入动作对应动画场景，不是自由词句解析。",
+          "cardLabel": "本社发行",
+          "workIds": [
+            "g010",
+            "g044"
+          ]
+        },
+        {
+          "id": "cinema-leland",
+          "title": "后继Leland关联",
+          "description": "保留1991年发行主体；不以早年筹备日期重建一部作品。",
+          "cardLabel": "后继关联",
+          "workIds": [
+            "g045"
+          ]
         }
       ]
     },
