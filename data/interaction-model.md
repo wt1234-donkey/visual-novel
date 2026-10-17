@@ -86,3 +86,7 @@ Saga轮换预设英文指令，Seilane选择固定行动；均可入主库。9�
 ## 英国Legend输入与菜单边界（2026-10-17）
 
 《英灵殿》复用旧输入式g114，不重复新建。The Great Space Race依据同期评测记录菜单指令、资源经营与战术策略，不贴直接驾驶、即时射击或预录影片分支；1部新跨类型关联无自由词句输入。Komplex纯射击仅玩法参考，Komplex City恢复版与Valhalla 2构想不作商业发行。主库无符合条件的新叙事，所有旧记录保留。详见legend-uk-audit.md。
+
+## 美国Legend Entertainment输入与图形冒险边界（2026-10-17）
+
+新增4部主库与5部跨类型叙事关联；七部早期解析器、Callahan的谜底输入及Blackstone的患者人名检索共9部仅专题。固定动词构句、Shannara交物品答谜、魔法符文与系统存档名分别判断，不能按图形界面推定无文字输入。Unreal本体实际开发者和Legend制作的Na Pali新战役分开；XMP竞技仅参考。当前主库1169、跨类型关联484、仅专题109，见legend-entertainment-audit.md。

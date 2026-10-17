@@ -69506,6 +69506,1043 @@
           ]
         }
       ]
+    },
+    {
+      "id": "legend_entertainment",
+      "name": "Legend Entertainment",
+      "foundedAt": "1989",
+      "foundedSource": "https://www.bobbatesllc.com/work-bbatesllc/",
+      "checkedAt": "2026-10-17",
+      "status": "美国Legend Entertainment专题：新增4部无文字输入主库、5部跨类型关联；9部输入式作品仅专题",
+      "publisherNote": "美国Legend Entertainment由Bob Bates与Mike Verdu于1989年创立，位于弗吉尼亚州；Bob Bates本人履历确认1989—2002联合经营、1998由GT Interactive收购、2004年1月结束。与英国MiCROL／Legend完全分开。开发、首发出版及现代商店署名逐项区分：Shannara由Legend发行并统筹外部开发；Callahan由Take-Two、Blackstone由Red Orb、Star Control 3由Accolade、后期剧情动作由GT或Infogrames发行。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>4部无文字输入主库 · 5部跨类型叙事关联 · 9部仅专题输入书目。18个正文档案，原清单17部独立游戏与2项扩展逐项对应。</strong></p>",
+      "scope": "根据“列出PSK游戏类型清单”项目的美国Legend Entertainment清单建立。早期七部解析器及两部含键入环节的图形冒险仅书目；无文字输入的四部冒险进入主库，RPG、策略、剧情动作另列关联。Unreal本体仅为Legend资料片建立正确归属，不声称由Legend开发。",
+      "versionScope": "原1165部主库、1362个内容身份、2356条平台发行及64个专题对象全部保留。本轮主库新增4部／5个内容／5条首批发行；关联新增5部／7个内容／7条首批发行。三项增补为Xanth和Hoboken首次配音、Return to Na Pali首次新战役；普通移植与合辑不扩列。",
+      "workIds": [
+        "g1169",
+        "g1170",
+        "g1171",
+        "g1172"
+      ],
+      "publisherWorkIds": [
+        "g1169",
+        "g1170",
+        "g1171",
+        "g1172"
+      ],
+      "relatedGames": [
+        {
+          "id": "legend-entertainment-hoboken",
+          "title": "霍博肯超级英雄联盟",
+          "chineseTitle": "霍博肯超级英雄联盟",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Superhero League of Hoboken",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "RPG／叙事关联",
+          "subcategory": "队伍RPG／点击冒险",
+          "genre": "末日喜剧RPG／冒险解谜",
+          "characters": [
+            "The Crimson Tape",
+            "Tropical Oil Man",
+            "Princess Glovebox",
+            "Dr. Entropy"
+          ],
+          "charactersSource": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+          "synopsis": "核灾变后的美国东北部出现一群能力古怪的超级英雄。玩家带队接受联盟任务，利用成员的特长解决荒诞事件并对抗Dr. Entropy。",
+          "notes": "Legend开发并发行。战斗、人物数值与队伍成长单列RPG关联；1995光盘版首次角色语音另计增补，不把1994制作署年当成CD首发年。",
+          "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "点击调查",
+            "战斗指令",
+            "谜题操作"
+          ],
+          "interactionNote": "手册印刷页10—12说明固定动词、场景和物品组合行动，选择成员与超能力；另有菜单战斗和成长系统。屏幕出现英文命令行不等于自然语言键入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/legend/hoboken-alt-manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "legend-entertainment-hoboken-c-original",
+              "workId": "legend-entertainment-hoboken",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "原作首批内容。Legend开发并发行。战斗、人物数值与队伍成长单列RPG关联；1995光盘版首次角色语音另计增补，不把1994制作署年当成CD首发年。",
+              "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+              "evidenceReleaseIds": [
+                "legend-entertainment-hoboken-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "legend-entertainment-hoboken-c-cd-voice",
+              "workId": "legend-entertainment-hoboken",
+              "label": "光盘版／首次角色配音",
+              "firstYear": 1995,
+              "basis": "added",
+              "evidence": "相对1994软盘原作，1995北美CD批次加入角色录音。CD手册单列配音演员与角色表，实物发行目录记1995。",
+              "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+              "evidenceReleaseIds": [
+                "legend-entertainment-hoboken-v-cd-voice"
+              ],
+              "addedContent": [
+                {
+                  "description": "新增超级英雄、敌人与NPC的数字语音，手册列出配音演员及角色对应，录音属于具体内容增量。",
+                  "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf"
+                }
+              ],
+              "comparedTo": "legend-entertainment-hoboken-c-original"
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "legend-entertainment-hoboken-v-original",
+              "workId": "legend-entertainment-hoboken",
+              "year": 1994,
+              "platform": "MS-DOS",
+              "publisher": "Legend Entertainment",
+              "publisherCompanies": [
+                "Legend Entertainment"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "无",
+              "differences": "原作首批内容。Legend开发并发行。战斗、人物数值与队伍成长单列RPG关联；1995光盘版首次角色语音另计增补，不把1994制作署年当成CD首发年。",
+              "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+              "contentVersionId": "legend-entertainment-hoboken-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、再版与合售不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "legend-entertainment-hoboken-v-cd-voice",
+              "workId": "legend-entertainment-hoboken",
+              "year": 1995,
+              "platform": "MS-DOS",
+              "publisher": "Legend Entertainment",
+              "publisherCompanies": [
+                "Legend Entertainment"
+              ],
+              "kind": "光盘版／首次角色配音",
+              "voice": "有",
+              "differences": "相对1994软盘原作，1995北美CD批次加入角色录音。CD手册单列配音演员与角色表，实物发行目录记1995。",
+              "source": "https://elisoftware.org/wiki/Superhero_League_Of_Hoboken_(PC,_CD-ROM)_Legend_Entertainment_-_1995_USA,_Canada_Release",
+              "contentVersionId": "legend-entertainment-hoboken-c-cd-voice",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、再版与合售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "legend-entertainment-star-control-3",
+          "title": "星际控制3",
+          "chineseTitle": "星际控制3",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Star Control 3",
+          "titleAliases": [],
+          "firstYear": 1996,
+          "category": "策略／叙事关联",
+          "subcategory": "太空探索／殖民策略／动作战斗",
+          "genre": "科幻外交冒险与太空策略",
+          "characters": [
+            "Captain（玩家）",
+            "ICOM",
+            "联盟的外星种族代表"
+          ],
+          "charactersSource": "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6",
+          "synopsis": "超空间旅行崩溃后，舰长率联盟殖民队前往Kessari星区，建立据点、与各族交涉，并调查威胁有智慧生命的危机。",
+          "notes": "Legend开发、Accolade发行；不是前两作Toys for Bob开发的续作团队。保留单人故事模式，独立Hyper Melee对战不另计叙事作品。",
+          "source": "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6",
+          "interactionModes": [
+            "菜单指令",
+            "选项分支",
+            "资源经营",
+            "战术策略",
+            "驾驶操控",
+            "瞄准射击"
+          ],
+          "interactionNote": "原手册区分Adventure Game与Hyper Melee：殖民设施、舰队和对话通过图标／固定回答操作；飞船战斗用转向、推进与武器按键。聊天、名称及系统命令不作为单人行动解析器。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6"
+          ],
+          "contentVersions": [
+            {
+              "id": "legend-entertainment-star-control-3-c-original",
+              "workId": "legend-entertainment-star-control-3",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "原作首批内容。Legend开发、Accolade发行；不是前两作Toys for Bob开发的续作团队。保留单人故事模式，独立Hyper Melee对战不另计叙事作品。",
+              "source": "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6",
+              "evidenceReleaseIds": [
+                "legend-entertainment-star-control-3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "legend-entertainment-star-control-3-v-original",
+              "workId": "legend-entertainment-star-control-3",
+              "year": 1996,
+              "platform": "MS-DOS",
+              "publisher": "Accolade",
+              "publisherCompanies": [
+                "Accolade"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "原作首批内容。Legend开发、Accolade发行；不是前两作Toys for Bob开发的续作团队。保留单人故事模式，独立Hyper Melee对战不另计叙事作品。",
+              "source": "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6",
+              "contentVersionId": "legend-entertainment-star-control-3-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、再版与合售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "legend-entertainment-wheel-of-time",
+          "title": "时光之轮",
+          "chineseTitle": "时光之轮",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Wheel of Time",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "动作／叙事关联",
+          "subcategory": "第一人称魔法动作／剧情战役",
+          "genre": "奇幻小说世界观衍生的故事战役",
+          "characters": [
+            "Elayna Sedai",
+            "The Hound",
+            "The Forsaken"
+          ],
+          "charactersSource": "https://www.gog.com/en/game/the_wheel_of_time",
+          "synopsis": "白塔的Elayna Sedai追查封印失窃，依靠不同ter’angreal法器穿过Shadar Logoth等危险区域，与觊觎力量的敌人周旋。",
+          "notes": "Legend开发，1999历史发行方为GT Interactive；GOG现售Nightdive署名不倒填历史。仅把单人剧情作为叙事关联，不将多人堡垒对战拆作故事。",
+          "source": "https://www.gog.com/en/game/the_wheel_of_time",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "瞄准射击",
+            "谜题操作"
+          ],
+          "interactionNote": "第一人称方向移动、瞄准并使用法器攻击、防御或触发机关；现代授权产品页说明单人战役和法器组合。是动作叙事关联，不是文字输入式RPG。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gog.com/en/game/the_wheel_of_time",
+            "https://www.gamespot.com/reviews/the-wheel-of-time-review/1900-2531896/"
+          ],
+          "contentVersions": [
+            {
+              "id": "legend-entertainment-wheel-of-time-c-original",
+              "workId": "legend-entertainment-wheel-of-time",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "原作首批内容。Legend开发，1999历史发行方为GT Interactive；GOG现售Nightdive署名不倒填历史。仅把单人剧情作为叙事关联，不将多人堡垒对战拆作故事。",
+              "source": "https://www.gog.com/en/game/the_wheel_of_time",
+              "evidenceReleaseIds": [
+                "legend-entertainment-wheel-of-time-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "legend-entertainment-wheel-of-time-v-original",
+              "workId": "legend-entertainment-wheel-of-time",
+              "year": 1999,
+              "platform": "Windows",
+              "publisher": "GT Interactive",
+              "publisherCompanies": [
+                "GT Interactive"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "原作首批内容。Legend开发，1999历史发行方为GT Interactive；GOG现售Nightdive署名不倒填历史。仅把单人剧情作为叙事关联，不将多人堡垒对战拆作故事。",
+              "source": "https://www.gog.com/en/game/the_wheel_of_time",
+              "contentVersionId": "legend-entertainment-wheel-of-time-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、再版与合售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "legend-entertainment-unreal-na-pali",
+          "title": "虚幻",
+          "chineseTitle": "虚幻",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Unreal",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "动作／叙事关联",
+          "subcategory": "第一人称科幻动作／本体与追加战役",
+          "genre": "逃生叙事／环境线索与射击",
+          "characters": [
+            "Prisoner 849",
+            "Nali居民",
+            "Skaarj侵略者"
+          ],
+          "charactersSource": "https://oldunreal.com/guides/Unreal%20manual.pdf",
+          "synopsis": "囚犯849从坠毁的Vortex Rikers醒来，在Na Pali寻找逃生之路。追加战役中，救援军舰又迫使幸存者返回星球，回收Prometheus残骸中的资料。",
+          "notes": "1998本体由Epic MegaGames与Digital Extremes开发；Legend只开发1999 Return to Na Pali资料片。为维持内容归属建立一个Unreal作品，资料片不伪装成独立续作。",
+          "source": "https://oldunreal.com/guides/Unreal%20manual.pdf",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "瞄准射击",
+            "点击调查"
+          ],
+          "interactionNote": "原厂手册列移动、鼠标瞄准、主／副武器和翻译器读取环境信息；Na Pali沿用第一人称操作并加入任务记录。开发者控制台是调试功能，不当作单人故事的自然语言解析器。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://oldunreal.com/guides/Unreal%20manual.pdf",
+            "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "legend-entertainment-unreal-na-pali-c-original",
+              "workId": "legend-entertainment-unreal-na-pali",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "原作首批内容。1998本体由Epic MegaGames与Digital Extremes开发；Legend只开发1999 Return to Na Pali资料片。为维持内容归属建立一个Unreal作品，资料片不伪装成独立续作。",
+              "source": "https://oldunreal.com/guides/Unreal%20manual.pdf",
+              "evidenceReleaseIds": [
+                "legend-entertainment-unreal-na-pali-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "legend-entertainment-unreal-na-pali-c-return-na-pali",
+              "workId": "legend-entertainment-unreal-na-pali",
+              "label": "Return to Na Pali／首次追加战役",
+              "firstYear": 1999,
+              "basis": "added",
+              "evidence": "Legend开发的Return to Na Pali在1998 Unreal本体后加入新单人战役、任务记录、武器与敌人；原始安装依赖本体，不能拆成第二个独立作品。",
+              "source": "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+              "evidenceReleaseIds": [
+                "legend-entertainment-unreal-na-pali-v-return-na-pali"
+              ],
+              "addedContent": [
+                {
+                  "description": "新增返回Na Pali回收Prometheus资料的单人任务、任务语音记录与新武器／敌人；本体原战役来自Epic及Digital Extremes。",
+                  "source": "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf"
+                }
+              ],
+              "comparedTo": "legend-entertainment-unreal-na-pali-c-original"
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "legend-entertainment-unreal-na-pali-v-original",
+              "workId": "legend-entertainment-unreal-na-pali",
+              "year": 1998,
+              "platform": "Windows",
+              "publisher": "GT Interactive",
+              "publisherCompanies": [
+                "GT Interactive"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有（部分）",
+              "differences": "原作首批内容。1998本体由Epic MegaGames与Digital Extremes开发；Legend只开发1999 Return to Na Pali资料片。为维持内容归属建立一个Unreal作品，资料片不伪装成独立续作。",
+              "source": "https://oldunreal.com/guides/Unreal%20manual.pdf",
+              "contentVersionId": "legend-entertainment-unreal-na-pali-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、再版与合售不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "legend-entertainment-unreal-na-pali-v-return-na-pali",
+              "workId": "legend-entertainment-unreal-na-pali",
+              "year": 1999,
+              "platform": "Windows",
+              "publisher": "GT Interactive",
+              "publisherCompanies": [
+                "GT Interactive"
+              ],
+              "kind": "Return to Na Pali／首次追加战役",
+              "voice": "有",
+              "differences": "Legend开发的Return to Na Pali在1998 Unreal本体后加入新单人战役、任务记录、武器与敌人；原始安装依赖本体，不能拆成第二个独立作品。",
+              "source": "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+              "contentVersionId": "legend-entertainment-unreal-na-pali-c-return-na-pali",
+              "contentRelation": "added",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、再版与合售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "legend-entertainment-unreal-ii",
+          "title": "虚幻II：觉醒",
+          "chineseTitle": "虚幻II：觉醒",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Unreal II: The Awakening",
+          "titleAliases": [],
+          "firstYear": 2003,
+          "category": "动作／叙事关联",
+          "subcategory": "第一人称科幻动作／剧情战役",
+          "genre": "太空巡警叙事／任务战斗",
+          "characters": [
+            "John Dalton",
+            "Aida",
+            "Isaak",
+            "Ne’Ban"
+          ],
+          "charactersSource": "https://manualmachine.com/gamespc/unrealiitheawakening/1119370-user-manual/",
+          "synopsis": "殖民地巡警John Dalton与Atlantis号伙伴追查外星遗物，在公司武装与不同势力间执行任务，逐步发现遗物背后的危险。",
+          "notes": "Legend开发，2003 Windows原始批次发行署名Infogrames；其后Atari品牌、Midway合集与Xbox移植不倒填首发。XMP纯多人竞技只参考，不增加叙事内容身份。",
+          "source": "https://manualmachine.com/gamespc/unrealiitheawakening/1119370-user-manual/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "瞄准射击",
+            "选项分支",
+            "战术策略"
+          ],
+          "interactionNote": "原手册印刷页8—9列移动、跳跃、蹲伏、使用和主／副武器；与Atlantis船员交谈使用预设回应，部分任务部署防御设施与友军。原始单人战役没有自由行动词句解析；XMP另行处理。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://manualmachine.com/gamespc/unrealiitheawakening/1119370-user-manual/"
+          ],
+          "contentVersions": [
+            {
+              "id": "legend-entertainment-unreal-ii-c-original",
+              "workId": "legend-entertainment-unreal-ii",
+              "label": "原作／首批内容",
+              "firstYear": 2003,
+              "basis": "original",
+              "evidence": "原作首批内容。Legend开发，2003 Windows原始批次发行署名Infogrames；其后Atari品牌、Midway合集与Xbox移植不倒填首发。XMP纯多人竞技只参考，不增加叙事内容身份。",
+              "source": "https://manualmachine.com/gamespc/unrealiitheawakening/1119370-user-manual/",
+              "evidenceReleaseIds": [
+                "legend-entertainment-unreal-ii-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "legend-entertainment-unreal-ii-v-original",
+              "workId": "legend-entertainment-unreal-ii",
+              "year": 2003,
+              "platform": "Windows",
+              "publisher": "Infogrames",
+              "publisherCompanies": [
+                "Infogrames"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "原作首批内容。Legend开发，2003 Windows原始批次发行署名Infogrames；其后Atari品牌、Midway合集与Xbox移植不倒填首发。XMP纯多人竞技只参考，不增加叙事内容身份。",
+              "source": "https://manualmachine.com/gamespc/unrealiitheawakening/1119370-user-manual/",
+              "contentVersionId": "legend-entertainment-unreal-ii-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作或已核新增内容的首次批次；普通移植、翻译、再版与合售不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "dossierOnlyWorks": [
+        {
+          "id": "legend-entertainment-spellcasting-101",
+          "title": "魔法课程101：巫师赢得所有女孩",
+          "chineseTitle": "魔法课程101：巫师赢得所有女孩",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Spellcasting 101: Sorcerers Get All the Girls",
+          "titleAliases": [],
+          "firstYear": 1990,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图像辅助的解析器叙事冒险",
+          "characters": [
+            "Ernie Eaglebeak"
+          ],
+          "charactersSource": "https://www.mocagh.org/loadpage.php?getgame=spell101",
+          "synopsis": "Ernie进入Sorcerer University学习魔法，卷入学园恋爱与威胁魔法世界的阴谋。",
+          "notes": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=spell101",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "早期Legend解析器作品，可键入动词、对象和句子，也有预设词表辅助构句。即使部分行动能完全点选，作品仍含文字输入玩法，按本轮条件排除主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ifwiki.org/Legend_Entertainment",
+            "https://www.mocagh.org/legend/lostadv-manual.pdf"
+          ]
+        },
+        {
+          "id": "legend-entertainment-spellcasting-201",
+          "title": "魔法课程201：巫师的魔法器具",
+          "chineseTitle": "魔法课程201：巫师的魔法器具",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Spellcasting 201: The Sorcerer’s Appliance",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图像辅助的解析器叙事冒险",
+          "characters": [
+            "Ernie Eaglebeak"
+          ],
+          "charactersSource": "https://www.mocagh.org/loadpage.php?getgame=spell201",
+          "synopsis": "Ernie进入大学二年级，在兄弟会考验与魔法器具引发的危机间奔走。",
+          "notes": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=spell201",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "早期Legend解析器作品，可键入动词、对象和句子，也有预设词表辅助构句。即使部分行动能完全点选，作品仍含文字输入玩法，按本轮条件排除主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ifwiki.org/Legend_Entertainment",
+            "https://www.mocagh.org/legend/lostadv-manual.pdf"
+          ]
+        },
+        {
+          "id": "legend-entertainment-timequest",
+          "title": "时空任务",
+          "chineseTitle": "时空任务",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Timequest",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图像辅助的解析器叙事冒险",
+          "characters": [
+            "时空警察（玩家）"
+          ],
+          "charactersSource": "https://www.mocagh.org/loadpage.php?getgame=timequest",
+          "synopsis": "时空警察穿越多个历史地点与年代，阻止Vettenmyer改动关键事件、破坏人类历史。",
+          "notes": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=timequest",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "早期Legend解析器作品，可键入动词、对象和句子，也有预设词表辅助构句。即使部分行动能完全点选，作品仍含文字输入玩法，按本轮条件排除主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ifwiki.org/Legend_Entertainment",
+            "https://www.mocagh.org/legend/lostadv-manual.pdf"
+          ]
+        },
+        {
+          "id": "legend-entertainment-gateway",
+          "title": "弗雷德里克·波尔的星门",
+          "chineseTitle": "弗雷德里克·波尔的星门",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Frederik Pohl’s Gateway",
+          "titleAliases": [],
+          "firstYear": 1992,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图像辅助的解析器叙事冒险",
+          "characters": [
+            "太空勘探者（玩家）"
+          ],
+          "charactersSource": "https://www.mocagh.org/loadpage.php?getgame=gateway",
+          "synopsis": "勘探者驾驶遗留的Heechee飞船，从星门基地出发探索未知航线并卷入威胁人类的事件。",
+          "notes": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=gateway",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "早期Legend解析器作品，可键入动词、对象和句子，也有预设词表辅助构句。即使部分行动能完全点选，作品仍含文字输入玩法，按本轮条件排除主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ifwiki.org/Legend_Entertainment",
+            "https://www.mocagh.org/legend/lostadv-manual.pdf"
+          ]
+        },
+        {
+          "id": "legend-entertainment-spellcasting-301",
+          "title": "魔法课程301：春假",
+          "chineseTitle": "魔法课程301：春假",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Spellcasting 301: Spring Break",
+          "titleAliases": [],
+          "firstYear": 1992,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图像辅助的解析器叙事冒险",
+          "characters": [
+            "Ernie Eaglebeak"
+          ],
+          "charactersSource": "https://www.mocagh.org/loadpage.php?getgame=spell301",
+          "synopsis": "Ernie与同学前往Fort Naughtytail度春假，在学校竞争、恶作剧与魔法谜题间争取胜利。",
+          "notes": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=spell301",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "早期Legend解析器作品，可键入动词、对象和句子，也有预设词表辅助构句。即使部分行动能完全点选，作品仍含文字输入玩法，按本轮条件排除主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ifwiki.org/Legend_Entertainment",
+            "https://www.mocagh.org/legend/lostadv-manual.pdf"
+          ]
+        },
+        {
+          "id": "legend-entertainment-eric-the-unready",
+          "title": "毫无准备的艾瑞克",
+          "chineseTitle": "毫无准备的艾瑞克",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Eric the Unready",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图像辅助的解析器叙事冒险",
+          "characters": [
+            "Eric"
+          ],
+          "charactersSource": "https://www.mocagh.org/loadpage.php?getgame=ericunready",
+          "synopsis": "笨拙的骑士Eric被派去完成看似不可能的任务，穿越充满戏仿的王国，营救Lorealle公主。",
+          "notes": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=ericunready",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "早期Legend解析器作品，可键入动词、对象和句子，也有预设词表辅助构句。即使部分行动能完全点选，作品仍含文字输入玩法，按本轮条件排除主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ifwiki.org/Legend_Entertainment",
+            "https://www.mocagh.org/legend/lostadv-manual.pdf"
+          ]
+        },
+        {
+          "id": "legend-entertainment-gateway-ii",
+          "title": "星门II：家园",
+          "chineseTitle": "星门II：家园",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Gateway II: Homeworld",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "图像辅助的解析器叙事冒险",
+          "characters": [
+            "前作的太空勘探者（玩家）"
+          ],
+          "charactersSource": "https://www.mocagh.org/loadpage.php?getgame=gateway2",
+          "synopsis": "昔日勘探者遭遇试图召来Heechee敌人的狂热教派，远赴外星世界寻找阻止危机的方法。",
+          "notes": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=gateway2",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "早期Legend解析器作品，可键入动词、对象和句子，也有预设词表辅助构句。即使部分行动能完全点选，作品仍含文字输入玩法，按本轮条件排除主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ifwiki.org/Legend_Entertainment",
+            "https://www.mocagh.org/legend/lostadv-manual.pdf"
+          ]
+        },
+        {
+          "id": "legend-entertainment-callahans",
+          "title": "卡拉汉的跨时空酒馆",
+          "chineseTitle": "卡拉汉的跨时空酒馆",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Callahan’s Crosstime Saloon",
+          "titleAliases": [],
+          "firstYear": 1997,
+          "category": "文字冒险",
+          "subcategory": "光盘图文冒险",
+          "genre": "科幻喜剧／点击调查与文字谜题",
+          "characters": [
+            "Jake Stonebender",
+            "Mike Callahan",
+            "Doc Webster",
+            "Josie"
+          ],
+          "charactersSource": "https://www.mocagh.org/legend/callahans-hintbook.pdf",
+          "synopsis": "Jake Stonebender从友人的酒馆出发，帮助不同来客处理跨时空的困境，故事跨越雨林、吸血鬼故乡和外星世界。",
+          "notes": "Legend开发，首发由Take-Two Interactive发行；馆藏手册的Mindscape版是地区版本证据，不覆盖首发署名。含键入谜底，仅专题。",
+          "source": "https://www.mocagh.org/legend/callahans-hintbook.pdf",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令",
+            "点击调查",
+            "选项分支",
+            "谜题操作"
+          ],
+          "interactionNote": "大部分场景用点击和对话选项；Riddle Night要求在回答栏填写乐队／演员名称等谜底。官方提示书印刷页23列出作答与Enter确认，实机截图可见编辑栏；不是纯固定选项，也不是单次密码。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/legend/callahans-manual.pdf",
+            "https://www.mocagh.org/legend/callahans-hintbook.pdf",
+            "https://www.lp.zone/t/time-to-make-puns-and-change-lives-lets-play-callahans-crosstime-saloon/1516/9"
+          ]
+        },
+        {
+          "id": "legend-entertainment-blackstone",
+          "title": "约翰·索尔的黑石纪事：恐怖冒险",
+          "chineseTitle": "约翰·索尔的黑石纪事：恐怖冒险",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "John Saul’s Blackstone Chronicles: An Adventure in Terror",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "文字冒险",
+          "subcategory": "光盘图文冒险",
+          "genre": "心理恐怖／精神病院调查与档案检索",
+          "characters": [
+            "Oliver Metcalf",
+            "Malcolm Metcalf",
+            "Joshua",
+            "Marilyn Wilson"
+          ],
+          "charactersSource": "https://www.scribd.com/document/712378717/John-Sauls-Blackstone-Chronicles-An-Adventure-in-Terror-Manual-Win-EN",
+          "synopsis": "Oliver Metcalf进入即将拆除的精神病院寻找儿子Joshua，聆听昔日病人的遭遇，并面对父亲Malcolm的幽灵与家族历史。",
+          "notes": "Legend开发，原作由Red Orb Entertainment发行。主要为鼠标调查，但患者电脑需要键入人名；不能只按point-and-click标签当作无输入叙事。",
+          "source": "https://www.scribd.com/document/712378717/John-Sauls-Blackstone-Chronicles-An-Adventure-in-Terror-Manual-Win-EN",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令",
+            "点击调查",
+            "选项分支",
+            "谜题操作"
+          ],
+          "interactionNote": "除了固定电脑口令，档案检索还要求输入患者人名，例如Mandy Lee。属于键入对象／关键词的信息检索；与存档名或单次密码分开，故仅专题书目。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://gamefaqs.gamespot.com/pc/70396-john-sauls-blackstone-chronicles-an-adventure-in-terror/faqs/60315/walkthrough",
+            "https://fr.wikipedia.org/wiki/John_Saul%27s_Blackstone_Chronicles_%3A_L%27Asile_maudit"
+          ]
+        }
+      ],
+      "catalogueEntryCount": 26,
+      "entries": [
+        {
+          "title": "Spellcasting 101: Sorcerers Get All the Girls（1990）",
+          "status": "仅专题／含文字输入",
+          "reason": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=spell101",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-spellcasting-101"
+          ]
+        },
+        {
+          "title": "Spellcasting 201: The Sorcerer’s Appliance（1991）",
+          "status": "仅专题／含文字输入",
+          "reason": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=spell201",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-spellcasting-201"
+          ]
+        },
+        {
+          "title": "Timequest（1991）",
+          "status": "仅专题／含文字输入",
+          "reason": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=timequest",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-timequest"
+          ]
+        },
+        {
+          "title": "Frederik Pohl’s Gateway（1992）",
+          "status": "仅专题／含文字输入",
+          "reason": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=gateway",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-gateway"
+          ]
+        },
+        {
+          "title": "Spellcasting 301: Spring Break（1992）",
+          "status": "仅专题／含文字输入",
+          "reason": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=spell301",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-spellcasting-301"
+          ]
+        },
+        {
+          "title": "Eric the Unready（1993）",
+          "status": "仅专题／含文字输入",
+          "reason": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=ericunready",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-eric-the-unready"
+          ]
+        },
+        {
+          "title": "Gateway II: Homeworld（1993）",
+          "status": "仅专题／含文字输入",
+          "reason": "仅专题书目；不新增主库、内容身份或平台发行。原Legend发行；菜单辅助不消除解析器功能。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=gateway2",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-gateway-ii"
+          ]
+        },
+        {
+          "title": "Companions of Xanth（1993）",
+          "status": "新增主库叙事",
+          "reason": "Legend开发并发行，依据Piers Anthony《Demons Don’t Dream》。1994光盘版新增角色录音，另立内容增补；不是另一部独立游戏。",
+          "source": "https://www.mocagh.org/legend/xanth-manual.pdf",
+          "workIds": [
+            "g1169"
+          ]
+        },
+        {
+          "title": "Death Gate（1994）",
+          "status": "新增主库叙事",
+          "reason": "Legend开发并发行，改编自Margaret Weis与Tracy Hickman的Death Gate Cycle。CD原作已含配音；后来的数字重发不新建内容身份。",
+          "source": "https://www.mocagh.org/legend/deathgate-manual.pdf",
+          "workIds": [
+            "g1170"
+          ]
+        },
+        {
+          "title": "Superhero League of Hoboken（1994）",
+          "status": "新增跨类型叙事关联",
+          "reason": "Legend开发并发行。战斗、人物数值与队伍成长单列RPG关联；1995光盘版首次角色语音另计增补，不把1994制作署年当成CD首发年。",
+          "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "legend-entertainment-hoboken"
+          ]
+        },
+        {
+          "title": "Mission Critical（1995）",
+          "status": "新增主库叙事",
+          "reason": "Legend开发并发行。真人演出的开场与三维场景调查结合，但不是以预录影片分支为核心的互动电影；不将安装命令计入游戏输入。",
+          "source": "https://www.mocagh.org/legend/missioncritical-manual.pdf",
+          "workIds": [
+            "g1171"
+          ]
+        },
+        {
+          "title": "Shannara（1995）",
+          "status": "新增主库叙事",
+          "reason": "Legend发行与制作统筹；实际开发署名区分Triton Interactive、FAR Productions，设计为Lori与Corey Cole。剧情在原著前两部之间；有战斗但没有以经验升级为核心的完整RPG系统。中文名为本库检索用译名。",
+          "source": "https://www.freegameempire.com/games/Shannara/manual",
+          "workIds": [
+            "g1172"
+          ]
+        },
+        {
+          "title": "Callahan’s Crosstime Saloon（1997）",
+          "status": "仅专题／含文字输入",
+          "reason": "Legend开发，首发由Take-Two Interactive发行；馆藏手册的Mindscape版是地区版本证据，不覆盖首发署名。含键入谜底，仅专题。",
+          "source": "https://www.mocagh.org/legend/callahans-hintbook.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-callahans"
+          ]
+        },
+        {
+          "title": "John Saul’s Blackstone Chronicles: An Adventure in Terror（1998）",
+          "status": "仅专题／含文字输入",
+          "reason": "Legend开发，原作由Red Orb Entertainment发行。主要为鼠标调查，但患者电脑需要键入人名；不能只按point-and-click标签当作无输入叙事。",
+          "source": "https://www.scribd.com/document/712378717/John-Sauls-Blackstone-Chronicles-An-Adventure-in-Terror-Manual-Win-EN",
+          "workIds": [],
+          "dossierIds": [
+            "legend-entertainment-blackstone"
+          ]
+        },
+        {
+          "title": "Star Control 3（1996）",
+          "status": "新增跨类型叙事关联",
+          "reason": "Legend开发、Accolade发行；不是前两作Toys for Bob开发的续作团队。保留单人故事模式，独立Hyper Melee对战不另计叙事作品。",
+          "source": "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6",
+          "workIds": [],
+          "relatedIds": [
+            "legend-entertainment-star-control-3"
+          ]
+        },
+        {
+          "title": "The Wheel of Time（1999）",
+          "status": "新增跨类型叙事关联",
+          "reason": "Legend开发，1999历史发行方为GT Interactive；GOG现售Nightdive署名不倒填历史。仅把单人剧情作为叙事关联，不将多人堡垒对战拆作故事。",
+          "source": "https://www.gog.com/en/game/the_wheel_of_time",
+          "workIds": [],
+          "relatedIds": [
+            "legend-entertainment-wheel-of-time"
+          ]
+        },
+        {
+          "title": "Unreal II: The Awakening（2003）",
+          "status": "新增跨类型叙事关联",
+          "reason": "Legend开发，2003 Windows原始批次发行署名Infogrames；其后Atari品牌、Midway合集与Xbox移植不倒填首发。XMP纯多人竞技只参考，不增加叙事内容身份。",
+          "source": "https://manualmachine.com/gamespc/unrealiitheawakening/1119370-user-manual/",
+          "workIds": [],
+          "relatedIds": [
+            "legend-entertainment-unreal-ii"
+          ]
+        },
+        {
+          "title": "Unreal（1998）",
+          "status": "新增跨类型叙事关联",
+          "reason": "1998本体由Epic MegaGames与Digital Extremes开发；Legend只开发1999 Return to Na Pali资料片。为维持内容归属建立一个Unreal作品，资料片不伪装成独立续作。",
+          "source": "https://oldunreal.com/guides/Unreal%20manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "legend-entertainment-unreal-na-pali"
+          ]
+        },
+        {
+          "title": "Companions of Xanth：1994 CD-ROM版",
+          "status": "同一作品新增内容",
+          "reason": "相对1993软盘版新增专业演员角色语音；不是仅因CD介质建版。",
+          "source": "https://mocagh.org/legend/legend-catalog6.pdf",
+          "workIds": []
+        },
+        {
+          "title": "Superhero League of Hoboken：1995 CD-ROM版",
+          "status": "同一作品新增内容",
+          "reason": "CD手册有角色配音表；1995实物发行证据与1994软盘作分开。",
+          "source": "https://www.mocagh.org/legend/hoboken-alt-manual.pdf",
+          "workIds": []
+        },
+        {
+          "title": "Unreal Mission Pack I: Return to Na Pali（1999）",
+          "status": "Unreal新增内容",
+          "reason": "Legend制作的新战役归1998 Unreal本体；本体开发方不是Legend。",
+          "source": "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+          "workIds": []
+        },
+        {
+          "title": "Unreal II: eXpanded MultiPlayer（XMP，2003）",
+          "status": "玩法参考／排除纯多人对战",
+          "reason": "没有新的单人故事战役；与原作合售的Special Edition不重复建作品或叙事内容。",
+          "source": "https://forums.beyondunreal.com/threads/atari-announces-unreal-ii-special-edition.121879/",
+          "workIds": []
+        },
+        {
+          "title": "Spellcasting Collection／Spellcasting Party Pak（1993）",
+          "status": "合集参考／不重复建作",
+          "reason": "101、201、301沿用各自书目；集合包装不去掉输入玩法。",
+          "source": "https://mocagh.org/legend/legend-catalog6.pdf",
+          "workIds": []
+        },
+        {
+          "title": "The Lost Adventures of Legend（1996）",
+          "status": "合集参考／不重复建作",
+          "reason": "按原手册所列子作品处理；不因同一张CD再计作品。",
+          "source": "https://www.mocagh.org/legend/lostadv-manual.pdf",
+          "workIds": []
+        },
+        {
+          "title": "The Trophy Case II（1997）",
+          "status": "合集参考／不重复建作",
+          "reason": "内含Shannara等既有游戏；不冒充Legend独立开发新故事。",
+          "source": "https://www.mobygames.com/game/3208/shannara/",
+          "workIds": []
+        },
+        {
+          "title": "Terminator 3: Rise of the Machines（2003）",
+          "status": "仅技术关联／不入叙事正文",
+          "reason": "主要开发方Black Ops Entertainment；Legend技术／引擎支援不等于独立开发或发行该作。",
+          "source": "https://www.mobygames.com/company/117/legend-entertainment-company/",
+          "workIds": []
+        }
+      ],
+      "source": "https://www.ifwiki.org/Legend_Entertainment",
+      "sectionTitle": "美国Legend Entertainment：从解析器、文学图形冒险到剧情动作",
+      "catalogueCountLabel": "18个正文档案 · 26行清单含增补、合集和支援边界",
+      "overviewLabel": "叙事作品与输入边界",
+      "auditTitle": "独立游戏、内容增补与排除边界核对",
+      "auditSourceLabel": "Legend叙事目录",
+      "auditLabel": "17部独立游戏＋2项扩展及本体、光盘、合集、技术支援，共26行核对。",
+      "auditNote": "参考表行数不当作独立作品数；正文18档案含17部原清单独立游戏及Na Pali所属Unreal本体。九部输入作品不产生主库内容与发行，未宣称全球全部移植／地区日期均已核实。",
+      "creativeProfile": {
+        "thesis": "编辑观察：Legend把文字冒险的细密叙述带入插画、点击界面与三维战役；画面和录音的变化并不自动改变输入方式或作品身份。",
+        "phases": [
+          {
+            "period": "1989—1993",
+            "heading": "图形、词表与解析器共存",
+            "analysis": "早期七作保留键入句子的交互深度，词表降低构句门槛；不能因为画面、鼠标或菜单存在就当作无文字输入。",
+            "basis": "编辑观察",
+            "source": "https://www.ifwiki.org/Legend_Entertainment"
+          },
+          {
+            "period": "1993—1998",
+            "heading": "文学图形冒险与录音演出",
+            "analysis": "Xanth和Death Gate把场景对象与预设动词放到中心，CD带来具体的录音增补；Callahan的谜底与Blackstone的档案检索又保留了局部文字输入，须逐作核对。",
+            "basis": "编辑观察",
+            "source": "https://mocagh.org/legend/legend-catalog6.pdf"
+          },
+          {
+            "period": "1996—2003",
+            "heading": "策略与第一人称故事战役",
+            "analysis": "Star Control 3的外交与殖民、Wheel of Time的魔法战役和Unreal系列的任务叙事均跨出传统冒险。单人故事、依赖本体的增补与纯多人竞技分开记录。",
+            "basis": "编辑观察",
+            "source": "https://kathleenbober.com/my-start-in-the-computer-gaming-industry-with-legend-entertainment-company/"
+          }
+        ]
+      },
+      "workContexts": {
+        "g1172": "Legend发行／统筹，Triton Interactive与FAR Productions实际开发；不把出版商等同开发商。",
+        "legend-entertainment-unreal-na-pali": "本体Epic MegaGames／Digital Extremes开发；Legend负责1999追加战役，按同一作品的内容增补归档。",
+        "legend-entertainment-callahans": "图形点击为主仍有谜底文字输入，本轮仅专题，不新增主库。",
+        "legend-entertainment-blackstone": "患者档案需输入人名，不只是固定口令；本轮仅专题。"
+      },
+      "dossierGroups": [
+        {
+          "id": "legend-entertainment-adventures",
+          "title": "无文字输入的主库冒险",
+          "description": "四部点击、固定动词、对话选项与物品谜题驱动的叙事作品。",
+          "cardLabel": "主库新增",
+          "workIds": [
+            "g1169",
+            "g1170",
+            "g1171",
+            "g1172"
+          ]
+        },
+        {
+          "id": "legend-entertainment-crossgenre",
+          "title": "跨类型叙事：RPG、策略与剧情动作",
+          "description": "五个作品身份，包括用于容纳Legend新战役的Unreal本体；不复制到四类主库。",
+          "cardLabel": "叙事关联",
+          "workIds": [
+            "legend-entertainment-hoboken",
+            "legend-entertainment-star-control-3",
+            "legend-entertainment-wheel-of-time",
+            "legend-entertainment-unreal-na-pali",
+            "legend-entertainment-unreal-ii"
+          ]
+        },
+        {
+          "id": "legend-entertainment-parser",
+          "title": "仅专题：含文字输入的叙事书目",
+          "description": "七部解析器与两部局部文字输入图形冒险，只作书目，不建立内容身份或平台发行。",
+          "cardLabel": "仅专题",
+          "workIds": [
+            "legend-entertainment-spellcasting-101",
+            "legend-entertainment-spellcasting-201",
+            "legend-entertainment-timequest",
+            "legend-entertainment-gateway",
+            "legend-entertainment-spellcasting-301",
+            "legend-entertainment-eric-the-unready",
+            "legend-entertainment-gateway-ii",
+            "legend-entertainment-callahans",
+            "legend-entertainment-blackstone"
+          ]
+        }
+      ]
     }
   ],
   "schemaVersion": 2,
