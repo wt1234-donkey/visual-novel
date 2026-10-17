@@ -38,3 +38,28 @@ Companies House记录公司号01135105于1973年9月19日注册，原名为Westm
 - [Amiga手册](https://www.mocagh.org/rainbird/pawn-amigaguide.pdf)：1986版权及语音合成操作。
 - [Computer Entertainer 1986年12月号](https://www.ataricompendium.com/archives/newsletters/video_game_update/computer_entertainer_dec86.pdf)：Atari ST版与Amiga后续版以及spoken text差异。
 - [Magnetic Scrolls现行产品页](https://www.magneticscrolls.com/magnetic-scrolls/thepawn)：2017重制的触屏界面与附加资料。
+
+
+## 按原游戏类型清单扩充（2026-10-17）
+
+原页扩充为10部正文身份：4部复用旧主库、6部仅专题输入式书目。新增主库0部、内容版0个、发行0条；旧1138／1332／2324保持。末尾117行／9组参考，包含合集、教育、规则和动作游戏，不当作独立叙事作品计数。
+
+| 项目 | 处理及依据 |
+|---|---|
+| Adventure A—D | 仅专题。Artic原作／Sinclair再版分开；A／B原作1981，C／D1982，Spectrum代理年不代替原作年。A原内页明确电脑执行词语命令，B—D档案列文字冒险。 |
+| Perilous Swamp、Sorcerer’s Island | 原厂Fantasy Games内页明确要求plain English words回答提示；并非菜单或选项式。两作分别加载，正文书目各一部，合集不另计。 |
+| The Adventure | 原厂1985 QL手册明确改编Crowther与Woods作品，复用g089；不复制一部新作，不追加未知增量的QL移植。 |
+| Mordon’s Quest | 同手册确认QL合集中的Abersoft程序与Sinclair出版关系，复用g137。Melbourne House Spectrum旧记录保持。 |
+| Journey into Danger | ZX81 ICL Super Programs 6（1981）内页说明地下迷宫、宝藏与怪物，控制需游戏内说明；Spectrum旧档案列1982 RPG。操作与两个程序关系不充分，暂只参考，不凭RPG字样入库。 |
+| 动作／射击／体育／棋类／策略／教育 | 只在玩法表参考；有探索、角色或城堡包装不足以认定叙事作品。 |
+
+新增来源：
+- [Fantasy Games原厂内页](https://www.zx81stuff.org.uk/zx81/inlays/f/FantasyGames.Inside.jpg)，两侧故事、人物与英文词语回答。
+- [Artic Adventure A原厂内页](https://www.zx81stuff.org.uk/zx81/inlays/p/PlanetOfDeath.Inside.jpg)，1981版权及命令操作。
+- [QL Classic Adventures原厂手册](https://www.mocagh.org/firstera/qladv-manual.pdf)，1985版权、Abersoft、双篇身份、两词命令；启动菜单不是游戏菜单操作。
+- [ZX81 Sinclair磁带目录](https://www.zx81stuff.org.uk/zx81/publisher/Sinclair/tapesByCode)，再版与合集标题。
+- [Spectrum Sinclair出版档案](https://worldofspectrum.org/archive/publishers/Sinclair-Research-Ltd)，原作／再版署名分列。
+- [Journey into Danger档案](https://worldofspectrum.org/archive/software/games/journey-into-danger-sinclair-research-ltd)，RPG分类不替代控制核定。
+- [Super Programs 6原厂内页](https://www.zx81stuff.org.uk/zx81/inlays/s/SuperPrograms6%28II%29.Inside.jpg)，游戏中另有控制说明，故本轮不猜标签。
+
+本批不是Sinclair所有软件全目录；原清单系列保留为系列，不补造所有分册、年日与版本。原两部专题卡片继续，其他61个专题配置与全部旧作品对象保持。

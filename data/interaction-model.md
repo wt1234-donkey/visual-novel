@@ -62,3 +62,7 @@ Christine、The Byoin、SKAPON为菜单式叙事，新增主库；Lolita II、AL
 ## Sierra On-Line独立专题（2026-10-17）
 
 旧35项不重收；新增44部无自由词句输入叙事／预制绘本。Manhunter两作MAD人名查询、Police Quest III／IV警务电脑、Larry 7的Other动词／话题和Gabriel Knight 3的SIDNEY关键词均标文字输入，仅专题。GK1的符号板和鼓语短语表、RAMA数制及固定锁码记谜题操作；安装命令、存档、起名、单次密码不作为解析器。4部在线RPG自由聊天与单机命令解析区分，仍仅专题；Playtoons只归档已有预制故事，共用创作编辑器不重复建作。互动动画细分类增加“互动绘本”，对应翻页／朗读与场景热点，不能伪标剧情分支或视角切换。新主库与RPG发行为原作及已核首次增补；当前主库1138、RPG等关联375、仅专题85。
+
+## Sinclair Research输入边界（2026-10-17）
+
+Fantasy Games两作原内页要求用英文词语回答；Adventure A—D同属文字指令，新增6部仅专题书目，主库无新作。QL Classic Adventures的程序选择菜单不构成游戏内菜单指令；The Adventure与Mordon’s Quest引用旧身份，不改原有互动对象。Journey into Danger控制证据不足，只在玩法参考表注明；不用RPG标签推定无输入。当前主库1138、关联375、仅专题91。
