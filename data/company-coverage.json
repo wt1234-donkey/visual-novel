@@ -35226,20 +35226,23 @@
       "name": "TAITO（太东）",
       "foundedAt": "1953-08-24",
       "foundedSource": "https://www.taito.co.jp/corporate/about/",
-      "checkedAt": "2026-10-12",
-      "status": "LD三作、新作Re:birth及BOYS CAFE两作核对完成；历史授权手机目录仍待补核",
-      "scope": "复用原库《忍者疾风》《时间少女》，补入LD《宇宙战舰大和号》《时间少女：重生》及两部2003手机原创ADV。友情育成作品放关联区；非全部太东电子游戏目录。",
-      "versionScope": "首发保留；后发行版仅在有可核实的新剧情、角色、路线、关卡、CG／重绘素材或新配音等内容时单列。同内容换平台、换商店、再版、包装变更与仅提高分辨率不新增版本；新增内容须写明差异与来源。未知差异先列核对说明。 此前两作共六条历史版本保留，不自动重写；本轮新增四条主库首发记录。",
+      "checkedAt": "2026-10-18",
+      "status": "旧6部叙事与1部关联保持；新增3部菜单叙事、12部剧情／动作RPG关联；3项首次内容增补",
+      "scope": "根据“列出Carry Lab（キャリーラボ）游戏类型清单”项目中的TAITO主要作品与玩法清单扩充既有专题。上下文找回的菜单推理与剧情RPG重点逐作补核，末尾以官方目录汇编主要商业游戏、系列、合作与发行参考；未完整取回约680条署名原表，不宣称全球全目录或逐字聊天备份。",
+      "versionScope": "新增15部独立作品各登记原作内容与最早已核发行；DS Estpolis重构、Saturn Chaos Seed与2017北野武手机新区域／音乐共3个增补内容。合计18个内容、19条首批发行。普通移植、代理、包装和2027预定合集不扩列；原1200部主库、1398内容、2392发行及所有其他专题保持。",
       "versionCountLabel": "首发、内容版与保留旧记录",
       "versionPanelLabel": "条首发／内容记录",
-      "publisherNote": "太东于1953年8月24日成立，符合1949年后范围。原库已有两作而尚无专题，故优先处理；品牌、实际发行和授权原作分别说明。",
+      "publisherNote": "TAITO于1953年8月24日成立。本页同时区分自研、TOSE／Neverland／Climax等合作开发与海外代理：Natsume日本原作、Square Enix DS发行、MediaWorks悠久原作均保留实际署名。",
       "workIds": [
         "g084",
         "g014",
         "g906",
         "g908",
         "g909",
-        "g907"
+        "g907",
+        "g1204",
+        "g1205",
+        "g1206"
       ],
       "publisherWorkIds": [
         "g084",
@@ -35247,7 +35250,10 @@
         "g906",
         "g908",
         "g909",
-        "g907"
+        "g907",
+        "g1204",
+        "g1205",
+        "g1206"
       ],
       "relatedGames": [
         {
@@ -35344,20 +35350,989 @@
           "interactionSources": [
             "https://www.taito.co.jp/uqgensoukyoku/uqrevival"
           ]
+        },
+        {
+          "id": "taito-takeshi",
+          "title": "北野武的挑战状",
+          "chineseTitle": "北野武的挑战状",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "たけしの挑戦状",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "动作冒险／日常选择与寻宝",
+          "characters": [
+            "公司职员（玩家）",
+            "妻子",
+            "社长",
+            "宝藏地图老人"
+          ],
+          "charactersSource": "https://www.taito.co.jp/classics/takechou",
+          "synopsis": "普通上班族在辞职、家庭关系与街头事件之间选择，准备前往南海孤岛寻宝，旅程穿插唱歌、飞行与特殊机关。",
+          "notes": "TAITO开发发行，1986年FC原作；保留有明确事件与寻宝目标的混合冒险，单列关联，非纯生活养成。",
+          "source": "https://www.taito.co.jp/classics/takechou",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "选项分支",
+            "谜题操作",
+            "设备互动",
+            "知识问答"
+          ],
+          "interactionNote": "方向与按钮控制移动、打斗及飞行，店内／人物回应使用预设菜单；FC麦克风唱歌与固定暗号为特殊设备／谜题操作，不是键入自由词句。作品层标签不代表手机版仍需同一麦克风。 2017「ひんたぼ語検定」为二选一／四选一问答，不是词句键入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.taito.co.jp/classics/takechou",
+            "https://www.taito.co.jp/mob/topics/2795",
+            "https://gcgx.games/takeshi/apl/hintabo.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-takeshi-c-original",
+              "workId": "taito-takeshi",
+              "label": "原作／首批内容",
+              "firstYear": 1986,
+              "basis": "original",
+              "evidence": "1986年原作内容。TAITO开发发行，1986年FC原作；保留有明确事件与寻宝目标的混合冒险，单列关联，非纯生活养成。",
+              "source": "https://www.taito.co.jp/classics/takechou",
+              "evidenceReleaseIds": [
+                "taito-takeshi-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "taito-takeshi-c-mobile2017",
+              "workId": "taito-takeshi",
+              "label": "TAITO CLASSICS（2017追加区域与音乐）",
+              "firstYear": 2017,
+              "basis": "added",
+              "comparedTo": "taito-takeshi-c-original",
+              "evidence": "2017年8月15日同批手机版首次加入「あめりか」区域、「ひんたぼ語検定」模式及ZUNTATA新曲；依这些具体增量登记一个内容，两平台共用。无敌／困难模式和商店渠道不是额外作品。",
+              "source": "https://www.taito.co.jp/mob/topics/2795",
+              "evidenceReleaseIds": [
+                "taito-takeshi-v-mobile2017-1",
+                "taito-takeshi-v-mobile2017-2"
+              ],
+              "addedContent": [
+                {
+                  "type": "新增内容",
+                  "description": "2017年8月15日同批手机版首次加入「あめりか」区域、「ひんたぼ語検定」模式及ZUNTATA新曲；依这些具体增量登记一个内容，两平台共用。无敌／困难模式和商店渠道不是额外作品。",
+                  "source": "https://www.taito.co.jp/mob/topics/2795"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-takeshi-v-original",
+              "workId": "taito-takeshi",
+              "year": 1986,
+              "platform": "Family Computer",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1986年最早已核原作内容批次。TAITO开发发行，1986年FC原作；保留有明确事件与寻宝目标的混合冒险，单列关联，非纯生活养成。",
+              "source": "https://www.taito.co.jp/classics/takechou",
+              "contentVersionId": "taito-takeshi-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "taito-takeshi-v-mobile2017-1",
+              "workId": "taito-takeshi",
+              "year": 2017,
+              "platform": "iOS",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "TAITO CLASSICS（2017追加区域与音乐）",
+              "voice": "未核实",
+              "differences": "2017年8月15日同批手机版首次加入「あめりか」区域、「ひんたぼ語検定」模式及ZUNTATA新曲；依这些具体增量登记一个内容，两平台共用。无敌／困难模式和商店渠道不是额外作品。",
+              "source": "https://www.taito.co.jp/mob/topics/2795",
+              "contentVersionId": "taito-takeshi-c-mobile2017",
+              "contentRelation": "added",
+              "contentNote": "与原作内容比较后登记的首次新增内容批次；同批多平台共用内容ID。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "taito-takeshi-v-mobile2017-2",
+              "workId": "taito-takeshi",
+              "year": 2017,
+              "platform": "Android",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "TAITO CLASSICS（2017追加区域与音乐）",
+              "voice": "未核实",
+              "differences": "2017年8月15日同批手机版首次加入「あめりか」区域、「ひんたぼ語検定」模式及ZUNTATA新曲；依这些具体增量登记一个内容，两平台共用。无敌／困难模式和商店渠道不是额外作品。",
+              "source": "https://www.taito.co.jp/mob/topics/2795",
+              "contentVersionId": "taito-takeshi-c-mobile2017",
+              "contentRelation": "added",
+              "contentNote": "与原作内容比较后登记的首次新增内容批次；同批多平台共用内容ID。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-jarvas",
+          "title": "未来神话：贾瓦斯",
+          "chineseTitle": "未来神话：贾瓦斯",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "未来神話ジャーヴァス",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "动作RPG／未来世界与势力征服",
+          "characters": [
+            "贾瓦斯号驾驶员（玩家）",
+            "七名暴君"
+          ],
+          "charactersSource": "https://www.gamingalexandria.com/highquality/fc/Mirai%20Shinwa%20Jarvas/Mirai%20Shinwa%20Jarvas%20-%20Manual.pdf",
+          "synopsis": "返回地球的飞船驾驶员面对文明衰败后的大陆，参加战斗、获取部下与情报，挑战七名统治者并寻找新的秩序。",
+          "notes": "TAITO于1987年发行的FC原创动作RPG；PC-88等普通后发机种未完成新增内容比较，暂不扩行。",
+          "source": "https://www.gamingalexandria.com/highquality/fc/Mirai%20Shinwa%20Jarvas/Mirai%20Shinwa%20Jarvas%20-%20Manual.pdf",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "战术策略"
+          ],
+          "interactionNote": "原厂说明书列方向移动、按钮攻击及城镇／阵营行动菜单；军队与领地系统以预设行动选择，不要求输入自然语言命令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gamingalexandria.com/highquality/fc/Mirai%20Shinwa%20Jarvas/Mirai%20Shinwa%20Jarvas%20-%20Manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-jarvas-c-original",
+              "workId": "taito-jarvas",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987年原作内容。TAITO于1987年发行的FC原创动作RPG；PC-88等普通后发机种未完成新增内容比较，暂不扩行。",
+              "source": "https://www.gamingalexandria.com/highquality/fc/Mirai%20Shinwa%20Jarvas/Mirai%20Shinwa%20Jarvas%20-%20Manual.pdf",
+              "evidenceReleaseIds": [
+                "taito-jarvas-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-jarvas-v-original",
+              "workId": "taito-jarvas",
+              "year": 1987,
+              "platform": "Family Computer",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1987年最早已核原作内容批次。TAITO于1987年发行的FC原创动作RPG；PC-88等普通后发机种未完成新增内容比较，暂不扩行。",
+              "source": "https://www.gamingalexandria.com/highquality/fc/Mirai%20Shinwa%20Jarvas/Mirai%20Shinwa%20Jarvas%20-%20Manual.pdf",
+              "contentVersionId": "taito-jarvas-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-minelvaton",
+          "title": "密涅瓦顿传奇：拉贡的复活",
+          "chineseTitle": "密涅瓦顿传奇：拉贡的复活",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ミネルバトンサーガ ラゴンの復活",
+          "titleAliases": [
+            "Minelvaton Saga: Ragon no Fukkatsu"
+          ],
+          "firstYear": 1987,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "奇幻RPG／同伴与佣兵冒险",
+          "characters": [
+            "亡国王子（玩家）",
+            "同伴与佣兵",
+            "ラゴン"
+          ],
+          "charactersSource": "https://setsumei.cloudfree.jp/famicom/minelvatonsaga/minelvatonsaga.html",
+          "synopsis": "幸存的王子穿越南奥菲利亚，与同伴和佣兵合作，调查黑暗力量与故国覆灭的联系，迎战复苏的拉贡。",
+          "notes": "开发关联为Random House，TAITO发行1987年FC版；后续Silva Saga由SETA等发行，不倒填为太东续作发行。",
+          "source": "https://setsumei.cloudfree.jp/famicom/minelvatonsaga/minelvatonsaga.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "即时动作"
+          ],
+          "interactionNote": "说明书以方向移动、接触式战斗和预设魔法／物品／佣兵操作为核心；角色名设置不等于文字指令，未概括为通常的菜单回合战斗。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://setsumei.cloudfree.jp/famicom/minelvatonsaga/minelvatonsaga.html",
+            "https://www.beep-shop.com/blog/21836/"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-minelvaton-c-original",
+              "workId": "taito-minelvaton",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987年原作内容。开发关联为Random House，TAITO发行1987年FC版；后续Silva Saga由SETA等发行，不倒填为太东续作发行。",
+              "source": "https://setsumei.cloudfree.jp/famicom/minelvatonsaga/minelvatonsaga.html",
+              "evidenceReleaseIds": [
+                "taito-minelvaton-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-minelvaton-v-original",
+              "workId": "taito-minelvaton",
+              "year": 1987,
+              "platform": "Family Computer",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1987年最早已核原作内容批次。开发关联为Random House，TAITO发行1987年FC版；后续Silva Saga由SETA等发行，不倒填为太东续作发行。",
+              "source": "https://setsumei.cloudfree.jp/famicom/minelvatonsaga/minelvatonsaga.html",
+              "contentVersionId": "taito-minelvaton-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-dungeon-magic",
+          "title": "地牢与魔法：元素之剑",
+          "chineseTitle": "地牢与魔法：元素之剑",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Dungeon & Magic: Swords of Element",
+          "titleAliases": [
+            "Dungeon Magic: Sword of the Elements"
+          ],
+          "firstYear": 1989,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "第一人称／实时迷宫RPG",
+          "characters": [
+            "冒险者（玩家）",
+            "Magi",
+            "Darces"
+          ],
+          "charactersSource": "https://www.world-of-nintendo.com/manuals/nes/dungeon_magic.shtml",
+          "synopsis": "冒险者走访城镇和迷宫，追寻英雄留下的元素之剑与神剑Tores，阻止黑暗领主Darces重返王国。",
+          "notes": "Natsume开发并于1989年11月10日在日本发行；TAITO为1990年北美发行关联，原作署名保留Natsume。与街机Light Bringer海外同名Dungeon Magic分开。",
+          "source": "https://www.world-of-nintendo.com/manuals/nes/dungeon_magic.shtml",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "谜题操作"
+          ],
+          "interactionNote": "原厂手册记前后移动／转身、A攻击、背包图标及YES／NO回应；魔法从固定符号面板组合，并非自由词句。手册第13、22页说明符号系统，不能据英文标题误标解析器。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.world-of-nintendo.com/manuals/nes/dungeon_magic.shtml"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-dungeon-magic-c-original",
+              "workId": "taito-dungeon-magic",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989年原作内容。Natsume开发并于1989年11月10日在日本发行；TAITO为1990年北美发行关联，原作署名保留Natsume。与街机Light Bringer海外同名Dungeon Magic分开。",
+              "source": "https://www.mobygames.com/game/13400/dungeon-magic-sword-of-the-elements/releases/nes/",
+              "evidenceReleaseIds": [
+                "taito-dungeon-magic-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-dungeon-magic-v-original",
+              "workId": "taito-dungeon-magic",
+              "year": 1989,
+              "platform": "Family Computer",
+              "publisher": "Natsume",
+              "publisherCompanies": [
+                "Natsume"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989年最早已核原作内容批次。Natsume开发并于1989年11月10日在日本发行；TAITO为1990年北美发行关联，原作署名保留Natsume。与街机Light Bringer海外同名Dungeon Magic分开。",
+              "source": "https://www.mobygames.com/game/13400/dungeon-magic-sword-of-the-elements/releases/nes/",
+              "contentVersionId": "taito-dungeon-magic-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-cadash",
+          "title": "卡达什",
+          "chineseTitle": "卡达什",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "カダッシュ / Cadash",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "横版动作RPG／城镇与公主营救",
+          "characters": [
+            "战士／魔法使／僧侣／忍者",
+            "サラサ姫"
+          ],
+          "charactersSource": "https://www.taito.co.jp/egret2mini/title",
+          "synopsis": "四种职业的冒险者从王国出发，经过城镇、洞穴与魔物据点，以居民情报、升级和装备为依靠，救回被掳的公主。",
+          "notes": "TAITO街机1989年原作；PCE与Mega Drive是后发改编，未核首次新增具体内容不扩列。",
+          "source": "https://www.taito.co.jp/egret2mini/title",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "官方资料列职业选择、居民提示、金钱买装备及动作攻略；方向移动、跳跃与攻击为主体，商店／魔法选取为固定行动，不含自由文字解析。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.taito.co.jp/egret2mini/title"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-cadash-c-original",
+              "workId": "taito-cadash",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989年原作内容。TAITO街机1989年原作；PCE与Mega Drive是后发改编，未核首次新增具体内容不扩列。",
+              "source": "https://www.taito.co.jp/egret2mini/title",
+              "evidenceReleaseIds": [
+                "taito-cadash-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-cadash-v-original",
+              "workId": "taito-cadash",
+              "year": 1989,
+              "platform": "Arcade",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989年最早已核原作内容批次。TAITO街机1989年原作；PCE与Mega Drive是后发改编，未核首次新增具体内容不扩列。",
+              "source": "https://www.taito.co.jp/egret2mini/title",
+              "contentVersionId": "taito-cadash-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-estpolis",
+          "title": "艾斯特波利斯传记",
+          "chineseTitle": "艾斯特波利斯传记",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エストポリス伝記",
+          "titleAliases": [
+            "Lufia & the Fortress of Doom"
+          ],
+          "firstYear": 1993,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "剧情RPG／英雄后裔与宿命",
+          "characters": [
+            "英雄后裔（玩家）",
+            "ルフィア",
+            "アグロス",
+            "ジュリナ"
+          ],
+          "charactersSource": "https://www.taito.co.jp/mob/topics/47405",
+          "synopsis": "百年前的英雄事迹成为传说，后裔与少女露菲娅踏上旅途，见证四狂神再现，并面对她与旧战争之间的联系。",
+          "notes": "Neverland Company开发、TAITO于1993年发行SFC原作；手机完整移植与2027预定合集不据商店、平台或包装另增作品。",
+          "source": "https://www.taito.co.jp/mob/topics/47405",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "城镇及迷宫方向探索、对话／物品菜单和队伍战斗指令；采用固定行动选择，起名与存档不构成自由会话输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.taito.co.jp/mob/topics/47405"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-estpolis-c-original",
+              "workId": "taito-estpolis",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年原作内容。Neverland Company开发、TAITO于1993年发行SFC原作；手机完整移植与2027预定合集不据商店、平台或包装另增作品。",
+              "source": "https://www.taito.co.jp/mob/topics/47405",
+              "evidenceReleaseIds": [
+                "taito-estpolis-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-estpolis-v-original",
+              "workId": "taito-estpolis",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年最早已核原作内容批次。Neverland Company开发、TAITO于1993年发行SFC原作；手机完整移植与2027预定合集不据商店、平台或包装另增作品。",
+              "source": "https://www.taito.co.jp/mob/topics/47405",
+              "contentVersionId": "taito-estpolis-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-estpolis2",
+          "title": "艾斯特波利斯传记II",
+          "chineseTitle": "艾斯特波利斯传记II",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エストポリス伝記II",
+          "titleAliases": [
+            "Lufia II: Rise of the Sinistrals",
+            "Estpolis",
+            "Lufia: Curse of the Sinistrals"
+          ],
+          "firstYear": 1995,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "剧情RPG／前传、迷宫机关与团队战斗",
+          "characters": [
+            "マキシム",
+            "セレナ",
+            "ティア",
+            "ガイ"
+          ],
+          "charactersSource": "https://www.taito.co.jp/mob/topics/47405",
+          "synopsis": "马克西姆与旅伴追寻异变，逐步成为传说中的英雄；队伍关系、爱情与四狂神的冲突构成第一作之前的故事。",
+          "notes": "Neverland Company开发、TAITO于1995年发行SFC原作；2010《エストポリス》按重构故事／新系统内容归原作，发行方Square Enix分开。",
+          "source": "https://www.taito.co.jp/mob/topics/47405",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令",
+            "谜题操作",
+            "即时动作"
+          ],
+          "interactionNote": "SFC原版以方向移动、固定战斗菜单及道具机关解谜为主；2010 DS重构版新增即时动作和触屏角色切换。标签汇总这两个内容版，不声称SFC有DS动作战斗；无自由文字行动输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.taito.co.jp/mob/topics/47405",
+            "https://www.nintendo.co.jp/ds/software/bsdj/index.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-estpolis2-c-original",
+              "workId": "taito-estpolis2",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年原作内容。Neverland Company开发、TAITO于1995年发行SFC原作；2010《エストポリス》按重构故事／新系统内容归原作，发行方Square Enix分开。",
+              "source": "https://www.taito.co.jp/mob/topics/47405",
+              "evidenceReleaseIds": [
+                "taito-estpolis2-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "taito-estpolis2-c-ds2010",
+              "workId": "taito-estpolis2",
+              "label": "エストポリス（2010 DS重构）",
+              "firstYear": 2010,
+              "basis": "added",
+              "comparedTo": "taito-estpolis2-c-original",
+              "evidence": "2010年2月25日。以II故事为基础重新构筑情节，并改为即时动作RPG，加入触屏角色切换与双画面战斗；新增内容不只是提高分辨率。原作署TAITO，DS实际发行署Square Enix。",
+              "source": "https://www.nintendo.co.jp/ds/software/bsdj/index.html",
+              "evidenceReleaseIds": [
+                "taito-estpolis2-v-ds2010"
+              ],
+              "addedContent": [
+                {
+                  "type": "新增内容",
+                  "description": "2010年2月25日。以II故事为基础重新构筑情节，并改为即时动作RPG，加入触屏角色切换与双画面战斗；新增内容不只是提高分辨率。原作署TAITO，DS实际发行署Square Enix。",
+                  "source": "https://www.nintendo.co.jp/ds/software/bsdj/index.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-estpolis2-v-original",
+              "workId": "taito-estpolis2",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年最早已核原作内容批次。Neverland Company开发、TAITO于1995年发行SFC原作；2010《エストポリス》按重构故事／新系统内容归原作，发行方Square Enix分开。",
+              "source": "https://www.taito.co.jp/mob/topics/47405",
+              "contentVersionId": "taito-estpolis2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "taito-estpolis2-v-ds2010",
+              "workId": "taito-estpolis2",
+              "year": 2010,
+              "platform": "Nintendo DS",
+              "publisher": "Square Enix",
+              "publisherCompanies": [
+                "Square Enix"
+              ],
+              "kind": "エストポリス（2010 DS重构）",
+              "voice": "未核实",
+              "differences": "2010年2月25日。以II故事为基础重新构筑情节，并改为即时动作RPG，加入触屏角色切换与双画面战斗；新增内容不只是提高分辨率。原作署TAITO，DS实际发行署Square Enix。",
+              "source": "https://www.nintendo.co.jp/ds/software/bsdj/index.html",
+              "contentVersionId": "taito-estpolis2-c-ds2010",
+              "contentRelation": "added",
+              "contentNote": "与原作内容比较后登记的首次新增内容批次；同批多平台共用内容ID。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-ladystalker",
+          "title": "大小姐冒险：来自过去的挑战",
+          "chineseTitle": "大小姐冒险：来自过去的挑战",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "レディストーカー ～過去からの挑戦～",
+          "titleAliases": [
+            "Lady Stalker"
+          ],
+          "firstYear": 1995,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "等距动作RPG／岛屿探索与机关",
+          "characters": [
+            "レディ",
+            "ヨシオ",
+            "コックス"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/274.html",
+          "synopsis": "任性的大小姐带着两名侍从前往神秘的死亡之岛，探索古迹与地下设施，卷入当地的阴谋。",
+          "notes": "Climax开发、TAITO于1995年发行SFC原作。手机《迷宮のワルツ》是独立地下城小品，固定剧情证据未足，先列参考。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/274.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "谜题操作"
+          ],
+          "interactionNote": "直接控制レディ移动和攻击，侍从主要由AI处理；机关与物品操作推进探索。不是由故事里的三人队伍推定三人都能直接控制。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/274.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-ladystalker-c-original",
+              "workId": "taito-ladystalker",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年原作内容。Climax开发、TAITO于1995年发行SFC原作。手机《迷宮のワルツ》是独立地下城小品，固定剧情证据未足，先列参考。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/274.html",
+              "evidenceReleaseIds": [
+                "taito-ladystalker-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-ladystalker-v-original",
+              "workId": "taito-ladystalker",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年最早已核原作内容批次。Climax开发、TAITO于1995年发行SFC原作。手机《迷宮のワルツ》是独立地下城小品，固定剧情证据未足，先列参考。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/274.html",
+              "contentVersionId": "taito-ladystalker-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-chaos-seed",
+          "title": "混沌之种：风水回廊记",
+          "chineseTitle": "混沌之种：风水回廊记",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "カオスシード ～風水回廊記～",
+          "titleAliases": [
+            "Chaos Seed",
+            "仙窟活龍大戦カオスシード"
+          ],
+          "firstYear": 1996,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "剧情动作RPG／风水仙窟与资源经营",
+          "characters": [
+            "洞仙青年（玩家）",
+            "洞仙伙伴",
+            "仙兽与入侵者"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/3632.html",
+          "synopsis": "洞仙通过开凿、经营仙窟恢复枯竭的龙脉，同时面对人类与洞仙的误解，在不同事件与路线中维护大地。",
+          "notes": "Neverland Company开发、TAITO于1996年3月15日发行SFC原作；1998 Saturn版的新增情节、美术和语音作为同作内容增补。 1999年对照评测亦逐项说明Saturn版追加人物与情节。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/3632.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "资源经营",
+            "战术策略"
+          ],
+          "interactionNote": "以按钮／方向行动进行洞窟探索与即时迎击，房间建设、仙兽安排和资源流动通过预设系统指令操作；故事事件承接洞窟经营，无自由文字命令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/3632.html",
+            "https://www.gavas.jp/products/detail.php?product_id=1247",
+            "https://surume5.han-be.com/review/chaos-seed.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-chaos-seed-c-original",
+              "workId": "taito-chaos-seed",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996年原作内容。Neverland Company开发、TAITO于1996年3月15日发行SFC原作；1998 Saturn版的新增情节、美术和语音作为同作内容增补。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/3632.html",
+              "evidenceReleaseIds": [
+                "taito-chaos-seed-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "taito-chaos-seed-c-saturn1998",
+              "workId": "taito-chaos-seed",
+              "label": "仙窟活龍大戦カオスシード（1998增补）",
+              "firstYear": 1998,
+              "basis": "added",
+              "comparedTo": "taito-chaos-seed-c-original",
+              "evidence": "1998年1月29日Saturn初版增加人物、情节、角色语音与会话插图；保留Neverland Company发行与ESP品牌／版权关联，不倒写为TAITO首发。12月廉价Satakore版不重复计内容。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=1247",
+              "evidenceReleaseIds": [
+                "taito-chaos-seed-v-saturn1998"
+              ],
+              "addedContent": [
+                {
+                  "type": "新增内容",
+                  "description": "1998年1月29日Saturn初版增加人物、情节、角色语音与会话插图；保留Neverland Company发行与ESP品牌／版权关联，不倒写为TAITO首发。12月廉价Satakore版不重复计内容。",
+                  "source": "https://www.gavas.jp/products/detail.php?product_id=1247"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-chaos-seed-v-original",
+              "workId": "taito-chaos-seed",
+              "year": 1996,
+              "platform": "Super Famicom",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1996年最早已核原作内容批次。Neverland Company开发、TAITO于1996年3月15日发行SFC原作；1998 Saturn版的新增情节、美术和语音作为同作内容增补。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/3632.html",
+              "contentVersionId": "taito-chaos-seed-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "taito-chaos-seed-v-saturn1998",
+              "workId": "taito-chaos-seed",
+              "year": 1998,
+              "platform": "Sega Saturn",
+              "publisher": "Neverland Company",
+              "publisherCompanies": [
+                "Neverland Company"
+              ],
+              "kind": "仙窟活龍大戦カオスシード（1998增补）",
+              "voice": "有",
+              "differences": "1998年1月29日Saturn初版增加人物、情节、角色语音与会话插图；保留Neverland Company发行与ESP品牌／版权关联，不倒写为TAITO首发。12月廉价Satakore版不重复计内容。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=1247",
+              "contentVersionId": "taito-chaos-seed-c-saturn1998",
+              "contentRelation": "added",
+              "contentNote": "与原作内容比较后登记的首次新增内容批次；同批多平台共用内容ID。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-energy-breaker",
+          "title": "能量破坏者",
+          "chineseTitle": "能量破坏者",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エナジーブレイカー",
+          "titleAliases": [],
+          "firstYear": 1996,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "战术RPG／失忆少女与时空探索",
+          "characters": [
+            "マイラ",
+            "レオン",
+            "ルナルド",
+            "ドロシー",
+            "スタア"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/6213.html",
+          "synopsis": "失去记忆的玛伊拉与各具目的的旅伴探索城镇与遗迹，逐步接近自己的身世和世界异变。",
+          "notes": "Neverland Company开发、TAITO于1996年7月26日发行SFC版；不因与Lufia共有客串元素就合并作品身份。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/6213.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战术策略",
+            "战斗指令",
+            "选项分支",
+            "谜题操作"
+          ],
+          "interactionNote": "地图探索与同地图战术战斗相接，BP决定行动；Lively Talk从预设态度和已获得的关键词列表选择，不是键入自由话题。道具、属性配置与移动均通过按钮／菜单完成。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/6213.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-energy-breaker-c-original",
+              "workId": "taito-energy-breaker",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996年原作内容。Neverland Company开发、TAITO于1996年7月26日发行SFC版；不因与Lufia共有客串元素就合并作品身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/6213.html",
+              "evidenceReleaseIds": [
+                "taito-energy-breaker-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-energy-breaker-v-original",
+              "workId": "taito-energy-breaker",
+              "year": 1996,
+              "platform": "Super Famicom",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1996年最早已核原作内容批次。Neverland Company开发、TAITO于1996年7月26日发行SFC版；不因与Lufia共有客串元素就合并作品身份。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/6213.html",
+              "contentVersionId": "taito-energy-breaker-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-estpolis-returns",
+          "title": "艾斯特波利斯传记：复苏的传说",
+          "chineseTitle": "艾斯特波利斯传记：复苏的传说",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エストポリス伝記 よみがえる伝説",
+          "titleAliases": [
+            "Lufia: The Legend Returns"
+          ],
+          "firstYear": 2001,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "剧情RPG／多角色阵列与迷宫探索",
+          "characters": [
+            "ウェイン",
+            "シーナ",
+            "冒险同伴"
+          ],
+          "charactersSource": "https://www.mobygames.com/game/22573/lufia-the-legend-returns/releases/",
+          "synopsis": "威恩与少女希娜相遇后离开故乡，在不同大陆结识伙伴，追查毁灭预兆与四狂神传说。",
+          "notes": "Neverland Company开发；2001年9月7日TAITO日本GBC首发，随后北美Natsume与欧洲Ubisoft发行。不是未完成的PS计划Lufia III本体。",
+          "source": "https://www.mobygames.com/game/22573/lufia-the-legend-returns/releases/",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令",
+            "战术策略"
+          ],
+          "interactionNote": "方向探索与预设对话／物品操作，战斗从固定指令选择并安排最多九人的阵列；不把队伍布阵误标为动作战斗，角色命名不属自由指令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mobygames.com/game/22573/lufia-the-legend-returns/releases/"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-estpolis-returns-c-original",
+              "workId": "taito-estpolis-returns",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001年原作内容。Neverland Company开发；2001年9月7日TAITO日本GBC首发，随后北美Natsume与欧洲Ubisoft发行。不是未完成的PS计划Lufia III本体。",
+              "source": "https://www.mobygames.com/game/22573/lufia-the-legend-returns/releases/",
+              "evidenceReleaseIds": [
+                "taito-estpolis-returns-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-estpolis-returns-v-original",
+              "workId": "taito-estpolis-returns",
+              "year": 2001,
+              "platform": "Game Boy Color",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2001年最早已核原作内容批次。Neverland Company开发；2001年9月7日TAITO日本GBC首发，随后北美Natsume与欧洲Ubisoft发行。不是未完成的PS计划Lufia III本体。",
+              "source": "https://www.mobygames.com/game/22573/lufia-the-legend-returns/releases/",
+              "contentVersionId": "taito-estpolis-returns-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "taito-estpolis-gaiden",
+          "title": "沉默的遗迹：艾斯特波利斯外传",
+          "chineseTitle": "沉默的遗迹：艾斯特波利斯外传",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "沈黙の遺跡 ～エストポリス外伝～",
+          "titleAliases": [
+            "Lufia: The Ruins of Lore"
+          ],
+          "firstYear": 2002,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "剧情RPG／寻宝、怪物收集与机关",
+          "characters": [
+            "エルディン",
+            "トーマ",
+            "ラミ"
+          ],
+          "charactersSource": "https://www.jp.square-enix.com/game/detail/estpolis_gba/",
+          "synopsis": "少年在父亲失踪后立志成为猎人，与青梅竹马出发应试，随后在古代遗迹和国家冲突中追寻父亲的踪迹。",
+          "notes": "Atelier Double开发、TAITO于2002年在日本发行GBA原作；北美Atlus与Wii U再发不另增内容，手机同名外传需独立核实。",
+          "source": "https://www.jp.square-enix.com/game/detail/estpolis_gba/",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令",
+            "谜题操作"
+          ],
+          "interactionNote": "官方介绍的斩、跳、投等Step Move用于地图机关；战斗使用固定指令，捕捉和Install合体通过系统选择完成，不把这些地图动作泛化为全程即时战斗。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.jp.square-enix.com/game/detail/estpolis_gba/"
+          ],
+          "contentVersions": [
+            {
+              "id": "taito-estpolis-gaiden-c-original",
+              "workId": "taito-estpolis-gaiden",
+              "label": "原作／首批内容",
+              "firstYear": 2002,
+              "basis": "original",
+              "evidence": "2002年原作内容。Atelier Double开发、TAITO于2002年在日本发行GBA原作；北美Atlus与Wii U再发不另增内容，手机同名外传需独立核实。",
+              "source": "https://www.jp.square-enix.com/game/detail/estpolis_gba/",
+              "evidenceReleaseIds": [
+                "taito-estpolis-gaiden-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "taito-estpolis-gaiden-v-original",
+              "workId": "taito-estpolis-gaiden",
+              "year": 2002,
+              "platform": "Game Boy Advance",
+              "publisher": "TAITO",
+              "publisherCompanies": [
+                "TAITO（太东）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2002年最早已核原作内容批次。Atelier Double开发、TAITO于2002年在日本发行GBA原作；北美Atlus与Wii U再发不另增内容，手机同名外传需独立核实。",
+              "source": "https://www.jp.square-enix.com/game/detail/estpolis_gba/",
+              "contentVersionId": "taito-estpolis-gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早已核批次；地区代理、普通移植、翻译和合辑不自动增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
         }
       ],
-      "relatedSectionTitle": "友情育成与追加内容",
-      "relatedIntro": "《悠久幻想曲》官方定位友情育成模拟。太东参与2025重绘版，1997原作归MediaWorks；关联作品不计主库四类总数。",
-      "relatedCountLabel": "按官方育成类型标注",
-      "catalogueEntryCount": 6,
+      "relatedSectionTitle": "剧情RPG、动作叙事与既有友情育成关联",
+      "relatedIntro": "剧情RPG和混合动作冒险采用独立关联记录；不改变四类主库范围。《悠久幻想曲》为既有友情育成例外，沿用历史记录与未核内容关系。",
+      "relatedCountLabel": "12部新增叙事关联＋1部既有历史关联",
+      "catalogueEntryCount": 22,
       "source": "https://www.taito.co.jp/taitoldgamecollection",
       "auditTitle": "作品、内容差异与合并发行说明",
       "auditSourceLabel": "LD官方专题",
-      "auditLabel": "六部主库相关作品、一个友情育成关联作品；厂商成立与排除项目另有来源。",
-      "auditNote": "“本轮核对完成”限定上述项目；历史移动授权作品尚未穷尽。已有平台记录按原样保留，新补记录执行内容差异口径。",
-      "sectionTitle": "从激光影碟到手机叙事与时空新故事",
+      "auditLabel": "22个正文作品档案及开发、发行、输入和内容增补边界；下方另有主要游戏玩法总表。",
+      "auditNote": "旧审计条目标记保留其当时语境；本轮增补与范围见data/taito-audit.md。原清单未完整恢复，约680条厂商署名不作为独立作品数。",
+      "sectionTitle": "LD互动动画、菜单推理与手机故事",
       "creativeProfile": {
-        "thesis": "编辑观察：太东的这组叙事作品跨越动画中的动作判断、手机短篇对话与现代有声故事。专题把同一厂商的不同呈现方式并置，也区分作品原创和授权重绘；不把所有带故事背景的动作游戏归为视觉小说。",
+        "thesis": "编辑观察：太东的叙事目录涵盖LD影像反应、菜单推理、人物群像RPG和手机短篇。玩法清单区分这些故事载体与纯射击、益智、竞技，同时保留合作开发和地区发行身份。",
         "phases": [
           {
             "period": "1984—1985",
@@ -35365,6 +36340,20 @@
             "analysis": "疾风救公主、玲香跨时代追捕与大和号战斗，都利用LD影像承载动作过程，由玩家在关键位置输入，形成影像叙事和游戏判断的结合。",
             "basis": "编辑观察",
             "source": "https://www.taito.co.jp/taitoldgamecollection"
+          },
+          {
+            "period": "1986—1989",
+            "heading": "菜单调查与混合动作探索",
+            "analysis": "京都两案以证言、图标和调查光标组织推理；AKIRA在菜单叙事之间穿插射击，北野武与早期RPG又把对话选择嵌入直接探索。",
+            "basis": "编辑观察",
+            "source": "https://www.gamingalexandria.com/highquality/fc/Akira/Akira%20-%20Manual.pdf"
+          },
+          {
+            "period": "1993—2002",
+            "heading": "同伴关系、战术与地下城叙事",
+            "analysis": "Lufia以两代英雄的关系构成连续故事；Energy Breaker以态度和关键词对话连接战术战斗，Chaos Seed则把洞窟经营与事件路线结合。",
+            "basis": "编辑观察",
+            "source": "https://www.taito.co.jp/mob/topics/47405"
           },
           {
             "period": "2003",
@@ -35502,8 +36491,243 @@
           "reason": "Space Invaders、Darius、Bubble Bobble等不因存在人物背景而自动进入视觉小说／互动动画目录。",
           "source": "https://www.taito.co.jp/mob/",
           "workIds": []
+        },
+        {
+          "title": "山村美紗サスペンス 京都龍の寺殺人事件",
+          "status": "新增无文字输入主库叙事",
+          "reason": "TOSE开发、TAITO发行；1987年FC原作。MSX2后发版不凭平台变更追加内容。",
+          "source": "https://setsumei.cloudfree.jp/famicom/kyotoryuunotera/kyotoryuunotera.html",
+          "workIds": [
+            "g1204"
+          ]
+        },
+        {
+          "title": "AKIRA",
+          "status": "新增无文字输入主库叙事",
+          "reason": "TOSE开发、TAITO于1988年发行的FC电影改编作；与未完成的海外Akira动作游戏计划区分。",
+          "source": "https://www.gamingalexandria.com/highquality/fc/Akira/Akira%20-%20Manual.pdf",
+          "workIds": [
+            "g1205"
+          ]
+        },
+        {
+          "title": "山村美紗サスペンス 京都花の密室殺人事件",
+          "status": "新增无文字输入主库叙事",
+          "reason": "TOSE开发、TAITO发行，1989年FC独立续篇。1990年《京都財テク殺人事件》由Hect发行，不据系列名归太东。",
+          "source": "https://setsumei.cloudfree.jp/famicom/kyotohananomisshitsu/kyotohananomisshitsu.html",
+          "workIds": [
+            "g1206"
+          ]
+        },
+        {
+          "title": "たけしの挑戦状",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "TAITO开发发行，1986年FC原作；保留有明确事件与寻宝目标的混合冒险，单列关联，非纯生活养成。",
+          "source": "https://www.taito.co.jp/classics/takechou",
+          "workIds": [],
+          "relatedIds": [
+            "taito-takeshi"
+          ]
+        },
+        {
+          "title": "未来神話ジャーヴァス",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "TAITO于1987年发行的FC原创动作RPG；PC-88等普通后发机种未完成新增内容比较，暂不扩行。",
+          "source": "https://www.gamingalexandria.com/highquality/fc/Mirai%20Shinwa%20Jarvas/Mirai%20Shinwa%20Jarvas%20-%20Manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "taito-jarvas"
+          ]
+        },
+        {
+          "title": "ミネルバトンサーガ ラゴンの復活",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "开发关联为Random House，TAITO发行1987年FC版；后续Silva Saga由SETA等发行，不倒填为太东续作发行。",
+          "source": "https://setsumei.cloudfree.jp/famicom/minelvatonsaga/minelvatonsaga.html",
+          "workIds": [],
+          "relatedIds": [
+            "taito-minelvaton"
+          ]
+        },
+        {
+          "title": "Dungeon & Magic: Swords of Element",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Natsume开发并于1989年11月10日在日本发行；TAITO为1990年北美发行关联，原作署名保留Natsume。与街机Light Bringer海外同名Dungeon Magic分开。",
+          "source": "https://www.mobygames.com/game/13400/dungeon-magic-sword-of-the-elements/releases/nes/",
+          "workIds": [],
+          "relatedIds": [
+            "taito-dungeon-magic"
+          ]
+        },
+        {
+          "title": "カダッシュ / Cadash",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "TAITO街机1989年原作；PCE与Mega Drive是后发改编，未核首次新增具体内容不扩列。",
+          "source": "https://www.taito.co.jp/egret2mini/title",
+          "workIds": [],
+          "relatedIds": [
+            "taito-cadash"
+          ]
+        },
+        {
+          "title": "エストポリス伝記",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Neverland Company开发、TAITO于1993年发行SFC原作；手机完整移植与2027预定合集不据商店、平台或包装另增作品。",
+          "source": "https://www.taito.co.jp/mob/topics/47405",
+          "workIds": [],
+          "relatedIds": [
+            "taito-estpolis"
+          ]
+        },
+        {
+          "title": "エストポリス伝記II",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Neverland Company开发、TAITO于1995年发行SFC原作；2010《エストポリス》按重构故事／新系统内容归原作，发行方Square Enix分开。",
+          "source": "https://www.taito.co.jp/mob/topics/47405",
+          "workIds": [],
+          "relatedIds": [
+            "taito-estpolis2"
+          ]
+        },
+        {
+          "title": "レディストーカー ～過去からの挑戦～",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Climax开发、TAITO于1995年发行SFC原作。手机《迷宮のワルツ》是独立地下城小品，固定剧情证据未足，先列参考。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/274.html",
+          "workIds": [],
+          "relatedIds": [
+            "taito-ladystalker"
+          ]
+        },
+        {
+          "title": "カオスシード ～風水回廊記～",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Neverland Company开发、TAITO于1996年3月15日发行SFC原作；1998 Saturn版的新增情节、美术和语音作为同作内容增补。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/3632.html",
+          "workIds": [],
+          "relatedIds": [
+            "taito-chaos-seed"
+          ]
+        },
+        {
+          "title": "エナジーブレイカー",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Neverland Company开发、TAITO于1996年7月26日发行SFC版；不因与Lufia共有客串元素就合并作品身份。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/6213.html",
+          "workIds": [],
+          "relatedIds": [
+            "taito-energy-breaker"
+          ]
+        },
+        {
+          "title": "エストポリス伝記 よみがえる伝説",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Neverland Company开发；2001年9月7日TAITO日本GBC首发，随后北美Natsume与欧洲Ubisoft发行。不是未完成的PS计划Lufia III本体。",
+          "source": "https://www.mobygames.com/game/22573/lufia-the-legend-returns/releases/",
+          "workIds": [],
+          "relatedIds": [
+            "taito-estpolis-returns"
+          ]
+        },
+        {
+          "title": "沈黙の遺跡 ～エストポリス外伝～",
+          "status": "新增无文字输入跨类型叙事",
+          "reason": "Atelier Double开发、TAITO于2002年在日本发行GBA原作；北美Atlus与Wii U再发不另增内容，手机同名外传需独立核实。",
+          "source": "https://www.jp.square-enix.com/game/detail/estpolis_gba/",
+          "workIds": [],
+          "relatedIds": [
+            "taito-estpolis-gaiden"
+          ]
+        },
+        {
+          "title": "エストポリス（2010 DS重构）",
+          "status": "同作首次新增内容",
+          "reason": "2010年2月25日。以II故事为基础重新构筑情节，并改为即时动作RPG，加入触屏角色切换与双画面战斗；新增内容不只是提高分辨率。原作署TAITO，DS实际发行署Square Enix。",
+          "source": "https://www.nintendo.co.jp/ds/software/bsdj/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "taito-estpolis2"
+          ]
+        },
+        {
+          "title": "仙窟活龍大戦カオスシード（1998增补）",
+          "status": "同作首次新增内容",
+          "reason": "1998年1月29日Saturn初版增加人物、情节、角色语音与会话插图；保留Neverland Company发行与ESP品牌／版权关联，不倒写为TAITO首发。12月廉价Satakore版不重复计内容。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=1247",
+          "workIds": [],
+          "relatedIds": [
+            "taito-chaos-seed"
+          ]
+        },
+        {
+          "title": "TAITO CLASSICS（2017追加区域与音乐）",
+          "status": "同作首次新增内容",
+          "reason": "2017年8月15日同批手机版首次加入「あめりか」区域、「ひんたぼ語検定」模式及ZUNTATA新曲；依这些具体增量登记一个内容，两平台共用。无敌／困难模式和商店渠道不是额外作品。",
+          "source": "https://www.taito.co.jp/mob/topics/2795",
+          "workIds": [],
+          "relatedIds": [
+            "taito-takeshi"
+          ]
+        },
+        {
+          "title": "京都財テク殺人事件（1990）",
+          "status": "其他发行厂商",
+          "reason": "系列第三作由Hect发行；同系列不是全属TAITO，不新增太东叙事身份。",
+          "source": "https://gamefaqs.gamespot.com/nes/579847-yamamura-misa-suspense-kyouto-zaiteku-satsujin-jiken/data",
+          "workIds": []
+        },
+        {
+          "title": "Dungeon Magic同名与地区署名",
+          "status": "同名分开／首发保留",
+          "reason": "原清单的1990 Dungeon Magic是北美NES关联；日本原作1989由Natsume发行。街机Light Bringer／Dungeon Magic是不同游戏，官方沿革记1993初出，1994程序版不倒填为原作首年。",
+          "source": "https://www.taito.co.jp/egret2mini/title",
+          "workIds": []
+        },
+        {
+          "title": "Lufia III: Ruins Chaser",
+          "status": "未完成计划",
+          "reason": "PS／PC计划不当已发行第三作；GBC《よみがえる伝説》按实际2001成品单列。",
+          "source": "https://lufia.fandom.com/wiki/Lufia%3A_The_Legend_Returns",
+          "workIds": []
+        },
+        {
+          "title": "エストポリス伝記 I＆II（2027）",
+          "status": "未来合集参考",
+          "reason": "官方仅预告2027，当前2026-10-18未发行；不新建原作或未来内容／平台发行。",
+          "source": "https://www.taito.co.jp/mob/topics/47405",
+          "workIds": []
+        },
+        {
+          "title": "エストポリス伝記 いにしえの洞窟／携带外传",
+          "status": "玩法拆出／控制与内容待补核",
+          "reason": "2003携带版明确由II的古洞窟拆出；地下城玩法与手机分章不自动等于新固定故事。未完成逐章／首次新增内容比较，只作参考。",
+          "source": "https://k-tai.watch.impress.co.jp/cda/article/news_toppage/15435.html",
+          "workIds": []
+        },
+        {
+          "title": "レディストーカー 迷宮のワルツ",
+          "status": "玩法主体／剧情证据未足",
+          "reason": "2006年手机地下城独立小品，不能把SFC的完整角色叙事自动复制为该作；暂不新建叙事卡。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/274.html",
+          "workIds": []
+        },
+        {
+          "title": "ふしぎの海のナディア（FC）／クレオパトラの魔宝",
+          "status": "厂商边界",
+          "reason": "FC Nadia由东宝发行，Cleopatra no Mahou为Square／DOG；不能与TAITO的Cleopatra Fortune益智游戏混同。",
+          "source": "https://www.jp.square-enix.com/game/detail/cleopatra/",
+          "workIds": []
+        },
+        {
+          "title": "EGRETⅡ mini第三方作品",
+          "status": "开发与发行分开",
+          "reason": "Mr. Do!、Wiz、Great Swordsman、TATSUJIN等明确保留Universal、Seibu、SETA、Toaplan等原开发／版权关联；合集收录不等于全部由TAITO原创。",
+          "source": "https://www.taito.co.jp/egret2mini/title",
+          "workIds": []
         }
-      ]
+      ],
+      "publisherWorkText": "<p class=\"scope-note\"><strong>9部主库叙事 · 13部跨类型关联，共22个作品档案。</strong> 本轮新增3部菜单冒险、12部剧情RPG／动作叙事；旧6部主库与悠久幻想曲保持。新作均无自由词句输入，角色名、续关密码与固定符号谜题另辨。</p>",
+      "catalogueCountLabel": "9部四类叙事作品；关联区另列13部"
     },
     {
       "id": "nec_he",
