@@ -15722,6 +15722,277 @@
           ]
         }
       ]
+    },
+    "toho": {
+      "title": "东宝（TOHO）游戏作品与玩法类型清单",
+      "updated": "2026-10-18",
+      "scope": "由原项目已恢复条目结合原厂说明及产品档案补核，非完整全球目录；表中参考行不等于已入库独立作品数。",
+      "groups": [
+        {
+          "title": "菜单冒险与附赠角色篇",
+          "note": "无自由文字输入；旧记录复用唯一ID。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "rows": [
+            {
+              "workId": "g1212"
+            },
+            {
+              "workId": "g1213"
+            },
+            {
+              "workId": "g1214"
+            },
+            {
+              "workId": "g630"
+            }
+          ]
+        },
+        {
+          "title": "剧情RPG与混合叙事",
+          "note": "独立动作改编、剧情RPG及双路线卡牌故事；实际发行署名逐条保留。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "rows": [
+            {
+              "workId": "toho-cagliostro-msx"
+            },
+            {
+              "workId": "toho-babylon-msx"
+            },
+            {
+              "workId": "toho-touch-fc"
+            },
+            {
+              "workId": "toho-times-of-lore"
+            },
+            {
+              "workId": "toho-ranma"
+            },
+            {
+              "workId": "toho-super-godzilla"
+            },
+            {
+              "workId": "toho-yamato"
+            },
+            {
+              "workId": "toho-trading-battle"
+            },
+            {
+              "workId": "toho-phanpara"
+            },
+            {
+              "workId": "toho-kaiju8"
+            },
+            {
+              "workId": "toho-sakuna-hinuka"
+            }
+          ]
+        },
+        {
+          "title": "含文字输入：专题保留，排除本次新增",
+          "note": "新哥斯拉是旧主库记录；另两部只有书目，不建立内容和发行。",
+          "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "rows": [
+            {
+              "workId": "g112"
+            },
+            {
+              "workId": "toho-cinemascope-godzilla"
+            },
+            {
+              "workId": "toho-touch-pc"
+            }
+          ]
+        },
+        {
+          "title": "早期动作、策略与待核参考",
+          "note": "有故事背景不自动等于叙事数据库准入；缺少操作或剧情流程证据先留参考。",
+          "source": "https://www.gavas.jp/products/list.php?maker_id=265",
+          "rows": [
+            {
+              "title": "シネスコウォーゲーム 海底軍艦（1984）",
+              "type": "电影冒险／潜艇战争模拟",
+              "relation": "东宝早期发行；操作待核",
+              "note": "原清单提及。需进一步核对原厂操作与冒险段落，暂不假定无文字输入。",
+              "source": "https://ja.wikipedia.org/wiki/海底軍艦_(映画)"
+            },
+            {
+              "title": "ゴジラくん（1985／MSX）",
+              "type": "动作益智",
+              "relation": "东宝发行／Compile开发",
+              "note": "破岩、避敌与营救迷你拉；目前资料不足以确认持续角色叙事，保留玩法参考。",
+              "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games"
+            },
+            {
+              "title": "インファント島の秘密 モンスターズフェア（1986／MSX）",
+              "type": "迷宫动作／益智",
+              "relation": "东宝发行",
+              "note": "怪兽与岛屿背景不自动构成剧情RPG。",
+              "source": "https://generation-msx.nl/software/toho/monsters-fair/868"
+            },
+            {
+              "title": "ジーキル博士の彷魔が刻（1988／FC）",
+              "type": "横向动作／双重人格切换",
+              "relation": "东宝发行",
+              "note": "以婚礼和变身为背景；本轮未取得足够持续叙事证据，不因小说改编就按文字冒险入库。",
+              "source": "https://www.gavas.jp/products/list.php?maker_id=265"
+            },
+            {
+              "title": "ゴジラ（1988／FC）",
+              "type": "六角地图策略＋横向怪兽动作",
+              "relation": "东宝发行",
+              "note": "战略地图与即时战斗并行；保留类型参考，不将片名直接当剧情证据。",
+              "source": "https://www.gavas.jp/products/list.php?maker_id=265"
+            },
+            {
+              "title": "燃える！お兄さん（1989／FC）",
+              "type": "横向动作",
+              "relation": "东宝发行",
+              "note": "营救雪绘的剧情背景保留，持续事件结构未补核。",
+              "source": "https://www.gavas.jp/products/list.php?maker_id=265"
+            },
+            {
+              "title": "ゴジラくん 怪獣大行進／Godzilla（1990／GB）",
+              "type": "动作益智",
+              "relation": "东宝发行",
+              "note": "不要与1985 MSX作、1988 FC作视作一个平台版本。",
+              "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games"
+            },
+            {
+              "title": "ふしぎの海のナディア（1991／FC）",
+              "type": "战术模拟RPG",
+              "relation": "东宝发行",
+              "note": "原厂手册说明50＋α独立战场、预设战斗命令与角色成长，命名不作文字输入；连续剧情事件结构尚待补核，先列参考。",
+              "source": "https://setsumei.cloudfree.jp/famicom/fushiginouminonadia/fushiginouminonadia.html"
+            },
+            {
+              "title": "Godzilla 2: War of the Monsters（1992／NES）",
+              "type": "回合战略",
+              "relation": "东宝海外发行",
+              "note": "指挥人类军队对抗怪兽；保留战争策略参考。",
+              "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games"
+            },
+            {
+              "title": "怪獣王ゴジラ（1993／GB）",
+              "type": "横向怪兽动作",
+              "relation": "东宝发行",
+              "note": "不把怪兽题材、关卡顺序自动写成剧情分支。",
+              "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games"
+            },
+            {
+              "title": "ゴジラ 爆闘烈伝（1994／PCE）",
+              "type": "2D格斗",
+              "relation": "东宝发行",
+              "note": "以怪兽对战为主；纯竞技部分不加入叙事库。",
+              "source": "https://www.gavas.jp/products/list.php?maker_id=265"
+            },
+            {
+              "title": "ゴジラ 怪獣大決戦（1994／SFC）",
+              "type": "2D格斗",
+              "relation": "东宝发行",
+              "note": "与爆斗烈传分别列类型，未凭剧情背景建立正文卡片。",
+              "source": "https://www.gavas.jp/products/list.php?maker_id=265"
+            },
+            {
+              "title": "らんま1/2 超技乱舞篇（1994／SFC）",
+              "type": "2D格斗",
+              "relation": "东宝发行",
+              "note": "与朱猫团RPG不同；纯格斗留玩法参考。",
+              "source": "https://www.ne.jp/asahi/krk/kct/misc/ranmagame.htm"
+            },
+            {
+              "title": "ゴジラ ムービースタジオツアー",
+              "type": "互动影像资料／制作工具",
+              "relation": "东宝相关CD-ROM",
+              "note": "怪兽海报、影片资料及制作活动，不凭工具互动纳为独立叙事。",
+              "source": "https://wikizilla.org/wiki/Godzilla_Movie_Studio_Tour"
+            }
+          ]
+        },
+        {
+          "title": "现代纯玩法、养成与未来计划",
+          "note": "未发行项目和纯竞技／养成只作清单参考。状态核对截至2026-10-18。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "rows": [
+            {
+              "title": "RUN GODZILLA（2021）",
+              "type": "放置养成／竞赛",
+              "relation": "TOHO Games发行",
+              "note": "纯养成参考；官方公告2025/07/01已结束服务。",
+              "source": "https://godzillagames.jp/run/announcement.html"
+            },
+            {
+              "title": "GODZILLA DESTRUCTION（2021）",
+              "type": "怪兽破坏动作",
+              "relation": "TOHO Games发行",
+              "note": "动作主导，2022年停止服务；不扩入剧情RPG。",
+              "source": "https://www.4gamer.net/games/561/G056105/20210427022/"
+            },
+            {
+              "title": "GODZILLA BATTLE LINE（2021）",
+              "type": "实时对战策略",
+              "relation": "TOHO Games发行",
+              "note": "单位编队与即时竞争为主。",
+              "source": "https://www.toho.co.jp/anime/lineup-games/"
+            },
+            {
+              "title": "ゴジラ ボクセルウォーズ／Godzilla Voxel Wars（2023）",
+              "type": "回合战术益智",
+              "relation": "TOHO Games发行",
+              "note": "题材与关卡背景不能替代独立叙事证据；Switch等普通移植不增加内容。",
+              "source": "https://www.toho.co.jp/anime/lineup-games/"
+            },
+            {
+              "title": "おうちに帰りたい ねこの旅",
+              "type": "猫咪模拟／养成",
+              "relation": "TOHO Games相关产品",
+              "note": "日常养成类只作参考。",
+              "source": "https://www.toho.co.jp/anime/lineup-games/"
+            },
+            {
+              "title": "ハイキュー!! ALL Challengers",
+              "type": "养成模拟",
+              "relation": "共同项目／事前登录",
+              "note": "官方目录仍列事前登录；非已核首次发行，不建数据库记录。",
+              "source": "https://www.toho.co.jp/anime/lineup-games/"
+            },
+            {
+              "title": "薬屋のひとりごと ～偽りの皇弟～",
+              "type": "推理冒险",
+              "relation": "东宝／Koei Tecmo合作；未发行",
+              "note": "官方列2027年初头预定；只作计划参考，不写入截至2026的已发行作品。",
+              "source": "https://www.toho.co.jp/anime/lineup-games/"
+            }
+          ]
+        },
+        {
+          "title": "授权、合作与普通移植边界",
+          "note": "区分版权方、开发方及实际发行方；不复制既有专题作品。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "rows": [
+            {
+              "title": "GUNHED（PCE）／ガンヘッド 新たなる戦い（FC）",
+              "type": "射击／战争模拟",
+              "relation": "电影授权边界",
+              "note": "FC馆藏记科学技研制作发行、Varie销售；PCE为Hudson作品。原清单提及不等于东宝自行发行，不复制其他厂商作品。",
+              "source": "https://collection.rcgs.jp/page/PACKAGE0000347"
+            },
+            {
+              "title": "Heavy Unit Mega Drive Special（1990）",
+              "type": "纵向射击",
+              "relation": "东宝MD发行关联",
+              "note": "原街机属于TAITO；已有TAITO清单保持，普通移植不凭平台增内容。",
+              "source": "https://wt1234-donkey.github.io/visual-novel/taito.html"
+            },
+            {
+              "title": "Godzilla（2014／PS3）及VS（PS4）",
+              "type": "怪兽动作",
+              "relation": "Bandai Namco发行／东宝版权授权",
+              "note": "仅版权关联，不作为东宝自发行新作追加。",
+              "source": "https://www.bandainamcoent.co.jp/corporate/press/release/60/pdf/20140626.pdf"
+            }
+          ]
+        }
+      ]
     }
   }
 }
