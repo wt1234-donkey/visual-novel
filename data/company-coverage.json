@@ -91555,6 +91555,1332 @@
         "g081": "旧主库含文字输入身份，本次原样复用，不新增。",
         "square-bof": "Square Soft仅为北美发行关联；原作记录仍归Capcom。"
       }
+    },
+    {
+      "id": "toho",
+      "name": "东宝（TOHO）",
+      "foundedAt": "1932-08-12",
+      "foundedSource": "https://www.toho.co.jp/ir/faq/",
+      "checkedAt": "2026-10-18",
+      "status": "新增3部无文字输入主库叙事、11部剧情跨类型关联；2部输入作仅专题，复用2部旧身份",
+      "workIds": [
+        "g112",
+        "g1212",
+        "g1213",
+        "g1214",
+        "g630"
+      ],
+      "legacyCommandWorkIds": [
+        "g112"
+      ],
+      "relatedGames": [
+        {
+          "id": "toho-cagliostro-msx",
+          "title": "鲁邦三世：卡里奥斯特罗之城（MSX2动作）",
+          "chineseTitle": "鲁邦三世：卡里奥斯特罗之城（MSX2动作）",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ルパン三世 カリオストロの城",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作冒险",
+          "genre": "电影改编／潜入与机关",
+          "characters": [
+            "鲁邦三世",
+            "克拉丽丝"
+          ],
+          "charactersSource": "https://generation-msx.nl/software/toho-cinefile-soft-library/arsene-lupin-the-3rd-and-the-castle-of-cagliostro/1038",
+          "synopsis": "鲁邦穿过城堡中的敌人与机关，寻找解救克拉丽丝的道路。",
+          "notes": "东宝1987年MSX2独立动作改编；与1985年PC菜单迷宫游戏共享电影题材，玩法和关卡实现不同，不是仅换机种的同内容发行。",
+          "source": "https://generation-msx.nl/software/toho-cinefile-soft-library/arsene-lupin-the-3rd-and-the-castle-of-cagliostro/1038",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "横向移动、跳跃、应敌与解机关；支持键盘／摇杆固定操作。按动作冒险收在关联区，不写成PC菜单版。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://generation-msx.nl/software/toho-cinefile-soft-library/arsene-lupin-the-3rd-and-the-castle-of-cagliostro/1038",
+            "https://www.ne.jp/asahi/krk/kct/misc/lupin3game.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-cagliostro-msx-c-original",
+              "workId": "toho-cagliostro-msx",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "东宝1987年MSX2独立动作改编；与1985年PC菜单迷宫游戏共享电影题材，玩法和关卡实现不同，不是仅换机种的同内容发行。",
+              "source": "https://generation-msx.nl/software/toho-cinefile-soft-library/arsene-lupin-the-3rd-and-the-castle-of-cagliostro/1038",
+              "evidenceReleaseIds": [
+                "toho-cagliostro-msx-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-cagliostro-msx-v-original",
+              "workId": "toho-cagliostro-msx",
+              "year": 1987,
+              "platform": "MSX2",
+              "publisher": "東宝",
+              "publisherCompanies": [
+                "東宝"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "东宝1987年MSX2独立动作改编；与1985年PC菜单迷宫游戏共享电影题材，玩法和关卡实现不同，不是仅换机种的同内容发行。",
+              "source": "https://generation-msx.nl/software/toho-cinefile-soft-library/arsene-lupin-the-3rd-and-the-castle-of-cagliostro/1038",
+              "contentVersionId": "toho-cagliostro-msx-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-babylon-msx",
+          "title": "鲁邦三世：巴比伦的黄金传说（MSX2动作）",
+          "chineseTitle": "鲁邦三世：巴比伦的黄金传说（MSX2动作）",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ルパン三世 バビロンの黄金伝説",
+          "titleAliases": [],
+          "firstYear": 1988,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作冒险",
+          "genre": "电影改编／横向寻宝动作",
+          "characters": [
+            "鲁邦三世"
+          ],
+          "charactersSource": "https://generation-msx.nl/software/toho/arsene-lupin-the-3rd-the-golden-legend-of-babylon/1235",
+          "synopsis": "鲁邦在追索黄金的旅途中突破敌人与障碍，向宝藏所在前进。",
+          "notes": "东宝1988年7月MSX2动作改编。与1989 PC-8801的菜单ADV分别建立作品；不是以同名作品标题自动合并，也不将电影上映年作为游戏首年。",
+          "source": "https://generation-msx.nl/software/toho/arsene-lupin-the-3rd-the-golden-legend-of-babylon/1235",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "键盘控制横向移动、跳跃与动作，按关卡推进；固定动作键不是输入行动词语。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://generation-msx.nl/software/toho/arsene-lupin-the-3rd-the-golden-legend-of-babylon/1235",
+            "https://www.ne.jp/asahi/krk/kct/misc/lupin3game.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-babylon-msx-c-original",
+              "workId": "toho-babylon-msx",
+              "label": "原作／首批内容",
+              "firstYear": 1988,
+              "basis": "original",
+              "evidence": "东宝1988年7月MSX2动作改编。与1989 PC-8801的菜单ADV分别建立作品；不是以同名作品标题自动合并，也不将电影上映年作为游戏首年。",
+              "source": "https://generation-msx.nl/software/toho/arsene-lupin-the-3rd-the-golden-legend-of-babylon/1235",
+              "evidenceReleaseIds": [
+                "toho-babylon-msx-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-babylon-msx-v-original",
+              "workId": "toho-babylon-msx",
+              "year": 1988,
+              "platform": "MSX2",
+              "publisher": "東宝",
+              "publisherCompanies": [
+                "東宝"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "东宝1988年7月MSX2动作改编。与1989 PC-8801的菜单ADV分别建立作品；不是以同名作品标题自动合并，也不将电影上映年作为游戏首年。",
+              "source": "https://generation-msx.nl/software/toho/arsene-lupin-the-3rd-the-golden-legend-of-babylon/1235",
+              "contentVersionId": "toho-babylon-msx-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-touch-fc",
+          "title": "Touch：三角之谜",
+          "chineseTitle": "Touch：三角之谜",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "シティ・アドベンチャー タッチ ミステリー・オブ・トライアングル",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作冒险",
+          "genre": "异世界探索／寻回小狗",
+          "characters": [
+            "上杉达也",
+            "上杉和也",
+            "浅仓南"
+          ],
+          "charactersSource": "https://setsumei.cloudfree.jp/famicom/touch/touch.html",
+          "synopsis": "三人在追赶小狗时进入玩具般的异世界，寻找走散的小狗与回家的出口。",
+          "notes": "东宝1987/03/14 Family Computer原作，与同年PC《Touch》为不同游戏；原厂说明书的故事、购物、道具与探索构成混合叙事关联，不作棒球模拟。",
+          "source": "https://setsumei.cloudfree.jp/famicom/touch/touch.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "方向移动、投球攻击、购物与物品操作。说明书中的「あいことば」用于续玩；固定续关密码不属于自由会话或冒险词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://setsumei.cloudfree.jp/famicom/touch/touch.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-touch-fc-c-original",
+              "workId": "toho-touch-fc",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "东宝1987/03/14 Family Computer原作，与同年PC《Touch》为不同游戏；原厂说明书的故事、购物、道具与探索构成混合叙事关联，不作棒球模拟。",
+              "source": "https://setsumei.cloudfree.jp/famicom/touch/touch.html",
+              "evidenceReleaseIds": [
+                "toho-touch-fc-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-touch-fc-v-original",
+              "workId": "toho-touch-fc",
+              "year": 1987,
+              "platform": "Family Computer",
+              "publisher": "東宝",
+              "publisherCompanies": [
+                "東宝"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "东宝1987/03/14 Family Computer原作，与同年PC《Touch》为不同游戏；原厂说明书的故事、购物、道具与探索构成混合叙事关联，不作棒球模拟。",
+              "source": "https://setsumei.cloudfree.jp/famicom/touch/touch.html",
+              "contentVersionId": "toho-touch-fc-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-times-of-lore",
+          "title": "传说时代：失落的徽章",
+          "chineseTitle": "传说时代：失落的徽章",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Times of Lore",
+          "titleAliases": [
+            "Times of Lore: Ushinawareta Medallion"
+          ],
+          "firstYear": 1988,
+          "category": "RPG／叙事关联",
+          "subcategory": "动作RPG",
+          "genre": "王国探索／图标会话",
+          "characters": [
+            "骑士",
+            "女武神",
+            "野蛮人"
+          ],
+          "charactersSource": "https://www.lemonamiga.com/doc/times-of-lore/1657",
+          "synopsis": "冒险者在失去国王的阿尔巴瑞斯特收集传闻、接受委托，追查危及王国的阴谋。",
+          "notes": "Origin Systems于1988年推出原作，本轮登记已核Commodore 64初发。东宝为1990/12/07日本FC发行关联，不能改写原作年份和公司；FC普通移植只作关系说明，不补内容记录。",
+          "source": "https://www.lemonamiga.com/doc/times-of-lore/1657",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令"
+          ],
+          "interactionNote": "移动与即时攻击；TALK图标打开会话菜单，询问话题从已知关键词列表选择，不自由键入。FC原厂手册亦有图标与物品操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.lemonamiga.com/doc/times-of-lore/1657",
+            "https://www.thegameisafootarcade.com/wp-content/uploads/2017/03/Times-of-Lore-Game-Manual.pdf",
+            "https://superfamicom.org/famicom/info/times-of-lore",
+            "https://gamefaqs.gamespot.com/c64/572050-times-of-lore/data"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-times-of-lore-c-original",
+              "workId": "toho-times-of-lore",
+              "label": "原作／首批内容",
+              "firstYear": 1988,
+              "basis": "original",
+              "evidence": "Origin Systems于1988年推出原作，本轮登记已核Commodore 64初发。东宝为1990/12/07日本FC发行关联，不能改写原作年份和公司；FC普通移植只作关系说明，不补内容记录。",
+              "source": "https://gamefaqs.gamespot.com/c64/572050-times-of-lore/data",
+              "evidenceReleaseIds": [
+                "toho-times-of-lore-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-times-of-lore-v-original",
+              "workId": "toho-times-of-lore",
+              "year": 1988,
+              "platform": "Commodore 64",
+              "publisher": "Origin Systems",
+              "publisherCompanies": [
+                "Origin Systems"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "Origin Systems于1988年推出原作，本轮登记已核Commodore 64初发。东宝为1990/12/07日本FC发行关联，不能改写原作年份和公司；FC普通移植只作关系说明，不补内容记录。",
+              "source": "https://gamefaqs.gamespot.com/c64/572050-times-of-lore/data",
+              "contentVersionId": "toho-times-of-lore-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-ranma",
+          "title": "乱马½：朱猫团的秘宝",
+          "chineseTitle": "乱马½：朱猫团的秘宝",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "らんま1/2 朱猫団的秘宝",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "漫画衍生／原创寻宝旅程",
+          "characters": [
+            "早乙女乱马",
+            "天道茜",
+            "响良牙"
+          ],
+          "charactersSource": "https://www.ne.jp/asahi/krk/kct/misc/ranmagame.htm",
+          "synopsis": "乱马与伙伴卷入朱猫团和秘宝的纷争，在城镇与迷宫间追踪事件。",
+          "notes": "东宝1993/10/22 Super Famicom原作；区别于同系列的格斗游戏，采用独立剧情与传统RPG探索、菜单战斗。",
+          "source": "https://www.ne.jp/asahi/krk/kct/misc/ranmagame.htm",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "城镇和地图移动、会话与道具菜单、预设攻击和技能选择。此处日文“コマンド入力型RPG”指菜单战斗，不据“入力”二字误标parser。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.ne.jp/asahi/krk/kct/misc/ranmagame.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-ranma-c-original",
+              "workId": "toho-ranma",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "东宝1993/10/22 Super Famicom原作；区别于同系列的格斗游戏，采用独立剧情与传统RPG探索、菜单战斗。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2119",
+              "evidenceReleaseIds": [
+                "toho-ranma-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-ranma-v-original",
+              "workId": "toho-ranma",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "東宝",
+              "publisherCompanies": [
+                "東宝"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "东宝1993/10/22 Super Famicom原作；区别于同系列的格斗游戏，采用独立剧情与传统RPG探索、菜单战斗。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2119",
+              "contentVersionId": "toho-ranma-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-super-godzilla",
+          "title": "超级哥斯拉",
+          "chineseTitle": "超级哥斯拉",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "超ゴジラ",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情动作／策略混合",
+          "genre": "通讯事件／外星入侵",
+          "characters": [
+            "哥斯拉",
+            "谷口队员",
+            "矢野研究员",
+            "指挥官"
+          ],
+          "charactersSource": "https://www.tohokingdom.com/vg/super_godzilla.htm",
+          "synopsis": "人类通过Super-X2引导哥斯拉抵抗外星怪兽，随着研究与通讯事件逐步迎来最终决战。",
+          "notes": "东宝1993年日本Super Famicom原作。独立原创事件与持续出现的人类角色使其区别于纯怪兽格斗；1994海外版不凭地区发行另增内容。",
+          "source": "https://www.tohokingdom.com/vg/super_godzilla.htm",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "战斗指令",
+            "阅读推进"
+          ],
+          "interactionNote": "方向控制移动与防御、按键攻击并选择大招，A键推进通讯文本；地图操控不标为纯回合战略。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.tohokingdom.com/vg/super_godzilla.htm",
+            "https://www.tohokingdom.com/vg/super_godzilla/japanese_manual.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-super-godzilla-c-original",
+              "workId": "toho-super-godzilla",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "东宝1993年日本Super Famicom原作。独立原创事件与持续出现的人类角色使其区别于纯怪兽格斗；1994海外版不凭地区发行另增内容。",
+              "source": "https://www.tohokingdom.com/vg/super_godzilla.htm",
+              "evidenceReleaseIds": [
+                "toho-super-godzilla-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-super-godzilla-v-original",
+              "workId": "toho-super-godzilla",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "東宝",
+              "publisherCompanies": [
+                "東宝"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "东宝1993年日本Super Famicom原作。独立原创事件与持续出现的人类角色使其区别于纯怪兽格斗；1994海外版不凭地区发行另增内容。",
+              "source": "https://www.tohokingdom.com/vg/super_godzilla.htm",
+              "contentVersionId": "toho-super-godzilla-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-yamato",
+          "title": "火之皇子：大和武尊",
+          "chineseTitle": "火之皇子：大和武尊",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "火の皇子 ヤマトタケル",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "日本神话／王权与旱灾",
+          "characters": [
+            "大和武尊",
+            "月之轮巫女",
+            "沙女"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/2707.html",
+          "synopsis": "旱灾与叛乱席卷大地，在伊势长大的王子前往大和，面对宫廷中针对自己的阴谋。",
+          "notes": "东宝1995/09/29 Super Famicom原作；西谷史编剧。故事按游戏说明书概述，不把1994年同题材电影的剧情直接移入。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/2707.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "地图移动、会话、预设战斗与从魔管理；开始时设定生日影响成长，与自由键入行动或会话分开。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/2707.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-yamato-c-original",
+              "workId": "toho-yamato",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "东宝1995/09/29 Super Famicom原作；西谷史编剧。故事按游戏说明书概述，不把1994年同题材电影的剧情直接移入。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/2707.html",
+              "evidenceReleaseIds": [
+                "toho-yamato-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-yamato-v-original",
+              "workId": "toho-yamato",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "東宝",
+              "publisherCompanies": [
+                "東宝"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "东宝1995/09/29 Super Famicom原作；西谷史编剧。故事按游戏说明书概述，不把1994年同题材电影的剧情直接移入。",
+              "source": "https://w.atwiki.jp/gcmatome/pages/2707.html",
+              "contentVersionId": "toho-yamato-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-trading-battle",
+          "title": "哥斯拉：卡牌战斗",
+          "chineseTitle": "哥斯拉：卡牌战斗",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ゴジラ トレーディングバトル",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "RPG／叙事关联",
+          "subcategory": "卡牌剧情／策略",
+          "genre": "双路线故事／外星入侵",
+          "characters": [
+            "怪兽岛的少年",
+            "G-Force军官",
+            "哥斯拉"
+          ],
+          "charactersSource": "https://www.tohokingdom.com/vg/godzilla_trading_battle.html",
+          "synopsis": "玩家从怪兽岛或G-Force视点经历外星入侵，通过收集和使用怪兽卡牌保卫地球。",
+          "notes": "东宝1998/12/03 PlayStation原作，Tao Human Systems开发。纳入的是两条具故事事件的路线；另有对战模式，不能因此将整作写成纯竞技或纯视觉小说。",
+          "source": "https://www.tohokingdom.com/vg/godzilla_trading_battle.html",
+          "interactionModes": [
+            "卡牌棋盘",
+            "战术策略",
+            "菜单指令",
+            "阅读推进"
+          ],
+          "interactionNote": "方向键选择卡牌和地图位置，圆圈确认，按预设菜单与卡牌规则推进故事对局；无自由行动词句输入证据。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.tohokingdom.com/vg/godzilla_trading_battle.html",
+            "https://www.gavas.jp/products/detail.php?product_id=10406"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-trading-battle-c-original",
+              "workId": "toho-trading-battle",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "东宝1998/12/03 PlayStation原作，Tao Human Systems开发。纳入的是两条具故事事件的路线；另有对战模式，不能因此将整作写成纯竞技或纯视觉小说。",
+              "source": "https://www.tohokingdom.com/vg/godzilla_trading_battle.html",
+              "evidenceReleaseIds": [
+                "toho-trading-battle-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-trading-battle-v-original",
+              "workId": "toho-trading-battle",
+              "year": 1998,
+              "platform": "PlayStation",
+              "publisher": "東宝",
+              "publisherCompanies": [
+                "東宝"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "东宝1998/12/03 PlayStation原作，Tao Human Systems开发。纳入的是两条具故事事件的路线；另有对战模式，不能因此将整作写成纯竞技或纯视觉小说。",
+              "source": "https://www.tohokingdom.com/vg/godzilla_trading_battle.html",
+              "contentVersionId": "toho-trading-battle-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-phanpara",
+          "title": "咒术回战：幻影游行",
+          "chineseTitle": "咒术回战：幻影游行",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "呪術廻戦 ファントムパレード",
+          "titleAliases": [
+            "Jujutsu Kaisen Phantom Parade"
+          ],
+          "firstYear": 2023,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "动画重述／福冈原创篇",
+          "characters": [
+            "虎杖悠仁",
+            "伏黑惠",
+            "钉崎野蔷薇",
+            "五条悟"
+          ],
+          "charactersSource": "https://www.cyberagent.co.jp/news/detail/id=29520",
+          "synopsis": "以角色视点重访动画事件，并前往福冈经历游戏原创的咒术故事。",
+          "notes": "2023/11/21日本iOS／Android同批开服，共用原作内容ID。东宝参与企划制作，Sumzap企划、开发及运营并配信；后发PC与海外本地化不凭平台或语言增加内容。",
+          "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+          "interactionModes": [
+            "菜单指令",
+            "战斗指令",
+            "阅读推进"
+          ],
+          "interactionNote": "编成队伍、从预设技能中选择战斗命令，阅读／观看具角色配音的故事。资料中的新规与客服文字栏不是叙事输入玩法；本记录概览已核故事与战斗操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.cyberagent.co.jp/news/detail/id=29520",
+            "https://jujutsuphanpara.jp/"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-phanpara-c-original",
+              "workId": "toho-phanpara",
+              "label": "原作／首批内容",
+              "firstYear": 2023,
+              "basis": "original",
+              "evidence": "2023/11/21日本iOS／Android同批开服，共用原作内容ID。东宝参与企划制作，Sumzap企划、开发及运营并配信；后发PC与海外本地化不凭平台或语言增加内容。",
+              "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+              "evidenceReleaseIds": [
+                "toho-phanpara-v-original-1",
+                "toho-phanpara-v-original-2"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-phanpara-v-original-1",
+              "workId": "toho-phanpara",
+              "year": 2023,
+              "platform": "iOS",
+              "publisher": "Sumzap",
+              "publisherCompanies": [
+                "Sumzap"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "2023/11/21日本iOS／Android同批开服，共用原作内容ID。东宝参与企划制作，Sumzap企划、开发及运营并配信；后发PC与海外本地化不凭平台或语言增加内容。",
+              "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+              "contentVersionId": "toho-phanpara-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "toho-phanpara-v-original-2",
+              "workId": "toho-phanpara",
+              "year": 2023,
+              "platform": "Android",
+              "publisher": "Sumzap",
+              "publisherCompanies": [
+                "Sumzap"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "2023/11/21日本iOS／Android同批开服，共用原作内容ID。东宝参与企划制作，Sumzap企划、开发及运营并配信；后发PC与海外本地化不凭平台或语言增加内容。",
+              "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+              "contentVersionId": "toho-phanpara-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-kaiju8",
+          "title": "怪兽8号 THE GAME",
+          "chineseTitle": "怪兽8号 THE GAME",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "怪獣８号 THE GAME",
+          "titleAliases": [
+            "Kaiju No. 8 THE GAME",
+            "怪獸8號 THE GAME"
+          ],
+          "firstYear": 2025,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情RPG",
+          "genre": "怪兽讨伐／原创主线",
+          "characters": [
+            "日比野卡夫卡",
+            "市川雷诺",
+            "亚白米娜",
+            "四之宫纱岸"
+          ],
+          "charactersSource": "https://games.aktsk.jp/news/61804/",
+          "synopsis": "防卫队与CLOZER成员应对怪兽及次元异常，原创主线与追忆、角色篇并行。",
+          "notes": "2025/08/31 iOS／Android首批配信，Akatsuki Games发行与开发运营，东宝及Production I.G共同企划制作。后发Steam不列普通移植新内容；原作、动画与游戏角色分别核对。",
+          "source": "https://games.aktsk.jp/news/61804/",
+          "interactionModes": [
+            "菜单指令",
+            "战斗指令",
+            "阅读推进"
+          ],
+          "interactionNote": "编队并选择预设战斗技能，观看故事与角色通讯；“消息／群聊”是查看角色之间的预写会话，不把这种演出形式误标为玩家自由文字聊天。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://games.aktsk.jp/news/61804/",
+            "https://kj8-thegame.com/",
+            "https://dengekionline.com/article/202508/49537"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-kaiju8-c-original",
+              "workId": "toho-kaiju8",
+              "label": "原作／首批内容",
+              "firstYear": 2025,
+              "basis": "original",
+              "evidence": "2025/08/31 iOS／Android首批配信，Akatsuki Games发行与开发运营，东宝及Production I.G共同企划制作。后发Steam不列普通移植新内容；原作、动画与游戏角色分别核对。",
+              "source": "https://games.aktsk.jp/news/61804/",
+              "evidenceReleaseIds": [
+                "toho-kaiju8-v-original-1",
+                "toho-kaiju8-v-original-2"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-kaiju8-v-original-1",
+              "workId": "toho-kaiju8",
+              "year": 2025,
+              "platform": "iOS",
+              "publisher": "Akatsuki Games",
+              "publisherCompanies": [
+                "Akatsuki Games"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "2025/08/31 iOS／Android首批配信，Akatsuki Games发行与开发运营，东宝及Production I.G共同企划制作。后发Steam不列普通移植新内容；原作、动画与游戏角色分别核对。",
+              "source": "https://games.aktsk.jp/news/61804/",
+              "contentVersionId": "toho-kaiju8-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "toho-kaiju8-v-original-2",
+              "workId": "toho-kaiju8",
+              "year": 2025,
+              "platform": "Android",
+              "publisher": "Akatsuki Games",
+              "publisherCompanies": [
+                "Akatsuki Games"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "2025/08/31 iOS／Android首批配信，Akatsuki Games发行与开发运营，东宝及Production I.G共同企划制作。后发Steam不列普通移植新内容；原作、动画与游戏角色分别核对。",
+              "source": "https://games.aktsk.jp/news/61804/",
+              "contentVersionId": "toho-kaiju8-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "toho-sakuna-hinuka",
+          "title": "天穗之咲稻姬：希努卡巡灵谭",
+          "chineseTitle": "天穗之咲稻姬：希努卡巡灵谭",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天穂のサクナヒメ～ヒヌカ巡霊譚～",
+          "titleAliases": [
+            "Sakuna: Hinuka Junreitan"
+          ],
+          "firstYear": 2026,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情动作RPG／稻作",
+          "genre": "双女神／群岛巡灵",
+          "characters": [
+            "佐久名姬",
+            "希努卡姬",
+            "魂爷",
+            "历"
+          ],
+          "charactersSource": "https://sakuna-hinuka.jp/",
+          "synopsis": "两位女神与伙伴巡行群岛，藉精灵与丰穰之力寻找失落之物，调查岛屿的谜团。",
+          "notes": "TOHO Games企划制作配信，G2 Studios开发运营。2026/02/05 iOS／Android原作同批；2026/07/27已停止服务，保留历史作品身份。后续官方YouTube剧本公开不是另一个可玩版本。",
+          "source": "https://sakuna-hinuka.jp/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "资源经营",
+            "菜单指令",
+            "阅读推进"
+          ],
+          "interactionNote": "俯视探索与触屏动作战斗、队伍编成、稻作资源管理及剧情阅读；有独立角色故事，区别于纯日常养成。已核玩法未显示自由行动或会话键入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://sakuna-hinuka.jp/",
+            "https://game8.jp/articles/569434",
+            "https://sakuna-hinuka.jp/news/906/"
+          ],
+          "contentVersions": [
+            {
+              "id": "toho-sakuna-hinuka-c-original",
+              "workId": "toho-sakuna-hinuka",
+              "label": "原作／首批内容",
+              "firstYear": 2026,
+              "basis": "original",
+              "evidence": "TOHO Games企划制作配信，G2 Studios开发运营。2026/02/05 iOS／Android原作同批；2026/07/27已停止服务，保留历史作品身份。后续官方YouTube剧本公开不是另一个可玩版本。",
+              "source": "https://sakuna-hinuka.jp/news/209/",
+              "evidenceReleaseIds": [
+                "toho-sakuna-hinuka-v-original-1",
+                "toho-sakuna-hinuka-v-original-2"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "toho-sakuna-hinuka-v-original-1",
+              "workId": "toho-sakuna-hinuka",
+              "year": 2026,
+              "platform": "iOS",
+              "publisher": "TOHO Games",
+              "publisherCompanies": [
+                "TOHO Games"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "TOHO Games企划制作配信，G2 Studios开发运营。2026/02/05 iOS／Android原作同批；2026/07/27已停止服务，保留历史作品身份。后续官方YouTube剧本公开不是另一个可玩版本。",
+              "source": "https://sakuna-hinuka.jp/news/209/",
+              "contentVersionId": "toho-sakuna-hinuka-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "toho-sakuna-hinuka-v-original-2",
+              "workId": "toho-sakuna-hinuka",
+              "year": 2026,
+              "platform": "Android",
+              "publisher": "TOHO Games",
+              "publisherCompanies": [
+                "TOHO Games"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "TOHO Games企划制作配信，G2 Studios开发运营。2026/02/05 iOS／Android原作同批；2026/07/27已停止服务，保留历史作品身份。后续官方YouTube剧本公开不是另一个可玩版本。",
+              "source": "https://sakuna-hinuka.jp/news/209/",
+              "contentVersionId": "toho-sakuna-hinuka-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、翻译、合售与再版不据此增加内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "dossierOnlyWorks": [
+        {
+          "id": "toho-cinemascope-godzilla",
+          "title": "哥斯拉：宽银幕冒险",
+          "chineseTitle": "哥斯拉：宽银幕冒险",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "シネスコ・アドベンチャー ゴジラ",
+          "titleAliases": [],
+          "firstYear": 1984,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "电影重述／三部调查",
+          "characters": [
+            "大户岛调查团成员",
+            "尾形秀人",
+            "芹泽博士"
+          ],
+          "charactersSource": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "synopsis": "从大户岛调查到东京灾难，再到海底决战，以不同人物经历1954年电影事件。",
+          "notes": "仅专题书目，不新增数据库作品、内容或发行。1984年11月东宝PC游戏，不把1984新电影的情节混入本作。",
+          "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "interactionModes": [
+            "文字输入",
+            "限时反应"
+          ],
+          "interactionNote": "以键入指令推进三段冒险，第三段加入实时要素；有电影画面不等于菜单操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+            "https://www.gamepres.org/pc88/library/1984/1984_11.htm"
+          ]
+        },
+        {
+          "id": "toho-touch-pc",
+          "title": "Touch（PC校园冒险）",
+          "chineseTitle": "Touch（PC校园冒险）",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "タッチ",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "校园／动词输入与名词选择",
+          "characters": [
+            "上杉达也",
+            "上杉和也",
+            "浅仓南"
+          ],
+          "charactersSource": "https://www.namura.net/xkd.com/product/touch.html",
+          "synopsis": "以明青学园和熟悉的人物关系为舞台，通过行动与交流推进校园事件。",
+          "notes": "仅专题书目。东宝1987年1月PC-8801作品；与1987 FC异世界动作冒险分别处理，不新增内容或发行。",
+          "source": "https://www.namura.net/xkd.com/product/touch.html",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "开发者资料明确动词指令输入、名词选择；开场或对象菜单不抵消实际动词键入，因此排除本次入库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.namura.net/xkd.com/product/touch.html",
+            "https://www.8-bits.info/gamelist/PC88/info/info_ydPDnMpdYYjSz0Qr.php"
+          ]
+        }
+      ],
+      "source": "https://www.toho.co.jp/anime/lineup-games/",
+      "scope": "根据“列出Carry Lab（キャリーラボ）游戏类型清单”项目的东宝清单建立专题。原聊天只恢复到部分条目，结合原厂说明书、产品资料及游戏档案补核；不是逐字聊天存档或全球完整目录。涵盖东宝自行发行、开发及有明确共同企划制作身份的作品，单纯电影版权授权另列边界参考。",
+      "publisherNote": "东宝官方记1932/08/12设立。依本轮用户具名要求建立，作为仓库优先1949年后公司的明确例外。东宝、TOHO Games品牌、Sumzap与Akatsuki Games实际配信各按历史署名保存；不把原片版权方自动当游戏发行商。",
+      "versionScope": "新作仅登记最早已核原作内容批次，同批多平台共用ID。1985 PC与1987 MSX2《卡里奥斯特罗之城》、1988 MSX2与1989 PC《巴比伦》为各自独立的游戏改编；普通移植、翻译、再版、动画光盘或后续商店上架不增加内容。此次未认定后发内容增补，并非完整版本史。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>新增3部菜单叙事、11部剧情RPG与混合叙事关联。</strong> 复用新哥斯拉与迷你角色心理测量者原ID；1984哥斯拉和PC Touch仅专题。正文18个档案，输入作品不作为本次数据库新增。</p>",
+      "sectionTitle": "电影、校园与角色故事",
+      "catalogueCountLabel": "3部新增菜单叙事 · 2部旧库复用",
+      "relatedSectionTitle": "剧情RPG与混合叙事",
+      "relatedIntro": "收录有明确人物故事的RPG、动作冒险与卡牌剧情；纯竞技、益智、育成及剧情证据不足项目只列末尾玩法参考。",
+      "relatedCountLabel": "11部新增关联作品",
+      "auditTitle": "作品、操作与历史归属核对",
+      "auditSourceLabel": "东宝现行游戏目录",
+      "auditLabel": "输入边界、同名改编与实际发行方逐项核对。",
+      "auditNote": "详细记录见data/toho-audit.md。早期档案结合原厂手册及保存资料；现代游戏只登记首次内容批次，不穷尽持续运营活动。",
+      "overviewLabel": "作品档案（含2部仅专题输入书目）",
+      "creativeProfile": {
+        "thesis": "编辑观察：东宝游戏把特摄与动画故事转化为调查、迷宫、动作、卡牌及角色RPG。媒介题材相近，实际操作和创作分工却须逐作区分。",
+        "phases": [
+          {
+            "period": "1984—1989",
+            "heading": "从电影输入冒险到菜单叙事",
+            "analysis": "早期哥斯拉与PC Touch保留词语输入；鲁邦PC冒险以预设菜单重组电影事件，阳光普照通过四日校园关系形成结局。",
+            "basis": "编辑观察",
+            "source": "https://w.atwiki.jp/gcmatome/pages/6334.html"
+          },
+          {
+            "period": "1987—1998",
+            "heading": "同一IP的不同可玩结构",
+            "analysis": "鲁邦MSX动作改编与PC迷宫ADV分别成作，乱马和大和武尊采用剧情RPG；超级哥斯拉和卡牌战斗则以通讯事件或不同路线承接操作。",
+            "basis": "编辑观察",
+            "source": "https://www.tohokingdom.com/vg/super_godzilla.htm"
+          },
+          {
+            "period": "2012—2026",
+            "heading": "附赠角色篇与共同制作",
+            "analysis": "迷你角色心理测量者作为动画光盘附赠ADV保存原身份。现代咒术回战、怪兽8号与希努卡巡灵谭有明确合作或配信分工，不能只看版权标记。",
+            "basis": "编辑观察",
+            "source": "https://www.toho.co.jp/anime/lineup-games/"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "ニューゴジラ",
+          "status": "旧主库复用",
+          "reason": "含文字输入的既有主库记录，原样保留历史身份；本次不新增。",
+          "source": "https://www.gamepres.org/pc88/library/1985/1985_4.htm",
+          "workIds": [
+            "g112"
+          ]
+        },
+        {
+          "title": "ルパン三世 カリオストロの城（图文选项／调查）",
+          "status": "新增无文字输入叙事",
+          "reason": "东宝1985年12月PC冒险原作，公称RPG；此处登记已核PC-8801首批。1987 MSX2为另一套横向动作改编，另立作品，不按普通移植并入。",
+          "source": "https://www.gamepres.org/pc88/library/1985/1985_12.htm",
+          "workIds": [
+            "g1212"
+          ]
+        },
+        {
+          "title": "陽あたり良好！",
+          "status": "新增无文字输入叙事",
+          "reason": "东宝1987年12月PC-8801原作。主人公是游戏原创的新住客，不能将漫画主角岸本霞误写成玩家视点。角色起名与存档不作行动词句输入。",
+          "source": "https://iza-namakura.hateblo.jp/entry/2022/08/25/200000",
+          "workIds": [
+            "g1213"
+          ]
+        },
+        {
+          "title": "ルパン三世 バビロンの黄金伝説（图文选项／调查）",
+          "status": "新增无文字输入叙事",
+          "reason": "东宝1989年PC-8801菜单ADV；按原片大纲重写事件与人物。1988 MSX2同名作是横向动作游戏，不能把1988年倒填为此ADV首年。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/6334.html",
+          "workIds": [
+            "g1214"
+          ]
+        },
+        {
+          "title": "ちみキャラさいこぱす",
+          "status": "旧主库复用",
+          "reason": "复用Nitroplus专题已收主库身份；分卷附赠章节不另造独立作品。",
+          "source": "https://www.nitroplus.co.jp/news/2012/3316.php",
+          "workIds": [
+            "g630"
+          ]
+        },
+        {
+          "title": "ルパン三世 カリオストロの城（动作冒险）",
+          "status": "剧情关联",
+          "reason": "东宝1987年MSX2独立动作改编；与1985年PC菜单迷宫游戏共享电影题材，玩法和关卡实现不同，不是仅换机种的同内容发行。",
+          "source": "https://generation-msx.nl/software/toho-cinefile-soft-library/arsene-lupin-the-3rd-and-the-castle-of-cagliostro/1038",
+          "workIds": [],
+          "relatedIds": [
+            "toho-cagliostro-msx"
+          ]
+        },
+        {
+          "title": "ルパン三世 バビロンの黄金伝説（动作冒险）",
+          "status": "剧情关联",
+          "reason": "东宝1988年7月MSX2动作改编。与1989 PC-8801的菜单ADV分别建立作品；不是以同名作品标题自动合并，也不将电影上映年作为游戏首年。",
+          "source": "https://generation-msx.nl/software/toho/arsene-lupin-the-3rd-the-golden-legend-of-babylon/1235",
+          "workIds": [],
+          "relatedIds": [
+            "toho-babylon-msx"
+          ]
+        },
+        {
+          "title": "シティ・アドベンチャー タッチ ミステリー・オブ・トライアングル",
+          "status": "剧情关联",
+          "reason": "东宝1987/03/14 Family Computer原作，与同年PC《Touch》为不同游戏；原厂说明书的故事、购物、道具与探索构成混合叙事关联，不作棒球模拟。",
+          "source": "https://setsumei.cloudfree.jp/famicom/touch/touch.html",
+          "workIds": [],
+          "relatedIds": [
+            "toho-touch-fc"
+          ]
+        },
+        {
+          "title": "Times of Lore",
+          "status": "剧情关联",
+          "reason": "东宝为1990年FC发行关联；1988原作公司仍为Origin Systems。",
+          "source": "https://www.lemonamiga.com/doc/times-of-lore/1657",
+          "workIds": [],
+          "relatedIds": [
+            "toho-times-of-lore"
+          ]
+        },
+        {
+          "title": "らんま1/2 朱猫団的秘宝",
+          "status": "剧情关联",
+          "reason": "东宝1993/10/22 Super Famicom原作；区别于同系列的格斗游戏，采用独立剧情与传统RPG探索、菜单战斗。",
+          "source": "https://www.ne.jp/asahi/krk/kct/misc/ranmagame.htm",
+          "workIds": [],
+          "relatedIds": [
+            "toho-ranma"
+          ]
+        },
+        {
+          "title": "超ゴジラ",
+          "status": "剧情关联",
+          "reason": "东宝1993年日本Super Famicom原作。独立原创事件与持续出现的人类角色使其区别于纯怪兽格斗；1994海外版不凭地区发行另增内容。",
+          "source": "https://www.tohokingdom.com/vg/super_godzilla.htm",
+          "workIds": [],
+          "relatedIds": [
+            "toho-super-godzilla"
+          ]
+        },
+        {
+          "title": "火の皇子 ヤマトタケル",
+          "status": "剧情关联",
+          "reason": "东宝1995/09/29 Super Famicom原作；西谷史编剧。故事按游戏说明书概述，不把1994年同题材电影的剧情直接移入。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/2707.html",
+          "workIds": [],
+          "relatedIds": [
+            "toho-yamato"
+          ]
+        },
+        {
+          "title": "ゴジラ トレーディングバトル",
+          "status": "剧情关联",
+          "reason": "东宝1998/12/03 PlayStation原作，Tao Human Systems开发。纳入的是两条具故事事件的路线；另有对战模式，不能因此将整作写成纯竞技或纯视觉小说。",
+          "source": "https://www.tohokingdom.com/vg/godzilla_trading_battle.html",
+          "workIds": [],
+          "relatedIds": [
+            "toho-trading-battle"
+          ]
+        },
+        {
+          "title": "呪術廻戦 ファントムパレード",
+          "status": "剧情关联",
+          "reason": "2023/11/21日本iOS／Android同批开服，共用原作内容ID。东宝参与企划制作，Sumzap企划、开发及运营并配信；后发PC与海外本地化不凭平台或语言增加内容。",
+          "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+          "workIds": [],
+          "relatedIds": [
+            "toho-phanpara"
+          ]
+        },
+        {
+          "title": "怪獣８号 THE GAME",
+          "status": "剧情关联",
+          "reason": "2025/08/31 iOS／Android首批配信，Akatsuki Games发行与开发运营，东宝及Production I.G共同企划制作。后发Steam不列普通移植新内容；原作、动画与游戏角色分别核对。",
+          "source": "https://games.aktsk.jp/news/61804/",
+          "workIds": [],
+          "relatedIds": [
+            "toho-kaiju8"
+          ]
+        },
+        {
+          "title": "天穂のサクナヒメ～ヒヌカ巡霊譚～",
+          "status": "剧情关联",
+          "reason": "TOHO Games企划制作配信，G2 Studios开发运营。2026/02/05 iOS／Android原作同批；2026/07/27已停止服务，保留历史作品身份。后续官方YouTube剧本公开不是另一个可玩版本。",
+          "source": "https://sakuna-hinuka.jp/",
+          "workIds": [],
+          "relatedIds": [
+            "toho-sakuna-hinuka"
+          ]
+        },
+        {
+          "title": "シネスコ・アドベンチャー ゴジラ",
+          "status": "仅专题输入书目",
+          "reason": "仅专题书目，不新增数据库作品、内容或发行。1984年11月东宝PC游戏，不把1984新电影的情节混入本作。",
+          "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "workIds": [],
+          "dossierIds": [
+            "toho-cinemascope-godzilla"
+          ]
+        },
+        {
+          "title": "タッチ",
+          "status": "仅专题输入书目",
+          "reason": "仅专题书目。东宝1987年1月PC-8801作品；与1987 FC异世界动作冒险分别处理，不新增内容或发行。",
+          "source": "https://www.namura.net/xkd.com/product/touch.html",
+          "workIds": [],
+          "dossierIds": [
+            "toho-touch-pc"
+          ]
+        },
+        {
+          "title": "シネスコウォーゲーム 海底軍艦（1984）",
+          "status": "东宝早期发行；操作待核",
+          "reason": "原清单提及。需进一步核对原厂操作与冒险段落，暂不假定无文字输入。",
+          "source": "https://ja.wikipedia.org/wiki/海底軍艦_(映画)",
+          "workIds": []
+        },
+        {
+          "title": "ゴジラくん（1985／MSX）",
+          "status": "东宝发行／Compile开发",
+          "reason": "破岩、避敌与营救迷你拉；目前资料不足以确认持续角色叙事，保留玩法参考。",
+          "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "workIds": []
+        },
+        {
+          "title": "インファント島の秘密 モンスターズフェア（1986／MSX）",
+          "status": "东宝发行",
+          "reason": "怪兽与岛屿背景不自动构成剧情RPG。",
+          "source": "https://generation-msx.nl/software/toho/monsters-fair/868",
+          "workIds": []
+        },
+        {
+          "title": "ジーキル博士の彷魔が刻（1988／FC）",
+          "status": "东宝发行",
+          "reason": "以婚礼和变身为背景；本轮未取得足够持续叙事证据，不因小说改编就按文字冒险入库。",
+          "source": "https://www.gavas.jp/products/list.php?maker_id=265",
+          "workIds": []
+        },
+        {
+          "title": "ゴジラ（1988／FC）",
+          "status": "东宝发行",
+          "reason": "战略地图与即时战斗并行；保留类型参考，不将片名直接当剧情证据。",
+          "source": "https://www.gavas.jp/products/list.php?maker_id=265",
+          "workIds": []
+        },
+        {
+          "title": "燃える！お兄さん（1989／FC）",
+          "status": "东宝发行",
+          "reason": "营救雪绘的剧情背景保留，持续事件结构未补核。",
+          "source": "https://www.gavas.jp/products/list.php?maker_id=265",
+          "workIds": []
+        },
+        {
+          "title": "ゴジラくん 怪獣大行進／Godzilla（1990／GB）",
+          "status": "东宝发行",
+          "reason": "不要与1985 MSX作、1988 FC作视作一个平台版本。",
+          "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "workIds": []
+        },
+        {
+          "title": "ふしぎの海のナディア（1991／FC）",
+          "status": "东宝发行",
+          "reason": "原厂手册说明50＋α独立战场、预设战斗命令与角色成长，命名不作文字输入；连续剧情事件结构尚待补核，先列参考。",
+          "source": "https://setsumei.cloudfree.jp/famicom/fushiginouminonadia/fushiginouminonadia.html",
+          "workIds": []
+        },
+        {
+          "title": "Godzilla 2: War of the Monsters（1992／NES）",
+          "status": "东宝海外发行",
+          "reason": "指挥人类军队对抗怪兽；保留战争策略参考。",
+          "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "workIds": []
+        },
+        {
+          "title": "怪獣王ゴジラ（1993／GB）",
+          "status": "东宝发行",
+          "reason": "不把怪兽题材、关卡顺序自动写成剧情分支。",
+          "source": "https://news.denfaminicogamer.jp/kikakuthetower/godzilla-games",
+          "workIds": []
+        },
+        {
+          "title": "ゴジラ 爆闘烈伝（1994／PCE）",
+          "status": "东宝发行",
+          "reason": "以怪兽对战为主；纯竞技部分不加入叙事库。",
+          "source": "https://www.gavas.jp/products/list.php?maker_id=265",
+          "workIds": []
+        },
+        {
+          "title": "ゴジラ 怪獣大決戦（1994／SFC）",
+          "status": "东宝发行",
+          "reason": "与爆斗烈传分别列类型，未凭剧情背景建立正文卡片。",
+          "source": "https://www.gavas.jp/products/list.php?maker_id=265",
+          "workIds": []
+        },
+        {
+          "title": "らんま1/2 超技乱舞篇（1994／SFC）",
+          "status": "东宝发行",
+          "reason": "与朱猫团RPG不同；纯格斗留玩法参考。",
+          "source": "https://www.ne.jp/asahi/krk/kct/misc/ranmagame.htm",
+          "workIds": []
+        },
+        {
+          "title": "ゴジラ ムービースタジオツアー",
+          "status": "东宝相关CD-ROM",
+          "reason": "怪兽海报、影片资料及制作活动，不凭工具互动纳为独立叙事。",
+          "source": "https://wikizilla.org/wiki/Godzilla_Movie_Studio_Tour",
+          "workIds": []
+        },
+        {
+          "title": "RUN GODZILLA（2021）",
+          "status": "TOHO Games发行",
+          "reason": "纯养成参考；官方公告2025/07/01已结束服务。",
+          "source": "https://godzillagames.jp/run/announcement.html",
+          "workIds": []
+        },
+        {
+          "title": "GODZILLA DESTRUCTION（2021）",
+          "status": "TOHO Games发行",
+          "reason": "动作主导，2022年停止服务；不扩入剧情RPG。",
+          "source": "https://www.4gamer.net/games/561/G056105/20210427022/",
+          "workIds": []
+        },
+        {
+          "title": "GODZILLA BATTLE LINE（2021）",
+          "status": "TOHO Games发行",
+          "reason": "单位编队与即时竞争为主。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "workIds": []
+        },
+        {
+          "title": "ゴジラ ボクセルウォーズ／Godzilla Voxel Wars（2023）",
+          "status": "TOHO Games发行",
+          "reason": "题材与关卡背景不能替代独立叙事证据；Switch等普通移植不增加内容。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "workIds": []
+        },
+        {
+          "title": "おうちに帰りたい ねこの旅",
+          "status": "TOHO Games相关产品",
+          "reason": "日常养成类只作参考。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "workIds": []
+        },
+        {
+          "title": "ハイキュー!! ALL Challengers",
+          "status": "共同项目／事前登录",
+          "reason": "官方目录仍列事前登录；非已核首次发行，不建数据库记录。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "workIds": []
+        },
+        {
+          "title": "薬屋のひとりごと ～偽りの皇弟～",
+          "status": "东宝／Koei Tecmo合作；未发行",
+          "reason": "官方列2027年初头预定；只作计划参考，不写入截至2026的已发行作品。",
+          "source": "https://www.toho.co.jp/anime/lineup-games/",
+          "workIds": []
+        },
+        {
+          "title": "GUNHED（PCE）／ガンヘッド 新たなる戦い（FC）",
+          "status": "电影授权边界",
+          "reason": "FC馆藏记科学技研制作发行、Varie销售；PCE为Hudson作品。原清单提及不等于东宝自行发行，不复制其他厂商作品。",
+          "source": "https://collection.rcgs.jp/page/PACKAGE0000347",
+          "workIds": []
+        },
+        {
+          "title": "Heavy Unit Mega Drive Special（1990）",
+          "status": "东宝MD发行关联",
+          "reason": "原街机属于TAITO；已有TAITO清单保持，普通移植不凭平台增内容。",
+          "source": "https://wt1234-donkey.github.io/visual-novel/taito.html",
+          "workIds": []
+        },
+        {
+          "title": "Godzilla（2014／PS3）及VS（PS4）",
+          "status": "Bandai Namco发行／东宝版权授权",
+          "reason": "仅版权关联，不作为东宝自发行新作追加。",
+          "source": "https://www.bandainamcoent.co.jp/corporate/press/release/60/pdf/20140626.pdf",
+          "workIds": []
+        }
+      ],
+      "catalogueEntryCount": 42,
+      "dossierGroups": [
+        {
+          "id": "toho-menu-stories",
+          "title": "菜单调查与角色叙事",
+          "description": "新增三部无自由文字输入作品；迷你角色心理测量者沿用既有主库身份。",
+          "workIds": [
+            "g1212",
+            "g1213",
+            "g1214",
+            "g630"
+          ]
+        },
+        {
+          "id": "toho-story-related",
+          "title": "剧情RPG、动作冒险与卡牌故事",
+          "description": "仅此专题的跨类型作品，按实际原作与发行公司记录；不是全部进入四类主目录。",
+          "workIds": [
+            "toho-cagliostro-msx",
+            "toho-babylon-msx",
+            "toho-touch-fc",
+            "toho-times-of-lore",
+            "toho-ranma",
+            "toho-super-godzilla",
+            "toho-yamato",
+            "toho-trading-battle",
+            "toho-phanpara",
+            "toho-kaiju8",
+            "toho-sakuna-hinuka"
+          ]
+        },
+        {
+          "id": "toho-input-boundaries",
+          "title": "文字输入边界",
+          "description": "新哥斯拉保留旧主库身份；宽银幕哥斯拉与PC Touch仅专题，无新增内容和发行记录。",
+          "workIds": [
+            "g112",
+            "toho-cinemascope-godzilla",
+            "toho-touch-pc"
+          ],
+          "cardLabel": "文字输入边界"
+        }
+      ],
+      "workContexts": {
+        "g112": "含文字输入的既有主库记录，原样保留历史身份；本次不新增。",
+        "g630": "复用Nitroplus专题已收主库身份；分卷附赠章节不另造独立作品。",
+        "toho-times-of-lore": "东宝为1990年FC发行关联；1988原作公司仍为Origin Systems。"
+      }
     }
   ],
   "schemaVersion": 2,
