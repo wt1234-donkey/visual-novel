@@ -83691,6 +83691,558 @@
         }
       ],
       "catalogueEntryCount": 49
+    },
+    {
+      "id": "mosaic",
+      "name": "Mosaic Publishing",
+      "foundedAt": "1983-07",
+      "foundedSource": "https://de.wikipedia.org/wiki/Mosaic_Publishing",
+      "checkedAt": "2026-10-18",
+      "status": "新增4部无文字输入主库；6部输入书目仅专题；复用1部旧输入身份",
+      "publisherNote": "Mosaic由Vicky Carne于1983年创立，历史资料记7月，主打文学与广播电视改编的Bookware；开发由Level 9、Shards、St. Bride’s、Ram Jam及Oxford Digital Enterprises等分别承担。作品合作与实际发行署名分开，Growing Pains保留Virgin Games首发。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>4部新增无文字输入叙事 · 6部仅专题输入书目 · 1部旧输入身份引用。</strong> 数字剧情选择与系统装载、存读档命令分别说明；各分段程序不拆成新作品。Growing Pains的Mosaic合作／部分机种发行与Virgin首发并列交代。</p>",
+      "scope": "围绕用户指定的此前Mosaic作品与玩法清单项目，以原厂手册、馆藏、同期资料和开发访谈重建具名目录。原聊天逐字清单未完整取回；本页不是其原文存档，也不把计划、工具和机种数当独立叙事游戏数。",
+      "versionScope": "本轮4部主库各登记一个原作内容与一个最早已核平台批次；没有已完成首次增量比较的后版，不凭磁盘、翻译、合集或再版加行。旧1196主库、1394内容、2388发行、72个专题对象与页面保持；含文字输入的新书目不生成内容／发行。",
+      "workIds": [
+        "g131",
+        "g1200",
+        "g1201",
+        "g1202",
+        "g1203"
+      ],
+      "legacyCommandWorkIds": [
+        "g131"
+      ],
+      "entries": [
+        {
+          "title": "The Saga of Erik the Viking",
+          "status": "复用旧输入身份",
+          "reason": "Level 9开发、Mosaic发行；旧库图文输入身份与1984 Spectrum记录原样引用。其他目录记该机种1985，年份异文只在本专题说明，不改旧记录。",
+          "source": "https://worldofspectrum.org/archive/software/text-adventures/the-saga-of-erik-the-viking-mosaic-publishing-ltd",
+          "workIds": [
+            "g131"
+          ]
+        },
+        {
+          "title": "The Secret Diary of Adrian Mole Aged 13¾",
+          "status": "新增无文字输入叙事",
+          "reason": "Level 9制作、Mosaic Publishing Ltd发行。各段程序承载同一故事，不拆为四部独立作品；BBC磁盘、C64捆绑及后发廉价版不凭包装另增内容。",
+          "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_secret_diary_of_adrian_mole-manual.pdf",
+          "workIds": [
+            "g1200"
+          ]
+        },
+        {
+          "title": "The Archers",
+          "status": "新增无文字输入叙事",
+          "reason": "Level 9与广播剧创作团队合作，Mosaic发行。原厂©1986，BBC馆藏亦记1986；部分Spectrum资料记1987，不将其后发年改写为原作年。四个角色段落合为一作。",
+          "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_archers-manual.pdf",
+          "workIds": [
+            "g1201"
+          ]
+        },
+        {
+          "title": "Yes, Prime Minister: The Computer Game",
+          "status": "新增无文字输入叙事",
+          "reason": "Oxford Digital Enterprises开发，BBC实现另署Five Ways Software；1987原厂说明书明确Mosaic出版。1985预告的Ram Jam《Yes Minister》不冒作已发行原作；后发DOS、PCW与Mastertronic再版只作参考。",
+          "source": "https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC//Manual/formated/Yes_Prime_Minister_-_Mosaic_Publishing.pdf",
+          "workIds": [
+            "g1202"
+          ]
+        },
+        {
+          "title": "The Growing Pains of Adrian Mole",
+          "status": "新增无文字输入叙事",
+          "reason": "Level 9制作并与Mosaic合作；本轮原厂手册实物署Published by Virgin Games Ltd，首发保留Virgin Games Ltd。Mosaic的BBC／MSX发行另有馆藏和目录，未经首次新增内容比较不追加发行；不是第一作增补版。",
+          "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_growing_pains_of_adrian_mole-manual.pdf",
+          "workIds": [
+            "g1203"
+          ]
+        },
+        {
+          "title": "The Unorthodox Engineers: The Pen and the Dark",
+          "status": "新增仅专题输入书目",
+          "reason": "Keith Campbell改编Colin Kapp短篇，Mosaic发行；含文字输入，仅专题，不新增数据库内容或发行。Dragon计划与The Subways of Tazoo续篇不算已发行。",
+          "source": "https://www.solutionarchive.com/game/id,394/",
+          "workIds": [],
+          "dossierIds": [
+            "mosaic-pen-dark"
+          ]
+        },
+        {
+          "title": "The Width of the World",
+          "status": "新增仅专题输入书目",
+          "reason": "Simon Gould改编Ian Watson短篇，Mosaic发行；小说1983初刊与游戏1984年份分开。",
+          "source": "https://www.solutionarchive.com/game/id,640/",
+          "workIds": [],
+          "dossierIds": [
+            "mosaic-width"
+          ]
+        },
+        {
+          "title": "The Nomad of Time",
+          "status": "新增仅专题输入书目",
+          "reason": "Shards Software开发的C64原作；飞艇有固定面板控制，但地点探索仍需词句输入，混合控制不能作为无输入作品准入。",
+          "source": "https://www.mocagh.org/miscgame/nomadoftime-manual.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "mosaic-nomad"
+          ]
+        },
+        {
+          "title": "The Stainless Steel Rat Saves the World",
+          "status": "新增仅专题输入书目",
+          "reason": "本书目指Shards的1984 C64作品；Sean O’Connell／Harry Harrison的Spectrum条目缺发行实物，另列参考，不据同名合并程序或补造发行。",
+          "source": "https://www.solutionarchive.com/game/id,2237/",
+          "workIds": [],
+          "dossierIds": [
+            "mosaic-steel-rat"
+          ]
+        },
+        {
+          "title": "The Snow Queen",
+          "status": "新增仅专题输入书目",
+          "reason": "St. Bride’s School制作、Mosaic发行。部分档案记1985；CASA指出1985为预制作预览、成品发行1986。本轮采用1986并保留异文；两部分属于同一故事。",
+          "source": "https://www.solutionarchive.com/game/id,1309/",
+          "workIds": [],
+          "dossierIds": [
+            "mosaic-snow-queen"
+          ]
+        },
+        {
+          "title": "Twice Shy",
+          "status": "新增仅专题输入书目",
+          "reason": "Ram Jam Corporation改编Dick Francis小说；既有驾驶、射击／赛马题材也不能消除物品与自由话语输入。未发行C64计划另列。",
+          "source": "https://www.solutionarchive.com/game/id,562/",
+          "workIds": [],
+          "dossierIds": [
+            "mosaic-twice-shy"
+          ]
+        },
+        {
+          "title": "Adrian Mole／The Archers分段程序",
+          "status": "分段不拆作",
+          "reason": "四个或更多程序对应原故事段落，依机种内存不同；既有剧情不因文件数或磁带面数生成独立作品。",
+          "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_secret_diary_of_adrian_mole-manual.pdf",
+          "workIds": []
+        },
+        {
+          "title": "The Secret Diary：BBC／C64及其他机种",
+          "status": "后发或同期先后未核参考",
+          "reason": "原厂确认Mosaic 1985出版；本轮只登记已核Spectrum最早批次，不仅据同年把所有机种设为同期。C64捆绑及BBC磁盘不自动增内容。",
+          "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_secret_diary_of_adrian_mole-manual.pdf",
+          "workIds": []
+        },
+        {
+          "title": "The Growing Pains：BBC／MSX Mosaic发行",
+          "status": "发行主体与后发机种参考",
+          "reason": "原厂手册署Virgin Games Ltd；Mosaic有1987馆藏与部分机种发行关联。普通移植无已核首次新增内容，未追加到内容／平台表。",
+          "source": "https://www.computinghistory.org.uk/det/13048/The-Growing-Pains-of-Adrian-Mole/",
+          "workIds": []
+        },
+        {
+          "title": "Yes, Prime Minister：BBC／C64／CPC、DOS／PCW",
+          "status": "机种与后发发行参考",
+          "reason": "原厂手册说明BBC控制与Five Ways实现，DOS／PCW见盘签；本轮不凭兼容目录补造所有同期批次。",
+          "source": "https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC//Manual/formated/Yes_Prime_Minister_-_Mosaic_Publishing.pdf",
+          "workIds": []
+        },
+        {
+          "title": "Mastertronic／Alternative Software再版",
+          "status": "后发渠道参考",
+          "reason": "廉价版、渠道和合集不独立建作；没有明确新故事或素材增量的后版不新增内容。",
+          "source": "https://worldofspectrum.net/item/0005819/",
+          "workIds": []
+        },
+        {
+          "title": "The Stainless Steel Rat：Spectrum条目",
+          "status": "发行与身份待核",
+          "reason": "WoS记Harry Harrison／Sean O’Connell等、MIA且无发行记录；不据传闻把它当Shards C64的已核移植或独立已发行新作。",
+          "source": "https://worldofspectrum.net/item/0010239/",
+          "workIds": []
+        },
+        {
+          "title": "Erik的1984／1985 Spectrum异文",
+          "status": "保留旧数据说明",
+          "reason": "旧g131记1984；Level 9历史目录有1985 Spectrum记法。先保留旧对象与证据，专题列异文。",
+          "source": "https://www.lysator.liu.se/adventure/Level_9_Computing.html",
+          "workIds": []
+        },
+        {
+          "title": "In the Beginning...（1984；早期预告见1983）",
+          "status": "非叙事玩法参考",
+          "reason": "分子到早期人类的十级演化动作目标；不以进化背景自动补成固定故事。GTW旧条目标1983，实物目录与回顾记1984。",
+          "source": "https://www.gamesthatwerent.com/gtw64/in-the-beginning/",
+          "workIds": []
+        },
+        {
+          "title": "My Secret File",
+          "status": "非游戏工具",
+          "reason": "用于记录家庭与朋友资料；不是既写好的剧情，也不是因自由录入而被误当输入式冒险。",
+          "source": "https://www.computinghistory.org.uk/det/69007/My-Secret-File/",
+          "workIds": []
+        },
+        {
+          "title": "The Adrian Mole Secret Diary Kit（1985）",
+          "status": "包装与工具参考",
+          "reason": "馆藏确认BBC盘并附The Adrian Mole Diary 1986纸本；未取得独立预制游戏故事依据，不与Secret Diary游戏或Growing Pains混同。",
+          "source": "https://www.computinghistory.org.uk/det/13025/The-Adrian-Mole-Secret-Diary-Kit/",
+          "workIds": []
+        },
+        {
+          "title": "Beyond the Arcade（1984）",
+          "status": "非电子游戏",
+          "reason": "Nicholas Palmer的书籍出版不计数据库游戏。",
+          "source": "https://classicadventurer.co.uk/pdf/03.pdf",
+          "workIds": []
+        },
+        {
+          "title": "Raffles",
+          "status": "未发行",
+          "reason": "St. Bride’s拟作为Snow Queen后续，访谈与CASA均记未实现。",
+          "source": "https://www.solutionarchive.com/game/id,7861/",
+          "workIds": []
+        },
+        {
+          "title": "Alice",
+          "status": "未发行",
+          "reason": "St. Bride’s计划，不与PSK或其他厂商同名Alice混同。",
+          "source": "https://www.solutionarchive.com/game/id,7862/",
+          "workIds": []
+        },
+        {
+          "title": "The Story of the Amulet／The Amulet",
+          "status": "未发行",
+          "reason": "Ram Jam后续，1986预告拟1987发行；未商业发行，不因目录列年份便建发行。",
+          "source": "https://www.solutionarchive.com/game/id,7242/",
+          "workIds": []
+        },
+        {
+          "title": "Yes Minister（Ram Jam早期方案）",
+          "status": "搁置方案",
+          "reason": "1985—1986预告和后来ODE的1987成品分开；不建立第二个已发行原作。",
+          "source": "https://en.wikipedia.org/wiki/Yes%2C_Prime_Minister_%28video_game%29",
+          "workIds": []
+        },
+        {
+          "title": "Coronation Street",
+          "status": "未实现构想",
+          "reason": "洽谈／创作方向参考，不与已发行The Archers互作别名。",
+          "source": "https://classicadventurer.co.uk/pdf/03.pdf",
+          "workIds": []
+        },
+        {
+          "title": "Foundation",
+          "status": "未获授权",
+          "reason": "创办人回顾未取得版权；不将计划算发行游戏。",
+          "source": "https://classicadventurer.co.uk/pdf/03.pdf",
+          "workIds": []
+        },
+        {
+          "title": "Special Deliverance",
+          "status": "未实现计划",
+          "reason": "1983年早期新闻所列，未核到发行实物。",
+          "source": "https://de.wikipedia.org/wiki/Mosaic_Publishing",
+          "workIds": []
+        },
+        {
+          "title": "Soldier, Ask Not",
+          "status": "未实现计划",
+          "reason": "原文学作者Gordon R. Dickson；不补造游戏人物与首发日期。",
+          "source": "https://de.wikipedia.org/wiki/Mosaic_Publishing",
+          "workIds": []
+        },
+        {
+          "title": "The World-Thinker",
+          "status": "未实现计划",
+          "reason": "Jack Vance改编候选；不构造已发行版本。",
+          "source": "https://de.wikipedia.org/wiki/Mosaic_Publishing",
+          "workIds": []
+        },
+        {
+          "title": "The Pen and the Dark：Dragon计划",
+          "status": "未发行机种",
+          "reason": "作者／目录记接近完成但未上市，不能列为商业发行。",
+          "source": "https://www.solutionarchive.com/game/id,394/",
+          "workIds": []
+        },
+        {
+          "title": "The Subways of Tazoo",
+          "status": "未实现续作",
+          "reason": "Pen and the Dark后续计划，未发行。",
+          "source": "https://www.solutionarchive.com/game/id,394/",
+          "workIds": []
+        },
+        {
+          "title": "Twice Shy：Commodore 64计划",
+          "status": "未发行机种",
+          "reason": "访谈回顾C64方案未成；不因预告机种补发行。",
+          "source": "https://classicadventurer.co.uk/pdf/03.pdf",
+          "workIds": []
+        }
+      ],
+      "source": "https://www.lysator.liu.se/adventure/Mosaic_Publishing.html",
+      "sectionTitle": "从科幻Bookware到预设选择的互动故事",
+      "catalogueCountLabel": "本次具名核对项目",
+      "overviewLabel": "正文档案（含仅专题输入书目）",
+      "auditTitle": "作品、输入边界与计划核对",
+      "auditSourceLabel": "历史作品目录",
+      "auditLabel": "正文作品与末尾玩法表分别统计；原作、同作发行、工具与未发行计划分开。",
+      "auditNote": "按原厂操作确认预设数字／图标选择，SAVE、LOAD与装载YES不等于自由行动输入。未把Mosaic合作倒写成每个平台均由Mosaic发行；年份异文与未发行机种保留说明。",
+      "workContexts": {
+        "g131": "Level 9开发、Mosaic发行；旧库图文输入身份与1984 Spectrum记录原样引用。其他目录记该机种1985，年份异文只在本专题说明，不改旧记录。",
+        "g1200": "Level 9制作、Mosaic Publishing Ltd发行。各段程序承载同一故事，不拆为四部独立作品；BBC磁盘、C64捆绑及后发廉价版不凭包装另增内容。",
+        "g1201": "Level 9与广播剧创作团队合作，Mosaic发行。原厂©1986，BBC馆藏亦记1986；部分Spectrum资料记1987，不将其后发年改写为原作年。四个角色段落合为一作。",
+        "g1202": "Oxford Digital Enterprises开发，BBC实现另署Five Ways Software；1987原厂说明书明确Mosaic出版。1985预告的Ram Jam《Yes Minister》不冒作已发行原作；后发DOS、PCW与Mastertronic再版只作参考。",
+        "g1203": "Level 9制作并与Mosaic合作；本轮原厂手册实物署Published by Virgin Games Ltd，首发保留Virgin Games Ltd。Mosaic的BBC／MSX发行另有馆藏和目录，未经首次新增内容比较不追加发行；不是第一作增补版。",
+        "mosaic-pen-dark": "Keith Campbell改编Colin Kapp短篇，Mosaic发行；含文字输入，仅专题，不新增数据库内容或发行。Dragon计划与The Subways of Tazoo续篇不算已发行。",
+        "mosaic-width": "Simon Gould改编Ian Watson短篇，Mosaic发行；小说1983初刊与游戏1984年份分开。",
+        "mosaic-nomad": "Shards Software开发的C64原作；飞艇有固定面板控制，但地点探索仍需词句输入，混合控制不能作为无输入作品准入。",
+        "mosaic-steel-rat": "本书目指Shards的1984 C64作品；Sean O’Connell／Harry Harrison的Spectrum条目缺发行实物，另列参考，不据同名合并程序或补造发行。",
+        "mosaic-snow-queen": "St. Bride’s School制作、Mosaic发行。部分档案记1985；CASA指出1985为预制作预览、成品发行1986。本轮采用1986并保留异文；两部分属于同一故事。",
+        "mosaic-twice-shy": "Ram Jam Corporation改编Dick Francis小说；既有驾驶、射击／赛马题材也不能消除物品与自由话语输入。未发行C64计划另列。"
+      },
+      "relatedGames": [],
+      "dossierOnlyWorks": [
+        {
+          "id": "mosaic-pen-dark",
+          "title": "非常规工程师：半影与黑暗",
+          "chineseTitle": "非常规工程师：半影与黑暗",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Unorthodox Engineers: The Pen and the Dark",
+          "titleAliases": [],
+          "firstYear": 1984,
+          "category": "文字冒险（仅专题）",
+          "subcategory": "纯文本指令",
+          "genre": "科幻调查／文学改编",
+          "characters": [
+            "Fritz van Noon",
+            "Dr. Maxwell Courtney"
+          ],
+          "charactersSource": "https://www.solutionarchive.com/game/id,394/",
+          "synopsis": "非常规工程师被召至Ithica，调查吸收能量的黑暗构造与其半影区，设法解释异常现象。",
+          "notes": "Keith Campbell改编Colin Kapp短篇，Mosaic发行；含文字输入，仅专题，不新增数据库内容或发行。Dragon计划与The Subways of Tazoo续篇不算已发行。",
+          "source": "https://www.solutionarchive.com/game/id,394/",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "用键入方向、行动和对象进行调查；完整指令流程明确，非预设选项。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.solutionarchive.com/game/id,394/",
+            "https://www.solutionarchive.com/file/id,23603/"
+          ]
+        },
+        {
+          "id": "mosaic-width",
+          "title": "世界的宽度",
+          "chineseTitle": "世界的宽度",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Width of the World",
+          "titleAliases": [],
+          "firstYear": 1984,
+          "category": "文字冒险（仅专题）",
+          "subcategory": "纯文本指令",
+          "genre": "科幻失踪调查／文学改编",
+          "characters": [
+            "失踪事件调查者（玩家）",
+            "Sarah"
+          ],
+          "charactersSource": "https://www.solutionarchive.com/game/id,640/",
+          "synopsis": "世界各地出现大规模人口失踪，玩家调查异常入口，尝试找到Sarah并带她回到原来的世界。",
+          "notes": "Simon Gould改编Ian Watson短篇，Mosaic发行；小说1983初刊与游戏1984年份分开。",
+          "source": "https://www.solutionarchive.com/game/id,640/",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "通过键入行动、对象与话语推进；调查、物品使用和与Sarah的交谈均有词句指令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.solutionarchive.com/game/id,640/",
+            "https://www.solutionarchive.com/file/id,904/"
+          ]
+        },
+        {
+          "id": "mosaic-nomad",
+          "title": "时间游牧者",
+          "chineseTitle": "时间游牧者",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Nomad of Time",
+          "titleAliases": [],
+          "firstYear": 1984,
+          "category": "文字冒险（仅专题）",
+          "subcategory": "图文指令",
+          "genre": "架空历史／飞艇与时空冒险",
+          "characters": [
+            "Oswald Bastable"
+          ],
+          "charactersSource": "https://www.mocagh.org/miscgame/nomadoftime-manual.pdf",
+          "synopsis": "Oswald Bastable驾驶飞艇穿过不同时间流，在六十天期限内寻找打破人类自我毁灭循环的方法。",
+          "notes": "Shards Software开发的C64原作；飞艇有固定面板控制，但地点探索仍需词句输入，混合控制不能作为无输入作品准入。",
+          "source": "https://www.mocagh.org/miscgame/nomadoftime-manual.pdf",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令",
+            "驾驶操控"
+          ],
+          "interactionNote": "飞艇面板用功能键、空格与RETURN选择方向、速度、高度等；离艇后按两词格式键入行动／对象探索。实时计时不等于即时动作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/miscgame/nomadoftime-manual.pdf"
+          ]
+        },
+        {
+          "id": "mosaic-steel-rat",
+          "title": "不锈钢老鼠拯救世界",
+          "chineseTitle": "不锈钢老鼠拯救世界",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Stainless Steel Rat Saves the World",
+          "titleAliases": [],
+          "firstYear": 1984,
+          "category": "文字冒险（仅专题）",
+          "subcategory": "图文指令",
+          "genre": "科幻谍报／文学改编",
+          "characters": [
+            "Slippery Jim diGriz"
+          ],
+          "charactersSource": "https://www.solutionarchive.com/game/id,2237/",
+          "synopsis": "Slippery Jim面对威胁时间线的敌人，穿越不同时代，追踪并阻止毁灭世界的阴谋。",
+          "notes": "本书目指Shards的1984 C64作品；Sean O’Connell／Harry Harrison的Spectrum条目缺发行实物，另列参考，不据同名合并程序或补造发行。",
+          "source": "https://www.solutionarchive.com/game/id,2237/",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原厂再版手册明确要求两词英语行动／对象指令，时间螺旋也需操作参数；不是仅从预设剧情选项中选择。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://mocagh.org/miscgame/steelrat.pdf",
+            "https://www.solutionarchive.com/game/id,2237/",
+            "https://www.solutionarchive.com/file/id,3110/"
+          ]
+        },
+        {
+          "id": "mosaic-snow-queen",
+          "title": "冰雪女王",
+          "chineseTitle": "冰雪女王",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Snow Queen",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "文字冒险（仅专题）",
+          "subcategory": "图文指令",
+          "genre": "童话解谜／文学改编",
+          "characters": [
+            "Gerda",
+            "Kay",
+            "Snow Queen"
+          ],
+          "charactersSource": "https://www.solutionarchive.com/game/id,1309/",
+          "synopsis": "Gerda追寻受冰雪女王魔法影响的Kay，穿过险境并设法将朋友救回。",
+          "notes": "St. Bride’s School制作、Mosaic发行。部分档案记1985；CASA指出1985为预制作预览、成品发行1986。本轮采用1986并保留异文；两部分属于同一故事。",
+          "source": "https://www.solutionarchive.com/game/id,1309/",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "采用Quill式文字命令，键入方向、交谈和物品操作；不是从菜单选择预设故事回应。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.solutionarchive.com/game/id,1309/",
+            "https://www.solutionarchive.com/file/id,7230/"
+          ]
+        },
+        {
+          "id": "mosaic-twice-shy",
+          "title": "惊弓之鸟",
+          "chineseTitle": "惊弓之鸟",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Twice Shy",
+          "titleAliases": [],
+          "firstYear": 1986,
+          "category": "文字冒险（仅专题）",
+          "subcategory": "图文指令",
+          "genre": "犯罪悬疑／赛马题材文学改编",
+          "characters": [
+            "Jonathan Derry"
+          ],
+          "charactersSource": "https://www.solutionarchive.com/game/id,562/",
+          "synopsis": "物理教师Jonathan Derry接手一批来历复杂的磁带，调查其用途并卷入危险的人际关系与犯罪事件。",
+          "notes": "Ram Jam Corporation改编Dick Francis小说；既有驾驶、射击／赛马题材也不能消除物品与自由话语输入。未发行C64计划另列。",
+          "source": "https://www.solutionarchive.com/game/id,562/",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "实际流程含键入取物、电话与行动命令，以及向人物提出词句问题；方向驾驶等也由命令控制，不伪标直接移动或即时枪战。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.solutionarchive.com/game/id,562/",
+            "https://www.solutionarchive.com/file/id,797/"
+          ]
+        }
+      ],
+      "creativeProfile": {
+        "thesis": "Mosaic将文学、广播剧和电视喜剧带入电脑：早期让玩家用词句探索，后来更多让玩家在既写好的情境中作选择。以下为根据作品与访谈作出的编辑观察。",
+        "phases": [
+          {
+            "period": "1984",
+            "heading": "小说世界中的探索与解谜",
+            "analysis": "早期Bookware以科学异常、时空旅行和神话旅途组成可探索世界；随盒文学文本提供背景，但软件中的行动仍由命令解析。",
+            "basis": "编辑观察",
+            "source": "https://www.mocagh.org/miscgame/nomadoftime-manual.pdf"
+          },
+          {
+            "period": "1985—1987",
+            "heading": "日记与广播剧的预设故事选择",
+            "analysis": "Adrian Mole两作把日记中的处事取舍转为数字选择；The Archers则让玩家作剧本编辑决定。评分和随机事件伴随预制故事，不是自由写作工具。",
+            "basis": "编辑观察",
+            "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_archers-manual.pdf"
+          },
+          {
+            "period": "1987",
+            "heading": "办公室中的政治喜剧",
+            "analysis": "Yes, Prime Minister以电话、文件和会议组织五天事件，人物回应与图标界面相结合；政治情境通过对话后果呈现。",
+            "basis": "编辑观察",
+            "source": "https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC//Manual/formated/Yes_Prime_Minister_-_Mosaic_Publishing.pdf"
+          }
+        ]
+      },
+      "dossierGroups": [
+        {
+          "id": "mosaic-legacy",
+          "title": "旧库引用：Erik的命令式旅程",
+          "description": "保留既有输入式身份，不作为本轮新增准入。",
+          "cardLabel": "旧库引用",
+          "workIds": [
+            "g131"
+          ]
+        },
+        {
+          "id": "mosaic-choices",
+          "title": "新增主库：日记、广播剧与政治喜剧",
+          "description": "剧情用预设选择推进；具体操作与系统性输入在各卡依据说明。",
+          "cardLabel": "新增无文字输入叙事",
+          "workIds": [
+            "g1200",
+            "g1201",
+            "g1202",
+            "g1203"
+          ]
+        },
+        {
+          "id": "mosaic-parsers",
+          "title": "仅专题：六部输入式Bookware",
+          "description": "保存剧情、人物与玩法来源；排除数据库新增，不制造内容版本和平台发行。",
+          "cardLabel": "仅专题书目",
+          "workIds": [
+            "mosaic-pen-dark",
+            "mosaic-width",
+            "mosaic-nomad",
+            "mosaic-steel-rat",
+            "mosaic-snow-queen",
+            "mosaic-twice-shy"
+          ]
+        }
+      ],
+      "catalogueEntryCount": 34
     }
   ],
   "schemaVersion": 2,
