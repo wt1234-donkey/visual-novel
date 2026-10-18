@@ -92881,6 +92881,993 @@
         "g630": "复用Nitroplus专题已收主库身份；分卷附赠章节不另造独立作品。",
         "toho-times-of-lore": "东宝为1990年FC发行关联；1988原作公司仍为Origin Systems。"
       }
+    },
+    {
+      "id": "db_soft",
+      "name": "dB-SOFT（デービーソフト）",
+      "foundedAt": "1980-05",
+      "foundedSource": "https://www.gamepres.org/pc88/library/dbsoft.html",
+      "checkedAt": "2026-10-18",
+      "status": "新增4部无文字输入跨类型叙事，复用2部品牌旧作；2部输入作仅专题",
+      "workIds": [
+        "g746",
+        "g747"
+      ],
+      "relatedGames": [
+        {
+          "id": "db-soft-woody-poco",
+          "title": "木偶波可",
+          "chineseTitle": "木偶波可",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "うっでぃぽこ",
+          "titleAliases": [
+            "Woody Poco",
+            "うっでい・ぽこ"
+          ],
+          "firstYear": 1986,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情动作RPG",
+          "genre": "童话／寻找妖精",
+          "characters": [
+            "波可（ポコ）",
+            "爷爷",
+            "妖精"
+          ],
+          "charactersSource": "https://shamirgame.blog.fc2.com/blog-entry-367.html",
+          "synopsis": "曾由木偶变成人的波可再次失去人的模样，为寻找妖精和恢复自身踏上旅途。城镇交谈、昼夜变化与四季区域串起冒险。",
+          "notes": "1986年10月PC-8801原作。后有PC-98、X1、FM77AV、MSX2及FC等移植；目前未补足与原作逐项比较的新增内容证据，本轮不另建后发内容。",
+          "source": "https://shamirgame.blog.fc2.com/blog-entry-367.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "瞄准射击"
+          ],
+          "interactionNote": "方向键移动、武器攻击和预设道具／会话菜单推进。8BITS另列数字方向键与RETURN确认；不是键入动词或自由会话。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://shamirgame.blog.fc2.com/blog-entry-367.html",
+            "https://www.8-bits.info/gamelist/PC88/info/info_DUy9h14tXa6fr114.php"
+          ],
+          "contentVersions": [
+            {
+              "id": "db-soft-woody-poco-c-original",
+              "workId": "db-soft-woody-poco",
+              "label": "原作／首批内容",
+              "firstYear": 1986,
+              "basis": "original",
+              "evidence": "1986年10月PC-8801原作。后有PC-98、X1、FM77AV、MSX2及FC等移植；目前未补足与原作逐项比较的新增内容证据，本轮不另建后发内容。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_DUy9h14tXa6fr114.php",
+              "evidenceReleaseIds": [
+                "db-soft-woody-poco-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "db-soft-woody-poco-v-original",
+              "workId": "db-soft-woody-poco",
+              "year": 1986,
+              "platform": "PC-8801",
+              "publisher": "デービーソフト",
+              "publisherCompanies": [
+                "dB-SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1986年10月PC-8801原作。后有PC-98、X1、FM77AV、MSX2及FC等移植；目前未补足与原作逐项比较的新增内容证据，本轮不另建后发内容。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_DUy9h14tXa6fr114.php",
+              "contentVersionId": "db-soft-woody-poco-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、再版与配信不增加内容记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "db-soft-layla",
+          "title": "蕾拉",
+          "chineseTitle": "蕾拉",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "レイラ",
+          "titleAliases": [
+            "LayLa",
+            "Layla"
+          ],
+          "firstYear": 1986,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情动作冒险",
+          "genre": "科幻／同伴营救",
+          "characters": [
+            "蕾拉（レイラ）",
+            "伊莉丝（イリス）",
+            "马尼托卡博士"
+          ],
+          "charactersSource": "https://kiyukou.com/fc-layla",
+          "synopsis": "特殊部队CAT派蕾拉阻止博士的实验。行动途中伊莉丝被俘，玩家在小行星基地寻找目标，救出同伴并共同继续任务。",
+          "notes": "1986/12/20 Famicom原作。以中途营救、同行变化与结局人物文本构成轻量故事，收在跨类型关联，不归视觉小说或菜单ADV。续关固定密码不作为叙事文字输入。",
+          "source": "https://kiyukou.com/fc-layla",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "方向移动、跳跃、射击与武器切换；在迷宫收集关键物品，营救后同伴跟随攻击。关卡间还有飞行射击；未据飞行画面单独推断完整驾驶系统。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://kiyukou.com/fc-layla",
+            "https://gamemanual.midnightmeattrain.com/entry/レイラ"
+          ],
+          "contentVersions": [
+            {
+              "id": "db-soft-layla-c-original",
+              "workId": "db-soft-layla",
+              "label": "原作／首批内容",
+              "firstYear": 1986,
+              "basis": "original",
+              "evidence": "1986/12/20 Famicom原作。以中途营救、同行变化与结局人物文本构成轻量故事，收在跨类型关联，不归视觉小说或菜单ADV。续关固定密码不作为叙事文字输入。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=4770",
+              "evidenceReleaseIds": [
+                "db-soft-layla-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "db-soft-layla-v-original",
+              "workId": "db-soft-layla",
+              "year": 1986,
+              "platform": "Famicom",
+              "publisher": "デービーソフト",
+              "publisherCompanies": [
+                "dB-SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1986/12/20 Famicom原作。以中途营救、同行变化与结局人物文本构成轻量故事，收在跨类型关联，不归视觉小说或菜单ADV。续关固定密码不作为叙事文字输入。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=4770",
+              "contentVersionId": "db-soft-layla-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、再版与配信不增加内容记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "db-soft-produce",
+          "title": "布局：恐怖之夜",
+          "chineseTitle": "布局：恐怖之夜",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "プロデュース",
+          "titleAliases": [
+            "Produce"
+          ],
+          "firstYear": 1987,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情恐怖策略",
+          "genre": "超能力／嫉妒与怪物诱导",
+          "characters": [
+            "俊夫（トシオ）",
+            "吉尔伯特（ギルバート）",
+            "蒂娜（ティナ）",
+            "沙耶加（さやか）"
+          ],
+          "charactersSource": "https://shamirgame.blog.fc2.com/blog-entry-376.html",
+          "synopsis": "四名具有特殊能力的同学来到旅舍。嫉妒的俊夫受到废楼力量诱惑，试图在天亮前用怪物将三位同伴引往楼上，故事围绕恐惧与选择的后果展开。",
+          "notes": "1987年7月PC-8801原作。PC-98、X1关系留说明；没有证据证明为新增内容首发，不据移植名称扩发行。人物故事与结局支持叙事关联，区别纯竞技或日常养成。",
+          "source": "https://shamirgame.blog.fc2.com/blog-entry-376.html",
+          "interactionModes": [
+            "菜单指令",
+            "战术策略",
+            "资源经营"
+          ],
+          "interactionNote": "选择怪物出现地点、持续时间与模式，消耗BOSS-POW并观察恐惧、疲劳来诱导自主行动的人物；玩家不直接操纵三名目标，也不键入行动词句。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://shamirgame.blog.fc2.com/blog-entry-376.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "db-soft-produce-c-original",
+              "workId": "db-soft-produce",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987年7月PC-8801原作。PC-98、X1关系留说明；没有证据证明为新增内容首发，不据移植名称扩发行。人物故事与结局支持叙事关联，区别纯竞技或日常养成。",
+              "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+              "evidenceReleaseIds": [
+                "db-soft-produce-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "db-soft-produce-v-original",
+              "workId": "db-soft-produce",
+              "year": 1987,
+              "platform": "PC-8801",
+              "publisher": "デービーソフト",
+              "publisherCompanies": [
+                "dB-SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1987年7月PC-8801原作。PC-98、X1关系留说明；没有证据证明为新增内容首发，不据移植名称扩发行。人物故事与结局支持叙事关联，区别纯竞技或日常养成。",
+              "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+              "contentVersionId": "db-soft-produce-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、再版与配信不增加内容记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "db-soft-melroon",
+          "title": "梅尔鲁恩物语",
+          "chineseTitle": "梅尔鲁恩物语",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "メルルーン",
+          "titleAliases": [
+            "The Story of Melroon",
+            "Melroon"
+          ],
+          "firstYear": 1989,
+          "category": "RPG／叙事关联",
+          "subcategory": "剧情动作RPG",
+          "genre": "七岛寻宝／记忆与传说",
+          "characters": [
+            "托马斯·布朗（トーマス・ブラウン）",
+            "吉姆·萨斯彭德（ジム・サスペンダー）",
+            "埃特罗（エテロー）",
+            "公主"
+          ],
+          "charactersSource": "https://shamirgame.blog.fc2.com/blog-entry-494.html",
+          "synopsis": "国王宣布集齐七件宝物的人可迎娶公主。托马斯与竞争者吉姆踏上七岛寻宝旅程，利用有限记忆保存线索，逐渐卷入复苏的邪恶与公主失踪事件。",
+          "notes": "1989年PC-8801原作。Gamepres记11/30、8BITS记12月，故只采用已一致的年份；PC-98版次序未核，不假定同批首发，也未新增后发内容记录。",
+          "source": "https://shamirgame.blog.fc2.com/blog-entry-494.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "菜单指令",
+            "谜题操作",
+            "知识问答"
+          ],
+          "interactionNote": "方向移动和实时武器动作，X／RETURN打开菜单；“記憶を使う”从已记住的话语中选择，初始两格。另有推石与问答。选用记忆不是自由键入句子，声音记录机制也不据此标麦克风输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://shamirgame.blog.fc2.com/blog-entry-494.html",
+            "https://www.8-bits.info/gamelist/PC88/info/info_2DFpnLk9RfEf2r8V.php"
+          ],
+          "contentVersions": [
+            {
+              "id": "db-soft-melroon-c-original",
+              "workId": "db-soft-melroon",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989年PC-8801原作。Gamepres记11/30、8BITS记12月，故只采用已一致的年份；PC-98版次序未核，不假定同批首发，也未新增后发内容记录。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_2DFpnLk9RfEf2r8V.php",
+              "evidenceReleaseIds": [
+                "db-soft-melroon-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "db-soft-melroon-v-original",
+              "workId": "db-soft-melroon",
+              "year": 1989,
+              "platform": "PC-8801",
+              "publisher": "デービーソフト",
+              "publisherCompanies": [
+                "dB-SOFT"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989年PC-8801原作。Gamepres记11/30、8BITS记12月，故只采用已一致的年份；PC-98版次序未核，不假定同批首发，也未新增后发内容记录。",
+              "source": "https://www.8-bits.info/gamelist/PC88/info/info_2DFpnLk9RfEf2r8V.php",
+              "contentVersionId": "db-soft-melroon-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记最早已核原作内容批次；普通移植、再版与配信不增加内容记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "dossierOnlyWorks": [
+        {
+          "id": "db-soft-south-pacific",
+          "title": "南太平洋冒险",
+          "chineseTitle": "南太平洋冒险",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "南太平洋アドベンチャー",
+          "titleAliases": [
+            "South Pacific Adventure"
+          ],
+          "firstYear": 1983,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式图文冒险",
+          "genre": "岛屿寻宝／逃脱",
+          "characters": [
+            "陈（チャン）",
+            "海中守护者"
+          ],
+          "charactersSource": "https://www.8-bits.info/gamelist/PC88/info/info_rwfYdrSj50u7rULr.php",
+          "synopsis": "学生陈在南太平洋追寻宝藏，玩家调查岛屿、应对危险并寻找离开的方法。",
+          "notes": "1983年11月PC-8801资料；含假名指令键入，仅保留专题书目，不新增数据库作品、内容或发行。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_rwfYdrSj50u7rULr.php",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "8BITS明确假名输入指令、RETURN确认。局部对象编号选择并不抵消主要的词句键入，依用户要求排除新增。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.8-bits.info/gamelist/PC88/info/info_rwfYdrSj50u7rULr.php"
+          ]
+        },
+        {
+          "id": "db-soft-don-juan",
+          "title": "唐璜",
+          "chineseTitle": "唐璜",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "ドンファン",
+          "titleAliases": [
+            "Don Juan",
+            "Donjuan"
+          ],
+          "firstYear": 1984,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式图文冒险",
+          "genre": "早期成人向人际冒险",
+          "characters": [
+            "唐璜（ドンファン）",
+            "圆（まどか）"
+          ],
+          "charactersSource": "https://g16.hatenablog.com/entry/2025/01/25/175626",
+          "synopsis": "围绕主人公与人物相遇、回应和调查展开的早期成人向冒险。",
+          "notes": "1984年3月PC-8801发行资料。dB-SOFT与Macadamia历史署名另见旧品牌专题，不因品牌差异复制身份；本作未入数据库，只列输入边界书目。",
+          "source": "https://g16.hatenablog.com/entry/2025/01/25/175626",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "通过键盘键入回答或指令推进；资料记有输入字数限制。不是仅选择预设回应，不能以含图像而认定无文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://g16.hatenablog.com/entry/2025/01/25/175626"
+          ]
+        }
+      ],
+      "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+      "scope": "根据“列出Carry Lab（キャリーラボ）游戏类型清单”项目的dB-SOFT条目建立。原聊天仅部分可恢复，以保存目录和逐作资料补核；涵盖Computer Land北海道前身、dB本体、Macadamia品牌及明确开发关联，非逐字原表或完整全球发行目录。早期仅有书目的作品保留待核，不据名称猜操作。",
+      "publisherNote": "1980年5月以Computer Land北海道设立，1984年更名dB-SOFT；Project EGG官方资料支持1980设立和1984改名。Macadamia Soft是品牌关联，复用既有专题ID；Casio、Victor、Atlus等实际发行另行标注。",
+      "versionScope": "本次四部新关联各登记最早已核原作内容和一条首批发行；未确认任何后发内容增补。Woody Poco等后版机种只作关系说明，普通移植、再版和EGG配信不增加内容。既有Macadam／177内容和关系未核历史发行原样保留。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>新增4部跨类型叙事，复用2部品牌旧作。</strong> 南太平洋冒险与Don Juan仅专题，不加入数据库；纯益智、麻将、棋盘与操作待核项目见末尾玩法表。</p>",
+      "sectionTitle": "木偶、记忆、恐惧与营救",
+      "catalogueCountLabel": "4部新增关联 · 2部旧库复用 · 2部仅专题",
+      "relatedSectionTitle": "剧情RPG与混合叙事",
+      "relatedIntro": "实际角色事件和操作均有资料支持才收录。",
+      "relatedCountLabel": "4部新增关联",
+      "auditTitle": "作品、输入与厂商归属核对",
+      "auditSourceLabel": "游戏保存目录",
+      "auditLabel": "逐项保留输入排除、旧身份复用与参考边界。",
+      "auditNote": "详细证据与疑点见data/db-soft-audit.md。早期年份是目录归年，不代表精确发行已核；正文不声称穷尽各机种内容差异。",
+      "overviewLabel": "作品档案（含2部仅专题输入书目）",
+      "creativeProfile": {
+        "thesis": "编辑观察：dB-SOFT的目录跨越早期动作、益智与角色冒险。其叙事作将寻路、有限记忆、怪物部署和同伴营救连接到人物处境，操作方式不应只用一个ADV或RPG标签概括。",
+        "phases": [
+          {
+            "period": "1982—1985",
+            "heading": "前身书目与输入式冒险",
+            "analysis": "早期目录有大量动作及书目信息不足的作品。南太平洋冒险与Don Juan明确依赖词句输入，作为类型历史保留，不加入本次数据库。",
+            "basis": "编辑观察",
+            "source": "https://www.8-bits.info/gamelist/PC88/info/info_rwfYdrSj50u7rULr.php"
+          },
+          {
+            "period": "1985—1987",
+            "heading": "品牌与动作叙事",
+            "analysis": "Macadamia旧记录复用；Woody Poco以木偶寻回身份推进，LayLa通过营救改变同伴状态，Produce则让人物恐惧成为部署怪物的条件。",
+            "basis": "编辑观察",
+            "source": "https://shamirgame.blog.fc2.com/blog-entry-376.html"
+          },
+          {
+            "period": "1989—1997",
+            "heading": "记忆线索与纯玩法的分界",
+            "analysis": "Melroon把有限记忆做成预设话语的选择系统；Flappy、麻将与铁路棋盘保留玩法参考，实际开发与外部发行关系分别说明。",
+            "basis": "编辑观察",
+            "source": "https://shamirgame.blog.fc2.com/blog-entry-494.html"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "マカダム",
+          "status": "旧主库身份复用",
+          "reason": "保留原品牌专题和全部历史对象，不新增内容或普通移植发行。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": [
+            "g746"
+          ]
+        },
+        {
+          "title": "177",
+          "status": "旧主库身份复用",
+          "reason": "保留原品牌专题和全部历史对象，不新增内容或普通移植发行。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": [
+            "g747"
+          ]
+        },
+        {
+          "title": "うっでぃぽこ",
+          "status": "新增叙事关联",
+          "reason": "方向键移动、武器攻击和预设道具／会话菜单推进。8BITS另列数字方向键与RETURN确认；不是键入动词或自由会话。",
+          "source": "https://shamirgame.blog.fc2.com/blog-entry-367.html",
+          "workIds": [],
+          "relatedIds": [
+            "db-soft-woody-poco"
+          ]
+        },
+        {
+          "title": "レイラ",
+          "status": "新增叙事关联",
+          "reason": "方向移动、跳跃、射击与武器切换；在迷宫收集关键物品，营救后同伴跟随攻击。关卡间还有飞行射击；未据飞行画面单独推断完整驾驶系统。",
+          "source": "https://kiyukou.com/fc-layla",
+          "workIds": [],
+          "relatedIds": [
+            "db-soft-layla"
+          ]
+        },
+        {
+          "title": "プロデュース",
+          "status": "新增叙事关联",
+          "reason": "选择怪物出现地点、持续时间与模式，消耗BOSS-POW并观察恐惧、疲劳来诱导自主行动的人物；玩家不直接操纵三名目标，也不键入行动词句。",
+          "source": "https://shamirgame.blog.fc2.com/blog-entry-376.html",
+          "workIds": [],
+          "relatedIds": [
+            "db-soft-produce"
+          ]
+        },
+        {
+          "title": "メルルーン",
+          "status": "新增叙事关联",
+          "reason": "方向移动和实时武器动作，X／RETURN打开菜单；“記憶を使う”从已记住的话语中选择，初始两格。另有推石与问答。选用记忆不是自由键入句子，声音记录机制也不据此标麦克风输入。",
+          "source": "https://shamirgame.blog.fc2.com/blog-entry-494.html",
+          "workIds": [],
+          "relatedIds": [
+            "db-soft-melroon"
+          ]
+        },
+        {
+          "title": "南太平洋アドベンチャー",
+          "status": "仅专题／排除新增",
+          "reason": "8BITS明确假名输入指令、RETURN确认。局部对象编号选择并不抵消主要的词句键入，依用户要求排除新增。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_rwfYdrSj50u7rULr.php",
+          "workIds": [],
+          "dossierIds": [
+            "db-soft-south-pacific"
+          ]
+        },
+        {
+          "title": "ドンファン",
+          "status": "仅专题／排除新增",
+          "reason": "通过键盘键入回答或指令推进；资料记有输入字数限制。不是仅选择预设回应，不能以含图像而认定无文字输入。",
+          "source": "https://g16.hatenablog.com/entry/2025/01/25/175626",
+          "workIds": [],
+          "dossierIds": [
+            "db-soft-don-juan"
+          ]
+        },
+        {
+          "title": "キングタイガー（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "プラネットバルカン（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "アスロック（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ワイルドスワット（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "スペースランディング（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "避开陨石、返回母船；目录重复项合并。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "マリンどんべえだあ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "マリンどんべえだあⅡ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "スカイどんべえだあⅠ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "スカイどんべえだあⅡ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "CRTチェイサーⅠ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "CRTチェイサーⅡ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "CRTチェイサーⅢ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "CRTチェイサーⅣ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "エアーライフル（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "キングタイガーⅢ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ギャラクティカⅠ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ギャラクティカⅡ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ギャラクティカⅢ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "スペースどんべえだあⅠ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "スペースどんべえだあⅡ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "フューチャー（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ビッグアステロイド（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "フレネルゾーン（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ドキドキすいか割り（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "1515（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "グランドクロス（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "コンジャンクション（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ザ・カーペンター（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录描述木匠造房与老鼠啃柱，不据此推为剧情模拟。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "スピットファイアー（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录描述飞机翻转及击落敌机。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "日本一周ヨットレース（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "应对恶劣天气；纯竞赛不入叙事库。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "トレインゲーム（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "アパッチゲーム（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "戦艦大和（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ブラックホール（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "バトルファイア（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "以潜射武器攻击来袭舰队。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "タマツキゲーム（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "体育玩法参考。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "レーダーサーチ（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ばくごん（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "シリウスF（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "バトルバルカン（目录归1982）",
+          "status": "Computer Land北海道前身书目",
+          "reason": "目录可核书目；缺少可读操作和连续剧情证据，不从名称推断玩法或文字输入。",
+          "source": "https://www.gamepres.org/pc88/library/1982/1982.html",
+          "workIds": []
+        },
+        {
+          "title": "ゼクサス光速2000光年（1984）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "PC目录记1984年2月，MSX资料另核。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "Zexas Limited（1985／MSX）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "Casio等发行关系按MSX档案保留；不写成全为dB发行。",
+          "source": "https://generation-msx.nl/company/db-soft/54/software",
+          "workIds": []
+        },
+        {
+          "title": "ヴォルガード／Volguard（1984）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "PC原作目录记1984年7月；MSX1985不是全作首年。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "ヴォルガードII（1985／FC）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "独立续作，玩法参考。",
+          "source": "https://www.mobygames.com/company/8317/db-soft-inc/games/",
+          "workIds": []
+        },
+        {
+          "title": "頭脳戦艦ガル（1985／FC）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "宣传RPG标签不等于菜单冒险或持续角色叙事。",
+          "source": "https://www.mobygames.com/company/8317/db-soft-inc/games/",
+          "workIds": []
+        },
+        {
+          "title": "らぷてっく／Laptick（1985）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "目录有らぶてっく、ラプテック等异文，作为同题参考，不复制作品。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "らぷてっく2（MSX）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "MSX档案归1985，其他目录年份有异；不将机种条目自动当新增内容。",
+          "source": "https://generation-msx.nl/company/db-soft/54/software",
+          "workIds": []
+        },
+        {
+          "title": "クロスブレイム／Cross Blaim（1986／MSX）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "已核发行和原厂手册存档；OCR无法可靠辨读。早期Real Fight RPG广告与成品设计有差异，剧情及具体操作仍需原册补证，暂留参考。",
+          "source": "https://generation-msx.nl/software/db-soft/cross-blaim/release/745",
+          "workIds": []
+        },
+        {
+          "title": "ストラテジック・マース（1988／MSX2）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "持续剧情结构未核，不凭太空战争背景纳入。",
+          "source": "https://generation-msx.nl/software/db-soft/strategic-mars/1833",
+          "workIds": []
+        },
+        {
+          "title": "桃太郎の鬼退治／Super Fresnel／Kim Kim Dan Dan／Apple Tree",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "原聊天可恢复名称，具体版本、年份与操作仍需逐作资料；此组合行只保存待核线索，不计四部已核叙事。",
+          "source": "https://wiki-origin.giantbomb.com/wiki/Companies/dB_SOFT",
+          "workIds": []
+        },
+        {
+          "title": "フラッピー／Flappy（1983）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "推石通关；原作最早批次不因FC或MSX年份重置。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "キングフラッピー／King Flappy（1985）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "高难度续作参考。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "Flappy Limited／Limited ’85（1985／MSX）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "两个Limited名目与Casio发行参照MSX档案；组合参考行不计独立叙事数。",
+          "source": "https://generation-msx.nl/company/db-soft/54/software",
+          "workIds": []
+        },
+        {
+          "title": "フラッピー2 ブルースター復活の日（1989）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "有营救背景，但连续人物事件结构待核；暂不仅据副标题列剧情作。",
+          "source": "https://www.8-bits.info/gamelist/X68K/info/info_9LXDfrAJ1aU81pAT.php",
+          "workIds": []
+        },
+        {
+          "title": "Flappy Special（1990／GB）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "dB开发、Victor音乐产业发行，不改写为dB自发行。",
+          "source": "https://mediaworld.co.jp/products/10188009003",
+          "workIds": []
+        },
+        {
+          "title": "Flappy 95（Windows）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "Moby记1995、部分目录记1996，精确首年暂留冲突；不扩叙事库。",
+          "source": "https://www.mobygames.com/game/256232/flappy-95/",
+          "workIds": []
+        },
+        {
+          "title": "始皇帝（1986）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "不是同名历史题材RPG。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "今夜も朝までパワフルまあじゃん（1988）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "纯麻将不加入叙事库。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "今夜も朝までパワフルまあじゃん2",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "PC88目录1989年1月，MSX档案1988；分清机种日期，不只用PC年份重置原作。",
+          "source": "https://generation-msx.nl/company/db-soft/54/software",
+          "workIds": []
+        },
+        {
+          "title": "パワフルまあじゃん2 データ集（1989）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "数据集参考，不计独立叙事。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "鉄道王（1987／FC）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "转盘行进、购路与资产竞争；保留玩法参考。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/9378.html",
+          "workIds": []
+        },
+        {
+          "title": "鉄道王’96 いくぜ億万長者!!（1995／PS）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "dB开发关联、Atlus发行；与Hudson桃太郎电铁分开。",
+          "source": "https://consoledictionary.com/games/288",
+          "workIds": []
+        },
+        {
+          "title": "鉄道王2 世界征服の野望!!（1997／PS）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "Atlus实际发行，dB开发关联；角色和竞争机制不自动改作视觉小说。",
+          "source": "https://jpsearch.go.jp/item/madb_game-M725134",
+          "workIds": []
+        },
+        {
+          "title": "ブラックウィング／Black Wing",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "目录明确发行中止，无作品／内容／发行记录。",
+          "source": "https://www.gamepres.org/pc88/library/dbsoft.html",
+          "workIds": []
+        },
+        {
+          "title": "鉄道王II（GB计划）",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "与1997 PS铁道王2不同，长期未定后未发行。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/9378.html",
+          "workIds": []
+        },
+        {
+          "title": "VIP／My Trainer／Hotall",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "仅解释公司产品背景，不扩入游戏或叙事目录。",
+          "source": "https://www.amusement-center.com/project/egg/participants/",
+          "workIds": []
+        },
+        {
+          "title": "Netfarm后继时期Flappy手机／Windows配信",
+          "status": "玩法参考／不新增叙事身份",
+          "reason": "单独说明后继关系，不把后继发行一律倒写为早期dB-SOFT原作。",
+          "source": "https://www.amusement-center.com/project/egg/participants/",
+          "workIds": []
+        }
+      ],
+      "catalogueEntryCount": 75,
+      "dossierGroups": [
+        {
+          "id": "db-soft-brand",
+          "title": "Macadamia品牌：既有身份复用",
+          "description": "沿用原库和原品牌专题，不复制或修改历史对象。",
+          "workIds": [
+            "g746",
+            "g747"
+          ]
+        },
+        {
+          "id": "db-soft-stories",
+          "title": "剧情RPG、动作与恐怖策略",
+          "description": "四部无自由文字输入新关联，各一原作内容／首批发行。",
+          "workIds": [
+            "db-soft-woody-poco",
+            "db-soft-layla",
+            "db-soft-produce",
+            "db-soft-melroon"
+          ]
+        },
+        {
+          "id": "db-soft-parser",
+          "title": "文字输入：专题书目",
+          "description": "两部只展示历史类型与排除理由，不建数据库内容或发行。",
+          "workIds": [
+            "db-soft-south-pacific",
+            "db-soft-don-juan"
+          ],
+          "cardLabel": "仅专题／文字输入"
+        }
+      ],
+      "workContexts": {
+        "g746": "dB母公司专题复用Macadamia原身份；旧准入例外保留，不表示本轮新增。",
+        "g747": "复用Macadamia原身份与历史发行，不因品牌和母公司各建一个作品。"
+      }
     }
   ],
   "schemaVersion": 2,
