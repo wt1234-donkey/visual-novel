@@ -12,7 +12,7 @@ import build_company_pages as pages
 
 class GameplayAppendixTests(unittest.TestCase):
     def test_complete_reference_tables_are_last_and_do_not_add_cards(self):
-        expected = {'adventure_international', 'infocom', 'sierra', 'koei', 'ascii', 'melbournehouse', 'psk', 'sierra_on_line', 'sinclair', 'microcabin', 'cinematronics', 'dataeast', 'enix', 'hudson', 'legend_uk', 'legend_entertainment', 'te_soft', 'carry_lab', 'champion_soft', 'hummingbird_soft', 'riverhill_soft', 'falcom', 'ibm', 'mosaic'}
+        expected = {'adventure_international', 'infocom', 'sierra', 'koei', 'ascii', 'melbournehouse', 'psk', 'sierra_on_line', 'sinclair', 'microcabin', 'cinematronics', 'dataeast', 'enix', 'hudson', 'legend_uk', 'legend_entertainment', 'te_soft', 'carry_lab', 'champion_soft', 'hummingbird_soft', 'riverhill_soft', 'falcom', 'ibm', 'mosaic', 'taito'}
         self.assertEqual(set(pages.gameplay_catalogues['companies']), expected)
         for company in pages.coverage['companies']:
             page = pages.build(company)
