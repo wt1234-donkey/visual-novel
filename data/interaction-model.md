@@ -132,3 +132,8 @@ Monster House的动词／名词映射固定按键，由保存协会明确为命�
 ## dB-SOFT（2026-10-18）
 
 dB-SOFT新增Woody Poco、LayLa、Produce、Melroon四部跨类型叙事；Melroon的记忆菜单选择已获得话语，不属于词句键入。South Pacific Adventure与Don Juan确认含文字输入，仅专题。LayLa的固定续关密码不作叙事文字输入。Macadamia两部旧记录原样复用。
+
+
+## JAST（日本）扩充（2026-10-18）
+
+Special II的GO／LOOK／SPEAK／ACTION是预设行动菜单；Justice Slave有章节分支及第三章选择战斗，两部新增无自由词句输入。Erika、Star Trap与天使们的午后II含假名键入，仅专题；预设菜单或功能键不抵消仍需输入的部分。旧g015输入式、旧养成关联及所有历史对象保持。详见[jast-catalogue-audit.md](jast-catalogue-audit.md)。

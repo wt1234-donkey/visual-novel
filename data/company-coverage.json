@@ -23376,10 +23376,10 @@
     {
       "id": "jast",
       "name": "JAST（日本）",
-      "checkedAt": "2026-10-08",
-      "status": "专题与已核实作品建档完成；历史资料缺项逐项标注",
-      "scope": "以发行《天使们的午后》的日本旧 JAST 为主体，整理本社、Crest、Tiare、早期 Purple、Angel Hearts 与 pride 的历史目录。现有 32 部四类作品与 7 部跨类型关联作品；2026-10-08 追加三部图文菜单指令作品，已有作品与版本保留原样。",
-      "versionScope": "列出有来源的主要初版、移植、重制与合集记录，不宣称穷尽所有地区和再版。发售月份冲突时只记年份；有年份冲突的 III 番外篇保留异文。部分配音需 JAST SOUND 外设，不能理解为普通机器上自带完整语音。",
+      "checkedAt": "2026-10-18",
+      "status": "原专题扩充：新增1部菜单叙事与1部战斗关联，3部输入作仅专题",
+      "scope": "根据“列出Carry Lab（キャリーラボ）游戏类型清单”项目中JAST（日本）的清单，扩充已有专题；覆盖本社、Crest、Tiare、早期Purple、Angel Hearts与pride。复用39部已发表身份，新增Special II主库与Justice Slave跨类型关联；3部新输入书目仅专题。原聊天清单结合历史目录补核，不声称全球发行穷尽。",
+      "versionScope": "本轮两部新作各登记一个原作内容及一条最早已核首批发行；普通移植、合集、再版与配信不另增内容。现有历史发行及未核内容关系原样保留。JAST SOUND外设支持不等于普通初版自带全语音。",
       "publisherNote": "本专题的 JAST 是 1985—2001 年间活动的日本株式会社ジャスト。旗下品牌的实际署名保留在版本中，筛选归档为“JAST（日本）”；JAST USA／现代 JAST 国际发行方单独保留。2001 年 Purple software 承接后的系列作品仅作沿革关联。 早期クレスト（Crest／Clest）依据机种馆录的 JAST 新品牌说明归档，保留版本实际署名。",
       "workIds": [
         "g015",
@@ -23413,7 +23413,8 @@
         "g679",
         "g680",
         "g681",
-        "g682"
+        "g682",
+        "g1215"
       ],
       "publisherWorkIds": [
         "g015",
@@ -23446,17 +23447,18 @@
         "g679",
         "g680",
         "g681",
-        "g682"
+        "g682",
+        "g1215"
       ],
-      "catalogueEntryCount": 59,
+      "catalogueEntryCount": 66,
       "source": "https://ja.wikipedia.org/wiki/ジャスト_(ブランド)",
       "sectionTitle": "从早期校园冒险到 Windows 多品牌时期",
-      "overviewLabel": "已建档作品与跨类型关联",
+      "overviewLabel": "作品档案（含3部新增仅专题输入书目）",
       "auditTitle": "历史目录核对与收录说明",
       "auditSourceLabel": "历史品牌目录（非现存官网）",
-      "auditLabel": "56 项历史核对与范围说明，另附 3 项菜单指令补充结果；不等同于独立游戏数。",
-      "auditNote": "旧官网已关闭，历史目录、机种馆录、零售资料和同期杂志相互补充。原有核对行保留为前次核对记录；本次新增条目附日期，已解决事项见后附补充结果。“资料待补”不计入顶部游戏数。本次只新增图文菜单指令作品，排除需要键入词句的指令输入作品；已有作品、版本与跨类型记录未改动。",
-      "description": "日本老 JAST 与旗下品牌作品专题：天使们的午后系列、剧情角色、平台版本、跨类型作品及历史目录核对。",
+      "auditLabel": "保留59项历史核对记录，追加本轮补核；末尾另附完整范围玩法表。",
+      "auditNote": "详细证据与日期异文见data/jast-catalogue-audit.md。前次“资料待补”行作为核对历史保留，本轮结果见后附日期行。新录入排除自由行动词句输入；原g015输入式记录和旧日程养成关联属于历史例外，不代表本轮新增。",
+      "description": "日本旧JAST与品牌游戏专题：菜单叙事、剧情战斗、输入式书目及玩法清单；与JAST USA分开。",
       "relatedGames": [
         {
           "id": "jast-smiles",
@@ -23951,11 +23953,81 @@
           "interactionSources": [
             "https://vnclub.org/vn/v10924/"
           ]
+        },
+        {
+          "id": "jast-justice-slave",
+          "title": "Justice Slave：化为星辰吧，邪恶组织",
+          "chineseTitle": "Justice Slave：化为星辰吧，邪恶组织",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "JUSTICE SLAVE ～星となれ!! 悪組織～",
+          "titleAliases": [
+            "Justice Slave",
+            "ジャスティススレイブ"
+          ],
+          "firstYear": 1999,
+          "category": "RPG／叙事关联",
+          "subcategory": "章节冒险＋战斗",
+          "genre": "秘密组织／黑色幽默",
+          "characters": [
+            "西川貴之",
+            "ラウル",
+            "インプドリア",
+            "センカ"
+          ],
+          "charactersSource": "https://type-98.lix.jp/98/kako/jslave.htm",
+          "synopsis": "邪恶组织的基层成员西川贵之奉命寻找古代遗物，意外释放破坏神拉乌尔并获得力量。他升职后的行动与失控风险，逐步卷入同伴和敌对组织的冲突。",
+          "notes": "1999年Windows原作，Tiare署名。品牌目录记8月13日、零售资料记8月23日，暂只用共同年份。四章故事带分支与战斗；不是仅因战斗题材归类。未核实角色配音，不从后年录音工作表推定新版本。",
+          "source": "https://type-98.lix.jp/98/kako/jslave.htm",
+          "interactionModes": [
+            "阅读推进",
+            "选项分支",
+            "战斗指令"
+          ],
+          "interactionNote": "阅读章节文本并选择回应；压力值上升可使主人公失控或触发“发飙”选择。评测明确第三章有选择式战斗，不据此声称全篇严格回合制；未见自由行动词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://type-98.lix.jp/98/kako/jslave.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "jast-justice-slave-c-original",
+              "workId": "jast-justice-slave",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "1999年Windows原作，Tiare署名。品牌目录记8月13日、零售资料记8月23日，暂只用共同年份。四章故事带分支与战斗；不是仅因战斗题材归类。未核实角色配音，不从后年录音工作表推定新版本。",
+              "source": "https://www.suruga-ya.jp/kaitori/kaitori_detail/145002564",
+              "evidenceReleaseIds": [
+                "jast-justice-slave-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "jast-justice-slave-v-original",
+              "workId": "jast-justice-slave",
+              "year": 1999,
+              "platform": "Windows",
+              "publisher": "Tiare",
+              "publisherCompanies": [
+                "JAST（日本）"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1999年Windows原作，Tiare署名。品牌目录记8月13日、零售资料记8月23日，暂只用共同年份。四章故事带分支与战斗；不是仅因战斗题材归类。未核实角色配音，不从后年录音工作表推定新版本。",
+              "source": "https://www.suruga-ya.jp/kaitori/kaitori_detail/145002564",
+              "contentVersionId": "jast-justice-slave-c-original",
+              "contentRelation": "original",
+              "contentNote": "只登记最早已核原作内容批次；未核后版与普通移植不扩列。",
+              "releaseRole": "contentDebut"
+            }
+          ]
         }
       ],
       "relatedSectionTitle": "RPG、养成模拟与 Fan Disc 杂集",
-      "relatedIntro": "保留有战斗、养成或期限行动系统的作品，并将以预告短篇与附录为主的整张 Fan Disc 单列。中文名有编辑译名标识；这些作品不混入四类主库筛选。",
-      "relatedCountLabel": "按可确认的主要玩法归档",
+      "relatedIntro": "原7部关联保持；本轮补入有章节剧情、选择与实操战斗的Justice Slave。旧《天使たちの微笑み》为既有养成例外。",
+      "relatedCountLabel": "8部跨类型关联（1部本轮新增）",
       "entries": [
         {
           "title": "天使たちの午後",
@@ -24465,6 +24537,69 @@
           ],
           "reason": "本次核实为图文菜单指令选择式，补入共享主库；前次待补行作为核对历史保留，现以本行补充结果为准。图文菜单指令选择式：PC-88 用 [2][4][6][8] 选择指令、Return 确认，不需要键入词句。中藤美希系列第二作，与《天使们的午后》有关联。8BITS 记 JAST 发行、Crest 开发，部分馆录／攻略记 Crest；本条保留署名异文，版本暂依机种资料。PC-88 1989 年 9 月、PC-98 1989 年 12 月有发行目录依据；其他页面的 1988 年异文不作为额外版本。故事中的 1989 年 12 月不是 PC-88 发售日期。MSX2 企划被 Generation MSX 明确标为取消，CG 收录不计为游戏发行。取消依据：https://generation-msx.nl/software/jast/night-angels---murder-case-along-private-railway/1771",
           "source": "https://www.8-bits.info/gamelist/PC88/info/info_UNmBFtRIwmibPszs.php"
+        },
+        {
+          "title": "天使たちの午後SpecialII（2026-10-18 补核）",
+          "status": "补充已收录",
+          "workIds": [
+            "g1215"
+          ],
+          "reason": "GO／LOOK／SPEAK／ACTION预设行动截图与攻略互证；1993年PC-98原作新增主库。",
+          "source": "https://www.gog.com/dreamlist/game/tenshi-tachi-no-gogo-special-2-1993"
+        },
+        {
+          "title": "JUSTICE SLAVE ～星となれ!! 悪組織～（2026-10-18 补核）",
+          "status": "补充专题关联",
+          "workIds": [],
+          "reason": "章节选择及第三章选择战斗可核；1999 Windows原作，精确8月日有异文。",
+          "source": "https://type-98.lix.jp/98/kako/jslave.htm",
+          "relatedIds": [
+            "jast-justice-slave"
+          ]
+        },
+        {
+          "title": "エリカ（2026-10-18 补核）",
+          "status": "仅专题／文字输入",
+          "workIds": [],
+          "reason": "假名行动键入，排除新增数据库。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_VtHnvizeQNU8ry3e.php",
+          "dossierIds": [
+            "jast-erika"
+          ]
+        },
+        {
+          "title": "スタートラップ（2026-10-18 补核）",
+          "status": "仅专题／混合输入",
+          "workIds": [],
+          "reason": "固定菜单外仍须键入词语；FM-7原作1986与PC-88版1987分开。",
+          "source": "https://erogereport.blog.jp/archives/1301770.html",
+          "dossierIds": [
+            "jast-star-trap"
+          ]
+        },
+        {
+          "title": "天使たちの午後II ～美奈子～（2026-10-18 补核）",
+          "status": "仅专题／文字输入",
+          "workIds": [],
+          "reason": "1987原作含输入，不与1988菜单式番外混淆。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_agJ3mkAmKDeWuu9z.php",
+          "dossierIds": [
+            "jast-tenshi2"
+          ]
+        },
+        {
+          "title": "Crisis／突撃!ばっこんストリート1・2（2026-10-18 补核）",
+          "status": "玩法参考／暂不补库",
+          "workIds": [],
+          "reason": "以棋盘、竞争和轮盘推进；Crisis虽然有事件剧情，本轮不扩大棋盘类准入。",
+          "source": "https://shamirgame.blog.fc2.com/blog-entry-561.html"
+        },
+        {
+          "title": "天使人形／彼岸花の追憶・記憶（2026-10-18 补核）",
+          "status": "资料仍待补",
+          "workIds": [],
+          "reason": "天使人形发行可核但连续剧情及操作不足；彼岸花题名异文与控制未解决，不猜无输入。",
+          "source": "https://www2s.biglobe.ne.jp/~pdg/xgame/1998.htm"
         }
       ],
       "creativeProfile": {
@@ -24492,7 +24627,186 @@
             "source": "https://www.purplesoftware.jp/products/tenshi/"
           }
         ]
-      }
+      },
+      "dossierOnlyWorks": [
+        {
+          "id": "jast-erika",
+          "title": "艾莉卡",
+          "chineseTitle": "艾莉卡",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "エリカ",
+          "titleAliases": [
+            "Erika: SF Adult Adventure",
+            "ERIKA"
+          ],
+          "firstYear": 1986,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式图文冒险",
+          "genre": "科幻／失忆调查",
+          "characters": [
+            "失忆的情报员（主人公）",
+            "艾莉卡（エリカ）"
+          ],
+          "charactersSource": "https://erogereport.blog.jp/archives/1301747.html",
+          "synopsis": "战机迫降后，主人公逐渐恢复情报员的记忆，并设法联系潜入敌方宇宙船的搭档艾莉卡。",
+          "notes": "1986年原作，PC-88资料记7月；其余机种关系不在此建发行。依用户要求只留专题书目，不加入数据库。",
+          "source": "https://erogereport.blog.jp/archives/1301747.html",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "8BITS明确Kana键入行动指令、Return确认；不是只用光标选择预设菜单。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.8-bits.info/gamelist/PC88/info/info_VtHnvizeQNU8ry3e.php"
+          ]
+        },
+        {
+          "id": "jast-star-trap",
+          "title": "星际陷阱",
+          "chineseTitle": "星际陷阱",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "くりいむレモン スタートラップ",
+          "titleAliases": [
+            "Star Trap",
+            "Cream Lemon: Star Trap",
+            "スタートラップ"
+          ],
+          "firstYear": 1986,
+          "category": "文字输入／仅专题",
+          "subcategory": "混合输入式图文冒险",
+          "genre": "科幻／星际营救",
+          "characters": [
+            "兰（ラン）",
+            "卡纳塔（カナタ）"
+          ],
+          "charactersSource": "https://erogereport.blog.jp/archives/1301770.html",
+          "synopsis": "地球舰队的两名超能力队员接近神秘植物行星，调查其迫近地球及人员失踪的威胁。",
+          "notes": "FM-7原作资料记1986年12月，PC-88为1987年7月，不能拿后者覆盖原作年。1996年Stardust改作不当作JAST本轮新作。只留专题，不建内容或发行。",
+          "source": "https://erogereport.blog.jp/archives/1301770.html",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "可在带星号的固定指令菜单中选择，但仍需自行键入未列出的词语。菜单快捷功能不能抵消自由指令输入，故排除新增数据库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.8-bits.info/gamelist/PC88/info/info_Bd7z6MKbtxJWmJ3u.php",
+            "https://erogereport.blog.jp/archives/1301770.html"
+          ]
+        },
+        {
+          "id": "jast-tenshi2",
+          "title": "天使们的午后II：美奈子",
+          "chineseTitle": "天使们的午后II：美奈子",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "天使たちの午後II ～美奈子～",
+          "titleAliases": [
+            "Tenshi-tachi no Gogo II: Minako",
+            "天使たちの午後 Ⅱ -美奈子-"
+          ],
+          "firstYear": 1987,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式图文冒险",
+          "genre": "校园／人物关系",
+          "characters": [
+            "美奈子",
+            "杏子",
+            "梢"
+          ],
+          "charactersSource": "https://ja.wikipedia.org/wiki/天使たちの午後",
+          "synopsis": "故事跟随美奈子的日常，以及她与杏子、梢之间的人际关系。",
+          "notes": "1987年原作含文字输入；1988年菜单式II番外篇为既有g652独立作品，两者不混并。原系列合集与重制关系另列参考，未完成内容对照前不补造数据库内容。",
+          "source": "https://ja.wikipedia.org/wiki/天使たちの午後",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令"
+          ],
+          "interactionNote": "PC-88资料明确Kana键入、Return确认。预设动词功能键不能覆盖全部行动，仍须输入其他词语，因此即使有快捷菜单也只留专题。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.8-bits.info/gamelist/PC88/info/info_agJ3mkAmKDeWuu9z.php",
+            "https://gamesdb.launchbox-app.com/games/details/147874-tenshi-tachi-no-gogo-ii-minako"
+          ]
+        }
+      ],
+      "catalogueCountLabel": "33部主库 · 8部跨类型 · 3部仅专题",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>本轮新增2部无文字输入叙事身份。</strong> Special II进入主库；Justice Slave含可操作战斗，进入专题跨类型数据库。艾莉卡、星际陷阱和天使们的午后II仅专题。原39部身份继续复用。</p>",
+      "workContexts": {
+        "g015": "既有1985年文字输入作品，保留历史身份与发行；不是本轮新增。菜单截图与快捷键不能证明原作无需键入。",
+        "g652": "1988年菜单式II番外篇，与1987年含文字输入的II美奈子原作分开。",
+        "g656": "开发暂名含Special，复用原身份；不因Special II命名再建Special I。",
+        "g662": "もんもん学園ten.ko.sei沿既有转校生内容与发行记录，不重复建作。",
+        "g678": "2001年Purple software承接作品，作为系列沿革引用，不倒改为JAST发行。",
+        "jast-smiles": "既有日程养成关联原样保留；本轮不扩大纯日常养成准入。"
+      },
+      "dossierGroups": [
+        {
+          "id": "jast-stories",
+          "title": "菜单冒险与多品牌叙事",
+          "description": "32部：31部旧主库加本轮Special II；旧输入原作在后组单列。",
+          "workIds": [
+            "g652",
+            "g653",
+            "g654",
+            "g655",
+            "g656",
+            "g657",
+            "g658",
+            "g659",
+            "g660",
+            "g661",
+            "g662",
+            "g663",
+            "g664",
+            "g665",
+            "g666",
+            "g667",
+            "g668",
+            "g669",
+            "g670",
+            "g671",
+            "g672",
+            "g673",
+            "g674",
+            "g675",
+            "g676",
+            "g677",
+            "g678",
+            "g679",
+            "g680",
+            "g681",
+            "g682",
+            "g1215"
+          ]
+        },
+        {
+          "id": "jast-related",
+          "title": "剧情RPG、混合玩法与既有关联",
+          "description": "八部关联保留实际玩法；新增Justice Slave，既有日程养成例外不扩展。",
+          "workIds": [
+            "jast-smiles",
+            "jast-vanishing",
+            "jast-tails",
+            "jast-izayoi",
+            "jast-world",
+            "jast-mugen",
+            "jast-purple-fd",
+            "jast-justice-slave"
+          ]
+        },
+        {
+          "id": "jast-parser",
+          "title": "文字输入与排除说明",
+          "description": "原g015保留；另外三部仅专题，不产生新数据库作品、内容或发行。",
+          "workIds": [
+            "g015",
+            "jast-erika",
+            "jast-star-trap",
+            "jast-tenshi2"
+          ],
+          "cardLabel": "文字输入／新增三部仅专题"
+        }
+      ]
     },
     {
       "id": "cocktailsoft",
