@@ -83053,6 +83053,644 @@
         }
       ],
       "catalogueEntryCount": 61
+    },
+    {
+      "id": "ibm",
+      "name": "IBM",
+      "foundedAt": "1911-06-16",
+      "foundedSource": "https://www.ibm.com/history/ctr-and-ibm",
+      "checkedAt": "2026-10-18",
+      "status": "新增6部无文字输入主库、2部跨类型叙事；复用3部旧输入身份",
+      "publisherNote": "IBM前身C-T-R于1911年6月16日设立，1924年改用IBM名称；1981是IBM PC推出年。IBM自产／合作、实际代理发行与仅运行在IBM PC的作品分别核对。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>新增6部主库叙事 · 2部跨类型叙事 · 复用3部旧输入式冒险。</strong> IBM关联包括早期PC发行与1990年代多媒体合作；Mad Dog原作保留American Laser Games、Yellow Brick Road原作保留Synergy发行，不将IBM代理写成原作自研。</p>",
+      "scope": "依据此前Carry Lab游戏类型清单项目中的IBM清单重新核对，覆盖原列早期研究、PC教育／动作与1990年代多媒体项目；这是具名范围的专题，不是IBM全球所有产品与每种机器游戏的穷尽目录。",
+      "versionScope": "新增6部主库各1个原作内容／1条首批发行；2部关联共2个原作内容／3条首批发行。只录有证据的最早批次，不机械追加IBM代理移植、翻译或合辑。旧1190主库、1388内容、2382发行及71个专题对象保持。",
+      "workIds": [
+        "g089",
+        "g057",
+        "g060",
+        "g1194",
+        "g1195",
+        "g1196",
+        "g1197",
+        "g1198",
+        "g1199"
+      ],
+      "legacyCommandWorkIds": [
+        "g089",
+        "g057",
+        "g060"
+      ],
+      "entries": [
+        {
+          "title": "Colossal Cave Adventure",
+          "status": "旧输入式身份引用",
+          "reason": "Microsoft Adventure为同作商业改编沿革；IBM在1981年发行IBM PC版。不把机种名当厂商，也不重复建Microsoft Adventure身份；含文字输入，旧对象原样保留。",
+          "source": "https://www.catb.org/~esr/open-adventure/history.html",
+          "workIds": [
+            "g089"
+          ]
+        },
+        {
+          "title": "The Wizard and the Princess",
+          "status": "旧输入式身份引用",
+          "reason": "IBM 1982年《Adventure in Serenia》属于The Wizard and the Princess的后发版本；保留g057，不新增原作／故事。含文字输入，旧发行署名保持。",
+          "source": "https://www.sierragamers.com/hi-res/",
+          "workIds": [
+            "g057"
+          ]
+        },
+        {
+          "title": "King’s Quest: Quest for the Crown",
+          "status": "旧输入式身份引用",
+          "reason": "1984年IBM PCjr委托／发行与Sierra开发关联；保留原King’s Quest身份与文字输入标签，不因后期菜单重制抹去原作操作。",
+          "source": "https://www.sierragamers.com/roberta-williams/",
+          "workIds": [
+            "g060"
+          ]
+        },
+        {
+          "title": "The Adventures of Hyperman",
+          "status": "新增无文字输入叙事",
+          "reason": "1995年IBM发行的科学点击冒险；电视动画为后续衍生，未把电视播出年或演员表当游戏首发资料。",
+          "source": "https://www.adventuregamedb.com/game_info/the_adventures_of_hyperman",
+          "workIds": [
+            "g1194"
+          ]
+        },
+        {
+          "title": "Peter and the Wolf",
+          "status": "新增无文字输入叙事",
+          "reason": "收录7th Level制作、IBM发行、Tony Randall讲述的1995年版本；不同于1994年Chuck Jones／IF/X与Time Warner同名作品。",
+          "source": "https://www.old-games.com/download/10527/peter-and-the-wolf",
+          "workIds": [
+            "g1195"
+          ]
+        },
+        {
+          "title": "Jungle Book",
+          "status": "新增无文字输入叙事",
+          "reason": "Powerhouse制作、IBM发行的1996实拍互动电影，取材1994真人电影；与Disney同名平台动作游戏及其他教育光盘区分。只记有明确早期发行依据的Windows 3.x。",
+          "source": "https://www.adventuregamedb.com/g/jungle_book",
+          "workIds": [
+            "g1196"
+          ]
+        },
+        {
+          "title": "The Adventures of Pinocchio",
+          "status": "新增无文字输入叙事",
+          "reason": "1996年Powerhouse制作、IBM发行，含电影与另拍素材。FMV World标1998，与发行目录的1996有异文；按早期Windows 3.x发行记录，不把后期DVD另算独立作品。",
+          "source": "https://www.adventuregamedb.com/g/the_adventures_of_pinocchio",
+          "workIds": [
+            "g1197"
+          ]
+        },
+        {
+          "title": "Mad Dog McCree",
+          "status": "新增无文字输入叙事",
+          "reason": "原作是American Laser Games的1990年街机激光影碟游戏；部分目录标题年记1991，保留异文。IBM关联为后发PC发行及1996合辑，不倒填为街机原发行商。",
+          "source": "https://fmvworld.com/maddogmccree_arcade.html",
+          "workIds": [
+            "g1198"
+          ]
+        },
+        {
+          "title": "Mad Dog II: The Lost Gold",
+          "status": "新增无文字输入叙事",
+          "reason": "原作是American Laser Games的1992年街机游戏；IBM是后发PC／1996合辑发行关联。三位向导的路径选择属于同作故事，不拆成三部游戏。",
+          "source": "https://fmvworld.com/maddog2_arcade.html",
+          "workIds": [
+            "g1199"
+          ]
+        },
+        {
+          "title": "Zyll",
+          "status": "新增跨类型叙事",
+          "reason": "原厂手册©IBM 1984，同时说明PC、XT、Portable与PCjr按键；首批作为同一IBM PC／PCjr兼容程序记录。可单人、合作或竞争，保留明确故事目标，列RPG关联。",
+          "source": "https://mocagh.org/miscgame/zyll-manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "ibm-zyll"
+          ]
+        },
+        {
+          "title": "Yellow Brick Road",
+          "status": "新增跨类型叙事",
+          "reason": "Synergy于1995年以Windows／Macintosh混合光盘首发；IBM为1996年日本再发行。沿用1995原作身份，只登记混合盘两平台共同内容，不另造IBM原作。",
+          "source": "https://www.metzomagic.com/showArticle.php?index=642",
+          "workIds": [],
+          "relatedIds": [
+            "ibm-yellow-brick-road"
+          ]
+        },
+        {
+          "title": "The Bernstein Program",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM 1957年研究程序；棋类决策，不新增叙事作品。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Management Decision-Making Laboratory",
+          "status": "玩法参考／不补叙事库",
+          "reason": "目录记1958；培训与管理模型。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Bank Management Simulation",
+          "status": "玩法参考／不补叙事库",
+          "reason": "保留早期模拟关联；不补造未经逐项核定的首发日和剧情。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Production-Manpower Decision Game",
+          "status": "玩法参考／不补叙事库",
+          "reason": "产能与人员决策训练；不作角色叙事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "BBC Vik",
+          "status": "玩法参考／不补叙事库",
+          "reason": "原列早期研究项目，控制与历史批次未逐项核定，不生成发行。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Retail Management Game",
+          "status": "玩法参考／不补叙事库",
+          "reason": "业务模拟与叙事冒险分开。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "1620 Blackjack",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM 1620平台上的规则游戏。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "One-Armed Bandit",
+          "status": "玩法参考／不补叙事库",
+          "reason": "规则／概率玩法，非固定叙事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Microsoft Adventure IBM PC版（1981）",
+          "status": "同作后发发行参考",
+          "reason": "沿用g089；普通平台发行不另加内容。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Adventure in Serenia（1982）",
+          "status": "同作后发发行参考",
+          "reason": "沿用g057；IBM署名不表示另一部独立故事。",
+          "source": "https://www.mocagh.org/loadpage.php?getgame=serenia",
+          "workIds": []
+        },
+        {
+          "title": "Adventures in Math",
+          "status": "玩法参考／不补叙事库",
+          "reason": "核心是算术题与练习，未核固定角色叙事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Monster Math",
+          "status": "玩法参考／不补叙事库",
+          "reason": "以运算练习为核心。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Strategy Games",
+          "status": "玩法参考／不补叙事库",
+          "reason": "合集与各规则玩法分开，不虚构故事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Freddy’s Rescue Roundup",
+          "status": "玩法参考／不补叙事库",
+          "reason": "营救鸡只的关卡目标不直接当作独立固定故事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Bouncy Bee Learns Letters",
+          "status": "玩法参考／不补叙事库",
+          "reason": "早教练习。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Bouncy Bee Learns Words",
+          "status": "玩法参考／不补叙事库",
+          "reason": "词语训练；不等于行动解析器，但也不因此自动成为叙事作品。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Volcanoes",
+          "status": "玩法参考／不补叙事库",
+          "reason": "模拟与知识教学参考，未核预制叙事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Imperial Space Command",
+          "status": "玩法参考／不补叙事库",
+          "reason": "部队与资源战略，不凭科幻世界设定判定固定剧情。",
+          "source": "https://www.mobygames.com/game/64538/imperial-space-command/",
+          "workIds": []
+        },
+        {
+          "title": "Olympic Decathlon",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM后发PC发行关联；纯竞技不补库。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Crossfire",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM实际发行关联与原开发分开。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Shamus",
+          "status": "玩法参考／不补叙事库",
+          "reason": "关卡与射击为核心，未核足够角色叙事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Jumpman",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM代理PC发行不代表原创开发。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Bumble Games",
+          "status": "玩法参考／不补叙事库",
+          "reason": "The Learning Company开发关联，练习性质。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Bumble Plot",
+          "status": "玩法参考／不补叙事库",
+          "reason": "坐标学习与解题。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Gertrude’s Secrets",
+          "status": "玩法参考／不补叙事库",
+          "reason": "教育逻辑操作，不据角色包装推断故事。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Gertrude’s Puzzles",
+          "status": "玩法参考／不补叙事库",
+          "reason": "与Secrets分列原清单系列范围；无故事准入证据。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Rocky’s Boots",
+          "status": "玩法参考／不补叙事库",
+          "reason": "构造逻辑机器的教育玩法。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Mad Dog McCree and Mad Dog II（1996合辑）",
+          "status": "包装／代理发行参考",
+          "reason": "沿用g1198／g1199，IBM Multimedia合装不建第三部作品。",
+          "source": "https://www.mobygames.com/company/7179/ibm-multimedia/",
+          "workIds": []
+        },
+        {
+          "title": "Yellow Brick Road IBM日本版（1996）",
+          "status": "同作后发发行参考",
+          "reason": "1995 Synergy混合光盘原作已收关联；IBM再发行不另加内容。",
+          "source": "https://www.mobygames.com/game/38410/yellow-brick-road/releases/",
+          "workIds": []
+        },
+        {
+          "title": "Quest for Fame（1995）",
+          "status": "玩法参考／不补叙事库",
+          "reason": "虚拟吉他与演出晋级明确，尚未核到超出演出生涯框架的固定故事；本轮仅玩法参考，不声称已证实没有叙事。",
+          "source": "https://www.mobygames.com/game/20009/quest-for-fame/",
+          "workIds": []
+        },
+        {
+          "title": "Kid Riffs（1995）",
+          "status": "玩法参考／不补叙事库",
+          "reason": "点击制作与学习音乐，不以卡通角色自动归互动绘本。",
+          "source": "https://www.mobygames.com/game/204062/kid-riffs/",
+          "workIds": []
+        },
+        {
+          "title": "Power: The Game（1995）",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM Multimedia发行；未核足以补库的固定剧情。",
+          "source": "https://www.mobygames.com/company/7179/ibm-multimedia/",
+          "workIds": []
+        },
+        {
+          "title": "Rapid Assault",
+          "status": "玩法参考／不补叙事库",
+          "reason": "保留原清单玩法；叙事与控制资料不足，只列参考。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        },
+        {
+          "title": "Black Rein（1995）",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM Multimedia发行，未核具体固定叙事流程，不凭军事背景补库。",
+          "source": "https://www.mobygames.com/company/7179/ibm-multimedia/",
+          "workIds": []
+        },
+        {
+          "title": "The Forbidden City: Beyond Space & Time（2008）",
+          "status": "玩法参考／不补叙事库",
+          "reason": "IBM与故宫博物院合作的文化展示；可游览和参与活动，不按角色故事游戏补库。",
+          "source": "https://preview.thenewsmarket.com/Previews/IBM/DocumentAssets/142575.pdf",
+          "workIds": []
+        },
+        {
+          "title": "The Book of Shadowboxes: A Story of the ABCs",
+          "status": "玩法参考／不补叙事库",
+          "reason": "补查EduQuest／IBM关系；以26页字母诗歌和阅读练习为主体，未核超出练习的固定故事，暂不补叙事库。1993 Macintosh与1994 Windows沿革不混为同批。",
+          "source": "https://oldcdreviews.wordpress.com/2008/12/17/book-of-shadowboxes-the/",
+          "workIds": []
+        },
+        {
+          "title": "Peter and the Wolf（Chuck Jones／IF/X，1994）",
+          "status": "同名不同作",
+          "reason": "与IBM／7th Level的1995作品区分，未并入IBM正文身份。",
+          "source": "https://www.wired.com/1995/08/peter-by-chuck/",
+          "workIds": []
+        },
+        {
+          "title": "IBM PC机种名／兼容PC游戏",
+          "status": "平台归属边界",
+          "reason": "仅在IBM PC运行不构成IBM开发或发行，未将Museum Madness等普通PC作品批量归入。",
+          "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+          "workIds": []
+        }
+      ],
+      "source": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+      "sectionTitle": "从PC命令冒险到多媒体故事",
+      "catalogueCountLabel": "本次具名核对项目",
+      "overviewLabel": "正文作品身份（含旧输入引用）",
+      "auditTitle": "IBM作品归属与输入边界核对",
+      "auditSourceLabel": "IBM游戏目录索引",
+      "auditLabel": "原清单项目分别进入作品卡、同作沿革或末尾玩法参考表。",
+      "auditNote": "参考表说明非叙事和证据不足项目，不将世界设定、职业晋级或教育题名直接当作固定叙事；资料不足不等于已证实没有故事。",
+      "workContexts": {
+        "g089": "Microsoft Adventure为同作商业改编沿革；IBM在1981年发行IBM PC版。不把机种名当厂商，也不重复建Microsoft Adventure身份；含文字输入，旧对象原样保留。",
+        "g057": "IBM 1982年《Adventure in Serenia》属于The Wizard and the Princess的后发版本；保留g057，不新增原作／故事。含文字输入，旧发行署名保持。",
+        "g060": "1984年IBM PCjr委托／发行与Sierra开发关联；保留原King’s Quest身份与文字输入标签，不因后期菜单重制抹去原作操作。",
+        "g1194": "1995年IBM发行的科学点击冒险；电视动画为后续衍生，未把电视播出年或演员表当游戏首发资料。",
+        "g1195": "收录7th Level制作、IBM发行、Tony Randall讲述的1995年版本；不同于1994年Chuck Jones／IF/X与Time Warner同名作品。",
+        "g1196": "Powerhouse制作、IBM发行的1996实拍互动电影，取材1994真人电影；与Disney同名平台动作游戏及其他教育光盘区分。只记有明确早期发行依据的Windows 3.x。",
+        "g1197": "1996年Powerhouse制作、IBM发行，含电影与另拍素材。FMV World标1998，与发行目录的1996有异文；按早期Windows 3.x发行记录，不把后期DVD另算独立作品。",
+        "g1198": "原作是American Laser Games的1990年街机激光影碟游戏；部分目录标题年记1991，保留异文。IBM关联为后发PC发行及1996合辑，不倒填为街机原发行商。",
+        "g1199": "原作是American Laser Games的1992年街机游戏；IBM是后发PC／1996合辑发行关联。三位向导的路径选择属于同作故事，不拆成三部游戏。",
+        "ibm-zyll": "原厂手册©IBM 1984，同时说明PC、XT、Portable与PCjr按键；首批作为同一IBM PC／PCjr兼容程序记录。可单人、合作或竞争，保留明确故事目标，列RPG关联。",
+        "ibm-yellow-brick-road": "Synergy于1995年以Windows／Macintosh混合光盘首发；IBM为1996年日本再发行。沿用1995原作身份，只登记混合盘两平台共同内容，不另造IBM原作。"
+      },
+      "relatedGames": [
+        {
+          "id": "ibm-zyll",
+          "title": "齐尔",
+          "chineseTitle": "齐尔",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Zyll",
+          "titleAliases": [],
+          "firstYear": 1984,
+          "category": "RPG／叙事关联",
+          "subcategory": "菜单驱动探索RPG",
+          "genre": "实时文字界面／合作探索RPG",
+          "characters": [
+            "冒险者（战士／法师／盗贼）",
+            "Zyll"
+          ],
+          "charactersSource": "https://mocagh.org/miscgame/zyll-manual.pdf",
+          "synopsis": "Zyll用黑色宝珠把国土变成荒原，冒险者闯入Castle Mitain，寻找至少四件宝物与宝珠，恢复故乡。",
+          "notes": "原厂手册©IBM 1984，同时说明PC、XT、Portable与PCjr按键；首批作为同一IBM PC／PCjr兼容程序记录。可单人、合作或竞争，保留明确故事目标，列RPG关联。",
+          "source": "https://mocagh.org/miscgame/zyll-manual.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "原厂手册将每个玩家的11个固定按键映射到主／子菜单命令；MOVE后继续选方向，物品、攻击等同样由预设命令选择。文字界面不是解析器，位置菜单也不是直接移动。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://mocagh.org/miscgame/zyll-manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "ibm-zyll-c-original",
+              "workId": "ibm-zyll",
+              "label": "原作／首批内容",
+              "firstYear": 1984,
+              "basis": "original",
+              "evidence": "1984年原作内容。原厂手册©IBM 1984，同时说明PC、XT、Portable与PCjr按键；首批作为同一IBM PC／PCjr兼容程序记录。可单人、合作或竞争，保留明确故事目标，列RPG关联。",
+              "source": "https://mocagh.org/miscgame/zyll-manual.pdf",
+              "evidenceReleaseIds": [
+                "ibm-zyll-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ibm-zyll-v-original",
+              "workId": "ibm-zyll",
+              "year": 1984,
+              "platform": "IBM PC／PCjr",
+              "publisher": "IBM",
+              "publisherCompanies": [
+                "IBM"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1984年原作首批内容。原厂手册©IBM 1984，同时说明PC、XT、Portable与PCjr按键；首批作为同一IBM PC／PCjr兼容程序记录。可单人、合作或竞争，保留明确故事目标，列RPG关联。",
+              "source": "https://mocagh.org/miscgame/zyll-manual.pdf",
+              "contentVersionId": "ibm-zyll-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早内容批次；后发IBM代理、普通移植、翻译和合集不因此另增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "ibm-yellow-brick-road",
+          "title": "黄砖路",
+          "chineseTitle": "黄砖路",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Yellow Brick Road",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "RPG／叙事关联",
+          "subcategory": "童话冒险／指令战斗",
+          "genre": "点击探索／队伍战斗",
+          "characters": [
+            "Tin Man",
+            "Scarecrow",
+            "Lion",
+            "Queen Glinda",
+            "Gnome King",
+            "Grey Bear"
+          ],
+          "charactersSource": "https://www.metzomagic.com/showArticle.php?index=642",
+          "synopsis": "Gnome King的军队威胁翡翠城，狮子被俘，玩家与铁皮人、稻草人等伙伴同行，救回同伴并对抗入侵者。",
+          "notes": "Synergy于1995年以Windows／Macintosh混合光盘首发；IBM为1996年日本再发行。沿用1995原作身份，只登记混合盘两平台共同内容，不另造IBM原作。",
+          "source": "https://www.metzomagic.com/showArticle.php?index=642",
+          "interactionModes": [
+            "点击调查",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "点击方向和同伴图像探索、听取意见；战斗选择角色、武器与目标，敌人持续推进且有恢复时间，不能概括为严格回合制或直接动作。物品自动收取／使用，无自由会话输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.metzomagic.com/showArticle.php?index=642",
+            "https://www.mobygames.com/game/38410/yellow-brick-road/releases/"
+          ],
+          "contentVersions": [
+            {
+              "id": "ibm-yellow-brick-road-c-original",
+              "workId": "ibm-yellow-brick-road",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年原作内容。Synergy于1995年以Windows／Macintosh混合光盘首发；IBM为1996年日本再发行。沿用1995原作身份，只登记混合盘两平台共同内容，不另造IBM原作。",
+              "source": "https://www.mobygames.com/game/38410/yellow-brick-road/releases/",
+              "evidenceReleaseIds": [
+                "ibm-yellow-brick-road-v-original-1",
+                "ibm-yellow-brick-road-v-original-2"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ibm-yellow-brick-road-v-original-1",
+              "workId": "ibm-yellow-brick-road",
+              "year": 1995,
+              "platform": "Windows 3.x",
+              "publisher": "Synergy Inc.",
+              "publisherCompanies": [
+                "Synergy Inc."
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有（部分）",
+              "differences": "1995年原作首批内容。Synergy于1995年以Windows／Macintosh混合光盘首发；IBM为1996年日本再发行。沿用1995原作身份，只登记混合盘两平台共同内容，不另造IBM原作。",
+              "source": "https://www.mobygames.com/game/38410/yellow-brick-road/releases/",
+              "contentVersionId": "ibm-yellow-brick-road-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早内容批次；后发IBM代理、普通移植、翻译和合集不因此另增内容或发行。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "ibm-yellow-brick-road-v-original-2",
+              "workId": "ibm-yellow-brick-road",
+              "year": 1995,
+              "platform": "Macintosh",
+              "publisher": "Synergy Inc.",
+              "publisherCompanies": [
+                "Synergy Inc."
+              ],
+              "kind": "原作／首批内容",
+              "voice": "有（部分）",
+              "differences": "1995年原作首批内容。Synergy于1995年以Windows／Macintosh混合光盘首发；IBM为1996年日本再发行。沿用1995原作身份，只登记混合盘两平台共同内容，不另造IBM原作。",
+              "source": "https://www.mobygames.com/game/38410/yellow-brick-road/releases/",
+              "contentVersionId": "ibm-yellow-brick-road-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅登记原作最早内容批次；后发IBM代理、普通移植、翻译和合集不因此另增内容或发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "dossierOnlyWorks": [],
+      "creativeProfile": {
+        "thesis": "IBM相关游戏横跨研究模拟、个人电脑软件发行和多媒体合作。以下依已核作品作编辑观察，着重比较指令、角色行动与影像如何承担叙事，不将合作方的创作全部归于IBM。",
+        "phases": [
+          {
+            "period": "早期研究—1980年代",
+            "heading": "模拟实验与文字世界",
+            "analysis": "早期棋类与管理模拟服务规则和决策；Adventure、Serenia与King’s Quest以输入推进探索，Zyll则以固定菜单组织实时角色冒险。",
+            "basis": "编辑观察",
+            "source": "https://mocagh.org/miscgame/zyll-manual.pdf"
+          },
+          {
+            "period": "1990—1996",
+            "heading": "真人电影与屏幕上的行动",
+            "analysis": "IBM后发代理的Mad Dog把枪战表现和救援故事相连；Powerhouse的两部电影改编以选择、谜题、反应和语音模仿连接预录画面。",
+            "basis": "编辑观察",
+            "source": "https://www.adventuregamedb.com/g/jungle_book"
+          },
+          {
+            "period": "1995—1996",
+            "heading": "儿童角色与知识叙事",
+            "analysis": "Hyperman把科学问题放进追捕事件，Peter and the Wolf用动画故事与乐器探索并行；与纯数学操练、字母或音乐创作工具分开收录。",
+            "basis": "编辑观察",
+            "source": "https://www.adventuregamedb.com/game_info/the_adventures_of_hyperman"
+          }
+        ]
+      },
+      "dossierGroups": [
+        {
+          "id": "ibm-legacy",
+          "title": "旧库引用：输入式命令冒险",
+          "description": "引用既有身份，不作为本轮无文字输入新准入；原作品和发行对象保持。",
+          "cardLabel": "旧库引用",
+          "workIds": [
+            "g089",
+            "g057",
+            "g060"
+          ]
+        },
+        {
+          "id": "ibm-multimedia",
+          "title": "新增主库：点击、绘本与实拍故事",
+          "description": "无自由行动词句键入；麦克风语音识别与固定谜题密码在互动依据中说明。",
+          "cardLabel": "新增叙事",
+          "workIds": [
+            "g1194",
+            "g1195",
+            "g1196",
+            "g1197",
+            "g1198",
+            "g1199"
+          ]
+        },
+        {
+          "id": "ibm-related",
+          "title": "跨类型关联：角色探索与指令战斗",
+          "description": "具有明确角色、故事目标与非输入操作，保留RPG／混合叙事类别。",
+          "cardLabel": "跨类型叙事",
+          "workIds": [
+            "ibm-zyll",
+            "ibm-yellow-brick-road"
+          ]
+        }
+      ],
+      "catalogueEntryCount": 49
     }
   ],
   "schemaVersion": 2,
