@@ -13794,6 +13794,242 @@
           ]
         }
       ]
+    },
+    "mosaic": {
+      "title": "附录：Mosaic Publishing游戏作品与玩法类型清单",
+      "updated": "2026-10-18",
+      "scope": "围绕原项目指定厂商，以现存原厂说明与历史目录重建作品、机种及计划清单；正文档案、输入书目、工具和未发行项目分别说明，不宣称取回原聊天逐字表格。",
+      "groups": [
+        {
+          "title": "1984：早期科幻与维京传奇",
+          "note": "输入叙事只作旧身份引用或仅专题书目，保留开发署名。",
+          "source": "https://www.lysator.liu.se/adventure/Mosaic_Publishing.html",
+          "rows": [
+            {
+              "workId": "mosaic-pen-dark"
+            },
+            {
+              "workId": "mosaic-width"
+            },
+            {
+              "workId": "mosaic-nomad"
+            },
+            {
+              "workId": "g131"
+            },
+            {
+              "workId": "mosaic-steel-rat"
+            }
+          ]
+        },
+        {
+          "title": "1985—1987：数字选择与输入式改编并行",
+          "note": "原作年份依据手册与最早馆藏，不按电视／小说出版年推算游戏。",
+          "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_archers-manual.pdf",
+          "rows": [
+            {
+              "workId": "g1200"
+            },
+            {
+              "workId": "mosaic-snow-queen"
+            },
+            {
+              "workId": "mosaic-twice-shy"
+            },
+            {
+              "workId": "g1201"
+            },
+            {
+              "workId": "g1202"
+            },
+            {
+              "workId": "g1203"
+            }
+          ]
+        },
+        {
+          "title": "已发行原作的机种、分段与再版",
+          "note": "后发机种和包装不自动增加内容版；未核新增内容不冒称完全同内容。",
+          "source": "https://www.lysator.liu.se/adventure/Mosaic_Publishing.html",
+          "rows": [
+            {
+              "title": "Adrian Mole／The Archers分段程序",
+              "type": "同一作品的剧情分段",
+              "relation": "分段不拆作",
+              "note": "四个或更多程序对应原故事段落，依机种内存不同；既有剧情不因文件数或磁带面数生成独立作品。",
+              "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_secret_diary_of_adrian_mole-manual.pdf"
+            },
+            {
+              "title": "The Secret Diary：BBC／C64及其他机种",
+              "type": "选择式叙事移植／捆绑",
+              "relation": "后发或同期先后未核参考",
+              "note": "原厂确认Mosaic 1985出版；本轮只登记已核Spectrum最早批次，不仅据同年把所有机种设为同期。C64捆绑及BBC磁盘不自动增内容。",
+              "source": "https://unbox.ifarchive.org/1jspogoh0v/level9_docs/the_secret_diary_of_adrian_mole-manual.pdf"
+            },
+            {
+              "title": "The Growing Pains：BBC／MSX Mosaic发行",
+              "type": "选择式续作／合作发行",
+              "relation": "发行主体与后发机种参考",
+              "note": "原厂手册署Virgin Games Ltd；Mosaic有1987馆藏与部分机种发行关联。普通移植无已核首次新增内容，未追加到内容／平台表。",
+              "source": "https://www.computinghistory.org.uk/det/13048/The-Growing-Pains-of-Adrian-Mole/"
+            },
+            {
+              "title": "Yes, Prime Minister：BBC／C64／CPC、DOS／PCW",
+              "type": "图标／对话选择",
+              "relation": "机种与后发发行参考",
+              "note": "原厂手册说明BBC控制与Five Ways实现，DOS／PCW见盘签；本轮不凭兼容目录补造所有同期批次。",
+              "source": "https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC//Manual/formated/Yes_Prime_Minister_-_Mosaic_Publishing.pdf"
+            },
+            {
+              "title": "Mastertronic／Alternative Software再版",
+              "type": "廉价重发／包装",
+              "relation": "后发渠道参考",
+              "note": "廉价版、渠道和合集不独立建作；没有明确新故事或素材增量的后版不新增内容。",
+              "source": "https://worldofspectrum.net/item/0005819/"
+            },
+            {
+              "title": "The Stainless Steel Rat：Spectrum条目",
+              "type": "同名科幻冒险／资料缺口",
+              "relation": "发行与身份待核",
+              "note": "WoS记Harry Harrison／Sean O’Connell等、MIA且无发行记录；不据传闻把它当Shards C64的已核移植或独立已发行新作。",
+              "source": "https://worldofspectrum.net/item/0010239/"
+            },
+            {
+              "title": "Erik的1984／1985 Spectrum异文",
+              "type": "输入式冒险／机种年差异",
+              "relation": "保留旧数据说明",
+              "note": "旧g131记1984；Level 9历史目录有1985 Spectrum记法。先保留旧对象与证据，专题列异文。",
+              "source": "https://www.lysator.liu.se/adventure/Level_9_Computing.html"
+            }
+          ]
+        },
+        {
+          "title": "非叙事游戏、日记工具与纸本",
+          "note": "题材、标题或品牌相同不构成另一部预制故事。",
+          "source": "https://classicadventurer.co.uk/pdf/03.pdf",
+          "rows": [
+            {
+              "title": "In the Beginning...（1984；早期预告见1983）",
+              "type": "街机动作／演化关卡",
+              "relation": "非叙事玩法参考",
+              "note": "分子到早期人类的十级演化动作目标；不以进化背景自动补成固定故事。GTW旧条目标1983，实物目录与回顾记1984。",
+              "source": "https://www.gamesthatwerent.com/gtw64/in-the-beginning/"
+            },
+            {
+              "title": "My Secret File",
+              "type": "儿童个人资料库／记录工具",
+              "relation": "非游戏工具",
+              "note": "用于记录家庭与朋友资料；不是既写好的剧情，也不是因自由录入而被误当输入式冒险。",
+              "source": "https://www.computinghistory.org.uk/det/69007/My-Secret-File/"
+            },
+            {
+              "title": "The Adrian Mole Secret Diary Kit（1985）",
+              "type": "日记套装／软件用途待细核",
+              "relation": "包装与工具参考",
+              "note": "馆藏确认BBC盘并附The Adrian Mole Diary 1986纸本；未取得独立预制游戏故事依据，不与Secret Diary游戏或Growing Pains混同。",
+              "source": "https://www.computinghistory.org.uk/det/13025/The-Adrian-Mole-Secret-Diary-Kit/"
+            },
+            {
+              "title": "Beyond the Arcade（1984）",
+              "type": "游戏主题纸本书",
+              "relation": "非电子游戏",
+              "note": "Nicholas Palmer的书籍出版不计数据库游戏。",
+              "source": "https://classicadventurer.co.uk/pdf/03.pdf"
+            }
+          ]
+        },
+        {
+          "title": "未发行、放弃的改编与机种计划",
+          "note": "预告、授权洽谈与未完成程序不制造已发行内容。",
+          "source": "https://classicadventurer.co.uk/pdf/03.pdf",
+          "rows": [
+            {
+              "title": "Raffles",
+              "type": "盗贼文学改编计划",
+              "relation": "未发行",
+              "note": "St. Bride’s拟作为Snow Queen后续，访谈与CASA均记未实现。",
+              "source": "https://www.solutionarchive.com/game/id,7861/"
+            },
+            {
+              "title": "Alice",
+              "type": "文学改编计划",
+              "relation": "未发行",
+              "note": "St. Bride’s计划，不与PSK或其他厂商同名Alice混同。",
+              "source": "https://www.solutionarchive.com/game/id,7862/"
+            },
+            {
+              "title": "The Story of the Amulet／The Amulet",
+              "type": "多人物／时间旅行图文冒险计划",
+              "relation": "未发行",
+              "note": "Ram Jam后续，1986预告拟1987发行；未商业发行，不因目录列年份便建发行。",
+              "source": "https://www.solutionarchive.com/game/id,7242/"
+            },
+            {
+              "title": "Yes Minister（Ram Jam早期方案）",
+              "type": "电视喜剧改编计划",
+              "relation": "搁置方案",
+              "note": "1985—1986预告和后来ODE的1987成品分开；不建立第二个已发行原作。",
+              "source": "https://en.wikipedia.org/wiki/Yes%2C_Prime_Minister_%28video_game%29"
+            },
+            {
+              "title": "Coronation Street",
+              "type": "电视连续剧改编构想",
+              "relation": "未实现构想",
+              "note": "洽谈／创作方向参考，不与已发行The Archers互作别名。",
+              "source": "https://classicadventurer.co.uk/pdf/03.pdf"
+            },
+            {
+              "title": "Foundation",
+              "type": "阿西莫夫文学改编构想",
+              "relation": "未获授权",
+              "note": "创办人回顾未取得版权；不将计划算发行游戏。",
+              "source": "https://classicadventurer.co.uk/pdf/03.pdf"
+            },
+            {
+              "title": "Special Deliverance",
+              "type": "科幻文学改编计划",
+              "relation": "未实现计划",
+              "note": "1983年早期新闻所列，未核到发行实物。",
+              "source": "https://de.wikipedia.org/wiki/Mosaic_Publishing"
+            },
+            {
+              "title": "Soldier, Ask Not",
+              "type": "科幻文学改编计划",
+              "relation": "未实现计划",
+              "note": "原文学作者Gordon R. Dickson；不补造游戏人物与首发日期。",
+              "source": "https://de.wikipedia.org/wiki/Mosaic_Publishing"
+            },
+            {
+              "title": "The World-Thinker",
+              "type": "科幻文学改编计划",
+              "relation": "未实现计划",
+              "note": "Jack Vance改编候选；不构造已发行版本。",
+              "source": "https://de.wikipedia.org/wiki/Mosaic_Publishing"
+            },
+            {
+              "title": "The Pen and the Dark：Dragon计划",
+              "type": "输入式冒险移植计划",
+              "relation": "未发行机种",
+              "note": "作者／目录记接近完成但未上市，不能列为商业发行。",
+              "source": "https://www.solutionarchive.com/game/id,394/"
+            },
+            {
+              "title": "The Subways of Tazoo",
+              "type": "非常规工程师后续构想",
+              "relation": "未实现续作",
+              "note": "Pen and the Dark后续计划，未发行。",
+              "source": "https://www.solutionarchive.com/game/id,394/"
+            },
+            {
+              "title": "Twice Shy：Commodore 64计划",
+              "type": "犯罪图文冒险移植计划",
+              "relation": "未发行机种",
+              "note": "访谈回顾C64方案未成；不因预告机种补发行。",
+              "source": "https://classicadventurer.co.uk/pdf/03.pdf"
+            }
+          ]
+        }
+      ]
     }
   }
 }
