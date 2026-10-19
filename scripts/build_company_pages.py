@@ -2,6 +2,7 @@
 import argparse
 import html
 import json
+import re
 from pathlib import Path
 from source_urls import source_url_valid
 
@@ -11,6 +12,45 @@ coverage = json.loads((ROOT / 'data/company-coverage.json').read_text(encoding='
 works = {work['id']: work for work in data['works']}
 gameplay_catalogues = json.loads((ROOT / 'data/gameplay-catalogues.json').read_text(encoding='utf-8'))
 escape = html.escape
+
+NAV_START = '<!-- company-dossiers:start -->'
+NAV_END = '<!-- company-dossiers:end -->'
+
+
+def build_dossier_navigation(index):
+    """Group homepage dossier links by their earliest main-catalogue work."""
+    if NAV_START in index:
+        before, rest = index.split(NAV_START, 1)
+        previous, after = rest.split(NAV_END, 1)
+    else:
+        old = re.search(r'<div class="company-quick" aria-label="厂商专题">.*?</div></div>', index)
+        assert old, '首页缺少厂商专题导航'
+        before, previous, after = index[:old.start()], old.group(), index[old.end():]
+    # Keep published link labels and URLs; the visible year lives outside the link.
+    links = {match.group(1): match.group(0) for match in re.finditer(
+        r'<a\b[^>]*href="([a-z_]+)\.html"[^>]*>.*?</a>', previous, re.S)}
+    companies = {company['id']: company for company in coverage['companies']}
+    assert set(links) <= set(companies), '首页含未登记的专题链接'
+    grouped = {}
+    for cid, company in companies.items():
+        year = min((works[wid]['firstYear'] for wid in company['workIds']), default=None)
+        period = year // 5 * 5 if year is not None else None
+        anchor = links.get(cid, f'<a class="secondary-link" href="{cid}.html">{escape(company["name"])}社</a>')
+        label = html.unescape(re.sub('<[^>]+>', '', anchor))
+        grouped.setdefault(period, []).append((year, label.casefold(), cid, anchor))
+    sections = []
+    for period in sorted(grouped, key=lambda year: year if year is not None else float('inf')):
+        title = f'{period}—{period + 4}' if period is not None else '暂无主库作品'
+        period_id = str(period) if period is not None else 'undated'
+        items = []
+        for year, _, cid, anchor in sorted(grouped[period], key=lambda item: (item[0] or 9999, item[1], item[2])):
+            year_label = str(year) if year is not None else '未归年'
+            items.append(f'<div class="dossier-item" role="listitem" data-company="{cid}" data-first-year="{year or ""}">{anchor}<span class="dossier-first-year">{year_label}</span></div>')
+        sections.append(f'<section class="dossier-period" aria-labelledby="dossier-period-{period_id}"><h4 id="dossier-period-{period_id}">{title}<span>{len(items)}个专题</span></h4><div class="dossier-links" role="list">{"".join(items)}</div></section>')
+    navigation = ('<section class="company-dossiers" id="company-dossiers" aria-label="厂商专题">'
+                  '<h3>厂商风格专题</h3><p class="dossier-order-note">按专题关联的主库作品最早首发年排序，每5年一组；同年按名称排列。链接旁标注最早年份，未有主库作品的专题单列。此处采用作品原作年，移植及发行关联仍沿用原作年。</p>'
+                  f'<div class="dossier-periods">{"".join(sections)}</div></section>')
+    return before + NAV_START + '\n        ' + navigation + '\n        ' + NAV_END + after
 
 
 def link(url, title):
@@ -231,3 +271,11 @@ if __name__ == '__main__':
         else:
             target.write_text(output, encoding='utf-8')
         print(f'{target.name}: {len(company["workIds"]) + len(company.get("relatedGames", [])) + len(company.get("dossierOnlyWorks", []))} 部相关游戏，已同步')
+    index_path = ROOT / 'index.html'
+    index = index_path.read_text(encoding='utf-8')
+    ordered_index = build_dossier_navigation(index)
+    if args.check:
+        assert index == ordered_index, '首页专题链接未按主库最早作品年份分组'
+    else:
+        index_path.write_text(ordered_index, encoding='utf-8')
+    print('index.html: 专题链接按主库最早作品年份分组，已同步')
