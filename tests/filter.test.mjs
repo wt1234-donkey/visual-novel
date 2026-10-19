@@ -447,7 +447,7 @@ test('publisher aliases preserve historical credit and count games across platfo
   assert.ok(filterCatalogue(data,{company:'Capcom'}).some(({work})=>work.id==='g049'));
   assert.equal(counts.has('CAPCOM'),false);
   assert.equal(counts.has('CHUNSOFT'),false);
-  assert.deepEqual(new Set(filterCatalogue(data,{company:'Konami'}).filter(({work})=>work.originalTitle.startsWith('ときめきメモリアル')).map(({work})=>work.id)),new Set(['g023','g175','g176','g177','g937','g938','g939','g940']));
+  assert.deepEqual(new Set(filterCatalogue(data,{company:'Konami'}).filter(({work})=>work.originalTitle.startsWith('ときめきメモリアル')).map(({work})=>work.id)),new Set(['g023','g175','g176','g177','g937','g938','g939','g940','g1217','g1218','g1219','g1220','g1221','g1222']));
 });
 
 test('Silkys Plus dossier, Chinese searches and original-brand separation',()=>{
@@ -973,8 +973,8 @@ test('Konami content chronology avoids recycled characters and previously releas
   const dossier=coverage.find(c=>c.id==='konami');
   assert.equal(dossier.foundedAt,'1969-03-21');
   assert.ok(coverage.indexOf(dossier)<coverage.findIndex(c=>c.id==='sinclair'));
-  assert.equal(dossier.workIds.length,11);
-  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,36);
+  assert.equal(dossier.workIds.length,24);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,52);
   const premium=data.platformReleases.find(v=>v.id==='g939-v2');
   assert.equal(premium.year,2012);assert.ok(premium.differences.includes('蓮見達也'));
   assert.ok(!data.platformReleases.some(v=>['g937','g938','g939'].includes(v.workId)&&v.year===2024));
