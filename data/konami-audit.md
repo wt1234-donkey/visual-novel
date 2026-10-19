@@ -41,3 +41,47 @@ Girl’s Side人物和玩法依据[初代PS2介绍](https://www.konami.com/games
 ## 尚未逐项完成
 
 本专题是核心叙事样本，不是科乐美全部游戏目录。Tokimeki Drama Series三作、2 Substories三作、Mitsumete Knight、授权ADV及移动端独立作品仍待后续逐项整理。《Snatcher》英语配音版与1996年新片头需再核地区发售年份及原版素材增量；本批未贸然增行。主系列配音与角色资料优先使用已核实字段，未核实状态不从平台推断。一般动作、体育、音乐或卡牌产品不因同属科乐美而自动加入叙事主库。
+
+## 2026-10-19：玩法清单重建与主库增补
+
+此前章节为2026-10-13的历史核对，保留其当时计数及待续状态；以下是本轮结果。
+
+### 来源范围
+
+用户要求按“列出Comptiq游戏类型清单”项目中的Konami清单建立专题，并明确不再排除文字输入叙事。原聊天完整列表未能取回，不能声称逐字复原或全公司目录已补齐。[游戏保存会PC-88 Konami目录](https://www.gamepres.org/pc88/library/konami.html)可直接核对四项：1986 Gradius、1986 Goonies、1988 Snatcher、1990天与地。Snatcher复用g040；其他三项只列玩法参考，其中天与地是PC-98移植，原作首批尚未细核，不能用1990年PC-88日期冒充独立原作首发。
+
+以此为起点扩展有来源支持的叙事：新增13部主库及22部跨类型关联，正文46个身份，末尾62项／9组表。原11部主库的身份、内容及发行全部保留；只对g040的互动字段补充已核文字查询与射击说明。其他75个专题配置和旧玩法表保持。本轮不是Konami全游戏目录，暂缓系列在表中明列，不能将“未完成细核”写成“无剧情”。
+
+### 新增主库13部
+
+| 作品 | 原作批次 | 操作与身份依据 |
+|---|---|---|
+| Shalom／魔城传说III | 1987 MSX | [官方EGG介绍](https://www.konami.com/games/jp/ja/products/dl_win_majou3_egg/)回溯原作年；移动、对话、谜题与不同动作首领。2016 Windows再发行不增内容。 |
+| Drama Series：虹色的青春、彩的情歌、启程之诗 | 1997、1998、1999 PS／Saturn同期 | [实际玩法整理](https://w.atwiki.jp/gcmatome/pages/3843.html)区分调查／交谈、足球训练、按键演奏与毕业事件；[官方创作者文章](https://www.konami.com/mg/archive/other/psonebooks/policenauts/staff02.html)证实Policenauts引擎的后续利用。三作各自独立，不并成1994本体DLC。 |
+| 2 Substories：Dancing Summer Vacation、Leaping School Festival、Memories Ringing On | 2000、2001、2001 PS | [分作玩法及原发售记录](https://w.atwiki.jp/gcmatome/pages/6782.html)。首作有地点选择及DDR，第二作取消地图探索，以选择分支为主；第三作好感选择及毕业回想。EVS起名不是文字行动输入。 |
+| 凝望骑士 | 1998 PS | [RED开发方介绍](https://red-entertainment.co.jp/gallery/cat02/357.html)证实三年佣兵生活、训练、战争及恋爱目标；仅标可证的日程／事件选择，不因战争题材猜战斗机制。R为独立RPG待续。 |
+| 幻想水浒外传1、2 | 2000、2001 PS | [第一作官方介绍](https://www.konami.com/games/jp/ja/products/gen_hal_ps/)、[第二作](https://www.konami.com/games/jp/ja/products/gan_cli_ps/)和[首发年资料](https://ja.wikipedia.org/wiki/幻想水滸外伝)。两作以纳修为核心、图文选择推进；现行官网2003是Books再版日期，不能套为首发。官网产品分类误泛列RPG，不据标签否认其文字冒险形式。 |
+| Shadow of Memories／Destiny | 2001 PS2 | [同期实机评测](https://www.gamespot.com/reviews/shadow-of-destiny-review/1900-2694612/)与[回顾](https://www.thepixelempire.net/shadow-of-memories-ps2-review.html)：直接探索、道具与时间谜题。地区异名是同作。 |
+| Time Hollow | 2008 DS | [任天堂产品页](https://www.nintendo.co.jp/ds/software/yhlj/index.html)确认2008/03/19、触控笔开洞改变过去；[实机试玩](https://www.gamespot.com/articles/e3-2008-time-hollow-hands-on/1100-6194002/)辅助区分调查玩法。主人公日本名時尾歩郎，英语版Ethan Kairos。 |
+| Zack & Ombra | 2010 DS | [任天堂产品页](https://www.nintendo.co.jp/ds/software/bzqj/index.html)确认2010/10/28、岛屿故事与触控小游戏推进；不是纯无剧情合集。 |
+
+中文名保留编辑译名标记；人物表仅列可核身份或姓名，不填造完整声优表。未逐项确认原版角色人声的发行保留“未核实”，不由光盘／掌机推断。Drama与Substories语音有实际玩法资料支持；没有把附送音乐CD算游戏内新录音。
+
+### 关联22部与后版内容
+
+- 幻想水浒传I—V、Rhapsodia、Card Stories、Tierkreis、编织百年之时、STAR LEAP共10部，按[官方系列历史](https://www.konami.com/games/suikoden/ja/history)区分本篇、文字外传与RPG支线；旧原作年结合[系列发行史](https://ja.wikipedia.org/wiki/幻想水滸伝シリーズ)，不照抄Books／Best／PS2 Archives日期。Card Stories有剧情卡牌战斗，Rhapsodia为独立战略RPG；它们不是纯对战参考。
+- [2026/08/07官方公告](https://www.konami.com/games/corporate/ja/news/topics/20260807/)明确STAR LEAP仅日本iOS／Android当天上线，两平台同一原作内容；Steam与全球计划不冒列首批。[官方商店文字](https://apps.apple.com/jp/app/id6746180100)明确时间线回合战斗、地图探索、战争与据点复兴。运营后续剧情未逐批建立内容身份，本条不声称穷尽全部更新。
+- Metal Gear、MG2、MGS1—4、Portable Ops、Peace Walker、Ground Zeroes、Phantom Pain和AC!D两作共12部。首发年／平台核[官方Archives](https://www.konami.com/mg/archives/jp/ja/)，故事核各作HISTORY页。**HISTORY顶部1964、1995、2005等是故事发生年，不是游戏发售年**。AC!D为卡牌指令／成本策略，不照搬即时潜入标签。
+- MGS V的两部独立商业发行保留各自身份；同一首批的主机平台共用内容ID。GZ的Windows版后发，不为平台覆盖追加；TPP首批Windows同批记录。其他后发移植、Master／Legacy／HD套装不另建作。
+- 初代幻想水浒传HD：以[官方新绘人物说明](https://www.konami.com/games/corporate/ja/news/topics/20220916g/)为具体美术增量，以[2025/03/06发售公告](https://www.konami.com/games/corporate/ja/news/topics/20250306/)定首批六平台，合为一个新增内容；Switch2六月普通移植不扩列。2022公告当时预计2023，实际首批以2025发售公告为准。II的HD仅有概括性图形变化，本轮未完成相对全部先行版的新增素材比较，暂不建立后版内容。
+- MGS3 Δ：以[官方新增模式／影片页](https://www.konami.com/mg/mgs3r/features/asia/ja/)明确的Secret Theater新片、Guy Savage Δ及平台特别关卡为增量；2025/08/28首批PS5与Windows的猿蛇特别关卡组合共用一个内容ID；Xbox的Bomberman特别关卡组合另建一个内容ID。剧情沿用、旧配音保留，不称新剧本／新录音。10月30日FOX HUNT在原首批之后，不并入8月内容依据；本轮也未穷尽其他历史增补。不同平台的特别关卡组合不强行合并为同一内容身份。
+
+### 输入与暂缓
+
+Snatcher资料库可按人名／关键词检索，[MobyGames资料](https://www.mobygames.com/game/7524/snatcher/trivia/)及[Jordan实机资料库记录](https://gamefaqs.gamespot.com/segacd/563492-snatcher/faqs/20970)支持后续版存在文字输入。仍用g040，既有原作内容及平台发行对象不改、不复制。操作概览注明版本边界；菜单主导并不等于不存在文字输入。此具名授权不自动更改其他品牌的既有收录范围。
+
+Silent Hill、Castlevania各分支、授权恋爱ADV（包括网球王子）、其他早期RPG、LovePlus独立手机服务、Ghost Babel／Rising／Survive等系列支线与新内容仍有未完成项。原聊天清单不足与全公司作品数量庞大不构成填造数据的理由；暂缓项只是后续研究范围，不能计作已入库。纯问答、对战益智和工具只列参考；Hudson原作保留原发行署名与既有专题身份。
+
+### 计数与检查口径
+
+主库从1212／1410／2404更新为**1225部／1423内容／2420发行**（新增13／13／16）；关联新增22部、25内容、39发行。合计新增35部、38内容、55发行；三项新增内容不作为独立作品。专题24部主库加22部关联，共46个卡片；62项玩法表有16项范围参考。所有旧作品、内容及平台发行身份均保留，唯一旧作字段订正为g040互动概览；新增发行均为contentDebut。

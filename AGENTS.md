@@ -12,3 +12,5 @@
 - New company dossiers use verified establishment dates after 1949, prioritizing companies already represented by actual catalogue releases without an existing dossier. New dossiers focus on narrative games and RPGs; do not expand them with pure daily-life training/raising, mahjong, board-game or pure competitive titles. Keep already published historical exceptions in older dossiers.
 
 - FairyTale专题按2026-10-19用户要求允许文字输入叙事；既有主库身份复用。此具名例外不自动扩展到其他品牌；资料不明仍需核实，不能仅凭ADV标签判定独立叙事。
+
+- Konami专题按2026-10-19用户要求允许文字输入叙事进入主库；复用旧作品身份，不将起名／存档名／一次性密码误记为解析器，也不自动改变其他厂商的具名例外范围。
