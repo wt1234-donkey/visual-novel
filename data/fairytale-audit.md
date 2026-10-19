@@ -194,3 +194,14 @@
 | [Dead of the Brain 1&2 · PC Engine合集](https://github.com/mamedev/mame/blob/master/hash/pcecd.xml) | 已归入两部版本 | 1999年授权移植合集，不重复新增作品；原作各计一条对应版本。 | g767、g768 |
 | [Natural2 DVD · 商品754](https://fandc.co.jp/catalog/pc/754) | 跨品牌版本归并 | 已确认原作的DVD／廉价合集版，不把FC03全部作品算作FairyTale。 | g777 |
 | [Natural2 DVD · 商品631](https://fandc.co.jp/catalog/pc/631) | 跨品牌版本归并 | 已确认原作的DVD／廉价合集版，不把FC03全部作品算作FairyTale。 | g777 |
+
+
+## FairyTale本轮范围与玩法表（2026-10-19）
+
+本轮允许文字输入叙事，不再沿用旧的操作排除条件。现有65部主库作品、27部关联项目全部复用原身份；未确认可新增的独立叙事作品，作品／内容／发行新增均为0。主库总量保持1212部作品、1410个内容版本、2404条平台发行。
+
+补上119项／10组末尾玩法表，92个正文身份各引用一次；体育、棋牌、六卷限时操作图鉴及外设项目为既有历史保留，并非本轮新增叙事。Lipstick V2原厂只确认ADV、1989年和PC-98商品，未给出剧情与操作；继续待核。Remix 1／2是ETC杂集，不能仅据分类排除所有游戏模块，也不自动认定有新的完整叙事。
+
+原聊天的具名清单未完整取回，本表为既有审计和来源重建，不是逐字聊天备份。2026-10-08的151项商品审计与历次数字保留历史语境，不宣称本轮重新抓取全部官网商品或逐版本实机测试。
+
+本轮查阅：[原厂目录](https://fandc.co.jp/catalog/pc)、[首作](https://fandc.co.jp/catalog/pc/240)、[Lipstick V2](https://fandc.co.jp/catalog/pc/490)、[Remix 2](https://fandc.co.jp/catalog/pc/291)、[Romance首作](https://fandc.co.jp/catalog/pc/310)、[donor／ETHIX](https://fandc.co.jp/catalog/pc/683)。

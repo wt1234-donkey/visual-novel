@@ -137,3 +137,8 @@ dB-SOFT新增Woody Poco、LayLa、Produce、Melroon四部跨类型叙事；Melro
 ## JAST（日本）扩充（2026-10-18）
 
 Special II的GO／LOOK／SPEAK／ACTION是预设行动菜单；Justice Slave有章节分支及第三章选择战斗，两部新增无自由词句输入。Erika、Star Trap与天使们的午后II含假名键入，仅专题；预设菜单或功能键不抵消仍需输入的部分。旧g015输入式、旧养成关联及所有历史对象保持。详见[jast-catalogue-audit.md](jast-catalogue-audit.md)。
+
+
+## FairyTale范围更新（2026-10-19）
+
+本专题按用户要求允许文字输入叙事，不再将该操作作为排除条件。作品仍须具备独立身份与叙事来源；Lipstick V2只有ADV分类、年份与机种，不能由类型缩写补造剧情或操作。现有65部主库和27部关联复用，未发现可新增的独立叙事，旧互动标签不因放宽范围而批量改写。此具名要求不自动调整其他专题的收录范围。
