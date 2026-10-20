@@ -17621,25 +17621,547 @@
     },
     "konami": {
       "title": "Konami游戏作品与玩法类型清单",
-      "updated": "2026-10-19",
-      "scope": "以PC-88 Konami四项发行目录为起点，扩展独立剧情冒险、恋爱外传、幻想水浒传与Metal Gear叙事。含文字输入不再排除；原聊天完整清单未恢复，本表为有来源的范围重建，不是全球全作品目录。",
+      "updated": "2026-10-20",
+      "scope": "已收到用户原清单全文，逐项核对第一至第五节183行；第六节系列优先表另补独立续篇。原作、后版、合辑和误署名分别处理；不是Konami全作品穷尽目录。",
       "groups": [
         {
-          "title": "图文调查、时间谜题与幻想冒险",
-          "note": "菜单、场景调查、文字查询与触控谜题分别说明；并非统一操作。",
-          "source": "https://www.gamepres.org/pc88/library/konami.html",
+          "title": "1981—1989：街机、MSX及FC时代",
+          "note": "依用户原文排序；原年、订正年、归档身份与逐行理由另见konami-source-review.json。动作参考不表示完全没有剧情。",
+          "source": "https://www.konami.com/corporate/ja/history/product.html",
           "rows": [
             {
-              "workId": "g040"
+              "title": "1981 · Scramble（スクランブル）",
+              "type": "横向卷轴射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
             },
             {
-              "workId": "g936"
+              "title": "1981 · Frogger（フロッガー）",
+              "type": "道路穿越动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1981 · Amidar（アミダー）",
+              "type": "迷宫动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1981 · Super Cobra（スーパーコブラ）",
+              "type": "横向射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1982 · Pooyan（プーヤン）",
+              "type": "固定画面射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1982 · Time Pilot（タイムパイロット）",
+              "type": "飞行射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1982 · Tutankham（ツタンカーム）",
+              "type": "迷宫探索动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1983 · Gyruss（ジャイラス）",
+              "type": "环绕射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1983 · Track & Field（ハイパーオリンピック）",
+              "type": "田径体育",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1983 · Antarctic Adventure（けっきょく南極大冒険）",
+              "type": "障碍竞速",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1984 · Circus Charlie（サーカスチャーリー）",
+              "type": "平台动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1984 · Road Fighter（ロードファイター）",
+              "type": "驾驶竞速",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1984 · Hyper Sports（ハイパースポーツ）",
+              "type": "体育",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1985 · Yie Ar Kung-Fu（イー・アル・カンフー）",
+              "type": "格斗",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1985 · Gradius（グラディウス）",
+              "type": "横版射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1985 · TwinBee（ツインビー）",
+              "type": "纵版射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1985 · Green Beret / Rush'n Attack",
+              "type": "军事动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1985 · King's Valley（王家の谷）",
+              "type": "解谜、古墓探索",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1986 · Knightmare（魔城伝説）",
+              "type": "奇幻射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1986 · Penguin Adventure（夢大陸アドベンチャー）",
+              "type": "探索、竞速",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1986 · The Goonies（グーニーズ）",
+              "type": "探索动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1986 · Salamander（沙羅曼蛇）",
+              "type": "横纵射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1986 · Castlevania（悪魔城ドラキュラ）",
+              "type": "哥特式动作冒险",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1986 · Ganbare Goemon! Karakuri Dōchū（がんばれゴエモン！からくり道中）",
+              "type": "动作冒险",
+              "relation": "玩法参考",
+              "note": "关卡通行、收集通行证与动作挑战为核心，不将系列后期剧情RPG性质倒填到1986原作。",
+              "source": "https://www.konami.com/games/goemon/"
+            },
+            {
+              "workId": "konami-kingkong2"
+            },
+            {
+              "workId": "konami-esper1"
+            },
+            {
+              "workId": "konami-galious"
             },
             {
               "workId": "g1216"
             },
             {
+              "title": "1987 · The Goonies II（グーニーズ2）",
+              "type": "动作冒险",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-getsu"
+            },
+            {
+              "workId": "konami-mg"
+            },
+            {
+              "title": "1987 · Contra（魂斗羅）",
+              "type": "军事动作射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-cv2"
+            },
+            {
+              "title": "1987 · The Treasure of Usas（ウシャス）",
+              "type": "遗迹探索、解谜",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "g040"
+            },
+            {
+              "title": "1988 · Parodius（パロディウス）",
+              "type": "恶搞射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1988 · Gradius II（グラディウスII）",
+              "type": "横版射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1988 · Konami Wai Wai World（コナミワイワイワールド）",
+              "type": "跨作品动作冒险",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1988 · King's Valley II（王家の谷II）",
+              "type": "解谜探索",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1989 · Castlevania III: Dracula's Curse（悪魔城伝説）",
+              "type": "哥特式动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1989 · Space Manbow（スペースマンボウ）",
+              "type": "科幻射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1989 · Teenage Mutant Ninja Turtles（T.M.N.T.）",
+              "type": "清版动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1989 · Crime Fighters（クライムファイターズ）",
+              "type": "格斗清版",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "g1229"
+            },
+            {
+              "workId": "g1230"
+            }
+          ]
+        },
+        {
+          "title": "1990—1999：RPG与恋爱叙事",
+          "note": "依用户原文排序；原年、订正年、归档身份与逐行理由另见konami-source-review.json。动作参考不表示完全没有剧情。",
+          "source": "https://www.konami.com/corporate/ja/history/product.html",
+          "rows": [
+            {
+              "workId": "konami-mg2"
+            },
+            {
+              "workId": "konami-sdsnatcher"
+            },
+            {
+              "workId": "konami-goemon-gaiden1"
+            },
+            {
+              "workId": "konami-madara1"
+            },
+            {
+              "title": "1990 · Quarth（クォース）",
+              "type": "解谜",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-lagrange"
+            },
+            {
+              "title": "1991 · Ganbare Goemon: Yukihime Kyūshutsu Emaki",
+              "type": "动作冒险",
+              "relation": "玩法参考",
+              "note": "1991 SFC动作关卡与城镇小游戏为核心；本轮优先外传RPG及调查／探索故事较重的第三作、PS与N64独立作。",
+              "source": "https://www.konami.com/games/goemon/"
+            },
+            {
+              "title": "1991 · Super Castlevania IV（悪魔城ドラキュラ）",
+              "type": "动作冒险",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1991 · Wai Wai World 2: SOS!! Parsley Jō",
+              "type": "跨作品动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1991 · Sunset Riders（サンセットライダーズ）",
+              "type": "西部动作射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-esper2"
+            },
+            {
+              "workId": "konami-goemon-gaiden2"
+            },
+            {
+              "title": "1992 · Contra III: The Alien Wars（魂斗羅スピリッツ）",
+              "type": "动作射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1992 · Axelay（アクスレイ）",
+              "type": "科幻射击",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1993 · Castlevania: Rondo of Blood（悪魔城ドラキュラX 血の輪廻）",
+              "type": "哥特动作",
+              "relation": "玩法参考",
+              "note": "1993 PC Engine SUPER CD-ROM²动作原作，含演出与救援分支；本轮保留动作参考，不以有过场动画直接归视觉小说。",
+              "source": "https://www.konami.com/games/castlevania/jp/ja/history"
+            },
+            {
+              "workId": "konami-madara2"
+            },
+            {
+              "title": "1993 · Rocket Knight Adventures（ロケットナイトアドベンチャーズ）",
+              "type": "平台动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1993 · Ganbare Goemon 2: Kiteretsu Shōgun Magginesu",
+              "type": "动作冒险",
+              "relation": "玩法参考",
+              "note": "1993 SFC横向闯关与机甲战为核心；城镇和阶段剧情不自动等同以调查持续推进故事的第三作。",
+              "source": "https://www.konami.com/games/jp/ja/products/dl_goemon2_sfc_c/"
+            },
+            {
+              "workId": "g936"
+            },
+            {
+              "workId": "g023"
+            },
+            {
+              "title": "1994 · Castlevania: Bloodlines（バンパイアキラー）",
+              "type": "动作冒险",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1994 · Contra: Hard Corps（魂斗羅ザ・ハードコア）",
+              "type": "动作射击",
+              "relation": "玩法参考",
+              "note": "含路线选择和不同结局的动作射击；保留叙事分支说明，射击关卡仍为核心，不归四类主库。",
+              "source": "https://www.konami.com/games/contra/ac/jp/ja/"
+            },
+            {
+              "workId": "konami-goemon3"
+            },
+            {
+              "title": "1994 · International Superstar Soccer（実況ワールドサッカー）",
+              "type": "足球",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-suikoden1"
+            },
+            {
+              "title": "1995 · Tokimeki Memorial: Forever with You",
+              "type": "恋爱模拟",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。恋爱模拟，不属于狭义视觉小说。",
+              "source": "https://www.konami.com/games/tokimeki/about/index.html",
+              "anchor": "g023"
+            },
+            {
+              "title": "1995 · Castlevania: Dracula X（悪魔城ドラキュラXX）",
+              "type": "动作",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-vandal1"
+            },
+            {
+              "workId": "konami-goemon-akogingu"
+            },
+            {
+              "workId": "konami-sotn"
+            },
+            {
+              "workId": "konami-azure"
+            },
+            {
+              "workId": "g1217"
+            },
+            {
+              "workId": "konami-goemon-n64"
+            },
+            {
+              "title": "1997 · beatmania（ビートマニア）",
+              "type": "音乐节奏",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-mgs"
+            },
+            {
+              "workId": "konami-suikoden2"
+            },
+            {
+              "workId": "g1223"
+            },
+            {
+              "workId": "konami-mitsumete-r"
+            },
+            {
+              "workId": "konami-twinbee-rpg"
+            },
+            {
+              "workId": "g1231"
+            },
+            {
+              "workId": "g1218"
+            },
+            {
+              "workId": "g1233"
+            },
+            {
+              "title": "1998 · Yu-Gi-Oh! Duel Monsters（遊☆戯☆王デュエルモンスターズ）",
+              "type": "卡牌对战",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "1998 · Dance Dance Revolution",
+              "type": "音乐节奏",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-sh1"
+            },
+            {
+              "workId": "g175"
+            },
+            {
+              "workId": "g1219"
+            },
+            {
+              "workId": "konami-vandal2"
+            },
+            {
+              "title": "1999 · Dragon Valor（ドラゴンヴァラー）",
+              "type": "家族世代动作RPG",
+              "relation": "厂商订正／不归Konami",
+              "note": "Namco开发发行的剧情ARPG，不作为Konami缺项导入。",
+              "source": "https://www.bandainamcoent.co.jp/cs/list/dragonvalor/"
+            },
+            {
+              "workId": "konami-melty3"
+            },
+            {
+              "workId": "konami-ygo-forbidden"
+            }
+          ]
+        },
+        {
+          "title": "2000—2009：主机与掌机叙事",
+          "note": "依用户原文排序；原年、订正年、归档身份与逐行理由另见konami-source-review.json。动作参考不表示完全没有剧情。",
+          "source": "https://www.konami.com/corporate/ja/history/product.html",
+          "rows": [
+            {
+              "workId": "g1234"
+            },
+            {
               "workId": "g1224"
+            },
+            {
+              "workId": "konami-eldergate"
+            },
+            {
+              "workId": "g1220"
+            },
+            {
+              "workId": "g1235"
             },
             {
               "workId": "g1225"
@@ -17648,64 +18170,339 @@
               "workId": "g1226"
             },
             {
-              "workId": "g1227"
+              "workId": "konami-mgs2"
             },
             {
-              "workId": "g1228"
-            }
-          ]
-        },
-        {
-          "title": "校园与恋人生活：既有主系列",
-          "note": "既有内容与发行全部保留，Plus／Premium／DLC不另建作品。",
-          "source": "https://www.konami.com/games/tokimeki/about/index.html",
-          "rows": [
-            {
-              "workId": "g023"
+              "workId": "konami-sh2"
             },
             {
-              "workId": "g175"
+              "workId": "konami-zoe1"
             },
             {
               "workId": "g176"
             },
             {
+              "workId": "konami-ringred"
+            },
+            {
+              "workId": "konami-ephemeral"
+            },
+            {
+              "workId": "konami-suikoden3"
+            },
+            {
+              "workId": "konami-harmony"
+            },
+            {
               "workId": "g937"
+            },
+            {
+              "workId": "g1237"
+            },
+            {
+              "workId": "konami-ygo-sacred"
+            },
+            {
+              "workId": "konami-sh3"
+            },
+            {
+              "workId": "konami-aria"
+            },
+            {
+              "workId": "konami-lament"
+            },
+            {
+              "workId": "konami-zoe2"
+            },
+            {
+              "workId": "konami-boktai"
+            },
+            {
+              "workId": "konami-mgs3"
+            },
+            {
+              "workId": "konami-sh4"
+            },
+            {
+              "workId": "konami-suikoden4"
+            },
+            {
+              "title": "2004 · Rumble Roses",
+              "type": "女子摔角",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "konami-rhapsodia"
+            },
+            {
+              "workId": "konami-dawn"
+            },
+            {
+              "workId": "konami-curse"
+            },
+            {
+              "workId": "konami-oz"
+            },
+            {
+              "workId": "konami-lostblue"
+            },
+            {
+              "workId": "g1238"
+            },
+            {
+              "workId": "konami-suikoden5"
+            },
+            {
+              "workId": "konami-portrait"
             },
             {
               "workId": "g938"
             },
             {
-              "workId": "g177"
+              "workId": "konami-lunar"
+            },
+            {
+              "workId": "g1239"
+            },
+            {
+              "workId": "g1240"
+            },
+            {
+              "workId": "konami-sh-origins"
+            },
+            {
+              "workId": "g1227"
+            },
+            {
+              "workId": "konami-tierkreis"
+            },
+            {
+              "workId": "konami-ecclesia"
+            },
+            {
+              "workId": "konami-sh-homecoming"
+            },
+            {
+              "workId": "g1236"
             },
             {
               "workId": "g941"
             },
             {
-              "workId": "g939"
+              "workId": "g177"
             },
             {
-              "workId": "g940"
+              "workId": "konami-sh-shattered"
             }
           ]
         },
         {
-          "title": "独立恋爱剧情外传与凝望骑士",
-          "note": "六部心跳外传各自独立发行；与日程模拟主系列不合并。",
-          "source": "https://w.atwiki.jp/gcmatome/pages/3843.html",
+          "title": "2010—2026：现代作品与后续内容",
+          "note": "依用户原文排序；原年、订正年、归档身份与逐行理由另见konami-source-review.json。动作参考不表示完全没有剧情。",
+          "source": "https://www.konami.com/corporate/ja/history/product.html",
           "rows": [
             {
-              "workId": "g1217"
+              "workId": "konami-mgspw"
             },
             {
-              "workId": "g1218"
+              "workId": "konami-lords1"
             },
             {
-              "workId": "g1219"
+              "title": "2010 · Love Plus+（ラブプラス＋）",
+              "type": "恋爱交流",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。Plus、NEW及NEW Plus沿用三位女主角与可继承的恋人关系，作为有新增内容的同作后续版本归档。街机联动是历史功能，不表示服务仍可使用；不收未核实的手机独立作品。 2026-10-20补核EVERY移动端新增事件与VR约会，归此作品内容扩展；服务已于2020结束，不表示仍可在线使用。",
+              "source": "https://www.konami.com/games/jp/ja/products/site/newloveplus/info.html",
+              "anchor": "g941"
             },
             {
-              "workId": "g1220"
+              "workId": "g939"
             },
+            {
+              "workId": "konami-sh-downpour"
+            },
+            {
+              "workId": "konami-sh-book"
+            },
+            {
+              "workId": "konami-woven"
+            },
+            {
+              "title": "2012 · New Love Plus（NEWラブプラス）",
+              "type": "恋爱交流",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。Plus、NEW及NEW Plus沿用三位女主角与可继承的恋人关系，作为有新增内容的同作后续版本归档。街机联动是历史功能，不表示服务仍可使用；不收未核实的手机独立作品。 2026-10-20补核EVERY移动端新增事件与VR约会，归此作品内容扩展；服务已于2020结束，不表示仍可在线使用。",
+              "source": "https://www.konami.com/games/jp/ja/products/site/newloveplus/info.html",
+              "anchor": "g941"
+            },
+            {
+              "workId": "konami-rising"
+            },
+            {
+              "workId": "konami-mirror"
+            },
+            {
+              "workId": "konami-lords2"
+            },
+            {
+              "workId": "konami-gz"
+            },
+            {
+              "title": "2014 · New Love Plus+",
+              "type": "恋爱交流",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。Plus、NEW及NEW Plus沿用三位女主角与可继承的恋人关系，作为有新增内容的同作后续版本归档。街机联动是历史功能，不表示服务仍可使用；不收未核实的手机独立作品。 2026-10-20补核EVERY移动端新增事件与VR约会，归此作品内容扩展；服务已于2020结束，不表示仍可在线使用。",
+              "source": "https://www.konami.com/games/jp/ja/products/site/newloveplus/info.html",
+              "anchor": "g941"
+            },
+            {
+              "workId": "konami-tpp"
+            },
+            {
+              "workId": "konami-ygo-legacy"
+            },
+            {
+              "title": "2016 · Yu-Gi-Oh! Duel Links",
+              "type": "卡牌对战",
+              "relation": "玩法参考",
+              "note": "主要为卡牌规则对战与角色解锁；未把角色活动或战斗台词一概计成独立叙事作品。",
+              "source": "https://www.konami.com/yugioh/duel_links/"
+            },
+            {
+              "title": "2017 · Super Bomberman R",
+              "type": "竞技动作",
+              "relation": "玩法参考",
+              "note": "含故事闯关，但核心是放置炸弹的竞技／关卡动作；本轮不因故事模式名称自动列为剧情RPG或ADV。",
+              "source": "https://www.konami.com/games/jp/ja/products/bom_r/"
+            },
+            {
+              "workId": "konami-survive"
+            },
+            {
+              "title": "2019 · Love Plus Every（ラブプラス EVERY）",
+              "type": "恋爱交流",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。Plus、NEW及NEW Plus沿用三位女主角与可继承的恋人关系，作为有新增内容的同作后续版本归档。街机联动是历史功能，不表示服务仍可使用；不收未核实的手机独立作品。 2026-10-20补核EVERY移动端新增事件与VR约会，归此作品内容扩展；服务已于2020结束，不表示仍可在线使用。",
+              "source": "https://www.konami.com/games/jp/ja/products/site/newloveplus/info.html",
+              "anchor": "g941"
+            },
+            {
+              "title": "2020 · Momotaro Dentetsu: Shōwa Heisei Reiwa mo Teiban!（桃太郎電鉄）",
+              "type": "铁路经营桌游",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "g940"
+            },
+            {
+              "title": "2021 · eFootball",
+              "type": "足球",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "title": "2022 · GetsuFumaDen: Undying Moon（月風魔伝）",
+              "type": "Roguelite动作",
+              "relation": "玩法参考",
+              "note": "2021 Steam早期访问、2022正式版；核心为重复闯关的Roguelite。保留类型与时间口径，本轮不凭背景设定当独立剧情ADV。",
+              "source": "https://www.konami.com/games/corporate/ja/news/topics/20210514/"
+            },
+            {
+              "title": "2022 · Yu-Gi-Oh! Master Duel",
+              "type": "卡牌对战",
+              "relation": "玩法参考",
+              "note": "以卡牌对战为核心；单人传说介绍卡牌世界观，不据此整部当人物剧情ADV。",
+              "source": "https://www.konami.com/yugioh/masterduel/"
+            },
+            {
+              "title": "2023 · Super Bomberman R 2",
+              "type": "竞技动作",
+              "relation": "玩法参考",
+              "note": "含故事模式与建关功能；竞技动作和关卡目标为核心，未作为叙事ADV新增。",
+              "source": "https://www.konami.com/games/bomberman/r2/jp/ja/"
+            },
+            {
+              "title": "2023 · Momotaro Dentetsu World（桃太郎電鉄ワールド）",
+              "type": "铁路经营桌游",
+              "relation": "玩法参考",
+              "note": "原清单的动作、射击、竞速、体育、音乐、解谜或桌游项目；未见足够依据归入本轮人物叙事／剧情RPG范围，保留原类型供对照，不新增故事身份。",
+              "source": "https://www.konami.com/corporate/ja/history/product.html"
+            },
+            {
+              "workId": "g1241"
+            },
+            {
+              "title": "2024 · Contra: Operation Galuga",
+              "type": "横版动作射击",
+              "relation": "玩法参考",
+              "note": "剧情模式配合横向射击闯关；本轮不按Story Mode名称直接归剧情ADV。",
+              "source": "https://www.konami.com/games/contra/og/jp/ja/"
+            },
+            {
+              "title": "2024 · Silent Hill 2（重制版）",
+              "type": "恐怖冒险",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。只登记原作首批平台；之后其他平台发行不以同年推定同期。 本轮记录原作首批；未列后发平台不表示未有移植。",
+              "source": "https://www.silenthillmemories.net/sh2/info_en.htm",
+              "anchor": "konami-sh2"
+            },
+            {
+              "title": "2025 · Suikoden I & II HD Remaster",
+              "type": "高清复刻RPG",
+              "relation": "既有作品／内容增补",
+              "note": "I与II共用合辑包装，分别关联原作；I已有2025新绘内容，II本轮补入场景美术增补。",
+              "source": "https://www.konami.com/games/suikoden/rem/1_2/jp/ja/system",
+              "anchor": "konami-suikoden1"
+            },
+            {
+              "title": "2025 · Tokimeki Memorial: forever with you emotional",
+              "type": "恋爱模拟复刻",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。恋爱模拟，不属于狭义视觉小说。",
+              "source": "https://www.konami.com/games/tokimeki/about/index.html",
+              "anchor": "g023"
+            },
+            {
+              "workId": "konami-shinepost"
+            },
+            {
+              "workId": "konami-edens"
+            },
+            {
+              "title": "2025 · Metal Gear Solid Δ: Snake Eater",
+              "type": "潜入动作、重制版",
+              "relation": "既有作品／内容版本关联",
+              "note": "原表所列为后发内容／发行年，复用原作身份。发行年以官方Archives为依据；官方HISTORY大标题是故事发生年，不能当发售年。 本批只登记原作首批与明确有内容增量的后版；未列平台不代表未曾移植。",
+              "source": "https://www.konami.com/mg/history/jp/ja/mgs3",
+              "anchor": "konami-mgs3"
+            },
+            {
+              "workId": "konami-shf"
+            },
+            {
+              "workId": "konami-darwin"
+            },
+            {
+              "workId": "konami-starleap"
+            },
+            {
+              "workId": "konami-townfall"
+            },
+            {
+              "workId": "konami-belmont"
+            }
+          ]
+        },
+        {
+          "title": "原文系列补充与此前已收作品",
+          "note": "保留前次已发布的外传、卡牌支线与扎克冒险；Dancing Blade第二作补齐原文系列优先表。",
+          "source": "https://www.konami.com/games/jp/ja/",
+          "rows": [
             {
               "workId": "g1221"
             },
@@ -17713,81 +18510,19 @@
               "workId": "g1222"
             },
             {
-              "workId": "g1223"
-            }
-          ]
-        },
-        {
-          "title": "幻想水浒传：剧情RPG与卡牌／战略支线",
-          "note": "两部图文外传在前组主库引用。STAR LEAP首批仅日本移动端；未把Steam计划算发行。",
-          "source": "https://www.konami.com/games/suikoden/ja/history",
-          "rows": [
-            {
-              "workId": "konami-suikoden1"
+              "workId": "g1228"
             },
             {
-              "workId": "konami-suikoden2"
-            },
-            {
-              "workId": "konami-suikoden3"
-            },
-            {
-              "workId": "konami-suikoden4"
-            },
-            {
-              "workId": "konami-suikoden5"
-            },
-            {
-              "workId": "konami-rhapsodia"
+              "workId": "g1232"
             },
             {
               "workId": "konami-cardstories"
-            },
-            {
-              "workId": "konami-tierkreis"
-            },
-            {
-              "workId": "konami-woven"
-            },
-            {
-              "workId": "konami-starleap"
-            }
-          ]
-        },
-        {
-          "title": "Metal Gear：潜入动作与卡牌策略",
-          "note": "本批覆盖十部核心潜入故事与两部AC!D；不是系列全部衍生作。",
-          "source": "https://www.konami.com/mg/archives/jp/ja/",
-          "rows": [
-            {
-              "workId": "konami-mg"
-            },
-            {
-              "workId": "konami-mg2"
-            },
-            {
-              "workId": "konami-mgs"
-            },
-            {
-              "workId": "konami-mgs2"
-            },
-            {
-              "workId": "konami-mgs3"
             },
             {
               "workId": "konami-mgs4"
             },
             {
               "workId": "konami-mpo"
-            },
-            {
-              "workId": "konami-mgspw"
-            },
-            {
-              "workId": "konami-gz"
-            },
-            {
-              "workId": "konami-tpp"
             },
             {
               "workId": "konami-acid"
@@ -17798,61 +18533,16 @@
           ]
         },
         {
-          "title": "PC-88清单其余三项",
-          "note": "日本电脑发行年份不改写街机／主机原作年；未新增无充分独立叙事依据的作品。",
-          "source": "https://www.gamepres.org/pc88/library/konami.html",
+          "title": "此前参考、品牌边界及未核历史内容",
+          "note": "以下为原专题保留的额外参考；不计入用户本轮183行。",
+          "source": "https://www.konami.com/corporate/en/history/index.html",
           "rows": [
-            {
-              "title": "Gradius／グラディウス（PC-88 1986）",
-              "type": "横向卷轴射击",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "PC-88目录列1986年8月；直接操纵战机的射击玩法，仅作原清单参考。",
-              "source": "https://www.gamepres.org/pc88/library/konami.html"
-            },
-            {
-              "title": "Goonies／グーニーズ（PC-88 1986）",
-              "type": "平台动作／电影授权",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "PC-88目录列1986年10月；电影授权关系不自动证明其符合本库叙事分类。",
-              "source": "https://www.gamepres.org/pc88/library/konami.html"
-            },
             {
               "title": "天与地／天と地と（PC-88 1990）",
               "type": "历史战略模拟",
               "relation": "玩法／范围参考，未新增作品",
               "note": "保存会说明由PC-98移植、扮演上杉谦信统一天下；原作首批及独立事件叙事尚未细核，暂不建作。",
               "source": "https://www.gamepres.org/pc88/library/1990/1990_12.html"
-            }
-          ]
-        },
-        {
-          "title": "同作品内容、合辑与普通移植",
-          "note": "此处为同作品参考行，跳转原身份，不重复增加正文卡片。",
-          "source": "https://www.konami.com/mg/archives/jp/ja/",
-          "rows": [
-            {
-              "title": "幻想水浒传I HD Remaster（2025）",
-              "type": "RPG／新绘人物美术",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "归初代内容增补，首批平台共享内容ID；合辑不是第三部独立游戏。",
-              "source": "https://www.konami.com/games/corporate/ja/news/topics/20250306/",
-              "anchor": "konami-suikoden1"
-            },
-            {
-              "title": "幻想水浒传II HD Remaster（2025）",
-              "type": "RPG／重制素材待逐项比较",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "与II关联；本批未完成相对所有先行版本的具体素材增量比较，不仅凭HD名称新增内容。",
-              "source": "https://www.konami.com/games/suikoden/rem/1_2/jp/ja/system",
-              "anchor": "konami-suikoden2"
-            },
-            {
-              "title": "METAL GEAR SOLID Δ（2025）",
-              "type": "潜入动作／新影片与可玩素材",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "归MGS3增补；首批与后发FOX HUNT区分。",
-              "source": "https://www.konami.com/mg/mgs3r/features/asia/ja/",
-              "anchor": "konami-mgs3"
             },
             {
               "title": "MGS Master／Legacy／HD Collections",
@@ -17867,56 +18557,14 @@
               "relation": "玩法／范围参考，未新增作品",
               "note": "既有DS／PSP人物内容再移入，不再次计新增；沿用原专题核对。",
               "source": "https://www.konami.com/games/girls_side/for_switch/"
-            }
-          ]
-        },
-        {
-          "title": "其他叙事候选与待续系列",
-          "note": "以下具备叙事或剧情候选属性，尚未在本批逐作完成首发、版本与控制核对；不能将暂缓误写成无剧情排除。",
-          "source": "https://www.konami.com/games/jp/ja/products/search/",
-          "rows": [
-            {
-              "title": "Silent Hill系列",
-              "type": "心理恐怖／动作解谜叙事",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "系列待逐作补录；本表不是已收全Konami叙事的声明。",
-              "source": "https://www.konami.com/games/silenthill/jp/ja/"
-            },
-            {
-              "title": "Castlevania系列",
-              "type": "平台动作／探索动作RPG",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "各作玩法及叙事密度不同，待区分纯动作与剧情RPG，不整批按视觉小说入库。",
-              "source": "https://www.konami.com/games/jp/ja/products/search/"
-            },
-            {
-              "title": "网球王子：学园祭与心跳生存系列",
-              "type": "授权恋爱冒险",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "官方确认PS2原版、DS追加与后续重制；尚待按各作及新增人物／剧情批次比较。",
-              "source": "https://www.konami.com/games/tenipuri/jp/ja/"
-            },
-            {
-              "title": "みつめてナイトR 大冒険編",
-              "type": "独立剧情RPG",
-              "relation": "玩法／范围参考，未新增作品",
-              "note": "RED明确为续作RPG；本批只补原恋爱模拟，RPG首发与控制待细核。",
-              "source": "https://red-entertainment.co.jp/gallery/cat02/357.html"
             },
             {
               "title": "Metal Gear其他衍生与历史增补",
               "type": "潜入／卡牌／动作叙事或资料软件",
               "relation": "玩法／范围参考，未新增作品",
-              "note": "Ghost Babel、Rising、Survive、Bande Dessinée等不以系列名称混并；Twin Snakes、Integral、Substance与Subsistence新素材待逐项比较。",
+              "note": "本轮补入Rising与Survive；Ghost Babel、Bande Dessinée及Integral等的原作／具体新增内容仍需按独立条目核对。",
               "source": "https://www.konami.com/mg/archives/jp/ja/"
-            }
-          ]
-        },
-        {
-          "title": "非叙事玩法与品牌边界",
-          "note": "按现有官方产品介绍列类型参考；不因同属Konami、拥有角色或公司收购而自动入叙事库。",
-          "source": "https://www.konami.com/games/jp/ja/",
-          "rows": [
+            },
             {
               "title": "心跳回忆 对战ぱずるだま／2 对战ぱずるだま",
               "type": "落物对战益智",
