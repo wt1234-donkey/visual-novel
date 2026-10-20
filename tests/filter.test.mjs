@@ -973,8 +973,8 @@ test('Konami content chronology avoids recycled characters and previously releas
   const dossier=coverage.find(c=>c.id==='konami');
   assert.equal(dossier.foundedAt,'1969-03-21');
   assert.ok(coverage.indexOf(dossier)<coverage.findIndex(c=>c.id==='sinclair'));
-  assert.equal(dossier.workIds.length,24);
-  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,52);
+  assert.equal(dossier.workIds.length,37);
+  assert.equal(data.platformReleases.filter(v=>dossier.workIds.includes(v.workId)).length,75);
   const premium=data.platformReleases.find(v=>v.id==='g939-v2');
   assert.equal(premium.year,2012);assert.ok(premium.differences.includes('蓮見達也'));
   assert.ok(!data.platformReleases.some(v=>['g937','g938','g939'].includes(v.workId)&&v.year===2024));
@@ -989,7 +989,7 @@ test('Konami content chronology avoids recycled characters and previously releas
   const aliases=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url),'utf8')).publisherAliases;
   assert.equal(aliases['科乐美'],'Konami');assert.equal(aliases['Konami Digital Entertainment'],'Konami');
   const filtered=filterCatalogue(data,{company:aliases['科乐美']});
-  for(const id of dossier.workIds)assert.ok(filtered.some(({work})=>work.id===id));
+  for(const id of dossier.publisherWorkIds)assert.ok(filtered.some(({work})=>work.id===id));
   assert.equal(data.platformReleases.find(v=>v.id==='g940-v1').publisher,'Konami Digital Entertainment');
   const page=readFileSync(new URL('../konami.html',import.meta.url),'utf8');
   for(const id of dossier.workIds)assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);

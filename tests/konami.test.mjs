@@ -8,7 +8,7 @@ const related=id=>co.relatedGames.find(w=>w.id==='konami-'+id);
 const fresh=data.works.filter(w=>Number(w.id.slice(1))>=1216&&Number(w.id.slice(1))<=1228);
 
 test('Konami reuses existing typed narrative and admits independent story spin-offs into main search',()=>{
- assert.equal(co.workIds.length,24);assert.equal(fresh.length,13);assert.equal(co.relatedGames.length,22);
+ assert.equal(co.workIds.length,37);assert.equal(fresh.length,13);assert.equal(co.relatedGames.length,83);
  const sn=data.works.find(w=>w.id==='g040');assert.ok(sn.interactionModes.includes('文字输入'));assert.ok(sn.interactionModes.includes('菜单指令'));
  assert.match(sn.interactionNote,/后续版/);assert.ok(!co.dossierOnlyWorks?.some(w=>w.id==='g040'));
  for(const w of fresh){
@@ -54,24 +54,45 @@ test('new material, platform variants and ordinary ports remain separate',()=>{
  assert.match(hd.contentVersions[1].evidence,/重新绘制/);
  assert.equal(hd.platformReleases.filter(r=>r.year===2025).length,6);
  assert.ok(!hd.platformReleases.some(r=>r.platform==='Nintendo Switch 2'));
- assert.equal(related('suikoden2').contentVersions.length,1);
+ assert.equal(related('suikoden2').contentVersions.length,2);
  const delta=related('mgs3');assert.equal(delta.contentVersions.length,3);
  const ps=delta.platformReleases.find(r=>r.platform==='PlayStation 5'),pc=delta.platformReleases.find(r=>r.platform==='Windows'),xb=delta.platformReleases.find(r=>r.platform==='Xbox Series X|S');
  assert.equal(ps.contentVersionId,pc.contentVersionId);assert.notEqual(ps.contentVersionId,xb.contentVersionId);
  for(const c of delta.contentVersions.filter(c=>c.basis==='added')){assert.equal(c.comparedTo,'konami-mgs3-c-original');assert.ok(c.addedContent.length);}
- assert.equal(co.relatedGames.reduce((n,w)=>n+w.contentVersions.length,0),25);
- assert.equal(co.relatedGames.reduce((n,w)=>n+w.platformReleases.length,0),39);
+ assert.equal(co.relatedGames.reduce((n,w)=>n+w.contentVersions.length,0),89);
+ assert.equal(co.relatedGames.reduce((n,w)=>n+w.platformReleases.length,0),129);
 });
 
-test('all Konami identities render once and pending series remain explicit reference rows',()=>{
+test('all Konami identities render once and complete source rows remain reviewable',()=>{
  const page=readFileSync(new URL('../konami.html',import.meta.url),'utf8');
- const ids=[...co.workIds,...co.relatedGames.map(w=>w.id)];assert.equal(ids.length,46);
+ const ids=[...co.workIds,...co.relatedGames.map(w=>w.id)];assert.equal(ids.length,120);
  for(const id of ids)assert.equal(page.split(`class="card" id="${id}"`).length-1,1,id);
  const table=read('gameplay-catalogues.json').companies.konami,rows=table.groups.flatMap(g=>g.rows);
- assert.equal(table.groups.length,9);assert.equal(rows.length,62);
+ assert.equal(table.groups.length,6);assert.equal(rows.length,199);
  assert.deepEqual(rows.filter(r=>r.workId).map(r=>r.workId).sort(),ids.sort());
- assert.ok(rows.some(r=>r.title==='Silent Hill系列'&&!r.workId));
+ assert.ok(rows.some(r=>r.workId==='konami-sh2'));
  assert.ok(rows.some(r=>r.title==='天与地／天と地と（PC-88 1990）'&&!r.workId));
- assert.match(co.scope,/原聊天完整清单未恢复/);
+ assert.match(co.scope,/已收到用户原清单全文/);
  assert.ok(page.indexOf('id="gameplay-catalogue"')>page.indexOf('id="coverage"'));
+});
+
+test('the supplied 183 rows resolve without manufacturing independent remakes or wrong publishers',()=>{
+ const audit=read('konami-source-review.json'),get=k=>audit.rows.find(r=>r.key===k);
+ assert.equal(audit.rows.length,183);assert.equal(new Set(audit.rows.map(r=>r.key)).size,183);
+ assert.equal(audit.newMainWorkIds.length,13);assert.equal(audit.newRelatedWorkIds.length,61);
+ const all=new Set([...co.workIds,...co.relatedGames.map(w=>w.id)]);
+ for(const r of audit.rows){assert.ok(r.note&&r.source);for(const id of r.workIds)assert.ok(all.has(id));}
+ assert.deepEqual(get('dragonvalor').workIds,[]);assert.match(get('dragonvalor').source,/bandainamco/);
+ assert.equal(get('ringred').resolvedYear,2000);assert.equal(get('ephemeral').resolvedYear,2000);
+ assert.equal(get('sh2-remake').workIds[0],get('sh2').workIds[0]);
+ assert.deepEqual(get('loveplus-every').workIds,['g941']);
+ assert.equal(data.platformReleases.find(r=>r.workId===get('hellnight').workIds[0]).publisher,'Atlus');
+ const chie=data.platformReleases.find(r=>r.workId===get('chie').workIds[0]);assert.equal(chie.platform,'Famicom');
+ const sd=related('sdsnatcher');assert.notEqual(sd.id,'g040');assert.ok(sd.interactionModes.includes('战斗指令'));
+ const short=data.works.find(w=>w.id===get('sh-short').workIds[0]);assert.ok(!short.interactionModes.includes('即时动作'));
+ const sh2=related('sh2');assert.equal(sh2.contentVersions.length,3);
+ const born=sh2.contentVersions.find(c=>c.id.endsWith('restless'));
+ assert.deepEqual(sh2.platformReleases.filter(r=>r.contentVersionId===born.id).map(r=>r.platform),['Xbox']);
+ const remake=sh2.platformReleases.filter(r=>r.year===2024);assert.equal(new Set(remake.map(r=>r.contentVersionId)).size,1);
+ for(const id of audit.newMainWorkIds){assert.ok(data.contentVersions.some(c=>c.workId===id&&c.basis==='original'));assert.ok(data.works.find(w=>w.id===id).interactionSources.length);}
 });
