@@ -153,3 +153,7 @@ Special II的GO／LOOK／SPEAK／ACTION是预设行动菜单；Justice Slave有�
 ## Konami原文补录（2026-10-20）
 
 新增13部主库叙事与61部剧情RPG／混合故事。千惠为菜单叙事，另有必经棒球反应、卡牌与竞马小游戏；FDS理纱的麦克风标设备互动。SD Snatcher独立RPG采用部位战斗指令；MADARA自动战斗仍可介入魔法／目标，非全手动回合制。Hellnight与SH短讯无常规武器战斗，不贴即时动作；Shattered Memories保留追逐而非战斗。文字输入准入例外继续仅限Konami，旧Snatcher字段保持。主库1238部，跨类型764部；逐作操作依据随卡片导出。
+
+## みなとそふと（2026-10-20）
+
+新增24部阅读／预设选择叙事与3部合作RPG关联。勇者部三部PC特典及一期一会按单线阅读登记；Plus Disc及后日谈仅确认阅读，不穷尽推断选项。武道、警察和战争题材不当可玩战斗；Kimi的PSP脱出模块、まじこいR的麻将／卡牌与Carnival FD附带麻将分别标记，不能泛指所有原作机种。半自动任务、放置战斗及原生平台与浏览器区别见[minatosoft-audit.md](minatosoft-audit.md)。
