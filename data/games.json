@@ -64832,10 +64832,10 @@
       "voice": "未核实",
       "differences": "1・Primo是1989年初作的重制，1997-12-12发行；不新增作品ID。",
       "source": "https://fandc.co.jp/catalog/pc/452",
-      "contentVersionId": null,
-      "contentRelation": "unverified",
-      "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
-      "releaseRole": "legacy"
+      "contentVersionId": "g690-c-primo-1997",
+      "contentRelation": "added",
+      "contentNote": "官方1997年1・Primo产品说明确认：初代Windows强化版加入声优演绎的角色会话。以新增角色语音为内容增量，不以更换平台或附赠历史CD判版。",
+      "releaseRole": "contentDebut"
     },
     {
       "id": "g698-v2",
@@ -104053,6 +104053,25 @@
         }
       ],
       "comparedTo": "g502-c-original"
+    },
+    {
+      "id": "g690-c-primo-1997",
+      "workId": "g690",
+      "label": "1・Primo：新增角色语音",
+      "firstYear": 1997,
+      "basis": "added",
+      "evidence": "官方1997年1・Primo产品说明确认：初代Windows强化版加入声优演绎的角色会话。以新增角色语音为内容增量，不以更换平台或附赠历史CD判版。",
+      "source": "https://fandc.co.jp/catalog/pc/452",
+      "evidenceReleaseIds": [
+        "g690-v4"
+      ],
+      "addedContent": [
+        {
+          "description": "新增角色会话配音；官方称对女孩会话提供声优语音支持。",
+          "source": "https://fandc.co.jp/catalog/pc/452"
+        }
+      ],
+      "comparedTo": "g690-c-original"
     }
   ]
 }
