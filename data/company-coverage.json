@@ -104861,6 +104861,222 @@
         }
       ],
       "catalogueEntryCount": 41
+    },
+    {
+      "id": "addison_wesley",
+      "name": "Addison-Wesley Publishing Company",
+      "checkedAt": "2026-10-21",
+      "status": "出版商专题：六部文字输入叙事（四部旧库复用、两部新建）；其余教育模拟与策略只列玩法目录",
+      "scope": "十五项已核发行关联：美国公司目录十四项，另加出版体系书籍式The Antagonists。主库聚焦六部明确的输入式剧情冒险；教育生存、经营、军事与宠物训练仅保留玩法参考。",
+      "versionScope": "既有四部托尔金原作身份与历史发行不改；新建两个原作内容与首批发行。北美异名、普通移植、书籍的不同机种代码及磁带不重复建立内容版。",
+      "publisherNote": "Addison-Wesley为美国出版社及地区发行体系，不等于所有作品的开发工作室。托尔金游戏由Beam Software开发、Melbourne House先发行部分原作；Rhiannon开发少女教育冒险；书籍式冒险由Hal Renko与Sam Edwards等创作。公司成立远早于1949，依据本次具名要求建立出版商专题。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>六部输入式叙事：旧库四部＋新增两部。十五项发行关联保留于末尾玩法清单。</strong>复用旧作品ID，不把Addison-Wesley北美代理版当成Melbourne House原作的新作品。</p>",
+      "description": "Addison-Wesley发行商专题：托尔金文字冒险、书籍附程序的互动小说，以及教育、策略游戏玩法清单。",
+      "workIds": [
+        "g113",
+        "g1021",
+        "g1026",
+        "g1028",
+        "g1272",
+        "g1273"
+      ],
+      "legacyCommandWorkIds": [
+        "g113",
+        "g1021",
+        "g1026",
+        "g1028"
+      ],
+      "authorizedCommandWorkIds": [
+        "g1272",
+        "g1273"
+      ],
+      "commandAuthorizationNote": "2026-10-21用户明确要求Addison-Wesley专题与数据库都考虑文字输入作品；新增授权仅为本专题两部书籍式输入冒险，不扩展到其他厂商。",
+      "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+      "sectionTitle": "出版商发行的输入式叙事",
+      "overviewLabel": "叙事主库引用／补录",
+      "catalogueCountLabel": "6部文字输入叙事",
+      "auditTitle": "十五项发行关联逐项核对",
+      "auditSourceLabel": "MobyGames美国公司目录",
+      "auditLabel": "十四项美国公司目录及一项书籍式冒险。",
+      "auditNote": "首发年与Addison-Wesley发行年不同；1984的Arendarvon与1985书籍、1983的Jenny与1984平台库目录均保留异文。公司关系不等于开发署名。",
+      "catalogueEntryCount": 15,
+      "entries": [
+        {
+          "title": "The Hobbit（1982）",
+          "status": "复用主库",
+          "reason": "Melbourne House原作，Addison-Wesley北美发行；原作品复用。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": [
+            "g113"
+          ]
+        },
+        {
+          "title": "Jenny of the Prairie（1983）",
+          "status": "玩法目录参考",
+          "reason": "Rhiannon开发；部分行动需键入词语，叙事内容不足以进入主库。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "Cave Girl Clair（1984）",
+          "status": "玩法目录参考",
+          "reason": "Rhiannon开发；四季生存任务为主，操作具体细节待核。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "Chelsea of the South Sea Islands（1984）",
+          "status": "玩法目录参考",
+          "reason": "Rhiannon开发；资源生存模拟，暂不入叙事主库。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "Dreadnought（1984）",
+          "status": "玩法目录参考",
+          "reason": "玩法核心为海战策略。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "Front Page（1984）",
+          "status": "玩法目录参考",
+          "reason": "玩法核心为经营决策。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "Military Coup（1984）",
+          "status": "玩法目录参考",
+          "reason": "玩法核心为政治策略。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "Waterloo（1984）",
+          "status": "玩法目录参考",
+          "reason": "玩法核心为双人战棋。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "The Secret of Arendarvon Castle（1984）",
+          "status": "新增主库",
+          "reason": "1984游戏目录与1985书籍版存在年份异文。",
+          "source": "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/",
+          "workIds": [
+            "g1272"
+          ]
+        },
+        {
+          "title": "The Fellowship of the Ring（1985）",
+          "status": "复用主库",
+          "reason": "北美异名与Melbourne House的Game One复用。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": [
+            "g1021"
+          ]
+        },
+        {
+          "title": "Lauren of the 25th Century（1985）",
+          "status": "玩法目录参考",
+          "reason": "Rhiannon开发；剧情占比及具体输入机制待核，不直接入主库。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "Puppy Love: Artificial Intelligence for Dogs（1986）",
+          "status": "玩法目录参考",
+          "reason": "训练模拟，非固定剧情ADV。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": []
+        },
+        {
+          "title": "The Shadows of Mordor（1987）",
+          "status": "复用主库",
+          "reason": "Melbourne House首发，Addison-Wesley北美发行；复用原身份。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": [
+            "g1026"
+          ]
+        },
+        {
+          "title": "The Crack of Doom（1989）",
+          "status": "复用主库",
+          "reason": "Beam开发、Addison-Wesley发行；复用旧身份。",
+          "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+          "workIds": [
+            "g1028"
+          ]
+        },
+        {
+          "title": "The Antagonists（1985）",
+          "status": "新增主库",
+          "reason": "另计出版体系的书籍式游戏，不在上述MobyGames美国公司14项中。",
+          "source": "https://worldofspectrum.org/archive/software/text-adventures/the-antagonists-addison-wesley-productions",
+          "workIds": [
+            "g1273"
+          ]
+        }
+      ],
+      "creativeProfile": {
+        "thesis": "编辑观察：出版社以北美代理、教育软件及书籍加可运行程序三种形式参与游戏出版；它们的玩法不能因同一发行商而合并分类。",
+        "phases": [
+          {
+            "period": "1982—1989",
+            "heading": "托尔金冒险的北美发行",
+            "analysis": "代理已由Melbourne House与Beam创建的作品；按原作身份和美国发行关系分别记录。",
+            "basis": "编辑观察",
+            "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/"
+          },
+          {
+            "period": "1983—1985",
+            "heading": "教育冒险与生存任务",
+            "analysis": "Rhiannon四部儿童作品借人物处境设计生存和资源任务，专题保留玩法与开发归属。",
+            "basis": "编辑观察",
+            "source": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/"
+          },
+          {
+            "period": "1984—1985",
+            "heading": "纸本档案和文字解析器",
+            "analysis": "Arendarvon与Antagonists把书中线索和可运行的游戏配对；代码键入属于发行载体，游戏内部通过文本命令操作。",
+            "basis": "编辑观察",
+            "source": "https://if50.substack.com/p/the-antagonists"
+          }
+        ]
+      },
+      "dossierGroups": [
+        {
+          "id": "addison-tolkien",
+          "title": "托尔金四部曲：复用原作身份",
+          "description": "区分Melbourne House首发与Addison-Wesley北美发行，不凭代理发行复制作品。",
+          "cardLabel": "托尔金／文字输入",
+          "workIds": [
+            "g113",
+            "g1021",
+            "g1026",
+            "g1028"
+          ]
+        },
+        {
+          "id": "addison-bookware",
+          "title": "书籍式文字冒险：新增两作",
+          "description": "有独立可运行程序和故事谜题，键入BASIC代码是装载过程。",
+          "cardLabel": "书籍式／文字输入",
+          "workIds": [
+            "g1272",
+            "g1273"
+          ]
+        }
+      ],
+      "workContexts": {
+        "g113": "Melbourne House原作；Addison-Wesley的Apple II／PC北美版是地区发行。",
+        "g1021": "The Fellowship of the Ring是Game One的北美名称，不新建第二作品。",
+        "g1026": "原作出版与北美版发行分别署名。",
+        "g1028": "原有Addison-Wesley发行记录保留。",
+        "g1272": "1984游戏目录／1985书籍发行异文；待找到同期原始包装进一步定年。",
+        "g1273": "实体书、机种程序和另购磁带是同一剧情作品的发行形式。"
+      }
     }
   ],
   "schemaVersion": 2,
