@@ -1,7 +1,9 @@
-import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261018-mosaic-v1';
+import {createEntityIndex,entityWorkCounts,summarizeCredits,BRAND_ROLES,DEVELOPER_ROLES,PUBLISHER_ROLES} from './entities.mjs?v=20261021-entities';
+import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261021-entities';
 
 const $=id=>document.getElementById(id);
-const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('company-select'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort'),contentStatus:$('content-status'),interaction:$('interaction')};
+const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('legacy-company-select'),publisher:$('company-select'),brand:$('brand-select'),developer:$('developer-select'),participant:$('participant-select'),participantRole:$('participant-role'),dossier:$('dossier-select'),dossierRelation:$('dossier-relation'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort'),contentStatus:$('content-status'),interaction:$('interaction')};
+let entityIndex;
 const label=(tag,className,text)=>{const el=document.createElement(tag);if(className)el.className=className;el.textContent=text;return el};
 const safeLink=(url,title)=>{const a=label('a','source-link',title);try{const u=new URL(url);if(['https:','http:'].includes(u.protocol)){a.href=u.href;a.target='_blank';a.rel='noopener noreferrer'}}catch{}return a};
 
@@ -17,8 +19,21 @@ function renderCard({work,platformReleases:versions,contentVersions}){
   const meta=label('div','card-meta','');
   const companies=[...new Set(versions.flatMap(v=>v.publisherCompanies||[]))];
   const publisherLabel=companies.length ? companies.slice(0,2).join(' / ')+(companies.length>2?` 等 ${companies.length} 家`:'') : '非商业／未署商业厂商';
-  meta.append(label('span','',`细分类 · ${work.subcategory}`),label('span','',work.genre),label('span','','主要角色 · '+work.characters.join(' / ')),label('span','','发行厂商 · '+publisherLabel));
+  meta.append(label('span','',`细分类 · ${work.subcategory}`),label('span','',work.genre),label('span','','主要角色 · '+work.characters.join(' / ')),label('span','','历史发行归档 · '+publisherLabel));
   card.append(top,title,original,intro,meta);
+  const roles=summarizeCredits(entityIndex,work.id,versions);
+  const relationPanel=document.createElement('details');relationPanel.className='entity-credits';
+  relationPanel.append(label('summary','','原作制作、品牌与发行关系 · '+roles.length+'项'));
+  if(!roles.length)relationPanel.append(label('p','credit-pending','具体参与职责尚待核实，保留作品原始署名与资料。'));
+  for(const c of roles){
+    const entity=entityIndex.entities.get(c.entityId),row=label('p','entity-credit','');
+    const a=label('a','',entity.name);a.href='entities.html#'+entity.id;
+    row.append(a,label('span','entity-type',entityIndex.model.typeLabels[entity.type]),label('span','',entityIndex.model.roleLabels[c.role]),label('span','credit-scope',{work:'原作／作品',content:'对应新增内容',release:'对应平台发行'}[c.targetType]),safeLink(c.source,'依据 ↗'));
+    relationPanel.append(row);
+  }
+  relationPanel.append(label('p','scope-note','原作、增补内容与具体发行分别署名；已登记品牌关系不代表所有历史时期均由同一公司经营。'));
+  card.append(relationPanel);
+
   const tags=label('div','interaction-tags','');tags.setAttribute('aria-label','互动方式');
   for(const mode of work.interactionModes||[])tags.append(label('span','interaction-tag'+(mode==='待核实'?' pending-tag':''),mode));
   card.append(tags);
@@ -59,13 +74,16 @@ function renderCard({work,platformReleases:versions,contentVersions}){
   return card;
 }
 
-function readFilters(){return Object.fromEntries(Object.entries(fields).map(([key,node])=>[key,node.value]))}
+function readFilters(){return {...Object.fromEntries(Object.entries(fields).map(([key,node])=>[key,node.value])),includeAffiliates:$('include-affiliates').checked}}
 
 async function main(){
   try {
-    const [response,taxonomyResponse]=await Promise.all([fetch('./data/games.json?v=20261020-minatosoft-v1'),fetch('./data/taxonomy.json?v=20261018-te-soft-v1')]);
-    if(!response.ok||!taxonomyResponse.ok)throw Error('HTTP '+(response.ok?taxonomyResponse.status:response.status));
-    const [data,taxonomy]=await Promise.all([response.json(),taxonomyResponse.json()]);
+    const responses=await Promise.all(['games.json','taxonomy.json','entity-catalogue.json'].map(path=>fetch('./data/'+path+'?v=20261021-entities')));
+    if(responses.some(r=>!r.ok))throw Error('HTTP '+responses.find(r=>!r.ok).status);
+    const [data,taxonomy,catalogue]=await Promise.all(responses.map(r=>r.json()));
+    entityIndex=createEntityIndex(data,catalogue.model,catalogue);
+    const typeCounts=new Map();for(const e of catalogue.model.entities)typeCounts.set(e.type,(typeCounts.get(e.type)||0)+1);
+    $('entity-stat-status').textContent=`${typeCounts.get('company')||0}个公司／组织 · ${typeCounts.get('brand')||0}个品牌 · ${catalogue.model.dossiers.length}个专题；其他团队、刊物和待核身份见主体档案。`;
     $('stat-works').textContent=data.works.length;
     $('stat-versions').textContent=data.contentVersions.length;
     $('stat-releases').textContent=data.platformReleases.length;
@@ -79,14 +97,26 @@ async function main(){
     $('interaction-policy-status').textContent=`互动方式可多选，按作品统计；${modeCounts.get('待核实')||0} 部主目录作品的具体操作待核实。标签为已记录玩法概览，不代表每个机种都有这些操作。`;
     const platforms=[...new Set(data.platformReleases.map(v=>v.platform.trim()))].sort((a,b)=>a.localeCompare(b,'zh'));
     for(const p of platforms){const option=label('option','',p);option.value=p;fields.platform.append(option)}
-    const companyCounts=publisherWorkCounts(data);
-    const unattributed=companyCounts.get('__unattributed__')||0;
-    companyCounts.delete('__unattributed__');
-    const orderedCompanies=[...companyCounts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'zh'));
-    for(const [company,count] of orderedCompanies){
-      const option=label('option','',`${company} · ${count} 部游戏`);option.value=company;fields.company.append(option);
+    function fillEntities(node,counts){
+      for(const [id,count] of [...counts].sort((a,b)=>b[1]-a[1]||entityIndex.entities.get(a[0]).name.localeCompare(entityIndex.entities.get(b[0]).name,'zh'))){
+        const entity=entityIndex.entities.get(id),option=label('option','',`${entity.name}〔${entityIndex.model.typeLabels[entity.type]}〕 · ${count?count+'部':'需展开品牌关系'}`);option.value=id;node.append(option);
+      }
     }
-    if(unattributed){const option=label('option','',`非商业／未署商业厂商 · ${unattributed} 部游戏`);option.value='__unattributed__';fields.company.append(option)}
+    const publisherCounts=entityWorkCounts(entityIndex,PUBLISHER_ROLES,{releaseOnly:true});
+    for(const [name,count] of [...publisherWorkCounts(data)].sort((a,b)=>b[1]-a[1])){const option=label('option','',`${name==='__unattributed__'?'非商业／未署商业厂商':name} · ${count}部`);option.value=name;fields.company.append(option);}
+    const unattributedCount=filterCatalogue(data,{publisher:'__unattributed__'},entityIndex).length;if(unattributedCount){const option=label('option','',`非商业／未署发行方 · ${unattributedCount}部`);option.value='__unattributed__';fields.publisher.append(option);}
+    fillEntities(fields.publisher,publisherCounts);fillEntities(fields.brand,entityWorkCounts(entityIndex,BRAND_ROLES));
+    const developerCounts=entityWorkCounts(entityIndex,DEVELOPER_ROLES);
+    // Registered parent organizations are selectable only with the explicit family-expansion switch.
+    for(const relation of entityIndex.model.relations)if(developerCounts.has(relation.from)&&!developerCounts.has(relation.to))developerCounts.set(relation.to,0);
+    fillEntities(fields.developer,developerCounts);fillEntities(fields.participant,entityWorkCounts(entityIndex));
+    for(const [id,name] of Object.entries(entityIndex.model.roleLabels)){
+      const option=label('option','',name);option.value=id;fields.participantRole.append(option);
+    }
+    for(const dossier of entityIndex.model.dossiers){const option=label('option','',dossier.name);option.value=dossier.id;fields.dossier.append(option);}
+    const params=new URLSearchParams(location.search);
+    for(const key of ['brand','developer','publisher','participant','participantRole','dossier','dossierRelation','query'])if(params.has(key))fields[key].value=params.get(key);
+    $('include-affiliates').checked=params.get('includeAffiliates')==='true';
     const fillSubcategories=()=>{
       const previous=fields.subcategory.value;
       const allOption=label('option','','全部细分类');allOption.value='';
@@ -102,21 +132,22 @@ async function main(){
     };
     fillSubcategories();
     const render=()=>{
-      const matches=filterCatalogue(data,readFilters());
+      const matches=filterCatalogue(data,readFilters(),entityIndex);
       const count=matches.reduce((n,item)=>n+item.platformReleases.length,0);
       $('result-count').textContent=`显示 ${matches.length} 部作品 · ${matches.reduce((n,item)=>n+item.contentVersions.length,0)} 个内容版本 · ${count} 条平台发行`;
       $('empty').hidden=matches.length>0;
       $('cards').replaceChildren(...matches.map(renderCard));
       for(const button of $('company-quick-list').querySelectorAll('button')){
-        button.setAttribute('aria-pressed',String(button.value===fields.company.value));
+        button.setAttribute('aria-pressed',String(button.value===fields.brand.value));
       }
     };
-    for(const [name,count] of [['',data.works.length],...orderedCompanies.slice(0,8)]){
-      const button=label('button','',name?`${name} · ${count} 部游戏`:`全部厂商 · ${count} 部游戏`);
-      button.type='button';button.value=name;
-      button.addEventListener('click',()=>{fields.company.value=name;render()});
-      $('company-quick-list').append(button);
+    const brands=[...entityWorkCounts(entityIndex,BRAND_ROLES)].sort((a,b)=>b[1]-a[1]);
+    for(const [id,count] of [['',data.works.length],...brands.slice(0,8)]){
+      const button=label('button','',id?`${entityIndex.entities.get(id).name} · ${count}部`:`全部品牌 · ${count}部`);
+      button.type='button';button.value=id;
+      button.addEventListener('click',()=>{fields.brand.value=id;render()});$('company-quick-list').append(button);
     }
+    $('include-affiliates').addEventListener('change',render);
     for(const [key,node] of Object.entries(fields)){
       node.addEventListener(key==='query'||key==='from'||key==='to'?'input':'change',()=>{
         if(key==='category')fillSubcategories();
@@ -127,7 +158,7 @@ async function main(){
         render();
       });
     }
-    $('clear').addEventListener('click',()=>{for(const [key,node] of Object.entries(fields))node.value=key==='sort'?'oldest':'';fillSubcategories();render();fields.query.focus()});
+    $('clear').addEventListener('click',()=>{for(const [key,node] of Object.entries(fields))node.value=key==='sort'?'oldest':'';$('include-affiliates').checked=false;fillSubcategories();render();fields.query.focus()});
     render();
   }catch(error){$('result-count').textContent='数据加载失败';$('empty').hidden=false;$('empty').querySelector('span').textContent='请从 GitHub Pages 或本地 HTTP 服务访问；'+error.message}
 }

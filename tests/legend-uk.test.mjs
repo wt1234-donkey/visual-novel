@@ -41,5 +41,5 @@ test('Legend unissued sequels, ports and pure shooting stay references',()=>{
   assert.equal(page.split('<article class="card"').length-1,2);
   assert.ok(page.includes('id="g114"')&&page.includes('id="legend-uk-great-space-race"'));
   assert.ok(page.indexOf('id="gameplay-catalogue"')>page.indexOf('id="coverage"'));
-  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="legend_uk.html">Legend（英国）社</a>'));
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="legend_uk.html">Legend（英国）</a>'));
 });

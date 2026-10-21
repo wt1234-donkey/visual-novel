@@ -66,5 +66,5 @@ test('dossier covers the catalogue without duplicating expansions or competitive
   const page=readFileSync(new URL('../legend_entertainment.html',import.meta.url),'utf8');
   assert.equal(page.split('<article class="card"').length-1,18);
   assert.ok(page.indexOf('id="gameplay-catalogue"')>page.indexOf('id="coverage"'));
-  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="legend_entertainment.html">Legend Entertainment（美国）社</a>'));
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('href="legend_entertainment.html">Legend Entertainment（美国）</a>'));
 });

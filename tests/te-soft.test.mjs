@@ -62,5 +62,5 @@ test('gameplay reference preserves excluded genres and uncertain controls withou
  const page=readFileSync(new URL('../te_soft.html',import.meta.url),'utf8');
  assert.equal(page.split('<article class="card"').length-1,26);
  assert.ok(page.indexOf('id="gameplay-catalogue"')>page.indexOf('id="coverage"'));
- assert.match(readFileSync(new URL('../index.html',import.meta.url),'utf8'),/href="te_soft.html">T&amp;E SOFT（日本）社/);
+ assert.match(readFileSync(new URL('../index.html',import.meta.url),'utf8'),/href="te_soft.html">T&amp;E SOFT（日本）/);
 });

@@ -5,6 +5,7 @@ import json
 import re
 from pathlib import Path
 from source_urls import source_url_valid
+from entity_model import MODEL, DOSSIERS, MEMBERSHIPS, GROUPS, POSITION, card_details, dossier_identity, membership_description
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
@@ -26,29 +27,30 @@ def build_dossier_navigation(index):
         old = re.search(r'<div class="company-quick" aria-label="厂商专题">.*?</div></div>', index)
         assert old, '首页缺少厂商专题导航'
         before, previous, after = index[:old.start()], old.group(), index[old.end():]
-    # Keep published link labels and URLs; the visible year lives outside the link.
-    links = {match.group(1): match.group(0) for match in re.finditer(
-        r'<a\b[^>]*href="([a-z_]+)\.html"[^>]*>.*?</a>', previous, re.S)}
     companies = {company['id']: company for company in coverage['companies']}
-    assert set(links) <= set(companies), '首页含未登记的专题链接'
     grouped = {}
     for cid, company in companies.items():
         year = min((works[wid]['firstYear'] for wid in company['workIds']), default=None)
         period = year // 5 * 5 if year is not None else None
-        anchor = links.get(cid, f'<a class="secondary-link" href="{cid}.html">{escape(company["name"])}社</a>')
-        label = html.unescape(re.sub('<[^>]+>', '', anchor))
-        grouped.setdefault(period, []).append((year, label.casefold(), cid, anchor))
+        kind = DOSSIERS[cid]['dossierType']
+        display_name = {'legend_entertainment':'Legend Entertainment（美国）','te_soft':'T&E SOFT（日本）'}.get(cid,company['name'])
+        anchor = f'<a class="secondary-link" href="{cid}.html">{escape(display_name)}</a>'
+        grouped.setdefault(period, []).append((year, company['name'].casefold(), cid, anchor, kind))
     sections = []
     for period in sorted(grouped, key=lambda year: year if year is not None else float('inf')):
         title = f'{period}—{period + 4}' if period is not None else '暂无主库作品'
         period_id = str(period) if period is not None else 'undated'
         items = []
-        for year, _, cid, anchor in sorted(grouped[period], key=lambda item: (item[0] or 9999, item[1], item[2])):
+        for year, _, cid, anchor, kind in sorted(grouped[period], key=lambda item: (item[0] or 9999, item[1], item[2])):
             year_label = str(year) if year is not None else '未归年'
-            items.append(f'<div class="dossier-item" role="listitem" data-company="{cid}" data-first-year="{year or ""}">{anchor}<span class="dossier-first-year">{year_label}</span></div>')
+            items.append(f'<div class="dossier-item" role="listitem" data-company="{cid}" data-first-year="{year or ""}" data-kind="{kind}">{anchor}<span class="entity-type">{escape(MODEL["typeLabels"][kind])}</span><span class="dossier-first-year">{year_label}</span></div>')
         sections.append(f'<section class="dossier-period" aria-labelledby="dossier-period-{period_id}"><h4 id="dossier-period-{period_id}">{title}<span>{len(items)}个专题</span></h4><div class="dossier-links" role="list">{"".join(items)}</div></section>')
-    navigation = ('<section class="company-dossiers" id="company-dossiers" aria-label="厂商专题">'
-                  '<h3>厂商风格专题</h3><p class="dossier-order-note">按专题关联的主库作品最早首发年排序，每5年一组；同年按名称排列。链接旁标注最早年份，未有主库作品的专题单列。此处采用作品原作年，移植及发行关联仍沿用原作年。</p>'
+    filters = '<div class="dossier-type-controls" role="group" aria-label="按专题类型筛选">' + ''.join(
+        f'<button type="button" data-dossier-kind="{kind}" aria-pressed="{str(not kind).lower()}">{label}</button>'
+        for kind, label in [('', '全部'), ('brand', '品牌'), ('company', '公司／组织'), ('team', '制作团队'), ('publication', '刊物'), ('history', '沿革专题')]) + '</div>'
+    navigation = ('<section class="company-dossiers" id="company-dossiers" aria-label="公司与品牌专题">'
+                  '<h3>公司与品牌专题</h3><p class="dossier-order-note">按专题关联的主库作品最早原作首发年排序，每5年一组；此年不代表公司成立、品牌启用或首次参与发行。未有主库作品的专题单列。</p>'
+                  f'{filters}<p id="dossier-filter-count" aria-live="polite">{len(companies)}个专题</p>'
                   f'<div class="dossier-periods">{"".join(sections)}</div></section>')
     return before + NAV_START + '\n        ' + navigation + '\n        ' + NAV_END + after
 
@@ -99,6 +101,7 @@ def card(work, versions=None, anchors=(), version_label='个平台版本', conte
 <div class="card-top"><span class="year">{work['firstYear']}</span><span class="category">{escape(work['category'])}{' · ' + escape(context_label) if context_label else ''}</span></div>
 <h3>{escape(display_title)}</h3>{original_line}{context}
 <p class="intro">{escape(work['synopsis'])}</p>
+{card_details(work, versions)}
 <div class="interaction-tags" aria-label="互动方式">{interaction_tags}</div>{interaction_evidence}
 <div class="card-meta"><span>{escape(work['subcategory'])} · {escape(work['genre'])}</span><span>主要角色 · {escape(' / '.join(work['characters']))}</span></div>
 {f'<p class="character-evidence">{link(work["charactersSource"], "角色依据")}{(" · " + escape(work["charactersNote"])) if work.get("charactersNote") else ""}</p>' if work.get('charactersSource') else ''}
@@ -193,7 +196,7 @@ def build(company):
     audit_source_label = company.get('auditSourceLabel', '官方产品目录')
     overview_label = company.get('overviewLabel', '已核实的相关游戏（含授权）' if related else '已核实的叙事作品')
     publisher_count = (f'<p class="scope-note"><strong>按实际发行署名：{len(company["publisherWorkIds"])} 部；'
-                       f'按作品品牌：{len(selected)} 部。</strong></p>') if 'publisherWorkIds' in company else ''
+                       f'专题主库引用：{len(selected)} 部。</strong></p>') if 'publisherWorkIds' in company else ''
     publisher_count = company.get('publisherWorkText', publisher_count)
     description = company.get('description', f"{company['name']} 叙事游戏作品专题：剧情、主要角色、首发年份、内容版本、平台发行与官方目录核对清单。")
     profile = company['creativeProfile']
@@ -226,6 +229,37 @@ def build(company):
             + ''.join(dossier_card(wid, group.get('cardLabel', '')) for wid in group['workIds'])
             + '</div></section>' for group in company['dossierGroups'])
         related_section = ''
+    # Group once by scoped participation; keep every historical card and URL anchor.
+    by_id = {w['id']: w for w in all_games}
+    legacy_groups = [*company.get('workGroups', []), *company.get('dossierGroups', [])]
+    legacy_navigation = ''
+    if legacy_groups:
+        legacy_navigation = '<details class="legacy-groups"><summary>原目录分期与范围说明</summary>' + ''.join(
+            f'<div id="{escape(group["id"])}"><h4>{escape(group["title"])}</h4><p>{escape(group["description"])}</p>'
+            + ' / '.join(f'<a href="#{escape(wid)}">{escape(by_id[wid].get("chineseTitle") or by_id[wid]["title"])}</a>' for wid in group['workIds']) + '</div>'
+            for group in legacy_groups) + '</details>'
+    old_card_labels = {wid:g.get('cardLabel','') for g in legacy_groups for wid in g['workIds']}
+    legacy_navigation += ''.join(f'<p class="scope-note">{escape(company.get(key, ""))}</p>' for key in ['relatedSectionTitle','relatedIntro'])
+    grouped_cards = []
+    for group_id, group_title in GROUPS.items():
+        group_works = sorted((w for w in all_games if MEMBERSHIPS[(company['id'], w['id'])]['group'] == group_id), key=lambda w: (w['firstYear'], w['id']))
+        if not group_works: continue
+        cards = []
+        for w in group_works:
+            member = MEMBERSHIPS[(company['id'], w['id'])]
+            note = membership_description(company['id'], w['id']) + ' ' + company.get('workContexts', {}).get(w['id'], '')
+            rendered = card(w, w.get('platformReleases') if w['id'] in related_by_id else ([] if w['id'] in dossier_by_id else None),
+                            anchors=legacy_anchors.get(w['id'], ()), context_label=POSITION[member['placement']] + (' · ' + old_card_labels[w['id']] if old_card_labels.get(w['id']) else ''), context_note=note,
+                            catalogue_only=w['id'] in dossier_by_id, version_label=company.get('versionPanelLabel', '个平台版本'))
+            modes = '|'.join(w['interactionModes'])
+            cards.append(f'<div class="dossier-card-wrapper" data-placement="{member["placement"]}" data-relation="{group_id}" data-modes="{escape(modes, quote=True)}">{rendered}</div>')
+        grouped_cards.append(f'<section class="participation-group" id="participation-{group_id}" data-participation-group="{group_id}"><h3>{group_title}<span class="group-count">{len(group_works)}部</span></h3><div class="cards">{"".join(cards)}</div></section>')
+    modes = sorted({mode for w in all_games for mode in w['interactionModes']})
+    dossier_filters = '<div class="dossier-filters"><label>作品位置<select data-dossier-filter="placement"><option value="">全部位置</option>' + ''.join(f'<option value="{key}">{value}</option>' for key,value in POSITION.items()) + '</select></label>'
+    dossier_filters += '<label>参与关系<select data-dossier-filter="relation"><option value="">全部关系</option>' + ''.join(f'<option value="{key}">{value}</option>' for key,value in GROUPS.items()) + '</select></label>'
+    dossier_filters += '<label>互动方式<select data-dossier-filter="mode"><option value="">全部互动</option>' + ''.join(f'<option>{escape(mode)}</option>' for mode in modes) + '</select></label></div><p id="dossier-result-count" aria-live="polite"></p>'
+    work_cards = dossier_filters + legacy_navigation + ''.join(grouped_cards)
+    related_section = '<span id="related-games" aria-hidden="true"></span>' if related else ''
     historical_section = ''
     if archive := company.get('historicalArchive'):
         path = Path(archive['path'])
@@ -238,7 +272,7 @@ def build(company):
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description)}">
 <title>{escape(company['name'])} 作品专题 · 叙事游戏年鉴</title>
-<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="company.css"></head>
+<link rel="stylesheet" href="styles.css?v=20261021-entities"><link rel="stylesheet" href="company.css?v=20261021-entities"><script type="module" src="dossiers.mjs?v=20261021-entities"></script></head>
 <body><div class="app-shell"><header class="masthead"><a class="brand" href="index.html"><span class="brand-mark">N.</span><span>叙事游戏年鉴</span></a><nav aria-label="专题导航"><a href="#identity">创作风格</a><a href="#works">全部作品</a><a href="#coverage">核对清单</a>{appendix_nav}<a href="index.html#catalogue">返回数据库</a></nav></header>
 <main><section class="company-hero"><p class="eyebrow">COMPANY DOSSIER · {escape(company['checkedAt'])}</p><h1>{escape(company['name'])} 作品专题</h1>
 <p class="lead">{escape(company['publisherNote'])}</p>{publisher_count}
@@ -247,8 +281,9 @@ def build(company):
 <div class="hero-links"><a class="primary-link" href="#identity">阅读创作风格</a><a class="secondary-link" href="#works">按年份阅读作品</a></div></section>
 <p class="scope-note">互动方式为可多选的作品层玩法概览，各平台操作可能不同；依据现有资料归纳，操作不明时标待核实。<a href="index.html#interaction-guide">查看互动方式定义</a> · <a href="data/interaction-modes.csv">下载互动清单</a>。</p>
 <p class="scope-note">当前采用作品 → 内容版本 → 平台发行三层记录。同内容跨平台不增加内容版本；仅确认首次新增剧情、人物、路线、可玩内容、美术或音频时新增。内容关系待核的历史发行另列，不计为新增内容。下方旧核对说明中的版本数保留其当时口径。</p>
+{dossier_identity(company)}
 {profile_section}
-<section id="works"><div class="section-heading"><div><p class="eyebrow">GAME CATALOGUE</p><h2>{escape(section_title)}</h2></div><p>{escape(company.get('catalogueCountLabel', f'{len(selected)} 部四类作品 · 增强版合并计数'))}</p></div>
+<section id="works"><div class="section-heading"><div><p class="eyebrow">GAME CATALOGUE</p><h2>{escape(section_title)}</h2></div><p>{len(selected)} 部主库引用 · {len(related)} 部关联 · {len(dossier_only)} 部书目</p></div>
 <nav class="work-index" aria-label="按年份跳转作品">{toc}</nav>{empty_note}{work_cards}</section>
 {related_section}{historical_section}
 <section class="company-audit" id="coverage"><p class="eyebrow">CATALOGUE AUDIT</p><h2>{escape(audit_title)}</h2>
