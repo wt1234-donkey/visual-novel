@@ -22,7 +22,7 @@ def build():
  for c in CREDITS['credits']:roles[c['entityId']][c['role']].add(c['workId'])
  for m in CREDITS['dossierMemberships']:member[m['workId']].append(m['dossierId'])
  summaries=' · '.join(f'{MODEL["typeLabels"][kind]} {n}' for kind,n in counts.items())
- body=f'<section class="company-hero"><h1>公司、品牌与制作主体档案</h1><p class="lead">同一作品可以关联多个主体；原作制作、品牌、发行、移植与授权分别记录。</p><p>{summaries}</p><p class="scope-note">身份待核的名称来自已保存的历史署名，尚不推定其为法人或品牌。统计为实体档案数，专题和角色作品数不相加。</p></section>'
+ body=f'<section class="company-hero"><h1>公司、品牌与制作主体档案</h1><p class="lead">同一作品可以关联多个主体；原作制作、品牌、发行、移植与授权分别记录。</p><p>{summaries}</p><p class="scope-note">名称统一为英文／拉丁字（日文）；无确证英文名称时采用转写或编辑译名，不表示官方英文名。旧名称仍可检索，详见<a href="data/entity-display-names.json">名称对照表</a>。身份待核的名称来自已保存的历史署名，尚不推定其为法人或品牌。统计为实体档案数，专题和角色作品数不相加。</p></section>'
  body+='<div class="directory-controls"><label>检索主体<input type="search" id="directory-search" placeholder="名称、别名、公司或品牌"></label><label>主体类型<select id="directory-kind"><option value="">全部类型</option>'+''.join(f'<option value="{k}">{v}</option>' for k,v in MODEL['typeLabels'].items() if k!='history')+'</select></label></div><p id="directory-count" aria-live="polite"></p><div class="entity-directory">'
  for entity in sorted(MODEL['entities'],key=lambda x:(x['type']=='unknown',x['name'].casefold())):
   eid=entity['id'];ds=[d for d in MODEL['dossiers'] if eid in d['entityIds']]
@@ -52,7 +52,7 @@ def build():
   entity=ENTITIES[c['entityId']];writer.writerow([c['id'],entity['id'],entity['name'],MODEL['typeLabels'][entity['type']],c['workId'],c['targetType'],c['targetId'],MODEL['roleLabels'][c['role']],c['rawCredit'],c['status'],c['source']])
  out['data/entity-credits.csv']='\ufeff'+rows.getvalue()
  main_ids={w['id'] for w in data['works']}
- public_model={k:MODEL[k] for k in ['typeLabels','roleLabels','relations','dossiers']}
+ public_model={k:MODEL[k] for k in ['typeLabels','roleLabels','relations','dossiers','displayNames']}
  public_model['entities']=[{k:v for k,v in item.items() if k in ['id','name','type','aliases']} for item in MODEL['entities']]
  compact_credits=[{k:v for k,v in c.items() if k not in ['note','territory','id']} for c in CREDITS['credits'] if c['workId'] in main_ids]
  out['data/entity-catalogue.json']=json.dumps({'model':public_model,'credits':compact_credits,'dossierMemberships':[m for m in CREDITS['dossierMemberships'] if m['workId'] in main_ids]},ensure_ascii=False,separators=(',',':'))+'\n'

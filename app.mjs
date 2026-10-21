@@ -1,4 +1,4 @@
-import {createEntityIndex,entityWorkCounts,summarizeCredits,BRAND_ROLES,DEVELOPER_ROLES,PUBLISHER_ROLES} from './entities.mjs?v=20261021-entities';
+import {createEntityIndex,entityWorkCounts,summarizeCredits,displayPublisherName,BRAND_ROLES,DEVELOPER_ROLES,PUBLISHER_ROLES} from './entities.mjs?v=20261021-names';
 import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261021-entities';
 
 const $=id=>document.getElementById(id);
@@ -17,7 +17,7 @@ function renderCard({work,platformReleases:versions,contentVersions}){
   if(work.chineseTitleType==='站内编辑译名') original.append(label('span','editorial-translation',' · 中文名为站内编辑译名'));
   const intro=label('p','intro',work.synopsis);
   const meta=label('div','card-meta','');
-  const companies=[...new Set(versions.flatMap(v=>v.publisherCompanies||[]))];
+  const companies=[...new Set(versions.flatMap(v=>v.publisherCompanies||[]).map(raw=>displayPublisherName(entityIndex,raw)))];
   const publisherLabel=companies.length ? companies.slice(0,2).join(' / ')+(companies.length>2?` 等 ${companies.length} 家`:'') : '非商业／未署商业厂商';
   meta.append(label('span','',`细分类 · ${work.subcategory}`),label('span','',work.genre),label('span','','主要角色 · '+work.characters.join(' / ')),label('span','','历史发行归档 · '+publisherLabel));
   card.append(top,title,original,intro,meta);
@@ -48,7 +48,10 @@ function renderCard({work,platformReleases:versions,contentVersions}){
     const row=label('div','version release-row','');
     const line=label('div','version-line','');
     line.append(label('strong','',String(release.year)),label('span','platform-name',release.platform),label('span','version-kind',release.kind));
-    row.append(line,label('p','publisher','发行／出版：'+release.publisher+(visibleVoiceNote(release)?' · '+visibleVoiceNote(release):'')),label('p','changes',release.differences),safeLink(release.source,'发行来源 ↗'));
+    const name=displayPublisherName(entityIndex,release.publisher);
+    row.append(line,label('p','publisher','发行／出版：'+name+(visibleVoiceNote(release)?' · '+visibleVoiceNote(release):'')));
+    if(name!==release.publisher)row.append(label('p','credit-scope','署名原文：'+release.publisher));
+    row.append(label('p','changes',release.differences),safeLink(release.source,'发行来源 ↗'));
     return row;
   };
   for(const content of contentVersions.sort((a,b)=>a.firstYear-b.firstYear)){
@@ -78,7 +81,7 @@ function readFilters(){return {...Object.fromEntries(Object.entries(fields).map(
 
 async function main(){
   try {
-    const responses=await Promise.all(['games.json','taxonomy.json','entity-catalogue.json'].map(path=>fetch('./data/'+path+'?v=20261021-entities')));
+    const responses=await Promise.all(['games.json','taxonomy.json','entity-catalogue.json'].map(path=>fetch('./data/'+path+'?v=20261021-names')));
     if(responses.some(r=>!r.ok))throw Error('HTTP '+responses.find(r=>!r.ok).status);
     const [data,taxonomy,catalogue]=await Promise.all(responses.map(r=>r.json()));
     entityIndex=createEntityIndex(data,catalogue.model,catalogue);
@@ -103,7 +106,7 @@ async function main(){
       }
     }
     const publisherCounts=entityWorkCounts(entityIndex,PUBLISHER_ROLES,{releaseOnly:true});
-    for(const [name,count] of [...publisherWorkCounts(data)].sort((a,b)=>b[1]-a[1])){const option=label('option','',`${name==='__unattributed__'?'非商业／未署商业厂商':name} · ${count}部`);option.value=name;fields.company.append(option);}
+    for(const [name,count] of [...publisherWorkCounts(data)].sort((a,b)=>b[1]-a[1])){const option=label('option','',`${name==='__unattributed__'?'非商业／未署商业厂商':displayPublisherName(entityIndex,name)} · ${count}部`);option.value=name;fields.company.append(option);}
     const unattributedCount=filterCatalogue(data,{publisher:'__unattributed__'},entityIndex).length;if(unattributedCount){const option=label('option','',`非商业／未署发行方 · ${unattributedCount}部`);option.value='__unattributed__';fields.publisher.append(option);}
     fillEntities(fields.publisher,publisherCounts);fillEntities(fields.brand,entityWorkCounts(entityIndex,BRAND_ROLES));
     const developerCounts=entityWorkCounts(entityIndex,DEVELOPER_ROLES);

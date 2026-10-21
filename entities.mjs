@@ -2,6 +2,7 @@
 export const BRAND_ROLES=new Set(['productionBrand','originalPublishingBrand','publishingBrand']);
 export const DEVELOPER_ROLES=new Set(['originalProduction','developer','coDeveloper']);
 export const PUBLISHER_ROLES=new Set(['publisher','publishingBrand']);
+export function displayPublisherName(index,raw){return index.model.displayNames?.[raw]||raw;}
 export function createEntityIndex(data,model,creditData,classification={placements:[]}){
   const entities=new Map(model.entities.map(e=>[e.id,e]));
   const mainIds=new Set(data.works.map(w=>w.id));

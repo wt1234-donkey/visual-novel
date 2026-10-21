@@ -74,4 +74,14 @@ python3 scripts/build_company_pages.py --check
 
 主体、角色与位置索引为派生数据；目前人工核定规则集中在 `build_entity_model.py` 的具名映射、来源与职责范围中，不能只修改生成JSON或HTML。未来扩充可再拆为独立编辑配置文件。
 
+## 名称格式（2026-10-21）
+
+日文主体名称的显示格式为英文／拉丁字（日文），使用全角括号，例如 `HummingBird Soft（ハミングバードソフト）`、`Madosoft（まどそふと）`、`Minato Soft（みなとそふと）`。名称表 `entity-display-names.json` 同时管理旧中文名、日文名与旧英文拼写的显示。已有纯英文名称不强行补造日文名；国家、沿革和待核说明继续独立保留其含义。
+
+`english`、`japanese` 为显示组成，不代表法人登记字段。`basis` 区分既有双语名（`existingBilingualName`）、目录拼写／惯用转写（`catalogueSpelling`）、罗马字（`romanization`）、编辑译名（`editorialTranslation`）；未宣称全部为官方英文。月星組、花月組暂无确证英文名，分别以 Moon-Star Group、Flower-Moon Group 作编辑译名，保留原文便于核对。个别本轮补核的名称另存 `source`。
+
+`entity_names.py` 在历史署名解析与参与记录生成完成后应用显示名，并把旧名称、英日文各部分加入检索别名。名称表不参与身份解析：即使不同待核主体显示同名，也不合并 ID、身份、关系或职责。主体索引、主库筛选、专题导航、标题与参与 CSV 共用同一结果。历史发行归档的筛选值保持原值，只改标签；发行行在显示新名时同时列出“署名原文”。作品正文、史料引文、核心 JSON 与旧历史 CSV 保留原文。
+
+修改名称表后运行本节上方全部生成器和校验，不直接编辑派生 JSON／HTML。
+
 如需纠正原始史实，应在独立变更中保留旧证据、说明订正，并复核基线断言；不得仅为让生成器通过而重算或删除基线。
