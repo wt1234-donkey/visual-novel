@@ -78,7 +78,7 @@ new_works = [
         synopsis="由ELF自主推出的短篇复古文字冒险，将该品牌其他作品中的角色引入同一冒险舞台；使用行动指令推进游戏，并非旧游戏合集。",
         notes="2011-08-12 Windows免费独立发行；输入命令式玩法有玩家实际体验佐证。完整命令词表、具体登场角色和声音状态仍待核实。",
         source=w1, interactionModes=["文字输入"],
-        interactionBasis="游戏发行目录与玩家实玩",
+        interactionBasis="来源核对",
         interactionNote="实玩反馈明确称「コマンドタイピング方式」，区别于菜单选择与输入存档名；具体全部动作词尚未实机穷尽。",
         interactionSources=[command1,w1],
         titleAliases=["Elf in Wonderland", "élf in Wonderland"]
@@ -92,7 +92,7 @@ new_works = [
         synopsis="ELF继首作之后另行发行的复古文字冒险续作，以1980年代游戏式片假名指令输入展开独立可玩流程；并非首作的重制或移植。",
         notes="2012-07-19 Windows独立商业发行，有同期购买及游玩记录；具体人物名单、角色语音和全套命令待核。",
         source=w2, interactionModes=["文字输入"],
-        interactionBasis="发行目录、同期玩家实玩",
+        interactionBasis="来源核对",
         interactionNote="2012年同期反馈显示键入片假名动作指令；有独立续篇游戏过程，不与首作并成单一内容版本。",
         interactionSources=[command2,"https://www.hikarinagi.org/galgames/14084/revisions"],
         titleAliases=["Elf in Wonderland 2","élf in Wonderland 2"]
