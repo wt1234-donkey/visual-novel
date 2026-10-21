@@ -220,7 +220,8 @@ test('Nitroplus dossier reuses originals and keeps remakes, aliases and actual p
   for(const id of dossier.workIds) assert.equal(page.split(`<article class="card" id="${id}">`).length-1,1);
   const links=[...readFileSync(new URL('../index.html',import.meta.url),'utf8').matchAll(/class="secondary-link" href="[^\"]+\.html">([^<]+)<\/a>/g)];
   assert.equal(links.length,JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.length);
-  assert.ok(links.every(([,name])=>name.endsWith('社')));
+  assert.ok(links.every(([,name])=>!name.endsWith('社')));
+  assert.ok(readFileSync(new URL('../index.html',import.meta.url),'utf8').includes('data-kind="brand"'));
 });
 
 test('historical Japanese JAST and international publishers stay independent',()=>{
