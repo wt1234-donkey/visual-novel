@@ -10,6 +10,8 @@ Konami专题已按用户提供的[183行原清单逐项对照](data/konami-sourc
 
 新增[株式会社ホークアイ公司专题](hawkeye.html)：引用旧みなとそふと24部主库身份，按五品牌分组，补录mirai六部独立叙事；另关联フリュー发行的《樹海の記憶》。画集ROM新ADV与ALLSTAR首次收录的芙慈子篇分别建档，后续同内容下载和普通合集不重计。详见[核对说明](data/hawkeye-audit.md)。
 
+新增[Addison-Wesley出版商专题](addison_wesley.html)：十五项发行／出版关联整理为完整玩法清单；复用托尔金系列四部主库作品，按本轮文字输入授权补录《The Secret of Arendarvon Castle》《The Antagonists》两部书籍式文字冒险。Rhiannon教育生存与策略模拟仅列参考；北美代理与Melbourne House／Beam原开发发行关系分开。见[核对说明](data/addison-wesley-audit.md)。
+
 ## 当前记录结构（2026-10-21）
 
 首页厂商专题按所关联主库作品的最早`firstYear`排序，并按1975—1979、1980—1984等5年区间分组，同年按链接名称排列。作品原作年用于归组，第三方发行／移植关系不改写原作年；没有主库作品的专题单列“暂无主库作品”。现有79个专题的名称与链接均由共享配置生成。导航由`scripts/build_company_pages.py`随专题生成，`--check`也验证分组；后续补录作品后运行生成器即可同步排序，不手动追加首页专题链接。
