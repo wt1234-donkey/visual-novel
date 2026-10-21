@@ -32254,8 +32254,8 @@
       "id": "gainax",
       "name": "GAINAX",
       "checkedAt": "2026-10-21",
-      "status": "补充合作RPG、授权叙事与后续新增内容；授权小游戏与未核项见末尾清单",
-      "scope": "原GAINAX本社开发／发行、联合制作、系列合作与授权改编分开说明。主库收叙事游戏，RPG在跨类型区，既有养成记录保留；非叙事衍生列末尾玩法参考。",
+      "status": "按剧情优先范围复核：21部主库引用，9部跨类型关联；最早主库作品1989年",
+      "scope": "原GAINAX本社开发／发行、联合制作、系列合作与授权改编分开说明。主库引用21部作品，含本次按叙事主导判断转入的《电脑学园IV：猿猎人J》；9部问答、策略、棋盘、格斗或RPG留在关联区。既有养成记录保留。",
       "versionScope": "保留历史发行，只新增原作或有具体新增内容的首次批次；2024 Regeneration注明Bliss Brain发行与米子GAINAX动画，不归为原GAINAX新作。",
       "publisherNote": "GAINAX曾制作销售游戏，目录从电脑冒险与养成延伸到EVA剧情作品。此页区分本社游戏、系列合作和授权手机叙事作品；TinMachine、CyberFront、CFK等发行署名保留。GAINA／BENTEN Film与米子GAINAX各为独立法人。 原GAINAX法人已于2025年完成破产整理；本页保存历史开发与发行记录。",
       "workIds": [
@@ -32278,7 +32278,8 @@
         "g828",
         "g829",
         "g927",
-        "g1276"
+        "g1276",
+        "g1277"
       ],
       "publisherWorkIds": [
         "g812",
@@ -32293,7 +32294,8 @@
         "g821",
         "g822",
         "g825",
-        "g826"
+        "g826",
+        "g1277"
       ],
       "relatedGames": [
         {
@@ -32608,72 +32610,6 @@
               "source": "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
               "evidenceReleaseIds": [
                 "gainax-dennou3-v1"
-              ],
-              "addedContent": []
-            }
-          ],
-          "interactionModes": [
-            "知识问答"
-          ],
-          "interactionNote": "依专题已有玩法分类归纳：美少女问答；只标可由已有资料支持的主要操作，未穷尽附带模块。",
-          "interactionBasis": "既有资料归纳",
-          "interactionSources": [
-            "https://d4e.co.jp/lights_cat/gainax"
-          ]
-        },
-        {
-          "id": "gainax-dennou4",
-          "title": "電脳学園IV エイプハンターJ",
-          "originalTitle": "電脳学園IV エイプハンターJ",
-          "titleAliases": [
-            "Cybernetic Hi-School 4",
-            "電脳学園4"
-          ],
-          "firstYear": 1991,
-          "category": "问答冒险",
-          "subcategory": "美少女问答",
-          "genre": "问答／剧情事件",
-          "characters": [
-            "本篇登场人物群像"
-          ],
-          "charactersNote": "人物姓名或身份依所引作品资料；未确认的角色姓名不另行补写。",
-          "charactersSource": "https://d4e.co.jp/lights_cat/gainax",
-          "synopsis": "通过菜单选择回答问答，推进本篇的角色事件与图像展示。",
-          "notes": "数字／菜单选择答案不等于键入词句解析器。问答为主，保留在专题跨类型区；General Products实际发行署名独立。",
-          "source": "https://d4e.co.jp/lights_cat/gainax",
-          "chineseTitle": "电脑学园IV：猿猎人J",
-          "chineseTitleType": "站内编辑译名",
-          "platformReleases": [
-            {
-              "year": 1991,
-              "platform": "PC-98",
-              "publisher": "GAINAX",
-              "publisherCompanies": [
-                "GAINAX"
-              ],
-              "kind": "首发／原版",
-              "voice": "未核实",
-              "differences": "该平台发行记录；未确认的配音与具体版本改动不推测。",
-              "source": "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
-              "id": "gainax-dennou4-v1",
-              "workId": "gainax-dennou4",
-              "contentVersionId": "gainax-dennou4-c-original",
-              "contentRelation": "original",
-              "contentNote": "原作／首批已核内容。",
-              "releaseRole": "legacy"
-            }
-          ],
-          "contentVersions": [
-            {
-              "id": "gainax-dennou4-c-original",
-              "workId": "gainax-dennou4",
-              "label": "原作／首批内容",
-              "firstYear": 1991,
-              "basis": "original",
-              "evidence": "该平台发行记录；未确认的配音与具体版本改动不推测。",
-              "source": "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
-              "evidenceReleaseIds": [
-                "gainax-dennou4-v1"
               ],
               "addedContent": []
             }
@@ -33165,11 +33101,11 @@
       "auditTitle": "历史作品与合作关系核对清单",
       "auditSourceLabel": "D4历史权利目录",
       "auditLabel": "历史游戏、官方应用公告与合作边界逐项处理；不是完整公司发行目录。",
-      "auditNote": "2026-10-21补录：复用SEGA《第二印象》，新增Secret of Evangelion及2007 PC增补、Götzendiener和手机使徒RPG；PM2增加2024重绘／开场动画。末尾玩法清单不计主库作品或正文卡片。未核版权合作细项、PC／PSP内容等同性与部分早期移植继续保留待核。",
+      "auditNote": "2026-10-21补录：复用SEGA《第二印象》，新增Secret of Evangelion及2007 PC增补、Götzendiener和手机使徒RPG；PM2增加2024重绘／开场动画。末尾玩法清单不计主库作品或正文卡片。未核版权合作细项、PC／PSP内容等同性与部分早期移植继续保留待核。 2026-10-21剧情优先复核：《电脑学园IV：猿猎人J》由关联区转入主库，共21部主库引用、9部关联；原作内容／发行ID保留，旧锚点跳转同一卡片。首页最早年份仍为《Battle Skin Panic》的1989年，归1985—1989组。",
       "description": "GAINAX游戏专题：本社、合作与授权关系；叙事、RPG、养成历史、重制内容及玩法参考清单。",
       "relatedSectionTitle": "问答、棋盘、策略与格斗游戏",
       "relatedCountLabel": "明确标注实际玩法",
-      "relatedIntro": "问答、策略、格斗与动作／地牢RPG按实际类型展示；发行署名与制作、授权关系分别记载。",
+      "relatedIntro": "以下作品的现有资料尚不足以支持“剧情为主、玩法为辅”的判断，继续按问答、策略、棋盘、格斗或RPG类型展示；有背景故事不直接等于叙事主导。",
       "creativeProfile": {
         "thesis": "从菜单式电脑冒险、长期角色养成到动画角色的原创外传，GAINAX关联作品采用不同互动方式组织角色故事。动画原作、游戏开发与发行公司分别核实，避免把共享角色误当成同一制作主体。",
         "phases": [
@@ -33391,13 +33327,13 @@
         },
         {
           "title": "電脳学園IV エイプハンターJ",
-          "status": "专题关联区收录",
-          "reason": "开发／发行作品。数字／菜单选择答案不等于键入词句解析器。问答为主，保留在专题跨类型区；General Products实际发行署名独立。",
-          "source": "https://d4e.co.jp/lights_cat/gainax",
-          "workIds": [],
-          "relatedIds": [
-            "gainax-dennou4"
-          ]
+          "status": "共享主库收录",
+          "reason": "依玩法评述作编辑判断：本作冒险叙事比重较前三作明显提高，按本次剧情优先范围转入主库；保留三选一知识问答，不写成纯阅读作品。沿用原作内容及首发证据，旧专题锚点继续有效。",
+          "source": "https://advgamer.com/dennoh-gakuen4-ape-hunter-j/",
+          "workIds": [
+            "g1277"
+          ],
+          "relatedIds": []
         },
         {
           "title": "プリンセスメーカーQ",
@@ -33563,6 +33499,9 @@
         "g828": "TinMachine授权作品／GAINAX公认合作",
         "g829": "TinMachine发行／GAINAX监修",
         "g821": "GAINAX原作；2024重制由Bliss Brain发行，米子GAINAX负责新增开场动画"
+      },
+      "legacyAnchors": {
+        "gainax-dennou4": "g1277"
       }
     },
     {
