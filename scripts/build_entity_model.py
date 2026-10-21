@@ -7,6 +7,7 @@ import json
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
+from entity_names import apply_names, NAMES as DISPLAY_NAMES, display_name
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '35b988136f016199d26121e41ca8d7b99d18e310'
@@ -200,7 +201,8 @@ def build():
   'entity-gaina':('renamedBentenFilm','2025-08-01','day',companies['gaina']['source']),
   'entity-sierra_company':('renamedSierraOnLine','1982','year',companies['sierra_on_line']['source'])}
  for eid,(kind,value,precision,src) in date_facts.items():entities[eid]['dates'].append({'kind':kind,'value':value,'precision':precision,'source':src,'status':'existingEvidence'})
- model={'schemaVersion':1,'updated':DATE,'typeLabels':TYPE_LABELS,'roleLabels':ROLE_LABELS,'entities':list(entities.values()),'relations':relations,'dossiers':dossiers,'policy':'实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。'}
+ apply_names(entities,dossiers)
+ model={'schemaVersion':1,'updated':DATE,'typeLabels':TYPE_LABELS,'roleLabels':ROLE_LABELS,'entities':list(entities.values()),'relations':relations,'dossiers':dossiers,'displayNames':{raw:display_name(raw) for raw in DISPLAY_NAMES},'policy':'实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。'}
  existing_baseline=ROOT/'data/entity-migration-baseline.json'
  if existing_baseline.exists():
   baseline=read('data/entity-migration-baseline.json')

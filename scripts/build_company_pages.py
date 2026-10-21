@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 from source_urls import source_url_valid
 from entity_model import MODEL, DOSSIERS, MEMBERSHIPS, GROUPS, POSITION, card_details, dossier_identity, membership_description
+from entity_names import display_name
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
@@ -33,9 +34,9 @@ def build_dossier_navigation(index):
         year = min((works[wid]['firstYear'] for wid in company['workIds']), default=None)
         period = year // 5 * 5 if year is not None else None
         kind = DOSSIERS[cid]['dossierType']
-        display_name = {'legend_entertainment':'Legend Entertainment（美国）','te_soft':'T&E SOFT（日本）'}.get(cid,company['name'])
-        anchor = f'<a class="secondary-link" href="{cid}.html">{escape(display_name)}</a>'
-        grouped.setdefault(period, []).append((year, company['name'].casefold(), cid, anchor, kind))
+        name = {'legend_entertainment':'Legend Entertainment（美国）','te_soft':'T&E SOFT（日本）'}.get(cid,DOSSIERS[cid]['name'])
+        anchor = f'<a class="secondary-link" href="{cid}.html">{escape(name)}</a>'
+        grouped.setdefault(period, []).append((year, name.casefold(), cid, anchor, kind))
     sections = []
     for period in sorted(grouped, key=lambda year: year if year is not None else float('inf')):
         title = f'{period}—{period + 4}' if period is not None else '暂无主库作品'
@@ -67,9 +68,11 @@ def card(work, versions=None, anchors=(), version_label='个平台版本', conte
     contents = work.get('contentVersions', [c for c in data['contentVersions'] if c['workId'] == work['id']])
     def release_row(v):
         voice_note = ' · 无角色配音' if v['voice'] == '无' else ''
+        name = display_name(v['publisher'])
+        raw_note = f'<p class="credit-scope">署名原文：{escape(v["publisher"])}</p>' if name != v['publisher'] else ''
         return f'''<div class="version release-row">
 <div class="version-line"><strong>{v['year']}</strong><span class="platform-name">{escape(v['platform'])}</span><span class="version-kind">{escape(v['kind'])}</span></div>
-<p class="publisher">发行／出版：{escape(v['publisher'])}{voice_note}</p>
+<p class="publisher">发行／出版：{escape(name)}{voice_note}</p>{raw_note}
 <p class="changes">{escape(v['differences'])}</p>{link(v['source'], '发行来源')}</div>'''
     content_rows = []
     for c in sorted(contents, key=lambda c: c['firstYear']):
@@ -163,6 +166,7 @@ def gameplay_appendix(company):
 
 
 def build(company):
+    company = {**company, 'name': DOSSIERS[company['id']]['name']}
     selected = sorted((works[wid] for wid in company['workIds']), key=lambda w: (w['firstYear'], w['id']))
     related = sorted(company.get('relatedGames', []), key=lambda w: (w['firstYear'], w['id']))
     dossier_only = company.get('dossierOnlyWorks', [])
