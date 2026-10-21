@@ -121,6 +121,7 @@ for w in new_works:
     elf["publisherWorkIds"].append(w["id"])
 
 elf.setdefault("authorizedCommandWorkIds", []).extend(["g1274", "g1275"])
+elf["commandAuthorizationNote"] = "2026-10-21用户具名要求核实并补充ELF的两部《エルフ イン ワンダーランド》独立游戏，确认属于复古词句输入式叙事ADV，准入范围仅限本次点名作品；不泛化至其他厂商或本品牌其他尚未核实的输入式游戏。"
 elf["checkedAt"] = "2026-10-21"
 elf["description"] = "日本 ELF 历史作品专题：40 部叙事作品、22 部跨类型作品、重制版本与文字指令游戏核查。"
 elf["publisherWorkText"] = '<p class="scope-note"><strong>叙事作品 40 部，其中 ELF 原创 35 部、ELF 发行的 Silky’s 原作 5 部。</strong></p>'
