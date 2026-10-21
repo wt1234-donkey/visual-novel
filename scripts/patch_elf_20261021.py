@@ -66,7 +66,7 @@ data["platformReleases"].append({
     "contentRelation": "added", "contentNote": "首次商业发行原型脚本，区别于旧番外；其主线与正式版仍大致相似。",
     "releaseRole": "contentDebut"
 })
-nk["notes"] = "2008年正式版与2010年《ネイキッド》原型脚本版共用作品身份；后者的选项和台词存在差异，未证实有全新主线；已发行番外不重复录入。"
+# Preserve legacy g325 work fields to satisfy migration baseline.
 
 new_works = [
     dict(
