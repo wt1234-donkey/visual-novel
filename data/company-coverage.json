@@ -32253,10 +32253,10 @@
     {
       "id": "gainax",
       "name": "GAINAX",
-      "checkedAt": "2026-10-08",
-      "status": "本轮叙事／养成及关联游戏核查完成；部分再版与跨类型清单留待补查",
-      "scope": "原株式会社ガイナックス的开发／发行作品，另标明Princess Maker系列合作与TinMachine的GAINAX协力／监修作品。只排除词句键入解析器；菜单、问答选择、点击与直接操作保留。养成归广义Galgame，问答／棋盘／策略／格斗在关联区明确分类。",
-      "versionScope": "每条版本按可核实的机种、年份与实际发行署名登记；增强、重制、合集及手机分割移植归并。未核实的其他地区、Mac版、后期重制和所有廉价再版不宣称补齐。",
+      "checkedAt": "2026-10-21",
+      "status": "补充合作RPG、授权叙事与后续新增内容；授权小游戏与未核项见末尾清单",
+      "scope": "原GAINAX本社开发／发行、联合制作、系列合作与授权改编分开说明。主库收叙事游戏，RPG在跨类型区，既有养成记录保留；非叙事衍生列末尾玩法参考。",
+      "versionScope": "保留历史发行，只新增原作或有具体新增内容的首次批次；2024 Regeneration注明Bliss Brain发行与米子GAINAX动画，不归为原GAINAX新作。",
       "publisherNote": "GAINAX曾制作销售游戏，目录从电脑冒险与养成延伸到EVA剧情作品。此页区分本社游戏、系列合作和授权手机叙事作品；TinMachine、CyberFront、CFK等发行署名保留。GAINA／BENTEN Film与米子GAINAX各为独立法人。 原GAINAX法人已于2025年完成破产整理；本页保存历史开发与发行记录。",
       "workIds": [
         "g812",
@@ -32276,7 +32276,9 @@
         "g826",
         "g827",
         "g828",
-        "g829"
+        "g829",
+        "g927",
+        "g1276"
       ],
       "publisherWorkIds": [
         "g812",
@@ -33019,20 +33021,155 @@
           "interactionSources": [
             "https://gamefaqs.gamespot.com/games/company/72617-gainax"
           ]
+        },
+        {
+          "id": "gainax-gotz",
+          "title": "ゲッツェンディーナー",
+          "originalTitle": "ゲッツェンディーナー",
+          "chineseTitle": "偶像崇拜者",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ゲッツェンディーナー"
+          ],
+          "firstYear": 1994,
+          "category": "角色扮演",
+          "subcategory": "动作角色扮演",
+          "genre": "动作RPG／机关解谜",
+          "characters": [
+            "逃离魔城的公主"
+          ],
+          "charactersNote": "依据所引作品资料；角色身份不代表攻略路线。",
+          "charactersSource": "https://bangumi.tv/subject/701742",
+          "synopsis": "操纵被困的公主探索城堡，在即时动作与机关解谜中寻找出路。",
+          "notes": "GAINAX制作、Studio Alex开发、NEC Home Electronics发行；保留实际发行方，不能记为GAINAX独立开发。",
+          "source": "https://bangumi.tv/subject/701742",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "移动、战斗并操作环境机关；并非以战斗题材推定回合指令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://bangumi.tv/subject/701742",
+            "https://shamirgame.blog.fc2.com/blog-entry-306.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "gainax-gotz-c-original",
+              "workId": "gainax-gotz",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "GAINAX制作、Studio Alex开发、NEC Home Electronics发行；保留实际发行方，不能记为GAINAX独立开发。",
+              "source": "https://bangumi.tv/subject/701742",
+              "evidenceReleaseIds": [
+                "gainax-gotz-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "gainax-gotz-v-original",
+              "workId": "gainax-gotz",
+              "year": 1994,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "NEC Home Electronics",
+              "publisherCompanies": [
+                "NEC Home Electronics"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "GAINAX制作、Studio Alex开发、NEC Home Electronics发行；保留实际发行方，不能记为GAINAX独立开发。",
+              "source": "https://bangumi.tv/subject/701742",
+              "contentVersionId": "gainax-gotz-c-original",
+              "contentRelation": "original",
+              "contentNote": "独立作品的首次内容发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "gainax-evarpg",
+          "title": "エヴァンゲリオンRPG～使徒育成計画～",
+          "originalTitle": "エヴァンゲリオンRPG～使徒育成計画～",
+          "chineseTitle": "福音战士RPG：使徒育成计划",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "エヴァンゲリオンRPG～使徒育成計画～"
+          ],
+          "firstYear": 2006,
+          "category": "角色扮演",
+          "subcategory": "地牢角色扮演",
+          "genre": "随机地牢／捕获育成",
+          "characters": [
+            "作战队伍",
+            "使徒实验体"
+          ],
+          "charactersNote": "依据所引作品资料；角色身份不代表攻略路线。",
+          "charactersSource": "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf",
+          "synopsis": "探索变化的作战区域、完成任务，并捕获、培养和合成使徒实验体。",
+          "notes": "TinMachine手机授权作品。官方2006年9月1日公告明确为地牢探索RPG；不与绫波／真嗣育成或2010年在线RPG合并。",
+          "source": "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令"
+          ],
+          "interactionNote": "官方公告与游戏画面支持区域探索及育成／合成菜单；未据此推定完整战斗操作机制。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "gainax-evarpg-c-original",
+              "workId": "gainax-evarpg",
+              "label": "原作／首批内容",
+              "firstYear": 2006,
+              "basis": "original",
+              "evidence": "TinMachine手机授权作品。官方2006年9月1日公告明确为地牢探索RPG；不与绫波／真嗣育成或2010年在线RPG合并。",
+              "source": "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf",
+              "evidenceReleaseIds": [
+                "gainax-evarpg-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "gainax-evarpg-v-original",
+              "workId": "gainax-evarpg",
+              "year": 2006,
+              "platform": "i-mode（FOMA iアプリ）",
+              "publisher": "TinMachine",
+              "publisherCompanies": [
+                "TinMachine"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "TinMachine手机授权作品。官方2006年9月1日公告明确为地牢探索RPG；不与绫波／真嗣育成或2010年在线RPG合并。",
+              "source": "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf",
+              "contentVersionId": "gainax-evarpg-c-original",
+              "contentRelation": "original",
+              "contentNote": "独立作品的首次内容发行。",
+              "releaseRole": "contentDebut"
+            }
+          ]
         }
       ],
-      "catalogueEntryCount": 26,
+      "catalogueEntryCount": 30,
       "source": "https://d4e.co.jp/lights_cat/gainax",
       "sectionTitle": "电脑冒险、角色养成与手机视觉小说",
       "overviewLabel": "已核实相关游戏（含合作）",
       "auditTitle": "历史作品与合作关系核对清单",
       "auditSourceLabel": "D4历史权利目录",
       "auditLabel": "历史游戏、官方应用公告与合作边界逐项处理；不是完整公司发行目录。",
-      "auditNote": "“本轮完成”指本页列出作品及关系均有记录。D4是权利目录，MAME是机种档案；部分1990年代及Mac记录依二手目录，未核实字段保持未核实。公司所有电子游戏及每个地区再版尚未穷尽。",
-      "description": "GAINAX游戏专题：钢铁女友、Princess Maker、电脑冒险与官方协力手机视觉小说；版本、实际发行署名及核对记录。",
+      "auditNote": "2026-10-21补录：复用SEGA《第二印象》，新增Secret of Evangelion及2007 PC增补、Götzendiener和手机使徒RPG；PM2增加2024重绘／开场动画。末尾玩法清单不计主库作品或正文卡片。未核版权合作细项、PC／PSP内容等同性与部分早期移植继续保留待核。",
+      "description": "GAINAX游戏专题：本社、合作与授权关系；叙事、RPG、养成历史、重制内容及玩法参考清单。",
       "relatedSectionTitle": "问答、棋盘、策略与格斗游戏",
       "relatedCountLabel": "明确标注实际玩法",
-      "relatedIntro": "这些作品有GAINAX开发、发行或系列关联依据，但主要玩法不是四类主库的阅读冒险。以独立关联记录展示；不会把问答和即时策略伪装为纯视觉小说。",
+      "relatedIntro": "问答、策略、格斗与动作／地牢RPG按实际类型展示；发行署名与制作、授权关系分别记载。",
       "creativeProfile": {
         "thesis": "从菜单式电脑冒险、长期角色养成到动画角色的原创外传，GAINAX关联作品采用不同互动方式组织角色故事。动画原作、游戏开发与发行公司分别核实，避免把共享角色误当成同一制作主体。",
         "phases": [
@@ -33318,10 +33455,12 @@
         },
         {
           "title": "プリンセスメーカー2 Regeneration 与近期重制",
-          "status": "版本后续补查",
-          "reason": "后期授权重制须区分现行开发法人；未为未逐项核实的主机／地区发售年补空白。已记录Refine，Regeneration后续版本留待专门补查。",
+          "status": "已补新增内容版本",
+          "reason": "2024重绘及新增开场动画归g821，首批Switch／Steam共用内容身份；不把米子GAINAX当作原GAINAX本社。",
           "source": "https://blissbrain.co.jp/pm2rg/",
-          "workIds": []
+          "workIds": [
+            "g821"
+          ]
         },
         {
           "title": "鋼鉄のガールフレンド、2nd、まほろ的Mac移植／廉价再版",
@@ -33347,9 +33486,12 @@
         {
           "title": "エヴァ＆GAINAX手机服务中的益智／动作游戏、头像与待机图",
           "status": "范围说明",
-          "reason": "官方服务含多种应用，本次补入叙事应用、Nadia移植与PM2养成移植；未把服务名、动画版权或头像应用直接当作独立视觉小说。",
+          "reason": "末尾玩法清单已补若干纸牌、打字及益智应用；使徒育成RPG另建跨类型档案。全部服务应用与授权作品仍未穷尽。",
           "source": "https://tinmachine.co.jp/release.html",
-          "workIds": []
+          "workIds": [],
+          "relatedIds": [
+            "gainax-evarpg"
+          ]
         },
         {
           "title": "音楽ディスク、画集、攻略书、限定特典及广播剧",
@@ -33371,8 +33513,57 @@
           "reason": "Khara于2025/12/11公布GAINAX破产整理结束及法人消灭；不把原法人历史作品转给GAINA或其他地方公司。",
           "source": "https://www.khara.co.jp/2025/12/11/251211/",
           "workIds": []
+        },
+        {
+          "title": "新世紀エヴァンゲリオン・セカンドインプレッション",
+          "status": "共享主库收录",
+          "reason": "授权／动画协作：复用SEGA专题已有作品g927与历史发行，不新建重复游戏。SEGA发行，不等于GAINAX本社游戏。",
+          "source": "https://raido.moe/staff/sat/sat_neon_genesis_evangelion_2nd_impression.html",
+          "workIds": [
+            "g927"
+          ]
+        },
+        {
+          "title": "シークレット オブ エヴァンゲリオン",
+          "status": "共享主库收录",
+          "reason": "授权IP改编：CyberFront发行；独立原创角色与调查剧情，不以GAINAX版权反推本社开发。",
+          "source": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml",
+          "workIds": [
+            "g1276"
+          ]
+        },
+        {
+          "title": "ゲッツェンディーナー",
+          "status": "专题关联区收录",
+          "reason": "GAINAX制作、Studio Alex开发、NEC Home Electronics发行；保留实际发行方，不能记为GAINAX独立开发。",
+          "source": "https://bangumi.tv/subject/701742",
+          "workIds": [],
+          "relatedIds": [
+            "gainax-gotz"
+          ]
+        },
+        {
+          "title": "エヴァンゲリオンRPG～使徒育成計画～",
+          "status": "专题关联区收录",
+          "reason": "TinMachine手机授权作品。官方2006年9月1日公告明确为地牢探索RPG；不与绫波／真嗣育成或2010年在线RPG合并。",
+          "source": "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "gainax-evarpg"
+          ]
         }
-      ]
+      ],
+      "workContexts": {
+        "g927": "授权／动画协作：复用SEGA专题已有作品g927与历史发行，不新建重复游戏。SEGA发行，不等于GAINAX本社游戏。",
+        "g1276": "授权IP改编：CyberFront发行；独立原创角色与调查剧情，不以GAINAX版权反推本社开发。",
+        "g812": "本社开发／发行",
+        "g823": "Princess Maker系列合作；不是本社独立开发",
+        "g824": "GAINAX开发、CyberFront发行",
+        "g827": "TinMachine授权作品／GAINAX协力",
+        "g828": "TinMachine授权作品／GAINAX公认合作",
+        "g829": "TinMachine发行／GAINAX监修",
+        "g821": "GAINAX原作；2024重制由Bliss Brain发行，米子GAINAX负责新增开场动画"
+      }
     },
     {
       "id": "jhv",

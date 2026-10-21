@@ -38904,6 +38904,44 @@
         "Elf in Wonderland 2",
         "élf in Wonderland 2"
       ]
+    },
+    {
+      "id": "g1276",
+      "title": "シークレット オブ エヴァンゲリオン",
+      "originalTitle": "シークレット オブ エヴァンゲリオン",
+      "chineseTitle": "新世纪福音战士：机密档案",
+      "chineseTitleType": "站内编辑译名",
+      "titleAliases": [
+        "シークレット オブ エヴァンゲリオン",
+        "Secret of Evangelion",
+        "EVA机密档案"
+      ],
+      "firstYear": 2006,
+      "category": "视觉小说",
+      "subcategory": "剧情分支／冒险",
+      "genre": "谍报调查／多结局ADV",
+      "characters": [
+        "剣崎キョウヤ",
+        "加賀ヒトミ",
+        "碇シンジ",
+        "綾波レイ",
+        "惣流・アスカ・ラングレー"
+      ],
+      "charactersNote": "依据所引作品资料；角色身份不代表攻略路线。",
+      "charactersSource": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml",
+      "synopsis": "从NERV谍报人员的视角调查动画主线背后的事件，行动与人物关系影响故事结局。",
+      "notes": "EVA授权改编；CyberFront发行，不能列为GAINAX本社自研。PS2原作首发为2006年12月21日；2007年是PC增强版年份。开发署名以各版制作表另核。",
+      "source": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml",
+      "interactionModes": [
+        "菜单指令",
+        "选项分支",
+        "知识问答"
+      ],
+      "interactionNote": "以有限行动次数选择目的地并推进剧情分支；知识问答来自2007年PC新增模块，不表示PS2原版含问答。",
+      "interactionBasis": "来源核对",
+      "interactionSources": [
+        "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml"
+      ]
     }
   ],
   "platformReleases": [
@@ -83636,6 +83674,78 @@
       "contentRelation": "original",
       "contentNote": "独立游戏首次发行，不是系列前作的内容版本。",
       "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1276-v-original",
+      "workId": "g1276",
+      "year": 2006,
+      "platform": "PlayStation 2",
+      "publisher": "CyberFront",
+      "publisherCompanies": [
+        "CyberFront"
+      ],
+      "kind": "原作首发",
+      "voice": "未核实",
+      "differences": "2006年12月PS2原作；同期发售资料记12月21日。2007年PC版为后续增强内容。",
+      "source": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml",
+      "contentVersionId": "g1276-c-original",
+      "contentRelation": "original",
+      "contentNote": "独立作品的首次内容发行。",
+      "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1276-c-pc2007-r1",
+      "workId": "g1276",
+      "year": 2007,
+      "platform": "Windows",
+      "publisher": "CyberFront",
+      "publisherCompanies": [
+        "CyberFront"
+      ],
+      "kind": "2007 PC增强内容",
+      "voice": "未核实",
+      "differences": "2007年6月28日PC版新增事件CG与EVA知识问答。PSP同期产品虽也有增补，未完成逐项内容对照，本次不擅自关联同一内容ID。",
+      "source": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml",
+      "contentVersionId": "g1276-c-pc2007",
+      "contentRelation": "added",
+      "contentNote": "首次新增内容批次；不将同批多平台重复计为内容版本。",
+      "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g821-c-regeneration-r1",
+      "workId": "g821",
+      "year": 2024,
+      "platform": "Nintendo Switch",
+      "publisher": "Bliss Brain",
+      "publisherCompanies": [
+        "Bliss Brain"
+      ],
+      "kind": "Regeneration重绘与新增动画",
+      "voice": "未核实",
+      "differences": "以2004 Refine为制作基础，重绘关键图像、度假及结局画面，新增米子GAINAX制作的开场动画。对照原作内容身份；不推定旧Refine发行已完成内容核验。Bliss Brain发行；米子GAINAX与原GAINAX是不同法人。首批Switch／Steam于2024年7月11日发行。后发PS版本存在删改，不作为同批新增平台。",
+      "source": "https://blissbrain.co.jp/pm2rg/",
+      "contentVersionId": "g821-c-regeneration",
+      "contentRelation": "added",
+      "contentNote": "首次新增内容批次；不将同批多平台重复计为内容版本。",
+      "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g821-c-regeneration-r2",
+      "workId": "g821",
+      "year": 2024,
+      "platform": "Windows（Steam）",
+      "publisher": "Bliss Brain",
+      "publisherCompanies": [
+        "Bliss Brain"
+      ],
+      "kind": "Regeneration重绘与新增动画",
+      "voice": "未核实",
+      "differences": "以2004 Refine为制作基础，重绘关键图像、度假及结局画面，新增米子GAINAX制作的开场动画。对照原作内容身份；不推定旧Refine发行已完成内容核验。Bliss Brain发行；米子GAINAX与原GAINAX是不同法人。首批Switch／Steam于2024年7月11日发行。后发PS版本存在删改，不作为同批新增平台。",
+      "source": "https://blissbrain.co.jp/pm2rg/",
+      "contentVersionId": "g821-c-regeneration",
+      "contentRelation": "added",
+      "contentNote": "首次新增内容批次；不将同批多平台重复计为内容版本。",
+      "releaseRole": "contentDebut"
     }
   ],
   "contentVersions": [
@@ -104233,6 +104343,58 @@
         "g1275-v-original"
       ],
       "addedContent": []
+    },
+    {
+      "id": "g1276-c-original",
+      "workId": "g1276",
+      "label": "原作／首批内容",
+      "firstYear": 2006,
+      "basis": "original",
+      "evidence": "2006年12月PS2原作；同期发售资料记12月21日。2007年PC版为后续增强内容。",
+      "source": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml",
+      "evidenceReleaseIds": [
+        "g1276-v-original"
+      ],
+      "addedContent": []
+    },
+    {
+      "id": "g1276-c-pc2007",
+      "workId": "g1276",
+      "label": "2007 PC增强内容",
+      "firstYear": 2007,
+      "basis": "added",
+      "comparedTo": "g1276-c-original",
+      "evidence": "2007年6月28日PC版新增事件CG与EVA知识问答。PSP同期产品虽也有增补，未完成逐项内容对照，本次不擅自关联同一内容ID。",
+      "source": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml",
+      "evidenceReleaseIds": [
+        "g1276-c-pc2007-r1"
+      ],
+      "addedContent": [
+        {
+          "description": "2007年6月28日PC版新增事件CG与EVA知识问答。PSP同期产品虽也有增补，未完成逐项内容对照，本次不擅自关联同一内容ID。",
+          "source": "https://www.4gamer.net/preview/secret_of_eva/secret_of_eva.shtml"
+        }
+      ]
+    },
+    {
+      "id": "g821-c-regeneration",
+      "workId": "g821",
+      "label": "Regeneration重绘与新增动画",
+      "firstYear": 2024,
+      "basis": "added",
+      "comparedTo": "g821-c-original",
+      "evidence": "以2004 Refine为制作基础，重绘关键图像、度假及结局画面，新增米子GAINAX制作的开场动画。对照原作内容身份；不推定旧Refine发行已完成内容核验。Bliss Brain发行；米子GAINAX与原GAINAX是不同法人。首批Switch／Steam于2024年7月11日发行。后发PS版本存在删改，不作为同批新增平台。",
+      "source": "https://blissbrain.co.jp/pm2rg/",
+      "evidenceReleaseIds": [
+        "g821-c-regeneration-r1",
+        "g821-c-regeneration-r2"
+      ],
+      "addedContent": [
+        {
+          "description": "以2004 Refine为制作基础，重绘关键图像、度假及结局画面，新增米子GAINAX制作的开场动画。对照原作内容身份；不推定旧Refine发行已完成内容核验。Bliss Brain发行；米子GAINAX与原GAINAX是不同法人。首批Switch／Steam于2024年7月11日发行。后发PS版本存在删改，不作为同批新增平台。",
+          "source": "https://blissbrain.co.jp/pm2rg/"
+        }
+      ]
     }
   ]
 }
