@@ -55506,9 +55506,9 @@
       "voice": "有（部分）",
       "differences": "2014-07-25《超昂天使エスカレイヤー・リブート》发行；按原作重制归档。",
       "source": "https://www.alicesoft.com/escalayerreboot/",
-      "contentVersionId": null,
-      "contentRelation": "unverified",
-      "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+      "contentVersionId": "g502-c-2014-review",
+      "contentRelation": "added",
+      "contentNote": "官方工作人员回顾明确提及与旧作比较的重新绘制；以游戏重绘美术作为内容增量，2014-07-25首次发行。",
       "releaseRole": "legacy"
     },
     {
@@ -56640,9 +56640,9 @@
       "publisherCompanies": [
         "Alicesoft"
       ],
-      "contentVersionId": null,
-      "contentRelation": "unverified",
-      "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+      "contentVersionId": "g548-c-2013-review",
+      "contentRelation": "added",
+      "contentNote": "官方明确以新剧本、图形及声音重新构筑1989年原作，并重做战斗系统；不以兼容或分辨率变化作为准入依据。",
       "releaseRole": "legacy"
     },
     {
@@ -104015,6 +104015,44 @@
         "g1273-v-original"
       ],
       "addedContent": []
+    },
+    {
+      "id": "g548-c-2013-review",
+      "workId": "g548",
+      "label": "ランス01 光をもとめて",
+      "firstYear": 2013,
+      "basis": "added",
+      "evidence": "官方明确以新剧本、图形及声音重新构筑1989年原作，并重做战斗系统；不以兼容或分辨率变化作为准入依据。",
+      "source": "https://www.alicesoft.com/rance01/story.html",
+      "evidenceReleaseIds": [
+        "g548-v2"
+      ],
+      "addedContent": [
+        {
+          "description": "官方明确以新剧本、图形及声音重新构筑1989年原作，并重做战斗系统；不以兼容或分辨率变化作为准入依据。",
+          "source": "https://www.alicesoft.com/rance01/story.html"
+        }
+      ],
+      "comparedTo": "g548-c-original"
+    },
+    {
+      "id": "g502-c-2014-review",
+      "workId": "g502",
+      "label": "超昂天使エスカレイヤー・リブート",
+      "firstYear": 2014,
+      "basis": "added",
+      "evidence": "官方工作人员回顾明确提及与旧作比较的重新绘制；以游戏重绘美术作为内容增量，2014-07-25首次发行。",
+      "source": "https://blog.alicesoft.com/archives/4121088.html",
+      "evidenceReleaseIds": [
+        "g502-v2"
+      ],
+      "addedContent": [
+        {
+          "description": "官方工作人员回顾明确提及与旧作比较的重新绘制；以游戏重绘美术作为内容增量，2014-07-25首次发行。",
+          "source": "https://blog.alicesoft.com/archives/4121088.html"
+        }
+      ],
+      "comparedTo": "g502-c-original"
     }
   ]
 }

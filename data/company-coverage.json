@@ -9194,10 +9194,10 @@
     {
       "id": "alicesoft",
       "name": "Alicesoft",
-      "checkedAt": "2026-10-04",
-      "status": "叙事作品已转入主库：88部作品、186条版本；专题累计234部",
-      "scope": "已整理234部作品：Alicesoft本品牌159部、Alice Blue 6部、AliceNoir 2部、ChampionSoft前身关联66部、历史合作品牌IMYUIC 1部；主库关联126部，专题补充108部。叙事／养成冒险已转入四类主库，包括文字输入和菜单指令游戏，具体玩法及混合系统保留说明；跨主库与全部专题去重，厂商全目录仍未完成。",
-      "versionScope": "专题累计413条版本：主库关联234条、专题补充179条。本次将88部叙事作品及186条已有发行记录转入主库，沿用机种、实际发行署名、配音状态、日期差异和来源；移植、再版和扩充不增加作品数，共用盘仍合列。",
+      "checkedAt": "2026-10-21",
+      "status": "本轮清单已对照；补齐9个新增内容身份、1条首次内容发行",
+      "scope": "现有234个作品身份保持：主库引用126部、专题关联108部，包含Alicesoft、关联品牌及ChampionSoft历史档案。按本轮清单补充9个重制／扩展内容身份，不重复建立已有作品；完整逐项对照见末尾玩法总表。",
+      "versionScope": "采用作品、内容版本、平台发行三层口径；本轮补录2012年Magnum首发，并核实既有重制记录的具体增量。普通移植及合集不新增内容；其余未核历史发行继续待核。",
       "publisherNote": "本专题区分Alicesoft、Alice Blue、AliceNoir、ChampionSoft历史沿革和IMYUIC历史合作。叙事／养成冒险及指令ADV统一引用主数据库，原型、杂志盘与混合玩法保留原归档说明；外部出版商改版仍保留原署名。既有两款1988年教育软件的署名冲突及1982年记录的商业署名疑点继续保留。非官方移植工具包和改造版不记为Alicesoft正式发行。",
       "workIds": [
         "g075",
@@ -9425,8 +9425,8 @@
       "sectionTitle": "主库叙事作品：126部（含指令冒险、养成与历史关联）",
       "overviewLabel": "已整理作品（含指令、RPG／SLG与历史关联）",
       "auditTitle": "已收录作品与后续目录",
-      "auditLabel": "88部专题叙事作品及186条版本已转入主数据库；核对清单引用统一作品ID。",
-      "auditNote": "专题累计234部／413条版本：主库关联126部／234条，专题补充108部／179条。品牌分项为Alicesoft 159部、Alice Blue 6部、AliceNoir 2部、ChampionSoft历史关联66部及IMYUIC历史合作1部。全库现为593部／1108条，本品牌主库实际发行署名作品为91部。转入作品保留原始信息与具体玩法，专题不另存同一作品副本；不同机种日期、共用盘和未发行计划均注明。",
+      "auditLabel": "本轮逐项对照与原有档案共用作品ID；补充重制／扩展的内容身份。",
+      "auditNote": "2026-10-21：独立作品新增0部；新增内容身份9个、平台发行1条。兰斯01／02／03、Magnum、わいどにょ、夜が来る！R、Escalayer Reboot、Only you PC重制及PS2新增剧本／配音分别归档。合辑不重复计作；历史条目和实际发行署名保留。",
       "entries": [
         {
           "title": "妻みぐい3",
@@ -11956,9 +11956,99 @@
           "relatedIds": [],
           "reason": "原作的非官方改造版，由爱好者制作；不记为Alicesoft正式发行新作品或厂商版本。",
           "source": "https://alicecottage1989.blog.jp/archives/20085824.html"
+        },
+        {
+          "title": "ランス01 光をもとめて（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [
+            "g548"
+          ],
+          "relatedIds": [],
+          "reason": "官方明确以新剧本、图形及声音重新构筑1989年原作，并重做战斗系统；不以兼容或分辨率变化作为准入依据。",
+          "source": "https://www.alicesoft.com/rance01/story.html"
+        },
+        {
+          "title": "ランス02 -反逆の少女たち-（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [],
+          "relatedIds": [
+            "alicesoft-extra-rance2"
+          ],
+          "reason": "沿用旧构图重新制作全彩视觉CG，保留原作大部分剧本与系统；2009-12-18随《アリス2010》首次发行。",
+          "source": "https://www.alicesoft.com/alice2010/cnt01.html"
+        },
+        {
+          "title": "ランス03 リーザス陥落（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [],
+          "relatedIds": [
+            "alicesoft-extra-rance3"
+          ],
+          "reason": "重构RanceIII并首次加入角色录音；官方规格为主人公以外全语音，首次发行2015-08-28。",
+          "source": "https://www.alicesoft.com/rance03/"
+        },
+        {
+          "title": "ランス・クエスト マグナム（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [],
+          "relatedIds": [
+            "alicesoft-extra-rancequest"
+          ],
+          "reason": "扩展包新增任务、战役剧本、新人物及既有人物的新故事，包含导く者篇与AL教篇；不是可脱离本体运行的独立续作。",
+          "source": "https://www.alicesoft.com/rance8/magnum_ywm01.html"
+        },
+        {
+          "title": "わいどにょ（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [],
+          "relatedIds": [
+            "alicesoft-extra-mamanyonyo"
+          ],
+          "reason": "新增上杉谦信、四方堂鸣香、战姬、雷梅迪亚及雾崎枫等参战角色，并扩大出击区域；准入依据为新角色内容，并非单纯宽屏化。",
+          "source": "https://www.alicesoft.com/alice2010/cnt03.html"
+        },
+        {
+          "title": "夜が来る！Remastered（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [],
+          "relatedIds": [
+            "alicesoft-extra-yorugakuru"
+          ],
+          "reason": "官方明确本篇故事无增删，但声音全部重新录制；以新录音建立内容版本，不以高清画面或系统便利性单独判版。先行下载为2024-04-19。",
+          "source": "https://www.alicesoft.com/yorugakurur/"
+        },
+        {
+          "title": "超昂天使エスカレイヤー・リブート（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [
+            "g502"
+          ],
+          "relatedIds": [],
+          "reason": "官方工作人员回顾明确提及与旧作比较的重新绘制；以游戏重绘美术作为内容增量，2014-07-25首次发行。",
+          "source": "https://blog.alicesoft.com/archives/4121088.html"
+        },
+        {
+          "title": "Only you -リ・クルス-（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [],
+          "relatedIds": [
+            "alicesoft-extra-onlyyou"
+          ],
+          "reason": "馆藏对照记录确认重新绘制CG并增加新剧本及音乐；首发日期以官方报导资料2001-07-26交叉核对。",
+          "source": "https://alicecottage1989.blog.jp/archives/37747133.html"
+        },
+        {
+          "title": "Only you リベルクルス（2026-10-21内容核对）",
+          "status": "新增内容身份，沿用作品ID",
+          "workIds": [],
+          "relatedIds": [
+            "alicesoft-extra-onlyyou"
+          ],
+          "reason": "相对2001年PC重制新增剧本与角色配音，保留实际发行方GeneX；2003及2005再发行不另建内容身份。",
+          "source": "https://alicecottage1989.blog.jp/archives/37747133.html"
         }
       ],
-      "description": "Alicesoft及历史关联专题：234部作品、413条版本，含文字与菜单指令、短篇冒险、问答、RPG／SLG、经营模拟、棋类与动作游戏，保留中文检索名、原名、人物和来源。",
+      "description": "Alicesoft及历史关联专题：234个作品身份；本轮清单对照及重制／扩展内容分层核实。",
       "creativeProfile": {
         "thesis": "Alicesoft的叙事与玩法长期并行。本专题共234部作品，含本品牌159部、Alice Blue 6部、AliceNoir 2部、ChampionSoft历史关联66部及IMYUIC历史合作1部。文字输入、菜单行动、养成、问答、经营、棋类和战略各有独立形式；完整作品、可玩附盘、移植与非游戏栏目分别确认。历史署名、机种发行日期冲突和资料缺口保留说明。",
         "phases": [
@@ -12337,10 +12427,25 @@
               "voice": "未核实",
               "differences": "2018-09-28。整合本篇与追加剧本、任务及系统改进；2012 年 Magnum 扩充包不另算独立作品。",
               "source": "https://www.alicesoft.com/rance8/",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-rancequest-c-2012-review",
+              "contentRelation": "same",
+              "contentNote": "2018整合版包含2012年Magnum扩展内容；未据整合包装另建新增内容，后续补丁不在本次逐项核对范围。",
               "releaseRole": "legacy"
+            },
+            {
+              "id": "alicesoft-extra-rancequest-v-magnum2012",
+              "workId": "alicesoft-extra-rancequest",
+              "year": 2012,
+              "platform": "Windows",
+              "publisher": "Alicesoft",
+              "kind": "扩展包首发",
+              "voice": "无",
+              "differences": "2012-02-24 首发；需要《兰斯·Quest》本体，盒装和同期下载合记。",
+              "source": "https://www.alicesoft.com/rance8/magnum.html",
+              "releaseRole": "contentDebut",
+              "contentVersionId": "alicesoft-extra-rancequest-c-2012-review",
+              "contentRelation": "added",
+              "contentNote": "扩展包新增任务、战役剧本、新人物及既有人物的新故事，包含导く者篇与AL教篇；不是可脱离本体运行的独立续作。"
             }
           ],
           "contentVersions": [
@@ -12356,6 +12461,25 @@
                 "alicesoft-extra-rancequest-v1"
               ],
               "addedContent": []
+            },
+            {
+              "id": "alicesoft-extra-rancequest-c-2012-review",
+              "workId": "alicesoft-extra-rancequest",
+              "label": "ランス・クエスト マグナム",
+              "firstYear": 2012,
+              "basis": "added",
+              "evidence": "扩展包新增任务、战役剧本、新人物及既有人物的新故事，包含导く者篇与AL教篇；不是可脱离本体运行的独立续作。",
+              "source": "https://www.alicesoft.com/rance8/magnum_ywm01.html",
+              "evidenceReleaseIds": [
+                "alicesoft-extra-rancequest-v-magnum2012"
+              ],
+              "addedContent": [
+                {
+                  "description": "扩展包新增任务、战役剧本、新人物及既有人物的新故事，包含导く者篇与AL教篇；不是可脱离本体运行的独立续作。",
+                  "source": "https://www.alicesoft.com/rance8/magnum_ywm01.html"
+                }
+              ],
+              "comparedTo": "alicesoft-extra-rancequest-c-original"
             }
           ],
           "interactionModes": [
@@ -13997,9 +14121,9 @@
               "voice": "未核实",
               "differences": "2009-12-18 随《Alice 2010》发行；改为 1280×720，扩展出击区域与角色，旧版存档不兼容。合集首发日期依据：https://www.alicesoft.com/alice2010/。",
               "source": "https://www.alicesoft.com/alice2010/cnt03.html",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-mamanyonyo-c-2009-review",
+              "contentRelation": "added",
+              "contentNote": "新增上杉谦信、四方堂鸣香、战姬、雷梅迪亚及雾崎枫等参战角色，并扩大出击区域；准入依据为新角色内容，并非单纯宽屏化。",
               "releaseRole": "legacy"
             }
           ],
@@ -14016,6 +14140,25 @@
                 "alicesoft-extra-mamanyonyo-v1"
               ],
               "addedContent": []
+            },
+            {
+              "id": "alicesoft-extra-mamanyonyo-c-2009-review",
+              "workId": "alicesoft-extra-mamanyonyo",
+              "label": "わいどにょ",
+              "firstYear": 2009,
+              "basis": "added",
+              "evidence": "新增上杉谦信、四方堂鸣香、战姬、雷梅迪亚及雾崎枫等参战角色，并扩大出击区域；准入依据为新角色内容，并非单纯宽屏化。",
+              "source": "https://www.alicesoft.com/alice2010/cnt03.html",
+              "evidenceReleaseIds": [
+                "alicesoft-extra-mamanyonyo-v2"
+              ],
+              "addedContent": [
+                {
+                  "description": "新增上杉谦信、四方堂鸣香、战姬、雷梅迪亚及雾崎枫等参战角色，并扩大出击区域；准入依据为新角色内容，并非单纯宽屏化。",
+                  "source": "https://www.alicesoft.com/alice2010/cnt03.html"
+                }
+              ],
+              "comparedTo": "alicesoft-extra-mamanyonyo-c-original"
             }
           ],
           "interactionModes": [
@@ -14229,9 +14372,9 @@
               "voice": "未核实",
               "differences": "2024-04-19 先行下载；5 月 24 日盒装与一般下载发行。同一重制内容合记一条，增加高清画面、重录声音与便利设置，剧情不变。",
               "source": "https://www.alicesoft.com/yorugakurur/",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-yorugakuru-c-2024-review",
+              "contentRelation": "added",
+              "contentNote": "官方明确本篇故事无增删，但声音全部重新录制；以新录音建立内容版本，不以高清画面或系统便利性单独判版。先行下载为2024-04-19。",
               "releaseRole": "legacy"
             }
           ],
@@ -14248,6 +14391,25 @@
                 "alicesoft-extra-yorugakuru-v1"
               ],
               "addedContent": []
+            },
+            {
+              "id": "alicesoft-extra-yorugakuru-c-2024-review",
+              "workId": "alicesoft-extra-yorugakuru",
+              "label": "夜が来る！Remastered",
+              "firstYear": 2024,
+              "basis": "added",
+              "evidence": "官方明确本篇故事无增删，但声音全部重新录制；以新录音建立内容版本，不以高清画面或系统便利性单独判版。先行下载为2024-04-19。",
+              "source": "https://www.alicesoft.com/yorugakurur/",
+              "evidenceReleaseIds": [
+                "alicesoft-extra-yorugakuru-v2"
+              ],
+              "addedContent": [
+                {
+                  "description": "官方明确本篇故事无增删，但声音全部重新录制；以新录音建立内容版本，不以高清画面或系统便利性单独判版。先行下载为2024-04-19。",
+                  "source": "https://www.alicesoft.com/yorugakurur/"
+                }
+              ],
+              "comparedTo": "alicesoft-extra-yorugakuru-c-original"
             }
           ],
           "interactionModes": [
@@ -14676,9 +14838,9 @@
               "voice": "无",
               "differences": "2001-07-26《Only you -リ・クルス-》发行，调整并增补剧情。官网明确标注无角色配音。",
               "source": "https://www.alicesoft.com/onlyyou/media.html",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-onlyyou-c-2001-review",
+              "contentRelation": "added",
+              "contentNote": "馆藏对照记录确认重新绘制CG并增加新剧本及音乐；首发日期以官方报导资料2001-07-26交叉核对。",
               "releaseRole": "legacy"
             },
             {
@@ -14691,9 +14853,9 @@
               "voice": "有",
               "differences": "2002-10-31《Only you リベルクルス》；发行署名为GeneX（ジェネックス），增加角色配音和动画并调整画面。廉价版不计新作品。",
               "source": "https://alicecottage1989.blog.jp/archives/37863815.html",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-onlyyou-c-2002-review",
+              "contentRelation": "added",
+              "contentNote": "相对2001年PC重制新增剧本与角色配音，保留实际发行方GeneX；2003及2005再发行不另建内容身份。",
               "releaseRole": "legacy"
             },
             {
@@ -14706,9 +14868,9 @@
               "voice": "有",
               "differences": "2003-04-24《Only you リベルクルス》；发行署名为GeneX（ジェネックス），增加角色配音和动画并调整画面。廉价版不计新作品。",
               "source": "https://alicecottage1989.blog.jp/archives/37863815.html",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-onlyyou-c-2002-review",
+              "contentRelation": "same",
+              "contentNote": "既有廉价／再发行沿用PS2新增剧本和配音内容，不重复计内容版本。",
               "releaseRole": "legacy"
             },
             {
@@ -14721,9 +14883,9 @@
               "voice": "有",
               "differences": "2005-10-20《Only you リベルクルス》；发行署名为GeneX（ジェネックス），增加角色配音和动画并调整画面。廉价版不计新作品。",
               "source": "https://alicecottage1989.blog.jp/archives/37863815.html",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-onlyyou-c-2002-review",
+              "contentRelation": "same",
+              "contentNote": "既有廉价／再发行沿用PS2新增剧本和配音内容，不重复计内容版本。",
               "releaseRole": "legacy"
             }
           ],
@@ -14740,6 +14902,44 @@
                 "alicesoft-extra-onlyyou-v1"
               ],
               "addedContent": []
+            },
+            {
+              "id": "alicesoft-extra-onlyyou-c-2001-review",
+              "workId": "alicesoft-extra-onlyyou",
+              "label": "Only you -リ・クルス-",
+              "firstYear": 2001,
+              "basis": "added",
+              "evidence": "馆藏对照记录确认重新绘制CG并增加新剧本及音乐；首发日期以官方报导资料2001-07-26交叉核对。",
+              "source": "https://alicecottage1989.blog.jp/archives/37747133.html",
+              "evidenceReleaseIds": [
+                "alicesoft-extra-onlyyou-v2"
+              ],
+              "addedContent": [
+                {
+                  "description": "馆藏对照记录确认重新绘制CG并增加新剧本及音乐；首发日期以官方报导资料2001-07-26交叉核对。",
+                  "source": "https://alicecottage1989.blog.jp/archives/37747133.html"
+                }
+              ],
+              "comparedTo": "alicesoft-extra-onlyyou-c-original"
+            },
+            {
+              "id": "alicesoft-extra-onlyyou-c-2002-review",
+              "workId": "alicesoft-extra-onlyyou",
+              "label": "Only you リベルクルス",
+              "firstYear": 2002,
+              "basis": "added",
+              "evidence": "相对2001年PC重制新增剧本与角色配音，保留实际发行方GeneX；2003及2005再发行不另建内容身份。",
+              "source": "https://alicecottage1989.blog.jp/archives/37747133.html",
+              "evidenceReleaseIds": [
+                "alicesoft-extra-onlyyou-v3"
+              ],
+              "addedContent": [
+                {
+                  "description": "相对2001年PC重制新增剧本与角色配音，保留实际发行方GeneX；2003及2005再发行不另建内容身份。",
+                  "source": "https://alicecottage1989.blog.jp/archives/37747133.html"
+                }
+              ],
+              "comparedTo": "alicesoft-extra-onlyyou-c-2001-review"
             }
           ],
           "interactionModes": [
@@ -15257,9 +15457,9 @@
               "source": "https://www.alicesoft.com/alice2010/cnt01.html",
               "id": "alicesoft-extra-rance2-v3",
               "workId": "alicesoft-extra-rance2",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-rance2-c-2009-review",
+              "contentRelation": "added",
+              "contentNote": "沿用旧构图重新制作全彩视觉CG，保留原作大部分剧本与系统；2009-12-18随《アリス2010》首次发行。",
               "releaseRole": "legacy"
             },
             {
@@ -15351,6 +15551,25 @@
                 "alicesoft-extra-rance2-v1"
               ],
               "addedContent": []
+            },
+            {
+              "id": "alicesoft-extra-rance2-c-2009-review",
+              "workId": "alicesoft-extra-rance2",
+              "label": "ランス02 -反逆の少女たち-",
+              "firstYear": 2009,
+              "basis": "added",
+              "evidence": "沿用旧构图重新制作全彩视觉CG，保留原作大部分剧本与系统；2009-12-18随《アリス2010》首次发行。",
+              "source": "https://www.alicesoft.com/alice2010/cnt01.html",
+              "evidenceReleaseIds": [
+                "alicesoft-extra-rance2-v3"
+              ],
+              "addedContent": [
+                {
+                  "description": "沿用旧构图重新制作全彩视觉CG，保留原作大部分剧本与系统；2009-12-18随《アリス2010》首次发行。",
+                  "source": "https://www.alicesoft.com/alice2010/cnt01.html"
+                }
+              ],
+              "comparedTo": "alicesoft-extra-rance2-c-original"
             }
           ],
           "interactionModes": [
@@ -15433,9 +15652,9 @@
               "source": "https://www.alicesoft.com/rance03/",
               "id": "alicesoft-extra-rance3-v3",
               "workId": "alicesoft-extra-rance3",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "alicesoft-extra-rance3-c-2015-review",
+              "contentRelation": "added",
+              "contentNote": "重构RanceIII并首次加入角色录音；官方规格为主人公以外全语音，首次发行2015-08-28。",
               "releaseRole": "legacy"
             },
             {
@@ -15482,6 +15701,25 @@
                 "alicesoft-extra-rance3-v1"
               ],
               "addedContent": []
+            },
+            {
+              "id": "alicesoft-extra-rance3-c-2015-review",
+              "workId": "alicesoft-extra-rance3",
+              "label": "ランス03 リーザス陥落",
+              "firstYear": 2015,
+              "basis": "added",
+              "evidence": "重构RanceIII并首次加入角色录音；官方规格为主人公以外全语音，首次发行2015-08-28。",
+              "source": "https://www.alicesoft.com/rance03/",
+              "evidenceReleaseIds": [
+                "alicesoft-extra-rance3-v3"
+              ],
+              "addedContent": [
+                {
+                  "description": "重构RanceIII并首次加入角色录音；官方规格为主人公以外全语音，首次发行2015-08-28。",
+                  "source": "https://www.alicesoft.com/rance03/"
+                }
+              ],
+              "comparedTo": "alicesoft-extra-rance3-c-original"
             }
           ],
           "interactionModes": [
@@ -20218,8 +20456,8 @@
       "relatedSectionTitle": "专题跨类型作品：108部",
       "relatedCountLabel": "独立作品；再版及扩充合并",
       "relatedIntro": "本区保留108部角色扮演／战略模拟、益智桌面、动作休闲、经营及棋盘派对游戏；按现有主库四类收录口径，叙事／养成冒险已统一引用主库记录。再版、扩充及同盘栏目按既有归档规则整理，存疑发行署名与具体玩法继续注明。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>专题合计234部（Alicesoft 159部、Alice Blue 6部、AliceNoir 2部、ChampionSoft历史关联66部、IMYUIC历史合作1部）；主库关联126部，专题补充108部；主库实际Alicesoft发行署名91部。</strong></p>",
-      "versionCountLabel": "已整理版本记录（存疑处注明）",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>专题234个作品身份：主库引用126部、专题关联108部。包含前身及关联品牌历史档案；本轮不重复新增作品，补9个内容身份与1条首次发行。</strong></p>",
+      "versionCountLabel": "平台发行记录（与内容版本分开）",
       "includeCommandGames": true,
       "legacyAnchors": {
         "alicesoft-extra-toushin2after": "g509",

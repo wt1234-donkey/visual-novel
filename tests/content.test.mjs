@@ -17,7 +17,11 @@ test('platform filtering retains release year and one shared content identity',(
 
 test('unverified historical releases stay visible without content version inflation',()=>{
   const result=filterCatalogue(data,{contentStatus:'unverified'});
-  assert.equal(result.reduce((sum,x)=>sum+x.platformReleases.length,0),964);
+  assert.equal(result.reduce((sum,x)=>sum+x.platformReleases.length,0),
+    data.platformReleases.filter(r=>r.contentRelation==='unverified').length);
+  // The two Alicesoft remakes now have sourced additions; unrelated unknowns remain unknown.
+  for (const id of ['g548-v2','g502-v2']) assert.ok(!result.some(x=>x.platformReleases.some(r=>r.id===id)));
+  assert.ok(result.some(x=>x.platformReleases.some(r=>r.id==='g211-v2')));
   assert.ok(result.every(x=>x.contentVersions.length===0));
   assert.ok(result.every(x=>x.platformReleases.every(r=>r.contentVersionId===null)));
   const linked=filterCatalogue(data,{contentStatus:'linked'});
