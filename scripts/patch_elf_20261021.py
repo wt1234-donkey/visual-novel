@@ -42,9 +42,9 @@ dk["platformReleases"].append({
     "contentRelation": "added", "contentNote": "已核实3D美术资源和16关挑战模式，不重复建新作。",
     "releaseRole": "contentDebut"
 })
-dk["notes"] = "跨类型策略RPG；2007年Windows 3D重制与1994年原版属于同一作品，新增3D场景与16关挑战模式。其他旧移植待核。"
-dk["interactionNote"] = "原作战术部署与战斗指令；2007重制将城镇与战场改为3D，并增加挑战关卡。跨版本概览不意味着原作也使用3D。"
-dk["interactionSources"] = [dk["source"], dk_review, dk_guide]
+# Preserve legacy DK4 related-work notes.
+# Preserve legacy DK4 interaction note.
+# Preserve legacy DK4 interaction sources.
 
 data["contentVersions"].append({
     "id": "g325-c-2010-naked", "workId": "g325",
