@@ -99,3 +99,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-22 A—Z第二批使用 `entity-creator-a2-review-20261022.json` 与同名Markdown；从Alchemist连续到Alicesoft，累计12／32个主体完成证据分流，新增40条ALICESOFT制作品牌。没有身份或关系订正；子品牌、前身与75条旧专题待核不继承制作职责，原作／关联位置不变。首批精确差异固定至其应用快照，当前批次单独对照baseCommit检验。
 
 2026-10-22 A—Z第三批使用 `entity-creator-a3-review-20261022.json` 与同名Markdown；连续核查第13—20个主体，追加American Laser Games两作制作、Applique子品牌4作及本品牌8作制作品牌。身份关系不改，子品牌不解除母品牌专题待核，2016先行LVN与后续扩充的职责不混用；ANIPLEX.EXE的製作／制作资料差异继续具名待核。
+
+2026-10-23 A—Z第四批使用 `entity-creator-a4-review-20261023.json` 与同名Markdown；连续核查AQUAPLUS公司、同名品牌、ARIA、Arsys Software及ASa Project，累计25／32。新增3条具名职责（2部作品），独立确认ARIA品牌身份并显式保留旧发行职责；ASa Project既有22条制作品牌不重复录入。公司／品牌不同维度按作品去重，原作与后发主机职责分开，旧专题待核、实体关系和迁移基线不改。

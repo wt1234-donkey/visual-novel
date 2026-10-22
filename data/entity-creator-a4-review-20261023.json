@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "f6f53b6faa6bc3ce2091e8cc67c782967fc2a303",
+  "audit": "data/entity-creator-a4-review-20261023.md",
+  "previousReview": "data/entity-creator-a3-review-20261022.md",
+  "policy": "连续核查第21—25个A主体，累计25／32仅表示证据分流进度；独立追加3条职责及1项ARIA品牌身份订正。保留原始署名、既有身份ID、关系、主库页面及迁移基线，不把公司与同名品牌合并。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZD-I01",
+      "entityId": "entity-name-5ba1ee4df514",
+      "rawName": "ARIA",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://aria-soft.com/about"
+      ],
+      "note": "官网关于页明确自称制作家用机游戏的软件品牌ARIA。仅订正品牌身份，稳定ID、原始发行及既有职责不变；不追加母公司／兄弟品牌关系，不把后发主机版创作倒填为AUGUST的PC原作制作。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZD-C01",
+      "entityId": "entity-aquaplus",
+      "dossierId": null,
+      "workId": "g037",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "AQUAPLUS",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://store.steampowered.com/app/3380520/ToHeart/",
+      "note": "官方链接的Steam商店具名开发者AQUAPLUS；公司发布稿确认2025年新生版产品，官网所链制作人／导演访谈说明开发过程。交叉核对后仅给既有2025重制作品g037登记公司原作制作，不回填1997年g026或Leaf其他作品；不认定全部工序独立完成，不改Steam发行内容关系。"
+    },
+    {
+      "reviewId": "AZD-C02",
+      "entityId": "entity-aquaplus_brand",
+      "dossierId": null,
+      "workId": "g159",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "AQUAPLUS",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://aquaplus.jp/th2/html/products.html",
+      "note": "2004原官方产品页明确PS2首发产品及制作人员，包含制作人、导演、原画、剧本、音乐；登记该原作的AQUAPLUS制作品牌。2005 Leaf XRATED及后发DX内容不借此改写，Leaf专题职责不继承，公司同名不自动新增职责。"
+    },
+    {
+      "reviewId": "AZD-C03",
+      "entityId": "entity-aquaplus_brand",
+      "dossierId": null,
+      "workId": "g037",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "AQUAPLUS",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.famitsu.com/article/202502/34702",
+      "note": "2025新生版官网直接链接制作人下川直哉及导演鷲見努的开发访谈，配合原官网产品及具名开发者商店资料，登记AQUAPLUS制作品牌；与公司制作是两个维度，按作品ID去重，不当作两部游戏。不扩展到1997原作、DLC制作分工或其他Leaf作品。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-aquaplus",
+      "name": "AQUAPLUS",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://store.steampowered.com/app/3380520/ToHeart/",
+        "https://aquaplus.jp/toheart/",
+        "https://prtimes.jp/main/html/rd/p/000000169.000046382.html",
+        "https://www.famitsu.com/article/202502/34702",
+        "https://aquaplus.jp/outline/"
+      ],
+      "reason": "仅登记2025重制作品g037的公司原作制作；公司与同名品牌保留独立ID。其他历史产品的品牌署名、版权或现时经营关系不能转作公司的逐作开发证明。",
+      "workIds": [
+        "g037"
+      ],
+      "reviewId": "AZD-D01"
+    },
+    {
+      "entityId": "entity-aquaplus_brand",
+      "name": "AQUAPLUS",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://aquaplus.jp/th2/html/products.html",
+        "https://aquaplus.jp/toheart/",
+        "https://www.famitsu.com/article/202502/34702",
+        "https://blog.aquaplus.jp/archives/2352",
+        "https://leaf.aquaplus.jp/product/wa2ic/",
+        "https://aquaplus.jp/wa2/"
+      ],
+      "reason": "登记g159、g037制作品牌。g039原始Leaf / AQUAPLUS联合发行来源是2012原声盘公告，只能确认关联，未证明2010原作品牌制作分工；原站入口本轮显示年龄确认，后发全年龄版不能回填原作。其余6部既有后发发行作品保留原职责。",
+      "workIds": [
+        "g026",
+        "g150",
+        "g166",
+        "g151",
+        "g334",
+        "g337",
+        "g159",
+        "g039",
+        "g037"
+      ],
+      "reviewId": "AZD-D02"
+    },
+    {
+      "entityId": "entity-name-5ba1ee4df514",
+      "name": "ARIA",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://aria-soft.com/about",
+        "https://aria-soft.com/product"
+      ],
+      "reason": "官网明确软件品牌，身份可直接确认；保持7条旧发行署名，不自动追加发行品牌或作品层制作。2006夜明、2015图书馆及2017千桃属于后发主机范围，需逐项核定内容／发行层的制作分工；不把品牌制作能力等同三部PC原作开发。",
+      "workIds": [
+        "g267",
+        "g271",
+        "g274"
+      ],
+      "reviewId": "AZD-D03"
+    },
+    {
+      "entityId": "entity-name-7f11db7a66f2",
+      "name": "Arsys Software",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
+        "https://www.mobygames.com/game/58696/star-cruiser-ii-the-odysseus-project/",
+        "https://www.value-press.com/pressrelease/88636"
+      ],
+      "reason": "现有机种索引与实物目录支持原发行和后发CD版区分；MobyGames搜索摘要列开发者但正文403，EGG官方发布稿只涉及前作，不能替代II原版制作证据。补原版说明书／结束职员或具名创作者资料后再核；保留身份待核与JHV专题待核，不改1993/1994日期异文。",
+      "workIds": [
+        "jhv-star2"
+      ],
+      "reviewId": "AZD-D04"
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-aquaplus",
+      "name": "AQUAPLUS",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://store.steampowered.com/app/3380520/ToHeart/",
+        "https://aquaplus.jp/toheart/",
+        "https://prtimes.jp/main/html/rd/p/000000169.000046382.html",
+        "https://www.famitsu.com/article/202502/34702",
+        "https://aquaplus.jp/outline/"
+      ],
+      "reason": "仅登记2025重制作品g037的公司原作制作；公司与同名品牌保留独立ID。其他历史产品的品牌署名、版权或现时经营关系不能转作公司的逐作开发证明。",
+      "workIds": [
+        "g037"
+      ]
+    },
+    {
+      "entityId": "entity-aquaplus_brand",
+      "name": "AQUAPLUS",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://aquaplus.jp/th2/html/products.html",
+        "https://aquaplus.jp/toheart/",
+        "https://www.famitsu.com/article/202502/34702",
+        "https://blog.aquaplus.jp/archives/2352",
+        "https://leaf.aquaplus.jp/product/wa2ic/",
+        "https://aquaplus.jp/wa2/"
+      ],
+      "reason": "登记g159、g037制作品牌。g039原始Leaf / AQUAPLUS联合发行来源是2012原声盘公告，只能确认关联，未证明2010原作品牌制作分工；原站入口本轮显示年龄确认，后发全年龄版不能回填原作。其余6部既有后发发行作品保留原职责。",
+      "workIds": [
+        "g026",
+        "g150",
+        "g166",
+        "g151",
+        "g334",
+        "g337",
+        "g159",
+        "g039",
+        "g037"
+      ]
+    },
+    {
+      "entityId": "entity-name-5ba1ee4df514",
+      "name": "ARIA",
+      "status": "identityRegistered",
+      "sources": [
+        "https://aria-soft.com/about",
+        "https://aria-soft.com/product"
+      ],
+      "reason": "官网明确软件品牌，身份可直接确认；保持7条旧发行署名，不自动追加发行品牌或作品层制作。2006夜明、2015图书馆及2017千桃属于后发主机范围，需逐项核定内容／发行层的制作分工；不把品牌制作能力等同三部PC原作开发。",
+      "workIds": [
+        "g267",
+        "g271",
+        "g274"
+      ]
+    },
+    {
+      "entityId": "entity-name-7f11db7a66f2",
+      "name": "Arsys Software",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
+        "https://www.mobygames.com/game/58696/star-cruiser-ii-the-odysseus-project/",
+        "https://www.value-press.com/pressrelease/88636"
+      ],
+      "reason": "现有机种索引与实物目录支持原发行和后发CD版区分；MobyGames搜索摘要列开发者但正文403，EGG官方发布稿只涉及前作，不能替代II原版制作证据。补原版说明书／结束职员或具名创作者资料后再核；保留身份待核与JHV专题待核，不改1993/1994日期异文。",
+      "workIds": [
+        "jhv-star2"
+      ]
+    },
+    {
+      "entityId": "entity-asaproject",
+      "name": "ASa Project",
+      "status": "existingRegistrationRetained",
+      "sources": [
+        "https://www.asa-pro.com/about.html",
+        "https://www.asa-pro.com/products.html",
+        "https://www.asa-pro.com/ousama/",
+        "https://www.asa-pro.com/futakoi/af/",
+        "https://www.asa-pro.com/koirowa/af/",
+        "https://www.asa-pro.com/koikari/fd/"
+      ],
+      "reason": "官网品牌介绍与目录对应既有22个创作条目，后日谈分卷由各产品页确认，王样恋爱产品页列本作制作职员。仅登记本次复核结论，不重复增加既有22条productionBrand，也不把旧existingDossier批量改成sourceReviewed；本轮不是全部版本或每名职员的重新核定。",
+      "workIds": [
+        "g282",
+        "g283",
+        "g284",
+        "g285",
+        "g286",
+        "g287",
+        "g288",
+        "g289",
+        "g290",
+        "g291",
+        "g292",
+        "g293",
+        "g294",
+        "g295",
+        "g296",
+        "g297",
+        "g298",
+        "g299",
+        "g300",
+        "g301",
+        "g302",
+        "g303"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "A",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 32,
+    "processedEntityIds": [
+      "entity-name-4750f74061fe",
+      "entity-name-c31f977d8bac",
+      "entity-name-6ed2a96c53cd",
+      "entity-addison_wesley",
+      "entity-adventure_international",
+      "entity-name-490ea790703a",
+      "entity-name-f0d25e9c6d82",
+      "entity-name-76fdfcac5ffb",
+      "entity-name-b8b1293f82fa",
+      "entity-alice_blue",
+      "entity-alice_noir",
+      "entity-alicesoft",
+      "entity-name-bd36baf4b6a9",
+      "entity-name-788994ba8dfb",
+      "entity-name-5b146b15540c",
+      "entity-angel_hearts",
+      "entity-aniplex",
+      "entity-aniplex_exe",
+      "entity-applique_imouto",
+      "entity-applique",
+      "entity-aquaplus",
+      "entity-aquaplus_brand",
+      "entity-name-5ba1ee4df514",
+      "entity-name-7f11db7a66f2",
+      "entity-asaproject"
+    ],
+    "nextEntityId": "entity-ascii",
+    "nextName": "ASCII",
+    "queue": [
+      {
+        "entityId": "entity-name-4750f74061fe",
+        "name": "Accolade",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c31f977d8bac",
+        "name": "Activision",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6ed2a96c53cd",
+        "name": "Addison-Wesley Productions",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-addison_wesley",
+        "name": "Addison-Wesley Publishing Company",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-adventure_international",
+        "name": "Adventure International",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-490ea790703a",
+        "name": "Adventure Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f0d25e9c6d82",
+        "name": "âge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-76fdfcac5ffb",
+        "name": "Akatsuki Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b8b1293f82fa",
+        "name": "Alchemist",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alice_blue",
+        "name": "Alice Blue",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alice_noir",
+        "name": "AliceNoir",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alicesoft",
+        "name": "Alicesoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bd36baf4b6a9",
+        "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-788994ba8dfb",
+        "name": "American Laser Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5b146b15540c",
+        "name": "aNCHOR",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-angel_hearts",
+        "name": "Angel Hearts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aniplex",
+        "name": "Aniplex",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aniplex_exe",
+        "name": "ANIPLEX.EXE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-applique_imouto",
+        "name": "Applique -Imouto-（あっぷりけ-妹-）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-applique",
+        "name": "Applique（あっぷりけ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aquaplus",
+        "name": "AQUAPLUS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aquaplus_brand",
+        "name": "AQUAPLUS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5ba1ee4df514",
+        "name": "ARIA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7f11db7a66f2",
+        "name": "Arsys Software",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-asaproject",
+        "name": "ASa Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-ascii",
+        "name": "ASCII",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-9590651f2922",
+        "name": "Asmik（アスミック）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-80a218385951",
+        "name": "Asoberu! BD-GAME（あそべる！BD-GAME）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-03ca146bb18c",
+        "name": "Atari",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-6cafab111889",
+        "name": "Atlus",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-august",
+        "name": "AUGUST",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-a7f6066af4b9",
+        "name": "Azarashi Soft（あざらしそふと）",
+        "status": "notStarted"
+      }
+    ]
+  }
+}

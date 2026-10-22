@@ -28,8 +28,8 @@ class CreatorAReviewTests(unittest.TestCase):
   self.assertEqual(a['entity-name-76fdfcac5ffb']['type'],'company')
   for eid in b:
    for field in ['id','name','aliases','dates']:self.assertEqual(b[eid][field],a[eid][field])
-  self.assertEqual(len(read('data/entity-migration-review.json')['pendingIdentities']),182)
-  self.assertEqual(read('data/entity-migration-review.json')['pendingMembershipCount'],611)
+  self.assertEqual(len(applied('data/entity-migration-review.json')['pendingIdentities']),182)
+  self.assertEqual(applied('data/entity-migration-review.json')['pendingMembershipCount'],611)
  def test_core_catalogue_baselines_and_all_prior_evidence_unchanged(self):
   paths=['data/games.json','data/company-coverage.json','data/taxonomy.json','data/gameplay-catalogues.json','data/work-classification.json','data/entity-migration-baseline.json','data/content-migration-baseline.json','index.html','app.mjs','filter.mjs','styles.css']
   paths += [f'data/entity-{batch}-review-20261022.{ext}' for batch in ['priority','followup','third','fourth'] for ext in ['json','md']]
