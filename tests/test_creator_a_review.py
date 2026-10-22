@@ -6,10 +6,12 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='d8f37e90abf47af94e9285167a26b6865497e332'
 def read(p):return json.loads((ROOT/p).read_text())
+APPLIED='c5abca055efbae673c53d8275579e9f42ae815b7'
+def applied(p):return json.loads(subprocess.check_output(['git','show',f'{APPLIED}:{p}'],cwd=ROOT,text=True))
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT,text=True))
 class CreatorAReviewTests(unittest.TestCase):
  def test_five_credits_append_without_rewriting_old_credits_or_memberships(self):
-  before,after=old('data/credits.json'),read('data/credits.json')
+  before,after=old('data/credits.json'),applied('data/credits.json')
   prior={c['id']:c for c in before['credits']};current={c['id']:c for c in after['credits']}
   self.assertTrue(prior.keys()<=current.keys())
   for cid in prior:self.assertEqual(prior[cid],current[cid],cid)
@@ -19,7 +21,7 @@ class CreatorAReviewTests(unittest.TestCase):
   self.assertEqual(len(added),5);self.assertEqual(before['dossierMemberships'],after['dossierMemberships'])
   for c in added:self.assertEqual(c['reviewRecord'],review['audit']);self.assertEqual(c['status'],'sourceReviewed')
  def test_only_akatsuki_identity_changes_and_relations_stay_identical(self):
-  before,after=old('data/entities.json'),read('data/entities.json')
+  before,after=old('data/entities.json'),applied('data/entities.json')
   self.assertEqual(before['relations'],after['relations']);self.assertEqual(before['dossiers'],after['dossiers'])
   b={n['id']:n for n in before['entities']};a={n['id']:n for n in after['entities']}
   self.assertEqual(b.keys(),a.keys());self.assertEqual({eid for eid in b if b[eid]!=a[eid]},{'entity-name-76fdfcac5ffb'})

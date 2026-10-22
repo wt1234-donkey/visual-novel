@@ -14,8 +14,12 @@ def build():
     read = lambda name: json.loads((ROOT / f'data/{name}.json').read_text())
     model, credits, games, coverage = [read(n) for n in ['entities', 'credits', 'games', 'company-coverage']]
     result = preview_build()
-    review = read('entity-creator-a-review-20261022')
-    result['registrationProgress'] = {**review['progress'], 'reviewedAt': review['reviewedAt'], 'audit': review['audit'], 'reviewedEntities': review['reviewedEntities']}
+    reviews = [read(name) for name in ['entity-creator-a-review-20261022', 'entity-creator-a2-review-20261022']]
+    review = reviews[-1]
+    reviewed_entities = [entry for batch in reviews for entry in batch['reviewedEntities']]
+    assert len({entry['entityId'] for entry in reviewed_entities}) == len(reviewed_entities)
+    assert [entry['entityId'] for entry in reviewed_entities] == review['progress']['processedEntityIds']
+    result['registrationProgress'] = {**review['progress'], 'reviewedAt': review['reviewedAt'], 'audit': review['audit'], 'reviewedEntities': reviewed_entities, 'audits': [batch['audit'] for batch in reviews]}
     works = {}
     for w in games['works']:
         works[w['id']] = (w, 'main', 'index.html?query=' + quote(w.get('chineseTitle') or w['title']) + '#catalogue')
