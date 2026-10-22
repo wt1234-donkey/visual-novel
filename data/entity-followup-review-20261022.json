@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "baseCommit": "ee0694de5dc51cc773bf9e76ae72a375da82211d",
+  "audit": "data/entity-followup-review-20261022.md",
+  "policy": "第二批只应用5项身份核定及3条具名作品制作职责；所有原始署名、既有职责、实体ID与关系保留。品牌身份核定不触发历史发行职责或原作品牌的自动重写。",
+  "identityCorrections": [
+    {
+      "reviewId": "F1",
+      "entityId": "entity-name-85a1fd56da66",
+      "rawName": "MangaGamer",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.mangagamer.com/privacy_policy.php",
+        "https://www.mangagamer.com/terms.php"
+      ],
+      "note": "官网隐私政策1.1明确MangaGamer为品牌，并将Japan Animation Contents列为运营公司；本批仅确认品牌类型，保留稳定ID与所有publisher署名，不建立运营关系或倒填历史合同，不增加开发／逐作本地化职责。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "F2",
+      "entityId": "entity-name-acccc0db4bce",
+      "rawName": "NekoNyan Ltd.",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://nekonyansoft.com/uploads/terms_and_conditions.pdf",
+        "https://find-and-update.company-information.service.gov.uk/company/10729116"
+      ],
+      "note": "官方2018服务条款将NekoNyan Ltd.列为协议主体，英国Companies House的10729116登记确认为有限公司；只确认现有发行主体的公司类型，不用现代通讯地址或一般业务描述倒填逐作开发、本地化职责。"
+    },
+    {
+      "reviewId": "F3",
+      "entityId": "entity-name-5b146b15540c",
+      "rawName": "aNCHOR",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://ancr.jp/company/"
+      ],
+      "note": "官方公司概要明确商号株式会社aNCHOR／aNCHOR Inc.；只确认公司类型，不将2011成立年份解释为aNCHOR名称启用，也不改写既有平台发行的历史署名。"
+    },
+    {
+      "reviewId": "F4",
+      "entityId": "entity-name-959a8e1f98f6",
+      "rawName": "D4 Enterprise",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://d4e.co.jp/company"
+      ],
+      "note": "官方公司概要明确株式会社D4エンタープライズ；只确认公司身份。Project EGG配信、版权管理和历史原作开发分别核查，不因复刻发行身份追加原作制作。"
+    },
+    {
+      "reviewId": "F5",
+      "entityId": "entity-name-21365baf366d",
+      "rawName": "Chunsoft",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/"
+      ],
+      "note": "官方沿革明确株式会社チュンソフト于1984年成立，2012年与Spike合并；该历史公司身份与Spike、Spike Chunsoft各自保留，不合并ID、不自动追溯现行公司的历史开发职责。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "F6",
+      "entityId": "entity-minatosoft",
+      "dossierId": "minatosoft",
+      "workId": "g1252",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "beforeWorkRoles": [],
+      "source": "https://yuyuyu.tv/season1/bddvd/bddvd_06.php",
+      "supportingSources": [
+        "https://yuyuyu.tv/news/archives/1563",
+        "https://www.youtube.com/watch?v=PwN4La5-sgQ"
+      ],
+      "note": "2015年第六卷官方商品页的可检索文本明确《结城友奈S》由みなとそふと制作，官方2018下载公告交叉确认具名品牌版本。该商品页全文本轮503，另保存访问边界；只确认本作制作，不自动上推Hawk Eye公司或改写2017下载卡为新内容。"
+    },
+    {
+      "reviewId": "F7",
+      "entityId": "entity-minatosoft",
+      "dossierId": "minatosoft",
+      "workId": "g1254",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "beforeWorkRoles": [],
+      "source": "https://animaru.jp/anmr/product/P0084939",
+      "supportingSources": [
+        "https://yuyuyu.tv/season2/product/bd/yusha.php"
+      ],
+      "note": "TBS・MBS官方商店的2018《勇者之章》商品页明确特典PC游戏《结城友奈A》由みなとそふと制作；Studio五组图像制作与Pony Canyon商品发行另列，不自动赋予Hawk Eye开发职责，也不把动画特典视为游戏版本。"
+    },
+    {
+      "reviewId": "F8",
+      "entityId": "entity-yuzusoft_sour",
+      "dossierId": null,
+      "workId": "g232",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "YUZUSOFTSOUR",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://store.steampowered.com/app/1662840/PARQUET/",
+      "supportingSources": [
+        "https://play.google.com/store/apps/details?hl=ja&id=com.yuzusoft.sour.parquet"
+      ],
+      "note": "Steam开发者字段与介绍明确《PARQUET》由YUZUSOFTSOUR制作，官方应用介绍明确其为SOUR首作；仅给SOUR子品牌增加制作品牌，不给Yuzusoft父品牌增加开发职责。既有发行、内容及父品牌专题待核状态保留。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B1",
+      "status": "identityResolvedScopeStillLimited",
+      "reason": "本批F1确认品牌身份；各时期合同与逐作本地化仍未扩核。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B6",
+      "status": "childProductionConfirmedParentPending",
+      "workIds": [
+        "g232"
+      ],
+      "reason": "F8只确认SOUR制作品牌；父品牌直接职责仍待核。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B8",
+      "status": "needsMoreSources",
+      "workIds": [
+        "g545"
+      ],
+      "sources": [
+        "https://www.alicesoft.com/support/sys39v545.html"
+      ],
+      "reason": "新增官方System3.9支持页可确认Alice Blue作品使用该引擎；不能据引擎使用推定整作开发协力，原始职员表仍缺。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B3",
+      "status": "needsMoreSources",
+      "reason": "Legend同期采访及目录支持英国语境；仍缺逐版原始署名，本批不合并两个Legend ID。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B4",
+      "status": "needsMoreSources",
+      "reason": "Mosaic三份既有原厂手册链接本轮均未成功读取，不以旧审核摘要替代重验。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B2",
+      "status": "needsMoreSources",
+      "reason": "国际JAST现行官方自述与日本旧JAST未取得完整历史连续性证明，保持独立。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B5",
+      "status": "needsMoreSources",
+      "reason": "复合发行署名及个人贡献仍不等于Minato品牌开发职责。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#B7",
+      "status": "needsMoreSources",
+      "reason": "CHiRAL品牌制作与Nitroplus公司职责继续分开。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#C1",
+      "status": "notReadyToJudge",
+      "reason": "Mobage／GREE实际发行者和内容证据未齐。"
+    },
+    {
+      "priorReview": "data/entity-priority-review-20261022.json#C2",
+      "status": "notReadyToJudge",
+      "reason": "1988目录署名与品牌年代冲突缺原证，继续待核。"
+    }
+  ]
+}

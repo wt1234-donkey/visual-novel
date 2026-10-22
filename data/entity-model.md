@@ -87,3 +87,5 @@ python3 scripts/build_company_pages.py --check
 修改名称表后运行本节上方全部生成器和校验，不直接编辑派生 JSON／HTML。
 
 如需纠正原始史实，应在独立变更中保留旧证据、说明订正，并复核基线断言；不得仅为让生成器通过而重算或删除基线。
+
+2026-10-22第二批使用 `entity-followup-review-20261022.json` 及同名Markdown，独立于首批和迁移基线。生成器按批次读取，核对旧身份／作品职责后，仅追加5项身份订正与3条作品职责。身份订正不得重复命中同一ID；MangaGamer的品牌身份使用显式 `preserveReleaseRoles: true`，保留旧 `publisher`，不由类型变化自动生成 `publishingBrand` 或 `originalPublishingBrand`。`beforeWorkRoles` 记录追加前的作品层角色；`dossierId: null` 允许仅给具名子品牌追加职责，不将职责上推到父品牌专题。指定专题的订正必须核对其主体和旧待核状态，才解除该条待核。
