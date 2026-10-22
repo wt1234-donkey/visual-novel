@@ -61,7 +61,7 @@ export function searchFamilies(data,query){
 async function init(){
   const $=id=>document.getElementById(id),workspace=$('workspace');
   let data;
-  try{const response=await fetch(document.body.dataset.source||'data/relationships-preview.json');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
+  try{const response=await fetch(document.body.dataset.source||'data/relationships-preview.json',{cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
   catch{workspace.setAttribute('aria-busy','false');$('graph-stage').innerHTML='<p class="error-message">关系资料暂时无法读取。请刷新重试，或先查看<a href="entities.html">主体档案</a>。</p>';$('family-nav').innerHTML='<p class="no-results">暂时无法读取家族列表。</p>';if($('creator-grid')){$('creator-grid').innerHTML='<p class="error-message">作品目录读取失败，请刷新重试或查看主体档案。</p>';$('creator-work-list').textContent='作品职责暂时无法读取。';}return;}
   const nodes=new Map(data.nodes.map(n=>[n.id,n]));
   const params=new URLSearchParams(location.search);
