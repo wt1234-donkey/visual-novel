@@ -6,20 +6,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'b9a5a7e7f10568e005c58bdc346e04b7e8cec399'
+APPLIED = 'd5a778252b49b0b2b1de19de775692cbcd0f548a'
 
 
 def read(path):
     return json.loads((ROOT / path).read_text())
 
 
-def before(path):
+def before(path, revision=BASE):
     return json.loads(subprocess.check_output(
-        ['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
+        ['git', 'show', f'{revision}:{path}'], cwd=ROOT, text=True))
 
 
 class ThirdEntityReviewTests(unittest.TestCase):
     def test_five_types_change_without_merging_names_or_relations(self):
-        old_model, model = before('data/entities.json'), read('data/entities.json')
+        old_model, model = before('data/entities.json'), before('data/entities.json', APPLIED)
         self.assertEqual(old_model['relations'], model['relations'])
         self.assertEqual(old_model['dossiers'], model['dossiers'])
         old = {x['id']: x for x in old_model['entities']}
@@ -37,7 +38,7 @@ class ThirdEntityReviewTests(unittest.TestCase):
             self.assertTrue(set(old[eid]['sources']) <= set(new[eid]['sources']))
 
     def test_only_three_credits_and_one_scoped_membership_change(self):
-        old_data, data = before('data/credits.json'), read('data/credits.json')
+        old_data, data = before('data/credits.json'), before('data/credits.json', APPLIED)
         old = {x['id']: x for x in old_data['credits']}
         new = {x['id']: x for x in data['credits']}
         self.assertTrue(old.keys() <= new.keys())
@@ -66,7 +67,7 @@ class ThirdEntityReviewTests(unittest.TestCase):
         self.assertEqual(new_m[('overdrive', 'g647')]['group'], 'original')
         self.assertEqual(len(new), 4753)
         self.assertEqual(len(new_m), 2234)
-        review = read('data/entity-migration-review.json')
+        review = before('data/entity-migration-review.json', APPLIED)
         self.assertEqual(len(review['pendingIdentities']), 187)
         self.assertEqual(review['pendingMembershipCount'], 613)
 

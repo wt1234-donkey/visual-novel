@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "baseCommit": "d5a778252b49b0b2b1de19de775692cbcd0f548a",
+  "audit": "data/entity-fourth-review-20261022.md",
+  "policy": "第四批只核定4项公司身份及2条仅专题书目制作职责；保留全部稳定ID、原始发行、身份关系和收录位置。书目制作核实不等于主库收录。",
+  "identityCorrections": [
+    {
+      "reviewId": "Q1",
+      "entityId": "entity-name-f9e8ee919b2e",
+      "rawName": "Double Fine Productions",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.doublefine.com/about",
+        "https://www.doublefine.com/"
+      ],
+      "note": "官方About介绍制作室，页脚明确Double Fine Productions, Inc.；只确认公司身份，不将创办人早年LucasArts作品倒算为公司原作，也不给已发行的复刻作品自动增加原作开发。"
+    },
+    {
+      "reviewId": "Q2",
+      "entityId": "entity-name-f00bc453a063",
+      "rawName": "BROCCOLI",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://broccoli.co.jp/company/profile/index_en.php",
+        "https://broccoli.co.jp/company/profile/"
+      ],
+      "note": "官方英日公司概要明确BROCCOLI Co., Ltd.／株式会社ブロッコリー。仅核定公司类型，不据综合业务介绍给授权IP作品或各平台发行批量追加开发，不新增母公司关系。"
+    },
+    {
+      "reviewId": "Q3",
+      "entityId": "entity-name-40ed6431d1a6",
+      "rawName": "Bandai Namco Games",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.bandainamcoent.co.jp/corporate/150401/"
+      ],
+      "note": "官方2015年4月1日更名公告明确旧公司名株式会社バンダイナムコゲームス及新公司名。只确认历史公司身份，保持既有Bandai Namco Games署名，不改为现名，也不合并Namco、Bandai、Banpresto或其他地区主体。"
+    },
+    {
+      "reviewId": "Q4",
+      "entityId": "entity-name-f9dfce1ab0f0",
+      "rawName": "Edia",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://edia.co.jp/company/overview/",
+        "https://prtimes.jp/main/html/rd/p/000000002.000021592.html"
+      ],
+      "note": "官方公司概要明确株式会社エディア／Edia Co., Ltd.，既有2016发行公告同样具名该法人。仅确认公司类型，不因手机游戏IP与sprite原作有关而给sprite追加开发或监修。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "Q5",
+      "entityId": "entity-microcabin",
+      "dossierId": "microcabin",
+      "workId": "microcabin-diamond",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "bibliography",
+      "beforeWorkRoles": [],
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官方「ゲーム用ソフトウェア 過去の開発実績」逐机种列出1982年11月、PC-6001的ダイヤモンドアドベンチャー，支持《钻石冒险》的原作制作关联。仅解除本条书目职责待核；文字输入和仅专题书目位置不变，不新增主库作品、内容版本或平台发行，不声称完成全部机种职员表重验。"
+    },
+    {
+      "reviewId": "Q6",
+      "entityId": "entity-microcabin",
+      "dossierId": "microcabin",
+      "workId": "microcabin-dream",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "bibliography",
+      "beforeWorkRoles": [],
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官方「ゲーム用ソフトウェア 過去の開発実績」逐机种列出1983年、MZ-80B／MZ-2000及同年9月PC-8801的ドリームランド，支持《梦境之地》的原作制作关联。仅解除本条书目职责待核；文字输入和仅专题书目位置不变，不新增主库作品、内容版本或平台发行，不声称完成全部机种职员表重验。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "reviewId": "QD1",
+      "entityId": "entity-name-61e191a86b41",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://store.playstation.com/ja-jp/product/JP0549-CUSA06588_00-AOKANAHD00000001",
+        "https://www.rightway.jp/"
+      ],
+      "reason": "平台保留RIGHTWAY发行，但本轮公司站点只有株式会社ライトウェイ及渋谷地址，缺与游戏业务直接对应的链接；有同名公司风险，不凭英文标志或名称归为同一法人。需游戏合同／发行官方联络或同期公司页。"
+    },
+    {
+      "reviewId": "QD2",
+      "entityId": "entity-name-431d2fb7a95c",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.cfk.kr/",
+        "https://store.steampowered.com/app/583040/",
+        "https://store.steampowered.com//eula/583040_eula_0"
+      ],
+      "reason": "官网本轮403；平台开发者列CFK Co., Ltd.，但当前EULA首句拼接了Bliss Brain与CFK，需更清晰官方公司资料对应现有发行名义。本批不据混合条款归并法人或变更历史发行。"
+    },
+    {
+      "reviewId": "QD3",
+      "entityId": "entity-name-c65fb9857dc9",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.dreamnews.jp/press/0000086203/",
+        "https://www.taxan.co.jp/jp/ir/upload_file/m008-m008_01/event01_14_3Q.pdf"
+      ],
+      "reason": "加賀電子原始公告可检索到株式会社サイバーフロント，但全文本轮403；官方IR搜索文本与本轮PDF提取不一致，暂不将搜索摘要当成完成全文复核。保留身份待核并继续找原始公告附件。"
+    },
+    {
+      "reviewId": "QD4",
+      "entityId": "entity-microcabin",
+      "workIds": [
+        "microcabin-riglord",
+        "microcabin-riglord2",
+        "microcabin-nirgends"
+      ],
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.microcabin.co.jp/works/games/"
+      ],
+      "reason": "本轮已读取的开发实绩文本没有定位到这三个具名条目，二手资料和版权署名不足以独立核定；需原版职员表、说明书或完整具名官方资料。"
+    },
+    {
+      "reviewId": "QD5",
+      "entityId": "entity-sprite",
+      "workIds": [
+        "sprite-eternal-sky"
+      ],
+      "status": "needsMoreSources",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000002.000021592.html"
+      ],
+      "reason": "Edia原始配信公告能确认其公司身份和配信，但没有具名sprite开发或监修；保持sprite专题职责待核。"
+    },
+    {
+      "reviewId": "QD6",
+      "entityId": "entity-key",
+      "workIds": [
+        "key-yurippe",
+        "key-ignis"
+      ],
+      "status": "needsMoreSources",
+      "sources": [
+        "https://key.visualarts.gr.jp/info/2016/02/ab_1.html",
+        "https://key.visualarts.gr.jp/info/2017/02/rewrite_ignismemoria_2.html"
+      ],
+      "reason": "Key官方配信公告确认服务上线与内容介绍，但未明确其直接制作／开发分工，不因官网发布新闻就解除职责待核。"
+    }
+  ]
+}

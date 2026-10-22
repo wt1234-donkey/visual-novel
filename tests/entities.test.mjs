@@ -65,3 +65,13 @@ test('third review confirms named production while preserving same-name company 
     assert.equal(find({participant:'entity-nitroplus',participantRole:'productionBrand',query}).length,0);
   }
 });
+
+test('reviewed Micro Cabin book production never admits parser books to the main catalogue',()=>{
+  for(const query of ['ダイヤモンドアドベンチャー','ドリームランド']){
+    assert.equal(find({developer:'entity-microcabin',query}).length,0);
+  }
+  for(const wid of ['microcabin-diamond','microcabin-dream']){
+    const member=credits.dossierMemberships.find(m=>m.dossierId==='microcabin'&&m.workId===wid);
+    assert.equal(member.group,'original');assert.equal(member.placement,'bibliography');
+  }
+});
