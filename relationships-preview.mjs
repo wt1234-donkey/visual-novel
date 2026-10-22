@@ -1,7 +1,7 @@
 const TYPES={company:'公司',brand:'品牌',team:'团队',unknown:'身份待核',publication:'刊物',individual:'个人'};
 const STATUS={sourceReviewed:'来源已核',existingDossier:'沿用档案',previewReviewed:'预览补充',pending:'关系待核',unresolved:'身份待核'};
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const norm=v=>String(v).normalize('NFKC').toLowerCase().replace(/\s+/g,'');
+const norm=v=>String(v).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,'');
 const GROUPS={creation:'创作作品',originalBrand:'原作发行品牌',pending:'专题职责待核',other:'其他参与／发行'};
 export function worksFor(data,node,group='creation',placement='main',query=''){
   const q=norm(query);
@@ -53,9 +53,16 @@ export function historiesFor(data,family){
   return data.nameHistory.filter(h=>ids.has(h.fromId)||ids.has(h.toId));
 }
 
+const englishKey=value=>String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase();
+export function sortFamilies(families){
+  return [...families].sort((a,b)=>{
+    const ak=englishKey(a.title),bk=englishKey(b.title),ag=/^[a-z]/.test(ak)?0:1,bg=/^[a-z]/.test(bk)?0:1;
+    return ag-bg||ak.localeCompare(bk,'en',{sensitivity:'base',numeric:true})||a.id.localeCompare(b.id,'en');
+  });
+}
 export function searchFamilies(data,query){
   const q=norm(query),nodes=new Map(data.nodes.map(n=>[n.id,n]));
-  return data.families.filter(f=>!q||norm([f.title,f.subtitle,...[f.root,...f.entityIds].flatMap(id=>{const n=nodes.get(id);return n?[n.name,...n.aliases]:[];}),...historiesFor(data,f).flatMap(h=>[h.oldName,h.newName])].join(' ')).includes(q));
+  return sortFamilies(data.families.filter(f=>!q||norm([f.title,f.subtitle,...[f.root,...f.entityIds].flatMap(id=>{const n=nodes.get(id);return n?[n.name,...n.aliases]:[];}),...historiesFor(data,f).flatMap(h=>[h.oldName,h.newName])].join(' ')).includes(q)));
 }
 
 async function init(){
@@ -145,6 +152,7 @@ async function init(){
     const placement=$('work-placement').value;
     const found=creatorNodes(data,{kind:$('creator-kind').value,placement,query:$('creator-search').value});
     $('creator-count').textContent=`${found.length} 个主体`;
+    if($('registration-progress')&&data.registrationProgress){const p=data.registrationProgress;$('registration-progress').innerHTML=`A 字母首批已核查 ${p.processedEntityIds.length} / ${p.total} 个主体 · 下一家：${esc(p.nextName)} <a href="${esc(p.audit)}">查看证据与待核清单 ↗</a>`;}
     $('creator-grid').innerHTML=found.length?found.map(n=>`<button class="creator-card" data-creator="${n.id}" aria-pressed="${n.id===selected}"><span class="node-kind">${TYPES[n.type]||'主体'}</span><strong>${esc(n.name)}</strong><span>${worksFor(data,n,'creation',placement).length} 部创作 · ${worksFor(data,n,'pending',placement).length} 部专题待核</span></button>`).join(''):'<p class="muted">暂无符合条件的创作厂商。可选择“全部主体（含发行与待核）”继续查找。</p>';
     renderWorks();
   }
