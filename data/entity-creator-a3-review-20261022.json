@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "baseCommit": "570bf41078e39f9d91fb192bef6ef0ad62d66639",
+  "audit": "data/entity-creator-a3-review-20261022.md",
+  "previousReview": "data/entity-creator-a2-review-20261022.md",
+  "policy": "连续复核第13—20个A主体；累计20／32指证据分流已完成，不是全部职责核定。应用14条具名创作职责；不改身份、关系、内容范围、原始发行、主库页面或迁移基线。",
+  "identityCorrections": [],
+  "creditAdditions": [
+    {
+      "reviewId": "AZC01",
+      "entityId": "entity-name-788994ba8dfb",
+      "dossierId": null,
+      "workId": "g1198",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "American Laser Games",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.scummvm.org/news/20260305/",
+      "note": "ScummVM引擎项目公告明确列为American Laser Games创作的作品；与原街机操作手册具名产品及Digital Leisure制作人的后发重制说明交叉核对。仅登记本作原作制作，不把IBM后发DOS发行、ScummVM引擎实现或Digital Leisure后发移植倒填为原作开发；公司法律身份和沿革仍待核。"
+    },
+    {
+      "reviewId": "AZC02",
+      "entityId": "entity-name-788994ba8dfb",
+      "dossierId": null,
+      "workId": "g1199",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "American Laser Games",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.scummvm.org/news/20260305/",
+      "note": "ScummVM项目具名创作公告明确列出本作；Digital Leisure制作人说明区分早期作品和后发高清移植。只补American Laser Games作品层原作制作；不新增IBM创作或后发平台记录，不认定法律主体连续性。"
+    },
+    {
+      "reviewId": "AZC03",
+      "entityId": "entity-applique_imouto",
+      "dossierId": null,
+      "workId": "g871",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ-妹-",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/saisai/product.html",
+      "note": "旧官方具名品牌产品页保留STAFF、原画、剧本及导演，和同站首页的品牌字段对应。登记本作制作品牌，保留音乐等外部合作人员，不认定品牌独立完成全部工序，不上推Applique或现归档网站品牌。"
+    },
+    {
+      "reviewId": "AZC04",
+      "entityId": "entity-applique_imouto",
+      "dossierId": null,
+      "workId": "g872",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ-妹-",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/arcology/staffdiary.html",
+      "note": "原始具名品牌开发日记、制作人员文章和原站发售日志对应本作，支持制作品牌。仅补子品牌职责；Applique专题中同作的待核引用继续保留。"
+    },
+    {
+      "reviewId": "AZC05",
+      "entityId": "entity-applique_imouto",
+      "dossierId": null,
+      "workId": "g873",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ-妹-",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/artemis/product.html",
+      "note": "原官方规格页STAFF列原画、剧本、机械设计等，页头Applique sister标志对应既有子品牌。页面为旧编码，网页提取解码失败后读取原HTML及品牌图复核。只追加本作子品牌制作，不由归档域名推定AKABEi SOFT3或母品牌开发。"
+    },
+    {
+      "reviewId": "AZC06",
+      "entityId": "entity-applique_imouto",
+      "dossierId": null,
+      "workId": "g874",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ-妹-",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/otomimi/spec.html",
+      "note": "原官方规格页保留剧本、原画等制作职员，品牌标志为あっぷりけ妹。旧编码HTML与原始品牌图均已复核；只追加该子品牌本作制作，母品牌专题的待核关系不继承。"
+    },
+    {
+      "reviewId": "AZC07",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g862",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/ap_soraoti/main.html",
+      "note": "原官方作品页保留原画、剧本、音乐和具名程序合作；2013年原官网快照列本作在品牌作品目录。原HTML可读取，网页提取不可访问。只登记品牌制作，不把程序协力改写为品牌独立开发或新公司关系。"
+    },
+    {
+      "reviewId": "AZC08",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g863",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/ap_concerto/u.html",
+      "note": "原官网企划栏由剧本人员桐月具名说明制作过程及导演合作，并与原官网品牌作品目录对应；只补本作制作品牌，不把共通世界观扩展为作品同一身份。"
+    },
+    {
+      "reviewId": "AZC09",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g864",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/ap_sinsemilla/product.html",
+      "note": "原官方规格页的产品图片明确列DATA及STAFF，已直接读取原图复核剧本、原画、音乐等；保留2013原官网目录对应。仅追加制作品牌，原版日期和平台资料不改。"
+    },
+    {
+      "reviewId": "AZC10",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g865",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/ap_rebirth/products.html",
+      "note": "官方规格页同时明确本作品牌及企画、剧本、原画、BGM人员。只追加具名制作品牌，不从相同公司域名或人员推定主体合并。"
+    },
+    {
+      "reviewId": "AZC11",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g866",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.akabeesoft3.com/products/ap_apfd/pro.html",
+      "note": "官方产品页列品牌、STAFF和导演，支持该FanDisc制作品牌；复用既有作品身份，不把其中关联角色、附赠设定集或音乐另增为新作品。"
+    },
+    {
+      "reviewId": "AZC12",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g867",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://moe-gameaward.com/title/detail.html?id=1098",
+      "note": "官方奖项参评资料具名品牌，并列原画、剧本与音乐人员，匹配既有原作。旧品牌官网链接本轮404；按参评品牌制作目录及具名职员登记制作品牌，不把现行FHD版或HIKARI FIELD发行移植到原作身份。"
+    },
+    {
+      "reviewId": "AZC13",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g868",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://moe-gameaward.com/title/detail.html?id=2086",
+      "note": "官方奖项参评资料逐项列本作品牌及原画、剧本、音乐，匹配既有2016作品。官网旧链接本轮404；仅登记制作品牌，不改旧原题、日期或程序作者归属。"
+    },
+    {
+      "reviewId": "AZC14",
+      "entityId": "entity-applique",
+      "dossierId": null,
+      "workId": "g870",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "あっぷりけ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://store.steampowered.com/app/2109640/_/?curator_clanid=33021465&l=japanese&snr=1_1056_4_18_curatorfeatureddiscount",
+      "note": "授权发行方说明明确原作是Applique十周年制作作品，并区分后发FHD国际版及发行方HIKARI FIELD。只登记既有2019原作的制作品牌，不把2022商店日期作为原作日期，不新增普通高清重发或独立开发公司断言。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "reviewId": "AZCD1",
+      "entityId": "entity-name-bd36baf4b6a9",
+      "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20190212-m"
+      ],
+      "reason": "官方公告分列三家公司共同配信，并列其他制作人员，不能把历史联合发行字符串认定为一个公司、制作团队或三方同等开发。保留联合发行署名及身份待核，补证需逐方原始开发分工；本批不拆分或合并身份。",
+      "workIds": [
+        "minatosoft-spyce"
+      ]
+    },
+    {
+      "reviewId": "AZCD3",
+      "entityId": "entity-name-5b146b15540c",
+      "name": "aNCHOR",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://games.ancr.jp/games/muv-luv/",
+        "https://ancr.jp/company/"
+      ],
+      "reason": "当前官方页的開発aNCHOR对应Steam及Switch等后发产品，不能倒填2003与2006原作。既有âge原作制作品牌和aNCHOR发行记录保持分开。若新增后发开发职责，需核定具体已收录内容／发行的适用范围；不扩张为整作原作制作。",
+      "workIds": [
+        "g052",
+        "g053"
+      ]
+    },
+    {
+      "reviewId": "AZCD4",
+      "entityId": "entity-angel_hearts",
+      "name": "Angel Hearts",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/ジャスト_(ブランド)",
+        "https://www.amazon.co.jp/YASHA-%E9%9A%A0%E3%81%95%E3%82%8C%E3%81%9F%E7%8B%82%E6%B0%97/dp/B00009ELCF",
+        "https://te2.rash.jp/r/l/gamemaker.html"
+      ],
+      "reason": "本轮可得零售品牌资料及历史链接目录，均不足以证明两作制作职责。既有品牌及原作发行保留，需原始说明书或官网制作职员页；不因JAST家族或品牌发行自动登记创作。",
+      "workIds": [
+        "g676",
+        "g677"
+      ]
+    },
+    {
+      "reviewId": "AZCD5",
+      "entityId": "entity-aniplex",
+      "name": "Aniplex",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.aniplex.co.jp/lineup/mahoyo-movie/news/detail/?id=70526",
+        "https://www.aniplex.co.jp/lineup/magireco/",
+        "https://store.steampowered.com/app/2987800",
+        "https://tanetsumi.aniplex-exe.com/"
+      ],
+      "reason": "魔法使之夜官方说明原开发販売为TYPE-MOON；Magia Record官方具名f4samurai开发；Exedra区分Aniplex企画发行与其他开发。Aniplex的公司、发行及企画贡献继续保留，不解释为未参与创作，也不追加原作开发；种子之歌官网暂不可读，需补原作开发范围与具名职员证明。",
+      "workIds": [
+        "g156",
+        "nitroplus-extra-magireco",
+        "g203",
+        "nitroplus-extra-exedra"
+      ]
+    },
+    {
+      "reviewId": "AZCD6",
+      "entityId": "entity-aniplex_exe",
+      "name": "ANIPLEX.EXE",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://aniplex-exe.com/",
+        "https://atri-mdm.com/",
+        "https://newscast.jp/news/0816588",
+        "https://tanetsumi.aniplex-exe.com/"
+      ],
+      "reason": "保留四作原作发行品牌及原有制作合作方。ヒラヒラヒヒル2022官方发布稿同时使用製作品牌及STAFF制作ANIPLEX.EXE，另列BA-KU程序；后续资料又记製作，不能不作区分地把企画／製作与实际开发归一。需核最终职员及职责词义对应，当前不升级为开发或批量制作品牌，不作没有创作贡献的断言。",
+      "workIds": [
+        "g200",
+        "g201",
+        "g202",
+        "g203"
+      ]
+    },
+    {
+      "reviewId": "AZCD8",
+      "entityId": "entity-applique",
+      "name": "Applique（あっぷりけ）",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://www.akabeesoft3.com/products/ap_soraoti/main.html",
+        "https://www.akabeesoft3.com/products/ap_concerto/u.html",
+        "https://www.akabeesoft3.com/products/ap_sinsemilla/product.html",
+        "https://www.akabeesoft3.com/products/ap_rebirth/products.html",
+        "https://www.akabeesoft3.com/products/ap_apfd/pro.html",
+        "https://moe-gameaward.com/title/detail.html?id=1098",
+        "https://moe-gameaward.com/title/detail.html?id=2086",
+        "https://store.steampowered.com/app/2109640/_/?curator_clanid=33021465&l=japanese&snr=1_1056_4_18_curatorfeatureddiscount",
+        "https://store.steampowered.com/app/1069230/?l=english",
+        "https://megalodon.jp/ref/2013-0401-1650-23/www.applique-soft.com/main.html"
+      ],
+      "reason": "8作登记制作品牌，g869暂缓：既有2016先行免费LVN与2017解放之羽扩充属于同一作品不同内容，Steam来源对应扩充版；需补2016原页或精确内容层开发来源。4条妹品牌专题待核不解除，母子品牌不继承。",
+      "workIds": [
+        "g862",
+        "g863",
+        "g864",
+        "g865",
+        "g866",
+        "g867",
+        "g868",
+        "g869",
+        "g870",
+        "g871",
+        "g872",
+        "g873",
+        "g874"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-bd36baf4b6a9",
+      "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20190212-m"
+      ],
+      "reason": "官方公告分列三家公司共同配信，并列其他制作人员，不能把历史联合发行字符串认定为一个公司、制作团队或三方同等开发。保留联合发行署名及身份待核，补证需逐方原始开发分工；本批不拆分或合并身份。",
+      "workIds": [
+        "minatosoft-spyce"
+      ]
+    },
+    {
+      "entityId": "entity-name-788994ba8dfb",
+      "name": "American Laser Games",
+      "status": "registered",
+      "sources": [
+        "https://www.scummvm.org/news/20260305/",
+        "https://blog.playstation.com/2013/01/21/mad-dog-mccree-rides-onto-psn-tuesday/",
+        "https://blog.playstation.com/?p=104160",
+        "https://manuals.plus/m/cec73f804f14d88770f8d9363738441d39e20d83235650be05301649c08d31f8",
+        "https://arcarc.xmission.com/PDF_LaserDisc_Games/Mad%20Dog%20McCree%20and%20Who%20Shot%20Johhny%20Rock%20Manual%20Rev%202.pdf"
+      ],
+      "reason": "登记两作原作制作。ScummVM项目公告明确创作主体，后发发行制作人公告区分原视频和重制；原街机手册封面及规格已目视核对。3DO说明书只读到转录摘要，原PDF未能本地取得，不单独据摘要认定原版全体人员或法人类型；法律身份和后续收购连续性不变。",
+      "workIds": [
+        "g1198",
+        "g1199"
+      ]
+    },
+    {
+      "entityId": "entity-name-5b146b15540c",
+      "name": "aNCHOR",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://games.ancr.jp/games/muv-luv/",
+        "https://ancr.jp/company/"
+      ],
+      "reason": "当前官方页的開発aNCHOR对应Steam及Switch等后发产品，不能倒填2003与2006原作。既有âge原作制作品牌和aNCHOR发行记录保持分开。若新增后发开发职责，需核定具体已收录内容／发行的适用范围；不扩张为整作原作制作。",
+      "workIds": [
+        "g052",
+        "g053"
+      ]
+    },
+    {
+      "entityId": "entity-angel_hearts",
+      "name": "Angel Hearts",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/ジャスト_(ブランド)",
+        "https://www.amazon.co.jp/YASHA-%E9%9A%A0%E3%81%95%E3%82%8C%E3%81%9F%E7%8B%82%E6%B0%97/dp/B00009ELCF",
+        "https://te2.rash.jp/r/l/gamemaker.html"
+      ],
+      "reason": "本轮可得零售品牌资料及历史链接目录，均不足以证明两作制作职责。既有品牌及原作发行保留，需原始说明书或官网制作职员页；不因JAST家族或品牌发行自动登记创作。",
+      "workIds": [
+        "g676",
+        "g677"
+      ]
+    },
+    {
+      "entityId": "entity-aniplex",
+      "name": "Aniplex",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.aniplex.co.jp/lineup/mahoyo-movie/news/detail/?id=70526",
+        "https://www.aniplex.co.jp/lineup/magireco/",
+        "https://store.steampowered.com/app/2987800",
+        "https://tanetsumi.aniplex-exe.com/"
+      ],
+      "reason": "魔法使之夜官方说明原开发販売为TYPE-MOON；Magia Record官方具名f4samurai开发；Exedra区分Aniplex企画发行与其他开发。Aniplex的公司、发行及企画贡献继续保留，不解释为未参与创作，也不追加原作开发；种子之歌官网暂不可读，需补原作开发范围与具名职员证明。",
+      "workIds": [
+        "g156",
+        "nitroplus-extra-magireco",
+        "g203",
+        "nitroplus-extra-exedra"
+      ]
+    },
+    {
+      "entityId": "entity-aniplex_exe",
+      "name": "ANIPLEX.EXE",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://aniplex-exe.com/",
+        "https://atri-mdm.com/",
+        "https://newscast.jp/news/0816588",
+        "https://tanetsumi.aniplex-exe.com/"
+      ],
+      "reason": "保留四作原作发行品牌及原有制作合作方。ヒラヒラヒヒル2022官方发布稿同时使用製作品牌及STAFF制作ANIPLEX.EXE，另列BA-KU程序；后续资料又记製作，不能不作区分地把企画／製作与实际开发归一。需核最终职员及职责词义对应，当前不升级为开发或批量制作品牌，不作没有创作贡献的断言。",
+      "workIds": [
+        "g200",
+        "g201",
+        "g202",
+        "g203"
+      ]
+    },
+    {
+      "entityId": "entity-applique_imouto",
+      "name": "Applique -Imouto-（あっぷりけ-妹-）",
+      "status": "registered",
+      "sources": [
+        "https://www.akabeesoft3.com/products/saisai/product.html",
+        "https://www.akabeesoft3.com/products/arcology/staffdiary.html",
+        "https://www.akabeesoft3.com/products/artemis/product.html",
+        "https://www.akabeesoft3.com/products/otomimi/spec.html"
+      ],
+      "reason": "4作逐一登记子品牌制作，原产品页／开发日记与原始品牌图核定；只改子品牌自己的创作目录。Applique专题的4条旧待核引用继续保留，不上推母品牌。",
+      "workIds": [
+        "g871",
+        "g872",
+        "g873",
+        "g874"
+      ]
+    },
+    {
+      "entityId": "entity-applique",
+      "name": "Applique（あっぷりけ）",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://www.akabeesoft3.com/products/ap_soraoti/main.html",
+        "https://www.akabeesoft3.com/products/ap_concerto/u.html",
+        "https://www.akabeesoft3.com/products/ap_sinsemilla/product.html",
+        "https://www.akabeesoft3.com/products/ap_rebirth/products.html",
+        "https://www.akabeesoft3.com/products/ap_apfd/pro.html",
+        "https://moe-gameaward.com/title/detail.html?id=1098",
+        "https://moe-gameaward.com/title/detail.html?id=2086",
+        "https://store.steampowered.com/app/2109640/_/?curator_clanid=33021465&l=japanese&snr=1_1056_4_18_curatorfeatureddiscount",
+        "https://store.steampowered.com/app/1069230/?l=english",
+        "https://megalodon.jp/ref/2013-0401-1650-23/www.applique-soft.com/main.html"
+      ],
+      "reason": "8作登记制作品牌，g869暂缓：既有2016先行免费LVN与2017解放之羽扩充属于同一作品不同内容，Steam来源对应扩充版；需补2016原页或精确内容层开发来源。4条妹品牌专题待核不解除，母子品牌不继承。",
+      "workIds": [
+        "g862",
+        "g863",
+        "g864",
+        "g865",
+        "g866",
+        "g867",
+        "g868",
+        "g869",
+        "g870",
+        "g871",
+        "g872",
+        "g873",
+        "g874"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "A",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 32,
+    "processedEntityIds": [
+      "entity-name-4750f74061fe",
+      "entity-name-c31f977d8bac",
+      "entity-name-6ed2a96c53cd",
+      "entity-addison_wesley",
+      "entity-adventure_international",
+      "entity-name-490ea790703a",
+      "entity-name-f0d25e9c6d82",
+      "entity-name-76fdfcac5ffb",
+      "entity-name-b8b1293f82fa",
+      "entity-alice_blue",
+      "entity-alice_noir",
+      "entity-alicesoft",
+      "entity-name-bd36baf4b6a9",
+      "entity-name-788994ba8dfb",
+      "entity-name-5b146b15540c",
+      "entity-angel_hearts",
+      "entity-aniplex",
+      "entity-aniplex_exe",
+      "entity-applique_imouto",
+      "entity-applique"
+    ],
+    "nextEntityId": "entity-aquaplus",
+    "nextName": "AQUAPLUS",
+    "queue": [
+      {
+        "entityId": "entity-name-4750f74061fe",
+        "name": "Accolade",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c31f977d8bac",
+        "name": "Activision",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6ed2a96c53cd",
+        "name": "Addison-Wesley Productions",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-addison_wesley",
+        "name": "Addison-Wesley Publishing Company",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-adventure_international",
+        "name": "Adventure International",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-490ea790703a",
+        "name": "Adventure Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f0d25e9c6d82",
+        "name": "âge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-76fdfcac5ffb",
+        "name": "Akatsuki Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b8b1293f82fa",
+        "name": "Alchemist",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alice_blue",
+        "name": "Alice Blue",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alice_noir",
+        "name": "AliceNoir",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alicesoft",
+        "name": "Alicesoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bd36baf4b6a9",
+        "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-788994ba8dfb",
+        "name": "American Laser Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5b146b15540c",
+        "name": "aNCHOR",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-angel_hearts",
+        "name": "Angel Hearts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aniplex",
+        "name": "Aniplex",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aniplex_exe",
+        "name": "ANIPLEX.EXE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-applique_imouto",
+        "name": "Applique -Imouto-（あっぷりけ-妹-）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-applique",
+        "name": "Applique（あっぷりけ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aquaplus",
+        "name": "AQUAPLUS",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-aquaplus_brand",
+        "name": "AQUAPLUS",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-5ba1ee4df514",
+        "name": "ARIA",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-7f11db7a66f2",
+        "name": "Arsys Software",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-asaproject",
+        "name": "ASa Project",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-ascii",
+        "name": "ASCII",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-9590651f2922",
+        "name": "Asmik（アスミック）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-80a218385951",
+        "name": "Asoberu! BD-GAME（あそべる！BD-GAME）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-03ca146bb18c",
+        "name": "Atari",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-6cafab111889",
+        "name": "Atlus",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-august",
+        "name": "AUGUST",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-a7f6066af4b9",
+        "name": "Azarashi Soft（あざらしそふと）",
+        "status": "notStarted"
+      }
+    ]
+  }
+}
