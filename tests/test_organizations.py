@@ -28,5 +28,5 @@ class OrganizationTests(unittest.TestCase):
         page = (ROOT / 'organizations.html').read_text()
         ids = re.findall(r'\bid="([^"]+)"', page)
         self.assertEqual(len(ids), len(set(ids)))
-        self.assertIn('data-source="data/organizations.json"', page)
+        self.assertRegex(page, r'data-source="data/organizations\.json\?v=[0-9a-f]{12}"')
         self.assertTrue((ROOT / 'relationships-preview.html').exists())
