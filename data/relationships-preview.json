@@ -1,0 +1,1568 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-22",
+  "mode": "presentationPreview",
+  "families": [
+    {
+      "id": "alicesoft",
+      "title": "Alicesoft",
+      "subtitle": "公司与多层品牌",
+      "root": "entity-champion_soft",
+      "focus": "entity-alicesoft",
+      "entityIds": [
+        "entity-champion_soft",
+        "entity-alicesoft",
+        "entity-alice_blue",
+        "entity-alice_noir"
+      ]
+    },
+    {
+      "id": "visualarts",
+      "title": "VISUAL ARTS / Key",
+      "subtitle": "母公司与制作品牌",
+      "root": "preview-tencent",
+      "focus": "entity-key",
+      "entityIds": [
+        "entity-visualarts",
+        "entity-key"
+      ]
+    },
+    {
+      "id": "nitroplus",
+      "title": "Nitroplus",
+      "subtitle": "同名公司与旗下品牌",
+      "root": "entity-nitroplus",
+      "focus": "entity-nitroplus_brand",
+      "entityIds": [
+        "entity-nitroplus",
+        "entity-nitroplus_brand",
+        "entity-nitroorigin",
+        "entity-nitrochiral"
+      ]
+    },
+    {
+      "id": "minato",
+      "title": "Hawk Eye / Minato",
+      "subtitle": "公司、品牌与子品牌",
+      "root": "entity-hawkeye",
+      "focus": "entity-minatosoft",
+      "entityIds": [
+        "entity-hawkeye",
+        "entity-minatosoft",
+        "entity-mirai",
+        "entity-whale",
+        "entity-minato_carnival",
+        "entity-minato_carnival_world"
+      ]
+    },
+    {
+      "id": "microsoft",
+      "title": "Microsoft / Xbox",
+      "subtitle": "旧名与更名沿革",
+      "root": "entity-microsoft",
+      "focus": "entity-xbox_game_studios",
+      "entityIds": [
+        "entity-microsoft",
+        "entity-microsoft_studios",
+        "entity-xbox_game_studios",
+        "entity-microsoft_home"
+      ]
+    },
+    {
+      "id": "silkys",
+      "title": "ELF / Silky’s",
+      "subtitle": "衍生组织与待核线索",
+      "root": "entity-elf",
+      "focus": "entity-silkys_plus",
+      "entityIds": [
+        "entity-elf",
+        "entity-silkys",
+        "entity-silkys_plus",
+        "entity-silkys_wasabi",
+        "entity-silkys_a5",
+        "entity-silkys_dolce"
+      ]
+    },
+    {
+      "id": "novect",
+      "title": "NOVECT",
+      "subtitle": "团队旧名",
+      "root": "entity-novect",
+      "focus": "entity-novect",
+      "entityIds": [
+        "entity-novect"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "entity-alice_blue",
+      "name": "Alice Blue",
+      "type": "brand",
+      "aliases": [
+        "Alice Blue"
+      ],
+      "sources": [
+        "https://www.alicesoft.com/game/index.html"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 3,
+        "related": 3,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g546",
+          "title": "隐月",
+          "year": 2000
+        },
+        {
+          "id": "g545",
+          "title": "王子殿下Lv1.5",
+          "year": 2002
+        },
+        {
+          "id": "g547",
+          "title": "向乐园出发",
+          "year": 2003
+        }
+      ]
+    },
+    {
+      "id": "entity-alice_noir",
+      "name": "AliceNoir",
+      "type": "brand",
+      "aliases": [
+        "AliceNoir"
+      ],
+      "sources": [
+        "https://www.alicesoft.com/game/index.html"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 1,
+        "related": 1,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g574",
+          "title": "Nor：一次现实的彼方",
+          "year": 2002
+        }
+      ]
+    },
+    {
+      "id": "entity-alicesoft",
+      "name": "Alicesoft",
+      "type": "brand",
+      "aliases": [
+        "Alicesoft",
+        "ALICESOFT",
+        "アリスソフト",
+        "Alicesoft（合集收录）／Wren（有志移植）",
+        "Alicesoft（合集）／朱蓮（有志移植）"
+      ],
+      "sources": [
+        "https://www.alicesoft.com/game/index.html"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "本专题区分Alicesoft、Alice Blue、AliceNoir、ChampionSoft历史沿革和IMYUIC历史合作。叙事／养成冒险及指令ADV统一引用主数据库，原型、杂志盘与混合玩法保留原归档说明；外部出版商改版仍保留原署名。既有两款1988年教育软件的署名冲突及1982年记录的商业署名疑点继续保留。非官方移植工具包和改造版不记为Alicesoft正式发行。",
+      "dates": [
+        {
+          "kind": "brandStarted",
+          "value": "1989",
+          "precision": "year",
+          "source": "https://www.gamepres.org/pc88/library/champion.htm",
+          "status": "existingEvidence"
+        }
+      ],
+      "stats": {
+        "main": 91,
+        "related": 68,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "alicesoft",
+          "name": "Alicesoft"
+        }
+      ],
+      "works": [
+        {
+          "id": "g548",
+          "title": "兰斯1：寻找小光",
+          "year": 1989
+        },
+        {
+          "id": "g549",
+          "title": "入侵者：樱宅探索",
+          "year": 1989
+        },
+        {
+          "id": "g550",
+          "title": "CRESCENT MOON少女",
+          "year": 1989
+        },
+        {
+          "id": "g551",
+          "title": "危险天狗传说",
+          "year": 1989
+        }
+      ]
+    },
+    {
+      "id": "entity-champion_soft",
+      "name": "Champion Soft（チャンピオンソフト）",
+      "type": "company",
+      "aliases": [
+        "Champion Soft（チャンピオンソフト）",
+        "チャンピオンソフト",
+        "ChampionSoft",
+        "Champion Soft"
+      ],
+      "sources": [
+        "https://www.gamepres.org/pc88/library/champion.htm"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "Champion Soft于1983年1月成立。1989年启用Alicesoft品牌，法定公司名仍为株式会社チャンピオンソフト。本专题聚焦早期Champion Soft目录；1982先行程序作为创办前关联，1989品牌后作品另见Alicesoft专题。早期销售、外包开发与本社品牌分别注明。",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1983-01",
+          "precision": "month",
+          "source": "https://www.gamepres.org/pc88/library/champion.htm",
+          "status": "existingEvidence"
+        }
+      ],
+      "nameParts": {
+        "english": "Champion Soft",
+        "japanese": "チャンピオンソフト",
+        "basis": "existingBilingualName"
+      },
+      "stats": {
+        "main": 30,
+        "related": 34,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "champion_soft",
+          "name": "Champion Soft（チャンピオンソフト）"
+        }
+      ],
+      "works": [
+        {
+          "id": "g075",
+          "title": "四次元少女莉迪亚",
+          "year": 1983
+        },
+        {
+          "id": "g104",
+          "title": "寻找广子",
+          "year": 1983
+        },
+        {
+          "id": "g121",
+          "title": "间谍 0011",
+          "year": 1983
+        },
+        {
+          "id": "g122",
+          "title": "太空奇遇",
+          "year": 1983
+        }
+      ]
+    },
+    {
+      "id": "entity-elf",
+      "name": "ELF",
+      "type": "company",
+      "aliases": [
+        "ELF",
+        "エルフ"
+      ],
+      "sources": [
+        "https://archive.is/taUch"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "ELF 指日本株式会社エルフ。Silky’s 原创游戏只在 ELF 确有发行移植／重制版时收入本专题，并明确原作发行品牌；FANZA 等后续权利方重制版仍按实际发行署名归档。",
+      "dates": [],
+      "stats": {
+        "main": 40,
+        "related": 22,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "elf",
+          "name": "ELF"
+        }
+      ],
+      "works": [
+        {
+          "id": "g683",
+          "title": "私立学校：PRIVATE SCHOOL",
+          "year": 1989
+        },
+        {
+          "id": "g684",
+          "title": "PINKY・PONKY 1：美丽之梦",
+          "year": 1989
+        },
+        {
+          "id": "g685",
+          "title": "PINKY・PONKY 2：暮光游戏",
+          "year": 1989
+        },
+        {
+          "id": "g686",
+          "title": "PINKY・PONKY 3：战斗恋人",
+          "year": 1989
+        }
+      ]
+    },
+    {
+      "id": "entity-hawkeye",
+      "name": "Hawk Eye（株式会社ホークアイ）",
+      "type": "company",
+      "aliases": [
+        "株式会社ホークアイ（Hawk Eye）",
+        "株式会社ホークアイ",
+        "Hawk Eye",
+        "Hawk Eye（株式会社ホークアイ）"
+      ],
+      "sources": [
+        "https://www.mirai-soft.net/guide.php"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "株式会社ホークアイ是法人主体；mirai官网直接标明mirai（株式会社ホークアイ）。五品牌保留实际发行署名，合作和授权游戏按真正发行方记载。2006为みなとそふと品牌活动起点，不能充当法人精确设立日。",
+      "dates": [],
+      "nameParts": {
+        "english": "Hawk Eye",
+        "japanese": "株式会社ホークアイ",
+        "basis": "catalogueSpelling"
+      },
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "hawkeye",
+          "name": "Hawk Eye（株式会社ホークアイ）"
+        }
+      ],
+      "works": []
+    },
+    {
+      "id": "entity-key",
+      "name": "Key",
+      "type": "brand",
+      "aliases": [
+        "Key"
+      ],
+      "sources": [
+        "https://key.visualarts.gr.jp/product_all"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "Key 是 VisualArt’s 旗下品牌。本专题按品牌关联作品整理，并显示各发行方的版本；主目录的“发行厂商”筛选仍严格依据该版本的发行署名。",
+      "dates": [],
+      "stats": {
+        "main": 21,
+        "related": 1,
+        "bibliography": 0
+      },
+      "productionCount": 21,
+      "dossiers": [
+        {
+          "id": "key",
+          "name": "Key"
+        }
+      ],
+      "works": [
+        {
+          "id": "g028",
+          "title": "雪之少女",
+          "year": 1999
+        },
+        {
+          "id": "g029",
+          "title": "青空",
+          "year": 2000
+        },
+        {
+          "id": "g030",
+          "title": "克兰娜德",
+          "year": 2004
+        },
+        {
+          "id": "g032",
+          "title": "星之梦",
+          "year": 2004
+        }
+      ]
+    },
+    {
+      "id": "entity-microsoft",
+      "name": "Microsoft",
+      "type": "company",
+      "aliases": [
+        "Microsoft"
+      ],
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "Microsoft于1975/04/04创立，按创业时间进入1975年4月候选组。2019年官方明确Microsoft Studios更名为Xbox Game Studios；发行字段保留当年的品牌名称，归档筛选统一到Microsoft，开发方DONTNOD、Access Games、INTERIOR/NIGHT和Obsidian分别注明。",
+      "dates": [],
+      "stats": {
+        "main": 2,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "microsoft",
+          "name": "Microsoft"
+        }
+      ],
+      "works": [
+        {
+          "id": "g089",
+          "title": "巨洞冒险",
+          "year": 1976
+        },
+        {
+          "id": "g967",
+          "title": "黏土世界",
+          "year": 1996
+        }
+      ]
+    },
+    {
+      "id": "entity-microsoft_home",
+      "name": "Microsoft Home",
+      "type": "brand",
+      "aliases": [
+        "Microsoft Home"
+      ],
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 1,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g966",
+          "title": "盖汉·威尔逊的终极鬼屋",
+          "year": 1994
+        }
+      ]
+    },
+    {
+      "id": "entity-microsoft_studios",
+      "name": "Microsoft Studios",
+      "type": "brand",
+      "aliases": [
+        "Microsoft Studios",
+        "Microsoft Game Studios"
+      ],
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 5,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g974",
+          "title": "摇摆管人编年史",
+          "year": 2011
+        },
+        {
+          "id": "g971",
+          "title": "阿德拉",
+          "year": 2012
+        },
+        {
+          "id": "g972",
+          "title": "迪士尼仙子：隐藏的宝藏",
+          "year": 2013
+        },
+        {
+          "id": "g973",
+          "title": "小美人鱼：海底宝藏",
+          "year": 2013
+        }
+      ]
+    },
+    {
+      "id": "entity-minato_carnival",
+      "name": "Minato Carnival（みなとカーニバル）",
+      "type": "brand",
+      "aliases": [
+        "みなとカーニバル",
+        "Minato Carnival",
+        "Minato Carnival（みなとカーニバル）"
+      ],
+      "sources": [
+        "https://www.minatosoft.com/product.php"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "nameParts": {
+        "english": "Minato Carnival",
+        "japanese": "みなとカーニバル",
+        "basis": "catalogueSpelling"
+      },
+      "stats": {
+        "main": 6,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g1258",
+          "title": "辻堂的纯爱之路",
+          "year": 2012
+        },
+        {
+          "id": "g1259",
+          "title": "辻堂的婚礼之路",
+          "year": 2013
+        },
+        {
+          "id": "g1260",
+          "title": "姊小路直子与银色死神",
+          "year": 2015
+        },
+        {
+          "id": "g1264",
+          "title": "黑金回姬谭：闪夜一夜",
+          "year": 2015
+        }
+      ]
+    },
+    {
+      "id": "entity-minato_carnival_world",
+      "name": "Minato Carnival World（みなとカーニバルWorld）",
+      "type": "brand",
+      "aliases": [
+        "みなとカーニバルWorld",
+        "Minato Carnival World",
+        "Minato Carnival World（みなとカーニバルWorld）"
+      ],
+      "sources": [
+        "https://www.minatosoft.com/product.php"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "nameParts": {
+        "english": "Minato Carnival World",
+        "japanese": "みなとカーニバルWorld",
+        "basis": "catalogueSpelling"
+      },
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": []
+    },
+    {
+      "id": "entity-minatosoft",
+      "name": "Minato Soft（みなとそふと）",
+      "type": "brand",
+      "aliases": [
+        "みなとそふと（Minato Soft）",
+        "みなとそふと",
+        "Minato Soft",
+        "Minato Soft（みなとそふと）"
+      ],
+      "sources": [
+        "https://www.minatosoft.com/product.php"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "みなとそふと是株式会社ホークアイ的品牌，并不存在据本清单推定的「株式会社みなとそふと」。2006为品牌活动起点，不冒称法人精确设立日。Carnival、Whale与家用机品牌保留各自发行署名；结城友奈PC特典出版方Pony Canyon，RPG的合作开发、发行与タカヒロ参与分开。2022部分人员转至CREST／Novus不改旧作品归属。",
+      "dates": [
+        {
+          "kind": "brandActivityStarted",
+          "value": "2006",
+          "precision": "year",
+          "source": "https://www.minatosoft.com/product.php",
+          "status": "existingEvidence"
+        }
+      ],
+      "nameParts": {
+        "english": "Minato Soft",
+        "japanese": "みなとそふと",
+        "basis": "catalogueSpelling"
+      },
+      "stats": {
+        "main": 16,
+        "related": 1,
+        "bibliography": 0
+      },
+      "productionCount": 3,
+      "dossiers": [
+        {
+          "id": "minatosoft",
+          "name": "Minato Soft（みなとそふと）"
+        }
+      ],
+      "works": [
+        {
+          "id": "g1242",
+          "title": "你是主人我是仆",
+          "year": 2007
+        },
+        {
+          "id": "g1243",
+          "title": "认真和我恋爱！",
+          "year": 2009
+        },
+        {
+          "id": "g1244",
+          "title": "认真和我恋爱！S",
+          "year": 2012
+        },
+        {
+          "id": "g1245",
+          "title": "认真和我恋爱！A-1",
+          "year": 2013
+        }
+      ]
+    },
+    {
+      "id": "entity-mirai",
+      "name": "mirai",
+      "type": "brand",
+      "aliases": [
+        "mirai"
+      ],
+      "sources": [
+        "https://www.mirai-soft.net/guide.php"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 6,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g1266",
+          "title": "花姬＊Absolute！",
+          "year": 2016
+        },
+        {
+          "id": "g1267",
+          "title": "魔法少女魔法爱琳",
+          "year": 2017
+        },
+        {
+          "id": "g1268",
+          "title": "宿星的女朋友",
+          "year": 2018
+        },
+        {
+          "id": "g1269",
+          "title": "宿星的女朋友2",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "id": "entity-nitrochiral",
+      "name": "NITRO CHiRAL",
+      "type": "brand",
+      "aliases": [
+        "NITRO CHiRAL",
+        "Nitro+CHiRAL",
+        "Nitro CHiRAL"
+      ],
+      "sources": [
+        "https://www.nitroplus.co.jp/company/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 7,
+        "related": 5,
+        "bibliography": 0
+      },
+      "productionCount": 7,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g622",
+          "title": "咎狗之血",
+          "year": 2005
+        },
+        {
+          "id": "g623",
+          "title": "咏叹调：虚空彼岸",
+          "year": 2006
+        },
+        {
+          "id": "g624",
+          "title": "甜蜜泳池",
+          "year": 2008
+        },
+        {
+          "id": "g625",
+          "title": "戏剧性谋杀",
+          "year": 2012
+        }
+      ]
+    },
+    {
+      "id": "entity-nitroorigin",
+      "name": "NITRO ORIGIN",
+      "type": "brand",
+      "aliases": [
+        "NITRO ORIGIN"
+      ],
+      "sources": [
+        "https://www.nitroplus.co.jp/company/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": []
+    },
+    {
+      "id": "entity-nitroplus",
+      "name": "Nitroplus",
+      "type": "company",
+      "aliases": [
+        "Nitroplus",
+        "NITRO PLUS"
+      ],
+      "sources": [
+        "https://nitro-origin.com/works/game/"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "Nitroplus 社及旗下品牌、原作合作和局部剧本参与分开说明。Chiral 品牌发行归档到 Nitroplus；5pb.、MAGES.、DMM、Aniplex、Square Enix 等实际发行署名保持独立。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "nitroplus",
+          "name": "Nitroplus"
+        }
+      ],
+      "works": []
+    },
+    {
+      "id": "entity-nitroplus_brand",
+      "name": "Nitroplus",
+      "type": "brand",
+      "aliases": [
+        "Nitroplus"
+      ],
+      "sources": [
+        "https://www.nitroplus.co.jp/company/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 28,
+        "related": 5,
+        "bibliography": 0
+      },
+      "productionCount": 2,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g597",
+          "title": "幻灵：地狱之影",
+          "year": 2000
+        },
+        {
+          "id": "g598",
+          "title": "吸血歼鬼维德戈尼亚",
+          "year": 2001
+        },
+        {
+          "id": "g162",
+          "title": "鬼哭街",
+          "year": 2002
+        },
+        {
+          "id": "g599",
+          "title": "你好，世界。",
+          "year": 2002
+        }
+      ]
+    },
+    {
+      "id": "entity-novect",
+      "name": "NOVECT（原 Novectacle）",
+      "type": "team",
+      "aliases": [
+        "NOVECT（原 Novectacle）",
+        "NOVECT",
+        "Novectacle"
+      ],
+      "sources": [
+        "https://booth.pm/ja/items/1956908"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "Novectacle 是团队旧称，现用 NOVECT。按作品开发归属建立专题；每个平台保留实际发行署名（Novectacle、MangaGamer、WhisperGames、dramatic create 等），主数据库的厂商筛选按这些署名归档。",
+      "dates": [],
+      "stats": {
+        "main": 9,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "novect",
+          "name": "NOVECT（原 Novectacle）"
+        }
+      ],
+      "works": [
+        {
+          "id": "g191",
+          "title": "雾上的伊拉斯谟",
+          "year": 2011
+        },
+        {
+          "id": "g195",
+          "title": "洋馆假日：小妖怪！",
+          "year": 2011
+        },
+        {
+          "id": "g192",
+          "title": "海市蜃楼之馆",
+          "year": 2012
+        },
+        {
+          "id": "g193",
+          "title": "第七境",
+          "year": 2013
+        }
+      ]
+    },
+    {
+      "id": "entity-silkys",
+      "name": "Silky’s",
+      "type": "brand",
+      "aliases": [
+        "Silky’s",
+        "Silky's"
+      ],
+      "sources": [
+        "https://ja.wikipedia.org/wiki/シルキーズ"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "Silky’s 是 ELF 的衍生品牌；原品牌与 2014 年后独立创立的 Silky’s Plus 分开归档。原作中已有五部在 ELF 专题因后续改编发行出现，本页沿用同一作品 ID。",
+      "dates": [],
+      "stats": {
+        "main": 29,
+        "related": 6,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "silkys",
+          "name": "Silky’s"
+        }
+      ],
+      "works": [
+        {
+          "id": "g305",
+          "title": "河原崎家的一族",
+          "year": 1993
+        },
+        {
+          "id": "g306",
+          "title": "野野村医院的人们",
+          "year": 1994
+        },
+        {
+          "id": "g307",
+          "title": "爱姊妹：两人的果实",
+          "year": 1994
+        },
+        {
+          "id": "g309",
+          "title": "恋姬",
+          "year": 1995
+        }
+      ]
+    },
+    {
+      "id": "entity-silkys_a5",
+      "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+      "type": "brand",
+      "aliases": [
+        "Silky’s Plus A5和牛",
+        "Silky’s Plus A5 Wagyu",
+        "シルキーズプラス A5和牛",
+        "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）"
+      ],
+      "sources": [
+        "https://ja.wikipedia.org/wiki/シルキーズプラス"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "nameParts": {
+        "english": "Silky’s Plus A5 Wagyu",
+        "japanese": "シルキーズプラス A5和牛",
+        "basis": "catalogueSpelling"
+      },
+      "stats": {
+        "main": 3,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g469",
+          "title": "根雪的幻影：白花庄的人们",
+          "year": 2015
+        },
+        {
+          "id": "g473",
+          "title": "寻蝶者",
+          "year": 2018
+        },
+        {
+          "id": "g474",
+          "title": "寻蝶者：混沌噩梦",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "id": "entity-silkys_dolce",
+      "name": "Silky’s Plus DOLCE",
+      "type": "brand",
+      "aliases": [
+        "Silky’s Plus DOLCE"
+      ],
+      "sources": [
+        "https://ja.wikipedia.org/wiki/シルキーズプラス"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 3,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g471",
+          "title": "景之海的艾佩莉亚",
+          "year": 2017
+        },
+        {
+          "id": "g472",
+          "title": "景之海的艾佩莉亚：卡萨布兰卡的骑士",
+          "year": 2017
+        },
+        {
+          "id": "g475",
+          "title": "言叶飘落的夏日风铃",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "id": "entity-silkys_plus",
+      "name": "Silky’s Plus",
+      "type": "brand",
+      "aliases": [
+        "Silky’s Plus",
+        "Silky's Plus"
+      ],
+      "sources": [
+        "https://ja.wikipedia.org/wiki/シルキーズプラス"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "2014 年起活动的独立品牌，不能与原 Silky’s 的历史作品直接合并。专题按作品品牌组织；主机与海外版本仍保留 Silky’s Plus Alpha、Entergram、Sekai Project 等实际发行署名。",
+      "dates": [],
+      "stats": {
+        "main": 5,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "silkys_plus",
+          "name": "Silky’s Plus"
+        }
+      ],
+      "works": [
+        {
+          "id": "g476",
+          "title": "罐头少女的终末世界",
+          "year": 2019
+        },
+        {
+          "id": "g477",
+          "title": "异想魅惑",
+          "year": 2019
+        },
+        {
+          "id": "g478",
+          "title": "罐头少女的终末世界：Another 八乙女华江篇",
+          "year": 2021
+        },
+        {
+          "id": "g479",
+          "title": "冬滚滚",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "id": "entity-silkys_wasabi",
+      "name": "Silky’s Plus WASABI",
+      "type": "brand",
+      "aliases": [
+        "Silky’s Plus WASABI"
+      ],
+      "sources": [
+        "https://ja.wikipedia.org/wiki/シルキーズプラス"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 4,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g468",
+          "title": "七色轮回",
+          "year": 2014
+        },
+        {
+          "id": "g470",
+          "title": "晓色怪奇谭",
+          "year": 2016
+        },
+        {
+          "id": "g477",
+          "title": "异想魅惑",
+          "year": 2019
+        },
+        {
+          "id": "g480",
+          "title": "异想魅惑2：宵暗廻奇谭",
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "id": "entity-visualarts",
+      "name": "VISUAL ARTS",
+      "type": "company",
+      "aliases": [
+        "VISUAL ARTS",
+        "VisualArt’s",
+        "VisualArts",
+        "VisualArt’s（ビジュアルアーツ★Motto）"
+      ],
+      "sources": [
+        "https://visual-arts.jp/blog_2024_1/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 21,
+        "related": 4,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g028",
+          "title": "雪之少女",
+          "year": 1999
+        },
+        {
+          "id": "g029",
+          "title": "青空",
+          "year": 2000
+        },
+        {
+          "id": "g030",
+          "title": "克兰娜德",
+          "year": 2004
+        },
+        {
+          "id": "g032",
+          "title": "星之梦",
+          "year": 2004
+        }
+      ]
+    },
+    {
+      "id": "entity-whale",
+      "name": "Whale（ホエール）",
+      "type": "brand",
+      "aliases": [
+        "ホエール",
+        "Whale",
+        "Whale（ホエール）"
+      ],
+      "sources": [
+        "https://www.mirai-soft.net/guide.php"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "nameParts": {
+        "english": "Whale",
+        "japanese": "ホエール",
+        "basis": "catalogueSpelling"
+      },
+      "stats": {
+        "main": 1,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g1263",
+          "title": "我的女友不是人",
+          "year": 2010
+        }
+      ]
+    },
+    {
+      "id": "entity-xbox_game_studios",
+      "name": "Xbox Game Studios",
+      "type": "brand",
+      "aliases": [
+        "Xbox Game Studios",
+        "Xbox Game Studios Publishing"
+      ],
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
+      "dates": [],
+      "stats": {
+        "main": 3,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g963",
+          "title": "告诉我为什么",
+          "year": 2020
+        },
+        {
+          "id": "g964",
+          "title": "黄昏降临时",
+          "year": 2022
+        },
+        {
+          "id": "g965",
+          "title": "隐迹渐现",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "id": "preview-tencent",
+      "name": "Tencent（腾讯）",
+      "type": "company",
+      "aliases": [
+        "Tencent Holdings",
+        "腾讯控股"
+      ],
+      "sources": [
+        "https://visual-arts.jp/blog-2023-july/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "用于母公司关系的页面示例，依据2023年公告；未追加到正式主体索引。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    }
+  ],
+  "edges": [
+    {
+      "id": "existing-0",
+      "parent": "entity-silkys_plus",
+      "child": "entity-silkys_wasabi",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://ja.wikipedia.org/wiki/シルキーズプラス",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-1",
+      "parent": "entity-silkys_plus",
+      "child": "entity-silkys_a5",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://ja.wikipedia.org/wiki/シルキーズプラス",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-2",
+      "parent": "entity-silkys_plus",
+      "child": "entity-silkys_dolce",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://ja.wikipedia.org/wiki/シルキーズプラス",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-15",
+      "parent": "entity-alicesoft",
+      "child": "entity-alice_blue",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://www.alicesoft.com/game/index.html",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-16",
+      "parent": "entity-alicesoft",
+      "child": "entity-alice_noir",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://www.alicesoft.com/game/index.html",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-17",
+      "parent": "entity-minatosoft",
+      "child": "entity-minato_carnival",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://www.minatosoft.com/product.php",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-18",
+      "parent": "entity-minatosoft",
+      "child": "entity-minato_carnival_world",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://www.minatosoft.com/product.php",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-19",
+      "parent": "entity-hawkeye",
+      "child": "entity-mirai",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://www.mirai-soft.net/guide.php",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-20",
+      "parent": "entity-hawkeye",
+      "child": "entity-whale",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://www.mirai-soft.net/guide.php",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-21",
+      "parent": "entity-microsoft",
+      "child": "entity-microsoft_studios",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-22",
+      "parent": "entity-microsoft",
+      "child": "entity-xbox_game_studios",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-23",
+      "parent": "entity-microsoft",
+      "child": "entity-microsoft_home",
+      "kind": "family",
+      "label": "品牌家族",
+      "status": "existingDossier",
+      "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-24",
+      "parent": "entity-visualarts",
+      "child": "entity-key",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://visual-arts.jp/blog_2024_1/",
+      "note": "公司与品牌分开；不由当前运营关系反推所有历史版本的合同发行方。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-28",
+      "parent": "entity-champion_soft",
+      "child": "entity-alicesoft",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://www.alicesoft.com/outline/profile.html",
+      "note": "Alicesoft品牌由Champion Soft经营；公司成立与品牌启用分开。",
+      "dateLabel": "1989起；终点未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-29",
+      "parent": "entity-nitroplus",
+      "child": "entity-nitrochiral",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://www.nitroplus.co.jp/company/",
+      "note": "子品牌独立，原署名不被公司别名吞并。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-30",
+      "parent": "entity-nitroplus",
+      "child": "entity-nitroorigin",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://www.nitroplus.co.jp/company/",
+      "note": "新品牌不追溯替换此前Nitroplus品牌署名。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-31",
+      "parent": "entity-nitroplus",
+      "child": "entity-nitroplus_brand",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://www.nitroplus.co.jp/company/",
+      "note": "公司与同名品牌分开。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-36",
+      "parent": "entity-elf",
+      "child": "entity-silkys",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "existingDossier",
+      "source": "https://ja.wikipedia.org/wiki/シルキーズ",
+      "note": "原品牌关系，不与Silky’s Plus合并。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-38",
+      "parent": "entity-hawkeye",
+      "child": "entity-minatosoft",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "existingDossier",
+      "source": "https://www.mirai-soft.net/guide.php",
+      "note": "品牌活动起点不当作法人成立日。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-39",
+      "parent": "entity-hawkeye",
+      "child": "entity-mirai",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://www.mirai-soft.net/guide.php",
+      "note": "官方署名mirai（株式会社ホークアイ）。",
+      "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "preview-va-parent",
+      "parent": "preview-tencent",
+      "child": "entity-visualarts",
+      "kind": "parent",
+      "label": "母公司／子公司",
+      "status": "previewReviewed",
+      "source": "https://visual-arts.jp/blog-2023-july/",
+      "dateLabel": "2023-07-27公告；终点未核",
+      "note": "官方股权转让公告明确腾讯及全资子公司安排。公告日期不当作交割日；未核当前持股状态。本条仅用于页面预览，未改正式关系索引。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "preview-silkys-origin",
+      "parent": "entity-silkys",
+      "child": "entity-silkys_plus",
+      "kind": "spinOff",
+      "label": "成员独立 · 待核",
+      "status": "pending",
+      "source": "https://ja.wikipedia.org/wiki/シルキーズプラス",
+      "dateLabel": "具体时间待核",
+      "note": "待核线索：既有档案区分原Silky’s与后来独立品牌。人员独立的原始公告、组织连续性和时间仍需补证；此连线不表示股权、母子公司或旧作继承。",
+      "basis": "previewCandidate"
+    }
+  ],
+  "nameHistory": [
+    {
+      "id": "xbox-name",
+      "fromId": "entity-microsoft_studios",
+      "toId": "entity-xbox_game_studios",
+      "oldName": "Microsoft Studios",
+      "newName": "Xbox Game Studios",
+      "dateLabel": "2019-02-05公告",
+      "status": "previewReviewed",
+      "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "note": "官方宣布开发组织更名。预览以历史名称相连，保留原来两个署名ID及各自作品，不自动合并或改写旧发行。"
+    },
+    {
+      "id": "novect-name",
+      "fromId": "entity-novect",
+      "toId": "entity-novect",
+      "oldName": "Novectacle",
+      "newName": "NOVECT",
+      "dateLabel": "更名时间未核",
+      "status": "existingDossier",
+      "source": "https://novect.net/",
+      "note": "旧名取自既有主体档案明确说明，官网现用NOVECT。其他检索别名不自动作为旧名。"
+    }
+  ],
+  "reference": {
+    "url": "https://www.kungal.com/galgame/official/15437",
+    "note": "参考企业家族、更名沿革和衍生分区的浏览逻辑；未复制外站关系数据。"
+  }
+}

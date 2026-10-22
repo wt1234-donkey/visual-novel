@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "reference": {
+    "url": "https://www.kungal.com/galgame/official/15437",
+    "note": "参考企业家族、更名沿革和衍生分区的浏览逻辑；未复制外站关系数据。"
+  },
+  "families": [
+    {
+      "id": "alicesoft",
+      "title": "Alicesoft",
+      "subtitle": "公司与多层品牌",
+      "root": "entity-champion_soft",
+      "focus": "entity-alicesoft",
+      "entityIds": [
+        "entity-champion_soft",
+        "entity-alicesoft",
+        "entity-alice_blue",
+        "entity-alice_noir"
+      ]
+    },
+    {
+      "id": "visualarts",
+      "title": "VISUAL ARTS / Key",
+      "subtitle": "母公司与制作品牌",
+      "root": "preview-tencent",
+      "focus": "entity-key",
+      "entityIds": [
+        "entity-visualarts",
+        "entity-key"
+      ]
+    },
+    {
+      "id": "nitroplus",
+      "title": "Nitroplus",
+      "subtitle": "同名公司与旗下品牌",
+      "root": "entity-nitroplus",
+      "focus": "entity-nitroplus_brand",
+      "entityIds": [
+        "entity-nitroplus",
+        "entity-nitroplus_brand",
+        "entity-nitroorigin",
+        "entity-nitrochiral"
+      ]
+    },
+    {
+      "id": "minato",
+      "title": "Hawk Eye / Minato",
+      "subtitle": "公司、品牌与子品牌",
+      "root": "entity-hawkeye",
+      "focus": "entity-minatosoft",
+      "entityIds": [
+        "entity-hawkeye",
+        "entity-minatosoft",
+        "entity-mirai",
+        "entity-whale",
+        "entity-minato_carnival",
+        "entity-minato_carnival_world"
+      ]
+    },
+    {
+      "id": "microsoft",
+      "title": "Microsoft / Xbox",
+      "subtitle": "旧名与更名沿革",
+      "root": "entity-microsoft",
+      "focus": "entity-xbox_game_studios",
+      "entityIds": [
+        "entity-microsoft",
+        "entity-microsoft_studios",
+        "entity-xbox_game_studios",
+        "entity-microsoft_home"
+      ]
+    },
+    {
+      "id": "silkys",
+      "title": "ELF / Silky’s",
+      "subtitle": "衍生组织与待核线索",
+      "root": "entity-elf",
+      "focus": "entity-silkys_plus",
+      "entityIds": [
+        "entity-elf",
+        "entity-silkys",
+        "entity-silkys_plus",
+        "entity-silkys_wasabi",
+        "entity-silkys_a5",
+        "entity-silkys_dolce"
+      ]
+    },
+    {
+      "id": "novect",
+      "title": "NOVECT",
+      "subtitle": "团队旧名",
+      "root": "entity-novect",
+      "focus": "entity-novect",
+      "entityIds": [
+        "entity-novect"
+      ]
+    }
+  ],
+  "previewNodes": [
+    {
+      "id": "preview-tencent",
+      "name": "Tencent（腾讯）",
+      "type": "company",
+      "aliases": [
+        "Tencent Holdings",
+        "腾讯控股"
+      ],
+      "sources": [
+        "https://visual-arts.jp/blog-2023-july/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "用于母公司关系的页面示例，依据2023年公告；未追加到正式主体索引。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    }
+  ],
+  "previewEdges": [
+    {
+      "id": "preview-va-parent",
+      "parent": "preview-tencent",
+      "child": "entity-visualarts",
+      "kind": "parent",
+      "label": "母公司／子公司",
+      "status": "previewReviewed",
+      "source": "https://visual-arts.jp/blog-2023-july/",
+      "dateLabel": "2023-07-27公告；终点未核",
+      "note": "官方股权转让公告明确腾讯及全资子公司安排。公告日期不当作交割日；未核当前持股状态。本条仅用于页面预览，未改正式关系索引。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "preview-silkys-origin",
+      "parent": "entity-silkys",
+      "child": "entity-silkys_plus",
+      "kind": "spinOff",
+      "label": "成员独立 · 待核",
+      "status": "pending",
+      "source": "https://ja.wikipedia.org/wiki/シルキーズプラス",
+      "dateLabel": "具体时间待核",
+      "note": "待核线索：既有档案区分原Silky’s与后来独立品牌。人员独立的原始公告、组织连续性和时间仍需补证；此连线不表示股权、母子公司或旧作继承。",
+      "basis": "previewCandidate"
+    }
+  ],
+  "nameHistory": [
+    {
+      "id": "xbox-name",
+      "fromId": "entity-microsoft_studios",
+      "toId": "entity-xbox_game_studios",
+      "oldName": "Microsoft Studios",
+      "newName": "Xbox Game Studios",
+      "dateLabel": "2019-02-05公告",
+      "status": "previewReviewed",
+      "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "note": "官方宣布开发组织更名。预览以历史名称相连，保留原来两个署名ID及各自作品，不自动合并或改写旧发行。"
+    },
+    {
+      "id": "novect-name",
+      "fromId": "entity-novect",
+      "toId": "entity-novect",
+      "oldName": "Novectacle",
+      "newName": "NOVECT",
+      "dateLabel": "更名时间未核",
+      "status": "existingDossier",
+      "source": "https://novect.net/",
+      "note": "旧名取自既有主体档案明确说明，官网现用NOVECT。其他检索别名不自动作为旧名。"
+    }
+  ]
+}
