@@ -97,3 +97,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-22 A—Z创作登记首批使用 `entity-creator-a-review-20261022.json` 与同名Markdown。顺序核查前8个A主体，仅应用5条具名作品职责及1项Akatsuki Games公司身份订正。其余核查结论与进度不产生职责，保持原始发行、主库准入、身份关系和迁移基线。作品职责已核与主体法律身份待核可并存；具体范围见独立记录。
 
 2026-10-22 A—Z第二批使用 `entity-creator-a2-review-20261022.json` 与同名Markdown；从Alchemist连续到Alicesoft，累计12／32个主体完成证据分流，新增40条ALICESOFT制作品牌。没有身份或关系订正；子品牌、前身与75条旧专题待核不继承制作职责，原作／关联位置不变。首批精确差异固定至其应用快照，当前批次单独对照baseCommit检验。
+
+2026-10-22 A—Z第三批使用 `entity-creator-a3-review-20261022.json` 与同名Markdown；连续核查第13—20个主体，追加American Laser Games两作制作、Applique子品牌4作及本品牌8作制作品牌。身份关系不改，子品牌不解除母品牌专题待核，2016先行LVN与后续扩充的职责不混用；ANIPLEX.EXE的製作／制作资料差异继续具名待核。

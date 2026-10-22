@@ -6,12 +6,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'c5abca055efbae673c53d8275579e9f42ae815b7'
 def read(path): return json.loads((ROOT / path).read_text())
+APPLIED = '570bf41078e39f9d91fb192bef6ef0ad62d66639'
+def applied(path): return json.loads(subprocess.check_output(['git', 'show', f'{APPLIED}:{path}'], cwd=ROOT, text=True))
 def old(path): return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 class CreatorA2ReviewTests(unittest.TestCase):
  def test_exact_forty_additions_preserve_all_original_credits(self):
   review = read('data/entity-creator-a2-review-20261022.json')
   b = {c['id']: c for c in old('data/credits.json')['credits']}
-  a = {c['id']: c for c in read('data/credits.json')['credits']}
+  a = {c['id']: c for c in applied('data/credits.json')['credits']}
   self.assertTrue(b.keys() <= a.keys())
   for cid in b: self.assertEqual(b[cid], a[cid], cid)
   added = [a[cid] for cid in a.keys() - b.keys()]
@@ -25,7 +27,7 @@ class CreatorA2ReviewTests(unittest.TestCase):
  def test_only_the_reviewed_subject_memberships_gain_roles(self):
   key = lambda m: (m['dossierId'], m['workId'])
   b = {key(m): m for m in old('data/credits.json')['dossierMemberships']}
-  a = {key(m): m for m in read('data/credits.json')['dossierMemberships']}
+  a = {key(m): m for m in applied('data/credits.json')['dossierMemberships']}
   self.assertEqual(b.keys(), a.keys())
   expected = {('alicesoft', c['workId']) for c in read('data/entity-creator-a2-review-20261022.json')['creditAdditions']}
   self.assertEqual({k for k in b if b[k] != a[k]}, expected)
@@ -38,9 +40,11 @@ class CreatorA2ReviewTests(unittest.TestCase):
  def test_core_identity_relations_old_reviews_and_main_page_unchanged(self):
   paths = ['data/entities.json','data/entity-migration-review.json','data/games.json','data/company-coverage.json','data/taxonomy.json','data/gameplay-catalogues.json','data/work-classification.json','data/entity-migration-baseline.json','data/content-migration-baseline.json','index.html','app.mjs','filter.mjs','styles.css']
   paths += [f'data/entity-creator-a-review-20261022.{ext}' for ext in ['json','md']]
-  for path in paths: self.assertEqual((ROOT/path).read_bytes(), subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
+  for path in paths:
+   actual = subprocess.check_output(['git','show',f'{APPLIED}:{path}'],cwd=ROOT) if path in ['data/entities.json','data/entity-migration-review.json'] else (ROOT/path).read_bytes()
+   self.assertEqual(actual, subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
  def test_progress_is_contiguous_and_unverified_brands_do_not_inherit(self):
-  review = read('data/entity-creator-a2-review-20261022.json');org = read('data/organizations.json');p = org['registrationProgress']
+  review = read('data/entity-creator-a2-review-20261022.json');org = applied('data/organizations.json');p = org['registrationProgress']
   self.assertEqual(p['processedEntityIds'], [r['entityId'] for r in p['queue'][:12]])
   self.assertEqual([r['entityId'] for r in p['reviewedEntities']], p['processedEntityIds'])
   self.assertEqual([r['name'] for r in review['reviewedEntities']], ['Alchemist','Alice Blue','AliceNoir','Alicesoft'])
