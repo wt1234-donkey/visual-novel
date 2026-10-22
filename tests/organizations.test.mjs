@@ -11,6 +11,15 @@ test('every formal entity is reachable from an organization family without ident
     assert.ok(data.families.some(f=>[f.root,...f.entityIds].includes(entity.id)),entity.id);
   }
   assert.equal(data.nodes.filter(n=>!n.previewOnly).length,formal.entities.length);
+  const main=new Set(Object.values(data.works).filter(w=>w.placement==='main').map(w=>w.id));
+  for(const node of data.nodes.filter(n=>!n.previewOnly)){
+    const direct=new Set(credits.credits.filter(c=>c.entityId===node.id&&main.has(c.workId)).map(c=>c.workId));
+    assert.equal(node.stats.main,direct.size,node.id);
+    for(const position of ['related','bibliography']){
+      const expected=new Set(credits.credits.filter(c=>c.entityId===node.id&&data.works[c.workId].placement===position).map(c=>c.workId));
+      assert.equal(node.stats[position],expected.size,node.id+' '+position);
+    }
+  }
 });
 test('creation groups exactly match resolved creation credits, not publisher or port development roles',()=>{
   for(const node of data.nodes.filter(n=>!n.previewOnly)){

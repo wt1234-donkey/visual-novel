@@ -47,7 +47,7 @@ def build():
             # Refer to the original credit IDs; evidence remains available without duplicating release rows.
             grouped[group].append({'workId': wid, 'creditIds': [c['id'] for c in cs],
                                    'pendingRefs': [{'dossierId': m['dossierId'], 'source': m['source']} for m in pending[eid][wid]]})
-        workids = set(byentity[eid])
+        workids = {wid for wid, cs in byentity[eid].items() if cs}
         featured = [works[wid][0] for wid in sorted(workids, key=lambda wid: (works[wid][0]['firstYear'], wid)) if works[wid][1] == 'main'][:4]
         nodes.append({**entity, 'groups': grouped,
                       'stats': {p: sum(works[wid][1] == p for wid in workids) for p in ['main', 'related', 'bibliography']},
