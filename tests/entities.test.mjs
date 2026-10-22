@@ -48,3 +48,10 @@ test('unfiltered entity-aware catalogue preserves every existing work, content a
   const raw=read('entity-catalogue.json');const compact=createEntityIndex(data,raw.model,raw);assert.deepEqual(filterCatalogue(data,{brand:'entity-key'},compact),find({brand:'entity-key'}));
   const r=data.platformReleases.find(r=>r.workId==='g200'&&r.platform==='Windows');assert.ok(creditsForRelease(index,'g200',r).some(c=>c.entityId==='entity-frontwing'));
 });
+test('reviewed production can be found without promoting corporate parents or related RPGs into the main catalogue',()=>{
+  assert.ok(find({developer:'entity-minatosoft'}).some(x=>x.work.id==='g1251'));
+  assert.ok(!find({developer:'entity-hawkeye'}).some(x=>x.work.id==='g1251'));
+  assert.ok(!find({developer:'entity-nitroplus'}).some(x=>x.work.id==='g622'));
+  for(const id of ['key-rpg-hbr','august-rpg-imys','minatosoft-climax'])assert.ok(!find({}).some(x=>x.work.id===id));
+  assert.ok(!credits.credits.some(c=>c.entityId==='entity-name-5caee77c6090'&&['developer','localizer'].includes(c.role)));
+});

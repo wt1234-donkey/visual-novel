@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "baseCommit": "f146070527470017120c08973ada0fca398c00ee",
+  "audit": "data/entity-priority-review-20261022.md",
+  "policy": "仅应用两项稳定ID身份订正及四条作品层职责。延后项不是生成规则；保留原始署名、身份关系与全部收录位置。",
+  "identityCorrections": [
+    {
+      "reviewId": "A1",
+      "entityId": "entity-name-8a871cf93bfd",
+      "rawName": "Spike Chunsoft",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/",
+        "https://www.spike-chunsoft.co.jp/company/outline/"
+      ],
+      "note": "2026-10-22依据官方公司页及沿革确认公司身份；2012年4月Spike与Chunsoft合并后的署名。保留Spike、Chunsoft及海外主体的独立身份，不由公司身份推定逐作开发职责。原发行署名不变。"
+    },
+    {
+      "reviewId": "A2",
+      "entityId": "entity-name-5caee77c6090",
+      "rawName": "Shiravune",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "team",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://shiravune.com/about"
+      ],
+      "note": "2026-10-22依据官方About确认其自称东京本地化团队；法人身份、运营关系与逐作本地化职责另核。保留既有发行署名，不将团队身份解释为独立法人或批量新增开发、本地化职责。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "A3",
+      "entityId": "entity-key",
+      "dossierId": "key",
+      "workId": "key-rpg-hbr",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "Key",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://www.wfs.games/news/20240717_01.html",
+      "supportingSources": [
+        "https://www.wfs.games/news/20220210_01.html"
+      ],
+      "note": "官方确认Key与Wright Flyer Studios合作企划、制作《绯染天空》；联合制作职责不表示Key独自承担系统程序。WFS公司及品牌复合署名仍单独待核，不据此改变发行或收录位置。"
+    },
+    {
+      "reviewId": "A4",
+      "entityId": "entity-august",
+      "dossierId": "august",
+      "workId": "august-rpg-imys",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "オーガスト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://august-soft.com/20th/history/",
+      "supportingSources": [
+        "https://play.google.com/store/apps/details?hl=ja&id=com.dmm.games.irismysteria"
+      ],
+      "note": "AUGUST在《爱丽丝秘迹》的合作范围为世界观、剧本与角色等创作；官方访谈及发行介绍区分DMM承担的系统开发、运营。不将AUGUST记为独立系统开发方，也不拆分DMM GAMES／AUGUST原发行署名。"
+    },
+    {
+      "reviewId": "A5",
+      "entityId": "entity-minatosoft",
+      "dossierId": "minatosoft",
+      "workId": "g1251",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://yuyuyu.tv/season1/bddvd/bddvd_01.php",
+      "supportingSources": [],
+      "note": "动画官方第1卷商品页明确2014年PC特典由みなとそふと制作；タカヒロ企划、Studio五组绘制游戏图像等分工分别保留。仅对应本作，不自动推广到S、A续作或Hawk Eye公司职责。"
+    },
+    {
+      "reviewId": "A6",
+      "entityId": "entity-minatosoft",
+      "dossierId": "minatosoft",
+      "workId": "minatosoft-climax",
+      "targetType": "work",
+      "role": "supervisor",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://prtimes.jp/main/html/rd/p/000004169.000032953.html",
+      "supportingSources": [
+        "https://dmmgames.co.jp/news/detail/id=1562"
+      ],
+      "note": "EXNOA于2023-06-20发布的公告明确みなとそふと监修新剧本、新增角色设定与插画。只记录监修，不推定系统开发；EXNOA（DMM GAMES）原发行署名及关联库位置保持。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "reviewId": "B1",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-name-85a1fd56da66"
+      ],
+      "workIds": [],
+      "reason": "MangaGamer发行职责已知，法人／品牌／业务名义和历史时期仍需来源；不批量新增本地化职责。"
+    },
+    {
+      "reviewId": "B2",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-name-251c0991e4f6",
+        "entity-name-8e61b50010ed",
+        "entity-jast"
+      ],
+      "workIds": [],
+      "reason": "国际JAST、JAST USA与日本旧JAST保留独立ID；缺法律名称与历史连续性原证，不建立全局同名别名。"
+    },
+    {
+      "reviewId": "B3",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-name-7482e374b5bd",
+        "entity-legend_uk"
+      ],
+      "workIds": [
+        "g114",
+        "legend-uk-great-space-race"
+      ],
+      "reason": "英国发行语境有目录及同期采访支持，逐版原始署名和身份对应尚需审核，不全局合并Legend。"
+    },
+    {
+      "reviewId": "B4",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-name-170eeb0b71f8",
+        "entity-mosaic"
+      ],
+      "workIds": [
+        "g131",
+        "g1200",
+        "g1201",
+        "g1202"
+      ],
+      "reason": "Mosaic出版与外部开发分开；逐作原厂署名、Ltd身份对应仍需核查，不覆盖Virgin发行。"
+    },
+    {
+      "reviewId": "B5",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-name-0f93dc471cd5",
+        "entity-name-bd36baf4b6a9"
+      ],
+      "workIds": [
+        "minatosoft-hanayui",
+        "minatosoft-spyce"
+      ],
+      "reason": "联合发布参与者及タカヒロ个人贡献已有证据，逐公司开发分工与Minato品牌职责未齐；不拆复合主体或代个人推品牌。"
+    },
+    {
+      "reviewId": "B6",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-yuzusoft",
+        "entity-yuzusoft_sour"
+      ],
+      "workIds": [
+        "g232"
+      ],
+      "reason": "SOUR独立品牌及常规人员创作有资料，父品牌直接职责需首发职员表；不改归主品牌PC本篇。"
+    },
+    {
+      "reviewId": "B7",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-nitroplus",
+        "entity-nitrochiral"
+      ],
+      "workIds": [
+        "g622"
+      ],
+      "reason": "CHiRAL制作品牌已知，公司专题的直接职责未核；版权原文与后发NITRO PLUS发行不能上推为公司原作开发。"
+    },
+    {
+      "reviewId": "B8",
+      "classification": "needsMoreSources",
+      "entityIds": [
+        "entity-alicesoft",
+        "entity-alice_blue"
+      ],
+      "workIds": [
+        "g545"
+      ],
+      "reason": "Wiki转录存在Alicesoft开发协力线索，需原始职员表或手册；暂保留专题职责待核。"
+    },
+    {
+      "reviewId": "C1",
+      "classification": "notReadyToJudge",
+      "entityIds": [
+        "entity-name-d1903e2fafb1",
+        "entity-name-e1232b52eff7"
+      ],
+      "workIds": [
+        "g209"
+      ],
+      "reason": "Mobage／GREE仅为平台线索，缺2016实际发行／运营者与内容证据；保留占位署名、null内容ID及unverified关系。"
+    },
+    {
+      "reviewId": "C2",
+      "classification": "notReadyToJudge",
+      "entityIds": [
+        "entity-name-de3ed19ac095"
+      ],
+      "workIds": [
+        "g594"
+      ],
+      "reason": "1988目录署名与1989品牌启用冲突，缺原包装、说明书与版权画面；不回填Alicesoft／Champion Soft，不改作品年份。"
+    }
+  ]
+}

@@ -72,7 +72,9 @@ python3 scripts/build_entity_pages.py --check
 python3 scripts/build_company_pages.py --check
 ```
 
-主体、角色与位置索引为派生数据；目前人工核定规则集中在 `build_entity_model.py` 的具名映射、来源与职责范围中，不能只修改生成JSON或HTML。未来扩充可再拆为独立编辑配置文件。
+主体、角色与位置索引为派生数据；人工核定规则由 `build_entity_model.py` 的具名映射及独立审核记录提供，不能只修改生成JSON或HTML。
+
+2026-10-22首批核查使用 `entity-priority-review-20261022.json` 与同名Markdown记录。JSON的 `identityCorrections` 保留稳定ID、订正前类型与状态、核定类型、来源和范围；`creditAdditions` 保存逐作品职责、旧待核状态、原文及限定说明。生成器检查旧值后仅应用2项身份与4项职责，不改迁移基线、身份关系或原始发行。新增参与记录用 `reviewId`、`reviewRecord` 关联独立审查；专题卡片同时显示范围。`deferredReviews` 只登记证据缺口，不能作为身份映射、职责或位置变更规则。后续批次仍需独立证据与提交，不能把候选意见升级为已核事实。
 
 ## 名称格式（2026-10-21）
 
