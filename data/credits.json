@@ -61765,6 +61765,51 @@
       "territory": null,
       "reviewId": "F8",
       "reviewRecord": "data/entity-followup-review-20261022.md"
+    },
+    {
+      "id": "credit-b60c2c9367fcf4b6",
+      "entityId": "entity-overdrive",
+      "targetType": "work",
+      "targetId": "g647",
+      "workId": "g647",
+      "role": "originalProduction",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "source": "https://mangagamer.wordpress.com/2011/08/30/announcing-go-go-nippon/",
+      "note": "2011年8月30日MangaGamer官方发行公告明确OVERDRIVE开发，Steam开发者字段一致。只确认2011原作制作；2015／2016扩充逐内容职责另核，MangaGamer全部历史publisher署名及既有内容身份保留。",
+      "territory": null,
+      "reviewId": "T6",
+      "reviewRecord": "data/entity-third-review-20261022.md"
+    },
+    {
+      "id": "credit-7e34d08f724b289d",
+      "entityId": "entity-nitroplus_brand",
+      "targetType": "work",
+      "targetId": "g163",
+      "workId": "g163",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "source": "https://songofsaya.com/",
+      "note": "官方英文站明确Nitroplus制作室出品，日文原作页列脚本、原画、音乐，授权商店亦将Creator与JAST USA发行分别列出。只给同名品牌增加制作品牌；不由品牌或个人职员署名上推Nitroplus公司，不推定BD／Android移植开发，也不新增STOVE发行。",
+      "territory": null,
+      "reviewId": "T7",
+      "reviewRecord": "data/entity-third-review-20261022.md"
+    },
+    {
+      "id": "credit-57b59d60c9cc287d",
+      "entityId": "entity-nitroplus_brand",
+      "targetType": "work",
+      "targetId": "g614",
+      "workId": "g614",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "source": "https://store.steampowered.com/app/1293820/",
+      "note": "Steam开发者字段明确Nitroplus、发行另列JAST，原作官方2013访谈讨论企划、开发与美术过程。仅追加同名品牌制作职责；公司专题仍待核，不用2024现行Nitro Origin名称倒替2013原作，也不追加JAST开发或本地化职责。",
+      "territory": null,
+      "reviewId": "T8",
+      "reviewRecord": "data/entity-third-review-20261022.md"
     }
   ],
   "dossierMemberships": [
@@ -70117,11 +70162,11 @@
       "workId": "g647",
       "placement": "main",
       "roles": [
-        "catalogueAssociation"
+        "originalProduction"
       ],
-      "group": "unresolved",
-      "source": "https://camp-fire.jp/projects/16727/view",
-      "status": "pendingRole"
+      "group": "original",
+      "source": "https://mangagamer.wordpress.com/2011/08/30/announcing-go-go-nippon/",
+      "status": "existingEvidence"
     },
     {
       "dossierId": "overdrive",

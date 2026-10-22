@@ -55,3 +55,13 @@ test('reviewed production can be found without promoting corporate parents or re
   for(const id of ['key-rpg-hbr','august-rpg-imys','minatosoft-climax'])assert.ok(!find({}).some(x=>x.work.id===id));
   assert.ok(!credits.credits.some(c=>c.entityId==='entity-name-5caee77c6090'&&['developer','localizer'].includes(c.role)));
 });
+
+test('third review confirms named production while preserving same-name company and publisher scopes',()=>{
+  assert.ok(find({developer:'entity-overdrive',query:'Go! Go! Nippon!'}).some(x=>x.work.id==='g647'));
+  assert.equal(find({developer:'entity-name-85a1fd56da66',query:'Go! Go! Nippon!'}).length,0);
+  for(const [wid,query] of [['g163','The Song of Saya'],['g614','YOU and ME and HER']]){
+    assert.ok(find({participant:'entity-nitroplus_brand',participantRole:'productionBrand',query}).some(x=>x.work.id===wid));
+    assert.equal(find({developer:'entity-nitroplus',query}).length,0);
+    assert.equal(find({participant:'entity-nitroplus',participantRole:'productionBrand',query}).length,0);
+  }
+});

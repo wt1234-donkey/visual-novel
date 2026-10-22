@@ -6,20 +6,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'ee0694de5dc51cc773bf9e76ae72a375da82211d'
+APPLIED = 'b9a5a7e7f10568e005c58bdc346e04b7e8cec399'
 
 
 def read(path):
     return json.loads((ROOT / path).read_text())
 
 
-def before(path):
+def before(path, revision=BASE):
     return json.loads(subprocess.check_output(
-        ['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
+        ['git', 'show', f'{revision}:{path}'], cwd=ROOT, text=True))
 
 
 class FollowupEntityReviewTests(unittest.TestCase):
     def test_only_five_identity_types_change_and_relations_are_preserved(self):
-        prior, current = before('data/entities.json'), read('data/entities.json')
+        prior, current = before('data/entities.json'), before('data/entities.json', APPLIED)
         self.assertEqual(prior['relations'], current['relations'])
         self.assertEqual(prior['dossiers'], current['dossiers'])
         old = {e['id']: e for e in prior['entities']}
@@ -39,7 +40,7 @@ class FollowupEntityReviewTests(unittest.TestCase):
             self.assertTrue(set(old[eid]['sources']) <= set(new[eid]['sources']))
 
     def test_three_credits_are_added_without_rewriting_publisher_or_parent_credits(self):
-        prior, current = before('data/credits.json'), read('data/credits.json')
+        prior, current = before('data/credits.json'), before('data/credits.json', APPLIED)
         old = {c['id']: c for c in prior['credits']}
         new = {c['id']: c for c in current['credits']}
         self.assertTrue(old.keys() <= new.keys())
@@ -73,7 +74,7 @@ class FollowupEntityReviewTests(unittest.TestCase):
             self.assertEqual(members[k]['status'], 'pendingRole', k)
         self.assertEqual(len(new), 4750)
         self.assertEqual(len(members), 2234)
-        review = read('data/entity-migration-review.json')
+        review = before('data/entity-migration-review.json', APPLIED)
         self.assertEqual(review['pendingMembershipCount'], 614)
         self.assertEqual(len(review['pendingIdentities']), 192)
 

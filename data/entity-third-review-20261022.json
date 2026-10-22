@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "baseCommit": "b9a5a7e7f10568e005c58bdc346e04b7e8cec399",
+  "audit": "data/entity-third-review-20261022.md",
+  "policy": "第三批仅应用5项公司身份核定及3条具名作品职责。保持所有原始署名、稳定ID、既有职责与实体关系；同名品牌制作不自动上推公司。",
+  "identityCorrections": [
+    {
+      "reviewId": "T1",
+      "entityId": "entity-name-5c51b719b1bb",
+      "rawName": "HIKARI FIELD",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.hikarifield.com/jp/",
+        "https://www.hikarifield.com/"
+      ],
+      "note": "官网公司概要明确株式会社HIKARI FIELD。只确认该署名的公司类型，不将成员早期活动并为法人历史，不给全部作品批量追加翻译、移植或开发职责。"
+    },
+    {
+      "reviewId": "T2",
+      "entityId": "entity-name-06aeb9d01fbe",
+      "rawName": "Sekai Project",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://sekaiproject.com/contact/",
+        "https://sekaiproject.com/reflections-on-10-years-at-sekai-project/"
+      ],
+      "note": "官方联络页列Sekai Project Inc.，公司十周年回顾亦明确公司身份；仅改类型，不把全部发行作品视为其开发或本地化，也不新增其他发行品牌关系。"
+    },
+    {
+      "reviewId": "T3",
+      "entityId": "entity-name-7554e19bb041",
+      "rawName": "CAPCOM",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.capcom.co.jp/ir/english/company/info.html"
+      ],
+      "note": "官方概要列CAPCOM CO., LTD.。只确认公司类型；不因一般开发业务介绍给各平台发行增加制作，不追加海外主体合并、日期或集团关系。"
+    },
+    {
+      "reviewId": "T4",
+      "entityId": "entity-name-8a3d38d0d11f",
+      "rawName": "Square Enix",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.jp.square-enix.com/company/en/outline/",
+        "https://www.jp.square-enix.com/company/ja/news/2012/html/b72327bc03e5a1056508e9bfb870ea96688e6b25.html"
+      ],
+      "note": "官方公司概要与既有2012原始发行公告明确株式会社スクウェア・エニックス。仅确认公司类型；不合并另存的日文署名、Square、Enix或控股公司，不补写2008以前法人连续性。"
+    },
+    {
+      "reviewId": "T5",
+      "entityId": "entity-name-22015689e48e",
+      "rawName": "Serenity Forge",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://serenityforge.com/about",
+        "https://serenityforge.com/games/doki-doki-literature-club-plus"
+      ],
+      "note": "官方About明确其为游戏开发与发行公司，页脚列Serenity Forge LLC。只确认类型，不由公司综合业务或联合版权给DDLC原作追加开发，不合并Team Salvato或Dan Salvato LLC。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "T6",
+      "entityId": "entity-overdrive",
+      "dossierId": "overdrive",
+      "workId": "g647",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://mangagamer.wordpress.com/2011/08/30/announcing-go-go-nippon/",
+      "supportingSources": [
+        "https://store.steampowered.com/app/251870/"
+      ],
+      "note": "2011年8月30日MangaGamer官方发行公告明确OVERDRIVE开发，Steam开发者字段一致。只确认2011原作制作；2015／2016扩充逐内容职责另核，MangaGamer全部历史publisher署名及既有内容身份保留。",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      }
+    },
+    {
+      "reviewId": "T7",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g163",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://songofsaya.com/",
+      "supportingSources": [
+        "https://www.nitroplus.co.jp/game/06-song-of-saya/saya.php",
+        "https://store.onstove.com/en/games/1248/"
+      ],
+      "note": "官方英文站明确Nitroplus制作室出品，日文原作页列脚本、原画、音乐，授权商店亦将Creator与JAST USA发行分别列出。只给同名品牌增加制作品牌；不由品牌或个人职员署名上推Nitroplus公司，不推定BD／Android移植开发，也不新增STOVE发行。"
+    },
+    {
+      "reviewId": "T8",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g614",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://store.steampowered.com/app/1293820/",
+      "supportingSources": [
+        "https://www.nitroplus.co.jp/game/totono/interview/01.php",
+        "https://www.nitroplus.co.jp/game/totono/"
+      ],
+      "note": "Steam开发者字段明确Nitroplus、发行另列JAST，原作官方2013访谈讨论企划、开发与美术过程。仅追加同名品牌制作职责；公司专题仍待核，不用2024现行Nitro Origin名称倒替2013原作，也不追加JAST开发或本地化职责。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "reviewId": "D1",
+      "entityId": "entity-name-b01843ba1268",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://teamsalvato.com/about",
+        "https://ddlc.plus/merch"
+      ],
+      "reason": "Team Salvato开发署名与Dan Salvato LLC版权并列不能直接证明两者为同一法人；about页面本轮未成功读取，保留身份待核。"
+    },
+    {
+      "reviewId": "D2",
+      "entityId": "entity-name-2ddaddfb96a5",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.koeitecmo.co.jp/news/news_20221101.pdf"
+      ],
+      "reason": "DMM GAMES既有文字兼有平台、品牌和发行名义。未在本批取得各时期具名发行与运营范围的完整证据，不把EXNOA直接作别名替换。"
+    },
+    {
+      "reviewId": "D3",
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "status": "notReadyToJudge",
+      "sources": [
+        "https://typemoon.com/"
+      ],
+      "reason": "TYPE-MOON历史同人社团、商业品牌和Notes法人层次需分时期证据。官网名称与一般次级介绍不足以给现有跨期署名选定单一身份，本批不改。"
+    },
+    {
+      "reviewId": "D4",
+      "entityId": "entity-nitroplus",
+      "workIds": [
+        "g163",
+        "g614"
+      ],
+      "status": "needsMoreSources",
+      "reason": "本批T7、T8确认品牌制作，不把公司与品牌并成同一对象。公司专题具体职责需继续核对公司层证据。"
+    }
+  ]
+}
