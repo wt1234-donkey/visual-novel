@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f8f5"><title>组织与沿革 · 创作厂商分类 · 叙事游戏年鉴</title>
+<meta name="description" content="沿母公司、旗下品牌、更名沿革与衍生组织探索创作脉络。按创作品牌、制作公司和团队浏览作品与原始职责依据。">
+<link rel="stylesheet" href="relationships-preview.css?v=20261022-organizations"><script type="module" src="relationships-preview.mjs?v=20261022-organizations"></script>
+</head>
+<body data-source="data/organizations.json" data-default-family="visualarts">
+<header class="site-header"><a class="wordmark" href="index.html"><span class="monogram">N.</span>叙事游戏年鉴<span class="divider">/</span><span class="header-section">组织与沿革</span></a><nav aria-label="主导航"><a href="index.html#catalogue">作品目录</a><a href="entities.html">主体档案</a><span class="preview-tag">组织与沿革</span></nav></header>
+<main>
+<section class="intro"><div><p class="eyebrow">THE PEOPLE BEHIND THE STORIES</p><h1>从一个品牌，读懂它的创作脉络。</h1><p>母公司与旗下品牌向下展开，旧名与衍生组织沿历史相连。</p></div><div class="intro-note"><span class="tiny-orbit" aria-hidden="true">↳</span><span>从熟悉的品牌出发<br><strong>找到下一部作品</strong></span></div></section>
+<div class="workspace" id="workspace" aria-busy="true">
+<aside class="family-panel panel"><div class="panel-heading"><h2>探索企业家族</h2><span id="family-total">…</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="family-search" type="search" placeholder="搜索名称或旧名…" aria-label="搜索家族、主体或旧名"></label><div class="family-nav" id="family-nav" aria-label="组织家族"><p class="muted">正在读取关系资料…</p></div><div class="sidebar-bottom"><span class="small-label">组织目录</span><p id="organization-total">点击节点查看关系，<br>在下方按创作厂商浏览作品。</p><a href="#creator-directory">按创作厂商找作品 ↗</a><a href="entities.html">浏览全部主体档案 <span>↗</span></a></div></aside>
+<section class="explorer panel" aria-labelledby="family-title">
+<div class="explorer-header"><div><div class="small-label">RELATIONSHIP EXPLORER</div><h2 id="family-title">公司与品牌关系</h2></div><div class="view-switch" role="group" aria-label="展示方式"><button data-view="tree" aria-pressed="true">关系树</button><button data-view="list" aria-pressed="false">关系列表</button></div></div>
+<div class="graph-toolbar"><div class="legend"><span><i class="line green"></i>运营／家族</span><span><i class="line blue"></i>母子公司</span><span><i class="line amber"></i>衍生待核</span></div><label class="pending-toggle"><input id="show-pending" type="checkbox" checked>显示待核线索</label></div>
+<div id="graph-scroll" class="graph-scroll" tabindex="0" aria-label="可滚动的企业关系树"><div id="graph-stage" class="graph-stage"><p class="loading-message">正在绘制关系树…</p></div></div>
+<div class="relation-list" id="relation-list" hidden></div>
+<div class="graph-bottom"><span id="graph-caption" aria-live="polite">点击节点查看详情</span><div class="zoom-tools" role="group" aria-label="关系树缩放"><button id="zoom-out" aria-label="缩小">−</button><span id="zoom-value">100%</span><button id="zoom-in" aria-label="放大">＋</button><button id="reset-tree" aria-label="展开全部并恢复缩放">复位 ↺</button></div></div>
+<div class="history-area"><section aria-labelledby="history-title"><div class="lane-heading"><h3 id="history-title"><span class="lane-icon history-icon">↶</span>旧名与更名沿革</h3><span class="lane-category">名称变化</span></div><div id="name-history"></div></section><section aria-labelledby="spin-title"><div class="lane-heading"><h3 id="spin-title"><span class="lane-icon spin-icon">↗</span>衍生组织</h3><span class="lane-category">组织分支</span></div><div id="spin-history"></div></section></div>
+</section>
+<aside class="detail-panel panel" id="detail-panel" aria-label="当前主体详情"><p class="muted">选择一个节点查看详情。</p></aside>
+</div>
+<section class="creator-directory panel" id="creator-directory" aria-labelledby="creator-directory-title">
+<div class="catalogue-heading"><div><p class="eyebrow">EXPLORE BY CREATOR</p><h2 id="creator-directory-title">按创作厂商找作品</h2></div><span id="creator-count" aria-live="polite"></span></div>
+<p class="catalogue-note" id="creation-coverage">从品牌的创作作品出发；点选厂商后，下方列出该主体的作品与职责依据。公司关系不自动汇总旗下作品。</p>
+<div class="creator-controls"><label>搜索厂商<input type="search" id="creator-search" placeholder="品牌、公司、团队或旧名…"></label><label>主体分类<select id="creator-kind"><option value="all">全部主体（含发行与待核）</option><option value="creators">已有创作记录的厂商</option><option value="brand">创作品牌</option><option value="company">制作公司</option><option value="team">制作团队</option></select></label><label>作品位置<select id="work-placement"><option value="main">主库作品</option><option value="related">叙事／跨类型关联</option><option value="bibliography">仅专题书目</option></select></label></div>
+<div id="creator-grid" class="creator-grid"><p class="muted">正在读取创作厂商…</p></div></section>
+<section class="creator-works panel" id="creator-works" aria-labelledby="creator-works-title"><div class="catalogue-heading"><div><p class="eyebrow">WORKS & CREDITS</p><h2 id="creator-works-title">当前主体的作品</h2></div><a href="#workspace">回到关系树 ↑</a></div><p id="creator-works-note" class="catalogue-note"></p><div id="work-groups" class="work-groups" role="group" aria-label="作品职责分类"></div><label class="work-search">检索当前主体作品<input id="work-search" type="search" placeholder="作品名称或原名…"></label><div id="creator-work-list" class="creator-work-list" aria-live="polite"></div></section>
+<section class="reading-guide"><div><span class="guide-index">01</span><p><strong>先认清主体</strong>公司、品牌和团队使用不同标签。</p></div><div><span class="guide-index">02</span><p><strong>再沿关系探索</strong>归属、更名与人员衍生分别表达。</p></div><div><span class="guide-index">03</span><p><strong>最后回到作品</strong>创作、原作发行品牌、专题待核与其他参与分别列示。</p></div></section>
+<details class="preview-method"><summary>关系与作品分类口径</summary><p>本页借鉴鲲Galgame的“企业家族／更名沿革／衍生”浏览逻辑。现有关系来自本站主体索引；腾讯与VISUAL ARTS、更名示例为带来源的展示补充。Silky’s衍生连线是待核线索，须继续补证。未知起止时间不代表持续至今，运营关系不等于持股关系，品牌家族不等于母子公司。创作作品仅依据原作制作、开发、联合制作或制作品牌记录；只负责移植、本地化、发行或版权的记录不进入创作组。原作发行品牌不自动认定为创作厂商；专题职责未核继续保留待核。主库、关联作品和专题书目分开浏览。作品数量不向母公司汇总，别名不自动作为旧名。本页未修改正式身份、关系、作品或发行数据。</p><p><a href="https://www.kungal.com/galgame/official/15437" target="_blank" rel="noopener noreferrer">展示逻辑参考 ↗</a> · <a href="data/relationships-preview-config.json">关系展示来源</a> · <a href="data/organizations.json">页面数据</a></p></details>
+</main><footer><span>叙事游戏年鉴 <b>·</b> 公司与品牌关系</span><span>创作厂商目录 / 2026.10.22</span></footer><div class="toast" id="toast" role="status" hidden></div>
+<noscript><p class="noscript">关系树需要JavaScript。请先查看<a href="entities.html">主体档案</a>与<a href="data/organizations.json">关系资料</a>。</p></noscript>
+</body></html>
