@@ -57,3 +57,12 @@ test('tree counts do not roll brand creation up to operating companies',()=>{
   assert.equal(key.productionCount,21);assert.equal(va.productionCount,0);
   const tree=layoutFamily(data,data.families.find(f=>f.id==='visualarts'));assert.equal(tree.nodes.length,3);
 });
+test('family list and search results sort A to Z, folding accents and leaving nonletters last',async()=>{
+  const {sortFamilies,searchFamilies}=await import('../relationships-preview.mjs');
+  const input=[{id:'z',title:'Zoo'},{id:'n',title:'5pb.'},{id:'a2',title:'âge'},{id:'b',title:'beta'},{id:'a1',title:'Accolade'}];
+  assert.deepEqual(sortFamilies(input).map(f=>f.id),['a1','a2','b','z','n']);
+  assert.equal(input[0].id,'z');
+  const all=searchFamilies(data,'');assert.equal(all[0].title,'Accolade');assert.equal(all[1].title,'Activision');
+  const found=searchFamilies(data,'Addison');assert.deepEqual(found.map(f=>f.title),['Addison-Wesley Productions','Addison-Wesley Publishing Company']);
+  assert.ok(searchFamilies(data,'age').some(f=>f.entityIds.includes('entity-name-f0d25e9c6d82')));
+});

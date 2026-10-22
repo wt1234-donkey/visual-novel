@@ -8,3 +8,5 @@ body[data-source] .family-nav{max-height:530px;overflow:auto}body[data-source] .
 @media(max-width:700px){body[data-source] .family-nav{max-height:none}.creator-directory,.creator-works{padding:18px}.catalogue-heading h2{font-size:20px}.creator-controls{grid-template-columns:1fr 1fr;gap:12px}.creator-controls label:first-child{grid-column:1/-1}.creator-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-height:310px;gap:8px}.creator-card{padding:11px}.creator-card strong{font-size:12px}.work-card-heading{gap:9px;flex-wrap:wrap}.work-card-heading h3{font-size:15px}.work-role{margin-left:42px}.catalogue-heading{flex-wrap:wrap}.work-groups{gap:7px}.work-groups button{font-size:11px;padding:9px}.creator-works .creator-work-list{max-height:none;overflow:visible;padding-right:0}}
 
 body[data-source] .family-nav{overflow-x:hidden}body[data-source] .family-button>span:last-child{min-width:0;overflow-wrap:anywhere}
+
+.family-sort-note{font-size:10px;line-height:1.7;color:#718079;margin:-7px 4px 12px}

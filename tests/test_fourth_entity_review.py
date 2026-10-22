@@ -6,20 +6,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'd5a778252b49b0b2b1de19de775692cbcd0f548a'
+APPLIED = 'd8f37e90abf47af94e9285167a26b6865497e332'
 
 
 def read(path):
     return json.loads((ROOT / path).read_text())
 
 
-def before(path):
+def before(path, revision=BASE):
     return json.loads(subprocess.check_output(
-        ['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
+        ['git', 'show', f'{revision}:{path}'], cwd=ROOT, text=True))
 
 
 class FourthEntityReviewTests(unittest.TestCase):
     def test_only_four_identity_types_change_without_altering_relations(self):
-        old_model, model = before('data/entities.json'), read('data/entities.json')
+        old_model, model = before('data/entities.json'), before('data/entities.json', APPLIED)
         self.assertEqual(old_model['relations'], model['relations'])
         self.assertEqual(old_model['dossiers'], model['dossiers'])
         old = {x['id']: x for x in old_model['entities']}
@@ -37,7 +38,7 @@ class FourthEntityReviewTests(unittest.TestCase):
         self.assertEqual(new['entity-name-61e191a86b41']['verification'], 'unresolved')
 
     def test_only_two_book_credits_and_two_memberships_change(self):
-        old_data, data = before('data/credits.json'), read('data/credits.json')
+        old_data, data = before('data/credits.json'), before('data/credits.json', APPLIED)
         old = {x['id']: x for x in old_data['credits']}
         new = {x['id']: x for x in data['credits']}
         self.assertTrue(old.keys() <= new.keys())
@@ -66,7 +67,7 @@ class FourthEntityReviewTests(unittest.TestCase):
             self.assertEqual(new_m[('microcabin', wid)]['group'], 'original')
         self.assertEqual(len(new), 4755)
         self.assertEqual(len(new_m), 2234)
-        review = read('data/entity-migration-review.json')
+        review = before('data/entity-migration-review.json', APPLIED)
         self.assertEqual(len(review['pendingIdentities']), 183)
         self.assertEqual(review['pendingMembershipCount'], 611)
 

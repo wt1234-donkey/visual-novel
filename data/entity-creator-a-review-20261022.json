@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "baseCommit": "d8f37e90abf47af94e9285167a26b6865497e332",
+  "audit": "data/entity-creator-a-review-20261022.md",
+  "policy": "A—Z顺序首批：8个主体逐项核查，5条具名创作职责与1项公司身份；保持原作、内容、发行、身份关系、收录位置与迁移基线。审核进度不代表所有旧职责已解除待核。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZ6",
+      "entityId": "entity-name-76fdfcac5ffb",
+      "rawName": "Akatsuki Games",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://games.aktsk.jp/news/60063/",
+        "https://games.aktsk.jp/news/61804/"
+      ],
+      "note": "官方原始项目及首发公告明确株式会社アカツキゲームス／Akatsuki Games Inc.及公司概要。只核定原身份的公司类型，不新增母公司或与株式会社アカツキ合并；逐作开发在独立职责记录中核定。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZ1",
+      "entityId": "entity-name-c31f977d8bac",
+      "dossierId": null,
+      "workId": "g1091",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Activision",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.gog.com/en/game/zork_grand_inquisitor",
+      "note": "授权商店的本作Company第一项链接明确为developers=activision，第二项为发行方。只补1997年《Zork: Grand Inquisitor》的原作制作；不把《Return to Zork》的Infocom署名或《Zork Nemesis》的Zombie开发倒归Activision，也不核定其跨时期法人连续性。"
+    },
+    {
+      "reviewId": "AZ2",
+      "entityId": "entity-name-490ea790703a",
+      "dossierId": null,
+      "workId": "g1089",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Adventure Soft",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://store.steampowered.com/app/674150/?l=english",
+      "note": "现行发行方在25周年版授权说明中明确Adventure Soft为原版Simon the Sorcerer开发者，另明确周年版由MojoTouch制作开发。此处仅登记1993原作制作；不增加周年版内容或移植发行，不核定Adventure Soft／HorrorSoft／Headfirst的法人或旧名关系。"
+    },
+    {
+      "reviewId": "AZ3",
+      "entityId": "entity-name-f0d25e9c6d82",
+      "dossierId": null,
+      "workId": "g052",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "âge",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://age-soft.com/main/products/マブラヴ/",
+      "note": "âge官网自身产品目录及单作页明确收录本作，支持原作制作品牌登记。仅记录该作品的品牌创作目录关联，不推定独立完成全部工序；现行Steam开发栏为aNCHOR，不据此将2003原作改为现法人开发，也不合并两个身份。"
+    },
+    {
+      "reviewId": "AZ4",
+      "entityId": "entity-name-f0d25e9c6d82",
+      "dossierId": null,
+      "workId": "g053",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "âge",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://age-soft.com/main/products/マブラヴオルタネイティヴ/",
+      "note": "âge官网自身产品目录及单作页明确收录本作；既有2006原作规格页保留原画、剧本等记录。只追加原作制作品牌，不继承到aNCHOR或声称品牌承担全部开发，现行平台名义和历史发行分别保留。"
+    },
+    {
+      "reviewId": "AZ5",
+      "entityId": "entity-name-76fdfcac5ffb",
+      "dossierId": null,
+      "workId": "toho-kaiju8",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社アカツキゲームス",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://games.aktsk.jp/news/60063/",
+      "note": "2024年6月16日官方公告明确企画・制作・開発・運営由株式会社アカツキゲームス担当，2025首发公告对应已收录同一作品。只追加该公司的原作制作；保留TOHO及Production I.G合作范围，不把其视为独家创作，也不把关联RPG转入主库。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "reviewId": "AZD1",
+      "entityId": "entity-name-4750f74061fe",
+      "name": "Accolade",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6"
+      ],
+      "reason": "原版Star Control 3说明书第52—53页分列Accolade与Legend职员，Legend有开发、故事和系统署名。保留Accolade发行；需逐项确认其内部制作职责及法人身份，当前不把整作开发登记给Accolade。",
+      "workIds": [
+        "legend-entertainment-star-control-3"
+      ]
+    },
+    {
+      "reviewId": "AZD2",
+      "entityId": "entity-name-c31f977d8bac",
+      "name": "Activision",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://www.gog.com/en/game/zork_grand_inquisitor",
+        "https://www.gog.com/en/game/return_to_zork",
+        "https://www.gog.com/en/game/zork_nemesis_the_forbidden_lands"
+      ],
+      "reason": "本批登记大审判官1条。重返佐克的商店开发项为Infocom，复仇女神为Zombie；两部Santa Fe作品仍缺适用原版的直接开发证明。Activision历史公司身份与不同时期法律主体暂不合并认定。",
+      "workIds": [
+        "g1088",
+        "g1090",
+        "g1189",
+        "g1091",
+        "g1190"
+      ]
+    },
+    {
+      "reviewId": "AZD3",
+      "entityId": "entity-name-6ed2a96c53cd",
+      "name": "Addison-Wesley Productions",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/",
+        "https://www.mobygames.com/game/179676/the-antagonists/"
+      ],
+      "reason": "原记录为发行。Arendarvon页面本轮403；Antagonists二手职员条目具名作者并区分地区出版方。仍需原书版权页、程序署名及地区主体对应；不据Productions名称认定开发，也不与另一Addison-Wesley身份合并。",
+      "workIds": [
+        "g1272",
+        "g1273"
+      ]
+    },
+    {
+      "reviewId": "AZD4",
+      "entityId": "entity-addison_wesley",
+      "name": "Addison-Wesley Publishing Company",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/"
+      ],
+      "reason": "专题5条待核引用和已记录发行继续保留。需逐作原说明书、书籍版权页及开发者证据，尤其Beam／地区出版社与书籍作者不能由出版品牌代替；本批没有直接确认该主体的创作职责。",
+      "workIds": [
+        "g113",
+        "g1272",
+        "g1021",
+        "g1273",
+        "g1026",
+        "g1028"
+      ]
+    },
+    {
+      "reviewId": "AZD5",
+      "entityId": "entity-adventure_international",
+      "name": "Adventure International",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.mocagh.org/ai/ai-v3i2catalog.pdf"
+      ],
+      "reason": "既有四条发行及36条专题待核继续保留。原始目录本轮返回13.5MB超提取上限，尚未完成逐页开发署名复核；Scott Adams个人作者、美国公司、AI UK及移植制作须区分，不能由品牌或作者关联整批核定公司原作开发。",
+      "workIds": [
+        "g089",
+        "g091",
+        "ai-death-planet",
+        "ai-local-call",
+        "ai-mystery-fun-house",
+        "ai-pyramid-doom",
+        "ai-secret-mission",
+        "ai-strange-odyssey",
+        "ai-two-heads",
+        "ai-voodoo-castle",
+        "ai-ghost-town",
+        "ai-impetuous",
+        "ai-savage-island-1",
+        "ai-six-micro",
+        "ai-crowley",
+        "ai-earthquake",
+        "ai-golden-voyage",
+        "ai-hong-kong",
+        "ai-labyrinth",
+        "ai-saigon",
+        "ai-savage-island-2",
+        "ai-traam",
+        "ai-merlins-treasure",
+        "ai-sledge-rahmul",
+        "ai-spook-house",
+        "ai-toxic-dumpsite",
+        "ai-claymorgue",
+        "ai-return-pirates-isle",
+        "ai-buckaroo",
+        "ai-hulk",
+        "ai-olin",
+        "ai-spider-man",
+        "ai-gremlins",
+        "ai-human-torch-thing",
+        "ai-seas-blood",
+        "ai-super-gran",
+        "g092",
+        "g093",
+        "g1080",
+        "g138"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-4750f74061fe",
+      "name": "Accolade",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6"
+      ],
+      "reason": "原版Star Control 3说明书第52—53页分列Accolade与Legend职员，Legend有开发、故事和系统署名。保留Accolade发行；需逐项确认其内部制作职责及法人身份，当前不把整作开发登记给Accolade。",
+      "workIds": [
+        "legend-entertainment-star-control-3"
+      ]
+    },
+    {
+      "entityId": "entity-name-c31f977d8bac",
+      "name": "Activision",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://www.gog.com/en/game/zork_grand_inquisitor",
+        "https://www.gog.com/en/game/return_to_zork",
+        "https://www.gog.com/en/game/zork_nemesis_the_forbidden_lands"
+      ],
+      "reason": "本批登记大审判官1条。重返佐克的商店开发项为Infocom，复仇女神为Zombie；两部Santa Fe作品仍缺适用原版的直接开发证明。Activision历史公司身份与不同时期法律主体暂不合并认定。",
+      "workIds": [
+        "g1088",
+        "g1090",
+        "g1189",
+        "g1091",
+        "g1190"
+      ]
+    },
+    {
+      "entityId": "entity-name-6ed2a96c53cd",
+      "name": "Addison-Wesley Productions",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/",
+        "https://www.mobygames.com/game/179676/the-antagonists/"
+      ],
+      "reason": "原记录为发行。Arendarvon页面本轮403；Antagonists二手职员条目具名作者并区分地区出版方。仍需原书版权页、程序署名及地区主体对应；不据Productions名称认定开发，也不与另一Addison-Wesley身份合并。",
+      "workIds": [
+        "g1272",
+        "g1273"
+      ]
+    },
+    {
+      "entityId": "entity-addison_wesley",
+      "name": "Addison-Wesley Publishing Company",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/"
+      ],
+      "reason": "专题5条待核引用和已记录发行继续保留。需逐作原说明书、书籍版权页及开发者证据，尤其Beam／地区出版社与书籍作者不能由出版品牌代替；本批没有直接确认该主体的创作职责。",
+      "workIds": [
+        "g113",
+        "g1272",
+        "g1021",
+        "g1273",
+        "g1026",
+        "g1028"
+      ]
+    },
+    {
+      "entityId": "entity-adventure_international",
+      "name": "Adventure International",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.mocagh.org/ai/ai-v3i2catalog.pdf"
+      ],
+      "reason": "既有四条发行及36条专题待核继续保留。原始目录本轮返回13.5MB超提取上限，尚未完成逐页开发署名复核；Scott Adams个人作者、美国公司、AI UK及移植制作须区分，不能由品牌或作者关联整批核定公司原作开发。",
+      "workIds": [
+        "g089",
+        "g091",
+        "ai-death-planet",
+        "ai-local-call",
+        "ai-mystery-fun-house",
+        "ai-pyramid-doom",
+        "ai-secret-mission",
+        "ai-strange-odyssey",
+        "ai-two-heads",
+        "ai-voodoo-castle",
+        "ai-ghost-town",
+        "ai-impetuous",
+        "ai-savage-island-1",
+        "ai-six-micro",
+        "ai-crowley",
+        "ai-earthquake",
+        "ai-golden-voyage",
+        "ai-hong-kong",
+        "ai-labyrinth",
+        "ai-saigon",
+        "ai-savage-island-2",
+        "ai-traam",
+        "ai-merlins-treasure",
+        "ai-sledge-rahmul",
+        "ai-spook-house",
+        "ai-toxic-dumpsite",
+        "ai-claymorgue",
+        "ai-return-pirates-isle",
+        "ai-buckaroo",
+        "ai-hulk",
+        "ai-olin",
+        "ai-spider-man",
+        "ai-gremlins",
+        "ai-human-torch-thing",
+        "ai-seas-blood",
+        "ai-super-gran",
+        "g092",
+        "g093",
+        "g1080",
+        "g138"
+      ]
+    },
+    {
+      "entityId": "entity-name-490ea790703a",
+      "name": "Adventure Soft",
+      "status": "registered",
+      "sources": [
+        "https://store.steampowered.com/app/674150/?l=english"
+      ],
+      "reason": "本库对应的Simon原作已登记1条；法律主体类型与历史更名仍待补原始公司资料。",
+      "workIds": [
+        "g1089"
+      ]
+    },
+    {
+      "entityId": "entity-name-f0d25e9c6d82",
+      "name": "âge",
+      "status": "registered",
+      "sources": [
+        "https://age-soft.com/main/products/",
+        "https://age-soft.com/main/products/マブラヴ/",
+        "https://age-soft.com/main/products/マブラヴオルタネイティヴ/",
+        "https://muvluv.com/alternative/spec.htm",
+        "https://store.steampowered.com/app/802880/",
+        "https://store.steampowered.com/app/802890/"
+      ],
+      "reason": "本库两部作品逐一登记制作品牌。品牌／团队的法律身份仍待补证；现行aNCHOR的商店记录不倒改早期原作身份。",
+      "workIds": [
+        "g052",
+        "g053"
+      ]
+    },
+    {
+      "entityId": "entity-name-76fdfcac5ffb",
+      "name": "Akatsuki Games",
+      "status": "registered",
+      "sources": [
+        "https://games.aktsk.jp/news/60063/",
+        "https://games.aktsk.jp/news/61804/"
+      ],
+      "reason": "本库1部关联作品登记原作制作，并确认公司类型；主库准入和母公司关系不在本次变更范围。",
+      "workIds": [
+        "toho-kaiju8"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "A",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 32,
+    "processedEntityIds": [
+      "entity-name-4750f74061fe",
+      "entity-name-c31f977d8bac",
+      "entity-name-6ed2a96c53cd",
+      "entity-addison_wesley",
+      "entity-adventure_international",
+      "entity-name-490ea790703a",
+      "entity-name-f0d25e9c6d82",
+      "entity-name-76fdfcac5ffb"
+    ],
+    "nextEntityId": "entity-name-b8b1293f82fa",
+    "nextName": "Alchemist",
+    "queue": [
+      {
+        "entityId": "entity-name-4750f74061fe",
+        "name": "Accolade",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c31f977d8bac",
+        "name": "Activision",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6ed2a96c53cd",
+        "name": "Addison-Wesley Productions",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-addison_wesley",
+        "name": "Addison-Wesley Publishing Company",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-adventure_international",
+        "name": "Adventure International",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-490ea790703a",
+        "name": "Adventure Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f0d25e9c6d82",
+        "name": "âge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-76fdfcac5ffb",
+        "name": "Akatsuki Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b8b1293f82fa",
+        "name": "Alchemist",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-alice_blue",
+        "name": "Alice Blue",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-alice_noir",
+        "name": "AliceNoir",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-alicesoft",
+        "name": "Alicesoft",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-bd36baf4b6a9",
+        "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-788994ba8dfb",
+        "name": "American Laser Games",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-5b146b15540c",
+        "name": "aNCHOR",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-angel_hearts",
+        "name": "Angel Hearts",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-aniplex",
+        "name": "Aniplex",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-aniplex_exe",
+        "name": "ANIPLEX.EXE",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-applique_imouto",
+        "name": "Applique -Imouto-（あっぷりけ-妹-）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-applique",
+        "name": "Applique（あっぷりけ）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-aquaplus",
+        "name": "AQUAPLUS",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-aquaplus_brand",
+        "name": "AQUAPLUS",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-5ba1ee4df514",
+        "name": "ARIA",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-7f11db7a66f2",
+        "name": "Arsys Software",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-asaproject",
+        "name": "ASa Project",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-ascii",
+        "name": "ASCII",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-9590651f2922",
+        "name": "Asmik（アスミック）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-80a218385951",
+        "name": "Asoberu! BD-GAME（あそべる！BD-GAME）",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-03ca146bb18c",
+        "name": "Atari",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-6cafab111889",
+        "name": "Atlus",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-august",
+        "name": "AUGUST",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-a7f6066af4b9",
+        "name": "Azarashi Soft（あざらしそふと）",
+        "status": "notStarted"
+      }
+    ]
+  }
+}
