@@ -61720,6 +61720,51 @@
       "territory": null,
       "reviewId": "A6",
       "reviewRecord": "data/entity-priority-review-20261022.md"
+    },
+    {
+      "id": "credit-209e5b262e2e18df",
+      "entityId": "entity-minatosoft",
+      "targetType": "work",
+      "targetId": "g1252",
+      "workId": "g1252",
+      "role": "originalProduction",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "source": "https://yuyuyu.tv/season1/bddvd/bddvd_06.php",
+      "note": "2015年第六卷官方商品页的可检索文本明确《结城友奈S》由みなとそふと制作，官方2018下载公告交叉确认具名品牌版本。该商品页全文本轮503，另保存访问边界；只确认本作制作，不自动上推Hawk Eye公司或改写2017下载卡为新内容。",
+      "territory": null,
+      "reviewId": "F6",
+      "reviewRecord": "data/entity-followup-review-20261022.md"
+    },
+    {
+      "id": "credit-e3044456f55d46ee",
+      "entityId": "entity-minatosoft",
+      "targetType": "work",
+      "targetId": "g1254",
+      "workId": "g1254",
+      "role": "originalProduction",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "source": "https://animaru.jp/anmr/product/P0084939",
+      "note": "TBS・MBS官方商店的2018《勇者之章》商品页明确特典PC游戏《结城友奈A》由みなとそふと制作；Studio五组图像制作与Pony Canyon商品发行另列，不自动赋予Hawk Eye开发职责，也不把动画特典视为游戏版本。",
+      "territory": null,
+      "reviewId": "F7",
+      "reviewRecord": "data/entity-followup-review-20261022.md"
+    },
+    {
+      "id": "credit-72732a633184a27f",
+      "entityId": "entity-yuzusoft_sour",
+      "targetType": "work",
+      "targetId": "g232",
+      "workId": "g232",
+      "role": "productionBrand",
+      "rawCredit": "YUZUSOFTSOUR",
+      "status": "sourceReviewed",
+      "source": "https://store.steampowered.com/app/1662840/PARQUET/",
+      "note": "Steam开发者字段与介绍明确《PARQUET》由YUZUSOFTSOUR制作，官方应用介绍明确其为SOUR首作；仅给SOUR子品牌增加制作品牌，不给Yuzusoft父品牌增加开发职责。既有发行、内容及父品牌专题待核状态保留。",
+      "territory": null,
+      "reviewId": "F8",
+      "reviewRecord": "data/entity-followup-review-20261022.md"
     }
   ],
   "dossierMemberships": [
@@ -86668,11 +86713,11 @@
       "workId": "g1252",
       "placement": "main",
       "roles": [
-        "catalogueAssociation"
+        "originalProduction"
       ],
-      "group": "unresolved",
-      "source": "https://www.minatosoft.com/product.php",
-      "status": "pendingRole"
+      "group": "original",
+      "source": "https://yuyuyu.tv/season1/bddvd/bddvd_06.php",
+      "status": "existingEvidence"
     },
     {
       "dossierId": "minatosoft",
@@ -86691,11 +86736,11 @@
       "workId": "g1254",
       "placement": "main",
       "roles": [
-        "catalogueAssociation"
+        "originalProduction"
       ],
-      "group": "unresolved",
-      "source": "https://www.minatosoft.com/product.php",
-      "status": "pendingRole"
+      "group": "original",
+      "source": "https://animaru.jp/anmr/product/P0084939",
+      "status": "existingEvidence"
     },
     {
       "dossierId": "minatosoft",

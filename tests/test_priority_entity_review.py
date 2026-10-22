@@ -6,15 +6,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW_BASE = 'f146070527470017120c08973ada0fca398c00ee'
+REVIEW_APPLIED = 'ee0694de5dc51cc773bf9e76ae72a375da82211d'
 
 
 def read(path):
     return json.loads((ROOT / path).read_text())
 
 
-def previous(path):
+def previous(path, revision=REVIEW_BASE):
     return json.loads(subprocess.check_output(
-        ['git', 'show', f'{REVIEW_BASE}:{path}'], cwd=ROOT, text=True))
+        ['git', 'show', f'{revision}:{path}'], cwd=ROOT, text=True))
 
 
 class PriorityEntityReviewTests(unittest.TestCase):
@@ -25,7 +26,7 @@ class PriorityEntityReviewTests(unittest.TestCase):
             self.assertEqual((ROOT / path).read_bytes(), subprocess.check_output(
                 ['git', 'show', f'{REVIEW_BASE}:{path}'], cwd=ROOT), path)
         before = previous('data/entities.json')
-        after = read('data/entities.json')
+        after = previous('data/entities.json', REVIEW_APPLIED)
         self.assertEqual(before['relations'], after['relations'])
         self.assertEqual(before['dossiers'], after['dossiers'])
         old = {e['id']: e for e in before['entities']}
@@ -43,7 +44,7 @@ class PriorityEntityReviewTests(unittest.TestCase):
 
     def test_only_four_scoped_contributions_are_added_and_four_memberships_resolved(self):
         before = previous('data/credits.json')
-        after = read('data/credits.json')
+        after = previous('data/credits.json', REVIEW_APPLIED)
         old = {c['id']: c for c in before['credits']}
         new = {c['id']: c for c in after['credits']}
         self.assertTrue(old.keys() <= new.keys())
@@ -75,8 +76,8 @@ class PriorityEntityReviewTests(unittest.TestCase):
         self.assertEqual(members[('hawkeye', 'g1251')]['status'], 'pendingRole')
         self.assertEqual(members[('nitroplus', 'g622')]['status'], 'pendingRole')
         self.assertEqual(members[('alicesoft', 'g545')]['status'], 'pendingRole')
-        self.assertEqual(read('data/entity-migration-review.json')['pendingMembershipCount'], 616)
-        self.assertEqual(len(read('data/entity-migration-review.json')['pendingIdentities']), 197)
+        self.assertEqual(previous('data/entity-migration-review.json', REVIEW_APPLIED)['pendingMembershipCount'], 616)
+        self.assertEqual(len(previous('data/entity-migration-review.json', REVIEW_APPLIED)['pendingIdentities']), 197)
 
     def test_corrections_explain_their_scope_on_the_existing_dossier_cards(self):
         cases = [('key.html', 'key-rpg-hbr', 'cooperation', 'related', 'A3'),

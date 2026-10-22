@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = '35b988136f016199d26121e41ca8d7b99d18e310'
 DATE = '2026-10-22'
 PRIORITY_REVIEW = 'data/entity-priority-review-20261022.json'
+FOLLOWUP_REVIEW = 'data/entity-followup-review-20261022.json'
 TYPE_LABELS = {'company':'公司／组织','brand':'品牌','team':'制作团队','publication':'刊物／出版名义','individual':'个人','unknown':'身份待核','history':'沿革专题'}
 ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
 BRANDS = set('key aniplex_exe sprite madosoft yuzusoft innocent_grey minori august toneworks asaproject leaf sagaplanets smee favorite cuffs cube sphere palette silkys silkys_plus alicesoft overdrive cocktailsoft macadamia fairytale cabbage hulotte laplacian applique clochette nanawind harukaze sorahane hummingbird_soft minatosoft'.split())
@@ -70,9 +71,9 @@ def render_json(d): return json.dumps(d,ensure_ascii=False,indent=2)+'\n'
 
 def build():
  d=read('data/games.json'); coverage=read('data/company-coverage.json'); taxonomy=read('data/taxonomy.json'); companies={c['id']:c for c in coverage['companies']}
- priority_review=read(PRIORITY_REVIEW)
- identity_reviews={x['entityId']:x for x in priority_review['identityCorrections']}
- assert len(identity_reviews)==len(priority_review['identityCorrections']),'重复的主体订正'
+ review_batches=[read(PRIORITY_REVIEW),read(FOLLOWUP_REVIEW)]
+ identity_reviews={x['entityId']:x for batch in review_batches for x in batch['identityCorrections']}
+ assert len(identity_reviews)==sum(len(batch['identityCorrections']) for batch in review_batches),'重复的主体订正'
  entities={}; aliases={}; dossiers=[]; relations=[]; credits=[]; memberships=[]; reviews=[]; placements=[]; names_review=[]; conflicts=[]
  def add_entity(eid,name,kind,names,source,basis='existingDossier',note=''):
   eid='entity-'+eid
@@ -125,7 +126,8 @@ def build():
    if reviewed:
     assert reviewed['status']=='sourceReviewed' and reviewed['rawName']==raw
     assert all(entities[eid][key]==value for key,value in reviewed['before'].items()),'主体旧值与独立订正记录不符'
-    assert reviewed['type'] in {'company','team'} and reviewed['sources'] and reviewed['note']
+    assert reviewed['type'] in {'company','team','brand'} and reviewed['sources'] and reviewed['note']
+    assert reviewed['type']!='brand' or reviewed.get('preserveReleaseRoles') is True,'身份核定不能自动改写旧发行职责'
     entities[eid].update(type=reviewed['type'],verification='sourceReviewed',historyNote=reviewed['note'])
     entities[eid]['sources']=list(dict.fromkeys([source,*reviewed['sources']]))
    else:
@@ -153,7 +155,8 @@ def build():
  for r in allreleases:
   eids=list(dict.fromkeys(release_entities(r)))
   for eid in eids:
-   role='publishingBrand' if entities[eid]['type']=='brand' else 'publisher'
+   preserve_role=identity_reviews.get(eid,{}).get('preserveReleaseRoles',False)
+   role='publishingBrand' if entities[eid]['type']=='brand' and not preserve_role else 'publisher'
    credit(eid,'release',r['id'],role,r['source'],r['publisher'],note='仅规范化此条历史发行署名；不据此推定开发职责。',work_id=r['workId'])
    if role=='publishingBrand' and r['year']==allworks[r['workId']]['firstYear'] and r['contentRelation']=='original':
     credit(eid,'work',r['workId'],'originalPublishingBrand',r['source'],r['publisher'],note='原作首发品牌署名；不等于该品牌独立完成全部程序、美术或剧本。')
@@ -176,20 +179,25 @@ def build():
   if r['workId'] in {'g200','g201'} and 'entity-imel' in release_entities(r):credit('entity-imel','release',r['id'],'portDeveloper','https://imel.co.jp/activity/',status='sourceReviewed',note='官方实绩的主机／手机移植开发；非原作剧本制作。',work_id=r['workId'])
  for cv in allcontents:
   if cv['workId']=='g821' and cv['firstYear']==2024:credit('entity-yonago_gainax','content',cv['id'],'addedAnimation','https://blissbrain.co.jp/pm2rg/',status='sourceReviewed',note='2024重制的新增动画，不是原GAINAX本社。',work_id='g821')
- # Add only the four independently reviewed work-scoped contributions. No issuer or family inference.
+ # Apply independently sourced work contributions; an optional dossierId scopes membership changes.
  reviewed_memberships={}
- for reviewed in priority_review['creditAdditions']:
+ for reviewed,audit in [(x,batch['audit']) for batch in review_batches for x in batch['creditAdditions']]:
   eid=reviewed['entityId'];wid=reviewed['workId'];cid=reviewed['dossierId']
   assert reviewed['status']=='sourceReviewed' and eid in entities and wid in allworks
-  assert reviewed['targetType']=='work' and reviewed['role'] in {'coDeveloper','originalProduction','supervisor'}
-  assert locations[wid]==reviewed['expectedPlacement'] and wid in [*companies[cid]['workIds'],*[w['id'] for w in companies[cid].get('relatedGames',[])]]
-  assert eid in next(d['entityIds'] for d in dossiers if d['id']==cid)
-  assert not any(x['entityId']==eid and x['workId']==wid for x in credits),'已存在职责不能由本批追加记录覆盖'
-  assert reviewed['before']=={'roles':['catalogueAssociation'],'group':'unresolved','status':'pendingRole'},'追加职责须对应明确的旧待核记录'
-  assert (cid,wid) not in reviewed_memberships
+  assert reviewed['targetType']=='work' and reviewed['role'] in {'coDeveloper','originalProduction','supervisor','productionBrand'}
+  assert locations[wid]==reviewed['expectedPlacement']
+  current_roles=sorted({x['role'] for x in credits if x['entityId']==eid and x['targetType']=='work' and x['targetId']==wid})
+  assert current_roles==reviewed.get('beforeWorkRoles',[]),'作品职责旧值与独立追加记录不符'
+  assert (eid,'work',wid,reviewed['role']) not in credit_seen,'已存在职责不能由追加记录覆盖'
+  if cid:
+   assert wid in [*companies[cid]['workIds'],*[w['id'] for w in companies[cid].get('relatedGames',[])]]
+   assert eid in next(d['entityIds'] for d in dossiers if d['id']==cid)
+   assert not any(x['entityId']==eid and x['workId']==wid for x in credits),'专题解除待核须单独审核旧职责'
+   assert reviewed['before']=={'roles':['catalogueAssociation'],'group':'unresolved','status':'pendingRole'}
+   assert (cid,wid) not in reviewed_memberships
   credit(eid,'work',wid,reviewed['role'],reviewed['source'],raw=reviewed['rawCredit'],status='sourceReviewed',note=reviewed['note'])
-  credits[-1].update(reviewId=reviewed['reviewId'],reviewRecord=priority_review['audit'])
-  reviewed_memberships[(cid,wid)]=reviewed
+  credits[-1].update(reviewId=reviewed['reviewId'],reviewRecord=audit)
+  if cid:reviewed_memberships[(cid,wid)]=reviewed
  assert set(identity_reviews)<=entities.keys(),'主体订正记录未命中既有身份'
  # Dossier memberships are separate from production assertions. Every existing member remains present.
  bywork=defaultdict(list)
