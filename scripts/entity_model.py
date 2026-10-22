@@ -33,7 +33,8 @@ def card_details(work,versions):
   seen.add(key)
   scope={'work':'原作／作品','content':'对应新增内容','release':'对应平台发行'}[c['targetType']]
   evidence='本轮来源核对' if c['status']=='sourceReviewed' else '沿用既有资料'
-  rows.append(f'<li>{entity_link(c["entityId"])} · {ESC(MODEL["roleLabels"][c["role"]])}<span class="credit-scope">{scope} · {evidence}</span> <a class="source-link" href="{ESC(c["source"],quote=True)}" target="_blank" rel="noopener noreferrer">依据 ↗</a></li>')
+  review_note=(f'<p class="scope-note">{ESC(c["note"])} <a href="{ESC(c["reviewRecord"],quote=True)}">核查记录 {ESC(c["reviewId"])}</a></p>' if c.get('reviewRecord') else '')
+  rows.append(f'<li>{entity_link(c["entityId"])} · {ESC(MODEL["roleLabels"][c["role"]])}<span class="credit-scope">{scope} · {evidence}</span> <a class="source-link" href="{ESC(c["source"],quote=True)}" target="_blank" rel="noopener noreferrer">依据 ↗</a>{review_note}</li>')
  placement=PLACEMENTS[wid]
  intro=f'<p class="catalogue-placement">{POSITION[placement["placement"]]} · 沿用既有收录，叙事主次未在本轮重新评定。</p>'
  if not rows:return intro+'<p class="credit-pending">参与职责尚待核实，详见作品原始资料。</p>'

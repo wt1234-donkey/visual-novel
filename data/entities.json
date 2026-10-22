@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "typeLabels": {
     "company": "公司／组织",
     "brand": "品牌",
@@ -2506,15 +2506,17 @@
     {
       "id": "entity-name-8a871cf93bfd",
       "name": "Spike Chunsoft",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "Spike Chunsoft"
       ],
       "sources": [
-        "https://www.spike-chunsoft.co.jp/pages/zeroescape/doublepack/"
+        "https://www.spike-chunsoft.co.jp/pages/zeroescape/doublepack/",
+        "https://www.spike-chunsoft.co.jp/company/",
+        "https://www.spike-chunsoft.co.jp/company/outline/"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "2026-10-22依据官方公司页及沿革确认公司身份；2012年4月Spike与Chunsoft合并后的署名。保留Spike、Chunsoft及海外主体的独立身份，不由公司身份推定逐作开发职责。原发行署名不变。",
       "dates": []
     },
     {
@@ -2562,15 +2564,16 @@
     {
       "id": "entity-name-5caee77c6090",
       "name": "Shiravune",
-      "type": "unknown",
+      "type": "team",
       "aliases": [
         "Shiravune"
       ],
       "sources": [
-        "https://shiravune.com/archives/2502"
+        "https://shiravune.com/archives/2502",
+        "https://shiravune.com/about"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "2026-10-22依据官方About确认其自称东京本地化团队；法人身份、运营关系与逐作本地化职责另核。保留既有发行署名，不将团队身份解释为独立法人或批量新增开发、本地化职责。",
       "dates": []
     },
     {
