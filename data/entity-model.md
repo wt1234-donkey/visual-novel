@@ -91,3 +91,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-22第二批使用 `entity-followup-review-20261022.json` 及同名Markdown，独立于首批和迁移基线。生成器按批次读取，核对旧身份／作品职责后，仅追加5项身份订正与3条作品职责。身份订正不得重复命中同一ID；MangaGamer的品牌身份使用显式 `preserveReleaseRoles: true`，保留旧 `publisher`，不由类型变化自动生成 `publishingBrand` 或 `originalPublishingBrand`。`beforeWorkRoles` 记录追加前的作品层角色；`dossierId: null` 允许仅给具名子品牌追加职责，不将职责上推到父品牌专题。指定专题的订正必须核对其主体和旧待核状态，才解除该条待核。
 
 2026-10-22第三批为 `entity-third-review-20261022.json` 与同名Markdown，独立记录5项公司身份和3条作品职责。Nitroplus公司与同名品牌继续分开；具名制作室／品牌证据只追加品牌制作，不解除公司专题待核。OVERDRIVE具名原作开发则核对自身专题旧状态后解除单条待核。前两批精确差异继续保存在其已应用快照回归中，当前新增差异对照本批baseCommit验证。
+
+2026-10-22第四批为 `entity-fourth-review-20261022.json` 与同名Markdown：4项公司身份与2条Micro Cabin书目制作。明确 `expectedPlacement: bibliography` 的具名订正可核对 `dossierOnlyWorks` 并解除单条书目职责待核；收录位置继续bibliography，不建立主库作品、内容或发行。角色核查与主库准入分别判断。旧批次精确差异仍对照其应用快照，当前数据另以本批baseCommit检验。
