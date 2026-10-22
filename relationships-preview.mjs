@@ -2,6 +2,14 @@ const TYPES={company:'公司',brand:'品牌',team:'团队',unknown:'身份待核
 const STATUS={sourceReviewed:'来源已核',existingDossier:'沿用档案',previewReviewed:'预览补充',pending:'关系待核',unresolved:'身份待核'};
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=v=>String(v).normalize('NFKC').toLowerCase().replace(/\s+/g,'');
+const GROUPS={creation:'创作作品',originalBrand:'原作发行品牌',pending:'专题职责待核',other:'其他参与／发行'};
+export function worksFor(data,node,group='creation',placement='main',query=''){
+  const q=norm(query);
+  return (node.groups?.[group]||[]).filter(r=>{const w=data.works[r.workId];return w.placement===placement&&(!q||norm([w.title,w.originalTitle].join(' ')).includes(q));});
+}
+export function creatorNodes(data,{kind='creators',placement='main',query=''}={}){
+  const q=norm(query);return data.nodes.filter(n=>!n.previewOnly&&(kind==='all'?Object.keys(GROUPS).some(g=>worksFor(data,n,g,placement).length):(kind==='creators'?worksFor(data,n,'creation',placement).length>0:n.type===kind&&Object.keys(GROUPS).some(g=>worksFor(data,n,g,placement).length)))&&(!q||norm([n.name,...n.aliases,...data.nameHistory.filter(h=>h.fromId===n.id||h.toId===n.id).flatMap(h=>[h.oldName,h.newName])].join(' ')).includes(q))).sort((a,b)=>worksFor(data,b,'creation',placement).length-worksFor(data,a,'creation',placement).length||a.name.localeCompare(b.name,'zh-CN'));
+}
 const safeUrl=v=>/^https?:\/\//.test(v)?esc(v):'#';
 
 export function familyEdges(data,family,showPending=true){
@@ -53,25 +61,27 @@ export function searchFamilies(data,query){
 async function init(){
   const $=id=>document.getElementById(id),workspace=$('workspace');
   let data;
-  try{const response=await fetch('data/relationships-preview.json');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
-  catch{workspace.setAttribute('aria-busy','false');$('graph-stage').innerHTML='<p class="error-message">关系资料暂时无法读取。请刷新重试，或先查看<a href="entities.html">主体档案</a>。</p>';$('family-nav').innerHTML='<p class="no-results">暂时无法读取家族列表。</p>';return;}
+  try{const response=await fetch(document.body.dataset.source||'data/relationships-preview.json');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
+  catch{workspace.setAttribute('aria-busy','false');$('graph-stage').innerHTML='<p class="error-message">关系资料暂时无法读取。请刷新重试，或先查看<a href="entities.html">主体档案</a>。</p>';$('family-nav').innerHTML='<p class="no-results">暂时无法读取家族列表。</p>';if($('creator-grid')){$('creator-grid').innerHTML='<p class="error-message">作品目录读取失败，请刷新重试或查看主体档案。</p>';$('creator-work-list').textContent='作品职责暂时无法读取。';}return;}
   const nodes=new Map(data.nodes.map(n=>[n.id,n]));
   const params=new URLSearchParams(location.search);
-  let family=data.families.find(f=>f.id===params.get('family'))||data.families[0];
+  let family=data.families.find(f=>f.id===params.get('family'))||data.families.find(f=>[f.root,...f.entityIds].includes(params.get('node')))||data.families.find(f=>f.id===document.body.dataset.defaultFamily)||data.families[0];
   let selected=[family.root,...family.entityIds].includes(params.get('node'))?params.get('node'):family.focus;
   let view='tree',zoom=1,collapsed=new Set(),showPending=true;
+  const catalogue=!!$('creator-grid');let workGroup=Object.hasOwn(GROUPS,params.get('group'))?params.get('group'):'creation';
+  if(catalogue&&['main','related','bibliography'].includes(params.get('placement')))$('work-placement').value=params.get('placement');
   const linkSource=(url,label='来源 ↗')=>`<a href="${safeUrl(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
   const nodeName=id=>nodes.get(id)?.name||id;
   const browseLink=id=>`index.html?participant=${encodeURIComponent(id)}#catalogue`;
-  function setURL(){const p=new URLSearchParams({family:family.id,node:selected});history.replaceState(null,'','?'+p);}
+  function setURL(){const p=new URLSearchParams({family:family.id,node:selected});if(catalogue){p.set('group',workGroup);p.set('placement',$('work-placement').value);}history.replaceState(null,'','?'+p);}
   function toast(text){$('toast').textContent=text;$('toast').hidden=false;setTimeout(()=>{$('toast').hidden=true;},2400);}
   function renderNav(){
     const found=searchFamilies(data,$('family-search').value);
     $('family-total').textContent=found.length;
-    $('family-nav').innerHTML=found.length?found.map((f,i)=>`<button class="family-button" data-family="${f.id}" aria-pressed="${f.id===family.id}"><span class="family-initial" aria-hidden="true">${esc(f.title.slice(0,1))}</span><span><strong>${esc(f.title)}</strong><small>${esc(f.subtitle)}</small></span></button>`).join(''):'<p class="no-results">暂无匹配家族。<br>试试 Key、NOVECT 或旧名。</p>';
+    $('family-nav').innerHTML=found.length?found.map((f,i)=>`<button class="family-button" data-family="${f.id}" aria-pressed="${f.id===family.id}"><span class="family-initial" aria-hidden="true">${esc(f.title.slice(0,1))}</span><span><strong>${esc(f.title)}</strong><small>${esc(f.subtitle)}</small></span></button>`).join(''):'<p class="no-results">暂无匹配主体。<br>试试 Key、NOVECT 或旧名。</p>';
   }
   function centerGraph(){const box=$('graph-scroll');box.scrollTo({left:Math.max(0,(parseFloat($('graph-stage').style.width)-box.clientWidth)/2),top:0});}
-  function chooseFamily(id){const f=data.families.find(f=>f.id===id);if(!f)return;family=f;selected=f.focus;collapsed=new Set();zoom=1;render();centerGraph();}
+  function chooseFamily(id){const f=data.families.find(f=>f.id===id);if(!f)return;family=f;selected=f.focus;collapsed=new Set();zoom=1;if(catalogue)$('work-search').value='';render();centerGraph();}
   function renderGraph(){
     const layout=layoutFamily(data,family,{showPending,collapsed});
     const pos=new Map(layout.nodes.map(n=>[n.id,n]));
@@ -84,7 +94,7 @@ async function init(){
       const n=nodes.get(p.id);if(!n)return '';
       const incoming=layout.edges.find(e=>e.child===n.id),pending=incoming?.status==='pending';
       const old=historiesFor(data,family).some(h=>h.fromId===n.id&&h.fromId!==h.toId);
-      return `<div class="graph-node kind-${n.type}${selected===n.id?' selected':''}${pending?' pending-node':''}" style="left:${p.x}px;top:${p.y}px"><button class="node-main" data-node="${n.id}" aria-pressed="${selected===n.id}" aria-label="查看${esc(n.name)}的关系和作品"><span class="node-meta"><span class="node-kind">${TYPES[n.type]||'主体'}</span><span>${pending?'衍生待核':old?'历史名称':selected===n.id?'正在查看':n.previewOnly?'预览补充':'主体档案'}</span></span><strong class="node-name">${esc(n.name)}</strong><span class="node-count"><i class="node-dot"></i>${n.previewOnly?'资料补充节点':`${n.stats.main} 部关联主库作品`}</span></button>${layout.children.has(n.id)?`<button class="fold-node" data-collapse="${n.id}" aria-expanded="${!collapsed.has(n.id)}" aria-label="${collapsed.has(n.id)?'展开':'折叠'}${esc(n.name)}的下级关系">${collapsed.has(n.id)?'+':'−'}</button>`:''}</div>`;
+      return `<div class="graph-node kind-${n.type}${selected===n.id?' selected':''}${pending?' pending-node':''}" style="left:${p.x}px;top:${p.y}px"><button class="node-main" data-node="${n.id}" aria-pressed="${selected===n.id}" aria-label="查看${esc(n.name)}的关系和作品"><span class="node-meta"><span class="node-kind">${TYPES[n.type]||'主体'}</span><span>${pending?'衍生待核':old?'历史名称':selected===n.id?'正在查看':n.previewOnly?'预览补充':'主体档案'}</span></span><strong class="node-name">${esc(n.name)}</strong><span class="node-count"><i class="node-dot"></i>${n.previewOnly?'资料补充节点':`${catalogue?(n.productionCount?`${n.productionCount} 部创作作品`:'暂无已登记创作记录'):`${n.stats.main} 部关联主库作品`}`}</span></button>${layout.children.has(n.id)?`<button class="fold-node" data-collapse="${n.id}" aria-expanded="${!collapsed.has(n.id)}" aria-label="${collapsed.has(n.id)?'展开':'折叠'}${esc(n.name)}的下级关系">${collapsed.has(n.id)?'+':'−'}</button>`:''}</div>`;
     }).join('');
     const stage=$('graph-stage');
     stage.style.width=layout.width*zoom+'px';stage.style.height=layout.height*zoom+'px';
@@ -112,18 +122,18 @@ async function init(){
     const status=incoming?'pending':n.verification;
     const description=n.historyNote||'主体身份、组织归属与作品参与分别记录。点击相连节点继续探索。';
     const relations=edges.map(e=>{const parent=e.child===n.id,other=parent?e.parent:e.child;const label=e.kind==='parent'?(parent?'母公司':'子公司'):e.kind==='spinOff'?(parent?'衍生来源（待核）':'衍生组织（待核）'):(parent?'上级／关联组织':'旗下／家族品牌');return `<div class="detail-relation"><div class="small-label">${label}</div><button data-node="${other}">${esc(nodeName(other))} ↗</button><p>${esc(e.dateLabel)} · ${esc(STATUS[e.status]||e.status)}</p><p>${esc(e.note)}</p>${linkSource(e.source)}</div>`;}).join('');
-    $('detail-panel').innerHTML=`<div class="detail-kicker"><span class="node-kind">${TYPES[n.type]||'主体'}</span><span class="status-dot ${status==='pending'?'pending':''}">${STATUS[status]||'沿用档案'}</span></div><div class="detail-logo" aria-hidden="true">${esc(n.name.slice(0,1))}</div><h2>${esc(n.name)}</h2><p class="detail-alias">${esc(alias||'独立主体档案')}</p><p class="detail-description">${esc(description)}</p><div class="detail-stats"><div><strong>${n.stats.main}</strong><span>关联主库作品</span></div><div><strong>${n.productionCount}</strong><span>主库制作记录</span></div><div><strong>${n.stats.related}</strong><span>跨类型关联</span></div><div><strong>${n.stats.bibliography}</strong><span>仅专题书目</span></div></div><section class="detail-section"><h3>与此主体相连<span>${edges.length} 条</span></h3>${relations||'<p class="empty-lane">暂无已登记组织关系。</p>'}</section>${histories.length?`<section class="detail-section"><h3>名称沿革</h3>${histories.map(h=>`<div class="detail-relation"><button data-node="${h.toId}">${esc(h.oldName)} → ${esc(h.newName)}</button><p>${esc(h.note)}</p>${linkSource(h.source)}</div>`).join('')}</section>`:''}${n.works.length?`<section class="detail-section"><h3>直接关联作品<span>按原作年选列</span></h3>${n.works.map(w=>`<a class="detail-work" href="index.html?query=${encodeURIComponent(w.title)}#catalogue"><span>${esc(w.title)}</span><time>${w.year}</time></a>`).join('')}</section>`:''}<div class="detail-actions">${!n.previewOnly?`<a class="button-primary" href="${browseLink(n.id)}">浏览该主体关联作品 <span>↗</span></a><a class="button-secondary" href="entities.html#${n.id}">查看完整主体档案 <span>↗</span></a>`:`<a class="button-primary" href="${safeUrl(n.sources[0])}" target="_blank" rel="noopener noreferrer">查看母公司关系公告 <span>↗</span></a>`}${n.dossiers.map(d=>`<a class="button-secondary" href="${esc(d.id)}.html">${esc(d.name)}专题 <span>↗</span></a>`).join('')}</div><p class="detail-footnote">数量仅统计本主体的直接记录。组织关系不自动继承作品或创作风格；未核时间不等于当前归属。</p><details class="source-details"><summary>主体来源与记录依据</summary>${n.sources.map((s,i)=>linkSource(s,`${i+1}. ${esc(new URL(s).hostname)} ↗`)).join('')}</details>`;
+    $('detail-panel').innerHTML=`<div class="detail-kicker"><span class="node-kind">${TYPES[n.type]||'主体'}</span><span class="status-dot ${status==='pending'?'pending':''}">${STATUS[status]||'沿用档案'}</span></div><div class="detail-logo" aria-hidden="true">${esc(n.name.slice(0,1))}</div><h2>${esc(n.name)}</h2><p class="detail-alias">${esc(alias||'独立主体档案')}</p><p class="detail-description">${esc(description)}</p><div class="detail-stats"><div><strong>${n.stats.main}</strong><span>关联主库作品</span></div><div><strong>${n.productionCount}</strong><span>主库制作记录</span></div><div><strong>${n.stats.related}</strong><span>跨类型关联</span></div><div><strong>${n.stats.bibliography}</strong><span>仅专题书目</span></div></div><section class="detail-section"><h3>与此主体相连<span>${edges.length} 条</span></h3>${relations||'<p class="empty-lane">暂无已登记组织关系。</p>'}</section>${histories.length?`<section class="detail-section"><h3>名称沿革</h3>${histories.map(h=>`<div class="detail-relation"><button data-node="${h.toId}">${esc(h.oldName)} → ${esc(h.newName)}</button><p>${esc(h.note)}</p>${linkSource(h.source)}</div>`).join('')}</section>`:''}${n.works.length?`<section class="detail-section"><h3>直接关联作品<span>按原作年选列</span></h3>${n.works.map(w=>`<a class="detail-work" href="index.html?query=${encodeURIComponent(w.title)}#catalogue"><span>${esc(w.title)}</span><time>${w.year}</time></a>`).join('')}</section>`:''}<div class="detail-actions">${catalogue?`<a class="button-primary" href="#creator-works">按职责浏览本主体作品 <span>↓</span></a>`:''}${!n.previewOnly?`<a class="button-primary" href="${browseLink(n.id)}">浏览该主体关联作品 <span>↗</span></a><a class="button-secondary" href="entities.html#${n.id}">查看完整主体档案 <span>↗</span></a>`:`<a class="button-primary" href="${safeUrl(n.sources[0])}" target="_blank" rel="noopener noreferrer">查看母公司关系公告 <span>↗</span></a>`}${n.dossiers.map(d=>`<a class="button-secondary" href="${esc(d.id)}.html">${esc(d.name)}专题 <span>↗</span></a>`).join('')}</div><p class="detail-footnote">数量仅统计本主体的直接记录。组织关系不自动继承作品或创作风格；未核时间不等于当前归属。</p><details class="source-details"><summary>主体来源与记录依据</summary>${n.sources.map((s,i)=>linkSource(s,`${i+1}. ${esc(new URL(s).hostname)} ↗`)).join('')}</details>`;
   }
   function render(){
     $('family-title').textContent=family.title;
-    renderNav();renderGraph();renderHistory();renderDetail();setURL();
+    renderNav();renderGraph();renderHistory();renderDetail();if(catalogue)renderCatalogue();setURL();
     $('graph-scroll').hidden=view!=='tree';$('relation-list').hidden=view!=='list';
     document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
   }
   workspace.addEventListener('click',e=>{
     const familyButton=e.target.closest('[data-family]');if(familyButton){chooseFamily(familyButton.dataset.family);return;}
     const fold=e.target.closest('[data-collapse]');if(fold){const id=fold.dataset.collapse;if(collapsed.has(id))collapsed.delete(id);else collapsed.add(id);renderGraph();return;}
-    const button=e.target.closest('[data-node]');if(button){selected=button.dataset.node;renderGraph();renderDetail();setURL();return;}
+    const button=e.target.closest('[data-node]');if(button){selected=button.dataset.node;if(catalogue)$('work-search').value='';renderGraph();renderDetail();if(catalogue)renderCatalogue();setURL();return;}
     const viewButton=e.target.closest('[data-view]');if(viewButton){view=viewButton.dataset.view;render();}
   });
   $('family-search').addEventListener('input',renderNav);
@@ -131,6 +141,36 @@ async function init(){
   $('zoom-in').addEventListener('click',()=>{zoom=Math.min(1.4,Math.round((zoom+.1)*10)/10);renderGraph();});
   $('zoom-out').addEventListener('click',()=>{zoom=Math.max(.7,Math.round((zoom-.1)*10)/10);renderGraph();});
   $('reset-tree').addEventListener('click',()=>{collapsed=new Set();zoom=1;renderGraph();centerGraph();toast('关系树已展开并恢复缩放');});
+  function renderCatalogue(){
+    const placement=$('work-placement').value;
+    const found=creatorNodes(data,{kind:$('creator-kind').value,placement,query:$('creator-search').value});
+    $('creator-count').textContent=`${found.length} 个主体`;
+    $('creator-grid').innerHTML=found.length?found.map(n=>`<button class="creator-card" data-creator="${n.id}" aria-pressed="${n.id===selected}"><span class="node-kind">${TYPES[n.type]||'主体'}</span><strong>${esc(n.name)}</strong><span>${worksFor(data,n,'creation',placement).length} 部创作 · ${worksFor(data,n,'pending',placement).length} 部专题待核</span></button>`).join(''):'<p class="muted">暂无符合条件的创作厂商。可选择“全部主体（含发行与待核）”继续查找。</p>';
+    renderWorks();
+  }
+  function renderWorks(){
+    const n=nodes.get(selected),placement=$('work-placement').value;
+    $('creator-works-title').textContent=n.name+' · 作品分类';
+    $('creator-works-note').textContent='按本主体的直接职责归类；创作作品包括原作制作、开发、联合制作和制作品牌，具体适用版本见依据。仅有原作发行署名或进入专题，均不自动认定为创作。';
+    $('work-groups').innerHTML=Object.entries(GROUPS).map(([key,label])=>`<button data-work-group="${key}" aria-pressed="${workGroup===key}">${label}<span>${worksFor(data,n,key,placement).length}</span></button>`).join('');
+    const rows=worksFor(data,n,workGroup,placement,$('work-search').value);
+    const positionLabel={main:'主库作品',related:'叙事／跨类型关联',bibliography:'仅专题书目'}[placement];
+    $('creator-work-list').innerHTML=rows.length?`<p class="work-result-count">${positionLabel} · ${GROUPS[workGroup]} · ${rows.length} 部，按原作首发年排序</p>`+rows.map(r=>{
+      const w=data.works[r.workId],cs=r.creditIds.map(id=>data.credits[id]);
+      const roles=[...new Set(cs.map(c=>data.roleLabels[c.role]||c.role))];
+      const evidence=cs.filter(c=>workGroup!=='creation'||data.creationRoles.includes(c.role));
+      return `<article class="creator-work"><div class="work-card-heading"><time>${w.year}</time><div><h3><a href="${esc(w.href)}">${esc(w.title)} ↗</a></h3><p>${esc(w.originalTitle)} · ${esc(w.category)}</p></div><span class="work-role ${workGroup==='pending'?'pending-role':''}">${GROUPS[workGroup]}</span></div><p class="work-credit-summary">${esc(roles.join(' · ')||'专题引用，具体职责未核')}${workGroup==='pending'?' · 专题职责待核':''}</p><details class="work-evidence"><summary>查看署名、适用范围与来源</summary>${evidence.map(c=>`<div><strong>${esc(data.roleLabels[c.role]||c.role)}</strong> · ${{work:'作品层',content:'内容版本层',release:'平台发行层'}[c.targetType]||esc(c.targetType)} ${esc(c.targetId)}<p>署名原文：${esc(c.rawCredit)}</p><p>${esc(c.note)}</p><p>${esc(STATUS[c.status]||({existingCredit:'沿用发行记录',existingEvidence:'沿用档案依据'}[c.status])||c.status)} · ${linkSource(c.source)}</p></div>`).join('')}${r.pendingRefs.map(ref=>`<div><strong>专题职责待核</strong><p>来自 <a href="${esc(ref.dossierId)}.html">${esc(ref.dossierId)} 专题</a>，保留原待核状态。</p>${linkSource(ref.source)}</div>`).join('')}</details></article>`;
+    }).join(''):`<p class="work-empty">当前${positionLabel}范围内，暂无“${GROUPS[workGroup]}”记录。${workGroup==='creation'?'可查看其他职责组；暂无记录不代表该主体未参与创作。':''}</p>`;
+  }
+  if(catalogue){
+    const mainWorks=Object.values(data.works).filter(w=>w.placement==='main').length,withCreation=new Set(data.nodes.flatMap(n=>worksFor(data,n,'creation','main').map(r=>r.workId))).size;
+    $('creation-coverage').textContent=`主库 ${mainWorks} 部作品中，${withCreation} 部已有直接创作记录，${mainWorks-withCreation} 部仍待补充创作依据。选择主体后，下方按职责列出作品；发行署名与专题待核不计入创作数量。`;
+    $('organization-total').textContent=`${data.nodes.filter(n=>!n.previewOnly).length} 个主体 · ${data.families.length} 组组织档案。点击节点，再按职责浏览作品。`;
+    $('creator-search').addEventListener('input',renderCatalogue);$('creator-kind').addEventListener('change',renderCatalogue);
+    $('work-placement').addEventListener('change',()=>{renderCatalogue();setURL();});$('work-search').addEventListener('input',renderWorks);
+    $('work-groups').addEventListener('click',e=>{const button=e.target.closest('[data-work-group]');if(button){workGroup=button.dataset.workGroup;renderWorks();setURL();}});
+    $('creator-grid').addEventListener('click',e=>{const button=e.target.closest('[data-creator]');if(!button)return;const f=data.families.find(f=>[f.root,...f.entityIds].includes(button.dataset.creator));if(!f)return;family=f;selected=button.dataset.creator;collapsed=new Set();zoom=1;workGroup='creation';$('work-search').value='';render();centerGraph();$('creator-works').scrollIntoView({block:'start'});});
+  }
   render();centerGraph();workspace.setAttribute('aria-busy','false');
 }
 if(typeof document!=='undefined')init();

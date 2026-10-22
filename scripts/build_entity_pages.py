@@ -8,6 +8,7 @@ from pathlib import Path
 from entity_model import MODEL,CREDITS,CLASSIFICATION,ENTITIES,DOSSIERS,POSITION,entity_link
 from html import escape as e
 from build_relationships_preview import build as build_relationships_preview
+from build_organizations import build as build_organizations
 ROOT=Path(__file__).resolve().parents[1]
 
 def shell(title,body):
@@ -58,6 +59,7 @@ def build():
  compact_credits=[{k:v for k,v in c.items() if k not in ['note','territory','id']} for c in CREDITS['credits'] if c['workId'] in main_ids]
  out['data/entity-catalogue.json']=json.dumps({'model':public_model,'credits':compact_credits,'dossierMemberships':[m for m in CREDITS['dossierMemberships'] if m['workId'] in main_ids]},ensure_ascii=False,separators=(',',':'))+'\n'
  out['data/relationships-preview.json']=json.dumps(build_relationships_preview(),ensure_ascii=False,indent=2)+'\n'
+ out['data/organizations.json']=json.dumps(build_organizations(),ensure_ascii=False,separators=(',',':'))+'\n'
  return out
 
 if __name__=='__main__':
