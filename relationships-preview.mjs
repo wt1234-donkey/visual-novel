@@ -152,7 +152,7 @@ async function init(){
     const placement=$('work-placement').value;
     const found=creatorNodes(data,{kind:$('creator-kind').value,placement,query:$('creator-search').value});
     $('creator-count').textContent=`${found.length} 个主体`;
-    if($('registration-progress')&&data.registrationProgress){const p=data.registrationProgress;$('registration-progress').innerHTML=`A 字母首批已核查 ${p.processedEntityIds.length} / ${p.total} 个主体 · 下一家：${esc(p.nextName)} <a href="${esc(p.audit)}">查看证据与待核清单 ↗</a>`;}
+    if($('registration-progress')&&data.registrationProgress){const p=data.registrationProgress;$('registration-progress').innerHTML=`A 字母累计已核查 ${p.processedEntityIds.length} / ${p.total} 个主体 · 下一家：${esc(p.nextName)} <a href="${esc(p.audit)}">查看证据与待核清单 ↗</a>`;}
     $('creator-grid').innerHTML=found.length?found.map(n=>`<button class="creator-card" data-creator="${n.id}" aria-pressed="${n.id===selected}"><span class="node-kind">${TYPES[n.type]||'主体'}</span><strong>${esc(n.name)}</strong><span>${worksFor(data,n,'creation',placement).length} 部创作 · ${worksFor(data,n,'pending',placement).length} 部专题待核</span></button>`).join(''):'<p class="muted">暂无符合条件的创作厂商。可选择“全部主体（含发行与待核）”继续查找。</p>';
     renderWorks();
   }
