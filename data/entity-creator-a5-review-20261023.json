@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "456057a36fb14202a7b2072c24a6261e031d2e44",
+  "audit": "data/entity-creator-a5-review-20261023.md",
+  "previousReview": "data/entity-creator-a4-review-20261023.md",
+  "policy": "连续核查第26—30个A主体，累计30／32；仅把来源明确写出开发元／开发公司的ASCII条目登记为创作职责，并独立订正Asmik、Atari、Atlus主体身份。保留原始发行署名、既有身份ID、关系、作品位置及迁移基线；Asoberu! BD-GAME继续待核。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I01",
+      "entityId": "entity-name-9590651f2922",
+      "rawName": "アスミック",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://www.asmik-ace.co.jp/history/",
+        "https://www.asmik-ace.co.jp/profile/"
+      ],
+      "note": "Asmik Ace官方沿革明确1985年由共同出资设立株式会社アスミック，1998年与Ace Pictures合并成立Asmik Ace Entertainment；官方公司概要同时列有计算机软件的企划、制作、发行等业务。仅订正历史Asmik的主体层级并保留现有发行署名，不把合并后的Asmik Ace或游戏开发方HummingBird Soft倒填为本作开发者。"
+    },
+    {
+      "reviewId": "AZE-I02",
+      "entityId": "entity-name-03ca146bb18c",
+      "rawName": "Atari",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://atari.com/pages/about",
+        "https://atari.com/pages/history"
+      ],
+      "note": "Atari官方关于页将Atari称为互动娱乐制作公司，历史页明确1972年创立及1984年分裂为Atari Corporation与Atari Games；因此只确认该发行署名可进入公司层，保留2004年Atari发行与Atari Melbourne House开发的分工，不用品牌历史把不同法人与开发团队合并。"
+    },
+    {
+      "reviewId": "AZE-I03",
+      "entityId": "entity-name-6cafab111889",
+      "rawName": "Atlus",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://atlus.co.jp/recruit/about/history/"
+      ],
+      "note": "Atlus官方历史明确1986年以计算机游戏开发公司成立，1989年推出首个自有品牌作品；仅订正主体身份，不把《暗黑弥赛亚／地狱之夜》的发行方Atlus推作开发方，既有发行职责和Dennou Eizou Seisakusho开发分工保持不变。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZE-C01",
+      "entityId": "entity-ascii",
+      "dossierId": null,
+      "workId": "g1003",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "アスキー",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_wANYKNB7WWya78VW.php",
+      "note": "PC-8801/SR产品资料同时列出メーカー名アスキー与開発元アスキー；登记《阿里昂》作品层原作制作。电影原作、发行与游戏开发分开记录，不据此扩展到ASCII其他作品或后发平台。"
+    },
+    {
+      "reviewId": "AZE-C02",
+      "entityId": "entity-ascii",
+      "dossierId": null,
+      "workId": "g1004",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "アスキー",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_NR8hzxRbmVqpXag5.php",
+      "note": "PC-8801/SR产品资料明确メーカー名与開発元均为アスキー；登记《冒险者们：贤者的遗言》作品层原作制作。作者、移植者与发行字段不替代开发证明，不把预告续作冒険者達II或其他ASCII发行作品自动继承。"
+    },
+    {
+      "reviewId": "AZE-C03",
+      "entityId": "entity-ascii",
+      "dossierId": null,
+      "workId": "ascii-chaos-angels",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "アスキー",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_sEVfQsIiv2Bv01nr.php",
+      "note": "PC-8801/SR产品资料明确《混沌天使》メーカー名与開発元均为アスキー；登记专题关联作品的原作制作，不改变其related位置，也不把MSX移植或成人题材标签扩展成ASCII全目录开发证明。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-ascii",
+      "name": "ASCII",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://www.8-bits.info/gamelist/PC88/info/info_wANYKNB7WWya78VW.php",
+        "https://www.8-bits.info/gamelist/PC88/info/info_NR8hzxRbmVqpXag5.php",
+        "https://www.8-bits.info/gamelist/PC88/info/info_sEVfQsIiv2Bv01nr.php"
+      ],
+      "reason": "本批只登记三项资料明确写出开发元为ASCII的作品；《鄂霍次克消失》资料显示开发元为LOGIN SOFT、ASCII为发行方，其他发行署名不能自动升级为创作职责。",
+      "workIds": [
+        "g1003",
+        "g1004",
+        "ascii-chaos-angels"
+      ],
+      "reviewId": "AZE-D01"
+    },
+    {
+      "entityId": "entity-name-9590651f2922",
+      "name": "Asmik（アスミック）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.asmik-ace.co.jp/history/",
+        "https://www.asmik-ace.co.jp/profile/"
+      ],
+      "reason": "历史主体身份已确认，但《深层迷宫IV》现有资料明确HummingBird Soft开发、Asmik发行；未增加Asmik创作职责。",
+      "workIds": [
+        "hummingbird-deep-dungeon-4"
+      ],
+      "reviewId": "AZE-D02"
+    },
+    {
+      "entityId": "entity-name-80a218385951",
+      "name": "Asoberu! BD-GAME（あそべる！BD-GAME）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://bd-game.product.co.jp/product/product10.html"
+      ],
+      "reason": "官方产品页可确认BD-GAME产品／品牌语境，但当前可读内容未能确认运营法人或具体作品制作职责；不把Visual Arts或原作品牌的关系推给该发行标签。",
+      "workIds": [
+        "g163"
+      ],
+      "reviewId": "AZE-D03"
+    },
+    {
+      "entityId": "entity-name-03ca146bb18c",
+      "name": "Atari",
+      "status": "identityRegistered",
+      "sources": [
+        "https://atari.com/pages/about",
+        "https://atari.com/pages/history"
+      ],
+      "reason": "主体层级与历史分裂可确认；现有《变形金刚：2004版》仍按Atari发行、Atari Melbourne House开发处理，不新增Atari创作职责。",
+      "workIds": [
+        "melbournehouse-transformers"
+      ],
+      "reviewId": "AZE-D04"
+    },
+    {
+      "entityId": "entity-name-6cafab111889",
+      "name": "Atlus",
+      "status": "identityRegistered",
+      "sources": [
+        "https://atlus.co.jp/recruit/about/history/"
+      ],
+      "reason": "官方历史确认Atlus为游戏开发公司；《暗黑弥赛亚／地狱之夜》现有资料的开发方为Dennou Eizou Seisakusho，Atlus仅保留发行署名。",
+      "workIds": [
+        "g1233"
+      ],
+      "reviewId": "AZE-D05"
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-ascii",
+      "name": "ASCII",
+      "status": "partiallyRegistered",
+      "sources": [
+        "https://www.8-bits.info/gamelist/PC88/info/info_wANYKNB7WWya78VW.php",
+        "https://www.8-bits.info/gamelist/PC88/info/info_NR8hzxRbmVqpXag5.php",
+        "https://www.8-bits.info/gamelist/PC88/info/info_sEVfQsIiv2Bv01nr.php"
+      ],
+      "reason": "仅登记三条有明确开发字段的作品；不从51条发行署名推导开发职责。",
+      "workIds": [
+        "g1003",
+        "g1004",
+        "ascii-chaos-angels"
+      ]
+    },
+    {
+      "entityId": "entity-name-9590651f2922",
+      "name": "Asmik（アスミック）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.asmik-ace.co.jp/history/",
+        "https://www.asmik-ace.co.jp/profile/"
+      ],
+      "reason": "官方沿革确认1985年株式会社アスミック及1998年合并；保留深层迷宫IV的HummingBird Soft开发、Asmik发行。",
+      "workIds": [
+        "hummingbird-deep-dungeon-4"
+      ]
+    },
+    {
+      "entityId": "entity-name-80a218385951",
+      "name": "Asoberu! BD-GAME（あそべる！BD-GAME）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://bd-game.product.co.jp/product/product10.html"
+      ],
+      "reason": "仅确认BDPG品牌／产品语境，运营法人及创作职责未核。",
+      "workIds": [
+        "g163"
+      ]
+    },
+    {
+      "entityId": "entity-name-03ca146bb18c",
+      "name": "Atari",
+      "status": "identityRegistered",
+      "sources": [
+        "https://atari.com/pages/about",
+        "https://atari.com/pages/history"
+      ],
+      "reason": "官方历史确认Atari主体及1984年分裂；保留Atari发行、Atari Melbourne House开发。",
+      "workIds": [
+        "melbournehouse-transformers"
+      ]
+    },
+    {
+      "entityId": "entity-name-6cafab111889",
+      "name": "Atlus",
+      "status": "identityRegistered",
+      "sources": [
+        "https://atlus.co.jp/recruit/about/history/"
+      ],
+      "reason": "官方历史确认1986年以游戏开发公司成立；Hellnight的具体开发方仍为Dennou Eizou Seisakusho。",
+      "workIds": [
+        "g1233"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "A",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 32,
+    "processedEntityIds": [
+      "entity-name-4750f74061fe",
+      "entity-name-c31f977d8bac",
+      "entity-name-6ed2a96c53cd",
+      "entity-addison_wesley",
+      "entity-adventure_international",
+      "entity-name-490ea790703a",
+      "entity-name-f0d25e9c6d82",
+      "entity-name-76fdfcac5ffb",
+      "entity-name-b8b1293f82fa",
+      "entity-alice_blue",
+      "entity-alice_noir",
+      "entity-alicesoft",
+      "entity-name-bd36baf4b6a9",
+      "entity-name-788994ba8dfb",
+      "entity-name-5b146b15540c",
+      "entity-angel_hearts",
+      "entity-aniplex",
+      "entity-aniplex_exe",
+      "entity-applique_imouto",
+      "entity-applique",
+      "entity-aquaplus",
+      "entity-aquaplus_brand",
+      "entity-name-5ba1ee4df514",
+      "entity-name-7f11db7a66f2",
+      "entity-asaproject",
+      "entity-ascii",
+      "entity-name-9590651f2922",
+      "entity-name-80a218385951",
+      "entity-name-03ca146bb18c",
+      "entity-name-6cafab111889"
+    ],
+    "nextEntityId": "entity-august",
+    "nextName": "AUGUST",
+    "queue": [
+      {
+        "entityId": "entity-name-4750f74061fe",
+        "name": "Accolade",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c31f977d8bac",
+        "name": "Activision",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6ed2a96c53cd",
+        "name": "Addison-Wesley Productions",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-addison_wesley",
+        "name": "Addison-Wesley Publishing Company",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-adventure_international",
+        "name": "Adventure International",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-490ea790703a",
+        "name": "Adventure Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f0d25e9c6d82",
+        "name": "âge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-76fdfcac5ffb",
+        "name": "Akatsuki Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b8b1293f82fa",
+        "name": "Alchemist",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alice_blue",
+        "name": "Alice Blue",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alice_noir",
+        "name": "AliceNoir",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-alicesoft",
+        "name": "Alicesoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bd36baf4b6a9",
+        "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-788994ba8dfb",
+        "name": "American Laser Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5b146b15540c",
+        "name": "aNCHOR",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-angel_hearts",
+        "name": "Angel Hearts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aniplex",
+        "name": "Aniplex",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aniplex_exe",
+        "name": "ANIPLEX.EXE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-applique_imouto",
+        "name": "Applique -Imouto-（あっぷりけ-妹-）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-applique",
+        "name": "Applique（あっぷりけ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aquaplus",
+        "name": "AQUAPLUS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-aquaplus_brand",
+        "name": "AQUAPLUS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5ba1ee4df514",
+        "name": "ARIA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7f11db7a66f2",
+        "name": "Arsys Software",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-asaproject",
+        "name": "ASa Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-ascii",
+        "name": "ASCII",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-9590651f2922",
+        "name": "Asmik（アスミック）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-80a218385951",
+        "name": "Asoberu! BD-GAME（あそべる！BD-GAME）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-03ca146bb18c",
+        "name": "Atari",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6cafab111889",
+        "name": "Atlus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-august",
+        "name": "AUGUST",
+        "status": "notStarted"
+      },
+      {
+        "entityId": "entity-name-a7f6066af4b9",
+        "name": "Azarashi Soft（あざらしそふと）",
+        "status": "notStarted"
+      }
+    ]
+  }
+}
+

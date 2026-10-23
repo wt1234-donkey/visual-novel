@@ -101,3 +101,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-22 A—Z第三批使用 `entity-creator-a3-review-20261022.json` 与同名Markdown；连续核查第13—20个主体，追加American Laser Games两作制作、Applique子品牌4作及本品牌8作制作品牌。身份关系不改，子品牌不解除母品牌专题待核，2016先行LVN与后续扩充的职责不混用；ANIPLEX.EXE的製作／制作资料差异继续具名待核。
 
 2026-10-23 A—Z第四批使用 `entity-creator-a4-review-20261023.json` 与同名Markdown；连续核查AQUAPLUS公司、同名品牌、ARIA、Arsys Software及ASa Project，累计25／32。新增3条具名职责（2部作品），独立确认ARIA品牌身份并显式保留旧发行职责；ASa Project既有22条制作品牌不重复录入。公司／品牌不同维度按作品去重，原作与后发主机职责分开，旧专题待核、实体关系和迁移基线不改。
+
+2026-10-23 A—Z第五批使用 `entity-creator-a5-review-20261023.json` 与同名Markdown；连续核查ASCII、Asmik、Asoberu!、Atari与Atlus，累计30／32。新增3条ASCII具名原作制作职责（2部主收录、1部专题关联），并独立确认Asmik、Atari、Atlus为公司主体；保留Asmik发行、Atari／Atari Melbourne House及Atlus／Dennou Eizou Seisakusho的既有分工，不以发行或品牌沿革倒推开发。Asoberu!与ASCII其余职责继续按证据缺口待核，专题位置、旧关系和迁移基线不改。
