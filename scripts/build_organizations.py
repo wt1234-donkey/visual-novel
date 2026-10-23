@@ -14,7 +14,7 @@ def build():
     read = lambda name: json.loads((ROOT / f'data/{name}.json').read_text())
     model, credits, games, coverage = [read(n) for n in ['entities', 'credits', 'games', 'company-coverage']]
     result = preview_build()
-    reviews = [read(name) for name in ['entity-creator-a-review-20261022', 'entity-creator-a2-review-20261022', 'entity-creator-a3-review-20261022', 'entity-creator-a4-review-20261023']]
+    reviews = [read(name) for name in ['entity-creator-a-review-20261022', 'entity-creator-a2-review-20261022', 'entity-creator-a3-review-20261022', 'entity-creator-a4-review-20261023', 'entity-creator-a5-review-20261023']]
     review = reviews[-1]
     reviewed_entities = [entry for batch in reviews for entry in batch['reviewedEntities']]
     assert len({entry['entityId'] for entry in reviewed_entities}) == len(reviewed_entities)
