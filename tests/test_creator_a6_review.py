@@ -21,7 +21,9 @@ class CreatorA6ReviewTests(unittest.TestCase):
         b, a = {e['id']: e for e in before['entities']}, {e['id']: e for e in after['entities']}
         self.assertEqual(a.keys(), b.keys())
         changed = {eid for eid in b if b[eid] != a[eid]}
-        self.assertEqual(changed, {'entity-name-a7f6066af4b9', 'entity-name-4b075a5bed09', 'entity-name-c45d1636d3b0', 'entity-name-91ab620ad791'})
+        expected = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3']
+                    for c in read(f'data/entity-creator-{filename}-review-20261023.json')['identityCorrections']}
+        self.assertEqual(changed, expected)
         e = a['entity-name-a7f6066af4b9']
         self.assertEqual(e['type'], 'brand')
         self.assertEqual(e['verification'], 'sourceReviewed')
