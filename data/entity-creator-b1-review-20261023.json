@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "5124a2045af2ed9536a39acfd02ba620a72e4c29",
+  "audit": "data/entity-creator-b1-review-20261023.md",
+  "previousReview": "data/entity-creator-a6-review-20261023.md",
+  "policy": "B字母首批顺序核查Bandai Namco Games、Bandai Visual、Banpresto。只对有集团原始资料支持的Bandai Visual历史公司身份作订正；发行、业务承继及集团沿革不推定逐作开发。旧Banpresto游戏公司、新景品公司和后来品牌不得合并为单一连续身份。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I05",
+      "entityId": "entity-name-4b075a5bed09",
+      "rawName": "バンダイビジュアル",
+      "before": {"type": "unknown", "verification": "unresolved"},
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.bandainamco.co.jp/about/history/corporate.html",
+        "https://www.bandainamco.co.jp/cgi-bin/releases/index.cgi/file/view/6083?entry_id=5501"
+      ],
+      "note": "集团历史记录バンダイビジュアル株式会社为公司，2018年集团公告说明商号改为バンダイナムコアーツ。仅核定历史公司身份，保留《卒業》Mac／WonderSwan等既有发行署名；不据此认定1992年原作开发、2018年后的品牌或其他主体的作品继承。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {"reviewId":"AZE-D08","entityId":"entity-name-40ed6431d1a6","name":"Bandai Namco Games","status":"identityRegistered","sources":["https://www.bandainamcoent.co.jp/corporate/150401/","https://www.bandainamcoent.co.jp/corporate/history/","https://www.nitroplus.co.jp/works/consumer-game"],"reason":"2015年更名公告可确认已有公司身份；六部作品的既有记录为发行层。需分别查各作初版职员表／官方制作署名，不能以集团业务和发行署名批量赋予开发职责。","workIds":["g1075","g1076","g1077","g1078","g1079","nitroplus-extra-madoka-portable"]},
+    {"reviewId":"AZE-D09","entityId":"entity-name-4b075a5bed09","name":"Bandai Visual（バンダイビジュアル）","status":"identityRegistered","sources":["https://www.bandainamco.co.jp/about/history/corporate.html","https://www.bandainamco.co.jp/cgi-bin/releases/index.cgi/file/view/6083?entry_id=5501"],"reason":"公司身份有集团资料，但《卒業》两条署名是后续平台发行，尚缺该版本开发职员表；不添加原作制作、移植开发或母公司作品继承。","workIds":["g830"]},
+    {"reviewId":"AZE-D10","entityId":"entity-banpresto","name":"Banpresto","status":"identityAmbiguous","sources":["https://www.bandainamco.co.jp/about/history/corporate.html","https://www.bandainamco.co.jp/releases/images/3/42276.pdf"],"reason":"原专题混用2008年前旧游戏公司、之后新景品公司与品牌延续语境。需逐条核对发行包装／片尾署名和时期法人，先不把单个稳定ID强行覆盖为无时期company或brand，不承继集团创作。","workIds":["g1061","g1062","g1063","g1064","g1065","g1066","g1067","g1068","g1069","g1070","g1071","g1072","g1073","g1074","g304","g913"]}
+  ],
+  "reviewedEntities": [
+    {"entityId":"entity-name-40ed6431d1a6","name":"Bandai Namco Games","status":"identityRegistered","sources":["https://www.bandainamcoent.co.jp/corporate/150401/","https://www.bandainamcoent.co.jp/corporate/history/"],"reason":"历史公司身份已由官方公告确认；六部作品只有发行层记录，不新增开发。","workIds":["g1075","g1076","g1077","g1078","g1079","nitroplus-extra-madoka-portable"]},
+    {"entityId":"entity-name-4b075a5bed09","name":"Bandai Visual（バンダイビジュアル）","status":"identityRegistered","sources":["https://www.bandainamco.co.jp/about/history/corporate.html","https://www.bandainamco.co.jp/cgi-bin/releases/index.cgi/file/view/6083?entry_id=5501"],"reason":"核定历史公司身份，保留《卒業》后发版本发行署名；未见逐作开发来源。","workIds":["g830"]},
+    {"entityId":"entity-banpresto","name":"Banpresto","status":"identityAmbiguous","sources":["https://www.bandainamco.co.jp/about/history/corporate.html","https://www.bandainamco.co.jp/releases/images/3/42276.pdf"],"reason":"集团资料证实2008年业务移转和新公司成立，却不足以将旧公司、后来品牌和逐作开发一并归入既有ID。","workIds":["g1061","g1062","g1063","g1064","g1065","g1066","g1067","g1068","g1069","g1070","g1071","g1072","g1073","g1074","g304","g913"]}
+  ],
+  "progress": {
+    "letter": "B",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 10,
+    "processedEntityIds": ["entity-name-40ed6431d1a6","entity-name-4b075a5bed09","entity-banpresto"],
+    "nextEntityId": "entity-name-c45d1636d3b0",
+    "nextName": "BLACKRAINBOW",
+    "queue": [
+      {"entityId":"entity-name-40ed6431d1a6","name":"Bandai Namco Games","status":"reviewed"},
+      {"entityId":"entity-name-4b075a5bed09","name":"Bandai Visual（バンダイビジュアル）","status":"reviewed"},
+      {"entityId":"entity-banpresto","name":"Banpresto","status":"reviewed"},
+      {"entityId":"entity-name-c45d1636d3b0","name":"BLACKRAINBOW","status":"pending"},
+      {"entityId":"entity-blissbrain","name":"Bliss Brain","status":"pending"},
+      {"entityId":"entity-name-91ab620ad791","name":"Blizzard Entertainment","status":"pending"},
+      {"entityId":"entity-name-cb3c445f13f2","name":"BPS","status":"pending"},
+      {"entityId":"entity-name-f00bc453a063","name":"BROCCOLI","status":"pending"},
+      {"entityId":"entity-name-e0c32a99a906","name":"Brøderbund","status":"pending"},
+      {"entityId":"entity-name-8b16f2bf500e","name":"Byakuya Shobo（白夜書房）","status":"pending"}
+    ]
+  }
+}

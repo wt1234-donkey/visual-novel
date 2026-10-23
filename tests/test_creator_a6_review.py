@@ -21,7 +21,7 @@ class CreatorA6ReviewTests(unittest.TestCase):
         b, a = {e['id']: e for e in before['entities']}, {e['id']: e for e in after['entities']}
         self.assertEqual(a.keys(), b.keys())
         changed = {eid for eid in b if b[eid] != a[eid]}
-        self.assertEqual(changed, {'entity-name-a7f6066af4b9'})
+        self.assertEqual(changed, {'entity-name-a7f6066af4b9', 'entity-name-4b075a5bed09'})
         e = a['entity-name-a7f6066af4b9']
         self.assertEqual(e['type'], 'brand')
         self.assertEqual(e['verification'], 'sourceReviewed')
@@ -31,11 +31,11 @@ class CreatorA6ReviewTests(unittest.TestCase):
     def test_progress_completes_a_and_preserves_work_objects(self):
         org, review = read('data/organizations.json'), read('data/entity-creator-a6-review-20261023.json')
         p = org['registrationProgress']
-        self.assertEqual(len(p['processedEntityIds']), 32)
-        self.assertEqual(p['nextEntityId'], 'entity-name-40ed6431d1a6')
-        self.assertEqual(p['nextName'], 'Bandai Namco Games')
+        self.assertEqual(p['processedEntityIds'][:32], review['progress']['processedEntityIds'])
+        self.assertEqual(review['progress']['nextEntityId'], 'entity-name-40ed6431d1a6')
+        self.assertEqual(review['progress']['nextName'], 'Bandai Namco Games')
         self.assertEqual([e['entityId'] for e in p['reviewedEntities']], p['processedEntityIds'])
-        self.assertEqual(p['audits'][-1], review['audit'])
+        self.assertIn(review['audit'], p['audits'])
         self.assertEqual(org['works'], old('data/organizations.json')['works'])
         node = next(n for n in org['nodes'] if n['id'] == 'entity-name-a7f6066af4b9')
         old_node = next(n for n in old('data/organizations.json')['nodes'] if n['id'] == 'entity-name-a7f6066af4b9')

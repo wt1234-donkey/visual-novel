@@ -14,12 +14,19 @@ def build():
     read = lambda name: json.loads((ROOT / f'data/{name}.json').read_text())
     model, credits, games, coverage = [read(n) for n in ['entities', 'credits', 'games', 'company-coverage']]
     result = preview_build()
-    reviews = [read(name) for name in ['entity-creator-a-review-20261022', 'entity-creator-a2-review-20261022', 'entity-creator-a3-review-20261022', 'entity-creator-a4-review-20261023', 'entity-creator-a5-review-20261023', 'entity-creator-a6-review-20261023']]
+    reviews = [read(name) for name in ['entity-creator-a-review-20261022', 'entity-creator-a2-review-20261022', 'entity-creator-a3-review-20261022', 'entity-creator-a4-review-20261023', 'entity-creator-a5-review-20261023', 'entity-creator-a6-review-20261023', 'entity-creator-b1-review-20261023']]
     review = reviews[-1]
     reviewed_entities = [entry for batch in reviews for entry in batch['reviewedEntities']]
     assert len({entry['entityId'] for entry in reviewed_entities}) == len(reviewed_entities)
-    assert [entry['entityId'] for entry in reviewed_entities] == review['progress']['processedEntityIds']
-    result['registrationProgress'] = {**review['progress'], 'reviewedAt': review['reviewedAt'], 'audit': review['audit'], 'reviewedEntities': reviewed_entities, 'audits': [batch['audit'] for batch in reviews]}
+    prior = reviews[-2]['progress']
+    current = review['progress']
+    assert [entry['entityId'] for entry in reviewed_entities] == prior['processedEntityIds'] + current['processedEntityIds']
+    assert current['processedEntityIds'] == [q['entityId'] for q in current['queue'][:len(current['processedEntityIds'])]]
+    assert len(current['queue']) == current['total']
+    progress = {**current, 'letterTotal': current['total'], 'letterProcessed': len(current['processedEntityIds']),
+                'total': prior['total'] + current['total'], 'processedEntityIds': prior['processedEntityIds'] + current['processedEntityIds'],
+                'queue': prior['queue'] + current['queue']}
+    result['registrationProgress'] = {**progress, 'reviewedAt': review['reviewedAt'], 'audit': review['audit'], 'reviewedEntities': reviewed_entities, 'audits': [batch['audit'] for batch in reviews]}
     works = {}
     for w in games['works']:
         works[w['id']] = (w, 'main', 'index.html?query=' + quote(w.get('chineseTitle') or w['title']) + '#catalogue')

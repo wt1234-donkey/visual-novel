@@ -68,8 +68,8 @@ export function searchFamilies(data,query){
 async function init(){
   const $=id=>document.getElementById(id),workspace=$('workspace');
   let data;
-  try{const response=await fetch(document.body.dataset.source||'data/relationships-preview.json',{cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
-  catch{workspace.setAttribute('aria-busy','false');$('graph-stage').innerHTML='<p class="error-message">关系资料暂时无法读取。请刷新重试，或先查看<a href="entities.html">主体档案</a>。</p>';$('family-nav').innerHTML='<p class="no-results">暂时无法读取家族列表。</p>';if($('creator-grid')){$('creator-grid').innerHTML='<p class="error-message">作品目录读取失败，请刷新重试或查看主体档案。</p>';$('creator-work-list').textContent='作品职责暂时无法读取。';}return;}
+  try{const response=await fetch(document.body.dataset.source||'data/relationships-preview.json');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
+  catch(error){console.error('组织目录读取失败',error);workspace.setAttribute('aria-busy','false');$('graph-stage').innerHTML='<p class="error-message">关系资料暂时无法读取。请刷新重试，或先查看<a href="entities.html">主体档案</a>。</p>';$('family-nav').innerHTML='<p class="no-results">暂时无法读取家族列表。</p>';if($('creator-grid')){$('creator-grid').innerHTML='<p class="error-message">作品目录读取失败，请刷新重试或查看主体档案。</p>';$('creator-work-list').textContent='作品职责暂时无法读取。';}return;}
   const nodes=new Map(data.nodes.map(n=>[n.id,n]));
   const params=new URLSearchParams(location.search);
   let family=data.families.find(f=>f.id===params.get('family'))||data.families.find(f=>[f.root,...f.entityIds].includes(params.get('node')))||data.families.find(f=>f.id===document.body.dataset.defaultFamily)||data.families[0];
@@ -152,7 +152,7 @@ async function init(){
     const placement=$('work-placement').value;
     const found=creatorNodes(data,{kind:$('creator-kind').value,placement,query:$('creator-search').value});
     $('creator-count').textContent=`${found.length} 个主体`;
-    if($('registration-progress')&&data.registrationProgress){const p=data.registrationProgress;$('registration-progress').innerHTML=`A 字母累计已核查 ${p.processedEntityIds.length} / ${p.total} 个主体 · 下一家：${esc(p.nextName)} <a href="${esc(p.audit)}">查看证据与待核清单 ↗</a>`;}
+    if($('registration-progress')&&data.registrationProgress){const p=data.registrationProgress;$('registration-progress').innerHTML=`${esc(p.letter)} 字母已核查 ${p.letterProcessed??p.processedEntityIds.length} / ${p.letterTotal??p.total} 个主体 · A—Z 累计 ${p.processedEntityIds.length} 个 · 下一家：${esc(p.nextName)} <a href="${esc(p.audit)}">查看证据与待核清单 ↗</a>`;}
     $('creator-grid').innerHTML=found.length?found.map(n=>`<button class="creator-card" data-creator="${n.id}" aria-pressed="${n.id===selected}"><span class="node-kind">${TYPES[n.type]||'主体'}</span><strong>${esc(n.name)}</strong><span>${worksFor(data,n,'creation',placement).length} 部创作 · ${worksFor(data,n,'pending',placement).length} 部专题待核</span></button>`).join(''):'<p class="muted">暂无符合条件的创作厂商。可选择“全部主体（含发行与待核）”继续查找。</p>';
     renderWorks();
   }

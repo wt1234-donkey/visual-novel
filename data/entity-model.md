@@ -104,3 +104,4 @@ python3 scripts/build_company_pages.py --check
 
 2026-10-23 A—Z第五批使用 `entity-creator-a5-review-20261023.json` 与同名Markdown；连续核查ASCII、Asmik、Asoberu!、Atari与Atlus，累计30／32。新增3条ASCII具名原作制作职责（2部主收录、1部专题关联），并独立确认Asmik、Atari、Atlus为公司主体；保留Asmik发行、Atari／Atari Melbourne House及Atlus／Dennou Eizou Seisakusho的既有分工，不以发行或品牌沿革倒推开发。Asoberu!与ASCII其余职责继续按证据缺口待核，专题位置、旧关系和迁移基线不改。
 2026-10-23 A—Z第六批使用 `entity-creator-a6-review-20261023.json` 与同名Markdown；完成A字母32／32，下一家为Bandai Namco Games。AUGUST沿用既有品牌档案与《爱丽丝秘迹》限定联合制作记录，不重复追加；依据あざらしそふと官方页面与版权提示，将 `entity-name-a7f6066af4b9` 从身份待核订正为品牌。保留其与SMEE的联合发行署名，不自动建立Nexton母公司关系，不新增开发职责；主库作品、内容版本、平台发行及迁移基线不变。
+2026-10-23 A—Z的B字母首批使用 `entity-creator-b1-review-20261023.json` 与同名Markdown；按Bandai Namco Games、Bandai Visual、Banpresto连续核查3／10，累计35／42。依据集团历史与2018年正式公告，仅将Bandai Visual的历史公司身份从unknown订正为company。Bandai Namco Games既有公司身份不变；Banpresto旧游戏公司、后设景品公司和品牌延续暂不混并。三家均不从发行／业务移转证据推断逐作开发，旧作品和迁移基线不变；下一家BLACKRAINBOW。
