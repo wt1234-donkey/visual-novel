@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "4a321fa",
+  "audit": "data/entity-creator-c3-review-20261023.md",
+  "previousReview": "data/entity-creator-c2-review-20261023.md",
+  "policy": "按英文名称Core Magazine至CUBE连续核查；法人、品牌、历史发行、原作制作与制作统筹分开。二手职员转录未获原始材料时不新增逐作开发职责。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I13",
+      "entityId": "entity-name-3e85e8c3e1f3",
+      "rawName": "コアマガジン",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://drap.coremagazine.co.jp/tradelaw",
+        "https://alicecottage1989.blog.jp/archives/20634266.html"
+      ],
+      "note": "公司官网交易表示可直接确认该主体类型；1995版实写游戏法律发行人与白夜書店历史关系仍待核，不改两条发行及任何沿革关系。"
+    },
+    {
+      "reviewId": "AZE-I14",
+      "entityId": "entity-name-cb4ca6959e74",
+      "rawName": "CROSSNET",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/376.html",
+        "https://www.favo-soft.jp/soft/product/hoshimemo/index.html"
+      ],
+      "note": "历史游戏职员表明确株式会社クロスネット；仅将该独立历史署名订正为公司，不向五个FAVORITE原作倒填开发。"
+    },
+    {
+      "reviewId": "AZE-I15",
+      "entityId": "entity-name-6bcd3472ea70",
+      "rawName": "クリスタルソフト",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://d4e.co.jp/lights_cat/crystalsoft",
+        "https://www.gamepres.org/pc88/library/crystal.html"
+      ],
+      "note": "权利方历史厂商目录和公司设立资料共同支持公司主体；不将发行归档推成《リザード》原作开发。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "reviewId": "AZE-D28",
+      "status": "identityRegistered",
+      "entityId": "entity-name-3e85e8c3e1f3",
+      "name": "Core Magazine（コアマガジン）",
+      "sources": [
+        "https://drap.coremagazine.co.jp/tradelaw",
+        "https://alicecottage1989.blog.jp/archives/20634266.html"
+      ],
+      "reason": "现行官方交易表示确认株式会社コアマガジン为出版公司；历史实写版两个平台只见コアマガジン发行，需原版版权页和白夜書店到新主体的法律沿革确认逐版责任。",
+      "workIds": [
+        "g542"
+      ]
+    },
+    {
+      "reviewId": "AZE-D29",
+      "status": "needsSource",
+      "entityId": "entity-name-21dcd9c9c1e7",
+      "name": "CoreMoreco",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/4789.html"
+      ],
+      "reason": "职员表转录将CoreMoreco列为品牌、コアモアコ列企画，ホビボックス列销售；缺原版包装、游戏内片尾或当年官方网页以确认品牌主体与逐项制作。",
+      "workIds": [
+        "g638"
+      ]
+    },
+    {
+      "reviewId": "AZE-D30",
+      "status": "identityRegistered",
+      "entityId": "entity-name-cb4ca6959e74",
+      "name": "CROSSNET",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/376.html",
+        "https://www.favo-soft.jp/soft/product/hoshimemo/index.html"
+      ],
+      "reason": "原版职员表转录明确制作：株式会社クロスネット，企画・開発：有限会社フェイバリット；已保留后者五部制作品牌，仍需逐作原版职员表区分本公司制作统筹和实际开发。不得与现存同名IT公司合并。",
+      "workIds": [
+        "g388",
+        "g389",
+        "g390",
+        "g391",
+        "g392"
+      ]
+    },
+    {
+      "reviewId": "AZE-D31",
+      "status": "identityRegistered",
+      "entityId": "entity-name-6bcd3472ea70",
+      "name": "Crystal Soft（クリスタルソフト）",
+      "sources": [
+        "https://d4e.co.jp/lights_cat/crystalsoft",
+        "https://www.gamepres.org/pc88/library/crystal.html"
+      ],
+      "reason": "现权利方D4按当时発売メーカー归档クリスタルソフト，早期资料记述设立者及社长，支持历史厂商身份；Riverhill专题《リザード》关联作品仅有发行，原作程序和移植分工需原版开发署名。",
+      "workIds": [
+        "riverhill-lizard"
+      ]
+    },
+    {
+      "reviewId": "AZE-D32",
+      "status": "creationAlreadyRegistered",
+      "entityId": "entity-cube",
+      "name": "CUBE",
+      "sources": [
+        "https://www.cuffs.co.jp/main/products/"
+      ],
+      "reason": "官方按CUBE第1至11作编号并列原画和剧本人员；既有11条productionBrand逐作覆盖，关联母公司CUFFS的法律和时期另核。",
+      "workIds": [
+        "g408",
+        "g409",
+        "g410",
+        "g411",
+        "g412",
+        "g413",
+        "g414",
+        "g415",
+        "g416",
+        "g417",
+        "g418"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-3e85e8c3e1f3",
+      "name": "Core Magazine（コアマガジン）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://drap.coremagazine.co.jp/tradelaw",
+        "https://alicecottage1989.blog.jp/archives/20634266.html"
+      ],
+      "reason": "现行官方交易表示确认株式会社コアマガジン为出版公司；历史实写版两个平台只见コアマガジン发行，需原版版权页和白夜書店到新主体的法律沿革确认逐版责任。",
+      "workIds": [
+        "g542"
+      ]
+    },
+    {
+      "entityId": "entity-name-21dcd9c9c1e7",
+      "name": "CoreMoreco",
+      "status": "needsSource",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/4789.html"
+      ],
+      "reason": "职员表转录将CoreMoreco列为品牌、コアモアコ列企画，ホビボックス列销售；缺原版包装、游戏内片尾或当年官方网页以确认品牌主体与逐项制作。",
+      "workIds": [
+        "g638"
+      ]
+    },
+    {
+      "entityId": "entity-name-cb4ca6959e74",
+      "name": "CROSSNET",
+      "status": "identityRegistered",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/376.html",
+        "https://www.favo-soft.jp/soft/product/hoshimemo/index.html"
+      ],
+      "reason": "原版职员表转录明确制作：株式会社クロスネット，企画・開発：有限会社フェイバリット；已保留后者五部制作品牌，仍需逐作原版职员表区分本公司制作统筹和实际开发。不得与现存同名IT公司合并。",
+      "workIds": [
+        "g388",
+        "g389",
+        "g390",
+        "g391",
+        "g392"
+      ]
+    },
+    {
+      "entityId": "entity-name-6bcd3472ea70",
+      "name": "Crystal Soft（クリスタルソフト）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://d4e.co.jp/lights_cat/crystalsoft",
+        "https://www.gamepres.org/pc88/library/crystal.html"
+      ],
+      "reason": "现权利方D4按当时発売メーカー归档クリスタルソフト，早期资料记述设立者及社长，支持历史厂商身份；Riverhill专题《リザード》关联作品仅有发行，原作程序和移植分工需原版开发署名。",
+      "workIds": [
+        "riverhill-lizard"
+      ]
+    },
+    {
+      "entityId": "entity-cube",
+      "name": "CUBE",
+      "status": "creationAlreadyRegistered",
+      "sources": [
+        "https://www.cuffs.co.jp/main/products/"
+      ],
+      "reason": "官方按CUBE第1至11作编号并列原画和剧本人员；既有11条productionBrand逐作覆盖，关联母公司CUFFS的法律和时期另核。",
+      "workIds": [
+        "g408",
+        "g409",
+        "g410",
+        "g411",
+        "g412",
+        "g413",
+        "g414",
+        "g415",
+        "g416",
+        "g417",
+        "g418"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "C",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 18,
+    "processedEntityIds": [
+      "entity-cabbage",
+      "entity-name-7554e19bb041",
+      "entity-name-53ec4c5b9afc",
+      "entity-carry_lab",
+      "entity-name-431d2fb7a95c",
+      "entity-name-21365baf366d",
+      "entity-cinematronics",
+      "entity-clochette",
+      "entity-name-8c31b0298459",
+      "entity-comptiq",
+      "entity-name-3e85e8c3e1f3",
+      "entity-name-21dcd9c9c1e7",
+      "entity-name-cb4ca6959e74",
+      "entity-name-6bcd3472ea70",
+      "entity-cube"
+    ],
+    "nextEntityId": "entity-cuffs",
+    "nextName": "CUFFS",
+    "queue": [
+      {
+        "entityId": "entity-cabbage",
+        "name": "Cabbage Soft（きゃべつそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7554e19bb041",
+        "name": "CAPCOM",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-53ec4c5b9afc",
+        "name": "Caramel Box（キャラメルBOX）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-carry_lab",
+        "name": "Carry Lab（キャリーラボ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-431d2fb7a95c",
+        "name": "CFK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-21365baf366d",
+        "name": "Chunsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-cinematronics",
+        "name": "Cinematronics",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-clochette",
+        "name": "Clochette",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c31b0298459",
+        "name": "Coktel Vision",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-comptiq",
+        "name": "Comptiq（コンプティーク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3e85e8c3e1f3",
+        "name": "Core Magazine（コアマガジン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-21dcd9c9c1e7",
+        "name": "CoreMoreco",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-cb4ca6959e74",
+        "name": "CROSSNET",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6bcd3472ea70",
+        "name": "Crystal Soft（クリスタルソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-cube",
+        "name": "CUBE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-cuffs",
+        "name": "CUFFS",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-42a2c095c251",
+        "name": "Cyan Worlds, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-c65fb9857dc9",
+        "name": "CyberFront",
+        "status": "pending"
+      }
+    ]
+  }
+}
