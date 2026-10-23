@@ -22,7 +22,8 @@ class CreatorD2Tests(unittest.TestCase):
         before, after = ({e['id']: e for e in data['entities']} for data in
                          [old('data/entities.json'), read('data/entities.json')])
         ids = {entry['entityId'] for entry in review['identityCorrections']}
-        self.assertEqual({eid for eid in before if before[eid] != after[eid]}, ids)
+        self.assertEqual({eid for eid in before if before[eid] != after[eid]},
+                         ids | {c['entityId'] for c in read('data/entity-creator-d3-review-20261023.json')['identityCorrections']})
         for correction in review['identityCorrections']:
             eid = correction['entityId']
             self.assertEqual((before[eid]['type'], before[eid]['verification']), ('unknown', 'unresolved'))
@@ -34,16 +35,17 @@ class CreatorD2Tests(unittest.TestCase):
         self.assertTrue(next(c for c in review['identityCorrections']
                              if c['rawName'] == 'DMM GAMES')['preserveReleaseRoles'])
         self.assertEqual(review['creditAdditions'], [])
-        self.assertEqual(read('data/credits.json'), old('data/credits.json'))
+        prior = {c['id']: c for c in old('data/credits.json')['credits']}
+        self.assertEqual(prior, {c['id']: c for c in read('data/credits.json')['credits'] if c['id'] in prior})
 
     def test_contiguous_progress_and_original_placement(self):
         current, previous = read('data/organizations.json'), old('data/organizations.json')
         p = current['registrationProgress']
         review = read('data/entity-creator-d2-review-20261023.json')
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
-                          len(p['processedEntityIds']), p['total']), ('D', 8, 10, 68, 70))
-        self.assertEqual(p['processedEntityIds'][60:], review['progress']['processedEntityIds'])
-        self.assertEqual(p['nextName'], 'Double Fine Productions')
+                          len(p['processedEntityIds']), p['total']), ('D', 10, 10, 70, 70))
+        self.assertEqual(p['processedEntityIds'][60:68], review['progress']['processedEntityIds'])
+        self.assertEqual(review['progress']['nextName'], 'Double Fine Productions')
         self.assertEqual(current['works'], previous['works'])
         nodes, prior = ({n['id']: n for n in data['nodes']} for data in [current, previous])
         for entry in review['reviewedEntities']:
