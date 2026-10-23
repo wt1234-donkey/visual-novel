@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "e1a432f",
+  "audit": "data/entity-creator-d1-review-20261023.md",
+  "previousReview": "data/entity-creator-c4-review-20261023.md",
+  "policy": "D字母从D3 Publisher到dB-SOFT连续核查；仅凭公司身份、发行或复刻配信不推断历史原作开发；沿用原始署名和独立主体关系。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I18",
+      "entityId": "entity-name-96d2374d7b76",
+      "rawName": "D3 Publisher",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.d3p.co.jp/company/",
+        "https://www.d3p.co.jp/cs/?pg=2&pl=2"
+      ],
+      "note": "公司官网明确株式会社ディースリー・パブリッシャー；2007年PS2《俺の下でAGAKE》在官方产品目录。仅订正历史发行署名的公司类型，不据移植发行推断原作开发或PC原版主体。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-96d2374d7b76",
+      "name": "D3 Publisher",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.d3p.co.jp/company/",
+        "https://www.d3p.co.jp/cs/?pg=2&pl=2"
+      ],
+      "reason": "公司官网明确株式会社ディースリー・パブリッシャー；产品目录列2007年PS2《俺の下でAGAKE》及PC原作改编。只订正原有D3 Publisher发行署名的公司类型；PS2改编开发团队和新增内容的具体制作需片尾/手册，不能倒填PC原作。",
+      "workIds": [
+        "alicesoft-extra-orenoshitadeagake"
+      ]
+    },
+    {
+      "entityId": "entity-name-959a8e1f98f6",
+      "name": "D4 Enterprise",
+      "status": "identityAlreadyRegistered",
+      "sources": [
+        "https://d4e.co.jp/company",
+        "https://d4e.co.jp/business",
+        "https://d4e.co.jp/history"
+      ],
+      "reason": "现有company/sourceReviewed已由公司概要支持。官方说明Project EGG复刻、授权配信及2004年前后事业承接，既有三作后发版发行不证明历史原版由D4开发；旧权利人与复刻移植职责逐版核。",
+      "workIds": [
+        "g812",
+        "g813",
+        "jhv-desert"
+      ]
+    },
+    {
+      "entityId": "entity-dataeast",
+      "name": "Data East",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://id.ndl.go.jp/auth/ndlna/033640244",
+        "https://www.nintendo.co.jp/wii/vc/vc_jsk/vc_jsk_01.html",
+        "https://el-dia.net/doukoku/"
+      ],
+      "reason": "Data East既为公司，23部作品保留现有平台发行/专题关联，g1159继续职责待核。部分旧目录/再发行页可证作品与发行，但逐作原版开发/委托制作、Mega-CD和后发权利方各异，须原版包装、片尾与同期广告确认；不批量赋开发。",
+      "workIds": [
+        "g1159",
+        "g1151",
+        "g1153",
+        "g1160"
+      ]
+    },
+    {
+      "entityId": "entity-db_soft",
+      "name": "dB-SOFT（デービーソフト）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.amusement-center.com/project/egg/participants/",
+        "https://www.gamepres.org/pc88/library/dbsoft.html"
+      ],
+      "reason": "Project EGG沿革支持1980 Computer Land北海道、1984 dB-SOFT更名，既有company与Macadamia品牌家族沿用。南太平洋冒险、唐璜和177三条专题待核缺作品逐版片尾/包装确认制作；其余五部发行不自动转开发。",
+      "workIds": [
+        "db-soft-south-pacific",
+        "db-soft-don-juan",
+        "g747",
+        "g746"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-96d2374d7b76",
+      "name": "D3 Publisher",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.d3p.co.jp/company/",
+        "https://www.d3p.co.jp/cs/?pg=2&pl=2"
+      ],
+      "reason": "公司官网明确株式会社ディースリー・パブリッシャー；产品目录列2007年PS2《俺の下でAGAKE》及PC原作改编。只订正原有D3 Publisher发行署名的公司类型；PS2改编开发团队和新增内容的具体制作需片尾/手册，不能倒填PC原作。",
+      "workIds": [
+        "alicesoft-extra-orenoshitadeagake"
+      ]
+    },
+    {
+      "entityId": "entity-name-959a8e1f98f6",
+      "name": "D4 Enterprise",
+      "status": "identityAlreadyRegistered",
+      "sources": [
+        "https://d4e.co.jp/company",
+        "https://d4e.co.jp/business",
+        "https://d4e.co.jp/history"
+      ],
+      "reason": "现有company/sourceReviewed已由公司概要支持。官方说明Project EGG复刻、授权配信及2004年前后事业承接，既有三作后发版发行不证明历史原版由D4开发；旧权利人与复刻移植职责逐版核。",
+      "workIds": [
+        "g812",
+        "g813",
+        "jhv-desert"
+      ]
+    },
+    {
+      "entityId": "entity-dataeast",
+      "name": "Data East",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://id.ndl.go.jp/auth/ndlna/033640244",
+        "https://www.nintendo.co.jp/wii/vc/vc_jsk/vc_jsk_01.html",
+        "https://el-dia.net/doukoku/"
+      ],
+      "reason": "Data East既为公司，23部作品保留现有平台发行/专题关联，g1159继续职责待核。部分旧目录/再发行页可证作品与发行，但逐作原版开发/委托制作、Mega-CD和后发权利方各异，须原版包装、片尾与同期广告确认；不批量赋开发。",
+      "workIds": [
+        "g1159",
+        "g1151",
+        "g1153",
+        "g1160"
+      ]
+    },
+    {
+      "entityId": "entity-db_soft",
+      "name": "dB-SOFT（デービーソフト）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.amusement-center.com/project/egg/participants/",
+        "https://www.gamepres.org/pc88/library/dbsoft.html"
+      ],
+      "reason": "Project EGG沿革支持1980 Computer Land北海道、1984 dB-SOFT更名，既有company与Macadamia品牌家族沿用。南太平洋冒险、唐璜和177三条专题待核缺作品逐版片尾/包装确认制作；其余五部发行不自动转开发。",
+      "workIds": [
+        "db-soft-south-pacific",
+        "db-soft-don-juan",
+        "g747",
+        "g746"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "D",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 10,
+    "processedEntityIds": [
+      "entity-name-96d2374d7b76",
+      "entity-name-959a8e1f98f6",
+      "entity-dataeast",
+      "entity-db_soft"
+    ],
+    "nextEntityId": "entity-name-bbf1e79f8c9f",
+    "nextName": "Digital Leisure",
+    "queue": [
+      {
+        "entityId": "entity-name-96d2374d7b76",
+        "name": "D3 Publisher",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-959a8e1f98f6",
+        "name": "D4 Enterprise",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-dataeast",
+        "name": "Data East",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-db_soft",
+        "name": "dB-SOFT（デービーソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bbf1e79f8c9f",
+        "name": "Digital Leisure",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-32b13af88204",
+        "name": "Digiturbo（デジターボ）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-2ddaddfb96a5",
+        "name": "DMM GAMES",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-16c097f224f4",
+        "name": "DMM GAMES／AUGUST",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-f9e8ee919b2e",
+        "name": "Double Fine Productions",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-4c4c2f63075a",
+        "name": "DreamWorks Interactive",
+        "status": "pending"
+      }
+    ]
+  }
+}
