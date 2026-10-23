@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "e63a3fd",
+  "audit": "data/entity-creator-e3-review-20261024.md",
+  "previousReview": "data/entity-creator-e2-review-20261024.md",
+  "policy": "依左侧英文排序核E字母第9—13项；独立证据记录旧身份事实订正与逐作创作追加，原发行与身份关系保留。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I27",
+      "entityId": "entity-name-059d1b76bb62",
+      "rawName": "エンターブレイン",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20130531sstt59th.pdf"
+      ],
+      "note": "KADOKAWA 2013年合并议案将株式会社エンターブレイン列为吸收合并消灭公司，足以核2001/2003同期法人；合并后的品牌形态不倒填旧发行署名，也不推定这两作由本社开发。"
+    },
+    {
+      "reviewId": "AZE-I28",
+      "entityId": "entity-name-49d0968e137f",
+      "rawName": "EXAMU",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.nitroplus.co.jp/works/other-game"
+      ],
+      "note": "Nitroplus官方作品页明确与エクサム共同开发街机游戏并标©EXAMU Inc.；仅订正本主体公司身份，不合并后继名称或覆盖原发行。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZE3-C01",
+      "entityId": "entity-name-49d0968e137f",
+      "dossierId": null,
+      "workId": "nitroplus-extra-blasterz",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "エクサム",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.nitroplus.co.jp/works/other-game",
+      "note": "Nitroplus官方明确街机对战游戏与エクサム共同开发；只登记专题关联作品的街机版合作，不将2015年PS3/PS4移植、Nitroplus其他游戏或主库原作计作EXAMU制作。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-059d1b76bb62",
+      "name": "Enterbrain（エンターブレイン）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20130531sstt59th.pdf",
+        "https://raido.moe/staff/ps2/ps2_true_love_story_3.html",
+        "https://raido.moe/staff/ps2/ps2_true_love_story_summer.html"
+      ],
+      "reason": "同期法人已由KADOKAWA吸收合并议案确认；两条PS2发行署名保持，片尾显示GameCRAB等具体工序，尚无Enterbrain开发的充分依据。",
+      "workIds": [
+        "g1016",
+        "g1017"
+      ]
+    },
+    {
+      "entityId": "entity-entergram",
+      "name": "ENTERGRAM",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.entergram.co.jp/corporate.html",
+        "https://www.entergram.co.jp/recruit/"
+      ],
+      "reason": "公司档案已核；官网说明软件开发业务和自有引擎，但44条发行关联的原作／移植工序仍需逐作片尾或官方开发署名。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-49d0968e137f",
+      "name": "EXAMU",
+      "status": "relatedCreationRegistered",
+      "sources": [
+        "https://www.nitroplus.co.jp/works/other-game",
+        "https://www.nitroplus.co.jp/works/consumer-game"
+      ],
+      "reason": "Nitroplus官方列街机版与エクサム共同开发，登记专题关联作品的共同开发；PS3/PS4移植由Marvelous发行，不从街机共同开发外推移植开发。",
+      "workIds": [
+        "nitroplus-extra-blasterz"
+      ]
+    },
+    {
+      "entityId": "entity-name-b06c3e4e3ae1",
+      "name": "EXNOA（DG REMAKE）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786"
+      ],
+      "reason": "原文并列运营公司和DG REMAKE品牌，现有两条2024主机发行不等于1992原作开发；缺逐版制作人员或开发方证据，组合署名暂不拆分或判为单一法人。",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-name-5f2bf730e86e",
+      "name": "EXNOA（DMM GAMES）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1562",
+        "https://dmmgames.co.jp/"
+      ],
+      "reason": "运营公司和DMM GAMES品牌组合仅在专题关联作品发行出现；缺本作原版制作名单，组合署名暂不并入已另立的DMM GAMES品牌。",
+      "workIds": [
+        "minatosoft-climax"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-059d1b76bb62",
+      "name": "Enterbrain（エンターブレイン）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20130531sstt59th.pdf",
+        "https://raido.moe/staff/ps2/ps2_true_love_story_3.html",
+        "https://raido.moe/staff/ps2/ps2_true_love_story_summer.html"
+      ],
+      "reason": "同期法人已由KADOKAWA吸收合并议案确认；两条PS2发行署名保持，片尾显示GameCRAB等具体工序，尚无Enterbrain开发的充分依据。",
+      "workIds": [
+        "g1016",
+        "g1017"
+      ]
+    },
+    {
+      "entityId": "entity-entergram",
+      "name": "ENTERGRAM",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.entergram.co.jp/corporate.html",
+        "https://www.entergram.co.jp/recruit/"
+      ],
+      "reason": "公司档案已核；官网说明软件开发业务和自有引擎，但44条发行关联的原作／移植工序仍需逐作片尾或官方开发署名。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-49d0968e137f",
+      "name": "EXAMU",
+      "status": "relatedCreationRegistered",
+      "sources": [
+        "https://www.nitroplus.co.jp/works/other-game",
+        "https://www.nitroplus.co.jp/works/consumer-game"
+      ],
+      "reason": "Nitroplus官方列街机版与エクサム共同开发，登记专题关联作品的共同开发；PS3/PS4移植由Marvelous发行，不从街机共同开发外推移植开发。",
+      "workIds": [
+        "nitroplus-extra-blasterz"
+      ]
+    },
+    {
+      "entityId": "entity-name-b06c3e4e3ae1",
+      "name": "EXNOA（DG REMAKE）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786"
+      ],
+      "reason": "原文并列运营公司和DG REMAKE品牌，现有两条2024主机发行不等于1992原作开发；缺逐版制作人员或开发方证据，组合署名暂不拆分或判为单一法人。",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-name-5f2bf730e86e",
+      "name": "EXNOA（DMM GAMES）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1562",
+        "https://dmmgames.co.jp/"
+      ],
+      "reason": "运营公司和DMM GAMES品牌组合仅在专题关联作品发行出现；缺本作原版制作名单，组合署名暂不并入已另立的DMM GAMES品牌。",
+      "workIds": [
+        "minatosoft-climax"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "E",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-name-fb6db91d6827",
+      "entity-name-f9dfce1ab0f0",
+      "entity-name-84c36fc1f1e1",
+      "entity-name-a0fea5d6d6c9",
+      "entity-name-328b53003a80",
+      "entity-elf",
+      "entity-name-bd6862a41912",
+      "entity-enix",
+      "entity-name-059d1b76bb62",
+      "entity-entergram",
+      "entity-name-49d0968e137f",
+      "entity-name-b06c3e4e3ae1",
+      "entity-name-5f2bf730e86e"
+    ],
+    "nextEntityId": "entity-fandc",
+    "nextName": "F&C",
+    "queue": [
+      {
+        "entityId": "entity-name-fb6db91d6827",
+        "name": "E3 Staff（イースリースタッフ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f9dfce1ab0f0",
+        "name": "Edia",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-84c36fc1f1e1",
+        "name": "EISYS（株式会社エイシス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-a0fea5d6d6c9",
+        "name": "El Dia",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-328b53003a80",
+        "name": "Electronic Arts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-elf",
+        "name": "ELF",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bd6862a41912",
+        "name": "Enix America Corporation",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-enix",
+        "name": "Enix（エニックス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-059d1b76bb62",
+        "name": "Enterbrain（エンターブレイン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-entergram",
+        "name": "ENTERGRAM",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-49d0968e137f",
+        "name": "EXAMU",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b06c3e4e3ae1",
+        "name": "EXNOA（DG REMAKE）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5f2bf730e86e",
+        "name": "EXNOA（DMM GAMES）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
