@@ -3192,17 +3192,18 @@
     {
       "id": "entity-name-84c36fc1f1e1",
       "name": "EISYS（株式会社エイシス）",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "株式会社エイシス",
         "EISYS",
         "EISYS（株式会社エイシス）"
       ],
       "sources": [
-        "https://www.nitroplus.co.jp/game/saya/"
+        "https://www.nitroplus.co.jp/game/saya/",
+        "https://www.eisys.co.jp/company/information"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "EISYS官网明确株式会社エイシス／EISYS Inc.的法人名称；Nitroplus《沙耶之歌》Android页仅将该公司标为2015年版本销售，移植制作与2003年原作不由此推定。只订正身份。",
       "dates": [],
       "nameParts": {
         "english": "EISYS",
@@ -4199,15 +4200,17 @@
     {
       "id": "entity-name-a0fea5d6d6c9",
       "name": "El Dia",
-      "type": "unknown",
+      "type": "brand",
       "aliases": [
         "El Dia"
       ],
       "sources": [
-        "https://www.famitsu.com/news/201802/01150950.html"
+        "https://www.famitsu.com/news/201802/01150950.html",
+        "https://www.famitsu.com/news/201612/16123008.html",
+        "https://el-dia.net/doukoku/"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "对RED FLAGSHIP负责人同期访谈明确El Dia为其游戏品牌，官方后发版页面承载《慟哭 そして…》2018年复刻。既有两条发行署名保持原职责；品牌不倒填Data East 1998年原作制作，也不自动取得原作发行品牌职责。经营关系如需入树，须另建RED FLAGSHIP档案与时期证据。",
       "dates": []
     },
     {
