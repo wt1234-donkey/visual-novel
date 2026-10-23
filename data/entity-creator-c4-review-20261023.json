@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "ec95229",
+  "audit": "data/entity-creator-c4-review-20261023.md",
+  "previousReview": "data/entity-creator-c3-review-20261023.md",
+  "policy": "按英文名称从CUFFS到CyberFront连续核查，完成C字母；现行法人和历史制作品牌分开，既有发行与后发版不能自动推定1997原作或他社开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I16",
+      "entityId": "entity-name-42a2c095c251",
+      "rawName": "Cyan Worlds, Inc.",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://cyan.com/legal/terms-of-use/"
+      ],
+      "note": "官网法律条款确认现行Cyan Worlds, Inc.主体为公司；早期Cyan, Inc.历史叙述不自动替换1997原版法人署名。"
+    },
+    {
+      "reviewId": "AZE-I17",
+      "entityId": "entity-name-c65fb9857dc9",
+      "rawName": "CyberFront",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.taxan.co.jp/jp/ir/upload_file/m000-/20140224.pdf"
+      ],
+      "note": "母公司同期披露明确株式会社サイバーフロント历史公司与2013年解散；仅订正独立发行署名类型，不新增作品开发或无时期公司关系。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "reviewId": "AZE-D33",
+      "entityId": "entity-cuffs",
+      "name": "CUFFS",
+      "status": "creationAlreadyRegistered",
+      "sources": [
+        "https://www.cuffs.co.jp/main/products/",
+        "https://www.cuffs.co.jp/main/guideline/"
+      ],
+      "reason": "官方以CUFFS第1至6作独立编号，六条作品制作品牌已登记；Sphere、CUBE、MintCUBE、Sonora在同页另列，不能上推作CUFFS主品牌制作。",
+      "workIds": [
+        "g402",
+        "g403",
+        "g404",
+        "g405",
+        "g406",
+        "g407"
+      ]
+    },
+    {
+      "reviewId": "AZE-D34",
+      "entityId": "entity-name-42a2c095c251",
+      "name": "Cyan Worlds, Inc.",
+      "status": "identityRegistered",
+      "sources": [
+        "https://cyan.com/legal/terms-of-use/",
+        "https://cyan.com/company/about-cyan/",
+        "https://cyan.com/2024/03/19/a-classic-reimagined-riven-set-for-2024-release-for-flatscreen-and-vr-platforms/"
+      ],
+      "reason": "现行官网法律条款明确Cyan Worlds, Inc.是公司，官方沿革记1987 Cyan, Inc.及1997 Riven；2024重制开发可确认，但旧作与今法人的法人沿革和1997原版职员署名尚需单独核定。现有2024发行内容关联仍unverified，不据制作陈述回写作品级1997原作职责。",
+      "workIds": [
+        "g1001"
+      ]
+    },
+    {
+      "reviewId": "AZE-D35",
+      "entityId": "entity-name-c65fb9857dc9",
+      "name": "CyberFront",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.taxan.co.jp/jp/ir/upload_file/m000-/20140224.pdf",
+        "https://www.4gamer.net/games/122/G012228/20110106057/"
+      ],
+      "reason": "加賀電子2014年财报资料明确㈱サイバーフロント是2013年解散的历史游戏销售子公司，支持公司身份；13条各平台发行及Gainax、Applique、OVERDRIVE作品的实际开发须逐版原始职员表，不由公司业务或持股推断。",
+      "workIds": [
+        "g645",
+        "g815",
+        "g818",
+        "g824",
+        "g820",
+        "g864",
+        "g1276",
+        "gainax-seikai"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-cuffs",
+      "name": "CUFFS",
+      "status": "creationAlreadyRegistered",
+      "sources": [
+        "https://www.cuffs.co.jp/main/products/",
+        "https://www.cuffs.co.jp/main/guideline/"
+      ],
+      "reason": "官方以CUFFS第1至6作独立编号，六条作品制作品牌已登记；Sphere、CUBE、MintCUBE、Sonora在同页另列，不能上推作CUFFS主品牌制作。",
+      "workIds": [
+        "g402",
+        "g403",
+        "g404",
+        "g405",
+        "g406",
+        "g407"
+      ]
+    },
+    {
+      "entityId": "entity-name-42a2c095c251",
+      "name": "Cyan Worlds, Inc.",
+      "status": "identityRegistered",
+      "sources": [
+        "https://cyan.com/legal/terms-of-use/",
+        "https://cyan.com/company/about-cyan/",
+        "https://cyan.com/2024/03/19/a-classic-reimagined-riven-set-for-2024-release-for-flatscreen-and-vr-platforms/"
+      ],
+      "reason": "现行官网法律条款明确Cyan Worlds, Inc.是公司，官方沿革记1987 Cyan, Inc.及1997 Riven；2024重制开发可确认，但旧作与今法人的法人沿革和1997原版职员署名尚需单独核定。现有2024发行内容关联仍unverified，不据制作陈述回写作品级1997原作职责。",
+      "workIds": [
+        "g1001"
+      ]
+    },
+    {
+      "entityId": "entity-name-c65fb9857dc9",
+      "name": "CyberFront",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.taxan.co.jp/jp/ir/upload_file/m000-/20140224.pdf",
+        "https://www.4gamer.net/games/122/G012228/20110106057/"
+      ],
+      "reason": "加賀電子2014年财报资料明确㈱サイバーフロント是2013年解散的历史游戏销售子公司，支持公司身份；13条各平台发行及Gainax、Applique、OVERDRIVE作品的实际开发须逐版原始职员表，不由公司业务或持股推断。",
+      "workIds": [
+        "g645",
+        "g815",
+        "g818",
+        "g824",
+        "g820",
+        "g864",
+        "g1276",
+        "gainax-seikai"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "C",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 18,
+    "processedEntityIds": [
+      "entity-cabbage",
+      "entity-name-7554e19bb041",
+      "entity-name-53ec4c5b9afc",
+      "entity-carry_lab",
+      "entity-name-431d2fb7a95c",
+      "entity-name-21365baf366d",
+      "entity-cinematronics",
+      "entity-clochette",
+      "entity-name-8c31b0298459",
+      "entity-comptiq",
+      "entity-name-3e85e8c3e1f3",
+      "entity-name-21dcd9c9c1e7",
+      "entity-name-cb4ca6959e74",
+      "entity-name-6bcd3472ea70",
+      "entity-cube",
+      "entity-cuffs",
+      "entity-name-42a2c095c251",
+      "entity-name-c65fb9857dc9"
+    ],
+    "nextEntityId": "entity-name-96d2374d7b76",
+    "nextName": "D3 Publisher",
+    "queue": [
+      {
+        "entityId": "entity-cabbage",
+        "name": "Cabbage Soft（きゃべつそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7554e19bb041",
+        "name": "CAPCOM",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-53ec4c5b9afc",
+        "name": "Caramel Box（キャラメルBOX）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-carry_lab",
+        "name": "Carry Lab（キャリーラボ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-431d2fb7a95c",
+        "name": "CFK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-21365baf366d",
+        "name": "Chunsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-cinematronics",
+        "name": "Cinematronics",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-clochette",
+        "name": "Clochette",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c31b0298459",
+        "name": "Coktel Vision",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-comptiq",
+        "name": "Comptiq（コンプティーク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3e85e8c3e1f3",
+        "name": "Core Magazine（コアマガジン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-21dcd9c9c1e7",
+        "name": "CoreMoreco",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-cb4ca6959e74",
+        "name": "CROSSNET",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6bcd3472ea70",
+        "name": "Crystal Soft（クリスタルソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-cube",
+        "name": "CUBE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-cuffs",
+        "name": "CUFFS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-42a2c095c251",
+        "name": "Cyan Worlds, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c65fb9857dc9",
+        "name": "CyberFront",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
