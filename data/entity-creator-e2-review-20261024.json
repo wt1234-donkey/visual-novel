@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "be3d2a5",
+  "audit": "data/entity-creator-e2-review-20261024.md",
+  "previousReview": "data/entity-creator-e1-review-20261023.md",
+  "policy": "依左侧英文排序核E字母第5—8项；既有身份关系与发行署名不覆盖；原版片尾具名制作才逐作补创作。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I25",
+      "entityId": "entity-name-328b53003a80",
+      "rawName": "Electronic Arts",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.ea.com/about?s=1713",
+        "https://www.gamesdatabase.org/game/sega-genesis/blades-of-vengeance.aspx"
+      ],
+      "note": "EA官网确认Electronic Arts Inc.为企业；旧三条发行署名保持原文。Blades of Vengeance资料将Beam Software列为开发方，另两作需要原版片尾及地域版本核对；不凭发行推定创作。"
+    },
+    {
+      "reviewId": "AZE-I26",
+      "entityId": "entity-name-bd6862a41912",
+      "rawName": "Enix America Corporation",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.videogamemanual.com/snes/King%20Arthur%20%26%20The%20Knights%20of%20Justice%20%28USA%29.pdf",
+        "https://www.hd.square-enix.com/eng/company/history.html"
+      ],
+      "note": "1994年《King Arthur & the Knights of Justice》原版手册具名Enix America Corporation，支持其同期公司／发行身份。集团史中的1999年ENIX AMERICA INC.另记，缺法人连续证据，不并同一主体或自动建立母子关系；开发归属需游戏片尾。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZE-C01",
+      "entityId": "entity-elf",
+      "dossierId": null,
+      "workId": "g320",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "（株）エルフ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://raido.moe/staff/win/win_shin_mikagura_shojo_tanteidan.html",
+      "note": "2003年Windows原版片尾明确企画・プロデュース为（株）エルフ，背景、CG、音响亦列elf；只登记本作制作参与。原作创意另署SIDO，游戏设计／程序署NUDE MAKER，不推定ELF独立完成全部工序或1990年代《御神楽少女探偵団》原作。"
+    },
+    {
+      "reviewId": "AZE-C02",
+      "entityId": "entity-enix",
+      "dossierId": null,
+      "workId": "g984",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "ENIX",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://raido.moe/staff/ps1/ps1_eurasia_express_satsujin.html",
+      "note": "1998年PS原版片尾“製作 ENIX／Foursome”明确共同制作；System Sacom另列游戏程序与声音，影视摄制人员逐项列名。仅记本作Enix制作参与，不覆盖Foursome及System Sacom职责，不推定其他Enix发行作品均由本社开发。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-328b53003a80",
+      "name": "Electronic Arts",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.ea.com/about?s=1713",
+        "https://www.gamesdatabase.org/game/sega-genesis/blades-of-vengeance.aspx"
+      ],
+      "reason": "公司身份可直接确认。现存Blades of Vengeance、Mars Saga、Skullmonkeys三条发行不等于创作；前者另署Beam Software。后两作及地域版需原始包装、片尾确认，不增开发。",
+      "workIds": [
+        "melbournehouse-blades",
+        "infocom-mars-saga",
+        "riverhill-skullmonkeys"
+      ]
+    },
+    {
+      "entityId": "entity-elf",
+      "name": "ELF",
+      "status": "creationRegistered",
+      "sources": [
+        "https://raido.moe/staff/win/win_shin_mikagura_shojo_tanteidan.html",
+        "https://raido.moe/staff/sat/sat_yuno.html",
+        "https://raido.moe/staff/pc98/pc98_dragon_knight_4.html"
+      ],
+      "reason": "《新・御神楽少女探偵団》原版片尾明确ELF企划制作及部分美术音响，逐作登记g320；NUDE MAKER负责设计／程序，SIDO为原作。其余93条发行与专题关联逐作待核，YU-NO土星版制作署名不倒填PC98原版。",
+      "workIds": [
+        "g320",
+        "g038",
+        "elf-r14"
+      ]
+    },
+    {
+      "entityId": "entity-name-bd6862a41912",
+      "name": "Enix America Corporation",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.videogamemanual.com/snes/King%20Arthur%20%26%20The%20Knights%20of%20Justice%20%28USA%29.pdf",
+        "https://www.hd.square-enix.com/eng/company/history.html"
+      ],
+      "reason": "同期手册确认Enix America Corporation实体与本作发行；原版片尾仍需核制作。1999年ENIX AMERICA INC.历史是另一名称／设立记录，缺同一法人及母子关系的直接证据。",
+      "workIds": [
+        "enix-arthur"
+      ]
+    },
+    {
+      "entityId": "entity-enix",
+      "name": "Enix（エニックス）",
+      "status": "creationRegistered",
+      "sources": [
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://raido.moe/staff/ps1/ps1_eurasia_express_satsujin.html"
+      ],
+      "reason": "集团史确认Enix沿革，PS原版片尾以ENIX和Foursome并列“製作”；只为g984补制作职责，其他75条发行逐作核，外部开发方与集团后继名称不被吸收。",
+      "workIds": [
+        "g984"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-328b53003a80",
+      "name": "Electronic Arts",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.ea.com/about?s=1713",
+        "https://www.gamesdatabase.org/game/sega-genesis/blades-of-vengeance.aspx"
+      ],
+      "reason": "公司身份可直接确认。现存Blades of Vengeance、Mars Saga、Skullmonkeys三条发行不等于创作；前者另署Beam Software。后两作及地域版需原始包装、片尾确认，不增开发。",
+      "workIds": [
+        "melbournehouse-blades",
+        "infocom-mars-saga",
+        "riverhill-skullmonkeys"
+      ]
+    },
+    {
+      "entityId": "entity-elf",
+      "name": "ELF",
+      "status": "creationRegistered",
+      "sources": [
+        "https://raido.moe/staff/win/win_shin_mikagura_shojo_tanteidan.html",
+        "https://raido.moe/staff/sat/sat_yuno.html",
+        "https://raido.moe/staff/pc98/pc98_dragon_knight_4.html"
+      ],
+      "reason": "《新・御神楽少女探偵団》原版片尾明确ELF企划制作及部分美术音响，逐作登记g320；NUDE MAKER负责设计／程序，SIDO为原作。其余93条发行与专题关联逐作待核，YU-NO土星版制作署名不倒填PC98原版。",
+      "workIds": [
+        "g320",
+        "g038",
+        "elf-r14"
+      ]
+    },
+    {
+      "entityId": "entity-name-bd6862a41912",
+      "name": "Enix America Corporation",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.videogamemanual.com/snes/King%20Arthur%20%26%20The%20Knights%20of%20Justice%20%28USA%29.pdf",
+        "https://www.hd.square-enix.com/eng/company/history.html"
+      ],
+      "reason": "同期手册确认Enix America Corporation实体与本作发行；原版片尾仍需核制作。1999年ENIX AMERICA INC.历史是另一名称／设立记录，缺同一法人及母子关系的直接证据。",
+      "workIds": [
+        "enix-arthur"
+      ]
+    },
+    {
+      "entityId": "entity-enix",
+      "name": "Enix（エニックス）",
+      "status": "creationRegistered",
+      "sources": [
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://raido.moe/staff/ps1/ps1_eurasia_express_satsujin.html"
+      ],
+      "reason": "集团史确认Enix沿革，PS原版片尾以ENIX和Foursome并列“製作”；只为g984补制作职责，其他75条发行逐作核，外部开发方与集团后继名称不被吸收。",
+      "workIds": [
+        "g984"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "E",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-name-fb6db91d6827",
+      "entity-name-f9dfce1ab0f0",
+      "entity-name-84c36fc1f1e1",
+      "entity-name-a0fea5d6d6c9",
+      "entity-name-328b53003a80",
+      "entity-elf",
+      "entity-name-bd6862a41912",
+      "entity-enix"
+    ],
+    "nextEntityId": "entity-name-059d1b76bb62",
+    "nextName": "Enterbrain（エンターブレイン）",
+    "queue": [
+      {
+        "entityId": "entity-name-fb6db91d6827",
+        "name": "E3 Staff（イースリースタッフ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f9dfce1ab0f0",
+        "name": "Edia",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-84c36fc1f1e1",
+        "name": "EISYS（株式会社エイシス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-a0fea5d6d6c9",
+        "name": "El Dia",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-328b53003a80",
+        "name": "Electronic Arts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-elf",
+        "name": "ELF",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bd6862a41912",
+        "name": "Enix America Corporation",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-enix",
+        "name": "Enix（エニックス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-059d1b76bb62",
+        "name": "Enterbrain（エンターブレイン）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-entergram",
+        "name": "ENTERGRAM",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-49d0968e137f",
+        "name": "EXAMU",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b06c3e4e3ae1",
+        "name": "EXNOA（DG REMAKE）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5f2bf730e86e",
+        "name": "EXNOA（DMM GAMES）",
+        "status": "pending"
+      }
+    ]
+  }
+}

@@ -50,8 +50,8 @@ class CreatorA5ReviewTests(unittest.TestCase):
             self.assertEqual(a[eid]['dates'], b[eid]['dates'])
         before, after = old('data/entity-migration-review.json'), read('data/entity-migration-review.json')
         self.assertEqual(after['pendingMembershipCount'], 611)
-        later_ids = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3', 'c4', 'd1', 'd2', 'd3', 'e1']
-                     for c in read(f'data/entity-creator-{filename}-review-20261023.json')['identityCorrections']}
+        later_ids = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3', 'c4', 'd1', 'd2', 'd3', 'e1', 'e2']
+                     for c in read(f'data/entity-creator-{filename}-review-{"20261024" if filename == "e2" else "20261023"}.json')['identityCorrections']}
         self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids | later_ids])
 
     def test_progress_and_placements(self):

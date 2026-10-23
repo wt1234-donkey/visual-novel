@@ -33,6 +33,7 @@ CREATOR_D1_REVIEW = 'data/entity-creator-d1-review-20261023.json'
 CREATOR_D2_REVIEW = 'data/entity-creator-d2-review-20261023.json'
 CREATOR_D3_REVIEW = 'data/entity-creator-d3-review-20261023.json'
 CREATOR_E1_REVIEW = 'data/entity-creator-e1-review-20261023.json'
+CREATOR_E2_REVIEW = 'data/entity-creator-e2-review-20261024.json'
 TYPE_LABELS = {'company':'公司／组织','brand':'品牌','team':'制作团队','publication':'刊物／出版名义','individual':'个人','unknown':'身份待核','history':'沿革专题'}
 ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
 BRANDS = set('key aniplex_exe sprite madosoft yuzusoft innocent_grey minori august toneworks asaproject leaf sagaplanets smee favorite cuffs cube sphere palette silkys silkys_plus alicesoft overdrive cocktailsoft macadamia fairytale cabbage hulotte laplacian applique clochette nanawind harukaze sorahane hummingbird_soft minatosoft'.split())
@@ -90,7 +91,7 @@ def render_json(d): return json.dumps(d,ensure_ascii=False,indent=2)+'\n'
 
 def build():
  d=read('data/games.json'); coverage=read('data/company-coverage.json'); taxonomy=read('data/taxonomy.json'); companies={c['id']:c for c in coverage['companies']}
- review_batches=[read(PRIORITY_REVIEW),read(FOLLOWUP_REVIEW),read(THIRD_REVIEW),read(FOURTH_REVIEW),read(CREATOR_A_REVIEW),read(CREATOR_A2_REVIEW),read(CREATOR_A3_REVIEW),read(CREATOR_A4_REVIEW),read(CREATOR_A5_REVIEW),read(CREATOR_A6_REVIEW),read(CREATOR_B1_REVIEW),read(CREATOR_B2_REVIEW),read(CREATOR_B3_REVIEW),read(CREATOR_C1_REVIEW),read(CREATOR_C2_REVIEW),read(CREATOR_C3_REVIEW),read(CREATOR_C4_REVIEW),read(CREATOR_D1_REVIEW),read(CREATOR_D2_REVIEW),read(CREATOR_D3_REVIEW),read(CREATOR_E1_REVIEW)]
+ review_batches=[read(PRIORITY_REVIEW),read(FOLLOWUP_REVIEW),read(THIRD_REVIEW),read(FOURTH_REVIEW),read(CREATOR_A_REVIEW),read(CREATOR_A2_REVIEW),read(CREATOR_A3_REVIEW),read(CREATOR_A4_REVIEW),read(CREATOR_A5_REVIEW),read(CREATOR_A6_REVIEW),read(CREATOR_B1_REVIEW),read(CREATOR_B2_REVIEW),read(CREATOR_B3_REVIEW),read(CREATOR_C1_REVIEW),read(CREATOR_C2_REVIEW),read(CREATOR_C3_REVIEW),read(CREATOR_C4_REVIEW),read(CREATOR_D1_REVIEW),read(CREATOR_D2_REVIEW),read(CREATOR_D3_REVIEW),read(CREATOR_E1_REVIEW),read(CREATOR_E2_REVIEW)]
  identity_reviews={x['entityId']:x for batch in review_batches for x in batch['identityCorrections']}
  assert len(identity_reviews)==sum(len(batch['identityCorrections']) for batch in review_batches),'重复的主体订正'
  entities={}; aliases={}; dossiers=[]; relations=[]; credits=[]; memberships=[]; reviews=[]; placements=[]; names_review=[]; conflicts=[]
