@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "6dd8261",
+  "audit": "data/entity-creator-c2-review-20261023.md",
+  "previousReview": "data/entity-creator-c1-review-20261023.md",
+  "policy": "按英文名称从Chunsoft连续到Comptiq核查；原作公司开发须官方具名，刊物发行、品牌产品目录、街机设备制造和并购身份不自动计作具体作品开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I12",
+      "entityId": "entity-name-8c31b0298459",
+      "rawName": "Coktel Vision",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://ir.avisbudgetgroup.com/static-files/0600098b-3745-40be-bcbd-92edc8317841"
+      ],
+      "note": "Sierra母公司并购披露明确Coktel Vision S.A.法国开发与发行公司身份。仅订正原历史署名类型；保留11条发行，1993年后集团关系未在本批逐期建档，不由公司业务描述给每部作品倒填开发。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZC-C03",
+      "entityId": "entity-name-21365baf366d",
+      "dossierId": null,
+      "workId": "g021",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "チュンソフト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.spike-chunsoft.co.jp/company/about/",
+      "note": "历史Chunsoft的官方沿革把《弟切草》明确列为1992年自社品牌首发、代表作品，限定旧公司原作制作；保留SFC原版发行署名。"
+    },
+    {
+      "reviewId": "AZC-C04",
+      "entityId": "entity-name-21365baf366d",
+      "dossierId": null,
+      "workId": "g022",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "チュンソフト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.spike-chunsoft.co.jp/company/about/",
+      "note": "历史Chunsoft的官方沿革在“互いが開発してきた”背景下列《かまいたちの夜》为该旧公司代表作品；仅登记原作，不延伸续作及后发平台。"
+    },
+    {
+      "reviewId": "AZC-C05",
+      "entityId": "entity-name-21365baf366d",
+      "dossierId": null,
+      "workId": "g170",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "チュンソフト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.spike-chunsoft.co.jp/pages/zendesu/weekly/about/index.html",
+      "note": "当时由株式会社チュンソフト运营的《週刊善人シボウデス》官网明示该作由チュンソフト開発・販売；仅记录2012年合并前的原作制作。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "reviewId": "AZE-D23",
+      "entityId": "entity-name-21365baf366d",
+      "name": "Chunsoft",
+      "status": "creationScoped",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/pages/zendesu/weekly/about/index.html"
+      ],
+      "reason": "旧公司两部自有代表作品和《善人シボウデス》当时官网开发明示可限定登记；另两部仅有发行与系列资料，需逐作人员署名。",
+      "workIds": [
+        "g021",
+        "g022",
+        "g170",
+        "g178",
+        "g180"
+      ]
+    },
+    {
+      "reviewId": "AZE-D24",
+      "entityId": "entity-cinematronics",
+      "name": "Cinematronics",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.worldradiohistory.com/Archive-All-Music/Cash-Box/80s/1983/CB-1983-08-20.pdf",
+        "https://www.arcade-museum.com/manuals-videogames/D/DragonsLair_SpaceAce_OperationServiceManual.pdf"
+      ],
+      "reason": "同期报道明确设备制造／发行且其他方参与制作；游戏程序和动画原作分工未获逐项职员与合同证明。",
+      "workIds": [
+        "g010",
+        "g044"
+      ]
+    },
+    {
+      "reviewId": "AZE-D25",
+      "entityId": "entity-clochette",
+      "name": "Clochette",
+      "status": "identityRegistered",
+      "sources": [
+        "https://clochette-soft.jp/sakigake/product.htm",
+        "https://clochette-soft.jp/html/recruit/recruit.html"
+      ],
+      "reason": "官方产品页显示品牌和个人职员；既有10条制作品牌已登记，后发版本分工仍需逐版职员表。",
+      "workIds": [
+        "g875",
+        "g876",
+        "g877",
+        "g878",
+        "g879",
+        "g880",
+        "g881",
+        "g882",
+        "g883",
+        "g884"
+      ]
+    },
+    {
+      "reviewId": "AZE-D26",
+      "entityId": "entity-name-8c31b0298459",
+      "name": "Coktel Vision",
+      "status": "identityRegistered",
+      "sources": [
+        "https://ir.avisbudgetgroup.com/static-files/0600098b-3745-40be-bcbd-92edc8317841",
+        "https://sierrahelp.com/Documents/Manuals/Gobliiins_-_Manual.pdf"
+      ],
+      "reason": "Sierra当年财务披露证明法国开发／发行公司身份；产品手册的公司署名不足以逐作确认11条发行中的原版开发与合作。",
+      "workIds": [
+        "g1106",
+        "g1112",
+        "g1114",
+        "g1117",
+        "g1119",
+        "g1124",
+        "g1137",
+        "g1138",
+        "g1139",
+        "g1140",
+        "g1141"
+      ]
+    },
+    {
+      "reviewId": "AZE-D27",
+      "entityId": "entity-comptiq",
+      "name": "Comptiq（コンプティーク）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://mediaguide.kadokawa.co.jp/media/p86-thyc-pj/",
+        "https://www.gamepres.org/pc88/library/comptiq.html"
+      ],
+      "reason": "KADOKAWA确认其刊物身份，旧游戏发行和刊物名义不能直接当作游戏开发。",
+      "workIds": [
+        "g111"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-21365baf366d",
+      "name": "Chunsoft",
+      "status": "creationScoped",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/pages/zendesu/weekly/about/index.html"
+      ],
+      "reason": "旧公司两部自有代表作品和《善人シボウデス》当时官网开发明示可限定登记；另两部仅有发行与系列资料，需逐作人员署名。",
+      "workIds": [
+        "g021",
+        "g022",
+        "g170",
+        "g178",
+        "g180"
+      ]
+    },
+    {
+      "entityId": "entity-cinematronics",
+      "name": "Cinematronics",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.worldradiohistory.com/Archive-All-Music/Cash-Box/80s/1983/CB-1983-08-20.pdf",
+        "https://www.arcade-museum.com/manuals-videogames/D/DragonsLair_SpaceAce_OperationServiceManual.pdf"
+      ],
+      "reason": "同期报道明确设备制造／发行且其他方参与制作；游戏程序和动画原作分工未获逐项职员与合同证明。",
+      "workIds": [
+        "g010",
+        "g044"
+      ]
+    },
+    {
+      "entityId": "entity-clochette",
+      "name": "Clochette",
+      "status": "identityRegistered",
+      "sources": [
+        "https://clochette-soft.jp/sakigake/product.htm",
+        "https://clochette-soft.jp/html/recruit/recruit.html"
+      ],
+      "reason": "官方产品页显示品牌和个人职员；既有10条制作品牌已登记，后发版本分工仍需逐版职员表。",
+      "workIds": [
+        "g875",
+        "g876",
+        "g877",
+        "g878",
+        "g879",
+        "g880",
+        "g881",
+        "g882",
+        "g883",
+        "g884"
+      ]
+    },
+    {
+      "entityId": "entity-name-8c31b0298459",
+      "name": "Coktel Vision",
+      "status": "identityRegistered",
+      "sources": [
+        "https://ir.avisbudgetgroup.com/static-files/0600098b-3745-40be-bcbd-92edc8317841",
+        "https://sierrahelp.com/Documents/Manuals/Gobliiins_-_Manual.pdf"
+      ],
+      "reason": "Sierra当年财务披露证明法国开发／发行公司身份；产品手册的公司署名不足以逐作确认11条发行中的原版开发与合作。",
+      "workIds": [
+        "g1106",
+        "g1112",
+        "g1114",
+        "g1117",
+        "g1119",
+        "g1124",
+        "g1137",
+        "g1138",
+        "g1139",
+        "g1140",
+        "g1141"
+      ]
+    },
+    {
+      "entityId": "entity-comptiq",
+      "name": "Comptiq（コンプティーク）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://mediaguide.kadokawa.co.jp/media/p86-thyc-pj/",
+        "https://www.gamepres.org/pc88/library/comptiq.html"
+      ],
+      "reason": "KADOKAWA确认其刊物身份，旧游戏发行和刊物名义不能直接当作游戏开发。",
+      "workIds": [
+        "g111"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "C",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 18,
+    "processedEntityIds": [
+      "entity-cabbage",
+      "entity-name-7554e19bb041",
+      "entity-name-53ec4c5b9afc",
+      "entity-carry_lab",
+      "entity-name-431d2fb7a95c",
+      "entity-name-21365baf366d",
+      "entity-cinematronics",
+      "entity-clochette",
+      "entity-name-8c31b0298459",
+      "entity-comptiq"
+    ],
+    "nextEntityId": "entity-name-3e85e8c3e1f3",
+    "nextName": "Core Magazine（コアマガジン）",
+    "queue": [
+      {
+        "entityId": "entity-cabbage",
+        "name": "Cabbage Soft（きゃべつそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7554e19bb041",
+        "name": "CAPCOM",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-53ec4c5b9afc",
+        "name": "Caramel Box（キャラメルBOX）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-carry_lab",
+        "name": "Carry Lab（キャリーラボ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-431d2fb7a95c",
+        "name": "CFK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-21365baf366d",
+        "name": "Chunsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-cinematronics",
+        "name": "Cinematronics",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-clochette",
+        "name": "Clochette",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c31b0298459",
+        "name": "Coktel Vision",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-comptiq",
+        "name": "Comptiq（コンプティーク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3e85e8c3e1f3",
+        "name": "Core Magazine（コアマガジン）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-21dcd9c9c1e7",
+        "name": "CoreMoreco",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-cb4ca6959e74",
+        "name": "CROSSNET",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6bcd3472ea70",
+        "name": "Crystal Soft（クリスタルソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-cube",
+        "name": "CUBE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-cuffs",
+        "name": "CUFFS",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-42a2c095c251",
+        "name": "Cyan Worlds, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-c65fb9857dc9",
+        "name": "CyberFront",
+        "status": "pending"
+      }
+    ]
+  }
+}
