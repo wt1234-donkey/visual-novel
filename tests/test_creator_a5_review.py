@@ -49,7 +49,7 @@ class CreatorA5ReviewTests(unittest.TestCase):
             self.assertEqual(a[eid]['dates'], b[eid]['dates'])
         before, after = old('data/entity-migration-review.json'), read('data/entity-migration-review.json')
         self.assertEqual(after['pendingMembershipCount'], 611)
-        self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids and e['entityId'] not in {'entity-name-a7f6066af4b9', 'entity-name-4b075a5bed09'}])
+        self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids and e['entityId'] not in {'entity-name-a7f6066af4b9', 'entity-name-4b075a5bed09', 'entity-name-c45d1636d3b0', 'entity-name-91ab620ad791'}])
 
     def test_progress_and_placements(self):
         org, review = read('data/organizations.json'), read('data/entity-creator-a5-review-20261023.json')

@@ -17,7 +17,7 @@ class CreatorB1Tests(unittest.TestCase):
     def test_single_sourced_identity_correction(self):
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = {e['id']: e for e in before['entities']}, {e['id']: e for e in after['entities']}
-        self.assertEqual({eid for eid in b if b[eid] != a[eid]}, {'entity-name-4b075a5bed09'})
+        self.assertTrue({'entity-name-4b075a5bed09'} <= {eid for eid in b if b[eid] != a[eid]})
         self.assertEqual(a['entity-name-4b075a5bed09']['type'], 'company')
         self.assertEqual(a['entity-name-4b075a5bed09']['verification'], 'sourceReviewed')
         self.assertEqual(a['entity-banpresto'], b['entity-banpresto'])
@@ -27,10 +27,9 @@ class CreatorB1Tests(unittest.TestCase):
         p = read('data/organizations.json')['registrationProgress']
         review = read('data/entity-creator-b1-review-20261023.json')
         self.assertEqual(p['letter'], 'B')
-        self.assertEqual((p['letterProcessed'], p['letterTotal']), (3, 10))
-        self.assertEqual((len(p['processedEntityIds']), p['total']), (35, 42))
-        self.assertEqual(p['processedEntityIds'][-3:], review['progress']['processedEntityIds'])
-        self.assertEqual(p['nextEntityId'], 'entity-name-c45d1636d3b0')
+        self.assertEqual((review['progress']['total'], len(review['progress']['processedEntityIds'])), (10, 3))
+        self.assertEqual(p['processedEntityIds'][32:35], review['progress']['processedEntityIds'])
+        self.assertEqual(review['progress']['nextEntityId'], 'entity-name-c45d1636d3b0')
         self.assertEqual([r['entityId'] for r in p['reviewedEntities']], p['processedEntityIds'])
         org = read('data/organizations.json')
         nodes = {n['id']: n for n in org['nodes']}

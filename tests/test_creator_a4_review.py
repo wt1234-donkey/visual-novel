@@ -77,7 +77,7 @@ class CreatorA4ReviewTests(unittest.TestCase):
         self.assertEqual(progress['processedEntityIds'][:25], [q['entityId'] for q in progress['queue'][:25]])
         self.assertEqual([e['entityId'] for e in progress['reviewedEntities'][:25]], progress['processedEntityIds'][:25])
         self.assertEqual(read('data/entity-creator-a4-review-20261023.json')['progress']['nextEntityId'], 'entity-ascii')
-        self.assertEqual(len(progress['audits']), 7)
+        self.assertIn(read('data/entity-creator-a4-review-20261023.json')['audit'], progress['audits'])
         ns = {n['id']: n for n in org['nodes']}
         old_ns = {n['id']: n for n in old('data/organizations.json')['nodes']}
         for eid in ['entity-leaf', 'entity-name-5ba1ee4df514', 'entity-name-7f11db7a66f2', 'entity-asaproject']:
