@@ -111,3 +111,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-23 C字母第二批使用 `entity-creator-c2-review-20261023.json` 与同名Markdown；从Chunsoft连续核查到Comptiq，C累计10／18、A—Z累计52／60。旧Chunsoft两部自有代表原作与《善人シボウデス》当时官网具名开发限定登记3条原作制作；Coktel Vision S.A.依并购方同期披露独立订正为公司。Cinematronics原街机制造／发行、Clochette已登记10条制作品牌、Comptiq刊物发行继续分开，不据此扩展开发、关系和后发版本职责；下一家Core Magazine。
 
 2026-10-23 C字母第三批使用 `entity-creator-c3-review-20261023.json` 与同名Markdown；连续核查Core Magazine、CoreMoreco、CROSSNET、Crystal Soft及CUBE，C累计15／18、A—Z累计57／60。依据公司交易表示、原版职员表转录及历史权利方目录分别订正Core Magazine、CROSSNET、Crystal Soft三个公司身份；CoreMoreco品牌身份缺原始材料继续待核。CUBE既有11条创作沿用，FAVORITE五作的制作不转给CROSSNET；只保存既有发行，不新增开发职责或公司关系。下一家CUFFS。
+
+2026-10-23 C字母第四批使用 `entity-creator-c4-review-20261023.json` 与同名Markdown；连续核查CUFFS、Cyan Worlds, Inc.、CyberFront，完成C字母18／18，A—Z累计60／60。CUFFS已登记六部主品牌制作，不能把同页CUBE/Sphere系列归并。Cyan现行法人据官方法律条款、CyberFront历史法人据母公司同期披露各自订正为公司；《Riven》1997原作、2024重制发行以及跨品牌移植开发均保持各自证据边界。没有新增作品开发或关系；下一家D3 Publisher。
