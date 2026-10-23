@@ -49,13 +49,13 @@ class CreatorA5ReviewTests(unittest.TestCase):
             self.assertEqual(a[eid]['dates'], b[eid]['dates'])
         before, after = old('data/entity-migration-review.json'), read('data/entity-migration-review.json')
         self.assertEqual(after['pendingMembershipCount'], 611)
-        self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids and e['entityId'] != 'entity-name-a7f6066af4b9'])
+        self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids and e['entityId'] not in {'entity-name-a7f6066af4b9', 'entity-name-4b075a5bed09'}])
 
     def test_progress_and_placements(self):
         org, review = read('data/organizations.json'), read('data/entity-creator-a5-review-20261023.json')
         progress = org['registrationProgress']
         self.assertEqual(progress['processedEntityIds'][:30], review['progress']['processedEntityIds'])
-        self.assertEqual(progress['nextEntityId'], 'entity-name-40ed6431d1a6')
+        self.assertEqual(review['progress']['nextEntityId'], 'entity-august')
         self.assertEqual([e['entityId'] for e in progress['reviewedEntities']], progress['processedEntityIds'])
         self.assertIn(review['audit'], progress['audits'])
         nodes = {n['id']: n for n in org['nodes']}
