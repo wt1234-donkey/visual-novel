@@ -113,3 +113,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-23 C字母第三批使用 `entity-creator-c3-review-20261023.json` 与同名Markdown；连续核查Core Magazine、CoreMoreco、CROSSNET、Crystal Soft及CUBE，C累计15／18、A—Z累计57／60。依据公司交易表示、原版职员表转录及历史权利方目录分别订正Core Magazine、CROSSNET、Crystal Soft三个公司身份；CoreMoreco品牌身份缺原始材料继续待核。CUBE既有11条创作沿用，FAVORITE五作的制作不转给CROSSNET；只保存既有发行，不新增开发职责或公司关系。下一家CUFFS。
 
 2026-10-23 C字母第四批使用 `entity-creator-c4-review-20261023.json` 与同名Markdown；连续核查CUFFS、Cyan Worlds, Inc.、CyberFront，完成C字母18／18，A—Z累计60／60。CUFFS已登记六部主品牌制作，不能把同页CUBE/Sphere系列归并。Cyan现行法人据官方法律条款、CyberFront历史法人据母公司同期披露各自订正为公司；《Riven》1997原作、2024重制发行以及跨品牌移植开发均保持各自证据边界。没有新增作品开发或关系；下一家D3 Publisher。
+
+2026-10-23 D字母首批使用 `entity-creator-d1-review-20261023.json` 与同名Markdown；连续核查D3 Publisher、D4 Enterprise、Data East、dB-SOFT，D累计4／10、A—Z累计64／70。D3官网及2007年官方产品目录支持其公司身份，独立订正旧待核身份；其PS2后发发行不推断PC原作开发。D4复刻配信、Data East各期发行和dB-SOFT旧专题关联继续分别按版本与原始署名核定。没有新增创作职责或组织关系；下一家Digital Leisure。
