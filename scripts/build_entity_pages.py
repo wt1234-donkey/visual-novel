@@ -62,7 +62,8 @@ def build():
  out['data/entity-catalogue.json']=json.dumps({'model':public_model,'credits':compact_credits,'dossierMemberships':[m for m in CREDITS['dossierMemberships'] if m['workId'] in main_ids]},ensure_ascii=False,separators=(',',':'))+'\n'
  out['data/relationships-preview.json']=json.dumps(build_relationships_preview(),ensure_ascii=False,indent=2)+'\n'
  out['data/organizations.json']=json.dumps(build_organizations(),ensure_ascii=False,separators=(',',':'))+'\n'
- snapshot_version=hashlib.sha256(out['data/organizations.json'].encode()).hexdigest()[:12]
+ # A previously truncated Pages upload used the same content hash; bust that cached response once.
+ snapshot_version=hashlib.sha256(out['data/organizations.json'].encode()).hexdigest()[:12]+'-b1r'
  out['organizations.html']=re.sub(r'data-source="data/organizations\.json[^"]*"',f'data-source="data/organizations.json?v={snapshot_version}"',(ROOT/'organizations.html').read_text())
  return out
 
