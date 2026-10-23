@@ -23,7 +23,7 @@ class CreatorD3Tests(unittest.TestCase):
                 [old('data/entities.json'), read('data/entities.json')])
         dream = 'entity-name-4c4c2f63075a'
         double = 'entity-name-f9e8ee919b2e'
-        self.assertEqual({eid for eid in b if b[eid] != a[eid]}, {dream})
+        self.assertEqual({eid for eid in b if b[eid] != a[eid]}, {dream} | {c['entityId'] for c in read('data/entity-creator-e1-review-20261023.json')['identityCorrections']})
         self.assertEqual((b[dream]['type'], b[dream]['verification']), ('unknown', 'unresolved'))
         self.assertEqual((a[dream]['type'], a[dream]['verification']), ('company', 'sourceReviewed'))
         self.assertEqual((a[dream]['aliases'], a[dream]['dates']), (b[dream]['aliases'], b[dream]['dates']))
@@ -45,9 +45,9 @@ class CreatorD3Tests(unittest.TestCase):
         progress = current['registrationProgress']
         review = read('data/entity-creator-d3-review-20261023.json')
         self.assertEqual((progress['letter'], progress['letterProcessed'], progress['letterTotal'],
-                          len(progress['processedEntityIds']), progress['total']), ('D', 10, 10, 70, 70))
-        self.assertEqual(progress['processedEntityIds'][60:], review['progress']['processedEntityIds'])
-        self.assertEqual(progress['nextName'], 'E3 Staff（イースリースタッフ）')
+                          len(progress['processedEntityIds']), progress['total']), ('E', 4, 13, 74, 83))
+        self.assertEqual(progress['processedEntityIds'][60:70], review['progress']['processedEntityIds'])
+        self.assertEqual(review['progress']['nextName'], 'E3 Staff（イースリースタッフ）')
         self.assertEqual(current['works'], previous['works'])
         nodes = {n['id']: n for n in current['nodes']}
         old_nodes = {n['id']: n for n in previous['nodes']}

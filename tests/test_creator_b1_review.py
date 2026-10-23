@@ -28,7 +28,7 @@ class CreatorB1Tests(unittest.TestCase):
     def test_progress_and_no_creator_inheritance(self):
         p = read('data/organizations.json')['registrationProgress']
         review = read('data/entity-creator-b1-review-20261023.json')
-        self.assertIn(p['letter'], ['B', 'C', 'D'])
+        self.assertIn(p['letter'], ['B', 'C', 'D', 'E'])
         self.assertEqual((review['progress']['total'], len(review['progress']['processedEntityIds'])), (10, 3))
         self.assertEqual(p['processedEntityIds'][32:35], review['progress']['processedEntityIds'])
         self.assertEqual(review['progress']['nextEntityId'], 'entity-name-c45d1636d3b0')

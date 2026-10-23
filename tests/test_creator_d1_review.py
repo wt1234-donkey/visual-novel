@@ -21,7 +21,7 @@ class CreatorD1Tests(unittest.TestCase):
         review = read('data/entity-creator-d1-review-20261023.json')
         before, after = ({e['id']: e for e in x['entities']} for x in [old('data/entities.json'), read('data/entities.json')])
         eid = 'entity-name-96d2374d7b76'
-        self.assertEqual({i for i in before if before[i] != after[i]}, {eid} | {c['entityId'] for c in read('data/entity-creator-d2-review-20261023.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-d3-review-20261023.json')['identityCorrections']})
+        self.assertEqual({i for i in before if before[i] != after[i]}, {eid} | {c['entityId'] for c in read('data/entity-creator-d2-review-20261023.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-d3-review-20261023.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-e1-review-20261023.json')['identityCorrections']})
         self.assertEqual((before[eid]['type'], before[eid]['verification']), ('unknown', 'unresolved'))
         self.assertEqual((after[eid]['type'], after[eid]['verification']), ('company', 'sourceReviewed'))
         self.assertEqual((after[eid]['aliases'], after[eid]['dates']), (before[eid]['aliases'], before[eid]['dates']))
@@ -35,7 +35,7 @@ class CreatorD1Tests(unittest.TestCase):
         p = current['registrationProgress']
         review = read('data/entity-creator-d1-review-20261023.json')
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']),
-                         ('D', 10, 10, 70, 70))
+                         ('E', 4, 13, 74, 83))
         self.assertEqual(p['processedEntityIds'][60:64], review['progress']['processedEntityIds'])
         self.assertEqual(review['progress']['nextName'], 'Digital Leisure')
         self.assertEqual(current['works'], previous['works'])
