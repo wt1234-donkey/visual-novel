@@ -117,3 +117,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-23 D字母首批使用 `entity-creator-d1-review-20261023.json` 与同名Markdown；连续核查D3 Publisher、D4 Enterprise、Data East、dB-SOFT，D累计4／10、A—Z累计64／70。D3官网及2007年官方产品目录支持其公司身份，独立订正旧待核身份；其PS2后发发行不推断PC原作开发。D4复刻配信、Data East各期发行和dB-SOFT旧专题关联继续分别按版本与原始署名核定。没有新增创作职责或组织关系；下一家Digital Leisure。
 
 2026-10-23 D字母第二批使用 `entity-creator-d2-review-20261023.json` 与同名Markdown；核查Digital Leisure、Digiturbo、DMM GAMES、DMM GAMES／AUGUST，D累计8／10、A—Z累计68／70。前三项分别以公司官网、Nitroplus正式沿革及EXNOA平台与商号资料独立订正身份，保留所有原发行角色；DMM GAMES同名旧法人不自动合并。复合署名继续待核，AUGUST既有合作开发事实不由此重复推导。没有新增创作职责或组织关系；下一家Double Fine Productions。
+
+2026-10-23 D字母第三批使用 `entity-creator-d3-review-20261023.json` 与同名Markdown；核查Double Fine Productions、DreamWorks Interactive，D累计10／10、A—Z累计70／70。Double Fine原有公司身份沿用，官方《Broken Age》片尾支持新增一条原作制作；LucasArts三部旧作的后发复刻另按版本核，不倒填原版创作。DreamWorks Interactive依据微软1996年公告独立订正公司身份，两部旧发行保留，逐作创作待原始片尾；合资背景不自动增加单方母子关系。下一家E3 Staff。

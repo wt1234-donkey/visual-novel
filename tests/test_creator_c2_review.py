@@ -21,7 +21,7 @@ class CreatorC2Tests(unittest.TestCase):
         review = read('data/entity-creator-c2-review-20261023.json')
         before, after = ({e['id']: e for e in x['entities']} for x in [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in before if before[eid] != after[eid]},
-                         {c['entityId'] for batch in [review, read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json')]
+                         {c['entityId'] for batch in [review, read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json')]
                           for c in batch['identityCorrections']})
         coktel = 'entity-name-8c31b0298459'
         self.assertEqual((before[coktel]['type'], before[coktel]['verification']), ('unknown', 'unresolved'))
@@ -31,15 +31,17 @@ class CreatorC2Tests(unittest.TestCase):
         self.assertEqual({cid: a[cid] for cid in b}, b)
         additions = [a[cid] for cid in a.keys() - b.keys()]
         self.assertEqual({(c['entityId'], c['workId'], c['role'], c['targetType']) for c in additions},
-                         {('entity-name-21365baf366d', wid, 'originalProduction', 'work') for wid in ['g021', 'g022', 'g170']})
-        self.assertEqual({c['reviewId'] for c in additions}, {c['reviewId'] for c in review['creditAdditions']})
+                         {('entity-name-21365baf366d', wid, 'originalProduction', 'work') for wid in ['g021', 'g022', 'g170']} |
+                         {('entity-name-f9e8ee919b2e', 'g978', 'originalProduction', 'work')})
+        self.assertEqual({c['reviewId'] for c in additions if c['reviewRecord'] == review['audit']},
+                         {c['reviewId'] for c in review['creditAdditions']})
         self.assertEqual(read('data/credits.json')['dossierMemberships'], old('data/credits.json')['dossierMemberships'])
 
     def test_progress_scopes_and_core_preservation(self):
         current, prior = read('data/organizations.json'), old('data/organizations.json')
         p = current['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']),
-                         ('D', 8, 10, 68, 70))
+                         ('D', 10, 10, 70, 70))
         self.assertEqual(read('data/entity-creator-c2-review-20261023.json')['progress']['nextEntityId'], 'entity-name-3e85e8c3e1f3')
         self.assertEqual(current['works'], prior['works'])
         nodes, previous = [{n['id']: n for n in x['nodes']} for x in [current, prior]]
