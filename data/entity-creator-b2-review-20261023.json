@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "25dbfb53406b05a00e3bd6fe4df6ad6bdd2e1c69",
+  "audit": "data/entity-creator-b2-review-20261023.md",
+  "previousReview": "data/entity-creator-b1-review-20261023.md",
+  "policy": "按B字母队列连续核查BLACKRAINBOW、Bliss Brain、Blizzard Entertainment。身份只据官方网站核定；原作、后发版本、增补、发行和授权分别处理，不以公司或品牌身份推导逐作开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I06",
+      "entityId": "entity-name-c45d1636d3b0",
+      "rawName": "BLACKRAINBOW",
+      "before": {"type":"unknown","verification":"unresolved"},
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": ["https://www.blackrainbow.jp/dvdpg/006/index.html","https://blackrainbow.jp/dl/dotfuck/data.html","https://www.blackrainbow.jp/br/brbox/"],
+      "note": "BLACKRAINBOW官方产品规格将其明确列为品牌；《かすみ遊戯》的2002年DVDPG版本另标BLACKRAINBOW DVDPG Division。仅核定既有署名主体的品牌层级，保留g673原版Purple（JAST期）与后发DVDPG发行分工，不将后发品牌倒填成1999年原作制作，也不合并DVDPG Division为未核的法人。"
+    },
+    {
+      "reviewId": "AZE-I07",
+      "entityId": "entity-name-91ab620ad791",
+      "rawName": "Blizzard Entertainment",
+      "before": {"type":"unknown","verification":"unresolved"},
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": ["https://www.blizzard.com/company/about/","https://www.blizzard.com/company/contact","https://news.blizzard.com/en-us/article/22887361/diablo-now-available-on-gog-com"],
+      "note": "Blizzard官方公司页面使用Blizzard Entertainment, Inc.。仅确认历史署名名称所指公司身份；官方2019年说明Hellfire不是暴雪官方产品、其在GOG组合中出现系同意附赠。保留Diablo原版与Sierra发行Hellfire增补的既有发行分工，不为Hellfire赋予暴雪创作职责。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {"reviewId":"AZE-D11","entityId":"entity-name-c45d1636d3b0","name":"BLACKRAINBOW","status":"identityRegistered","sources":["https://www.blackrainbow.jp/dvdpg/006/index.html","https://blackrainbow.jp/dl/dotfuck/data.html"],"reason":"官方产品明确品牌身份及DVDPG后发版，但未提供1999年原版创作署名或DVDPG制作人员完整表；g673仅保留该品牌在2002年具体发行层的原始署名。","workIds":["g673"]},
+    {"reviewId":"AZE-D12","entityId":"entity-blissbrain","name":"Bliss Brain","status":"identityRegistered","sources":["https://blissbrain.co.jp/title/corporate/","https://blissbrain.co.jp/pm2rg/"],"reason":"官方自称日本游戏发行公司；g821的2024年Regeneration两个首批平台发行已具名，动画由Yonago Gainax制作。Bliss Brain在该重绘和移植中的逐项制作分工须取得职员表，发行与版权提示不足以追加原作开发。","workIds":["g821"]},
+    {"reviewId":"AZE-D13","entityId":"entity-name-91ab620ad791","name":"Blizzard Entertainment","status":"identityRegistered","sources":["https://www.blizzard.com/company/about/","https://news.blizzard.com/en-us/article/22887361/diablo-now-available-on-gog-com"],"reason":"公司身份可确认；Diablo原版发行与Sierra的Hellfire增补应按两条发行证据区别。原版逐作开发团队与公司层制作职责仍需片尾或同期官方资料，Hellfire不记暴雪开发。","workIds":["sierra-on-line-diablo-hellfire"]}
+  ],
+  "reviewedEntities": [
+    {"entityId":"entity-name-c45d1636d3b0","name":"BLACKRAINBOW","status":"identityRegistered","sources":["https://blackrainbow.jp/dl/dotfuck/data.html","https://www.blackrainbow.jp/dvdpg/006/index.html"],"reason":"官方规格确认品牌；g673后发DVDPG署名原样保留，无原作制作外推。","workIds":["g673"]},
+    {"entityId":"entity-blissbrain","name":"Bliss Brain","status":"identityRegistered","sources":["https://blissbrain.co.jp/title/corporate/","https://blissbrain.co.jp/pm2rg/"],"reason":"公司及发行身份已核定；重绘与动画存在明确其他制作方，暂缺其逐项游戏开发职员表。","workIds":["g821"]},
+    {"entityId":"entity-name-91ab620ad791","name":"Blizzard Entertainment","status":"identityRegistered","sources":["https://www.blizzard.com/company/about/","https://news.blizzard.com/en-us/article/22887361/diablo-now-available-on-gog-com"],"reason":"官方公司身份确认；Hellfire非暴雪官方产品，保留原版与增补分工。","workIds":["sierra-on-line-diablo-hellfire"]}
+  ],
+  "progress": {
+    "letter":"B",
+    "normalization":"英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total":10,
+    "processedEntityIds":["entity-name-40ed6431d1a6","entity-name-4b075a5bed09","entity-banpresto","entity-name-c45d1636d3b0","entity-blissbrain","entity-name-91ab620ad791"],
+    "nextEntityId":"entity-name-cb3c445f13f2",
+    "nextName":"BPS",
+    "queue":[
+      {"entityId":"entity-name-40ed6431d1a6","name":"Bandai Namco Games","status":"reviewed"},
+      {"entityId":"entity-name-4b075a5bed09","name":"Bandai Visual（バンダイビジュアル）","status":"reviewed"},
+      {"entityId":"entity-banpresto","name":"Banpresto","status":"reviewed"},
+      {"entityId":"entity-name-c45d1636d3b0","name":"BLACKRAINBOW","status":"reviewed"},
+      {"entityId":"entity-blissbrain","name":"Bliss Brain","status":"reviewed"},
+      {"entityId":"entity-name-91ab620ad791","name":"Blizzard Entertainment","status":"reviewed"},
+      {"entityId":"entity-name-cb3c445f13f2","name":"BPS","status":"pending"},
+      {"entityId":"entity-name-f00bc453a063","name":"BROCCOLI","status":"pending"},
+      {"entityId":"entity-name-e0c32a99a906","name":"Brøderbund","status":"pending"},
+      {"entityId":"entity-name-8b16f2bf500e","name":"Byakuya Shobo（白夜書房）","status":"pending"}
+    ]
+  }
+}
