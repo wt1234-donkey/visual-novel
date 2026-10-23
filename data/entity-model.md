@@ -115,3 +115,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-23 C字母第四批使用 `entity-creator-c4-review-20261023.json` 与同名Markdown；连续核查CUFFS、Cyan Worlds, Inc.、CyberFront，完成C字母18／18，A—Z累计60／60。CUFFS已登记六部主品牌制作，不能把同页CUBE/Sphere系列归并。Cyan现行法人据官方法律条款、CyberFront历史法人据母公司同期披露各自订正为公司；《Riven》1997原作、2024重制发行以及跨品牌移植开发均保持各自证据边界。没有新增作品开发或关系；下一家D3 Publisher。
 
 2026-10-23 D字母首批使用 `entity-creator-d1-review-20261023.json` 与同名Markdown；连续核查D3 Publisher、D4 Enterprise、Data East、dB-SOFT，D累计4／10、A—Z累计64／70。D3官网及2007年官方产品目录支持其公司身份，独立订正旧待核身份；其PS2后发发行不推断PC原作开发。D4复刻配信、Data East各期发行和dB-SOFT旧专题关联继续分别按版本与原始署名核定。没有新增创作职责或组织关系；下一家Digital Leisure。
+
+2026-10-23 D字母第二批使用 `entity-creator-d2-review-20261023.json` 与同名Markdown；核查Digital Leisure、Digiturbo、DMM GAMES、DMM GAMES／AUGUST，D累计8／10、A—Z累计68／70。前三项分别以公司官网、Nitroplus正式沿革及EXNOA平台与商号资料独立订正身份，保留所有原发行角色；DMM GAMES同名旧法人不自动合并。复合署名继续待核，AUGUST既有合作开发事实不由此重复推导。没有新增创作职责或组织关系；下一家Double Fine Productions。
