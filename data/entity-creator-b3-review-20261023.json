@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "fa95711de1b628a7e34bf4bf01f596ec8dff925d",
+  "audit": "data/entity-creator-b3-review-20261023.md",
+  "previousReview": "data/entity-creator-b2-review-20261023.md",
+  "policy": "按B字母队列连续核查BPS、BROCCOLI、Brøderbund、Byakuya Shobo。主体身份与每部作品的创作职责分开审查；白夜書店与白夜書房的历史署名差异保留待核，发行不自动推导开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I08",
+      "entityId": "entity-name-cb3c445f13f2",
+      "rawName": "BPS",
+      "before": {"type":"unknown","verification":"unresolved"},
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": ["https://tetris.com/corporate-bios", "https://www.sramanamitra.com/2009/09/17/the-story-of-tetris-henk-rogers-part-2/"],
+      "note": "Tetris官方创办人简介确认Bullet-Proof Software为Henk Rogers的首家游戏发行公司及《The Black Onyx》的出版主体；Rogers本人回顾撰写《Fire Crystal》。仅核定BPS历史发行主体的公司类型，保留两部作品既有发行署名，不从创办人个人创作推论公司逐作开发，也不与后来的Blue Planet Software自动合并。"
+    },
+    {
+      "reviewId": "AZE-I09",
+      "entityId": "entity-name-e0c32a99a906",
+      "rawName": "Brøderbund",
+      "before": {"type":"unknown","verification":"unresolved"},
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": ["https://www.jordanmechner.com/en/games-movies/prince-of-persia/", "https://www.jordanmechner.com/downloads/archive/whoswho.pdf", "https://cyan.com/company/support/", "https://cyan.com/company/about-cyan/"],
+      "note": "《Prince of Persia》作者本人明确Brøderbund发行1989年Apple II原版，档案称Brøderbund Software有CEO和共同创办人；Cyan明确Brøderbund曾发行《Myst》实体版并自述本社创作。仅核定既有署名的公司身份，不将发行方改成两部原作的开发方，也不并入后续版权公司。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {"reviewId":"AZE-D14","entityId":"entity-name-cb3c445f13f2","name":"BPS","status":"identityRegistered","sources":["https://tetris.com/corporate-bios","https://www.sramanamitra.com/2009/09/17/the-story-of-tetris-henk-rogers-part-2/"],"reason":"BPS历史公司及两部作品发行署名可核；Rogers个人设计／撰写不等于Bullet-Proof Software的逐作制作署名，仍需首版职员表或同期期刊的制作方资料。","workIds":["ascii-black-onyx","ascii-fire-crystal"]},
+    {"reviewId":"AZE-D15","entityId":"entity-name-f00bc453a063","name":"BROCCOLI","status":"identityRegistered","sources":["https://broccoli.co.jp/company/profile/index_en.php","https://www.broccoli.co.jp/company/profile/"],"reason":"既有公司身份由官方沿用；g818、g825后发平台的BROCCOLI发行不能覆盖GAINAX原版制作。需各后发版完整职员表确认移植或增补的具体制作职责。","workIds":["g818","g825"]},
+    {"reviewId":"AZE-D16","entityId":"entity-name-e0c32a99a906","name":"Brøderbund","status":"identityRegistered","sources":["https://www.jordanmechner.com/en/games-movies/prince-of-persia/","https://cyan.com/company/support/","https://cyan.com/company/about-cyan/"],"reason":"原作者与Cyan分别确认Prince of Persia、Myst发行；两部作品原作的作者／工作室另有具名来源，Brøderbund的具体开发分工须同期职员表。","workIds":["riverhill-prince","g1060"]},
+    {"reviewId":"AZE-D17","entityId":"entity-name-8b16f2bf500e","name":"Byakuya Shobo（白夜書房）","status":"identityUnresolved","sources":["https://www.byakuya-shobo.co.jp/company/cc10339.html","https://alicecottage1989.blog.jp/archives/20634266.html"],"reason":"官网可确认白夜書房为公司，但g542-v6原始索引写白夜書房（档案记作白夜書店）。缺版本封面、版权页或原目录证实白夜書店与白夜書房在此发行上的对应关系，暂不订正既有身份，也不赋予游戏开发。","workIds":["g542"]}
+  ],
+  "reviewedEntities": [
+    {"entityId":"entity-name-cb3c445f13f2","name":"BPS","status":"identityRegistered","sources":["https://tetris.com/corporate-bios","https://www.sramanamitra.com/2009/09/17/the-story-of-tetris-henk-rogers-part-2/"],"reason":"确认Bullet-Proof Software为发行公司；两部1984年作品尚无公司层逐作制作署名。","workIds":["ascii-black-onyx","ascii-fire-crystal"]},
+    {"entityId":"entity-name-f00bc453a063","name":"BROCCOLI","status":"identityRegistered","sources":["https://broccoli.co.jp/company/profile/index_en.php","https://www.broccoli.co.jp/company/profile/"],"reason":"既有公司身份正确；后发版发行与GAINAX原版制作分开，开发待核。","workIds":["g818","g825"]},
+    {"entityId":"entity-name-e0c32a99a906","name":"Brøderbund","status":"identityRegistered","sources":["https://www.jordanmechner.com/en/games-movies/prince-of-persia/","https://cyan.com/company/support/","https://cyan.com/company/about-cyan/"],"reason":"历史游戏发行公司身份可核；不以发行推定Myst或Prince of Persia原作开发。","workIds":["riverhill-prince","g1060"]},
+    {"entityId":"entity-name-8b16f2bf500e","name":"Byakuya Shobo（白夜書房）","status":"identityUnresolved","sources":["https://www.byakuya-shobo.co.jp/company/cc10339.html","https://alicecottage1989.blog.jp/archives/20634266.html"],"reason":"法人现状可核，历史版本署名白夜書店与白夜書房未完成逐版对照，保留原有待核身份。","workIds":["g542"]}
+  ],
+  "progress": {
+    "letter":"B",
+    "normalization":"英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total":10,
+    "processedEntityIds":["entity-name-40ed6431d1a6","entity-name-4b075a5bed09","entity-banpresto","entity-name-c45d1636d3b0","entity-blissbrain","entity-name-91ab620ad791","entity-name-cb3c445f13f2","entity-name-f00bc453a063","entity-name-e0c32a99a906","entity-name-8b16f2bf500e"],
+    "nextEntityId":"entity-cabbage",
+    "nextName":"Cabbage Soft（きゃべつそふと）",
+    "queue":[
+      {"entityId":"entity-name-40ed6431d1a6","name":"Bandai Namco Games","status":"reviewed"},
+      {"entityId":"entity-name-4b075a5bed09","name":"Bandai Visual（バンダイビジュアル）","status":"reviewed"},
+      {"entityId":"entity-banpresto","name":"Banpresto","status":"reviewed"},
+      {"entityId":"entity-name-c45d1636d3b0","name":"BLACKRAINBOW","status":"reviewed"},
+      {"entityId":"entity-blissbrain","name":"Bliss Brain","status":"reviewed"},
+      {"entityId":"entity-name-91ab620ad791","name":"Blizzard Entertainment","status":"reviewed"},
+      {"entityId":"entity-name-cb3c445f13f2","name":"BPS","status":"reviewed"},
+      {"entityId":"entity-name-f00bc453a063","name":"BROCCOLI","status":"reviewed"},
+      {"entityId":"entity-name-e0c32a99a906","name":"Brøderbund","status":"reviewed"},
+      {"entityId":"entity-name-8b16f2bf500e","name":"Byakuya Shobo（白夜書房）","status":"reviewed"}
+    ]
+  }
+}

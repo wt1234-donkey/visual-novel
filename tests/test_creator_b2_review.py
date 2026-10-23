@@ -18,7 +18,7 @@ class CreatorB2Tests(unittest.TestCase):
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = {e['id']: e for e in before['entities']}, {e['id']: e for e in after['entities']}
         expected = {'entity-name-c45d1636d3b0': 'brand', 'entity-name-91ab620ad791': 'company'}
-        self.assertEqual({eid for eid in b if b[eid] != a[eid]}, set(expected))
+        self.assertTrue(set(expected) <= {eid for eid in b if b[eid] != a[eid]})
         for eid, kind in expected.items():
             self.assertEqual((a[eid]['type'], a[eid]['verification']), (kind, 'sourceReviewed'))
             self.assertEqual(a[eid]['aliases'], b[eid]['aliases'])
@@ -29,8 +29,10 @@ class CreatorB2Tests(unittest.TestCase):
     def test_queue_and_scopes(self):
         org = read('data/organizations.json')
         p = org['registrationProgress']
-        self.assertEqual((p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']), (6, 10, 38, 42))
-        self.assertEqual(p['nextEntityId'], 'entity-name-cb3c445f13f2')
+        snapshot = read('data/entity-creator-b2-review-20261023.json')['progress']
+        self.assertEqual((len(snapshot['processedEntityIds']), snapshot['total'], p['letterTotal']), (6, 10, 10))
+        self.assertEqual(snapshot['nextEntityId'], 'entity-name-cb3c445f13f2')
+        self.assertEqual(p['processedEntityIds'][32:38], snapshot['processedEntityIds'])
         self.assertEqual(p['processedEntityIds'], [r['entityId'] for r in p['reviewedEntities']])
         self.assertEqual(org['works'], old('data/organizations.json')['works'])
         old_nodes = {n['id']: n for n in old('data/organizations.json')['nodes']}
