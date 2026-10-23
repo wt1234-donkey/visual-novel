@@ -21,7 +21,8 @@ class CreatorA5ReviewTests(unittest.TestCase):
         self.assertTrue(b.keys() <= a.keys())
         for cid in b:
             self.assertEqual(a[cid], b[cid], cid)
-        added = [a[cid] for cid in a.keys() - b.keys()]
+        added = [a[cid] for cid in a.keys() - b.keys()
+                 if a[cid].get('reviewRecord') == 'data/entity-creator-a5-review-20261023.md']
         expected = {('entity-ascii', 'g1003', 'originalProduction'),
                     ('entity-ascii', 'g1004', 'originalProduction'),
                     ('entity-ascii', 'ascii-chaos-angels', 'originalProduction')}
@@ -49,7 +50,7 @@ class CreatorA5ReviewTests(unittest.TestCase):
             self.assertEqual(a[eid]['dates'], b[eid]['dates'])
         before, after = old('data/entity-migration-review.json'), read('data/entity-migration-review.json')
         self.assertEqual(after['pendingMembershipCount'], 611)
-        later_ids = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3']
+        later_ids = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1']
                      for c in read(f'data/entity-creator-{filename}-review-20261023.json')['identityCorrections']}
         self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids | later_ids])
 

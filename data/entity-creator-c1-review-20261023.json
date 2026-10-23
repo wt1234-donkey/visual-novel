@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "f5ba4378118ebf0ec56e663ad8248bdf4b60944d",
+  "audit": "data/entity-creator-c1-review-20261023.md",
+  "previousReview": "data/entity-creator-b3-review-20261023.md",
+  "policy": "按英文名称排序连续核查Cabbage Soft、CAPCOM、Caramel Box、Carry Lab、CFK。仅以具名原作制作署名登记作品品牌职责；公司经营、发行、版权目录和后发移植不自动计作开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I10",
+      "entityId": "entity-name-53ec4c5b9afc",
+      "rawName": "キャラメルBOX",
+      "before": {"type":"unknown","verification":"unresolved"},
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": ["https://product.hobibox.net/chara1_2017oct/", "https://w.atwiki.jp/ercr/pages/1257.html", "https://w.atwiki.jp/ercr/pages/1258.html"],
+      "note": "HOBIBOX官方展会产品资料使用キャラメルBOX品牌名；两部原作的职员资料均列品牌与製作：キャラメルBOX。仅核定该历史署名的品牌层级，不根据后续HOBIBOX、EXNOA经营线索建立未核时段关系，保留原始发行职责。"
+    },
+    {
+      "reviewId": "AZE-I11",
+      "entityId": "entity-name-431d2fb7a95c",
+      "rawName": "CFK",
+      "before": {"type":"unknown","verification":"unresolved"},
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": ["https://www.cfk.kr/Company/company_list?lang=en", "https://www.cfk.kr/News/news_view?news_seq=1374"],
+      "note": "CFK官方公司简介说明发行与本地化业务，官网隐私告知明确주식회사 CFK法人名称。仅确认既有CFK后发版署名所指公司类型；不并入旧CyberFront或日本CyberFront，不将五部作品的原作制作改记CFK。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZC-C01",
+      "entityId": "entity-name-53ec4c5b9afc",
+      "dossierId": null,
+      "workId": "g639",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "キャラメルBOX",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://w.atwiki.jp/ercr/pages/1257.html",
+      "note": "《シャマナシャマナ》首版职员转录明确列品牌キャラメルBOX及製作：キャラメルBOX，另列HOBIBOX、Nitro+製作協力和个人制作人员。仅登记品牌层制作，不把协力方归作开发，也不扩展到其他作品。"
+    },
+    {
+      "reviewId": "AZC-C02",
+      "entityId": "entity-name-53ec4c5b9afc",
+      "dossierId": null,
+      "workId": "g640",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "キャラメルBOX",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://w.atwiki.jp/ercr/pages/1258.html",
+      "note": "《処女はお姉さまに恋してる》首版职员转录明确列製作：キャラメルBOX，HOBIBOX与Nitro+另列製作協力；HOBIBOX官方资料亦将本作列为キャラメルBOX产品。仅登记原作制作品牌，不替代个人及协力分工，也不影响后来版本。"
+    }
+  ],
+  "deferredReviews": [
+    {"reviewId":"AZE-D18","entityId":"entity-cabbage","name":"Cabbage Soft（きゃべつそふと）","status":"identityRegistered","sources":["https://cabbage-soft.com/products/hoshikoi/product/","https://cabbage-soft.com/products/jna/"],"reason":"官网产品规格与既有专题一致，8部作品的制作品牌职责已经登记；后发国际版、主机版的具体开发团队须逐版职员表，不重复批量追加。","workIds":["g835","g836","g837","g838","g839","g840","g841","g842"]},
+    {"reviewId":"AZE-D19","entityId":"entity-name-7554e19bb041","name":"CAPCOM","status":"identityRegistered","sources":["https://www.capcom.co.jp/ir/english/company/history.html","https://www.capcom.co.jp/ir/business/salesdata.html"],"reason":"公司身份与系列归属可核；g049、g172、g173、g182及专题Breath of Fire的各首版开发责任仍需同期职员表或官方逐作制作资料，官方公司历史仅说发行、系列为代表内容。","workIds":["g049","g172","g173","g182","square-bof"]},
+    {"reviewId":"AZE-D20","entityId":"entity-name-53ec4c5b9afc","name":"Caramel Box（キャラメルBOX）","status":"creationScoped","sources":["https://product.hobibox.net/chara1_2017oct/","https://w.atwiki.jp/ercr/pages/1257.html","https://w.atwiki.jp/ercr/pages/1258.html"],"reason":"仅两部具名原作转录明确製作；品牌经营主体变迁与其他作品制作未核，不补母公司沿革或后发平台职责。","workIds":["g639","g640"]},
+    {"reviewId":"AZE-D21","entityId":"entity-carry_lab","name":"Carry Lab（キャリーラボ）","status":"identityRegistered","sources":["https://d4e.co.jp/lights_cat/carry_lab","https://d4e.co.jp/20190304/2946"],"reason":"D4权利目录把《スターライトアドベンチャー》列作当时的発売メーカー；公司也曾从事移植，不能以权利承继与旧发行反推g103或三条专题引用的具体原作开发。需要首版职员／包装署名。","workIds":["g103"]},
+    {"reviewId":"AZE-D22","entityId":"entity-name-431d2fb7a95c","name":"CFK","status":"identityRegistered","sources":["https://www.cfk.kr/Company/company_list?lang=en","https://www.cfk.kr/News/news_view?news_seq=1374"],"reason":"法人身份可核，既有g820、g821、g822、g824与gainax-gogo为后发平台发行；原作GAINAX和各版开发团队仍需逐版职员或制作公告，CFK公司级业务介绍不足以追加开发。","workIds":["g820","g821","g822","g824","gainax-gogo"]}
+  ],
+  "reviewedEntities": [
+    {"entityId":"entity-cabbage","name":"Cabbage Soft（きゃべつそふと）","status":"identityRegistered","sources":["https://cabbage-soft.com/products/hoshikoi/product/","https://cabbage-soft.com/products/jna/"],"reason":"品牌与既有8部制作品牌登记核对，无重复追加。","workIds":["g835","g836","g837","g838","g839","g840","g841","g842"]},
+    {"entityId":"entity-name-7554e19bb041","name":"CAPCOM","status":"identityRegistered","sources":["https://www.capcom.co.jp/ir/english/company/history.html","https://www.capcom.co.jp/ir/business/salesdata.html"],"reason":"公司与系列资料确认，五部首版公司层开发仍待逐作证据。","workIds":["g049","g172","g173","g182","square-bof"]},
+    {"entityId":"entity-name-53ec4c5b9afc","name":"Caramel Box（キャラメルBOX）","status":"creationScoped","sources":["https://product.hobibox.net/chara1_2017oct/","https://w.atwiki.jp/ercr/pages/1257.html","https://w.atwiki.jp/ercr/pages/1258.html"],"reason":"品牌身份及两部原作的製作署名可核，限定两作登记。","workIds":["g639","g640"]},
+    {"entityId":"entity-carry_lab","name":"Carry Lab（キャリーラボ）","status":"identityRegistered","sources":["https://d4e.co.jp/lights_cat/carry_lab","https://d4e.co.jp/20190304/2946"],"reason":"公司与当时发行可核，作品开发和专题职责继续待核。","workIds":["g103"]},
+    {"entityId":"entity-name-431d2fb7a95c","name":"CFK","status":"identityRegistered","sources":["https://www.cfk.kr/Company/company_list?lang=en","https://www.cfk.kr/News/news_view?news_seq=1374"],"reason":"公司身份核定；后发发行未变原作制作。","workIds":["g820","g821","g822","g824","gainax-gogo"]}
+  ],
+  "progress": {
+    "letter":"C",
+    "normalization":"英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total":18,
+    "processedEntityIds":["entity-cabbage","entity-name-7554e19bb041","entity-name-53ec4c5b9afc","entity-carry_lab","entity-name-431d2fb7a95c"],
+    "nextEntityId":"entity-name-21365baf366d",
+    "nextName":"Chunsoft",
+    "queue":[
+      {"entityId":"entity-cabbage","name":"Cabbage Soft（きゃべつそふと）","status":"reviewed"},
+      {"entityId":"entity-name-7554e19bb041","name":"CAPCOM","status":"reviewed"},
+      {"entityId":"entity-name-53ec4c5b9afc","name":"Caramel Box（キャラメルBOX）","status":"reviewed"},
+      {"entityId":"entity-carry_lab","name":"Carry Lab（キャリーラボ）","status":"reviewed"},
+      {"entityId":"entity-name-431d2fb7a95c","name":"CFK","status":"reviewed"},
+      {"entityId":"entity-name-21365baf366d","name":"Chunsoft","status":"pending"},
+      {"entityId":"entity-cinematronics","name":"Cinematronics","status":"pending"},
+      {"entityId":"entity-clochette","name":"Clochette","status":"pending"},
+      {"entityId":"entity-name-8c31b0298459","name":"Coktel Vision","status":"pending"},
+      {"entityId":"entity-comptiq","name":"Comptiq（コンプティーク）","status":"pending"},
+      {"entityId":"entity-name-3e85e8c3e1f3","name":"Core Magazine（コアマガジン）","status":"pending"},
+      {"entityId":"entity-name-21dcd9c9c1e7","name":"CoreMoreco","status":"pending"},
+      {"entityId":"entity-name-cb4ca6959e74","name":"CROSSNET","status":"pending"},
+      {"entityId":"entity-name-6bcd3472ea70","name":"Crystal Soft（クリスタルソフト）","status":"pending"},
+      {"entityId":"entity-cube","name":"CUBE","status":"pending"},
+      {"entityId":"entity-cuffs","name":"CUFFS","status":"pending"},
+      {"entityId":"entity-name-42a2c095c251","name":"Cyan Worlds, Inc.","status":"pending"},
+      {"entityId":"entity-name-c65fb9857dc9","name":"CyberFront","status":"pending"}
+    ]
+  }
+}
