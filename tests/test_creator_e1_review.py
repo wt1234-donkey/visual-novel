@@ -22,7 +22,7 @@ class CreatorE1Tests(unittest.TestCase):
         before, after = ({e['id']: e for e in data['entities']} for data in
                          [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in before if before[eid] != after[eid]},
-                         {c['entityId'] for c in review['identityCorrections']})
+                         {c['entityId'] for c in review['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-e2-review-20261024.json')['identityCorrections']})
         for correction in review['identityCorrections']:
             eid = correction['entityId']
             self.assertEqual((before[eid]['type'], before[eid]['verification']),
@@ -43,16 +43,17 @@ class CreatorE1Tests(unittest.TestCase):
         progress = current['registrationProgress']
         review = read('data/entity-creator-e1-review-20261023.json')
         self.assertEqual((progress['letter'], progress['letterProcessed'], progress['letterTotal'],
-                          len(progress['processedEntityIds']), progress['total']), ('E', 4, 13, 74, 83))
+                          len(progress['processedEntityIds']), progress['total']), ('E', 8, 13, 78, 83))
         self.assertEqual(progress['processedEntityIds'][70:74], review['progress']['processedEntityIds'])
-        self.assertEqual(progress['nextName'], 'Electronic Arts')
+        self.assertEqual(review['progress']['nextName'], 'Electronic Arts')
+        self.assertEqual(progress['nextName'], 'Enterbrain（エンターブレイン）')
         self.assertEqual(current['works'], before['works'])
         old_nodes = {n['id']: n for n in before['nodes']}
         nodes = {n['id']: n for n in current['nodes']}
         for eid in review['progress']['processedEntityIds']:
             self.assertEqual(nodes[eid]['groups'], old_nodes[eid]['groups'])
             self.assertEqual(nodes[eid]['productionCount'], 0)
-        for path in ['data/games.json', 'data/company-coverage.json', 'data/credits.json',
+        for path in ['data/games.json', 'data/company-coverage.json',
                      'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
             self.assertEqual((ROOT / path).read_bytes(),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)

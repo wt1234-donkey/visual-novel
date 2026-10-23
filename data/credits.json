@@ -62905,6 +62905,36 @@
       "territory": null,
       "reviewId": "AZD-C01",
       "reviewRecord": "data/entity-creator-d3-review-20261023.md"
+    },
+    {
+      "id": "credit-adac8959f0509a0d",
+      "entityId": "entity-elf",
+      "targetType": "work",
+      "targetId": "g320",
+      "workId": "g320",
+      "role": "originalProduction",
+      "rawCredit": "（株）エルフ",
+      "status": "sourceReviewed",
+      "source": "https://raido.moe/staff/win/win_shin_mikagura_shojo_tanteidan.html",
+      "note": "2003年Windows原版片尾明确企画・プロデュース为（株）エルフ，背景、CG、音响亦列elf；只登记本作制作参与。原作创意另署SIDO，游戏设计／程序署NUDE MAKER，不推定ELF独立完成全部工序或1990年代《御神楽少女探偵団》原作。",
+      "territory": null,
+      "reviewId": "AZE-C01",
+      "reviewRecord": "data/entity-creator-e2-review-20261024.md"
+    },
+    {
+      "id": "credit-a5d57e4e682cbaf6",
+      "entityId": "entity-enix",
+      "targetType": "work",
+      "targetId": "g984",
+      "workId": "g984",
+      "role": "originalProduction",
+      "rawCredit": "ENIX",
+      "status": "sourceReviewed",
+      "source": "https://raido.moe/staff/ps1/ps1_eurasia_express_satsujin.html",
+      "note": "1998年PS原版片尾“製作 ENIX／Foursome”明确共同制作；System Sacom另列游戏程序与声音，影视摄制人员逐项列名。仅记本作Enix制作参与，不覆盖Foursome及System Sacom职责，不推定其他Enix发行作品均由本社开发。",
+      "territory": null,
+      "reviewId": "AZE-C02",
+      "reviewRecord": "data/entity-creator-e2-review-20261024.md"
     }
   ],
   "dossierMemberships": [
@@ -64920,9 +64950,10 @@
       "workId": "g320",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://archive.is/taUch",
       "status": "existingEvidence"
     },
@@ -78498,9 +78529,10 @@
       "workId": "g984",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.hd.square-enix.com/jpn/company/history.html",
       "status": "existingEvidence"
     },
