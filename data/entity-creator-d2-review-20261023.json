@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "c6c136c",
+  "audit": "data/entity-creator-d2-review-20261023.md",
+  "previousReview": "data/entity-creator-d1-review-20261023.md",
+  "policy": "按D字母排序逐项核查Digital Leisure、Digiturbo、DMM GAMES及复合署名；只订正有独立证据的身份，不把后发发行或平台身份自动认作原创开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I19",
+      "entityId": "entity-name-bbf1e79f8c9f",
+      "rawName": "Digital Leisure",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://digitalleisure.com/company/",
+        "https://mocagh.org/miscgame/dragonslair20th-manual.pdf"
+      ],
+      "note": "Digital Leisure Inc.官网自述1997年成立并开发、发行游戏；原手册署名对应《Dragon’s Lair》20周年后发版。只订正公司身份；1983原版早于该公司，不归为其原创开发。"
+    },
+    {
+      "reviewId": "AZE-I20",
+      "entityId": "entity-name-32b13af88204",
+      "rawName": "デジターボ",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://www.nitrochiral.com/game/dramatical_murder_recode.php"
+      ],
+      "note": "Nitroplus官方沿革记载1997年有限会社デジターボ、2000年株式会社、2016年更名コンテライド、2024年并入Nitroplus。旧发行署名是历史法人；不以其后更名、合并倒推各版本原版开发，也不合并旧主体ID。"
+    },
+    {
+      "reviewId": "AZE-I21",
+      "entityId": "entity-name-2ddaddfb96a5",
+      "rawName": "DMM GAMES",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://dmmgames.co.jp/business/",
+        "https://dmmgames.co.jp/news/detail/id=210",
+        "https://aquaplus.jp/toheart/en.html"
+      ],
+      "note": "DMM GAMES是EXNOA运营的平台／对外名称；同名合同会社于2020-04-10更名EXNOA，原始署名须按各期版本理解。这里保留既有发行职责，仅订正这组未标法律后缀署名的对外品牌身份；不合并法人、不新增开发或原作品牌职责。",
+      "preserveReleaseRoles": true
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-bbf1e79f8c9f",
+      "name": "Digital Leisure",
+      "status": "identityRegistered",
+      "sources": [
+        "https://digitalleisure.com/company/",
+        "https://mocagh.org/miscgame/dragonslair20th-manual.pdf"
+      ],
+      "reason": "Digital Leisure Inc.官网自述1997年成立并开发、发行游戏；原手册署名对应《Dragon’s Lair》20周年后发版。只订正公司身份；1983原版早于该公司，不归为其原创开发。",
+      "workIds": [
+        "g010"
+      ]
+    },
+    {
+      "entityId": "entity-name-32b13af88204",
+      "name": "Digiturbo（デジターボ）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://www.nitrochiral.com/game/dramatical_murder_recode.php"
+      ],
+      "reason": "Nitroplus官方沿革记载1997年有限会社デジターボ、2000年株式会社、2016年更名コンテライド、2024年并入Nitroplus。旧发行署名是历史法人；不以其后更名、合并倒推各版本原版开发，也不合并旧主体ID。",
+      "workIds": [
+        "g597",
+        "g625"
+      ]
+    },
+    {
+      "entityId": "entity-name-2ddaddfb96a5",
+      "name": "DMM GAMES",
+      "status": "identityRegistered",
+      "sources": [
+        "https://dmmgames.co.jp/business/",
+        "https://dmmgames.co.jp/news/detail/id=210",
+        "https://aquaplus.jp/toheart/en.html"
+      ],
+      "reason": "DMM GAMES是EXNOA运营的平台／对外名称；同名合同会社于2020-04-10更名EXNOA，原始署名须按各期版本理解。这里保留既有发行职责，仅订正这组未标法律后缀署名的对外品牌身份；不合并法人、不新增开发或原作品牌职责。",
+      "workIds": [
+        "g037",
+        "nitroplus-extra-touken-online",
+        "nitroplus-extra-touken-musou",
+        "nitroplus-extra-touken-puzzle",
+        "nitroplus-extra-necro-mission"
+      ]
+    },
+    {
+      "entityId": "entity-name-16c097f224f4",
+      "name": "DMM GAMES／AUGUST",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://august-soft.com/20th/history/",
+        "https://august-soft.com/product"
+      ],
+      "reason": "AUGUST官方将《あいりすミスティリア！》表述为双方合作，员工对谈区分AUGUST的世界观、剧本与角色制作和DMM的游戏系统；既有AUGUST合作开发已单列。复合发行署名不是独立法人或品牌，须核原版片尾、条款和各版本合同主体才可拆分，不从斜线推定组织关系。",
+      "workIds": [
+        "august-rpg-imys"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-bbf1e79f8c9f",
+      "name": "Digital Leisure",
+      "status": "identityRegistered",
+      "sources": [
+        "https://digitalleisure.com/company/",
+        "https://mocagh.org/miscgame/dragonslair20th-manual.pdf"
+      ],
+      "reason": "Digital Leisure Inc.官网自述1997年成立并开发、发行游戏；原手册署名对应《Dragon’s Lair》20周年后发版。只订正公司身份；1983原版早于该公司，不归为其原创开发。",
+      "workIds": [
+        "g010"
+      ]
+    },
+    {
+      "entityId": "entity-name-32b13af88204",
+      "name": "Digiturbo（デジターボ）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://www.nitrochiral.com/game/dramatical_murder_recode.php"
+      ],
+      "reason": "Nitroplus官方沿革记载1997年有限会社デジターボ、2000年株式会社、2016年更名コンテライド、2024年并入Nitroplus。旧发行署名是历史法人；不以其后更名、合并倒推各版本原版开发，也不合并旧主体ID。",
+      "workIds": [
+        "g597",
+        "g625"
+      ]
+    },
+    {
+      "entityId": "entity-name-2ddaddfb96a5",
+      "name": "DMM GAMES",
+      "status": "identityRegistered",
+      "sources": [
+        "https://dmmgames.co.jp/business/",
+        "https://dmmgames.co.jp/news/detail/id=210",
+        "https://aquaplus.jp/toheart/en.html"
+      ],
+      "reason": "DMM GAMES是EXNOA运营的平台／对外名称；同名合同会社于2020-04-10更名EXNOA，原始署名须按各期版本理解。这里保留既有发行职责，仅订正这组未标法律后缀署名的对外品牌身份；不合并法人、不新增开发或原作品牌职责。",
+      "workIds": [
+        "g037",
+        "nitroplus-extra-touken-online",
+        "nitroplus-extra-touken-musou",
+        "nitroplus-extra-touken-puzzle",
+        "nitroplus-extra-necro-mission"
+      ]
+    },
+    {
+      "entityId": "entity-name-16c097f224f4",
+      "name": "DMM GAMES／AUGUST",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://august-soft.com/20th/history/",
+        "https://august-soft.com/product"
+      ],
+      "reason": "AUGUST官方将《あいりすミスティリア！》表述为双方合作，员工对谈区分AUGUST的世界观、剧本与角色制作和DMM的游戏系统；既有AUGUST合作开发已单列。复合发行署名不是独立法人或品牌，须核原版片尾、条款和各版本合同主体才可拆分，不从斜线推定组织关系。",
+      "workIds": [
+        "august-rpg-imys"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "D",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 10,
+    "processedEntityIds": [
+      "entity-name-96d2374d7b76",
+      "entity-name-959a8e1f98f6",
+      "entity-dataeast",
+      "entity-db_soft",
+      "entity-name-bbf1e79f8c9f",
+      "entity-name-32b13af88204",
+      "entity-name-2ddaddfb96a5",
+      "entity-name-16c097f224f4"
+    ],
+    "nextEntityId": "entity-name-f9e8ee919b2e",
+    "nextName": "Double Fine Productions",
+    "queue": [
+      {
+        "entityId": "entity-name-96d2374d7b76",
+        "name": "D3 Publisher",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-959a8e1f98f6",
+        "name": "D4 Enterprise",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-dataeast",
+        "name": "Data East",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-db_soft",
+        "name": "dB-SOFT（デービーソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bbf1e79f8c9f",
+        "name": "Digital Leisure",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-32b13af88204",
+        "name": "Digiturbo（デジターボ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-2ddaddfb96a5",
+        "name": "DMM GAMES",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-16c097f224f4",
+        "name": "DMM GAMES／AUGUST",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f9e8ee919b2e",
+        "name": "Double Fine Productions",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-4c4c2f63075a",
+        "name": "DreamWorks Interactive",
+        "status": "pending"
+      }
+    ]
+  }
+}
