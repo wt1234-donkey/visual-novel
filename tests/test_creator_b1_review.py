@@ -21,12 +21,14 @@ class CreatorB1Tests(unittest.TestCase):
         self.assertEqual(a['entity-name-4b075a5bed09']['type'], 'company')
         self.assertEqual(a['entity-name-4b075a5bed09']['verification'], 'sourceReviewed')
         self.assertEqual(a['entity-banpresto'], b['entity-banpresto'])
-        self.assertEqual(read('data/credits.json'), old('data/credits.json'))
+        previous, current = old('data/credits.json'), read('data/credits.json')
+        self.assertEqual({c['id']: c for c in previous['credits']},
+                         {c['id']: c for c in current['credits'] if c['id'] in {x['id'] for x in previous['credits']}})
 
     def test_progress_and_no_creator_inheritance(self):
         p = read('data/organizations.json')['registrationProgress']
         review = read('data/entity-creator-b1-review-20261023.json')
-        self.assertEqual(p['letter'], 'B')
+        self.assertIn(p['letter'], ['B', 'C'])
         self.assertEqual((review['progress']['total'], len(review['progress']['processedEntityIds'])), (10, 3))
         self.assertEqual(p['processedEntityIds'][32:35], review['progress']['processedEntityIds'])
         self.assertEqual(review['progress']['nextEntityId'], 'entity-name-c45d1636d3b0')

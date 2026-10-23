@@ -16,12 +16,16 @@ def old(path):
 class CreatorA6ReviewTests(unittest.TestCase):
     def test_no_new_credits_and_azarashi_identity_only(self):
         before, after = old('data/credits.json'), read('data/credits.json')
-        self.assertEqual(before, after)
+        additions = [c for c in after['credits'] if c['id'] not in {x['id'] for x in before['credits']}]
+        self.assertEqual({(c['entityId'], c['workId'], c['role']) for c in additions},
+                         {('entity-name-53ec4c5b9afc', wid, 'productionBrand') for wid in ['g639', 'g640']})
+        self.assertEqual({c['id']: c for c in before['credits']},
+                         {c['id']: c for c in after['credits'] if c['id'] in {x['id'] for x in before['credits']}})
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = {e['id']: e for e in before['entities']}, {e['id']: e for e in after['entities']}
         self.assertEqual(a.keys(), b.keys())
         changed = {eid for eid in b if b[eid] != a[eid]}
-        expected = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3']
+        expected = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1']
                     for c in read(f'data/entity-creator-{filename}-review-20261023.json')['identityCorrections']}
         self.assertEqual(changed, expected)
         e = a['entity-name-a7f6066af4b9']

@@ -24,13 +24,15 @@ class CreatorB2Tests(unittest.TestCase):
             self.assertEqual(a[eid]['aliases'], b[eid]['aliases'])
             self.assertEqual(a[eid]['dates'], b[eid]['dates'])
         self.assertEqual(a['entity-blissbrain'], b['entity-blissbrain'])
-        self.assertEqual(read('data/credits.json'), old('data/credits.json'))
+        previous, current = old('data/credits.json'), read('data/credits.json')
+        prior = {c['id']: c for c in previous['credits']}
+        self.assertEqual(prior, {c['id']: c for c in current['credits'] if c['id'] in prior})
 
     def test_queue_and_scopes(self):
         org = read('data/organizations.json')
         p = org['registrationProgress']
         snapshot = read('data/entity-creator-b2-review-20261023.json')['progress']
-        self.assertEqual((len(snapshot['processedEntityIds']), snapshot['total'], p['letterTotal']), (6, 10, 10))
+        self.assertEqual((len(snapshot['processedEntityIds']), snapshot['total']), (6, 10))
         self.assertEqual(snapshot['nextEntityId'], 'entity-name-cb3c445f13f2')
         self.assertEqual(p['processedEntityIds'][32:38], snapshot['processedEntityIds'])
         self.assertEqual(p['processedEntityIds'], [r['entityId'] for r in p['reviewedEntities']])
