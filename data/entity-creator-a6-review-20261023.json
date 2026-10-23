@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "638d68ce70afc044f3fa000de64911cfbfda0dcb",
+  "audit": "data/entity-creator-a6-review-20261023.md",
+  "previousReview": "data/entity-creator-a5-review-20261023.md",
+  "policy": "连续核查第31—32个A主体，完成A字母队列；仅确认来源明确的品牌／公司身份，不从发行署名批量推导创作职责。保留原始发行署名、既有身份ID、关系、作品位置及迁移基线；AUGUST既有合作职责不重复追加，Azarashi Soft仅订正为品牌主体。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZE-I04",
+      "entityId": "entity-name-a7f6066af4b9",
+      "rawName": "あざらしそふと",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://azarashi-soft.nexton-net.jp/",
+        "https://azarashi-soft.nexton-net.jp/top_sp.html",
+        "https://www.hook-net.jp/htm/old_news/old_news_2019.htm"
+      ],
+      "note": "あざらしそふと官方站点明确自称品牌，并在官方版权页同时列出株式会社ネクストン及あざらしそふと；官方页面还列出姊妹品牌与SMEE合作。仅将历史署名主体订正为品牌，保留《俏皮女友让人无法忽视》现有あざらしそふと／SMEE联合发行记录；未建立未具时期依据的Nexton母公司关系，也不把品牌身份推定为该作独立开发。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-august",
+      "name": "AUGUST",
+      "status": "identityRegistered",
+      "sources": [
+        "https://august-soft.com/product",
+        "https://august-soft.com/20th/history/",
+        "https://games.dmm.com/detail/imys"
+      ],
+      "reason": "AUGUST既有品牌档案与《爱丽丝秘迹》限定联合制作职责已经由前批独立审核记录；本批只完成队列登记，不重复写入职责。DMM GAMES／AUGUST复合发行署名及系统开发、运营分工仍按原记录保留。",
+      "workIds": [
+        "g263",
+        "g264",
+        "g265",
+        "g266",
+        "g267",
+        "g268",
+        "g269",
+        "g270",
+        "g271",
+        "g272",
+        "g273",
+        "g274",
+        "g275",
+        "august-rpg-imys"
+      ],
+      "reviewId": "AZE-D06"
+    },
+    {
+      "entityId": "entity-name-a7f6066af4b9",
+      "name": "Azarashi Soft（あざらしそふと）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://azarashi-soft.nexton-net.jp/",
+        "https://azarashi-soft.nexton-net.jp/top_sp.html",
+        "https://www.hook-net.jp/htm/old_news/old_news_2019.htm"
+      ],
+      "reason": "官方首页与产品页明确使用品牌标签；官方版权说明同时列出株式会社ネクストン及品牌名，足以确认品牌层，但不足以确定历史法人、经营起止或逐作开发分工。现有联合发行记录不升级为创作职责。",
+      "workIds": [
+        "g377"
+      ],
+      "reviewId": "AZE-D07"
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-august",
+      "name": "AUGUST",
+      "status": "identityRegistered",
+      "sources": [
+        "https://august-soft.com/product",
+        "https://august-soft.com/20th/history/",
+        "https://games.dmm.com/detail/imys"
+      ],
+      "reason": "既有品牌档案与前批AUGUST／《爱丽丝秘迹》联合制作审核可直接确认；本批不重复追加记录。",
+      "workIds": [
+        "g263",
+        "g264",
+        "g265",
+        "g266",
+        "g267",
+        "g268",
+        "g269",
+        "g270",
+        "g271",
+        "g272",
+        "g273",
+        "g274",
+        "g275",
+        "august-rpg-imys"
+      ]
+    },
+    {
+      "entityId": "entity-name-a7f6066af4b9",
+      "name": "Azarashi Soft（あざらしそふと）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://azarashi-soft.nexton-net.jp/",
+        "https://azarashi-soft.nexton-net.jp/top_sp.html",
+        "https://www.hook-net.jp/htm/old_news/old_news_2019.htm"
+      ],
+      "reason": "官方页面明确品牌自称并保留Nexton版权提示；联合发行作品继续保留原始署名，不新增开发职责或未经证实的母公司关系。",
+      "workIds": [
+        "g377"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "A",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 32,
+    "processedEntityIds": [
+      "entity-name-4750f74061fe",
+      "entity-name-c31f977d8bac",
+      "entity-name-6ed2a96c53cd",
+      "entity-addison_wesley",
+      "entity-adventure_international",
+      "entity-name-490ea790703a",
+      "entity-name-f0d25e9c6d82",
+      "entity-name-76fdfcac5ffb",
+      "entity-name-b8b1293f82fa",
+      "entity-alice_blue",
+      "entity-alice_noir",
+      "entity-alicesoft",
+      "entity-name-bd36baf4b6a9",
+      "entity-name-788994ba8dfb",
+      "entity-name-5b146b15540c",
+      "entity-angel_hearts",
+      "entity-aniplex",
+      "entity-aniplex_exe",
+      "entity-applique_imouto",
+      "entity-applique",
+      "entity-aquaplus",
+      "entity-aquaplus_brand",
+      "entity-name-5ba1ee4df514",
+      "entity-name-7f11db7a66f2",
+      "entity-asaproject",
+      "entity-ascii",
+      "entity-name-9590651f2922",
+      "entity-name-80a218385951",
+      "entity-name-03ca146bb18c",
+      "entity-name-6cafab111889",
+      "entity-august",
+      "entity-name-a7f6066af4b9"
+    ],
+    "nextEntityId": "entity-name-40ed6431d1a6",
+    "nextName": "Bandai Namco Games",
+    "queue": [
+      {"entityId":"entity-name-4750f74061fe","name":"Accolade","status":"reviewed"},
+      {"entityId":"entity-name-c31f977d8bac","name":"Activision","status":"reviewed"},
+      {"entityId":"entity-name-6ed2a96c53cd","name":"Addison-Wesley Productions","status":"reviewed"},
+      {"entityId":"entity-addison_wesley","name":"Addison-Wesley Publishing Company","status":"reviewed"},
+      {"entityId":"entity-adventure_international","name":"Adventure International","status":"reviewed"},
+      {"entityId":"entity-name-490ea790703a","name":"Adventure Soft","status":"reviewed"},
+      {"entityId":"entity-name-f0d25e9c6d82","name":"âge","status":"reviewed"},
+      {"entityId":"entity-name-76fdfcac5ffb","name":"Akatsuki Games","status":"reviewed"},
+      {"entityId":"entity-name-b8b1293f82fa","name":"Alchemist","status":"reviewed"},
+      {"entityId":"entity-alice_blue","name":"Alice Blue","status":"reviewed"},
+      {"entityId":"entity-alice_noir","name":"AliceNoir","status":"reviewed"},
+      {"entityId":"entity-alicesoft","name":"Alicesoft","status":"reviewed"},
+      {"entityId":"entity-name-bd36baf4b6a9","name":"AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）","status":"reviewed"},
+      {"entityId":"entity-name-788994ba8dfb","name":"American Laser Games","status":"reviewed"},
+      {"entityId":"entity-name-5b146b15540c","name":"aNCHOR","status":"reviewed"},
+      {"entityId":"entity-angel_hearts","name":"Angel Hearts","status":"reviewed"},
+      {"entityId":"entity-aniplex","name":"Aniplex","status":"reviewed"},
+      {"entityId":"entity-aniplex_exe","name":"ANIPLEX.EXE","status":"reviewed"},
+      {"entityId":"entity-applique_imouto","name":"Applique -Imouto-（あっぷりけ-妹-）","status":"reviewed"},
+      {"entityId":"entity-applique","name":"Applique（あっぷりけ）","status":"reviewed"},
+      {"entityId":"entity-aquaplus","name":"AQUAPLUS","status":"reviewed"},
+      {"entityId":"entity-aquaplus_brand","name":"AQUAPLUS","status":"reviewed"},
+      {"entityId":"entity-name-5ba1ee4df514","name":"ARIA","status":"reviewed"},
+      {"entityId":"entity-name-7f11db7a66f2","name":"Arsys Software","status":"reviewed"},
+      {"entityId":"entity-asaproject","name":"ASa Project","status":"reviewed"},
+      {"entityId":"entity-ascii","name":"ASCII","status":"reviewed"},
+      {"entityId":"entity-name-9590651f2922","name":"Asmik（アスミック）","status":"reviewed"},
+      {"entityId":"entity-name-80a218385951","name":"Asoberu! BD-GAME（あそべる！BD-GAME）","status":"reviewed"},
+      {"entityId":"entity-name-03ca146bb18c","name":"Atari","status":"reviewed"},
+      {"entityId":"entity-name-6cafab111889","name":"Atlus","status":"reviewed"},
+      {"entityId":"entity-august","name":"AUGUST","status":"reviewed"},
+      {"entityId":"entity-name-a7f6066af4b9","name":"Azarashi Soft（あざらしそふと）","status":"reviewed"}
+    ],
+    "reviewedEntities": [],
+    "audits": []
+  }
+}

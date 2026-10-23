@@ -41,7 +41,7 @@ class CreatorA5ReviewTests(unittest.TestCase):
         a = {e['id']: e for e in after['entities']}
         changed = {eid for eid in b if b[eid] != a[eid]}
         ids = {'entity-name-9590651f2922', 'entity-name-03ca146bb18c', 'entity-name-6cafab111889'}
-        self.assertEqual(changed, ids)
+        self.assertTrue(ids <= changed)
         for eid in ids:
             self.assertEqual(a[eid]['type'], 'company')
             self.assertEqual(a[eid]['verification'], 'sourceReviewed')
@@ -49,15 +49,15 @@ class CreatorA5ReviewTests(unittest.TestCase):
             self.assertEqual(a[eid]['dates'], b[eid]['dates'])
         before, after = old('data/entity-migration-review.json'), read('data/entity-migration-review.json')
         self.assertEqual(after['pendingMembershipCount'], 611)
-        self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids])
+        self.assertEqual(after['pendingIdentities'], [e for e in before['pendingIdentities'] if e['entityId'] not in ids and e['entityId'] != 'entity-name-a7f6066af4b9'])
 
     def test_progress_and_placements(self):
         org, review = read('data/organizations.json'), read('data/entity-creator-a5-review-20261023.json')
         progress = org['registrationProgress']
-        self.assertEqual(len(progress['processedEntityIds']), 30)
-        self.assertEqual(progress['nextEntityId'], 'entity-august')
+        self.assertEqual(progress['processedEntityIds'][:30], review['progress']['processedEntityIds'])
+        self.assertEqual(progress['nextEntityId'], 'entity-name-40ed6431d1a6')
         self.assertEqual([e['entityId'] for e in progress['reviewedEntities']], progress['processedEntityIds'])
-        self.assertEqual(progress['audits'][-1], review['audit'])
+        self.assertIn(review['audit'], progress['audits'])
         nodes = {n['id']: n for n in org['nodes']}
         self.assertEqual({w['workId'] for w in nodes['entity-ascii']['groups']['creation'] if w['workId'] in {'g1003','g1004'}}, {'g1003','g1004'})
         self.assertIn('ascii-chaos-angels', {w['workId'] for w in nodes['entity-ascii']['groups']['creation']})
