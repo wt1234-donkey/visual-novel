@@ -22,7 +22,7 @@ class CreatorF2Tests(unittest.TestCase):
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = ({e['id']: e for e in d['entities']} for d in (before, after))
         self.assertEqual({eid for eid in b if b[eid] != a[eid]},
-                         {x['entityId'] for x in review['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g1-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g2-review-20261024.json')['identityCorrections']})
+                         {x['entityId'] for x in review['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g1-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g2-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g3-review-20261024.json')['identityCorrections']})
         self.assertEqual(before['relations'], after['relations'])
         self.assertEqual([(x['rawName'], x['type']) for x in review['identityCorrections']],
                          [('Firebird', 'brand'), ('Fox Interactive', 'company'),
@@ -37,8 +37,9 @@ class CreatorF2Tests(unittest.TestCase):
         self.assertTrue(review['identityCorrections'][0]['preserveReleaseRoles'])
         before, after = old('data/credits.json'), read('data/credits.json')
         self.assertEqual(before['dossierMemberships'], after['dossierMemberships'])
-        self.assertEqual(after['credits'][:-1], before['credits'])
-        self.assertEqual(after['credits'][-1]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
+        self.assertEqual(after['credits'][:-2], before['credits'])
+        self.assertEqual(after['credits'][-2]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
+        self.assertEqual(after['credits'][-1]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
 
     def test_release_scope_and_order(self):
         review = read('data/entity-creator-f2-review-20261024.json')
@@ -46,7 +47,7 @@ class CreatorF2Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('G', 10, 13, 104, 107, 'Good Smile Company'))
+                         ('G', 13, 13, 107, 107, 'HARUKAZE'))
         self.assertEqual(p['processedEntityIds'][88:94],
                          [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

@@ -21,7 +21,7 @@ class CreatorC2Tests(unittest.TestCase):
         review = read('data/entity-creator-c2-review-20261023.json')
         before, after = ({e['id']: e for e in x['entities']} for x in [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in before if before[eid] != after[eid]},
-                         {c['entityId'] for batch in [review, read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json'), read('data/entity-creator-g1-review-20261024.json'), read('data/entity-creator-g2-review-20261024.json')]
+                         {c['entityId'] for batch in [review, read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json'), read('data/entity-creator-g1-review-20261024.json'), read('data/entity-creator-g2-review-20261024.json'), read('data/entity-creator-g3-review-20261024.json')]
                           for c in batch['identityCorrections']})
         coktel = 'entity-name-8c31b0298459'
         self.assertEqual((before[coktel]['type'], before[coktel]['verification']), ('unknown', 'unresolved'))
@@ -32,7 +32,7 @@ class CreatorC2Tests(unittest.TestCase):
         additions = [a[cid] for cid in a.keys() - b.keys()]
         self.assertEqual({(c['entityId'], c['workId'], c['role'], c['targetType']) for c in additions},
                          {('entity-name-21365baf366d', wid, 'originalProduction', 'work') for wid in ['g021', 'g022', 'g170']} |
-                         {('entity-name-f9e8ee919b2e', 'g978', 'originalProduction', 'work'), ('entity-elf', 'g320', 'originalProduction', 'work'), ('entity-enix', 'g984', 'originalProduction', 'work'), ('entity-name-49d0968e137f', 'nitroplus-extra-blasterz', 'coDeveloper', 'work'), ('entity-name-acf6175f07fb', 'sierra-on-line-zeliard', 'originalProduction', 'work')})
+                         {('entity-name-f9e8ee919b2e', 'g978', 'originalProduction', 'work'), ('entity-elf', 'g320', 'originalProduction', 'work'), ('entity-enix', 'g984', 'originalProduction', 'work'), ('entity-name-49d0968e137f', 'nitroplus-extra-blasterz', 'coDeveloper', 'work'), ('entity-name-acf6175f07fb', 'sierra-on-line-zeliard', 'originalProduction', 'work'), ('entity-name-4d8bc5606e40', 'g650', 'productionBrand', 'work')})
         self.assertEqual({c['reviewId'] for c in additions if c['reviewRecord'] == review['audit']},
                          {c['reviewId'] for c in review['creditAdditions']})
         self.assertEqual([m for m in read('data/credits.json')['dossierMemberships'] if (m['dossierId'], m['workId']) not in {('elf', 'g320'), ('enix', 'g984')}],
@@ -42,7 +42,7 @@ class CreatorC2Tests(unittest.TestCase):
         current, prior = read('data/organizations.json'), old('data/organizations.json')
         p = current['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']),
-                         ('G', 10, 13, 104, 107))
+                         ('G', 13, 13, 107, 107))
         self.assertEqual(read('data/entity-creator-c2-review-20261023.json')['progress']['nextEntityId'], 'entity-name-3e85e8c3e1f3')
         self.assertEqual(current['works'], prior['works'])
         nodes, previous = [{n['id']: n for n in x['nodes']} for x in [current, prior]]

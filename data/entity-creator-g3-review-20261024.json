@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "4dfab7f",
+  "audit": "data/entity-creator-g3-review-20261024.md",
+  "previousReview": "data/entity-creator-g2-review-20261024.md",
+  "policy": "按组织与沿革左侧G字母第11—13项连续核查；品牌原作制作限定具体作品，发行法人不推开发，所有原发行、身份关系与迁移基线保持。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZG3-I01",
+      "entityId": "entity-name-7c36813da51c",
+      "rawName": "Good Smile Company",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://corporate.goodsmile.com/en/about-en/",
+        "https://www.nitroplus.co.jp/news/2021/11504.php"
+      ],
+      "note": "Good Smile Company官方法人档案列公司名和游戏经营业务；Nitroplus 2021原作消息逐项署Good Smile Company配信、NextNinja开发运营。现有iOS/Android两行仅证明发行，不转记原作／程序开发；若要登记其具体企划职责需该作官方片尾或项目资料。"
+    },
+    {
+      "reviewId": "AZG3-I02",
+      "entityId": "entity-name-4d8bc5606e40",
+      "rawName": "GROOVER",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://note.com/milktub696/n/nbf8eeeb3348d",
+        "https://w.atwiki.jp/ercr/pages/2904.html"
+      ],
+      "note": "原作制作人bamboo亲述2001年《グリーングリーン》是其在GROOVER品牌首作，原版职员表转录也把GROOVER列品牌。仅给g650原作登记制作品牌；2013 OVERDRIVE EDITION属另一期，未知旧公司法人与合同关系不据品牌名建立。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZG3-I03",
+      "entityId": "entity-name-5bae781ea87d",
+      "rawName": "GT Interactive",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+        "https://oldunreal.com/guides/Unreal%20manual.pdf",
+        "https://www.sec.gov/news/digest/1998/dig090298.pdf"
+      ],
+      "note": "1999原版《Return to Na Pali》手册明署GT Interactive Software Corp.发行并把Legend列另一主体；1998《Unreal》手册列GT制作管理／测试与Epic团队分栏。GT为发行法人，不因母子关系或项目管理推全部游戏创作；《Wheel of Time》与《Abe’s Exoddus》旧发行分别缺同期原盒/版权页复核。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZG3-C01",
+      "entityId": "entity-name-4d8bc5606e40",
+      "dossierId": null,
+      "workId": "g650",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "GROOVER",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://note.com/milktub696/n/nbf8eeeb3348d",
+      "note": "《グリーングリーン》原制作人bamboo自述本作是其在GROOVER品牌的2001年首个制作项目；仅把GROOVER记作2001原作制作品牌。旧发行publisher、2013 OVERDRIVE EDITION及独立开发工序保持各自版本。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-7c36813da51c",
+      "name": "Good Smile Company",
+      "status": "identityRegistered",
+      "sources": [
+        "https://corporate.goodsmile.com/en/about-en/",
+        "https://www.nitroplus.co.jp/news/2021/11504.php"
+      ],
+      "reason": "Good Smile Company官方法人档案列公司名和游戏经营业务；Nitroplus 2021原作消息逐项署Good Smile Company配信、NextNinja开发运营。现有iOS/Android两行仅证明发行，不转记原作／程序开发；若要登记其具体企划职责需该作官方片尾或项目资料。",
+      "workIds": [
+        "nitroplus-extra-arsnotoria"
+      ]
+    },
+    {
+      "entityId": "entity-name-4d8bc5606e40",
+      "name": "GROOVER",
+      "status": "creationRegistered",
+      "sources": [
+        "https://note.com/milktub696/n/nbf8eeeb3348d",
+        "https://w.atwiki.jp/ercr/pages/2904.html"
+      ],
+      "reason": "原作制作人bamboo亲述2001年《グリーングリーン》是其在GROOVER品牌首作，原版职员表转录也把GROOVER列品牌。仅给g650原作登记制作品牌；2013 OVERDRIVE EDITION属另一期，未知旧公司法人与合同关系不据品牌名建立。",
+      "workIds": [
+        "g650"
+      ]
+    },
+    {
+      "entityId": "entity-name-5bae781ea87d",
+      "name": "GT Interactive",
+      "status": "identityRegistered",
+      "sources": [
+        "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+        "https://oldunreal.com/guides/Unreal%20manual.pdf",
+        "https://www.sec.gov/news/digest/1998/dig090298.pdf"
+      ],
+      "reason": "1999原版《Return to Na Pali》手册明署GT Interactive Software Corp.发行并把Legend列另一主体；1998《Unreal》手册列GT制作管理／测试与Epic团队分栏。GT为发行法人，不因母子关系或项目管理推全部游戏创作；《Wheel of Time》与《Abe’s Exoddus》旧发行分别缺同期原盒/版权页复核。",
+      "workIds": [
+        "legend-entertainment-wheel-of-time",
+        "legend-entertainment-unreal-na-pali",
+        "riverhill-abe"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-7c36813da51c",
+      "name": "Good Smile Company",
+      "status": "identityRegistered",
+      "sources": [
+        "https://corporate.goodsmile.com/en/about-en/",
+        "https://www.nitroplus.co.jp/news/2021/11504.php"
+      ],
+      "reason": "Good Smile Company官方法人档案列公司名和游戏经营业务；Nitroplus 2021原作消息逐项署Good Smile Company配信、NextNinja开发运营。现有iOS/Android两行仅证明发行，不转记原作／程序开发；若要登记其具体企划职责需该作官方片尾或项目资料。",
+      "workIds": [
+        "nitroplus-extra-arsnotoria"
+      ]
+    },
+    {
+      "entityId": "entity-name-4d8bc5606e40",
+      "name": "GROOVER",
+      "status": "creationRegistered",
+      "sources": [
+        "https://note.com/milktub696/n/nbf8eeeb3348d",
+        "https://w.atwiki.jp/ercr/pages/2904.html"
+      ],
+      "reason": "原作制作人bamboo亲述2001年《グリーングリーン》是其在GROOVER品牌首作，原版职员表转录也把GROOVER列品牌。仅给g650原作登记制作品牌；2013 OVERDRIVE EDITION属另一期，未知旧公司法人与合同关系不据品牌名建立。",
+      "workIds": [
+        "g650"
+      ]
+    },
+    {
+      "entityId": "entity-name-5bae781ea87d",
+      "name": "GT Interactive",
+      "status": "identityRegistered",
+      "sources": [
+        "https://oldunreal.com/guides/Unreal%20NaPali%20Manual.pdf",
+        "https://oldunreal.com/guides/Unreal%20manual.pdf",
+        "https://www.sec.gov/news/digest/1998/dig090298.pdf"
+      ],
+      "reason": "1999原版《Return to Na Pali》手册明署GT Interactive Software Corp.发行并把Legend列另一主体；1998《Unreal》手册列GT制作管理／测试与Epic团队分栏。GT为发行法人，不因母子关系或项目管理推全部游戏创作；《Wheel of Time》与《Abe’s Exoddus》旧发行分别缺同期原盒/版权页复核。",
+      "workIds": [
+        "legend-entertainment-wheel-of-time",
+        "legend-entertainment-unreal-na-pali",
+        "riverhill-abe"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "G",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-name-9eb4e4c25db9",
+      "entity-gaina",
+      "entity-gainax",
+      "entity-name-acf6175f07fb",
+      "entity-name-b8429ea71808",
+      "entity-name-0956fc2c3ad0",
+      "entity-name-6ce5a7f6ac91",
+      "entity-name-f7fd3e45b4ae",
+      "entity-name-c30e25476da0",
+      "entity-name-4671824b3a8c",
+      "entity-name-7c36813da51c",
+      "entity-name-4d8bc5606e40",
+      "entity-name-5bae781ea87d"
+    ],
+    "nextEntityId": "entity-harukaze",
+    "nextName": "HARUKAZE",
+    "queue": [
+      {
+        "entityId": "entity-name-9eb4e4c25db9",
+        "name": "G-MODE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-gaina",
+        "name": "GAINA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-gainax",
+        "name": "GAINAX",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-acf6175f07fb",
+        "name": "Game Arts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b8429ea71808",
+        "name": "GameBank（ゲームバンク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0956fc2c3ad0",
+        "name": "General Products",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6ce5a7f6ac91",
+        "name": "GeneX",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f7fd3e45b4ae",
+        "name": "GeneX（ジェネックス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c30e25476da0",
+        "name": "GigasDrop.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-4671824b3a8c",
+        "name": "Good Navigate（グッドナビゲイト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c36813da51c",
+        "name": "Good Smile Company",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-4d8bc5606e40",
+        "name": "GROOVER",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5bae781ea87d",
+        "name": "GT Interactive",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
