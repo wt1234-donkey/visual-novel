@@ -22,7 +22,7 @@ class CreatorE1Tests(unittest.TestCase):
         before, after = ({e['id']: e for e in data['entities']} for data in
                          [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in before if before[eid] != after[eid]},
-                         {c['entityId'] for c in review['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-e2-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-e3-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-f1-review-20261024.json')['identityCorrections']})
+                         {c['entityId'] for c in review['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-e2-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-e3-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-f1-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-f2-review-20261024.json')['identityCorrections']})
         for correction in review['identityCorrections']:
             eid = correction['entityId']
             self.assertEqual((before[eid]['type'], before[eid]['verification']),
@@ -43,10 +43,10 @@ class CreatorE1Tests(unittest.TestCase):
         progress = current['registrationProgress']
         review = read('data/entity-creator-e1-review-20261023.json')
         self.assertEqual((progress['letter'], progress['letterProcessed'], progress['letterTotal'],
-                          len(progress['processedEntityIds']), progress['total']), ('F', 5, 11, 88, 94))
+                          len(progress['processedEntityIds']), progress['total']), ('F', 11, 11, 94, 94))
         self.assertEqual(progress['processedEntityIds'][70:74], review['progress']['processedEntityIds'])
         self.assertEqual(review['progress']['nextName'], 'Electronic Arts')
-        self.assertEqual(progress['nextName'], 'Firebird')
+        self.assertEqual(progress['nextName'], 'G-MODE')
         self.assertEqual(current['works'], before['works'])
         old_nodes = {n['id']: n for n in before['nodes']}
         nodes = {n['id']: n for n in current['nodes']}
