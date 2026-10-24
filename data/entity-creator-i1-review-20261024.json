@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "42057ac4da3071bb444cdce55519c8b4be2a00de",
+  "audit": "data/entity-creator-i1-review-20261024.md",
+  "previousReview": "data/entity-creator-h3-review-20261024.md",
+  "policy": "I组按英文排序核首三家；分离历史发行、法人身份、原作製作与后发改编开发，原库、专题位置、迁移基线及既有关系保持。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZI1-I01",
+      "entityId": "entity-name-382a9f6ab2ee",
+      "rawName": "IDEA FACTORY",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.ideaf.co.jp/company/"
+      ],
+      "note": "公司官网载アイディアファクトリー株式会社（IDEA FACTORY Co., Ltd.），1994年10月27日设立；仅确认旧IDEA FACTORY发行署名指向法人，不由乙女品牌或共同版权推断两部安琪莉可的实际开发。"
+    },
+    {
+      "reviewId": "AZI1-I02",
+      "entityId": "entity-name-b72187fd26e6",
+      "rawName": "Imageepoch",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.jrpg.jp/policy.html",
+        "https://www.tdb.co.jp/report/bankruptcy/flash/4047/"
+      ],
+      "note": "历史当事方JRPG.jp版权条款明列株式会社イメージエポック，2015年企业记录另确认历史法人。只订正旧Imageepoch发行节点类别；3DS后发改编不与ALICESOFT原作合并为同一开发职责。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZI1-C01",
+      "entityId": "entity-name-b72187fd26e6",
+      "dossierId": null,
+      "workId": "nitroplus-extra-sonipro",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "イメージエポック",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.jrpg.jp/game/detail/tid43",
+      "note": "2014年Imageepoch官方产品页对3DS《ソニプロ》明列製作／イメージエポック、開発／タムソフト；仅登记Imageepoch原作制作统筹，不把它记作独立程序开发，也不改变偶像养成的专题关联位置。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-ibm",
+      "name": "IBM",
+      "status": "creationNotInferred",
+      "sources": [
+        "https://mocagh.org/miscgame/zyll-manual.pdf",
+        "https://www.sierragamers.com/wp-content/uploads/2019/12/Kings_Quest_1_Manual_1_IBM_Version.pdf",
+        "https://elisoftware.org/wiki/Peter_And_The_Wolf_(PC,_CD-ROM)_IBM_-_1995_USA,_Canada_Release"
+      ],
+      "reason": "IBM法人历史及七条具体发行沿用。Zyll原版手册只给IBM版权／出版，King’s Quest的IBM PCjr版是原始发行而Sierra创作，Peter and the Wolf原包装称动画由Seventh Level制作；Hyperman合作开发资料彼此有歧义。专题四条待核引用g089、g1198、g1199、ibm-yellow-brick-road继续待核，需IBM PC版盒书／目录的具体发行证据，不能上推原作开发。",
+      "workIds": [
+        "g089",
+        "g057",
+        "g060",
+        "g1194",
+        "g1195",
+        "g1196",
+        "g1197",
+        "g1198",
+        "g1199",
+        "ibm-zyll",
+        "ibm-yellow-brick-road"
+      ]
+    },
+    {
+      "entityId": "entity-name-382a9f6ab2ee",
+      "name": "IDEA FACTORY",
+      "status": "identityConfirmedRoleDeferred",
+      "sources": [
+        "https://www.ideaf.co.jp/company/",
+        "https://www.otomate-p.jp/game/game-96/",
+        "https://www.otomate.jp/neoangelique/info/"
+      ],
+      "reason": "官网法人名称与IDEA FACTORY Co., Ltd.拼写证公司身份；两款安琪莉可档案的原发行与版权仍分开，版权未分清独立开发者／授权，缺原版职员表及与光荣特库摩分工，暂不新增作品开发。",
+      "workIds": [
+        "g1054",
+        "g1055"
+      ]
+    },
+    {
+      "entityId": "entity-name-b72187fd26e6",
+      "name": "Imageepoch",
+      "status": "identityAndProductionConfirmed",
+      "sources": [
+        "https://www.jrpg.jp/policy.html",
+        "https://www.jrpg.jp/game/detail/tid41",
+        "https://www.jrpg.jp/game/detail/tid43",
+        "https://www.tdb.co.jp/report/bankruptcy/flash/4047/"
+      ],
+      "reason": "本社版权条款明列株式会社イメージエポック；当事方产品页将3DS《ソニプロ》製作署Imageepoch、开发署Tamsoft，故只加前者原作制作。3DS《闘神都市》製作和开发均署Imageepoch，但它是1994年ALICESOFT《闘神都市II》的后发改编，开发仅适用于alicesoft-extra-toushin2-v3，需版本级重制开发角色再登记，不倒填到原作。",
+      "workIds": [
+        "alicesoft-extra-toushin2",
+        "nitroplus-extra-sonipro"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-ibm",
+      "name": "IBM",
+      "status": "creationNotInferred",
+      "sources": [
+        "https://mocagh.org/miscgame/zyll-manual.pdf",
+        "https://www.sierragamers.com/wp-content/uploads/2019/12/Kings_Quest_1_Manual_1_IBM_Version.pdf",
+        "https://elisoftware.org/wiki/Peter_And_The_Wolf_(PC,_CD-ROM)_IBM_-_1995_USA,_Canada_Release"
+      ],
+      "reason": "IBM法人历史及七条具体发行沿用。Zyll原版手册只给IBM版权／出版，King’s Quest的IBM PCjr版是原始发行而Sierra创作，Peter and the Wolf原包装称动画由Seventh Level制作；Hyperman合作开发资料彼此有歧义。专题四条待核引用g089、g1198、g1199、ibm-yellow-brick-road继续待核，需IBM PC版盒书／目录的具体发行证据，不能上推原作开发。",
+      "workIds": [
+        "g089",
+        "g057",
+        "g060",
+        "g1194",
+        "g1195",
+        "g1196",
+        "g1197",
+        "g1198",
+        "g1199",
+        "ibm-zyll",
+        "ibm-yellow-brick-road"
+      ]
+    },
+    {
+      "entityId": "entity-name-382a9f6ab2ee",
+      "name": "IDEA FACTORY",
+      "status": "identityConfirmedRoleDeferred",
+      "sources": [
+        "https://www.ideaf.co.jp/company/",
+        "https://www.otomate-p.jp/game/game-96/",
+        "https://www.otomate.jp/neoangelique/info/"
+      ],
+      "reason": "官网法人名称与IDEA FACTORY Co., Ltd.拼写证公司身份；两款安琪莉可档案的原发行与版权仍分开，版权未分清独立开发者／授权，缺原版职员表及与光荣特库摩分工，暂不新增作品开发。",
+      "workIds": [
+        "g1054",
+        "g1055"
+      ]
+    },
+    {
+      "entityId": "entity-name-b72187fd26e6",
+      "name": "Imageepoch",
+      "status": "identityAndProductionConfirmed",
+      "sources": [
+        "https://www.jrpg.jp/policy.html",
+        "https://www.jrpg.jp/game/detail/tid41",
+        "https://www.jrpg.jp/game/detail/tid43",
+        "https://www.tdb.co.jp/report/bankruptcy/flash/4047/"
+      ],
+      "reason": "本社版权条款明列株式会社イメージエポック；当事方产品页将3DS《ソニプロ》製作署Imageepoch、开发署Tamsoft，故只加前者原作制作。3DS《闘神都市》製作和开发均署Imageepoch，但它是1994年ALICESOFT《闘神都市II》的后发改编，开发仅适用于alicesoft-extra-toushin2-v3，需版本级重制开发角色再登记，不倒填到原作。",
+      "workIds": [
+        "alicesoft-extra-toushin2",
+        "nitroplus-extra-sonipro"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "I",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-ibm",
+      "entity-name-382a9f6ab2ee",
+      "entity-name-b72187fd26e6"
+    ],
+    "nextEntityId": "entity-imel",
+    "nextName": "iMel",
+    "queue": [
+      {
+        "entityId": "entity-ibm",
+        "name": "IBM",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-382a9f6ab2ee",
+        "name": "IDEA FACTORY",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b72187fd26e6",
+        "name": "Imageepoch",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-imel",
+        "name": "iMel",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-c73a46096ea7",
+        "name": "Impact Interactive Publishing",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3de89d1ab0a5",
+        "name": "IMYUIC(ALICESOFT)",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-1b20d2df8464",
+        "name": "Index Corporation",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-infocom",
+        "name": "Infocom",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-c8ec85da2361",
+        "name": "Infogrames",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-innocent_grey",
+        "name": "Innocent Grey",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-d7900289691e",
+        "name": "Interchannel",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8447c5d78187",
+        "name": "Interchannel（インターチャネル）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8daa9d3fef6f",
+        "name": "IRI Commerce & Technology（IRIコマース&テクノロジー）",
+        "status": "pending"
+      }
+    ]
+  }
+}

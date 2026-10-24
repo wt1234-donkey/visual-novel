@@ -3,12 +3,13 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'f5ba4378118ebf0ec56e663ad8248bdf4b60944d'
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return load_snapshot(ROOT, path)
 
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))

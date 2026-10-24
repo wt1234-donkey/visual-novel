@@ -3,9 +3,10 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from creator_snapshot import load_snapshot
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '570bf41078e39f9d91fb192bef6ef0ad62d66639'
-def read(path): return json.loads((ROOT / path).read_text())
+def read(path): return load_snapshot(ROOT, path)
 APPLIED = 'f6f53b6faa6bc3ce2091e8cc67c782967fc2a303'
 def applied(path): return json.loads(subprocess.check_output(['git', 'show', f'{APPLIED}:{path}'], cwd=ROOT, text=True))
 def old(path): return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))

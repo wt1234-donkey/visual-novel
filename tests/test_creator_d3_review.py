@@ -3,13 +3,14 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '46f5c48'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return load_snapshot(ROOT, path)
 
 
 def old(path):
