@@ -34,15 +34,15 @@ class CreatorG1Tests(unittest.TestCase):
         b, a = ({c['id']: c for c in d['credits']} for d in (old_credits, new_credits))
         self.assertEqual({cid: a[cid] for cid in b}, b)
         added = [a[cid] for cid in a.keys() - b.keys()]
-        self.assertEqual(len(added), 13)
+        self.assertEqual(len(added), 17)
         c = next(x for x in added if x['reviewRecord'] == review['audit'])
         self.assertEqual((c['entityId'], c['workId'], c['targetType'], c['role'],
                           c['source'], c['reviewId'], c['reviewRecord']),
                          ('entity-name-acf6175f07fb', 'sierra-on-line-zeliard',
                           'work', 'originalProduction', review['creditAdditions'][0]['source'],
                           'AZG1-C01', review['audit']))
-        self.assertEqual([m for m in old_credits['dossierMemberships'] if m['dossierId'] != 'hulotte'],
-                         [m for m in new_credits['dossierMemberships'] if m['dossierId'] != 'hulotte'])
+        self.assertEqual([m for m in old_credits['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}],
+                         [m for m in new_credits['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}])
 
     def test_order_and_original_database_preservation(self):
         review = read('data/entity-creator-g1-review-20261024.json')
@@ -50,7 +50,7 @@ class CreatorG1Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('H', 10, 12, 117, 119, 'HummingBird Soft（ハミングバードソフト）'))
+                         ('H', 12, 12, 119, 119, 'IBM'))
         self.assertEqual(p['processedEntityIds'][94:99],
                          [x['entityId'] for x in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

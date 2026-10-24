@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "1b17dbd",
+  "audit": "data/entity-creator-h3-review-20261024.md",
+  "previousReview": "data/entity-creator-h2-review-20261024.md",
+  "policy": "H组末两家逐项核开发、发行与权利署名；来源中带问号的开发推测继续待核，未指向具体版本的关系不回填。旧主库、历史发行、主体关系和迁移基线保持。",
+  "identityCorrections": [],
+  "creditAdditions": [
+    {
+      "reviewId": "AZH3-C01",
+      "entityId": "entity-hummingbird_soft",
+      "dossierId": null,
+      "workId": "g101",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "ハミングバードソフト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://fm-7.com/museum/products/aibua2n8/",
+      "note": "FM-7馆藏在《帕姆斯》资料中明确将ハミングバードソフト列为开发元，既有同名首发品牌发行职责另列；仅给此原作登记制作品牌，不概括同系列其他作品或每一移植。"
+    },
+    {
+      "reviewId": "AZH3-C02",
+      "entityId": "entity-hummingbird_soft",
+      "dossierId": null,
+      "workId": "g102",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "ハミングバードソフト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://fm-7.com/museum/products/5boixii6/",
+      "note": "FM-7馆藏在《仙境骑士》资料中明确将ハミングバードソフト列为开发元，既有同名首发品牌发行职责另列；仅给此原作登记制作品牌，不概括同系列其他作品或每一移植。"
+    },
+    {
+      "reviewId": "AZH3-C03",
+      "entityId": "entity-hummingbird_soft",
+      "dossierId": null,
+      "workId": "g105",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "ハミングバードソフト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://fm-7.com/museum/products/74ajuk34/",
+      "note": "FM-7馆藏在《深渊》资料中明确将ハミングバードソフト列为开发元，既有同名首发品牌发行职责另列；仅给此原作登记制作品牌，不概括同系列其他作品或每一移植。"
+    },
+    {
+      "reviewId": "AZH3-C04",
+      "entityId": "entity-hunex",
+      "dossierId": null,
+      "workId": "g916",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "HuneX",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www2n.biglobe.ne.jp/~fify/game/pc-fx/fx_63.htm",
+      "note": "1998年PC-FX同期资料明确分列本作开发元HuneX、发行元NEC-HE；HuneX官方WORKS另将原作列在自家项目中并署©1998 HuneX。仅据具名开发栏登记g916原作制作公司；PlayStation版HUMAN发行及后发移植开发另核。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-hummingbird_soft",
+      "name": "HummingBird Soft（ハミングバードソフト）",
+      "status": "creationRegistered",
+      "sources": [
+        "https://fm-7.com/museum/products/5boixii6/",
+        "https://d4e.co.jp/20190304/2946",
+        "https://d4e.co.jp/lights_cat/humming-bird"
+      ],
+      "reason": "FM馆藏具体作品的开发元栏核实《ザ・パームス》《ザ・ナイト・オブ・ワンダーランド》《ABYSS》三部早期原作；ABYSS II单作开发栏附问号，Agni现有材料只够认旧发行。D4权利继承方将Deep Dungeon系列列为当年厂商所作，但各原版承制分工、Square/Asmik发行和部分3DO他社参与还需包装片尾逐作核，保留八条相关职责待核。1982年独立沿革与既有起点描述有差异，需另立事实订正，不静默改写。",
+      "workIds": [
+        "g101",
+        "g102",
+        "g105",
+        "g109",
+        "g1175",
+        "hummingbird-deep-dungeon",
+        "hummingbird-deep-dungeon-2",
+        "hummingbird-deep-dungeon-3",
+        "hummingbird-deep-dungeon-4"
+      ]
+    },
+    {
+      "entityId": "entity-hunex",
+      "name": "HuneX",
+      "status": "creationRegistered",
+      "sources": [
+        "https://www.hunex.co.jp/archives/company/history",
+        "https://www.hunex.co.jp/archives/works/pc-fx",
+        "https://www2n.biglobe.ne.jp/~fify/game/pc-fx/fx_63.htm",
+        "https://www.hunex.co.jp/archives/works/ps1",
+        "https://www.hunex.co.jp/archives/news/eg"
+      ],
+      "reason": "HuneX当事方沿革明确1992年由ヒューマン与NEC-HE合资，2000年独立，自称游戏开发350作以上；1998年同期PC-FX游戏资料把g916开发元明列HuneX、发行元明列NEC-HE，官方WORKS的1998版权交叉支持，限定登记一条原作制作。g838/g840的2025声明只是主机下载版销售移交，不倒填原作；HuneX、NEC-HE、HUMAN分版发行不同。历史合资关系的经营时段／现有Human两个署名ID尚未消歧，不新建自动母子链。",
+      "workIds": [
+        "g916",
+        "g838",
+        "g840"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-hummingbird_soft",
+      "name": "HummingBird Soft（ハミングバードソフト）",
+      "status": "creationRegistered",
+      "sources": [
+        "https://fm-7.com/museum/products/5boixii6/",
+        "https://d4e.co.jp/20190304/2946",
+        "https://d4e.co.jp/lights_cat/humming-bird"
+      ],
+      "reason": "FM馆藏具体作品的开发元栏核实《ザ・パームス》《ザ・ナイト・オブ・ワンダーランド》《ABYSS》三部早期原作；ABYSS II单作开发栏附问号，Agni现有材料只够认旧发行。D4权利继承方将Deep Dungeon系列列为当年厂商所作，但各原版承制分工、Square/Asmik发行和部分3DO他社参与还需包装片尾逐作核，保留八条相关职责待核。1982年独立沿革与既有起点描述有差异，需另立事实订正，不静默改写。",
+      "workIds": [
+        "g101",
+        "g102",
+        "g105",
+        "g109",
+        "g1175",
+        "hummingbird-deep-dungeon",
+        "hummingbird-deep-dungeon-2",
+        "hummingbird-deep-dungeon-3",
+        "hummingbird-deep-dungeon-4"
+      ]
+    },
+    {
+      "entityId": "entity-hunex",
+      "name": "HuneX",
+      "status": "creationRegistered",
+      "sources": [
+        "https://www.hunex.co.jp/archives/company/history",
+        "https://www.hunex.co.jp/archives/works/pc-fx",
+        "https://www2n.biglobe.ne.jp/~fify/game/pc-fx/fx_63.htm",
+        "https://www.hunex.co.jp/archives/works/ps1",
+        "https://www.hunex.co.jp/archives/news/eg"
+      ],
+      "reason": "HuneX当事方沿革明确1992年由ヒューマン与NEC-HE合资，2000年独立，自称游戏开发350作以上；1998年同期PC-FX游戏资料把g916开发元明列HuneX、发行元明列NEC-HE，官方WORKS的1998版权交叉支持，限定登记一条原作制作。g838/g840的2025声明只是主机下载版销售移交，不倒填原作；HuneX、NEC-HE、HUMAN分版发行不同。历史合资关系的经营时段／现有Human两个署名ID尚未消歧，不新建自动母子链。",
+      "workIds": [
+        "g916",
+        "g838",
+        "g840"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "H",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 12,
+    "processedEntityIds": [
+      "entity-harukaze",
+      "entity-hawkeye",
+      "entity-name-5c51b719b1bb",
+      "entity-hokubu",
+      "entity-name-2f2c43ae71dc",
+      "entity-hudson",
+      "entity-hulotte",
+      "entity-hulotte_roi",
+      "entity-name-53708cc2d758",
+      "entity-name-4f1d0851948b",
+      "entity-hummingbird_soft",
+      "entity-hunex"
+    ],
+    "nextEntityId": "entity-ibm",
+    "nextName": "IBM",
+    "queue": [
+      {
+        "entityId": "entity-harukaze",
+        "name": "HARUKAZE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hawkeye",
+        "name": "Hawk Eye（株式会社ホークアイ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5c51b719b1bb",
+        "name": "HIKARI FIELD",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hokubu",
+        "name": "HOKUBU Communication & Industrial（北部通信工業）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-2f2c43ae71dc",
+        "name": "Hudson Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hudson",
+        "name": "Hudson Soft（ハドソンソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hulotte",
+        "name": "HULOTTE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hulotte_roi",
+        "name": "HULOTTE ROI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-53708cc2d758",
+        "name": "HUMAN",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-4f1d0851948b",
+        "name": "Human（ヒューマン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hummingbird_soft",
+        "name": "HummingBird Soft（ハミングバードソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hunex",
+        "name": "HuneX",
+        "status": "reviewed"
+      }
+    ]
+  }
+}

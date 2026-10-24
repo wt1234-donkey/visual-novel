@@ -35,10 +35,10 @@ class CreatorE2Tests(unittest.TestCase):
         self.assertEqual({(c['entityId'], c['workId'], c['role']) for c in added},
                          {('entity-elf', 'g320', 'originalProduction'),
                           ('entity-enix', 'g984', 'originalProduction'), ('entity-name-49d0968e137f', 'nitroplus-extra-blasterz', 'coDeveloper'), ('entity-name-acf6175f07fb', 'sierra-on-line-zeliard', 'originalProduction'), ('entity-name-4d8bc5606e40', 'g650', 'productionBrand')} |
-                         {(c['entityId'], c['workId'], c['role']) for c in read('data/entity-creator-h2-review-20261024.json')['creditAdditions']})
+                         {(c['entityId'], c['workId'], c['role']) for batch in ['h2','h3'] for c in read(f'data/entity-creator-{batch}-review-20261024.json')['creditAdditions']})
         self.assertEqual({(c['reviewId'], c['source']) for c in added},
-                         {(c['reviewId'], c['source']) for batch in [review, read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json'), read('data/entity-creator-g1-review-20261024.json'), read('data/entity-creator-g3-review-20261024.json'), read('data/entity-creator-h1-review-20261024.json'), read('data/entity-creator-h2-review-20261024.json')] for c in batch['creditAdditions']})
-        self.assertTrue(all(c['targetType'] == 'work' and c['reviewRecord'] in {review['audit'], 'data/entity-creator-e3-review-20261024.md', 'data/entity-creator-g1-review-20261024.md', 'data/entity-creator-g3-review-20261024.md', 'data/entity-creator-h2-review-20261024.md'} for c in added))
+                         {(c['reviewId'], c['source']) for batch in [review, read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json'), read('data/entity-creator-g1-review-20261024.json'), read('data/entity-creator-g3-review-20261024.json'), read('data/entity-creator-h1-review-20261024.json'), read('data/entity-creator-h2-review-20261024.json'), read('data/entity-creator-h3-review-20261024.json')] for c in batch['creditAdditions']})
+        self.assertTrue(all(c['targetType'] == 'work' and c['reviewRecord'] in {review['audit'], 'data/entity-creator-e3-review-20261024.md', 'data/entity-creator-g1-review-20261024.md', 'data/entity-creator-g3-review-20261024.md', 'data/entity-creator-h2-review-20261024.md', 'data/entity-creator-h3-review-20261024.md'} for c in added))
         self.assertEqual(old('data/entities.json')['relations'], read('data/entities.json')['relations'])
 
     def test_classification_and_baseline(self):
@@ -46,9 +46,9 @@ class CreatorE2Tests(unittest.TestCase):
         p = after['registrationProgress']
         review = read('data/entity-creator-e2-review-20261024.json')
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
-                          len(p['processedEntityIds']), p['total']), ('H', 10, 12, 117, 119))
+                          len(p['processedEntityIds']), p['total']), ('H', 12, 12, 119, 119))
         self.assertEqual(p['processedEntityIds'][74:78], [e['entityId'] for e in review['reviewedEntities']])
-        self.assertEqual(p['nextName'], 'HummingBird Soft（ハミングバードソフト）')
+        self.assertEqual(p['nextName'], 'IBM')
         self.assertEqual(after['works'], before['works'])
         nodes = {n['id']: n for n in after['nodes']}
         for eid, wid in [('entity-elf', 'g320'), ('entity-enix', 'g984')]:

@@ -34,10 +34,10 @@ class CreatorE3Tests(unittest.TestCase):
         before, after = old('data/credits.json'), read('data/credits.json')
         b, a = ({c['id']: c for c in x['credits']} for x in (before, after))
         self.assertEqual({cid: a[cid] for cid in b}, b)
-        self.assertEqual([m for m in before['dossierMemberships'] if m['dossierId'] != 'hulotte'],
-                         [m for m in after['dossierMemberships'] if m['dossierId'] != 'hulotte'])
+        self.assertEqual([m for m in before['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}],
+                         [m for m in after['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}])
         additions = [a[cid] for cid in a.keys() - b.keys()]
-        self.assertEqual(len(additions), 14)
+        self.assertEqual(len(additions), 18)
         c = next(x for x in additions if x["reviewRecord"] == review["audit"])
         self.assertEqual((c['entityId'], c['workId'], c['targetType'], c['role'], c['source'],
                           c['reviewId'], c['reviewRecord']),
@@ -50,7 +50,7 @@ class CreatorE3Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('H', 10, 12, 117, 119, 'HummingBird Soft（ハミングバードソフト）'))
+                         ('H', 12, 12, 119, 119, 'IBM'))
         self.assertEqual(p['processedEntityIds'][78:83], [x['entityId'] for x in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])
         node = next(n for n in after['nodes'] if n['id'] == 'entity-name-49d0968e137f')

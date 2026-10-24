@@ -31,11 +31,11 @@ class CreatorF1Tests(unittest.TestCase):
             self.assertEqual((a[eid]['aliases'], a[eid]['dates']), (b[eid]['aliases'], b[eid]['dates']))
             self.assertTrue(x['preserveReleaseRoles'])
         before, after = old('data/credits.json'), read('data/credits.json')
-        self.assertEqual([m for m in before['dossierMemberships'] if m['dossierId'] != 'hulotte'],
-                         [m for m in after['dossierMemberships'] if m['dossierId'] != 'hulotte'])
-        self.assertEqual(after['credits'][:-13], before['credits'])
-        self.assertEqual(after['credits'][-13]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
-        self.assertEqual(after['credits'][-12]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
+        self.assertEqual([m for m in before['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}],
+                         [m for m in after['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}])
+        self.assertEqual(after['credits'][:-17], before['credits'])
+        self.assertEqual(after['credits'][-17]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
+        self.assertEqual(after['credits'][-16]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
         credits = read('data/credits.json')['credits']
         expected = {'entity-name-d8351a6222ea': {'g777-v5', 'g777-v6'},
                     'entity-name-4bbd70f3b821': {'g306-v6'}}
@@ -50,7 +50,7 @@ class CreatorF1Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('H', 10, 12, 117, 119, 'HummingBird Soft（ハミングバードソフト）'))
+                         ('H', 12, 12, 119, 119, 'IBM'))
         self.assertEqual(p['processedEntityIds'][83:88], [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])
         old_nodes, nodes = ({n['id']: n for n in data['nodes']} for data in (before, after))

@@ -43,7 +43,7 @@ class CreatorD2Tests(unittest.TestCase):
         p = current['registrationProgress']
         review = read('data/entity-creator-d2-review-20261023.json')
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
-                          len(p['processedEntityIds']), p['total']), ('H', 10, 12, 117, 119))
+                          len(p['processedEntityIds']), p['total']), ('H', 12, 12, 119, 119))
         self.assertEqual(p['processedEntityIds'][60:68], review['progress']['processedEntityIds'])
         self.assertEqual(review['progress']['nextName'], 'Double Fine Productions')
         self.assertEqual(current['works'], previous['works'])
