@@ -92,6 +92,8 @@ python3 scripts/build_company_pages.py --check
 
 2026-10-24 I 字母第二批使用 `entity-creator-i2-review-20261024.json` 与同名 Markdown，按 iMel、Impact Interactive Publishing、IMYUIC(ALICESOFT)、Index Corporation 连续核查，I 累计 7／13。iMel已有六条限定移植开发不重复，Impact及2013年旧Index各订正一项公司身份，均不由出版／运营倒推原作开发。IMYUIC与AliceSoft的复合名义由2022年历史管理改名产生，保留旧数据并单列史实订正需求，不自动合并2020原品牌或2022独立品牌；下一家 Infocom。
 
+2026-10-24 I 字母第三批使用 `entity-creator-i3-review-20261024.json` 与同名 Markdown，连续核查 Infocom、Infogrames、Innocent Grey，I 累计 10／13。根据权利方原始代码公告，只给 Infocom 的《Zork I–III》家用机商业版追加三条原作制作，不并入早期大型机作品；Infogrames 以当事方同期新闻稿和 SEC 申报确认历史美国公司身份，与法国母公司、另一子公司及后起同名品牌分开。Innocent Grey 的11部制作品牌沿用，不重复追加。旧发行、其余职责待核、作品位置、主体关系及迁移基线不改；下一家 Interchannel。
+
 2026-10-22第二批使用 `entity-followup-review-20261022.json` 及同名Markdown，独立于首批和迁移基线。生成器按批次读取，核对旧身份／作品职责后，仅追加5项身份订正与3条作品职责。身份订正不得重复命中同一ID；MangaGamer的品牌身份使用显式 `preserveReleaseRoles: true`，保留旧 `publisher`，不由类型变化自动生成 `publishingBrand` 或 `originalPublishingBrand`。`beforeWorkRoles` 记录追加前的作品层角色；`dossierId: null` 允许仅给具名子品牌追加职责，不将职责上推到父品牌专题。指定专题的订正必须核对其主体和旧待核状态，才解除该条待核。
 
 2026-10-22第三批为 `entity-third-review-20261022.json` 与同名Markdown，独立记录5项公司身份和3条作品职责。Nitroplus公司与同名品牌继续分开；具名制作室／品牌证据只追加品牌制作，不解除公司专题待核。OVERDRIVE具名原作开发则核对自身专题旧状态后解除单条待核。前两批精确差异继续保存在其已应用快照回归中，当前新增差异对照本批baseCommit验证。

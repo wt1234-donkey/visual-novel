@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "0bc18368b3359154936ce6271f41f9496890aaf9",
+  "audit": "data/entity-creator-i3-review-20261024.md",
+  "previousReview": "data/entity-creator-i2-review-20261024.md",
+  "policy": "I组按英文字母顺序核第8—10项；只有具名原作资料增加作品制作，历史美国公司订正不合并法国母公司或再启用品牌；既有作品及原版发行不重写。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZI3-I01",
+      "entityId": "entity-name-c8ec85da2361",
+      "rawName": "Infogrames",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.nintendoworldreport.com/news/7774/mib-2-alien-escape-escapes-to-gamecube",
+        "https://www.sec.gov/Archives/edgar/data/1002607/000095012306002721/y17768e10vkza.htm"
+      ],
+      "note": "2002年当事方《Men in Black II》新闻稿明确Infogrames, Inc.为美国发行法人，SEC申报确认2003年更名Atari, Inc.；仅修正这两条旧发行所共用的历史公司类别，法国IESA及后起同名品牌不在此ID合并。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZI3-C01",
+      "entityId": "entity-infocom",
+      "dossierId": null,
+      "workId": "g002",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Infocom",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+      "note": "微软、Xbox及Activision公布的原始代码说明Infocom团队将早期大型机Zork拆分为家用机三部曲；只记该商业版原作制作，不把1977—1979大型机游戏并入，也不推断其他Infocom名义作品。"
+    },
+    {
+      "reviewId": "AZI3-C02",
+      "entityId": "entity-infocom",
+      "dossierId": null,
+      "workId": "g062",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Infocom",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+      "note": "微软、Xbox及Activision公布的原始代码说明Infocom团队将早期大型机Zork拆分为家用机三部曲；只记该商业版原作制作，不把1977—1979大型机游戏并入，也不推断其他Infocom名义作品。"
+    },
+    {
+      "reviewId": "AZI3-C03",
+      "entityId": "entity-infocom",
+      "dossierId": null,
+      "workId": "g063",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Infocom",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+      "note": "微软、Xbox及Activision公布的原始代码说明Infocom团队将早期大型机Zork拆分为家用机三部曲；只记该商业版原作制作，不把1977—1979大型机游戏并入，也不推断其他Infocom名义作品。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-infocom",
+      "name": "Infocom",
+      "status": "threeOriginalsConfirmed",
+      "sources": [
+        "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+        "https://github.com/historicalsource/zork1"
+      ],
+      "reason": "微软与Xbox/Activision官方公开Zork I、II、III源代码，明确Infocom团队把早期大型机Zork拆分并制作家用机三部曲；现有g002/g062/g063为商业版作品，可追加三条原作制作。原始1977—1979大型机作品不等同于这三部，家用机发行署名仍按旧版本。专题其余经典游戏、Infocomics、RPG及后期同名品牌作品尚需各作原版片尾/源码与时间界限；不把发行或后期品牌一概作原公司开发。",
+      "workIds": [
+        "g002",
+        "g062",
+        "g063",
+        "g1086",
+        "g1088",
+        "g1089",
+        "g1090",
+        "g1091"
+      ]
+    },
+    {
+      "entityId": "entity-name-c8ec85da2361",
+      "name": "Infogrames",
+      "status": "historicalUSCompanyConfirmed",
+      "sources": [
+        "https://www.nintendoworldreport.com/news/7774/mib-2-alien-escape-escapes-to-gamecube",
+        "https://www.sec.gov/Archives/edgar/data/1002607/000095012306002721/y17768e10vkza.htm",
+        "https://greatemerald.eu/lostsites/unreal2/faq.html"
+      ],
+      "reason": "2002年Infogrames Inc.当事方新闻稿直接将Men in Black II列为其发行并称开发为其Melbourne House；同期Unreal II官方FAQ重刊指开发为Legend Entertainment、制造与营销为Infogrames Inc.；SEC申报确认2003年美国法人由Infogrames Inc.更名Atari Inc.。只订正旧共同发行署名为历史公司类别；法国Infogrames Entertainment SA、美国Infogrames Interactive Inc.及2024年再启用的发行品牌另属不同身份，不能自动加沿革边或作品制作。Unreal II原PC版包装可进一步锁定地区版发行。",
+      "workIds": [
+        "melbournehouse-mib2",
+        "legend-entertainment-unreal-ii"
+      ]
+    },
+    {
+      "entityId": "entity-innocent_grey",
+      "name": "Innocent Grey",
+      "status": "alreadyScoped",
+      "sources": [
+        "https://www.gungnir.co.jp/innocentgrey/products/pro_caucasus/cc_index.html",
+        "https://www.gungnir.co.jp/innocentgrey/products/pro_shell3/dl/kara3_pamp01.pdf",
+        "https://www.gungnir.co.jp/innocentgrey/copyright.html"
+      ],
+      "reason": "原有11部g233—g243制作品牌职责已登记；官方当年产品页与制作人员册支持品牌范围，Gungnir权利/制作用语不自动替换逐作署名。后发主机移植与国际发行另按具体版本核，不把品牌创作上推为母公司每部程序开发，也不重复计入作品。",
+      "workIds": [
+        "g233",
+        "g234",
+        "g235",
+        "g236",
+        "g237",
+        "g238",
+        "g239",
+        "g240",
+        "g241",
+        "g242",
+        "g243"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-infocom",
+      "name": "Infocom",
+      "status": "threeOriginalsConfirmed",
+      "sources": [
+        "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+        "https://github.com/historicalsource/zork1"
+      ],
+      "reason": "微软与Xbox/Activision官方公开Zork I、II、III源代码，明确Infocom团队把早期大型机Zork拆分并制作家用机三部曲；现有g002/g062/g063为商业版作品，可追加三条原作制作。原始1977—1979大型机作品不等同于这三部，家用机发行署名仍按旧版本。专题其余经典游戏、Infocomics、RPG及后期同名品牌作品尚需各作原版片尾/源码与时间界限；不把发行或后期品牌一概作原公司开发。",
+      "workIds": [
+        "g002",
+        "g062",
+        "g063",
+        "g1086",
+        "g1088",
+        "g1089",
+        "g1090",
+        "g1091"
+      ]
+    },
+    {
+      "entityId": "entity-name-c8ec85da2361",
+      "name": "Infogrames",
+      "status": "historicalUSCompanyConfirmed",
+      "sources": [
+        "https://www.nintendoworldreport.com/news/7774/mib-2-alien-escape-escapes-to-gamecube",
+        "https://www.sec.gov/Archives/edgar/data/1002607/000095012306002721/y17768e10vkza.htm",
+        "https://greatemerald.eu/lostsites/unreal2/faq.html"
+      ],
+      "reason": "2002年Infogrames Inc.当事方新闻稿直接将Men in Black II列为其发行并称开发为其Melbourne House；同期Unreal II官方FAQ重刊指开发为Legend Entertainment、制造与营销为Infogrames Inc.；SEC申报确认2003年美国法人由Infogrames Inc.更名Atari Inc.。只订正旧共同发行署名为历史公司类别；法国Infogrames Entertainment SA、美国Infogrames Interactive Inc.及2024年再启用的发行品牌另属不同身份，不能自动加沿革边或作品制作。Unreal II原PC版包装可进一步锁定地区版发行。",
+      "workIds": [
+        "melbournehouse-mib2",
+        "legend-entertainment-unreal-ii"
+      ]
+    },
+    {
+      "entityId": "entity-innocent_grey",
+      "name": "Innocent Grey",
+      "status": "alreadyScoped",
+      "sources": [
+        "https://www.gungnir.co.jp/innocentgrey/products/pro_caucasus/cc_index.html",
+        "https://www.gungnir.co.jp/innocentgrey/products/pro_shell3/dl/kara3_pamp01.pdf",
+        "https://www.gungnir.co.jp/innocentgrey/copyright.html"
+      ],
+      "reason": "原有11部g233—g243制作品牌职责已登记；官方当年产品页与制作人员册支持品牌范围，Gungnir权利/制作用语不自动替换逐作署名。后发主机移植与国际发行另按具体版本核，不把品牌创作上推为母公司每部程序开发，也不重复计入作品。",
+      "workIds": [
+        "g233",
+        "g234",
+        "g235",
+        "g236",
+        "g237",
+        "g238",
+        "g239",
+        "g240",
+        "g241",
+        "g242",
+        "g243"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "I",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-ibm",
+      "entity-name-382a9f6ab2ee",
+      "entity-name-b72187fd26e6",
+      "entity-imel",
+      "entity-name-c73a46096ea7",
+      "entity-name-3de89d1ab0a5",
+      "entity-name-1b20d2df8464",
+      "entity-infocom",
+      "entity-name-c8ec85da2361",
+      "entity-innocent_grey"
+    ],
+    "nextEntityId": "entity-name-d7900289691e",
+    "nextName": "Interchannel",
+    "queue": [
+      {
+        "entityId": "entity-ibm",
+        "name": "IBM",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-382a9f6ab2ee",
+        "name": "IDEA FACTORY",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b72187fd26e6",
+        "name": "Imageepoch",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-imel",
+        "name": "iMel",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c73a46096ea7",
+        "name": "Impact Interactive Publishing",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3de89d1ab0a5",
+        "name": "IMYUIC(ALICESOFT)",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1b20d2df8464",
+        "name": "Index Corporation",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-infocom",
+        "name": "Infocom",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c8ec85da2361",
+        "name": "Infogrames",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-innocent_grey",
+        "name": "Innocent Grey",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d7900289691e",
+        "name": "Interchannel",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8447c5d78187",
+        "name": "Interchannel（インターチャネル）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8daa9d3fef6f",
+        "name": "IRI Commerce & Technology（IRIコマース&テクノロジー）",
+        "status": "pending"
+      }
+    ]
+  }
+}

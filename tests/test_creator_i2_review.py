@@ -6,9 +6,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '142723dfcfc155e16f3eccbdefbdeca0649706d7'
+SNAPSHOT = 'c9b7398600cd385e8aabcc58fc8991ad23721446'
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 
@@ -41,7 +44,7 @@ class CreatorI2Tests(unittest.TestCase):
                          [x['entityId'] for x in read('data/entity-creator-i2-review-20261024.json')['reviewedEntities']])
         for path in ['data/games.json', 'data/company-coverage.json', 'data/taxonomy.json',
                      'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
-            self.assertEqual((ROOT / path).read_bytes(),
+            self.assertEqual(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{path}'], cwd=ROOT),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
 
 
