@@ -18,7 +18,7 @@ class CreatorC1Tests(unittest.TestCase):
         review = read('data/entity-creator-c1-review-20261023.json')
         b, a = ({e['id']: e for e in x['entities']} for x in [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in b if b[eid] != a[eid]},
-                         {c['entityId'] for batch in [review, read('data/entity-creator-c2-review-20261023.json'), read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json')]
+                         {c['entityId'] for batch in [review, read('data/entity-creator-c2-review-20261023.json'), read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json'), read('data/entity-creator-g1-review-20261024.json')]
                           for c in batch['identityCorrections']})
         for correction in review['identityCorrections']:
             eid = correction['entityId']
@@ -40,7 +40,7 @@ class CreatorC1Tests(unittest.TestCase):
         p = org['registrationProgress']
         self.assertEqual(p['processedEntityIds'][42:47], read('data/entity-creator-c1-review-20261023.json')['progress']['processedEntityIds'])
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']),
-                         ('F', 11, 11, 94, 94))
+                         ('G', 5, 13, 99, 107))
         self.assertEqual(read('data/entity-creator-c1-review-20261023.json')['progress']['nextEntityId'], 'entity-name-21365baf366d')
         self.assertEqual([r['entityId'] for r in p['reviewedEntities']], p['processedEntityIds'])
         self.assertEqual(org['works'], old('data/organizations.json')['works'])

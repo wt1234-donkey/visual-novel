@@ -21,7 +21,7 @@ class CreatorC4Tests(unittest.TestCase):
         review = read('data/entity-creator-c4-review-20261023.json')
         before, after = ({e['id']: e for e in x['entities']} for x in [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in before if before[eid] != after[eid]},
-                         {entry['entityId'] for batch in [review, read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json')] for entry in batch['identityCorrections']})
+                         {entry['entityId'] for batch in [review, read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json'), read('data/entity-creator-g1-review-20261024.json')] for entry in batch['identityCorrections']})
         for correction in review['identityCorrections']:
             eid = correction['entityId']
             self.assertEqual((before[eid]['type'], before[eid]['verification']), ('unknown', 'unresolved'))
@@ -38,7 +38,7 @@ class CreatorC4Tests(unittest.TestCase):
         p = current['registrationProgress']
         review = read('data/entity-creator-c4-review-20261023.json')
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']),
-                         ('F', 11, 11, 94, 94))
+                         ('G', 5, 13, 99, 107))
         self.assertEqual(review['progress']['nextEntityId'], 'entity-name-96d2374d7b76')
         self.assertEqual(p['processedEntityIds'][42:60], review['progress']['processedEntityIds'])
         self.assertEqual(current['works'], previous['works'])
