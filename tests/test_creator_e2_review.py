@@ -22,7 +22,7 @@ class CreatorE2Tests(unittest.TestCase):
         before, after = ({e['id']: e for e in data['entities']} for data in
                          [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in before if before[eid] != after[eid]},
-                         {x['entityId'] for x in review['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-e3-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-f1-review-20261024.json')['identityCorrections']})
+                         {x['entityId'] for x in review['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-e3-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-f1-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-f2-review-20261024.json')['identityCorrections']})
         for correction in review['identityCorrections']:
             b, a = before[correction['entityId']], after[correction['entityId']]
             self.assertEqual((b['type'], b['verification']), ('unknown', 'unresolved'))
@@ -36,7 +36,7 @@ class CreatorE2Tests(unittest.TestCase):
                          {('entity-elf', 'g320', 'originalProduction'),
                           ('entity-enix', 'g984', 'originalProduction'), ('entity-name-49d0968e137f', 'nitroplus-extra-blasterz', 'coDeveloper')})
         self.assertEqual({(c['reviewId'], c['source']) for c in added},
-                         {(c['reviewId'], c['source']) for batch in [review, read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json')] for c in batch['creditAdditions']})
+                         {(c['reviewId'], c['source']) for batch in [review, read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json'), read('data/entity-creator-f2-review-20261024.json')] for c in batch['creditAdditions']})
         self.assertTrue(all(c['targetType'] == 'work' and c['reviewRecord'] in {review['audit'], 'data/entity-creator-e3-review-20261024.md'} for c in added))
         self.assertEqual(old('data/entities.json')['relations'], read('data/entities.json')['relations'])
 
@@ -45,9 +45,9 @@ class CreatorE2Tests(unittest.TestCase):
         p = after['registrationProgress']
         review = read('data/entity-creator-e2-review-20261024.json')
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
-                          len(p['processedEntityIds']), p['total']), ('F', 5, 11, 88, 94))
+                          len(p['processedEntityIds']), p['total']), ('F', 11, 11, 94, 94))
         self.assertEqual(p['processedEntityIds'][74:78], [e['entityId'] for e in review['reviewedEntities']])
-        self.assertEqual(p['nextName'], 'Firebird')
+        self.assertEqual(p['nextName'], 'G-MODE')
         self.assertEqual(after['works'], before['works'])
         nodes = {n['id']: n for n in after['nodes']}
         for eid, wid in [('entity-elf', 'g320'), ('entity-enix', 'g984')]:
