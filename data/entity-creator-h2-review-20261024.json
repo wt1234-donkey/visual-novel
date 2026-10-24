@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "6bccaa7",
+  "audit": "data/entity-creator-h2-review-20261024.md",
+  "previousReview": "data/entity-creator-h1-review-20261024.md",
+  "policy": "H字母第6—10项连续核查。官方品牌目录仅登记具名主品牌制作；历史发行、他方移植、同形异写身份和旧关系独立保留；书目待核不因发行或版权自动转为开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZH2-I01",
+      "entityId": "entity-name-53708cc2d758",
+      "rawName": "HUMAN",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.hunex.co.jp/archives/works/ps1",
+        "https://prtimes.jp/main/html/rd/p/000000024.000029510.html"
+      ],
+      "note": "HuneX原项目表将HUMAN列为1998年《ファーストKiss☆物語》PlayStation版発売元，同时版权单列HuneX；Sunsoft当事方回顾确认同期的ヒューマン株式会社为历史游戏公司。只核发行方的公司类别；大小写历史署名与另一ヒューマン节点暂不合并，需1998原盒法人版权页作同一性订正。"
+    },
+    {
+      "reviewId": "AZH2-I02",
+      "entityId": "entity-name-4f1d0851948b",
+      "rawName": "ヒューマン",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000024.000029510.html",
+        "https://psxdatacenter.com/games/J/C/SLPS-00657.html"
+      ],
+      "note": "Sunsoft权利方回顾明确1995年クロックタワー原作为ヒューマン株式会社发行，佐证历史法人。现有《クロックタワー2》PS版ヒューマン署名源于后来的游戏索引，1996原盒与片尾待补；不能据1995初代或后世复刻把开发自动移到本条。两个Human字形节点维持原样。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZH2-C01",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g843",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/with-ribbon/",
+      "note": "品牌官网将《With Ribbon》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C02",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g853",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/with-ribbon/download/sScenario.html",
+      "note": "品牌官网将《With Ribbon ショートシナリオ集》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C03",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g844",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/moteyaba/",
+      "note": "品牌官网将《妹のおかげでモテすぎてヤバい。》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C04",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g845",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/ichayaba/",
+      "note": "品牌官网将《叶とメグリとのその後がイチャらぶすぎてヤバい。》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C05",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g846",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/yomeyaba/",
+      "note": "品牌官网将《嫁探しが捗りすぎてヤバい。》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C06",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g847",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/kamiyaba/",
+      "note": "品牌官网将《神頼みしすぎて俺の未来がヤバい。》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C07",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g848",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/atropos/",
+      "note": "品牌官网将《出会って5分は俺のもの！ 時間停止と不可避な運命》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C08",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g849",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/invisible/",
+      "note": "品牌官网将《俺の姿が、透明に！？ 不可視の薬と数奇な運命》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C09",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g851",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/cupid/",
+      "note": "品牌官网将《俺の恋天使がポンコツすぎてコワ～い。》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C10",
+      "entityId": "entity-hulotte",
+      "dossierId": null,
+      "workId": "g852",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/vision/",
+      "note": "品牌官网将《俺の瞳で丸裸！ 不可知な未来と視透かす運命》作为自身发布的原作/附属短篇列示；只登记HULOTTE制作品牌，原版发行与后发移植、本地化另据具体版本署名，不声称全部人员或程序由品牌独立完成。"
+    },
+    {
+      "reviewId": "AZH2-C11",
+      "entityId": "entity-hulotte_roi",
+      "dossierId": null,
+      "workId": "g850",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "HULOTTE ROI",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://hulotte.jp/product/kokoro/",
+      "note": "HULOTTE ROI官网在规格处明确品牌署名，公告称《ココロのカタチとイロとオト》为其出道作。只登记子品牌制作，不上推给HULOTTE母品牌；已知外部音乐人员照原署名。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-hudson",
+      "name": "Hudson Soft（ハドソンソフト）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1191141/000119312505073349/d6k.htm",
+        "https://www.gamepres.org/catalog/?cat=1&id=8811000648008&nav=brand",
+        "https://www.gamepres.org/pc88/library/1985/1985_12.html"
+      ],
+      "reason": "Hudson Soft公司身份已有SEC同期材料；70条旧发行与三项专题职责待核。1985《デゼニワールド》实物目录仅确认发售，旧杂志文字记载Hudson两名制作人参与前期取材，但仍缺原版片尾、具体公司制作署名，保留书目待核；《オリエンタルブルー》《Miami Law》需原项目片尾和承制分工，不能以Hudson发行或北美子公司替代。",
+      "workIds": [
+        "hudson-dezeni-world",
+        "hudson-orientalblue",
+        "g1167"
+      ]
+    },
+    {
+      "entityId": "entity-hulotte",
+      "name": "HULOTTE",
+      "status": "creationRegistered",
+      "sources": [
+        "https://hulotte.jp/pc/products",
+        "https://hulotte.jp/pc/archives/44"
+      ],
+      "reason": "官方产品目录、首作发布及逐作页面确认十个主品牌作品含一个附属短篇；已登记原作发行品牌，本次按每作原始网页补制作品牌。ROI出道作g850仍仅属子品牌，HULOTTE专题引用保持待核；开发程序、美术等具体承制者需片尾逐项审查。",
+      "workIds": [
+        "g843",
+        "g853",
+        "g844",
+        "g845",
+        "g846",
+        "g847",
+        "g848",
+        "g849",
+        "g851",
+        "g852",
+        "g850"
+      ]
+    },
+    {
+      "entityId": "entity-hulotte_roi",
+      "name": "HULOTTE ROI",
+      "status": "creationRegistered",
+      "sources": [
+        "https://hulotte.jp/product/kokoro/",
+        "https://hulotte.jp/pc/archives/2731"
+      ],
+      "reason": "官网规格署HULOTTE ROI并明确该作是子品牌出道作，限定g850一作制作品牌；与HULOTTE既有brandFamily起止未知，不上推母品牌。",
+      "workIds": [
+        "g850"
+      ]
+    },
+    {
+      "entityId": "entity-name-53708cc2d758",
+      "name": "HUMAN",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.hunex.co.jp/archives/works/ps1",
+        "https://prtimes.jp/main/html/rd/p/000000024.000029510.html"
+      ],
+      "reason": "HuneX旧作品表原文HUMAN为PS《ファーストKiss☆物語》发行方，版权归HuneX；核公司身份并保持发行，不将HuneX开发或PC-FX NEC原版改写成HUMAN制作。需1998原盒核法律全称与另一节点的映射。",
+      "workIds": [
+        "g916"
+      ]
+    },
+    {
+      "entityId": "entity-name-4f1d0851948b",
+      "name": "Human（ヒューマン）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000024.000029510.html",
+        "https://psxdatacenter.com/games/J/C/SLPS-00657.html"
+      ],
+      "reason": "Sunsoft当事方证明历史ヒューマン株式会社；现有《クロックタワー2》原发行来自二手索引，原版片尾、包装及其与HUMAN大写节点的对应尚缺。1995初代与1996续作不互推开发。",
+      "workIds": [
+        "g1015"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-hudson",
+      "name": "Hudson Soft（ハドソンソフト）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1191141/000119312505073349/d6k.htm",
+        "https://www.gamepres.org/catalog/?cat=1&id=8811000648008&nav=brand",
+        "https://www.gamepres.org/pc88/library/1985/1985_12.html"
+      ],
+      "reason": "Hudson Soft公司身份已有SEC同期材料；70条旧发行与三项专题职责待核。1985《デゼニワールド》实物目录仅确认发售，旧杂志文字记载Hudson两名制作人参与前期取材，但仍缺原版片尾、具体公司制作署名，保留书目待核；《オリエンタルブルー》《Miami Law》需原项目片尾和承制分工，不能以Hudson发行或北美子公司替代。",
+      "workIds": [
+        "hudson-dezeni-world",
+        "hudson-orientalblue",
+        "g1167"
+      ]
+    },
+    {
+      "entityId": "entity-hulotte",
+      "name": "HULOTTE",
+      "status": "creationRegistered",
+      "sources": [
+        "https://hulotte.jp/pc/products",
+        "https://hulotte.jp/pc/archives/44"
+      ],
+      "reason": "官方产品目录、首作发布及逐作页面确认十个主品牌作品含一个附属短篇；已登记原作发行品牌，本次按每作原始网页补制作品牌。ROI出道作g850仍仅属子品牌，HULOTTE专题引用保持待核；开发程序、美术等具体承制者需片尾逐项审查。",
+      "workIds": [
+        "g843",
+        "g853",
+        "g844",
+        "g845",
+        "g846",
+        "g847",
+        "g848",
+        "g849",
+        "g851",
+        "g852",
+        "g850"
+      ]
+    },
+    {
+      "entityId": "entity-hulotte_roi",
+      "name": "HULOTTE ROI",
+      "status": "creationRegistered",
+      "sources": [
+        "https://hulotte.jp/product/kokoro/",
+        "https://hulotte.jp/pc/archives/2731"
+      ],
+      "reason": "官网规格署HULOTTE ROI并明确该作是子品牌出道作，限定g850一作制作品牌；与HULOTTE既有brandFamily起止未知，不上推母品牌。",
+      "workIds": [
+        "g850"
+      ]
+    },
+    {
+      "entityId": "entity-name-53708cc2d758",
+      "name": "HUMAN",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.hunex.co.jp/archives/works/ps1",
+        "https://prtimes.jp/main/html/rd/p/000000024.000029510.html"
+      ],
+      "reason": "HuneX旧作品表原文HUMAN为PS《ファーストKiss☆物語》发行方，版权归HuneX；核公司身份并保持发行，不将HuneX开发或PC-FX NEC原版改写成HUMAN制作。需1998原盒核法律全称与另一节点的映射。",
+      "workIds": [
+        "g916"
+      ]
+    },
+    {
+      "entityId": "entity-name-4f1d0851948b",
+      "name": "Human（ヒューマン）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000024.000029510.html",
+        "https://psxdatacenter.com/games/J/C/SLPS-00657.html"
+      ],
+      "reason": "Sunsoft当事方证明历史ヒューマン株式会社；现有《クロックタワー2》原发行来自二手索引，原版片尾、包装及其与HUMAN大写节点的对应尚缺。1995初代与1996续作不互推开发。",
+      "workIds": [
+        "g1015"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "H",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 12,
+    "processedEntityIds": [
+      "entity-harukaze",
+      "entity-hawkeye",
+      "entity-name-5c51b719b1bb",
+      "entity-hokubu",
+      "entity-name-2f2c43ae71dc",
+      "entity-hudson",
+      "entity-hulotte",
+      "entity-hulotte_roi",
+      "entity-name-53708cc2d758",
+      "entity-name-4f1d0851948b"
+    ],
+    "nextEntityId": "entity-hummingbird_soft",
+    "nextName": "HummingBird Soft（ハミングバードソフト）",
+    "queue": [
+      {
+        "entityId": "entity-harukaze",
+        "name": "HARUKAZE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hawkeye",
+        "name": "Hawk Eye（株式会社ホークアイ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5c51b719b1bb",
+        "name": "HIKARI FIELD",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hokubu",
+        "name": "HOKUBU Communication & Industrial（北部通信工業）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-2f2c43ae71dc",
+        "name": "Hudson Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hudson",
+        "name": "Hudson Soft（ハドソンソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hulotte",
+        "name": "HULOTTE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hulotte_roi",
+        "name": "HULOTTE ROI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-53708cc2d758",
+        "name": "HUMAN",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-4f1d0851948b",
+        "name": "Human（ヒューマン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hummingbird_soft",
+        "name": "HummingBird Soft（ハミングバードソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-hunex",
+        "name": "HuneX",
+        "status": "pending"
+      }
+    ]
+  }
+}

@@ -22,7 +22,7 @@ class CreatorF1Tests(unittest.TestCase):
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = ({e['id']: e for e in data['entities']} for data in (before, after))
         self.assertEqual({eid for eid in b if b[eid] != a[eid]},
-                         {x['entityId'] for x in review['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-f2-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g1-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g2-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g3-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-h1-review-20261024.json')['identityCorrections']})
+                         {x['entityId'] for x in review['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-f2-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g1-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g2-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g3-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-h1-review-20261024.json')['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-h2-review-20261024.json')['identityCorrections']})
         self.assertEqual(before['relations'], after['relations'])
         for x in review['identityCorrections']:
             eid = x['entityId']
@@ -31,10 +31,11 @@ class CreatorF1Tests(unittest.TestCase):
             self.assertEqual((a[eid]['aliases'], a[eid]['dates']), (b[eid]['aliases'], b[eid]['dates']))
             self.assertTrue(x['preserveReleaseRoles'])
         before, after = old('data/credits.json'), read('data/credits.json')
-        self.assertEqual(before['dossierMemberships'], after['dossierMemberships'])
-        self.assertEqual(after['credits'][:-2], before['credits'])
-        self.assertEqual(after['credits'][-2]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
-        self.assertEqual(after['credits'][-1]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
+        self.assertEqual([m for m in before['dossierMemberships'] if m['dossierId'] != 'hulotte'],
+                         [m for m in after['dossierMemberships'] if m['dossierId'] != 'hulotte'])
+        self.assertEqual(after['credits'][:-13], before['credits'])
+        self.assertEqual(after['credits'][-13]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
+        self.assertEqual(after['credits'][-12]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
         credits = read('data/credits.json')['credits']
         expected = {'entity-name-d8351a6222ea': {'g777-v5', 'g777-v6'},
                     'entity-name-4bbd70f3b821': {'g306-v6'}}
@@ -49,7 +50,7 @@ class CreatorF1Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('H', 5, 12, 112, 119, 'Hudson Soft（ハドソンソフト）'))
+                         ('H', 10, 12, 117, 119, 'HummingBird Soft（ハミングバードソフト）'))
         self.assertEqual(p['processedEntityIds'][83:88], [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])
         old_nodes, nodes = ({n['id']: n for n in data['nodes']} for data in (before, after))
