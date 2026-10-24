@@ -6,9 +6,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '37a7d92010796ef272b69985bb7c514fdfdd0769'
+SNAPSHOT = '142723dfcfc155e16f3eccbdefbdeca0649706d7'
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 
