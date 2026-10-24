@@ -88,6 +88,8 @@ python3 scripts/build_company_pages.py --check
 
 如需纠正原始史实，应在独立变更中保留旧证据、说明订正，并复核基线断言；不得仅为让生成器通过而重算或删除基线。
 
+2026-10-24 I 字母首批使用 `entity-creator-i1-review-20261024.json` 与同名 Markdown，按 IBM、IDEA FACTORY、Imageepoch 连续核查 3／13。IBM 七条既有发行与四项待核关联保持；IDEA FACTORY 和 Imageepoch 各独立订正一项公司身份。Imageepoch 当事方明确将《ソニプロ》製作与 Tamsoft 开发区分，仅追加前者原作制作。3DS《闘神都市》后发改编开发先在审计记版本范围，不倒填至 1994 年原作；历史关系、作品身份和迁移基线不变。下一家 iMel。
+
 2026-10-22第二批使用 `entity-followup-review-20261022.json` 及同名Markdown，独立于首批和迁移基线。生成器按批次读取，核对旧身份／作品职责后，仅追加5项身份订正与3条作品职责。身份订正不得重复命中同一ID；MangaGamer的品牌身份使用显式 `preserveReleaseRoles: true`，保留旧 `publisher`，不由类型变化自动生成 `publishingBrand` 或 `originalPublishingBrand`。`beforeWorkRoles` 记录追加前的作品层角色；`dossierId: null` 允许仅给具名子品牌追加职责，不将职责上推到父品牌专题。指定专题的订正必须核对其主体和旧待核状态，才解除该条待核。
 
 2026-10-22第三批为 `entity-third-review-20261022.json` 与同名Markdown，独立记录5项公司身份和3条作品职责。Nitroplus公司与同名品牌继续分开；具名制作室／品牌证据只追加品牌制作，不解除公司专题待核。OVERDRIVE具名原作开发则核对自身专题旧状态后解除单条待核。前两批精确差异继续保存在其已应用快照回归中，当前新增差异对照本批baseCommit验证。
