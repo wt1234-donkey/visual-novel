@@ -22,7 +22,7 @@ class CreatorF2Tests(unittest.TestCase):
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = ({e['id']: e for e in d['entities']} for d in (before, after))
         self.assertEqual({eid for eid in b if b[eid] != a[eid]},
-                         {x['entityId'] for x in review['identityCorrections']})
+                         {x['entityId'] for x in review['identityCorrections']} | {x['entityId'] for x in read('data/entity-creator-g1-review-20261024.json')['identityCorrections']})
         self.assertEqual(before['relations'], after['relations'])
         self.assertEqual([(x['rawName'], x['type']) for x in review['identityCorrections']],
                          [('Firebird', 'brand'), ('Fox Interactive', 'company'),
@@ -35,7 +35,10 @@ class CreatorF2Tests(unittest.TestCase):
             self.assertEqual((a[eid]['aliases'], a[eid]['dates']), (b[eid]['aliases'], b[eid]['dates']))
             self.assertTrue(x['sources'])
         self.assertTrue(review['identityCorrections'][0]['preserveReleaseRoles'])
-        self.assertEqual(old('data/credits.json'), read('data/credits.json'))
+        before, after = old('data/credits.json'), read('data/credits.json')
+        self.assertEqual(before['dossierMemberships'], after['dossierMemberships'])
+        self.assertEqual(after['credits'][:-1], before['credits'])
+        self.assertEqual(after['credits'][-1]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
 
     def test_release_scope_and_order(self):
         review = read('data/entity-creator-f2-review-20261024.json')
@@ -43,7 +46,7 @@ class CreatorF2Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('F', 11, 11, 94, 94, 'G-MODE'))
+                         ('G', 5, 13, 99, 107, 'General Products'))
         self.assertEqual(p['processedEntityIds'][88:94],
                          [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

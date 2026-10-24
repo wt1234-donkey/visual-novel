@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "3d78a32",
+  "audit": "data/entity-creator-g1-review-20261024.md",
+  "previousReview": "data/entity-creator-f2-review-20261024.md",
+  "policy": "按组织与沿革左侧G字母第1—5项连续核查；旧版与重制范围分离，既有身份关系不合并，具名原作制作仅在专题关联记账。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZG-I01",
+      "entityId": "entity-name-9eb4e4c25db9",
+      "rawName": "G-MODE",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://gmodecorp.com/company",
+        "https://prtimes.jp/main/html/rd/p/000000744.000001474.html"
+      ],
+      "note": "G-MODE官方公司档案及当事方公告确认株式会社ジー・モード；现有两条2024重制发行不证明其制作1984年原作。重制由旧版开发成员和room6合作，若补创作须内容层具名记录，不能以作品级职责覆盖原版。"
+    },
+    {
+      "reviewId": "AZG-I04",
+      "entityId": "entity-name-acf6175f07fb",
+      "rawName": "Game Arts",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.gamearts.co.jp/ja/company/history_of_corp.html",
+        "https://www.gamearts.co.jp/ja/products/pc-zeliard.html",
+        "https://www.gamepres.org/2022/07/23/exhibition2019-miyaji/"
+      ],
+      "note": "Game Arts官方沿革记1985设立并以PC游戏开发起步，1987年列《Zeliard》；官方原版产品页和游戏保存协会对初期作品的当事人口述项目说明可归其原作制作。只加专题关联作品原作制作，不把Sierra的DOS发行或其他作品外推。"
+    },
+    {
+      "reviewId": "AZG-I05",
+      "entityId": "entity-name-b8429ea71808",
+      "rawName": "ゲームバンク",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://mediaarts-db.artmuseums.go.jp/id/C45030",
+        "https://pc.watch.impress.co.jp/docs/article/970106/gamebank.htm",
+        "https://ja.wikipedia.org/wiki/卒業II_〜Neo_Generation〜"
+      ],
+      "note": "文化厅媒体艺术数据库登记1995年设立的ゲームバンク株式会社；1997年同期业界报道也按法人称呼。g831现有Windows 95发行署名仍仅由后来的二手资料支持，需1996原版盒书或同期目录核版本与移植开发；与2015同名新法人不能合并。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZG1-C01",
+      "entityId": "entity-name-acf6175f07fb",
+      "dossierId": null,
+      "workId": "sierra-on-line-zeliard",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "GAME ARTS",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.gamearts.co.jp/ja/company/history_of_corp.html",
+      "note": "官方1985年公司开发起点、1987年《Zeliard》产品沿革与原版官网互证；仅记原作制作。Sierra 1990 DOS发行及后续移植不由此转为Game Arts开发。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-9eb4e4c25db9",
+      "name": "G-MODE",
+      "status": "identityRegistered",
+      "sources": [
+        "https://gmodecorp.com/company",
+        "https://prtimes.jp/main/html/rd/p/000000744.000001474.html"
+      ],
+      "reason": "G-MODE官方公司档案及当事方公告确认株式会社ジー・モード；现有两条2024重制发行不证明其制作1984年原作。重制由旧版开发成员和room6合作，若补创作须内容层具名记录，不能以作品级职责覆盖原版。",
+      "workIds": [
+        "g012"
+      ]
+    },
+    {
+      "entityId": "entity-gaina",
+      "name": "GAINA",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000004.000147544.html"
+      ],
+      "reason": "母公司公告证明GAINA在2025年8月更名BENTEN Film，动画公司且独立于原GAINAX；现有专题无可核游戏创作或发行，不从动画作品推游戏制作。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-gainax",
+      "name": "GAINAX",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://d4e.co.jp/lights_cat/gainax",
+        "https://tinmachine.co.jp/eva_gainax/evangelion.html"
+      ],
+      "reason": "既有GAINAX专题已登记15部主库原作制作；D4历史发行清单及TinMachine授权项目说明其余关联不能一概视为本社开发。五条专题职责待核仍保留，须逐作片尾或原团队证据。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-acf6175f07fb",
+      "name": "Game Arts",
+      "status": "relatedCreationRegistered",
+      "sources": [
+        "https://www.gamearts.co.jp/ja/company/history_of_corp.html",
+        "https://www.gamearts.co.jp/ja/products/pc-zeliard.html",
+        "https://www.gamepres.org/2022/07/23/exhibition2019-miyaji/"
+      ],
+      "reason": "Game Arts官方沿革记1985设立并以PC游戏开发起步，1987年列《Zeliard》；官方原版产品页和游戏保存协会对初期作品的当事人口述项目说明可归其原作制作。只加专题关联作品原作制作，不把Sierra的DOS发行或其他作品外推。",
+      "workIds": [
+        "sierra-on-line-zeliard"
+      ]
+    },
+    {
+      "entityId": "entity-name-b8429ea71808",
+      "name": "GameBank（ゲームバンク）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://mediaarts-db.artmuseums.go.jp/id/C45030",
+        "https://pc.watch.impress.co.jp/docs/article/970106/gamebank.htm",
+        "https://ja.wikipedia.org/wiki/卒業II_〜Neo_Generation〜"
+      ],
+      "reason": "文化厅媒体艺术数据库登记1995年设立的ゲームバンク株式会社；1997年同期业界报道也按法人称呼。g831现有Windows 95发行署名仍仅由后来的二手资料支持，需1996原版盒书或同期目录核版本与移植开发；与2015同名新法人不能合并。",
+      "workIds": [
+        "g831"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-9eb4e4c25db9",
+      "name": "G-MODE",
+      "status": "identityRegistered",
+      "sources": [
+        "https://gmodecorp.com/company",
+        "https://prtimes.jp/main/html/rd/p/000000744.000001474.html"
+      ],
+      "reason": "G-MODE官方公司档案及当事方公告确认株式会社ジー・モード；现有两条2024重制发行不证明其制作1984年原作。重制由旧版开发成员和room6合作，若补创作须内容层具名记录，不能以作品级职责覆盖原版。",
+      "workIds": [
+        "g012"
+      ]
+    },
+    {
+      "entityId": "entity-gaina",
+      "name": "GAINA",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000004.000147544.html"
+      ],
+      "reason": "母公司公告证明GAINA在2025年8月更名BENTEN Film，动画公司且独立于原GAINAX；现有专题无可核游戏创作或发行，不从动画作品推游戏制作。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-gainax",
+      "name": "GAINAX",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://d4e.co.jp/lights_cat/gainax",
+        "https://tinmachine.co.jp/eva_gainax/evangelion.html"
+      ],
+      "reason": "既有GAINAX专题已登记15部主库原作制作；D4历史发行清单及TinMachine授权项目说明其余关联不能一概视为本社开发。五条专题职责待核仍保留，须逐作片尾或原团队证据。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-acf6175f07fb",
+      "name": "Game Arts",
+      "status": "relatedCreationRegistered",
+      "sources": [
+        "https://www.gamearts.co.jp/ja/company/history_of_corp.html",
+        "https://www.gamearts.co.jp/ja/products/pc-zeliard.html",
+        "https://www.gamepres.org/2022/07/23/exhibition2019-miyaji/"
+      ],
+      "reason": "Game Arts官方沿革记1985设立并以PC游戏开发起步，1987年列《Zeliard》；官方原版产品页和游戏保存协会对初期作品的当事人口述项目说明可归其原作制作。只加专题关联作品原作制作，不把Sierra的DOS发行或其他作品外推。",
+      "workIds": [
+        "sierra-on-line-zeliard"
+      ]
+    },
+    {
+      "entityId": "entity-name-b8429ea71808",
+      "name": "GameBank（ゲームバンク）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://mediaarts-db.artmuseums.go.jp/id/C45030",
+        "https://pc.watch.impress.co.jp/docs/article/970106/gamebank.htm",
+        "https://ja.wikipedia.org/wiki/卒業II_〜Neo_Generation〜"
+      ],
+      "reason": "文化厅媒体艺术数据库登记1995年设立的ゲームバンク株式会社；1997年同期业界报道也按法人称呼。g831现有Windows 95发行署名仍仅由后来的二手资料支持，需1996原版盒书或同期目录核版本与移植开发；与2015同名新法人不能合并。",
+      "workIds": [
+        "g831"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "G",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-name-9eb4e4c25db9",
+      "entity-gaina",
+      "entity-gainax",
+      "entity-name-acf6175f07fb",
+      "entity-name-b8429ea71808"
+    ],
+    "nextEntityId": "entity-name-0956fc2c3ad0",
+    "nextName": "General Products",
+    "queue": [
+      {
+        "entityId": "entity-name-9eb4e4c25db9",
+        "name": "G-MODE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-gaina",
+        "name": "GAINA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-gainax",
+        "name": "GAINAX",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-acf6175f07fb",
+        "name": "Game Arts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b8429ea71808",
+        "name": "GameBank（ゲームバンク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0956fc2c3ad0",
+        "name": "General Products",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6ce5a7f6ac91",
+        "name": "GeneX",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-f7fd3e45b4ae",
+        "name": "GeneX（ジェネックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-c30e25476da0",
+        "name": "GigasDrop.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-4671824b3a8c",
+        "name": "Good Navigate（グッドナビゲイト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-7c36813da51c",
+        "name": "Good Smile Company",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-4d8bc5606e40",
+        "name": "GROOVER",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5bae781ea87d",
+        "name": "GT Interactive",
+        "status": "pending"
+      }
+    ]
+  }
+}
