@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "3458c01",
+  "audit": "data/entity-creator-g2-review-20261024.md",
+  "previousReview": "data/entity-creator-g1-review-20261024.md",
+  "policy": "按组织与沿革左侧G字母第6—10项连续核查；仅有同期法人／品牌证据时订正身份，原版与移植版分离，既有身份及关系不合并、不重写发行和迁移基线。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZG2-I01",
+      "entityId": "entity-name-6ce5a7f6ac91",
+      "rawName": "GeneX",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20031228/pm.htm",
+        "https://game.watch.impress.co.jp/docs/20060615/pm4.htm",
+        "https://www.4gamer.net/games/031/G003193/20060615171838/"
+      ],
+      "note": "2003年同期报道直称株式会社ジェネックス，GeneX署名对应的2005年PS2《プリンセスメーカー4》发行保留。2006年Windows版Game Watch写GeneX发行，4Gamer写CyberFront发行，需原盒、版权页与分销合同厘清；不由发行推开发或将不同版混为同一职责。"
+    },
+    {
+      "reviewId": "AZG2-I02",
+      "entityId": "entity-name-f7fd3e45b4ae",
+      "rawName": "GeneX（ジェネックス）",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20031228/pm.htm",
+        "https://game.watch.impress.co.jp/docs/digest/200209.htm",
+        "https://alicecottage1989.blog.jp/archives/37863815.html"
+      ],
+      "note": "同期报道明确株式会社ジェネックス，2002年Only you PS2公告从ジェネックス官方域名链接产品。现有三版发行仅私家目录，仍需各版原盒片尾复核；现阶段保留独立双语署名ID，不自动合并另一GeneX记录，不转成AliceSoft原作开发。"
+    },
+    {
+      "reviewId": "AZG2-I03",
+      "entityId": "entity-name-c30e25476da0",
+      "rawName": "GigasDrop.",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.nitroplus.co.jp/news/2011/2613.php"
+      ],
+      "note": "Nitroplus在2011年同期消息直称GigasDrop.为MAGES.的PC游戏品牌且该日发行《STEINS;GATE 変移空間のオクテット》。仅订正品牌类型，原publisher署名不变；具体开发团队与有时限的经营关系仍需官方制作名单／沿革证明。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZG2-I04",
+      "entityId": "entity-name-4671824b3a8c",
+      "rawName": "グッドナビゲイト",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/800",
+        "https://game.watch.impress.co.jp/docs/20050308/io.htm"
+      ],
+      "note": "F&C官方PS2商品页将グッドナビゲイト列为发行元；2005年同期报道直称株式会社グッドナビゲイト，并区分其GNソフトウェア品牌。g735原作是2008年Cocktail Soft Windows版，该法人2009年PS2发行不证明其创作原作或亲自移植。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-0956fc2c3ad0",
+      "name": "General Products",
+      "status": "requiresSource",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc8801_flop.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/gainax/gainax.htm"
+      ],
+      "reason": "原始PC-88发行记录称General Products，收藏实物按GAINAX制作、GENERAL PRODUCTS销售列示；但同名历史商店、商品品牌与法人经营关系尚无足够同期原件可界定，三条电脑学园发行不证明独立开发。",
+      "workIds": [
+        "gainax-dennou1",
+        "gainax-dennou2",
+        "gainax-dennou3"
+      ]
+    },
+    {
+      "entityId": "entity-name-6ce5a7f6ac91",
+      "name": "GeneX",
+      "status": "identityRegistered",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20031228/pm.htm",
+        "https://game.watch.impress.co.jp/docs/20060615/pm4.htm",
+        "https://www.4gamer.net/games/031/G003193/20060615171838/"
+      ],
+      "reason": "2003年同期报道直称株式会社ジェネックス，GeneX署名对应的2005年PS2《プリンセスメーカー4》发行保留。2006年Windows版Game Watch写GeneX发行，4Gamer写CyberFront发行，需原盒、版权页与分销合同厘清；不由发行推开发或将不同版混为同一职责。",
+      "workIds": [
+        "g823"
+      ]
+    },
+    {
+      "entityId": "entity-name-f7fd3e45b4ae",
+      "name": "GeneX（ジェネックス）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20031228/pm.htm",
+        "https://game.watch.impress.co.jp/docs/digest/200209.htm",
+        "https://alicecottage1989.blog.jp/archives/37863815.html"
+      ],
+      "reason": "同期报道明确株式会社ジェネックス，2002年Only you PS2公告从ジェネックス官方域名链接产品。现有三版发行仅私家目录，仍需各版原盒片尾复核；现阶段保留独立双语署名ID，不自动合并另一GeneX记录，不转成AliceSoft原作开发。",
+      "workIds": [
+        "alicesoft-extra-onlyyou"
+      ]
+    },
+    {
+      "entityId": "entity-name-c30e25476da0",
+      "name": "GigasDrop.",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.nitroplus.co.jp/news/2011/2613.php"
+      ],
+      "reason": "Nitroplus在2011年同期消息直称GigasDrop.为MAGES.的PC游戏品牌且该日发行《STEINS;GATE 変移空間のオクテット》。仅订正品牌类型，原publisher署名不变；具体开发团队与有时限的经营关系仍需官方制作名单／沿革证明。",
+      "workIds": [
+        "g631"
+      ]
+    },
+    {
+      "entityId": "entity-name-4671824b3a8c",
+      "name": "Good Navigate（グッドナビゲイト）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/800",
+        "https://game.watch.impress.co.jp/docs/20050308/io.htm"
+      ],
+      "reason": "F&C官方PS2商品页将グッドナビゲイト列为发行元；2005年同期报道直称株式会社グッドナビゲイト，并区分其GNソフトウェア品牌。g735原作是2008年Cocktail Soft Windows版，该法人2009年PS2发行不证明其创作原作或亲自移植。",
+      "workIds": [
+        "g735"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-0956fc2c3ad0",
+      "name": "General Products",
+      "status": "requiresSource",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc8801_flop.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/gainax/gainax.htm"
+      ],
+      "reason": "原始PC-88发行记录称General Products，收藏实物按GAINAX制作、GENERAL PRODUCTS销售列示；但同名历史商店、商品品牌与法人经营关系尚无足够同期原件可界定，三条电脑学园发行不证明独立开发。",
+      "workIds": [
+        "gainax-dennou1",
+        "gainax-dennou2",
+        "gainax-dennou3"
+      ]
+    },
+    {
+      "entityId": "entity-name-6ce5a7f6ac91",
+      "name": "GeneX",
+      "status": "identityRegistered",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20031228/pm.htm",
+        "https://game.watch.impress.co.jp/docs/20060615/pm4.htm",
+        "https://www.4gamer.net/games/031/G003193/20060615171838/"
+      ],
+      "reason": "2003年同期报道直称株式会社ジェネックス，GeneX署名对应的2005年PS2《プリンセスメーカー4》发行保留。2006年Windows版Game Watch写GeneX发行，4Gamer写CyberFront发行，需原盒、版权页与分销合同厘清；不由发行推开发或将不同版混为同一职责。",
+      "workIds": [
+        "g823"
+      ]
+    },
+    {
+      "entityId": "entity-name-f7fd3e45b4ae",
+      "name": "GeneX（ジェネックス）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20031228/pm.htm",
+        "https://game.watch.impress.co.jp/docs/digest/200209.htm",
+        "https://alicecottage1989.blog.jp/archives/37863815.html"
+      ],
+      "reason": "同期报道明确株式会社ジェネックス，2002年Only you PS2公告从ジェネックス官方域名链接产品。现有三版发行仅私家目录，仍需各版原盒片尾复核；现阶段保留独立双语署名ID，不自动合并另一GeneX记录，不转成AliceSoft原作开发。",
+      "workIds": [
+        "alicesoft-extra-onlyyou"
+      ]
+    },
+    {
+      "entityId": "entity-name-c30e25476da0",
+      "name": "GigasDrop.",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.nitroplus.co.jp/news/2011/2613.php"
+      ],
+      "reason": "Nitroplus在2011年同期消息直称GigasDrop.为MAGES.的PC游戏品牌且该日发行《STEINS;GATE 変移空間のオクテット》。仅订正品牌类型，原publisher署名不变；具体开发团队与有时限的经营关系仍需官方制作名单／沿革证明。",
+      "workIds": [
+        "g631"
+      ]
+    },
+    {
+      "entityId": "entity-name-4671824b3a8c",
+      "name": "Good Navigate（グッドナビゲイト）",
+      "status": "identityRegistered",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/800",
+        "https://game.watch.impress.co.jp/docs/20050308/io.htm"
+      ],
+      "reason": "F&C官方PS2商品页将グッドナビゲイト列为发行元；2005年同期报道直称株式会社グッドナビゲイト，并区分其GNソフトウェア品牌。g735原作是2008年Cocktail Soft Windows版，该法人2009年PS2发行不证明其创作原作或亲自移植。",
+      "workIds": [
+        "g735"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "G",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-name-9eb4e4c25db9",
+      "entity-gaina",
+      "entity-gainax",
+      "entity-name-acf6175f07fb",
+      "entity-name-b8429ea71808",
+      "entity-name-0956fc2c3ad0",
+      "entity-name-6ce5a7f6ac91",
+      "entity-name-f7fd3e45b4ae",
+      "entity-name-c30e25476da0",
+      "entity-name-4671824b3a8c"
+    ],
+    "nextEntityId": "entity-name-7c36813da51c",
+    "nextName": "Good Smile Company",
+    "queue": [
+      {
+        "entityId": "entity-name-9eb4e4c25db9",
+        "name": "G-MODE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-gaina",
+        "name": "GAINA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-gainax",
+        "name": "GAINAX",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-acf6175f07fb",
+        "name": "Game Arts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b8429ea71808",
+        "name": "GameBank（ゲームバンク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0956fc2c3ad0",
+        "name": "General Products",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6ce5a7f6ac91",
+        "name": "GeneX",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-f7fd3e45b4ae",
+        "name": "GeneX（ジェネックス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c30e25476da0",
+        "name": "GigasDrop.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-4671824b3a8c",
+        "name": "Good Navigate（グッドナビゲイト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c36813da51c",
+        "name": "Good Smile Company",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-4d8bc5606e40",
+        "name": "GROOVER",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5bae781ea87d",
+        "name": "GT Interactive",
+        "status": "pending"
+      }
+    ]
+  }
+}
