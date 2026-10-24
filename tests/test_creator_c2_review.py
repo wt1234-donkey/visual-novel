@@ -21,7 +21,7 @@ class CreatorC2Tests(unittest.TestCase):
         review = read('data/entity-creator-c2-review-20261023.json')
         before, after = ({e['id']: e for e in x['entities']} for x in [old('data/entities.json'), read('data/entities.json')])
         self.assertEqual({eid for eid in before if before[eid] != after[eid]},
-                         {c['entityId'] for batch in [review, read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json')]
+                         {c['entityId'] for batch in [review, read('data/entity-creator-c3-review-20261023.json'), read('data/entity-creator-c4-review-20261023.json'), read('data/entity-creator-d1-review-20261023.json'), read('data/entity-creator-d2-review-20261023.json'), read('data/entity-creator-d3-review-20261023.json'), read('data/entity-creator-e1-review-20261023.json'), read('data/entity-creator-e2-review-20261024.json'), read('data/entity-creator-e3-review-20261024.json'), read('data/entity-creator-f1-review-20261024.json')]
                           for c in batch['identityCorrections']})
         coktel = 'entity-name-8c31b0298459'
         self.assertEqual((before[coktel]['type'], before[coktel]['verification']), ('unknown', 'unresolved'))
@@ -42,7 +42,7 @@ class CreatorC2Tests(unittest.TestCase):
         current, prior = read('data/organizations.json'), old('data/organizations.json')
         p = current['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']),
-                         ('E', 13, 13, 83, 83))
+                         ('F', 5, 11, 88, 94))
         self.assertEqual(read('data/entity-creator-c2-review-20261023.json')['progress']['nextEntityId'], 'entity-name-3e85e8c3e1f3')
         self.assertEqual(current['works'], prior['works'])
         nodes, previous = [{n['id']: n for n in x['nodes']} for x in [current, prior]]

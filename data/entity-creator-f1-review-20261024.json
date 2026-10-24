@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "ebff3e6",
+  "audit": "data/entity-creator-f1-review-20261024.md",
+  "previousReview": "data/entity-creator-e3-review-20261024.md",
+  "policy": "按组织与沿革左侧F字母第1—5项顺序核查；身份事实独立证据、旧发行原文与角色保留；后发重制品牌不倒填原作制作。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZF-I01",
+      "entityId": "entity-name-d8351a6222ea",
+      "rawName": "F&C・FC03",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://fandc.co.jp/catalog/pc/754",
+        "https://fandc.co.jp/catalog/pc/631",
+        "https://fandc.co.jp/dreamsoft/about.html"
+      ],
+      "note": "F&C官方目录在2001 DVD版和2003廉价版都以“ブランド：F&C・FC03”具名。DreamSoft沿革提及2001年以此名义起步，但DreamSoft法人继续存续；品牌不等于独立法人，也不追认2000年FairyTale原版制作。保留原发行角色。"
+    },
+    {
+      "reviewId": "AZF-I02",
+      "entityId": "entity-name-4bbd70f3b821",
+      "rawName": "FG REMAKE",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://www.fanzagames-digination.com/fgremake/nonomura_re/",
+        "https://moe-gameaward.com/media/2025/05/30/20204/"
+      ],
+      "note": "FG REMAKE官方产品站与EXNOA原文公告明确为2025年《野々村病院の人々》重制品牌。保留发行行角色；不将重制品牌的参与倒填1994年Silky’s原作，亦不把品牌并入EXNOA法人。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-fandc",
+      "name": "F&C",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://fandc.co.jp/extra/corporate",
+        "https://fandc.co.jp/catalog/pc/754"
+      ],
+      "reason": "官网核实1997年设立公司、从事企划开发发行及系列代表作；具体旧作分品牌、人员及发行，不能将家族作品自动汇总为本社直接开发。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-d8351a6222ea",
+      "name": "F&C・FC03",
+      "status": "identityRegistered",
+      "sources": [
+        "https://fandc.co.jp/catalog/pc/754",
+        "https://fandc.co.jp/catalog/pc/631",
+        "https://fandc.co.jp/dreamsoft/about.html"
+      ],
+      "reason": "F&C同期产品页两版均明确标为品牌；DreamSoft说明2001年春以F&C・FC03起步，品牌和独立法人不要混同。DVD版及廉价版只是2000年FairyTale原作后发，不能回填原作创作。",
+      "workIds": [
+        "g777"
+      ]
+    },
+    {
+      "entityId": "entity-name-fdc56bbd260d",
+      "name": "FANZA GAMES（DG REMAKE）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786",
+        "https://a.sofmap.com/product_detail.aspx?sku=21447788",
+        "https://game.watch.impress.co.jp/docs/news/1308585.html"
+      ],
+      "reason": "现有2021年发行行引用2023年CSver公告，不能据此证明2021年DG REMAKE署名；2021年PC版与2024年主机品牌须版本分别核原版包装和官方同期页面。复合署名暂不宜判为单一主体，历史发行订正须另作具名证据记录。",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-favorite",
+      "name": "FAVORITE",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.favo-soft.jp/soft/product.html",
+        "https://www.favo-soft.jp/soft/guideline.html"
+      ],
+      "reason": "官网产品目录及著作权说明支持既有品牌制作与有限会社フェイバリット法律主体的区分；14部现存制作品牌已登记，不重复添加公司身份或把CROSSNET旧发行误作本品牌发行。主机移植逐版核。",
+      "workIds": [
+        "g388",
+        "g389",
+        "g390",
+        "g391",
+        "g392",
+        "g393",
+        "g394",
+        "g395",
+        "g396",
+        "g397",
+        "g398",
+        "g399",
+        "g400",
+        "g401"
+      ]
+    },
+    {
+      "entityId": "entity-name-4bbd70f3b821",
+      "name": "FG REMAKE",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.fanzagames-digination.com/fgremake/nonomura_re/",
+        "https://moe-gameaward.com/media/2025/05/30/20204/"
+      ],
+      "reason": "官方作品站与EXNOA原文新闻明确FG REMAKE为2025年重制品牌；g306原作是1994年Silky’s，2025年重制已属新增内容但现有逐作新增机制仅支持work，不能以work-level制作品牌倒填1994原作。",
+      "workIds": [
+        "g306"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-fandc",
+      "name": "F&C",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://fandc.co.jp/extra/corporate",
+        "https://fandc.co.jp/catalog/pc/754"
+      ],
+      "reason": "官网核实1997年设立公司、从事企划开发发行及系列代表作；具体旧作分品牌、人员及发行，不能将家族作品自动汇总为本社直接开发。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-d8351a6222ea",
+      "name": "F&C・FC03",
+      "status": "identityRegistered",
+      "sources": [
+        "https://fandc.co.jp/catalog/pc/754",
+        "https://fandc.co.jp/catalog/pc/631",
+        "https://fandc.co.jp/dreamsoft/about.html"
+      ],
+      "reason": "F&C同期产品页两版均明确标为品牌；DreamSoft说明2001年春以F&C・FC03起步，品牌和独立法人不要混同。DVD版及廉价版只是2000年FairyTale原作后发，不能回填原作创作。",
+      "workIds": [
+        "g777"
+      ]
+    },
+    {
+      "entityId": "entity-name-fdc56bbd260d",
+      "name": "FANZA GAMES（DG REMAKE）",
+      "status": "needsMoreSources",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786",
+        "https://a.sofmap.com/product_detail.aspx?sku=21447788",
+        "https://game.watch.impress.co.jp/docs/news/1308585.html"
+      ],
+      "reason": "现有2021年发行行引用2023年CSver公告，不能据此证明2021年DG REMAKE署名；2021年PC版与2024年主机品牌须版本分别核原版包装和官方同期页面。复合署名暂不宜判为单一主体，历史发行订正须另作具名证据记录。",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-favorite",
+      "name": "FAVORITE",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.favo-soft.jp/soft/product.html",
+        "https://www.favo-soft.jp/soft/guideline.html"
+      ],
+      "reason": "官网产品目录及著作权说明支持既有品牌制作与有限会社フェイバリット法律主体的区分；14部现存制作品牌已登记，不重复添加公司身份或把CROSSNET旧发行误作本品牌发行。主机移植逐版核。",
+      "workIds": [
+        "g388",
+        "g389",
+        "g390",
+        "g391",
+        "g392",
+        "g393",
+        "g394",
+        "g395",
+        "g396",
+        "g397",
+        "g398",
+        "g399",
+        "g400",
+        "g401"
+      ]
+    },
+    {
+      "entityId": "entity-name-4bbd70f3b821",
+      "name": "FG REMAKE",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.fanzagames-digination.com/fgremake/nonomura_re/",
+        "https://moe-gameaward.com/media/2025/05/30/20204/"
+      ],
+      "reason": "官方作品站与EXNOA原文新闻明确FG REMAKE为2025年重制品牌；g306原作是1994年Silky’s，2025年重制已属新增内容但现有逐作新增机制仅支持work，不能以work-level制作品牌倒填1994原作。",
+      "workIds": [
+        "g306"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "F",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 11,
+    "processedEntityIds": [
+      "entity-fandc",
+      "entity-name-d8351a6222ea",
+      "entity-name-fdc56bbd260d",
+      "entity-favorite",
+      "entity-name-4bbd70f3b821"
+    ],
+    "nextEntityId": "entity-name-9dbcd9638453",
+    "nextName": "Firebird",
+    "queue": [
+      {
+        "entityId": "entity-fandc",
+        "name": "F&C",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d8351a6222ea",
+        "name": "F&C・FC03",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fdc56bbd260d",
+        "name": "FANZA GAMES（DG REMAKE）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-favorite",
+        "name": "FAVORITE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-4bbd70f3b821",
+        "name": "FG REMAKE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-9dbcd9638453",
+        "name": "Firebird",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-00dfc4724ca6",
+        "name": "Fox Interactive",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-frontwing",
+        "name": "Frontwing",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b5c18c410b18",
+        "name": "Fruitbat Factory",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-60381c8a73f3",
+        "name": "FuRyu",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-27ad495eb1bc",
+        "name": "FuRyu（フリュー）",
+        "status": "pending"
+      }
+    ]
+  }
+}
