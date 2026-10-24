@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "bad7f56331d8b7fc19fa02b48cf6a8b0ec9459f1",
+  "audit": "data/entity-creator-j1-review-20261024.md",
+  "previousReview": "data/entity-creator-i4-review-20261024.md",
+  "policy": "按字母顺序完成J五项；国际发行节点与日本历史公司各自核定，明确具名开发才追加原作制作。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZJ1-I01",
+      "entityId": "entity-name-251c0991e4f6",
+      "rawName": "JAST",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://discuss.jastusa.com/t/jast-needs-to-pay-more-attention-to-release-dates/6294",
+        "https://jaststore.com/page/about-us",
+        "https://jast.games/about"
+      ],
+      "note": "官方工作人员2017年讨论明确称JAST为公司且与J-List不同实体，当前官网Company Info亦以JAST自称；可订正现代国际发行节点为公司类别，但未核定完整注册名称及跨期法人连续性。官方店铺自述1996、发行站正文1998且页脚1996起，成立年份不填；保留旧JAST USA与日本旧JAST独立ID。所列11条Steam发行不直接等同本地化或原作开发，须逐版职员表。"
+    },
+    {
+      "reviewId": "AZJ1-I02",
+      "entityId": "entity-name-8e61b50010ed",
+      "rawName": "JAST USA",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://discuss.jastusa.com/t/official-post-about-starless-nymphomaniacs-paradise/6130?page=6",
+        "https://jaststore.com/page/privacy-policy"
+      ],
+      "note": "2015年官方论坛工作人员Nick明确JAST USA为美国公司，与日本注册的J-List分别；隐私政策以JAST USA为业务主体。仅订正该旧发行署名节点的公司类别，不添加精确注册名、不与现代JAST或日本旧公司合并。五条旧发行不据此新增开发、本地化或母子关系；1990年代具体法律身份与各版制作仍需原始证据。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZJ1-C01",
+      "entityId": "entity-jast",
+      "dossierId": null,
+      "workId": "g015",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "ジャスト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_6Tyibs0v7iKE9uBs.php",
+      "note": "PC-88原版馆录明确開発元ジャスト；FM-7版馆录另列该公司开发作为互证。仅登记g015原作制作，不推定FM-7及后发各版的具体移植程序作者，不扩展至同系列全部作品。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-0483335f6a4f",
+      "name": "J. K. Greye Software",
+      "status": "identityAndDevelopmentPending",
+      "sources": [
+        "https://timexsinclair.com/computer_media/catacombs/index.html",
+        "https://timexsinclair.com/company/j-k-greye-software/index.html"
+      ],
+      "reason": "Catacombs归档及源码1030行只见J.K.GREYE SOFTWARE版权署名，不能单独证明具体开发者或公司法律身份；J.K. Greye Software与Enterprises Ltd的对应及John Greye个人创作须补原盒说明书或当事人资料。保留旧发行节点unknown及Melbourne House专题职责待核，不把后发美国发行当原作制作。",
+      "workIds": [
+        "melbournehouse-catacombs"
+      ]
+    },
+    {
+      "entityId": "entity-jhv",
+      "name": "Japan Home Video",
+      "status": "existingCompanyPublishingOnly",
+      "sources": [
+        "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03",
+        "https://www.namura.net/xkd.com/product/graduation.html"
+      ],
+      "reason": "官网公司概要明确ジャパンホームビデオ株式会社，沿用既有公司身份；原开发人员的卒業实绩将発売メーカーJHV与HEADROOM第一回作品及设计程序署名分列。旧发行和专题关联保留，不能给JHV增加HEADROOM/TENKY/Beluga各作的原作制作。其他原作须逐作职员表核。",
+      "workIds": [
+        "g830",
+        "g831",
+        "g832",
+        "g833",
+        "g834",
+        "jhv-desert",
+        "jhv-star2",
+        "jhv-aggregare",
+        "jhv-samurai"
+      ]
+    },
+    {
+      "entityId": "entity-name-251c0991e4f6",
+      "name": "JAST",
+      "status": "modernCompanyConfirmed",
+      "sources": [
+        "https://discuss.jastusa.com/t/jast-needs-to-pay-more-attention-to-release-dates/6294",
+        "https://jaststore.com/page/about-us",
+        "https://jast.games/about"
+      ],
+      "reason": "官方工作人员2017年讨论明确称JAST为公司且与J-List不同实体，当前官网Company Info亦以JAST自称；可订正现代国际发行节点为公司类别，但未核定完整注册名称及跨期法人连续性。官方店铺自述1996、发行站正文1998且页脚1996起，成立年份不填；保留旧JAST USA与日本旧JAST独立ID。所列11条Steam发行不直接等同本地化或原作开发，须逐版职员表。",
+      "workIds": [
+        "g239",
+        "g240",
+        "g241",
+        "g242",
+        "g163",
+        "g611",
+        "g614",
+        "g616",
+        "g622",
+        "g624",
+        "g625"
+      ]
+    },
+    {
+      "entityId": "entity-name-8e61b50010ed",
+      "name": "JAST USA",
+      "status": "usCompanyConfirmed",
+      "sources": [
+        "https://discuss.jastusa.com/t/official-post-about-starless-nymphomaniacs-paradise/6130?page=6",
+        "https://jaststore.com/page/privacy-policy"
+      ],
+      "reason": "2015年官方论坛工作人员Nick明确JAST USA为美国公司，与日本注册的J-List分别；隐私政策以JAST USA为业务主体。仅订正该旧发行署名节点的公司类别，不添加精确注册名、不与现代JAST或日本旧公司合并。五条旧发行不据此新增开发、本地化或母子关系；1990年代具体法律身份与各版制作仍需原始证据。",
+      "workIds": [
+        "g169",
+        "g662",
+        "g667",
+        "g857"
+      ]
+    },
+    {
+      "entityId": "entity-jast",
+      "name": "JAST（日本）",
+      "status": "oneOriginalConfirmed",
+      "sources": [
+        "https://www.8-bits.info/gamelist/PC88/info/info_6Tyibs0v7iKE9uBs.php",
+        "https://fm-7.com/museum/products/nkobte9s/",
+        "https://w.atwiki.jp/ercr/pages/3611.html"
+      ],
+      "reason": "PC-88馆录在1985原版明确開発元ジャスト，FM-7馆录对1986版另列発売元与開発元均为ジャスト；仅给g015原作追加原作制作，FM-7移植者未知，不概括全部移植。1995转校生职员表转录署PRESENTED BY株式会社ジャスト支持旧公司名义但不独立证明该作具体开发，保留其既有发行。其余系列、Crest及2001年后Purple作品继续逐作待核。",
+      "workIds": [
+        "g015",
+        "g652",
+        "g653",
+        "g654",
+        "g655",
+        "g656",
+        "g657",
+        "g658",
+        "g659",
+        "g660",
+        "g661",
+        "g662",
+        "g663",
+        "g664",
+        "g665",
+        "g666",
+        "g681",
+        "g682",
+        "g1215",
+        "jast-smiles"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-0483335f6a4f",
+      "name": "J. K. Greye Software",
+      "status": "identityAndDevelopmentPending",
+      "sources": [
+        "https://timexsinclair.com/computer_media/catacombs/index.html",
+        "https://timexsinclair.com/company/j-k-greye-software/index.html"
+      ],
+      "reason": "Catacombs归档及源码1030行只见J.K.GREYE SOFTWARE版权署名，不能单独证明具体开发者或公司法律身份；J.K. Greye Software与Enterprises Ltd的对应及John Greye个人创作须补原盒说明书或当事人资料。保留旧发行节点unknown及Melbourne House专题职责待核，不把后发美国发行当原作制作。",
+      "workIds": [
+        "melbournehouse-catacombs"
+      ]
+    },
+    {
+      "entityId": "entity-jhv",
+      "name": "Japan Home Video",
+      "status": "existingCompanyPublishingOnly",
+      "sources": [
+        "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03",
+        "https://www.namura.net/xkd.com/product/graduation.html"
+      ],
+      "reason": "官网公司概要明确ジャパンホームビデオ株式会社，沿用既有公司身份；原开发人员的卒業实绩将発売メーカーJHV与HEADROOM第一回作品及设计程序署名分列。旧发行和专题关联保留，不能给JHV增加HEADROOM/TENKY/Beluga各作的原作制作。其他原作须逐作职员表核。",
+      "workIds": [
+        "g830",
+        "g831",
+        "g832",
+        "g833",
+        "g834",
+        "jhv-desert",
+        "jhv-star2",
+        "jhv-aggregare",
+        "jhv-samurai"
+      ]
+    },
+    {
+      "entityId": "entity-name-251c0991e4f6",
+      "name": "JAST",
+      "status": "modernCompanyConfirmed",
+      "sources": [
+        "https://discuss.jastusa.com/t/jast-needs-to-pay-more-attention-to-release-dates/6294",
+        "https://jaststore.com/page/about-us",
+        "https://jast.games/about"
+      ],
+      "reason": "官方工作人员2017年讨论明确称JAST为公司且与J-List不同实体，当前官网Company Info亦以JAST自称；可订正现代国际发行节点为公司类别，但未核定完整注册名称及跨期法人连续性。官方店铺自述1996、发行站正文1998且页脚1996起，成立年份不填；保留旧JAST USA与日本旧JAST独立ID。所列11条Steam发行不直接等同本地化或原作开发，须逐版职员表。",
+      "workIds": [
+        "g239",
+        "g240",
+        "g241",
+        "g242",
+        "g163",
+        "g611",
+        "g614",
+        "g616",
+        "g622",
+        "g624",
+        "g625"
+      ]
+    },
+    {
+      "entityId": "entity-name-8e61b50010ed",
+      "name": "JAST USA",
+      "status": "usCompanyConfirmed",
+      "sources": [
+        "https://discuss.jastusa.com/t/official-post-about-starless-nymphomaniacs-paradise/6130?page=6",
+        "https://jaststore.com/page/privacy-policy"
+      ],
+      "reason": "2015年官方论坛工作人员Nick明确JAST USA为美国公司，与日本注册的J-List分别；隐私政策以JAST USA为业务主体。仅订正该旧发行署名节点的公司类别，不添加精确注册名、不与现代JAST或日本旧公司合并。五条旧发行不据此新增开发、本地化或母子关系；1990年代具体法律身份与各版制作仍需原始证据。",
+      "workIds": [
+        "g169",
+        "g662",
+        "g667",
+        "g857"
+      ]
+    },
+    {
+      "entityId": "entity-jast",
+      "name": "JAST（日本）",
+      "status": "oneOriginalConfirmed",
+      "sources": [
+        "https://www.8-bits.info/gamelist/PC88/info/info_6Tyibs0v7iKE9uBs.php",
+        "https://fm-7.com/museum/products/nkobte9s/",
+        "https://w.atwiki.jp/ercr/pages/3611.html"
+      ],
+      "reason": "PC-88馆录在1985原版明确開発元ジャスト，FM-7馆录对1986版另列発売元与開発元均为ジャスト；仅给g015原作追加原作制作，FM-7移植者未知，不概括全部移植。1995转校生职员表转录署PRESENTED BY株式会社ジャスト支持旧公司名义但不独立证明该作具体开发，保留其既有发行。其余系列、Crest及2001年后Purple作品继续逐作待核。",
+      "workIds": [
+        "g015",
+        "g652",
+        "g653",
+        "g654",
+        "g655",
+        "g656",
+        "g657",
+        "g658",
+        "g659",
+        "g660",
+        "g661",
+        "g662",
+        "g663",
+        "g664",
+        "g665",
+        "g666",
+        "g681",
+        "g682",
+        "g1215",
+        "jast-smiles"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "J",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 5,
+    "processedEntityIds": [
+      "entity-name-0483335f6a4f",
+      "entity-jhv",
+      "entity-name-251c0991e4f6",
+      "entity-name-8e61b50010ed",
+      "entity-jast"
+    ],
+    "nextEntityId": "entity-name-82fc3d1bfdaa",
+    "nextName": "KADOKAWA",
+    "queue": [
+      {
+        "entityId": "entity-name-0483335f6a4f",
+        "name": "J. K. Greye Software",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-jhv",
+        "name": "Japan Home Video",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-251c0991e4f6",
+        "name": "JAST",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8e61b50010ed",
+        "name": "JAST USA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-jast",
+        "name": "JAST（日本）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}

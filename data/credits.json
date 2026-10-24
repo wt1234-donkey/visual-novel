@@ -63265,6 +63265,21 @@
       "territory": null,
       "reviewId": "AZI3-C03",
       "reviewRecord": "data/entity-creator-i3-review-20261024.md"
+    },
+    {
+      "id": "credit-36a63afd94c35817",
+      "entityId": "entity-jast",
+      "targetType": "work",
+      "targetId": "g015",
+      "workId": "g015",
+      "role": "originalProduction",
+      "rawCredit": "ジャスト",
+      "status": "sourceReviewed",
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_6Tyibs0v7iKE9uBs.php",
+      "note": "PC-88原版馆录明确開発元ジャスト；FM-7版馆录另列该公司开发作为互证。仅登记g015原作制作，不推定FM-7及后发各版的具体移植程序作者，不扩展至同系列全部作品。",
+      "territory": null,
+      "reviewId": "AZJ1-C01",
+      "reviewRecord": "data/entity-creator-j1-review-20261024.md"
     }
   ],
   "dossierMemberships": [
@@ -71716,9 +71731,10 @@
       "workId": "g015",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://ja.wikipedia.org/wiki/ジャスト_(ブランド)",
       "status": "existingEvidence"
     },

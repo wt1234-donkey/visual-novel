@@ -127,3 +127,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-23 D字母第三批使用 `entity-creator-d3-review-20261023.json` 与同名Markdown；核查Double Fine Productions、DreamWorks Interactive，D累计10／10、A—Z累计70／70。Double Fine原有公司身份沿用，官方《Broken Age》片尾支持新增一条原作制作；LucasArts三部旧作的后发复刻另按版本核，不倒填原版创作。DreamWorks Interactive依据微软1996年公告独立订正公司身份，两部旧发行保留，逐作创作待原始片尾；合资背景不自动增加单方母子关系。下一家E3 Staff。
 
 2026-10-24 I4完成I组13／13，审核见 `entity-creator-i4-review-20261024.json` 及同名Markdown。日文Interchannel与IRI-CT各独立订正公司身份；英文Interchannel的2002／2006混合旧署名另核，不合并节点或增加制作职责。下一家J. K. Greye Software。
+
+2026-10-24 J1完成J组5／5，独立记录见 `entity-creator-j1-review-20261024.json` 与同名Markdown。现代JAST与JAST USA各自订正公司类别，不合并身份；日本旧JAST的g015据明确开发馆录增加一条原作制作。JHV发行、J.K.Greye版权及其他未核职责各自保留。下一家KADOKAWA。
