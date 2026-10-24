@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "1153bb6b300219ac06fc293edc6886e7ffea7ed2",
+  "audit": "data/entity-creator-i4-review-20261024.md",
+  "previousReview": "data/entity-creator-i3-review-20261024.md",
+  "policy": "I组末三项；主体类别与逐版原署名分开，时间疑点保留待核；不推定移植开发或合并别名节点。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZI4-I01",
+      "entityId": "entity-name-8447c5d78187",
+      "rawName": "インターチャネル",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/209",
+        "https://www.green-japan.com/company/1320"
+      ],
+      "note": "F&C官方Canvas页面明确2005-03-03 PS2廉价版発売元为インターチャネル，原作为F&C・FC01；具名公司人员采访与同期更名公告支持历史株式会社身份。仅订正该日文旧发行节点的公司类别；保留英文与NEC节点独立ID，不登记原作或移植开发，不由名称相同建立沿革边。"
+    },
+    {
+      "reviewId": "AZI4-I02",
+      "entityId": "entity-name-8daa9d3fef6f",
+      "rawName": "IRIコマース&テクノロジー",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.iid.co.jp/company/history.html",
+        "https://www.suruga-ya.jp/product/detail/145011428"
+      ],
+      "note": "イード官方沿革明确2000年设立株式会社IRIコマース&テクノロジー，2010年与旧イード合并并更名；零售目录将2004卒業复刻合集列IRI-CT。仅核旧署名主体为公司，两部原作与复刻版发行保持，不因复刻出版推定HEADROOM/TENKY原作制作或模拟器开发。包装版权页与承制人员仍待核；不新建现公司身份或自动沿革关系。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-d7900289691e",
+      "name": "Interchannel",
+      "status": "temporalCreditPending",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20040617/ic.htm",
+        "https://www.prot.co.jp/switch/kanon/introduction.html",
+        "https://key.visualarts.gr.jp/clannad_10th/"
+      ],
+      "reason": "旧英文节点混用2002年Kanon PS2与2006年CLANNAD PS2发行；2004年7月更名的同期公告使前者署名存在时间疑点。现引用的Kanon现代移植说明只能证明配音及平台历史，不能核定2002发行法人。保留unknown及两个旧发行，不与NEC Interchannel或日文节点合并；须补原盒、说明书与片尾，另行订正历史发行和基线。未确认逐版移植开发。",
+      "workIds": [
+        "g028",
+        "g030"
+      ]
+    },
+    {
+      "entityId": "entity-name-8447c5d78187",
+      "name": "Interchannel（インターチャネル）",
+      "status": "historicalCompanyConfirmed",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/209",
+        "https://www.green-japan.com/company/1320",
+        "https://game.watch.impress.co.jp/docs/20040617/ic.htm"
+      ],
+      "reason": "F&C官方Canvas页面明确2005-03-03 PS2廉价版発売元为インターチャネル，原作为F&C・FC01；具名公司人员采访与同期更名公告支持历史株式会社身份。仅订正该日文旧发行节点的公司类别；保留英文与NEC节点独立ID，不登记原作或移植开发，不由名称相同建立沿革边。",
+      "workIds": [
+        "g727"
+      ]
+    },
+    {
+      "entityId": "entity-name-8daa9d3fef6f",
+      "name": "IRI Commerce & Technology（IRIコマース&テクノロジー）",
+      "status": "companyConfirmedReissueOnly",
+      "sources": [
+        "https://www.iid.co.jp/company/history.html",
+        "https://www.suruga-ya.jp/product/detail/145011428"
+      ],
+      "reason": "イード官方沿革明确2000年设立株式会社IRIコマース&テクノロジー，2010年与旧イード合并并更名；零售目录将2004卒業复刻合集列IRI-CT。仅核旧署名主体为公司，两部原作与复刻版发行保持，不因复刻出版推定HEADROOM/TENKY原作制作或模拟器开发。包装版权页与承制人员仍待核；不新建现公司身份或自动沿革关系。",
+      "workIds": [
+        "g830",
+        "g831"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-d7900289691e",
+      "name": "Interchannel",
+      "status": "temporalCreditPending",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20040617/ic.htm",
+        "https://www.prot.co.jp/switch/kanon/introduction.html",
+        "https://key.visualarts.gr.jp/clannad_10th/"
+      ],
+      "reason": "旧英文节点混用2002年Kanon PS2与2006年CLANNAD PS2发行；2004年7月更名的同期公告使前者署名存在时间疑点。现引用的Kanon现代移植说明只能证明配音及平台历史，不能核定2002发行法人。保留unknown及两个旧发行，不与NEC Interchannel或日文节点合并；须补原盒、说明书与片尾，另行订正历史发行和基线。未确认逐版移植开发。",
+      "workIds": [
+        "g028",
+        "g030"
+      ]
+    },
+    {
+      "entityId": "entity-name-8447c5d78187",
+      "name": "Interchannel（インターチャネル）",
+      "status": "historicalCompanyConfirmed",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/209",
+        "https://www.green-japan.com/company/1320",
+        "https://game.watch.impress.co.jp/docs/20040617/ic.htm"
+      ],
+      "reason": "F&C官方Canvas页面明确2005-03-03 PS2廉价版発売元为インターチャネル，原作为F&C・FC01；具名公司人员采访与同期更名公告支持历史株式会社身份。仅订正该日文旧发行节点的公司类别；保留英文与NEC节点独立ID，不登记原作或移植开发，不由名称相同建立沿革边。",
+      "workIds": [
+        "g727"
+      ]
+    },
+    {
+      "entityId": "entity-name-8daa9d3fef6f",
+      "name": "IRI Commerce & Technology（IRIコマース&テクノロジー）",
+      "status": "companyConfirmedReissueOnly",
+      "sources": [
+        "https://www.iid.co.jp/company/history.html",
+        "https://www.suruga-ya.jp/product/detail/145011428"
+      ],
+      "reason": "イード官方沿革明确2000年设立株式会社IRIコマース&テクノロジー，2010年与旧イード合并并更名；零售目录将2004卒業复刻合集列IRI-CT。仅核旧署名主体为公司，两部原作与复刻版发行保持，不因复刻出版推定HEADROOM/TENKY原作制作或模拟器开发。包装版权页与承制人员仍待核；不新建现公司身份或自动沿革关系。",
+      "workIds": [
+        "g830",
+        "g831"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "I",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-ibm",
+      "entity-name-382a9f6ab2ee",
+      "entity-name-b72187fd26e6",
+      "entity-imel",
+      "entity-name-c73a46096ea7",
+      "entity-name-3de89d1ab0a5",
+      "entity-name-1b20d2df8464",
+      "entity-infocom",
+      "entity-name-c8ec85da2361",
+      "entity-innocent_grey",
+      "entity-name-d7900289691e",
+      "entity-name-8447c5d78187",
+      "entity-name-8daa9d3fef6f"
+    ],
+    "nextEntityId": "entity-name-0483335f6a4f",
+    "nextName": "J. K. Greye Software",
+    "queue": [
+      {
+        "entityId": "entity-ibm",
+        "name": "IBM",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-382a9f6ab2ee",
+        "name": "IDEA FACTORY",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b72187fd26e6",
+        "name": "Imageepoch",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-imel",
+        "name": "iMel",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c73a46096ea7",
+        "name": "Impact Interactive Publishing",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3de89d1ab0a5",
+        "name": "IMYUIC(ALICESOFT)",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1b20d2df8464",
+        "name": "Index Corporation",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-infocom",
+        "name": "Infocom",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c8ec85da2361",
+        "name": "Infogrames",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-innocent_grey",
+        "name": "Innocent Grey",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d7900289691e",
+        "name": "Interchannel",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8447c5d78187",
+        "name": "Interchannel（インターチャネル）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8daa9d3fef6f",
+        "name": "IRI Commerce & Technology（IRIコマース&テクノロジー）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}

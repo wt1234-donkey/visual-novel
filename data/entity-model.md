@@ -125,3 +125,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-23 D字母第二批使用 `entity-creator-d2-review-20261023.json` 与同名Markdown；核查Digital Leisure、Digiturbo、DMM GAMES、DMM GAMES／AUGUST，D累计8／10、A—Z累计68／70。前三项分别以公司官网、Nitroplus正式沿革及EXNOA平台与商号资料独立订正身份，保留所有原发行角色；DMM GAMES同名旧法人不自动合并。复合署名继续待核，AUGUST既有合作开发事实不由此重复推导。没有新增创作职责或组织关系；下一家Double Fine Productions。
 
 2026-10-23 D字母第三批使用 `entity-creator-d3-review-20261023.json` 与同名Markdown；核查Double Fine Productions、DreamWorks Interactive，D累计10／10、A—Z累计70／70。Double Fine原有公司身份沿用，官方《Broken Age》片尾支持新增一条原作制作；LucasArts三部旧作的后发复刻另按版本核，不倒填原版创作。DreamWorks Interactive依据微软1996年公告独立订正公司身份，两部旧发行保留，逐作创作待原始片尾；合资背景不自动增加单方母子关系。下一家E3 Staff。
+
+2026-10-24 I4完成I组13／13，审核见 `entity-creator-i4-review-20261024.json` 及同名Markdown。日文Interchannel与IRI-CT各独立订正公司身份；英文Interchannel的2002／2006混合旧署名另核，不合并节点或增加制作职责。下一家J. K. Greye Software。
