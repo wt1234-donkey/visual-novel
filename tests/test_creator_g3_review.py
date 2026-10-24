@@ -22,7 +22,7 @@ class CreatorG3Tests(unittest.TestCase):
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = ({e['id']: e for e in d['entities']} for d in (before, after))
         self.assertEqual({eid for eid in b if b[eid] != a[eid]},
-                         {c['entityId'] for c in review['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-h1-review-20261024.json')['identityCorrections']})
+                         {c['entityId'] for c in review['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-h1-review-20261024.json')['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-h2-review-20261024.json')['identityCorrections']})
         self.assertEqual(before['relations'], after['relations'])
         for c in review['identityCorrections']:
             eid = c['entityId']
@@ -33,9 +33,10 @@ class CreatorG3Tests(unittest.TestCase):
         self.assertTrue(next(c for c in review['identityCorrections'] if c['entityId'] == brand)['preserveReleaseRoles'])
 
         before, after = old('data/credits.json'), read('data/credits.json')
-        self.assertEqual(after['credits'][:-1], before['credits'])
-        self.assertEqual(after['dossierMemberships'], before['dossierMemberships'])
-        c = after['credits'][-1]
+        self.assertEqual(after['credits'][:-12], before['credits'])
+        self.assertEqual([m for m in after['dossierMemberships'] if m['dossierId'] != 'hulotte'],
+                         [m for m in before['dossierMemberships'] if m['dossierId'] != 'hulotte'])
+        c = after['credits'][-12]
         self.assertEqual((c['entityId'], c['workId'], c['targetType'], c['role'],
                           c['source'], c['reviewId'], c['reviewRecord']),
                          (brand, 'g650', 'work', 'productionBrand',
@@ -55,7 +56,7 @@ class CreatorG3Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId'], p['nextName']),
-                         ('H', 5, 12, 112, 119, 'entity-hudson', 'Hudson Soft（ハドソンソフト）'))
+                         ('H', 10, 12, 117, 119, 'entity-hummingbird_soft', 'HummingBird Soft（ハミングバードソフト）'))
         self.assertEqual(p['processedEntityIds'][104:107],
                          [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])
