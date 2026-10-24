@@ -20,15 +20,15 @@ class CreatorA6ReviewTests(unittest.TestCase):
         self.assertEqual({(c['entityId'], c['workId'], c['role']) for c in additions},
                          {('entity-name-53ec4c5b9afc', wid, 'productionBrand') for wid in ['g639', 'g640']} |
                          {('entity-name-21365baf366d', wid, 'originalProduction') for wid in ['g021', 'g022', 'g170']} |
-                         {('entity-name-f9e8ee919b2e', 'g978', 'originalProduction'), ('entity-elf', 'g320', 'originalProduction'), ('entity-enix', 'g984', 'originalProduction'), ('entity-name-49d0968e137f', 'nitroplus-extra-blasterz', 'coDeveloper'), ('entity-name-acf6175f07fb', 'sierra-on-line-zeliard', 'originalProduction')})
+                         {('entity-name-f9e8ee919b2e', 'g978', 'originalProduction'), ('entity-elf', 'g320', 'originalProduction'), ('entity-enix', 'g984', 'originalProduction'), ('entity-name-49d0968e137f', 'nitroplus-extra-blasterz', 'coDeveloper'), ('entity-name-acf6175f07fb', 'sierra-on-line-zeliard', 'originalProduction'), ('entity-name-4d8bc5606e40', 'g650', 'productionBrand')})
         self.assertEqual({c['id']: c for c in before['credits']},
                          {c['id']: c for c in after['credits'] if c['id'] in {x['id'] for x in before['credits']}})
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = {e['id']: e for e in before['entities']}, {e['id']: e for e in after['entities']}
         self.assertEqual(a.keys(), b.keys())
         changed = {eid for eid in b if b[eid] != a[eid]}
-        expected = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3', 'c4', 'd1', 'd2', 'd3', 'e1', 'e2', 'e3', 'f1', 'f2', 'g1', 'g2']
-                    for c in read(f'data/entity-creator-{filename}-review-{"20261024" if filename in {"e2", "e3", "f1", "f2", "g1", "g2"} else "20261023"}.json')['identityCorrections']}
+        expected = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3', 'c4', 'd1', 'd2', 'd3', 'e1', 'e2', 'e3', 'f1', 'f2', 'g1', 'g2', 'g3']
+                    for c in read(f'data/entity-creator-{filename}-review-{"20261024" if filename in {"e2", "e3", "f1", "f2", "g1", "g2", "g3"} else "20261023"}.json')['identityCorrections']}
         self.assertEqual(changed, expected)
         e = a['entity-name-a7f6066af4b9']
         self.assertEqual(e['type'], 'brand')

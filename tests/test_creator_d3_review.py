@@ -23,7 +23,7 @@ class CreatorD3Tests(unittest.TestCase):
                 [old('data/entities.json'), read('data/entities.json')])
         dream = 'entity-name-4c4c2f63075a'
         double = 'entity-name-f9e8ee919b2e'
-        self.assertEqual({eid for eid in b if b[eid] != a[eid]}, {dream} | {c['entityId'] for batch in ['e1-review-20261023', 'e2-review-20261024', 'e3-review-20261024', 'f1-review-20261024', 'f2-review-20261024', 'g1-review-20261024', 'g2-review-20261024'] for c in read(f'data/entity-creator-{batch}.json')['identityCorrections']})
+        self.assertEqual({eid for eid in b if b[eid] != a[eid]}, {dream} | {c['entityId'] for batch in ['e1-review-20261023', 'e2-review-20261024', 'e3-review-20261024', 'f1-review-20261024', 'f2-review-20261024', 'g1-review-20261024', 'g2-review-20261024', 'g3-review-20261024'] for c in read(f'data/entity-creator-{batch}.json')['identityCorrections']})
         self.assertEqual((b[dream]['type'], b[dream]['verification']), ('unknown', 'unresolved'))
         self.assertEqual((a[dream]['type'], a[dream]['verification']), ('company', 'sourceReviewed'))
         self.assertEqual((a[dream]['aliases'], a[dream]['dates']), (b[dream]['aliases'], b[dream]['dates']))
@@ -33,7 +33,7 @@ class CreatorD3Tests(unittest.TestCase):
         new_credits = {c['id']: c for c in after['credits']}
         self.assertEqual({cid: new_credits[cid] for cid in old_credits}, old_credits)
         added = [new_credits[cid] for cid in new_credits.keys() - old_credits.keys()]
-        self.assertEqual(len(added), 5)
+        self.assertEqual(len(added), 6)
         added = [c for c in added if c['reviewRecord'] == review['audit']]
         self.assertEqual(len(added), 1)
         self.assertEqual((added[0]['entityId'], added[0]['workId'], added[0]['targetType'],
@@ -48,7 +48,7 @@ class CreatorD3Tests(unittest.TestCase):
         progress = current['registrationProgress']
         review = read('data/entity-creator-d3-review-20261023.json')
         self.assertEqual((progress['letter'], progress['letterProcessed'], progress['letterTotal'],
-                          len(progress['processedEntityIds']), progress['total']), ('G', 10, 13, 104, 107))
+                          len(progress['processedEntityIds']), progress['total']), ('G', 13, 13, 107, 107))
         self.assertEqual(progress['processedEntityIds'][60:70], review['progress']['processedEntityIds'])
         self.assertEqual(review['progress']['nextName'], 'E3 Staff（イースリースタッフ）')
         self.assertEqual(current['works'], previous['works'])
