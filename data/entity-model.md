@@ -129,3 +129,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-24 I4完成I组13／13，审核见 `entity-creator-i4-review-20261024.json` 及同名Markdown。日文Interchannel与IRI-CT各独立订正公司身份；英文Interchannel的2002／2006混合旧署名另核，不合并节点或增加制作职责。下一家J. K. Greye Software。
 
 2026-10-24 J1完成J组5／5，独立记录见 `entity-creator-j1-review-20261024.json` 与同名Markdown。现代JAST与JAST USA各自订正公司类别，不合并身份；日本旧JAST的g015据明确开发馆录增加一条原作制作。JHV发行、J.K.Greye版权及其他未核职责各自保留。下一家KADOKAWA。
+
+2026-10-24 K1核查K组前六项，独立记录为 `entity-creator-k1-review-20261024.json` 与同名Markdown。两条角川游戏、两条角川书店旧节点各订正公司类别，同名法人分设及逐版映射仍需独立审查；KADOKAWA混合时期与三方复合节点保持unknown，不加开发。进度K组6／14；下一家Kaga Create。
