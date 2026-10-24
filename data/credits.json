@@ -63220,6 +63220,51 @@
       "territory": null,
       "reviewId": "AZI1-C01",
       "reviewRecord": "data/entity-creator-i1-review-20261024.md"
+    },
+    {
+      "id": "credit-77f806d83d431a48",
+      "entityId": "entity-infocom",
+      "targetType": "work",
+      "targetId": "g002",
+      "workId": "g002",
+      "role": "originalProduction",
+      "rawCredit": "Infocom",
+      "status": "sourceReviewed",
+      "source": "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+      "note": "微软、Xbox及Activision公布的原始代码说明Infocom团队将早期大型机Zork拆分为家用机三部曲；只记该商业版原作制作，不把1977—1979大型机游戏并入，也不推断其他Infocom名义作品。",
+      "territory": null,
+      "reviewId": "AZI3-C01",
+      "reviewRecord": "data/entity-creator-i3-review-20261024.md"
+    },
+    {
+      "id": "credit-988341b362e35de5",
+      "entityId": "entity-infocom",
+      "targetType": "work",
+      "targetId": "g062",
+      "workId": "g062",
+      "role": "originalProduction",
+      "rawCredit": "Infocom",
+      "status": "sourceReviewed",
+      "source": "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+      "note": "微软、Xbox及Activision公布的原始代码说明Infocom团队将早期大型机Zork拆分为家用机三部曲；只记该商业版原作制作，不把1977—1979大型机游戏并入，也不推断其他Infocom名义作品。",
+      "territory": null,
+      "reviewId": "AZI3-C02",
+      "reviewRecord": "data/entity-creator-i3-review-20261024.md"
+    },
+    {
+      "id": "credit-b2eaba38fd202254",
+      "entityId": "entity-infocom",
+      "targetType": "work",
+      "targetId": "g063",
+      "workId": "g063",
+      "role": "originalProduction",
+      "rawCredit": "Infocom",
+      "status": "sourceReviewed",
+      "source": "https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source/",
+      "note": "微软、Xbox及Activision公布的原始代码说明Infocom团队将早期大型机Zork拆分为家用机三部曲；只记该商业版原作制作，不把1977—1979大型机游戏并入，也不推断其他Infocom名义作品。",
+      "territory": null,
+      "reviewId": "AZI3-C03",
+      "reviewRecord": "data/entity-creator-i3-review-20261024.md"
     }
   ],
   "dossierMemberships": [
@@ -82403,9 +82448,10 @@
       "workId": "g002",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.eblong.com/infocom/",
       "status": "existingEvidence"
     },
@@ -82414,9 +82460,10 @@
       "workId": "g062",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.eblong.com/infocom/",
       "status": "existingEvidence"
     },
@@ -82436,9 +82483,10 @@
       "workId": "g063",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.eblong.com/infocom/",
       "status": "existingEvidence"
     },
