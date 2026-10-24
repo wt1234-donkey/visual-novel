@@ -27,8 +27,8 @@ class CreatorA6ReviewTests(unittest.TestCase):
         b, a = {e['id']: e for e in before['entities']}, {e['id']: e for e in after['entities']}
         self.assertEqual(a.keys(), b.keys())
         changed = {eid for eid in b if b[eid] != a[eid]}
-        expected = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3', 'c4', 'd1', 'd2', 'd3', 'e1', 'e2', 'e3', 'f1', 'f2', 'g1']
-                    for c in read(f'data/entity-creator-{filename}-review-{"20261024" if filename in {"e2", "e3", "f1", "f2", "g1"} else "20261023"}.json')['identityCorrections']}
+        expected = {c['entityId'] for filename in ['a6', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3', 'c4', 'd1', 'd2', 'd3', 'e1', 'e2', 'e3', 'f1', 'f2', 'g1', 'g2']
+                    for c in read(f'data/entity-creator-{filename}-review-{"20261024" if filename in {"e2", "e3", "f1", "f2", "g1", "g2"} else "20261023"}.json')['identityCorrections']}
         self.assertEqual(changed, expected)
         e = a['entity-name-a7f6066af4b9']
         self.assertEqual(e['type'], 'brand')
