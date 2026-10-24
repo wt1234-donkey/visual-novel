@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "96d41760c57e9b60ff99f701e6a3f8dfb185c432",
+  "audit": "data/entity-creator-k2-review-20261024.md",
+  "previousReview": "data/entity-creator-k1-review-20261024.md",
+  "policy": "按K组第7—10项连续核查；历史公司与后续品牌、旧发行与当前官网、一般业务与逐作开发分开。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZK2-I01",
+      "entityId": "entity-name-d045c5d84903",
+      "rawName": "加賀クリエイト",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.taxan.co.jp/jp/recruit/graduate/about/company.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001066257"
+      ],
+      "note": "加賀電子官方沿革记录2007年Digital Gain改称加賀クリエイト株式会社，政府法人档案确认公司名及2016年4月登记关闭。仅订正历史主体为公司，不将关闭登记日等同解散日。现行两部Vita官网已转ENTERGRAM，恋愛0キロメートルV页仍留2014 KAGA CREATE版权但现标开发销售ENTERGRAM；无法仅凭当前页面完整重验旧版发行。两条旧publisher保留，原始盒面/同期官网及具体移植开发留待单独历史核查，不追加开发或新主体关系。"
+    },
+    {
+      "reviewId": "AZK2-I02",
+      "entityId": "entity-name-3a59ff4a4f09",
+      "rawName": "KID",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20070202/kid.htm",
+        "https://game.watch.impress.co.jp/docs/20081226/cfpsp.htm"
+      ],
+      "note": "2007年CyberFront承继公告的同期报道明确株式会社キッド，并将旧公司开发与出版、移植业务及破产后的品牌承继分开；2008年Ever17移植报道也明确原2002发行公司。现有KID旧发行集中1996—2005，订正为历史公司类别，保留18条旧发行。CyberFront后设同名品牌不并入本节点，取得版权与源码不等于成为原作开发；具体KID原作和移植职责仍须逐作片尾，不按发行批量登记。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-d045c5d84903",
+      "name": "Kaga Create（加賀クリエイト）",
+      "status": "historicalCompanyConfirmed",
+      "sources": [
+        "https://www.taxan.co.jp/jp/recruit/graduate/about/company.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001066257",
+        "https://www.entergram.co.jp/zerokiroV/",
+        "https://www.entergram.co.jp/hitotsutobashiV/"
+      ],
+      "reason": "加賀電子官方沿革记录2007年Digital Gain改称加賀クリエイト株式会社，政府法人档案确认公司名及2016年4月登记关闭。仅订正历史主体为公司，不将关闭登记日等同解散日。现行两部Vita官网已转ENTERGRAM，恋愛0キロメートルV页仍留2014 KAGA CREATE版权但现标开发销售ENTERGRAM；无法仅凭当前页面完整重验旧版发行。两条旧publisher保留，原始盒面/同期官网及具体移植开发留待单独历史核查，不追加开发或新主体关系。",
+      "workIds": [
+        "g285",
+        "g286"
+      ]
+    },
+    {
+      "entityId": "entity-key",
+      "name": "Key",
+      "status": "alreadyScoped",
+      "sources": [
+        "https://key.visualarts.gr.jp/diary/2008/07/3.html",
+        "https://key.visualarts.gr.jp/anemoi/spec.html",
+        "https://www.wfs.games/news/20240717_01.html"
+      ],
+      "reason": "Key官方旧员工问答解释其为VisualArt’s内部开发部门，现行产品规格明确品牌Key。已有21条制作品牌、21条原作制作作用于同一批21作，不作为42部独立作品；限定的绯染天空联合制作沿用WFS官方证据。品牌及旧记录保持，不重复追加；后发主机开发、母公司逐作职责及其他系列合作须逐版本资料，不由品牌或版权推定。",
+      "workIds": [
+        "g028",
+        "g029",
+        "g030",
+        "g032",
+        "g145",
+        "g146",
+        "g147",
+        "g148",
+        "g149",
+        "g157",
+        "g158",
+        "g164",
+        "g165",
+        "g183",
+        "g184",
+        "g185",
+        "g186",
+        "g187",
+        "g188",
+        "g189",
+        "g190",
+        "key-rpg-hbr"
+      ]
+    },
+    {
+      "entityId": "entity-name-3a59ff4a4f09",
+      "name": "KID",
+      "status": "historicalCompanyConfirmed",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20070202/kid.htm",
+        "https://game.watch.impress.co.jp/docs/20081226/cfpsp.htm"
+      ],
+      "reason": "2007年CyberFront承继公告的同期报道明确株式会社キッド，并将旧公司开发与出版、移植业务及破产后的品牌承继分开；2008年Ever17移植报道也明确原2002发行公司。现有KID旧发行集中1996—2005，订正为历史公司类别，保留18条旧发行。CyberFront后设同名品牌不并入本节点，取得版权与源码不等于成为原作开发；具体KID原作和移植职责仍须逐作片尾，不按发行批量登记。",
+      "workIds": [
+        "g048",
+        "g050",
+        "g152",
+        "g153",
+        "g154",
+        "g167",
+        "g168",
+        "g233",
+        "g545",
+        "g718",
+        "g739",
+        "g698",
+        "g719",
+        "g773",
+        "alicesoft-extra-oujisamalv1"
+      ]
+    },
+    {
+      "entityId": "entity-koei_tecmo",
+      "name": "Koei Tecmo Games（コーエーテクモゲームス）",
+      "status": "existingCompanyPublishingOnly",
+      "sources": [
+        "https://www.koeitecmo.co.jp/company/group/",
+        "https://www.koeitecmo.co.jp/business/entertainment/",
+        "https://www.gamecity.ne.jp/products/products/ee/Rlgeten.htm"
+      ],
+      "reason": "官方集团公司表支持既有公司身份，业务页把Ruby Party等创作品牌分列。73条既有发行不重复追加；下天之华官方产品页的公司版权和公司一般开发业务不足以单独确定每作开发分工。Ruby Party、旧KOEI、Konami原作权利以及2010年后的公司发行各自保留；不将旗下品牌全部作品推为公司独立开发，不增母子或沿革关系。",
+      "workIds": [
+        "g992",
+        "g993",
+        "g994",
+        "g995",
+        "g1040",
+        "g1042",
+        "g1045",
+        "g1047",
+        "g1048",
+        "g1049",
+        "g1050",
+        "g1051",
+        "g1052",
+        "g1056",
+        "g1057",
+        "g1059",
+        "koei-ange",
+        "koei-lumina",
+        "koei-loveangel",
+        "koei-c2",
+        "koei-c3",
+        "koei-jinnan",
+        "koei-shiseikan",
+        "koei-amane",
+        "koei-c3bonus",
+        "koei-kangei",
+        "koei-sansecil",
+        "koei-c4",
+        "koei-100c",
+        "koei-star",
+        "koei-100h",
+        "koei-fab"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-d045c5d84903",
+      "name": "Kaga Create（加賀クリエイト）",
+      "status": "historicalCompanyConfirmed",
+      "sources": [
+        "https://www.taxan.co.jp/jp/recruit/graduate/about/company.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001066257",
+        "https://www.entergram.co.jp/zerokiroV/",
+        "https://www.entergram.co.jp/hitotsutobashiV/"
+      ],
+      "reason": "加賀電子官方沿革记录2007年Digital Gain改称加賀クリエイト株式会社，政府法人档案确认公司名及2016年4月登记关闭。仅订正历史主体为公司，不将关闭登记日等同解散日。现行两部Vita官网已转ENTERGRAM，恋愛0キロメートルV页仍留2014 KAGA CREATE版权但现标开发销售ENTERGRAM；无法仅凭当前页面完整重验旧版发行。两条旧publisher保留，原始盒面/同期官网及具体移植开发留待单独历史核查，不追加开发或新主体关系。",
+      "workIds": [
+        "g285",
+        "g286"
+      ]
+    },
+    {
+      "entityId": "entity-key",
+      "name": "Key",
+      "status": "alreadyScoped",
+      "sources": [
+        "https://key.visualarts.gr.jp/diary/2008/07/3.html",
+        "https://key.visualarts.gr.jp/anemoi/spec.html",
+        "https://www.wfs.games/news/20240717_01.html"
+      ],
+      "reason": "Key官方旧员工问答解释其为VisualArt’s内部开发部门，现行产品规格明确品牌Key。已有21条制作品牌、21条原作制作作用于同一批21作，不作为42部独立作品；限定的绯染天空联合制作沿用WFS官方证据。品牌及旧记录保持，不重复追加；后发主机开发、母公司逐作职责及其他系列合作须逐版本资料，不由品牌或版权推定。",
+      "workIds": [
+        "g028",
+        "g029",
+        "g030",
+        "g032",
+        "g145",
+        "g146",
+        "g147",
+        "g148",
+        "g149",
+        "g157",
+        "g158",
+        "g164",
+        "g165",
+        "g183",
+        "g184",
+        "g185",
+        "g186",
+        "g187",
+        "g188",
+        "g189",
+        "g190",
+        "key-rpg-hbr"
+      ]
+    },
+    {
+      "entityId": "entity-name-3a59ff4a4f09",
+      "name": "KID",
+      "status": "historicalCompanyConfirmed",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20070202/kid.htm",
+        "https://game.watch.impress.co.jp/docs/20081226/cfpsp.htm"
+      ],
+      "reason": "2007年CyberFront承继公告的同期报道明确株式会社キッド，并将旧公司开发与出版、移植业务及破产后的品牌承继分开；2008年Ever17移植报道也明确原2002发行公司。现有KID旧发行集中1996—2005，订正为历史公司类别，保留18条旧发行。CyberFront后设同名品牌不并入本节点，取得版权与源码不等于成为原作开发；具体KID原作和移植职责仍须逐作片尾，不按发行批量登记。",
+      "workIds": [
+        "g048",
+        "g050",
+        "g152",
+        "g153",
+        "g154",
+        "g167",
+        "g168",
+        "g233",
+        "g545",
+        "g718",
+        "g739",
+        "g698",
+        "g719",
+        "g773",
+        "alicesoft-extra-oujisamalv1"
+      ]
+    },
+    {
+      "entityId": "entity-koei_tecmo",
+      "name": "Koei Tecmo Games（コーエーテクモゲームス）",
+      "status": "existingCompanyPublishingOnly",
+      "sources": [
+        "https://www.koeitecmo.co.jp/company/group/",
+        "https://www.koeitecmo.co.jp/business/entertainment/",
+        "https://www.gamecity.ne.jp/products/products/ee/Rlgeten.htm"
+      ],
+      "reason": "官方集团公司表支持既有公司身份，业务页把Ruby Party等创作品牌分列。73条既有发行不重复追加；下天之华官方产品页的公司版权和公司一般开发业务不足以单独确定每作开发分工。Ruby Party、旧KOEI、Konami原作权利以及2010年后的公司发行各自保留；不将旗下品牌全部作品推为公司独立开发，不增母子或沿革关系。",
+      "workIds": [
+        "g992",
+        "g993",
+        "g994",
+        "g995",
+        "g1040",
+        "g1042",
+        "g1045",
+        "g1047",
+        "g1048",
+        "g1049",
+        "g1050",
+        "g1051",
+        "g1052",
+        "g1056",
+        "g1057",
+        "g1059",
+        "koei-ange",
+        "koei-lumina",
+        "koei-loveangel",
+        "koei-c2",
+        "koei-c3",
+        "koei-jinnan",
+        "koei-shiseikan",
+        "koei-amane",
+        "koei-c3bonus",
+        "koei-kangei",
+        "koei-sansecil",
+        "koei-c4",
+        "koei-100c",
+        "koei-star",
+        "koei-100h",
+        "koei-fab"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "K",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 14,
+    "processedEntityIds": [
+      "entity-name-82fc3d1bfdaa",
+      "entity-name-0f93dc471cd5",
+      "entity-name-3d1dc43ef66a",
+      "entity-name-fdde072d309a",
+      "entity-name-856f467ef1dc",
+      "entity-name-0a2b481b8b1e",
+      "entity-name-d045c5d84903",
+      "entity-key",
+      "entity-name-3a59ff4a4f09",
+      "entity-koei_tecmo"
+    ],
+    "nextEntityId": "entity-koei",
+    "nextName": "KOEI（光栄）",
+    "queue": [
+      {
+        "entityId": "entity-name-82fc3d1bfdaa",
+        "name": "KADOKAWA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0f93dc471cd5",
+        "name": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3d1dc43ef66a",
+        "name": "Kadokawa Games（角川ゲームス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fdde072d309a",
+        "name": "Kadokawa Games（角川ゲームス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-856f467ef1dc",
+        "name": "Kadokawa Shoten（角川書店）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0a2b481b8b1e",
+        "name": "Kadokawa Shoten（角川書店）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d045c5d84903",
+        "name": "Kaga Create（加賀クリエイト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-key",
+        "name": "Key",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3a59ff4a4f09",
+        "name": "KID",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-koei_tecmo",
+        "name": "Koei Tecmo Games（コーエーテクモゲームス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-koei",
+        "name": "KOEI（光栄）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-9e2d0b1695d0",
+        "name": "KOGADO STUDIO（工画堂スタジオ）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-konami",
+        "name": "Konami",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-konami_de",
+        "name": "Konami Digital Entertainment",
+        "status": "pending"
+      }
+    ]
+  }
+}

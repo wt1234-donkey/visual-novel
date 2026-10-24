@@ -131,3 +131,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-24 J1完成J组5／5，独立记录见 `entity-creator-j1-review-20261024.json` 与同名Markdown。现代JAST与JAST USA各自订正公司类别，不合并身份；日本旧JAST的g015据明确开发馆录增加一条原作制作。JHV发行、J.K.Greye版权及其他未核职责各自保留。下一家KADOKAWA。
 
 2026-10-24 K1核查K组前六项，独立记录为 `entity-creator-k1-review-20261024.json` 与同名Markdown。两条角川游戏、两条角川书店旧节点各订正公司类别，同名法人分设及逐版映射仍需独立审查；KADOKAWA混合时期与三方复合节点保持unknown，不加开发。进度K组6／14；下一家Kaga Create。
+
+2026-10-24 K2核查K组第7—10项，独立审核为 `entity-creator-k2-review-20261024.json` 与同名Markdown。加賀クリエイト及原KID各订正公司类别，前者现行官网已显示ENTERGRAM，后者同名后设品牌另核；Key既有21作与绯染天空限定合作、KT公司发行均沿用。无新增开发；进度K组10／14，下一家KOEI。
