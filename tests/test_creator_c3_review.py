@@ -39,7 +39,7 @@ class CreatorC3Tests(unittest.TestCase):
         progress = current['registrationProgress']
         review = read('data/entity-creator-c3-review-20261023.json')
         self.assertEqual((progress['letter'], progress['letterProcessed'], progress['letterTotal'],
-                          len(progress['processedEntityIds']), progress['total']), ('H', 10, 12, 117, 119))
+                          len(progress['processedEntityIds']), progress['total']), ('H', 12, 12, 119, 119))
         self.assertEqual(review['progress']['nextEntityId'], 'entity-cuffs')
         self.assertEqual(progress['processedEntityIds'][42:57], review['progress']['processedEntityIds'])
         nodes = {n['id']: n for n in current['nodes']}

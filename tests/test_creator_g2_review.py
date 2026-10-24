@@ -27,10 +27,10 @@ class CreatorG2Tests(unittest.TestCase):
         self.assertEqual(before['relations'], after['relations'])
         self.assertEqual(review['creditAdditions'], [])
         old_credits, new_credits = old('data/credits.json'), read('data/credits.json')
-        self.assertEqual(new_credits['credits'][:-12], old_credits['credits'])
-        self.assertEqual(new_credits['credits'][-12]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
-        self.assertEqual([m for m in new_credits['dossierMemberships'] if m['dossierId'] != 'hulotte'],
-                         [m for m in old_credits['dossierMemberships'] if m['dossierId'] != 'hulotte'])
+        self.assertEqual(new_credits['credits'][:-16], old_credits['credits'])
+        self.assertEqual(new_credits['credits'][-16]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
+        self.assertEqual([m for m in new_credits['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}],
+                         [m for m in old_credits['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}])
         for x in review['identityCorrections']:
             eid = x['entityId']
             self.assertEqual((b[eid]['type'], b[eid]['verification']), ('unknown', 'unresolved'))
@@ -49,7 +49,7 @@ class CreatorG2Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('H', 10, 12, 117, 119, 'HummingBird Soft（ハミングバードソフト）'))
+                         ('H', 12, 12, 119, 119, 'IBM'))
         self.assertEqual(p['processedEntityIds'][99:104],
                          [x['entityId'] for x in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

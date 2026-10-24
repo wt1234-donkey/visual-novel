@@ -32,15 +32,15 @@ class CreatorC1Tests(unittest.TestCase):
         self.assertEqual({(c['entityId'], c['workId'], c['role'], c['targetType']) for c in additions},
                          {('entity-name-53ec4c5b9afc', wid, 'productionBrand', 'work') for wid in ['g639', 'g640']})
         self.assertEqual({c['reviewId'] for c in additions}, {c['reviewId'] for c in review['creditAdditions']})
-        self.assertEqual([m for m in after['dossierMemberships'] if (m['dossierId'], m['workId']) not in {('elf', 'g320'), ('enix', 'g984')} and m['dossierId'] != 'hulotte'],
-                         [m for m in before['dossierMemberships'] if (m['dossierId'], m['workId']) not in {('elf', 'g320'), ('enix', 'g984')} and m['dossierId'] != 'hulotte'])
+        self.assertEqual([m for m in after['dossierMemberships'] if (m['dossierId'], m['workId']) not in {('elf', 'g320'), ('enix', 'g984')} and m['dossierId'] != 'hulotte' and m['dossierId'] != 'hummingbird_soft'],
+                         [m for m in before['dossierMemberships'] if (m['dossierId'], m['workId']) not in {('elf', 'g320'), ('enix', 'g984')} and m['dossierId'] != 'hulotte' and m['dossierId'] != 'hummingbird_soft'])
 
     def test_contiguous_progress_and_unchanged_core(self):
         org = read('data/organizations.json')
         p = org['registrationProgress']
         self.assertEqual(p['processedEntityIds'][42:47], read('data/entity-creator-c1-review-20261023.json')['progress']['processedEntityIds'])
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']), p['total']),
-                         ('H', 10, 12, 117, 119))
+                         ('H', 12, 12, 119, 119))
         self.assertEqual(read('data/entity-creator-c1-review-20261023.json')['progress']['nextEntityId'], 'entity-name-21365baf366d')
         self.assertEqual([r['entityId'] for r in p['reviewedEntities']], p['processedEntityIds'])
         self.assertEqual(org['works'], old('data/organizations.json')['works'])

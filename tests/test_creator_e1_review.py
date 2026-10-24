@@ -43,10 +43,10 @@ class CreatorE1Tests(unittest.TestCase):
         progress = current['registrationProgress']
         review = read('data/entity-creator-e1-review-20261023.json')
         self.assertEqual((progress['letter'], progress['letterProcessed'], progress['letterTotal'],
-                          len(progress['processedEntityIds']), progress['total']), ('H', 10, 12, 117, 119))
+                          len(progress['processedEntityIds']), progress['total']), ('H', 12, 12, 119, 119))
         self.assertEqual(progress['processedEntityIds'][70:74], review['progress']['processedEntityIds'])
         self.assertEqual(review['progress']['nextName'], 'Electronic Arts')
-        self.assertEqual(progress['nextName'], 'HummingBird Soft（ハミングバードソフト）')
+        self.assertEqual(progress['nextName'], 'IBM')
         self.assertEqual(current['works'], before['works'])
         old_nodes = {n['id']: n for n in before['nodes']}
         nodes = {n['id']: n for n in current['nodes']}

@@ -29,9 +29,9 @@ class CreatorH1Tests(unittest.TestCase):
         self.assertEqual((a[eid]['aliases'], a[eid]['dates']), (b[eid]['aliases'], b[eid]['dates']))
         self.assertEqual(before['relations'], after['relations'])
         self.assertEqual(review['creditAdditions'], [])
-        self.assertEqual(read('data/credits.json')['credits'][:-11], old('data/credits.json')['credits'])
-        self.assertEqual([m for m in read('data/credits.json')['dossierMemberships'] if m['dossierId'] != 'hulotte'],
-                         [m for m in old('data/credits.json')['dossierMemberships'] if m['dossierId'] != 'hulotte'])
+        self.assertEqual(read('data/credits.json')['credits'][:-15], old('data/credits.json')['credits'])
+        self.assertEqual([m for m in read('data/credits.json')['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}],
+                         [m for m in old('data/credits.json')['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}])
         publisher = [c for c in read('data/credits.json')['credits'] if c['entityId'] == eid]
         self.assertEqual([(c['targetId'], c['role']) for c in publisher], [('g1167-v-original', 'publisher')])
 
@@ -41,7 +41,7 @@ class CreatorH1Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId'], p['nextName']),
-                         ('H', 10, 12, 117, 119, 'entity-hummingbird_soft', 'HummingBird Soft（ハミングバードソフト）'))
+                         ('H', 12, 12, 119, 119, 'entity-ibm', 'IBM'))
         self.assertEqual(p['processedEntityIds'][107:112],
                          [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

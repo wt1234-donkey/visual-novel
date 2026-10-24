@@ -33,10 +33,10 @@ class CreatorG3Tests(unittest.TestCase):
         self.assertTrue(next(c for c in review['identityCorrections'] if c['entityId'] == brand)['preserveReleaseRoles'])
 
         before, after = old('data/credits.json'), read('data/credits.json')
-        self.assertEqual(after['credits'][:-12], before['credits'])
-        self.assertEqual([m for m in after['dossierMemberships'] if m['dossierId'] != 'hulotte'],
-                         [m for m in before['dossierMemberships'] if m['dossierId'] != 'hulotte'])
-        c = after['credits'][-12]
+        self.assertEqual(after['credits'][:-16], before['credits'])
+        self.assertEqual([m for m in after['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}],
+                         [m for m in before['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}])
+        c = after['credits'][-16]
         self.assertEqual((c['entityId'], c['workId'], c['targetType'], c['role'],
                           c['source'], c['reviewId'], c['reviewRecord']),
                          (brand, 'g650', 'work', 'productionBrand',
@@ -56,7 +56,7 @@ class CreatorG3Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId'], p['nextName']),
-                         ('H', 10, 12, 117, 119, 'entity-hummingbird_soft', 'HummingBird Soft（ハミングバードソフト）'))
+                         ('H', 12, 12, 119, 119, 'entity-ibm', 'IBM'))
         self.assertEqual(p['processedEntityIds'][104:107],
                          [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

@@ -36,11 +36,11 @@ class CreatorF2Tests(unittest.TestCase):
             self.assertTrue(x['sources'])
         self.assertTrue(review['identityCorrections'][0]['preserveReleaseRoles'])
         before, after = old('data/credits.json'), read('data/credits.json')
-        self.assertEqual([m for m in before['dossierMemberships'] if m['dossierId'] != 'hulotte'],
-                         [m for m in after['dossierMemberships'] if m['dossierId'] != 'hulotte'])
-        self.assertEqual(after['credits'][:-13], before['credits'])
-        self.assertEqual(after['credits'][-13]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
-        self.assertEqual(after['credits'][-12]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
+        self.assertEqual([m for m in before['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}],
+                         [m for m in after['dossierMemberships'] if m['dossierId'] not in {'hulotte', 'hummingbird_soft'}])
+        self.assertEqual(after['credits'][:-17], before['credits'])
+        self.assertEqual(after['credits'][-17]['reviewRecord'], 'data/entity-creator-g1-review-20261024.md')
+        self.assertEqual(after['credits'][-16]['reviewRecord'], 'data/entity-creator-g3-review-20261024.md')
 
     def test_release_scope_and_order(self):
         review = read('data/entity-creator-f2-review-20261024.json')
@@ -48,7 +48,7 @@ class CreatorF2Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
-                         ('H', 10, 12, 117, 119, 'HummingBird Soft（ハミングバードソフト）'))
+                         ('H', 12, 12, 119, 119, 'IBM'))
         self.assertEqual(p['processedEntityIds'][88:94],
                          [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

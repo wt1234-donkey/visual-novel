@@ -21,7 +21,7 @@ class CreatorA6ReviewTests(unittest.TestCase):
                          {('entity-name-53ec4c5b9afc', wid, 'productionBrand') for wid in ['g639', 'g640']} |
                          {('entity-name-21365baf366d', wid, 'originalProduction') for wid in ['g021', 'g022', 'g170']} |
                          {('entity-name-f9e8ee919b2e', 'g978', 'originalProduction'), ('entity-elf', 'g320', 'originalProduction'), ('entity-enix', 'g984', 'originalProduction'), ('entity-name-49d0968e137f', 'nitroplus-extra-blasterz', 'coDeveloper'), ('entity-name-acf6175f07fb', 'sierra-on-line-zeliard', 'originalProduction'), ('entity-name-4d8bc5606e40', 'g650', 'productionBrand')} |
-                         {(c['entityId'], c['workId'], c['role']) for c in read('data/entity-creator-h2-review-20261024.json')['creditAdditions']})
+                         {(c['entityId'], c['workId'], c['role']) for batch in ['h2','h3'] for c in read(f'data/entity-creator-{batch}-review-20261024.json')['creditAdditions']})
         self.assertEqual({c['id']: c for c in before['credits']},
                          {c['id']: c for c in after['credits'] if c['id'] in {x['id'] for x in before['credits']}})
         before, after = old('data/entities.json'), read('data/entities.json')

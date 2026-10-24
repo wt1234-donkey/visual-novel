@@ -36,7 +36,7 @@ class CreatorA4ReviewTests(unittest.TestCase):
             self.assertEqual(c['reviewRecord'], review['audit'])
         after_members = {(m['dossierId'], m['workId']): m for m in after['dossierMemberships']}
         for member in before['dossierMemberships']:
-            if (member['dossierId'] == 'ascii' and member['workId'] in {'g1003', 'g1004', 'ascii-chaos-angels'}) or (member['dossierId'], member['workId']) in {('elf', 'g320'), ('enix', 'g984')} or member['dossierId'] == 'hulotte':
+            if (member['dossierId'] == 'ascii' and member['workId'] in {'g1003', 'g1004', 'ascii-chaos-angels'}) or (member['dossierId'], member['workId']) in {('elf', 'g320'), ('enix', 'g984')} or member['dossierId'] in {'hulotte', 'hummingbird_soft'}:
                 continue
             self.assertEqual(after_members[(member['dossierId'], member['workId'])], member)
 
