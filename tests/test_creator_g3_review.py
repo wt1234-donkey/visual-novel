@@ -22,7 +22,7 @@ class CreatorG3Tests(unittest.TestCase):
         before, after = old('data/entities.json'), read('data/entities.json')
         b, a = ({e['id']: e for e in d['entities']} for d in (before, after))
         self.assertEqual({eid for eid in b if b[eid] != a[eid]},
-                         {c['entityId'] for c in review['identityCorrections']})
+                         {c['entityId'] for c in review['identityCorrections']} | {c['entityId'] for c in read('data/entity-creator-h1-review-20261024.json')['identityCorrections']})
         self.assertEqual(before['relations'], after['relations'])
         for c in review['identityCorrections']:
             eid = c['entityId']
@@ -55,7 +55,7 @@ class CreatorG3Tests(unittest.TestCase):
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId'], p['nextName']),
-                         ('G', 13, 13, 107, 107, 'entity-harukaze', 'HARUKAZE'))
+                         ('H', 5, 12, 112, 119, 'entity-hudson', 'Hudson Soft（ハドソンソフト）'))
         self.assertEqual(p['processedEntityIds'][104:107],
                          [e['entityId'] for e in review['reviewedEntities']])
         self.assertEqual(after['works'], before['works'])

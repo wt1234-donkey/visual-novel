@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "f61b8d9",
+  "audit": "data/entity-creator-h1-review-20261024.md",
+  "previousReview": "data/entity-creator-g3-review-20261024.md",
+  "policy": "按组织与沿革左侧H字母第1—5项连续核查；既有品牌创作、历史发行与法人运营分别记账。旧身份关系、主库和迁移基线不作回填。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZH1-I01",
+      "entityId": "entity-name-2f2c43ae71dc",
+      "rawName": "Hudson Entertainment",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1191141/000119312505218870/d6k.htm",
+        "https://www.esrb.org/ratings/26482/miami-law/",
+        "https://purenintendo.com/hudson-entertainments-crime-fighting-adventure-videogame-miami-law-goes-gold/"
+      ],
+      "note": "Konami 2005年同期披露明列Hudson Entertainment, Inc.为Hudson Soft子公司，ESRB《Miami Law》评级登记同名法人；2009当事方通稿仅列其北美发行部门身份。保持g1167原版publisher，Hudson Soft开发和Gaijinworks本地化不能合并到该法人；具体所有权时段和2009盒书需另核。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-harukaze",
+      "name": "HARUKAZE",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://harukaze-soft.com/product/",
+        "https://harukaze-soft.com/info/20120903/105/"
+      ],
+      "reason": "HARUKAZE官方产品页连续列四个Project，2012当事方发布称《らぶおぶ恋愛皇帝》为品牌第一作。既有四部主库制作品牌已登记；画集附盘、主机移植与海外联合发行沿旧版本，不由官网产品目录新增作品。",
+      "workIds": [
+        "g899",
+        "g900",
+        "g901",
+        "g902"
+      ]
+    },
+    {
+      "entityId": "entity-hawkeye",
+      "name": "Hawk Eye（株式会社ホークアイ）",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.minatosoft.com/majikoi-s/support/index.html",
+        "https://www.minatosoft.com/staff-d-2011.php"
+      ],
+      "reason": "官方客服页以株式会社ホークアイ／みなとそふと联署，品牌家族关系在现有实体表已记录。专题31项仍以职责待核：公司服务／运营及タカヒロ署名不自动证明所有品牌作品由法人的团队开发，需逐作原版片尾与承制合同。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-5c51b719b1bb",
+      "name": "HIKARI FIELD",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.hikarifield.com/jp/",
+        "https://store.steampowered.com/app/3027600/"
+      ],
+      "reason": "HIKARI FIELD官网载株式会社及翻译、移植和国际版发行服务，已是company/sourceReviewed；库中16部均是具体平台发行关联。业务能力不等于每个原作独立创作或亲自移植，需按作品列具体本地化／移植人员和版本分工。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-hokubu",
+      "name": "HOKUBU Communication & Industrial（北部通信工業）",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.sekonic.co.jp/company/history/",
+        "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
+        "https://ja.wikipedia.org/wiki/卒業II_〜Neo_Generation〜"
+      ],
+      "reason": "セコニック官方沿革载1969年北部通信工業株式会社设立；现有三条3DO历史发行复合署名北部通信工業（SharRock）只据二手条目。需各版包装、版权页确认发行法人和SharRock品牌关系／移植者；不由游戏发行归其原作开发。",
+      "workIds": [
+        "g830",
+        "g831",
+        "g959"
+      ]
+    },
+    {
+      "entityId": "entity-name-2f2c43ae71dc",
+      "name": "Hudson Entertainment",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1191141/000119312505218870/d6k.htm",
+        "https://www.esrb.org/ratings/26482/miami-law/",
+        "https://purenintendo.com/hudson-entertainments-crime-fighting-adventure-videogame-miami-law-goes-gold/"
+      ],
+      "reason": "Konami 2005年同期披露明列Hudson Entertainment, Inc.为Hudson Soft子公司，ESRB《Miami Law》评级登记同名法人；2009当事方通稿仅列其北美发行部门身份。保持g1167原版publisher，Hudson Soft开发和Gaijinworks本地化不能合并到该法人；具体所有权时段和2009盒书需另核。",
+      "workIds": [
+        "g1167"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-harukaze",
+      "name": "HARUKAZE",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://harukaze-soft.com/product/",
+        "https://harukaze-soft.com/info/20120903/105/"
+      ],
+      "reason": "HARUKAZE官方产品页连续列四个Project，2012当事方发布称《らぶおぶ恋愛皇帝》为品牌第一作。既有四部主库制作品牌已登记；画集附盘、主机移植与海外联合发行沿旧版本，不由官网产品目录新增作品。",
+      "workIds": [
+        "g899",
+        "g900",
+        "g901",
+        "g902"
+      ]
+    },
+    {
+      "entityId": "entity-hawkeye",
+      "name": "Hawk Eye（株式会社ホークアイ）",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.minatosoft.com/majikoi-s/support/index.html",
+        "https://www.minatosoft.com/staff-d-2011.php"
+      ],
+      "reason": "官方客服页以株式会社ホークアイ／みなとそふと联署，品牌家族关系在现有实体表已记录。专题31项仍以职责待核：公司服务／运营及タカヒロ署名不自动证明所有品牌作品由法人的团队开发，需逐作原版片尾与承制合同。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-name-5c51b719b1bb",
+      "name": "HIKARI FIELD",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.hikarifield.com/jp/",
+        "https://store.steampowered.com/app/3027600/"
+      ],
+      "reason": "HIKARI FIELD官网载株式会社及翻译、移植和国际版发行服务，已是company/sourceReviewed；库中16部均是具体平台发行关联。业务能力不等于每个原作独立创作或亲自移植，需按作品列具体本地化／移植人员和版本分工。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-hokubu",
+      "name": "HOKUBU Communication & Industrial（北部通信工業）",
+      "status": "alreadyReviewed",
+      "sources": [
+        "https://www.sekonic.co.jp/company/history/",
+        "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
+        "https://ja.wikipedia.org/wiki/卒業II_〜Neo_Generation〜"
+      ],
+      "reason": "セコニック官方沿革载1969年北部通信工業株式会社设立；现有三条3DO历史发行复合署名北部通信工業（SharRock）只据二手条目。需各版包装、版权页确认发行法人和SharRock品牌关系／移植者；不由游戏发行归其原作开发。",
+      "workIds": [
+        "g830",
+        "g831",
+        "g959"
+      ]
+    },
+    {
+      "entityId": "entity-name-2f2c43ae71dc",
+      "name": "Hudson Entertainment",
+      "status": "identityRegistered",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1191141/000119312505218870/d6k.htm",
+        "https://www.esrb.org/ratings/26482/miami-law/",
+        "https://purenintendo.com/hudson-entertainments-crime-fighting-adventure-videogame-miami-law-goes-gold/"
+      ],
+      "reason": "Konami 2005年同期披露明列Hudson Entertainment, Inc.为Hudson Soft子公司，ESRB《Miami Law》评级登记同名法人；2009当事方通稿仅列其北美发行部门身份。保持g1167原版publisher，Hudson Soft开发和Gaijinworks本地化不能合并到该法人；具体所有权时段和2009盒书需另核。",
+      "workIds": [
+        "g1167"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "H",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 12,
+    "processedEntityIds": [
+      "entity-harukaze",
+      "entity-hawkeye",
+      "entity-name-5c51b719b1bb",
+      "entity-hokubu",
+      "entity-name-2f2c43ae71dc"
+    ],
+    "nextEntityId": "entity-hudson",
+    "nextName": "Hudson Soft（ハドソンソフト）",
+    "queue": [
+      {
+        "entityId": "entity-harukaze",
+        "name": "HARUKAZE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hawkeye",
+        "name": "Hawk Eye（株式会社ホークアイ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5c51b719b1bb",
+        "name": "HIKARI FIELD",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hokubu",
+        "name": "HOKUBU Communication & Industrial（北部通信工業）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-2f2c43ae71dc",
+        "name": "Hudson Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-hudson",
+        "name": "Hudson Soft（ハドソンソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-hulotte",
+        "name": "HULOTTE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-hulotte_roi",
+        "name": "HULOTTE ROI",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-53708cc2d758",
+        "name": "HUMAN",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-4f1d0851948b",
+        "name": "Human（ヒューマン）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-hummingbird_soft",
+        "name": "HummingBird Soft（ハミングバードソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-hunex",
+        "name": "HuneX",
+        "status": "pending"
+      }
+    ]
+  }
+}
