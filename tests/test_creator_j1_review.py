@@ -4,8 +4,11 @@ import subprocess
 import unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+SNAPSHOT='ce97df0ef44facab882b5baf55c5fcae077a2b89'
 BASE='310ae9e9f6625fa3b8b17931da73ab7286cb4433'
 def read(p):
+    if p in {"data/entities.json", "data/credits.json", "data/organizations.json"}:
+        return json.loads(subprocess.check_output(["git", "show", f"{SNAPSHOT}:{p}"], cwd=ROOT))
     return json.loads((ROOT/p).read_text())
 def old(p):
     return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))

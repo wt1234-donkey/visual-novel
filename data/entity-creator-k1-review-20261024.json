@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "6987aa4e3fb0f9501f759f4f9c14c85750151be4",
+  "audit": "data/entity-creator-k1-review-20261024.md",
+  "previousReview": "data/entity-creator-j1-review-20261024.md",
+  "policy": "连续核K前六项；公司类别不等于跨期法人连续性，同名节点不合并，复合上线不推开发。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZK1-I01",
+      "entityId": "entity-name-3d1dc43ef66a",
+      "rawName": "角川游戏",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20110120.pdf",
+        "https://www.typemoon.com/products/fatevita/character/"
+      ],
+      "note": "2011年当事方新闻稿明确株式会社角川ゲームス于2009年设立，2011年整合各社家庭用游戏发行。该旧中文角川游戏署名节点可订正公司类别。这里只核类别，2012 Fate Vita的具体制作/移植仍须当版职员表；不因公司一般业务包含开发而记原作制作，也不与另一同名ID合并。"
+    },
+    {
+      "reviewId": "AZK1-I02",
+      "entityId": "entity-name-fdde072d309a",
+      "rawName": "角川ゲームス",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20110120.pdf",
+        "https://www.falcom.co.jp/games-data/zeroevo"
+      ],
+      "note": "同一2011官方新闻稿支持历史株式会社角川ゲームス公司类别；Falcom官方零之轨迹Evolution页面将其列販売元，版权另署Falcom及Chara-ani。订正该日文旧发行节点为公司，六条既有发行保持；不把Evolution移植、增补制作或原PC/PSP开发归给发行方，不合并两个显示同名ID。"
+    },
+    {
+      "reviewId": "AZK1-I03",
+      "entityId": "entity-name-856f467ef1dc",
+      "rawName": "角川书店",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20061122-1.pdf",
+        "https://typemoon.com/contents/9ncnes/fate-stay-night-realta-nua"
+      ],
+      "note": "2006年公司分割公告明确旧株式会社角川書店与2007年1月4日新设同名公司有别；TYPE-MOON产品页确认本条Fate PS2为2007年4月。仅订正旧中文角川书店发行节点为公司类别；具体首版法人和分割承接对应仍须原版法律署名，不能仅靠同名统一到现代KADOKAWA或其他旧ID，不增加原作开发。"
+    },
+    {
+      "reviewId": "AZK1-I04",
+      "entityId": "entity-name-0a2b481b8b1e",
+      "rawName": "角川書店",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20061122-1.pdf",
+        "https://group.kadokawa.co.jp/company/history/05.html",
+        "https://www.nitroplus.co.jp/game/05-demonbane-houkou/",
+        "https://www.nitrochiral.com/game/togainu_tb.php"
+      ],
+      "note": "旧日文角川書店节点横跨1995、2004、2008、2010、2011。官方社史与2006分割公告表明这些时期使用该名的是公司，但经历同名法人分设；仅核定公司类别，不表示全部记录属于同一法人。Nitroplus确认2004 PS2为角川書店发行，Nitrochiral将2008発売元/販売元列角川書店，均不等于原作开发。逐发行法人拆分、1995原盒及分割归属留后续独立史实审查；现有ID和历史发行保持。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-82fc3d1bfdaa",
+      "name": "KADOKAWA",
+      "status": "compositeOrTemporalIdentityPending",
+      "sources": [
+        "https://www.kadokawa.co.jp/product/game1624/",
+        "https://group.kadokawa.co.jp/company/history/06.html",
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "旧KADOKAWA节点混合2002、2005、2012及2016发行；现行商品站的品牌归档不能核定每个首版发行法人。2013年吸收合并与2017当事方株式会社署名只能证明各自时期，不能覆盖早期对象。继续unknown；须按原盒/原版官网核旧署名并另作历史订正，不由KADOKAWA（HARUKAZE制作）推导该公司开发。",
+      "workIds": [
+        "g204",
+        "g777",
+        "g900",
+        "fairytale-r16"
+      ]
+    },
+    {
+      "entityId": "entity-name-0f93dc471cd5",
+      "name": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）",
+      "status": "compositeOrTemporalIdentityPending",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "2017-06-08当事方公告将KADOKAWA、AltPlus、scopes分列为配信开始的三家公司，复合发行名称不是单一公司。保留该旧复合节点unknown、两平台原发行与内容身份；不把共同上线直接等同逐作开发，不自动拆分参与记录或建立公司关系。",
+      "workIds": [
+        "minatosoft-hanayui"
+      ]
+    },
+    {
+      "entityId": "entity-name-3d1dc43ef66a",
+      "name": "Kadokawa Games（角川ゲームス）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20110120.pdf",
+        "https://www.typemoon.com/products/fatevita/character/"
+      ],
+      "reason": "2011年当事方新闻稿明确株式会社角川ゲームス于2009年设立，2011年整合各社家庭用游戏发行。该旧中文角川游戏署名节点可订正公司类别。这里只核类别，2012 Fate Vita的具体制作/移植仍须当版职员表；不因公司一般业务包含开发而记原作制作，也不与另一同名ID合并。",
+      "workIds": [
+        "g031"
+      ]
+    },
+    {
+      "entityId": "entity-name-fdde072d309a",
+      "name": "Kadokawa Games（角川ゲームス）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20110120.pdf",
+        "https://www.falcom.co.jp/games-data/zeroevo"
+      ],
+      "reason": "同一2011官方新闻稿支持历史株式会社角川ゲームス公司类别；Falcom官方零之轨迹Evolution页面将其列販売元，版权另署Falcom及Chara-ani。订正该日文旧发行节点为公司，六条既有发行保持；不把Evolution移植、增补制作或原PC/PSP开发归给发行方，不合并两个显示同名ID。",
+      "workIds": [
+        "g611",
+        "falcom-sora-fc",
+        "falcom-sora-sc",
+        "falcom-sora-3rd",
+        "falcom-zero",
+        "falcom-azure"
+      ]
+    },
+    {
+      "entityId": "entity-name-856f467ef1dc",
+      "name": "Kadokawa Shoten（角川書店）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20061122-1.pdf",
+        "https://typemoon.com/contents/9ncnes/fate-stay-night-realta-nua"
+      ],
+      "reason": "2006年公司分割公告明确旧株式会社角川書店与2007年1月4日新设同名公司有别；TYPE-MOON产品页确认本条Fate PS2为2007年4月。仅订正旧中文角川书店发行节点为公司类别；具体首版法人和分割承接对应仍须原版法律署名，不能仅靠同名统一到现代KADOKAWA或其他旧ID，不增加原作开发。",
+      "workIds": [
+        "g031"
+      ]
+    },
+    {
+      "entityId": "entity-name-0a2b481b8b1e",
+      "name": "Kadokawa Shoten（角川書店）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20061122-1.pdf",
+        "https://group.kadokawa.co.jp/company/history/05.html",
+        "https://www.nitroplus.co.jp/game/05-demonbane-houkou/",
+        "https://www.nitrochiral.com/game/togainu_tb.php"
+      ],
+      "reason": "旧日文角川書店节点横跨1995、2004、2008、2010、2011。官方社史与2006分割公告表明这些时期使用该名的是公司，但经历同名法人分设；仅核定公司类别，不表示全部记录属于同一法人。Nitroplus确认2004 PS2为角川書店发行，Nitrochiral将2008発売元/販売元列角川書店，均不等于原作开发。逐发行法人拆分、1995原盒及分割归属留后续独立史实审查；现有ID和历史发行保持。",
+      "workIds": [
+        "g054",
+        "g600",
+        "g622",
+        "hummingbird-lodoss-sfc"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-82fc3d1bfdaa",
+      "name": "KADOKAWA",
+      "status": "compositeOrTemporalIdentityPending",
+      "sources": [
+        "https://www.kadokawa.co.jp/product/game1624/",
+        "https://group.kadokawa.co.jp/company/history/06.html",
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "旧KADOKAWA节点混合2002、2005、2012及2016发行；现行商品站的品牌归档不能核定每个首版发行法人。2013年吸收合并与2017当事方株式会社署名只能证明各自时期，不能覆盖早期对象。继续unknown；须按原盒/原版官网核旧署名并另作历史订正，不由KADOKAWA（HARUKAZE制作）推导该公司开发。",
+      "workIds": [
+        "g204",
+        "g777",
+        "g900",
+        "fairytale-r16"
+      ]
+    },
+    {
+      "entityId": "entity-name-0f93dc471cd5",
+      "name": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）",
+      "status": "compositeOrTemporalIdentityPending",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "2017-06-08当事方公告将KADOKAWA、AltPlus、scopes分列为配信开始的三家公司，复合发行名称不是单一公司。保留该旧复合节点unknown、两平台原发行与内容身份；不把共同上线直接等同逐作开发，不自动拆分参与记录或建立公司关系。",
+      "workIds": [
+        "minatosoft-hanayui"
+      ]
+    },
+    {
+      "entityId": "entity-name-3d1dc43ef66a",
+      "name": "Kadokawa Games（角川ゲームス）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20110120.pdf",
+        "https://www.typemoon.com/products/fatevita/character/"
+      ],
+      "reason": "2011年当事方新闻稿明确株式会社角川ゲームス于2009年设立，2011年整合各社家庭用游戏发行。该旧中文角川游戏署名节点可订正公司类别。这里只核类别，2012 Fate Vita的具体制作/移植仍须当版职员表；不因公司一般业务包含开发而记原作制作，也不与另一同名ID合并。",
+      "workIds": [
+        "g031"
+      ]
+    },
+    {
+      "entityId": "entity-name-fdde072d309a",
+      "name": "Kadokawa Games（角川ゲームス）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20110120.pdf",
+        "https://www.falcom.co.jp/games-data/zeroevo"
+      ],
+      "reason": "同一2011官方新闻稿支持历史株式会社角川ゲームス公司类别；Falcom官方零之轨迹Evolution页面将其列販売元，版权另署Falcom及Chara-ani。订正该日文旧发行节点为公司，六条既有发行保持；不把Evolution移植、增补制作或原PC/PSP开发归给发行方，不合并两个显示同名ID。",
+      "workIds": [
+        "g611",
+        "falcom-sora-fc",
+        "falcom-sora-sc",
+        "falcom-sora-3rd",
+        "falcom-zero",
+        "falcom-azure"
+      ]
+    },
+    {
+      "entityId": "entity-name-856f467ef1dc",
+      "name": "Kadokawa Shoten（角川書店）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20061122-1.pdf",
+        "https://typemoon.com/contents/9ncnes/fate-stay-night-realta-nua"
+      ],
+      "reason": "2006年公司分割公告明确旧株式会社角川書店与2007年1月4日新设同名公司有别；TYPE-MOON产品页确认本条Fate PS2为2007年4月。仅订正旧中文角川书店发行节点为公司类别；具体首版法人和分割承接对应仍须原版法律署名，不能仅靠同名统一到现代KADOKAWA或其他旧ID，不增加原作开发。",
+      "workIds": [
+        "g031"
+      ]
+    },
+    {
+      "entityId": "entity-name-0a2b481b8b1e",
+      "name": "Kadokawa Shoten（角川書店）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20061122-1.pdf",
+        "https://group.kadokawa.co.jp/company/history/05.html",
+        "https://www.nitroplus.co.jp/game/05-demonbane-houkou/",
+        "https://www.nitrochiral.com/game/togainu_tb.php"
+      ],
+      "reason": "旧日文角川書店节点横跨1995、2004、2008、2010、2011。官方社史与2006分割公告表明这些时期使用该名的是公司，但经历同名法人分设；仅核定公司类别，不表示全部记录属于同一法人。Nitroplus确认2004 PS2为角川書店发行，Nitrochiral将2008発売元/販売元列角川書店，均不等于原作开发。逐发行法人拆分、1995原盒及分割归属留后续独立史实审查；现有ID和历史发行保持。",
+      "workIds": [
+        "g054",
+        "g600",
+        "g622",
+        "hummingbird-lodoss-sfc"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "K",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 14,
+    "processedEntityIds": [
+      "entity-name-82fc3d1bfdaa",
+      "entity-name-0f93dc471cd5",
+      "entity-name-3d1dc43ef66a",
+      "entity-name-fdde072d309a",
+      "entity-name-856f467ef1dc",
+      "entity-name-0a2b481b8b1e"
+    ],
+    "nextEntityId": "entity-name-d045c5d84903",
+    "nextName": "Kaga Create（加賀クリエイト）",
+    "queue": [
+      {
+        "entityId": "entity-name-82fc3d1bfdaa",
+        "name": "KADOKAWA",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0f93dc471cd5",
+        "name": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3d1dc43ef66a",
+        "name": "Kadokawa Games（角川ゲームス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fdde072d309a",
+        "name": "Kadokawa Games（角川ゲームス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-856f467ef1dc",
+        "name": "Kadokawa Shoten（角川書店）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0a2b481b8b1e",
+        "name": "Kadokawa Shoten（角川書店）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d045c5d84903",
+        "name": "Kaga Create（加賀クリエイト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-key",
+        "name": "Key",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3a59ff4a4f09",
+        "name": "KID",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-koei_tecmo",
+        "name": "Koei Tecmo Games（コーエーテクモゲームス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-koei",
+        "name": "KOEI（光栄）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-9e2d0b1695d0",
+        "name": "KOGADO STUDIO（工画堂スタジオ）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-konami",
+        "name": "Konami",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-konami_de",
+        "name": "Konami Digital Entertainment",
+        "status": "pending"
+      }
+    ]
+  }
+}
