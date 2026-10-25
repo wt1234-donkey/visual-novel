@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "a11d4ff83a1b23254e2827a6729f527f62fe611a",
+  "audit": "data/entity-creator-l1-review-20261025.md",
+  "previousReview": "data/entity-creator-k3-review-20261025.md",
+  "policy": "按L首五项连续核查；制作品牌、公司类别与逐版发行独立，历史法人不从现名倒填。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZL1-I01",
+      "entityId": "entity-name-7482e374b5bd",
+      "rawName": "Legend",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.crashonline.org.uk/08/news.htm"
+      ],
+      "note": "同期CRASH第8期将Valhalla与The Great Space Race的Legend明确称为原名Microl的公司，足以独立订正旧发行节点为历史公司类别。仅确认类别，不宣称完整工商注册名或精确更名日；旧Legend原文、三条发行与节点ID保持。不与英国专题节点或美国Legend Entertainment合并，不由发行、营销或图形技术介绍推定逐作完整制作职责。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZL1-C01",
+      "entityId": "entity-laplacian",
+      "dossierId": null,
+      "workId": "g854",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Laplacian",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://laplacian.jp/pdf/laplacian-news_1711.pdf",
+      "note": "原时期官方刊物具名キミトユメミシ及剧本／原画／设计职员；结合品牌负责人开发回顾 https://note.com/laplacian/n/ne1efbcd15dd2，限定2016原作制作品牌。"
+    },
+    {
+      "reviewId": "AZL1-C02",
+      "entityId": "entity-laplacian",
+      "dossierId": null,
+      "workId": "g855",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Laplacian",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://laplacian.jp/pdf/laplacian-news_1711.pdf",
+      "note": "原时期官方刊物具名ニュートンと林檎の樹及企划／剧本／原画／设计职员；结合品牌负责人开发回顾 https://note.com/laplacian/n/ne1efbcd15dd2，限定2017原作制作品牌。"
+    },
+    {
+      "reviewId": "AZL1-C03",
+      "entityId": "entity-laplacian",
+      "dossierId": null,
+      "workId": "g856",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Laplacian",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://note.com/laplacian/n/ne1efbcd15dd2",
+      "note": "品牌负责人明确自家品牌作品开发并点名未来ラジオと人工鳩时期的制作活动，结合原时期刊物 https://laplacian.jp/pdf/laplacian-news_1806.pdf 的具名Laplacian新作，限定2018原作制作品牌。"
+    },
+    {
+      "reviewId": "AZL1-C04",
+      "entityId": "entity-laplacian",
+      "dossierId": null,
+      "workId": "g860",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Laplacian",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://laplacian.jp/games/kenban/",
+      "note": "官网SPEC明确制作Laplacian及独立职员表；仅游戏制作品牌，原小说及出版方不并入。"
+    },
+    {
+      "reviewId": "AZL1-C05",
+      "entityId": "entity-laplacian",
+      "dossierId": null,
+      "workId": "g861",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Laplacian",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://laplacian.jp/games/shiori/",
+      "note": "官网SPEC明确制作Laplacian及独立职员表；限定作品制作品牌，不据此推断所有平台移植工种。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-laplacian",
+      "name": "Laplacian",
+      "status": "fiveProductionBrandsConfirmed",
+      "sources": [
+        "https://laplacian.jp/pdf/laplacian-news_1711.pdf",
+        "https://laplacian.jp/pdf/laplacian-news_1806.pdf",
+        "https://note.com/laplacian/n/ne1efbcd15dd2",
+        "https://laplacian.jp/games/kenban/",
+        "https://laplacian.jp/games/shiori/",
+        "https://store.steampowered.com/app/1607200/",
+        "https://prtimes.jp/main/html/rd/p/000000004.000036203.html"
+      ],
+      "reason": "品牌负责人的2026年说明明确历史Laplacian是游戏品牌，回顾自家作品开发及制作人员；结合原时期官方刊物具名作品／职员，为キミトユメミシ、ニュートンと林檎の樹、未来ラジオと人工鳩各追加制作品牌。官网SPEC明确記憶の鍵盤、久我山栞の死様手帖的制作Laplacian，再追加两条。只登记制作品牌，不等同品牌独立完成全部工种。2022公司更名及资产移转不倒填历史公司开发或新建法人关系；g858的2022 Steam开发栏仅记后发证据，不据此覆盖2020原版。g857尚缺明确制作表；g859当事方将发行／销售分列，保留既有发行，不能由销售推开发。",
+      "workIds": [
+        "g854",
+        "g855",
+        "g856",
+        "g857",
+        "g858",
+        "g859",
+        "g860",
+        "g861"
+      ]
+    },
+    {
+      "entityId": "entity-leaf",
+      "name": "Leaf",
+      "status": "existingProductionBrandsRetained",
+      "sources": [
+        "https://blog.aquaplus.jp/archives/3889",
+        "https://leaf.aquaplus.jp/product/index.html"
+      ],
+      "reason": "AQUAPLUS官方2013公告明确公司开展AQUAPLUS和LEAF两个游戏品牌并从事两品牌游戏企划开发销售。沿用Leaf身份与13部既有制作品牌，不重复追加；旧产品目录本轮未能访问，不声称每部已外部重验。品牌、法人及后发主机职责保持各自范围，公告公司设立日期不当作Leaf启用日。",
+      "workIds": [
+        "g024",
+        "g025",
+        "g026",
+        "g039",
+        "g150",
+        "g151",
+        "g159",
+        "g166",
+        "g333",
+        "g334",
+        "g335",
+        "g336",
+        "g337",
+        "g338",
+        "leaf-r01",
+        "leaf-r02",
+        "leaf-r03",
+        "leaf-r04",
+        "leaf-r05",
+        "leaf-r06",
+        "leaf-r07",
+        "leaf-r08",
+        "leaf-r09",
+        "leaf-r10",
+        "leaf-r11"
+      ]
+    },
+    {
+      "entityId": "entity-name-7482e374b5bd",
+      "name": "Legend",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://www.crashonline.org.uk/08/news.htm"
+      ],
+      "reason": "同期CRASH第8期将Valhalla与The Great Space Race的Legend明确称为原名Microl的公司，足以独立订正旧发行节点为历史公司类别。仅确认类别，不宣称完整工商注册名或精确更名日；旧Legend原文、三条发行与节点ID保持。不与英国专题节点或美国Legend Entertainment合并，不由发行、营销或图形技术介绍推定逐作完整制作职责。",
+      "workIds": [
+        "g114",
+        "legend-uk-great-space-race"
+      ]
+    },
+    {
+      "entityId": "entity-legend_entertainment",
+      "name": "Legend Entertainment",
+      "status": "existingCompanyRolesPending",
+      "sources": [
+        "https://www.bobbatesllc.com/work-bbatesllc/",
+        "https://www.mocagh.org/legend/missioncritical-manual.pdf",
+        "https://www.mocagh.org/legend/xanth-manual.pdf"
+      ],
+      "reason": "联合创始人Bob Bates官网明确1989—2002联合CEO、1998被GT收购及2002—2004工作室负责人，支持沿用美国公司身份。现有七条具体发行保持。公司总体研发业务、负责人一般监制经历及原版手册的技术支持／版权均不足以一揽子核定所有书目开发；未据此给Shannara等外部承制作补内部开发，逐作原始职员表仍待补证。不与英国Legend混同，也不由并购自动增加关系。",
+      "workIds": [
+        "g1169",
+        "g1170",
+        "g1171",
+        "g1172",
+        "legend-entertainment-blackstone",
+        "legend-entertainment-callahans",
+        "legend-entertainment-eric-the-unready",
+        "legend-entertainment-gateway",
+        "legend-entertainment-gateway-ii",
+        "legend-entertainment-hoboken",
+        "legend-entertainment-spellcasting-101",
+        "legend-entertainment-spellcasting-201",
+        "legend-entertainment-spellcasting-301",
+        "legend-entertainment-star-control-3",
+        "legend-entertainment-timequest",
+        "legend-entertainment-unreal-ii",
+        "legend-entertainment-unreal-na-pali",
+        "legend-entertainment-wheel-of-time"
+      ]
+    },
+    {
+      "entityId": "entity-legend_uk",
+      "name": "Legend（英国）",
+      "status": "existingHistoricalCompanyRolesPending",
+      "sources": [
+        "https://www.crashonline.org.uk/08/news.htm"
+      ],
+      "reason": "同期报道支持英国历史公司背景，既有英国沿革专题身份沿用。Valhalla与The Great Space Race现有专题职责仍待核，未将raw Legend节点的发行复制到该专题主体；类别确认不构成两个ID同一身份的映射核定，也不新建公司关系或开发职责。",
+      "workIds": [
+        "g114",
+        "legend-uk-great-space-race"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-laplacian",
+      "name": "Laplacian",
+      "status": "fiveProductionBrandsConfirmed",
+      "sources": [
+        "https://laplacian.jp/pdf/laplacian-news_1711.pdf",
+        "https://laplacian.jp/pdf/laplacian-news_1806.pdf",
+        "https://note.com/laplacian/n/ne1efbcd15dd2",
+        "https://laplacian.jp/games/kenban/",
+        "https://laplacian.jp/games/shiori/",
+        "https://store.steampowered.com/app/1607200/",
+        "https://prtimes.jp/main/html/rd/p/000000004.000036203.html"
+      ],
+      "reason": "品牌负责人的2026年说明明确历史Laplacian是游戏品牌，回顾自家作品开发及制作人员；结合原时期官方刊物具名作品／职员，为キミトユメミシ、ニュートンと林檎の樹、未来ラジオと人工鳩各追加制作品牌。官网SPEC明确記憶の鍵盤、久我山栞の死様手帖的制作Laplacian，再追加两条。只登记制作品牌，不等同品牌独立完成全部工种。2022公司更名及资产移转不倒填历史公司开发或新建法人关系；g858的2022 Steam开发栏仅记后发证据，不据此覆盖2020原版。g857尚缺明确制作表；g859当事方将发行／销售分列，保留既有发行，不能由销售推开发。",
+      "workIds": [
+        "g854",
+        "g855",
+        "g856",
+        "g857",
+        "g858",
+        "g859",
+        "g860",
+        "g861"
+      ]
+    },
+    {
+      "entityId": "entity-leaf",
+      "name": "Leaf",
+      "status": "existingProductionBrandsRetained",
+      "sources": [
+        "https://blog.aquaplus.jp/archives/3889",
+        "https://leaf.aquaplus.jp/product/index.html"
+      ],
+      "reason": "AQUAPLUS官方2013公告明确公司开展AQUAPLUS和LEAF两个游戏品牌并从事两品牌游戏企划开发销售。沿用Leaf身份与13部既有制作品牌，不重复追加；旧产品目录本轮未能访问，不声称每部已外部重验。品牌、法人及后发主机职责保持各自范围，公告公司设立日期不当作Leaf启用日。",
+      "workIds": [
+        "g024",
+        "g025",
+        "g026",
+        "g039",
+        "g150",
+        "g151",
+        "g159",
+        "g166",
+        "g333",
+        "g334",
+        "g335",
+        "g336",
+        "g337",
+        "g338",
+        "leaf-r01",
+        "leaf-r02",
+        "leaf-r03",
+        "leaf-r04",
+        "leaf-r05",
+        "leaf-r06",
+        "leaf-r07",
+        "leaf-r08",
+        "leaf-r09",
+        "leaf-r10",
+        "leaf-r11"
+      ]
+    },
+    {
+      "entityId": "entity-name-7482e374b5bd",
+      "name": "Legend",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://www.crashonline.org.uk/08/news.htm"
+      ],
+      "reason": "同期CRASH第8期将Valhalla与The Great Space Race的Legend明确称为原名Microl的公司，足以独立订正旧发行节点为历史公司类别。仅确认类别，不宣称完整工商注册名或精确更名日；旧Legend原文、三条发行与节点ID保持。不与英国专题节点或美国Legend Entertainment合并，不由发行、营销或图形技术介绍推定逐作完整制作职责。",
+      "workIds": [
+        "g114",
+        "legend-uk-great-space-race"
+      ]
+    },
+    {
+      "entityId": "entity-legend_entertainment",
+      "name": "Legend Entertainment",
+      "status": "existingCompanyRolesPending",
+      "sources": [
+        "https://www.bobbatesllc.com/work-bbatesllc/",
+        "https://www.mocagh.org/legend/missioncritical-manual.pdf",
+        "https://www.mocagh.org/legend/xanth-manual.pdf"
+      ],
+      "reason": "联合创始人Bob Bates官网明确1989—2002联合CEO、1998被GT收购及2002—2004工作室负责人，支持沿用美国公司身份。现有七条具体发行保持。公司总体研发业务、负责人一般监制经历及原版手册的技术支持／版权均不足以一揽子核定所有书目开发；未据此给Shannara等外部承制作补内部开发，逐作原始职员表仍待补证。不与英国Legend混同，也不由并购自动增加关系。",
+      "workIds": [
+        "g1169",
+        "g1170",
+        "g1171",
+        "g1172",
+        "legend-entertainment-blackstone",
+        "legend-entertainment-callahans",
+        "legend-entertainment-eric-the-unready",
+        "legend-entertainment-gateway",
+        "legend-entertainment-gateway-ii",
+        "legend-entertainment-hoboken",
+        "legend-entertainment-spellcasting-101",
+        "legend-entertainment-spellcasting-201",
+        "legend-entertainment-spellcasting-301",
+        "legend-entertainment-star-control-3",
+        "legend-entertainment-timequest",
+        "legend-entertainment-unreal-ii",
+        "legend-entertainment-unreal-na-pali",
+        "legend-entertainment-wheel-of-time"
+      ]
+    },
+    {
+      "entityId": "entity-legend_uk",
+      "name": "Legend（英国）",
+      "status": "existingHistoricalCompanyRolesPending",
+      "sources": [
+        "https://www.crashonline.org.uk/08/news.htm"
+      ],
+      "reason": "同期报道支持英国历史公司背景，既有英国沿革专题身份沿用。Valhalla与The Great Space Race现有专题职责仍待核，未将raw Legend节点的发行复制到该专题主体；类别确认不构成两个ID同一身份的映射核定，也不新建公司关系或开发职责。",
+      "workIds": [
+        "g114",
+        "legend-uk-great-space-race"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "L",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 12,
+    "processedEntityIds": [
+      "entity-laplacian",
+      "entity-leaf",
+      "entity-name-7482e374b5bd",
+      "entity-legend_entertainment",
+      "entity-legend_uk"
+    ],
+    "nextEntityId": "entity-name-547f933b0469",
+    "nextName": "Leland",
+    "queue": [
+      {
+        "entityId": "entity-laplacian",
+        "name": "Laplacian",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-leaf",
+        "name": "Leaf",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7482e374b5bd",
+        "name": "Legend",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-legend_entertainment",
+        "name": "Legend Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-legend_uk",
+        "name": "Legend（英国）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-547f933b0469",
+        "name": "Leland",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-liarsoft",
+        "name": "Liar-soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8ce25297971d",
+        "name": "LJN",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a2534654b05f",
+        "name": "LOGIN SOFT（ログインソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-9ba14a4f9578",
+        "name": "LOGiN（ログイン）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-57509c825879",
+        "name": "LucasArts",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a548db0984af",
+        "name": "LunaSystem",
+        "status": "pending"
+      }
+    ]
+  }
+}
