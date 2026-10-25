@@ -133,3 +133,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-24 K1核查K组前六项，独立记录为 `entity-creator-k1-review-20261024.json` 与同名Markdown。两条角川游戏、两条角川书店旧节点各订正公司类别，同名法人分设及逐版映射仍需独立审查；KADOKAWA混合时期与三方复合节点保持unknown，不加开发。进度K组6／14；下一家Kaga Create。
 
 2026-10-24 K2核查K组第7—10项，独立审核为 `entity-creator-k2-review-20261024.json` 与同名Markdown。加賀クリエイト及原KID各订正公司类别，前者现行官网已显示ENTERGRAM，后者同名后设品牌另核；Key既有21作与绯染天空限定合作、KT公司发行均沿用。无新增开发；进度K组10／14，下一家KOEI。
+
+2026-10-25 K3完成K组14／14，独立审核见 `entity-creator-k3-review-20261025.json` 与同名Markdown。工画堂独立订正公司身份，ascii-haja与g040按当事方资料各记原作制作；ASCII职责待核及关联位置保留。KOEI与KDE其余逐作开发不从发行推定。下一家Laplacian。

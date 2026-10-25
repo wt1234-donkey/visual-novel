@@ -63280,6 +63280,36 @@
       "territory": null,
       "reviewId": "AZJ1-C01",
       "reviewRecord": "data/entity-creator-j1-review-20261024.md"
+    },
+    {
+      "id": "credit-2cb00facd81c34a6",
+      "entityId": "entity-name-9e2d0b1695d0",
+      "targetType": "work",
+      "targetId": "ascii-haja",
+      "workId": "ascii-haja",
+      "role": "originalProduction",
+      "rawCredit": "工画堂スタジオ",
+      "status": "sourceReviewed",
+      "source": "https://www.kogado.com/110th/prologue.html",
+      "note": "工画堂负责人官方访谈回顾自家PC研发并具名覇邪の封印为原创第二作；仅记电脑原作制作，ASCII的FC版发行及具体移植另核，专题关联位置不转入主库。",
+      "territory": null,
+      "reviewId": "AZK3-C01",
+      "reviewRecord": "data/entity-creator-k3-review-20261025.md"
+    },
+    {
+      "id": "credit-e9832a6b717ba6fc",
+      "entityId": "entity-konami",
+      "targetType": "work",
+      "targetId": "g040",
+      "workId": "g040",
+      "role": "originalProduction",
+      "rawCredit": "Konami",
+      "status": "sourceReviewed",
+      "source": "https://www.konami.com/mg/archive/other/psonebooks/policenauts/interview01.html",
+      "note": "官方开发人员访谈明确小岛所率Snatcher PC88制作团队位于Konami内部并建立脚本技术；仅记1988电脑原作制作，不推定所有移植，更不归给2006成立的KDE公司。",
+      "territory": null,
+      "reviewId": "AZK3-C02",
+      "reviewRecord": "data/entity-creator-k3-review-20261025.md"
     }
   ],
   "dossierMemberships": [
@@ -76300,9 +76330,10 @@
       "workId": "g040",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.konami.com/corporate/en/history/index.html",
       "status": "existingEvidence"
     },
