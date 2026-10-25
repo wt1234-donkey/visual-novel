@@ -4762,15 +4762,16 @@
     {
       "id": "entity-name-61d0027ef7ce",
       "name": "MediaWorks",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "MediaWorks"
       ],
       "sources": [
-        "https://www.taito.co.jp/uqgensoukyoku/"
+        "https://www.taito.co.jp/uqgensoukyoku/",
+        "https://group.kadokawa.co.jp/documents/topics/20080228_2.pdf"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "KADOKAWA于2008年2月28日的当事方公告明确株式会社メディアワークス为合并存续公司，合并后计划更名ASCII MEDIA WORKS Inc.，足以独立确认旧MediaWorks公司类别。旧1997发行与原文保持；合并方案不等于给旧公司追加原作开发，也不由Taito现行重制目录把1997作品开发移交给后发发行方。旧ASCII、MediaWorks及后起同名出版品牌不自动合并；逐作制作继续待核。",
       "dates": []
     },
     {
@@ -5248,17 +5249,18 @@
     {
       "id": "entity-name-fec7ac8f12b1",
       "name": "Matsushita Electric Industrial（松下電器産業）",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "松下電器産業",
         "Matsushita Electric Industrial",
         "Matsushita Electric Industrial（松下電器産業）"
       ],
       "sources": [
-        "https://gamefaqs.gamespot.com/3do/569413-kurokishi-no-kamen/faqs/80948/introduction"
+        "https://gamefaqs.gamespot.com/3do/569413-kurokishi-no-kamen/faqs/80948/introduction",
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "Panasonic官方历史明确1935起使用松下電器産業株式会社公司名，2008改名；独立订正1994旧发行节点为历史公司类别，保留两条既有发行及原文。Micro Cabin官网开发实绩在Puppet Tale和Powers Kingdom两项1994年3DO原作行明确共同开发（松下電器産業），分别追加两条联合制作。只限这两部原作；Myst的1995年3DO是后发版本，不能倒填1993原作。与上一批松下／Panasoft复合节点分设，不自动创建更名或品牌关系，不将1935公司设立当作新专题准入。",
       "dates": [],
       "nameParts": {
         "english": "Matsushita Electric Industrial",

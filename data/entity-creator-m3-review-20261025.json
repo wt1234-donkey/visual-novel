@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "65d4c9914534d1f1d70bab216c266ac47098b443",
+  "audit": "data/entity-creator-m3-review-20261025.md",
+  "previousReview": "data/entity-creator-m2-review-20261025.md",
+  "policy": "连续核查M第11—15项；按原作开发机种登记，明确共同开发不改独作，移植／年代异文／复合个体身份分别处理。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZM3-I01",
+      "entityId": "entity-name-fec7ac8f12b1",
+      "rawName": "松下電器産業",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html"
+      ],
+      "note": "Panasonic官方历史明确1935起使用松下電器産業株式会社公司名，2008改名；独立订正1994旧发行节点为历史公司类别，保留两条既有发行及原文。Micro Cabin官网开发实绩在Puppet Tale和Powers Kingdom两项1994年3DO原作行明确共同开发（松下電器産業），分别追加两条联合制作。只限这两部原作；Myst的1995年3DO是后发版本，不能倒填1993原作。与上一批松下／Panasoft复合节点分设，不自动创建更名或品牌关系，不将1935公司设立当作新专题准入。"
+    },
+    {
+      "reviewId": "AZM3-I02",
+      "entityId": "entity-name-61d0027ef7ce",
+      "rawName": "MediaWorks",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20080228_2.pdf"
+      ],
+      "note": "KADOKAWA于2008年2月28日的当事方公告明确株式会社メディアワークス为合并存续公司，合并后计划更名ASCII MEDIA WORKS Inc.，足以独立确认旧MediaWorks公司类别。旧1997发行与原文保持；合并方案不等于给旧公司追加原作开发，也不由Taito现行重制目录把1997作品开发移交给后发发行方。旧ASCII、MediaWorks及后起同名出版品牌不自动合并；逐作制作继续待核。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZM3-C01",
+      "entityId": "entity-name-fec7ac8f12b1",
+      "dossierId": null,
+      "workId": "g1150",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "松下電器産業",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网原作开发行 1994.07 3DO 明确共同开发（松下電器産業）；仅登记此原作联合制作，不由发行或版权推断，不扩展至Myst等后发版本。"
+    },
+    {
+      "reviewId": "AZM3-C02",
+      "entityId": "entity-name-fec7ac8f12b1",
+      "dossierId": null,
+      "workId": "microcabin-powers",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "松下電器産業",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网原作开发行 1994.06 3DO 明确共同开发（松下電器産業）；仅登记此原作联合制作，不由发行或版权推断，不扩展至Myst等后发版本。"
+    },
+    {
+      "reviewId": "AZM3-C03",
+      "entityId": "entity-name-5714be41cf55",
+      "dossierId": null,
+      "workId": "ascii-rogue",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "Michael Toy／Glenn Wichman（原作者传播）",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.wichman.org/roguehistory.html",
+      "note": "Wichman第一人称回顾自己与Toy共同构思早期UNIX Rogue，Toy承担多数初版程序；仅记早期原作联合制作，不把复合署名视为正式法人／团队，也不排除Arnold、Lane等后续贡献或推定全部商业移植。"
+    },
+    {
+      "reviewId": "AZM3-C04",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g097",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1982.06 MZ-80B；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C05",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g098",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1982.09 MZ-80B/PC-8001；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C06",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g133",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1984.03 N-BASIC；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C07",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1142",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1984.08 PC-9801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C08",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1143",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1986.01 PC-9801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C09",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1144",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1986.12 PC-9801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C10",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1145",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1987.06 PC-8801/9801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C11",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1146",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1987.12 PC-8801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C12",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1147",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1988.04 PC-8801/9801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C13",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1148",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1988.09 PC-8801/9801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C14",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-xak",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1989.06 PC-8801/9801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C15",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-xak2",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1990.10 PC-88/98；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C16",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-gazzel",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1991.06 PC-88/98；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C17",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-illusion",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1991.12 MSX turboR；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C18",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-xak3",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1993.04 PC-98；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C19",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-dragonhalf",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1993.12 PC-98；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C20",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-herowish",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1994.06 PC-98；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C21",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-sword",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1995.09 3DO；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C22",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-soulgetter",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 2000.08 Game Boy；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C23",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-agent",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "bibliography",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1984.05 FM-7；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C24",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-worry",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "bibliography",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1984.12 X-1；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C25",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-harry",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "bibliography",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1984.12 PC-6001/8801；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C26",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-snow",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "bibliography",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网过去开发实绩具名原作行 1986.02 PC-6001；只确认该原作制作关联，不扩大到所有移植或独立完成全部工种；原有收录位置保持。"
+    },
+    {
+      "reviewId": "AZM3-C27",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "g1150",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网开发实绩 1994.07 3DO 明确共同开发（松下電器産業）；仅登记本主体在该原作的联合制作，不把发行归属或后发版本一并上推。"
+    },
+    {
+      "reviewId": "AZM3-C28",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-powers",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网开发实绩 1994.06 3DO 明确共同开发（松下電器産業）；仅登记本主体在该原作的联合制作，不把发行归属或后发版本一并上推。"
+    },
+    {
+      "reviewId": "AZM3-C29",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-riglord",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网开发实绩 1995.07 Sega Saturn 明确共同开发（セガ・エンタープライゼス）；仅登记本主体在该原作的联合制作，不把发行归属或后发版本一并上推。"
+    },
+    {
+      "reviewId": "AZM3-C30",
+      "entityId": "entity-microcabin",
+      "dossierId": null,
+      "workId": "microcabin-riglord2",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "マイクロキャビン",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.microcabin.co.jp/works/games/",
+      "note": "官网开发实绩 1996.11 Sega Saturn 明确共同开发（セガ・エンタープライゼズ）；仅登记本主体在该原作的联合制作，不把发行归属或后发版本一并上推。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-fec7ac8f12b1",
+      "name": "Matsushita Electric Industrial（松下電器産業）",
+      "status": "historicalCompanyAndTwoCoDevelopmentsConfirmed",
+      "sources": [
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html",
+        "https://www.microcabin.co.jp/works/games/"
+      ],
+      "reason": "Panasonic官方历史明确1935起使用松下電器産業株式会社公司名，2008改名；独立订正1994旧发行节点为历史公司类别，保留两条既有发行及原文。Micro Cabin官网开发实绩在Puppet Tale和Powers Kingdom两项1994年3DO原作行明确共同开发（松下電器産業），分别追加两条联合制作。只限这两部原作；Myst的1995年3DO是后发版本，不能倒填1993原作。与上一批松下／Panasoft复合节点分设，不自动创建更名或品牌关系，不将1935公司设立当作新专题准入。",
+      "workIds": [
+        "hummingbird-black-death-mask",
+        "riverhill-hauzer"
+      ]
+    },
+    {
+      "entityId": "entity-name-61d0027ef7ce",
+      "name": "MediaWorks",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20080228_2.pdf",
+        "https://www.taito.co.jp/uqgensoukyoku/"
+      ],
+      "reason": "KADOKAWA于2008年2月28日的当事方公告明确株式会社メディアワークス为合并存续公司，合并后计划更名ASCII MEDIA WORKS Inc.，足以独立确认旧MediaWorks公司类别。旧1997发行与原文保持；合并方案不等于给旧公司追加原作开发，也不由Taito现行重制目录把1997作品开发移交给后发发行方。旧ASCII、MediaWorks及后起同名出版品牌不自动合并；逐作制作继续待核。",
+      "workIds": [
+        "taito-uq"
+      ]
+    },
+    {
+      "entityId": "entity-melbournehouse",
+      "name": "Melbourne House",
+      "status": "existingPublisherDevelopmentIdentityBoundaryRetained",
+      "sources": [
+        "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html"
+      ],
+      "reason": "基于创办人访谈的Play It Again公司档案将Melbourne House出版与1980年Beam Software开发明确分开，并记1987出售及1997工作室重取旧名。沿用现有公司身份、39条具体发行及原专题；不能将Hobbit等早期发行自动改成该出版公司制作。后期Beam重用Melbourne House名义与旧出版公司间的法律主体、合同和逐作职责须继续分时核定，本批不一揽子追加制作、合并身份或新增公司关系。",
+      "workIds": [
+        "g089",
+        "g1018",
+        "g1019",
+        "g1020",
+        "g1021",
+        "g1022",
+        "g1023",
+        "g1024",
+        "g1025",
+        "g1026",
+        "g1027",
+        "g1028",
+        "g1029",
+        "g1030",
+        "g113",
+        "g129",
+        "g130",
+        "g132",
+        "g136",
+        "g137",
+        "g991",
+        "melbournehouse-alien-earth",
+        "melbournehouse-asterix",
+        "melbournehouse-blades",
+        "melbournehouse-catacombs",
+        "melbournehouse-demo",
+        "melbournehouse-doc",
+        "melbournehouse-fighting",
+        "melbournehouse-fist-2",
+        "melbournehouse-inspector",
+        "melbournehouse-judge",
+        "melbournehouse-kknd",
+        "melbournehouse-kknd2",
+        "melbournehouse-mib2",
+        "melbournehouse-mugsy",
+        "melbournehouse-punisher",
+        "melbournehouse-revenge",
+        "melbournehouse-riders-rohan",
+        "melbournehouse-shadowrun",
+        "melbournehouse-throne",
+        "melbournehouse-transformers",
+        "melbournehouse-usagi",
+        "melbournehouse-war-middle-earth",
+        "melbournehouse-wizard-princess"
+      ]
+    },
+    {
+      "entityId": "entity-name-5714be41cf55",
+      "name": "Michael Toy／Glenn Wichman（原作者传播）",
+      "status": "earlyCoCreatorsConfirmedCompositeIdentityPending",
+      "sources": [
+        "https://www.wichman.org/roguehistory.html"
+      ],
+      "reason": "Glenn Wichman本人回顾明确自己与Michael Toy共同构思早期UNIX Rogue、Toy承担多数初版程序，并区分Ken Arnold后续加入及Jon Lane／A.I.Design／Epyx的商业移植与销售。可给现有复合署名追加一条限定早期原作的联合制作；这不把两个自然人当成单一法人或正式注册团队，节点类别继续unknown。原publisher传播署名是旧数据，保留而非声称商业出版已证实；今后个体身份拆分及映射应独立审核，不遗漏Arnold等后续贡献，也不把各商业移植归给这一早期双人组合。",
+      "workIds": [
+        "ascii-rogue"
+      ]
+    },
+    {
+      "entityId": "entity-microcabin",
+      "name": "Micro Cabin（マイクロキャビン）",
+      "status": "twentySevenScopedProductionCreditsConfirmed",
+      "sources": [
+        "https://www.microcabin.co.jp/works/games/"
+      ],
+      "reason": "官网是逐日期／机种的过去开发实绩表，明确区分共同开发、移植和销售许可。本批按与原作相符的行追加23条原作制作、4条联合制作；已登记Diamond Adventure和Dreamland不重复。Myst、J.B.Harold及Princess Maker的行仅证明后发机种，不倒填原作。What’s Michael与Nirgends的官网年份分别为1989／1997，与现有1988／1996有冲突；GOHST-TOWN拼写与现有Ghost Town对应待原版材料确认，三项暂不追加。本批仅确认所列原作开发，未检查完整原始职员表或断言所有移植；书目位置、版权合作及他方发行均分别保留。",
+      "workIds": [
+        "g097",
+        "g098",
+        "g1060",
+        "g1142",
+        "g1143",
+        "g1144",
+        "g1145",
+        "g1146",
+        "g1147",
+        "g1148",
+        "g1149",
+        "g1150",
+        "g133",
+        "g820",
+        "g942",
+        "microcabin-agent",
+        "microcabin-diamond",
+        "microcabin-dragonhalf",
+        "microcabin-dream",
+        "microcabin-gazzel",
+        "microcabin-ghost",
+        "microcabin-harry",
+        "microcabin-herowish",
+        "microcabin-illusion",
+        "microcabin-nirgends",
+        "microcabin-powers",
+        "microcabin-riglord",
+        "microcabin-riglord2",
+        "microcabin-snow",
+        "microcabin-soulgetter",
+        "microcabin-sword",
+        "microcabin-worry",
+        "microcabin-xak",
+        "microcabin-xak2",
+        "microcabin-xak3"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-fec7ac8f12b1",
+      "name": "Matsushita Electric Industrial（松下電器産業）",
+      "status": "historicalCompanyAndTwoCoDevelopmentsConfirmed",
+      "sources": [
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html",
+        "https://www.microcabin.co.jp/works/games/"
+      ],
+      "reason": "Panasonic官方历史明确1935起使用松下電器産業株式会社公司名，2008改名；独立订正1994旧发行节点为历史公司类别，保留两条既有发行及原文。Micro Cabin官网开发实绩在Puppet Tale和Powers Kingdom两项1994年3DO原作行明确共同开发（松下電器産業），分别追加两条联合制作。只限这两部原作；Myst的1995年3DO是后发版本，不能倒填1993原作。与上一批松下／Panasoft复合节点分设，不自动创建更名或品牌关系，不将1935公司设立当作新专题准入。",
+      "workIds": [
+        "hummingbird-black-death-mask",
+        "riverhill-hauzer"
+      ]
+    },
+    {
+      "entityId": "entity-name-61d0027ef7ce",
+      "name": "MediaWorks",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://group.kadokawa.co.jp/documents/topics/20080228_2.pdf",
+        "https://www.taito.co.jp/uqgensoukyoku/"
+      ],
+      "reason": "KADOKAWA于2008年2月28日的当事方公告明确株式会社メディアワークス为合并存续公司，合并后计划更名ASCII MEDIA WORKS Inc.，足以独立确认旧MediaWorks公司类别。旧1997发行与原文保持；合并方案不等于给旧公司追加原作开发，也不由Taito现行重制目录把1997作品开发移交给后发发行方。旧ASCII、MediaWorks及后起同名出版品牌不自动合并；逐作制作继续待核。",
+      "workIds": [
+        "taito-uq"
+      ]
+    },
+    {
+      "entityId": "entity-melbournehouse",
+      "name": "Melbourne House",
+      "status": "existingPublisherDevelopmentIdentityBoundaryRetained",
+      "sources": [
+        "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html"
+      ],
+      "reason": "基于创办人访谈的Play It Again公司档案将Melbourne House出版与1980年Beam Software开发明确分开，并记1987出售及1997工作室重取旧名。沿用现有公司身份、39条具体发行及原专题；不能将Hobbit等早期发行自动改成该出版公司制作。后期Beam重用Melbourne House名义与旧出版公司间的法律主体、合同和逐作职责须继续分时核定，本批不一揽子追加制作、合并身份或新增公司关系。",
+      "workIds": [
+        "g089",
+        "g1018",
+        "g1019",
+        "g1020",
+        "g1021",
+        "g1022",
+        "g1023",
+        "g1024",
+        "g1025",
+        "g1026",
+        "g1027",
+        "g1028",
+        "g1029",
+        "g1030",
+        "g113",
+        "g129",
+        "g130",
+        "g132",
+        "g136",
+        "g137",
+        "g991",
+        "melbournehouse-alien-earth",
+        "melbournehouse-asterix",
+        "melbournehouse-blades",
+        "melbournehouse-catacombs",
+        "melbournehouse-demo",
+        "melbournehouse-doc",
+        "melbournehouse-fighting",
+        "melbournehouse-fist-2",
+        "melbournehouse-inspector",
+        "melbournehouse-judge",
+        "melbournehouse-kknd",
+        "melbournehouse-kknd2",
+        "melbournehouse-mib2",
+        "melbournehouse-mugsy",
+        "melbournehouse-punisher",
+        "melbournehouse-revenge",
+        "melbournehouse-riders-rohan",
+        "melbournehouse-shadowrun",
+        "melbournehouse-throne",
+        "melbournehouse-transformers",
+        "melbournehouse-usagi",
+        "melbournehouse-war-middle-earth",
+        "melbournehouse-wizard-princess"
+      ]
+    },
+    {
+      "entityId": "entity-name-5714be41cf55",
+      "name": "Michael Toy／Glenn Wichman（原作者传播）",
+      "status": "earlyCoCreatorsConfirmedCompositeIdentityPending",
+      "sources": [
+        "https://www.wichman.org/roguehistory.html"
+      ],
+      "reason": "Glenn Wichman本人回顾明确自己与Michael Toy共同构思早期UNIX Rogue、Toy承担多数初版程序，并区分Ken Arnold后续加入及Jon Lane／A.I.Design／Epyx的商业移植与销售。可给现有复合署名追加一条限定早期原作的联合制作；这不把两个自然人当成单一法人或正式注册团队，节点类别继续unknown。原publisher传播署名是旧数据，保留而非声称商业出版已证实；今后个体身份拆分及映射应独立审核，不遗漏Arnold等后续贡献，也不把各商业移植归给这一早期双人组合。",
+      "workIds": [
+        "ascii-rogue"
+      ]
+    },
+    {
+      "entityId": "entity-microcabin",
+      "name": "Micro Cabin（マイクロキャビン）",
+      "status": "twentySevenScopedProductionCreditsConfirmed",
+      "sources": [
+        "https://www.microcabin.co.jp/works/games/"
+      ],
+      "reason": "官网是逐日期／机种的过去开发实绩表，明确区分共同开发、移植和销售许可。本批按与原作相符的行追加23条原作制作、4条联合制作；已登记Diamond Adventure和Dreamland不重复。Myst、J.B.Harold及Princess Maker的行仅证明后发机种，不倒填原作。What’s Michael与Nirgends的官网年份分别为1989／1997，与现有1988／1996有冲突；GOHST-TOWN拼写与现有Ghost Town对应待原版材料确认，三项暂不追加。本批仅确认所列原作开发，未检查完整原始职员表或断言所有移植；书目位置、版权合作及他方发行均分别保留。",
+      "workIds": [
+        "g097",
+        "g098",
+        "g1060",
+        "g1142",
+        "g1143",
+        "g1144",
+        "g1145",
+        "g1146",
+        "g1147",
+        "g1148",
+        "g1149",
+        "g1150",
+        "g133",
+        "g820",
+        "g942",
+        "microcabin-agent",
+        "microcabin-diamond",
+        "microcabin-dragonhalf",
+        "microcabin-dream",
+        "microcabin-gazzel",
+        "microcabin-ghost",
+        "microcabin-harry",
+        "microcabin-herowish",
+        "microcabin-illusion",
+        "microcabin-nirgends",
+        "microcabin-powers",
+        "microcabin-riglord",
+        "microcabin-riglord2",
+        "microcabin-snow",
+        "microcabin-soulgetter",
+        "microcabin-sword",
+        "microcabin-worry",
+        "microcabin-xak",
+        "microcabin-xak2",
+        "microcabin-xak3"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "M",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 30,
+    "processedEntityIds": [
+      "entity-macadamia",
+      "entity-madosoft",
+      "entity-mages",
+      "entity-name-1cc39c9db973",
+      "entity-makura",
+      "entity-name-85a1fd56da66",
+      "entity-name-35ae58bf892b",
+      "entity-name-ff103df997b5",
+      "entity-name-170de3c8b237",
+      "entity-name-770b8bb9bcbc",
+      "entity-name-fec7ac8f12b1",
+      "entity-name-61d0027ef7ce",
+      "entity-melbournehouse",
+      "entity-name-5714be41cf55",
+      "entity-microcabin"
+    ],
+    "nextEntityId": "entity-microsoft",
+    "nextName": "Microsoft",
+    "queue": [
+      {
+        "entityId": "entity-macadamia",
+        "name": "Macadamia Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-madosoft",
+        "name": "Madosoft（まどそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mages",
+        "name": "MAGES.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1cc39c9db973",
+        "name": "Magical Zoo（マジカルズゥ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-makura",
+        "name": "Makura（枕）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-85a1fd56da66",
+        "name": "MangaGamer",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-35ae58bf892b",
+        "name": "Marvelous",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ff103df997b5",
+        "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-170de3c8b237",
+        "name": "Masaya（メサイヤ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fec7ac8f12b1",
+        "name": "Matsushita Electric Industrial（松下電器産業）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-61d0027ef7ce",
+        "name": "MediaWorks",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-melbournehouse",
+        "name": "Melbourne House",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microcabin",
+        "name": "Micro Cabin（マイクロキャビン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft",
+        "name": "Microsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft_home",
+        "name": "Microsoft Home",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft_studios",
+        "name": "Microsoft Studios",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minato_carnival_world",
+        "name": "Minato Carnival World（みなとカーニバルWorld）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minato_carnival",
+        "name": "Minato Carnival（みなとカーニバル）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minatosoft",
+        "name": "Minato Soft（みなとそふと）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-297835568b98",
+        "name": "Minato Station（みなとすてーしょん）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minori",
+        "name": "minori",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mirai",
+        "name": "mirai",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-935c3bc35045",
+        "name": "Mixx Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-fairytale_tsuki",
+        "name": "Moon-Star Group（月星組）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mosaic",
+        "name": "Mosaic Publishing",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-170eeb0b71f8",
+        "name": "Mosaic Publishing Ltd",
+        "status": "pending"
+      }
+    ]
+  }
+}
