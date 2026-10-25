@@ -171,3 +171,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 P2连续核查日文显示名Pony Canyon至Psionic，记录为 `entity-creator-p2-review-20261025.json` 与同名Markdown。具名公司资料、同期品牌报道和作者第一方主页支持公司／品牌／个人三项身份订正，仅追加Ghostscape一条原作制作。pride缺原始制作资料，PROTOTYPE整体移植业务不批量推逐版开发，两者原职责保持；全部专题、旧发行、日期、位置、关系和基线保持。P累计10／13，A—P累计228／231，下一项PSK。
 
 P2同时允许独立身份订正将动态解析的unknown节点核为既有模型中的individual类别，仍要求原署名、订正前状态、具名来源和说明全部匹配；本批仅命中Psionic。不改变历史发行角色或其他主体的归类规则。
+
+2026-10-25 P字母第三批使用 `entity-creator-p3-review-20261025.json` 与同名Markdown，按PSK、Purple software、Purple（JAST期）完成P组13／13。现行Purple software仅确认品牌身份并保留publisher；PSK的ザ・病院与旧Purple的かすみ遊戯各按当事方明确开发说明补一条原作职责，现行品牌、历史品牌、母公司和后发DVDPG职责分开。其他逐作STAFF和沿革继续待核，作品／内容／发行、关系与基线不改；下一项Quest（クエスト）。

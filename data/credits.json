@@ -64885,6 +64885,36 @@
       "territory": null,
       "reviewId": "AZP2-C01",
       "reviewRecord": "data/entity-creator-p2-review-20261025.md"
+    },
+    {
+      "id": "credit-b766db89dc406dfe",
+      "entityId": "entity-psk",
+      "targetType": "work",
+      "targetId": "g1096",
+      "workId": "g1096",
+      "role": "originalProduction",
+      "rawCredit": "PSK",
+      "status": "sourceReviewed",
+      "source": "https://prtimes.jp/main/html/rd/p/000000104.000069696.html",
+      "note": "D4官方公告在1987年原作介绍中明确PSK为开发方；仅追加ザ・病院原作制作，保留原publisher，不将2022复刻发行当作原作新内容或给PSK批量增加其他作品开发。",
+      "territory": null,
+      "reviewId": "AZP3-C01",
+      "reviewRecord": "data/entity-creator-p3-review-20261025.md"
+    },
+    {
+      "id": "credit-8c53949c84f272e0",
+      "entityId": "entity-jast_purple",
+      "targetType": "work",
+      "targetId": "g673",
+      "workId": "g673",
+      "role": "productionBrand",
+      "rawCredit": "Purple",
+      "status": "sourceReviewed",
+      "source": "https://www.blackrainbow.jp/dvdpg/006/index.html",
+      "note": "BLACKRAINBOW官方DVDPG页明确原游戏由Purple开发；职责限1999年かすみ遊戯原作的旧Purple品牌，不转给现行Purple software或JAST公司，也不把2002DVDPG改编制作倒填给原品牌。",
+      "territory": null,
+      "reviewId": "AZP3-C02",
+      "reviewRecord": "data/entity-creator-p3-review-20261025.md"
     }
   ],
   "dossierMemberships": [
@@ -84811,9 +84841,10 @@
       "workId": "g1096",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://repadars.org/psk1.html",
       "status": "existingEvidence"
     },

@@ -12,6 +12,8 @@ PSI = 'entity-name-cd9fca98a5c2'
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'172ad9c4edd2e7e5459f02fa9055381ecd8cb9f9:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 
