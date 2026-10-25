@@ -4401,15 +4401,17 @@
     {
       "id": "entity-name-b129f13b41e4",
       "name": "Simon & Schuster Interactive",
-      "type": "unknown",
+      "type": "brand",
       "aliases": [
         "Simon & Schuster Interactive"
       ],
       "sources": [
-        "https://www.mobygames.com/game/7117/private-eye/releases/"
+        "https://www.mobygames.com/game/7117/private-eye/releases/",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/467290/manuals/Manual.pdf",
+        "https://www.sec.gov/Archives/edgar/data/813828/000091205702012516/a2073981z10-k405.htm"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "Steam官方托管的1998原游戏手册搜索索引明确Simon & Schuster Interactive是Simon & Schuster, Inc.的division；SEC 2001财年报告可读且以该名义出版CD-ROM。将节点核为brand以表达历史软件出版部门／名义，不认定独立法人；显式保留g1188原publisher，不自动产生品牌发行、原作发行品牌或开发。",
       "dates": []
     },
     {
