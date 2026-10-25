@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "9d33ca50eb858648d548473b35903790972c8cf8",
+  "audit": "data/entity-creator-p1-review-20261025.md",
+  "previousReview": "data/entity-creator-o1-review-20261025.md",
+  "policy": "P组第1—5项；沿用品牌十八作既有制作，关联模拟作品仅补制作品牌；公司类别不推开发，近似主体名不合并。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZP1-I01",
+      "entityId": "entity-name-906fa9d6b292",
+      "rawName": "Philips Interactive Media, Inc.",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.icdia.co.uk/iengineer/IE_9503.html",
+        "https://www.icdia.co.uk/iengineer/IE_9603.pdf",
+        "https://www.acmi.net.au/works/119642--the-dame-was-loaded-dos/",
+        "https://www.acmi.net.au/works/119781--the-dame-was-loaded/"
+      ],
+      "note": "同期自办开发技术刊物具名Philips Interactive Media, Inc.作为出版主体，1995刊物另列洛杉矶地址及技术组织；ACMI实物馆藏分列Beam Software开发与Philips发行，支持将既有署名核为历史公司类别。只订正类别，不将比利时PIMC、荷兰B.V.、英国International Ltd.或Philips总公司合并，不补成立／终止或运营关系。技术支持业务及本作发行不等于原作开发。馆藏总条目的1995与DOS实物1996分开理解，不据此改原作年。"
+    },
+    {
+      "reviewId": "AZP1-I02",
+      "entityId": "entity-name-db9995981277",
+      "rawName": "PIACCI",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.dreamnews.jp/press/0000079275/",
+        "https://fandc.co.jp/catalog/consumer/804",
+        "https://fandc.co.jp/catalog/consumer/695",
+        "https://fandc.co.jp/catalog/consumer/723"
+      ],
+      "note": "2013公司自发公告具名株式会社PIACCI并列公司概要，且将发行公司、COCOEVER品牌与F&C／HuneX开发分别列示。F&C官方家庭用目录也把既有三作对应版本的発売元记为PIACCI；G.O.条目另列COCKTAIL SOFT原作，4明确是2009作的移植。仅订正公司类别，保留七条publisher原文，不把GN Software品牌、原作开发、翻译或移植实现混同，不新增业务关系或平台。"
+    },
+    {
+      "reviewId": "AZP1-I03",
+      "entityId": "entity-name-84c58ec33dac",
+      "rawName": "パイオニアLDC",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://jpn.pioneer/ja/corp/news/press/pdf/ir/fiscal2001.pdf",
+        "https://jpn.pioneer/ja/corp/news/press/index/736/rel%3D_1999_"
+      ],
+      "note": "Pioneer2001官方业绩资料的集团概要图将パイオニアＬＤＣ(株)作为具名公司分列，1998官方产品公告也具名其销售职责，支持订正历史公司类别。只核类别，不将母公司、美国Pioneer Entertainment或后续名称合并，不从集团一般企划／制作／销售范围推定Blue Chicago Blues开发。官方站本次直连进入维护页，历史资料内容由检索缓存取得，不冒称已读取当前完整PDF或作品STAFF。"
+    },
+    {
+      "reviewId": "AZP1-I04",
+      "entityId": "entity-name-fb8b690c85a0",
+      "rawName": "Pony Canyon",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.ponycanyon.biz/company/outline",
+        "https://www.ponycanyon.biz/company/brand/",
+        "https://www.ponycanyon.biz/wp/wp-content/uploads/2025/10/%E4%BC%9A%E7%A4%BE%E6%A1%88%E5%86%852025_%E8%8B%B1%E8%AA%9E%E7%89%88%E6%9C%80%E7%B5%82%E7%A8%BF_v1_1_ol.pdf"
+      ],
+      "note": "官方公司概要与英文公司案内明确PONY CANYON INC.为公司英文名，官方沿革记1987年合并并改用该公司名，支持1988既有英文署名的公司类别。只订正当前这一历史节点，不与日文显示名节点合并或抢先订正，不把1966创业、1955前身或1987改名混作同一成立日期。魔塔崩坏保留既有发行职责，不由版权、公司内容制作业务或发行推原作开发；官网直连403，本轮读取的是官方页面及案内检索缓存。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZP1-C01",
+      "entityId": "entity-palette",
+      "dossierId": null,
+      "workId": "palette-extra-honey",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "ぱれっと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.clearrave.co.jp/brand/brand_palette.html",
+      "note": "集团官方品牌目录在ぱれっと栏目逐作列出蜂蜜庄，并具名原画たまひよ、剧本米村純一及2002原版。只补本作制作品牌，不从首发发行或版权单独推定；保留related、原模拟系统范围及主库身份边界，不转主库或增加后发版。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-palette",
+      "workIds": [
+        "palette-extra-honey"
+      ],
+      "status": "relatedPlacementRetained",
+      "sources": [
+        "https://palette.clearrave.co.jp/product/hachimitu/system.htm"
+      ],
+      "reason": "官网明确七月导入、七八月模拟系统为核心、九月路线结局。制作归属可以确认，但叙事与系统主次未据此重审，保留related及原有玩法标签，不自动转主库。"
+    },
+    {
+      "entityId": "entity-name-906fa9d6b292",
+      "workIds": [
+        "g1030"
+      ],
+      "status": "publisherAndDevelopmentSeparated",
+      "sources": [
+        "https://www.icdia.co.uk/iengineer/IE_9503.html",
+        "https://www.icdia.co.uk/iengineer/IE_9603.pdf",
+        "https://www.acmi.net.au/works/119642--the-dame-was-loaded-dos/",
+        "https://www.acmi.net.au/works/119781--the-dame-was-loaded/"
+      ],
+      "reason": "仅公司身份确认。不同馆藏对象的制作年份与开发显示不直接替代既有作品／发行字段；不新增Philips原作开发，不合并PIMC或其他Philips法人。"
+    },
+    {
+      "entityId": "entity-name-db9995981277",
+      "workIds": [
+        "g731",
+        "g735",
+        "g736"
+      ],
+      "status": "portsAndOriginalDevelopmentSeparated",
+      "sources": [
+        "https://www.dreamnews.jp/press/0000079275/",
+        "https://fandc.co.jp/catalog/consumer/804",
+        "https://fandc.co.jp/catalog/consumer/695",
+        "https://fandc.co.jp/catalog/consumer/723"
+      ],
+      "reason": "F&C目录逐作STAFF及原作／移植说明不证明发行公司的具体移植开发，本批不追加原作或portDeveloper。"
+    },
+    {
+      "entityId": "entity-name-84c58ec33dac",
+      "workIds": [
+        "g1187"
+      ],
+      "status": "workSpecificDevelopmentStillUnverified",
+      "sources": [
+        "https://jpn.pioneer/ja/corp/news/press/pdf/ir/fiscal2001.pdf",
+        "https://jpn.pioneer/ja/corp/news/press/index/736/rel%3D_1999_"
+      ],
+      "reason": "集团公司企划制作销售的通用分类不是本作开发署名；官方站维护，暂缺本作原始制作资料。"
+    },
+    {
+      "entityId": "entity-name-fb8b690c85a0",
+      "workIds": [
+        "carry-lab-matou"
+      ],
+      "status": "historicalPublisherOnly",
+      "sources": [
+        "https://www.ponycanyon.biz/company/outline",
+        "https://www.ponycanyon.biz/company/brand/",
+        "https://www.ponycanyon.biz/wp/wp-content/uploads/2025/10/%E4%BC%9A%E7%A4%BE%E6%A1%88%E5%86%852025_%E8%8B%B1%E8%AA%9E%E7%89%88%E6%9C%80%E7%B5%82%E7%A8%BF_v1_1_ol.pdf"
+      ],
+      "reason": "公司身份与一般制作业务不替代魔塔崩坏逐作开发证据；英文与日文显示名节点保留独立稳定ID。"
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-palette",
+      "name": "Palette（ぱれっと）",
+      "status": "existingEighteenProductionsAndOneRelatedBrandConfirmed",
+      "sources": [
+        "https://www.clearrave.co.jp/brand/brand_palette.html",
+        "https://palette.clearrave.co.jp/product/",
+        "https://palette.clearrave.co.jp/product/hachimitu/system.htm",
+        "https://palette.clearrave.co.jp/product/mashiro-project/sana/",
+        "https://9-nine-project.com/game/asnine",
+        "https://9-nine-project.com/game/asnine/news/12/"
+      ],
+      "reason": "沿用既有品牌身份及十八条productionBrand，不重复追加或将existingDossier批量改成sourceReviewed。官方集团品牌目录逐作具名原画、剧本，结合SANA／as:9-nine-特设资料核对版本边界。仅给关联作品蜂蜜庄新增一条制作品牌；官方目录明确本作原画たまひよ、剧本米村純一。保留related及模拟系统范围，不因有结局剧情转主库。SANA独立作品、2009原作／FHD内容与9-nine-四篇、整合及衍生各自身份保持；子品牌Qualia与集团公司不合并，不增加父公司制作。",
+      "workIds": [
+        "g423",
+        "g424",
+        "g425",
+        "g426",
+        "g427",
+        "g428",
+        "g429",
+        "g430",
+        "g431",
+        "g432",
+        "g433",
+        "g434",
+        "g435",
+        "g436",
+        "g437",
+        "g438",
+        "g439",
+        "g440",
+        "palette-extra-honey"
+      ]
+    },
+    {
+      "entityId": "entity-name-906fa9d6b292",
+      "name": "Philips Interactive Media, Inc.",
+      "status": "historicalCompanyPublishingScopeConfirmed",
+      "sources": [
+        "https://www.icdia.co.uk/iengineer/IE_9503.html",
+        "https://www.icdia.co.uk/iengineer/IE_9603.pdf",
+        "https://www.acmi.net.au/works/119642--the-dame-was-loaded-dos/",
+        "https://www.acmi.net.au/works/119781--the-dame-was-loaded/"
+      ],
+      "reason": "同期自办开发技术刊物具名Philips Interactive Media, Inc.作为出版主体，1995刊物另列洛杉矶地址及技术组织；ACMI实物馆藏分列Beam Software开发与Philips发行，支持将既有署名核为历史公司类别。只订正类别，不将比利时PIMC、荷兰B.V.、英国International Ltd.或Philips总公司合并，不补成立／终止或运营关系。技术支持业务及本作发行不等于原作开发。馆藏总条目的1995与DOS实物1996分开理解，不据此改原作年。",
+      "workIds": [
+        "g1030"
+      ]
+    },
+    {
+      "entityId": "entity-name-db9995981277",
+      "name": "PIACCI",
+      "status": "companyConfirmedPublishingAndOriginalDevelopmentSeparated",
+      "sources": [
+        "https://www.dreamnews.jp/press/0000079275/",
+        "https://fandc.co.jp/catalog/consumer/804",
+        "https://fandc.co.jp/catalog/consumer/695",
+        "https://fandc.co.jp/catalog/consumer/723"
+      ],
+      "reason": "2013公司自发公告具名株式会社PIACCI并列公司概要，且将发行公司、COCOEVER品牌与F&C／HuneX开发分别列示。F&C官方家庭用目录也把既有三作对应版本的発売元记为PIACCI；G.O.条目另列COCKTAIL SOFT原作，4明确是2009作的移植。仅订正公司类别，保留七条publisher原文，不把GN Software品牌、原作开发、翻译或移植实现混同，不新增业务关系或平台。",
+      "workIds": [
+        "g731",
+        "g735",
+        "g736"
+      ]
+    },
+    {
+      "entityId": "entity-name-84c58ec33dac",
+      "name": "Pioneer LDC（パイオニアLDC）",
+      "status": "historicalCompanyConfirmedNoDevelopmentInference",
+      "sources": [
+        "https://jpn.pioneer/ja/corp/news/press/pdf/ir/fiscal2001.pdf",
+        "https://jpn.pioneer/ja/corp/news/press/index/736/rel%3D_1999_"
+      ],
+      "reason": "Pioneer2001官方业绩资料的集团概要图将パイオニアＬＤＣ(株)作为具名公司分列，1998官方产品公告也具名其销售职责，支持订正历史公司类别。只核类别，不将母公司、美国Pioneer Entertainment或后续名称合并，不从集团一般企划／制作／销售范围推定Blue Chicago Blues开发。官方站本次直连进入维护页，历史资料内容由检索缓存取得，不冒称已读取当前完整PDF或作品STAFF。",
+      "workIds": [
+        "g1187"
+      ]
+    },
+    {
+      "entityId": "entity-name-fb8b690c85a0",
+      "name": "Pony Canyon",
+      "status": "historicalEnglishCompanySignatureConfirmed",
+      "sources": [
+        "https://www.ponycanyon.biz/company/outline",
+        "https://www.ponycanyon.biz/company/brand/",
+        "https://www.ponycanyon.biz/wp/wp-content/uploads/2025/10/%E4%BC%9A%E7%A4%BE%E6%A1%88%E5%86%852025_%E8%8B%B1%E8%AA%9E%E7%89%88%E6%9C%80%E7%B5%82%E7%A8%BF_v1_1_ol.pdf"
+      ],
+      "reason": "官方公司概要与英文公司案内明确PONY CANYON INC.为公司英文名，官方沿革记1987年合并并改用该公司名，支持1988既有英文署名的公司类别。只订正当前这一历史节点，不与日文显示名节点合并或抢先订正，不把1966创业、1955前身或1987改名混作同一成立日期。魔塔崩坏保留既有发行职责，不由版权、公司内容制作业务或发行推原作开发；官网直连403，本轮读取的是官方页面及案内检索缓存。",
+      "workIds": [
+        "carry-lab-matou"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "P",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-palette",
+      "entity-name-906fa9d6b292",
+      "entity-name-db9995981277",
+      "entity-name-84c58ec33dac",
+      "entity-name-fb8b690c85a0"
+    ],
+    "nextEntityId": "entity-name-e8f2daf6c0f9",
+    "nextName": "Pony Canyon（ポニーキャニオン）",
+    "queue": [
+      {
+        "entityId": "entity-palette",
+        "name": "Palette（ぱれっと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-906fa9d6b292",
+        "name": "Philips Interactive Media, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-db9995981277",
+        "name": "PIACCI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-84c58ec33dac",
+        "name": "Pioneer LDC（パイオニアLDC）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fb8b690c85a0",
+        "name": "Pony Canyon",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e8f2daf6c0f9",
+        "name": "Pony Canyon（ポニーキャニオン）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-pride",
+        "name": "pride",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e853d08ed1b6",
+        "name": "Princess Soft（プリンセスソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-prototype",
+        "name": "PROTOTYPE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-cd9fca98a5c2",
+        "name": "Psionic",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-psk",
+        "name": "PSK（パソコンショップ高知）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-fb321fae98fc",
+        "name": "Purple software",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-jast_purple",
+        "name": "Purple（JAST期）",
+        "status": "pending"
+      }
+    ]
+  }
+}
