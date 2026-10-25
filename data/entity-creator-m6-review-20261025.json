@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "7579dfdde2496a45ce82e323ff7ce1f2f975a5db",
+  "audit": "data/entity-creator-m6-review-20261025.md",
+  "previousReview": "data/entity-creator-m5-review-20261025.md",
+  "policy": "完成M第26—30项，历史公司类别、商店服务复合原文、子品牌制作与外包出版分开核定；次项NanaWind。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZM6-I01",
+      "entityId": "entity-name-935c3bc35045",
+      "rawName": "Mixx Entertainment",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://icv2.com/articles/comics/view/14344/interview-tokyopop-ceo-stuart-levy-part-1",
+        "https://icv2.com/articles/comics/view/19870/stu-levys-personal-message",
+        "https://www.awn.com/animationworld/new-japan-anime-film-reviews-13"
+      ],
+      "note": "Stu Levy于2009年访谈与2011年本人声明明确其美国公司早期名Mixx，区分日本既有多媒体业务与美国创业；AWN同期2002年授权图像法律署名明确Mixx Entertainment, Inc.及TOKYOPOP商标。结合既有Graduation发行名，独立订正该历史节点为公司类别，不由漫画刊名或现行商标把节点当品牌。MobyGames职员转录将英语版制作人和翻译归Stuart Levy、Mixx Games部门；本轮未直接验读原CD职员表，不能据此给1994日本原作增加Mixx制作或把个人翻译当全公司职责。保留一条旧发行；更名确切日期、日美法人与部门映射、1996／1997英语版日期异文另核，不新增关系。"
+    },
+    {
+      "reviewId": "AZM6-I02",
+      "entityId": "entity-name-170eeb0b71f8",
+      "rawName": "Mosaic Publishing Ltd",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/01720326/filing-history?page=2",
+        "https://find-and-update.company-information.service.gov.uk/officers/qnnXsaXZPpEMGCcuziDhCcMYTeo/appointments"
+      ],
+      "note": "Companies House可检索登记以01720326明确MOSAIC PUBLISHING LIMITED公司名，并列Victoria Katharine Carne的历史董事／秘书任职；原Erik手册可检索内容具名Mosaic Publishing Limited出版与Level 9团队制作，支持既有Ltd发行节点为历史公司类别。仅订正类型与核对状态，不把公司登记页当游戏开发证据。本轮登记全文及PDF正文访问失败，依据官方登记索引和原手册索引；未复验完整扫描、精确成立／注销日期或全部原始申报。与无Ltd专题节点保留不同ID，不自动合并身份或创建同一主体关系，保留四条具体发行及旧作品位置。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZM6-C01",
+      "entityId": "entity-fairytale_tsuki",
+      "dossierId": null,
+      "workId": "g792",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "月星組/フェアリーテール",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://fandc.co.jp/catalog/pc/104",
+      "note": "F&C原版产品页具名品牌、STAFF原画／剧本／音乐及月星組出道作定位，登记该作原作制作品牌，不从版权或发行单独推断；不扩大到主机移植，FairyTale父级专题职责待核及原位置保持。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-935c3bc35045",
+      "name": "Mixx Entertainment",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://icv2.com/articles/comics/view/14344/interview-tokyopop-ceo-stuart-levy-part-1",
+        "https://icv2.com/articles/comics/view/19870/stu-levys-personal-message",
+        "https://www.awn.com/animationworld/new-japan-anime-film-reviews-13",
+        "https://www.mobygames.com/game/1861/graduation-for-windows-95/credits/windows/"
+      ],
+      "reason": "Stu Levy于2009年访谈与2011年本人声明明确其美国公司早期名Mixx，区分日本既有多媒体业务与美国创业；AWN同期2002年授权图像法律署名明确Mixx Entertainment, Inc.及TOKYOPOP商标。结合既有Graduation发行名，独立订正该历史节点为公司类别，不由漫画刊名或现行商标把节点当品牌。MobyGames职员转录将英语版制作人和翻译归Stuart Levy、Mixx Games部门；本轮未直接验读原CD职员表，不能据此给1994日本原作增加Mixx制作或把个人翻译当全公司职责。保留一条旧发行；更名确切日期、日美法人与部门映射、1996／1997英语版日期异文另核，不新增关系。",
+      "workIds": [
+        "g831"
+      ]
+    },
+    {
+      "entityId": "entity-name-588f588386f3",
+      "name": "Moe APP（萌えAPP）",
+      "status": "mixedServiceAndLegalSignaturesPending",
+      "sources": [
+        "https://www.hublots.net/business/content.html",
+        "https://moeapp.net/support.html",
+        "https://www.hublots.net/news/detail/150410_2.html",
+        "https://www.hublots.net/news/detail/131220.html"
+      ],
+      "reason": "Hublots官方业务页明确萌えAPPストア为应用配信商店并区分内容持有方，支持运营服务与原作品牌分开；AQUA同期公告将Hublots配信与SORAHANE原作版权分列。支持页仍列运营公司，不将今日网站与当前全部法人沿革等同。既有节点同时收纳萌えAPP、株式会社ハブロッツ（萌えAPP）、株式会社ジャックインザボックス（萌えAPP）三种原文；单改company或brand均会掩盖服务与法人复合映射，继续unknown，保留八条旧publisher。后续需逐发行拆分服务名、各期合同公司和移植开发，再独立审核身份映射；本批不从配信、商店功能或通用移植服务声明推断四部原作开发，不新增运营／合并关系。",
+      "workIds": [
+        "g864",
+        "g886",
+        "g903",
+        "g904"
+      ]
+    },
+    {
+      "entityId": "entity-fairytale_tsuki",
+      "name": "Moon-Star Group（月星組）",
+      "status": "oneProductionBrandConfirmed",
+      "sources": [
+        "https://fandc.co.jp/catalog/pc/104"
+      ],
+      "reason": "F&C官方原版产品页同时明确月星組／フェアリーテール品牌、2003年6月27日原版、具名原画／剧本／音乐，并将其描述为月星組出道作。沿用既有子品牌身份，仅给g792たまきゅう追加制作品牌，未断言品牌内部完成全部工种。保留两条PC发行品牌、原作发行品牌及NEC Interchannel后发主机发行；不将子品牌制作上推FairyTale专题或母公司，也不把此页当所有后版开发依据。Moon-Star Group仍为编辑显示译名，不冒称法定英文。",
+      "workIds": [
+        "g792"
+      ]
+    },
+    {
+      "entityId": "entity-mosaic",
+      "name": "Mosaic Publishing",
+      "status": "existingPublisherExternalDevelopmentBoundaryRetained",
+      "sources": [
+        "https://solutionarchive.com/interview_keith_2/",
+        "https://www.lysator.liu.se/adventure/Mosaic_Publishing.html",
+        "https://mocagh.org/miscgame/twiceshy.pdf"
+      ],
+      "reason": "沿用Mosaic Publishing既有公司专题身份及11个档案位置。开发者Keith Campbell第一人称访谈明确Vicky Carne委托其编写The Pen and the Dark并逐机种移植，说明出版策划与外部程序开发分工；Lysator目录同样区分Level 9、Ram Jam等开发。原Twice Shy手册的可检索文字分列Mosaic出版和Ram Jam程序版权，本轮未取到该PDF完整正文，不冒称复验原扫描。文学授权、委托和销售不能自动给Mosaic增加原作制作或开发，全部现有职责待核保持；Growing Pains的Virgin原发行不改，不将同题的计划、再版和不同实现合并。",
+      "workIds": [
+        "g131",
+        "g1200",
+        "g1201",
+        "g1202",
+        "g1203",
+        "mosaic-pen-dark",
+        "mosaic-width",
+        "mosaic-nomad",
+        "mosaic-steel-rat",
+        "mosaic-snow-queen",
+        "mosaic-twice-shy"
+      ]
+    },
+    {
+      "entityId": "entity-name-170eeb0b71f8",
+      "name": "Mosaic Publishing Ltd",
+      "status": "historicalLimitedCompanyCategoryConfirmed",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/01720326/filing-history?page=2",
+        "https://find-and-update.company-information.service.gov.uk/officers/qnnXsaXZPpEMGCcuziDhCcMYTeo/appointments",
+        "https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC//Manual/formated/Saga_Of_Erik_The_Viking%2C_The_-_Mosaic_Publishing.pdf"
+      ],
+      "reason": "Companies House可检索登记以01720326明确MOSAIC PUBLISHING LIMITED公司名，并列Victoria Katharine Carne的历史董事／秘书任职；原Erik手册可检索内容具名Mosaic Publishing Limited出版与Level 9团队制作，支持既有Ltd发行节点为历史公司类别。仅订正类型与核对状态，不把公司登记页当游戏开发证据。本轮登记全文及PDF正文访问失败，依据官方登记索引和原手册索引；未复验完整扫描、精确成立／注销日期或全部原始申报。与无Ltd专题节点保留不同ID，不自动合并身份或创建同一主体关系，保留四条具体发行及旧作品位置。",
+      "workIds": [
+        "g1200",
+        "g1201",
+        "g1202",
+        "g131"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-935c3bc35045",
+      "name": "Mixx Entertainment",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://icv2.com/articles/comics/view/14344/interview-tokyopop-ceo-stuart-levy-part-1",
+        "https://icv2.com/articles/comics/view/19870/stu-levys-personal-message",
+        "https://www.awn.com/animationworld/new-japan-anime-film-reviews-13",
+        "https://www.mobygames.com/game/1861/graduation-for-windows-95/credits/windows/"
+      ],
+      "reason": "Stu Levy于2009年访谈与2011年本人声明明确其美国公司早期名Mixx，区分日本既有多媒体业务与美国创业；AWN同期2002年授权图像法律署名明确Mixx Entertainment, Inc.及TOKYOPOP商标。结合既有Graduation发行名，独立订正该历史节点为公司类别，不由漫画刊名或现行商标把节点当品牌。MobyGames职员转录将英语版制作人和翻译归Stuart Levy、Mixx Games部门；本轮未直接验读原CD职员表，不能据此给1994日本原作增加Mixx制作或把个人翻译当全公司职责。保留一条旧发行；更名确切日期、日美法人与部门映射、1996／1997英语版日期异文另核，不新增关系。",
+      "workIds": [
+        "g831"
+      ]
+    },
+    {
+      "entityId": "entity-name-588f588386f3",
+      "name": "Moe APP（萌えAPP）",
+      "status": "mixedServiceAndLegalSignaturesPending",
+      "sources": [
+        "https://www.hublots.net/business/content.html",
+        "https://moeapp.net/support.html",
+        "https://www.hublots.net/news/detail/150410_2.html",
+        "https://www.hublots.net/news/detail/131220.html"
+      ],
+      "reason": "Hublots官方业务页明确萌えAPPストア为应用配信商店并区分内容持有方，支持运营服务与原作品牌分开；AQUA同期公告将Hublots配信与SORAHANE原作版权分列。支持页仍列运营公司，不将今日网站与当前全部法人沿革等同。既有节点同时收纳萌えAPP、株式会社ハブロッツ（萌えAPP）、株式会社ジャックインザボックス（萌えAPP）三种原文；单改company或brand均会掩盖服务与法人复合映射，继续unknown，保留八条旧publisher。后续需逐发行拆分服务名、各期合同公司和移植开发，再独立审核身份映射；本批不从配信、商店功能或通用移植服务声明推断四部原作开发，不新增运营／合并关系。",
+      "workIds": [
+        "g864",
+        "g886",
+        "g903",
+        "g904"
+      ]
+    },
+    {
+      "entityId": "entity-fairytale_tsuki",
+      "name": "Moon-Star Group（月星組）",
+      "status": "oneProductionBrandConfirmed",
+      "sources": [
+        "https://fandc.co.jp/catalog/pc/104"
+      ],
+      "reason": "F&C官方原版产品页同时明确月星組／フェアリーテール品牌、2003年6月27日原版、具名原画／剧本／音乐，并将其描述为月星組出道作。沿用既有子品牌身份，仅给g792たまきゅう追加制作品牌，未断言品牌内部完成全部工种。保留两条PC发行品牌、原作发行品牌及NEC Interchannel后发主机发行；不将子品牌制作上推FairyTale专题或母公司，也不把此页当所有后版开发依据。Moon-Star Group仍为编辑显示译名，不冒称法定英文。",
+      "workIds": [
+        "g792"
+      ]
+    },
+    {
+      "entityId": "entity-mosaic",
+      "name": "Mosaic Publishing",
+      "status": "existingPublisherExternalDevelopmentBoundaryRetained",
+      "sources": [
+        "https://solutionarchive.com/interview_keith_2/",
+        "https://www.lysator.liu.se/adventure/Mosaic_Publishing.html",
+        "https://mocagh.org/miscgame/twiceshy.pdf"
+      ],
+      "reason": "沿用Mosaic Publishing既有公司专题身份及11个档案位置。开发者Keith Campbell第一人称访谈明确Vicky Carne委托其编写The Pen and the Dark并逐机种移植，说明出版策划与外部程序开发分工；Lysator目录同样区分Level 9、Ram Jam等开发。原Twice Shy手册的可检索文字分列Mosaic出版和Ram Jam程序版权，本轮未取到该PDF完整正文，不冒称复验原扫描。文学授权、委托和销售不能自动给Mosaic增加原作制作或开发，全部现有职责待核保持；Growing Pains的Virgin原发行不改，不将同题的计划、再版和不同实现合并。",
+      "workIds": [
+        "g131",
+        "g1200",
+        "g1201",
+        "g1202",
+        "g1203",
+        "mosaic-pen-dark",
+        "mosaic-width",
+        "mosaic-nomad",
+        "mosaic-steel-rat",
+        "mosaic-snow-queen",
+        "mosaic-twice-shy"
+      ]
+    },
+    {
+      "entityId": "entity-name-170eeb0b71f8",
+      "name": "Mosaic Publishing Ltd",
+      "status": "historicalLimitedCompanyCategoryConfirmed",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/01720326/filing-history?page=2",
+        "https://find-and-update.company-information.service.gov.uk/officers/qnnXsaXZPpEMGCcuziDhCcMYTeo/appointments",
+        "https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC//Manual/formated/Saga_Of_Erik_The_Viking%2C_The_-_Mosaic_Publishing.pdf"
+      ],
+      "reason": "Companies House可检索登记以01720326明确MOSAIC PUBLISHING LIMITED公司名，并列Victoria Katharine Carne的历史董事／秘书任职；原Erik手册可检索内容具名Mosaic Publishing Limited出版与Level 9团队制作，支持既有Ltd发行节点为历史公司类别。仅订正类型与核对状态，不把公司登记页当游戏开发证据。本轮登记全文及PDF正文访问失败，依据官方登记索引和原手册索引；未复验完整扫描、精确成立／注销日期或全部原始申报。与无Ltd专题节点保留不同ID，不自动合并身份或创建同一主体关系，保留四条具体发行及旧作品位置。",
+      "workIds": [
+        "g1200",
+        "g1201",
+        "g1202",
+        "g131"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "M",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 30,
+    "processedEntityIds": [
+      "entity-macadamia",
+      "entity-madosoft",
+      "entity-mages",
+      "entity-name-1cc39c9db973",
+      "entity-makura",
+      "entity-name-85a1fd56da66",
+      "entity-name-35ae58bf892b",
+      "entity-name-ff103df997b5",
+      "entity-name-170de3c8b237",
+      "entity-name-770b8bb9bcbc",
+      "entity-name-fec7ac8f12b1",
+      "entity-name-61d0027ef7ce",
+      "entity-melbournehouse",
+      "entity-name-5714be41cf55",
+      "entity-microcabin",
+      "entity-microsoft",
+      "entity-microsoft_home",
+      "entity-microsoft_studios",
+      "entity-minato_carnival_world",
+      "entity-minato_carnival",
+      "entity-minatosoft",
+      "entity-name-297835568b98",
+      "entity-minori",
+      "entity-mirai",
+      "entity-name-5963707789d1",
+      "entity-name-935c3bc35045",
+      "entity-name-588f588386f3",
+      "entity-fairytale_tsuki",
+      "entity-mosaic",
+      "entity-name-170eeb0b71f8"
+    ],
+    "nextEntityId": "entity-nanawind",
+    "nextName": "NanaWind",
+    "queue": [
+      {
+        "entityId": "entity-macadamia",
+        "name": "Macadamia Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-madosoft",
+        "name": "Madosoft（まどそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mages",
+        "name": "MAGES.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1cc39c9db973",
+        "name": "Magical Zoo（マジカルズゥ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-makura",
+        "name": "Makura（枕）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-85a1fd56da66",
+        "name": "MangaGamer",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-35ae58bf892b",
+        "name": "Marvelous",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ff103df997b5",
+        "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-170de3c8b237",
+        "name": "Masaya（メサイヤ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fec7ac8f12b1",
+        "name": "Matsushita Electric Industrial（松下電器産業）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-61d0027ef7ce",
+        "name": "MediaWorks",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-melbournehouse",
+        "name": "Melbourne House",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microcabin",
+        "name": "Micro Cabin（マイクロキャビン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft",
+        "name": "Microsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft_home",
+        "name": "Microsoft Home",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft_studios",
+        "name": "Microsoft Studios",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minato_carnival_world",
+        "name": "Minato Carnival World（みなとカーニバルWorld）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minato_carnival",
+        "name": "Minato Carnival（みなとカーニバル）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minatosoft",
+        "name": "Minato Soft（みなとそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-297835568b98",
+        "name": "Minato Station（みなとすてーしょん）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minori",
+        "name": "minori",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mirai",
+        "name": "mirai",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-935c3bc35045",
+        "name": "Mixx Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-fairytale_tsuki",
+        "name": "Moon-Star Group（月星組）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mosaic",
+        "name": "Mosaic Publishing",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-170eeb0b71f8",
+        "name": "Mosaic Publishing Ltd",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
