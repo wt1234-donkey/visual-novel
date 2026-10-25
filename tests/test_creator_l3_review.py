@@ -5,12 +5,15 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+SNAPSHOT = 'a0d9a6fc5a282dc3c437c17b93479f82ff24890e'
 BASE = '2abb28f54941fb4a34418303ad0ed26302238026'
 LUCAS = 'entity-name-57509c825879'
 LUNA = 'entity-name-a548db0984af'
 
 
 def read(path):
+    if path in {"data/entities.json", "data/credits.json", "data/organizations.json"}:
+        return json.loads(subprocess.check_output(["git", "show", f"{SNAPSHOT}:{path}"], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 

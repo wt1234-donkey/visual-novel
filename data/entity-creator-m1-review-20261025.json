@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "73b636b076e57ede68a4b2f36f7c6384a351d6ee",
+  "audit": "data/entity-creator-m1-review-20261025.md",
+  "previousReview": "data/entity-creator-l3-review-20261025.md",
+  "policy": "按M首五项连续核查；原作制作、历史品牌、现行公司与具体后发版本分别核定，既有制作记录不重复。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZM1-I01",
+      "entityId": "entity-name-1cc39c9db973",
+      "rawName": "マジカルズゥ",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://www.gamepres.org/pc88/library/1985/scream.html"
+      ],
+      "note": "游戏保存协会The Screamer专题将Magical Zoo明确解释为Stratford内部的品牌兼部门，正式部门名未详；并据所列同期史料具名长谷川设计／设定／剧本、金子编程及七人程序协作。按该机构制作史资料独立订正品牌类别，并给ascii-screamer电脑原作追加一条制作品牌；本轮未直接查阅其所引1985杂志，不冒称逐页检查原本。显式保留旧publisher，不因品牌类别自动生成其他发行角色；不把Stratford法人、ASCII关联专题或后发移植开发混入。资料中的5月与Impress的10月日期异文留待独立核查，本批不改核心年份或发行。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZM1-C01",
+      "entityId": "entity-mages",
+      "dossierId": null,
+      "workId": "g636",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "MAGES.",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.gamer.ne.jp/news/201405270048/",
+      "note": "2014原作发布会具名MAGES. 5pb.Games Div.5制作人松原达也，并记录其Xbox One原作开发方案；与官方职员表 https://www.kagaku-adv.com/titles/chaoschild/ 交叉核对。仅登记2014原作制作，不以2019 Steam版公告倒填，也不扩展至前作或所有移植。"
+    },
+    {
+      "reviewId": "AZM1-C02",
+      "entityId": "entity-name-1cc39c9db973",
+      "dossierId": null,
+      "workId": "ascii-screamer",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "マジカルズゥ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.gamepres.org/pc88/library/1985/scream.html",
+      "note": "游戏保存协会制作史明确Stratford内Magical Zoo品牌／部门及本作设计、剧本和程序开发人员分工；按具名史料登记电脑原作制作品牌。本轮未直接翻阅所引1985杂志，未断言所有移植开发；ASCII专题关联位置及自身职责待核保留。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-macadamia",
+      "name": "Macadamia Soft",
+      "status": "existingBrandProductionPending",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/dbsoft.html",
+        "https://www.beep-shop.com/blog/5425/"
+      ],
+      "reason": "既有Macadamia Soft品牌身份沿用；保存协会目录将其与dB-SOFT并列，实物经手者BEEP核对177包装、手册和问卷上的dB-SOFT名称，支持品牌而非独立法人解释。现有两部作品与四条具体发行、g747原作发行品牌保留。发行、版权及通用开发元栏目不能单独厘定Macadam和177原版制作分工，继续等待原手册职员表／当事方明确开发说明；不从品牌归属给dB-SOFT增加制作，也不因书目范围更动作品或关系。",
+      "workIds": [
+        "g746",
+        "g747"
+      ]
+    },
+    {
+      "entityId": "entity-madosoft",
+      "name": "Madosoft（まどそふと）",
+      "status": "existingTenProductionBrandsRetained",
+      "sources": [
+        "https://madosoft.net/products",
+        "https://whanime.com/blu-ray.php"
+      ],
+      "reason": "本轮重看官方产品目录，原画／剧本等具名制作资料与既有品牌目录范围相符；沿用十条制作品牌（九部独立售卖本篇及一部动画BD附赠短篇），不重复追加。BD特典沿用其原始收录证据；官网新预告、ASMR、小说及主机版本不自动新增作品或扩大制作到iMel等具体移植职责，目录外2027预告不录入本批。",
+      "workIds": [
+        "g209",
+        "g210",
+        "g211",
+        "g212",
+        "g213",
+        "g214",
+        "g215",
+        "g216",
+        "g217",
+        "g218"
+      ]
+    },
+    {
+      "entityId": "entity-mages",
+      "name": "MAGES.",
+      "status": "existingCompanyOneOriginalConfirmed",
+      "sources": [
+        "https://mages.co.jp/about/company",
+        "https://mages.co.jp/about/history",
+        "https://www.gamer.ne.jp/news/201405270048/",
+        "https://www.kagaku-adv.com/titles/chaoschild/",
+        "https://www.spike-chunsoft.co.jp/news/3740/"
+      ],
+      "reason": "官方公司概要与沿革支持既有MAGES.公司身份，2011年AG-ONE与5pb.合并更名与此前5pb.时期分开。2014年发布会现场报道具名MAGES. 5pb.Games Div.5制作人松原达也，转述其原作开发、引擎、美术及演出方案；结合官方原作职员表和2014首发记录，仅给g636 CHAOS;CHILD原作追加一条制作。2019年Spike Chunsoft公告明确的是Steam版开发／发行，单独保留版本范围，不将其直接当2014原作依据。其余17条既有发行保留；YU-NO、Never7、Ever17后发版与早期CHAOS;HEAD／STEINS;GATE的5pb.时代不因现公司目录或版权统一倒填MAGES.原作制作，关系不自动追加。",
+      "workIds": [
+        "g038",
+        "g048",
+        "g050",
+        "g054",
+        "g618",
+        "g632",
+        "g636"
+      ]
+    },
+    {
+      "entityId": "entity-name-1cc39c9db973",
+      "name": "Magical Zoo（マジカルズゥ）",
+      "status": "brandAndOneProductionBrandConfirmed",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/1985/scream.html",
+        "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1277500.html"
+      ],
+      "reason": "游戏保存协会The Screamer专题将Magical Zoo明确解释为Stratford内部的品牌兼部门，正式部门名未详；并据所列同期史料具名长谷川设计／设定／剧本、金子编程及七人程序协作。按该机构制作史资料独立订正品牌类别，并给ascii-screamer电脑原作追加一条制作品牌；本轮未直接查阅其所引1985杂志，不冒称逐页检查原本。显式保留旧publisher，不因品牌类别自动生成其他发行角色；不把Stratford法人、ASCII关联专题或后发移植开发混入。资料中的5月与Impress的10月日期异文留待独立核查，本批不改核心年份或发行。",
+      "workIds": [
+        "ascii-screamer"
+      ]
+    },
+    {
+      "entityId": "entity-makura",
+      "name": "Makura（枕）",
+      "status": "existingCoDevelopmentReconfirmed",
+      "sources": [
+        "https://aniplex-exe.com/news/?category=atri-mdm&id=52873"
+      ],
+      "reason": "ANIPLEX.EXE官方2019年12月26日项目公告明确制作Frontwing×枕，本轮复核后沿用g200 ATRI既有联合制作记录与品牌身份，不重复追加。ANIPLEX.EXE发行品牌和两个制作品牌分开；不由该作推断枕运营法人、目录外作品、所有后发移植或IP授权职责。",
+      "workIds": [
+        "g200"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-macadamia",
+      "name": "Macadamia Soft",
+      "status": "existingBrandProductionPending",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/dbsoft.html",
+        "https://www.beep-shop.com/blog/5425/"
+      ],
+      "reason": "既有Macadamia Soft品牌身份沿用；保存协会目录将其与dB-SOFT并列，实物经手者BEEP核对177包装、手册和问卷上的dB-SOFT名称，支持品牌而非独立法人解释。现有两部作品与四条具体发行、g747原作发行品牌保留。发行、版权及通用开发元栏目不能单独厘定Macadam和177原版制作分工，继续等待原手册职员表／当事方明确开发说明；不从品牌归属给dB-SOFT增加制作，也不因书目范围更动作品或关系。",
+      "workIds": [
+        "g746",
+        "g747"
+      ]
+    },
+    {
+      "entityId": "entity-madosoft",
+      "name": "Madosoft（まどそふと）",
+      "status": "existingTenProductionBrandsRetained",
+      "sources": [
+        "https://madosoft.net/products",
+        "https://whanime.com/blu-ray.php"
+      ],
+      "reason": "本轮重看官方产品目录，原画／剧本等具名制作资料与既有品牌目录范围相符；沿用十条制作品牌（九部独立售卖本篇及一部动画BD附赠短篇），不重复追加。BD特典沿用其原始收录证据；官网新预告、ASMR、小说及主机版本不自动新增作品或扩大制作到iMel等具体移植职责，目录外2027预告不录入本批。",
+      "workIds": [
+        "g209",
+        "g210",
+        "g211",
+        "g212",
+        "g213",
+        "g214",
+        "g215",
+        "g216",
+        "g217",
+        "g218"
+      ]
+    },
+    {
+      "entityId": "entity-mages",
+      "name": "MAGES.",
+      "status": "existingCompanyOneOriginalConfirmed",
+      "sources": [
+        "https://mages.co.jp/about/company",
+        "https://mages.co.jp/about/history",
+        "https://www.gamer.ne.jp/news/201405270048/",
+        "https://www.kagaku-adv.com/titles/chaoschild/",
+        "https://www.spike-chunsoft.co.jp/news/3740/"
+      ],
+      "reason": "官方公司概要与沿革支持既有MAGES.公司身份，2011年AG-ONE与5pb.合并更名与此前5pb.时期分开。2014年发布会现场报道具名MAGES. 5pb.Games Div.5制作人松原达也，转述其原作开发、引擎、美术及演出方案；结合官方原作职员表和2014首发记录，仅给g636 CHAOS;CHILD原作追加一条制作。2019年Spike Chunsoft公告明确的是Steam版开发／发行，单独保留版本范围，不将其直接当2014原作依据。其余17条既有发行保留；YU-NO、Never7、Ever17后发版与早期CHAOS;HEAD／STEINS;GATE的5pb.时代不因现公司目录或版权统一倒填MAGES.原作制作，关系不自动追加。",
+      "workIds": [
+        "g038",
+        "g048",
+        "g050",
+        "g054",
+        "g618",
+        "g632",
+        "g636"
+      ]
+    },
+    {
+      "entityId": "entity-name-1cc39c9db973",
+      "name": "Magical Zoo（マジカルズゥ）",
+      "status": "brandAndOneProductionBrandConfirmed",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/1985/scream.html",
+        "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/1277500.html"
+      ],
+      "reason": "游戏保存协会The Screamer专题将Magical Zoo明确解释为Stratford内部的品牌兼部门，正式部门名未详；并据所列同期史料具名长谷川设计／设定／剧本、金子编程及七人程序协作。按该机构制作史资料独立订正品牌类别，并给ascii-screamer电脑原作追加一条制作品牌；本轮未直接查阅其所引1985杂志，不冒称逐页检查原本。显式保留旧publisher，不因品牌类别自动生成其他发行角色；不把Stratford法人、ASCII关联专题或后发移植开发混入。资料中的5月与Impress的10月日期异文留待独立核查，本批不改核心年份或发行。",
+      "workIds": [
+        "ascii-screamer"
+      ]
+    },
+    {
+      "entityId": "entity-makura",
+      "name": "Makura（枕）",
+      "status": "existingCoDevelopmentReconfirmed",
+      "sources": [
+        "https://aniplex-exe.com/news/?category=atri-mdm&id=52873"
+      ],
+      "reason": "ANIPLEX.EXE官方2019年12月26日项目公告明确制作Frontwing×枕，本轮复核后沿用g200 ATRI既有联合制作记录与品牌身份，不重复追加。ANIPLEX.EXE发行品牌和两个制作品牌分开；不由该作推断枕运营法人、目录外作品、所有后发移植或IP授权职责。",
+      "workIds": [
+        "g200"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "M",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 30,
+    "processedEntityIds": [
+      "entity-macadamia",
+      "entity-madosoft",
+      "entity-mages",
+      "entity-name-1cc39c9db973",
+      "entity-makura"
+    ],
+    "nextEntityId": "entity-name-85a1fd56da66",
+    "nextName": "MangaGamer",
+    "queue": [
+      {
+        "entityId": "entity-macadamia",
+        "name": "Macadamia Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-madosoft",
+        "name": "Madosoft（まどそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mages",
+        "name": "MAGES.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1cc39c9db973",
+        "name": "Magical Zoo（マジカルズゥ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-makura",
+        "name": "Makura（枕）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-85a1fd56da66",
+        "name": "MangaGamer",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-35ae58bf892b",
+        "name": "Marvelous",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ff103df997b5",
+        "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-170de3c8b237",
+        "name": "Masaya（メサイヤ）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-fec7ac8f12b1",
+        "name": "Matsushita Electric Industrial（松下電器産業）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-61d0027ef7ce",
+        "name": "MediaWorks",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-melbournehouse",
+        "name": "Melbourne House",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microcabin",
+        "name": "Micro Cabin（マイクロキャビン）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft",
+        "name": "Microsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft_home",
+        "name": "Microsoft Home",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft_studios",
+        "name": "Microsoft Studios",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minato_carnival_world",
+        "name": "Minato Carnival World（みなとカーニバルWorld）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minato_carnival",
+        "name": "Minato Carnival（みなとカーニバル）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minatosoft",
+        "name": "Minato Soft（みなとそふと）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-297835568b98",
+        "name": "Minato Station（みなとすてーしょん）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minori",
+        "name": "minori",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mirai",
+        "name": "mirai",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-935c3bc35045",
+        "name": "Mixx Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-fairytale_tsuki",
+        "name": "Moon-Star Group（月星組）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mosaic",
+        "name": "Mosaic Publishing",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-170eeb0b71f8",
+        "name": "Mosaic Publishing Ltd",
+        "status": "pending"
+      }
+    ]
+  }
+}
