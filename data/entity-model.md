@@ -157,3 +157,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 N1开始N组，独立记录为 `entity-creator-n1-review-20261025.json` 与同名Markdown。逐作具名文本及STAFF原图支持NanaWind十条制作品牌，LunaSystem旅行部四篇及专题待核不继承；Natsume、NEC Avenue和英文NEC Interchannel各订正公司类别。当前改名、当事方持权公告与原厂手册分别限定身份，NEC-HE发行／出资不推制作，日文NEC Interchannel下一项另核；不改原目录、发行、位置、关系或基线。N累计5／21。
 
 2026-10-25 N2连续核查日文NEC Interchannel至英文Nihon Falcom，独立记录为 `entity-creator-n2-review-20261025.json` 与同名Markdown。原厂手册与官方具名资料支持NEC、Neverland及历史Falcom三个公司类别；Nitroplus发售公告及Falcom IR开发陈述各支持一条原作制作。NetEase Games部门分类继续待核，NekoNyan本地化、Neverland后发Saturn开发与原作范围分开；专题待核、旧发行、节点关系、目录及基线保持。N累计10／21，下一项Falcom沿革专题。
+
+2026-10-25 N3连续核查Falcom沿革至NIS America，独立记录为 `entity-creator-n3-review-20261025.json` 与同名Markdown。Falcom新旧法人不合并，仅按原开发公告补两条历史原作制作；NineLives、两个任天堂旧节点及NIS America分别订正公司类别。任天堂具名制作人资料支持BOND共同原作制作及两部Square合作原作联合制作；NineLives个人履历、NIS后发出版不推开发。仅Romancia自身专题分组更新，其他待核和全部位置／发行／基线保持，N累计15／21，下一项NITRO CHiRAL。

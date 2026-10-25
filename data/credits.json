@@ -64315,6 +64315,81 @@
       "territory": null,
       "reviewId": "AZN2-C02",
       "reviewRecord": "data/entity-creator-n2-review-20261025.md"
+    },
+    {
+      "id": "credit-0bc7f0eb9cd1f094",
+      "entityId": "entity-falcom",
+      "targetType": "work",
+      "targetId": "ascii-dragon-slayer",
+      "workId": "ascii-dragon-slayer",
+      "role": "originalProduction",
+      "rawCredit": "日本ファルコム",
+      "status": "sourceReviewed",
+      "source": "https://www.falcom.co.jp/ir-data/20211008",
+      "note": "官方IR明确PC-8801原作由日本Falcom开发／发行；仅记录1984原作的历史创作名义，不断言跨2001法律连续性，不以2022 BEEP移植倒填原作，不新增Falcom专题成员或解除ASCII专题待核。",
+      "territory": null,
+      "reviewId": "AZN3-C01",
+      "reviewRecord": "data/entity-creator-n3-review-20261025.md"
+    },
+    {
+      "id": "credit-58fcda35a8bd7ae7",
+      "entityId": "entity-falcom",
+      "targetType": "work",
+      "targetId": "falcom-romancia",
+      "workId": "falcom-romancia",
+      "role": "originalProduction",
+      "rawCredit": "日本ファルコム",
+      "status": "sourceReviewed",
+      "source": "https://www.falcom.co.jp/ir-data/20211008",
+      "note": "官方IR点名原PC-8801 Romancia为1984—1986日本Falcom开发／发行三作之一；仅补1986原作，既有专题改入原作组而位置不变，不倒填2022移植，不合并新旧公司节点。",
+      "territory": null,
+      "reviewId": "AZN3-C02",
+      "reviewRecord": "data/entity-creator-n3-review-20261025.md"
+    },
+    {
+      "id": "credit-1b80e3eb6d1534aa",
+      "entityId": "entity-name-0bee31ac676c",
+      "targetType": "work",
+      "targetId": "g1058",
+      "workId": "g1058",
+      "role": "originalProduction",
+      "rawCredit": "Nintendo",
+      "status": "sourceReviewed",
+      "source": "https://www.ndw.jp/bond_inta01/",
+      "note": "具名制作人访谈明确任天堂提出企划、主题并与KT共同制作；仅登记BOND共同原作制作，官方规格的Koei Tecmo开发元与之分开，不推定Nintendo单方程序开发或解除KOEI专题待核。",
+      "territory": null,
+      "reviewId": "AZN3-C03",
+      "reviewRecord": "data/entity-creator-n3-review-20261025.md"
+    },
+    {
+      "id": "credit-9a1ecbac46ac2dd1",
+      "entityId": "entity-name-bb40df899e7f",
+      "targetType": "work",
+      "targetId": "g1209",
+      "workId": "g1209",
+      "role": "coDeveloper",
+      "rawCredit": "任天堂",
+      "status": "sourceReviewed",
+      "source": "https://www.nintendo.co.jp/wii/interview/slsjr3oj/vol1/index.html",
+      "note": "官方坂本／坂口对谈直接回顾中山美穂原作协作，注2明确任天堂与旧Square共同开发；只补1987原作联合制作，不将现Square Enix或后发平台倒填，不解除Square专题待核。",
+      "territory": null,
+      "reviewId": "AZN3-C04",
+      "reviewRecord": "data/entity-creator-n3-review-20261025.md"
+    },
+    {
+      "id": "credit-4af784f6528ad81a",
+      "entityId": "entity-name-bb40df899e7f",
+      "targetType": "work",
+      "targetId": "square-mario-rpg",
+      "workId": "square-mario-rpg",
+      "role": "coDeveloper",
+      "rawCredit": "任天堂",
+      "status": "sourceReviewed",
+      "source": "https://www.nintendo.co.jp/wii/interview/slsjr3oj/vol1/index.html",
+      "note": "官方对谈注2明确1996超级马力欧RPG由任天堂与Square共同开发；只补SFC原作联合制作，不把2023重制及后发VC当作原作开发，不改关联位置或解除Square专题待核。",
+      "territory": null,
+      "reviewId": "AZN3-C05",
+      "reviewRecord": "data/entity-creator-n3-review-20261025.md"
     }
   ],
   "dossierMemberships": [
@@ -87326,9 +87401,10 @@
       "workId": "falcom-romancia",
       "placement": "related",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.falcom.co.jp/sitemap",
       "status": "existingEvidence"
     },
