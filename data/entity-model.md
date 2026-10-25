@@ -163,3 +163,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 N4连续核查NITRO CHiRAL至novamicus，独立记录为 `entity-creator-n4-review-20261025.json` 与同名Markdown。按官方具名资料新增CHiRAL节奏游戏一条制作品牌、公司Rusty Rabbit一条共同原作制作、旧Nitroplus十作制作品牌；仅公司Rusty一条自身专题待核解除。ORIGIN为2021新品牌，不承接早期原作；novamicus订正品牌并显式保持旧publisher，ONE.2023内容不倒填1998。其余子品牌／父公司待核、位置、旧发行、关系和基线保持，N累计20／21，下一项NOVECT。
 
 2026-10-25 N5核查NOVECT，独立记录为 `entity-creator-n5-review-20261025.json` 与同名Markdown。逐作官网STAFF、企划说明及两部原包制作栏支持九条原作制作；保留旧团队身份、Novectacle原署名、外部参与与后发移植边界。九条自身专题关联增加制作角色并转original，原publisher及位置保持；第一次投票年份差异另列待核，不改历史日期。N累计21／21，A—N累计214／214，下一项Origin Systems。
+
+2026-10-25 O1按Origin Systems、OTAKU Plan、OVERDRIVE、Overflow顺序完成O组四项，记录为 `entity-creator-o1-review-20261025.json` 与同名Markdown。原厂手册确认Origin公司与一条原作制作；OTAKU Plan按自述仅记本地化发行团队；OVERDRIVE九作补制作品牌，GROOVER原作范围保持；Overflow仅订正品牌并保留publisher，首发间接来源及2005制作另列待核。三项身份、十条职责，九条自身专题分组更新，全部旧目录／日期／位置／关系与基线保持。O累计4／4，A—O累计218／218，下一项Palette（ぱれっと）。

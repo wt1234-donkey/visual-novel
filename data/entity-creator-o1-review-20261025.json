@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "6a677ba7abd3bd1323fa1e98e58f1be7b74f495c",
+  "audit": "data/entity-creator-o1-review-20261025.md",
+  "previousReview": "data/entity-creator-n5-review-20261025.md",
+  "policy": "O组按Origin Systems、OTAKU Plan、OVERDRIVE、Overflow顺序核查；身份、原作制作与后发本地化／重制严格限定。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZO1-I01",
+      "entityId": "entity-name-a59a367044e7",
+      "rawName": "Origin Systems",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.mocagh.org/origin/timeslore-alt-manual.pdf",
+        "https://www.mocagh.org/origin/origin-catalog-alt.pdf"
+      ],
+      "note": "原厂Commodore64/128手册第3页保证条款明确Origin Systems, Inc.，原厂目录第8页介绍公司及办公组织，足以确认既有历史署名为公司。只订正类别，不与EA后发Origin服务或其他公司合并，不增订成立、收购或终止日期。"
+    },
+    {
+      "reviewId": "AZO1-I02",
+      "entityId": "entity-name-4abb165f3e1e",
+      "rawName": "OTAKU Plan",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "team",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://otaku-plan.net/about",
+        "https://store.steampowered.com/app/1346770/YAKIMOCHI_STREAM/"
+      ],
+      "note": "官网ABOUT自称从事游戏本地化与发行的团队，故仅将既有署名归为团队，未认定法人名称或制作工作室。Steam将まどそふと开发与mirai works／OTAKU Plan发行分别列示；通用本地化介绍不生成该作具名翻译职责，更不倒填2014原作开发。保留共同发行原文及既有平台记录。"
+    },
+    {
+      "reviewId": "AZO1-I03",
+      "entityId": "entity-name-8d45e971c1f6",
+      "rawName": "Overflow（STACK）",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://0verflow.com/vk-contact/",
+        "https://0verflow.com/guide/"
+      ],
+      "note": "官网合作窗口明确Overflow为有限会社スタック管理运营的品牌，网站说明也具名该法人。复合显示名保留，类别订正为品牌，并显式保持两条publisher原角色；不另造STACK节点或沿革边，不将原署名改成公司。现有g033首发与重制记录的来源分别为20周年演唱会页和2025重制页；周年说明可间接交叉核对原作年份，但不足以据此补2005原作制作。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZO1-C01",
+      "entityId": "entity-name-a59a367044e7",
+      "dossierId": null,
+      "workId": "toho-times-of-lore",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Origin Systems",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.mocagh.org/origin/timeslore-alt-manual.pdf",
+      "note": "原厂C64/128手册第12页具名导演／设计Chris Roberts、制作人Dallas Snell及编码、音乐、美术等分工，并明确Origin人员对作品实现的参与；Chris Roberts现工作室2012回顾也确认其在Origin的第一作。登记1988原作公司制作参与，非宣称独立完成全部工种；不将NES移植、Toho发行或其专题待核归给公司，不改变related位置。"
+    },
+    {
+      "reviewId": "AZO1-C02",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g641",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mangagamer.com/detail.php?product_code=38",
+      "note": "当事发行方产品页分别列开发OVERDRIVE与发行MangaGamer，2011公告也具名其为Edelweiss制作方；登记2006原作制作品牌，网页2008为英语发行年，不改原作年。"
+    },
+    {
+      "reviewId": "AZO1-C03",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g642",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mangagamer.com/detail.php?product_code=21",
+      "note": "当事发行方产品页明确开发OVERDRIVE，2011公告另回顾其为Kira Kira制作方；只记2007原作制作品牌，不把英文、移动版或后发HD全部当原作新增内容。"
+    },
+    {
+      "reviewId": "AZO1-C04",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g643",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mangagamer.com/detail.php?product_code=28",
+      "note": "当事发行方产品页开发字段明确OVERDRIVE，并单列Curtain Call为后续FD；只给既有独立FD作品追加制作品牌，不并入本篇，不以英语2010上架年替换2008原作年。"
+    },
+    {
+      "reviewId": "AZO1-C05",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g644",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mangagamer.com/detail.php?goods_type=1&product_code=9",
+      "note": "当事发行方独立FD产品页明确开发OVERDRIVE；不是仅从两作捆绑包或原作版权推定。保持2008独立FD与本篇各自作品ID。"
+    },
+    {
+      "reviewId": "AZO1-C06",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g645",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://mangagamer.wordpress.com/2011/08/30/announcing-go-go-nippon/",
+      "note": "2011同期发行公告明确列OVERDRIVE为DEARDROPS等作的制作方；2014双作合集的开发字段仅交叉核对。只给2010原作追加制作品牌，不用合集上架时间或PSP版倒填首发。"
+    },
+    {
+      "reviewId": "AZO1-C07",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g646",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://mangagamer.wordpress.com/2011/05/24/bamboos-livechat/",
+      "note": "2011-05-24当事发行方所记bamboo访谈在OVERDRIVE开发段落明确讨论尚待日本发售的本作开发；结合2011-06-23发售前公告与2012脚本实现说明，限定2011原作制作品牌，不单凭2014超電激产品页回推原版。"
+    },
+    {
+      "reviewId": "AZO1-C08",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g648",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mangagamer.com/detail.php?product_code=87I",
+      "note": "当事发行方本作独立产品页明确开发OVERDRIVE，与DEARDROPS本篇、双作合集及另列MangaGamer发行分开；只追加既有2011本作制作品牌。"
+    },
+    {
+      "reviewId": "AZO1-C09",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g649",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mangagamer.com/detail.php?product_code=300",
+      "note": "当事发行方Bokuten产品页开发字段明确OVERDRIVE；此页为2021英语实体版，作为原制作归属证据而非原版日期或新内容证据，不增补平台、不改2013原作年。"
+    },
+    {
+      "reviewId": "AZO1-C10",
+      "entityId": "entity-overdrive",
+      "dossierId": null,
+      "workId": "g651",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "OVERDRIVE",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://musicus.over-drive.jp/products",
+      "note": "官网原作特设页元描述具名原画／角色设计すめらぎ琥珀、剧本瀬戸口廉也、声音制作milktub与流田Project；MangaGamer另明确开发OVERDRIVE。限定2019原作制作品牌，ENTERGRAM后发主机发行、英文2021及外部音乐分工各自保留。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-8d45e971c1f6",
+      "workIds": [
+        "g033"
+      ],
+      "status": "originalStaffAndIndirectReleaseSourceUnresolved",
+      "sources": [
+        "https://0verflow.com/vk-contact/",
+        "https://0verflow.com/guide/",
+        "https://0verflow.com/sdre_live/",
+        "https://0verflow.com/sdrm/",
+        "https://0verflow.com/guideline/"
+      ],
+      "reason": "g033-v1来源sdre_live为2025年20周年演唱会，周年说明可间接核对2005，但不是原版产品STAFF或直接发行规格；g033-v2来源sdrm明确是2025 REMASTERED。需进一步补同期原版资料，不因未取得旧网页快照就宣称URL内容发生漂移。本批保留历史publisher、日期、内容和迁移基线，不追加2005 productionBrand。"
+    },
+    {
+      "entityId": "entity-name-4abb165f3e1e",
+      "workIds": [
+        "g210"
+      ],
+      "status": "workSpecificLocalizationNotInferred",
+      "sources": [
+        "https://otaku-plan.net/about",
+        "https://store.steampowered.com/app/1346770/YAKIMOCHI_STREAM/"
+      ],
+      "reason": "一般业务为本地化与发行，不代表每作翻译和实现由团队独自负责。仅按第一方自述确认团队类别，未取得本作逐岗位翻译资料，保留发行职责，不追加localizer或原作制作。"
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-a59a367044e7",
+      "name": "Origin Systems",
+      "status": "historicalCompanyAndOneOriginalProductionConfirmed",
+      "sources": [
+        "https://www.mocagh.org/origin/timeslore-alt-manual.pdf",
+        "https://www.mocagh.org/origin/origin-catalog-alt.pdf",
+        "https://robertsspaceindustries.com/en/comm-link/spectrum-dispatch/12671-Blast-From-The-Past-Times-Of-Lore"
+      ],
+      "reason": "原厂Commodore64/128手册第3页保证条款明确Origin Systems, Inc.，原厂目录第8页介绍公司及办公组织，足以确认既有历史署名为公司。只订正类别，不与EA后发Origin服务或其他公司合并，不增订成立、收购或终止日期。 原厂STAFF及其明确的Origin人员参与支持一条1988原作制作；不解除Toho专题职责待核，不改既有related位置或旧发行。",
+      "workIds": [
+        "toho-times-of-lore"
+      ]
+    },
+    {
+      "entityId": "entity-name-4abb165f3e1e",
+      "name": "OTAKU Plan",
+      "status": "localizationPublishingTeamConfirmed",
+      "sources": [
+        "https://otaku-plan.net/about",
+        "https://store.steampowered.com/app/1346770/YAKIMOCHI_STREAM/"
+      ],
+      "reason": "官网ABOUT自称从事游戏本地化与发行的团队，故仅将既有署名归为团队，未认定法人名称或制作工作室。Steam将まどそふと开发与mirai works／OTAKU Plan发行分别列示；通用本地化介绍不生成该作具名翻译职责，更不倒填2014原作开发。保留共同发行原文及既有平台记录。",
+      "workIds": [
+        "g210"
+      ]
+    },
+    {
+      "entityId": "entity-overdrive",
+      "name": "OVERDRIVE",
+      "status": "nineProductionBrandsConfirmedOriginalGrooverSeparated",
+      "sources": [
+        "https://www.mangagamer.com/detail.php?product_code=38",
+        "https://www.mangagamer.com/detail.php?product_code=21",
+        "https://www.mangagamer.com/detail.php?product_code=28",
+        "https://www.mangagamer.com/detail.php?goods_type=1&product_code=9",
+        "https://mangagamer.wordpress.com/2011/08/30/announcing-go-go-nippon/",
+        "https://mangagamer.wordpress.com/2011/05/24/bamboos-livechat/",
+        "https://www.mangagamer.com/detail.php?product_code=87I",
+        "https://www.mangagamer.com/detail.php?product_code=300",
+        "https://musicus.over-drive.jp/products",
+        "https://over-drive.jp/",
+        "https://mangagamer.wordpress.com/2011/06/23/bamboo-bounces-back/",
+        "https://mangagamer.wordpress.com/2012/02/19/announcements-from-katsucon/",
+        "https://www.mangagamer.com/detail.php?goods_type=0&product_code=134",
+        "https://www.mangagamer.com/detail.php?goods_type=1&product_code=1221",
+        "https://note.com/milktub696/n/nbf8eeeb3348d"
+      ],
+      "reason": "沿用品牌身份。九部既有作品按逐作当事发行方开发字段、2011同期具名开发访谈或原作特设制作资料追加productionBrand；Go! Go! Nippon!既有originalProduction不重复。Green Green原作GROOVER及2013 OVERDRIVE EDITION的版本范围分别保留，不将品牌成立后制作追溯到2001。MangaGamer发行、英语脚本实现、ENTERGRAM主机发行以及外部动画／音乐参与分别限定，不增加作品、内容或平台。",
+      "workIds": [
+        "g641",
+        "g642",
+        "g643",
+        "g644",
+        "g645",
+        "g646",
+        "g647",
+        "g648",
+        "g649",
+        "g650",
+        "g651"
+      ]
+    },
+    {
+      "entityId": "entity-name-8d45e971c1f6",
+      "name": "Overflow（STACK）",
+      "status": "brandConfirmedOriginalProductionAndIndirectSourceDeferred",
+      "sources": [
+        "https://0verflow.com/vk-contact/",
+        "https://0verflow.com/guide/",
+        "https://0verflow.com/sdre_live/",
+        "https://0verflow.com/sdrm/",
+        "https://0verflow.com/guideline/"
+      ],
+      "reason": "官网合作窗口明确Overflow为有限会社スタック管理运营的品牌，网站说明也具名该法人。复合显示名保留，类别订正为品牌，并显式保持两条publisher原角色；不另造STACK节点或沿革边，不将原署名改成公司。现有g033首发与重制记录的来源分别为20周年演唱会页和2025重制页；周年说明可间接交叉核对原作年份，但不足以据此补2005原作制作。 现行通用制作说明不足以重建2005逐作原版STAFF；保留日期与内容边界，后发DVD／翻译开发不能从当前版权推定。",
+      "workIds": [
+        "g033"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "O",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 4,
+    "processedEntityIds": [
+      "entity-name-a59a367044e7",
+      "entity-name-4abb165f3e1e",
+      "entity-overdrive",
+      "entity-name-8d45e971c1f6"
+    ],
+    "nextEntityId": "entity-palette",
+    "nextName": "Palette（ぱれっと）",
+    "queue": [
+      {
+        "entityId": "entity-name-a59a367044e7",
+        "name": "Origin Systems",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-4abb165f3e1e",
+        "name": "OTAKU Plan",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-overdrive",
+        "name": "OVERDRIVE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8d45e971c1f6",
+        "name": "Overflow（STACK）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
