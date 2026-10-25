@@ -141,3 +141,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 L2连续核查Leland、Liar-soft、LJN、LOGIN SOFT、LOGiN，独立记录为 `entity-creator-l2-review-20261025.json` 与同名Markdown。Leland原版传单和LJN原版手册分别订正历史公司类别；LOGIN SOFT依具名品牌史料订正为品牌，显式保持旧发行角色，不自动生成其他发行职责。Liar-soft既有原作制作沿用，LOGiN刊物与游戏发行主体的对应继续待核。无新增制作或关系；L累计10／12，下一家LucasArts。
 
 2026-10-25 L3完成L组12／12，独立审核为 `entity-creator-l3-review-20261025.json` 与同名Markdown。原版目录确认LucasArts历史公司，社团官网确认LunaSystem制作团队；按具名创作史、开发人员访谈及明确STAFF制作分别给三部LucasArts原作、四部旅行部原作追加七条原作制作。后发重制、补丁、合作展示与NanaWind专题待核不继承；既有目录、发行、关系和迁移基线保持。下一家Macadamia Soft。
+
+2026-10-25 M1核查Macadamia Soft至Makura前五项，独立记录为 `entity-creator-m1-review-20261025.json` 与同名Markdown。Magical Zoo据保存协会品牌／部门及制作史订正为品牌，显式保留原publisher，并给The Screamer追加制作品牌；MAGES.据2014原作制作人发布会记录给CHAOS;CHILD追加原作制作，2019 Steam开发证据另限定。Madosoft与枕既有制作沿用，Macadamia具体制作待核；ASCII专题待核及关联位置不改。M累计5／30，下一家MangaGamer。
