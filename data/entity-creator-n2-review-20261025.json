@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "b1d9d9cf0586005f68779de21b52481e70746b7d",
+  "audit": "data/entity-creator-n2-review-20261025.md",
+  "previousReview": "data/entity-creator-n1-review-20261025.md",
+  "policy": "N组第6—10项；具名共同制作、历史法人类别与后发移植／本地化分别限定，原署名和沿革节点不自动合并。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZN2-I01",
+      "entityId": "entity-name-ef0ae286070f",
+      "rawName": "NECインターチャネル",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://support.nec-lavie.jp/e-manual/m/nx/vs/s2990302/wd/v1/mst/vs2comn1.pdf",
+        "https://fandc.co.jp/catalog/consumer/303",
+        "https://fandc.co.jp/catalog/consumer/242"
+      ],
+      "note": "NEC原厂1999年STEP2入門手册本批再次直接下载，PDF文件第166页去除版面换行后明确NECインターチャネル株式会社，第167页为1998 NEC Interchannel,Ltd.。F&C官方Pia2.2及Canvas廉价版目录分别保留2000、2003年的NECインターチャネル発売元，与COCKTAIL SOFT原作分列。仅将该日文原发行节点订正为历史公司类别；保留15条发行、9部作品及全部旧原文，不把主机发行、版权或现行网站跳转推定为原作／移植开发。英文NEC节点、去NEC后的两个Interchannel节点均保持独立，不追加合并、别名或沿革关系。"
+    },
+    {
+      "reviewId": "AZN2-I02",
+      "entityId": "entity-name-c4968cadbf3e",
+      "rawName": "Neverland Company",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.sega.jp/fb/segavoice/050317/home.html",
+        "https://www.marv.jp/special/game/ds/runefactory3/special/event.html",
+        "https://www.4gamer.net/games/999/G999905/20131129059/"
+      ],
+      "note": "SEGA官方2005制作人访谈具名（株）ネバーランドカンパニー并提及仙窟活龍大戦カオスシード开发，Marvelous官方2009活动报告具名同公司代表取締役社长高田誠，足以订正旧Neverland Company节点为历史公司类别。2013同期报道只限定停业历史，不用已被其他行业占用的旧域名核现状。保留一条1998 Saturn历史发行；SEGA访谈所述为仙窟活龍大戦后发版，不能据此把整部1996 SFC原作、Saturn增补以及ESP／TAITO发行统一为同一职责。原作与各版职员表仍需分别补核，本批不追加work级原作制作、关系或基线订正；亦不新增其他Rune Factory等目录作品。"
+    },
+    {
+      "reviewId": "AZN2-I03",
+      "entityId": "entity-name-417356621ac7",
+      "rawName": "Nihon Falcom",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.falcom.co.jp/company/history-1980",
+        "https://www.falcom.co.jp/company/outline",
+        "https://www.falcom.co.jp/ir-data/20211008",
+        "https://www.falcom.co.jp/games-data/switch_egg_asteka2_pc8801"
+      ],
+      "note": "官方1980年代沿革明确1981年日本ファルコム株式会社设立，现行公司概要区分1981创業与2001設立。本节点仅有1986 PC-8801太阳神殿一条原发行，独立订正为历史公司类别，不据同名直接认定与2001法人或下一项Falcom沿革专题完全同一。2021-10-08官方IR公告明确1984—1986三作由日本Falcom开发／发行，其中点名太阳神殿；据此仅给g1086追加一条原作制作。2022 BEEP X68000移植与2024 D4的EGG发行不倒填原作职责，不复制作品或另增平台。Infocom及Falcom专题的原待核关联均保留，不把英语后发版或现行权利署名当作主体合并依据。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZN2-C01",
+      "entityId": "entity-name-95984e43e41f",
+      "dossierId": null,
+      "workId": "nitroplus-extra-rusty-rabbit",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "NetEase Games",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.nitroplus.co.jp/news/2025/12068.php",
+      "note": "2025年当事方发售公告明确NetEase Games与ニトロプラス共同制作及原作联名，仅登记本作共同原作制作，不断言单方独立完成程序开发或将NetEase Games合并为版权法人；Nitroplus自身专题职责待核和关联位置保持。"
+    },
+    {
+      "reviewId": "AZN2-C02",
+      "entityId": "entity-name-417356621ac7",
+      "dossierId": null,
+      "workId": "g1086",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Nihon Falcom",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.falcom.co.jp/ir-data/20211008",
+      "note": "官方IR公告明确日本Falcom开发／发行1984—1986三作，其中点名太阳神殿；只登记1986 PC-8801原作制作，不将2022 BEEP或2024 EGG移植开发／发行倒填，不合并同名沿革专题或解除其及Infocom专题待核。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-ef0ae286070f",
+      "name": "NEC Interchannel（NECインターチャネル）",
+      "status": "historicalJapaneseCompanySignatureConfirmed",
+      "sources": [
+        "https://support.nec-lavie.jp/e-manual/m/nx/vs/s2990302/wd/v1/mst/vs2comn1.pdf",
+        "https://fandc.co.jp/catalog/consumer/303",
+        "https://fandc.co.jp/catalog/consumer/242"
+      ],
+      "reason": "NEC原厂1999年STEP2入門手册本批再次直接下载，PDF文件第166页去除版面换行后明确NECインターチャネル株式会社，第167页为1998 NEC Interchannel,Ltd.。F&C官方Pia2.2及Canvas廉价版目录分别保留2000、2003年的NECインターチャネル発売元，与COCKTAIL SOFT原作分列。仅将该日文原发行节点订正为历史公司类别；保留15条发行、9部作品及全部旧原文，不把主机发行、版权或现行网站跳转推定为原作／移植开发。英文NEC节点、去NEC后的两个Interchannel节点均保持独立，不追加合并、别名或沿革关系。",
+      "workIds": [
+        "g687",
+        "g721",
+        "g722",
+        "g724",
+        "g727",
+        "g744",
+        "g775",
+        "g792",
+        "g959"
+      ]
+    },
+    {
+      "entityId": "entity-name-acccc0db4bce",
+      "name": "NekoNyan Ltd.",
+      "status": "existingCompanyLocalizationScopeRetained",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/10729116",
+        "https://www.nekonyansoft.com/uploads/terms_and_conditions.pdf",
+        "https://www.nekonyansoft.com/index.php",
+        "https://sanobawitch.nekonyansoft.com/",
+        "https://aokana.nekonyansoft.com/"
+      ],
+      "reason": "沿用已核NekoNyan Ltd.公司身份。英国登记10729116及2018官方条款均具名公司；官网自述本地化业务，逐作英文页与FAQ展示后发英文／Steam和自营版本，不等于日本原作开发。保留12条历史发行与共同署名HIKARI FIELD的各自节点；本批不将一般本地化业务或商品展示概括成十二部原作职责，不新增跨语言、跨发行的work级localizer。逐版翻译、编辑、程序移植和授权分工仍需按该版职员表核定，不把当前网站动态页脚或登记通讯地址倒填历史日期。",
+      "workIds": [
+        "g204",
+        "g205",
+        "g206",
+        "g207",
+        "g224",
+        "g226",
+        "g227",
+        "g228",
+        "g229",
+        "g232",
+        "g851",
+        "g856"
+      ]
+    },
+    {
+      "entityId": "entity-name-95984e43e41f",
+      "name": "NetEase Games",
+      "status": "jointOriginalProductionConfirmedIdentityScopePending",
+      "sources": [
+        "https://www.neteasegames.com/about/index.html",
+        "https://www.nitroplus.co.jp/news/2025/12068.php",
+        "https://www.rustyrabbit.com/m/en/"
+      ],
+      "reason": "NetEase官方将NetEase Games说明为NetEase, Inc.的online games division，而Rusty Rabbit权利页另列NetEase Interactive Entertainment Pte. Ltd.；二者不能仅凭业务联系视为同一法人。现有类型没有独立业务部门分类，本批保留该旧原文节点unknown，不擅自改为公司、品牌或新增母子边。身份分类未决不妨碍具名职责：Nitroplus于2025-04-17的当事方发售公告明确双方共同制作，并在原作栏列NetEase Games×ニトロプラス，仅给既有Rusty Rabbit关联作品追加一条originalProduction，说明共同制作而非单方独立开发。原三条具体平台发行与Nitroplus自身专题待核保持，不增加新作品、平台或内容。",
+      "workIds": [
+        "nitroplus-extra-rusty-rabbit"
+      ]
+    },
+    {
+      "entityId": "entity-name-c4968cadbf3e",
+      "name": "Neverland Company",
+      "status": "historicalCompanyConfirmedLaterVersionSeparated",
+      "sources": [
+        "https://www.sega.jp/fb/segavoice/050317/home.html",
+        "https://www.marv.jp/special/game/ds/runefactory3/special/event.html",
+        "https://www.4gamer.net/games/999/G999905/20131129059/"
+      ],
+      "reason": "SEGA官方2005制作人访谈具名（株）ネバーランドカンパニー并提及仙窟活龍大戦カオスシード开发，Marvelous官方2009活动报告具名同公司代表取締役社长高田誠，足以订正旧Neverland Company节点为历史公司类别。2013同期报道只限定停业历史，不用已被其他行业占用的旧域名核现状。保留一条1998 Saturn历史发行；SEGA访谈所述为仙窟活龍大戦后发版，不能据此把整部1996 SFC原作、Saturn增补以及ESP／TAITO发行统一为同一职责。原作与各版职员表仍需分别补核，本批不追加work级原作制作、关系或基线订正；亦不新增其他Rune Factory等目录作品。",
+      "workIds": [
+        "taito-chaos-seed"
+      ]
+    },
+    {
+      "entityId": "entity-name-417356621ac7",
+      "name": "Nihon Falcom",
+      "status": "historicalCompanyAndOriginalDevelopmentConfirmed",
+      "sources": [
+        "https://www.falcom.co.jp/company/history-1980",
+        "https://www.falcom.co.jp/company/outline",
+        "https://www.falcom.co.jp/ir-data/20211008",
+        "https://www.falcom.co.jp/games-data/switch_egg_asteka2_pc8801"
+      ],
+      "reason": "官方1980年代沿革明确1981年日本ファルコム株式会社设立，现行公司概要区分1981创業与2001設立。本节点仅有1986 PC-8801太阳神殿一条原发行，独立订正为历史公司类别，不据同名直接认定与2001法人或下一项Falcom沿革专题完全同一。2021-10-08官方IR公告明确1984—1986三作由日本Falcom开发／发行，其中点名太阳神殿；据此仅给g1086追加一条原作制作。2022 BEEP X68000移植与2024 D4的EGG发行不倒填原作职责，不复制作品或另增平台。Infocom及Falcom专题的原待核关联均保留，不把英语后发版或现行权利署名当作主体合并依据。",
+      "workIds": [
+        "g1086"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-ef0ae286070f",
+      "name": "NEC Interchannel（NECインターチャネル）",
+      "status": "historicalJapaneseCompanySignatureConfirmed",
+      "sources": [
+        "https://support.nec-lavie.jp/e-manual/m/nx/vs/s2990302/wd/v1/mst/vs2comn1.pdf",
+        "https://fandc.co.jp/catalog/consumer/303",
+        "https://fandc.co.jp/catalog/consumer/242"
+      ],
+      "reason": "NEC原厂1999年STEP2入門手册本批再次直接下载，PDF文件第166页去除版面换行后明确NECインターチャネル株式会社，第167页为1998 NEC Interchannel,Ltd.。F&C官方Pia2.2及Canvas廉价版目录分别保留2000、2003年的NECインターチャネル発売元，与COCKTAIL SOFT原作分列。仅将该日文原发行节点订正为历史公司类别；保留15条发行、9部作品及全部旧原文，不把主机发行、版权或现行网站跳转推定为原作／移植开发。英文NEC节点、去NEC后的两个Interchannel节点均保持独立，不追加合并、别名或沿革关系。",
+      "workIds": [
+        "g687",
+        "g721",
+        "g722",
+        "g724",
+        "g727",
+        "g744",
+        "g775",
+        "g792",
+        "g959"
+      ]
+    },
+    {
+      "entityId": "entity-name-acccc0db4bce",
+      "name": "NekoNyan Ltd.",
+      "status": "existingCompanyLocalizationScopeRetained",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/10729116",
+        "https://www.nekonyansoft.com/uploads/terms_and_conditions.pdf",
+        "https://www.nekonyansoft.com/index.php",
+        "https://sanobawitch.nekonyansoft.com/",
+        "https://aokana.nekonyansoft.com/"
+      ],
+      "reason": "沿用已核NekoNyan Ltd.公司身份。英国登记10729116及2018官方条款均具名公司；官网自述本地化业务，逐作英文页与FAQ展示后发英文／Steam和自营版本，不等于日本原作开发。保留12条历史发行与共同署名HIKARI FIELD的各自节点；本批不将一般本地化业务或商品展示概括成十二部原作职责，不新增跨语言、跨发行的work级localizer。逐版翻译、编辑、程序移植和授权分工仍需按该版职员表核定，不把当前网站动态页脚或登记通讯地址倒填历史日期。",
+      "workIds": [
+        "g204",
+        "g205",
+        "g206",
+        "g207",
+        "g224",
+        "g226",
+        "g227",
+        "g228",
+        "g229",
+        "g232",
+        "g851",
+        "g856"
+      ]
+    },
+    {
+      "entityId": "entity-name-95984e43e41f",
+      "name": "NetEase Games",
+      "status": "jointOriginalProductionConfirmedIdentityScopePending",
+      "sources": [
+        "https://www.neteasegames.com/about/index.html",
+        "https://www.nitroplus.co.jp/news/2025/12068.php",
+        "https://www.rustyrabbit.com/m/en/"
+      ],
+      "reason": "NetEase官方将NetEase Games说明为NetEase, Inc.的online games division，而Rusty Rabbit权利页另列NetEase Interactive Entertainment Pte. Ltd.；二者不能仅凭业务联系视为同一法人。现有类型没有独立业务部门分类，本批保留该旧原文节点unknown，不擅自改为公司、品牌或新增母子边。身份分类未决不妨碍具名职责：Nitroplus于2025-04-17的当事方发售公告明确双方共同制作，并在原作栏列NetEase Games×ニトロプラス，仅给既有Rusty Rabbit关联作品追加一条originalProduction，说明共同制作而非单方独立开发。原三条具体平台发行与Nitroplus自身专题待核保持，不增加新作品、平台或内容。",
+      "workIds": [
+        "nitroplus-extra-rusty-rabbit"
+      ]
+    },
+    {
+      "entityId": "entity-name-c4968cadbf3e",
+      "name": "Neverland Company",
+      "status": "historicalCompanyConfirmedLaterVersionSeparated",
+      "sources": [
+        "https://www.sega.jp/fb/segavoice/050317/home.html",
+        "https://www.marv.jp/special/game/ds/runefactory3/special/event.html",
+        "https://www.4gamer.net/games/999/G999905/20131129059/"
+      ],
+      "reason": "SEGA官方2005制作人访谈具名（株）ネバーランドカンパニー并提及仙窟活龍大戦カオスシード开发，Marvelous官方2009活动报告具名同公司代表取締役社长高田誠，足以订正旧Neverland Company节点为历史公司类别。2013同期报道只限定停业历史，不用已被其他行业占用的旧域名核现状。保留一条1998 Saturn历史发行；SEGA访谈所述为仙窟活龍大戦后发版，不能据此把整部1996 SFC原作、Saturn增补以及ESP／TAITO发行统一为同一职责。原作与各版职员表仍需分别补核，本批不追加work级原作制作、关系或基线订正；亦不新增其他Rune Factory等目录作品。",
+      "workIds": [
+        "taito-chaos-seed"
+      ]
+    },
+    {
+      "entityId": "entity-name-417356621ac7",
+      "name": "Nihon Falcom",
+      "status": "historicalCompanyAndOriginalDevelopmentConfirmed",
+      "sources": [
+        "https://www.falcom.co.jp/company/history-1980",
+        "https://www.falcom.co.jp/company/outline",
+        "https://www.falcom.co.jp/ir-data/20211008",
+        "https://www.falcom.co.jp/games-data/switch_egg_asteka2_pc8801"
+      ],
+      "reason": "官方1980年代沿革明确1981年日本ファルコム株式会社设立，现行公司概要区分1981创業与2001設立。本节点仅有1986 PC-8801太阳神殿一条原发行，独立订正为历史公司类别，不据同名直接认定与2001法人或下一项Falcom沿革专题完全同一。2021-10-08官方IR公告明确1984—1986三作由日本Falcom开发／发行，其中点名太阳神殿；据此仅给g1086追加一条原作制作。2022 BEEP X68000移植与2024 D4的EGG发行不倒填原作职责，不复制作品或另增平台。Infocom及Falcom专题的原待核关联均保留，不把英语后发版或现行权利署名当作主体合并依据。",
+      "workIds": [
+        "g1086"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "N",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 21,
+    "processedEntityIds": [
+      "entity-nanawind",
+      "entity-name-78226abfa58b",
+      "entity-name-0b22f68e63fb",
+      "entity-nec_he",
+      "entity-name-46fe3a3fcf5f",
+      "entity-name-ef0ae286070f",
+      "entity-name-acccc0db4bce",
+      "entity-name-95984e43e41f",
+      "entity-name-c4968cadbf3e",
+      "entity-name-417356621ac7"
+    ],
+    "nextEntityId": "entity-falcom",
+    "nextName": "Nihon Falcom（日本ファルコム）",
+    "queue": [
+      {
+        "entityId": "entity-nanawind",
+        "name": "NanaWind",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-78226abfa58b",
+        "name": "Natsume",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0b22f68e63fb",
+        "name": "NEC Avenue",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-nec_he",
+        "name": "NEC Home Electronics",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-46fe3a3fcf5f",
+        "name": "NEC Interchannel",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ef0ae286070f",
+        "name": "NEC Interchannel（NECインターチャネル）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-acccc0db4bce",
+        "name": "NekoNyan Ltd.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-95984e43e41f",
+        "name": "NetEase Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c4968cadbf3e",
+        "name": "Neverland Company",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-417356621ac7",
+        "name": "Nihon Falcom",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-falcom",
+        "name": "Nihon Falcom（日本ファルコム）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-c9d832d41604",
+        "name": "NineLives",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-0bee31ac676c",
+        "name": "Nintendo",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-bb40df899e7f",
+        "name": "Nintendo（任天堂）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-198d8c1fcfbe",
+        "name": "NIS America, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-nitrochiral",
+        "name": "NITRO CHiRAL",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-nitroorigin",
+        "name": "NITRO ORIGIN",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-nitroplus",
+        "name": "Nitroplus",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-nitroplus_brand",
+        "name": "Nitroplus",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-d824aa40b8bf",
+        "name": "novamicus（NEXTON）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-novect",
+        "name": "NOVECT（原 Novectacle）",
+        "status": "pending"
+      }
+    ]
+  }
+}

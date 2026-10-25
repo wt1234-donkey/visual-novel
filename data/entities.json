@@ -3404,17 +3404,20 @@
     {
       "id": "entity-name-ef0ae286070f",
       "name": "NEC Interchannel（NECインターチャネル）",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "NECインターチャネル",
         "NEC Interchannel",
         "NEC Interchannel（NECインターチャネル）"
       ],
       "sources": [
-        "https://mediaworld.co.jp/products/10016646001"
+        "https://mediaworld.co.jp/products/10016646001",
+        "https://support.nec-lavie.jp/e-manual/m/nx/vs/s2990302/wd/v1/mst/vs2comn1.pdf",
+        "https://fandc.co.jp/catalog/consumer/303",
+        "https://fandc.co.jp/catalog/consumer/242"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "NEC原厂1999年STEP2入門手册本批再次直接下载，PDF文件第166页去除版面换行后明确NECインターチャネル株式会社，第167页为1998 NEC Interchannel,Ltd.。F&C官方Pia2.2及Canvas廉价版目录分别保留2000、2003年的NECインターチャネル発売元，与COCKTAIL SOFT原作分列。仅将该日文原发行节点订正为历史公司类别；保留15条发行、9部作品及全部旧原文，不把主机发行、版权或现行网站跳转推定为原作／移植开发。英文NEC节点、去NEC后的两个Interchannel节点均保持独立，不追加合并、别名或沿革关系。",
       "dates": [],
       "nameParts": {
         "english": "NEC Interchannel",
@@ -4169,15 +4172,18 @@
     {
       "id": "entity-name-417356621ac7",
       "name": "Nihon Falcom",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "Nihon Falcom"
       ],
       "sources": [
-        "https://www.falcom.co.jp/games-data/switch_egg_asteka2_pc8801"
+        "https://www.falcom.co.jp/games-data/switch_egg_asteka2_pc8801",
+        "https://www.falcom.co.jp/company/history-1980",
+        "https://www.falcom.co.jp/company/outline",
+        "https://www.falcom.co.jp/ir-data/20211008"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "官方1980年代沿革明确1981年日本ファルコム株式会社设立，现行公司概要区分1981创業与2001設立。本节点仅有1986 PC-8801太阳神殿一条原发行，独立订正为历史公司类别，不据同名直接认定与2001法人或下一项Falcom沿革专题完全同一。2021-10-08官方IR公告明确1984—1986三作由日本Falcom开发／发行，其中点名太阳神殿；据此仅给g1086追加一条原作制作。2022 BEEP X68000移植与2024 D4的EGG发行不倒填原作职责，不复制作品或另增平台。Infocom及Falcom专题的原待核关联均保留，不把英语后发版或现行权利署名当作主体合并依据。",
       "dates": []
     },
     {
@@ -4803,15 +4809,18 @@
     {
       "id": "entity-name-c4968cadbf3e",
       "name": "Neverland Company",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "Neverland Company"
       ],
       "sources": [
-        "https://www.gavas.jp/products/detail.php?product_id=1247"
+        "https://www.gavas.jp/products/detail.php?product_id=1247",
+        "https://www.sega.jp/fb/segavoice/050317/home.html",
+        "https://www.marv.jp/special/game/ds/runefactory3/special/event.html",
+        "https://www.4gamer.net/games/999/G999905/20131129059/"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "SEGA官方2005制作人访谈具名（株）ネバーランドカンパニー并提及仙窟活龍大戦カオスシード开发，Marvelous官方2009活动报告具名同公司代表取締役社长高田誠，足以订正旧Neverland Company节点为历史公司类别。2013同期报道只限定停业历史，不用已被其他行业占用的旧域名核现状。保留一条1998 Saturn历史发行；SEGA访谈所述为仙窟活龍大戦后发版，不能据此把整部1996 SFC原作、Saturn增补以及ESP／TAITO发行统一为同一职责。原作与各版职员表仍需分别补核，本批不追加work级原作制作、关系或基线订正；亦不新增其他Rune Factory等目录作品。",
       "dates": []
     },
     {
