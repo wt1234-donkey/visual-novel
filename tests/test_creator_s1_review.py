@@ -21,13 +21,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'8d86229a9f65735f0fe68ab8bd67e362eff8a759:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS1Tests(unittest.TestCase):
     def test_only_screaming_villains_company_identity_changes(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {SCREAM})
@@ -42,7 +48,7 @@ class CreatorS1Tests(unittest.TestCase):
         self.assertEqual(sum(e['verification'] == 'unresolved' for e in ae.values()), 74)
 
     def test_five_credits_preserve_old_records_and_limit_remaster_to_added_content(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-5], before['credits'])
         actual = [(c['entityId'], c['targetType'], c['targetId'], c['workId'], c['role'], c['status'])
                   for c in after['credits'][-5:]]
@@ -61,7 +67,7 @@ class CreatorS1Tests(unittest.TestCase):
         self.assertEqual([c['role'] for c in scoped], ['publisher', 'developer'])
 
     def test_four_related_membership_changes_preserve_pending_and_catalogue_objects(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         bm, am = [{(m['dossierId'], m['workId']): m for m in d['dossierMemberships']} for d in [before, after]]
         keys = {('sagaplanets', 'sagaplanets-r01'), ('sagaplanets', 'sagaplanets-r02'),
                 ('sega', 'sega-roommania'), ('sega', 'sega-new-sakura')}
@@ -79,7 +85,7 @@ class CreatorS1Tests(unittest.TestCase):
             self.assertEqual(read(path), old(path), path)
 
     def test_s_order_and_next_seikaisha_do_not_promote_related_works(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']),
                           p['total'], p['nextEntityId']), ('S', 3, 42, 240, 279, 'entity-name-7c9d766b5702'))

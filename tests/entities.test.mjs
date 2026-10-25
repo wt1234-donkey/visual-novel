@@ -89,3 +89,22 @@ test('anniversary development is limited to added content and never the 1992 Nig
   assert.ok(!creditsForRelease(index,'g934',original).some(c=>c.entityId===developer&&c.role==='developer'));
   assert.ok(creditsForRelease(index,'g934',later).some(c=>c.entityId===developer&&c.role==='developer'&&c.targetType==='content'));
 });
+
+test('Serenity Forge Plus development excludes original DDLC and mobile releases with unknown content',()=>{
+  const developer='entity-name-22015689e48e';
+  const made=find({developer});
+  assert.equal(made.length,1);
+  assert.equal(made[0].work.id,'g056');
+  assert.deepEqual(made[0].platformReleases.map(r=>r.id),['g056-v3','g056-v4','g056-v5']);
+  assert.equal(find({developer,from:2017,to:2017}).length,0);
+  assert.equal(find({developer,from:2021,to:2021}).length,1);
+  assert.equal(find({developer,from:2025,to:2025}).length,0);
+  for(const rid of ['g056-v1','g056-v2','g056-v6','g056-v7']){
+    const release=data.platformReleases.find(r=>r.id===rid);
+    assert.ok(!creditsForRelease(index,'g056',release).some(c=>c.entityId===developer&&c.role==='developer'));
+  }
+  for(const rid of ['g056-v3','g056-v4','g056-v5']){
+    const release=data.platformReleases.find(r=>r.id===rid);
+    assert.ok(creditsForRelease(index,'g056',release).some(c=>c.entityId===developer&&c.role==='developer'&&c.targetId==='g056-c-3'));
+  }
+});

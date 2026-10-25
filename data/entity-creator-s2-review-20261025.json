@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "713a89a2b5e9e7ecc98943f13e96d3f611cf5a6d",
+  "audit": "data/entity-creator-s2-review-20261025.md",
+  "previousReview": "data/entity-creator-s1-review-20261025.md",
+  "policy": "按S组第4—7项连续核查；公司身份、联合企划制作、增补内容开发及后发发行各自限定。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS2-I01",
+      "entityId": "entity-name-7c9d766b5702",
+      "rawName": "星海社",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://seikaisha.co.jp/about/company-profile/",
+        "https://www.nitroplus.co.jp/game/phenomeno/"
+      ],
+      "note": "官网公司概要具名株式会社星海社，独立订正为company。Nitroplus的2012视觉小说官网把星海社列于企画／開発的联合署名中，足以确认原作制作参与；只追加g613的originalProduction，不将合并栏目拆成各方独占程序或素材职责。既有联合publisher与Nitroplus品牌身份分开，小说出版与游戏公开不混同。"
+    },
+    {
+      "reviewId": "AZS2-I02",
+      "entityId": "entity-name-13bcad90dc83",
+      "rawName": "シャルラク",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/259",
+        "https://fandc.co.jp/dreamsoft/e_night/en_related.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4011101031202",
+        "https://internet.watch.impress.co.jp/www/article/2000/0630/shall.htm"
+      ],
+      "note": "F&C原作方目录明确2002年GBA Natural2 -DUO-発売元为シャルラク并链接旧官方网站，历史相关页另用シャルラク株式会社称谓；政府法人索引列同名法人，2000年当事发布会报道亦具名该游戏公司。本批订正为company，保留GBA publisher，不将发行或公司游戏业务当作该版开发证据。シャルラクプラス的法人连续性另核，不自动合并。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS2-C01",
+      "entityId": "entity-name-7c9d766b5702",
+      "dossierId": null,
+      "workId": "g613",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "企画/開発：星海社/ニトロプラス",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.nitroplus.co.jp/game/phenomeno/",
+      "note": "当事产品页将星海社具名列于联合企画／開発；确认2012视觉小说原作制作参与，不从斜线合并栏目推断某方独占程序、素材或具体分工，不把小说出版当作游戏开发证据；保留原联合发行与Nitroplus品牌。"
+    },
+    {
+      "reviewId": "AZS2-C02",
+      "entityId": "entity-name-22015689e48e",
+      "dossierId": null,
+      "workId": "g056",
+      "targetType": "content",
+      "targetId": "g056-c-3",
+      "role": "developer",
+      "rawCredit": "Serenity Forge programming team",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeTargetRoles": [],
+      "source": "https://mcvuk.com/business-news/insisting-that-ddlc-must-be-experienced-in-one-specific-way-would-be-a-very-elitist-and-pretentious-mindset-for-us-to-have-behind-the-scenes-of-doki-doki-literature-club-plus/",
+      "note": "2021当事访谈明确Unity Technologies先启动、Serenity Forge程序团队接手，并与Team Salvato工程师协作完成Plus。只确认既有g056-c-3增补内容开发，三条2021发行适用；不扩及2017原作或内容ID仍为空的2025移动发行，不覆盖其他协作者或凭引擎重做另建内容。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-7c9d766b5702",
+      "name": "Seikaisha（星海社）",
+      "status": "technicalSubrolesAndPartnerIdentityDeferred",
+      "sources": [
+        "https://seikaisha.co.jp/about/company-profile/",
+        "https://www.nitroplus.co.jp/game/phenomeno/"
+      ],
+      "reason": "企画／開発为合并栏目，不能据排列拆分程序、剧本管理或素材制作；与Nitroplus同名法人／品牌的各项职能须分别核定。本批不增集团关系、成立日期或小说书目，也不将原作出版误作新游戏内容。",
+      "workIds": [
+        "g613"
+      ]
+    },
+    {
+      "entityId": "entity-name-06aeb9d01fbe",
+      "name": "Sekai Project",
+      "status": "perReleaseLocalizationAndDevelopmentDeferred",
+      "sources": [
+        "https://sekaiproject.com/contact/",
+        "https://sekaiproject.com/reflections-on-10-years-at-sekai-project/",
+        "https://store.steampowered.com/app/420100/CLANNAD_Side_Stories/"
+      ],
+      "reason": "11条发行保持原证据状态；具体译者、项目管理、本地化与后发技术实现须逐版STAFF支持。当前商店的开发／发行分栏不等于已核全部历史职责，不将2016英文版反写到2008原作。",
+      "workIds": [
+        "g190",
+        "g211",
+        "g212",
+        "g213",
+        "g214",
+        "g215",
+        "g468",
+        "g477",
+        "g837",
+        "g839",
+        "g841"
+      ]
+    },
+    {
+      "entityId": "entity-name-22015689e48e",
+      "name": "Serenity Forge",
+      "status": "mobileContentAndOtherCollaboratorsDeferred",
+      "sources": [
+        "https://serenityforge.com/games/doki-doki-literature-club-plus",
+        "https://mcvuk.com/business-news/insisting-that-ddlc-must-be-experienced-in-one-specific-way-would-be-a-very-elitist-and-pretentious-mindset-for-us-to-have-behind-the-scenes-of-doki-doki-literature-club-plus/"
+      ],
+      "reason": "2021 Plus内容开发已核，具体技术分工与其他协作者保持分列。2025 Android／iOS既有内容ID为空，不能由沿用Unity推定与Plus内容相同，开发核定不自动改内容关系、发行日期或新增移动内容记录。",
+      "workIds": [
+        "g056"
+      ]
+    },
+    {
+      "entityId": "entity-name-13bcad90dc83",
+      "name": "Shall Luck（シャルラク）",
+      "status": "gbaDevelopmentAndCorporateSuccessionDeferred",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/259",
+        "https://fandc.co.jp/dreamsoft/e_night/en_related.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4011101031202",
+        "https://internet.watch.impress.co.jp/www/article/2000/0630/shall.htm"
+      ],
+      "reason": "2002 GBA的移植开发与新增内容仍缺具名STAFF，contentVersionId继续为空。历史网页同时出现シャルラク与シャルラクプラス称谓，缺法律承继材料时不建关系、不并实体，也不把FAIRYTALE原作开发转记给后发发行方。",
+      "workIds": [
+        "g777"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-7c9d766b5702",
+      "name": "Seikaisha（星海社）",
+      "status": "companyConfirmedOneOriginalProductionAdded",
+      "sources": [
+        "https://seikaisha.co.jp/about/company-profile/",
+        "https://www.nitroplus.co.jp/game/phenomeno/"
+      ],
+      "reason": "官网公司概要具名株式会社星海社，独立订正为company。Nitroplus的2012视觉小说官网把星海社列于企画／開発的联合署名中，足以确认原作制作参与；只追加g613的originalProduction，不将合并栏目拆成各方独占程序或素材职责。既有联合publisher与Nitroplus品牌身份分开，小说出版与游戏公开不混同。",
+      "workIds": [
+        "g613"
+      ]
+    },
+    {
+      "entityId": "entity-name-06aeb9d01fbe",
+      "name": "Sekai Project",
+      "status": "existingCompanyElevenPublishersRetainedLocalizationScopeDeferred",
+      "sources": [
+        "https://sekaiproject.com/contact/",
+        "https://sekaiproject.com/reflections-on-10-years-at-sekai-project/",
+        "https://store.steampowered.com/app/420100/CLANNAD_Side_Stories/"
+      ],
+      "reason": "沿用已核公司身份与11条历史发行署名。官方联络页及十周年回顾支持公司与本地化业务；CLANNAD Side Stories商店仍明确区分VisualArts/Key开发和Sekai Project发行。本批不由一般业务介绍推断11作逐版开发／翻译，不改原作品或普通后发内容关联，也不合并联合发行方TamaMako gaming。",
+      "workIds": [
+        "g190",
+        "g211",
+        "g212",
+        "g213",
+        "g214",
+        "g215",
+        "g468",
+        "g477",
+        "g837",
+        "g839",
+        "g841"
+      ]
+    },
+    {
+      "entityId": "entity-name-22015689e48e",
+      "name": "Serenity Forge",
+      "status": "existingCompanyOnePlusContentDeveloperConfirmed",
+      "sources": [
+        "https://serenityforge.com/games/doki-doki-literature-club-plus",
+        "https://mcvuk.com/business-news/insisting-that-ddlc-must-be-experienced-in-one-specific-way-would-be-a-very-elitist-and-pretentious-mindset-for-us-to-have-behind-the-scenes-of-doki-doki-literature-club-plus/"
+      ],
+      "reason": "沿用已核公司身份及五条发行。2021-07-29当事访谈中Zhenghua Yang明确Unity Technologies程序团队先启动，随后交接Serenity Forge程序团队，且Team Salvato工程师共同实现；只给既有Plus增补内容g056-c-3追加developer。该内容的三条2021发行可命中，2017原作及内容关系未核的2025移动版不继承，Team Salvato职责不覆盖，Unity参与不顺带造新实体。",
+      "workIds": [
+        "g056"
+      ]
+    },
+    {
+      "entityId": "entity-name-13bcad90dc83",
+      "name": "Shall Luck（シャルラク）",
+      "status": "historicalCompanyConfirmedGbaDeveloperDeferred",
+      "sources": [
+        "https://fandc.co.jp/catalog/consumer/259",
+        "https://fandc.co.jp/dreamsoft/e_night/en_related.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4011101031202",
+        "https://internet.watch.impress.co.jp/www/article/2000/0630/shall.htm"
+      ],
+      "reason": "F&C原作方目录明确2002年GBA Natural2 -DUO-発売元为シャルラク并链接旧官方网站，历史相关页另用シャルラク株式会社称谓；政府法人索引列同名法人，2000年当事发布会报道亦具名该游戏公司。本批订正为company，保留GBA publisher，不将发行或公司游戏业务当作该版开发证据。シャルラクプラス的法人连续性另核，不自动合并。",
+      "workIds": [
+        "g777"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83"
+    ],
+    "nextEntityId": "entity-sharrock",
+    "nextName": "SharRock",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}
