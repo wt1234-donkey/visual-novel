@@ -14,13 +14,17 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    return json.loads(subprocess.check_output(['git', 'show', f'05b37582360b81dc26c6c5b691e0325fc065d1c3:{path}'], cwd=ROOT))
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS6Tests(unittest.TestCase):
     def test_only_two_historical_company_identities_change_without_dates_or_relationships(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {IDS[1], IDS[3]})
@@ -51,7 +55,7 @@ class CreatorS6Tests(unittest.TestCase):
         self.assertEqual(read(REVIEW)['creditAdditions'], [])
 
     def test_four_consecutive_entities_advance_to_sol_press(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

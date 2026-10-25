@@ -191,3 +191,8 @@ P2同时允许独立身份订正将动态解析的unknown节点核为既有模�
 2026-10-26 S字母第五批使用 `entity-creator-s5-review-20261026.json` 与同名Markdown，连续核查Alpha、DOLCE、WASABI、Simon & Schuster Interactive，S累计19／42。官方具名团队定位与制作自述分别支持DOLCE言の葉、WASABIなないろ两条制作品牌；原手册及SEC材料支持Simon历史软件出版部门名义，以brand承载并显式保留publisher。Alpha旧发行与当前Sony列RED FLAGSHIP差异独立待核，不合并实体、不改原档案。父专题、旧发行、关系和基线保持，下一项Sinclair Research。
 
 2026-10-26 S字母第六批使用 `entity-creator-s6-review-20261026.json` 与同名Markdown，连续核查Sinclair Research、Sir-tech Software、SMEE、SNK，S累计23／42。原Sir-tech手册实物署名及SNK官方分期历史分别确认两项历史公司类别；SNK旧公司与2001后起公司／品牌承继分开，不倒填日期或法律关系。Sinclair出版不推开发，SMEE25条既有制作沿用；全部4986条职责、专题、原始发行、位置和基线保持。下一项Sol Press。
+
+
+## S组第七批身份核查（2026-10-26）
+
+Sol Press及两条Sony Computer Entertainment原文独立订正为历史公司，Sony节点不合并、现名与日期不倒填。SORAHANE三条既有制作品牌保留，官网访问失败注明；Sphere四部官方编号产品复核不重复加职责。全部4986条职责与原作品／内容／发行保持，S进度28／42，下一项Spike。详见[独立审计](entity-creator-s7-review-20261026.md)。
