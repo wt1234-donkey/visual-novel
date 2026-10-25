@@ -14,13 +14,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'5350087819ae8406336cb1dca05e83ccd0b3e001:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS4Tests(unittest.TestCase):
     def test_four_credits_preserve_all_earlier_credits_and_identities(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-4], before['credits'])
         self.assertEqual(len(after['credits']), 4984)
         actual = [(c['entityId'], c['targetType'], c['targetId'], c['role'])
@@ -33,13 +39,13 @@ class CreatorS4Tests(unittest.TestCase):
         for c in after['credits'][-4:]:
             self.assertEqual(c['reviewRecord'], REVIEW.replace('.json', '.md'))
             self.assertEqual(c['status'], 'sourceReviewed')
-        self.assertEqual(read('data/entities.json'), old('data/entities.json'))
+        self.assertEqual(applied('data/entities.json'), old('data/entities.json'))
         for eid in IDS[:3]:
             self.assertEqual([c for c in after['credits'] if c['entityId'] == eid and c['targetType'] == 'release'],
                              [c for c in before['credits'] if c['entityId'] == eid and c['targetType'] == 'release'])
 
     def test_only_three_sierra_memberships_change_and_parent_brand_remains_pending(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         bm, am = [{(m['dossierId'], m['workId']): m for m in d['dossierMemberships']}
                   for d in [before, after]]
         self.assertEqual(bm.keys(), am.keys())
@@ -59,10 +65,10 @@ class CreatorS4Tests(unittest.TestCase):
                      'data/gameplay-catalogues.json', 'data/work-classification.json',
                      'data/entity-migration-review.json', 'data/content-migration-baseline.json',
                      'data/entity-migration-baseline.json']:
-            self.assertEqual(read(path), old(path), path)
+            self.assertEqual(applied(path), old(path), path)
 
     def test_order_advances_four_entities_to_alpha_without_catalogue_admission_changes(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

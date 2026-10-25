@@ -187,3 +187,5 @@ P2同时允许独立身份订正将动态解析的unknown节点核为既有模�
 2026-10-26 S字母第三批使用 `entity-creator-s3-review-20261026.json` 与同名Markdown，连续核查SharRock、Shiravune、小学馆Production与小学馆，S累计11／42。确认小学馆公司身份，官方具名DEVELOPER只给Shiravune的2022同级生发行g046-v3追加developer；不反写原作、2021重制或共有内容ID。独立审核入口允许release／developer，核对同作品目标发行、原职责并禁止专题捷径。SharRock品牌与Shall Luck、ShoPro制片与外部技术制作分别保留；其余缺口、旧发行、专题、关系和基线保持。下一项Sierra On-Line。
 
 2026-10-26 S字母第四批使用 `entity-creator-s4-review-20261026.json` 与同名Markdown，连续核查Sierra On-Line、Silky’s、Silky’s Plus、A5和牛，S累计15／42。原手册索引及创办人逐作回顾支持三条Sierra原作制作；官方开发座谈与品牌规格索引交叉支持A5和牛本篇一条制作品牌。转载传记、全文不可达及验证页明确区分；不从发行或版权补开发，不把子品牌制作上推父专题。身份、旧发行、位置与基线保持，下一项Silky’s Plus Alpha。
+
+2026-10-26 S字母第五批使用 `entity-creator-s5-review-20261026.json` 与同名Markdown，连续核查Alpha、DOLCE、WASABI、Simon & Schuster Interactive，S累计19／42。官方具名团队定位与制作自述分别支持DOLCE言の葉、WASABIなないろ两条制作品牌；原手册及SEC材料支持Simon历史软件出版部门名义，以brand承载并显式保留publisher。Alpha旧发行与当前Sony列RED FLAGSHIP差异独立待核，不合并实体、不改原档案。父专题、旧发行、关系和基线保持，下一项Sinclair Research。

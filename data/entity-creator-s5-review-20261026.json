@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "6bc94524087b6796ca243abcdf624d73e1b3b56a",
+  "audit": "data/entity-creator-s5-review-20261026.md",
+  "previousReview": "data/entity-creator-s4-review-20261026.md",
+  "policy": "按S组第16—19项连续核查；Alpha历史发行与RED FLAGSHIP现列名义单独保留差异，子团队制作不传递父品牌，出版部门不冒充独立公司。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS5-I01",
+      "entityId": "entity-name-b129f13b41e4",
+      "rawName": "Simon & Schuster Interactive",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/467290/manuals/Manual.pdf",
+        "https://www.sec.gov/Archives/edgar/data/813828/000091205702012516/a2073981z10-k405.htm"
+      ],
+      "note": "Steam官方托管的1998原游戏手册搜索索引明确Simon & Schuster Interactive是Simon & Schuster, Inc.的division；SEC 2001财年报告可读且以该名义出版CD-ROM。将节点核为brand以表达历史软件出版部门／名义，不认定独立法人；显式保留g1188原publisher，不自动产生品牌发行、原作发行品牌或开发。",
+      "preserveReleaseRoles": true
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS5-C01",
+      "entityId": "entity-silkys_dolce",
+      "dossierId": null,
+      "workId": "g475",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "シルキーズプラス「チームDOLCE」第2弾",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.silkysplus.jp/game/kotonatu/",
+      "note": "官方特设站和news索引将本作明确标为チームDOLCE第2弾，限定本作制作品牌。正文直读502，仅核索引可见具名团队定位，不扩展景の海补充篇、父专题或法人关系。"
+    },
+    {
+      "reviewId": "AZS5-C02",
+      "entityId": "entity-silkys_wasabi",
+      "dossierId": null,
+      "workId": "g468",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "シルキーズプラスWASABI処女作",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.silkysplus.jp/game/nanarin/index.html",
+      "note": "原作官网索引明确本作是WASABI处女作且自述精魂込めて制作，限定2014原作制作品牌；正文直读502。2015Vita新增内容和Alpha、RED FLAGSHIP名义各自另核，不新增后发开发职责。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-8c9d353d6fe9",
+      "name": "Silky’s Plus Alpha",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://blog.ja.playstation.com/2015/09/16/20150916_new-soft/",
+        "https://www.silkysplusa.com/"
+      ],
+      "reason": "Alpha法人／品牌类别及与RED FLAGSHIP发行层差异须原包装和合同证据；保留旧publisher并单列订正需求，不以版权行代替发行。",
+      "workIds": [
+        "g468"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_dolce",
+      "name": "Silky’s Plus DOLCE",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.silkysplus.jp/game/kotonatu/",
+        "https://www.silkysplus.jp/game/kotonatu/news.html",
+        "https://www.silkysplus.jp/game/apeiria/productinfo.html"
+      ],
+      "reason": "景の海本篇／补充篇制作需进一步具名STAFF；不将言の葉第2弾反推未核前作，不改子团队类别或父专题职责。",
+      "workIds": [
+        "g471",
+        "g472",
+        "g475"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_wasabi",
+      "name": "Silky’s Plus WASABI",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.silkysplus.jp/game/nanarin/index.html",
+        "https://www.silkysplus.jp/game/nanarin/comment.html",
+        "https://www.silkysplus.jp/game/kimagure/creator_talk_02.html"
+      ],
+      "reason": "あけいろ、きまぐれ及续篇的具体制作分工、主机移植与团队运营另核，不从一部原作外推全部。",
+      "workIds": [
+        "g468",
+        "g470",
+        "g477",
+        "g480"
+      ]
+    },
+    {
+      "entityId": "entity-name-b129f13b41e4",
+      "name": "Simon & Schuster Interactive",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/467290/manuals/Manual.pdf",
+        "https://www.sec.gov/Archives/edgar/data/813828/000091205702012516/a2073981z10-k405.htm"
+      ],
+      "reason": "1996 Private Eye原包装及出版合同仍需补核；Brooklyn Multimedia开发和Riverhill日本代理分开，不用1998手册证明1996具体合同或内容。",
+      "workIds": [
+        "g1188"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-8c9d353d6fe9",
+      "name": "Silky’s Plus Alpha",
+      "status": "publisherConflictAndIdentityDeferred",
+      "sources": [
+        "https://blog.ja.playstation.com/2015/09/16/20150916_new-soft/",
+        "https://www.silkysplusa.com/"
+      ],
+      "reason": "Sony当前官方页面列Vita发行方RED FLAGSHIP，同时保留Alpha版权行及旧官网链接；旧数据库的Alpha发行原文不改，身份继续unknown，不以版权行推公司、品牌或开发。Alpha官网直读502，需原包装、交易主体及版本STAFF独立订正，不能合并RED FLAG SHIP节点或倒填PC原作。",
+      "workIds": [
+        "g468"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_dolce",
+      "name": "Silky’s Plus DOLCE",
+      "status": "oneTeamProductionBrandAdded",
+      "sources": [
+        "https://www.silkysplus.jp/game/kotonatu/",
+        "https://www.silkysplus.jp/game/kotonatu/news.html",
+        "https://www.silkysplus.jp/game/apeiria/productinfo.html"
+      ],
+      "reason": "官网特设站及news搜索索引明确言の葉为チームDOLCE第2弾，据具名制作团队作品定位给g475追加一条制作品牌。既有brand类别表达子团队对外名义，不解释成独立法人；景の海及其补充篇仅发行／目录证据暂不升为制作，父专题待核保持。",
+      "workIds": [
+        "g471",
+        "g472",
+        "g475"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_wasabi",
+      "name": "Silky’s Plus WASABI",
+      "status": "oneOriginalProductionBrandAdded",
+      "sources": [
+        "https://www.silkysplus.jp/game/nanarin/index.html",
+        "https://www.silkysplus.jp/game/nanarin/comment.html",
+        "https://www.silkysplus.jp/game/kimagure/creator_talk_02.html"
+      ],
+      "reason": "官网nanarin原作页索引明确WASABI处女作并自述精魂込めて制作，限定给g468追加制作品牌。保持2014 PC原作与2015 Alpha／RED FLAGSHIP后发职责分离；其余三作及具名原画参与不能只凭一般合作表述批量追加，父品牌不继承。",
+      "workIds": [
+        "g468",
+        "g470",
+        "g477",
+        "g480"
+      ]
+    },
+    {
+      "entityId": "entity-name-b129f13b41e4",
+      "name": "Simon & Schuster Interactive",
+      "status": "publishingDivisionIdentityConfirmedPreservingPublisher",
+      "sources": [
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/467290/manuals/Manual.pdf",
+        "https://www.sec.gov/Archives/edgar/data/813828/000091205702012516/a2073981z10-k405.htm"
+      ],
+      "reason": "Steam官方托管的1998原游戏手册搜索索引明确Simon & Schuster Interactive是Simon & Schuster, Inc.的division；SEC 2001财年报告可读且以该名义出版CD-ROM。将节点核为brand以表达历史软件出版部门／名义，不认定独立法人；显式保留g1188原publisher，不自动产生品牌发行、原作发行品牌或开发。",
+      "workIds": [
+        "g1188"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715",
+      "entity-sierra_company",
+      "entity-silkys",
+      "entity-silkys_plus",
+      "entity-silkys_a5",
+      "entity-name-8c9d353d6fe9",
+      "entity-silkys_dolce",
+      "entity-silkys_wasabi",
+      "entity-name-b129f13b41e4"
+    ],
+    "nextEntityId": "entity-sinclair",
+    "nextName": "Sinclair Research",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}

@@ -141,3 +141,19 @@ test('Sierra originals and A5 production exclude external studios and parent-bra
   assert.equal(find({developer:'entity-silkys'}).length,0);
   assert.ok(find({publisher:'entity-ibm'}).some(x=>x.work.id==='g060'));
 });
+
+
+test('DOLCE and WASABI productions stay separate from Alpha and the parent; Simon retains publisher only',()=>{
+  for(const [eid,wid] of [['entity-silkys_dolce','g475'],['entity-silkys_wasabi','g468']]){
+    assert.deepEqual(find({participant:eid,participantRole:'productionBrand'}).map(x=>x.work.id),[wid]);
+  }
+  assert.equal(find({participant:'entity-silkys_plus',participantRole:'productionBrand'}).length,0);
+  const alpha='entity-name-8c9d353d6fe9',simon='entity-name-b129f13b41e4';
+  assert.equal(find({developer:alpha}).length,0);
+  assert.deepEqual(find({publisher:alpha}).map(x=>x.work.id),['g468']);
+  assert.deepEqual(find({publisher:alpha})[0].platformReleases.map(r=>r.id),['g468-v2']);
+  assert.equal(model.entities.find(e=>e.id===simon).type,'brand');
+  assert.equal(find({brand:simon}).length,0);
+  assert.equal(find({developer:simon}).length,0);
+  assert.deepEqual(find({publisher:simon}).map(x=>x.work.id),['g1188']);
+});
