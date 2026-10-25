@@ -1,5 +1,6 @@
 """B1 audit: no inherited creator credit from Bandai Namco publishing."""
 import json
+import re
 import subprocess
 import unittest
 from pathlib import Path
@@ -46,12 +47,17 @@ class CreatorB1Tests(unittest.TestCase):
         paths = ['data/games.json', 'data/company-coverage.json', 'data/taxonomy.json',
                  'data/gameplay-catalogues.json', 'data/work-classification.json',
                  'data/entity-migration-baseline.json', 'data/content-migration-baseline.json',
-                 'index.html', 'app.mjs', 'filter.mjs', 'styles.css', 'banpresto.html',
+                 'index.html', 'app.mjs', 'filter.mjs', 'styles.css',
                  'data/entity-creator-a6-review-20261023.json',
                  'data/entity-creator-a6-review-20261023.md']
         for path in paths:
             self.assertEqual((ROOT / path).read_bytes(),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
+        # Shared credit panels reflect later entity audits; preserve the dossier body.
+        panel = r'<details class="entity-credits">.*?</details>'
+        self.assertEqual(re.sub(panel, '', (ROOT / 'banpresto.html').read_text()),
+                         re.sub(panel, '', subprocess.check_output(
+                             ['git', 'show', f'{BASE}:banpresto.html'], cwd=ROOT, text=True)))
 
 if __name__ == '__main__':
     unittest.main()
