@@ -13,6 +13,8 @@ IDS = [RAIN, RED, RIGHT]
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'73fb2c7fe6f7af48a112236e4643ef95a54e38da:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 
