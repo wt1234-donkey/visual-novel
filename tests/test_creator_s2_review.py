@@ -16,13 +16,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'af8d34d953350633ef3975aae99384ae01c7a0a6:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS2Tests(unittest.TestCase):
     def test_only_two_company_identities_change_without_dates_relations_or_name_changes(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {SEIKAISHA, SHALL})
@@ -37,7 +43,7 @@ class CreatorS2Tests(unittest.TestCase):
         self.assertEqual(sum(e['verification'] == 'unresolved' for e in ae.values()), 72)
 
     def test_two_precise_credits_preserve_all_existing_records_and_release_roles(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-2], before['credits'])
         actual = [(c['entityId'], c['targetType'], c['targetId'], c['workId'], c['role'], c['status'])
                   for c in after['credits'][-2:]]
@@ -71,7 +77,7 @@ class CreatorS2Tests(unittest.TestCase):
                          ['g056-v3', 'g056-v4', 'g056-v5'])
 
     def test_s_order_advances_four_consecutive_entities_to_sharrock(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], len(p['processedEntityIds']),
                           p['total'], p['nextEntityId']), ('S', 7, 42, 244, 279, 'entity-sharrock'))

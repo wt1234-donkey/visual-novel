@@ -53,7 +53,8 @@ test('reviewed production can be found without promoting corporate parents or re
   assert.ok(!find({developer:'entity-hawkeye'}).some(x=>x.work.id==='g1251'));
   assert.ok(!find({developer:'entity-nitroplus'}).some(x=>x.work.id==='g622'));
   for(const id of ['key-rpg-hbr','august-rpg-imys','minatosoft-climax'])assert.ok(!find({}).some(x=>x.work.id===id));
-  assert.ok(!credits.credits.some(c=>c.entityId==='entity-name-5caee77c6090'&&['developer','localizer'].includes(c.role)));
+  assert.ok(!credits.credits.some(c=>c.entityId==='entity-name-5caee77c6090'&&c.targetType==='work'&&['developer','localizer'].includes(c.role)));
+  assert.ok(!credits.credits.some(c=>c.entityId==='entity-name-5caee77c6090'&&c.role==='localizer'));
 });
 
 test('third review confirms named production while preserving same-name company and publisher scopes',()=>{
@@ -107,4 +108,22 @@ test('Serenity Forge Plus development excludes original DDLC and mobile releases
     const release=data.platformReleases.find(r=>r.id===rid);
     assert.ok(creditsForRelease(index,'g056',release).some(c=>c.entityId===developer&&c.role==='developer'&&c.targetId==='g056-c-3'));
   }
+});
+
+
+test('Shiravune developer credit matches only the 2022 Doukyuusei release even with shared content',()=>{
+  const developer='entity-name-5caee77c6090';
+  const made=find({developer});
+  assert.deepEqual(made.map(x=>x.work.id),['g046']);
+  assert.deepEqual(made[0].platformReleases.map(r=>r.id),['g046-v3']);
+  for(const release of data.platformReleases.filter(r=>r.workId==='g046')){
+    const has=creditsForRelease(index,'g046',release).some(c=>c.entityId===developer&&c.role==='developer');
+    assert.equal(has,release.id==='g046-v3');
+  }
+  const scoped=data.platformReleases.find(r=>r.id==='g046-v3');
+  assert.ok(scoped);
+  assert.ok(!creditsForRelease(index,'g046',{...scoped,id:'other-release-same-content'})
+    .some(c=>c.entityId===developer&&c.role==='developer'));
+  assert.equal(find({developer,from:1992,to:1992}).length,0);
+  assert.equal(find({developer,from:2021,to:2021}).length,0);
 });
