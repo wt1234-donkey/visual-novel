@@ -139,3 +139,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 L1核查L组前5／12，独立记录见 `entity-creator-l1-review-20261025.json` 与同名Markdown。Laplacian按原时期刊物、品牌负责人开发回顾及两部新作明确制作规格追加五条制作品牌；历史与现行公司分开，OneRoom销售和白昼梦后发版不外推。Leaf既有13条制作品牌沿用；raw Legend独立订正为历史公司类别，与英国专题及美国公司保持分设，其余职责待核。下一家Leland。
 
 2026-10-25 L2连续核查Leland、Liar-soft、LJN、LOGIN SOFT、LOGiN，独立记录为 `entity-creator-l2-review-20261025.json` 与同名Markdown。Leland原版传单和LJN原版手册分别订正历史公司类别；LOGIN SOFT依具名品牌史料订正为品牌，显式保持旧发行角色，不自动生成其他发行职责。Liar-soft既有原作制作沿用，LOGiN刊物与游戏发行主体的对应继续待核。无新增制作或关系；L累计10／12，下一家LucasArts。
+
+2026-10-25 L3完成L组12／12，独立审核为 `entity-creator-l3-review-20261025.json` 与同名Markdown。原版目录确认LucasArts历史公司，社团官网确认LunaSystem制作团队；按具名创作史、开发人员访谈及明确STAFF制作分别给三部LucasArts原作、四部旅行部原作追加七条原作制作。后发重制、补丁、合作展示与NanaWind专题待核不继承；既有目录、发行、关系和迁移基线保持。下一家Macadamia Soft。
