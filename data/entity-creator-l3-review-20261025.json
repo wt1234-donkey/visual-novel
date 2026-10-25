@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "68e7e287cf5a05ca69e39c3395ac77e4256f5543",
+  "audit": "data/entity-creator-l3-review-20261025.md",
+  "previousReview": "data/entity-creator-l2-review-20261025.md",
+  "policy": "完成L末两项；历史公司与同人团队独立核定，具名原作制作不扩展至重制、合作展示、补丁或目录外作品。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZL3-I01",
+      "entityId": "entity-name-57509c825879",
+      "rawName": "LucasArts",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.mocagh.org/lucasfilm/lucasarts-98catalog.pdf"
+      ],
+      "note": "1998年秋季原版公司目录扫描第31页订购单具名收款方LucasArts Entertainment Co.，第32页寄送地址具名LucasArts Entertainment Company，支持独立订正九十年代旧LucasArts发行节点为公司类别。Lucasfilm官方SCUMM史点名《触手之日》的内部设计／编程；Tim Schafer、Larry Ahern具名访谈回顾在LucasArts制作《Full Throttle》，明确内部开发场景；Lucasfilm《Grim Fandango》25周年回顾将其列为工作室原创作品并回顾制作。按各原作分别追加三条原作制作，仅限1993／1995／1998原作；Double Fine后发重制、各承制商和现行Lucasfilm Games授权业务另核，不由历史名称延续倒填同一法人或建立公司关系，原始发行保留。"
+    },
+    {
+      "reviewId": "AZL3-I02",
+      "entityId": "entity-name-a548db0984af",
+      "rawName": "LunaSystem",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "team",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.lunasys.info/"
+      ],
+      "note": "官网明确为サークルLuna System并由社团代表运营，独立订正为制作团队类别，不冒称注册公司。自家作品目录的旅行部01—04段逐项列出伊香保／箱根／鬼怒川／草津篇链接，并在该段STAFF明确制作LunaSystem，足以分别给既有g895—g898四部原作追加原作制作。保留原拼写LunaSystem和五条既有发行；NanaWind合作展示及双方版权不构成NanaWind制作或运营关系，NanaWind专题既有分组不自动解除。01—04仍为四部既有作品，补丁、包装及FANZA下载未重新判定内容，也不增加发行或目录外旧作。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZL3-C01",
+      "entityId": "entity-name-57509c825879",
+      "dossierId": null,
+      "workId": "g975",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "LucasArts",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/",
+      "note": "Lucasfilm官方SCUMM史将1993 Day of the Tentacle列为内部设计与编程人员使用自家引擎创作的作品；仅登记原作制作，后发Double Fine重制与移植不继承。"
+    },
+    {
+      "reviewId": "AZL3-C02",
+      "entityId": "entity-name-57509c825879",
+      "dossierId": null,
+      "workId": "g976",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "LucasArts",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.artofthetitle.com/title/full-throttle/",
+      "note": "原作项目负责人Tim Schafer与首席动画师Larry Ahern具名回顾在LucasArts制作Full Throttle及与Dark Forces团队相邻的内部开发场景；限定1995原作，不把2017重制职员表整体归给旧公司。"
+    },
+    {
+      "reviewId": "AZL3-C03",
+      "entityId": "entity-name-57509c825879",
+      "dossierId": null,
+      "workId": "g977",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "LucasArts",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.lucasfilm.com/news/celebrating-grim-fandango-25-years/",
+      "note": "Lucasfilm官方25周年回顾将Grim Fandango明确列为LucasArts工作室原创游戏并回顾原版世界、美术与设计；限定1998原作，不由后发重制或现行授权业务扩大开发职责。"
+    },
+    {
+      "reviewId": "AZL3-C04",
+      "entityId": "entity-name-a548db0984af",
+      "dossierId": null,
+      "workId": "g895",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "LunaSystem",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.lunasys.info/cate_lunasystem/product",
+      "note": "社团官网自家作品目录旅行部01—04段具名01伊香保篇并统一列STAFF制作LunaSystem；仅登记该篇原作制作。四部独立身份保留，合作方NanaWind不因此继承制作职责，补丁与下载发行的内容关系另核。"
+    },
+    {
+      "reviewId": "AZL3-C05",
+      "entityId": "entity-name-a548db0984af",
+      "dossierId": null,
+      "workId": "g896",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "LunaSystem",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.lunasys.info/cate_lunasystem/product",
+      "note": "社团官网自家作品目录旅行部01—04段具名02箱根篇并统一列STAFF制作LunaSystem；仅登记该篇原作制作。四部独立身份保留，合作方NanaWind不因此继承制作职责，补丁与下载发行的内容关系另核。"
+    },
+    {
+      "reviewId": "AZL3-C06",
+      "entityId": "entity-name-a548db0984af",
+      "dossierId": null,
+      "workId": "g897",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "LunaSystem",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.lunasys.info/cate_lunasystem/product",
+      "note": "社团官网自家作品目录旅行部01—04段具名03鬼怒川篇并统一列STAFF制作LunaSystem；仅登记该篇原作制作。四部独立身份保留，合作方NanaWind不因此继承制作职责，补丁与下载发行的内容关系另核。"
+    },
+    {
+      "reviewId": "AZL3-C07",
+      "entityId": "entity-name-a548db0984af",
+      "dossierId": null,
+      "workId": "g898",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "LunaSystem",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.lunasys.info/cate_lunasystem/product",
+      "note": "社团官网自家作品目录旅行部01—04段具名04草津篇并统一列STAFF制作LunaSystem；仅登记该篇原作制作。四部独立身份保留，合作方NanaWind不因此继承制作职责，补丁与下载发行的内容关系另核。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-57509c825879",
+      "name": "LucasArts",
+      "status": "historicalCompanyAndThreeOriginalsConfirmed",
+      "sources": [
+        "https://www.mocagh.org/lucasfilm/lucasarts-98catalog.pdf",
+        "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/",
+        "https://www.artofthetitle.com/title/full-throttle/",
+        "https://www.lucasfilm.com/news/celebrating-grim-fandango-25-years/",
+        "https://www.doublefine.com/games/full-throttle-remastered/credits",
+        "https://www.doublefine.com/games/grim-fandango-remastered/making"
+      ],
+      "reason": "1998年秋季原版公司目录扫描第31页订购单具名收款方LucasArts Entertainment Co.，第32页寄送地址具名LucasArts Entertainment Company，支持独立订正九十年代旧LucasArts发行节点为公司类别。Lucasfilm官方SCUMM史点名《触手之日》的内部设计／编程；Tim Schafer、Larry Ahern具名访谈回顾在LucasArts制作《Full Throttle》，明确内部开发场景；Lucasfilm《Grim Fandango》25周年回顾将其列为工作室原创作品并回顾制作。按各原作分别追加三条原作制作，仅限1993／1995／1998原作；Double Fine后发重制、各承制商和现行Lucasfilm Games授权业务另核，不由历史名称延续倒填同一法人或建立公司关系，原始发行保留。",
+      "workIds": [
+        "g975",
+        "g976",
+        "g977"
+      ]
+    },
+    {
+      "entityId": "entity-name-a548db0984af",
+      "name": "LunaSystem",
+      "status": "circleAndFourOriginalsConfirmed",
+      "sources": [
+        "https://www.lunasys.info/",
+        "https://www.lunasys.info/cate_lunasystem/product",
+        "https://nanawind.jp/product/prj06_5/index01.html",
+        "https://nanawind.jp/product/prj06_5/index02.html",
+        "https://nanawind.jp/product/prj06_5/index03.html",
+        "https://nanawind.jp/product/prj06_5/index.html"
+      ],
+      "reason": "官网明确为サークルLuna System并由社团代表运营，独立订正为制作团队类别，不冒称注册公司。自家作品目录的旅行部01—04段逐项列出伊香保／箱根／鬼怒川／草津篇链接，并在该段STAFF明确制作LunaSystem，足以分别给既有g895—g898四部原作追加原作制作。保留原拼写LunaSystem和五条既有发行；NanaWind合作展示及双方版权不构成NanaWind制作或运营关系，NanaWind专题既有分组不自动解除。01—04仍为四部既有作品，补丁、包装及FANZA下载未重新判定内容，也不增加发行或目录外旧作。",
+      "workIds": [
+        "g895",
+        "g896",
+        "g897",
+        "g898"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-57509c825879",
+      "name": "LucasArts",
+      "status": "historicalCompanyAndThreeOriginalsConfirmed",
+      "sources": [
+        "https://www.mocagh.org/lucasfilm/lucasarts-98catalog.pdf",
+        "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/",
+        "https://www.artofthetitle.com/title/full-throttle/",
+        "https://www.lucasfilm.com/news/celebrating-grim-fandango-25-years/",
+        "https://www.doublefine.com/games/full-throttle-remastered/credits",
+        "https://www.doublefine.com/games/grim-fandango-remastered/making"
+      ],
+      "reason": "1998年秋季原版公司目录扫描第31页订购单具名收款方LucasArts Entertainment Co.，第32页寄送地址具名LucasArts Entertainment Company，支持独立订正九十年代旧LucasArts发行节点为公司类别。Lucasfilm官方SCUMM史点名《触手之日》的内部设计／编程；Tim Schafer、Larry Ahern具名访谈回顾在LucasArts制作《Full Throttle》，明确内部开发场景；Lucasfilm《Grim Fandango》25周年回顾将其列为工作室原创作品并回顾制作。按各原作分别追加三条原作制作，仅限1993／1995／1998原作；Double Fine后发重制、各承制商和现行Lucasfilm Games授权业务另核，不由历史名称延续倒填同一法人或建立公司关系，原始发行保留。",
+      "workIds": [
+        "g975",
+        "g976",
+        "g977"
+      ]
+    },
+    {
+      "entityId": "entity-name-a548db0984af",
+      "name": "LunaSystem",
+      "status": "circleAndFourOriginalsConfirmed",
+      "sources": [
+        "https://www.lunasys.info/",
+        "https://www.lunasys.info/cate_lunasystem/product",
+        "https://nanawind.jp/product/prj06_5/index01.html",
+        "https://nanawind.jp/product/prj06_5/index02.html",
+        "https://nanawind.jp/product/prj06_5/index03.html",
+        "https://nanawind.jp/product/prj06_5/index.html"
+      ],
+      "reason": "官网明确为サークルLuna System并由社团代表运营，独立订正为制作团队类别，不冒称注册公司。自家作品目录的旅行部01—04段逐项列出伊香保／箱根／鬼怒川／草津篇链接，并在该段STAFF明确制作LunaSystem，足以分别给既有g895—g898四部原作追加原作制作。保留原拼写LunaSystem和五条既有发行；NanaWind合作展示及双方版权不构成NanaWind制作或运营关系，NanaWind专题既有分组不自动解除。01—04仍为四部既有作品，补丁、包装及FANZA下载未重新判定内容，也不增加发行或目录外旧作。",
+      "workIds": [
+        "g895",
+        "g896",
+        "g897",
+        "g898"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "L",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 12,
+    "processedEntityIds": [
+      "entity-laplacian",
+      "entity-leaf",
+      "entity-name-7482e374b5bd",
+      "entity-legend_entertainment",
+      "entity-legend_uk",
+      "entity-name-547f933b0469",
+      "entity-liarsoft",
+      "entity-name-8ce25297971d",
+      "entity-name-a2534654b05f",
+      "entity-name-9ba14a4f9578",
+      "entity-name-57509c825879",
+      "entity-name-a548db0984af"
+    ],
+    "nextEntityId": "entity-macadamia",
+    "nextName": "Macadamia Soft",
+    "queue": [
+      {
+        "entityId": "entity-laplacian",
+        "name": "Laplacian",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-leaf",
+        "name": "Leaf",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7482e374b5bd",
+        "name": "Legend",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-legend_entertainment",
+        "name": "Legend Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-legend_uk",
+        "name": "Legend（英国）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-547f933b0469",
+        "name": "Leland",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-liarsoft",
+        "name": "Liar-soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8ce25297971d",
+        "name": "LJN",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-a2534654b05f",
+        "name": "LOGIN SOFT（ログインソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-9ba14a4f9578",
+        "name": "LOGiN（ログイン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-57509c825879",
+        "name": "LucasArts",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-a548db0984af",
+        "name": "LunaSystem",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
