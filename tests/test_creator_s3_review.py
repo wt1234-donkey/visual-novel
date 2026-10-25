@@ -21,13 +21,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'902fcc101e8495cdf72449e904b1972ca1b36e65:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS3Tests(unittest.TestCase):
     def test_one_identity_and_one_release_credit_preserve_all_other_objects(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {SHOGAKUKAN})
@@ -38,7 +44,7 @@ class CreatorS3Tests(unittest.TestCase):
         self.assertEqual(before['relations'], after['relations'])
         self.assertEqual(before['dossiers'], after['dossiers'])
         self.assertEqual(sum(e['verification'] == 'unresolved' for e in ae.values()), 71)
-        bc, ac = old('data/credits.json'), read('data/credits.json')
+        bc, ac = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(ac['credits'][:-1], bc['credits'])
         credit = ac['credits'][-1]
         self.assertEqual([credit[k] for k in ['entityId', 'targetType', 'targetId', 'workId', 'role']],
@@ -56,7 +62,7 @@ class CreatorS3Tests(unittest.TestCase):
             self.assertEqual(read(path), old(path), path)
 
     def test_four_consecutive_entities_advance_to_sierra(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

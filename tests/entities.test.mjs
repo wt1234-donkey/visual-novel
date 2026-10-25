@@ -127,3 +127,17 @@ test('Shiravune developer credit matches only the 2022 Doukyuusei release even w
   assert.equal(find({developer,from:1992,to:1992}).length,0);
   assert.equal(find({developer,from:2021,to:2021}).length,0);
 });
+
+
+test('Sierra originals and A5 production exclude external studios and parent-brand shortcuts',()=>{
+  assert.deepEqual(find({developer:'entity-sierra_company'}).map(x=>x.work.id).sort(),['g001','g060','g061']);
+  for(const wid of ['g094','g1102','g1103','g1107','g1134']){
+    const work=data.works.find(w=>w.id===wid);
+    assert.ok(work);
+    assert.ok(!find({developer:'entity-sierra_company'}).some(x=>x.work.id===wid));
+  }
+  assert.deepEqual(find({brand:'entity-silkys_a5',participantRole:'productionBrand'}).map(x=>x.work.id),['g473']);
+  assert.equal(find({participant:'entity-silkys_plus',participantRole:'productionBrand'}).length,0);
+  assert.equal(find({developer:'entity-silkys'}).length,0);
+  assert.ok(find({publisher:'entity-ibm'}).some(x=>x.work.id==='g060'));
+});
