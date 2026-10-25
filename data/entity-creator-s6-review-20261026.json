@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "e21fa4fd508c0a9adddd1bdbef854c5084bafc14",
+  "audit": "data/entity-creator-s6-review-20261026.md",
+  "previousReview": "data/entity-creator-s5-review-20261026.md",
+  "policy": "按S组第20—23项连续核查；只订正具名历史公司类别，不将商标、发行、现行法人或平台归属推为原作制作。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS6-I01",
+      "entityId": "entity-name-12a802d7d9bd",
+      "rawName": "Sir-tech Software, Inc.",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.mocagh.org/sir-tech/wiz3-manual.pdf",
+        "https://www.mocagh.org/sir-tech/wiz6-manual.pdf"
+      ],
+      "note": "原Wizardry III手册封面、版权内页与封底可读并已看扫描图，正式署SIR-TECH SOFTWARE, INC.与纽约Ogdensburg通信地址，独立确认为历史公司。原手册把设计者及版权主体Andrew Greenberg、Robert Woodhead等另列，不从Sir-tech商标或发行倒推七作原作制作；加拿大Sir-Tech及后发移植法人另核。"
+    },
+    {
+      "reviewId": "AZS6-I02",
+      "entityId": "entity-name-ce72ada6adcb",
+      "rawName": "SNK",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.snk-corp.co.jp/snk-history/history/",
+        "https://www.snk-corp.co.jp/snk40th/",
+        "https://www.snk-corp.co.jp/company/",
+        "https://www.snk-corp.co.jp/official/akeaka/titles/samuraishodown/"
+      ],
+      "note": "1993侍魂发行节点独立确认为当时历史公司：官方历史页明确1978株式会社新日本企画、1986改为株式会社エス・エヌ・ケイ；40周年页区分旧公司与后起SNK Playmore品牌承继。现公司概要另载2001 Playmore成立及2016改名，不把2001日期反写1993节点，不合并新旧法人或新增法律承继关系。1993原作与后发ACA版本的制作、发行分别待核，不从官网产品发布说明推开发。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-sinclair",
+      "name": "Sinclair Research",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/01135105",
+        "https://www.mocagh.org/rainbird/qlpawn-manual.pdf",
+        "https://magneticscrolls.info/facts.php"
+      ],
+      "reason": "Sinclair专题共四部主库引用和六项书目的其余具体开发、代理和内容关系仍按原证据保持；注册注销状态不改作品年代或旧publisher。",
+      "workIds": [
+        "g113",
+        "g135",
+        "g089",
+        "g137",
+        "sinclair-planet-of-death",
+        "sinclair-inca-curse",
+        "sinclair-ship-of-doom",
+        "sinclair-espionage-island",
+        "sinclair-perilous-swamp",
+        "sinclair-sorcerers-island"
+      ]
+    },
+    {
+      "entityId": "entity-name-12a802d7d9bd",
+      "name": "Sir-tech Software, Inc.",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.mocagh.org/sir-tech/wiz3-manual.pdf",
+        "https://www.mocagh.org/sir-tech/wiz6-manual.pdf"
+      ],
+      "reason": "七作具体制作合同、作者公司与Sir-tech的关系及后发日本移植逐版另核，不能只凭手册商标直接批量加开发。",
+      "workIds": [
+        "ascii-wizardry-1",
+        "ascii-wizardry-2",
+        "ascii-wizardry-3",
+        "ascii-wizardry-4",
+        "ascii-wizardry-5",
+        "ascii-wizardry-6",
+        "ascii-wizardry-7"
+      ]
+    },
+    {
+      "entityId": "entity-smee",
+      "name": "SMEE",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.hook-net.jp/smee/product.html",
+        "https://www.hook-net.jp/htm/product.htm"
+      ],
+      "reason": "25条既有制作沿用；完整历史STAFF复验、联合品牌具体分工和后发技术实现不因本次抽核自动解决。",
+      "workIds": [
+        "g363",
+        "g364",
+        "g365",
+        "g366",
+        "g367",
+        "g368",
+        "g369",
+        "g370",
+        "g371",
+        "g372",
+        "g373",
+        "g374",
+        "g375",
+        "g376",
+        "g377",
+        "g378",
+        "g379",
+        "g380",
+        "g381",
+        "g382",
+        "g383",
+        "g384",
+        "g385",
+        "g386",
+        "g387"
+      ]
+    },
+    {
+      "entityId": "entity-name-ce72ada6adcb",
+      "name": "SNK",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.snk-corp.co.jp/snk-history/history/",
+        "https://www.snk-corp.co.jp/snk40th/",
+        "https://www.snk-corp.co.jp/company/",
+        "https://www.snk-corp.co.jp/official/akeaka/titles/samuraishodown/"
+      ],
+      "reason": "1993原版开发STAFF与旧公司／现公司法律承继仍需独立材料；格斗关联位置保留，不转入主库、不由系列复刻扩目录。",
+      "workIds": [
+        "jhv-samurai"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-sinclair",
+      "name": "Sinclair Research",
+      "status": "existingCompanyPublisherNotPromoted",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/01135105",
+        "https://www.mocagh.org/rainbird/qlpawn-manual.pdf",
+        "https://magneticscrolls.info/facts.php"
+      ],
+      "reason": "沿用公司身份。Companies House可读，确认1973注册及前名，现列2025-10-14注销；本批仅在审计记状态，不改既有日期或五年作品导航。QL-Pawn原手册封面明确Software by Magnetic Scrolls，程序／文档与包装职责分开；不将Sinclair平台或出版当开发，不因Anita Sinclair同姓推公司关系。",
+      "workIds": [
+        "g113",
+        "g135",
+        "g089",
+        "g137",
+        "sinclair-planet-of-death",
+        "sinclair-inca-curse",
+        "sinclair-ship-of-doom",
+        "sinclair-espionage-island",
+        "sinclair-perilous-swamp",
+        "sinclair-sorcerers-island"
+      ]
+    },
+    {
+      "entityId": "entity-name-12a802d7d9bd",
+      "name": "Sir-tech Software, Inc.",
+      "status": "historicalCompanyConfirmedOriginalAuthorsSeparate",
+      "sources": [
+        "https://www.mocagh.org/sir-tech/wiz3-manual.pdf",
+        "https://www.mocagh.org/sir-tech/wiz6-manual.pdf"
+      ],
+      "reason": "原Wizardry III手册封面、版权内页与封底可读并已看扫描图，正式署SIR-TECH SOFTWARE, INC.与纽约Ogdensburg通信地址，独立确认为历史公司。原手册把设计者及版权主体Andrew Greenberg、Robert Woodhead等另列，不从Sir-tech商标或发行倒推七作原作制作；加拿大Sir-Tech及后发移植法人另核。",
+      "workIds": [
+        "ascii-wizardry-1",
+        "ascii-wizardry-2",
+        "ascii-wizardry-3",
+        "ascii-wizardry-4",
+        "ascii-wizardry-5",
+        "ascii-wizardry-6",
+        "ascii-wizardry-7"
+      ]
+    },
+    {
+      "entityId": "entity-smee",
+      "name": "SMEE",
+      "status": "existingBrandTwentyFiveProductionCreditsRetained",
+      "sources": [
+        "https://www.hook-net.jp/smee/product.html",
+        "https://www.hook-net.jp/htm/product.htm"
+      ],
+      "reason": "沿用品牌与25条既有productionBrand，不重复追加。现官网产品页可读，抽核ラブピカル两项的SMEE脚本、导演与制片人署名；不宣称本次把全部历史STAFF重新外部核完。あざスミ联名、HOOKSOFT姊妹品牌及后发主机版保持原范围，当前目录不触发新作或普通发行扩充。",
+      "workIds": [
+        "g363",
+        "g364",
+        "g365",
+        "g366",
+        "g367",
+        "g368",
+        "g369",
+        "g370",
+        "g371",
+        "g372",
+        "g373",
+        "g374",
+        "g375",
+        "g376",
+        "g377",
+        "g378",
+        "g379",
+        "g380",
+        "g381",
+        "g382",
+        "g383",
+        "g384",
+        "g385",
+        "g386",
+        "g387"
+      ]
+    },
+    {
+      "entityId": "entity-name-ce72ada6adcb",
+      "name": "SNK",
+      "status": "historicalCompanyConfirmedSeparateFromModernCorporation",
+      "sources": [
+        "https://www.snk-corp.co.jp/snk-history/history/",
+        "https://www.snk-corp.co.jp/snk40th/",
+        "https://www.snk-corp.co.jp/company/",
+        "https://www.snk-corp.co.jp/official/akeaka/titles/samuraishodown/"
+      ],
+      "reason": "1993侍魂发行节点独立确认为当时历史公司：官方历史页明确1978株式会社新日本企画、1986改为株式会社エス・エヌ・ケイ；40周年页区分旧公司与后起SNK Playmore品牌承继。现公司概要另载2001 Playmore成立及2016改名，不把2001日期反写1993节点，不合并新旧法人或新增法律承继关系。1993原作与后发ACA版本的制作、发行分别待核，不从官网产品发布说明推开发。",
+      "workIds": [
+        "jhv-samurai"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715",
+      "entity-sierra_company",
+      "entity-silkys",
+      "entity-silkys_plus",
+      "entity-silkys_a5",
+      "entity-name-8c9d353d6fe9",
+      "entity-silkys_dolce",
+      "entity-silkys_wasabi",
+      "entity-name-b129f13b41e4",
+      "entity-sinclair",
+      "entity-name-12a802d7d9bd",
+      "entity-smee",
+      "entity-name-ce72ada6adcb"
+    ],
+    "nextEntityId": "entity-name-539be8af5be9",
+    "nextName": "Sol Press",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}

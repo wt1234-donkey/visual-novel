@@ -189,3 +189,5 @@ P2同时允许独立身份订正将动态解析的unknown节点核为既有模�
 2026-10-26 S字母第四批使用 `entity-creator-s4-review-20261026.json` 与同名Markdown，连续核查Sierra On-Line、Silky’s、Silky’s Plus、A5和牛，S累计15／42。原手册索引及创办人逐作回顾支持三条Sierra原作制作；官方开发座谈与品牌规格索引交叉支持A5和牛本篇一条制作品牌。转载传记、全文不可达及验证页明确区分；不从发行或版权补开发，不把子品牌制作上推父专题。身份、旧发行、位置与基线保持，下一项Silky’s Plus Alpha。
 
 2026-10-26 S字母第五批使用 `entity-creator-s5-review-20261026.json` 与同名Markdown，连续核查Alpha、DOLCE、WASABI、Simon & Schuster Interactive，S累计19／42。官方具名团队定位与制作自述分别支持DOLCE言の葉、WASABIなないろ两条制作品牌；原手册及SEC材料支持Simon历史软件出版部门名义，以brand承载并显式保留publisher。Alpha旧发行与当前Sony列RED FLAGSHIP差异独立待核，不合并实体、不改原档案。父专题、旧发行、关系和基线保持，下一项Sinclair Research。
+
+2026-10-26 S字母第六批使用 `entity-creator-s6-review-20261026.json` 与同名Markdown，连续核查Sinclair Research、Sir-tech Software、SMEE、SNK，S累计23／42。原Sir-tech手册实物署名及SNK官方分期历史分别确认两项历史公司类别；SNK旧公司与2001后起公司／品牌承继分开，不倒填日期或法律关系。Sinclair出版不推开发，SMEE25条既有制作沿用；全部4986条职责、专题、原始发行、位置和基线保持。下一项Sol Press。
