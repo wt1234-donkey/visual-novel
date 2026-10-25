@@ -145,3 +145,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 M1核查Macadamia Soft至Makura前五项，独立记录为 `entity-creator-m1-review-20261025.json` 与同名Markdown。Magical Zoo据保存协会品牌／部门及制作史订正为品牌，显式保留原publisher，并给The Screamer追加制作品牌；MAGES.据2014原作制作人发布会记录给CHAOS;CHILD追加原作制作，2019 Steam开发证据另限定。Madosoft与枕既有制作沿用，Macadamia具体制作待核；ASCII专题待核及关联位置不改。M累计5／30，下一家MangaGamer。
 
 2026-10-25 M2连续核查MangaGamer至松下电器／Panasoft复合名义，独立审核为 `entity-creator-m2-review-20261025.json` 与同名Markdown。Marvelous及Marvelous Interactive各订正公司类别，现行页的回溯改名不改历史发行；Masaya依2014当事方品牌转让公告订正品牌，显式保留publisher。无新增制作／本地化；MangaGamer既有身份沿用，复合名义继续待核，不与下一项松下电器节点合并。M累计10／30。
+
+2026-10-25 M3核查松下电器至Micro Cabin，独立审核为 `entity-creator-m3-review-20261025.json` 与同名Markdown。松下电器和MediaWorks各订正历史公司类别；官网原作开发行支持Micro Cabin 23条原作制作及4条联合制作，松下电器两条合作、Rogue早期复合作者一条合作另限定。后发移植、年份异文和复合个体身份不自动解决；Melbourne House出版／Beam制作继续分开。书目位置与ASCII职责待核保持，M累计15／30，下一项Microsoft。
