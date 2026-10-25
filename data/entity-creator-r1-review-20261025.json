@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "52ac2f73cfca842fd316599f17cb4a6fa0df1212",
+  "audit": "data/entity-creator-r1-review-20261025.md",
+  "previousReview": "data/entity-creator-q1-review-20261025.md",
+  "policy": "按R组Rainbird、RED FLAG SHIP、RIGHTWAY连续核查3／5；出版label、法人和原作／移植制作分开。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZR1-I01",
+      "entityId": "entity-name-bceb1074c614",
+      "rawName": "Rainbird",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://classicadventurer.co.uk/pdf/12.pdf",
+        "https://www.mocagh.org/rainbird/pawn-manual.pdf",
+        "https://www.mocagh.org/rainbird/pawn-amigaguide.pdf"
+      ],
+      "note": "The Classic Adventurer第12期Richard Hewison访谈及历史介绍在PDF第11页明确Rainbird是Tony Rainbird设立的出版label；The Pawn同期手册PDF第31页出版行具名Rainbird Software，Amiga说明另署Magnetic Scrolls版权。将本节点订正为brand并显式保留两条publisher，不自动生成原作发行品牌或开发。1985 QL原作与后发图像版／Amiga版分别核定；同期出版行不证明Rainbird开发全部程序、图像或原作。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZR1-I02",
+      "entityId": "entity-name-128195244522",
+      "rawName": "RED FLAG SHIP",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001104414",
+        "https://store.playstation.com/ja-jp/product/JP0072-CUSA53668_00-0315894448568057",
+        "https://www.famitsu.com/news/201506/25081728.html"
+      ],
+      "note": "经济产业省Gビズインフォ具名株式会社ＲＥＤ ＦＬＡＧ ＳＨＩＰ，平台方现行クロガネ产品页亦用同一株式会社名义；确认既有RED FLAG SHIP署名对应公司，保留2015一期一会的publisher。该作当事发行公告以みなとすてーしょん宣传，并分别具名剧本与原画；宣传品牌、发行公司、具体开发人员不合并。后发閃夜一夜页面仅交叉核对法人名，不当作一期一会的制作证明，也不把两部游戏或后发移植合并。"
+    },
+    {
+      "reviewId": "AZR1-I03",
+      "entityId": "entity-name-61e191a86b41",
+      "rawName": "RIGHTWAY",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://rightway.net/company",
+        "https://rightway.net/games",
+        "https://rightway.net/games/4541624090115",
+        "https://store.steampowered.com/app/2795270/"
+      ],
+      "note": "同一rightway.net域的公司页具名株式会社ライトウェイ／RIGHTWAY CO., LTD.，出版主页及游戏目录链接该公司页，确认本节点为公司。保留四作七条publisher；everlasting flowers的Steam官方页面将sprite／flowers.studio开发与RIGHTWAY发行明确分列，既有sprite制作品牌不重复。官网所列销售渠道及整体内容业务不能逐作推出原作或移植开发；2026年11月预定Windows实体版仍不当作已发售内容。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-bceb1074c614",
+      "name": "Rainbird",
+      "status": "historicalLabelPeriodsAndVersionDevelopmentDeferred",
+      "sources": [
+        "https://classicadventurer.co.uk/pdf/12.pdf",
+        "https://www.mocagh.org/rainbird/pawn-manual.pdf",
+        "https://www.mocagh.org/rainbird/pawn-amigaguide.pdf"
+      ],
+      "reason": "出版label类别可确认，Telecomsoft及后继运营的具体时段、各图像版开发职责仍需逐版原始职员表。Bird Sanctuary检索缓存保有旧历史片段，但本次历史URL实际返回无关博彩内容，作者介绍不可用，不能冒称读取旧站完整正文；保留旧源字段，新增依据改用可独立核对的手册与访谈，不据疑似失效页面改身份关系或日期。",
+      "workIds": [
+        "g135"
+      ]
+    },
+    {
+      "entityId": "entity-name-128195244522",
+      "name": "RED FLAG SHIP",
+      "status": "originalProductionAndCorporateBrandBoundaryDeferred",
+      "sources": [
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001104414",
+        "https://store.playstation.com/ja-jp/product/JP0072-CUSA53668_00-0315894448568057",
+        "https://www.famitsu.com/news/201506/25081728.html"
+      ],
+      "reason": "公司身份不等于原作开发已核。2015一期一会公告的旧PS Store链接本次转至商店首页，品牌宣传和版权署名不足以给RED FLAG SHIP、みなとすてーしょん或Hawk Eye批量增原作制作；两条母专题pendingRole保持。历史经营品牌的起止和法人关系待具名原始材料，不追加关系或日期。",
+      "workIds": [
+        "g1265"
+      ]
+    },
+    {
+      "entityId": "entity-name-61e191a86b41",
+      "name": "RIGHTWAY",
+      "status": "perReleasePortDeveloperAndHistoricalOperatorDetailsDeferred",
+      "sources": [
+        "https://rightway.net/company",
+        "https://rightway.net/games",
+        "https://rightway.net/games/4541624090115",
+        "https://store.steampowered.com/app/2795270/"
+      ],
+      "reason": "RIGHTWAY七条发行对应的逐版移植开发仍缺具名STAFF；不以官网出版目录、房地产及一般内容业务推定制作。sprite既有四作制作品牌保持，flowers.studio、Frontwing本地化等其他参与另核；本批不新增实体或关系，不从同域及商业合作反推历史合并。",
+      "workIds": [
+        "g205",
+        "g206",
+        "g207",
+        "g208"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-bceb1074c614",
+      "name": "Rainbird",
+      "status": "historicalPublishingBrandConfirmedOriginalDevelopmentSeparated",
+      "sources": [
+        "https://classicadventurer.co.uk/pdf/12.pdf",
+        "https://www.mocagh.org/rainbird/pawn-manual.pdf",
+        "https://www.mocagh.org/rainbird/pawn-amigaguide.pdf"
+      ],
+      "reason": "The Classic Adventurer第12期Richard Hewison访谈及历史介绍在PDF第11页明确Rainbird是Tony Rainbird设立的出版label；The Pawn同期手册PDF第31页出版行具名Rainbird Software，Amiga说明另署Magnetic Scrolls版权。将本节点订正为brand并显式保留两条publisher，不自动生成原作发行品牌或开发。1985 QL原作与后发图像版／Amiga版分别核定；同期出版行不证明Rainbird开发全部程序、图像或原作。",
+      "workIds": [
+        "g135"
+      ]
+    },
+    {
+      "entityId": "entity-name-128195244522",
+      "name": "RED FLAG SHIP",
+      "status": "companyConfirmedBrandPromotionAndPublishingSeparated",
+      "sources": [
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001104414",
+        "https://store.playstation.com/ja-jp/product/JP0072-CUSA53668_00-0315894448568057",
+        "https://www.famitsu.com/news/201506/25081728.html"
+      ],
+      "reason": "经济产业省Gビズインフォ具名株式会社ＲＥＤ ＦＬＡＧ ＳＨＩＰ，平台方现行クロガネ产品页亦用同一株式会社名义；确认既有RED FLAG SHIP署名对应公司，保留2015一期一会的publisher。该作当事发行公告以みなとすてーしょん宣传，并分别具名剧本与原画；宣传品牌、发行公司、具体开发人员不合并。后发閃夜一夜页面仅交叉核对法人名，不当作一期一会的制作证明，也不把两部游戏或后发移植合并。",
+      "workIds": [
+        "g1265"
+      ]
+    },
+    {
+      "entityId": "entity-name-61e191a86b41",
+      "name": "RIGHTWAY",
+      "status": "companyConfirmedSpriteDevelopmentAndLaterPublishingSeparated",
+      "sources": [
+        "https://rightway.net/company",
+        "https://rightway.net/games",
+        "https://rightway.net/games/4541624090115",
+        "https://store.steampowered.com/app/2795270/"
+      ],
+      "reason": "同一rightway.net域的公司页具名株式会社ライトウェイ／RIGHTWAY CO., LTD.，出版主页及游戏目录链接该公司页，确认本节点为公司。保留四作七条publisher；everlasting flowers的Steam官方页面将sprite／flowers.studio开发与RIGHTWAY发行明确分列，既有sprite制作品牌不重复。官网所列销售渠道及整体内容业务不能逐作推出原作或移植开发；2026年11月预定Windows实体版仍不当作已发售内容。",
+      "workIds": [
+        "g205",
+        "g206",
+        "g207",
+        "g208"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "R",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 5,
+    "processedEntityIds": [
+      "entity-name-bceb1074c614",
+      "entity-name-128195244522",
+      "entity-name-61e191a86b41"
+    ],
+    "nextEntityId": "entity-riverhill_soft",
+    "nextName": "Riverhill Soft（リバーヒルソフト）",
+    "queue": [
+      {
+        "entityId": "entity-name-bceb1074c614",
+        "name": "Rainbird",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-128195244522",
+        "name": "RED FLAG SHIP",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-61e191a86b41",
+        "name": "RIGHTWAY",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-riverhill_soft",
+        "name": "Riverhill Soft（リバーヒルソフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-72929f935a72",
+        "name": "Russell（ラッセル）",
+        "status": "pending"
+      }
+    ]
+  }
+}
