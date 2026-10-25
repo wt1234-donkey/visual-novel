@@ -64855,6 +64855,21 @@
       "territory": null,
       "reviewId": "AZO1-C10",
       "reviewRecord": "data/entity-creator-o1-review-20261025.md"
+    },
+    {
+      "id": "credit-21c85e52dec56555",
+      "entityId": "entity-palette",
+      "targetType": "work",
+      "targetId": "palette-extra-honey",
+      "workId": "palette-extra-honey",
+      "role": "productionBrand",
+      "rawCredit": "ぱれっと",
+      "status": "sourceReviewed",
+      "source": "https://www.clearrave.co.jp/brand/brand_palette.html",
+      "note": "集团官方品牌目录在ぱれっと栏目逐作列出蜂蜜庄，并具名原画たまひよ、剧本米村純一及2002原版。只补本作制作品牌，不从首发发行或版权单独推定；保留related、原模拟系统范围及主库身份边界，不转主库或增加后发版。",
+      "territory": null,
+      "reviewId": "AZP1-C01",
+      "reviewRecord": "data/entity-creator-p1-review-20261025.md"
     }
   ],
   "dossierMemberships": [
@@ -69020,9 +69035,10 @@
       "placement": "related",
       "roles": [
         "originalPublishingBrand",
+        "productionBrand",
         "publishingBrand"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://palette.clearrave.co.jp/product/",
       "status": "existingEvidence"
     },

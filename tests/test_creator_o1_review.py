@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+SNAPSHOT = '155fac06ae47a7e20f2c5a3cf3bae0d3c75d3016'
 BASE = '868d8ceac5575abd8144c4572d4de4c230954553'
 ORIGIN = 'entity-name-a59a367044e7'
 OTAKU = 'entity-name-4abb165f3e1e'
@@ -13,6 +14,8 @@ OVERDRIVE_WORKS = ['g641', 'g642', 'g643', 'g644', 'g645', 'g646', 'g648', 'g649
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 

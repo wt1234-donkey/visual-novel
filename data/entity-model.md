@@ -165,3 +165,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 N5核查NOVECT，独立记录为 `entity-creator-n5-review-20261025.json` 与同名Markdown。逐作官网STAFF、企划说明及两部原包制作栏支持九条原作制作；保留旧团队身份、Novectacle原署名、外部参与与后发移植边界。九条自身专题关联增加制作角色并转original，原publisher及位置保持；第一次投票年份差异另列待核，不改历史日期。N累计21／21，A—N累计214／214，下一项Origin Systems。
 
 2026-10-25 O1按Origin Systems、OTAKU Plan、OVERDRIVE、Overflow顺序完成O组四项，记录为 `entity-creator-o1-review-20261025.json` 与同名Markdown。原厂手册确认Origin公司与一条原作制作；OTAKU Plan按自述仅记本地化发行团队；OVERDRIVE九作补制作品牌，GROOVER原作范围保持；Overflow仅订正品牌并保留publisher，首发间接来源及2005制作另列待核。三项身份、十条职责，九条自身专题分组更新，全部旧目录／日期／位置／关系与基线保持。O累计4／4，A—O累计218／218，下一项Palette（ぱれっと）。
+
+2026-10-25 P1按Palette、Philips Interactive Media、PIACCI、Pioneer LDC、英文Pony Canyon顺序核查，记录为 `entity-creator-p1-review-20261025.json` 与同名Markdown。十八条既有品牌制作保持，蜂蜜庄仅补一条related制作品牌；四个旧发行节点按具名主体资料订正公司，不从发行推开发，不合并近似法人。来源缓存与直连维护／403／404的区别明确记录，全部原日期、内容／发行、位置、关系和基线保持。P累计5／13，A—P累计223／231，下一项日文显示名Pony Canyon。
