@@ -1,0 +1,756 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "5607626ccdc5982f7280728b513fd0417873b831",
+  "audit": "data/entity-creator-n4-review-20261025.md",
+  "previousReview": "data/entity-creator-n3-review-20261025.md",
+  "policy": "N组第16—20项；公司、同名品牌、子品牌与2021新品牌分别限定；后发重制职责不倒填原作。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZN4-I01",
+      "entityId": "entity-name-d824aa40b8bf",
+      "rawName": "novamicus（NEXTON）",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://nexton-net.jp/nexton30th/nvm001/",
+        "https://www.nexton-net.jp/index2.html"
+      ],
+      "note": "ONE.官方PRODUCT明确品牌novamicus，并把原作／剧本Tactics与2023内容的剧本编辑novamicus分别列示；NEXTON官网也以novamicus品牌展示该项目。三个既有发行均对应2023 g047-c-2重制，足以将复合显示名novamicus（NEXTON）订正为品牌，显式保留publisher角色，不自动转换成publishingBrand或增加1998 originalPublishingBrand。该后发内容制作证据不生成整部1998作品的productionBrand；原Tactics、NEXTON公司与本节点不合并，不新增沿革边、内容或平台。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZN4-C01",
+      "entityId": "entity-nitrochiral",
+      "dossierId": null,
+      "workId": "nitroplus-extra-rhythm-carnival",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "NITRO CHiRAL",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitrochiral.com/game/rhythm-carnival.php",
+      "note": "官方品牌产品页明确首款节奏游戏与淵井鏑戏剧脚本；只补2017既有作品制作品牌，不将捆绑typing、2026下载版或戏剧内容另作新原作，不转主库或上推公司。"
+    },
+    {
+      "reviewId": "AZN4-C02",
+      "entityId": "entity-nitroplus",
+      "dossierId": "nitroplus",
+      "workId": "nitroplus-extra-rusty-rabbit",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社ニトロプラス",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.neteasegames.com/jp/news/20250417/37024_1228141.html",
+      "note": "当事方公告明确具名株式会社并说明双方共同制作；仅解除本公司自身专题该作待核、保留related位置及NetEase既有共同制作，不由版权或子品牌倒推公司全部旧作开发。",
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      }
+    },
+    {
+      "reviewId": "AZN4-C03",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g597",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/news/2021/11617.php",
+      "note": "2021品牌分立公告明确点名此前制作Phantom；官方Phantom档案另列2000原作、2004INTEGRATION与后发移植，不把新版职员表充作2000全部人员。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C04",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g598",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/pc/lineup/into_02/",
+      "note": "官方旧介绍明确为Nitroplus第二作，分列2001原版与后发廉价／审查版，并具名虚淵玄脚本及中央東口原画。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C05",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g599",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/game/04-helloworld/sofurin.php",
+      "note": "官方2002ソフ倫版产品规格与STAFF具名南條しかし、きんりきまんとう和ZIZZ；另述后发DVD审查修正，不替换原作。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C06",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g600",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/news/2021/11617.php",
+      "note": "2021公告明确点名此前制作斬魔大聖デモンベイン；与当前目录所列2004機神咆吼／2019移植分别记录，不推后发开发。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C07",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g602",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/pc/lineup/into_08/",
+      "note": "官方Windows10版具名海法紀光／Niθ，并两次明确与旧版游戏内容不变；以旧原作范围登记，不把2017规格当2005首发。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C08",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g603",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/game/09-hana/",
+      "note": "官方2005产品规格与STAFF列奈良原一鉄脚本、大崎シンヤ原画及ZIZZ音乐。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C09",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g605",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/game/12-carnevale/",
+      "note": "官方2007产品规格与STAFF列下倉バイオ脚本、大崎シンヤ原画及ZIZZ音乐。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C10",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g606",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/pc/lineup/into_13/",
+      "note": "官方旧产品页以可读HTML列2007原作及虚淵玄脚本、Niθ原画，不依赖失效Flash。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C11",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g169",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/news/2021/11617.php",
+      "note": "2021公告明确点名此前制作装甲悪鬼村正；只补2009本篇，不连带邪念编／赎罪编或其他作者作品。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    },
+    {
+      "reviewId": "AZN4-C12",
+      "entityId": "entity-nitroplus_brand",
+      "dossierId": null,
+      "workId": "g616",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Nitroplus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.nitroplus.co.jp/news/2021/11617.php",
+      "note": "2021公告明确点名此前制作凍京NECRO；只补2016原作品牌，不将UNKNOWN GAMES、后发SUICIDE MISSION或外部程序分工吞并。 仅登记旧Nitroplus原作制作品牌，非新ORIGIN追溯职责；不声称独立完成全部工种，不改变原发行、版本或公司专题待核。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-nitrochiral",
+      "name": "NITRO CHiRAL",
+      "status": "existingSevenProductionsAndOneRelatedBrandConfirmed",
+      "sources": [
+        "https://www.nitroplus.co.jp/company/brand/",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://www.nitrochiral.com/game/",
+        "https://www.nitrochiral.com/game/end",
+        "https://www.nitrochiral.com/game/slow-damage/",
+        "https://www.nitrochiral.com/game/rhythm-carnival.php",
+        "https://www.nitrochiral.com/game/chiralmori.php"
+      ],
+      "reason": "沿用NITRO CHiRAL品牌及七部既有productionBrand，不重复追加。官方沿革分列2005旧名品牌与2023改名，现行目录又明确把外部发行相关作品另列。Rhythm carnival官方规格明确本品牌首款节奏游戏并具名淵井鏑的戏剧脚本，仅追加此既有related作品制作品牌，不因含戏剧改主库位置，不将捆绑的咎狗TYPING自动当作同一作品。キラル盛官网所述2008盘与既有2007小游戏发行有时间／先行批次边界，三篇小游戏与typing须分别核原版材料，不能把合集STAFF无条件倒填。全部旧发行、父公司专题七条主作及其他待核保持。",
+      "workIds": [
+        "g622",
+        "g623",
+        "g624",
+        "g625",
+        "g626",
+        "g627",
+        "g628",
+        "nitroplus-extra-nekoda",
+        "nitroplus-extra-quims",
+        "nitroplus-extra-rhythm-carnival",
+        "nitroplus-extra-togainu-poker",
+        "nitroplus-extra-togainu-typing"
+      ]
+    },
+    {
+      "entityId": "entity-nitroorigin",
+      "name": "NITRO ORIGIN",
+      "status": "existingBrandNoRetroactiveProduction",
+      "sources": [
+        "https://www.nitroplus.co.jp/news/2021/11617.php",
+        "https://www.nitroplus.co.jp/company/brand/",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://nitro-origin.com/works/game/",
+        "https://nitro-origin.com/game/phantom/archives/"
+      ],
+      "reason": "沿用品牌身份；官方同期公告明确NITRO ORIGIN设立日为2021-09-06，1999品牌Nitroplus及2000法人分别保留。当前目录以新版权名追列旧作，不能让新品牌取得2000—2018原作制作。Phantom档案明确2000、2004、2012及后发版本分设；2026NITRO ARCHIVE与2024普及版属于后发范围，本轮不新增普通发行或把新标识作work级原作制作。本节点现有零条职责保持，不新增或改写日期、运营关系和旧署名。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-nitroplus",
+      "name": "Nitroplus",
+      "status": "companyOneScopedJointProductionConfirmed",
+      "sources": [
+        "https://www.nitroplus.co.jp/company/",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://www.neteasegames.com/jp/news/20250417/37024_1228141.html"
+      ],
+      "reason": "沿用公司身份；官方沿革分列1999品牌、2000株式会社、2021ORIGIN及后续企业变动，不将公司与同名品牌、CHiRAL或CG团队合并。NetEase2025-04-17当事方公告具名株式会社ニトロプラス，并明确Rusty Rabbit为双方共同制作，足以在公司自身专题精确解除该related作品一条catalogueAssociation待核并追加originalProduction。N2既有NetEase共同制作保持，不称任一方独自开发全部工种。其余72条公司专题待核不由旗下品牌制作、版权、所属脚本家或合作展示自动解除。",
+      "workIds": [
+        "g054",
+        "g162",
+        "g163",
+        "g169",
+        "g597",
+        "g598",
+        "g599",
+        "g600",
+        "g601",
+        "g602",
+        "g603",
+        "g604",
+        "g605",
+        "g606",
+        "g607",
+        "g608",
+        "g609",
+        "g610",
+        "g611",
+        "g612",
+        "g613",
+        "g614",
+        "g615",
+        "g616",
+        "g617",
+        "g618",
+        "g619",
+        "g620",
+        "g621",
+        "g622",
+        "g623",
+        "g624",
+        "g625",
+        "g626",
+        "g627",
+        "g628",
+        "g629",
+        "g630",
+        "g631",
+        "g632",
+        "g633",
+        "g634",
+        "g635",
+        "g636",
+        "g637",
+        "g638",
+        "g639",
+        "g640",
+        "nitroplus-extra-arsnotoria",
+        "nitroplus-extra-azathoth",
+        "nitroplus-extra-blasterz",
+        "nitroplus-extra-dolls-nest",
+        "nitroplus-extra-exedra",
+        "nitroplus-extra-gunslinger",
+        "nitroplus-extra-gunslinger-reloaded",
+        "nitroplus-extra-gunslinger2",
+        "nitroplus-extra-gunslinger3",
+        "nitroplus-extra-kishinhisho",
+        "nitroplus-extra-madoka-portable",
+        "nitroplus-extra-magireco",
+        "nitroplus-extra-necro-mission",
+        "nitroplus-extra-nekoda",
+        "nitroplus-extra-nitrowars",
+        "nitroplus-extra-quims",
+        "nitroplus-extra-rhythm-carnival",
+        "nitroplus-extra-royale",
+        "nitroplus-extra-rusty-rabbit",
+        "nitroplus-extra-sonipro",
+        "nitroplus-extra-togainu-poker",
+        "nitroplus-extra-togainu-typing",
+        "nitroplus-extra-touken-musou",
+        "nitroplus-extra-touken-online",
+        "nitroplus-extra-touken-puzzle"
+      ]
+    },
+    {
+      "entityId": "entity-nitroplus_brand",
+      "name": "Nitroplus",
+      "status": "tenHistoricalProductionBrandsConfirmed",
+      "sources": [
+        "https://www.nitroplus.co.jp/news/2021/11617.php",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://nitro-origin.com/works/game/",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://www.nitroplus.co.jp/pc/lineup/into_02/",
+        "https://www.nitroplus.co.jp/game/04-helloworld/sofurin.php",
+        "https://www.nitroplus.co.jp/pc/lineup/into_08/",
+        "https://www.nitroplus.co.jp/game/09-hana/",
+        "https://www.nitroplus.co.jp/game/12-carnevale/",
+        "https://www.nitroplus.co.jp/pc/lineup/into_13/"
+      ],
+      "reason": "保留旧同名品牌及公司独立ID。2021分立公告明确说明従来Nitroplus品牌并具名回顾制作作品，结合逐作旧规格／具名STAFF／同内容说明，限定给十部既有原作补productionBrand；不把当前NITRO ORIGIN追溯版权当原发行名。沙耶及君彼既有两条制作品牌不重复。Phantom原版与INTEGRATION、鬼哭街原版与重制、斬魔大聖与機神咆吼／飛翔、村正本篇与FD、NECRO本篇与在线衍生继续分别按证据范围保存；本轮未给其余合作、FD或改编批量制作，亦不向公司专题上推十作职责。",
+      "workIds": [
+        "g054",
+        "g162",
+        "g163",
+        "g169",
+        "g597",
+        "g598",
+        "g599",
+        "g600",
+        "g601",
+        "g602",
+        "g603",
+        "g604",
+        "g605",
+        "g606",
+        "g607",
+        "g608",
+        "g609",
+        "g610",
+        "g611",
+        "g612",
+        "g613",
+        "g614",
+        "g615",
+        "g616",
+        "g617",
+        "g618",
+        "g622",
+        "g629",
+        "nitroplus-extra-azathoth",
+        "nitroplus-extra-dolls-nest",
+        "nitroplus-extra-kishinhisho",
+        "nitroplus-extra-nitrowars",
+        "nitroplus-extra-royale"
+      ]
+    },
+    {
+      "entityId": "entity-name-d824aa40b8bf",
+      "name": "novamicus（NEXTON）",
+      "status": "BrandConfirmedLaterRefineScopeSeparated",
+      "sources": [
+        "https://nexton-net.jp/nexton30th/nvm001/",
+        "https://www.nexton-net.jp/index2.html"
+      ],
+      "reason": "ONE.官方PRODUCT明确品牌novamicus，并把原作／剧本Tactics与2023内容的剧本编辑novamicus分别列示；NEXTON官网也以novamicus品牌展示该项目。三个既有发行均对应2023 g047-c-2重制，足以将复合显示名novamicus（NEXTON）订正为品牌，显式保留publisher角色，不自动转换成publishingBrand或增加1998 originalPublishingBrand。该后发内容制作证据不生成整部1998作品的productionBrand；原Tactics、NEXTON公司与本节点不合并，不新增沿革边、内容或平台。",
+      "workIds": [
+        "g047"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-nitrochiral",
+      "name": "NITRO CHiRAL",
+      "status": "existingSevenProductionsAndOneRelatedBrandConfirmed",
+      "sources": [
+        "https://www.nitroplus.co.jp/company/brand/",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://www.nitrochiral.com/game/",
+        "https://www.nitrochiral.com/game/end",
+        "https://www.nitrochiral.com/game/slow-damage/",
+        "https://www.nitrochiral.com/game/rhythm-carnival.php",
+        "https://www.nitrochiral.com/game/chiralmori.php"
+      ],
+      "reason": "沿用NITRO CHiRAL品牌及七部既有productionBrand，不重复追加。官方沿革分列2005旧名品牌与2023改名，现行目录又明确把外部发行相关作品另列。Rhythm carnival官方规格明确本品牌首款节奏游戏并具名淵井鏑的戏剧脚本，仅追加此既有related作品制作品牌，不因含戏剧改主库位置，不将捆绑的咎狗TYPING自动当作同一作品。キラル盛官网所述2008盘与既有2007小游戏发行有时间／先行批次边界，三篇小游戏与typing须分别核原版材料，不能把合集STAFF无条件倒填。全部旧发行、父公司专题七条主作及其他待核保持。",
+      "workIds": [
+        "g622",
+        "g623",
+        "g624",
+        "g625",
+        "g626",
+        "g627",
+        "g628",
+        "nitroplus-extra-nekoda",
+        "nitroplus-extra-quims",
+        "nitroplus-extra-rhythm-carnival",
+        "nitroplus-extra-togainu-poker",
+        "nitroplus-extra-togainu-typing"
+      ]
+    },
+    {
+      "entityId": "entity-nitroorigin",
+      "name": "NITRO ORIGIN",
+      "status": "existingBrandNoRetroactiveProduction",
+      "sources": [
+        "https://www.nitroplus.co.jp/news/2021/11617.php",
+        "https://www.nitroplus.co.jp/company/brand/",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://nitro-origin.com/works/game/",
+        "https://nitro-origin.com/game/phantom/archives/"
+      ],
+      "reason": "沿用品牌身份；官方同期公告明确NITRO ORIGIN设立日为2021-09-06，1999品牌Nitroplus及2000法人分别保留。当前目录以新版权名追列旧作，不能让新品牌取得2000—2018原作制作。Phantom档案明确2000、2004、2012及后发版本分设；2026NITRO ARCHIVE与2024普及版属于后发范围，本轮不新增普通发行或把新标识作work级原作制作。本节点现有零条职责保持，不新增或改写日期、运营关系和旧署名。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-nitroplus",
+      "name": "Nitroplus",
+      "status": "companyOneScopedJointProductionConfirmed",
+      "sources": [
+        "https://www.nitroplus.co.jp/company/",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://www.neteasegames.com/jp/news/20250417/37024_1228141.html"
+      ],
+      "reason": "沿用公司身份；官方沿革分列1999品牌、2000株式会社、2021ORIGIN及后续企业变动，不将公司与同名品牌、CHiRAL或CG团队合并。NetEase2025-04-17当事方公告具名株式会社ニトロプラス，并明确Rusty Rabbit为双方共同制作，足以在公司自身专题精确解除该related作品一条catalogueAssociation待核并追加originalProduction。N2既有NetEase共同制作保持，不称任一方独自开发全部工种。其余72条公司专题待核不由旗下品牌制作、版权、所属脚本家或合作展示自动解除。",
+      "workIds": [
+        "g054",
+        "g162",
+        "g163",
+        "g169",
+        "g597",
+        "g598",
+        "g599",
+        "g600",
+        "g601",
+        "g602",
+        "g603",
+        "g604",
+        "g605",
+        "g606",
+        "g607",
+        "g608",
+        "g609",
+        "g610",
+        "g611",
+        "g612",
+        "g613",
+        "g614",
+        "g615",
+        "g616",
+        "g617",
+        "g618",
+        "g619",
+        "g620",
+        "g621",
+        "g622",
+        "g623",
+        "g624",
+        "g625",
+        "g626",
+        "g627",
+        "g628",
+        "g629",
+        "g630",
+        "g631",
+        "g632",
+        "g633",
+        "g634",
+        "g635",
+        "g636",
+        "g637",
+        "g638",
+        "g639",
+        "g640",
+        "nitroplus-extra-arsnotoria",
+        "nitroplus-extra-azathoth",
+        "nitroplus-extra-blasterz",
+        "nitroplus-extra-dolls-nest",
+        "nitroplus-extra-exedra",
+        "nitroplus-extra-gunslinger",
+        "nitroplus-extra-gunslinger-reloaded",
+        "nitroplus-extra-gunslinger2",
+        "nitroplus-extra-gunslinger3",
+        "nitroplus-extra-kishinhisho",
+        "nitroplus-extra-madoka-portable",
+        "nitroplus-extra-magireco",
+        "nitroplus-extra-necro-mission",
+        "nitroplus-extra-nekoda",
+        "nitroplus-extra-nitrowars",
+        "nitroplus-extra-quims",
+        "nitroplus-extra-rhythm-carnival",
+        "nitroplus-extra-royale",
+        "nitroplus-extra-rusty-rabbit",
+        "nitroplus-extra-sonipro",
+        "nitroplus-extra-togainu-poker",
+        "nitroplus-extra-togainu-typing",
+        "nitroplus-extra-touken-musou",
+        "nitroplus-extra-touken-online",
+        "nitroplus-extra-touken-puzzle"
+      ]
+    },
+    {
+      "entityId": "entity-nitroplus_brand",
+      "name": "Nitroplus",
+      "status": "tenHistoricalProductionBrandsConfirmed",
+      "sources": [
+        "https://www.nitroplus.co.jp/news/2021/11617.php",
+        "https://www.nitroplus.co.jp/company/history/",
+        "https://nitro-origin.com/works/game/",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://www.nitroplus.co.jp/pc/lineup/into_02/",
+        "https://www.nitroplus.co.jp/game/04-helloworld/sofurin.php",
+        "https://www.nitroplus.co.jp/pc/lineup/into_08/",
+        "https://www.nitroplus.co.jp/game/09-hana/",
+        "https://www.nitroplus.co.jp/game/12-carnevale/",
+        "https://www.nitroplus.co.jp/pc/lineup/into_13/"
+      ],
+      "reason": "保留旧同名品牌及公司独立ID。2021分立公告明确说明従来Nitroplus品牌并具名回顾制作作品，结合逐作旧规格／具名STAFF／同内容说明，限定给十部既有原作补productionBrand；不把当前NITRO ORIGIN追溯版权当原发行名。沙耶及君彼既有两条制作品牌不重复。Phantom原版与INTEGRATION、鬼哭街原版与重制、斬魔大聖与機神咆吼／飛翔、村正本篇与FD、NECRO本篇与在线衍生继续分别按证据范围保存；本轮未给其余合作、FD或改编批量制作，亦不向公司专题上推十作职责。",
+      "workIds": [
+        "g054",
+        "g162",
+        "g163",
+        "g169",
+        "g597",
+        "g598",
+        "g599",
+        "g600",
+        "g601",
+        "g602",
+        "g603",
+        "g604",
+        "g605",
+        "g606",
+        "g607",
+        "g608",
+        "g609",
+        "g610",
+        "g611",
+        "g612",
+        "g613",
+        "g614",
+        "g615",
+        "g616",
+        "g617",
+        "g618",
+        "g622",
+        "g629",
+        "nitroplus-extra-azathoth",
+        "nitroplus-extra-dolls-nest",
+        "nitroplus-extra-kishinhisho",
+        "nitroplus-extra-nitrowars",
+        "nitroplus-extra-royale"
+      ]
+    },
+    {
+      "entityId": "entity-name-d824aa40b8bf",
+      "name": "novamicus（NEXTON）",
+      "status": "BrandConfirmedLaterRefineScopeSeparated",
+      "sources": [
+        "https://nexton-net.jp/nexton30th/nvm001/",
+        "https://www.nexton-net.jp/index2.html"
+      ],
+      "reason": "ONE.官方PRODUCT明确品牌novamicus，并把原作／剧本Tactics与2023内容的剧本编辑novamicus分别列示；NEXTON官网也以novamicus品牌展示该项目。三个既有发行均对应2023 g047-c-2重制，足以将复合显示名novamicus（NEXTON）订正为品牌，显式保留publisher角色，不自动转换成publishingBrand或增加1998 originalPublishingBrand。该后发内容制作证据不生成整部1998作品的productionBrand；原Tactics、NEXTON公司与本节点不合并，不新增沿革边、内容或平台。",
+      "workIds": [
+        "g047"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "N",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 21,
+    "processedEntityIds": [
+      "entity-nanawind",
+      "entity-name-78226abfa58b",
+      "entity-name-0b22f68e63fb",
+      "entity-nec_he",
+      "entity-name-46fe3a3fcf5f",
+      "entity-name-ef0ae286070f",
+      "entity-name-acccc0db4bce",
+      "entity-name-95984e43e41f",
+      "entity-name-c4968cadbf3e",
+      "entity-name-417356621ac7",
+      "entity-falcom",
+      "entity-name-c9d832d41604",
+      "entity-name-0bee31ac676c",
+      "entity-name-bb40df899e7f",
+      "entity-name-198d8c1fcfbe",
+      "entity-nitrochiral",
+      "entity-nitroorigin",
+      "entity-nitroplus",
+      "entity-nitroplus_brand",
+      "entity-name-d824aa40b8bf"
+    ],
+    "nextEntityId": "entity-novect",
+    "nextName": "NOVECT（原 Novectacle）",
+    "queue": [
+      {
+        "entityId": "entity-nanawind",
+        "name": "NanaWind",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-78226abfa58b",
+        "name": "Natsume",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0b22f68e63fb",
+        "name": "NEC Avenue",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-nec_he",
+        "name": "NEC Home Electronics",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-46fe3a3fcf5f",
+        "name": "NEC Interchannel",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ef0ae286070f",
+        "name": "NEC Interchannel（NECインターチャネル）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-acccc0db4bce",
+        "name": "NekoNyan Ltd.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-95984e43e41f",
+        "name": "NetEase Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c4968cadbf3e",
+        "name": "Neverland Company",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-417356621ac7",
+        "name": "Nihon Falcom",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-falcom",
+        "name": "Nihon Falcom（日本ファルコム）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-c9d832d41604",
+        "name": "NineLives",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0bee31ac676c",
+        "name": "Nintendo",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-bb40df899e7f",
+        "name": "Nintendo（任天堂）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-198d8c1fcfbe",
+        "name": "NIS America, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-nitrochiral",
+        "name": "NITRO CHiRAL",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-nitroorigin",
+        "name": "NITRO ORIGIN",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-nitroplus",
+        "name": "Nitroplus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-nitroplus_brand",
+        "name": "Nitroplus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d824aa40b8bf",
+        "name": "novamicus（NEXTON）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-novect",
+        "name": "NOVECT（原 Novectacle）",
+        "status": "pending"
+      }
+    ]
+  }
+}
