@@ -137,3 +137,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 K3完成K组14／14，独立审核见 `entity-creator-k3-review-20261025.json` 与同名Markdown。工画堂独立订正公司身份，ascii-haja与g040按当事方资料各记原作制作；ASCII职责待核及关联位置保留。KOEI与KDE其余逐作开发不从发行推定。下一家Laplacian。
 
 2026-10-25 L1核查L组前5／12，独立记录见 `entity-creator-l1-review-20261025.json` 与同名Markdown。Laplacian按原时期刊物、品牌负责人开发回顾及两部新作明确制作规格追加五条制作品牌；历史与现行公司分开，OneRoom销售和白昼梦后发版不外推。Leaf既有13条制作品牌沿用；raw Legend独立订正为历史公司类别，与英国专题及美国公司保持分设，其余职责待核。下一家Leland。
+
+2026-10-25 L2连续核查Leland、Liar-soft、LJN、LOGIN SOFT、LOGiN，独立记录为 `entity-creator-l2-review-20261025.json` 与同名Markdown。Leland原版传单和LJN原版手册分别订正历史公司类别；LOGIN SOFT依具名品牌史料订正为品牌，显式保持旧发行角色，不自动生成其他发行职责。Liar-soft既有原作制作沿用，LOGiN刊物与游戏发行主体的对应继续待核。无新增制作或关系；L累计10／12，下一家LucasArts。
