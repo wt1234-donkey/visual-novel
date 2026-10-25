@@ -12,6 +12,8 @@ OLD_PURPLE = 'entity-jast_purple'
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'5e51901e0d03ab96a712051913d6df99fcdfac7b:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 

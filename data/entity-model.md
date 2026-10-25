@@ -173,3 +173,5 @@ python3 scripts/build_company_pages.py --check
 P2同时允许独立身份订正将动态解析的unknown节点核为既有模型中的individual类别，仍要求原署名、订正前状态、具名来源和说明全部匹配；本批仅命中Psionic。不改变历史发行角色或其他主体的归类规则。
 
 2026-10-25 P字母第三批使用 `entity-creator-p3-review-20261025.json` 与同名Markdown，按PSK、Purple software、Purple（JAST期）完成P组13／13。现行Purple software仅确认品牌身份并保留publisher；PSK的ザ・病院与旧Purple的かすみ遊戯各按当事方明确开发说明补一条原作职责，现行品牌、历史品牌、母公司和后发DVDPG职责分开。其他逐作STAFF和沿革继续待核，作品／内容／发行、关系与基线不改；下一项Quest（クエスト）。
+
+2026-10-25 Q字母首批使用 `entity-creator-q1-review-20261025.json` 与同名Markdown，完成Quest一项（Q组1／1）。收购方财报与ARTDINK官方页确认历史公司身份，原开发者访谈支持两条限定SFC原作制作；两部作品保持Riverhill关联目录位置，后发移植、增补与人员移籍不向原公司倒填职责。全部专题关联、关系及基线保持；下一项Rainbird。
