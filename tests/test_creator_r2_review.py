@@ -14,6 +14,8 @@ HORI = 'https://www.gamespark.jp/article/2026/04/26/165712.html'
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'e43530441600b96d854c2feb0567c5455c6a6746:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 

@@ -75,3 +75,17 @@ test('reviewed Micro Cabin book production never admits parser books to the main
     assert.equal(member.group,'original');assert.equal(member.placement,'bibliography');
   }
 });
+
+test('anniversary development is limited to added content and never the 1992 Night Trap original',()=>{
+  const developer='entity-name-d05eacc25c69';
+  const made=find({developer});
+  assert.equal(made.length,1);
+  assert.equal(made[0].work.id,'g934');
+  assert.deepEqual(made[0].platformReleases.map(r=>r.id),['g934-v2']);
+  assert.equal(find({developer,from:1992,to:1992}).length,0);
+  assert.equal(find({developer,from:2017,to:2017}).length,1);
+  const original=data.platformReleases.find(r=>r.id==='g934-v1');
+  const later=data.platformReleases.find(r=>r.id==='g934-v2');
+  assert.ok(!creditsForRelease(index,'g934',original).some(c=>c.entityId===developer&&c.role==='developer'));
+  assert.ok(creditsForRelease(index,'g934',later).some(c=>c.entityId===developer&&c.role==='developer'&&c.targetType==='content'));
+});
