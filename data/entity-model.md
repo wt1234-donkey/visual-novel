@@ -167,3 +167,7 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 O1按Origin Systems、OTAKU Plan、OVERDRIVE、Overflow顺序完成O组四项，记录为 `entity-creator-o1-review-20261025.json` 与同名Markdown。原厂手册确认Origin公司与一条原作制作；OTAKU Plan按自述仅记本地化发行团队；OVERDRIVE九作补制作品牌，GROOVER原作范围保持；Overflow仅订正品牌并保留publisher，首发间接来源及2005制作另列待核。三项身份、十条职责，九条自身专题分组更新，全部旧目录／日期／位置／关系与基线保持。O累计4／4，A—O累计218／218，下一项Palette（ぱれっと）。
 
 2026-10-25 P1按Palette、Philips Interactive Media、PIACCI、Pioneer LDC、英文Pony Canyon顺序核查，记录为 `entity-creator-p1-review-20261025.json` 与同名Markdown。十八条既有品牌制作保持，蜂蜜庄仅补一条related制作品牌；四个旧发行节点按具名主体资料订正公司，不从发行推开发，不合并近似法人。来源缓存与直连维护／403／404的区别明确记录，全部原日期、内容／发行、位置、关系和基线保持。P累计5／13，A—P累计223／231，下一项日文显示名Pony Canyon。
+
+2026-10-25 P2连续核查日文显示名Pony Canyon至Psionic，记录为 `entity-creator-p2-review-20261025.json` 与同名Markdown。具名公司资料、同期品牌报道和作者第一方主页支持公司／品牌／个人三项身份订正，仅追加Ghostscape一条原作制作。pride缺原始制作资料，PROTOTYPE整体移植业务不批量推逐版开发，两者原职责保持；全部专题、旧发行、日期、位置、关系和基线保持。P累计10／13，A—P累计228／231，下一项PSK。
+
+P2同时允许独立身份订正将动态解析的unknown节点核为既有模型中的individual类别，仍要求原署名、订正前状态、具名来源和说明全部匹配；本批仅命中Psionic。不改变历史发行角色或其他主体的归类规则。

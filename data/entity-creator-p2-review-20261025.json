@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "1e2634041a854363ea912325390ea2cbb3a5f03c",
+  "audit": "data/entity-creator-p2-review-20261025.md",
+  "previousReview": "data/entity-creator-p1-review-20261025.md",
+  "policy": "P组第6—10项；公司、品牌与个人用名分别核定，原作与后发移植范围分开，缺原始制作资料保持待核。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZP2-I01",
+      "entityId": "entity-name-e8f2daf6c0f9",
+      "rawName": "ポニーキャニオン",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.ponycanyon.biz/company/outline/",
+        "https://yuyuyu.tv/season1/bddvd/bddvd_01.php",
+        "https://yuyuyu.tv/season1/bddvd/bddvd_06.php",
+        "https://yuyuyu.tv/season2/product/bd/yusha.php"
+      ],
+      "note": "官方公司概要具名株式会社ポニーキャニオン；本节点三个2014—2018特典游戏的官方包装规格分别保留其发行名义，首两作又将制作みなとそふと、企划和剧本等另列。仅订正公司类别，不从动画／光盘包装发行生成PC游戏开发，不把Studio五组素材、みなとそふと制作或另作花结的序列号混入本节点。英文Pony Canyon与本节点维持各自稳定ID、别名、日期和原署名。官网公司页403、三个包装页直连503／403，本轮所读正文来自检索缓存。"
+    },
+    {
+      "reviewId": "AZP2-I02",
+      "entityId": "entity-name-e853d08ed1b6",
+      "rawName": "プリンセスソフト",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20040311/f.htm",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://dengekionline.com/elem/000/000/139/139428/"
+      ],
+      "note": "2004-03-11同期GAME Watch报道明确称其为株式会社オークス的品牌，结合原权利方Phantom档案及2009PS2キラ☆キラ发售报道，确认本历史署名为品牌。显式保留两条publisher，不自动转publishingBrand或增加原作发行品牌。既有署名限2003／2009主机版，不获得2000Nitroplus或2007OVERDRIVE原作制作。品牌运营的起止、早期合作公司及后续品牌不据片段补关系；旧官网无法读取，身份依据为同期报道正文，不冒称取得官方公司登记。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZP2-I03",
+      "entityId": "entity-name-cd9fca98a5c2",
+      "rawName": "Psionic",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "individual",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://retrovandal.itch.io/",
+        "https://www.moddb.com/members/psionicgames",
+        "https://www.kongregate.com/en/games/psionic3d/ghostscape"
+      ],
+      "note": "作者自营itch.io主页明确Psionic为其网上使用的名字，并自述独立承担美术和游戏设计，点名创作Ghostscape 1、2及3D；ModDB同一作者页的itch链接和自述交叉核对，Kongregate原作页另列Psionic3D为开发者。将既有Psionic节点仅订正为individual，并补2008Ghostscape原作制作。保留原publisher、原名和别名；后发3D重制、移动版和新用名不自动变为同一内容或新增主体关系，不假定各平台全部技术工种由其独自完成。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZP2-C01",
+      "entityId": "entity-name-cd9fca98a5c2",
+      "dossierId": null,
+      "workId": "g970",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Psionic",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://retrovandal.itch.io/",
+      "note": "作者第一方主页明确Psionic为其个人用名并点名创作Ghostscape系列；原作发布页另具名Psionic3D为开发者。只给2008原作追加制作职责，保留原平台publisher；不把Ghostscape3D、2016重制、移动移植或Portal发行混成2008全部版本开发。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-e8f2daf6c0f9",
+      "name": "Pony Canyon（ポニーキャニオン）",
+      "status": "companyConfirmedBonusGamesPublishingSeparated",
+      "sources": [
+        "https://www.ponycanyon.biz/company/outline/",
+        "https://yuyuyu.tv/season1/bddvd/bddvd_01.php",
+        "https://yuyuyu.tv/season1/bddvd/bddvd_06.php",
+        "https://yuyuyu.tv/season2/product/bd/yusha.php"
+      ],
+      "reason": "官方公司概要具名株式会社ポニーキャニオン；本节点三个2014—2018特典游戏的官方包装规格分别保留其发行名义，首两作又将制作みなとそふと、企划和剧本等另列。仅订正公司类别，不从动画／光盘包装发行生成PC游戏开发，不把Studio五组素材、みなとそふと制作或另作花结的序列号混入本节点。英文Pony Canyon与本节点维持各自稳定ID、别名、日期和原署名。官网公司页403、三个包装页直连503／403，本轮所读正文来自检索缓存。",
+      "workIds": [
+        "g1251",
+        "g1252",
+        "g1254"
+      ]
+    },
+    {
+      "entityId": "entity-pride",
+      "name": "pride",
+      "status": "existingBrandOriginalStaffEvidenceDeferred",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/2655.html",
+        "http://www.jboxgame.co.jp/pride/"
+      ],
+      "reason": "沿用既有历史品牌身份及两条发行品牌职责。ERCR为二次转录资料，分列企划／剧本／导演、原画、程序及外部动画制作等，但不是本轮取得的原始职员表或品牌自身制作声明；旧J-BOX下pride官网无法读取。原作制作及与JAST／J-BOX的具体历史主体边界继续待核，不把转录表或品牌发行单独升级为productionBrand，也不因名称相似并入另一部ゆめにっき。",
+      "workIds": [
+        "g679"
+      ]
+    },
+    {
+      "entityId": "entity-name-e853d08ed1b6",
+      "name": "Princess Soft（プリンセスソフト）",
+      "status": "brandConfirmedLaterConsolePublishingScopeSeparated",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20040311/f.htm",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://dengekionline.com/elem/000/000/139/139428/"
+      ],
+      "reason": "2004-03-11同期GAME Watch报道明确称其为株式会社オークス的品牌，结合原权利方Phantom档案及2009PS2キラ☆キラ发售报道，确认本历史署名为品牌。显式保留两条publisher，不自动转publishingBrand或增加原作发行品牌。既有署名限2003／2009主机版，不获得2000Nitroplus或2007OVERDRIVE原作制作。品牌运营的起止、早期合作公司及后续品牌不据片段补关系；旧官网无法读取，身份依据为同期报道正文，不冒称取得官方公司登记。",
+      "workIds": [
+        "g597",
+        "g642"
+      ]
+    },
+    {
+      "entityId": "entity-prototype",
+      "name": "PROTOTYPE",
+      "status": "existingCompanyPortWorkSeparatedFromOriginalProduction",
+      "sources": [
+        "https://www.prot.co.jp/company/index.html",
+        "https://www.prot.co.jp/notice/recruit.html",
+        "https://www.prot.co.jp/notice/videoposting.html",
+        "https://www.prot.co.jp/switch/kanon/spec.html",
+        "https://www.prot.co.jp/switch/cartagra/index.html"
+      ],
+      "reason": "官方公司页确认既有株式会社身份，保持原sourceReviewed，不重复订正或补成立日期。招聘与视频说明明确公司业务是获许可的主机移植、重构、追加规划及录音等，并区分PC原作；各作原脚本和CG也分别具名。保留19作37条现有publisher，不由整体移植业务批量填逐版portDeveloper，更不补work级originalProduction。カルタグラ现行页明确主机版基于2023PC重制，仍与2005原作、旧PS2及2026Steam范围分开；保留全部既有内容／平台身份。",
+      "workIds": [
+        "g028",
+        "g029",
+        "g030",
+        "g032",
+        "g145",
+        "g147",
+        "g148",
+        "g149",
+        "g183",
+        "g184",
+        "g185",
+        "g190",
+        "g233",
+        "g239",
+        "g240",
+        "g241",
+        "g242",
+        "g277",
+        "g878"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-e8f2daf6c0f9",
+      "name": "Pony Canyon（ポニーキャニオン）",
+      "status": "companyConfirmedBonusGamesPublishingSeparated",
+      "sources": [
+        "https://www.ponycanyon.biz/company/outline/",
+        "https://yuyuyu.tv/season1/bddvd/bddvd_01.php",
+        "https://yuyuyu.tv/season1/bddvd/bddvd_06.php",
+        "https://yuyuyu.tv/season2/product/bd/yusha.php"
+      ],
+      "reason": "官方公司概要具名株式会社ポニーキャニオン；本节点三个2014—2018特典游戏的官方包装规格分别保留其发行名义，首两作又将制作みなとそふと、企划和剧本等另列。仅订正公司类别，不从动画／光盘包装发行生成PC游戏开发，不把Studio五组素材、みなとそふと制作或另作花结的序列号混入本节点。英文Pony Canyon与本节点维持各自稳定ID、别名、日期和原署名。官网公司页403、三个包装页直连503／403，本轮所读正文来自检索缓存。",
+      "workIds": [
+        "g1251",
+        "g1252",
+        "g1254"
+      ]
+    },
+    {
+      "entityId": "entity-pride",
+      "name": "pride",
+      "status": "existingBrandOriginalStaffEvidenceDeferred",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/2655.html",
+        "http://www.jboxgame.co.jp/pride/"
+      ],
+      "reason": "沿用既有历史品牌身份及两条发行品牌职责。ERCR为二次转录资料，分列企划／剧本／导演、原画、程序及外部动画制作等，但不是本轮取得的原始职员表或品牌自身制作声明；旧J-BOX下pride官网无法读取。原作制作及与JAST／J-BOX的具体历史主体边界继续待核，不把转录表或品牌发行单独升级为productionBrand，也不因名称相似并入另一部ゆめにっき。",
+      "workIds": [
+        "g679"
+      ]
+    },
+    {
+      "entityId": "entity-name-e853d08ed1b6",
+      "name": "Princess Soft（プリンセスソフト）",
+      "status": "brandConfirmedLaterConsolePublishingScopeSeparated",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20040311/f.htm",
+        "https://nitro-origin.com/game/phantom/archives/",
+        "https://dengekionline.com/elem/000/000/139/139428/"
+      ],
+      "reason": "2004-03-11同期GAME Watch报道明确称其为株式会社オークス的品牌，结合原权利方Phantom档案及2009PS2キラ☆キラ发售报道，确认本历史署名为品牌。显式保留两条publisher，不自动转publishingBrand或增加原作发行品牌。既有署名限2003／2009主机版，不获得2000Nitroplus或2007OVERDRIVE原作制作。品牌运营的起止、早期合作公司及后续品牌不据片段补关系；旧官网无法读取，身份依据为同期报道正文，不冒称取得官方公司登记。",
+      "workIds": [
+        "g597",
+        "g642"
+      ]
+    },
+    {
+      "entityId": "entity-prototype",
+      "name": "PROTOTYPE",
+      "status": "existingCompanyPortWorkSeparatedFromOriginalProduction",
+      "sources": [
+        "https://www.prot.co.jp/company/index.html",
+        "https://www.prot.co.jp/notice/recruit.html",
+        "https://www.prot.co.jp/notice/videoposting.html",
+        "https://www.prot.co.jp/switch/kanon/spec.html",
+        "https://www.prot.co.jp/switch/cartagra/index.html"
+      ],
+      "reason": "官方公司页确认既有株式会社身份，保持原sourceReviewed，不重复订正或补成立日期。招聘与视频说明明确公司业务是获许可的主机移植、重构、追加规划及录音等，并区分PC原作；各作原脚本和CG也分别具名。保留19作37条现有publisher，不由整体移植业务批量填逐版portDeveloper，更不补work级originalProduction。カルタグラ现行页明确主机版基于2023PC重制，仍与2005原作、旧PS2及2026Steam范围分开；保留全部既有内容／平台身份。",
+      "workIds": [
+        "g028",
+        "g029",
+        "g030",
+        "g032",
+        "g145",
+        "g147",
+        "g148",
+        "g149",
+        "g183",
+        "g184",
+        "g185",
+        "g190",
+        "g233",
+        "g239",
+        "g240",
+        "g241",
+        "g242",
+        "g277",
+        "g878"
+      ]
+    },
+    {
+      "entityId": "entity-name-cd9fca98a5c2",
+      "name": "Psionic",
+      "status": "individualCreatorAndOneOriginalProductionConfirmed",
+      "sources": [
+        "https://retrovandal.itch.io/",
+        "https://www.moddb.com/members/psionicgames",
+        "https://www.kongregate.com/en/games/psionic3d/ghostscape"
+      ],
+      "reason": "作者自营itch.io主页明确Psionic为其网上使用的名字，并自述独立承担美术和游戏设计，点名创作Ghostscape 1、2及3D；ModDB同一作者页的itch链接和自述交叉核对，Kongregate原作页另列Psionic3D为开发者。将既有Psionic节点仅订正为individual，并补2008Ghostscape原作制作。保留原publisher、原名和别名；后发3D重制、移动版和新用名不自动变为同一内容或新增主体关系，不假定各平台全部技术工种由其独自完成。",
+      "workIds": [
+        "g970"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "P",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-palette",
+      "entity-name-906fa9d6b292",
+      "entity-name-db9995981277",
+      "entity-name-84c58ec33dac",
+      "entity-name-fb8b690c85a0",
+      "entity-name-e8f2daf6c0f9",
+      "entity-pride",
+      "entity-name-e853d08ed1b6",
+      "entity-prototype",
+      "entity-name-cd9fca98a5c2"
+    ],
+    "nextEntityId": "entity-psk",
+    "nextName": "PSK（パソコンショップ高知）",
+    "queue": [
+      {
+        "entityId": "entity-palette",
+        "name": "Palette（ぱれっと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-906fa9d6b292",
+        "name": "Philips Interactive Media, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-db9995981277",
+        "name": "PIACCI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-84c58ec33dac",
+        "name": "Pioneer LDC（パイオニアLDC）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fb8b690c85a0",
+        "name": "Pony Canyon",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e8f2daf6c0f9",
+        "name": "Pony Canyon（ポニーキャニオン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-pride",
+        "name": "pride",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e853d08ed1b6",
+        "name": "Princess Soft（プリンセスソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-prototype",
+        "name": "PROTOTYPE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-cd9fca98a5c2",
+        "name": "Psionic",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-psk",
+        "name": "PSK（パソコンショップ高知）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-fb321fae98fc",
+        "name": "Purple software",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-jast_purple",
+        "name": "Purple（JAST期）",
+        "status": "pending"
+      }
+    ]
+  }
+}
