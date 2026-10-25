@@ -177,3 +177,5 @@ P2同时允许独立身份订正将动态解析的unknown节点核为既有模�
 2026-10-25 Q字母首批使用 `entity-creator-q1-review-20261025.json` 与同名Markdown，完成Quest一项（Q组1／1）。收购方财报与ARTDINK官方页确认历史公司身份，原开发者访谈支持两条限定SFC原作制作；两部作品保持Riverhill关联目录位置，后发移植、增补与人员移籍不向原公司倒填职责。全部专题关联、关系及基线保持；下一项Rainbird。
 
 2026-10-25 R字母首批使用 `entity-creator-r1-review-20261025.json` 与同名Markdown，按Rainbird、RED FLAG SHIP、RIGHTWAY连续核查3／5。同期出版行与访谈支持Rainbird出版品牌类别并显式保留publisher，政府法人资料及公司官网各确认后两项公司身份；全部职责和专题关联逐条保持，制作与经营沿革缺口具名待核。下一项Riverhill Soft（リバーヒルソフト）。
+
+2026-10-25 R字母第二批使用 `entity-creator-r2-review-20261025.json` 与同名Markdown，完成Riverhill Soft、Russell，R累计5／5。创始人分期履历与当事开发访谈支持Riverhill十部既有原作制作，其中一部仍保留related；Russell只确认公司身份，PSP发行与ゆずソフト追加内容制作分开。两条指定专题待核解除，其他历史发行、身份关系与基线保持；下一项SAGA PLANETS。
