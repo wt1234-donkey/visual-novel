@@ -155,3 +155,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 M6完成M组30／30，独立审核为 `entity-creator-m6-review-20261025.json` 与同名Markdown。Mixx Entertainment与Mosaic Publishing Ltd各订正公司类别，原Ltd与专题节点不合并；月星組たまきゅう按官方具名STAFF追加一条制作品牌，父级职责待核保留。萌えAPP服务与公司混合原文继续待核，Mosaic出版与外部开发分开；登记／原手册索引可达范围另记，不改旧发行、位置、关系或基线。下一项NanaWind。
 
 2026-10-25 N1开始N组，独立记录为 `entity-creator-n1-review-20261025.json` 与同名Markdown。逐作具名文本及STAFF原图支持NanaWind十条制作品牌，LunaSystem旅行部四篇及专题待核不继承；Natsume、NEC Avenue和英文NEC Interchannel各订正公司类别。当前改名、当事方持权公告与原厂手册分别限定身份，NEC-HE发行／出资不推制作，日文NEC Interchannel下一项另核；不改原目录、发行、位置、关系或基线。N累计5／21。
+
+2026-10-25 N2连续核查日文NEC Interchannel至英文Nihon Falcom，独立记录为 `entity-creator-n2-review-20261025.json` 与同名Markdown。原厂手册与官方具名资料支持NEC、Neverland及历史Falcom三个公司类别；Nitroplus发售公告及Falcom IR开发陈述各支持一条原作制作。NetEase Games部门分类继续待核，NekoNyan本地化、Neverland后发Saturn开发与原作范围分开；专题待核、旧发行、节点关系、目录及基线保持。N累计10／21，下一项Falcom沿革专题。

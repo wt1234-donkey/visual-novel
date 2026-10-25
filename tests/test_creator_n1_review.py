@@ -6,10 +6,13 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+SNAPSHOT = '9f157ff14c5ed54a4eed7362d3ad46bc3c92c91c'
 BASE = 'f7ddbcc5de7eda9850b4433cf84dcdcb79d83f06'
 
 
 def read(path):
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
+        return json.loads(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{path}'], cwd=ROOT))
     return json.loads((ROOT / path).read_text())
 
 
@@ -41,7 +44,7 @@ class CreatorN1Tests(unittest.TestCase):
                 previous = re.sub(
                     rf'(href="entities.html#{eid}">[^<]*<span class="entity-type">)身份待核(</span>)',
                     r'\g<1>公司／组织\g<2>', previous)
-            self.assertEqual((ROOT / page).read_text(), previous, page)
+            self.assertEqual(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{page}'], cwd=ROOT, text=True), previous, page)
 
     def test_ten_original_brand_credits_preserve_all_existing_participation(self):
         before, after = old('data/credits.json'), read('data/credits.json')
