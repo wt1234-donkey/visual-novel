@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "477dae11ca2b721a203dba8381f29cea109c4525",
+  "audit": "data/entity-creator-q1-review-20261025.md",
+  "previousReview": "data/entity-creator-p3-review-20261025.md",
+  "policy": "Q组仅Quest一项；核定历史公司与两作SFC原作制作，关联目录和后发移植职责分开。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZQ1-I01",
+      "entityId": "entity-name-5c50162a1fac",
+      "rawName": "クエスト",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.hd.square-enix.com/jpn/ir/pdf/0402-200305220000-01.pdf",
+        "https://www.artdink.co.jp/japanese/title/ogre/"
+      ],
+      "note": "收购方2003年决算短信第23页在营业受让资产附注中具名株式会社クエスト，ARTDINK官方移植页亦称㈱クエスト社；确认本节点为历史游戏公司。松野泰己2011年访谈回顾在该公司制作两部SFC原作的企划、开发团队与制作过程，故为1993伝説のオウガバトル及1995タクティクスオウガ各追加originalProduction。两条原publisher、关联位置与后发Riverhill发行保持；不将现权利方版权或一般移植说明直接转成原作开发，不并入同名IT公司。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZQ1-C01",
+      "entityId": "entity-name-5c50162a1fac",
+      "dossierId": null,
+      "workId": "riverhill-ogre",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "クエスト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.4gamer.net/games/116/G011621/20110426090/",
+      "note": "松野泰己当事者访谈回顾Quest时期伝説のオウガバトル的企划和开发团队，ARTDINK官方移植页另明确原作为クエスト社作品。仅追加1993 SFC原作制作，关联位置不变，不给Quest追加1996Saturn增补或PS移植开发职责。"
+    },
+    {
+      "reviewId": "AZQ1-C02",
+      "entityId": "entity-name-5c50162a1fac",
+      "dossierId": null,
+      "workId": "riverhill-tactics",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "クエスト",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.4gamer.net/games/116/G011621/20110426090/",
+      "note": "松野泰己访谈直接说明タクティクスオウガ原始企划及开发团队，并与此前オウガバトル和后来的Square工作分开。仅确认1995 SFC原作制作，不将1996Saturn事件录音、2010運命の輪或2022リボーン制作倒填为该公司职责。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-5c50162a1fac",
+      "name": "Quest（クエスト）",
+      "status": "laterPortDevelopmentAndCorporateTransferDetailsDeferred",
+      "sources": [
+        "https://www.hd.square-enix.com/jpn/ir/pdf/0402-200305220000-01.pdf",
+        "https://www.1101.com/nintendo/FFT-A/01.html",
+        "http://www.quest-kk.com/osirase/"
+      ],
+      "reason": "财报确认的是从株式会社クエスト受让营业及相应资产；访谈以通俗合并说法描述人员和标题移转，不据此建立法律吸收合并、母子公司或同一法人关系。旧官网公告本次不可读取，法人成立／终止与沿革日期不补。两部原作制作不覆盖1996Saturn追加内容、PS移植、2010／2022重制的具体委托和实现职责，仍须逐版原始职员表；人员移籍也不把后续Square作品倒记给Quest。",
+      "workIds": [
+        "riverhill-ogre",
+        "riverhill-tactics"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-5c50162a1fac",
+      "name": "Quest（クエスト）",
+      "status": "historicalCompanyAndTwoRelatedOriginalProductionsConfirmed",
+      "sources": [
+        "https://www.hd.square-enix.com/jpn/ir/pdf/0402-200305220000-01.pdf",
+        "https://www.artdink.co.jp/japanese/title/ogre/",
+        "https://www.4gamer.net/games/116/G011621/20110426090/",
+        "https://www.1101.com/nintendo/FFT-A/01.html"
+      ],
+      "reason": "收购方2003年决算短信第23页在营业受让资产附注中具名株式会社クエスト，ARTDINK官方移植页亦称㈱クエスト社；确认本节点为历史游戏公司。松野泰己2011年访谈回顾在该公司制作两部SFC原作的企划、开发团队与制作过程，故为1993伝説のオウガバトル及1995タクティクスオウガ各追加originalProduction。两条原publisher、关联位置与后发Riverhill发行保持；不将现权利方版权或一般移植说明直接转成原作开发，不并入同名IT公司。",
+      "workIds": [
+        "riverhill-ogre",
+        "riverhill-tactics"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "Q",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 1,
+    "processedEntityIds": [
+      "entity-name-5c50162a1fac"
+    ],
+    "nextEntityId": "entity-name-bceb1074c614",
+    "nextName": "Rainbird",
+    "queue": [
+      {
+        "entityId": "entity-name-5c50162a1fac",
+        "name": "Quest（クエスト）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
