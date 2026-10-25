@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "3ef716479a4c40e0860254ebb150f48854d54c7f",
+  "audit": "data/entity-creator-m2-review-20261025.md",
+  "previousReview": "data/entity-creator-m1-review-20261025.md",
+  "policy": "按M第6—10项连续核查；现行公司、历史公司、旧品牌和复合署名分别判断，不由发行、IP移转或现名倒填制作。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZM2-I01",
+      "entityId": "entity-name-35ae58bf892b",
+      "rawName": "Marvelous",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://corp.marv.jp/company/about.html",
+        "https://corp.marv.jp/company/history.html"
+      ],
+      "note": "官方概要明确株式会社マーベラス，沿革载2014年7月改为现名；PS官方2015产品报道明确Marvelous为家庭机版发行方，并将原街机制作与EXAMU合作分列。独立订正现有Marvelous节点为公司，保留两条具体发行，不由版权或发行推断完整原作／移植开发。不与2007年消灭的Marvelous Interactive节点合并，不自动扩展到海外同名公司或沿革关系。"
+    },
+    {
+      "reviewId": "AZM2-I02",
+      "entityId": "entity-name-ff103df997b5",
+      "rawName": "マーベラスインタラクティブ",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://corp.marv.jp/company/history.html",
+        "https://www.marv.jp/titles/cs/419/"
+      ],
+      "note": "官方沿革具名株式会社マーベラスインタラクティブ，记2003年旧Victor Interactive Software更名与2007年6月被吸收合并，足以独立订正2006发行节点为历史公司类别。现行Ys Strategy页面保留2006作品日期，却使用后起Marvelous AQL发行名与Marvelous版权；将此作为现行页面回溯改名现象单列，不据此改写原始发行或将该旧公司当作2014现名公司。旧署名、作品关联位置及一条发行保持，Falcom原作IP或系列名称不能代替本作开发证据，未追加制作或公司关系。"
+    },
+    {
+      "reviewId": "AZM2-I03",
+      "entityId": "entity-name-170de3c8b237",
+      "rawName": "メサイヤ",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.e-xtreme.co.jp/topics/1121/",
+        "https://www.e-xtreme.co.jp/service/ip/masaya/"
+      ],
+      "note": "Extreme于2014年11月14日的当事方公告明确旧メサイヤ是NCS持有的游戏品牌，并区分2014年4月新起的メサイヤゲームス；现行品牌页补述NCS游戏部门背景。独立订正既有1990发行节点为品牌，显式preserveReleaseRoles保留publisher，不自动生成发行品牌／原作发行品牌。2016 EGG公告只涉及PC Engine版复刻配信，取得IP、品牌业务概述和复刻厂家不能证明1990原作具体制作；不将NCS、Extreme、D4或后起品牌身份混并，逐作职员表待核。",
+      "preserveReleaseRoles": true
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-85a1fd56da66",
+      "name": "MangaGamer",
+      "status": "existingBrandReleaseRolesRetained",
+      "sources": [
+        "https://www.mangagamer.com/privacy_policy.php",
+        "https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/"
+      ],
+      "reason": "官网隐私政策1.1仍明确MangaGamer为品牌并将Japan Animation Contents, KK列为运营主体，既有品牌身份沿用，不重复订正。抽核Fata Morgana商店页将NOVECT开发和MangaGamer发行明确分列；保留24条既有发行（18部作品），不声称已逐一外部重验全部发行。发行、商店经营或品牌身份不等于原作开发／逐版翻译，未取得各版本本地化职员表前不一揽子登记制作、本地化或运营关系。",
+      "workIds": [
+        "g192",
+        "g193",
+        "g194",
+        "g233",
+        "g250",
+        "g251",
+        "g252",
+        "g261",
+        "g641",
+        "g642",
+        "g643",
+        "g644",
+        "g645",
+        "g646",
+        "g647",
+        "g648",
+        "g649",
+        "g651"
+      ]
+    },
+    {
+      "entityId": "entity-name-35ae58bf892b",
+      "name": "Marvelous",
+      "status": "companyCategoryConfirmed",
+      "sources": [
+        "https://corp.marv.jp/company/about.html",
+        "https://corp.marv.jp/company/history.html",
+        "https://blog.ja.playstation.com/2015/10/09/20151009-nitroplus-blasterz/"
+      ],
+      "reason": "官方概要明确株式会社マーベラス，沿革载2014年7月改为现名；PS官方2015产品报道明确Marvelous为家庭机版发行方，并将原街机制作与EXAMU合作分列。独立订正现有Marvelous节点为公司，保留两条具体发行，不由版权或发行推断完整原作／移植开发。不与2007年消灭的Marvelous Interactive节点合并，不自动扩展到海外同名公司或沿革关系。",
+      "workIds": [
+        "nitroplus-extra-blasterz"
+      ]
+    },
+    {
+      "entityId": "entity-name-ff103df997b5",
+      "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://corp.marv.jp/company/history.html",
+        "https://www.marv.jp/titles/cs/419/"
+      ],
+      "reason": "官方沿革具名株式会社マーベラスインタラクティブ，记2003年旧Victor Interactive Software更名与2007年6月被吸收合并，足以独立订正2006发行节点为历史公司类别。现行Ys Strategy页面保留2006作品日期，却使用后起Marvelous AQL发行名与Marvelous版权；将此作为现行页面回溯改名现象单列，不据此改写原始发行或将该旧公司当作2014现名公司。旧署名、作品关联位置及一条发行保持，Falcom原作IP或系列名称不能代替本作开发证据，未追加制作或公司关系。",
+      "workIds": [
+        "falcom-ys-strategy"
+      ]
+    },
+    {
+      "entityId": "entity-name-170de3c8b237",
+      "name": "Masaya（メサイヤ）",
+      "status": "historicalBrandCategoryConfirmed",
+      "sources": [
+        "https://www.e-xtreme.co.jp/topics/1121/",
+        "https://www.e-xtreme.co.jp/service/ip/masaya/",
+        "https://www.gamer.ne.jp/news/201604190010/"
+      ],
+      "reason": "Extreme于2014年11月14日的当事方公告明确旧メサイヤ是NCS持有的游戏品牌，并区分2014年4月新起的メサイヤゲームス；现行品牌页补述NCS游戏部门背景。独立订正既有1990发行节点为品牌，显式preserveReleaseRoles保留publisher，不自动生成发行品牌／原作发行品牌。2016 EGG公告只涉及PC Engine版复刻配信，取得IP、品牌业务概述和复刻厂家不能证明1990原作具体制作；不将NCS、Extreme、D4或后起品牌身份混并，逐作职员表待核。",
+      "workIds": [
+        "g1183"
+      ]
+    },
+    {
+      "entityId": "entity-name-770b8bb9bcbc",
+      "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+      "status": "compositeHistoricalSignaturePending",
+      "sources": [
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html",
+        "https://gyusyabu.ddo.jp/MP3/1987/ASH2.html"
+      ],
+      "reason": "Panasonic官方历史确认旧松下电器产业公司名及2008改名，但不足以单独解释既有松下電器産業（Panasoft）复合发行署名应映射到公司、品牌还是两者。1987 Ashguine II旧资料页本轮出现重定向循环，未取得对应原版包装／手册的法律主体与Panasoft关系说明。继续保留unknown及一条既有发行，不与下一项松下電器産業独立节点合并，不拆分映射，不由硬件品牌、发行或同名沿革推开发。",
+      "workIds": [
+        "te-soft-ashguine-2"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-85a1fd56da66",
+      "name": "MangaGamer",
+      "status": "existingBrandReleaseRolesRetained",
+      "sources": [
+        "https://www.mangagamer.com/privacy_policy.php",
+        "https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/"
+      ],
+      "reason": "官网隐私政策1.1仍明确MangaGamer为品牌并将Japan Animation Contents, KK列为运营主体，既有品牌身份沿用，不重复订正。抽核Fata Morgana商店页将NOVECT开发和MangaGamer发行明确分列；保留24条既有发行（18部作品），不声称已逐一外部重验全部发行。发行、商店经营或品牌身份不等于原作开发／逐版翻译，未取得各版本本地化职员表前不一揽子登记制作、本地化或运营关系。",
+      "workIds": [
+        "g192",
+        "g193",
+        "g194",
+        "g233",
+        "g250",
+        "g251",
+        "g252",
+        "g261",
+        "g641",
+        "g642",
+        "g643",
+        "g644",
+        "g645",
+        "g646",
+        "g647",
+        "g648",
+        "g649",
+        "g651"
+      ]
+    },
+    {
+      "entityId": "entity-name-35ae58bf892b",
+      "name": "Marvelous",
+      "status": "companyCategoryConfirmed",
+      "sources": [
+        "https://corp.marv.jp/company/about.html",
+        "https://corp.marv.jp/company/history.html",
+        "https://blog.ja.playstation.com/2015/10/09/20151009-nitroplus-blasterz/"
+      ],
+      "reason": "官方概要明确株式会社マーベラス，沿革载2014年7月改为现名；PS官方2015产品报道明确Marvelous为家庭机版发行方，并将原街机制作与EXAMU合作分列。独立订正现有Marvelous节点为公司，保留两条具体发行，不由版权或发行推断完整原作／移植开发。不与2007年消灭的Marvelous Interactive节点合并，不自动扩展到海外同名公司或沿革关系。",
+      "workIds": [
+        "nitroplus-extra-blasterz"
+      ]
+    },
+    {
+      "entityId": "entity-name-ff103df997b5",
+      "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+      "status": "historicalCompanyCategoryConfirmed",
+      "sources": [
+        "https://corp.marv.jp/company/history.html",
+        "https://www.marv.jp/titles/cs/419/"
+      ],
+      "reason": "官方沿革具名株式会社マーベラスインタラクティブ，记2003年旧Victor Interactive Software更名与2007年6月被吸收合并，足以独立订正2006发行节点为历史公司类别。现行Ys Strategy页面保留2006作品日期，却使用后起Marvelous AQL发行名与Marvelous版权；将此作为现行页面回溯改名现象单列，不据此改写原始发行或将该旧公司当作2014现名公司。旧署名、作品关联位置及一条发行保持，Falcom原作IP或系列名称不能代替本作开发证据，未追加制作或公司关系。",
+      "workIds": [
+        "falcom-ys-strategy"
+      ]
+    },
+    {
+      "entityId": "entity-name-170de3c8b237",
+      "name": "Masaya（メサイヤ）",
+      "status": "historicalBrandCategoryConfirmed",
+      "sources": [
+        "https://www.e-xtreme.co.jp/topics/1121/",
+        "https://www.e-xtreme.co.jp/service/ip/masaya/",
+        "https://www.gamer.ne.jp/news/201604190010/"
+      ],
+      "reason": "Extreme于2014年11月14日的当事方公告明确旧メサイヤ是NCS持有的游戏品牌，并区分2014年4月新起的メサイヤゲームス；现行品牌页补述NCS游戏部门背景。独立订正既有1990发行节点为品牌，显式preserveReleaseRoles保留publisher，不自动生成发行品牌／原作发行品牌。2016 EGG公告只涉及PC Engine版复刻配信，取得IP、品牌业务概述和复刻厂家不能证明1990原作具体制作；不将NCS、Extreme、D4或后起品牌身份混并，逐作职员表待核。",
+      "workIds": [
+        "g1183"
+      ]
+    },
+    {
+      "entityId": "entity-name-770b8bb9bcbc",
+      "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+      "status": "compositeHistoricalSignaturePending",
+      "sources": [
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html",
+        "https://gyusyabu.ddo.jp/MP3/1987/ASH2.html"
+      ],
+      "reason": "Panasonic官方历史确认旧松下电器产业公司名及2008改名，但不足以单独解释既有松下電器産業（Panasoft）复合发行署名应映射到公司、品牌还是两者。1987 Ashguine II旧资料页本轮出现重定向循环，未取得对应原版包装／手册的法律主体与Panasoft关系说明。继续保留unknown及一条既有发行，不与下一项松下電器産業独立节点合并，不拆分映射，不由硬件品牌、发行或同名沿革推开发。",
+      "workIds": [
+        "te-soft-ashguine-2"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "M",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 30,
+    "processedEntityIds": [
+      "entity-macadamia",
+      "entity-madosoft",
+      "entity-mages",
+      "entity-name-1cc39c9db973",
+      "entity-makura",
+      "entity-name-85a1fd56da66",
+      "entity-name-35ae58bf892b",
+      "entity-name-ff103df997b5",
+      "entity-name-170de3c8b237",
+      "entity-name-770b8bb9bcbc"
+    ],
+    "nextEntityId": "entity-name-fec7ac8f12b1",
+    "nextName": "Matsushita Electric Industrial（松下電器産業）",
+    "queue": [
+      {
+        "entityId": "entity-macadamia",
+        "name": "Macadamia Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-madosoft",
+        "name": "Madosoft（まどそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mages",
+        "name": "MAGES.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1cc39c9db973",
+        "name": "Magical Zoo（マジカルズゥ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-makura",
+        "name": "Makura（枕）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-85a1fd56da66",
+        "name": "MangaGamer",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-35ae58bf892b",
+        "name": "Marvelous",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ff103df997b5",
+        "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-170de3c8b237",
+        "name": "Masaya（メサイヤ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fec7ac8f12b1",
+        "name": "Matsushita Electric Industrial（松下電器産業）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-61d0027ef7ce",
+        "name": "MediaWorks",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-melbournehouse",
+        "name": "Melbourne House",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microcabin",
+        "name": "Micro Cabin（マイクロキャビン）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft",
+        "name": "Microsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft_home",
+        "name": "Microsoft Home",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-microsoft_studios",
+        "name": "Microsoft Studios",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minato_carnival_world",
+        "name": "Minato Carnival World（みなとカーニバルWorld）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minato_carnival",
+        "name": "Minato Carnival（みなとカーニバル）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minatosoft",
+        "name": "Minato Soft（みなとそふと）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-297835568b98",
+        "name": "Minato Station（みなとすてーしょん）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minori",
+        "name": "minori",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mirai",
+        "name": "mirai",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-935c3bc35045",
+        "name": "Mixx Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-fairytale_tsuki",
+        "name": "Moon-Star Group（月星組）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mosaic",
+        "name": "Mosaic Publishing",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-170eeb0b71f8",
+        "name": "Mosaic Publishing Ltd",
+        "status": "pending"
+      }
+    ]
+  }
+}
