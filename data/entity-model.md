@@ -149,3 +149,5 @@ python3 scripts/build_company_pages.py --check
 2026-10-25 M3核查松下电器至Micro Cabin，独立审核为 `entity-creator-m3-review-20261025.json` 与同名Markdown。松下电器和MediaWorks各订正历史公司类别；官网原作开发行支持Micro Cabin 23条原作制作及4条联合制作，松下电器两条合作、Rogue早期复合作者一条合作另限定。后发移植、年份异文和复合个体身份不自动解决；Melbourne House出版／Beam制作继续分开。书目位置与ASCII职责待核保持，M累计15／30，下一项Microsoft。
 
 2026-10-25 M4连续核查Microsoft至Minato Carnival，独立审核为 `entity-creator-m4-review-20261025.json` 与同名Markdown。三个微软公司／品牌节点沿用，逐作发行不推开发；World目录外项目不自动准入。以官方索引可取得的逐作具名制作说明给Minato Carnival三作追加制作品牌，正文不可达与两个FD制作范围另记，父品牌／公司专题待核保持。无身份、关系、原始发行或位置变更，M累计20／30，下一项Minato Soft。
+
+2026-10-25 M5核查Minato Soft至mirai works，独立记录为 `entity-creator-m5-review-20261025.json` 与同名Markdown。官方历史品牌介绍支持Minato Station订正品牌并保留旧publisher；逐作具名资料限定追加Minato Soft四条、mirai宿星三条制作品牌。2011再版证据不冒充2007首版材料，合集、短篇与后发移植另核；minori既有19条制作沿用。官网正文不可达的索引证据范围明确保留，mirai works身份及父公司职责仍待核；M累计25／30，下一项Mixx Entertainment。

@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "0196ed77224b41b0298edc5bbcc132b5cbb290ec",
+  "audit": "data/entity-creator-m5-review-20261025.md",
+  "previousReview": "data/entity-creator-m4-review-20261025.md",
+  "policy": "连续核查M第21—25项；品牌、法人、同名海外发行商分设；限定逐作制作品牌与证据可达范围，旧publisher和父公司职责保持。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZM5-I01",
+      "entityId": "entity-name-297835568b98",
+      "rawName": "みなとすてーしょん",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://www.minatostation.com/information/noel090919.html",
+        "https://www.kotoko.asia/posts/pages/iuqddu"
+      ],
+      "note": "历史官网介绍明确自称コンシューマ・ゲームブランドみなとすてーしょん，独立订正为品牌；KOTOKO官方歌曲档案亦将其列为品牌，其同页2008日期与ぽーたぶる标题不一致，不能用于改写版本年份。显式preserveReleaseRoles保留四条旧publisher，不因类别订正自动制造发行品牌或原作发行品牌。工作人员博客开发担当者署名不等于每部作品、每个平台完整开发归属；君が主与真剣的主机版、2015クロガネ和2021成人PC扩充各自分时，未追加制作或法人／运营关系。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZM5-C01",
+      "entityId": "entity-minatosoft",
+      "dossierId": null,
+      "workId": "g1242",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.minatosoft.com/kimiaru/spec-2011.html",
+      "note": "官方2011再版规格具名タカヒロ企划／剧本与白猫参謀原画；按既有同一作品登记制作品牌，未声称检查2007首版职员表，不扩大到主机移植开发。 本轮相关站点正文访问失败，依据可取得的官方搜索索引具名内容，不声称完整职员表已核验；原发行、其他品牌与公司职责分别保留。"
+    },
+    {
+      "reviewId": "AZM5-C02",
+      "entityId": "entity-minatosoft",
+      "dossierId": null,
+      "workId": "g1243",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.minatosoft.com/majikoi/top.html",
+      "note": "原作官网具名タカヒロ企划／剧本与wagi原画，登记本作制作品牌；后发R版、Steam本地化和A系列各自另核。 本轮相关站点正文访问失败，依据可取得的官方搜索索引具名内容，不声称完整职员表已核验；原发行、其他品牌与公司职责分别保留。"
+    },
+    {
+      "reviewId": "AZM5-C03",
+      "entityId": "entity-minatosoft",
+      "dossierId": null,
+      "workId": "g1253",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.minatosoft.com/koya/",
+      "note": "官方具名タカヒロ企划、田中ロミオ剧本和松竜原画；企划者原作概要明确自己没有写剧本，制作品牌不等于内部人员包办全部工种。 本轮相关站点正文访问失败，依据可取得的官方搜索索引具名内容，不声称完整职员表已核验；原发行、其他品牌与公司职责分别保留。"
+    },
+    {
+      "reviewId": "AZM5-C04",
+      "entityId": "entity-minatosoft",
+      "dossierId": null,
+      "workId": "g1256",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "みなとそふと",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.minatosoft.com/wagahime/product.html",
+      "note": "官方原作规格具名タカヒロ企划／剧本并列BGM及其他制作协作；仅登记本作制作品牌，不扩展到将军衍生作或Climax服务游戏。 本轮相关站点正文访问失败，依据可取得的官方搜索索引具名内容，不声称完整职员表已核验；原发行、其他品牌与公司职责分别保留。"
+    },
+    {
+      "reviewId": "AZM5-C05",
+      "entityId": "entity-mirai",
+      "dossierId": null,
+      "workId": "g1268",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "mirai",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mirai-soft.net/syukugar/special/guideline_st.html",
+      "note": "官方宿星原作页面具名かんなぎれい原画、すいみゃSD原画、ハルモニー剧本、アメディオ音乐；登记本作制作品牌，不由家族关系上推公司。 本轮相关站点正文访问失败，依据可取得的官方搜索索引具名内容，不声称完整职员表已核验；原发行、其他品牌与公司职责分别保留。"
+    },
+    {
+      "reviewId": "AZM5-C06",
+      "entityId": "entity-mirai",
+      "dossierId": null,
+      "workId": "g1269",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "mirai",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mirai-soft.net/syukugar2/spec.html",
+      "note": "宿星2官方规格分别具名原画、SD原画、剧本及音乐，登记本篇制作品牌，未把二代当作一代普通移植。 本轮相关站点正文访问失败，依据可取得的官方搜索索引具名内容，不声称完整职员表已核验；原发行、其他品牌与公司职责分别保留。"
+    },
+    {
+      "reviewId": "AZM5-C07",
+      "entityId": "entity-mirai",
+      "dossierId": null,
+      "workId": "g1270",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "mirai",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.mirai-soft.net/syukugar3/spec.html",
+      "note": "宿星3官方规格具名かんなぎれい、すいみゃ、ハルモニー与アメディオ，登记本篇制作品牌；ALLSTAR与后发单卖不在此条范围内。 本轮相关站点正文访问失败，依据可取得的官方搜索索引具名内容，不声称完整职员表已核验；原发行、其他品牌与公司职责分别保留。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-minatosoft",
+      "name": "Minato Soft（みなとそふと）",
+      "status": "fourProductionBrandsConfirmed",
+      "sources": [
+        "https://www.minatosoft.com/kimiaru/spec-2011.html",
+        "https://www.minatosoft.com/majikoi/top.html",
+        "https://www.minatosoft.com/koya/",
+        "https://www.minatosoft.com/koya/outline/",
+        "https://www.minatosoft.com/wagahime/product.html",
+        "https://www.minatosoft.com/majikoi-a-pk/"
+      ],
+      "reason": "沿用Minato Soft品牌，保留Hawk Eye公司与同族品牌的独立身份。君が主官方2011再版规格仍具名タカヒロ企划／剧本、白猫参謀原画，以既有同一作品身份登记制作品牌，不声称已读2007首版职员表；真剣原作官网具名タカヒロ与wagi；荒野官网具名タカヒロ企划、田中ロミオ剧本、松竜原画，并由企划者明确自己没有写本作剧本；我が姫君原作规格具名タカヒロ及其他制作分工。据此仅追加g1242、g1243、g1253、g1256四条制作品牌。既有三条结城友奈原作制作、一条Climax监修不重复。A合集有共同制作资料，但未逐一重验各下载篇、Plus Disc、猟犬后日谈和将军衍生作范围，不一揽子扩展；S及其余版本继续待逐作完整材料。原发行、子品牌职责、Pony Canyon出版与父公司待核不改。",
+      "workIds": [
+        "g1242",
+        "g1243",
+        "g1244",
+        "g1245",
+        "g1246",
+        "g1247",
+        "g1248",
+        "g1249",
+        "g1250",
+        "g1251",
+        "g1252",
+        "g1253",
+        "g1254",
+        "g1255",
+        "g1256",
+        "g1257",
+        "minatosoft-climax"
+      ]
+    },
+    {
+      "entityId": "entity-name-297835568b98",
+      "name": "Minato Station（みなとすてーしょん）",
+      "status": "historicalConsoleBrandConfirmed",
+      "sources": [
+        "https://www.minatostation.com/information/noel090919.html",
+        "https://minatostation.com/staffblog/2012/02/",
+        "https://www.kotoko.asia/posts/pages/iuqddu"
+      ],
+      "reason": "历史官网介绍明确自称コンシューマ・ゲームブランドみなとすてーしょん，独立订正为品牌；KOTOKO官方歌曲档案亦将其列为品牌，其同页2008日期与ぽーたぶる标题不一致，不能用于改写版本年份。显式preserveReleaseRoles保留四条旧publisher，不因类别订正自动制造发行品牌或原作发行品牌。工作人员博客开发担当者署名不等于每部作品、每个平台完整开发归属；君が主与真剣的主机版、2015クロガネ和2021成人PC扩充各自分时，未追加制作或法人／运营关系。",
+      "workIds": [
+        "g1242",
+        "g1243",
+        "g1264"
+      ]
+    },
+    {
+      "entityId": "entity-minori",
+      "name": "minori",
+      "status": "existingNineteenProductionBrandsRetained",
+      "sources": [
+        "https://www.minori.ph/lineup/",
+        "https://www.minori.ph/lineup/trinoline/_index01_.html"
+      ],
+      "reason": "沿用minori既有品牌及19条制作品牌。官网原作目录和Trinoline更新档案可正常取得，说明此前作品、2017本篇及2018Genesis的独立发布；本轮抽核目录边界，不冒称逐部重读19作原职员表。其他出版社的衍生出版物、英文Steam发行与后发主机版继续区分，不能由现行目录反推各版开发方或本地化团队；不重复追加已存在职责，也不以停业／现时持权改变原发行和作品身份。",
+      "workIds": [
+        "g244",
+        "g245",
+        "g246",
+        "g247",
+        "g248",
+        "g249",
+        "g250",
+        "g251",
+        "g252",
+        "g253",
+        "g254",
+        "g255",
+        "g256",
+        "g257",
+        "g258",
+        "g259",
+        "g260",
+        "g261",
+        "g262"
+      ]
+    },
+    {
+      "entityId": "entity-mirai",
+      "name": "mirai",
+      "status": "threeSyukugarProductionBrandsConfirmed",
+      "sources": [
+        "https://www.mirai-soft.net/syukugar/special/guideline_st.html",
+        "https://www.mirai-soft.net/syukugar2/spec.html",
+        "https://www.mirai-soft.net/syukugar3/spec.html",
+        "https://www.mirai-soft.net/hanahime/vfb.html",
+        "https://www.mirai-soft.net/syukugar-as/spec.html"
+      ],
+      "reason": "沿用mirai品牌。宿星1的官方具名内容与宿星2、3规格分别列かんなぎれい原画、すいみゃSD原画、ハルモニー剧本和アメディオ音乐，据此给g1268—g1270分别追加制作品牌，不凭发行、版权或母公司关系倒推。Hanahime画集页确认附赠新作ADV，ALLSTAR规格有共同人员资料，但本轮未厘清附赠あーりん与芙慈子篇逐作职员表、合集共用段落和原作承制范围，g1266／g1267／g1271暂不追加。书籍本身不当游戏，合集不变新作；Hawk Eye专题职责待核继续保持，mirai不与海外发行名mirai works合并。",
+      "workIds": [
+        "g1266",
+        "g1267",
+        "g1268",
+        "g1269",
+        "g1270",
+        "g1271"
+      ]
+    },
+    {
+      "entityId": "entity-name-5963707789d1",
+      "name": "mirai works",
+      "status": "publishingConfirmedIdentityPending",
+      "sources": [
+        "https://store.steampowered.com/app/1346770/YAKIMOCHI_STREAM/",
+        "https://www.miraiworks.asia/about"
+      ],
+      "reason": "Steam权利方页面明确まどそふと开发、mirai works与OTAKU Plan发行，并在正文限定mirai works负责本次Steam版publishing；仅复核既有一条联合发行，不据此增加原作开发、本地化或公司类别。同名miraiworks.asia页面自称2025年成立，未见与2022 Steam署名的可核连接；该页仅作同名候选排查，不视为既有发行商官网，不将其法人资料映射到本节点。Hawk Eye旗下mirai、招聘顾问同名公司及该同名站点均不自动合并，身份继续unknown。",
+      "workIds": [
+        "g210"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-minatosoft",
+      "name": "Minato Soft（みなとそふと）",
+      "status": "fourProductionBrandsConfirmed",
+      "sources": [
+        "https://www.minatosoft.com/kimiaru/spec-2011.html",
+        "https://www.minatosoft.com/majikoi/top.html",
+        "https://www.minatosoft.com/koya/",
+        "https://www.minatosoft.com/koya/outline/",
+        "https://www.minatosoft.com/wagahime/product.html",
+        "https://www.minatosoft.com/majikoi-a-pk/"
+      ],
+      "reason": "沿用Minato Soft品牌，保留Hawk Eye公司与同族品牌的独立身份。君が主官方2011再版规格仍具名タカヒロ企划／剧本、白猫参謀原画，以既有同一作品身份登记制作品牌，不声称已读2007首版职员表；真剣原作官网具名タカヒロ与wagi；荒野官网具名タカヒロ企划、田中ロミオ剧本、松竜原画，并由企划者明确自己没有写本作剧本；我が姫君原作规格具名タカヒロ及其他制作分工。据此仅追加g1242、g1243、g1253、g1256四条制作品牌。既有三条结城友奈原作制作、一条Climax监修不重复。A合集有共同制作资料，但未逐一重验各下载篇、Plus Disc、猟犬后日谈和将军衍生作范围，不一揽子扩展；S及其余版本继续待逐作完整材料。原发行、子品牌职责、Pony Canyon出版与父公司待核不改。",
+      "workIds": [
+        "g1242",
+        "g1243",
+        "g1244",
+        "g1245",
+        "g1246",
+        "g1247",
+        "g1248",
+        "g1249",
+        "g1250",
+        "g1251",
+        "g1252",
+        "g1253",
+        "g1254",
+        "g1255",
+        "g1256",
+        "g1257",
+        "minatosoft-climax"
+      ]
+    },
+    {
+      "entityId": "entity-name-297835568b98",
+      "name": "Minato Station（みなとすてーしょん）",
+      "status": "historicalConsoleBrandConfirmed",
+      "sources": [
+        "https://www.minatostation.com/information/noel090919.html",
+        "https://minatostation.com/staffblog/2012/02/",
+        "https://www.kotoko.asia/posts/pages/iuqddu"
+      ],
+      "reason": "历史官网介绍明确自称コンシューマ・ゲームブランドみなとすてーしょん，独立订正为品牌；KOTOKO官方歌曲档案亦将其列为品牌，其同页2008日期与ぽーたぶる标题不一致，不能用于改写版本年份。显式preserveReleaseRoles保留四条旧publisher，不因类别订正自动制造发行品牌或原作发行品牌。工作人员博客开发担当者署名不等于每部作品、每个平台完整开发归属；君が主与真剣的主机版、2015クロガネ和2021成人PC扩充各自分时，未追加制作或法人／运营关系。",
+      "workIds": [
+        "g1242",
+        "g1243",
+        "g1264"
+      ]
+    },
+    {
+      "entityId": "entity-minori",
+      "name": "minori",
+      "status": "existingNineteenProductionBrandsRetained",
+      "sources": [
+        "https://www.minori.ph/lineup/",
+        "https://www.minori.ph/lineup/trinoline/_index01_.html"
+      ],
+      "reason": "沿用minori既有品牌及19条制作品牌。官网原作目录和Trinoline更新档案可正常取得，说明此前作品、2017本篇及2018Genesis的独立发布；本轮抽核目录边界，不冒称逐部重读19作原职员表。其他出版社的衍生出版物、英文Steam发行与后发主机版继续区分，不能由现行目录反推各版开发方或本地化团队；不重复追加已存在职责，也不以停业／现时持权改变原发行和作品身份。",
+      "workIds": [
+        "g244",
+        "g245",
+        "g246",
+        "g247",
+        "g248",
+        "g249",
+        "g250",
+        "g251",
+        "g252",
+        "g253",
+        "g254",
+        "g255",
+        "g256",
+        "g257",
+        "g258",
+        "g259",
+        "g260",
+        "g261",
+        "g262"
+      ]
+    },
+    {
+      "entityId": "entity-mirai",
+      "name": "mirai",
+      "status": "threeSyukugarProductionBrandsConfirmed",
+      "sources": [
+        "https://www.mirai-soft.net/syukugar/special/guideline_st.html",
+        "https://www.mirai-soft.net/syukugar2/spec.html",
+        "https://www.mirai-soft.net/syukugar3/spec.html",
+        "https://www.mirai-soft.net/hanahime/vfb.html",
+        "https://www.mirai-soft.net/syukugar-as/spec.html"
+      ],
+      "reason": "沿用mirai品牌。宿星1的官方具名内容与宿星2、3规格分别列かんなぎれい原画、すいみゃSD原画、ハルモニー剧本和アメディオ音乐，据此给g1268—g1270分别追加制作品牌，不凭发行、版权或母公司关系倒推。Hanahime画集页确认附赠新作ADV，ALLSTAR规格有共同人员资料，但本轮未厘清附赠あーりん与芙慈子篇逐作职员表、合集共用段落和原作承制范围，g1266／g1267／g1271暂不追加。书籍本身不当游戏，合集不变新作；Hawk Eye专题职责待核继续保持，mirai不与海外发行名mirai works合并。",
+      "workIds": [
+        "g1266",
+        "g1267",
+        "g1268",
+        "g1269",
+        "g1270",
+        "g1271"
+      ]
+    },
+    {
+      "entityId": "entity-name-5963707789d1",
+      "name": "mirai works",
+      "status": "publishingConfirmedIdentityPending",
+      "sources": [
+        "https://store.steampowered.com/app/1346770/YAKIMOCHI_STREAM/",
+        "https://www.miraiworks.asia/about"
+      ],
+      "reason": "Steam权利方页面明确まどそふと开发、mirai works与OTAKU Plan发行，并在正文限定mirai works负责本次Steam版publishing；仅复核既有一条联合发行，不据此增加原作开发、本地化或公司类别。同名miraiworks.asia页面自称2025年成立，未见与2022 Steam署名的可核连接；该页仅作同名候选排查，不视为既有发行商官网，不将其法人资料映射到本节点。Hawk Eye旗下mirai、招聘顾问同名公司及该同名站点均不自动合并，身份继续unknown。",
+      "workIds": [
+        "g210"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "M",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 30,
+    "processedEntityIds": [
+      "entity-macadamia",
+      "entity-madosoft",
+      "entity-mages",
+      "entity-name-1cc39c9db973",
+      "entity-makura",
+      "entity-name-85a1fd56da66",
+      "entity-name-35ae58bf892b",
+      "entity-name-ff103df997b5",
+      "entity-name-170de3c8b237",
+      "entity-name-770b8bb9bcbc",
+      "entity-name-fec7ac8f12b1",
+      "entity-name-61d0027ef7ce",
+      "entity-melbournehouse",
+      "entity-name-5714be41cf55",
+      "entity-microcabin",
+      "entity-microsoft",
+      "entity-microsoft_home",
+      "entity-microsoft_studios",
+      "entity-minato_carnival_world",
+      "entity-minato_carnival",
+      "entity-minatosoft",
+      "entity-name-297835568b98",
+      "entity-minori",
+      "entity-mirai",
+      "entity-name-5963707789d1"
+    ],
+    "nextEntityId": "entity-name-935c3bc35045",
+    "nextName": "Mixx Entertainment",
+    "queue": [
+      {
+        "entityId": "entity-macadamia",
+        "name": "Macadamia Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-madosoft",
+        "name": "Madosoft（まどそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mages",
+        "name": "MAGES.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1cc39c9db973",
+        "name": "Magical Zoo（マジカルズゥ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-makura",
+        "name": "Makura（枕）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-85a1fd56da66",
+        "name": "MangaGamer",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-35ae58bf892b",
+        "name": "Marvelous",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ff103df997b5",
+        "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-170de3c8b237",
+        "name": "Masaya（メサイヤ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fec7ac8f12b1",
+        "name": "Matsushita Electric Industrial（松下電器産業）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-61d0027ef7ce",
+        "name": "MediaWorks",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-melbournehouse",
+        "name": "Melbourne House",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microcabin",
+        "name": "Micro Cabin（マイクロキャビン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft",
+        "name": "Microsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft_home",
+        "name": "Microsoft Home",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft_studios",
+        "name": "Microsoft Studios",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minato_carnival_world",
+        "name": "Minato Carnival World（みなとカーニバルWorld）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minato_carnival",
+        "name": "Minato Carnival（みなとカーニバル）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minatosoft",
+        "name": "Minato Soft（みなとそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-297835568b98",
+        "name": "Minato Station（みなとすてーしょん）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minori",
+        "name": "minori",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mirai",
+        "name": "mirai",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-935c3bc35045",
+        "name": "Mixx Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-fairytale_tsuki",
+        "name": "Moon-Star Group（月星組）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mosaic",
+        "name": "Mosaic Publishing",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-170eeb0b71f8",
+        "name": "Mosaic Publishing Ltd",
+        "status": "pending"
+      }
+    ]
+  }
+}
