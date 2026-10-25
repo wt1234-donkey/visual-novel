@@ -179,3 +179,5 @@ P2同时允许独立身份订正将动态解析的unknown节点核为既有模�
 2026-10-25 R字母首批使用 `entity-creator-r1-review-20261025.json` 与同名Markdown，按Rainbird、RED FLAG SHIP、RIGHTWAY连续核查3／5。同期出版行与访谈支持Rainbird出版品牌类别并显式保留publisher，政府法人资料及公司官网各确认后两项公司身份；全部职责和专题关联逐条保持，制作与经营沿革缺口具名待核。下一项Riverhill Soft（リバーヒルソフト）。
 
 2026-10-25 R字母第二批使用 `entity-creator-r2-review-20261025.json` 与同名Markdown，完成Riverhill Soft、Russell，R累计5／5。创始人分期履历与当事开发访谈支持Riverhill十部既有原作制作，其中一部仍保留related；Russell只确认公司身份，PSP发行与ゆずソフト追加内容制作分开。两条指定专题待核解除，其他历史发行、身份关系与基线保持；下一项SAGA PLANETS。
+
+2026-10-25 S字母首批使用 `entity-creator-s1-review-20261025.json` 与同名Markdown，核查SAGA PLANETS、Screaming Villains、SEGA（3／42）。追加SAGA两条关联制作品牌、SEGA两条关联原作制作；确认Screaming Villains公司身份并将2017周年版developer限定于既有增补内容g934-c-2。独立审核入口允许content／developer，必须验证确切目标、所属作品、added性质及目标旧职责，不允许直接解除指定专题待核。原作发行不继承增补内容开发，收录位置、历史发行及基线保持；下一项Seikaisha（星海社）。

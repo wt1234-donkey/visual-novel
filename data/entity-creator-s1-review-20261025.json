@@ -1,0 +1,508 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "fd3bfe5f871eb72909b480e714ba7169df7fb3f3",
+  "audit": "data/entity-creator-s1-review-20261025.md",
+  "previousReview": "data/entity-creator-r2-review-20261025.md",
+  "policy": "按S组前3项；品牌与法人、原作制作与增补内容开发、参与职责与收录位置分开。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS1-I01",
+      "entityId": "entity-name-d05eacc25c69",
+      "rawName": "Screaming Villains",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.prnewswire.com/news-releases/classic-video-game-night-trap-to-be-rereleased-august-11-to-mark-25th-anniversary-of-controversial-title-that-led-to-establishment-of-video-game-ratings-system-300502572.html",
+        "https://www.screamingvillains.com/"
+      ],
+      "note": "2017年当事新闻稿具名Screaming Villains LLC，并链接自营官网；官网自述独立游戏工作室及经典FMV复刻业务。将原未知身份订正为company，原publisher保持。Steam官方产品页将Screaming Villains列为开发者，并与Digital Pictures原作分开；新闻稿明确2017周年版重新构建并新增Survivor模式与可玩原型，故只给既有g934-c-2增补内容追加developer；不把1986拍摄、1992原作或Digital Pictures原作开发倒记给2016年成立的工作室，也不重复新增已收录周年版。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS1-C01",
+      "entityId": "entity-sagaplanets",
+      "dossierId": null,
+      "workId": "sagaplanets-r01",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "SAGA PLANETS",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://sagaplanets.product.co.jp/works/works.htm",
+      "note": "官方品牌旧产品目录具名本作及原画、剧本等制作信息，只追加品牌制作；保留originalPublishingBrand、publishingBrand及related位置，不由制作参与自动重判叙事收录或补普通后发版本。"
+    },
+    {
+      "reviewId": "AZS1-C02",
+      "entityId": "entity-sagaplanets",
+      "dossierId": null,
+      "workId": "sagaplanets-r02",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "SAGA PLANETS",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://sagaplanets.product.co.jp/works/works.htm",
+      "note": "官方品牌旧产品目录具名本作及原画、剧本等制作信息，只追加品牌制作；保留originalPublishingBrand、publishingBrand及related位置，不由制作参与自动重判叙事收录或补普通后发版本。"
+    },
+    {
+      "reviewId": "AZS1-C03",
+      "entityId": "entity-name-d05eacc25c69",
+      "dossierId": null,
+      "workId": "g934",
+      "targetType": "content",
+      "targetId": "g934-c-2",
+      "role": "developer",
+      "rawCredit": "Screaming Villains",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeTargetRoles": [],
+      "source": "https://store.steampowered.com/app/643620/Night_Trap__25th_Anniversary_Edition/",
+      "note": "Steam周年版官方页面明确开发者Screaming Villains，并将Digital Pictures原作与2017重构分开；当事新闻稿另确认新增Survivor玩法及可玩原型。仅确认既有增补内容g934-c-2开发，保留publisher，不作用于1992原作内容或其发行，不新增内容记录或原作制作职责。"
+    },
+    {
+      "reviewId": "AZS1-C04",
+      "entityId": "entity-sega",
+      "dossierId": null,
+      "workId": "sega-roommania",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "SEGA",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.4gamer.net/games/999/G999903/20260115035/",
+      "note": "当事制作团队口述明确原作源于当时SEGA内部数字媒体制作部门的企划与制作；仅补2000ROOMMANIA#203原作制作，保留publisher与related，不把2003续作、后发移植或其后独立公司的职责并入。"
+    },
+    {
+      "reviewId": "AZS1-C05",
+      "entityId": "entity-sega",
+      "dossierId": null,
+      "workId": "sega-new-sakura",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "SEGA",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.sega.jp/topics/detail/180416_info_1/",
+      "note": "2018当事方公告称由公司推进完全新作开发，2019制作人／导演访谈进一步说明内部项目与实现过程。仅追加2019新サクラ大戦原作制作，保留publisher及related，不倒推1996—2005旧系列、外部作者或后发改编职责。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-sagaplanets",
+      "name": "SAGA PLANETS",
+      "status": "historicalOperatorAndLaterPortDetailsDeferred",
+      "sources": [
+        "https://sagapla.net/product.html",
+        "https://sagaplanets.product.co.jp/works/works.htm"
+      ],
+      "reason": "本批不新建或合并同名法人，不补Visual Arts时期及后续运营起止。24条主库制作品牌保留原来源状态；两条关联制作不等于进入主库的叙事准入证据，后发主机发行与具体移植开发仍需逐版具名STAFF。",
+      "workIds": [
+        "g339",
+        "g340",
+        "g341",
+        "g342",
+        "g343",
+        "g344",
+        "g345",
+        "g346",
+        "g347",
+        "g348",
+        "g349",
+        "g350",
+        "g351",
+        "g352",
+        "g353",
+        "g354",
+        "g355",
+        "g356",
+        "g357",
+        "g358",
+        "g359",
+        "g360",
+        "g361",
+        "g362",
+        "sagaplanets-r01",
+        "sagaplanets-r02"
+      ]
+    },
+    {
+      "entityId": "entity-name-d05eacc25c69",
+      "name": "Screaming Villains",
+      "status": "otherLaterReleasesAndTechnicalSubrolesDeferred",
+      "sources": [
+        "https://www.screamingvillains.com/",
+        "https://www.prnewswire.com/news-releases/classic-video-game-night-trap-to-be-rereleased-august-11-to-mark-25th-anniversary-of-controversial-title-that-led-to-establishment-of-video-game-ratings-system-300502572.html"
+      ],
+      "reason": "2017版developer已在增补内容层确认，不再列成原作开发待核。新闻稿区分8月11日限量实体版与8月15日数字版，日期差异不据此重写既有合并发行；Xbox后续计划与后来Switch／Vita具体实现另核。增强画质不单独生成内容；原型与新增可玩模式沿用既有g934-c-2，不增作品或发行。",
+      "workIds": [
+        "g934"
+      ]
+    },
+    {
+      "entityId": "entity-sega",
+      "name": "SEGA（セガ）",
+      "status": "otherOriginalsPartnerAndPortRolesDeferred",
+      "sources": [
+        "https://www.4gamer.net/games/999/G999903/20260115035/",
+        "https://www.sega.jp/topics/detail/180416_info_1/",
+        "https://www.spike-chunsoft.co.jp/pages/games/segachun/kama3.html",
+        "https://www.sega.jp/mdmini2/soft/yumemi-mystery-mansion.html"
+      ],
+      "reason": "其余作品逐作开发及版本范围继续待核，原Chunsoft、GAINAX、RED、System Sacom、Digital Pictures及外部协作者职责不转给发行商。2003ニュールーマニア不因续作名或活动同场而自动继承2000内部团队原作职责；相关分社化与法人连续性不在本批新定关系。旧樱花大战各作、后发移植与平台第三方分开，不由新サクラ大戦倒推整系列。",
+      "workIds": [
+        "g034",
+        "g179",
+        "g181",
+        "g450",
+        "g815",
+        "g924",
+        "g925",
+        "g926",
+        "g927",
+        "g928",
+        "g929",
+        "g930",
+        "g931",
+        "g932",
+        "g933",
+        "g934",
+        "g935",
+        "sega-new-roommania",
+        "g1159",
+        "microcabin-riglord",
+        "microcabin-riglord2",
+        "te-soft-hydlide"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-sagaplanets",
+      "name": "SAGA PLANETS",
+      "status": "existingBrandTwentyFourProductionsRetainedTwoRelatedBrandsAdded",
+      "sources": [
+        "https://sagapla.net/product.html",
+        "https://sagaplanets.product.co.jp/works/works.htm"
+      ],
+      "reason": "沿用既有品牌身份和24部主库制作品牌，不重复追加。官方旧产品目录分别列PureHeart与ムギュ～っと！ペットめいど，并具名原画、剧本等制作资料；各给既有related作品追加一条productionBrand，原作发行品牌及发行品牌保持。两作仍属关联目录，职责核定不重判玩法／叙事主次，不新增主库、普通再版或当前法人的历史运营关系。",
+      "workIds": [
+        "g339",
+        "g340",
+        "g341",
+        "g342",
+        "g343",
+        "g344",
+        "g345",
+        "g346",
+        "g347",
+        "g348",
+        "g349",
+        "g350",
+        "g351",
+        "g352",
+        "g353",
+        "g354",
+        "g355",
+        "g356",
+        "g357",
+        "g358",
+        "g359",
+        "g360",
+        "g361",
+        "g362",
+        "sagaplanets-r01",
+        "sagaplanets-r02"
+      ]
+    },
+    {
+      "entityId": "entity-name-d05eacc25c69",
+      "name": "Screaming Villains",
+      "status": "companyConfirmedOneAddedContentDeveloperScoped",
+      "sources": [
+        "https://www.screamingvillains.com/",
+        "https://www.prnewswire.com/news-releases/classic-video-game-night-trap-to-be-rereleased-august-11-to-mark-25th-anniversary-of-controversial-title-that-led-to-establishment-of-video-game-ratings-system-300502572.html",
+        "https://store.steampowered.com/app/643620/Night_Trap__25th_Anniversary_Edition/"
+      ],
+      "reason": "2017年当事新闻稿具名Screaming Villains LLC，并链接自营官网；官网自述独立游戏工作室及经典FMV复刻业务。将原未知身份订正为company，原publisher保持。Steam官方产品页将Screaming Villains列为开发者，并与Digital Pictures原作分开；新闻稿明确2017周年版重新构建并新增Survivor模式与可玩原型，故只给既有g934-c-2增补内容追加developer；不把1986拍摄、1992原作或Digital Pictures原作开发倒记给2016年成立的工作室，也不重复新增已收录周年版。",
+      "workIds": [
+        "g934"
+      ]
+    },
+    {
+      "entityId": "entity-sega",
+      "name": "SEGA（セガ）",
+      "status": "twoRelatedOriginalProductionsConfirmedOtherDeveloperRolesSeparated",
+      "sources": [
+        "https://www.4gamer.net/games/999/G999903/20260115035/",
+        "https://www.sega.jp/topics/detail/180416_info_1/",
+        "https://game.watch.impress.co.jp/docs/interview/1207499.html",
+        "https://www.sega.jp/game/detail/sakura-taisen-shin-sakura/"
+      ],
+      "reason": "保留既有公司对象及26条publisher。ROOMMANIA#203当事制作团队在25周年活动回顾中说明当时隶属SEGA内部数字媒体制作部门，并讲述企划审批与实际制作；2018官方新サクラ大戦公告及2019制作人／导演访谈明确该项目原作开发。本批只给2000ROOMMANIA#203与2019新サクラ大戦各追加originalProduction，两作仍属related。不因主机平台、现行版权或一般产品目录，把其他制作室、合作者及后发移植职责全部归SEGA。",
+      "workIds": [
+        "g034",
+        "g179",
+        "g181",
+        "g450",
+        "g815",
+        "g924",
+        "g925",
+        "g926",
+        "g927",
+        "g928",
+        "g929",
+        "g930",
+        "g931",
+        "g932",
+        "g933",
+        "g934",
+        "g935",
+        "sega-roommania",
+        "sega-new-roommania",
+        "sega-new-sakura",
+        "g1159",
+        "microcabin-riglord",
+        "microcabin-riglord2",
+        "te-soft-hydlide"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega"
+    ],
+    "nextEntityId": "entity-name-7c9d766b5702",
+    "nextName": "Seikaisha（星海社）",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}

@@ -72,6 +72,7 @@ CREATOR_P3_REVIEW = 'data/entity-creator-p3-review-20261025.json'
 CREATOR_Q1_REVIEW = 'data/entity-creator-q1-review-20261025.json'
 CREATOR_R1_REVIEW = 'data/entity-creator-r1-review-20261025.json'
 CREATOR_R2_REVIEW = 'data/entity-creator-r2-review-20261025.json'
+CREATOR_S1_REVIEW = 'data/entity-creator-s1-review-20261025.json'
 TYPE_LABELS = {'company':'公司／组织','brand':'品牌','team':'制作团队','publication':'刊物／出版名义','individual':'个人','unknown':'身份待核','history':'沿革专题'}
 ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
 BRANDS = set('key aniplex_exe sprite madosoft yuzusoft innocent_grey minori august toneworks asaproject leaf sagaplanets smee favorite cuffs cube sphere palette silkys silkys_plus alicesoft overdrive cocktailsoft macadamia fairytale cabbage hulotte laplacian applique clochette nanawind harukaze sorahane hummingbird_soft minatosoft'.split())
@@ -129,7 +130,7 @@ def render_json(d): return json.dumps(d,ensure_ascii=False,indent=2)+'\n'
 
 def build():
  d=read('data/games.json'); coverage=read('data/company-coverage.json'); taxonomy=read('data/taxonomy.json'); companies={c['id']:c for c in coverage['companies']}
- review_batches=[read(PRIORITY_REVIEW),read(FOLLOWUP_REVIEW),read(THIRD_REVIEW),read(FOURTH_REVIEW),read(CREATOR_A_REVIEW),read(CREATOR_A2_REVIEW),read(CREATOR_A3_REVIEW),read(CREATOR_A4_REVIEW),read(CREATOR_A5_REVIEW),read(CREATOR_A6_REVIEW),read(CREATOR_B1_REVIEW),read(CREATOR_B2_REVIEW),read(CREATOR_B3_REVIEW),read(CREATOR_C1_REVIEW),read(CREATOR_C2_REVIEW),read(CREATOR_C3_REVIEW),read(CREATOR_C4_REVIEW),read(CREATOR_D1_REVIEW),read(CREATOR_D2_REVIEW),read(CREATOR_D3_REVIEW),read(CREATOR_E1_REVIEW),read(CREATOR_E2_REVIEW),read(CREATOR_E3_REVIEW),read(CREATOR_F1_REVIEW),read(CREATOR_F2_REVIEW),read(CREATOR_G1_REVIEW),read(CREATOR_G2_REVIEW),read(CREATOR_G3_REVIEW),read(CREATOR_H1_REVIEW),read(CREATOR_H2_REVIEW),read(CREATOR_H3_REVIEW),read(CREATOR_I1_REVIEW),read(CREATOR_I2_REVIEW),read(CREATOR_I3_REVIEW),read(CREATOR_I4_REVIEW),read(CREATOR_J1_REVIEW),read(CREATOR_K1_REVIEW),read(CREATOR_K2_REVIEW),read(CREATOR_K3_REVIEW),read(CREATOR_L1_REVIEW),read(CREATOR_L2_REVIEW),read(CREATOR_L3_REVIEW),read(CREATOR_M1_REVIEW),read(CREATOR_M2_REVIEW),read(CREATOR_M3_REVIEW),read(CREATOR_M4_REVIEW),read(CREATOR_M5_REVIEW),read(CREATOR_M6_REVIEW),read(CREATOR_N1_REVIEW),read(CREATOR_N2_REVIEW),read(CREATOR_N3_REVIEW),read(CREATOR_N4_REVIEW),read(CREATOR_N5_REVIEW),read(CREATOR_O1_REVIEW),read(CREATOR_P1_REVIEW),read(CREATOR_P2_REVIEW),read(CREATOR_P3_REVIEW),read(CREATOR_Q1_REVIEW),read(CREATOR_R1_REVIEW),read(CREATOR_R2_REVIEW)]
+ review_batches=[read(PRIORITY_REVIEW),read(FOLLOWUP_REVIEW),read(THIRD_REVIEW),read(FOURTH_REVIEW),read(CREATOR_A_REVIEW),read(CREATOR_A2_REVIEW),read(CREATOR_A3_REVIEW),read(CREATOR_A4_REVIEW),read(CREATOR_A5_REVIEW),read(CREATOR_A6_REVIEW),read(CREATOR_B1_REVIEW),read(CREATOR_B2_REVIEW),read(CREATOR_B3_REVIEW),read(CREATOR_C1_REVIEW),read(CREATOR_C2_REVIEW),read(CREATOR_C3_REVIEW),read(CREATOR_C4_REVIEW),read(CREATOR_D1_REVIEW),read(CREATOR_D2_REVIEW),read(CREATOR_D3_REVIEW),read(CREATOR_E1_REVIEW),read(CREATOR_E2_REVIEW),read(CREATOR_E3_REVIEW),read(CREATOR_F1_REVIEW),read(CREATOR_F2_REVIEW),read(CREATOR_G1_REVIEW),read(CREATOR_G2_REVIEW),read(CREATOR_G3_REVIEW),read(CREATOR_H1_REVIEW),read(CREATOR_H2_REVIEW),read(CREATOR_H3_REVIEW),read(CREATOR_I1_REVIEW),read(CREATOR_I2_REVIEW),read(CREATOR_I3_REVIEW),read(CREATOR_I4_REVIEW),read(CREATOR_J1_REVIEW),read(CREATOR_K1_REVIEW),read(CREATOR_K2_REVIEW),read(CREATOR_K3_REVIEW),read(CREATOR_L1_REVIEW),read(CREATOR_L2_REVIEW),read(CREATOR_L3_REVIEW),read(CREATOR_M1_REVIEW),read(CREATOR_M2_REVIEW),read(CREATOR_M3_REVIEW),read(CREATOR_M4_REVIEW),read(CREATOR_M5_REVIEW),read(CREATOR_M6_REVIEW),read(CREATOR_N1_REVIEW),read(CREATOR_N2_REVIEW),read(CREATOR_N3_REVIEW),read(CREATOR_N4_REVIEW),read(CREATOR_N5_REVIEW),read(CREATOR_O1_REVIEW),read(CREATOR_P1_REVIEW),read(CREATOR_P2_REVIEW),read(CREATOR_P3_REVIEW),read(CREATOR_Q1_REVIEW),read(CREATOR_R1_REVIEW),read(CREATOR_R2_REVIEW),read(CREATOR_S1_REVIEW)]
  identity_reviews={x['entityId']:x for batch in review_batches for x in batch['identityCorrections']}
  assert len(identity_reviews)==sum(len(batch['identityCorrections']) for batch in review_batches),'重复的主体订正'
  entities={}; aliases={}; dossiers=[]; relations=[]; credits=[]; memberships=[]; reviews=[]; placements=[]; names_review=[]; conflicts=[]
@@ -237,23 +238,31 @@ def build():
   if r['workId'] in {'g200','g201'} and 'entity-imel' in release_entities(r):credit('entity-imel','release',r['id'],'portDeveloper','https://imel.co.jp/activity/',status='sourceReviewed',note='官方实绩的主机／手机移植开发；非原作剧本制作。',work_id=r['workId'])
  for cv in allcontents:
   if cv['workId']=='g821' and cv['firstYear']==2024:credit('entity-yonago_gainax','content',cv['id'],'addedAnimation','https://blissbrain.co.jp/pm2rg/',status='sourceReviewed',note='2024重制的新增动画，不是原GAINAX本社。',work_id='g821')
- # Apply independently sourced work contributions; an optional dossierId scopes membership changes.
+ # Apply independently sourced contributions; later-content development never becomes original-work production.
  reviewed_memberships={}
  for reviewed,audit in [(x,batch['audit']) for batch in review_batches for x in batch['creditAdditions']]:
   eid=reviewed['entityId'];wid=reviewed['workId'];cid=reviewed['dossierId']
   assert reviewed['status']=='sourceReviewed' and eid in entities and wid in allworks
-  assert reviewed['targetType']=='work' and reviewed['role'] in {'coDeveloper','originalProduction','supervisor','productionBrand'}
+  level=reviewed['targetType'];target=wid if level=='work' else reviewed.get('targetId')
+  if level=='work':
+   assert reviewed['role'] in {'coDeveloper','originalProduction','supervisor','productionBrand'}
+   before_roles=reviewed.get('beforeWorkRoles',[])
+  else:
+   assert level=='content' and reviewed['role']=='developer' and cid is None,'后发内容开发须独立限定内容ID，不能直接解除专题待核'
+   content=next((cv for cv in allcontents if cv['id']==target),None)
+   assert content and content['workId']==wid and content['basis']=='added','内容开发追加必须命中同作品既有增补内容'
+   before_roles=reviewed['beforeTargetRoles']
   assert locations[wid]==reviewed['expectedPlacement']
-  current_roles=sorted({x['role'] for x in credits if x['entityId']==eid and x['targetType']=='work' and x['targetId']==wid})
-  assert current_roles==reviewed.get('beforeWorkRoles',[]),'作品职责旧值与独立追加记录不符'
-  assert (eid,'work',wid,reviewed['role']) not in credit_seen,'已存在职责不能由追加记录覆盖'
+  current_roles=sorted({x['role'] for x in credits if x['entityId']==eid and x['targetType']==level and x['targetId']==target})
+  assert current_roles==before_roles,'目标职责旧值与独立追加记录不符'
+  assert (eid,level,target,reviewed['role']) not in credit_seen,'已存在职责不能由追加记录覆盖'
   if cid:
    assert wid in [*companies[cid]['workIds'],*[w['id'] for field in ['relatedGames','dossierOnlyWorks'] for w in companies[cid].get(field,[])]]
    assert eid in next(d['entityIds'] for d in dossiers if d['id']==cid)
    assert not any(x['entityId']==eid and x['workId']==wid for x in credits),'专题解除待核须单独审核旧职责'
    assert reviewed['before']=={'roles':['catalogueAssociation'],'group':'unresolved','status':'pendingRole'}
    assert (cid,wid) not in reviewed_memberships
-  credit(eid,'work',wid,reviewed['role'],reviewed['source'],raw=reviewed['rawCredit'],status='sourceReviewed',note=reviewed['note'])
+  credit(eid,level,target,reviewed['role'],reviewed['source'],raw=reviewed['rawCredit'],status='sourceReviewed',note=reviewed['note'],work_id=wid)
   credits[-1].update(reviewId=reviewed['reviewId'],reviewRecord=audit)
   if cid:reviewed_memberships[(cid,wid)]=reviewed
  assert set(identity_reviews)<=entities.keys(),'主体订正记录未命中既有身份'

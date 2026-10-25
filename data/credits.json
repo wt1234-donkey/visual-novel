@@ -65095,6 +65095,81 @@
       "territory": null,
       "reviewId": "AZR2-C10",
       "reviewRecord": "data/entity-creator-r2-review-20261025.md"
+    },
+    {
+      "id": "credit-e1e39bd412146177",
+      "entityId": "entity-sagaplanets",
+      "targetType": "work",
+      "targetId": "sagaplanets-r01",
+      "workId": "sagaplanets-r01",
+      "role": "productionBrand",
+      "rawCredit": "SAGA PLANETS",
+      "status": "sourceReviewed",
+      "source": "https://sagaplanets.product.co.jp/works/works.htm",
+      "note": "官方品牌旧产品目录具名本作及原画、剧本等制作信息，只追加品牌制作；保留originalPublishingBrand、publishingBrand及related位置，不由制作参与自动重判叙事收录或补普通后发版本。",
+      "territory": null,
+      "reviewId": "AZS1-C01",
+      "reviewRecord": "data/entity-creator-s1-review-20261025.md"
+    },
+    {
+      "id": "credit-49a24dbc9afed350",
+      "entityId": "entity-sagaplanets",
+      "targetType": "work",
+      "targetId": "sagaplanets-r02",
+      "workId": "sagaplanets-r02",
+      "role": "productionBrand",
+      "rawCredit": "SAGA PLANETS",
+      "status": "sourceReviewed",
+      "source": "https://sagaplanets.product.co.jp/works/works.htm",
+      "note": "官方品牌旧产品目录具名本作及原画、剧本等制作信息，只追加品牌制作；保留originalPublishingBrand、publishingBrand及related位置，不由制作参与自动重判叙事收录或补普通后发版本。",
+      "territory": null,
+      "reviewId": "AZS1-C02",
+      "reviewRecord": "data/entity-creator-s1-review-20261025.md"
+    },
+    {
+      "id": "credit-f01d028ee1c3865b",
+      "entityId": "entity-name-d05eacc25c69",
+      "targetType": "content",
+      "targetId": "g934-c-2",
+      "workId": "g934",
+      "role": "developer",
+      "rawCredit": "Screaming Villains",
+      "status": "sourceReviewed",
+      "source": "https://store.steampowered.com/app/643620/Night_Trap__25th_Anniversary_Edition/",
+      "note": "Steam周年版官方页面明确开发者Screaming Villains，并将Digital Pictures原作与2017重构分开；当事新闻稿另确认新增Survivor玩法及可玩原型。仅确认既有增补内容g934-c-2开发，保留publisher，不作用于1992原作内容或其发行，不新增内容记录或原作制作职责。",
+      "territory": null,
+      "reviewId": "AZS1-C03",
+      "reviewRecord": "data/entity-creator-s1-review-20261025.md"
+    },
+    {
+      "id": "credit-817d7f2d75316824",
+      "entityId": "entity-sega",
+      "targetType": "work",
+      "targetId": "sega-roommania",
+      "workId": "sega-roommania",
+      "role": "originalProduction",
+      "rawCredit": "SEGA",
+      "status": "sourceReviewed",
+      "source": "https://www.4gamer.net/games/999/G999903/20260115035/",
+      "note": "当事制作团队口述明确原作源于当时SEGA内部数字媒体制作部门的企划与制作；仅补2000ROOMMANIA#203原作制作，保留publisher与related，不把2003续作、后发移植或其后独立公司的职责并入。",
+      "territory": null,
+      "reviewId": "AZS1-C04",
+      "reviewRecord": "data/entity-creator-s1-review-20261025.md"
+    },
+    {
+      "id": "credit-041f6a2fef3c83a4",
+      "entityId": "entity-sega",
+      "targetType": "work",
+      "targetId": "sega-new-sakura",
+      "workId": "sega-new-sakura",
+      "role": "originalProduction",
+      "rawCredit": "SEGA",
+      "status": "sourceReviewed",
+      "source": "https://www.sega.jp/topics/detail/180416_info_1/",
+      "note": "2018当事方公告称由公司推进完全新作开发，2019制作人／导演访谈进一步说明内部项目与实现过程。仅追加2019新サクラ大戦原作制作，保留publisher及related，不倒推1996—2005旧系列、外部作者或后发改编职责。",
+      "territory": null,
+      "reviewId": "AZS1-C05",
+      "reviewRecord": "data/entity-creator-s1-review-20261025.md"
     }
   ],
   "dossierMemberships": [
@@ -68229,9 +68304,10 @@
       "placement": "related",
       "roles": [
         "originalPublishingBrand",
+        "productionBrand",
         "publishingBrand"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://sagapla.net/product.html",
       "status": "existingEvidence"
     },
@@ -68241,9 +68317,10 @@
       "placement": "related",
       "roles": [
         "originalPublishingBrand",
+        "productionBrand",
         "publishingBrand"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://sagapla.net/product.html",
       "status": "existingEvidence"
     },
@@ -78050,9 +78127,10 @@
       "workId": "sega-roommania",
       "placement": "related",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.sega.jp/history/companyTimeline/",
       "status": "existingEvidence"
     },
@@ -78072,9 +78150,10 @@
       "workId": "sega-new-sakura",
       "placement": "related",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.sega.jp/history/companyTimeline/",
       "status": "existingEvidence"
     },
