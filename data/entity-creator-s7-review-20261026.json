@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "3067b97219f10bfe0332862dd84785c36047e7ae",
+  "audit": "data/entity-creator-s7-review-20261026.md",
+  "previousReview": "data/entity-creator-s6-review-20261026.md",
+  "policy": "按S组第24—28项连续核查；三项公司类别独立订正，保留Sony原文分离与所有发行职责，失败访问明记缺口。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS7-I01",
+      "entityId": "entity-name-539be8af5be9",
+      "rawName": "Sol Press",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.linkedin.com/company/solpress",
+        "https://newton.backerkit.com/hosted_preorders/project_updates?page=2"
+      ],
+      "note": "Sol Press企业自述页以Sol Press, LLC.为名，明确本地化与出版公司；原项目方BackerKit公告确认2018英语Steam发行。仅将该历史署名核为公司，不以企业业务介绍推定本作原作开发或逐版翻译、移植职责；成立精确日期、当前登记状态及权利终止另核，空日期保留。"
+    },
+    {
+      "reviewId": "AZS7-I02",
+      "entityId": "entity-name-8865f66ec578",
+      "rawName": "Sony Computer Entertainment",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.sony.com/en/SonyInfo/News/Press/200311/03-054E/",
+        "https://www.sony.com/ja/SonyInfo/News/Press/200311/03-054/",
+        "https://sonyinteractive.com/en/press-releases/2016/160401-2/",
+        "https://www.productionig.com/contents/works/05_/000169.html",
+        "https://www.productionig.com/contents/works_sp/31_/s03_/index.html"
+      ],
+      "note": "Sony 2003年官方中英公告分别列历史公司正式商号及1993-11-16设立，支持1997—2005发行署名的公司类别。2016官方改名表区分新设SIE LLC与原SCE Inc.改名，不反写现名、不合并相邻日文原文实体。Double Cast官方STAFF分别列Production为Sugar & Rockets、Production I.G，Produced by为SCE；这些术语不可一律等同程序开发，Sony三条发行职责保持。"
+    },
+    {
+      "reviewId": "AZS7-I03",
+      "entityId": "entity-name-ffa62a4c6281",
+      "rawName": "ソニー・コンピュータエンタテインメント",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.sony.com/ja/SonyInfo/News/Press/200311/03-054/",
+        "https://www.sony.com/en/SonyInfo/News/Press/200311/03-054E/",
+        "https://sonyinteractive.com/en/press-releases/2016/160401-2/"
+      ],
+      "note": "日文原文ソニー・コンピュータエンタテインメント独立核为历史公司；2003日英官方公告共同确认正式名称和当时公司身份。保留本条ID、英文显示与原日文别名，不因与相邻英文记录同名而自动合并；1997 Linda³ Again发行不升级原作制作，后来的SIE重组不倒填本节点。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-539be8af5be9",
+      "name": "Sol Press",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.linkedin.com/company/solpress",
+        "https://newton.backerkit.com/hosted_preorders/project_updates?page=2"
+      ],
+      "reason": "法人登记全史、精确起止日期、权利终止及三条英语发行的具体翻译／增补／技术分工未逐项证实；本批不采用社区关于注销或失联的说法作登记结论。",
+      "workIds": [
+        "g855"
+      ]
+    },
+    {
+      "entityId": "entity-name-8865f66ec578",
+      "name": "Sony Computer Entertainment",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.sony.com/en/SonyInfo/News/Press/200311/03-054E/",
+        "https://www.sony.com/ja/SonyInfo/News/Press/200311/03-054/",
+        "https://sonyinteractive.com/en/press-releases/2016/160401-2/",
+        "https://www.productionig.com/contents/works/05_/000169.html",
+        "https://www.productionig.com/contents/works_sp/31_/s03_/index.html"
+      ],
+      "reason": "Sugar & Rockets、Production I.G尚无实体；本次已找到原作具名Production证据，后续可建立独立身份与限定角色，不能挂到Sony名下。Sony的Produced by与具体开发、2005 PSP技术移植和1997 Princess Maker版本分工仍需逐版核定。",
+      "workIds": [
+        "g027",
+        "g822"
+      ]
+    },
+    {
+      "entityId": "entity-name-ffa62a4c6281",
+      "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.sony.com/ja/SonyInfo/News/Press/200311/03-054/",
+        "https://www.sony.com/en/SonyInfo/News/Press/200311/03-054E/",
+        "https://sonyinteractive.com/en/press-releases/2016/160401-2/"
+      ],
+      "reason": "Linda³ Again的Sony发行、原版Alfa System制作与1997重制分工需独立STAFF证据；与英文同名节点的身份归并及法律连续性另立审核，不在类别订正中隐式合并。",
+      "workIds": [
+        "ascii-linda"
+      ]
+    },
+    {
+      "entityId": "entity-sorahane",
+      "name": "SORAHANE",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "http://www.sorahane.org/web/products/",
+        "https://www.sorahane.org/web/",
+        "https://www.sorahane.org/aqua/",
+        "https://www.sorahane.org/sakusaki/"
+      ],
+      "reason": "完整三作官方产品／STAFF正文与运营法人、移动技术实现待可读原始资料复核；本次只保留既有署名，不能将失败访问写作已验证。",
+      "workIds": [
+        "g903",
+        "g904",
+        "g905"
+      ]
+    },
+    {
+      "entityId": "entity-sphere",
+      "name": "Sphere",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.cuffs.co.jp/main/products/",
+        "https://www.cuffs.co.jp/main/online/game/"
+      ],
+      "reason": "四作的完整合同主体与后发主机／移动技术分工未逐版复验；本次只确认官方品牌编号与STAFF目录，不新增运营关系、普通发行或内容版本。",
+      "workIds": [
+        "g419",
+        "g420",
+        "g421",
+        "g422"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-539be8af5be9",
+      "name": "Sol Press",
+      "status": "historicalCompanyPublisherNotPromoted",
+      "sources": [
+        "https://www.linkedin.com/company/solpress",
+        "https://newton.backerkit.com/hosted_preorders/project_updates?page=2"
+      ],
+      "reason": "Sol Press企业自述页以Sol Press, LLC.为名，明确本地化与出版公司；原项目方BackerKit公告确认2018英语Steam发行。仅将该历史署名核为公司，不以企业业务介绍推定本作原作开发或逐版翻译、移植职责；成立精确日期、当前登记状态及权利终止另核，空日期保留。",
+      "workIds": [
+        "g855"
+      ]
+    },
+    {
+      "entityId": "entity-name-8865f66ec578",
+      "name": "Sony Computer Entertainment",
+      "status": "historicalCompanyEnglishSignatureKeptSeparate",
+      "sources": [
+        "https://www.sony.com/en/SonyInfo/News/Press/200311/03-054E/",
+        "https://www.sony.com/ja/SonyInfo/News/Press/200311/03-054/",
+        "https://sonyinteractive.com/en/press-releases/2016/160401-2/",
+        "https://www.productionig.com/contents/works/05_/000169.html",
+        "https://www.productionig.com/contents/works_sp/31_/s03_/index.html"
+      ],
+      "reason": "Sony 2003年官方中英公告分别列历史公司正式商号及1993-11-16设立，支持1997—2005发行署名的公司类别。2016官方改名表区分新设SIE LLC与原SCE Inc.改名，不反写现名、不合并相邻日文原文实体。Double Cast官方STAFF分别列Production为Sugar & Rockets、Production I.G，Produced by为SCE；这些术语不可一律等同程序开发，Sony三条发行职责保持。",
+      "workIds": [
+        "g027",
+        "g822"
+      ]
+    },
+    {
+      "entityId": "entity-name-ffa62a4c6281",
+      "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+      "status": "historicalCompanyJapaneseSignatureKeptSeparate",
+      "sources": [
+        "https://www.sony.com/ja/SonyInfo/News/Press/200311/03-054/",
+        "https://www.sony.com/en/SonyInfo/News/Press/200311/03-054E/",
+        "https://sonyinteractive.com/en/press-releases/2016/160401-2/"
+      ],
+      "reason": "日文原文ソニー・コンピュータエンタテインメント独立核为历史公司；2003日英官方公告共同确认正式名称和当时公司身份。保留本条ID、英文显示与原日文别名，不因与相邻英文记录同名而自动合并；1997 Linda³ Again发行不升级原作制作，后来的SIE重组不倒填本节点。",
+      "workIds": [
+        "ascii-linda"
+      ]
+    },
+    {
+      "entityId": "entity-sorahane",
+      "name": "SORAHANE",
+      "status": "existingBrandProductionPreservedSourceUnavailable",
+      "sources": [
+        "http://www.sorahane.org/web/products/",
+        "https://www.sorahane.org/web/",
+        "https://www.sorahane.org/aqua/",
+        "https://www.sorahane.org/sakusaki/"
+      ],
+      "reason": "沿用SORAHANE品牌和三作既有productionBrand。本次官方目录及主页返回502，AQUA与さくら、咲きました。产品页超时；搜索索引只可见首作与第三作等摘要，未声称完整正文重验。移动发行的ジャックインザボックス、ハブロッツ与萌えAPP服务范围分开；不补法人、姊妹品牌或跨平台制作。",
+      "workIds": [
+        "g903",
+        "g904",
+        "g905"
+      ]
+    },
+    {
+      "entityId": "entity-sphere",
+      "name": "Sphere",
+      "status": "existingBrandFourProductionsRechecked",
+      "sources": [
+        "https://www.cuffs.co.jp/main/products/",
+        "https://www.cuffs.co.jp/main/online/game/"
+      ],
+      "reason": "CUFFS官方Products正文可读，明确Sphere 1st—4th Product，逐列ヨスガノソラ、ハルカナソラ、イモウトノカタチ、Berry’s及各作STAFF；沿用四条既有productionBrand，不重复追加。哈鲁卡娜索拉独立Fan Disc身份与本篇保持；CUFFS、CUBE、Sonora及普通合售、下载再版不并作同一制作主体或新增内容。",
+      "workIds": [
+        "g419",
+        "g420",
+        "g421",
+        "g422"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715",
+      "entity-sierra_company",
+      "entity-silkys",
+      "entity-silkys_plus",
+      "entity-silkys_a5",
+      "entity-name-8c9d353d6fe9",
+      "entity-silkys_dolce",
+      "entity-silkys_wasabi",
+      "entity-name-b129f13b41e4",
+      "entity-sinclair",
+      "entity-name-12a802d7d9bd",
+      "entity-smee",
+      "entity-name-ce72ada6adcb",
+      "entity-name-539be8af5be9",
+      "entity-name-8865f66ec578",
+      "entity-name-ffa62a4c6281",
+      "entity-sorahane",
+      "entity-sphere"
+    ],
+    "nextEntityId": "entity-name-6d5cd9b9dc38",
+    "nextName": "Spike",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}
