@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "90759dbd7362b5fda9e77f8d8d0f2100fb558533",
+  "audit": "data/entity-creator-m4-review-20261025.md",
+  "previousReview": "data/entity-creator-m3-review-20261025.md",
+  "policy": "连续核查M第16—20项；公司、消费／发行品牌、内部团队分别保存，仅给有具名制作内容的三部原作追加子品牌职责。正文不可达的证据范围与目录外项目明确保留。",
+  "identityCorrections": [],
+  "creditAdditions": [
+    {
+      "reviewId": "AZM4-C01",
+      "entityId": "entity-minato_carnival",
+      "dossierId": null,
+      "workId": "g1258",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "みなとカーニバル",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.minatocarnival.com/tsujidou/outline.php",
+      "note": "官方原作概要与制作者发言具名企划タカヒロ、剧本さかき傘、原画みこしまつり；以具名制作资料登记本作原作制作品牌，不扩大到后发移植或其他品牌。 本轮依据官方搜索索引可取得的具名内容，正文访问失败，不声称完整职员表已经核验；父品牌专题职责待核保持。"
+    },
+    {
+      "reviewId": "AZM4-C02",
+      "entityId": "entity-minato_carnival",
+      "dossierId": null,
+      "workId": "g1260",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "みなとカーニバル",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.minatocarnival.com/anekouji-sd/outline.php",
+      "note": "官方原作概要说明タカヒロ与王雀孫合作、みこしまつり与白猫参謀原画及制作定位；登记本作制作品牌，不把合作作者等同品牌雇员或全部工种自研。 本轮依据官方搜索索引可取得的具名内容，正文访问失败，不声称完整职员表已经核验；父品牌专题职责待核保持。"
+    },
+    {
+      "reviewId": "AZM4-C03",
+      "entityId": "entity-minato_carnival",
+      "dossierId": null,
+      "workId": "g1262",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "みなとカーニバル",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.minatocarnival.com/wakasama/concept.html",
+      "note": "官方原作概念页具名タカヒロ企划、田中ロミオ全剧本、みこしまつり原画，并明确为该品牌新作；登记原作制作品牌，不由版权或发行推定。 本轮依据官方搜索索引可取得的具名内容，正文访问失败，不声称完整职员表已经核验；父品牌专题职责待核保持。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-microsoft",
+      "name": "Microsoft",
+      "status": "existingCompanyPublishingBoundaryRetained",
+      "sources": [
+        "https://devblogs.microsoft.com/oldnewthing/20160209-00/?p=93002",
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+        "https://neverhood.se/olde/nev/scoop"
+      ],
+      "reason": "微软官方博客再次说明1975年4月4日创业，沿用既有公司节点；Xbox官方2019公告明确游戏开发组织及各独立团队，不能把集团旗下团队、历史收购和发行品牌归并成Microsoft自身逐作开发。原Neverhood开发方保存的产品介绍明确Microsoft／DreamWorks Interactive为发行标签，支持保留旧联名发行，不改成微软原作制作。现有三条发行及19部专题关联均保持；g089的微软商业改编与1976／1977原作者身份分开，具体移植开发、项目管理和其余合作职责继续逐版待核。",
+      "workIds": [
+        "g089",
+        "g010",
+        "g975",
+        "g966",
+        "g976",
+        "g967",
+        "g968",
+        "g977",
+        "g969",
+        "g970",
+        "g974",
+        "g971",
+        "g972",
+        "g973",
+        "g962",
+        "g978",
+        "g963",
+        "g964",
+        "g965"
+      ]
+    },
+    {
+      "entityId": "entity-microsoft_home",
+      "name": "Microsoft Home",
+      "status": "existingConsumerBrandReconfirmed",
+      "sources": [
+        "https://learn.microsoft.com/en-us/shows/history/history-of-microsoft-1993",
+        "https://www.acmi.net.au/works/84348--microsoft-gahan-wilsons-the-ultimate-haunted-house-mac/"
+      ],
+      "reason": "微软官方1993年沿革明确10月4日推出Microsoft Home消费者软件品牌，支持沿用既有品牌类别，不误用1994展示住宅项目的同名网页。g966保留一条发行品牌和一条原作发行品牌。ACMI实物馆藏以production company标示Microsoft Corporation，并说明Gahan Wilson设计，但该馆藏通用字段不足以判定Microsoft Home品牌承担原作开发，未取得原职员表前不追加制作，也不消除微软公司专题职责待核。",
+      "workIds": [
+        "g966"
+      ]
+    },
+    {
+      "entityId": "entity-microsoft_studios",
+      "name": "Microsoft Studios",
+      "status": "existingPublishingBrandDeveloperBoundaryRetained",
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+        "https://www.xbox.com/en-us/games/store/d4-dark-dreams-dont-die/bvgqmljfsszg"
+      ],
+      "reason": "Xbox官方2019年2月5日公告明确将游戏开发组织Microsoft Studios更名为Xbox Game Studios，列出独立开发团队及Global Publishing。D4官方产品页同时明确Microsoft Studios发行与Access Games开发，支持分开保存品牌发行与实际开发。沿用既有品牌节点、14条具体发行品牌与5条原作发行品牌，不把组织总称当作所有具体作品的开发团队，不自动合并Xbox Game Studios节点或增加更名关系；后发移植和现行商店署名不倒填早期原作。",
+      "workIds": [
+        "g962",
+        "g971",
+        "g972",
+        "g973",
+        "g974"
+      ]
+    },
+    {
+      "entityId": "entity-minato_carnival_world",
+      "name": "Minato Carnival World（みなとカーニバルWorld）",
+      "status": "existingWorldBrandOutsideCatalogueRetained",
+      "sources": [
+        "https://www.minatocarnival.com/world/kurokami_bansan/"
+      ],
+      "reason": "官方可检索的World作品页具名クロカミサマの晩餐、企画シナリオタカヒロ与原画みこしまつり，沿用World独立品牌节点；与Minato Carnival和Minato Soft的现有家族关系保持。本轮官网正文获取失败，仅核对官方搜索索引摘要，不声称检查完整职员表。该作品不在现有主库／关联／书目身份中；本批不新建作品、发行或空目标职责，不把World制作职责加给同族其他品牌。目录准入留待独立作品核查。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-minato_carnival",
+      "name": "Minato Carnival（みなとカーニバル）",
+      "status": "threeOriginalProductionBrandsConfirmed",
+      "sources": [
+        "https://www.minatocarnival.com/guide.php",
+        "https://www.minatocarnival.com/staff-p.php",
+        "https://www.minatocarnival.com/tsujidou/outline.php",
+        "https://minatocarnival.com/tsujidou/meeting.php",
+        "https://www.minatocarnival.com/anekouji-sd/outline.php",
+        "https://www.minatocarnival.com/wakasama/concept.html",
+        "https://minatocarnival.com/tsujidou-vr/outline.php",
+        "https://www.minatocarnival.com/carnivalfd/outline.html"
+      ],
+      "reason": "官方品牌介绍与工作人员介绍支持沿用Minato Carnival独立品牌。官方原作概要／制作者发言分别具名纯爱之路的タカヒロ企划、さかき傘剧本及みこしまつり原画，姉小路直子的タカヒロ／王雀孫合作与两位原画，以及和香的タカヒロ企划、田中ロミオ全剧本和みこしまつり原画；据此追加三条限定原作制作品牌，不声称内部包办全部工种。本轮正文访问不稳定，依据已取得的官方搜索索引摘要，不冒称完整页面或原版职员表逐项验读。バージンロード与Carnival FD摘要能确认产品及衍生关系，尚不足以单独厘清制作范围，暂不追加其制作。2021クロガネPC扩充署名不倒填2015 Vita原作；也不把子品牌职责上推给Minato Soft或Hawk Eye，原五部发行及旧专题待核保持。",
+      "workIds": [
+        "g1258",
+        "g1259",
+        "g1260",
+        "g1261",
+        "g1262",
+        "g1264"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-microsoft",
+      "name": "Microsoft",
+      "status": "existingCompanyPublishingBoundaryRetained",
+      "sources": [
+        "https://devblogs.microsoft.com/oldnewthing/20160209-00/?p=93002",
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+        "https://neverhood.se/olde/nev/scoop"
+      ],
+      "reason": "微软官方博客再次说明1975年4月4日创业，沿用既有公司节点；Xbox官方2019公告明确游戏开发组织及各独立团队，不能把集团旗下团队、历史收购和发行品牌归并成Microsoft自身逐作开发。原Neverhood开发方保存的产品介绍明确Microsoft／DreamWorks Interactive为发行标签，支持保留旧联名发行，不改成微软原作制作。现有三条发行及19部专题关联均保持；g089的微软商业改编与1976／1977原作者身份分开，具体移植开发、项目管理和其余合作职责继续逐版待核。",
+      "workIds": [
+        "g089",
+        "g010",
+        "g975",
+        "g966",
+        "g976",
+        "g967",
+        "g968",
+        "g977",
+        "g969",
+        "g970",
+        "g974",
+        "g971",
+        "g972",
+        "g973",
+        "g962",
+        "g978",
+        "g963",
+        "g964",
+        "g965"
+      ]
+    },
+    {
+      "entityId": "entity-microsoft_home",
+      "name": "Microsoft Home",
+      "status": "existingConsumerBrandReconfirmed",
+      "sources": [
+        "https://learn.microsoft.com/en-us/shows/history/history-of-microsoft-1993",
+        "https://www.acmi.net.au/works/84348--microsoft-gahan-wilsons-the-ultimate-haunted-house-mac/"
+      ],
+      "reason": "微软官方1993年沿革明确10月4日推出Microsoft Home消费者软件品牌，支持沿用既有品牌类别，不误用1994展示住宅项目的同名网页。g966保留一条发行品牌和一条原作发行品牌。ACMI实物馆藏以production company标示Microsoft Corporation，并说明Gahan Wilson设计，但该馆藏通用字段不足以判定Microsoft Home品牌承担原作开发，未取得原职员表前不追加制作，也不消除微软公司专题职责待核。",
+      "workIds": [
+        "g966"
+      ]
+    },
+    {
+      "entityId": "entity-microsoft_studios",
+      "name": "Microsoft Studios",
+      "status": "existingPublishingBrandDeveloperBoundaryRetained",
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+        "https://www.xbox.com/en-us/games/store/d4-dark-dreams-dont-die/bvgqmljfsszg"
+      ],
+      "reason": "Xbox官方2019年2月5日公告明确将游戏开发组织Microsoft Studios更名为Xbox Game Studios，列出独立开发团队及Global Publishing。D4官方产品页同时明确Microsoft Studios发行与Access Games开发，支持分开保存品牌发行与实际开发。沿用既有品牌节点、14条具体发行品牌与5条原作发行品牌，不把组织总称当作所有具体作品的开发团队，不自动合并Xbox Game Studios节点或增加更名关系；后发移植和现行商店署名不倒填早期原作。",
+      "workIds": [
+        "g962",
+        "g971",
+        "g972",
+        "g973",
+        "g974"
+      ]
+    },
+    {
+      "entityId": "entity-minato_carnival_world",
+      "name": "Minato Carnival World（みなとカーニバルWorld）",
+      "status": "existingWorldBrandOutsideCatalogueRetained",
+      "sources": [
+        "https://www.minatocarnival.com/world/kurokami_bansan/"
+      ],
+      "reason": "官方可检索的World作品页具名クロカミサマの晩餐、企画シナリオタカヒロ与原画みこしまつり，沿用World独立品牌节点；与Minato Carnival和Minato Soft的现有家族关系保持。本轮官网正文获取失败，仅核对官方搜索索引摘要，不声称检查完整职员表。该作品不在现有主库／关联／书目身份中；本批不新建作品、发行或空目标职责，不把World制作职责加给同族其他品牌。目录准入留待独立作品核查。",
+      "workIds": []
+    },
+    {
+      "entityId": "entity-minato_carnival",
+      "name": "Minato Carnival（みなとカーニバル）",
+      "status": "threeOriginalProductionBrandsConfirmed",
+      "sources": [
+        "https://www.minatocarnival.com/guide.php",
+        "https://www.minatocarnival.com/staff-p.php",
+        "https://www.minatocarnival.com/tsujidou/outline.php",
+        "https://minatocarnival.com/tsujidou/meeting.php",
+        "https://www.minatocarnival.com/anekouji-sd/outline.php",
+        "https://www.minatocarnival.com/wakasama/concept.html",
+        "https://minatocarnival.com/tsujidou-vr/outline.php",
+        "https://www.minatocarnival.com/carnivalfd/outline.html"
+      ],
+      "reason": "官方品牌介绍与工作人员介绍支持沿用Minato Carnival独立品牌。官方原作概要／制作者发言分别具名纯爱之路的タカヒロ企划、さかき傘剧本及みこしまつり原画，姉小路直子的タカヒロ／王雀孫合作与两位原画，以及和香的タカヒロ企划、田中ロミオ全剧本和みこしまつり原画；据此追加三条限定原作制作品牌，不声称内部包办全部工种。本轮正文访问不稳定，依据已取得的官方搜索索引摘要，不冒称完整页面或原版职员表逐项验读。バージンロード与Carnival FD摘要能确认产品及衍生关系，尚不足以单独厘清制作范围，暂不追加其制作。2021クロガネPC扩充署名不倒填2015 Vita原作；也不把子品牌职责上推给Minato Soft或Hawk Eye，原五部发行及旧专题待核保持。",
+      "workIds": [
+        "g1258",
+        "g1259",
+        "g1260",
+        "g1261",
+        "g1262",
+        "g1264"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "M",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 30,
+    "processedEntityIds": [
+      "entity-macadamia",
+      "entity-madosoft",
+      "entity-mages",
+      "entity-name-1cc39c9db973",
+      "entity-makura",
+      "entity-name-85a1fd56da66",
+      "entity-name-35ae58bf892b",
+      "entity-name-ff103df997b5",
+      "entity-name-170de3c8b237",
+      "entity-name-770b8bb9bcbc",
+      "entity-name-fec7ac8f12b1",
+      "entity-name-61d0027ef7ce",
+      "entity-melbournehouse",
+      "entity-name-5714be41cf55",
+      "entity-microcabin",
+      "entity-microsoft",
+      "entity-microsoft_home",
+      "entity-microsoft_studios",
+      "entity-minato_carnival_world",
+      "entity-minato_carnival"
+    ],
+    "nextEntityId": "entity-minatosoft",
+    "nextName": "Minato Soft（みなとそふと）",
+    "queue": [
+      {
+        "entityId": "entity-macadamia",
+        "name": "Macadamia Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-madosoft",
+        "name": "Madosoft（まどそふと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-mages",
+        "name": "MAGES.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-1cc39c9db973",
+        "name": "Magical Zoo（マジカルズゥ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-makura",
+        "name": "Makura（枕）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-85a1fd56da66",
+        "name": "MangaGamer",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-35ae58bf892b",
+        "name": "Marvelous",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ff103df997b5",
+        "name": "Marvelous Interactive（マーベラスインタラクティブ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-170de3c8b237",
+        "name": "Masaya（メサイヤ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fec7ac8f12b1",
+        "name": "Matsushita Electric Industrial（松下電器産業）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-61d0027ef7ce",
+        "name": "MediaWorks",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-melbournehouse",
+        "name": "Melbourne House",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microcabin",
+        "name": "Micro Cabin（マイクロキャビン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft",
+        "name": "Microsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft_home",
+        "name": "Microsoft Home",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-microsoft_studios",
+        "name": "Microsoft Studios",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minato_carnival_world",
+        "name": "Minato Carnival World（みなとカーニバルWorld）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minato_carnival",
+        "name": "Minato Carnival（みなとカーニバル）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-minatosoft",
+        "name": "Minato Soft（みなとそふと）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-297835568b98",
+        "name": "Minato Station（みなとすてーしょん）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-minori",
+        "name": "minori",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mirai",
+        "name": "mirai",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-935c3bc35045",
+        "name": "Mixx Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-fairytale_tsuki",
+        "name": "Moon-Star Group（月星組）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-mosaic",
+        "name": "Mosaic Publishing",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-170eeb0b71f8",
+        "name": "Mosaic Publishing Ltd",
+        "status": "pending"
+      }
+    ]
+  }
+}
