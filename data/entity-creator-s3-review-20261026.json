@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "f36dff44f7107c0892709856460513eb505e6a30",
+  "audit": "data/entity-creator-s3-review-20261026.md",
+  "previousReview": "data/entity-creator-s2-review-20261025.md",
+  "policy": "按S组第8—11项连续核查；保持品牌、团队及不同公司身份，发行层开发不反写原作或共有内容。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS3-I01",
+      "entityId": "entity-name-663fc46f7715",
+      "rawName": "小学館",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.shogakukan.co.jp/company/profile",
+        "https://www.shogakukan.co.jp/storage/files/article/2024/SOL20240627MAGNET.pdf"
+      ],
+      "note": "官方公司概要索引及2024公司自行发布的PDF均具名株式会社小学館，独立订正company；网页正文抓取仅返回iframe，身份以可读PDF交叉确认。保留3DO哆啦A梦旧publisher与Riverhill原作制作，不将出版、IP或资本关系推成开发，不与小学馆Production合并。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS3-C01",
+      "entityId": "entity-name-5caee77c6090",
+      "dossierId": null,
+      "workId": "g046",
+      "targetType": "release",
+      "targetId": "g046-v3",
+      "role": "developer",
+      "rawCredit": "DEVELOPER: Elf, Shiravune",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeTargetRoles": [
+        "publisher"
+      ],
+      "source": "https://shiravune.com/archives/2502",
+      "note": "官方产品页具名2022-04-15发行的DEVELOPER为Elf, Shiravune；仅记录g046-v3这一发行的开发署名，不外推到1992原作、2021重制或共有内容ID，也不推断具体翻译、剧本或程序分工。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-sharrock",
+      "name": "SharRock",
+      "status": "sourceAndTechnicalScopeDeferred",
+      "sources": [
+        "https://www.sekonic.co.jp/company/history/",
+        "https://digandrescue.com/software/sharrock/3do-sharrock/"
+      ],
+      "reason": "原包装、品牌运营起止与三部3DO实际制作分工仍待核；个人目录不当作第一方材料。",
+      "workIds": [
+        "g830",
+        "g959",
+        "g831"
+      ]
+    },
+    {
+      "entityId": "entity-name-5caee77c6090",
+      "name": "Shiravune",
+      "status": "sourceAndTechnicalScopeDeferred",
+      "sources": [
+        "https://shiravune.com/about",
+        "https://shiravune.com/archives/2502"
+      ],
+      "reason": "七条发行仅同级生2022具名开发得以限定登记，其余逐版开发／本地化及团队法律运营关系另核。",
+      "workIds": [
+        "g046",
+        "g037",
+        "g236",
+        "g238",
+        "g243",
+        "g836",
+        "g847"
+      ]
+    },
+    {
+      "entityId": "entity-shopro",
+      "name": "Shogakukan Production（小学館プロダクション）",
+      "status": "sourceAndTechnicalScopeDeferred",
+      "sources": [
+        "https://www.shopro.co.jp/corporate/history/history_1990-1967.html",
+        "https://www.shopro.co.jp/corporate/profile/index.html",
+        "https://raido.moe/staff/sat/sat_kekkon.html",
+        "https://raido.moe/staff/ps1/ps1_sotsugyo_3.html"
+      ],
+      "reason": "片尾转录为二手保存材料，未独立复核原画面；制作统筹、外部技术开发及后发移植须分别核查。",
+      "workIds": [
+        "g960",
+        "g834",
+        "g961"
+      ]
+    },
+    {
+      "entityId": "entity-name-663fc46f7715",
+      "name": "Shogakukan（小学館）",
+      "status": "sourceAndTechnicalScopeDeferred",
+      "sources": [
+        "https://www.shogakukan.co.jp/company/profile",
+        "https://www.shogakukan.co.jp/storage/files/article/2024/SOL20240627MAGNET.pdf"
+      ],
+      "reason": "1995旧联合发行的合同与原版版权页仍需复核；当前公司身份不提升旧发行证据等级，不生成IP授权或母子关系。",
+      "workIds": [
+        "riverhill-dora"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-sharrock",
+      "name": "SharRock",
+      "status": "existingBrandRetainedCreditsDeferred",
+      "sources": [
+        "https://www.sekonic.co.jp/company/history/",
+        "https://digandrescue.com/software/sharrock/3do-sharrock/"
+      ],
+      "reason": "沿用既有SharRock品牌身份。Sekonic沿革只能直接证明北部通信工业公司历史；游戏品牌与三部3DO目录的对应由个人收藏目录辅助，未取得原包装完整署名，不能当作原作制作或移植开发证据。本批保持零独立职责与北部通信工业原发行行，SharRock与シャルラク分设。",
+      "workIds": [
+        "g830",
+        "g959",
+        "g831"
+      ]
+    },
+    {
+      "entityId": "entity-name-5caee77c6090",
+      "name": "Shiravune",
+      "status": "existingTeamOneReleaseDeveloperAdded",
+      "sources": [
+        "https://shiravune.com/about",
+        "https://shiravune.com/archives/2502"
+      ],
+      "reason": "官方About自称东京本地化团队，沿用team。官方同级生重制英文产品页明确2022-04-15版DEVELOPER为Elf, Shiravune，追加一条仅限g046-v3的developer；不向1992原作、2021重制或其他六作发行外推，不把开发栏目解释为具体翻译人员或剧本制作。",
+      "workIds": [
+        "g046",
+        "g037",
+        "g236",
+        "g238",
+        "g243",
+        "g836",
+        "g847"
+      ]
+    },
+    {
+      "entityId": "entity-shopro",
+      "name": "Shogakukan Production（小学館プロダクション）",
+      "status": "existingCompanyPublishersRetainedProductionRolesDeferred",
+      "sources": [
+        "https://www.shopro.co.jp/corporate/history/history_1990-1967.html",
+        "https://www.shopro.co.jp/corporate/profile/index.html",
+        "https://raido.moe/staff/sat/sat_kekkon.html",
+        "https://raido.moe/staff/ps1/ps1_sotsugyo_3.html"
+      ],
+      "reason": "沿用历史公司身份及三条发行。官方公司沿革与概要区别1967成立及现名；1995结婚片尾转录区分制作、企划与程序合作方，1998毕业III转录列本公司两名制片人及外部制作部门。本批只记录证据分工，转录未与原版画面独立复核，不据Presented by或公司制片人姓名直接补程序开发，不将1997 Crossworld发行反写1996原作。",
+      "workIds": [
+        "g960",
+        "g834",
+        "g961"
+      ]
+    },
+    {
+      "entityId": "entity-name-663fc46f7715",
+      "name": "Shogakukan（小学館）",
+      "status": "companyIdentityConfirmedPublisherRetained",
+      "sources": [
+        "https://www.shogakukan.co.jp/company/profile",
+        "https://www.shogakukan.co.jp/storage/files/article/2024/SOL20240627MAGNET.pdf"
+      ],
+      "reason": "官方公司概要索引及2024公司自行发布的PDF均具名株式会社小学館，独立订正company；网页正文抓取仅返回iframe，身份以可读PDF交叉确认。保留3DO哆啦A梦旧publisher与Riverhill原作制作，不将出版、IP或资本关系推成开发，不与小学馆Production合并。",
+      "workIds": [
+        "riverhill-dora"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715"
+    ],
+    "nextEntityId": "entity-sierra_company",
+    "nextName": "Sierra On-Line（原On-Line Systems）",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}
