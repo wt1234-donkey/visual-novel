@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "e979ee3268005970e977108479ae8fc7abe2c8ae",
+  "audit": "data/entity-creator-p3-review-20261025.md",
+  "previousReview": "data/entity-creator-p2-review-20261025.md",
+  "policy": "按P组第11—13项连续核查；现行与历史Purple身份分开，开发职责只在直接证据支持的原作范围追加。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZP3-I01",
+      "entityId": "entity-name-fb321fae98fc",
+      "rawName": "Purple software",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000003.000163730.html",
+        "https://www.purplesoftware.jp/products/"
+      ],
+      "note": "当事方2025年公告明确列品牌名为パープルソフトウェア，官网使用Purple software署名，故将本节点从unknown订正为brand。保留天使たちの午後 SEASON2001既有publisher，不自动生成发行品牌或制作品牌。官方目录确实列有该2001作品，但单作页面本次未取得有效正文；目录归档不单独解决原作STAFF及JAST旧品牌至现行品牌的历史交接。旧隐私页与现行公告公司名称不同，不据此填历史运营起止、合并法人或改写旧署名。",
+      "preserveReleaseRoles": true
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZP3-C01",
+      "entityId": "entity-psk",
+      "dossierId": null,
+      "workId": "g1096",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "PSK",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://prtimes.jp/main/html/rd/p/000000104.000069696.html",
+      "note": "D4官方公告在1987年原作介绍中明确PSK为开发方；仅追加ザ・病院原作制作，保留原publisher，不将2022复刻发行当作原作新内容或给PSK批量增加其他作品开发。"
+    },
+    {
+      "reviewId": "AZP3-C02",
+      "entityId": "entity-jast_purple",
+      "dossierId": null,
+      "workId": "g673",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "Purple",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.blackrainbow.jp/dvdpg/006/index.html",
+      "note": "BLACKRAINBOW官方DVDPG页明确原游戏由Purple开发；职责限1999年かすみ遊戯原作的旧Purple品牌，不转给现行Purple software或JAST公司，也不把2002DVDPG改编制作倒填给原品牌。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-psk",
+      "name": "PSK（パソコンショップ高知）",
+      "status": "oneOriginalProductionConfirmedOtherDevelopmentDeferred",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000104.000069696.html",
+        "https://fm-7.com/museum/products/4tfxljbv/",
+        "https://repadars.org/psk1.html"
+      ],
+      "reason": "D4エンタープライズ2022年官方复刻公告在介绍1987年ザ・病院时明确称PSK为开发方，故只追加该原作制作。既有公司身份、五条publisher和八条专题引用保留。Christine的Oh!FM-7条目将开发方写作PSK?，不能删掉问号；历史介绍自称非官方并含软件屋笑话，不能作为法人设立或所有作品开发的统一证据。其余逐作职责、店铺活动与法人沿革继续待核。",
+      "workIds": [
+        "g005",
+        "g1095",
+        "g1096",
+        "g1097",
+        "psk-alice",
+        "psk-cosmo-angel",
+        "psk-final-lolita",
+        "psk-lolita2",
+        "psk-yellow-lemon"
+      ]
+    },
+    {
+      "entityId": "entity-name-fb321fae98fc",
+      "name": "Purple software",
+      "status": "brandConfirmedHistoricalTransitionAndOriginalStaffDeferred",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000003.000163730.html",
+        "https://www.purplesoftware.jp/products/",
+        "https://www.purplesoftware.jp/privacy.html",
+        "https://www.purplesoftware.jp/products/tenshi/"
+      ],
+      "reason": "当事方2025年公告明确列品牌名为パープルソフトウェア，官网使用Purple software署名，故将本节点从unknown订正为brand。保留天使たちの午後 SEASON2001既有publisher，不自动生成发行品牌或制作品牌。官方目录确实列有该2001作品，但单作页面本次未取得有效正文；目录归档不单独解决原作STAFF及JAST旧品牌至现行品牌的历史交接。旧隐私页与现行公告公司名称不同，不据此填历史运营起止、合并法人或改写旧署名。",
+      "workIds": [
+        "g678"
+      ]
+    },
+    {
+      "entityId": "entity-jast_purple",
+      "name": "Purple（JAST期）",
+      "status": "oneHistoricalProductionBrandConfirmedOtherOriginalStaffDeferred",
+      "sources": [
+        "https://www.blackrainbow.jp/dvdpg/006/index.html",
+        "https://kiisu.egono.com/main.php?key=lien"
+      ],
+      "reason": "BLACKRAINBOW的2002年かすみ遊戯DVDPG产品页明确说原作由Purple开发，且将原PC版与本次DVDPG产品分列。只给1999年原作g673追加旧Purple制作品牌，保留六作十二条原作发行品牌／平台发行品牌职责。该证据不转给现行Purple software，不给JAST母专题继承原作制作，也不赋予旧Purple后发DVDPG移植职责。Lien页面是二次评论而非取得的原始STAFF，其余五作制作和历史主体交接继续待核。",
+      "workIds": [
+        "g673",
+        "g674",
+        "g675",
+        "jast-world",
+        "jast-mugen",
+        "jast-purple-fd"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-psk",
+      "name": "PSK（パソコンショップ高知）",
+      "status": "oneOriginalProductionConfirmedOtherDevelopmentDeferred",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000104.000069696.html",
+        "https://fm-7.com/museum/products/4tfxljbv/",
+        "https://repadars.org/psk1.html"
+      ],
+      "reason": "D4エンタープライズ2022年官方复刻公告在介绍1987年ザ・病院时明确称PSK为开发方，故只追加该原作制作。既有公司身份、五条publisher和八条专题引用保留。Christine的Oh!FM-7条目将开发方写作PSK?，不能删掉问号；历史介绍自称非官方并含软件屋笑话，不能作为法人设立或所有作品开发的统一证据。其余逐作职责、店铺活动与法人沿革继续待核。",
+      "workIds": [
+        "g005",
+        "g1095",
+        "g1096",
+        "g1097",
+        "psk-alice",
+        "psk-cosmo-angel",
+        "psk-final-lolita",
+        "psk-lolita2",
+        "psk-yellow-lemon"
+      ]
+    },
+    {
+      "entityId": "entity-name-fb321fae98fc",
+      "name": "Purple software",
+      "status": "brandConfirmedHistoricalTransitionAndOriginalStaffDeferred",
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000003.000163730.html",
+        "https://www.purplesoftware.jp/products/",
+        "https://www.purplesoftware.jp/privacy.html",
+        "https://www.purplesoftware.jp/products/tenshi/"
+      ],
+      "reason": "当事方2025年公告明确列品牌名为パープルソフトウェア，官网使用Purple software署名，故将本节点从unknown订正为brand。保留天使たちの午後 SEASON2001既有publisher，不自动生成发行品牌或制作品牌。官方目录确实列有该2001作品，但单作页面本次未取得有效正文；目录归档不单独解决原作STAFF及JAST旧品牌至现行品牌的历史交接。旧隐私页与现行公告公司名称不同，不据此填历史运营起止、合并法人或改写旧署名。",
+      "workIds": [
+        "g678"
+      ]
+    },
+    {
+      "entityId": "entity-jast_purple",
+      "name": "Purple（JAST期）",
+      "status": "oneHistoricalProductionBrandConfirmedOtherOriginalStaffDeferred",
+      "sources": [
+        "https://www.blackrainbow.jp/dvdpg/006/index.html",
+        "https://kiisu.egono.com/main.php?key=lien"
+      ],
+      "reason": "BLACKRAINBOW的2002年かすみ遊戯DVDPG产品页明确说原作由Purple开发，且将原PC版与本次DVDPG产品分列。只给1999年原作g673追加旧Purple制作品牌，保留六作十二条原作发行品牌／平台发行品牌职责。该证据不转给现行Purple software，不给JAST母专题继承原作制作，也不赋予旧Purple后发DVDPG移植职责。Lien页面是二次评论而非取得的原始STAFF，其余五作制作和历史主体交接继续待核。",
+      "workIds": [
+        "g673",
+        "g674",
+        "g675",
+        "jast-world",
+        "jast-mugen",
+        "jast-purple-fd"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "P",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 13,
+    "processedEntityIds": [
+      "entity-palette",
+      "entity-name-906fa9d6b292",
+      "entity-name-db9995981277",
+      "entity-name-84c58ec33dac",
+      "entity-name-fb8b690c85a0",
+      "entity-name-e8f2daf6c0f9",
+      "entity-pride",
+      "entity-name-e853d08ed1b6",
+      "entity-prototype",
+      "entity-name-cd9fca98a5c2",
+      "entity-psk",
+      "entity-name-fb321fae98fc",
+      "entity-jast_purple"
+    ],
+    "nextEntityId": "entity-name-5c50162a1fac",
+    "nextName": "Quest（クエスト）",
+    "queue": [
+      {
+        "entityId": "entity-palette",
+        "name": "Palette（ぱれっと）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-906fa9d6b292",
+        "name": "Philips Interactive Media, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-db9995981277",
+        "name": "PIACCI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-84c58ec33dac",
+        "name": "Pioneer LDC（パイオニアLDC）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fb8b690c85a0",
+        "name": "Pony Canyon",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e8f2daf6c0f9",
+        "name": "Pony Canyon（ポニーキャニオン）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-pride",
+        "name": "pride",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e853d08ed1b6",
+        "name": "Princess Soft（プリンセスソフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-prototype",
+        "name": "PROTOTYPE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-cd9fca98a5c2",
+        "name": "Psionic",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-psk",
+        "name": "PSK（パソコンショップ高知）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-fb321fae98fc",
+        "name": "Purple software",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-jast_purple",
+        "name": "Purple（JAST期）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
