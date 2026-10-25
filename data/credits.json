@@ -65215,6 +65215,66 @@
       "territory": null,
       "reviewId": "AZS3-C01",
       "reviewRecord": "data/entity-creator-s3-review-20261026.md"
+    },
+    {
+      "id": "credit-8e6d4b6343ce6127",
+      "entityId": "entity-sierra_company",
+      "targetType": "work",
+      "targetId": "g001",
+      "workId": "g001",
+      "role": "originalProduction",
+      "rawCredit": "Mystery House: Roberta designed, wrote and illustrated; Ken programmed",
+      "status": "sourceReviewed",
+      "source": "https://www.sierragamers.com/wp-content/uploads/2019/12/Roberta_Williams_Anthology_Manual.pdf",
+      "note": "Ken在原官方合集手册的第一人称回顾明确夫妻原始设计、图像和程序制作；本次只读取到该PDF搜索索引片段，全文因43MB限制未直读。限定1980原作制作，不将后发StarCraft版开发归给原公司。",
+      "territory": null,
+      "reviewId": "AZS4-C01",
+      "reviewRecord": "data/entity-creator-s4-review-20261026.md"
+    },
+    {
+      "id": "credit-756a2b5636572a30",
+      "entityId": "entity-sierra_company",
+      "targetType": "work",
+      "targetId": "g060",
+      "workId": "g060",
+      "role": "originalProduction",
+      "rawCredit": "Roberta says: IBM wanted a new type of game",
+      "status": "sourceReviewed",
+      "source": "https://www.sierragamers.com/kings-quest-1-agi/",
+      "note": "创办人档案保存Roberta在官方合集手册中的逐作开发回顾，明确IBM委托和团队动画实现；限定1984原作制作，IBM发行行、后发重制及具体员工职责保持。",
+      "territory": null,
+      "reviewId": "AZS4-C02",
+      "reviewRecord": "data/entity-creator-s4-review-20261026.md"
+    },
+    {
+      "id": "credit-cad088ae76e3bc02",
+      "entityId": "entity-sierra_company",
+      "targetType": "work",
+      "targetId": "g061",
+      "workId": "g061",
+      "role": "originalProduction",
+      "rawCredit": "Roberta says: King’s Quest II",
+      "status": "sourceReviewed",
+      "source": "https://www.sierragamers.com/kings-quest-2/",
+      "note": "创办人档案保存Roberta对第二部的设计与具体场景回顾，区别第一部和后发版本；限定1985原作制作，不因同系列推导其它续作开发。",
+      "territory": null,
+      "reviewId": "AZS4-C03",
+      "reviewRecord": "data/entity-creator-s4-review-20261026.md"
+    },
+    {
+      "id": "credit-744fa37a1d68a03c",
+      "entityId": "entity-silkys_a5",
+      "targetType": "work",
+      "targetId": "g473",
+      "workId": "g473",
+      "role": "productionBrand",
+      "rawCredit": "シルキーズプラス A5和牛",
+      "status": "sourceReviewed",
+      "source": "https://www.silkysplus.jp/game/butterfly/talk_01.html",
+      "note": "官方开发座谈搜索索引明确本作由シルキーズプラス开发制片人率领制作团队；与官方productinfo.html具名A5和牛品牌交叉限定g473。正文直读502，仅核可见索引文字，不外推其它子团队、根雪或补充篇；不解除父专题职责待核。",
+      "territory": null,
+      "reviewId": "AZS4-C04",
+      "reviewRecord": "data/entity-creator-s4-review-20261026.md"
     }
   ],
   "dossierMemberships": [
@@ -84991,9 +85051,10 @@
       "workId": "g001",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.sierragamers.com/sierra-games/",
       "status": "existingEvidence"
     },
@@ -85068,9 +85129,10 @@
       "workId": "g060",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.sierragamers.com/sierra-games/",
       "status": "existingEvidence"
     },
@@ -85223,9 +85285,10 @@
       "workId": "g061",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.sierragamers.com/sierra-games/",
       "status": "existingEvidence"
     },

@@ -1,0 +1,605 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "cc68f2017328ad01445fa06cb0987d58a0d475d3",
+  "audit": "data/entity-creator-s4-review-20261026.md",
+  "previousReview": "data/entity-creator-s3-review-20261026.md",
+  "policy": "按S组第12—15项连续核查；原作制作、外部工作室开发、发行品牌及子品牌分别限定。",
+  "identityCorrections": [],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS4-C01",
+      "entityId": "entity-sierra_company",
+      "dossierId": null,
+      "workId": "g001",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Mystery House: Roberta designed, wrote and illustrated; Ken programmed",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.sierragamers.com/wp-content/uploads/2019/12/Roberta_Williams_Anthology_Manual.pdf",
+      "note": "Ken在原官方合集手册的第一人称回顾明确夫妻原始设计、图像和程序制作；本次只读取到该PDF搜索索引片段，全文因43MB限制未直读。限定1980原作制作，不将后发StarCraft版开发归给原公司。"
+    },
+    {
+      "reviewId": "AZS4-C02",
+      "entityId": "entity-sierra_company",
+      "dossierId": null,
+      "workId": "g060",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Roberta says: IBM wanted a new type of game",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.sierragamers.com/kings-quest-1-agi/",
+      "note": "创办人档案保存Roberta在官方合集手册中的逐作开发回顾，明确IBM委托和团队动画实现；限定1984原作制作，IBM发行行、后发重制及具体员工职责保持。"
+    },
+    {
+      "reviewId": "AZS4-C03",
+      "entityId": "entity-sierra_company",
+      "dossierId": null,
+      "workId": "g061",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Roberta says: King’s Quest II",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.sierragamers.com/kings-quest-2/",
+      "note": "创办人档案保存Roberta对第二部的设计与具体场景回顾，区别第一部和后发版本；限定1985原作制作，不因同系列推导其它续作开发。"
+    },
+    {
+      "reviewId": "AZS4-C04",
+      "entityId": "entity-silkys_a5",
+      "dossierId": null,
+      "workId": "g473",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "シルキーズプラス A5和牛",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.silkysplus.jp/game/butterfly/talk_01.html",
+      "note": "官方开发座谈搜索索引明确本作由シルキーズプラス开发制片人率领制作团队；与官方productinfo.html具名A5和牛品牌交叉限定g473。正文直读502，仅核可见索引文字，不外推其它子团队、根雪或补充篇；不解除父专题职责待核。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-sierra_company",
+      "name": "Sierra On-Line（原On-Line Systems）",
+      "status": "remainingVersionsAndProductionScopeDeferred",
+      "sources": [
+        "https://www.sierragamers.com/wp-content/uploads/2019/12/Roberta_Williams_Anthology_Manual.pdf",
+        "https://www.sierragamers.com/kings-quest-1-agi/",
+        "https://www.sierragamers.com/kings-quest-2/"
+      ],
+      "reason": "其余53条既有发行及相关／书目职责仍需逐作核定；Dynamix、外部制作与后发重制不继承。原手册完整正文与成立年份异文尚待补核。",
+      "workIds": [
+        "g001",
+        "g057",
+        "g058",
+        "g059",
+        "g060",
+        "g061",
+        "g094",
+        "g095",
+        "g099",
+        "g1094",
+        "g1098",
+        "g1099",
+        "g1100",
+        "g1101",
+        "g1102",
+        "g1103",
+        "g1104",
+        "g1105",
+        "g1107",
+        "g1108",
+        "g1109",
+        "g1110",
+        "g1111",
+        "g1113",
+        "g1115",
+        "g1116",
+        "g1118",
+        "g1120",
+        "g1121",
+        "g1122",
+        "g1123",
+        "g1125",
+        "g1126",
+        "g1127",
+        "g1128",
+        "g1129",
+        "g1130",
+        "g1131",
+        "g1132",
+        "g1133",
+        "g1134",
+        "g1135",
+        "g1136",
+        "sierra-on-line-antara",
+        "sierra-on-line-arcanum",
+        "sierra-on-line-diablo-hellfire",
+        "sierra-on-line-kq8",
+        "sierra-on-line-krondor",
+        "sierra-on-line-qfg3",
+        "sierra-on-line-qfg4",
+        "sierra-on-line-qfg5",
+        "sierra-on-line-return",
+        "sierra-on-line-throne",
+        "sierra-on-line-wrath"
+      ]
+    },
+    {
+      "entityId": "entity-silkys",
+      "name": "Silky’s",
+      "status": "remainingVersionsAndProductionScopeDeferred",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/シルキーズ",
+        "https://www.ymgal.games/oa10266"
+      ],
+      "reason": "35部作品及普通后发版的制作职责仍缺可读原STAFF；后发FG重制不能倒填早期Silky’s制作，不重开玩法准入。",
+      "workIds": [
+        "g305",
+        "g306",
+        "g307",
+        "g309",
+        "g311",
+        "g442",
+        "g444",
+        "g445",
+        "g447",
+        "g448",
+        "g449",
+        "g450",
+        "g451",
+        "g452",
+        "g453",
+        "g454",
+        "g455",
+        "g456",
+        "g457",
+        "g458",
+        "g459",
+        "g460",
+        "g461",
+        "g462",
+        "g463",
+        "g464",
+        "g465",
+        "g466",
+        "g467",
+        "silkys-extra-48",
+        "silkys-extra-birthdays",
+        "silkys-extra-iku",
+        "silkys-extra-marine",
+        "silkys-extra-ohpai",
+        "silkys-extra-valentine"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_plus",
+      "name": "Silky’s Plus",
+      "status": "remainingVersionsAndProductionScopeDeferred",
+      "sources": [
+        "https://www.silkysplus.jp/game/kanzume/news_02_sinsakuhappyookinen.html",
+        "https://www.silkysplus.jp/game/fuyukuru/wryooiti.html",
+        "https://www.silkysplus.jp/game/kanzume/developertalk_03.html"
+      ],
+      "reason": "四部主品牌作品与不同子团队、后发Alpha发行需逐作拆分；官网全文未读，不将制作发表索引当作完整STAFF。",
+      "workIds": [
+        "g476",
+        "g477",
+        "g478",
+        "g479",
+        "g481"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_a5",
+      "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+      "status": "remainingVersionsAndProductionScopeDeferred",
+      "sources": [
+        "https://www.silkysplus.jp/game/butterfly/talk_01.html",
+        "https://www.silkysplus.jp/game/butterfly/productinfo.html",
+        "https://www.silkysplus.jp/game/neyuki/product.html"
+      ],
+      "reason": "仅本篇制作品牌已核；根雪及独立补充篇仍缺具名制作证据，父品牌职责和运营起止保持待核。",
+      "workIds": [
+        "g469",
+        "g473",
+        "g474"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-sierra_company",
+      "name": "Sierra On-Line（原On-Line Systems）",
+      "status": "existingCompanyThreeOriginalProductionsAdded",
+      "sources": [
+        "https://www.sierragamers.com/wp-content/uploads/2019/12/Roberta_Williams_Anthology_Manual.pdf",
+        "https://www.sierragamers.com/kings-quest-1-agi/",
+        "https://www.sierragamers.com/kings-quest-2/"
+      ],
+      "reason": "沿用历史公司身份及On-Line Systems名称。原手册搜索索引的Ken第一人称制作回顾、创办人档案保存的Roberta逐作开发回顾，限定补神秘屋、国王密使I、II三部原作制作。不是由56条发行反推开发；IBM首发发行、StarCraft后发版、Dynamix与外部团队开发各自保留，1979／1980成立异文和1982改名不更改。",
+      "workIds": [
+        "g001",
+        "g057",
+        "g058",
+        "g059",
+        "g060",
+        "g061",
+        "g094",
+        "g095",
+        "g099",
+        "g1094",
+        "g1098",
+        "g1099",
+        "g1100",
+        "g1101",
+        "g1102",
+        "g1103",
+        "g1104",
+        "g1105",
+        "g1107",
+        "g1108",
+        "g1109",
+        "g1110",
+        "g1111",
+        "g1113",
+        "g1115",
+        "g1116",
+        "g1118",
+        "g1120",
+        "g1121",
+        "g1122",
+        "g1123",
+        "g1125",
+        "g1126",
+        "g1127",
+        "g1128",
+        "g1129",
+        "g1130",
+        "g1131",
+        "g1132",
+        "g1133",
+        "g1134",
+        "g1135",
+        "g1136",
+        "sierra-on-line-antara",
+        "sierra-on-line-arcanum",
+        "sierra-on-line-diablo-hellfire",
+        "sierra-on-line-kq8",
+        "sierra-on-line-krondor",
+        "sierra-on-line-qfg3",
+        "sierra-on-line-qfg4",
+        "sierra-on-line-qfg5",
+        "sierra-on-line-return",
+        "sierra-on-line-throne",
+        "sierra-on-line-wrath"
+      ]
+    },
+    {
+      "entityId": "entity-silkys",
+      "name": "Silky’s",
+      "status": "existingBrandOriginalPublishingNotPromoted",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/シルキーズ",
+        "https://www.ymgal.games/oa10266"
+      ],
+      "reason": "沿用原Silky’s品牌身份与35条原作发行品牌、44条发行品牌署名。现有原品牌档案主要为二手逐作资料，本次未取得可直接核定原版STAFF的当事材料，不批量将原作发行品牌升级为制作品牌，也不把2014后Silky’s Plus及后发重制制作倒填原作。",
+      "workIds": [
+        "g305",
+        "g306",
+        "g307",
+        "g309",
+        "g311",
+        "g442",
+        "g444",
+        "g445",
+        "g447",
+        "g448",
+        "g449",
+        "g450",
+        "g451",
+        "g452",
+        "g453",
+        "g454",
+        "g455",
+        "g456",
+        "g457",
+        "g458",
+        "g459",
+        "g460",
+        "g461",
+        "g462",
+        "g463",
+        "g464",
+        "g465",
+        "g466",
+        "g467",
+        "silkys-extra-48",
+        "silkys-extra-birthdays",
+        "silkys-extra-iku",
+        "silkys-extra-marine",
+        "silkys-extra-ohpai",
+        "silkys-extra-valentine"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_plus",
+      "name": "Silky’s Plus",
+      "status": "existingBrandPerTeamProductionDeferred",
+      "sources": [
+        "https://www.silkysplus.jp/game/kanzume/news_02_sinsakuhappyookinen.html",
+        "https://www.silkysplus.jp/game/fuyukuru/wryooiti.html",
+        "https://www.silkysplus.jp/game/kanzume/developertalk_03.html"
+      ],
+      "reason": "沿用Silky’s Plus独立品牌。官网制作发表及创作者访谈的搜索索引可见缶詰少女、ふゆから等具名创作线索，正文直读502或不可达；尚不足以逐一拆清主品牌与各子团队制作。本批不补主品牌制作，不解除子品牌作品在父专题的待核，不由外部歌手的一般印象推导开发。",
+      "workIds": [
+        "g476",
+        "g477",
+        "g478",
+        "g479",
+        "g481"
+      ]
+    },
+    {
+      "entityId": "entity-silkys_a5",
+      "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+      "status": "oneNamedProductionBrandAdded",
+      "sources": [
+        "https://www.silkysplus.jp/game/butterfly/talk_01.html",
+        "https://www.silkysplus.jp/game/butterfly/productinfo.html",
+        "https://www.silkysplus.jp/game/neyuki/product.html"
+      ],
+      "reason": "官方开发座谈索引明确シルキーズプラス开发制片人率领バタフライシーカー制作团队，配合该作官方规格页明确A5和牛品牌，限定补g473一条制作品牌。只支持该作，不外推根雪、独立补充篇或父品牌；规格页单列発売ブランド本身不作为制作证据，外部企划脚本与原画作者保留独立分工。",
+      "workIds": [
+        "g469",
+        "g473",
+        "g474"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715",
+      "entity-sierra_company",
+      "entity-silkys",
+      "entity-silkys_plus",
+      "entity-silkys_a5"
+    ],
+    "nextEntityId": "entity-name-8c9d353d6fe9",
+    "nextName": "Silky’s Plus Alpha",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}
