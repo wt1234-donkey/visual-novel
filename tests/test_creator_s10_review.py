@@ -15,13 +15,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'8f186829271a10bbd50a23740836523a8152501f:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS10Tests(unittest.TestCase):
     def test_three_company_corrections_preserve_the_unresolved_joint_publisher(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {IDS[0], IDS[1], IDS[3]})
@@ -38,7 +44,7 @@ class CreatorS10Tests(unittest.TestCase):
         self.assertEqual(sum(e['verification'] == 'unresolved' for e in ae.values()), 58)
 
     def test_three_original_productions_preserve_every_old_release_and_credit(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-3], before['credits'])
         self.assertEqual(len(after['credits']), 4997)
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role'])
@@ -57,7 +63,7 @@ class CreatorS10Tests(unittest.TestCase):
         self.assertTrue(all(c['role'] == 'publisher' for c in after['credits'] if c['entityId'] == IDS[0]))
 
     def test_all_parent_memberships_dates_content_and_baselines_stay_exact(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['dossierMemberships'], before['dossierMemberships'])
         members = after['dossierMemberships']
         self.assertEqual((len(members), sum(m['status'] == 'pendingRole' for m in members)), (2234, 602))
@@ -71,7 +77,7 @@ class CreatorS10Tests(unittest.TestCase):
             self.assertEqual(read(path), old(path), path)
 
     def test_four_consecutive_entities_advance_to_syawase(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

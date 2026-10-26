@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "8d3b8592edb761e299b767f427558859185b2cb1",
+  "audit": "data/entity-creator-s11-review-20261026.md",
+  "previousReview": "data/entity-creator-s10-review-20261026.md",
+  "policy": "按S组第41—42项收尾；发行层本地化、原作制作和法人身份分开，未取得历史身份正文时不猜公司类别，完成登记不等于全部缺口已解决。",
+  "identityCorrections": [],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS11-C01",
+      "entityId": "entity-name-b1b599d0fabf",
+      "dossierId": null,
+      "workId": "g855",
+      "targetType": "release",
+      "targetId": "g855-v3",
+      "role": "localizer",
+      "rawCredit": "『ニュートンとリンゴの樹』の中国語版制作や発行",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeTargetRoles": [
+        "publisher"
+      ],
+      "source": "https://www.syawaseworks.com/",
+      "note": "官网2020具名项目说明支持既有中文发行g855-v3本地化，不将整体中文版制作拆成未经证实的独占翻译／程序工作。2023现公司设立不倒填2020法人；不作用于原作、英语版、其它发行或共享内容ID，不新增内容版本。"
+    },
+    {
+      "reviewId": "AZS11-C02",
+      "entityId": "entity-name-389c2f591e55",
+      "dossierId": null,
+      "workId": "ibm-yellow-brick-road",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Original Version / Created by SYNERGY,Inc.",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://raido.moe/staff/ps1/ps1_yellow_brick_road.html",
+      "note": "原片尾公开转录具名Original Version制作组织及导演、故事、视觉、程序，另列GREAT负责Play Station Version移植。只核可读转录；原图RAR不可由浏览工具读取，未声称亲见实机或原图。限定原作制作，保持1995混合盘身份、未知法人类别及IBM专题待核，不给后发IBM／Acclaim增加开发。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-b1b599d0fabf",
+      "name": "Syawase Works China",
+      "status": "identityPeriodAndVersionRoleEvidenceDeferred",
+      "sources": [
+        "https://www.syawaseworks.com/",
+        "https://store.steampowered.com/app/1237370/?l=tchinese"
+      ],
+      "reason": "2020地区发行名义与2023日本现公司、此前团队／商号的法律关系仍待原合同或时期资料；当前官网的泛用程序合作业务不证明本作技术移植。本地化只限定g855-v3，不升原作制作，不新建独立中文作品。",
+      "workIds": [
+        "g855"
+      ]
+    },
+    {
+      "entityId": "entity-name-389c2f591e55",
+      "name": "Synergy Inc.",
+      "status": "identityPeriodAndVersionRoleEvidenceDeferred",
+      "sources": [
+        "https://raido.moe/staff/ps1/ps1_yellow_brick_road.html",
+        "http://www.synergy-j.co.jp/index_j.html",
+        "https://web.archive.org/web/19971015030743/http://www.synergy-j.co.jp/index_j.html"
+      ],
+      "reason": "需公司概要原件、1995混合盘原始STAFF或可读原图进一步交叉核对；目前不声称亲见原始片尾扫描／实机。美国Synergy Interactive、Acclaim发行与GREAT移植分别保留，不并同名当前企业，IBM专题职责仍pendingRole。",
+      "workIds": [
+        "ibm-yellow-brick-road"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-b1b599d0fabf",
+      "name": "Syawase Works China",
+      "status": "localizedReleaseIdentityPeriodUnresolved",
+      "sources": [
+        "https://www.syawaseworks.com/",
+        "https://store.steampowered.com/app/1237370/?l=tchinese"
+      ],
+      "reason": "官网具体自述2020年与Laplacian合作，负责Newton中文版制作和发行，支持既有g855-v3一条发行层localizer。官网同时列株式会社Syawase Works成立于2023-05，不能把现日本公司倒填2020的Syawase Works China；原发行署名、实体ID和unknown身份保留。中文版制作不等于2017原作开发，也不向英语版或共享内容ID传播。",
+      "workIds": [
+        "g855"
+      ]
+    },
+    {
+      "entityId": "entity-name-389c2f591e55",
+      "name": "Synergy Inc.",
+      "status": "originalProductionFromCreditTranscriptionIdentityUnresolved",
+      "sources": [
+        "https://raido.moe/staff/ps1/ps1_yellow_brick_road.html",
+        "http://www.synergy-j.co.jp/index_j.html",
+        "https://web.archive.org/web/19971015030743/http://www.synergy-j.co.jp/index_j.html"
+      ],
+      "reason": "Yellow Brick Road日本PS1片尾署名的公开转录明确分Original Version与Play Station Version：原作Created by SYNERGY,Inc.，并具名导演、故事、视觉和程序；GREAT另负责移植。限定ibm-yellow-brick-road一条原作制作，不从1996移植STAFF倒推出IBM开发。公司旧官网502、Wayback仅得空索引框架，原图RAR浏览工具不能读取，故只核可读转录的职责，保留unknown身份，不凭Inc后缀填法律公司类别或成立日。",
+      "workIds": [
+        "ibm-yellow-brick-road"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715",
+      "entity-sierra_company",
+      "entity-silkys",
+      "entity-silkys_plus",
+      "entity-silkys_a5",
+      "entity-name-8c9d353d6fe9",
+      "entity-silkys_dolce",
+      "entity-silkys_wasabi",
+      "entity-name-b129f13b41e4",
+      "entity-sinclair",
+      "entity-name-12a802d7d9bd",
+      "entity-smee",
+      "entity-name-ce72ada6adcb",
+      "entity-name-539be8af5be9",
+      "entity-name-8865f66ec578",
+      "entity-name-ffa62a4c6281",
+      "entity-sorahane",
+      "entity-sphere",
+      "entity-name-6d5cd9b9dc38",
+      "entity-name-8a871cf93bfd",
+      "entity-name-6554f3ac70ec",
+      "entity-sprite",
+      "entity-name-8a3d38d0d11f",
+      "entity-name-6d2a66d8a91c",
+      "entity-name-e92deef78c89",
+      "entity-square",
+      "entity-name-a3d00ecbbdcb",
+      "entity-name-ccdf9b616bf6",
+      "entity-name-456a2209f1ad",
+      "entity-name-3c3fb799f482",
+      "entity-name-b1b599d0fabf",
+      "entity-name-389c2f591e55"
+    ],
+    "nextEntityId": "entity-te_soft",
+    "nextName": "T&E SOFT",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "reviewed"
+      }
+    ]
+  }
+}

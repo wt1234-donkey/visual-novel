@@ -211,3 +211,8 @@ Square Enix日文署名及美国Square Soft独立核为company，2008前后同�
 ## S组第十批历史公司与联合发行边界（2026-10-26）
 
 StarCraft、Sumzap、Sunnyside Soft依原厂手册／公司概要分别核定company；Sunflower Ocean仅确认联合发行，保留unknown。具名上线公告与原期刊开发说明支持Sumzap一部、Sunnyside两部原作制作，产品线收购不建法人合并关系，三个父专题引用仍pendingRole。原作品、内容、发行及年代保持，S进度40／42，下一项Syawase Works China。详见[独立审计](entity-creator-s10-review-20261026.md)。
+
+
+## S组收尾与发行层本地化（2026-10-26）
+
+S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一项T&E SOFT。两项身份缺口保留，仅按官网2020中文版制作说明与原片尾转录分别追加g855-v3发行层localizer、黄砖路原作制作。独立审核入口的release允许developer或localizer，仍须同作品、具体发行ID、原角色与无专题捷径；本地化不计原作开发，不沿共享内容ID外溢。全部原始数据、实体、专题和基线保持，详见[独立审计](entity-creator-s11-review-20261026.md)。
