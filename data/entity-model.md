@@ -228,3 +228,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 T字母第五批使用 `entity-creator-t5-review-20261026.json` 与同名Markdown，按Tonkin House、Toshiba EMI、TYPE-MOON连续收尾，T累计19／19，当前A—T队列登记298／298。品牌／历史公司三项身份分别核定；TYPE-MOON四部既有商业作品仅追加制作品牌，旧同人月姬与2021作品不合并，发行和后发开发保持独立。Tonkin类别依据及原件不可读限制明确登记，不推YsIV开发；专题职责待核保留。下一项Ultra Games。
 
 2026-10-26 U字母首批使用 `entity-creator-u1-review-20261026.json` 与同名Markdown，按Ultra Games、Union Planning连续核查并收尾，U累计2／2，当前A—U队列登记300／300。原Nightshade说明书区分商标与Ultra Software Corporation，具体1984馆藏著录确认Union历史公司，排除2007室内设计同名公司；身份核定不自动新增开发或发行品牌角色，全部旧职责与专题引用保留。下一项Virgin Games Ltd。
+
+2026-10-26 V字母首批使用 `entity-creator-v1-review-20261026.json` 与同名Markdown，按Virgin Games Ltd、VISUAL ARTS连续核查并收尾，V累计2／2，当前A—V队列登记302／302。原说明书及同期广告具名Virgin Games Ltd出版销售公司，区别Mosaic制作与Level 9程序；VISUAL ARTS官方公司概要与沿革核既有公司身份及Key品牌分层。仅订正Virgin身份，不据公司与品牌归属自动增加创作、开发或新版发行；全部原职责、专题及旧发行保留。下一项WFS（WRIGHT FLYER STUDIOS）。
