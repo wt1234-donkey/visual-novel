@@ -15,13 +15,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'712383317f0cab13cc903a328f986f523ee91bf8:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS7Tests(unittest.TestCase):
     def test_exactly_three_company_identities_change_and_sony_nodes_stay_distinct(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, set(IDS[:3]))
@@ -41,8 +47,8 @@ class CreatorS7Tests(unittest.TestCase):
         for path in ['data/credits.json', 'data/games.json', 'data/company-coverage.json',
                      'data/taxonomy.json', 'data/gameplay-catalogues.json', 'data/work-classification.json',
                      'data/content-migration-baseline.json', 'data/entity-migration-baseline.json']:
-            self.assertEqual(read(path), old(path), path)
-        c = read('data/credits.json')
+            self.assertEqual(applied(path), old(path), path)
+        c = applied('data/credits.json')
         self.assertEqual((len(c['credits']), len(c['dossierMemberships'])), (4986, 2234))
         self.assertEqual(sum(m['status'] == 'pendingRole' for m in c['dossierMemberships']), 602)
         for eid, count in zip(IDS[:3], [3, 3, 1]):
@@ -55,7 +61,7 @@ class CreatorS7Tests(unittest.TestCase):
         self.assertEqual(read(REVIEW)['creditAdditions'], [])
 
     def test_five_consecutive_entities_advance_from_sol_press_to_spike(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

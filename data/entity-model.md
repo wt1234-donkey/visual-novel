@@ -196,3 +196,8 @@ P2同时允许独立身份订正将动态解析的unknown节点核为既有模�
 ## S组第七批身份核查（2026-10-26）
 
 Sol Press及两条Sony Computer Entertainment原文独立订正为历史公司，Sony节点不合并、现名与日期不倒填。SORAHANE三条既有制作品牌保留，官网访问失败注明；Sphere四部官方编号产品复核不重复加职责。全部4986条职责与原作品／内容／发行保持，S进度28／42，下一项Spike。详见[独立审计](entity-creator-s7-review-20261026.md)。
+
+
+## S组第八批身份与制作核查（2026-10-26）
+
+历史Spike与日本Spinnaker分别订正company。官方原作目录、开发声明及社内访谈支持Spike的g035、Spike Chunsoft的g160和g161三条originalProduction；g171官方明确Chime开发，旧发行保留。sprite五条既有制作品牌不重复追加，2026-11-26预告不提前准入。全部旧职责、专题、内容／发行、关系和基线保持；S进度32／42，下一项Square Enix。详见[独立审计](entity-creator-s8-review-20261026.md)。
