@@ -201,3 +201,8 @@ Sol Press及两条Sony Computer Entertainment原文独立订正为历史公司�
 ## S组第八批身份与制作核查（2026-10-26）
 
 历史Spike与日本Spinnaker分别订正company。官方原作目录、开发声明及社内访谈支持Spike的g035、Spike Chunsoft的g160和g161三条originalProduction；g171官方明确Chime开发，旧发行保留。sprite五条既有制作品牌不重复追加，2026-11-26预告不提前准入。全部旧职责、专题、内容／发行、关系和基线保持；S进度32／42，下一项Square Enix。详见[独立审计](entity-creator-s8-review-20261026.md)。
+
+
+## S组第九批历史主体与原作创作（2026-10-26）
+
+Square Enix日文署名及美国Square Soft独立核为company，2008前后同名公司时期保留缺口，不倒填日期或合并节点。美国开发者亲述与手册转录支持Evermore一条制作；官方加藤简介支持日本Square四作原作创作参与，原发行不推开发。四项Square专题由发行组显示为原作组，Evermore父专题仍待核，内容和收录位置保持。S进度36／42，下一项StarCraft。详见[独立审计](entity-creator-s9-review-20261026.md)。

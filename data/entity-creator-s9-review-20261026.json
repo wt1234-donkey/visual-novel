@@ -1,0 +1,659 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "30a409d54ff53133a6bc0afa2d2b3f3b045b2602",
+  "audit": "data/entity-creator-s9-review-20261026.md",
+  "previousReview": "data/entity-creator-s8-review-20261026.md",
+  "policy": "按S组第33—36项连续核查；日本Square、美国Square Soft、2008前后Square Enix与原始中英文署名分开。具名原作创作才追加，保持发行、内容和专题边界。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS9-I01",
+      "entityId": "entity-name-6d2a66d8a91c",
+      "rawName": "スクウェア・エニックス",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.jp.square-enix.com/company/ja/outline/",
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.tri-ace.co.jp/products/consumer.html"
+      ],
+      "note": "スクウェア・エニックス日文历史署名核为company；集团史与日文公司概要分别确认2003合并后的公司及2008新设运营公司。此节点同时命中2004 SO3 Director’s Cut和2010 Wonder Project J2移动版，不将两期同名法人断言为同一连续公司、不把2008设立日填到2004发行；保留ID、别名、日期及两条publisher，后续可再作时期拆分审核。"
+    },
+    {
+      "reviewId": "AZS9-I02",
+      "entityId": "entity-name-e92deef78c89",
+      "rawName": "Square Soft, Inc.",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.world-of-nintendo.com/manuals/super_nes/secret_of_evermore.shtml",
+        "https://www.nintendolife.com/news/2009/04/interview_with_brian_fehdrau_secret_of_evermore"
+      ],
+      "note": "官方集团史明确1989-03美国SQUARE SOFT, INC.为独立子公司，原Evermore手册转录另列Square Soft公司、Square Co.商标及美国地址，核定company。原手册具名主程序员与开发者本人访谈交叉支持美国团队从零制作Evermore，限定本作一条原作制作；Mystic Quest仅发行保留，不由Inc后缀或版权推开发，不合并日本Square及Square L.A.。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS9-C01",
+      "entityId": "entity-name-e92deef78c89",
+      "dossierId": null,
+      "workId": "square-evermore",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Square Soft, Inc. / Secret of Evermore",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.nintendolife.com/news/2009/04/interview_with_brian_fehdrau_secret_of_evermore",
+      "note": "主程序员本人访谈明确美国团队、工具和游戏均从零建立，日本Square为母公司；与原手册具名Brian Fehdrau、Square Soft Team及公司地址交叉，限定美国Square Soft的本作制作参与。手册为公开文字转录，不冒称已看实物扫描；不将角色传递给日本Square父专题或Mystic Quest。"
+    },
+    {
+      "reviewId": "AZS9-C02",
+      "entityId": "entity-square",
+      "dossierId": null,
+      "workId": "g1210",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。"
+    },
+    {
+      "reviewId": "AZS9-C03",
+      "entityId": "entity-square",
+      "dossierId": null,
+      "workId": "square-chronotrigger",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。"
+    },
+    {
+      "reviewId": "AZS9-C04",
+      "entityId": "entity-square",
+      "dossierId": null,
+      "workId": "square-xenogears",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。"
+    },
+    {
+      "reviewId": "AZS9-C05",
+      "entityId": "entity-square",
+      "dossierId": null,
+      "workId": "square-chronocross",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-8a3d38d0d11f",
+      "name": "Square Enix",
+      "status": "perWorkProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.jp.square-enix.com/company/en/outline/",
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.jp.square-enix.com/company/ja/news/2012/html/b72327bc03e5a1056508e9bfb870ea96688e6b25.html"
+      ],
+      "reason": "九部关联作品的其它具体程序、内容增补及外包分工未逐项解决。Gunslinger Byking具名开发、后发remaster具体承包方须各自实体／角色审核，不能挂到Square Enix发行节点。",
+      "workIds": [
+        "nitroplus-extra-gunslinger",
+        "nitroplus-extra-gunslinger2",
+        "nitroplus-extra-gunslinger-reloaded",
+        "nitroplus-extra-gunslinger3",
+        "taito-estpolis2",
+        "square-sf",
+        "square-seiken3",
+        "square-chronotrigger",
+        "square-livealive"
+      ]
+    },
+    {
+      "entityId": "entity-name-6d2a66d8a91c",
+      "name": "Square Enix（スクウェア・エニックス）",
+      "status": "perWorkProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.jp.square-enix.com/company/ja/outline/",
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.tri-ace.co.jp/products/consumer.html"
+      ],
+      "reason": "2004与2010原署名涉及2008前后同名公司，法律连续性及是否需分时期节点另立审核；本批类型核定不构成两期同一法人的结论。SO3增补与Wonder Project移动新增内容的具体开发仍不由publisher生成。",
+      "workIds": [
+        "enix-wonderj2",
+        "enix-so3"
+      ]
+    },
+    {
+      "entityId": "entity-name-e92deef78c89",
+      "name": "Square Soft, Inc.",
+      "status": "perWorkProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.world-of-nintendo.com/manuals/super_nes/secret_of_evermore.shtml",
+        "https://www.nintendolife.com/news/2009/04/interview_with_brian_fehdrau_secret_of_evermore"
+      ],
+      "reason": "Mystic Quest具体原作开发与美国本地化分工、Square L.A.及后期重组不在一条Evermore职责中解决；Evermore在日本Square父专题仍保持catalogueAssociation／pendingRole，不把子公司制作自动上推。",
+      "workIds": [
+        "square-ffusa",
+        "square-evermore"
+      ]
+    },
+    {
+      "entityId": "entity-square",
+      "name": "Square（スクウェア）",
+      "status": "perWorkProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+        "https://www.jp.square-enix.com/presents/info/20230308003544.html"
+      ],
+      "reason": "72条专题引用中除本次四作外的逐项制作仍待继续补证；本批不是全部目录STAFF重验。1984—1986部门到公司界限、DOG／Carry Lab／Hummingbird等外部制作、1992 Mystic Quest以及后发重制均须分别核定，不批量给Square加开发。",
+      "workIds": [
+        "g076",
+        "g081",
+        "g1207",
+        "g1208",
+        "g1210",
+        "g1211",
+        "carry-lab-hao",
+        "hummingbird-deep-dungeon",
+        "hummingbird-deep-dungeon-2",
+        "hummingbird-deep-dungeon-3",
+        "square-ff",
+        "square-ff2",
+        "square-ff3",
+        "square-ff4",
+        "square-ff5",
+        "square-ff6",
+        "square-ff7",
+        "square-ff8",
+        "square-ff9",
+        "square-ff10",
+        "square-ff10-2",
+        "square-fft",
+        "square-ffta",
+        "square-saga",
+        "square-saga2",
+        "square-saga3",
+        "square-romancingsaga1",
+        "square-romancingsaga2",
+        "square-romancingsaga3",
+        "square-sf",
+        "square-sf2",
+        "square-usaga",
+        "square-seiken",
+        "square-seiken2",
+        "square-seiken3",
+        "square-seiken-lom",
+        "square-fm",
+        "square-fm2",
+        "square-fma",
+        "square-fm3",
+        "square-gunhazard",
+        "square-chronotrigger",
+        "square-chronocross",
+        "square-pe",
+        "square-pe2",
+        "square-chocobodungeon1",
+        "square-chocobodungeon2",
+        "square-dewprism",
+        "square-vagrantstory",
+        "square-sokaigi",
+        "square-musashi",
+        "square-xenogears",
+        "square-treasurehunterg",
+        "square-bouncer",
+        "square-wildcard",
+        "square-bwb",
+        "square-kh",
+        "square-hanjuku-hero",
+        "square-rl",
+        "square-cyberorg",
+        "square-alcahest",
+        "square-livealive",
+        "square-bahamut-lagoon",
+        "square-square-ts",
+        "square-kalin",
+        "square-blassty",
+        "square-treasure-conflix",
+        "square-dynami",
+        "g1209",
+        "square-ffusa",
+        "square-evermore",
+        "square-mario-rpg",
+        "square-bof",
+        "square-alpha",
+        "square-rudra",
+        "square-ff11"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-8a3d38d0d11f",
+      "name": "Square Enix",
+      "status": "existingCompanyPublisherNotDeveloper",
+      "sources": [
+        "https://www.jp.square-enix.com/company/en/outline/",
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.jp.square-enix.com/company/ja/news/2012/html/b72327bc03e5a1056508e9bfb870ea96688e6b25.html"
+      ],
+      "reason": "沿用已核公司类型，13条发行保留。官方公司概要明确2008-10-01新设运营公司，集团史将2003合并、2008控股化及新设公司分开。Gunslinger原公告具体列Byking开发公司及导演、Square Enix制片人；不由原创企画、版权或发行推技术开发。后发重制／增补仍各按内容和实际制作另核，不合并日文原文节点。",
+      "workIds": [
+        "nitroplus-extra-gunslinger",
+        "nitroplus-extra-gunslinger2",
+        "nitroplus-extra-gunslinger-reloaded",
+        "nitroplus-extra-gunslinger3",
+        "taito-estpolis2",
+        "square-sf",
+        "square-seiken3",
+        "square-chronotrigger",
+        "square-livealive"
+      ]
+    },
+    {
+      "entityId": "entity-name-6d2a66d8a91c",
+      "name": "Square Enix（スクウェア・エニックス）",
+      "status": "historicalCompanyPeriodsKeptSeparate",
+      "sources": [
+        "https://www.jp.square-enix.com/company/ja/outline/",
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.tri-ace.co.jp/products/consumer.html"
+      ],
+      "reason": "スクウェア・エニックス日文历史署名核为company；集团史与日文公司概要分别确认2003合并后的公司及2008新设运营公司。此节点同时命中2004 SO3 Director’s Cut和2010 Wonder Project J2移动版，不将两期同名法人断言为同一连续公司、不把2008设立日填到2004发行；保留ID、别名、日期及两条publisher，后续可再作时期拆分审核。",
+      "workIds": [
+        "enix-wonderj2",
+        "enix-so3"
+      ]
+    },
+    {
+      "entityId": "entity-name-e92deef78c89",
+      "name": "Square Soft, Inc.",
+      "status": "americanCompanyOneOriginalProduction",
+      "sources": [
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.world-of-nintendo.com/manuals/super_nes/secret_of_evermore.shtml",
+        "https://www.nintendolife.com/news/2009/04/interview_with_brian_fehdrau_secret_of_evermore"
+      ],
+      "reason": "官方集团史明确1989-03美国SQUARE SOFT, INC.为独立子公司，原Evermore手册转录另列Square Soft公司、Square Co.商标及美国地址，核定company。原手册具名主程序员与开发者本人访谈交叉支持美国团队从零制作Evermore，限定本作一条原作制作；Mystic Quest仅发行保留，不由Inc后缀或版权推开发，不合并日本Square及Square L.A.。",
+      "workIds": [
+        "square-ffusa",
+        "square-evermore"
+      ]
+    },
+    {
+      "entityId": "entity-square",
+      "name": "Square（スクウェア）",
+      "status": "historicalCompanyFourOriginalProductions",
+      "sources": [
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+        "https://www.jp.square-enix.com/presents/info/20230308003544.html"
+      ],
+      "reason": "沿用Square历史公司身份。2008官方新闻PDF的加藤正人简介明确其在株式会社スクウェア任内参与Chrono Trigger、Radical Dreamers、Xenogears、Chrono Cross的剧本和演出，给这四部作品各追加原作制作参与；不宣称技术或素材独占。1986以前软件部门、美国子公司、DOG及外包开发与2003后的重制分别保留，专题其余作品仍逐项待核。",
+      "workIds": [
+        "g076",
+        "g081",
+        "g1207",
+        "g1208",
+        "g1210",
+        "g1211",
+        "carry-lab-hao",
+        "hummingbird-deep-dungeon",
+        "hummingbird-deep-dungeon-2",
+        "hummingbird-deep-dungeon-3",
+        "square-ff",
+        "square-ff2",
+        "square-ff3",
+        "square-ff4",
+        "square-ff5",
+        "square-ff6",
+        "square-ff7",
+        "square-ff8",
+        "square-ff9",
+        "square-ff10",
+        "square-ff10-2",
+        "square-fft",
+        "square-ffta",
+        "square-saga",
+        "square-saga2",
+        "square-saga3",
+        "square-romancingsaga1",
+        "square-romancingsaga2",
+        "square-romancingsaga3",
+        "square-sf",
+        "square-sf2",
+        "square-usaga",
+        "square-seiken",
+        "square-seiken2",
+        "square-seiken3",
+        "square-seiken-lom",
+        "square-fm",
+        "square-fm2",
+        "square-fma",
+        "square-fm3",
+        "square-gunhazard",
+        "square-chronotrigger",
+        "square-chronocross",
+        "square-pe",
+        "square-pe2",
+        "square-chocobodungeon1",
+        "square-chocobodungeon2",
+        "square-dewprism",
+        "square-vagrantstory",
+        "square-sokaigi",
+        "square-musashi",
+        "square-xenogears",
+        "square-treasurehunterg",
+        "square-bouncer",
+        "square-wildcard",
+        "square-bwb",
+        "square-kh",
+        "square-hanjuku-hero",
+        "square-rl",
+        "square-cyberorg",
+        "square-alcahest",
+        "square-livealive",
+        "square-bahamut-lagoon",
+        "square-square-ts",
+        "square-kalin",
+        "square-blassty",
+        "square-treasure-conflix",
+        "square-dynami",
+        "g1209",
+        "square-ffusa",
+        "square-evermore",
+        "square-mario-rpg",
+        "square-bof",
+        "square-alpha",
+        "square-rudra",
+        "square-ff11"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715",
+      "entity-sierra_company",
+      "entity-silkys",
+      "entity-silkys_plus",
+      "entity-silkys_a5",
+      "entity-name-8c9d353d6fe9",
+      "entity-silkys_dolce",
+      "entity-silkys_wasabi",
+      "entity-name-b129f13b41e4",
+      "entity-sinclair",
+      "entity-name-12a802d7d9bd",
+      "entity-smee",
+      "entity-name-ce72ada6adcb",
+      "entity-name-539be8af5be9",
+      "entity-name-8865f66ec578",
+      "entity-name-ffa62a4c6281",
+      "entity-sorahane",
+      "entity-sphere",
+      "entity-name-6d5cd9b9dc38",
+      "entity-name-8a871cf93bfd",
+      "entity-name-6554f3ac70ec",
+      "entity-sprite",
+      "entity-name-8a3d38d0d11f",
+      "entity-name-6d2a66d8a91c",
+      "entity-name-e92deef78c89",
+      "entity-square"
+    ],
+    "nextEntityId": "entity-name-a3d00ecbbdcb",
+    "nextName": "StarCraft（スタークラフト）",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}

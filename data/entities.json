@@ -4911,17 +4911,20 @@
     {
       "id": "entity-name-6d2a66d8a91c",
       "name": "Square Enix（スクウェア・エニックス）",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "スクウェア・エニックス",
         "Square Enix",
         "Square Enix（スクウェア・エニックス）"
       ],
       "sources": [
-        "https://game.watch.impress.co.jp/docs/news/360731.html"
+        "https://game.watch.impress.co.jp/docs/news/360731.html",
+        "https://www.jp.square-enix.com/company/ja/outline/",
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.tri-ace.co.jp/products/consumer.html"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "スクウェア・エニックス日文历史署名核为company；集团史与日文公司概要分别确认2003合并后的公司及2008新设运营公司。此节点同时命中2004 SO3 Director’s Cut和2010 Wonder Project J2移动版，不将两期同名法人断言为同一连续公司、不把2008设立日填到2004发行；保留ID、别名、日期及两条publisher，后续可再作时期拆分审核。",
       "dates": [],
       "nameParts": {
         "english": "Square Enix",
@@ -5495,15 +5498,18 @@
     {
       "id": "entity-name-e92deef78c89",
       "name": "Square Soft, Inc.",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "Square Soft, Inc."
       ],
       "sources": [
-        "https://www.world-of-nintendo.com/manuals/super_nes/final_fantasy_mystic_que.shtml"
+        "https://www.world-of-nintendo.com/manuals/super_nes/final_fantasy_mystic_que.shtml",
+        "https://www.hd.square-enix.com/eng/company/history.html",
+        "https://www.world-of-nintendo.com/manuals/super_nes/secret_of_evermore.shtml",
+        "https://www.nintendolife.com/news/2009/04/interview_with_brian_fehdrau_secret_of_evermore"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "官方集团史明确1989-03美国SQUARE SOFT, INC.为独立子公司，原Evermore手册转录另列Square Soft公司、Square Co.商标及美国地址，核定company。原手册具名主程序员与开发者本人访谈交叉支持美国团队从零制作Evermore，限定本作一条原作制作；Mystic Quest仅发行保留，不由Inc后缀或版权推开发，不合并日本Square及Square L.A.。",
       "dates": []
     },
     {

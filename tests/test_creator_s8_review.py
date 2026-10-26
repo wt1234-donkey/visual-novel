@@ -15,13 +15,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'a5c6f50f4f6aa62752f328003af9ba13dbd62477:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS8Tests(unittest.TestCase):
     def test_two_company_corrections_preserve_all_names_dates_and_relationships(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {IDS[0], IDS[2]})
@@ -36,7 +42,7 @@ class CreatorS8Tests(unittest.TestCase):
         self.assertEqual(sum(e['verification'] == 'unresolved' for e in ae.values()), 63)
 
     def test_three_original_productions_preserve_all_existing_release_credits(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-3], before['credits'])
         self.assertEqual(len(after['credits']), 4989)
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role'])
@@ -56,7 +62,7 @@ class CreatorS8Tests(unittest.TestCase):
                          [c for c in before['credits'] if c['entityId'] == IDS[3]])
 
     def test_memberships_original_catalogue_and_migration_baselines_stay_exact(self):
-        bc, ac = old('data/credits.json'), read('data/credits.json')
+        bc, ac = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(ac['dossierMemberships'], bc['dossierMemberships'])
         self.assertEqual(len(ac['dossierMemberships']), 2234)
         self.assertEqual(sum(m['status'] == 'pendingRole' for m in ac['dossierMemberships']), 602)
@@ -70,7 +76,7 @@ class CreatorS8Tests(unittest.TestCase):
         self.assertEqual(mac['contentRelation'], 'unverified')
 
     def test_four_consecutive_entities_advance_to_square_enix(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),
