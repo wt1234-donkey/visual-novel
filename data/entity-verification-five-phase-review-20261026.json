@@ -1,0 +1,1196 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "27e7339c4ceb2e7ea2a42fc95b8cd2ab0c166cec",
+  "audit": "data/entity-verification-five-phase-audit-20261026.json",
+  "previousReview": "data/entity-creator-a-recheck1-review-20261026.md",
+  "policy": "按冻结字母队列完成五段证据审查；处理不等于证实。仅有直接原件者改身份，发行与专题职责独立。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZR-P1-I01",
+      "entityId": "entity-name-b8b1293f82fa",
+      "rawName": "Alchemist",
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.comiket.co.jp/info-a/C66/C66kigyo/List_A.html"
+      ],
+      "note": "同期C66企业展位原件明确列株式会社アルケミスト及《月は東に日は西に》家用版。核定历史发行署名所指为公司；直接逐作支持g265，其他原作、移植和制作职责仍各待原件。",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      }
+    },
+    {
+      "reviewId": "AZR-P1-I02",
+      "entityId": "entity-name-788994ba8dfb",
+      "rawName": "American Laser Games",
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://manuals.plus/m/051d6e54fb3d36dc96349bce8efcc7244213e20623a258218df168fc34d068fc"
+      ],
+      "note": "1993年Sega CD《Mad Dog McCree》原版说明书保修条款由American Laser Games, Inc.承担，版权标1990及1993；核定此历史署名为公司。续作只在同页商标清单出现，不能据此推断其制作或版本职责。",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      }
+    },
+    {
+      "reviewId": "AZR-P2-I01",
+      "entityId": "entity-name-3de89d1ab0a5",
+      "rawName": "IMYUIC(ALICESOFT)",
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://www.alicesoft.com/information/2022/entry003001.html"
+      ],
+      "note": "ALICESOFT在2022年公告明确称IMYUIC(ALICESOFT)是其管辖已发行作品的品牌／社团名称，并指名HENTAI LABYRINTH；这是后改的标记，不倒填作品原发时的品牌或开发职责。保留旧发行publisher及其角色。",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      }
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-6ed2a96c53cd",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://worldofspectrum.org/archive/books/secret-of-arendarvon-castle-the"
+      ],
+      "reason": "馆藏仅著录Addison-Wesley Productions为1985书籍出版名义和作者，缺封底／版权页能区分法人、部门或出版品牌的原件；两条发行保持原署名，不能凭Productions推开发。",
+      "missingEvidence": "Addison-Wesley Productions在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g1272",
+        "g1273"
+      ]
+    },
+    {
+      "entityId": "entity-name-490ea790703a",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://store.steampowered.com/app/836840/Simon_the_Sorcerer__Legacy_Edition_English/"
+      ],
+      "reason": "权利方后发Legacy版商店将Adventure Soft列开发、MojoTouch列发行；原作制作已登记，但该开发名不能确定1993游戏的法人形态、Adventure Soft Publishing及Headfirst等历史连续性，身份仍unknown。",
+      "missingEvidence": "Adventure Soft在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g1089"
+      ]
+    },
+    {
+      "entityId": "entity-name-f0d25e9c6d82",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.age-soft.com/former/kimiita_oshirase.html",
+        "https://age-soft.com/main/products/"
+      ],
+      "reason": "当事方支持品牌与法人区分，不自动建立经营起止日期或把后来的aNCHOR移植和两条旧发行publisher改成品牌发行；原作层制作品牌已登记。",
+      "missingEvidence": "âge在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g052",
+        "g053"
+      ]
+    },
+    {
+      "entityId": "entity-name-bd36baf4b6a9",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20190212-m"
+      ],
+      "reason": "官方公告分列三家公司共同配信，并列其他制作人员，不能把历史联合发行字符串认定为一个公司、制作团队或三方同等开发。保留联合发行署名及身份待核，补证需逐方原始开发分工；本批不拆分或合并身份。",
+      "missingEvidence": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "minatosoft-spyce"
+      ]
+    },
+    {
+      "entityId": "entity-name-7f11db7a66f2",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
+        "https://www.mobygames.com/game/58696/star-cruiser-ii-the-odysseus-project/",
+        "https://www.value-press.com/pressrelease/88636"
+      ],
+      "reason": "现有机种索引与实物目录支持原发行和后发CD版区分；MobyGames搜索摘要列开发者但正文403，EGG官方发布稿只涉及前作，不能替代II原版制作证据。补原版说明书／结束职员或具名创作者资料后再核；保留身份待核与JHV专题待核，不改1993/1994日期异文。",
+      "missingEvidence": "Arsys Software在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "jhv-star2"
+      ]
+    },
+    {
+      "entityId": "entity-name-80a218385951",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://bd-game.product.co.jp/product/product10.html"
+      ],
+      "reason": "仅确认BDPG品牌／产品语境，运营法人及创作职责未核。",
+      "missingEvidence": "Asoberu! BD-GAME（あそべる！BD-GAME）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g163"
+      ]
+    },
+    {
+      "entityId": "entity-name-8b16f2bf500e",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.byakuya-shobo.co.jp/company/cc10339.html",
+        "https://alicecottage1989.blog.jp/archives/20634266.html"
+      ],
+      "reason": "法人现状可核，历史版本署名白夜書店与白夜書房未完成逐版对照，保留原有待核身份。",
+      "missingEvidence": "Byakuya Shobo（白夜書房）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g542"
+      ]
+    },
+    {
+      "entityId": "entity-name-21dcd9c9c1e7",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/4789.html"
+      ],
+      "reason": "职员表转录将CoreMoreco列为品牌、コアモアコ列企画，ホビボックス列销售；缺原版包装、游戏内片尾或当年官方网页以确认品牌主体与逐项制作。",
+      "missingEvidence": "CoreMoreco在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g638"
+      ]
+    },
+    {
+      "entityId": "entity-name-16c097f224f4",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://august-soft.com/20th/history/",
+        "https://august-soft.com/product"
+      ],
+      "reason": "AUGUST官方将《あいりすミスティリア！》表述为双方合作，员工对谈区分AUGUST的世界观、剧本与角色制作和DMM的游戏系统；既有AUGUST合作开发已单列。复合发行署名不是独立法人或品牌，须核原版片尾、条款和各版本合同主体才可拆分，不从斜线推定组织关系。",
+      "missingEvidence": "DMM GAMES／AUGUST在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "august-rpg-imys"
+      ]
+    },
+    {
+      "entityId": "entity-name-fb6db91d6827",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://raido.moe/staff/ps1/ps1_sotsugyo_crossworld.html"
+      ],
+      "reason": "《卒業 Crossworld》PS原版片尾明确“企画製作 M2／SOFIX”“販売 イースリースタッフ”；只有销售职责可直接确认。缺E3 Staff同期法人资料及其他作品原始署名，保留身份待核，不记为本作创作。",
+      "missingEvidence": "E3 Staff（イースリースタッフ）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g834"
+      ]
+    },
+    {
+      "entityId": "entity-name-b06c3e4e3ae1",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786"
+      ],
+      "reason": "原文并列运营公司和DG REMAKE品牌，现有两条2024主机发行不等于1992原作开发；缺逐版制作人员或开发方证据，组合署名暂不拆分或判为单一法人。",
+      "missingEvidence": "EXNOA（DG REMAKE）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-name-5f2bf730e86e",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1562",
+        "https://dmmgames.co.jp/"
+      ],
+      "reason": "运营公司和DMM GAMES品牌组合仅在专题关联作品发行出现；缺本作原版制作名单，组合署名暂不并入已另立的DMM GAMES品牌。",
+      "missingEvidence": "EXNOA（DMM GAMES）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "minatosoft-climax"
+      ]
+    },
+    {
+      "entityId": "entity-name-fdc56bbd260d",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786",
+        "https://a.sofmap.com/product_detail.aspx?sku=21447788",
+        "https://game.watch.impress.co.jp/docs/news/1308585.html"
+      ],
+      "reason": "现有2021年发行行引用2023年CSver公告，不能据此证明2021年DG REMAKE署名；2021年PC版与2024年主机品牌须版本分别核原版包装和官方同期页面。复合署名暂不宜判为单一主体，历史发行订正须另作具名证据记录。",
+      "missingEvidence": "FANZA GAMES（DG REMAKE）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-name-0956fc2c3ad0",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc8801_flop.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/gainax/gainax.htm"
+      ],
+      "reason": "原始PC-88发行记录称General Products，收藏实物按GAINAX制作、GENERAL PRODUCTS销售列示；但同名历史商店、商品品牌与法人经营关系尚无足够同期原件可界定，三条电脑学园发行不证明独立开发。",
+      "missingEvidence": "General Products在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "gainax-dennou1",
+        "gainax-dennou2",
+        "gainax-dennou3"
+      ]
+    },
+    {
+      "entityId": "entity-name-d7900289691e",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20040617/ic.htm",
+        "https://www.prot.co.jp/switch/kanon/introduction.html",
+        "https://key.visualarts.gr.jp/clannad_10th/"
+      ],
+      "reason": "旧英文节点混用2002年Kanon PS2与2006年CLANNAD PS2发行；2004年7月更名的同期公告使前者署名存在时间疑点。现引用的Kanon现代移植说明只能证明配音及平台历史，不能核定2002发行法人。保留unknown及两个旧发行，不与NEC Interchannel或日文节点合并；须补原盒、说明书与片尾，另行订正历史发行和基线。未确认逐版移植开发。",
+      "missingEvidence": "Interchannel在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g028",
+        "g030"
+      ]
+    },
+    {
+      "entityId": "entity-name-0483335f6a4f",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://timexsinclair.com/computer_media/catacombs/index.html",
+        "https://timexsinclair.com/company/j-k-greye-software/index.html"
+      ],
+      "reason": "Catacombs归档及源码1030行只见J.K.GREYE SOFTWARE版权署名，不能单独证明具体开发者或公司法律身份；J.K. Greye Software与Enterprises Ltd的对应及John Greye个人创作须补原盒说明书或当事人资料。保留旧发行节点unknown及Melbourne House专题职责待核，不把后发美国发行当原作制作。",
+      "missingEvidence": "J. K. Greye Software在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "melbournehouse-catacombs"
+      ]
+    },
+    {
+      "entityId": "entity-name-82fc3d1bfdaa",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.kadokawa.co.jp/product/game1624/",
+        "https://group.kadokawa.co.jp/company/history/06.html",
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "旧KADOKAWA节点混合2002、2005、2012及2016发行；现行商品站的品牌归档不能核定每个首版发行法人。2013年吸收合并与2017当事方株式会社署名只能证明各自时期，不能覆盖早期对象。继续unknown；须按原盒/原版官网核旧署名并另作历史订正，不由KADOKAWA（HARUKAZE制作）推导该公司开发。",
+      "missingEvidence": "KADOKAWA在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g204",
+        "g777",
+        "g900",
+        "fairytale-r16"
+      ]
+    },
+    {
+      "entityId": "entity-name-0f93dc471cd5",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "2017-06-08当事方公告将KADOKAWA、AltPlus、scopes分列为配信开始的三家公司，复合发行名称不是单一公司。保留该旧复合节点unknown、两平台原发行与内容身份；不把共同上线直接等同逐作开发，不自动拆分参与记录或建立公司关系。",
+      "missingEvidence": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "minatosoft-hanayui"
+      ]
+    },
+    {
+      "entityId": "entity-name-9ba14a4f9578",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.gamepres.org/catalog/?id=8814001665005",
+        "https://www.gamepres.org/pc88/library/1986/1986_10.html",
+        "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/2130088.html"
+      ],
+      "reason": "游戏保存协会1986年6月号馆录明确LOGiN是ASCII发行的杂志，历史回顾也区分刊物和LOGIN SOFT品牌。但旧ascii-highlander书目仅将ログイン列为邮购发行，并记分部后发，尚未取得对应原版邮购页／版权页证明本游戏发行名义就是刊物主体。节点类别继续unknown、三条发行保持；同名和近似拼写不构成与LOGIN SOFT合并依据，也不将其他杂志连载同名Highlander直接等同该游戏或追加制作。",
+      "missingEvidence": "LOGiN（ログイン）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "ascii-highlander"
+      ]
+    },
+    {
+      "entityId": "entity-name-770b8bb9bcbc",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html",
+        "https://gyusyabu.ddo.jp/MP3/1987/ASH2.html"
+      ],
+      "reason": "Panasonic官方历史确认旧松下电器产业公司名及2008改名，但不足以单独解释既有松下電器産業（Panasoft）复合发行署名应映射到公司、品牌还是两者。1987 Ashguine II旧资料页本轮出现重定向循环，未取得对应原版包装／手册的法律主体与Panasoft关系说明。继续保留unknown及一条既有发行，不与下一项松下電器産業独立节点合并，不拆分映射，不由硬件品牌、发行或同名沿革推开发。",
+      "missingEvidence": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "te-soft-ashguine-2"
+      ]
+    },
+    {
+      "entityId": "entity-name-5714be41cf55",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.wichman.org/roguehistory.html"
+      ],
+      "reason": "Glenn Wichman本人回顾明确自己与Michael Toy共同构思早期UNIX Rogue、Toy承担多数初版程序，并区分Ken Arnold后续加入及Jon Lane／A.I.Design／Epyx的商业移植与销售。可给现有复合署名追加一条限定早期原作的联合制作；这不把两个自然人当成单一法人或正式注册团队，节点类别继续unknown。原publisher传播署名是旧数据，保留而非声称商业出版已证实；今后个体身份拆分及映射应独立审核，不遗漏Arnold等后续贡献，也不把各商业移植归给这一早期双人组合。",
+      "missingEvidence": "Michael Toy／Glenn Wichman（原作者传播）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "ascii-rogue"
+      ]
+    },
+    {
+      "entityId": "entity-name-5963707789d1",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://store.steampowered.com/app/1346770/YAKIMOCHI_STREAM/",
+        "https://www.miraiworks.asia/about"
+      ],
+      "reason": "Steam权利方页面明确まどそふと开发、mirai works与OTAKU Plan发行，并在正文限定mirai works负责本次Steam版publishing；仅复核既有一条联合发行，不据此增加原作开发、本地化或公司类别。同名miraiworks.asia页面自称2025年成立，未见与2022 Steam署名的可核连接；该页仅作同名候选排查，不视为既有发行商官网，不将其法人资料映射到本节点。Hawk Eye旗下mirai、招聘顾问同名公司及该同名站点均不自动合并，身份继续unknown。",
+      "missingEvidence": "mirai works在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g210"
+      ]
+    },
+    {
+      "entityId": "entity-name-588f588386f3",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.hublots.net/business/content.html",
+        "https://moeapp.net/support.html",
+        "https://www.hublots.net/news/detail/150410_2.html",
+        "https://www.hublots.net/news/detail/131220.html"
+      ],
+      "reason": "Hublots官方业务页明确萌えAPPストア为应用配信商店并区分内容持有方，支持运营服务与原作品牌分开；AQUA同期公告将Hublots配信与SORAHANE原作版权分列。支持页仍列运营公司，不将今日网站与当前全部法人沿革等同。既有节点同时收纳萌えAPP、株式会社ハブロッツ（萌えAPP）、株式会社ジャックインザボックス（萌えAPP）三种原文；单改company或brand均会掩盖服务与法人复合映射，继续unknown，保留八条旧publisher。后续需逐发行拆分服务名、各期合同公司和移植开发，再独立审核身份映射；本批不从配信、商店功能或通用移植服务声明推断四部原作开发，不新增运营／合并关系。",
+      "missingEvidence": "Moe APP（萌えAPP）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g864",
+        "g886",
+        "g903",
+        "g904"
+      ]
+    },
+    {
+      "entityId": "entity-name-95984e43e41f",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.neteasegames.com/about/index.html",
+        "https://www.nitroplus.co.jp/news/2025/12068.php",
+        "https://www.rustyrabbit.com/m/en/"
+      ],
+      "reason": "NetEase官方将NetEase Games说明为NetEase, Inc.的online games division，而Rusty Rabbit权利页另列NetEase Interactive Entertainment Pte. Ltd.；二者不能仅凭业务联系视为同一法人。现有类型没有独立业务部门分类，本批保留该旧原文节点unknown，不擅自改为公司、品牌或新增母子边。身份分类未决不妨碍具名职责：Nitroplus于2025-04-17的当事方发售公告明确双方共同制作，并在原作栏列NetEase Games×ニトロプラス，仅给既有Rusty Rabbit关联作品追加一条originalProduction，说明共同制作而非单方独立开发。原三条具体平台发行与Nitroplus自身专题待核保持，不增加新作品、平台或内容。",
+      "missingEvidence": "NetEase Games在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "nitroplus-extra-rusty-rabbit"
+      ]
+    },
+    {
+      "entityId": "entity-name-8c9d353d6fe9",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://blog.ja.playstation.com/2015/09/16/20150916_new-soft/",
+        "https://www.silkysplusa.com/"
+      ],
+      "reason": "Sony当前官方页面列Vita发行方RED FLAGSHIP，同时保留Alpha版权行及旧官网链接；旧数据库的Alpha发行原文不改，身份继续unknown，不以版权行推公司、品牌或开发。Alpha官网直读502，需原包装、交易主体及版本STAFF独立订正，不能合并RED FLAG SHIP节点或倒填PC原作。",
+      "missingEvidence": "Silky’s Plus Alpha在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g468"
+      ]
+    },
+    {
+      "entityId": "entity-name-456a2209f1ad",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://store.steampowered.com/publisher/SunflowerOcean",
+        "https://store.steampowered.com/app/1144300/?l=english",
+        "https://store.steampowered.com/app/668360/?l=english"
+      ],
+      "reason": "Steam原商品页仍分别列minori／OVERDRIVE开发、MangaGamer与Sunflower Ocean联合发行。发行商主页只自述面向简体中文视觉小说开发，不能区分法人、品牌或团队，也不足以核定这两部具体中文制作合同；继续unknown／unresolved，两条publisher不改，不与MangaGamer或作品原厂合并。",
+      "missingEvidence": "Sunflower Ocean在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g250",
+        "g649"
+      ]
+    },
+    {
+      "entityId": "entity-name-b1b599d0fabf",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.syawaseworks.com/",
+        "https://store.steampowered.com/app/1237370/?l=tchinese"
+      ],
+      "reason": "官网具体自述2020年与Laplacian合作，负责Newton中文版制作和发行，支持既有g855-v3一条发行层localizer。官网同时列株式会社Syawase Works成立于2023-05，不能把现日本公司倒填2020的Syawase Works China；原发行署名、实体ID和unknown身份保留。中文版制作不等于2017原作开发，也不向英语版或共享内容ID传播。",
+      "missingEvidence": "Syawase Works China在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g855"
+      ]
+    },
+    {
+      "entityId": "entity-name-389c2f591e55",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://raido.moe/staff/ps1/ps1_yellow_brick_road.html",
+        "http://www.synergy-j.co.jp/index_j.html",
+        "https://web.archive.org/web/19971015030743/http://www.synergy-j.co.jp/index_j.html"
+      ],
+      "reason": "Yellow Brick Road日本PS1片尾署名的公开转录明确分Original Version与Play Station Version：原作Created by SYNERGY,Inc.，并具名导演、故事、视觉和程序；GREAT另负责移植。限定ibm-yellow-brick-road一条原作制作，不从1996移植STAFF倒推出IBM开发。公司旧官网502、Wayback仅得空索引框架，原图RAR浏览工具不能读取，故只核可读转录的职责，保留unknown身份，不凭Inc后缀填法律公司类别或成立日。",
+      "missingEvidence": "Synergy Inc.在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "ibm-yellow-brick-road"
+      ]
+    },
+    {
+      "entityId": "entity-name-3fc0babaf7f8",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.tamamakogaming.com/",
+        "https://www.tamamakogaming.com/jp",
+        "https://store.steampowered.com/app/1604380/Hamidashi_Creative/",
+        "https://store.steampowered.com/app/3407830/Hamidashi_Creative_Totsu/"
+      ],
+      "reason": "两部Hamidashi Creative现Steam产品页均将madosoft列为Developer，TamaMako gaming与Sekai Project列为Publisher，支持保留既有地区联合发行。TamaMako主页仅可读取合作方正文，大量内容以图片承载，未取得历史法律主体与逐作本地化STAFF，不由发行身份或中文支持推定开发／本地化；保留unknown／unresolved。",
+      "missingEvidence": "TamaMako gaming在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g214",
+        "g215"
+      ]
+    },
+    {
+      "entityId": "entity-name-40e00ac41438",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
+        "https://xing.co.jp/company/history",
+        "https://www.x68000-jp.sakura.ne.jp/x68k_ohxgamedata.html",
+        "https://download.file-hunter.com/Magazines/JP/Takeru%20Press/Takeru_Press_1995_8-9.pdf"
+      ],
+      "reason": "X68000发行和法律身份仍欠具体原件与历史连续性证据，保留unknown以及g830-v2一条旧publisher；现代JOYSOUND同名公司不自动合并。",
+      "missingEvidence": "XING（エクシング）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g830"
+      ]
+    },
+    {
+      "entityId": "entity-name-e1232b52eff7",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "服务上架已证，发行法律主体未证，保留unknown。",
+      "missingEvidence": "发行方待核实（GREE）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-d1903e2fafb1",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "服务上架已证，发行法律主体未证，保留unknown。",
+      "missingEvidence": "发行方待核实（Mobage）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-de3ed19ac095",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/1988/1988_10.html",
+        "https://www.alicesoft.com/outline/contents.html"
+      ],
+      "reason": "二手1988署名与官方1989品牌起点冲突，保留unknown。",
+      "missingEvidence": "未核实（1988年前身关联；目录署名冲突）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "g594",
+        "alicesoft-extra-joseishain"
+      ]
+    },
+    {
+      "entityId": "entity-name-a978e18d1d4b",
+      "status": "awaitOriginalIdentityAndVersionScope",
+      "sources": [
+        "https://www.alicesoft.com/outline/contents.html",
+        "https://fm-7.com/museum/products/eut10qpw/",
+        "https://fm-7.com/museum/products/mttloqf5/",
+        "https://fm-7.com/museum/products/x3auvpz4/"
+      ],
+      "reason": "1982馆藏归类早于1983公司设立，保留unknown与原署名。",
+      "missingEvidence": "未核实（馆藏归入ChampionSoft前身关联）在相应时期的原版版权页／法人登记及逐版本署名",
+      "workIds": [
+        "alicesoft-extra-combat47",
+        "alicesoft-extra-weddingrace",
+        "alicesoft-extra-computerwars"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-b8b1293f82fa",
+      "name": "Alchemist",
+      "status": "identityResolved",
+      "sources": [
+        "https://www.comiket.co.jp/info-a/C66/C66kigyo/List_A.html"
+      ],
+      "reason": "同期C66企业展位原件明确列株式会社アルケミスト及《月は東に日は西に》家用版。核定历史发行署名所指为公司；直接逐作支持g265，其他原作、移植和制作职责仍各待原件。",
+      "workIds": [
+        "g264",
+        "g265",
+        "g876",
+        "g285"
+      ]
+    },
+    {
+      "entityId": "entity-name-bd36baf4b6a9",
+      "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20190212-m"
+      ],
+      "reason": "官方公告分列三家公司共同配信，并列其他制作人员，不能把历史联合发行字符串认定为一个公司、制作团队或三方同等开发。保留联合发行署名及身份待核，补证需逐方原始开发分工；本批不拆分或合并身份。",
+      "workIds": [
+        "minatosoft-spyce"
+      ]
+    },
+    {
+      "entityId": "entity-name-788994ba8dfb",
+      "name": "American Laser Games",
+      "status": "identityResolved",
+      "sources": [
+        "https://manuals.plus/m/051d6e54fb3d36dc96349bce8efcc7244213e20623a258218df168fc34d068fc"
+      ],
+      "reason": "1993年Sega CD《Mad Dog McCree》原版说明书保修条款由American Laser Games, Inc.承担，版权标1990及1993；核定此历史署名为公司。续作只在同页商标清单出现，不能据此推断其制作或版本职责。",
+      "workIds": [
+        "g1198",
+        "g1199"
+      ]
+    },
+    {
+      "entityId": "entity-name-7f11db7a66f2",
+      "name": "Arsys Software",
+      "status": "identityDeferred",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
+        "https://www.mobygames.com/game/58696/star-cruiser-ii-the-odysseus-project/",
+        "https://www.value-press.com/pressrelease/88636"
+      ],
+      "reason": "现有机种索引与实物目录支持原发行和后发CD版区分；MobyGames搜索摘要列开发者但正文403，EGG官方发布稿只涉及前作，不能替代II原版制作证据。补原版说明书／结束职员或具名创作者资料后再核；保留身份待核与JHV专题待核，不改1993/1994日期异文。",
+      "workIds": [
+        "jhv-star2"
+      ]
+    },
+    {
+      "entityId": "entity-name-80a218385951",
+      "name": "Asoberu! BD-GAME（あそべる！BD-GAME）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://bd-game.product.co.jp/product/product10.html"
+      ],
+      "reason": "仅确认BDPG品牌／产品语境，运营法人及创作职责未核。",
+      "workIds": [
+        "g163"
+      ]
+    },
+    {
+      "entityId": "entity-name-8b16f2bf500e",
+      "name": "Byakuya Shobo（白夜書房）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.byakuya-shobo.co.jp/company/cc10339.html",
+        "https://alicecottage1989.blog.jp/archives/20634266.html"
+      ],
+      "reason": "法人现状可核，历史版本署名白夜書店与白夜書房未完成逐版对照，保留原有待核身份。",
+      "workIds": [
+        "g542"
+      ]
+    },
+    {
+      "entityId": "entity-name-21dcd9c9c1e7",
+      "name": "CoreMoreco",
+      "status": "identityDeferred",
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/4789.html"
+      ],
+      "reason": "职员表转录将CoreMoreco列为品牌、コアモアコ列企画，ホビボックス列销售；缺原版包装、游戏内片尾或当年官方网页以确认品牌主体与逐项制作。",
+      "workIds": [
+        "g638"
+      ]
+    },
+    {
+      "entityId": "entity-name-16c097f224f4",
+      "name": "DMM GAMES／AUGUST",
+      "status": "identityDeferred",
+      "sources": [
+        "https://august-soft.com/20th/history/",
+        "https://august-soft.com/product"
+      ],
+      "reason": "AUGUST官方将《あいりすミスティリア！》表述为双方合作，员工对谈区分AUGUST的世界观、剧本与角色制作和DMM的游戏系统；既有AUGUST合作开发已单列。复合发行署名不是独立法人或品牌，须核原版片尾、条款和各版本合同主体才可拆分，不从斜线推定组织关系。",
+      "workIds": [
+        "august-rpg-imys"
+      ]
+    },
+    {
+      "entityId": "entity-name-fb6db91d6827",
+      "name": "E3 Staff（イースリースタッフ）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://raido.moe/staff/ps1/ps1_sotsugyo_crossworld.html"
+      ],
+      "reason": "《卒業 Crossworld》PS原版片尾明确“企画製作 M2／SOFIX”“販売 イースリースタッフ”；只有销售职责可直接确认。缺E3 Staff同期法人资料及其他作品原始署名，保留身份待核，不记为本作创作。",
+      "workIds": [
+        "g834"
+      ]
+    },
+    {
+      "entityId": "entity-name-b06c3e4e3ae1",
+      "name": "EXNOA（DG REMAKE）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786"
+      ],
+      "reason": "原文并列运营公司和DG REMAKE品牌，现有两条2024主机发行不等于1992原作开发；缺逐版制作人员或开发方证据，组合署名暂不拆分或判为单一法人。",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-name-5f2bf730e86e",
+      "name": "EXNOA（DMM GAMES）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1562",
+        "https://dmmgames.co.jp/"
+      ],
+      "reason": "运营公司和DMM GAMES品牌组合仅在专题关联作品发行出现；缺本作原版制作名单，组合署名暂不并入已另立的DMM GAMES品牌。",
+      "workIds": [
+        "minatosoft-climax"
+      ]
+    },
+    {
+      "entityId": "entity-name-fdc56bbd260d",
+      "name": "FANZA GAMES（DG REMAKE）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://dmmgames.co.jp/news/detail/id=1786",
+        "https://a.sofmap.com/product_detail.aspx?sku=21447788",
+        "https://game.watch.impress.co.jp/docs/news/1308585.html"
+      ],
+      "reason": "现有2021年发行行引用2023年CSver公告，不能据此证明2021年DG REMAKE署名；2021年PC版与2024年主机品牌须版本分别核原版包装和官方同期页面。复合署名暂不宜判为单一主体，历史发行订正须另作具名证据记录。",
+      "workIds": [
+        "g046"
+      ]
+    },
+    {
+      "entityId": "entity-name-0956fc2c3ad0",
+      "name": "General Products",
+      "status": "identityDeferred",
+      "sources": [
+        "https://github.com/mamedev/mame/blob/master/hash/pc8801_flop.xml",
+        "https://retroblues.sakura.ne.jp/regeokiba/gainax/gainax.htm"
+      ],
+      "reason": "原始PC-88发行记录称General Products，收藏实物按GAINAX制作、GENERAL PRODUCTS销售列示；但同名历史商店、商品品牌与法人经营关系尚无足够同期原件可界定，三条电脑学园发行不证明独立开发。",
+      "workIds": [
+        "gainax-dennou1",
+        "gainax-dennou2",
+        "gainax-dennou3"
+      ]
+    },
+    {
+      "entityId": "entity-name-3de89d1ab0a5",
+      "name": "IMYUIC(ALICESOFT)",
+      "status": "identityResolved",
+      "sources": [
+        "https://www.alicesoft.com/information/2022/entry003001.html"
+      ],
+      "reason": "ALICESOFT在2022年公告明确称IMYUIC(ALICESOFT)是其管辖已发行作品的品牌／社团名称，并指名HENTAI LABYRINTH；这是后改的标记，不倒填作品原发时的品牌或开发职责。保留旧发行publisher及其角色。",
+      "workIds": [
+        "alicesoft-extra-hentailabyrinth"
+      ]
+    },
+    {
+      "entityId": "entity-name-d7900289691e",
+      "name": "Interchannel",
+      "status": "identityDeferred",
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/20040617/ic.htm",
+        "https://www.prot.co.jp/switch/kanon/introduction.html",
+        "https://key.visualarts.gr.jp/clannad_10th/"
+      ],
+      "reason": "旧英文节点混用2002年Kanon PS2与2006年CLANNAD PS2发行；2004年7月更名的同期公告使前者署名存在时间疑点。现引用的Kanon现代移植说明只能证明配音及平台历史，不能核定2002发行法人。保留unknown及两个旧发行，不与NEC Interchannel或日文节点合并；须补原盒、说明书与片尾，另行订正历史发行和基线。未确认逐版移植开发。",
+      "workIds": [
+        "g028",
+        "g030"
+      ]
+    },
+    {
+      "entityId": "entity-name-0483335f6a4f",
+      "name": "J. K. Greye Software",
+      "status": "identityDeferred",
+      "sources": [
+        "https://timexsinclair.com/computer_media/catacombs/index.html",
+        "https://timexsinclair.com/company/j-k-greye-software/index.html"
+      ],
+      "reason": "Catacombs归档及源码1030行只见J.K.GREYE SOFTWARE版权署名，不能单独证明具体开发者或公司法律身份；J.K. Greye Software与Enterprises Ltd的对应及John Greye个人创作须补原盒说明书或当事人资料。保留旧发行节点unknown及Melbourne House专题职责待核，不把后发美国发行当原作制作。",
+      "workIds": [
+        "melbournehouse-catacombs"
+      ]
+    },
+    {
+      "entityId": "entity-name-82fc3d1bfdaa",
+      "name": "KADOKAWA",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.kadokawa.co.jp/product/game1624/",
+        "https://group.kadokawa.co.jp/company/history/06.html",
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "旧KADOKAWA节点混合2002、2005、2012及2016发行；现行商品站的品牌归档不能核定每个首版发行法人。2013年吸收合并与2017当事方株式会社署名只能证明各自时期，不能覆盖早期对象。继续unknown；须按原盒/原版官网核旧署名并另作历史订正，不由KADOKAWA（HARUKAZE制作）推导该公司开发。",
+      "workIds": [
+        "g204",
+        "g777",
+        "g900",
+        "fairytale-r16"
+      ]
+    },
+    {
+      "entityId": "entity-name-0f93dc471cd5",
+      "name": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.altplus.co.jp/topics/20170608"
+      ],
+      "reason": "2017-06-08当事方公告将KADOKAWA、AltPlus、scopes分列为配信开始的三家公司，复合发行名称不是单一公司。保留该旧复合节点unknown、两平台原发行与内容身份；不把共同上线直接等同逐作开发，不自动拆分参与记录或建立公司关系。",
+      "workIds": [
+        "minatosoft-hanayui"
+      ]
+    },
+    {
+      "entityId": "entity-name-9ba14a4f9578",
+      "name": "LOGiN（ログイン）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.gamepres.org/catalog/?id=8814001665005",
+        "https://www.gamepres.org/pc88/library/1986/1986_10.html",
+        "https://akiba-pc.watch.impress.co.jp/docs/column/retrosoft/2130088.html"
+      ],
+      "reason": "游戏保存协会1986年6月号馆录明确LOGiN是ASCII发行的杂志，历史回顾也区分刊物和LOGIN SOFT品牌。但旧ascii-highlander书目仅将ログイン列为邮购发行，并记分部后发，尚未取得对应原版邮购页／版权页证明本游戏发行名义就是刊物主体。节点类别继续unknown、三条发行保持；同名和近似拼写不构成与LOGIN SOFT合并依据，也不将其他杂志连载同名Highlander直接等同该游戏或追加制作。",
+      "workIds": [
+        "ascii-highlander"
+      ]
+    },
+    {
+      "entityId": "entity-name-770b8bb9bcbc",
+      "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://holdings.panasonic/jp/corporate/about/history/chronicle/2008.html",
+        "https://gyusyabu.ddo.jp/MP3/1987/ASH2.html"
+      ],
+      "reason": "Panasonic官方历史确认旧松下电器产业公司名及2008改名，但不足以单独解释既有松下電器産業（Panasoft）复合发行署名应映射到公司、品牌还是两者。1987 Ashguine II旧资料页本轮出现重定向循环，未取得对应原版包装／手册的法律主体与Panasoft关系说明。继续保留unknown及一条既有发行，不与下一项松下電器産業独立节点合并，不拆分映射，不由硬件品牌、发行或同名沿革推开发。",
+      "workIds": [
+        "te-soft-ashguine-2"
+      ]
+    },
+    {
+      "entityId": "entity-name-5714be41cf55",
+      "name": "Michael Toy／Glenn Wichman（原作者传播）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.wichman.org/roguehistory.html"
+      ],
+      "reason": "Glenn Wichman本人回顾明确自己与Michael Toy共同构思早期UNIX Rogue、Toy承担多数初版程序，并区分Ken Arnold后续加入及Jon Lane／A.I.Design／Epyx的商业移植与销售。可给现有复合署名追加一条限定早期原作的联合制作；这不把两个自然人当成单一法人或正式注册团队，节点类别继续unknown。原publisher传播署名是旧数据，保留而非声称商业出版已证实；今后个体身份拆分及映射应独立审核，不遗漏Arnold等后续贡献，也不把各商业移植归给这一早期双人组合。",
+      "workIds": [
+        "ascii-rogue"
+      ]
+    },
+    {
+      "entityId": "entity-name-5963707789d1",
+      "name": "mirai works",
+      "status": "identityDeferred",
+      "sources": [
+        "https://store.steampowered.com/app/1346770/YAKIMOCHI_STREAM/",
+        "https://www.miraiworks.asia/about"
+      ],
+      "reason": "Steam权利方页面明确まどそふと开发、mirai works与OTAKU Plan发行，并在正文限定mirai works负责本次Steam版publishing；仅复核既有一条联合发行，不据此增加原作开发、本地化或公司类别。同名miraiworks.asia页面自称2025年成立，未见与2022 Steam署名的可核连接；该页仅作同名候选排查，不视为既有发行商官网，不将其法人资料映射到本节点。Hawk Eye旗下mirai、招聘顾问同名公司及该同名站点均不自动合并，身份继续unknown。",
+      "workIds": [
+        "g210"
+      ]
+    },
+    {
+      "entityId": "entity-name-588f588386f3",
+      "name": "Moe APP（萌えAPP）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.hublots.net/business/content.html",
+        "https://moeapp.net/support.html",
+        "https://www.hublots.net/news/detail/150410_2.html",
+        "https://www.hublots.net/news/detail/131220.html"
+      ],
+      "reason": "Hublots官方业务页明确萌えAPPストア为应用配信商店并区分内容持有方，支持运营服务与原作品牌分开；AQUA同期公告将Hublots配信与SORAHANE原作版权分列。支持页仍列运营公司，不将今日网站与当前全部法人沿革等同。既有节点同时收纳萌えAPP、株式会社ハブロッツ（萌えAPP）、株式会社ジャックインザボックス（萌えAPP）三种原文；单改company或brand均会掩盖服务与法人复合映射，继续unknown，保留八条旧publisher。后续需逐发行拆分服务名、各期合同公司和移植开发，再独立审核身份映射；本批不从配信、商店功能或通用移植服务声明推断四部原作开发，不新增运营／合并关系。",
+      "workIds": [
+        "g864",
+        "g886",
+        "g903",
+        "g904"
+      ]
+    },
+    {
+      "entityId": "entity-name-95984e43e41f",
+      "name": "NetEase Games",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.neteasegames.com/about/index.html",
+        "https://www.nitroplus.co.jp/news/2025/12068.php",
+        "https://www.rustyrabbit.com/m/en/"
+      ],
+      "reason": "NetEase官方将NetEase Games说明为NetEase, Inc.的online games division，而Rusty Rabbit权利页另列NetEase Interactive Entertainment Pte. Ltd.；二者不能仅凭业务联系视为同一法人。现有类型没有独立业务部门分类，本批保留该旧原文节点unknown，不擅自改为公司、品牌或新增母子边。身份分类未决不妨碍具名职责：Nitroplus于2025-04-17的当事方发售公告明确双方共同制作，并在原作栏列NetEase Games×ニトロプラス，仅给既有Rusty Rabbit关联作品追加一条originalProduction，说明共同制作而非单方独立开发。原三条具体平台发行与Nitroplus自身专题待核保持，不增加新作品、平台或内容。",
+      "workIds": [
+        "nitroplus-extra-rusty-rabbit"
+      ]
+    },
+    {
+      "entityId": "entity-name-8c9d353d6fe9",
+      "name": "Silky’s Plus Alpha",
+      "status": "identityDeferred",
+      "sources": [
+        "https://blog.ja.playstation.com/2015/09/16/20150916_new-soft/",
+        "https://www.silkysplusa.com/"
+      ],
+      "reason": "Sony当前官方页面列Vita发行方RED FLAGSHIP，同时保留Alpha版权行及旧官网链接；旧数据库的Alpha发行原文不改，身份继续unknown，不以版权行推公司、品牌或开发。Alpha官网直读502，需原包装、交易主体及版本STAFF独立订正，不能合并RED FLAG SHIP节点或倒填PC原作。",
+      "workIds": [
+        "g468"
+      ]
+    },
+    {
+      "entityId": "entity-name-456a2209f1ad",
+      "name": "Sunflower Ocean",
+      "status": "identityDeferred",
+      "sources": [
+        "https://store.steampowered.com/publisher/SunflowerOcean",
+        "https://store.steampowered.com/app/1144300/?l=english",
+        "https://store.steampowered.com/app/668360/?l=english"
+      ],
+      "reason": "Steam原商品页仍分别列minori／OVERDRIVE开发、MangaGamer与Sunflower Ocean联合发行。发行商主页只自述面向简体中文视觉小说开发，不能区分法人、品牌或团队，也不足以核定这两部具体中文制作合同；继续unknown／unresolved，两条publisher不改，不与MangaGamer或作品原厂合并。",
+      "workIds": [
+        "g250",
+        "g649"
+      ]
+    },
+    {
+      "entityId": "entity-name-b1b599d0fabf",
+      "name": "Syawase Works China",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.syawaseworks.com/",
+        "https://store.steampowered.com/app/1237370/?l=tchinese"
+      ],
+      "reason": "官网具体自述2020年与Laplacian合作，负责Newton中文版制作和发行，支持既有g855-v3一条发行层localizer。官网同时列株式会社Syawase Works成立于2023-05，不能把现日本公司倒填2020的Syawase Works China；原发行署名、实体ID和unknown身份保留。中文版制作不等于2017原作开发，也不向英语版或共享内容ID传播。",
+      "workIds": [
+        "g855"
+      ]
+    },
+    {
+      "entityId": "entity-name-389c2f591e55",
+      "name": "Synergy Inc.",
+      "status": "identityDeferred",
+      "sources": [
+        "https://raido.moe/staff/ps1/ps1_yellow_brick_road.html",
+        "http://www.synergy-j.co.jp/index_j.html",
+        "https://web.archive.org/web/19971015030743/http://www.synergy-j.co.jp/index_j.html"
+      ],
+      "reason": "Yellow Brick Road日本PS1片尾署名的公开转录明确分Original Version与Play Station Version：原作Created by SYNERGY,Inc.，并具名导演、故事、视觉和程序；GREAT另负责移植。限定ibm-yellow-brick-road一条原作制作，不从1996移植STAFF倒推出IBM开发。公司旧官网502、Wayback仅得空索引框架，原图RAR浏览工具不能读取，故只核可读转录的职责，保留unknown身份，不凭Inc后缀填法律公司类别或成立日。",
+      "workIds": [
+        "ibm-yellow-brick-road"
+      ]
+    },
+    {
+      "entityId": "entity-name-3fc0babaf7f8",
+      "name": "TamaMako gaming",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.tamamakogaming.com/",
+        "https://www.tamamakogaming.com/jp",
+        "https://store.steampowered.com/app/1604380/Hamidashi_Creative/",
+        "https://store.steampowered.com/app/3407830/Hamidashi_Creative_Totsu/"
+      ],
+      "reason": "两部Hamidashi Creative现Steam产品页均将madosoft列为Developer，TamaMako gaming与Sekai Project列为Publisher，支持保留既有地区联合发行。TamaMako主页仅可读取合作方正文，大量内容以图片承载，未取得历史法律主体与逐作本地化STAFF，不由发行身份或中文支持推定开发／本地化；保留unknown／unresolved。",
+      "workIds": [
+        "g214",
+        "g215"
+      ]
+    },
+    {
+      "entityId": "entity-name-40e00ac41438",
+      "name": "XING（エクシング）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
+        "https://xing.co.jp/company/history",
+        "https://www.x68000-jp.sakura.ne.jp/x68k_ohxgamedata.html",
+        "https://download.file-hunter.com/Magazines/JP/Takeru%20Press/Takeru_Press_1995_8-9.pdf"
+      ],
+      "reason": "X68000发行和法律身份仍欠具体原件与历史连续性证据，保留unknown以及g830-v2一条旧publisher；现代JOYSOUND同名公司不自动合并。",
+      "workIds": [
+        "g830"
+      ]
+    },
+    {
+      "entityId": "entity-name-e1232b52eff7",
+      "name": "发行方待核实（GREE）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "服务上架已证，发行法律主体未证，保留unknown。",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-d1903e2fafb1",
+      "name": "发行方待核实（Mobage）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "服务上架已证，发行法律主体未证，保留unknown。",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-de3ed19ac095",
+      "name": "未核实（1988年前身关联；目录署名冲突）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/1988/1988_10.html",
+        "https://www.alicesoft.com/outline/contents.html"
+      ],
+      "reason": "二手1988署名与官方1989品牌起点冲突，保留unknown。",
+      "workIds": [
+        "g594",
+        "alicesoft-extra-joseishain"
+      ]
+    },
+    {
+      "entityId": "entity-name-a978e18d1d4b",
+      "name": "未核实（馆藏归入ChampionSoft前身关联）",
+      "status": "identityDeferred",
+      "sources": [
+        "https://www.alicesoft.com/outline/contents.html",
+        "https://fm-7.com/museum/products/eut10qpw/",
+        "https://fm-7.com/museum/products/mttloqf5/",
+        "https://fm-7.com/museum/products/x3auvpz4/"
+      ],
+      "reason": "1982馆藏归类早于1983公司设立，保留unknown与原署名。",
+      "workIds": [
+        "alicesoft-extra-combat47",
+        "alicesoft-extra-weddingrace",
+        "alicesoft-extra-computerwars"
+      ]
+    }
+  ],
+  "recheckProgress": {
+    "letter": "全部五段",
+    "normalization": "沿首轮结束时39项unresolved显示名的sortFamilies快照；拉丁重音折合基本字母",
+    "total": 39,
+    "processedEntityIds": [
+      "entity-name-4750f74061fe",
+      "entity-name-c31f977d8bac",
+      "entity-name-6ed2a96c53cd",
+      "entity-name-490ea790703a",
+      "entity-name-f0d25e9c6d82",
+      "entity-name-b8b1293f82fa",
+      "entity-name-bd36baf4b6a9",
+      "entity-name-788994ba8dfb",
+      "entity-name-7f11db7a66f2",
+      "entity-name-80a218385951",
+      "entity-name-8b16f2bf500e",
+      "entity-name-21dcd9c9c1e7",
+      "entity-name-16c097f224f4",
+      "entity-name-fb6db91d6827",
+      "entity-name-b06c3e4e3ae1",
+      "entity-name-5f2bf730e86e",
+      "entity-name-fdc56bbd260d",
+      "entity-name-0956fc2c3ad0",
+      "entity-name-3de89d1ab0a5",
+      "entity-name-d7900289691e",
+      "entity-name-0483335f6a4f",
+      "entity-name-82fc3d1bfdaa",
+      "entity-name-0f93dc471cd5",
+      "entity-name-9ba14a4f9578",
+      "entity-name-770b8bb9bcbc",
+      "entity-name-5714be41cf55",
+      "entity-name-5963707789d1",
+      "entity-name-588f588386f3",
+      "entity-name-95984e43e41f",
+      "entity-name-8c9d353d6fe9",
+      "entity-name-456a2209f1ad",
+      "entity-name-b1b599d0fabf",
+      "entity-name-389c2f591e55",
+      "entity-name-3fc0babaf7f8",
+      "entity-name-40e00ac41438",
+      "entity-name-e1232b52eff7",
+      "entity-name-d1903e2fafb1",
+      "entity-name-de3ed19ac095",
+      "entity-name-a978e18d1d4b"
+    ],
+    "nextEntityId": null,
+    "nextName": null,
+    "baselineQueue": [
+      {
+        "entityId": "entity-name-4750f74061fe",
+        "name": "Accolade"
+      },
+      {
+        "entityId": "entity-name-c31f977d8bac",
+        "name": "Activision"
+      },
+      {
+        "entityId": "entity-name-6ed2a96c53cd",
+        "name": "Addison-Wesley Productions"
+      },
+      {
+        "entityId": "entity-name-490ea790703a",
+        "name": "Adventure Soft"
+      },
+      {
+        "entityId": "entity-name-f0d25e9c6d82",
+        "name": "âge"
+      },
+      {
+        "entityId": "entity-name-b8b1293f82fa",
+        "name": "Alchemist"
+      },
+      {
+        "entityId": "entity-name-bd36baf4b6a9",
+        "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）"
+      },
+      {
+        "entityId": "entity-name-788994ba8dfb",
+        "name": "American Laser Games"
+      },
+      {
+        "entityId": "entity-name-7f11db7a66f2",
+        "name": "Arsys Software"
+      },
+      {
+        "entityId": "entity-name-80a218385951",
+        "name": "Asoberu! BD-GAME（あそべる！BD-GAME）"
+      },
+      {
+        "entityId": "entity-name-8b16f2bf500e",
+        "name": "Byakuya Shobo（白夜書房）"
+      },
+      {
+        "entityId": "entity-name-21dcd9c9c1e7",
+        "name": "CoreMoreco"
+      },
+      {
+        "entityId": "entity-name-16c097f224f4",
+        "name": "DMM GAMES／AUGUST"
+      },
+      {
+        "entityId": "entity-name-fb6db91d6827",
+        "name": "E3 Staff（イースリースタッフ）"
+      },
+      {
+        "entityId": "entity-name-b06c3e4e3ae1",
+        "name": "EXNOA（DG REMAKE）"
+      },
+      {
+        "entityId": "entity-name-5f2bf730e86e",
+        "name": "EXNOA（DMM GAMES）"
+      },
+      {
+        "entityId": "entity-name-fdc56bbd260d",
+        "name": "FANZA GAMES（DG REMAKE）"
+      },
+      {
+        "entityId": "entity-name-0956fc2c3ad0",
+        "name": "General Products"
+      },
+      {
+        "entityId": "entity-name-3de89d1ab0a5",
+        "name": "IMYUIC(ALICESOFT)"
+      },
+      {
+        "entityId": "entity-name-d7900289691e",
+        "name": "Interchannel"
+      },
+      {
+        "entityId": "entity-name-0483335f6a4f",
+        "name": "J. K. Greye Software"
+      },
+      {
+        "entityId": "entity-name-82fc3d1bfdaa",
+        "name": "KADOKAWA"
+      },
+      {
+        "entityId": "entity-name-0f93dc471cd5",
+        "name": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）"
+      },
+      {
+        "entityId": "entity-name-9ba14a4f9578",
+        "name": "LOGiN（ログイン）"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）"
+      },
+      {
+        "entityId": "entity-name-95984e43e41f",
+        "name": "NetEase Games"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc."
+      },
+      {
+        "entityId": "entity-name-3fc0babaf7f8",
+        "name": "TamaMako gaming"
+      },
+      {
+        "entityId": "entity-name-40e00ac41438",
+        "name": "XING（エクシング）"
+      },
+      {
+        "entityId": "entity-name-e1232b52eff7",
+        "name": "发行方待核实（GREE）"
+      },
+      {
+        "entityId": "entity-name-d1903e2fafb1",
+        "name": "发行方待核实（Mobage）"
+      },
+      {
+        "entityId": "entity-name-de3ed19ac095",
+        "name": "未核实（1988年前身关联；目录署名冲突）"
+      },
+      {
+        "entityId": "entity-name-a978e18d1d4b",
+        "name": "未核实（馆藏归入ChampionSoft前身关联）"
+      }
+    ]
+  }
+}
