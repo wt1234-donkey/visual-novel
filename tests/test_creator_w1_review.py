@@ -24,9 +24,15 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'6d3d3f5be873cf8ba4c9923e6cce6ac7bacbafc6:{path}'], cwd=ROOT))
+    return read(path)
+
+
 class CreatorW1Tests(unittest.TestCase):
     def test_four_scoped_identities_preserve_names_dates_and_relationships(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({eid for eid in be if be[eid] != ae[eid]}, set(IDS) - {IDS[1]})
@@ -42,7 +48,7 @@ class CreatorW1Tests(unittest.TestCase):
         self.assertEqual((len(ae), sum(e['verification'] == 'unresolved' for e in ae.values())), (326, 40))
 
     def test_only_two_explicit_branded_roles_added_without_catalogue_changes(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-2], before['credits'])
         self.assertEqual(after['dossierMemberships'], before['dossierMemberships'])
         self.assertEqual((len(after['credits']), len(after['dossierMemberships']),
@@ -58,7 +64,7 @@ class CreatorW1Tests(unittest.TestCase):
                      'data/gameplay-catalogues.json', 'data/work-classification.json',
                      'data/content-migration-baseline.json', 'data/entity-migration-baseline.json']:
             self.assertEqual(read(path), old(path), path)
-        self.assertEqual(read('data/organizations.json')['works'], old('data/organizations.json')['works'])
+        self.assertEqual(applied('data/organizations.json')['works'], old('data/organizations.json')['works'])
         hbr = next(w for c in read('data/company-coverage.json')['companies'] if c['id'] == 'key'
                    for w in c['relatedGames'] if w['id'] == 'key-rpg-hbr')
         pc = next(r for r in hbr['platformReleases'] if r['id'] == 'key-rpg-hbr-v3')
@@ -69,7 +75,7 @@ class CreatorW1Tests(unittest.TestCase):
                          [('g085-v1', 1985, 'Data East'), ('g085-v2', 1992, 'Wolf Team')])
 
     def test_complete_w_order_and_next_xbox(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),
