@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "2a6be6dbe89af872b33ebd483153dea09cda29f0",
+  "audit": "data/entity-creator-x1-review-20261026.md",
+  "previousReview": "data/entity-creator-w1-review-20261026.md",
+  "policy": "按X组两项连续核查并收尾。Xbox Game Studios现有发行品牌与DONTNOD、INTERIOR/NIGHT、Obsidian等实际开发分开；XING同名企业与1993 X68000发行待核，不从名称、现行法人或二手平台列表推出历史连续性或移植开发。",
+  "identityCorrections": [],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-xbox_game_studios",
+      "name": "Xbox Game Studios",
+      "status": "specificProductionAndPublisherScopeDeferred",
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+        "https://news.xbox.com/en-us/2019/11/14/tell-me-why-x019/",
+        "https://news.xbox.com/en-us/2022/07/19/as-dusk-falls-available-now-game-pass-pc-steam/",
+        "https://www.obsidian.net/games/pentiment"
+      ],
+      "reason": "2019 Xbox官方将Microsoft Studios更名为Xbox Game Studios，称为由多个独立开发团队与Global Publishing构成的组织；此表述不等于单一开发公司。三部现有作品原发行／出版品牌11条保留；Tell Me Why的DONTNOD、As Dusk Falls的INTERIOR/NIGHT与Pentiment的Obsidian实际开发不由Xbox发行品牌承接。现有三作后续内容／平台归属及各独立团队职责应逐版本另核，未从出版关系新增品牌或母体的创作角色。",
+      "workIds": ["g963", "g964", "g965"]
+    },
+    {
+      "entityId": "entity-name-40e00ac41438",
+      "name": "XING（エクシング）",
+      "status": "historicalPublisherIdentityAndReleaseEvidenceDeferred",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
+        "https://xing.co.jp/company/history",
+        "https://www.x68000-jp.sakura.ne.jp/x68k_ohxgamedata.html",
+        "https://download.file-hunter.com/Magazines/JP/Takeru%20Press/Takeru_Press_1995_8-9.pdf"
+      ],
+      "reason": "g830-v2原X68000 1993发行署名取自百科式平台汇总；Oh!X投票资料转录出现卒業与エクシング，但不证明刊物票表与具体发行封套、法律主体或准确年份一致。1995 TAKERU Press索引同时出现卒業X68000和株式会社エクシング等字样，PDF直读失败且词可能来自不同版面，不以搜索共现合并为证据。现行xing.co.jp官方沿革记1992成立的JOYSOUND卡拉OK公司，未明确对应本游戏1993发行；亦有二手目录将X68000版本记JHV／TAKERU及1994，待原包装、广告或当事方可读原件逐版核实。保留unknown、原publisher和contentRelation unverified，不写现代公司日期、补开发或更动游戏发行记录。",
+      "workIds": ["g830"]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-xbox_game_studios",
+      "name": "Xbox Game Studios",
+      "status": "existingPublishingBrandReviewed",
+      "sources": [
+        "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+        "https://news.xbox.com/en-us/2019/11/14/tell-me-why-x019/",
+        "https://news.xbox.com/en-us/2022/07/19/as-dusk-falls-available-now-game-pass-pc-steam/",
+        "https://www.obsidian.net/games/pentiment"
+      ],
+      "reason": "官方更名公告确认Xbox Game Studios为包含独立工作室和Global Publishing的组织名；既有brand与三作11条发行／原作发行品牌职责保持，三家实际开发方与品牌发行分开。",
+      "workIds": ["g963", "g964", "g965"]
+    },
+    {
+      "entityId": "entity-name-40e00ac41438",
+      "name": "XING（エクシング）",
+      "status": "historicalIdentityDeferred",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
+        "https://xing.co.jp/company/history",
+        "https://www.x68000-jp.sakura.ne.jp/x68k_ohxgamedata.html",
+        "https://download.file-hunter.com/Magazines/JP/Takeru%20Press/Takeru_Press_1995_8-9.pdf"
+      ],
+      "reason": "X68000发行和法律身份仍欠具体原件与历史连续性证据，保留unknown以及g830-v2一条旧publisher；现代JOYSOUND同名公司不自动合并。",
+      "workIds": ["g830"]
+    }
+  ],
+  "progress": {
+    "letter": "X",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 2,
+    "processedEntityIds": ["entity-xbox_game_studios", "entity-name-40e00ac41438"],
+    "nextEntityId": "entity-yonago_gainax",
+    "nextName": "Yonago GAINAX（米子ガイナックス）",
+    "queue": [
+      {"entityId": "entity-xbox_game_studios", "name": "Xbox Game Studios", "status": "reviewed"},
+      {"entityId": "entity-name-40e00ac41438", "name": "XING（エクシング）", "status": "reviewed"}
+    ]
+  }
+}
