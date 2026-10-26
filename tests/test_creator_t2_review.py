@@ -20,13 +20,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'deafc7f5a6e551367b6d06012e6a7afc3337d920:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorT2Tests(unittest.TestCase):
     def test_two_identity_corrections_preserve_regional_publisher_and_historical_brand(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {IDS[1], IDS[3]})
@@ -40,7 +46,7 @@ class CreatorT2Tests(unittest.TestCase):
         self.assertEqual((len(ae), sum(e['verification'] == 'unresolved' for e in ae.values())), (326, 54))
 
     def test_exact_three_credits_preserve_original_signatures_and_collaborators(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-3], before['credits'])
         self.assertEqual(len(after['credits']), 5002)
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role'])
@@ -72,13 +78,13 @@ class CreatorT2Tests(unittest.TestCase):
             release = next(r for r in games['platformReleases'] if r['id'] == rid)
             self.assertIsNone(release['contentVersionId'])
             self.assertEqual(release['contentRelation'], 'unverified')
-        cs = read('data/credits.json')['credits']
+        cs = applied('data/credits.json')['credits']
         self.assertEqual([(c['targetType'], c['targetId']) for c in cs
                           if c['entityId'] == IDS[1] and c['role'] == 'developer'], [('content', 'g056-c-3')])
-        self.assertEqual(read('data/organizations.json')['works'], old('data/organizations.json')['works'])
+        self.assertEqual(applied('data/organizations.json')['works'], old('data/organizations.json')['works'])
 
     def test_four_consecutive_entities_advance_t_to_tinmachine(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

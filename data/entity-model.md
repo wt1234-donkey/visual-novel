@@ -220,3 +220,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 T字母首批使用 `entity-creator-t1-review-20261026.json` 与同名Markdown，连续核查T&E SOFT、Tactics（NEXTON）、TAITO、TAKERU，T累计4／19。NEXTON与Brother原站支持两项brand身份，TAKERU明确是软件销售服务；两项均保留旧publisher且不自动生成发行／制作品牌职责。T&E与TAITO逐作开发证据不足的范围单列待核，本批无新增职责、无专题解除。累计当前A—T队列登记283／298，下一项TamaMako gaming。
 
 2026-10-26 T字母第二批使用 `entity-creator-t2-review-20261026.json` 与同名Markdown，连续核查TamaMako gaming、Team Salvato、Tiare、TikGames，T累计8／19。核定Team Salvato制作团队、TikGames公司身份，分别追加DDLC原作制作／既有Plus增补开发与Interpol原作制作三条职责，Serenity Forge协作保留。TamaMako联合发行不推本地化或开发，Tiare既有品牌不向JAST父专题上推制作；当前A—T队列登记287／298，下一项TinMachine。
+
+2026-10-26 T字母第三批使用 `entity-creator-t3-review-20261026.json` 与同名Markdown，连续核查TinMachine、TOHO Games、TOHO、Tokuma Shoten Intermedia，T累计12／19。核定游戏品牌与历史出版公司两项身份；首发公告支持东宝参与Phantom Parade游戏企画制作，只追加一条原作制作并核对自身专题旧值后解除该作待核，Sumzap开发独立保持。TinMachine配信不推开发，品牌身份不自动产生职责；当前A—T队列登记291／298，下一项Tokuma Shoten（徳間書店）。

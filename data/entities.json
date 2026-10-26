@@ -3916,7 +3916,7 @@
     {
       "id": "entity-name-9832231b6baa",
       "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
-      "type": "unknown",
+      "type": "company",
       "aliases": [
         "徳間書店インターメディア",
         "GAMEテクノポリス",
@@ -3924,10 +3924,13 @@
         "Tokuma Shoten Intermedia（徳間書店インターメディア）"
       ],
       "sources": [
-        "https://w.atwiki.jp/gcmatome/pages/1764.html"
+        "https://w.atwiki.jp/gcmatome/pages/1764.html",
+        "https://id.ndl.go.jp/auth/ndlna/001283900",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000000043118",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I028765203"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "国会图书馆原始典据001283900直接列徳間書店インターメディア株式会社及简称，来源为1996ファミマガweekly；其Technopolis、Famimaga书目交叉支持历史出版公司，核为company。NDL是书目权威记录，不冒称公司登记原件。旧GAMEテクノポリス等别名兼容映射保留，不把品牌文字等同法人正式名，也不据出版公司身份推八部游戏原作制作。",
       "dates": [],
       "nameParts": {
         "english": "Tokuma Shoten Intermedia",
@@ -5578,15 +5581,16 @@
     {
       "id": "entity-name-0b5ee01c0e65",
       "name": "TOHO Games",
-      "type": "unknown",
+      "type": "brand",
       "aliases": [
         "TOHO Games"
       ],
       "sources": [
-        "https://sakuna-hinuka.jp/news/209/"
+        "https://sakuna-hinuka.jp/news/209/",
+        "https://www.toho.co.jp/sns/"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "东宝官方SNS列表正文直接称TOHO Games为东宝的游戏レーベル，核为brand，与东宝公司节点分开。显式preserveReleaseRoles:true保留两条历史publisher，不因品牌身份自动生成publishingBrand、originalPublishingBrand或制作角色；不从当前品牌关系推所有历史游戏合同归属。",
       "dates": []
     },
     {
