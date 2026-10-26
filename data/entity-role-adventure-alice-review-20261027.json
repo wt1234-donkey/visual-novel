@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-27",
+  "baseTree": "99d54acbeda8976b27df552ecc0709718cc7b600",
+  "audit": "data/entity-role-adventure-alice-audit-20261027.json",
+  "policy": "A段一次审查Adventure International 36条及Alicesoft 75条。只升级一项明确具名企划制作协力，六项子品牌制作记录不解除母专题待核；其余110条保留待核。",
+  "identityCorrections": [],
+  "creditAdditions": [
+    {
+      "reviewId": "AAB-A-01",
+      "entityId": "entity-alicesoft",
+      "dossierId": "alicesoft",
+      "workId": "alicesoft-extra-hentailabyrinth",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "アリスソフト・プロデュースの新ブランド「IMYUIC」",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://www.alicesoft.com/information/2020/entry002611.html",
+      "note": "2020年原作品牌企划制作协力，IMAYUI/IMYUIC负责个人品牌创作；不表示 Alicesoft 完成全部程序或后续独立期作品。"
+    },
+    {
+      "reviewId": "AAB-A-02",
+      "entityId": "entity-alice_blue",
+      "dossierId": null,
+      "workId": "alicesoft-extra-orenoshitadeagake",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "俺の下であがけ(Alice Blue)",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.alicesoft.com/support/sys39v549.html",
+      "note": "同期官方页面具名 alice_blue 作品／引擎支持，限原版制作品牌；不把子品牌职责倒填 Alicesoft 母专题。System 3.9 list, 俺の下であがけ"
+    },
+    {
+      "reviewId": "AAB-A-03",
+      "entityId": "entity-alice_blue",
+      "dossierId": null,
+      "workId": "alicesoft-extra-oujisamalv1",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "王子さまＬｖ１(Alice Blue)",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.alicesoft.com/support/sys39v549.html",
+      "note": "同期官方页面具名 alice_blue 作品／引擎支持，限原版制作品牌；不把子品牌职责倒填 Alicesoft 母专题。System 3.9 list, 王子さまLv1"
+    },
+    {
+      "reviewId": "AAB-A-04",
+      "entityId": "entity-alice_blue",
+      "dossierId": null,
+      "workId": "g545",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "王子さまＬｖ１．５(Alice Blue)",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.alicesoft.com/support/sys39v549.html",
+      "note": "同期官方页面具名 alice_blue 作品／引擎支持，限原版制作品牌；不把子品牌职责倒填 Alicesoft 母专题。System 3.9 list, 王子さまLv1.5"
+    },
+    {
+      "reviewId": "AAB-A-05",
+      "entityId": "entity-alice_blue",
+      "dossierId": null,
+      "workId": "g546",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "隠れ月 (Alice Blue)",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.alicesoft.com/support/sys39v549.html",
+      "note": "同期官方页面具名 alice_blue 作品／引擎支持，限原版制作品牌；不把子品牌职责倒填 Alicesoft 母专题。System 3.8 list, 隠れ月"
+    },
+    {
+      "reviewId": "AAB-A-06",
+      "entityId": "entity-alice_blue",
+      "dossierId": null,
+      "workId": "g547",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "楽園行(Alice Blue)",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://www.alicesoft.com/support/sys39v549.html",
+      "note": "同期官方页面具名 alice_blue 作品／引擎支持，限原版制作品牌；不把子品牌职责倒填 Alicesoft 母专题。System 3.9 list, 楽園行"
+    },
+    {
+      "reviewId": "AAB-A-07",
+      "entityId": "entity-alice_noir",
+      "dossierId": null,
+      "workId": "g574",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "ＡｌｉｃｅＮｏｉｒ第一弾「Ｎｏｒ」",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [
+        "originalPublishingBrand"
+      ],
+      "source": "https://noir.alicesoft.com/nor/index.htm",
+      "note": "同期官方页面具名 alice_noir 作品／引擎支持，限原版制作品牌；不把子品牌职责倒填 Alicesoft 母专题。original Nor product page, heading and development diary"
+    }
+  ],
+  "deferredReviews": [],
+  "reviewedEntities": []
+}

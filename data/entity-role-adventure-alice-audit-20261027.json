@@ -1,0 +1,2782 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-27",
+  "baselineTree": "99d54acbeda8976b27df552ecc0709718cc7b600",
+  "dossiers": [
+    "adventure_international",
+    "alicesoft"
+  ],
+  "claimCount": 111,
+  "confirmedWorkClaims": 1,
+  "deferredWorkClaims": 110,
+  "separateBrandCredits": 6,
+  "sourceCount": 8,
+  "evidence": [
+    {
+      "evidenceId": "E-A-AI-SAGA",
+      "url": "https://www.mocagh.org/ai/saga-manual.pdf",
+      "location": "original 1981 Graphic Adventure manual, p.2 credits",
+      "limit": "Graphic Adventure graphic engines name Scott Adams, Penguin Software, Mark Pelczarski and Adventure International separately; this later edition is not the 1978 original."
+    },
+    {
+      "evidenceId": "E-A-AI-DEATH",
+      "url": "https://www.mocagh.org/ai/deathplanet-manual.pdf",
+      "location": "Death Planet original manual, p.1",
+      "limit": "Adventure International is listed as publisher; Lance Micklus is author and Charles Paul de Young is credited for the Color Computer conversion."
+    },
+    {
+      "evidenceId": "E-A-ALICE-HISTORY",
+      "url": "https://www.alicesoft.com/outline/contents.html",
+      "location": "company outline, 1983 establishment and 1989 brand start",
+      "limit": "Alicesoft brand started in 1989, so Champion Soft products in 1982–88 cannot be relabelled as contemporary Alicesoft-branded development."
+    },
+    {
+      "evidenceId": "E-A-ALICE-FREE",
+      "url": "https://www.alicesoft.com/about/",
+      "location": "free-distribution list, three named Showa Champion Soft products",
+      "limit": "Little Princess, Little Vampire and Gakuen Senki are explicitly Champion Soft brand products; the text does not assign the later Alicesoft brand development."
+    },
+    {
+      "evidenceId": "E-A-ALICE-SUPPORT",
+      "url": "https://www.alicesoft.com/support/sys39v549.html",
+      "location": "official System 3.8/3.9 compatibility list, five Alice Blue titles and Nor",
+      "limit": "The page names Alice Blue and Alice Noir on individual titles; it is a product/engine list, not evidence that the parent brand independently made all components."
+    },
+    {
+      "evidenceId": "E-A-ALICE-NOR",
+      "url": "https://noir.alicesoft.com/nor/index.htm",
+      "location": "Nor contemporary product page and development diary",
+      "limit": "The product identifies AliceNoir as its first release; this does not resolve a parent Alicesoft production credit."
+    },
+    {
+      "evidenceId": "E-A-ALICE-HENTAI",
+      "url": "https://www.alicesoft.com/information/2020/entry002611.html",
+      "location": "2020-07-22 original director announcement, introduction and new-brand paragraphs",
+      "limit": "The director calls IMYUIC an Alicesoft-produced new brand for this specific game; credits are limited to production collaboration, not independent engine/programming."
+    },
+    {
+      "evidenceId": "E-A-ALICE-INDEPENDENCE",
+      "url": "https://www.alicesoft.com/information/2022/entry003001.html",
+      "location": "2022-05-30 separation announcement, name and ongoing sale paragraphs",
+      "limit": "Later IMYUIC(ALICESOFT) sale name and independence cannot be projected backward as sole original development."
+    }
+  ],
+  "decisions": [
+    {
+      "claimId": "role:adventure_international:ai-buckaroo",
+      "phase": "P1",
+      "workId": "ai-buckaroo",
+      "title": "巴卡鲁·班宰的第八维度大冒险",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《巴卡鲁·班宰的第八维度大冒险》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-claymorgue",
+      "phase": "P1",
+      "workId": "ai-claymorgue",
+      "title": "克莱莫格城堡的巫师",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《克莱莫格城堡的巫师》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-crowley",
+      "phase": "P1",
+      "workId": "ai-crowley",
+      "title": "克劳利庄园的诅咒",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《克劳利庄园的诅咒》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-death-planet",
+      "phase": "P1",
+      "workId": "ai-death-planet",
+      "title": "死亡星球：犬星冒险",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "原版或各移植版片尾／合约中 Adventure International 具体创作工种的具名原件；现有说明书仅支持发行。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-DEATH"
+      ],
+      "batchFinding": "原说明书列 AI 为发行、Lance Micklus 为作者、Charles Paul de Young 为 Color Computer 移植者；未证明 AI 原作开发。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-earthquake",
+      "phase": "P1",
+      "workId": "ai-earthquake",
+      "title": "地震：旧金山1906",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《地震：旧金山1906》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-ghost-town",
+      "phase": "P1",
+      "workId": "ai-ghost-town",
+      "title": "幽灵镇",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《幽灵镇》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-golden-voyage",
+      "phase": "P1",
+      "workId": "ai-golden-voyage",
+      "title": "黄金航程",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《黄金航程》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-gremlins",
+      "phase": "P1",
+      "workId": "ai-gremlins",
+      "title": "小魔怪：冒险篇",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《小魔怪：冒险篇》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-hong-kong",
+      "phase": "P1",
+      "workId": "ai-hong-kong",
+      "title": "香港之龙",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《香港之龙》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-hulk",
+      "phase": "P1",
+      "workId": "ai-hulk",
+      "title": "探索探针：绿巨人",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《探索探针：绿巨人》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-human-torch-thing",
+      "phase": "P1",
+      "workId": "ai-human-torch-thing",
+      "title": "探索探针：霹雳火与石头人",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《探索探针：霹雳火与石头人》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-impetuous",
+      "phase": "P1",
+      "workId": "ai-impetuous",
+      "title": "皇家海军“冒进号”",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《皇家海军“冒进号”》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-labyrinth",
+      "phase": "P1",
+      "workId": "ai-labyrinth",
+      "title": "克里特迷宫",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《克里特迷宫》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-local-call",
+      "phase": "P1",
+      "workId": "ai-local-call",
+      "title": "致命的本地电话",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《致命的本地电话》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-merlins-treasure",
+      "phase": "P1",
+      "workId": "ai-merlins-treasure",
+      "title": "梅林的宝藏",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《梅林的宝藏》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-mystery-fun-house",
+      "phase": "P1",
+      "workId": "ai-mystery-fun-house",
+      "title": "神秘游乐屋",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《神秘游乐屋》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-olin",
+      "phase": "P1",
+      "workId": "ai-olin",
+      "title": "翡翠国的奥林：没药王国",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《翡翠国的奥林：没药王国》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-pyramid-doom",
+      "phase": "P1",
+      "workId": "ai-pyramid-doom",
+      "title": "末日金字塔",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《末日金字塔》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-return-pirates-isle",
+      "phase": "P1",
+      "workId": "ai-return-pirates-isle",
+      "title": "重返海盗岛",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《重返海盗岛》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-saigon",
+      "phase": "P1",
+      "workId": "ai-saigon",
+      "title": "西贡：最后的日子",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《西贡：最后的日子》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-savage-island-1",
+      "phase": "P1",
+      "workId": "ai-savage-island-1",
+      "title": "蛮荒岛：第一部",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《蛮荒岛：第一部》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-savage-island-2",
+      "phase": "P1",
+      "workId": "ai-savage-island-2",
+      "title": "蛮荒岛：第二部",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《蛮荒岛：第二部》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-seas-blood",
+      "phase": "P1",
+      "workId": "ai-seas-blood",
+      "title": "血海",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《血海》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-secret-mission",
+      "phase": "P1",
+      "workId": "ai-secret-mission",
+      "title": "秘密任务",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《秘密任务》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-six-micro",
+      "phase": "P1",
+      "workId": "ai-six-micro",
+      "title": "六篇微型故事",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《六篇微型故事》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-sledge-rahmul",
+      "phase": "P1",
+      "workId": "ai-sledge-rahmul",
+      "title": "拉姆尔之锤",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《拉姆尔之锤》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-spider-man",
+      "phase": "P1",
+      "workId": "ai-spider-man",
+      "title": "探索探针：蜘蛛侠",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《探索探针：蜘蛛侠》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-spook-house",
+      "phase": "P1",
+      "workId": "ai-spook-house",
+      "title": "幽灵屋",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《幽灵屋》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-strange-odyssey",
+      "phase": "P1",
+      "workId": "ai-strange-odyssey",
+      "title": "奇异奥德赛",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《奇异奥德赛》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-super-gran",
+      "phase": "P1",
+      "workId": "ai-super-gran",
+      "title": "超级奶奶：冒险篇",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《超级奶奶：冒险篇》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-toxic-dumpsite",
+      "phase": "P1",
+      "workId": "ai-toxic-dumpsite",
+      "title": "有毒废料场",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《有毒废料场》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-traam",
+      "phase": "P1",
+      "workId": "ai-traam",
+      "title": "逃离特拉姆",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《逃离特拉姆》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-two-heads",
+      "phase": "P1",
+      "workId": "ai-two-heads",
+      "title": "硬币的两面",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《硬币的两面》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:ai-voodoo-castle",
+      "phase": "P1",
+      "workId": "ai-voodoo-castle",
+      "title": "巫毒城堡",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "bibliography",
+      "releaseContextIds": [],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《巫毒城堡》原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "同期 Graphic Adventure 说明书将作者、各平台图形制作和发行分列；不能套用到本条原版／其他游戏。"
+    },
+    {
+      "claimId": "role:adventure_international:g089",
+      "phase": "P1",
+      "workId": "g089",
+      "title": "巨洞冒险",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "main",
+      "releaseContextIds": [
+        "g089-v1",
+        "g089-v2",
+        "g089-v3",
+        "g089-v4"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《巨洞冒险》原版包装／说明书／片尾职员表（g089-v1、g089-v2、g089-v3、g089-v4）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "1976/1977 大型机原版及现存 Microsoft 后发发行均不能由 AI 1981 图形版说明书追认公司开发。"
+    },
+    {
+      "claimId": "role:adventure_international:g091",
+      "phase": "P1",
+      "workId": "g091",
+      "title": "冒险乐园",
+      "dossierId": "adventure_international",
+      "dossierName": "Adventure International",
+      "placement": "main",
+      "releaseContextIds": [
+        "g091-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "leadAccess": "unavailable",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《冒险乐园》原版包装／说明书／片尾职员表（g091-v1）中「Adventure International」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-AI-SAGA"
+      ],
+      "batchFinding": "1978 Scott Adams 初期自行销售记录与 1981 AI 图形版是不同发行；后者的引擎分工不能倒填原版。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-carchaser",
+      "phase": "P1",
+      "workId": "alicesoft-extra-carchaser",
+      "title": "汽车追逐者",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-carchaser-v1",
+        "alicesoft-extra-carchaser-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《汽车追逐者》原版包装／说明书／片尾职员表（alicesoft-extra-carchaser-v1、alicesoft-extra-carchaser-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-combat47",
+      "phase": "P1",
+      "workId": "alicesoft-extra-combat47",
+      "title": "国盗战：Combat 47",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-combat47-v1",
+        "alicesoft-extra-combat47-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《国盗战：Combat 47》原版包装／说明书／片尾职员表（alicesoft-extra-combat47-v1、alicesoft-extra-combat47-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-computerwars",
+      "phase": "P1",
+      "workId": "alicesoft-extra-computerwars",
+      "title": "销售翻倍大作战：电脑商战",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-computerwars-v1",
+        "alicesoft-extra-computerwars-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《销售翻倍大作战：电脑商战》原版包装／说明书／片尾职员表（alicesoft-extra-computerwars-v1、alicesoft-extra-computerwars-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-crashball",
+      "phase": "P1",
+      "workId": "alicesoft-extra-crashball",
+      "title": "撞击球",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-crashball-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《撞击球》原版包装／说明书／片尾职员表（alicesoft-extra-crashball-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-dranesthetist",
+      "phase": "P1",
+      "workId": "alicesoft-extra-dranesthetist",
+      "title": "麻醉科医生",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-dranesthetist-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《麻醉科医生》原版包装／说明书／片尾职员表（alicesoft-extra-dranesthetist-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-dreammyhome",
+      "phase": "P1",
+      "workId": "alicesoft-extra-dreammyhome",
+      "title": "梦想之家",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-dreammyhome-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《梦想之家》原版包装／说明书／片尾职员表（alicesoft-extra-dreammyhome-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-executiveroad",
+      "phase": "P1",
+      "workId": "alicesoft-extra-executiveroad",
+      "title": "通往高管之路",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-executiveroad-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《通往高管之路》原版包装／说明书／片尾职员表（alicesoft-extra-executiveroad-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-fairyshowbiz",
+      "phase": "P1",
+      "workId": "alicesoft-extra-fairyshowbiz",
+      "title": "妖精公寓特别篇：演艺圈篇",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-fairyshowbiz-v1",
+        "alicesoft-extra-fairyshowbiz-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《妖精公寓特别篇：演艺圈篇》原版包装／说明书／片尾职员表（alicesoft-extra-fairyshowbiz-v1、alicesoft-extra-fairyshowbiz-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-hentailabyrinth",
+      "phase": "P1",
+      "workId": "alicesoft-extra-hentailabyrinth",
+      "title": "HENTAI LABYRINTH：奇异迷宫",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-hentailabyrinth-v1"
+      ],
+      "decision": "confirmed",
+      "evidenceIds": [
+        "E-A-ALICE-HENTAI"
+      ],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": null,
+      "previousDecision": "deferred",
+      "batchDecision": "confirmed",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HENTAI",
+        "E-A-ALICE-INDEPENDENCE"
+      ],
+      "batchFinding": "2020年当事导演明确 IMYUIC 为 Alicesoft 企划制作的新品牌；仅确认此作品牌企划制作协力，不声称公司独立程序开发。",
+      "source": "https://www.alicesoft.com/information/2020/entry002611.html",
+      "sourceLocation": "2020-07-22 director announcement, Alicesoft-produced new brand",
+      "confirmedRole": "coDeveloper"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-hisui",
+      "phase": "P1",
+      "workId": "alicesoft-extra-hisui",
+      "title": "翡翠之眸",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-hisui-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《翡翠之眸》原版包装／说明书／片尾职员表（alicesoft-extra-hisui-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-hopper",
+      "phase": "P1",
+      "workId": "alicesoft-extra-hopper",
+      "title": "Hopper：派对游戏",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-hopper-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《Hopper：派对游戏》原版包装／说明书／片尾职员表（alicesoft-extra-hopper-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-hyakuninisshu",
+      "phase": "P1",
+      "workId": "alicesoft-extra-hyakuninisshu",
+      "title": "小仓百人一首",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-hyakuninisshu-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《小仓百人一首》原版包装／说明书／片尾职员表（alicesoft-extra-hyakuninisshu-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-joseishain",
+      "phase": "P1",
+      "workId": "alicesoft-extra-joseishain",
+      "title": "发挥女性员工的才能",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-joseishain-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《发挥女性员工的才能》原版包装／说明书／片尾职员表（alicesoft-extra-joseishain-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-jumpingcross",
+      "phase": "P1",
+      "workId": "alicesoft-extra-jumpingcross",
+      "title": "跳跃十字",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-jumpingcross-v1",
+        "alicesoft-extra-jumpingcross-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《跳跃十字》原版包装／说明书／片尾职员表（alicesoft-extra-jumpingcross-v1、alicesoft-extra-jumpingcross-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-katomasaojoseki200",
+      "phase": "P1",
+      "workId": "alicesoft-extra-katomasaojoseki200",
+      "title": "加藤正夫实战定式200：实战篇",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-katomasaojoseki200-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《加藤正夫实战定式200：实战篇》原版包装／说明书／片尾职员表（alicesoft-extra-katomasaojoseki200-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-lemonade2",
+      "phase": "P1",
+      "workId": "alicesoft-extra-lemonade2",
+      "title": "LEMONADE：柠檬女孩运动会",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-lemonade2-v1",
+        "alicesoft-extra-lemonade2-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《LEMONADE：柠檬女孩运动会》原版包装／说明书／片尾职员表（alicesoft-extra-lemonade2-v1、alicesoft-extra-lemonade2-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-map47",
+      "phase": "P1",
+      "workId": "alicesoft-extra-map47",
+      "title": "地图47",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-map47-v1",
+        "alicesoft-extra-map47-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《地图47》原版包装／说明书／片尾职员表（alicesoft-extra-map47-v1、alicesoft-extra-map47-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-nessenkoshien",
+      "phase": "P1",
+      "workId": "alicesoft-extra-nessenkoshien",
+      "title": "热战！甲子园",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-nessenkoshien-v1",
+        "alicesoft-extra-nessenkoshien-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《热战！甲子园》原版包装／说明书／片尾职员表（alicesoft-extra-nessenkoshien-v1、alicesoft-extra-nessenkoshien-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-northernconvoy",
+      "phase": "P1",
+      "workId": "alicesoft-extra-northernconvoy",
+      "title": "北方护航船队",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-northernconvoy-v1",
+        "alicesoft-extra-northernconvoy-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《北方护航船队》原版包装／说明书／片尾职员表（alicesoft-extra-northernconvoy-v1、alicesoft-extra-northernconvoy-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-omega1",
+      "phase": "P1",
+      "workId": "alicesoft-extra-omega1",
+      "title": "OMEGA：创刊号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-omega1-v1",
+        "alicesoft-extra-omega1-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《OMEGA：创刊号》原版包装／说明书／片尾职员表（alicesoft-extra-omega1-v1、alicesoft-extra-omega1-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-omega2",
+      "phase": "P1",
+      "workId": "alicesoft-extra-omega2",
+      "title": "OMEGA：创刊2号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-omega2-v1",
+        "alicesoft-extra-omega2-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《OMEGA：创刊2号》原版包装／说明书／片尾职员表（alicesoft-extra-omega2-v1、alicesoft-extra-omega2-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-oozumou",
+      "phase": "P1",
+      "workId": "alicesoft-extra-oozumou",
+      "title": "大相扑",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-oozumou-v1",
+        "alicesoft-extra-oozumou-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《大相扑》原版包装／说明书／片尾职员表（alicesoft-extra-oozumou-v1、alicesoft-extra-oozumou-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-orenoshitadeagake",
+      "phase": "P1",
+      "workId": "alicesoft-extra-orenoshitadeagake",
+      "title": "在我之下挣扎",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-orenoshitadeagake-v1",
+        "alicesoft-extra-orenoshitadeagake-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《在我之下挣扎》原版制作名单中 Alicesoft 母品牌与 alice_blue 子品牌的分工原件。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-SUPPORT"
+      ],
+      "batchFinding": "官方逐作将此项署为 alice_blue 品牌产品；仅追加该子品牌制作品牌，母专题职责继续待核。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-oujisamalv1",
+      "phase": "P1",
+      "workId": "alicesoft-extra-oujisamalv1",
+      "title": "王子殿下Lv1",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-oujisamalv1-v1",
+        "alicesoft-extra-oujisamalv1-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《王子殿下Lv1》原版制作名单中 Alicesoft 母品牌与 alice_blue 子品牌的分工原件。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-SUPPORT"
+      ],
+      "batchFinding": "官方逐作将此项署为 alice_blue 品牌产品；仅追加该子品牌制作品牌，母专题职责继续待核。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-oujisamalv2",
+      "phase": "P1",
+      "workId": "alicesoft-extra-oujisamalv2",
+      "title": "王子殿下Lv2",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-oujisamalv2-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《王子殿下Lv2》原版包装／说明书／片尾职员表（alicesoft-extra-oujisamalv2-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-playmateafternoon",
+      "phase": "P1",
+      "workId": "alicesoft-extra-playmateafternoon",
+      "title": "午后：Playmate拼图",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-playmateafternoon-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《午后：Playmate拼图》原版包装／说明书／片尾职员表（alicesoft-extra-playmateafternoon-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-playmatecalifornia",
+      "phase": "P1",
+      "workId": "alicesoft-extra-playmatecalifornia",
+      "title": "加州之风：Playmate拼图",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-playmatecalifornia-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《加州之风：Playmate拼图》原版包装／说明书／片尾职员表（alicesoft-extra-playmatecalifornia-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-playmateflowernight",
+      "phase": "P1",
+      "workId": "alicesoft-extra-playmateflowernight",
+      "title": "花之夜：Playmate拼图",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-playmateflowernight-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《花之夜：Playmate拼图》原版包装／说明书／片尾职员表（alicesoft-extra-playmateflowernight-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-probowling",
+      "phase": "P1",
+      "workId": "alicesoft-extra-probowling",
+      "title": "职业保龄球",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-probowling-v1",
+        "alicesoft-extra-probowling-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《职业保龄球》原版包装／说明书／片尾职员表（alicesoft-extra-probowling-v1、alicesoft-extra-probowling-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-provisionspanic",
+      "phase": "P1",
+      "workId": "alicesoft-extra-provisionspanic",
+      "title": "粮食危机",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-provisionspanic-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《粮食危机》原版包装／说明书／片尾职员表（alicesoft-extra-provisionspanic-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-timepatrol",
+      "phase": "P1",
+      "workId": "alicesoft-extra-timepatrol",
+      "title": "时间巡逻队",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-timepatrol-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《时间巡逻队》原版包装／说明书／片尾职员表（alicesoft-extra-timepatrol-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-tsumego",
+      "phase": "P1",
+      "workId": "alicesoft-extra-tsumego",
+      "title": "围棋死活题",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-tsumego-v1",
+        "alicesoft-extra-tsumego-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《围棋死活题》原版包装／说明书／片尾职员表（alicesoft-extra-tsumego-v1、alicesoft-extra-tsumego-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-tsumego120",
+      "phase": "P1",
+      "workId": "alicesoft-extra-tsumego120",
+      "title": "围棋死活题120",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-tsumego120-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《围棋死活题120》原版包装／说明书／片尾职员表（alicesoft-extra-tsumego120-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-tsumeshogi",
+      "phase": "P1",
+      "workId": "alicesoft-extra-tsumeshogi",
+      "title": "将棋诘题",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-tsumeshogi-v1",
+        "alicesoft-extra-tsumeshogi-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《将棋诘题》原版包装／说明书／片尾职员表（alicesoft-extra-tsumeshogi-v1、alicesoft-extra-tsumeshogi-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-weddingrace",
+      "phase": "P1",
+      "workId": "alicesoft-extra-weddingrace",
+      "title": "天堂与地狱：婚礼竞赛",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-weddingrace-v1",
+        "alicesoft-extra-weddingrace-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《天堂与地狱：婚礼竞赛》原版包装／说明书／片尾职员表（alicesoft-extra-weddingrace-v1、alicesoft-extra-weddingrace-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-zeta1",
+      "phase": "P1",
+      "workId": "alicesoft-extra-zeta1",
+      "title": "ZETA：创刊号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-zeta1-v1",
+        "alicesoft-extra-zeta1-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《ZETA：创刊号》原版包装／说明书／片尾职员表（alicesoft-extra-zeta1-v1、alicesoft-extra-zeta1-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-zeta2",
+      "phase": "P1",
+      "workId": "alicesoft-extra-zeta2",
+      "title": "ZETA：创刊2号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-zeta2-v1",
+        "alicesoft-extra-zeta2-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《ZETA：创刊2号》原版包装／说明书／片尾职员表（alicesoft-extra-zeta2-v1、alicesoft-extra-zeta2-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-zeta3",
+      "phase": "P1",
+      "workId": "alicesoft-extra-zeta3",
+      "title": "ZETA：第3号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-zeta3-v1",
+        "alicesoft-extra-zeta3-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《ZETA：第3号》原版包装／说明书／片尾职员表（alicesoft-extra-zeta3-v1、alicesoft-extra-zeta3-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-zeta4",
+      "phase": "P1",
+      "workId": "alicesoft-extra-zeta4",
+      "title": "ZETA：第4号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-zeta4-v1",
+        "alicesoft-extra-zeta4-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《ZETA：第4号》原版包装／说明书／片尾职员表（alicesoft-extra-zeta4-v1、alicesoft-extra-zeta4-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:alicesoft-extra-zeta5",
+      "phase": "P1",
+      "workId": "alicesoft-extra-zeta5",
+      "title": "ZETA：第5号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "related",
+      "releaseContextIds": [
+        "alicesoft-extra-zeta5-v1",
+        "alicesoft-extra-zeta5-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《ZETA：第5号》原版包装／说明书／片尾职员表（alicesoft-extra-zeta5-v1、alicesoft-extra-zeta5-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g075",
+      "phase": "P1",
+      "workId": "g075",
+      "title": "四次元少女莉迪亚",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g075-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《四次元少女莉迪亚》原版包装／说明书／片尾职员表（g075-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g086",
+      "phase": "P1",
+      "workId": "g086",
+      "title": "妖精公寓",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g086-v1",
+        "g086-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《妖精公寓》原版包装／说明书／片尾职员表（g086-v1、g086-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g104",
+      "phase": "P1",
+      "workId": "g104",
+      "title": "寻找广子",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g104-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《寻找广子》原版包装／说明书／片尾职员表（g104-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g121",
+      "phase": "P1",
+      "workId": "g121",
+      "title": "间谍 0011",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g121-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《间谍 0011》原版包装／说明书／片尾职员表（g121-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g122",
+      "phase": "P1",
+      "workId": "g122",
+      "title": "太空奇遇",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g122-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《太空奇遇》原版包装／说明书／片尾职员表（g122-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g123",
+      "phase": "P1",
+      "workId": "g123",
+      "title": "奥利机场杀人事件",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g123-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《奥利机场杀人事件》原版包装／说明书／片尾职员表（g123-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g139",
+      "phase": "P1",
+      "workId": "g139",
+      "title": "桃太郎",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g139-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《桃太郎》原版包装／说明书／片尾职员表（g139-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g140",
+      "phase": "P1",
+      "workId": "g140",
+      "title": "浦岛太郎",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g140-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《浦岛太郎》原版包装／说明书／片尾职员表（g140-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g141",
+      "phase": "P1",
+      "workId": "g141",
+      "title": "法老的诅咒",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g141-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《法老的诅咒》原版包装／说明书／片尾职员表（g141-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g142",
+      "phase": "P1",
+      "workId": "g142",
+      "title": "疯狂屋",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g142-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《疯狂屋》原版包装／说明书／片尾职员表（g142-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g143",
+      "phase": "P1",
+      "workId": "g143",
+      "title": "鬼巌城",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g143-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《鬼巌城》原版包装／说明书／片尾职员表（g143-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g545",
+      "phase": "P1",
+      "workId": "g545",
+      "title": "王子殿下Lv1.5",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g545-v1",
+        "g545-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《王子殿下Lv1.5》原版制作名单中 Alicesoft 母品牌与 alice_blue 子品牌的分工原件。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-SUPPORT"
+      ],
+      "batchFinding": "官方逐作将此项署为 alice_blue 品牌产品；仅追加该子品牌制作品牌，母专题职责继续待核。"
+    },
+    {
+      "claimId": "role:alicesoft:g546",
+      "phase": "P1",
+      "workId": "g546",
+      "title": "隐月",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g546-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《隐月》原版制作名单中 Alicesoft 母品牌与 alice_blue 子品牌的分工原件。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-SUPPORT"
+      ],
+      "batchFinding": "官方逐作将此项署为 alice_blue 品牌产品；仅追加该子品牌制作品牌，母专题职责继续待核。"
+    },
+    {
+      "claimId": "role:alicesoft:g547",
+      "phase": "P1",
+      "workId": "g547",
+      "title": "向乐园出发",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g547-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《向乐园出发》原版制作名单中 Alicesoft 母品牌与 alice_blue 子品牌的分工原件。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-SUPPORT"
+      ],
+      "batchFinding": "官方逐作将此项署为 alice_blue 品牌产品；仅追加该子品牌制作品牌，母专题职责继续待核。"
+    },
+    {
+      "claimId": "role:alicesoft:g574",
+      "phase": "P1",
+      "workId": "g574",
+      "title": "Nor：一次现实的彼方",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g574-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《Nor：一次现实的彼方》原版制作名单中 Alicesoft 母品牌与 alice_noir 子品牌的分工原件。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-NOR"
+      ],
+      "batchFinding": "官方逐作将此项署为 alice_noir 品牌产品；仅追加该子品牌制作品牌，母专题职责继续待核。"
+    },
+    {
+      "claimId": "role:alicesoft:g576",
+      "phase": "P1",
+      "workId": "g576",
+      "title": "小公主：被掳走的美树",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g576-v1",
+        "g576-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《小公主：被掳走的美树》同期原版职员表若有 Alicesoft 名义的直接制作证据；目前官方仅列 Champion Soft。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网逐作明确归于昭和时期 Champion Soft 品牌；1989年才启用的 Alicesoft 品牌身份不能倒填原版。"
+    },
+    {
+      "claimId": "role:alicesoft:g577",
+      "phase": "P1",
+      "workId": "g577",
+      "title": "小吸血鬼",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g577-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《小吸血鬼》同期原版职员表若有 Alicesoft 名义的直接制作证据；目前官方仅列 Champion Soft。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网逐作明确归于昭和时期 Champion Soft 品牌；1989年才启用的 Alicesoft 品牌身份不能倒填原版。"
+    },
+    {
+      "claimId": "role:alicesoft:g578",
+      "phase": "P1",
+      "workId": "g578",
+      "title": "学园战记",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g578-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《学园战记》同期原版职员表若有 Alicesoft 名义的直接制作证据；目前官方仅列 Champion Soft。",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网逐作明确归于昭和时期 Champion Soft 品牌；1989年才启用的 Alicesoft 品牌身份不能倒填原版。"
+    },
+    {
+      "claimId": "role:alicesoft:g580",
+      "phase": "P1",
+      "workId": "g580",
+      "title": "幻梦之城",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g580-v1",
+        "g580-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《幻梦之城》原版包装／说明书／片尾职员表（g580-v1、g580-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g581",
+      "phase": "P1",
+      "workId": "g581",
+      "title": "天女传说",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g581-v1",
+        "g581-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《天女传说》原版包装／说明书／片尾职员表（g581-v1、g581-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g582",
+      "phase": "P1",
+      "workId": "g582",
+      "title": "美砂的故事：小小名侦探",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g582-v1",
+        "g582-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《美砂的故事：小小名侦探》原版包装／说明书／片尾职员表（g582-v1、g582-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g583",
+      "phase": "P1",
+      "workId": "g583",
+      "title": "Love Chaser：追寻失踪的新娘",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g583-v1",
+        "g583-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《Love Chaser：追寻失踪的新娘》原版包装／说明书／片尾职员表（g583-v1、g583-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g584",
+      "phase": "P1",
+      "workId": "g584",
+      "title": "Lovely GAL：浮游都市的危机",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g584-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《Lovely GAL：浮游都市的危机》原版包装／说明书／片尾职员表（g584-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g585",
+      "phase": "P1",
+      "workId": "g585",
+      "title": "珀尔修斯：海上的杀意",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g585-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《珀尔修斯：海上的杀意》原版包装／说明书／片尾职员表（g585-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g586",
+      "phase": "P1",
+      "workId": "g586",
+      "title": "庆子的秘密",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g586-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《庆子的秘密》原版包装／说明书／片尾职员表（g586-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g587",
+      "phase": "P1",
+      "workId": "g587",
+      "title": "POP LEMON",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g587-v1",
+        "g587-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《POP LEMON》原版包装／说明书／片尾职员表（g587-v1、g587-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g588",
+      "phase": "P1",
+      "workId": "g588",
+      "title": "Tawhid：超能力者护送之旅",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g588-v1",
+        "g588-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《Tawhid：超能力者护送之旅》原版包装／说明书／片尾职员表（g588-v1、g588-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g589",
+      "phase": "P1",
+      "workId": "g589",
+      "title": "妖精公寓特别篇：社团篇",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g589-v1",
+        "g589-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《妖精公寓特别篇：社团篇》原版包装／说明书／片尾职员表（g589-v1、g589-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g590",
+      "phase": "P1",
+      "workId": "g590",
+      "title": "妖精公寓特别篇：科幻篇",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g590-v1",
+        "g590-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《妖精公寓特别篇：科幻篇》原版包装／说明书／片尾职员表（g590-v1、g590-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g591",
+      "phase": "P1",
+      "workId": "g591",
+      "title": "妖精公寓特别篇：学园篇",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g591-v1",
+        "g591-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《妖精公寓特别篇：学园篇》原版包装／说明书／片尾职员表（g591-v1、g591-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g592",
+      "phase": "P1",
+      "workId": "g592",
+      "title": "大灾变",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g592-v1",
+        "g592-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《大灾变》原版包装／说明书／片尾职员表（g592-v1、g592-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g593",
+      "phase": "P1",
+      "workId": "g593",
+      "title": "暗影猎人",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g593-v1",
+        "g593-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《暗影猎人》原版包装／说明书／片尾职员表（g593-v1、g593-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g594",
+      "phase": "P1",
+      "workId": "g594",
+      "title": "初学餐桌礼仪",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g594-v1"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《初学餐桌礼仪》原版包装／说明书／片尾职员表（g594-v1）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g595",
+      "phase": "P1",
+      "workId": "g595",
+      "title": "你好！麻衣子",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g595-v1",
+        "g595-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《你好！麻衣子》原版包装／说明书／片尾职员表（g595-v1、g595-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    },
+    {
+      "claimId": "role:alicesoft:g596",
+      "phase": "P1",
+      "workId": "g596",
+      "title": "OMEGA：第3号",
+      "dossierId": "alicesoft",
+      "dossierName": "Alicesoft",
+      "placement": "main",
+      "releaseContextIds": [
+        "g596-v1",
+        "g596-v2"
+      ],
+      "decision": "deferred",
+      "evidenceIds": [],
+      "screenedLead": "https://www.alicesoft.com/game/index.html",
+      "leadAccess": "screenedLead",
+      "finding": "既有目录／馆藏／沿革链接未证明本专题在该作品及版本的具体制作职责",
+      "missingEvidence": "《OMEGA：第3号》原版包装／说明书／片尾职员表（g596-v1、g596-v2）中「Alicesoft」的具名职责与适用版本",
+      "previousDecision": "deferred",
+      "batchDecision": "deferred",
+      "reviewedEvidenceIds": [
+        "E-A-ALICE-HISTORY",
+        "E-A-ALICE-FREE"
+      ],
+      "batchFinding": "官网说明品牌沿革和少量产品归属；本项仍缺对应原版的 Alicesoft 母品牌具体制作署名。"
+    }
+  ],
+  "counts": {
+    "deferred": 110,
+    "confirmed": 1
+  }
+}
