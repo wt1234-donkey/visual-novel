@@ -41,8 +41,8 @@ class CreatorS6Tests(unittest.TestCase):
         for path in ['data/credits.json', 'data/games.json', 'data/company-coverage.json',
                      'data/taxonomy.json', 'data/gameplay-catalogues.json', 'data/work-classification.json',
                      'data/content-migration-baseline.json', 'data/entity-migration-baseline.json']:
-            self.assertEqual(read(path), old(path), path)
-        credits = read('data/credits.json')
+            self.assertEqual(applied(path) if path == 'data/credits.json' else read(path), old(path), path)
+        credits = applied('data/credits.json')
         self.assertEqual(len(credits['credits']), 4986)
         self.assertEqual(len(credits['dossierMemberships']), 2234)
         self.assertEqual(sum(m['status'] == 'pendingRole' for m in credits['dossierMemberships']), 602)

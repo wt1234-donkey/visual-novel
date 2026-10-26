@@ -16,7 +16,7 @@ def read(path):
 
 
 def applied(path):
-    if path in ['data/entities.json', 'data/organizations.json']:
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
         return json.loads(subprocess.check_output(['git', 'show', f'5de7b25eecbf8a05f33bc4decb06b1edf6f3ab75:{path}'], cwd=ROOT))
     return read(path)
 
@@ -46,7 +46,7 @@ class CreatorS5Tests(unittest.TestCase):
         self.assertTrue(read(REVIEW)['identityCorrections'][0]['preserveReleaseRoles'])
 
     def test_two_scoped_team_credits_preserve_parent_memberships_and_catalogue(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-2], before['credits'])
         self.assertEqual(len(after['credits']), 4986)
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role'])

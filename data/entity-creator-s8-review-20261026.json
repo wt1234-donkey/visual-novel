@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "f98e363888e421df46dee112b2738f5de1216b0f",
+  "audit": "data/entity-creator-s8-review-20261026.md",
+  "previousReview": "data/entity-creator-s7-review-20261026.md",
+  "policy": "按S组第29—32项连续核查；历史Spike与合并后公司分开，具名制作才追加，Mac发行与移植开发、品牌与法人及未来作品分别保留。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZS8-I01",
+      "entityId": "entity-name-6d5cd9b9dc38",
+      "rawName": "Spike",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/",
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/recruit/interview/interview02/"
+      ],
+      "note": "官方沿革及公司介绍明确2005业务分割后株式会社スパイク、2012年4月合并；本节点2009—2010两项发行属于该历史公司，不将1989旧业务起点、1997同名公司或合并后的公司混作同一法人。公司原作目录与内部开发访谈支持g035原作制作一条，保留g055发行不推开发。"
+    },
+    {
+      "reviewId": "AZS8-I02",
+      "entityId": "entity-name-6554f3ac70ec",
+      "rawName": "Spinnaker",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.mahoro-matic.com/mahoro2/item/item_ot.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010601030703",
+        "https://spin.co.jp/"
+      ],
+      "note": "原Mahoro官网商品表明确2003-12-05的for Mac发行元株式会社スピンネーカ，且与GAINAX Windows原版并列，支持本节点历史公司类别。政府gBiz页同名法人仅作补充，设立日期为空；不把当前登记或同域名现行皮具公司当2003法律连续性证据，不并美国Spinnaker Software，Mac publisher不升移植开发。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZS8-C01",
+      "entityId": "entity-name-6d5cd9b9dc38",
+      "dossierId": null,
+      "workId": "g035",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スパイク：オリジナルタイトル／ダンガンロンパ",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.spike-chunsoft.co.jp/company/about/",
+      "note": "官方公司介绍在2005设立的历史Spike下列自开发原作，社内访谈具体回顾受旧Spike邀请参与首作程序与裁判场景从零开发；限定2010首作制作参与，非独占全部素材，不因后发发行或2012合并改署。"
+    },
+    {
+      "reviewId": "AZS8-C02",
+      "entityId": "entity-name-8a871cf93bfd",
+      "dossierId": null,
+      "workId": "g160",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "当社が開発・販売するダンガンロンパシリーズ：スーパーダンガンロンパ２",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.spike-chunsoft.co.jp/news/45095/",
+      "note": "官方开发自述与逐作首发规格相结合，限定2012-07-26原作制作；2012-04合并后的发行与当前具名系列制作证据共同支持，不扩大到2010前作、全部后发移植或法律承继关系。"
+    },
+    {
+      "reviewId": "AZS8-C03",
+      "entityId": "entity-name-8a871cf93bfd",
+      "dossierId": null,
+      "workId": "g161",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "当社が開発・販売するダンガンロンパシリーズ：ニューダンガンロンパＶ３",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.spike-chunsoft.co.jp/news/45095/",
+      "note": "官方具名自开发系列与2017-01-12原版规格，另由社内开发者回顾V3制作经历交叉支持；限定本作原作制作参与，不把外部剧本、全部移植或海外发行主体视为同一开发公司。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-6d5cd9b9dc38",
+      "name": "Spike",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/",
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/recruit/interview/interview02/"
+      ],
+      "reason": "g055的Chunsoft原作开发证据及g035后发移植／新增内容逐版技术职责另核；本批不从发行或合并后版权追加其余开发，不建立未核法人承继关系。",
+      "workIds": [
+        "g055",
+        "g035"
+      ]
+    },
+    {
+      "entityId": "entity-name-8a871cf93bfd",
+      "name": "Spike Chunsoft",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/",
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/news/45095/",
+        "https://www.spike-chunsoft.co.jp/recruit/interview/interview02/",
+        "https://www.spike-chunsoft.co.jp/pages/zeroescape/spec/",
+        "https://www.spike-chunsoft.com/company/"
+      ],
+      "reason": "其余12部作品的原作、移植及海外发行公司分工继续逐项核对；g171明确Chime开发但尚无独立实体，后续另立具名身份，不将此职责登记到Spike Chunsoft。g160开发跨合并期的前后分工、后发版本外包与美国发行映射仍待专审。",
+      "workIds": [
+        "g055",
+        "g034",
+        "g054",
+        "g035",
+        "g160",
+        "g161",
+        "g171",
+        "g179",
+        "g618",
+        "g619",
+        "g620",
+        "g634",
+        "g635",
+        "g636"
+      ]
+    },
+    {
+      "entityId": "entity-name-6554f3ac70ec",
+      "name": "Spinnaker",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://www.mahoro-matic.com/mahoro2/item/item_ot.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010601030703",
+        "https://spin.co.jp/"
+      ],
+      "reason": "Mac版开发STAFF、与Windows内容对照及旧公司完整法人成立／终止史未核。原spin.co.jp链接现转皮具页面，不能当原游戏厂商现状；政府同名法人不单独证明全时期连续性。",
+      "workIds": [
+        "g819"
+      ]
+    },
+    {
+      "entityId": "entity-sprite",
+      "name": "sprite",
+      "status": "perReleaseProductionAndHistoricalScopeDeferred",
+      "sources": [
+        "https://sprite.net/games",
+        "https://sprite.net/aokana/extra1",
+        "https://sprite.net/aokana/extra2",
+        "https://sprite.net/everlastingflowers",
+        "https://store.playstation.com/ja-jp/concept/10010257"
+      ],
+      "reason": "其余历史法人、sprite games移动账号与每一后发版本技术分工未重验；flowers.studio及Frontwing具名合作已记录但不借sprite节点代记。未发售、取消和非叙事授权项目保持范围外。",
+      "workIds": [
+        "g204",
+        "g205",
+        "g206",
+        "g207",
+        "g208"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-6d5cd9b9dc38",
+      "name": "Spike",
+      "status": "historicalCompanyOneOriginalProduction",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/",
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/recruit/interview/interview02/"
+      ],
+      "reason": "官方沿革及公司介绍明确2005业务分割后株式会社スパイク、2012年4月合并；本节点2009—2010两项发行属于该历史公司，不将1989旧业务起点、1997同名公司或合并后的公司混作同一法人。公司原作目录与内部开发访谈支持g035原作制作一条，保留g055发行不推开发。",
+      "workIds": [
+        "g055",
+        "g035"
+      ]
+    },
+    {
+      "entityId": "entity-name-8a871cf93bfd",
+      "name": "Spike Chunsoft",
+      "status": "existingCompanyTwoOriginalProductions",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/",
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/news/45095/",
+        "https://www.spike-chunsoft.co.jp/recruit/interview/interview02/",
+        "https://www.spike-chunsoft.co.jp/pages/zeroescape/spec/",
+        "https://www.spike-chunsoft.com/company/"
+      ],
+      "reason": "沿用已核公司类别。官方声明明确自社开发的弹丸论破系列，并列2的2012-07-26原版及V3的2017-01-12原版；V3另有社内开发者回顾。只给g160、g161各加原作制作，不把2010首作倒署2012公司。《零时困境》官方规格另列开发元（有）チャイム；海外公司2017成立及MAGES等外部作品发行均不转开发。",
+      "workIds": [
+        "g055",
+        "g034",
+        "g054",
+        "g035",
+        "g160",
+        "g161",
+        "g171",
+        "g179",
+        "g618",
+        "g619",
+        "g620",
+        "g634",
+        "g635",
+        "g636"
+      ]
+    },
+    {
+      "entityId": "entity-name-6554f3ac70ec",
+      "name": "Spinnaker",
+      "status": "historicalCompanyMacPublisherNotDeveloper",
+      "sources": [
+        "https://www.mahoro-matic.com/mahoro2/item/item_ot.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010601030703",
+        "https://spin.co.jp/"
+      ],
+      "reason": "原Mahoro官网商品表明确2003-12-05的for Mac发行元株式会社スピンネーカ，且与GAINAX Windows原版并列，支持本节点历史公司类别。政府gBiz页同名法人仅作补充，设立日期为空；不把当前登记或同域名现行皮具公司当2003法律连续性证据，不并美国Spinnaker Software，Mac publisher不升移植开发。",
+      "workIds": [
+        "g819"
+      ]
+    },
+    {
+      "entityId": "entity-sprite",
+      "name": "sprite",
+      "status": "existingBrandFiveProductionsPreserved",
+      "sources": [
+        "https://sprite.net/games",
+        "https://sprite.net/aokana/extra1",
+        "https://sprite.net/aokana/extra2",
+        "https://sprite.net/everlastingflowers",
+        "https://store.playstation.com/ja-jp/concept/10010257"
+      ],
+      "reason": "沿用sprite品牌及五条既有productionBrand。官网本篇目录、EXTRA1／2独立页及everlasting flowers具名企画・制作可读；后者另列flowers.studio与Frontwing翻译，不将发行商RIGHTWAY或合作方全部工作归sprite。新预告小金井荘と金色の揚羽蝶标2026-11-26，当前尚未发行，不纳本批已发售作品。",
+      "workIds": [
+        "g204",
+        "g205",
+        "g206",
+        "g207",
+        "g208"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "S",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 42,
+    "processedEntityIds": [
+      "entity-sagaplanets",
+      "entity-name-d05eacc25c69",
+      "entity-sega",
+      "entity-name-7c9d766b5702",
+      "entity-name-06aeb9d01fbe",
+      "entity-name-22015689e48e",
+      "entity-name-13bcad90dc83",
+      "entity-sharrock",
+      "entity-name-5caee77c6090",
+      "entity-shopro",
+      "entity-name-663fc46f7715",
+      "entity-sierra_company",
+      "entity-silkys",
+      "entity-silkys_plus",
+      "entity-silkys_a5",
+      "entity-name-8c9d353d6fe9",
+      "entity-silkys_dolce",
+      "entity-silkys_wasabi",
+      "entity-name-b129f13b41e4",
+      "entity-sinclair",
+      "entity-name-12a802d7d9bd",
+      "entity-smee",
+      "entity-name-ce72ada6adcb",
+      "entity-name-539be8af5be9",
+      "entity-name-8865f66ec578",
+      "entity-name-ffa62a4c6281",
+      "entity-sorahane",
+      "entity-sphere",
+      "entity-name-6d5cd9b9dc38",
+      "entity-name-8a871cf93bfd",
+      "entity-name-6554f3ac70ec",
+      "entity-sprite"
+    ],
+    "nextEntityId": "entity-name-8a3d38d0d11f",
+    "nextName": "Square Enix",
+    "queue": [
+      {
+        "entityId": "entity-sagaplanets",
+        "name": "SAGA PLANETS",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d05eacc25c69",
+        "name": "Screaming Villains",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sega",
+        "name": "SEGA（セガ）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-7c9d766b5702",
+        "name": "Seikaisha（星海社）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-06aeb9d01fbe",
+        "name": "Sekai Project",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-22015689e48e",
+        "name": "Serenity Forge",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-13bcad90dc83",
+        "name": "Shall Luck（シャルラク）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sharrock",
+        "name": "SharRock",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5caee77c6090",
+        "name": "Shiravune",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-shopro",
+        "name": "Shogakukan Production（小学館プロダクション）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-663fc46f7715",
+        "name": "Shogakukan（小学館）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sierra_company",
+        "name": "Sierra On-Line（原On-Line Systems）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys",
+        "name": "Silky’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_plus",
+        "name": "Silky’s Plus",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_a5",
+        "name": "Silky’s Plus A5 Wagyu（シルキーズプラス A5和牛）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_dolce",
+        "name": "Silky’s Plus DOLCE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-silkys_wasabi",
+        "name": "Silky’s Plus WASABI",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b129f13b41e4",
+        "name": "Simon & Schuster Interactive",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sinclair",
+        "name": "Sinclair Research",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-12a802d7d9bd",
+        "name": "Sir-tech Software, Inc.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-smee",
+        "name": "SMEE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ce72ada6adcb",
+        "name": "SNK",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-539be8af5be9",
+        "name": "Sol Press",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8865f66ec578",
+        "name": "Sony Computer Entertainment",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ffa62a4c6281",
+        "name": "Sony Computer Entertainment（ソニー・コンピュータエンタテインメント）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sorahane",
+        "name": "SORAHANE",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sphere",
+        "name": "Sphere",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6d5cd9b9dc38",
+        "name": "Spike",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8a871cf93bfd",
+        "name": "Spike Chunsoft",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-6554f3ac70ec",
+        "name": "Spinnaker",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-sprite",
+        "name": "sprite",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8a3d38d0d11f",
+        "name": "Square Enix",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-6d2a66d8a91c",
+        "name": "Square Enix（スクウェア・エニックス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-e92deef78c89",
+        "name": "Square Soft, Inc.",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-square",
+        "name": "Square（スクウェア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-a3d00ecbbdcb",
+        "name": "StarCraft（スタークラフト）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-ccdf9b616bf6",
+        "name": "Sumzap",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-3c3fb799f482",
+        "name": "Sunnyside Soft",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc.",
+        "status": "pending"
+      }
+    ]
+  }
+}
