@@ -216,3 +216,5 @@ StarCraft、Sumzap、Sunnyside Soft依原厂手册／公司概要分别核定com
 ## S组收尾与发行层本地化（2026-10-26）
 
 S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一项T&E SOFT。两项身份缺口保留，仅按官网2020中文版制作说明与原片尾转录分别追加g855-v3发行层localizer、黄砖路原作制作。独立审核入口的release允许developer或localizer，仍须同作品、具体发行ID、原角色与无专题捷径；本地化不计原作开发，不沿共享内容ID外溢。全部原始数据、实体、专题和基线保持，详见[独立审计](entity-creator-s11-review-20261026.md)。
+
+2026-10-26 T字母首批使用 `entity-creator-t1-review-20261026.json` 与同名Markdown，连续核查T&E SOFT、Tactics（NEXTON）、TAITO、TAKERU，T累计4／19。NEXTON与Brother原站支持两项brand身份，TAKERU明确是软件销售服务；两项均保留旧publisher且不自动生成发行／制作品牌职责。T&E与TAITO逐作开发证据不足的范围单列待核，本批无新增职责、无专题解除。累计当前A—T队列登记283／298，下一项TamaMako gaming。

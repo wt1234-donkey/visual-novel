@@ -19,22 +19,28 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'7dba8bea89937aca4b47ad5c40a1689f617db456:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS11Tests(unittest.TestCase):
     def test_unresolved_identities_dates_and_relationships_remain_exact(self):
-        self.assertEqual(read('data/entities.json'), old('data/entities.json'))
-        self.assertEqual(read('data/entity-migration-review.json'), old('data/entity-migration-review.json'))
-        e = {e['id']: e for e in read('data/entities.json')['entities']}
+        self.assertEqual(applied('data/entities.json'), old('data/entities.json'))
+        self.assertEqual(applied('data/entity-migration-review.json'), old('data/entity-migration-review.json'))
+        e = {e['id']: e for e in applied('data/entities.json')['entities']}
         for eid in IDS:
             self.assertEqual((e[eid]['type'], e[eid]['verification']), ('unknown', 'unresolved'))
         self.assertEqual(sum(e['verification'] == 'unresolved' for e in e.values()), 58)
         self.assertEqual(read(REVIEW)['identityCorrections'], [])
 
     def test_exact_release_localizer_and_original_creator_preserve_all_old_credits(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-2], before['credits'])
         self.assertEqual(len(after['credits']), 4999)
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role'])
@@ -49,14 +55,14 @@ class CreatorS11Tests(unittest.TestCase):
         self.assertEqual((localized[0]['targetType'], localized[0]['targetId']), ('release', 'g855-v3'))
         self.assertEqual([c for c in after['credits'] if c['role'] == 'publisher'],
                          [c for c in before['credits'] if c['role'] == 'publisher'])
-        model = read('data/organizations.json')
+        model = applied('data/organizations.json')
         node = next(n for n in model['nodes'] if n['id'] == IDS[0])
         self.assertEqual(node['groups']['creation'], [])
         self.assertEqual(node['productionCount'], 0)
         self.assertNotIn('localizer', model['creationRoles'])
 
     def test_memberships_and_all_original_catalogue_objects_stay_exact(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['dossierMemberships'], before['dossierMemberships'])
         m = next(m for m in after['dossierMemberships'] if m['dossierId'] == 'ibm'
                  and m['workId'] == 'ibm-yellow-brick-road')
@@ -69,7 +75,7 @@ class CreatorS11Tests(unittest.TestCase):
             self.assertEqual(read(path), old(path), path)
 
     def test_two_consecutive_entities_complete_s_and_advance_to_t_and_e_soft(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

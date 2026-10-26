@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "25800848f92baf2811450ed3c77bb67b7318a368",
+  "audit": "data/entity-creator-t1-review-20261026.md",
+  "previousReview": "data/entity-creator-s11-review-20261026.md",
+  "policy": "按T组第1—4项连续核查；品牌、销售服务、原作制作及发行名义分开。身份核定不自动改旧角色；证据不足明示缺口，完成登记不表示逐作职责全部解决。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZT1-I01",
+      "entityId": "entity-name-e135870e3299",
+      "rawName": "Tactics（NEXTON）",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://nexton-net.jp/faq.html",
+        "https://nexton-net.jp/~support/",
+        "https://nexton-net.jp/nexton30th/nvm001/"
+      ],
+      "note": "NEXTON官方FAQ直接以Tactics为品牌示例，用户支持页亦列为支持品牌，核为brand，保留Tactics（NEXTON）原署名和实体ID。2023 ONE官网是重制项目资料，不以其novamicus名义替换1998原作，也不据品牌身份自动追加制作或发行品牌角色。"
+    },
+    {
+      "reviewId": "AZT1-I02",
+      "entityId": "entity-name-08cbddd5e450",
+      "rawName": "TAKERU",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://global.brother/ja/digest/history/takeru",
+        "https://museum.global.brother/guide/zone/2/32?lang=ja"
+      ],
+      "note": "Brother官方品牌史将TAKERU明确为1986—1997运行的软件自动售卖系统／服务，核为销售服务brand，不是游戏开发公司或制作团队。Brother开发自动售卖机不是开发所售游戏，原三条publisher署名照旧，不自动生成publishingBrand、originalPublishingBrand或productionBrand，不新建Brother实体或经营关系。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-te_soft",
+      "name": "T&E SOFT",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://d4e.co.jp/lights_cat/t_and_e_soft",
+        "https://prtimes.jp/main/html/rd/p/000000013.000069696.html",
+        "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm"
+      ],
+      "reason": "23部有发行署名作品及g010、te-soft-daiva-6、te-soft-ashguine-2专题引用的逐作制作、时期主体与版本职责仍待原始STAFF／原件。Hydlide复刻介绍为二手资料；所找到HY2FM7原件线索直读重定向循环，未冒称看过扫描。Bushi等外部开发不因历史品牌关联改归T&E。",
+      "workIds": [
+        "g073",
+        "g087",
+        "g088",
+        "g1173",
+        "g1174",
+        "te-soft-hydlide",
+        "te-soft-hydlide-2",
+        "te-soft-hydlide-3",
+        "te-soft-daiva-1",
+        "te-soft-daiva-2",
+        "te-soft-daiva-3",
+        "te-soft-daiva-4",
+        "te-soft-daiva-5",
+        "te-soft-daiva-7",
+        "te-soft-runeworth",
+        "te-soft-runeworth-2",
+        "te-soft-runeworth-3",
+        "te-soft-sword-world",
+        "te-soft-sword-world-2",
+        "te-soft-bushi",
+        "te-soft-blaze-blade",
+        "te-soft-blaze-busters",
+        "te-soft-sonata",
+        "g010",
+        "te-soft-daiva-6",
+        "te-soft-ashguine-2"
+      ]
+    },
+    {
+      "entityId": "entity-name-e135870e3299",
+      "name": "Tactics（NEXTON）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://nexton-net.jp/faq.html",
+        "https://nexton-net.jp/~support/",
+        "https://nexton-net.jp/nexton30th/nvm001/"
+      ],
+      "reason": "g047的1998原作制作品牌／开发及后发版合同发行须原期资料；品牌核定只改变身份，尚不新增g047制作职责。未补法人成立日期、运营起止或与novamicus的合并关系。",
+      "workIds": [
+        "g047"
+      ]
+    },
+    {
+      "entityId": "entity-taito",
+      "name": "TAITO（タイトー）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.taito.co.jp/classics/timegal",
+        "https://www.taito.co.jp/taitoldgamecollection"
+      ],
+      "reason": "21部既有发行作品以及taito-dungeon-magic专题待核引用保留；逐作原作开发、外包动画、合作制作与后发移植待原始STAFF。Time Gal文章具名动画方不能证明TAITO独占制作；不把2023续篇或当前权利状态倒填1985。",
+      "workIds": [
+        "g084",
+        "g014",
+        "g906",
+        "g907",
+        "g908",
+        "g909",
+        "g1204",
+        "g1205",
+        "g1206",
+        "taito-uq",
+        "taito-takeshi",
+        "taito-jarvas",
+        "taito-minelvaton",
+        "taito-cadash",
+        "taito-estpolis",
+        "taito-estpolis2",
+        "taito-ladystalker",
+        "taito-chaos-seed",
+        "taito-energy-breaker",
+        "taito-estpolis-returns",
+        "taito-estpolis-gaiden",
+        "taito-dungeon-magic"
+      ]
+    },
+    {
+      "entityId": "entity-name-08cbddd5e450",
+      "name": "TAKERU",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://global.brother/ja/digest/history/takeru",
+        "https://museum.global.brother/guide/zone/2/32?lang=ja"
+      ],
+      "reason": "g743、g812、cocktailsoft-r13的三条既有发行继续沿用原证据，未声称从Brother品牌史重验每款分发日期和合同发行。g812-v2的contentVersionId:null／unverified保持；销售渠道不自动获得所售游戏开发、本地化或内容版本身份。",
+      "workIds": [
+        "g743",
+        "g812",
+        "cocktailsoft-r13"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-te_soft",
+      "name": "T&E SOFT",
+      "status": "historicalIdentityOrProductionEvidenceDeferred",
+      "sources": [
+        "https://d4e.co.jp/lights_cat/t_and_e_soft",
+        "https://prtimes.jp/main/html/rd/p/000000013.000069696.html",
+        "https://retroblues.sakura.ne.jp/kouryaku/hydlide2/fukkoku.htm"
+      ],
+      "reason": "现权利方D4目录明确标注当时的发行厂商，不等于原始开发。2021复刻公告说明收录旧作与原员工提供开发资料，但本次未读到附赠PDF原件，不把该公告泛化为23部作品原作制作证据。原法人、Deep、2008新法人及品牌继承仍按旧沿革分开，保留unknown／existingDossier。",
+      "workIds": [
+        "g073",
+        "g087",
+        "g088",
+        "g1173",
+        "g1174",
+        "te-soft-hydlide",
+        "te-soft-hydlide-2",
+        "te-soft-hydlide-3",
+        "te-soft-daiva-1",
+        "te-soft-daiva-2",
+        "te-soft-daiva-3",
+        "te-soft-daiva-4",
+        "te-soft-daiva-5",
+        "te-soft-daiva-7",
+        "te-soft-runeworth",
+        "te-soft-runeworth-2",
+        "te-soft-runeworth-3",
+        "te-soft-sword-world",
+        "te-soft-sword-world-2",
+        "te-soft-bushi",
+        "te-soft-blaze-blade",
+        "te-soft-blaze-busters",
+        "te-soft-sonata",
+        "g010",
+        "te-soft-daiva-6",
+        "te-soft-ashguine-2"
+      ]
+    },
+    {
+      "entityId": "entity-name-e135870e3299",
+      "name": "Tactics（NEXTON）",
+      "status": "identityReviewedRolesDeferred",
+      "sources": [
+        "https://nexton-net.jp/faq.html",
+        "https://nexton-net.jp/~support/",
+        "https://nexton-net.jp/nexton30th/nvm001/"
+      ],
+      "reason": "NEXTON官方FAQ直接以Tactics为品牌示例，用户支持页亦列为支持品牌，核为brand，保留Tactics（NEXTON）原署名和实体ID。2023 ONE官网是重制项目资料，不以其novamicus名义替换1998原作，也不据品牌身份自动追加制作或发行品牌角色。",
+      "workIds": [
+        "g047"
+      ]
+    },
+    {
+      "entityId": "entity-taito",
+      "name": "TAITO（タイトー）",
+      "status": "historicalIdentityOrProductionEvidenceDeferred",
+      "sources": [
+        "https://www.taito.co.jp/classics/timegal",
+        "https://www.taito.co.jp/taitoldgamecollection"
+      ],
+      "reason": "官方Time Gal回顾正文确认1985发行，并明确动画由东映动画制作；现有TAITO公司身份保持。发行及当前合集宣传不能替代逐作开发STAFF，尤其2023续篇、Neverland／Climax等合作、Square Enix后发版均须独立核对，不将21部发行作品批量登记为自研。",
+      "workIds": [
+        "g084",
+        "g014",
+        "g906",
+        "g907",
+        "g908",
+        "g909",
+        "g1204",
+        "g1205",
+        "g1206",
+        "taito-uq",
+        "taito-takeshi",
+        "taito-jarvas",
+        "taito-minelvaton",
+        "taito-cadash",
+        "taito-estpolis",
+        "taito-estpolis2",
+        "taito-ladystalker",
+        "taito-chaos-seed",
+        "taito-energy-breaker",
+        "taito-estpolis-returns",
+        "taito-estpolis-gaiden",
+        "taito-dungeon-magic"
+      ]
+    },
+    {
+      "entityId": "entity-name-08cbddd5e450",
+      "name": "TAKERU",
+      "status": "identityReviewedRolesDeferred",
+      "sources": [
+        "https://global.brother/ja/digest/history/takeru",
+        "https://museum.global.brother/guide/zone/2/32?lang=ja"
+      ],
+      "reason": "Brother官方品牌史将TAKERU明确为1986—1997运行的软件自动售卖系统／服务，核为销售服务brand，不是游戏开发公司或制作团队。Brother开发自动售卖机不是开发所售游戏，原三条publisher署名照旧，不自动生成publishingBrand、originalPublishingBrand或productionBrand，不新建Brother实体或经营关系。",
+      "workIds": [
+        "g743",
+        "g812",
+        "cocktailsoft-r13"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "T",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 19,
+    "processedEntityIds": [
+      "entity-te_soft",
+      "entity-name-e135870e3299",
+      "entity-taito",
+      "entity-name-08cbddd5e450"
+    ],
+    "nextEntityId": "entity-name-3fc0babaf7f8",
+    "nextName": "TamaMako gaming",
+    "queue": [
+      {
+        "entityId": "entity-te_soft",
+        "name": "T&E SOFT",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e135870e3299",
+        "name": "Tactics（NEXTON）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-taito",
+        "name": "TAITO（タイトー）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-08cbddd5e450",
+        "name": "TAKERU",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3fc0babaf7f8",
+        "name": "TamaMako gaming",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-b01843ba1268",
+        "name": "Team Salvato",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-tiare",
+        "name": "Tiare",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-5f291db8e809",
+        "name": "TikGames",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-tinmachine",
+        "name": "TinMachine",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-0b5ee01c0e65",
+        "name": "TOHO Games",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-toho",
+        "name": "TOHO（東宝）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-9832231b6baa",
+        "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-tokuma",
+        "name": "Tokuma Shoten（徳間書店）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-2793ee33b030",
+        "name": "Tokyo Shoseki",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-aa2256b9c684",
+        "name": "TOKYOTOON",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-toneworks",
+        "name": "tone work’s",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-679a14238228",
+        "name": "Tonkin House（トンキンハウス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8039f82ef72c",
+        "name": "Toshiba EMI（東芝EMI）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-77c5d6e9dcc8",
+        "name": "TYPE-MOON",
+        "status": "pending"
+      }
+    ]
+  }
+}
