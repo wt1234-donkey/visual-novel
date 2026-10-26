@@ -222,3 +222,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 T字母第二批使用 `entity-creator-t2-review-20261026.json` 与同名Markdown，连续核查TamaMako gaming、Team Salvato、Tiare、TikGames，T累计8／19。核定Team Salvato制作团队、TikGames公司身份，分别追加DDLC原作制作／既有Plus增补开发与Interpol原作制作三条职责，Serenity Forge协作保留。TamaMako联合发行不推本地化或开发，Tiare既有品牌不向JAST父专题上推制作；当前A—T队列登记287／298，下一项TinMachine。
 
 2026-10-26 T字母第三批使用 `entity-creator-t3-review-20261026.json` 与同名Markdown，连续核查TinMachine、TOHO Games、TOHO、Tokuma Shoten Intermedia，T累计12／19。核定游戏品牌与历史出版公司两项身份；首发公告支持东宝参与Phantom Parade游戏企画制作，只追加一条原作制作并核对自身专题旧值后解除该作待核，Sumzap开发独立保持。TinMachine配信不推开发，品牌身份不自动产生职责；当前A—T队列登记291／298，下一项Tokuma Shoten（徳間書店）。
+
+2026-10-26 T字母第四批使用 `entity-creator-t4-review-20261026.json` 与同名Markdown，连续核查Tokuma Shoten、Tokyo Shoseki、TOKYOTOON、tone work’s，T累计16／19。核定Tokyo Shoseki与TOKYOTOON公司身份；只给TOKYOTOON两条2019 Steam发行追加developer，2018公司成立不倒填2016／2017原作，未知内容关联保持。德间母子主体及tone work’s六条制作品牌沿用，不重复加角色或解除专题待核；当前A—T队列登记295／298，下一项Tonkin House（トンキンハウス）。

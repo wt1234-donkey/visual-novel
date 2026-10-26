@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "73b3fd79a34b9d7b30af7778a1df38da6eb2f627",
+  "audit": "data/entity-creator-t4-review-20261026.md",
+  "previousReview": "data/entity-creator-t3-review-20261026.md",
+  "policy": "按T组第13—16项连续核查；公司、制作品牌与具体后发发行开发分别限定，成立时期不倒填原作，未核内容关系不猜相同或新增。登记包含明确缺口，不表示全部职责已解决。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZT4-I01",
+      "entityId": "entity-name-2793ee33b030",
+      "rawName": "Tokyo Shoseki",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.tokyo-shoseki.co.jp/corporate/aboutus/information.html",
+        "https://www.tokyo-shoseki.co.jp/corporate/company_english/information.html",
+        "https://gamemanual.midnightmeattrain.com/entry/太陽の神殿"
+      ],
+      "note": "东京书籍官网公司概要直接列東京書籍株式会社，英页对应TOKYO SHOSEKI CO., LTD.，核为company；1988太阳神殿原手册封面扫描可见Tokyo Shoseki署名，与原发行英文名交叉。只核公司类别，不把1909创业年当游戏品牌启用或新建专题依据；Falcom1986原作、1988 FC改编与Infocom英语发行保持独立，不由publisher推开发。"
+    },
+    {
+      "reviewId": "AZT4-I02",
+      "entityId": "entity-name-aa2256b9c684",
+      "rawName": "TOKYOTOON",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://tokyotoon.jp/company/",
+        "https://tokyotoon.jp/product/",
+        "https://store.steampowered.com/app/1010600/",
+        "https://store.steampowered.com/app/1128260/"
+      ],
+      "note": "官网明确株式会社TOKYOTOON／TOKYOTOON Co., Ltd.成立于2018-03，核为company。两作2019 Steam产品页分别列TOKYOTOON为Developer，原站实绩亦分别列2019 Steam版；只给g900-v9与g901-v8追加release/developer，不倒填2016／2017 HARUKAZE原作，不从公司现有作品表列出的2017记录断言2018法人已存在。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZT4-C01",
+      "entityId": "entity-name-aa2256b9c684",
+      "dossierId": null,
+      "workId": "g900",
+      "targetType": "release",
+      "targetId": "g900-v9",
+      "role": "developer",
+      "rawCredit": "Developer: TOKYOTOON",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeTargetRoles": [
+        "publisher"
+      ],
+      "source": "https://store.steampowered.com/app/1010600/",
+      "note": "2019 Steam产品页明确开发署名TOKYOTOON，原站实绩列该Steam版；公司2018成立与原作2016／2017分开。仅限定既有g900-v9发行开发，保留原publisher和Fruitbat Factory联合发行，不主张独占翻译／原作制作；contentVersionId:null／unverified保留，不向其它发行、原作或主机增补传播。"
+    },
+    {
+      "reviewId": "AZT4-C02",
+      "entityId": "entity-name-aa2256b9c684",
+      "dossierId": null,
+      "workId": "g901",
+      "targetType": "release",
+      "targetId": "g901-v8",
+      "role": "developer",
+      "rawCredit": "Developer: TOKYOTOON",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeTargetRoles": [
+        "publisher"
+      ],
+      "source": "https://store.steampowered.com/app/1128260/",
+      "note": "2019 Steam产品页明确开发署名TOKYOTOON，原站实绩列该Steam版；公司2018成立与原作2016／2017分开。仅限定既有g901-v8发行开发，保留原publisher和Fruitbat Factory联合发行，不主张独占翻译／原作制作；contentVersionId:null／unverified保留，不向其它发行、原作或主机增补传播。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-tokuma",
+      "name": "Tokuma Shoten（徳間書店）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.tokuma.jp/company/",
+        "https://www.hunex.co.jp/archives/works/pc-fx",
+        "https://id.ndl.go.jp/auth/ndlna/001283900"
+      ],
+      "reason": "九项专题引用的原作开发、子公司制作品牌及后合并时期开发仍待逐作STAFF；五项pendingRole保持。现公司入口本次读到大量新闻导航，Foreign Rights子页不可读，未重验原1954日期或法人沿革，不改旧记录、合并ID或推母公司开发。",
+      "workIds": [
+        "g918",
+        "g920",
+        "g921",
+        "g923",
+        "g919",
+        "g922",
+        "tokuma-filena",
+        "tokuma-lovequest",
+        "tokuma-littlemaster3"
+      ]
+    },
+    {
+      "entityId": "entity-name-2793ee33b030",
+      "name": "Tokyo Shoseki",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.tokyo-shoseki.co.jp/corporate/aboutus/information.html",
+        "https://www.tokyo-shoseki.co.jp/corporate/company_english/information.html",
+        "https://gamemanual.midnightmeattrain.com/entry/太陽の神殿"
+      ],
+      "reason": "g1086-v-famicom的实际开发、改编程序与人员职责仍待原STAFF；只看原手册封面与末页扫描，不冒称看过全部扫描或已确认制作名单。东京书籍与Tonkin House历史关系留给下一项独立核查，不在本批新建运营关系或补普通移植。",
+      "workIds": [
+        "g1086"
+      ]
+    },
+    {
+      "entityId": "entity-name-aa2256b9c684",
+      "name": "TOKYOTOON",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://tokyotoon.jp/company/",
+        "https://tokyotoon.jp/product/",
+        "https://store.steampowered.com/app/1010600/",
+        "https://store.steampowered.com/app/1128260/"
+      ],
+      "reason": "两条Steam发行的具体程序、翻译人员及其与主机增补的内容关系仍待更细STAFF；Developer是产品具名开发，不断言独占翻译或全部原作创作。两条contentVersionId:null／unverified保持，不传播至主机、共享内容对象或其它发行，不借2018公司说明合并HARUKAZE、Fruitbat Factory。",
+      "workIds": [
+        "g900",
+        "g901"
+      ]
+    },
+    {
+      "entityId": "entity-toneworks",
+      "name": "tone work’s",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://toneworks.product.co.jp/product.html",
+        "https://toneworks.product.co.jp/hoshiori/index.html",
+        "https://toneworks.product.co.jp/hoshiori_pe/"
+      ],
+      "reason": "g278生日短篇的独立作品／内容边界、详细STAFF及后续版本逐项仍可补核；本批不由网页产品列表缺项删改原库，不新增合售／重发或把主机追加回归PC再造为新作品。品牌、视觉艺术公司与PROTOTYPE／ENTERGRAM发行职责分别保留，当前品牌关系不倒填所有历史开发。",
+      "workIds": [
+        "g276",
+        "g277",
+        "g278",
+        "g279",
+        "g280",
+        "g281"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-tokuma",
+      "name": "Tokuma Shoten（徳間書店）",
+      "status": "existingCompanySubsidiaryRolesDeferred",
+      "sources": [
+        "https://www.tokuma.jp/company/",
+        "https://www.hunex.co.jp/archives/works/pc-fx",
+        "https://id.ndl.go.jp/auth/ndlna/001283900"
+      ],
+      "reason": "保留德间书店既有company身份与四条发行署名。HuneX官方PC-FX实绩将Fire Woman Matoi-gumi明确列为徳間書店発売，不把厂商实绩、版权或母公司关系改写为德间独占开发。Intermedia历史公司已在T3独立核定，原GAMEテクノポリス、后合并业务名义及母公司专题仍分开，不把子公司八作制作上推母公司。",
+      "workIds": [
+        "g918",
+        "g920",
+        "g921",
+        "g923",
+        "g919",
+        "g922",
+        "tokuma-filena",
+        "tokuma-lovequest",
+        "tokuma-littlemaster3"
+      ]
+    },
+    {
+      "entityId": "entity-name-2793ee33b030",
+      "name": "Tokyo Shoseki",
+      "status": "historicalPublisherCompanyIdentityReviewed",
+      "sources": [
+        "https://www.tokyo-shoseki.co.jp/corporate/aboutus/information.html",
+        "https://www.tokyo-shoseki.co.jp/corporate/company_english/information.html",
+        "https://gamemanual.midnightmeattrain.com/entry/太陽の神殿"
+      ],
+      "reason": "东京书籍官网公司概要直接列東京書籍株式会社，英页对应TOKYO SHOSEKI CO., LTD.，核为company；1988太阳神殿原手册封面扫描可见Tokyo Shoseki署名，与原发行英文名交叉。只核公司类别，不把1909创业年当游戏品牌启用或新建专题依据；Falcom1986原作、1988 FC改编与Infocom英语发行保持独立，不由publisher推开发。",
+      "workIds": [
+        "g1086"
+      ]
+    },
+    {
+      "entityId": "entity-name-aa2256b9c684",
+      "name": "TOKYOTOON",
+      "status": "companyAndScopedSteamDevelopmentReviewed",
+      "sources": [
+        "https://tokyotoon.jp/company/",
+        "https://tokyotoon.jp/product/",
+        "https://store.steampowered.com/app/1010600/",
+        "https://store.steampowered.com/app/1128260/"
+      ],
+      "reason": "官网明确株式会社TOKYOTOON／TOKYOTOON Co., Ltd.成立于2018-03，核为company。两作2019 Steam产品页分别列TOKYOTOON为Developer，原站实绩亦分别列2019 Steam版；只给g900-v9与g901-v8追加release/developer，不倒填2016／2017 HARUKAZE原作，不从公司现有作品表列出的2017记录断言2018法人已存在。",
+      "workIds": [
+        "g900",
+        "g901"
+      ]
+    },
+    {
+      "entityId": "entity-toneworks",
+      "name": "tone work’s",
+      "status": "existingProductionBrandPreserved",
+      "sources": [
+        "https://toneworks.product.co.jp/product.html",
+        "https://toneworks.product.co.jp/hoshiori/index.html",
+        "https://toneworks.product.co.jp/hoshiori_pe/"
+      ],
+      "reason": "官方产品页可读五部本篇／后续作，星织原站明确主机Converted Edition由PROTOTYPE发行，Perfect Edition页说明主机追加剧情与CG回归PC。保留tone work’s既有brand及六条productionBrand，不重复追加；第六项g278生日内容本次未取得独立STAFF原件，不声称六作全部重新核定，原有身份和收录照旧。",
+      "workIds": [
+        "g276",
+        "g277",
+        "g278",
+        "g279",
+        "g280",
+        "g281"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "T",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 19,
+    "processedEntityIds": [
+      "entity-te_soft",
+      "entity-name-e135870e3299",
+      "entity-taito",
+      "entity-name-08cbddd5e450",
+      "entity-name-3fc0babaf7f8",
+      "entity-name-b01843ba1268",
+      "entity-tiare",
+      "entity-name-5f291db8e809",
+      "entity-tinmachine",
+      "entity-name-0b5ee01c0e65",
+      "entity-toho",
+      "entity-name-9832231b6baa",
+      "entity-tokuma",
+      "entity-name-2793ee33b030",
+      "entity-name-aa2256b9c684",
+      "entity-toneworks"
+    ],
+    "nextEntityId": "entity-name-679a14238228",
+    "nextName": "Tonkin House（トンキンハウス）",
+    "queue": [
+      {
+        "entityId": "entity-te_soft",
+        "name": "T&E SOFT",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e135870e3299",
+        "name": "Tactics（NEXTON）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-taito",
+        "name": "TAITO（タイトー）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-08cbddd5e450",
+        "name": "TAKERU",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3fc0babaf7f8",
+        "name": "TamaMako gaming",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b01843ba1268",
+        "name": "Team Salvato",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tiare",
+        "name": "Tiare",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5f291db8e809",
+        "name": "TikGames",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tinmachine",
+        "name": "TinMachine",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0b5ee01c0e65",
+        "name": "TOHO Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-toho",
+        "name": "TOHO（東宝）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-9832231b6baa",
+        "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tokuma",
+        "name": "Tokuma Shoten（徳間書店）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-2793ee33b030",
+        "name": "Tokyo Shoseki",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-aa2256b9c684",
+        "name": "TOKYOTOON",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-toneworks",
+        "name": "tone work’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-679a14238228",
+        "name": "Tonkin House（トンキンハウス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8039f82ef72c",
+        "name": "Toshiba EMI（東芝EMI）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-77c5d6e9dcc8",
+        "name": "TYPE-MOON",
+        "status": "pending"
+      }
+    ]
+  }
+}

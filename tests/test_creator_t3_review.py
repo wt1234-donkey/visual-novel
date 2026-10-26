@@ -20,13 +20,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'700c5f0c055bd9be328bf7000dc6f004d9162d76:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorT3Tests(unittest.TestCase):
     def test_only_label_and_intermedia_identity_change_without_mergers_or_dates(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {IDS[1], IDS[3]})
@@ -40,7 +46,7 @@ class CreatorT3Tests(unittest.TestCase):
         self.assertEqual((len(ae), sum(e['verification'] == 'unresolved' for e in ae.values())), (326, 52))
 
     def test_exact_one_production_preserves_all_credits_and_other_subjects(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-1], before['credits'])
         self.assertEqual(len(after['credits']), 5003)
         c = after['credits'][-1]
@@ -59,7 +65,7 @@ class CreatorT3Tests(unittest.TestCase):
         self.assertFalse(any(c['entityId'] == IDS[2] and c['role'] == 'developer' for c in after['credits']))
 
     def test_only_own_phantom_parade_membership_is_resolved_and_catalogue_is_preserved(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(len(before['dossierMemberships']), len(after['dossierMemberships']))
         diffs = [(b, a) for b, a in zip(before['dossierMemberships'], after['dossierMemberships']) if b != a]
         self.assertEqual(len(diffs), 1)
@@ -74,10 +80,10 @@ class CreatorT3Tests(unittest.TestCase):
                      'data/gameplay-catalogues.json', 'data/work-classification.json',
                      'data/content-migration-baseline.json', 'data/entity-migration-baseline.json']:
             self.assertEqual(read(path), old(path), path)
-        self.assertEqual(read('data/organizations.json')['works'], old('data/organizations.json')['works'])
+        self.assertEqual(applied('data/organizations.json')['works'], old('data/organizations.json')['works'])
 
     def test_four_consecutive_entities_advance_t_to_tokuma_parent(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),
