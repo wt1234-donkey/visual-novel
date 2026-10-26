@@ -236,3 +236,7 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 X字母首批使用 `entity-creator-x1-review-20261026.json` 与同名Markdown，按Xbox Game Studios、XING（エクシング）连续完成X累计2／2，当前A—X队列登记309／309。Xbox发布品牌不自动等于独立开发团队；XING的单项1993 X68000历史署名只有二手资料，不能与现行同名JOYSOUND法人直接合并。无新增身份或职责，原发行、未核内容关系、专题与位置保持。下一项Yonago GAINAX（米子ガイナックス）。
 
 2026-10-26 Y字母首批使用 `entity-creator-y1-review-20261026.json` 与同名Markdown，依Yonago GAINAX、Yuzusoft SOUR、Yuzusoft完成Y累计3／3，当前A—Y登记312／312。米子公司官网核定2014年5月设立；EXNOA发布《PARQUET》支持SOUR于2021年7月已有品牌活动。只增加两个时间事实，区分法人设立、品牌活动与作品开发；原动画与品牌职责、发行、未核内容关系和专题待核保持。下一项5pb.（数字组）。
+
+2026-10-26 C—F补漏批次使用 `entity-creator-cf-catchup-review-20261026.json` 与同名Markdown：重算当前显示名排序发现八个尚未登记者仍排在数字组之前，依Champion Soft、Cocktail Soft、Crest / JAST、dramatic create、FairyTale / X-Shitei、FAIRYTALE ETHIX、FairyTale、Flower-Moon Group补齐，累计320项，余6项。HuneX官方沿革支持dramatic create品牌2014年已启动，仅补这一时间事实；品牌与法人、发行和制作分开，原有各子品牌署名、1982前身疑点及全部职责／内容／位置保持。下一项5pb.。
+
+2026-10-26 数字及其他批次使用 `entity-creator-numeric-review-20261026.json` 与同名Markdown，依5pb.、07th Expansion、GREE及Mobage待核发行、1988目录冲突、1982前身占位六项收尾。07th官网支持团队身份与两部原作层制作职责，其余历史发行及未知内容保持；现有326个实体均已按批登记审查，39项身份和601项专题职责仍保留待核，当前排序队列完成，无下一项。详见独立审计。

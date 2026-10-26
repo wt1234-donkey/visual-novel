@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "b38cdf51951cb90118d6a1a4f04afac715cf67c5",
+  "audit": "data/entity-creator-cf-catchup-review-20261026.md",
+  "previousReview": "data/entity-creator-y1-review-20261026.md",
+  "policy": "对已审队列重新按当前显示名排序，先补八个因显示名变更留在数字组之前的C—F主体；只以HuneX当事方沿革补dramatic create品牌活动年份，不由产品品牌、发行或母公司推开发。接续项为5pb.。",
+  "identityCorrections": [],
+  "creditAdditions": [],
+  "dateFacts": [
+    {
+      "entityId": "entity-dramaticcreate",
+      "before": [],
+      "kind": "brandActivityStarted",
+      "value": "2014",
+      "precision": "year",
+      "source": "https://www.hunex.co.jp/archives/company/history",
+      "status": "sourceReviewed",
+      "note": "HuneX官方沿革明确2014年启动自有游戏品牌dramatic create；此年不是1992年HuneX公司设立日，也不等于逐作移植开发。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-champion_soft",
+      "status": "preincorporationAndWorkRolesDeferred",
+      "sources": ["https://www.alicesoft.com/outline/contents.html", "https://www.alicesoft.com/outline/profile.html"],
+      "reason": "公司官网确认1983年1月设立、3月法人化及1989年Alicesoft品牌启用；既有97条实际平台publisher保持。1982旧标题、原始署名与1983改题前后内容另核，不能将1982馆藏归类倒填成法人发行。",
+      "workCount": 64
+    },
+    {
+      "entityId": "entity-cocktailsoft",
+      "status": "perTitleProductionDeferred",
+      "sources": ["https://fandc.co.jp/catalog/pc/417", "https://fandc.co.jp/catalog/pc"],
+      "reason": "F&C官方目录将《きゃんきゃんバニー》等列カクテルソフト品牌；已有216条原作／具体发行品牌职责保留。官方产品标签不能自动归责具体程序、美术或授权发行平台。",
+      "workCount": 69
+    },
+    {
+      "entityId": "entity-jast_crest",
+      "status": "historicalBrandAndReleaseDatingDeferred",
+      "sources": ["https://www.8-bits.info/gamelist/PC88/info/info_sEYav8D601zXtfnZ.php", "https://www.gamepres.org/pc88/library/jast.html"],
+      "reason": "馆藏将クレスト与JAST并列，g680三平台现存旧署名与年份异文保留；缺同期原封套及JAST当事方品牌起止声明，不扩大为公司主体或逐版开发。",
+      "workIds": ["g680"]
+    },
+    {
+      "entityId": "entity-dramaticcreate",
+      "status": "portDevelopmentByTitleDeferred",
+      "sources": ["https://www.hunex.co.jp/archives/company/history", "https://www.hunex.co.jp/archives/service/dramaticcreate"],
+      "reason": "官方明确2014品牌启动且是主机游戏销售品牌；现有16条publishingBrand保留。以原PC或手机作品为基础的移植需逐作开发署名，不从品牌销售与HuneX法人关系推断。",
+      "workCount": 11
+    },
+    {
+      "entityId": "entity-fairytale_x",
+      "status": "perVersionBrandAndProductionDeferred",
+      "sources": ["https://fandc.co.jp/catalog/pc/", "https://fandc.co.jp/catalog/pc?direction=asc&page=18&sort=r.position"],
+      "reason": "F&C目录具体将《校内写生》列FAIRYTALE/X指定，既有17条品牌职责及5作范围保持；不能把X指定历史署名合并到FairyTale主品牌或推全平台同内容。",
+      "workCount": 5
+    },
+    {
+      "entityId": "entity-fairytale_ethix",
+      "status": "perTitleProductionDeferred",
+      "sources": ["https://fandc.co.jp/catalog/pc/683", "https://fandc.co.jp/catalog/pc/850"],
+      "reason": "F&C官方《donor》产品资料列FAIRYTALE ETHIX品牌；既有两作六条品牌发行职责保留，不由共享FairyTale字样合并不同子品牌。",
+      "workCount": 2
+    },
+    {
+      "entityId": "entity-fairytale",
+      "status": "subbrandAndPerVersionProductionDeferred",
+      "sources": ["https://fandc.co.jp/catalog/pc", "https://fandc.co.jp/catalog/pc/417"],
+      "reason": "F&C目录逐作标明フェアリーテール及其子品牌，主品牌80作242条既有发行品牌职责保持；不能将Cocktail、ETHIX、X指定或花月組的实际署名统改主品牌。",
+      "workCount": 80
+    },
+    {
+      "entityId": "entity-fairytale_hana",
+      "status": "labelAndNarrativeScopeDeferred",
+      "sources": ["https://fandc.co.jp/catalog/pc/625", "https://fandc.co.jp/catalog/pc/633"],
+      "reason": "F&C称花月組为フェアリーテール新标签，四作13条旧品牌职责保留；《月雀》是桌上麻雀，不据该品牌归属把它列入主库叙事游戏。英文Flower-Moon是编辑译名，不是公司法定英文名。",
+      "workCount": 4
+    }
+  ],
+  "reviewedEntities": [
+    {"entityId": "entity-champion_soft", "name": "Champion Soft（チャンピオンソフト）", "status": "existingCompanyReviewed", "sources": ["https://www.alicesoft.com/outline/contents.html", "https://www.alicesoft.com/outline/profile.html"], "reason": "官方公司起点及1989品牌分层核对；原97条发行署名和1982前身待核范围保持。"},
+    {"entityId": "entity-cocktailsoft", "name": "Cocktail Soft", "status": "existingPublishingBrandReviewed", "sources": ["https://fandc.co.jp/catalog/pc/417", "https://fandc.co.jp/catalog/pc"], "reason": "F&C官方品牌目录支持既有独立发行品牌，216条职责保持。"},
+    {"entityId": "entity-jast_crest", "name": "Crest / JAST（クレスト）", "status": "historicalBrandReviewedWithGap", "sources": ["https://www.8-bits.info/gamelist/PC88/info/info_sEYav8D601zXtfnZ.php", "https://www.gamepres.org/pc88/library/jast.html"], "reason": "旧Crest/JAST复合署名保持，三平台版本及品牌沿革缺原件待核。"},
+    {"entityId": "entity-dramaticcreate", "name": "dramatic create", "status": "brandActivityReviewed", "sources": ["https://www.hunex.co.jp/archives/company/history", "https://www.hunex.co.jp/archives/service/dramaticcreate"], "reason": "HuneX官方明确2014品牌启动和主机销售范围；只补品牌活动年份。"},
+    {"entityId": "entity-fairytale_x", "name": "FairyTale / X-Shitei（フェアリーテール／X指定）", "status": "existingSubbrandReviewed", "sources": ["https://fandc.co.jp/catalog/pc?direction=asc&page=18&sort=r.position"], "reason": "X指定品牌独立，5作17条品牌职责保持。"},
+    {"entityId": "entity-fairytale_ethix", "name": "FAIRYTALE ETHIX", "status": "existingSubbrandReviewed", "sources": ["https://fandc.co.jp/catalog/pc/683"], "reason": "官方产品品牌标示支持ETHIX独立节点，2作6条职责保持。"},
+    {"entityId": "entity-fairytale", "name": "FairyTale（フェアリーテール）", "status": "existingPublishingBrandReviewed", "sources": ["https://fandc.co.jp/catalog/pc"], "reason": "主品牌80作242条发行品牌职责保持，子品牌署名不自动归并。"},
+    {"entityId": "entity-fairytale_hana", "name": "Flower-Moon Group（花月組）", "status": "existingSubbrandReviewed", "sources": ["https://fandc.co.jp/catalog/pc/625", "https://fandc.co.jp/catalog/pc/633"], "reason": "官方称花月組为新标签，4作13条原署名保持，编辑译名不当法人名。"}
+  ],
+  "progress": {
+    "letter": "C—F",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后；本批补登已更名后落在C—F的漏项",
+    "total": 8,
+    "processedEntityIds": ["entity-champion_soft", "entity-cocktailsoft", "entity-jast_crest", "entity-dramaticcreate", "entity-fairytale_x", "entity-fairytale_ethix", "entity-fairytale", "entity-fairytale_hana"],
+    "nextEntityId": "entity-5pb",
+    "nextName": "5pb.",
+    "queue": [
+      {"entityId": "entity-champion_soft", "name": "Champion Soft（チャンピオンソフト）", "status": "reviewed"},
+      {"entityId": "entity-cocktailsoft", "name": "Cocktail Soft", "status": "reviewed"},
+      {"entityId": "entity-jast_crest", "name": "Crest / JAST（クレスト）", "status": "reviewed"},
+      {"entityId": "entity-dramaticcreate", "name": "dramatic create", "status": "reviewed"},
+      {"entityId": "entity-fairytale_x", "name": "FairyTale / X-Shitei（フェアリーテール／X指定）", "status": "reviewed"},
+      {"entityId": "entity-fairytale_ethix", "name": "FAIRYTALE ETHIX", "status": "reviewed"},
+      {"entityId": "entity-fairytale", "name": "FairyTale（フェアリーテール）", "status": "reviewed"},
+      {"entityId": "entity-fairytale_hana", "name": "Flower-Moon Group（花月組）", "status": "reviewed"}
+    ]
+  }
+}

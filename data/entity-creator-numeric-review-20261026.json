@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "b38cdf51951cb90118d6a1a4f04afac715cf67c5",
+  "audit": "data/entity-creator-numeric-review-20261026.md",
+  "previousReview": "data/entity-creator-cf-catchup-review-20261026.md",
+  "policy": "承接按当前显示名补登的C—F八项，依sortFamilies继续核查数字及其他六项；仅在官方明确同人社团与原作归属时订正07th身份和两项原作制作，历史发行名及平台服务、馆藏前身推断保留待核。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZN-I01",
+      "entityId": "entity-name-ee1a7668cd89",
+      "rawName": "07th Expansion",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "team",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://07th-expansion.net/contact",
+        "https://07th-expansion.net/umi_saku/",
+        "https://07th-expansion.net/otameshi"
+      ],
+      "note": "官网明确07th Expansion为同人PC游戏中心的同人サークル，海猫介绍自称本社团2007年发表原作，下载页介绍其制作的小说游戏。核定制作团队而非法人公司；g051-v1与g174-v1原publisher原样保持，后发ENTERGRAM版本不归于本社团开发。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZN-C01",
+      "entityId": "entity-name-ee1a7668cd89",
+      "dossierId": null,
+      "workId": "g051",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "07th Expansion",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://07th-expansion.net/otameshi",
+      "note": "官网称其制作小说游戏，明确列《ひぐらしのなく頃に》原点；仅记2002原作层团队制作，不扩展到ENTERGRAM后发主机版或推断个人全部工种。"
+    },
+    {
+      "reviewId": "AZN-C02",
+      "entityId": "entity-name-ee1a7668cd89",
+      "dossierId": null,
+      "workId": "g174",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "07th Expansion",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://07th-expansion.net/umi_saku/",
+      "note": "官方介绍明确2007《うみねこのなく頃に》由本社团发表的原作小说游戏；只登记该原作的团队制作，不将后来的《咲》全收录内容倒填2007年。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-5pb",
+      "status": "perTitleDevelopmentAndLaterBrandScopeDeferred",
+      "sources": [
+        "https://mages.co.jp/topics/ir/20190726/post-145",
+        "https://mages.co.jp/about/history"
+      ],
+      "reason": "MAGES.官方2019公告统一5pb.事业品牌至MAGES.；旧5pb.与MAGES.法人已分层。既有71条发行品牌记录、历史复合署名与旧关系保留，集团沿革不能自动给12作补逐作开发。",
+      "workIds": [
+        "g038",
+        "g054",
+        "g618",
+        "g619",
+        "g620",
+        "g621",
+        "g632",
+        "g633",
+        "g634",
+        "g635",
+        "g636",
+        "g637"
+      ]
+    },
+    {
+      "entityId": "entity-name-ee1a7668cd89",
+      "status": "laterAdaptationsAndIndividualRolesSeparate",
+      "sources": [
+        "https://07th-expansion.net/contact",
+        "https://07th-expansion.net/umi_saku/",
+        "https://07th-expansion.net/otameshi"
+      ],
+      "reason": "07th团队制作仅限g051、g174两部原作层；后发主机移植与不同出版方、竜騎士07个人剧本和海猫咲的新增故事分开，未新增后发内容或发行。",
+      "workIds": [
+        "g051",
+        "g174"
+      ]
+    },
+    {
+      "entityId": "entity-name-e1232b52eff7",
+      "status": "greeMobilePublisherUnverified",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "まどそふと2016公告只证明《ナマイキデレーション》GREE版公开并链接服务页面，未具名该次发行合同方或制作方；GREE是服务位置，不能替换待核发行署名。保持g209-v3 unverified/null。",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-d1903e2fafb1",
+      "status": "mobageMobilePublisherUnverified",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "同一公告只证明Mobage版公开，不能从平台服务名推定发行法律主体或移植开发。保持g209-v2待核发行及unverified/null。",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-de3ed19ac095",
+      "status": "1988CatalogueSignatureConflictUnverified",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/1988/1988_10.html",
+        "https://www.alicesoft.com/outline/contents.html"
+      ],
+      "reason": "PC-88目录将两项1988教育／管理软件列作アリスソフト，但当事公司称该品牌1989年才设立；同页另将MISTY列チャンピオンソフト。缺同期封套、广告或原始销售合同，不能据目录冲突把g594-v1及专题条目改填后发品牌或现公司。",
+      "workIds": [
+        "g594",
+        "alicesoft-extra-joseishain"
+      ]
+    },
+    {
+      "entityId": "entity-name-a978e18d1d4b",
+      "status": "1982PreincorporationPublisherUnverified",
+      "sources": [
+        "https://www.alicesoft.com/outline/contents.html",
+        "https://fm-7.com/museum/products/eut10qpw/",
+        "https://fm-7.com/museum/products/mttloqf5/",
+        "https://fm-7.com/museum/products/x3auvpz4/"
+      ],
+      "reason": "馆藏把三项FM-7旧标题归为1982 ChampionSoft，官网却记公司1983年1月设立、3月法人化。没有1982原包装与署名、准确首发日、改题前后内容对照，不倒填未成立法人；1983重题版和原始三条待核发行分别保留。",
+      "workIds": [
+        "alicesoft-extra-combat47",
+        "alicesoft-extra-weddingrace",
+        "alicesoft-extra-computerwars"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-5pb",
+      "name": "5pb.",
+      "status": "existingBrandReviewed",
+      "sources": [
+        "https://mages.co.jp/topics/ir/20190726/post-145"
+      ],
+      "reason": "核旧5pb.发行品牌与MAGES.公司沿革分层，71条既有品牌署名保持。",
+      "workIds": [
+        "g038",
+        "g054",
+        "g618",
+        "g619",
+        "g620",
+        "g621",
+        "g632",
+        "g633",
+        "g634",
+        "g635",
+        "g636",
+        "g637"
+      ]
+    },
+    {
+      "entityId": "entity-name-ee1a7668cd89",
+      "name": "07th Expansion",
+      "status": "teamAndTwoOriginalWorksReviewed",
+      "sources": [
+        "https://07th-expansion.net/contact",
+        "https://07th-expansion.net/otameshi",
+        "https://07th-expansion.net/umi_saku/"
+      ],
+      "reason": "官方自称同人社团并具名原作；订正team，给g051、g174原作层各一条originalProduction，旧发行不变。",
+      "workIds": [
+        "g051",
+        "g174"
+      ]
+    },
+    {
+      "entityId": "entity-name-e1232b52eff7",
+      "name": "发行方待核实（GREE）",
+      "status": "publisherIdentityDeferred",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "服务上架已证，发行法律主体未证，保留unknown。",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-d1903e2fafb1",
+      "name": "发行方待核实（Mobage）",
+      "status": "publisherIdentityDeferred",
+      "sources": [
+        "https://madosoft.net/news/303"
+      ],
+      "reason": "服务上架已证，发行法律主体未证，保留unknown。",
+      "workIds": [
+        "g209"
+      ]
+    },
+    {
+      "entityId": "entity-name-de3ed19ac095",
+      "name": "未核实（1988年前身关联；目录署名冲突）",
+      "status": "catalogueConflictDeferred",
+      "sources": [
+        "https://www.gamepres.org/pc88/library/1988/1988_10.html",
+        "https://www.alicesoft.com/outline/contents.html"
+      ],
+      "reason": "二手1988署名与官方1989品牌起点冲突，保留unknown。",
+      "workIds": [
+        "g594",
+        "alicesoft-extra-joseishain"
+      ]
+    },
+    {
+      "entityId": "entity-name-a978e18d1d4b",
+      "name": "未核实（馆藏归入ChampionSoft前身关联）",
+      "status": "preincorporationPublisherDeferred",
+      "sources": [
+        "https://www.alicesoft.com/outline/contents.html",
+        "https://fm-7.com/museum/products/eut10qpw/",
+        "https://fm-7.com/museum/products/mttloqf5/",
+        "https://fm-7.com/museum/products/x3auvpz4/"
+      ],
+      "reason": "1982馆藏归类早于1983公司设立，保留unknown与原署名。",
+      "workIds": [
+        "alicesoft-extra-combat47",
+        "alicesoft-extra-weddingrace",
+        "alicesoft-extra-computerwars"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "数字及其他",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 6,
+    "processedEntityIds": [
+      "entity-5pb",
+      "entity-name-ee1a7668cd89",
+      "entity-name-e1232b52eff7",
+      "entity-name-d1903e2fafb1",
+      "entity-name-de3ed19ac095",
+      "entity-name-a978e18d1d4b"
+    ],
+    "nextEntityId": null,
+    "nextName": null,
+    "queue": [
+      {
+        "entityId": "entity-5pb",
+        "name": "5pb.",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-ee1a7668cd89",
+        "name": "07th Expansion",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e1232b52eff7",
+        "name": "发行方待核实（GREE）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-d1903e2fafb1",
+        "name": "发行方待核实（Mobage）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-de3ed19ac095",
+        "name": "未核实（1988年前身关联；目录署名冲突）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-a978e18d1d4b",
+        "name": "未核实（馆藏归入ChampionSoft前身关联）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
