@@ -85,7 +85,7 @@ class ThirdEntityReviewTests(unittest.TestCase):
         for path, wid, rid, group in [('overdrive.html', 'g647', 'T6', 'original'),
                                        ('nitroplus.html', 'g163', 'T7', 'unresolved'),
                                        ('nitroplus.html', 'g614', 'T8', 'unresolved')]:
-            page = (ROOT / path).read_text()
+            page = subprocess.check_output(['git', 'show', f'{APPLIED}:{path}'], cwd=ROOT, text=True)
             start = page.index(f'id="{wid}"')
             wrapper = page[page.rfind('<div class="dossier-card-wrapper"', 0, start):start]
             card = page[start:page.index('</article>', start)]

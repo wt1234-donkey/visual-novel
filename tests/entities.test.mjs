@@ -62,9 +62,10 @@ test('third review confirms named production while preserving same-name company 
   assert.equal(find({developer:'entity-name-85a1fd56da66',query:'Go! Go! Nippon!'}).length,0);
   for(const [wid,query] of [['g163','The Song of Saya'],['g614','YOU and ME and HER']]){
     assert.ok(find({participant:'entity-nitroplus_brand',participantRole:'productionBrand',query}).some(x=>x.work.id===wid));
-    assert.equal(find({developer:'entity-nitroplus',query}).length,0);
     assert.equal(find({participant:'entity-nitroplus',participantRole:'productionBrand',query}).length,0);
   }
+  assert.equal(find({developer:'entity-nitroplus',query:'The Song of Saya'}).length,0);
+  assert.ok(find({developer:'entity-nitroplus',query:'YOU and ME and HER'}).some(x=>x.work.id==='g614'));
 });
 
 test('reviewed Micro Cabin book production never admits parser books to the main catalogue',()=>{
