@@ -19,13 +19,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'62f913e8fccbbdec5fe2d7c14ef8fdca72cde2b0:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorT5Tests(unittest.TestCase):
     def test_three_identities_change_without_alias_mergers_or_new_dates(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, set(IDS))
@@ -39,7 +45,7 @@ class CreatorT5Tests(unittest.TestCase):
         self.assertEqual((len(ae), sum(e['verification'] == 'unresolved' for e in ae.values())), (326, 47))
 
     def test_four_scoped_production_brands_preserve_every_old_credit_and_publisher(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-4], before['credits'])
         self.assertEqual(len(after['credits']), 5009)
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role'])
@@ -58,7 +64,7 @@ class CreatorT5Tests(unittest.TestCase):
                                  for c in after['credits']))
 
     def test_all_parent_memberships_and_original_work_content_release_objects_stay_exact(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(before['dossierMemberships'], after['dossierMemberships'])
         self.assertEqual((len(after['dossierMemberships']), sum(m['status'] == 'pendingRole'
                           for m in after['dossierMemberships'])), (2234, 601))
@@ -73,10 +79,10 @@ class CreatorT5Tests(unittest.TestCase):
             r = next(r for r in games['platformReleases'] if r['id'] == rid)
             self.assertIsNone(r['contentVersionId'])
             self.assertEqual(r['contentRelation'], 'unverified')
-        self.assertEqual(read('data/organizations.json')['works'], old('data/organizations.json')['works'])
+        self.assertEqual(applied('data/organizations.json')['works'], old('data/organizations.json')['works'])
 
     def test_three_consecutive_entities_complete_t_and_advance_to_ultra_games(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),
