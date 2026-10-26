@@ -65350,6 +65350,81 @@
       "territory": null,
       "reviewId": "AZS8-C03",
       "reviewRecord": "data/entity-creator-s8-review-20261026.md"
+    },
+    {
+      "id": "credit-6596834183a08c5b",
+      "entityId": "entity-name-e92deef78c89",
+      "targetType": "work",
+      "targetId": "square-evermore",
+      "workId": "square-evermore",
+      "role": "originalProduction",
+      "rawCredit": "Square Soft, Inc. / Secret of Evermore",
+      "status": "sourceReviewed",
+      "source": "https://www.nintendolife.com/news/2009/04/interview_with_brian_fehdrau_secret_of_evermore",
+      "note": "主程序员本人访谈明确美国团队、工具和游戏均从零建立，日本Square为母公司；与原手册具名Brian Fehdrau、Square Soft Team及公司地址交叉，限定美国Square Soft的本作制作参与。手册为公开文字转录，不冒称已看实物扫描；不将角色传递给日本Square父专题或Mystic Quest。",
+      "territory": null,
+      "reviewId": "AZS9-C01",
+      "reviewRecord": "data/entity-creator-s9-review-20261026.md"
+    },
+    {
+      "id": "credit-4391d9d7b4603c8f",
+      "entityId": "entity-square",
+      "targetType": "work",
+      "targetId": "g1210",
+      "workId": "g1210",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。",
+      "territory": null,
+      "reviewId": "AZS9-C02",
+      "reviewRecord": "data/entity-creator-s9-review-20261026.md"
+    },
+    {
+      "id": "credit-879ae50c8b174219",
+      "entityId": "entity-square",
+      "targetType": "work",
+      "targetId": "square-chronotrigger",
+      "workId": "square-chronotrigger",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。",
+      "territory": null,
+      "reviewId": "AZS9-C03",
+      "reviewRecord": "data/entity-creator-s9-review-20261026.md"
+    },
+    {
+      "id": "credit-e8ca13babc647627",
+      "entityId": "entity-square",
+      "targetType": "work",
+      "targetId": "square-xenogears",
+      "workId": "square-xenogears",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。",
+      "territory": null,
+      "reviewId": "AZS9-C04",
+      "reviewRecord": "data/entity-creator-s9-review-20261026.md"
+    },
+    {
+      "id": "credit-c40eabbb0070424e",
+      "entityId": "entity-square",
+      "targetType": "work",
+      "targetId": "square-chronocross",
+      "workId": "square-chronocross",
+      "role": "originalProduction",
+      "rawCredit": "株式会社スクウェアにてシナリオ、演出等を担当",
+      "status": "sourceReviewed",
+      "source": "https://www.jp.square-enix.com/company/ja/news/2008/download/20081122_156.pdf",
+      "note": "2008官方新闻PDF加藤正人简介具名列出本作，明确在Square任内负责剧本与演出，支持原作创作参与而非仅发行或版权；不宣称全部程序／美术独占，不将2008新闻主体、后发重制与原作法人混同。保留原作品位置、内容和发行。",
+      "territory": null,
+      "reviewId": "AZS9-C05",
+      "reviewRecord": "data/entity-creator-s9-review-20261026.md"
     }
   ],
   "dossierMemberships": [
@@ -89288,9 +89363,10 @@
       "workId": "g1210",
       "placement": "main",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.jp.square-enix.com/game/",
       "status": "existingEvidence"
     },
@@ -89662,9 +89738,10 @@
       "workId": "square-chronotrigger",
       "placement": "related",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.jp.square-enix.com/game/",
       "status": "existingEvidence"
     },
@@ -89673,9 +89750,10 @@
       "workId": "square-chronocross",
       "placement": "related",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.jp.square-enix.com/game/",
       "status": "existingEvidence"
     },
@@ -89772,9 +89850,10 @@
       "workId": "square-xenogears",
       "placement": "related",
       "roles": [
+        "originalProduction",
         "publisher"
       ],
-      "group": "release",
+      "group": "original",
       "source": "https://www.jp.square-enix.com/game/",
       "status": "existingEvidence"
     },
