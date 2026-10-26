@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "d9d17d676fb58bf5472fc98224fa91d4619ebb4b",
+  "audit": "data/entity-creator-t5-review-20261026.md",
+  "previousReview": "data/entity-creator-t4-review-20261026.md",
+  "policy": "按T组第17—19项连续收尾；品牌、法人、原作制作品牌与后发版开发分别限定，不从同名、版权或业务承接传播职责，登记包括明确原件与分工缺口。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZT5-I01",
+      "entityId": "entity-name-679a14238228",
+      "rawName": "トンキンハウス",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://mediaarts-db.artmuseums.go.jp/id/C45418",
+        "https://ja.wikipedia.org/wiki/トンキンハウス",
+        "https://www.falcom.co.jp/license/license-games",
+        "https://archive.org/details/ys-4-manual-scan-jp-sfc-snes"
+      ],
+      "note": "国立美术馆MADB东京书籍责任主体C45418的可读检索摘录与百科正文均明确Tonkin House为游戏品牌，核为brand，不并入T4的Tokyo Shoseki公司ID。两者历史说明可能同源，不作两份独立原件证据；MADB直读正文为空，原YsIV包装／登记卡／PDF链接不可读，故只核名称类别，不追加开发、成立日或历史运营关系。显式保留原publisher。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZT5-I02",
+      "entityId": "entity-name-8039f82ef72c",
+      "rawName": "東芝EMI",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.memory-tech.co.jp/news/2005121311-3336/",
+        "https://www.memory-tech.co.jp/news/2006112813-3358/",
+        "https://www.hamster.co.jp/corporate/history/"
+      ],
+      "note": "Memory-Tech作为交易当事方的2005及2006原始公告明确东芝EMI株式会社，Hamster官方1999沿革亦明确其计算机软件用户支持业务，核为历史company。1986两条游戏发行继续保留，不将工厂／设计部门交易、音乐业务或Hamster服务承接推成游戏原作开发、公司合并或完整法律连续性。"
+    },
+    {
+      "reviewId": "AZT5-I03",
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "rawName": "TYPE-MOON",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.typemoon.com/products/mahoyo/outline.html",
+        "https://www.aniplex.co.jp/news/detail/?id=42427",
+        "https://www.typemoon.com/products/products.html",
+        "https://www.typemoon.com/products/fate/data/index.html",
+        "https://typemoon.com/products/tsukihime/"
+      ],
+      "note": "2012魔法使之夜原官网直接列ブランド：TYPE-MOON，Aniplex同期活动说明也称PC游戏品牌，核为brand并保留七条旧publisher。既有四部作品分别是2004 Fate、2005 hollow、2012魔法使之夜及2021月姬重制；原品牌产品目录与逐作STAFF／企画制作资料支持四条productionBrand，不断言所有程序、美术和动画都由品牌独占完成。旧同人月姬与本库2021作品不同，不以同名混录或新增普通移植。",
+      "preserveReleaseRoles": true
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZT5-C01",
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "dossierId": null,
+      "workId": "g031",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "TYPE-MOON：PRODUCTS／Fate/stay night／STAFF",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.typemoon.com/products/fate/data/index.html",
+      "note": "2004原PC规格与STAFF具名剧本、原画、音乐，品牌自有产品目录列同作同年，支持制作品牌，不是从后发主机publisher或版权推开发。2024重制技术职责未核。"
+    },
+    {
+      "reviewId": "AZT5-C02",
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "dossierId": null,
+      "workId": "g036",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "企画・制作：TYPE-MOON",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://typemoon.com/products/tsukihime/",
+      "note": "2021官方原站具名企画制作并列导演、原画、程序及外部ufotable动画，限定现有2021重制作品g036，不与2000同人原作合并，不主张品牌独占所有贡献。"
+    },
+    {
+      "reviewId": "AZT5-C03",
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "dossierId": null,
+      "workId": "g155",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "TYPE-MOON：PRODUCTS／Fate/hollow ataraxia",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.typemoon.com/products/products.html",
+      "note": "品牌自有产品目录明确2005-10-28原Windows作品并附剧情、类型，限定本作制作品牌；旧单作站只读到入口及版权框架，不冒称核过完整原盘STAFF。后发Vita动画／程序与REMATERED开发另核。"
+    },
+    {
+      "reviewId": "AZT5-C04",
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "dossierId": null,
+      "workId": "g156",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "ブランド：TYPE-MOON／シナリオ：奈須きのこ／原画：こやまひろかず",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.typemoon.com/products/mahoyo/outline.html",
+      "note": "2012原PC官网产品概要明确品牌与具名STAFF，支持原作制作品牌；不以2022／2023后发版企画制作回填2012技术细节，也不把Aniplex发行记作原作开发。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-679a14238228",
+      "name": "Tonkin House（トンキンハウス）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://mediaarts-db.artmuseums.go.jp/id/C45418",
+        "https://ja.wikipedia.org/wiki/トンキンハウス",
+        "https://www.falcom.co.jp/license/license-games",
+        "https://archive.org/details/ys-4-manual-scan-jp-sfc-snes"
+      ],
+      "reason": "falcom-ys4-mask的具体开发／制作及1993合同主体仍待原STAFF或包装原件；数据库分类只核品牌，可能同源历史文字不能确认各阶段运营时段。原档案publisher、Falcom专题待核关联保持，不给东京书籍母公司自动增加创作；IA目录可读但图片/PDF跳转不可读，未冒称看过原件。",
+      "workIds": [
+        "falcom-ys4-mask"
+      ]
+    },
+    {
+      "entityId": "entity-name-8039f82ef72c",
+      "name": "Toshiba EMI（東芝EMI）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.memory-tech.co.jp/news/2005121311-3336/",
+        "https://www.memory-tech.co.jp/news/2006112813-3358/",
+        "https://www.hamster.co.jp/corporate/history/"
+      ],
+      "reason": "两作实际开发、主机移植及原作企画人员仍待逐作资料；T&E SOFT、东芝EMI、Hamster与后继唱片公司分别保留，不从版权、制造分割或后期商标收购断言1986开发。不补设立／解散／更名日期或新公司经营关系。",
+      "workIds": [
+        "te-soft-hydlide",
+        "te-soft-daiva-6"
+      ]
+    },
+    {
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "name": "TYPE-MOON",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.typemoon.com/products/mahoyo/outline.html",
+        "https://www.aniplex.co.jp/news/detail/?id=42427",
+        "https://www.typemoon.com/products/products.html",
+        "https://www.typemoon.com/products/fate/data/index.html",
+        "https://typemoon.com/products/tsukihime/"
+      ],
+      "reason": "四作独立制作人员的分工、2003商业化时期的法律主体关系及后发版开发仍可补核；品牌类别不等于ノーツ法人。2005旧站主体框架与目录可读，未取得完整原盘STAFF；2021月姬官网企画制作明确，ufotable动画另列。2024 Fate、2022／2023魔夜等后发版不因品牌角色自动取得技术开发，未知内容关联保持。",
+      "workIds": [
+        "g031",
+        "g036",
+        "g155",
+        "g156"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-679a14238228",
+      "name": "Tonkin House（トンキンハウス）",
+      "status": "brandIdentityReviewedPrimaryArtifactsDeferred",
+      "sources": [
+        "https://mediaarts-db.artmuseums.go.jp/id/C45418",
+        "https://ja.wikipedia.org/wiki/トンキンハウス",
+        "https://www.falcom.co.jp/license/license-games",
+        "https://archive.org/details/ys-4-manual-scan-jp-sfc-snes"
+      ],
+      "reason": "国立美术馆MADB东京书籍责任主体C45418的可读检索摘录与百科正文均明确Tonkin House为游戏品牌，核为brand，不并入T4的Tokyo Shoseki公司ID。两者历史说明可能同源，不作两份独立原件证据；MADB直读正文为空，原YsIV包装／登记卡／PDF链接不可读，故只核名称类别，不追加开发、成立日或历史运营关系。显式保留原publisher。",
+      "workIds": [
+        "falcom-ys4-mask"
+      ]
+    },
+    {
+      "entityId": "entity-name-8039f82ef72c",
+      "name": "Toshiba EMI（東芝EMI）",
+      "status": "historicalCompanyIdentityReviewed",
+      "sources": [
+        "https://www.memory-tech.co.jp/news/2005121311-3336/",
+        "https://www.memory-tech.co.jp/news/2006112813-3358/",
+        "https://www.hamster.co.jp/corporate/history/"
+      ],
+      "reason": "Memory-Tech作为交易当事方的2005及2006原始公告明确东芝EMI株式会社，Hamster官方1999沿革亦明确其计算机软件用户支持业务，核为历史company。1986两条游戏发行继续保留，不将工厂／设计部门交易、音乐业务或Hamster服务承接推成游戏原作开发、公司合并或完整法律连续性。",
+      "workIds": [
+        "te-soft-hydlide",
+        "te-soft-daiva-6"
+      ]
+    },
+    {
+      "entityId": "entity-name-77c5d6e9dcc8",
+      "name": "TYPE-MOON",
+      "status": "commercialProductionBrandReviewed",
+      "sources": [
+        "https://www.typemoon.com/products/mahoyo/outline.html",
+        "https://www.aniplex.co.jp/news/detail/?id=42427",
+        "https://www.typemoon.com/products/products.html",
+        "https://www.typemoon.com/products/fate/data/index.html",
+        "https://typemoon.com/products/tsukihime/"
+      ],
+      "reason": "2012魔法使之夜原官网直接列ブランド：TYPE-MOON，Aniplex同期活动说明也称PC游戏品牌，核为brand并保留七条旧publisher。既有四部作品分别是2004 Fate、2005 hollow、2012魔法使之夜及2021月姬重制；原品牌产品目录与逐作STAFF／企画制作资料支持四条productionBrand，不断言所有程序、美术和动画都由品牌独占完成。旧同人月姬与本库2021作品不同，不以同名混录或新增普通移植。",
+      "workIds": [
+        "g031",
+        "g036",
+        "g155",
+        "g156"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "T",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 19,
+    "processedEntityIds": [
+      "entity-te_soft",
+      "entity-name-e135870e3299",
+      "entity-taito",
+      "entity-name-08cbddd5e450",
+      "entity-name-3fc0babaf7f8",
+      "entity-name-b01843ba1268",
+      "entity-tiare",
+      "entity-name-5f291db8e809",
+      "entity-tinmachine",
+      "entity-name-0b5ee01c0e65",
+      "entity-toho",
+      "entity-name-9832231b6baa",
+      "entity-tokuma",
+      "entity-name-2793ee33b030",
+      "entity-name-aa2256b9c684",
+      "entity-toneworks",
+      "entity-name-679a14238228",
+      "entity-name-8039f82ef72c",
+      "entity-name-77c5d6e9dcc8"
+    ],
+    "nextEntityId": "entity-name-c87c2b9662fc",
+    "nextName": "Ultra Games",
+    "queue": [
+      {
+        "entityId": "entity-te_soft",
+        "name": "T&E SOFT",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e135870e3299",
+        "name": "Tactics（NEXTON）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-taito",
+        "name": "TAITO（タイトー）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-08cbddd5e450",
+        "name": "TAKERU",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3fc0babaf7f8",
+        "name": "TamaMako gaming",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b01843ba1268",
+        "name": "Team Salvato",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tiare",
+        "name": "Tiare",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5f291db8e809",
+        "name": "TikGames",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tinmachine",
+        "name": "TinMachine",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0b5ee01c0e65",
+        "name": "TOHO Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-toho",
+        "name": "TOHO（東宝）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-9832231b6baa",
+        "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tokuma",
+        "name": "Tokuma Shoten（徳間書店）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-2793ee33b030",
+        "name": "Tokyo Shoseki",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-aa2256b9c684",
+        "name": "TOKYOTOON",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-toneworks",
+        "name": "tone work’s",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-679a14238228",
+        "name": "Tonkin House（トンキンハウス）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-8039f82ef72c",
+        "name": "Toshiba EMI（東芝EMI）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-77c5d6e9dcc8",
+        "name": "TYPE-MOON",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
