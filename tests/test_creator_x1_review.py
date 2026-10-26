@@ -19,20 +19,28 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json',
+                'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(
+            ['git', 'show', f'1d1d898595e9979cf7e3f15733777f58ccac029b:{path}'], cwd=ROOT))
+    return read(path)
+
+
 class CreatorX1Tests(unittest.TestCase):
     def test_entire_entity_and_credit_indexes_stay_identical(self):
-        self.assertEqual(read('data/entities.json'), old('data/entities.json'))
-        self.assertEqual(read('data/credits.json'), old('data/credits.json'))
-        self.assertEqual(read('data/entity-migration-review.json'), old('data/entity-migration-review.json'))
+        self.assertEqual(applied('data/entities.json'), old('data/entities.json'))
+        self.assertEqual(applied('data/credits.json'), old('data/credits.json'))
+        self.assertEqual(applied('data/entity-migration-review.json'), old('data/entity-migration-review.json'))
         review = read(REVIEW)
         self.assertEqual(review['identityCorrections'], [])
         self.assertEqual(review['creditAdditions'], [])
-        entities = {e['id']: e for e in read('data/entities.json')['entities']}
+        entities = {e['id']: e for e in applied('data/entities.json')['entities']}
         self.assertEqual((entities[XBOX]['type'], entities[XBOX]['verification']),
                          ('brand', 'existingDossier'))
         self.assertEqual((entities[XING]['type'], entities[XING]['verification']),
                          ('unknown', 'unresolved'))
-        credits = read('data/credits.json')
+        credits = applied('data/credits.json')
         xbox = [c for c in credits['credits'] if c['entityId'] == XBOX]
         xing = [c for c in credits['credits'] if c['entityId'] == XING]
         self.assertEqual((len(xbox), {c['role'] for c in xbox}),
@@ -51,12 +59,12 @@ class CreatorX1Tests(unittest.TestCase):
         release = next(r for r in read('data/games.json')['platformReleases'] if r['id'] == 'g830-v2')
         self.assertEqual((release['year'], release['publisher'], release['contentRelation'], release['contentVersionId']),
                          (1993, 'エクシング', 'unverified', None))
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         for field in ['nodes', 'edges', 'works', 'credits', 'families']:
             self.assertEqual(after[field], before[field])
 
     def test_x_order_progresses_to_yonago_gainax(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

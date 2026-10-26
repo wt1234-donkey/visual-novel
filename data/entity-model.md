@@ -234,3 +234,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 W字母首批使用 `entity-creator-w1-review-20261026.json` 与同名Markdown，按WFS、Whale、WhisperGames、Wolf Team、WRIGHT FLYER STUDIOS连续完成W累计5／5，当前A—W队列登记307／307。官方更名、品牌公告与具体馆藏支持WFS／Wolf历史公司及两项发行品牌身份；Whale既有品牌不变。第一方HBR制作行与Steam开发行仅支持WRIGHT品牌一条相关作品制作品牌和一条PC发行开发，未核内容关系与原发行保留；旧专题待核不跨品牌继承。下一项Xbox Game Studios。
 
 2026-10-26 X字母首批使用 `entity-creator-x1-review-20261026.json` 与同名Markdown，按Xbox Game Studios、XING（エクシング）连续完成X累计2／2，当前A—X队列登记309／309。Xbox发布品牌不自动等于独立开发团队；XING的单项1993 X68000历史署名只有二手资料，不能与现行同名JOYSOUND法人直接合并。无新增身份或职责，原发行、未核内容关系、专题与位置保持。下一项Yonago GAINAX（米子ガイナックス）。
+
+2026-10-26 Y字母首批使用 `entity-creator-y1-review-20261026.json` 与同名Markdown，依Yonago GAINAX、Yuzusoft SOUR、Yuzusoft完成Y累计3／3，当前A—Y登记312／312。米子公司官网核定2014年5月设立；EXNOA发布《PARQUET》支持SOUR于2021年7月已有品牌活动。只增加两个时间事实，区分法人设立、品牌活动与作品开发；原动画与品牌职责、发行、未核内容关系和专题待核保持。下一项5pb.（数字组）。
