@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "ee88ef9094801faee4c371ba8a93c11cee5eaa04",
+  "audit": "data/entity-creator-u1-review-20261026.md",
+  "previousReview": "data/entity-creator-t5-review-20261026.md",
+  "policy": "按U组两项连续核查并收尾；发行商标、法律公司、原作开发与现代同名主体分开。身份类别核定不自动添加制作或发行角色，登记包含明确原件和时期缺口。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZU1-I01",
+      "entityId": "entity-name-c87c2b9662fc",
+      "rawName": "Ultra Games",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+        "https://www.gamesdatabase.org/game/nintendo-nes/nightshade"
+      ],
+      "note": "1992 NES Nightshade原说明书扫描明确ULTRA／ULTRAGAMES为Ultra Software Corporation注册商标，手册封面、介绍与保修部分将ULTRA作为对外发行标识，核为brand。原文Ultra Games与法律公司Ultra Software Corporation不合并，不从Konami版权或游戏发行名义推原作开发；显式preserveReleaseRoles:true保留一条历史publisher。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZU1-I02",
+      "entityId": "entity-name-810ea95a0ca4",
+      "rawName": "ユニオンプランニング",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.gamepres.org/catalog/?id=8811007323007",
+        "https://mediaarts-db.artmuseums.go.jp/id/M736595"
+      ],
+      "note": "游戏保存协会具体馆藏8811007323007将狼男殺人事件发行者明确记为株式会社ユニオンプランニング，品牌另列Union Original Soft，且记录实际软盘媒体调查与迁移信息，支持1984历史company身份。MADB同作检索摘要亦列公司全名，但与馆藏记录为连携资料，不当作独立原件互证；不据同名现公司官网或现代法人编号认定历史连续性，不把发行者当Riverhill原作开发方。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-c87c2b9662fc",
+      "name": "Ultra Games",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+        "https://www.gamesdatabase.org/game/nintendo-nes/nightshade"
+      ],
+      "reason": "Nightshade实际原作STAFF、具体本地化及Ultra Software Corporation历史法律／经营关系仍可独立补核。Games Database的Beam Software开发栏沿用原事实，不因本批商标核定给Ultra或Konami自动加制作。不补品牌启用／公司设立日、Nintendo五作限制动机或后继合并关系；不与1985 Ultimate同名作品合并或补模拟器发行。",
+      "workIds": [
+        "g1029"
+      ]
+    },
+    {
+      "entityId": "entity-name-810ea95a0ca4",
+      "name": "Union Planning（ユニオンプランニング）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.gamepres.org/catalog/?id=8811007323007",
+        "https://mediaarts-db.artmuseums.go.jp/id/M736595",
+        "https://www.8-bits.info/gamelist/PC88/tips/tips_r6XSYw1vjMuibzKj.php",
+        "https://union-p.jp/about_cp.html"
+      ],
+      "reason": "原始包装／公司概要及设立、股权、解散时期仍待可读原件，馆藏封面图点击失败，未声称看过包装扫描；company核定依馆藏著录正文。MADB直读正文为空，仅检索摘要可读。1984-12平台日期不改，Riverhill开发与Union发行分开，不以2007室内设计公司、现代同名登记或同类近名公司替代历史发行主体。",
+      "workIds": [
+        "g1176"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-c87c2b9662fc",
+      "name": "Ultra Games",
+      "status": "publishingTrademarkIdentityReviewed",
+      "sources": [
+        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+        "https://www.gamesdatabase.org/game/nintendo-nes/nightshade"
+      ],
+      "reason": "1992 NES Nightshade原说明书扫描明确ULTRA／ULTRAGAMES为Ultra Software Corporation注册商标，手册封面、介绍与保修部分将ULTRA作为对外发行标识，核为brand。原文Ultra Games与法律公司Ultra Software Corporation不合并，不从Konami版权或游戏发行名义推原作开发；显式preserveReleaseRoles:true保留一条历史publisher。",
+      "workIds": [
+        "g1029"
+      ]
+    },
+    {
+      "entityId": "entity-name-810ea95a0ca4",
+      "name": "Union Planning（ユニオンプランニング）",
+      "status": "historicalPublisherCompanyIdentityReviewed",
+      "sources": [
+        "https://www.gamepres.org/catalog/?id=8811007323007",
+        "https://mediaarts-db.artmuseums.go.jp/id/M736595",
+        "https://www.8-bits.info/gamelist/PC88/tips/tips_r6XSYw1vjMuibzKj.php",
+        "https://union-p.jp/about_cp.html"
+      ],
+      "reason": "游戏保存协会具体馆藏8811007323007将狼男殺人事件发行者明确记为株式会社ユニオンプランニング，品牌另列Union Original Soft，且记录实际软盘媒体调查与迁移信息，支持1984历史company身份。MADB同作检索摘要亦列公司全名，但与馆藏记录为连携资料，不当作独立原件互证；不据同名现公司官网或现代法人编号认定历史连续性，不把发行者当Riverhill原作开发方。",
+      "workIds": [
+        "g1176"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "U",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 2,
+    "processedEntityIds": [
+      "entity-name-c87c2b9662fc",
+      "entity-name-810ea95a0ca4"
+    ],
+    "nextEntityId": "entity-name-317db6dbff30",
+    "nextName": "Virgin Games Ltd",
+    "queue": [
+      {
+        "entityId": "entity-name-c87c2b9662fc",
+        "name": "Ultra Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-810ea95a0ca4",
+        "name": "Union Planning（ユニオンプランニング）",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
