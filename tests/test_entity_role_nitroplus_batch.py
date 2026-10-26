@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_TREE = '8a520a639b38bd38b8eb11aae16fdb2dd6eb201d'
+NITROPLUS_TREE = '99d54acbeda8976b27df552ecc0709718cc7b600'
 
 
 def read(path):
@@ -14,6 +15,10 @@ def read(path):
 
 def base(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE_TREE}:{path}'], cwd=ROOT))
+
+
+def applied(path):
+    return json.loads(subprocess.check_output(['git', 'show', f'{NITROPLUS_TREE}:{path}'], cwd=ROOT))
 
 
 class NitroplusRoleBatchTests(unittest.TestCase):
@@ -29,7 +34,7 @@ class NitroplusRoleBatchTests(unittest.TestCase):
         self.assertTrue(all(d['source'] and d['sourceLocation'] and d['evidenceIds']
                             for d in audit['decisions'] if d['batchDecision'] == 'confirmed'))
 
-        current = read('data/credits.json')
+        current = applied('data/credits.json')
         before = base('data/credits.json')
         previous = {c['id']: c for c in before['credits']}
         additions = [c for c in current['credits'] if c['id'] not in previous]
@@ -49,7 +54,7 @@ class NitroplusRoleBatchTests(unittest.TestCase):
                           if a['targetType'] == 'work'})
         self.assertTrue(all(old_members[k]['status'] == 'pendingRole' and
                             new_members[k]['status'] == 'existingEvidence' for k in changed))
-        self.assertEqual(read('data/entity-migration-review.json')['pendingMembershipCount'], 590)
+        self.assertEqual(applied('data/entity-migration-review.json')['pendingMembershipCount'], 590)
 
     def test_catalogue_and_historical_releases_are_preserved(self):
         for path in ('data/games.json', 'data/company-coverage.json',

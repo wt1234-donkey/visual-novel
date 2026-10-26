@@ -98,6 +98,7 @@ CREATOR_NUMERIC_REVIEW = 'data/entity-creator-numeric-review-20261026.json'
 CREATOR_A_RECHECK1_REVIEW = 'data/entity-creator-a-recheck1-review-20261026.json'
 FIVE_PHASE_REVIEW = 'data/entity-verification-five-phase-review-20261026.json'
 NITROPLUS_ROLE_REVIEW = 'data/entity-role-nitroplus-review-20261027.json'
+ADVENTURE_ALICE_ROLE_REVIEW = 'data/entity-role-adventure-alice-review-20261027.json'
 TYPE_LABELS = {'company':'公司／组织','brand':'品牌','team':'制作团队','publication':'刊物／出版名义','individual':'个人','unknown':'身份待核','history':'沿革专题'}
 ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
 BRANDS = set('key aniplex_exe sprite madosoft yuzusoft innocent_grey minori august toneworks asaproject leaf sagaplanets smee favorite cuffs cube sphere palette silkys silkys_plus alicesoft overdrive cocktailsoft macadamia fairytale cabbage hulotte laplacian applique clochette nanawind harukaze sorahane hummingbird_soft minatosoft'.split())
@@ -159,6 +160,7 @@ def build():
  review_batches.append(read(CREATOR_A_RECHECK1_REVIEW))
  review_batches.append(read(FIVE_PHASE_REVIEW))
  review_batches.append(read(NITROPLUS_ROLE_REVIEW))
+ review_batches.append(read(ADVENTURE_ALICE_ROLE_REVIEW))
  identity_reviews={x['entityId']:x for batch in review_batches for x in batch['identityCorrections']}
  assert len(identity_reviews)==sum(len(batch['identityCorrections']) for batch in review_batches),'重复的主体订正'
  entities={}; aliases={}; dossiers=[]; relations=[]; credits=[]; memberships=[]; reviews=[]; placements=[]; names_review=[]; conflicts=[]
