@@ -23,9 +23,15 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'd4370f1cf0fc8984ff5dab3bd458fec81f93b0f8:{path}'], cwd=ROOT))
+    return read(path)
+
+
 class CreatorU1Tests(unittest.TestCase):
     def test_only_two_identities_change_without_modern_homonym_mergers_or_dates(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, set(IDS))
@@ -40,7 +46,7 @@ class CreatorU1Tests(unittest.TestCase):
         self.assertEqual((len(ae), sum(e['verification'] == 'unresolved' for e in ae.values())), (326, 45))
 
     def test_every_credit_and_membership_remains_exact_with_publisher_only_subjects(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after, before)
         self.assertEqual(len(after['credits']), 5009)
         self.assertEqual((len(after['dossierMemberships']), sum(m['status'] == 'pendingRole'
@@ -50,7 +56,7 @@ class CreatorU1Tests(unittest.TestCase):
             cs = [c for c in after['credits'] if c['entityId'] == eid]
             self.assertEqual([(c['targetType'], c['targetId'], c['role']) for c in cs],
                              [('release', rid, 'publisher')])
-            node = next(n for n in read('data/organizations.json')['nodes'] if n['id'] == eid)
+            node = next(n for n in applied('data/organizations.json')['nodes'] if n['id'] == eid)
             self.assertEqual(node['groups']['creation'], [])
             self.assertEqual(node['productionCount'], 0)
 
@@ -62,10 +68,10 @@ class CreatorU1Tests(unittest.TestCase):
         games = read('data/games.json')
         self.assertEqual(next(w['firstYear'] for w in games['works'] if w['id'] == 'g1029'), 1992)
         self.assertEqual(next(w['firstYear'] for w in games['works'] if w['id'] == 'g1176'), 1984)
-        self.assertEqual(read('data/organizations.json')['works'], old('data/organizations.json')['works'])
+        self.assertEqual(applied('data/organizations.json')['works'], old('data/organizations.json')['works'])
 
     def test_two_consecutive_entities_complete_u_and_advance_to_virgin_games(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "26f71965f291c460a33991c9778b537afbc8677b",
+  "audit": "data/entity-creator-v1-review-20261026.md",
+  "previousReview": "data/entity-creator-u1-review-20261026.md",
+  "policy": "按V组两项连续核查并收尾；历史Virgin Games Ltd发行公司、Mosaic制作署名、Level 9程序制作与VISUAL ARTS／Key公司品牌层级分开。既有发行与制作职责不因公司身份或母子关系自动重写。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZV1-I01",
+      "entityId": "entity-name-317db6dbff30",
+      "rawName": "Virgin Games Ltd",
+      "before": {"type": "unknown", "verification": "unresolved"},
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.mocagh.org/rainbird/adrianmole2-alt.pdf",
+        "https://electronicsandbooks.com/edt/manual/Magazine/C/Crash%20Sinclair%20Spectrum%20Games%20UK/Crash38-Mar87%20c20111224%20%5B124%5D.pdf",
+        "https://worldofspectrum.org/archive/software/text-adventures/the-growing-pains-of-adrian-mole-virgin-games-ltd"
+      ],
+      "note": "1987 Growing Pains同期说明书署Published by Virgin Games Ltd，CRASH第38期同期销售广告要求支票抬头Virgin Games Ltd并把Produced by Mosaic Publishing Ltd另列。以具名Ltd收款／发行主体核定历史company类别；不把Virgin的发行等同Level 9的程序开发、Mosaic的制作或后来的Virgin Mastertronic。原g1203-v-original发行署名原样保留。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-317db6dbff30",
+      "name": "Virgin Games Ltd",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.mocagh.org/rainbird/adrianmole2-alt.pdf",
+        "https://electronicsandbooks.com/edt/manual/Magazine/C/Crash%20Sinclair%20Spectrum%20Games%20UK/Crash38-Mar87%20c20111224%20%5B124%5D.pdf",
+        "https://worldofspectrum.org/archive/software/text-adventures/the-growing-pains-of-adrian-mole-virgin-games-ltd",
+        "https://www.mobygames.com/game/15160/the-growing-pains-of-adrian-mole/releases/"
+      ],
+      "reason": "原说明书与同期广告的搜索可读摘录支持署名与法人性质，PDF直读在本次检索接口返回错误，未声称重新逐页看过扫描；此前Mosaic审计曾引用另一份手册。MobyGames发行细目直读403，摘要将Mosaic发行与Virgin分销并列，和游戏原说明书Published by Virgin之间的逐版地域口径仍待原封套核对。保留ZX Spectrum原版publisher，不改成纯分销，也不据广告日期补普通机种移植或改1987年原记录。公司登记、Virgin集团沿革、与Virgin Mastertronic合并关系未核。",
+      "workIds": ["g1203"]
+    },
+    {
+      "entityId": "entity-visualarts",
+      "name": "VISUAL ARTS",
+      "status": "specificWorkProductionScopeDeferred",
+      "sources": [
+        "https://visual-arts.jp/",
+        "https://visual-arts.jp/history/",
+        "https://visual-arts.jp/blog_2024_1/",
+        "https://visual-arts.jp/recruitment/interview/crosstalk04/"
+      ],
+      "reason": "官网公司概要核株式会社ビジュアルアーツ；沿革区分1991前身与1996现名，1998 Key开发室及1999 Key品牌。招聘访谈明确公司与品牌分层。现有46条发行公司职责及Key既有21部制作品牌不回填为公司逐作原作制作；要补公司原作角色仍须逐作品当事方制作说明，不能从母公司、引擎、商店发行或集团股权推断。既有1991／1996历史不擅自写成当前空dates字段，先核其日期模型与时期限定。",
+      "workIds": ["g028", "g029", "g030", "g032", "g145", "g146", "g147", "g148", "g149", "g157", "g158", "g164", "g165", "g183", "g184", "g185", "g186", "g187", "g188", "g189", "g190", "key-card-mission", "key-ignis", "key-operation-wars", "key-yurippe"]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-317db6dbff30",
+      "name": "Virgin Games Ltd",
+      "status": "historicalPublisherCompanyIdentityReviewed",
+      "sources": [
+        "https://www.mocagh.org/rainbird/adrianmole2-alt.pdf",
+        "https://electronicsandbooks.com/edt/manual/Magazine/C/Crash%20Sinclair%20Spectrum%20Games%20UK/Crash38-Mar87%20c20111224%20%5B124%5D.pdf",
+        "https://worldofspectrum.org/archive/software/text-adventures/the-growing-pains-of-adrian-mole-virgin-games-ltd"
+      ],
+      "reason": "具名1987同期发行署名及Ltd收款主体确认历史公司类别；原ZX Spectrum发行保留，Mosaic制作与Level 9开发独立。",
+      "workIds": ["g1203"]
+    },
+    {
+      "entityId": "entity-visualarts",
+      "name": "VISUAL ARTS",
+      "status": "existingCompanyIdentityReviewed",
+      "sources": [
+        "https://visual-arts.jp/",
+        "https://visual-arts.jp/history/",
+        "https://visual-arts.jp/blog_2024_1/",
+        "https://visual-arts.jp/recruitment/interview/crosstalk04/"
+      ],
+      "reason": "官方公司概要及沿革复核既有company身份；Key品牌分设，现有发行46条保留，不由公司关系新增逐作创作角色。",
+      "workIds": ["g028", "g029", "g030", "g032", "g145", "g146", "g147", "g148", "g149", "g157", "g158", "g164", "g165", "g183", "g184", "g185", "g186", "g187", "g188", "g189", "g190", "key-card-mission", "key-ignis", "key-operation-wars", "key-yurippe"]
+    }
+  ],
+  "progress": {
+    "letter": "V",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 2,
+    "processedEntityIds": ["entity-name-317db6dbff30", "entity-visualarts"],
+    "nextEntityId": "entity-name-a7663faeee46",
+    "nextName": "WFS（WRIGHT FLYER STUDIOS）",
+    "queue": [
+      {"entityId": "entity-name-317db6dbff30", "name": "Virgin Games Ltd", "status": "reviewed"},
+      {"entityId": "entity-visualarts", "name": "VISUAL ARTS", "status": "reviewed"}
+    ]
+  }
+}
