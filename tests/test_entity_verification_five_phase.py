@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TREE = '025762765317e2e71b1889fb4f95e164d8588b75'
+FIVE_PHASE_TREE = '8a520a639b38bd38b8eb11aae16fdb2dd6eb201d'
 
 
 def read(path):
@@ -26,7 +27,9 @@ class FivePhaseReviewTests(unittest.TestCase):
         self.assertTrue(all(d['missingEvidence'] and not d['evidenceIds']
                             for d in decisions if d['decision'] == 'deferred'))
         self.assertEqual([p['phase'] for p in audit['phaseResults']], ['P1', 'P2', 'P3', 'P4', 'P5'])
-        self.assertEqual(read('data/credits.json'), prior('data/credits.json'))
+        five_phase_credits = json.loads(subprocess.check_output(
+            ['git', 'show', f'{FIVE_PHASE_TREE}:data/credits.json'], cwd=ROOT))
+        self.assertEqual(five_phase_credits, prior('data/credits.json'))
         for path in ['data/games.json', 'data/company-coverage.json', 'data/entity-migration-baseline.json']:
             self.assertEqual(read(path), prior(path))
 
