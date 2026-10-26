@@ -37,6 +37,14 @@ def build():
                 'total': sum(p['total'] for p in completed_letters.values()) + current['total'], 'processedEntityIds': prior_processed + current['processedEntityIds'],
                 'queue': prior_queue + current['queue']}
     result['registrationProgress'] = {**progress, 'reviewedAt': review['reviewedAt'], 'audit': review['audit'], 'reviewedEntities': reviewed_entities, 'audits': [batch['audit'] for batch in reviews]}
+    recheck = read('entity-creator-a-recheck1-review-20261026')
+    second = recheck['recheckProgress']
+    queue_ids = [entry['entityId'] for entry in second['baselineQueue']]
+    assert len(queue_ids) == second['total'] == len(set(queue_ids))
+    assert second['processedEntityIds'] == queue_ids[:len(second['processedEntityIds'])]
+    assert second['nextEntityId'] == queue_ids[len(second['processedEntityIds'])]
+    assert [entry['entityId'] for entry in recheck['reviewedEntities']] == second['processedEntityIds']
+    result['recheckProgress'] = {**second, 'reviewedAt': recheck['reviewedAt'], 'audit': recheck['audit']}
     works = {}
     for w in games['works']:
         works[w['id']] = (w, 'main', 'index.html?query=' + quote(w.get('chineseTitle') or w['title']) + '#catalogue')

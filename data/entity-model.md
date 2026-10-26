@@ -240,3 +240,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 C—F补漏批次使用 `entity-creator-cf-catchup-review-20261026.json` 与同名Markdown：重算当前显示名排序发现八个尚未登记者仍排在数字组之前，依Champion Soft、Cocktail Soft、Crest / JAST、dramatic create、FairyTale / X-Shitei、FAIRYTALE ETHIX、FairyTale、Flower-Moon Group补齐，累计320项，余6项。HuneX官方沿革支持dramatic create品牌2014年已启动，仅补这一时间事实；品牌与法人、发行和制作分开，原有各子品牌署名、1982前身疑点及全部职责／内容／位置保持。下一项5pb.。
 
 2026-10-26 数字及其他批次使用 `entity-creator-numeric-review-20261026.json` 与同名Markdown，依5pb.、07th Expansion、GREE及Mobage待核发行、1988目录冲突、1982前身占位六项收尾。07th官网支持团队身份与两部原作层制作职责，其余历史发行及未知内容保持；现有326个实体均已按批登记审查，39项身份和601项专题职责仍保留待核，当前排序队列完成，无下一项。详见独立审计。
+
+2026-10-26 第二轮身份复核使用 `entity-creator-a-recheck1-review-20261026.json` 与同名Markdown，从首轮结束时39项`unresolved`的显示名排序连续复核前五项。Accolade原版说明书、Activision当事公司证券申报、âge品牌公告支持三项身份订正；Addison-Wesley Productions与Adventure Soft法律／名义边界继续待核。首轮326项进度不重置，二轮5／39，余36项身份待核，下一项Alchemist。作品职责、原发行与内容保持，详见独立审计。

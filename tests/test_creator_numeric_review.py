@@ -21,17 +21,25 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json',
+                'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(
+            ['git', 'show', f'7ea5d46efdfb5a36875fbc48ed3b287ac0dc0e3c:{path}'], cwd=ROOT))
+    return read(path)
+
+
 class CreatorNumericReviewTests(unittest.TestCase):
     def test_only_07th_identity_and_two_original_production_credits_change(self):
         before, after = [dict((e['id'], e) for e in d['entities']) for d in
-                         [old('data/entities.json'), read('data/entities.json')]]
+                         [old('data/entities.json'), applied('data/entities.json')]]
         self.assertEqual(before.keys(), after.keys())
         self.assertEqual({eid for eid in before if before[eid] != after[eid]}, {SEVEN})
         self.assertEqual((before[SEVEN]['type'], before[SEVEN]['verification']), ('unknown', 'unresolved'))
         self.assertEqual((after[SEVEN]['type'], after[SEVEN]['verification']), ('team', 'sourceReviewed'))
         review = read(REVIEW)
         self.assertEqual([r['entityId'] for r in review['identityCorrections']], [SEVEN])
-        prior, current = old('data/credits.json'), read('data/credits.json')
+        prior, current = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(current['credits'][:len(prior['credits'])], prior['credits'])
         extra = current['credits'][len(prior['credits']):]
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role']) for c in extra],
@@ -48,21 +56,21 @@ class CreatorNumericReviewTests(unittest.TestCase):
         for path in ['data/games.json', 'data/company-coverage.json', 'data/taxonomy.json',
                      'data/gameplay-catalogues.json', 'data/work-classification.json',
                      'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
-            self.assertEqual(read(path), old(path), path)
-        before, after = old('data/entity-migration-review.json'), read('data/entity-migration-review.json')
+            self.assertEqual(applied(path), old(path), path)
+        before, after = old('data/entity-migration-review.json'), applied('data/entity-migration-review.json')
         self.assertEqual({k: v for k, v in after.items() if k != 'pendingIdentities'},
                          {k: v for k, v in before.items() if k != 'pendingIdentities'})
         self.assertEqual(after['pendingIdentities'],
                          [x for x in before['pendingIdentities'] if x['entityId'] != SEVEN])
         self.assertEqual(len(after['pendingIdentities']), 39)
-        self.assertEqual([(e['type'], e['verification']) for e in read('data/entities.json')['entities']
+        self.assertEqual([(e['type'], e['verification']) for e in applied('data/entities.json')['entities']
                           if e['id'] in IDS[2:]], [('unknown', 'unresolved')] * 4)
         games = read('data/games.json')
         mobile = [r for r in games['platformReleases'] if r['id'] in {'g209-v2', 'g209-v3'}]
         self.assertEqual(len(mobile), 2)
         self.assertTrue(all(r['contentRelation'] == 'unverified' and r['contentVersionId'] is None
                             for r in mobile))
-        before_org, after_org = old('data/organizations.json'), read('data/organizations.json')
+        before_org, after_org = old('data/organizations.json'), applied('data/organizations.json')
         for key in ['edges', 'works', 'families']:
             self.assertEqual(after_org[key], before_org[key], key)
         bn, an = [{n['id']: n for n in d['nodes']} for d in [before_org, after_org]]
@@ -73,7 +81,7 @@ class CreatorNumericReviewTests(unittest.TestCase):
         self.assertEqual([r['entityId'] for r in review['reviewedEntities']], IDS)
         self.assertEqual([r['entityId'] for r in review['deferredReviews']], IDS)
         before = old('data/organizations.json')['registrationProgress']
-        p = read('data/organizations.json')['registrationProgress']
+        p = applied('data/organizations.json')['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'], p['total'],
                           p['nextEntityId'], p['nextName']), ('数字及其他', 6, 6, 326, None, None))
         self.assertEqual(p['processedEntityIds'][:320], before['processedEntityIds'])
