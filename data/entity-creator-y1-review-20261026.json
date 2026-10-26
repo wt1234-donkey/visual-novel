@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "f81f5cb0b399512409c972b375e0584b305d8d2d",
+  "audit": "data/entity-creator-y1-review-20261026.md",
+  "previousReview": "data/entity-creator-x1-review-20261026.md",
+  "policy": "依目录现行字母排序完成Y组三项。法人设立、子品牌首次已证活动与作品发行各记各的；只新增有当事方证据的时间事实，不凭官网目录、版权或出版角色推断逐作开发与原GAINAX母体关系。",
+  "identityCorrections": [],
+  "creditAdditions": [],
+  "dateFacts": [
+    {
+      "entityId": "entity-yonago_gainax",
+      "before": [],
+      "kind": "established",
+      "value": "2014-05",
+      "precision": "month",
+      "source": "https://yonago-gainax.co.jp/conpany/company.html",
+      "status": "sourceReviewed",
+      "note": "米子ガイナックス株式会社官网公司概要明确设立2014年5月；不是赤井孝美参与创立旧GAINAX的1984年。"
+    },
+    {
+      "entityId": "entity-yuzusoft_sour",
+      "before": [],
+      "kind": "brandActivityStarted",
+      "value": "2021-07",
+      "precision": "month",
+      "source": "https://prtimes.jp/main/html/rd/p/000002805.000032953.html",
+      "status": "sourceReviewed",
+      "note": "EXNOA称SOUR为新品牌、PARQUET为其出道作并记2021年7月31日配信；只记可证的首次品牌活动月份，不充作法人设立日。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-yonago_gainax",
+      "status": "originalGainaxAndLaterGameDevelopmentSeparate",
+      "sources": ["https://yonago-gainax.co.jp/conpany/company.html", "https://blissbrain.co.jp/pm2rg/"],
+      "reason": "2014年米子公司不可倒填1993年原GAINAX作品；Bliss Brain仅具名2024再生版原创开场动画，未具名米子公司负责全游戏开发或所有重绘，保留内容层一条addedAnimation。",
+      "workIds": ["g821"]
+    },
+    {
+      "entityId": "entity-yuzusoft_sour",
+      "status": "perPlatformContentStillUnverified",
+      "sources": ["https://prtimes.jp/main/html/rd/p/000002805.000032953.html", "https://store.steampowered.com/app/1662840/PARQUET/"],
+      "reason": "EXNOA明确《PARQUET》由株式会社ユノス制作，SOUR是全年龄新品牌；Steam具名SOUR开发者与NekoNyan、HIKARI FIELD发行者。保留SOUR既有制作品牌及四条原发行品牌署名，不给主品牌继承Steam开发，不将浏览器版或Steam版未知内容关系认作相同。",
+      "workIds": ["g232"]
+    },
+    {
+      "entityId": "entity-yuzusoft",
+      "status": "specificDevelopmentAndParentScopeDeferred",
+      "sources": ["https://www.yuzu-soft.com/products.html", "https://prtimes.jp/main/html/rd/p/000002805.000032953.html", "https://store.steampowered.com/app/1662840/PARQUET/"],
+      "reason": "官方产品目录对应13部既有主品牌作品，既有28条原作／具体发行品牌记录保持；PARQUET是SOUR出道作，父品牌专题对该作pendingRole继续待核。官网产品归档、版权和品牌家族关系不自动给13作逐项开发或将SOUR署名并入父品牌。",
+      "workIds": ["g219", "g220", "g221", "g222", "g223", "g224", "g225", "g226", "g227", "g228", "g229", "g230", "g231", "g232"]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-yonago_gainax",
+      "name": "Yonago GAINAX（米子ガイナックス）",
+      "status": "companyEstablishmentReviewed",
+      "sources": ["https://yonago-gainax.co.jp/conpany/company.html", "https://blissbrain.co.jp/pm2rg/"],
+      "reason": "核定2014年5月米子公司设立日期；2024再生版新增开场动画职责保持内容限定。",
+      "workIds": ["g821"]
+    },
+    {
+      "entityId": "entity-yuzusoft_sour",
+      "name": "Yuzusoft SOUR（ゆずソフトSOUR）",
+      "status": "brandFirstActivityReviewed",
+      "sources": ["https://prtimes.jp/main/html/rd/p/000002805.000032953.html", "https://store.steampowered.com/app/1662840/PARQUET/"],
+      "reason": "《PARQUET》2021年7月31日初次配信支持品牌活动月份；SOUR制作品牌与各平台发行者分开，原六条职责保持。",
+      "workIds": ["g232"]
+    },
+    {
+      "entityId": "entity-yuzusoft",
+      "name": "Yuzusoft（ゆずソフト）",
+      "status": "parentPublishingBrandReviewed",
+      "sources": ["https://www.yuzu-soft.com/products.html", "https://prtimes.jp/main/html/rd/p/000002805.000032953.html"],
+      "reason": "官网目录与现有13部主品牌作品吻合；与SOUR品牌分开，原28条出版品牌记录及PARQUET专题待核状态保持。",
+      "workIds": ["g219", "g220", "g221", "g222", "g223", "g224", "g225", "g226", "g227", "g228", "g229", "g230", "g231", "g232"]
+    }
+  ],
+  "progress": {
+    "letter": "Y",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 3,
+    "processedEntityIds": ["entity-yonago_gainax", "entity-yuzusoft_sour", "entity-yuzusoft"],
+    "nextEntityId": "entity-5pb",
+    "nextName": "5pb.",
+    "queue": [
+      {"entityId": "entity-yonago_gainax", "name": "Yonago GAINAX（米子ガイナックス）", "status": "reviewed"},
+      {"entityId": "entity-yuzusoft_sour", "name": "Yuzusoft SOUR（ゆずソフトSOUR）", "status": "reviewed"},
+      {"entityId": "entity-yuzusoft", "name": "Yuzusoft（ゆずソフト）", "status": "reviewed"}
+    ]
+  }
+}
