@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "b521bf5d1bf0a94c2a4548acd07835343b05fc75",
+  "audit": "data/entity-creator-t2-review-20261026.md",
+  "previousReview": "data/entity-creator-t1-review-20261026.md",
+  "policy": "按T组第5—8项连续核查；地区发行、本地化、原作制作和Plus增补开发分别限定，不由品牌家族或当前合作关系传播职责。登记包括明确缺口，不表示所有职责已解决。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZT2-I01",
+      "entityId": "entity-name-b01843ba1268",
+      "rawName": "Team Salvato",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "team",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://ddlc.moe/",
+        "https://teamsalvato.itch.io/ddlc",
+        "https://teamsalvato.com/team",
+        "https://serenityforge.com/games/doki-doki-literature-club-plus/press-kit"
+      ],
+      "note": "原作官网及作者itch发布页明确DDLC由Team Salvato开发，并具名剧本、程序、音乐及美术人员；现官网团队页与发行方Press Kit亦称独立开发工作室，核为制作团队team，不以Team名称或未读到的法人登记断言特定LLC。追加g056原作制作及既有g056-c-3 Plus增补内容开发；Plus官方说明同时具名Serenity Forge技术支持，保留其已有开发职责，不断言独占创作。"
+    },
+    {
+      "reviewId": "AZT2-I02",
+      "entityId": "entity-name-5f291db8e809",
+      "rawName": "TikGames",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.tikgames.com/about/",
+        "https://www.tikgames.com/classics/view/63/interpol-the-trail-of-dr-chaos/"
+      ],
+      "note": "TikGames官方About直接自称TikGames, LLC并说明2002创立，核为company；原站Interpol具体作品页分别列Publisher与Developer为TikGames，支持g969一条原作制作。公司作品总数和经营平台不用于扩充本库，也不自动新增后发主机移植或把其它发行方视为开发。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZT2-C01",
+      "entityId": "entity-name-b01843ba1268",
+      "dossierId": null,
+      "workId": "g056",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Doki Doki Literature Club (DDLC) was developed by Team Salvato.",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "source": "https://ddlc.moe/",
+      "note": "原作官网及作者发布页具名原作开发与STAFF，限定2017原作制作，不把原作署名倒推出所有后发版技术实现，不排除具名美术协作者。",
+      "beforeWorkRoles": []
+    },
+    {
+      "reviewId": "AZT2-C02",
+      "entityId": "entity-name-b01843ba1268",
+      "dossierId": null,
+      "workId": "g056",
+      "targetType": "content",
+      "role": "developer",
+      "rawCredit": "Developer: Team Salvato / unique additional content only found in DDLC Plus",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "source": "https://serenityforge.com/games/doki-doki-literature-club-plus/press-kit",
+      "note": "官方Plus Press Kit列Team Salvato为Developer，说明新增叙事与独有内容，且明确Serenity Forge技术支持。仅追加既有g056-c-3增补内容开发，保留Serenity Forge既有开发及全部发行署名，不作用于原作技术开发或内容ID为空的移动发行，不新建内容。",
+      "targetId": "g056-c-3",
+      "beforeTargetRoles": []
+    },
+    {
+      "reviewId": "AZT2-C03",
+      "entityId": "entity-name-5f291db8e809",
+      "dossierId": null,
+      "workId": "g969",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "Developer: TikGames",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "source": "https://www.tikgames.com/classics/view/63/interpol-the-trail-of-dr-chaos/",
+      "note": "原厂具体作品页将开发与发行分别列示并均具名TikGames，限定g969原作制作。只保留原库2007年份，不由官网当前平台目录批量增加移植职责或普通平台发行。",
+      "beforeWorkRoles": []
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-3fc0babaf7f8",
+      "name": "TamaMako gaming",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.tamamakogaming.com/",
+        "https://www.tamamakogaming.com/jp",
+        "https://store.steampowered.com/app/1604380/Hamidashi_Creative/",
+        "https://store.steampowered.com/app/3407830/Hamidashi_Creative_Totsu/"
+      ],
+      "reason": "2022与2025具体地区发行的本地化、技术实现及历史法人／团队／品牌类别仍需原STAFF或同期资料。官网当前业务／合作名录不足以覆盖两作；不采二手百科的2023成立日倒填2022发行，不给Sekai Project自动追加翻译开发。",
+      "workIds": [
+        "g214",
+        "g215"
+      ]
+    },
+    {
+      "entityId": "entity-name-b01843ba1268",
+      "name": "Team Salvato",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://ddlc.moe/",
+        "https://teamsalvato.itch.io/ddlc",
+        "https://teamsalvato.com/team",
+        "https://serenityforge.com/games/doki-doki-literature-club-plus/press-kit"
+      ],
+      "reason": "法律主体形式、设立登记与早期团队连续性未查证，team只核制作工作室身份。2025移动版共同技术贡献另核，内容ID仍为空的发行不继承Plus内容级开发；未新增作品、内容或发行，也未补未具名人员的独占贡献。",
+      "workIds": [
+        "g056"
+      ]
+    },
+    {
+      "entityId": "entity-tiare",
+      "name": "Tiare",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://jaststore.com/page/classic-jast-games/",
+        "https://ja.wikipedia.org/wiki/ジャスト_(ブランド)",
+        "https://www.just-nin.com/"
+      ],
+      "reason": "十部既有Tiare发行／首发品牌范围的逐作原作制作与后发版开发，及历史公司主体、活动时期和运营关系仍待原包装／STAFF／公司原件。JAST USA当前经典英文版的1996／1998／1999年份不改写日本原作年份；不并入美国同名JAST或现代同名商标。",
+      "workIds": [
+        "g667",
+        "g668",
+        "g669",
+        "g670",
+        "g671",
+        "g672",
+        "jast-vanishing",
+        "jast-tails",
+        "jast-izayoi",
+        "jast-justice-slave"
+      ]
+    },
+    {
+      "entityId": "entity-name-5f291db8e809",
+      "name": "TikGames",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.tikgames.com/about/",
+        "https://www.tikgames.com/classics/view/63/interpol-the-trail-of-dr-chaos/"
+      ],
+      "reason": "具体平台版移植、后发发行合同与首发月日仍需同期原件；官网2007-01-18与部分二手日期不一致，本批只保持原库2007原作年，不订正具体日。原厂具名开发支持原作制作参与，不意味着所有后发版本代码均由同一主体完成。",
+      "workIds": [
+        "g969"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-3fc0babaf7f8",
+      "name": "TamaMako gaming",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.tamamakogaming.com/",
+        "https://www.tamamakogaming.com/jp",
+        "https://store.steampowered.com/app/1604380/Hamidashi_Creative/",
+        "https://store.steampowered.com/app/3407830/Hamidashi_Creative_Totsu/"
+      ],
+      "reason": "两部Hamidashi Creative现Steam产品页均将madosoft列为Developer，TamaMako gaming与Sekai Project列为Publisher，支持保留既有地区联合发行。TamaMako主页仅可读取合作方正文，大量内容以图片承载，未取得历史法律主体与逐作本地化STAFF，不由发行身份或中文支持推定开发／本地化；保留unknown／unresolved。",
+      "workIds": [
+        "g214",
+        "g215"
+      ]
+    },
+    {
+      "entityId": "entity-name-b01843ba1268",
+      "name": "Team Salvato",
+      "status": "identityAndScopedProductionReviewed",
+      "sources": [
+        "https://ddlc.moe/",
+        "https://teamsalvato.itch.io/ddlc",
+        "https://teamsalvato.com/team",
+        "https://serenityforge.com/games/doki-doki-literature-club-plus/press-kit"
+      ],
+      "reason": "原作官网及作者itch发布页明确DDLC由Team Salvato开发，并具名剧本、程序、音乐及美术人员；现官网团队页与发行方Press Kit亦称独立开发工作室，核为制作团队team，不以Team名称或未读到的法人登记断言特定LLC。追加g056原作制作及既有g056-c-3 Plus增补内容开发；Plus官方说明同时具名Serenity Forge技术支持，保留其已有开发职责，不断言独占创作。",
+      "workIds": [
+        "g056"
+      ]
+    },
+    {
+      "entityId": "entity-tiare",
+      "name": "Tiare",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://jaststore.com/page/classic-jast-games/",
+        "https://ja.wikipedia.org/wiki/ジャスト_(ブランド)",
+        "https://www.just-nin.com/"
+      ],
+      "reason": "保留既有Tiare独立brand及十部作品首发／发行品牌职责，不由JAST家族关系自动上推原作制作。旧日本公司站入口本次不可读取；现JAST经典游戏页只说明英文旧作及浏览器模拟，不直接列Tiare原作STAFF。百科仅用于定位历史名称与作品线索，本轮不作新的法人、日文展示名或逐作制作订正。",
+      "workIds": [
+        "g667",
+        "g668",
+        "g669",
+        "g670",
+        "g671",
+        "g672",
+        "jast-vanishing",
+        "jast-tails",
+        "jast-izayoi",
+        "jast-justice-slave"
+      ]
+    },
+    {
+      "entityId": "entity-name-5f291db8e809",
+      "name": "TikGames",
+      "status": "identityAndScopedProductionReviewed",
+      "sources": [
+        "https://www.tikgames.com/about/",
+        "https://www.tikgames.com/classics/view/63/interpol-the-trail-of-dr-chaos/"
+      ],
+      "reason": "TikGames官方About直接自称TikGames, LLC并说明2002创立，核为company；原站Interpol具体作品页分别列Publisher与Developer为TikGames，支持g969一条原作制作。公司作品总数和经营平台不用于扩充本库，也不自动新增后发主机移植或把其它发行方视为开发。",
+      "workIds": [
+        "g969"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "T",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 19,
+    "processedEntityIds": [
+      "entity-te_soft",
+      "entity-name-e135870e3299",
+      "entity-taito",
+      "entity-name-08cbddd5e450",
+      "entity-name-3fc0babaf7f8",
+      "entity-name-b01843ba1268",
+      "entity-tiare",
+      "entity-name-5f291db8e809"
+    ],
+    "nextEntityId": "entity-tinmachine",
+    "nextName": "TinMachine",
+    "queue": [
+      {
+        "entityId": "entity-te_soft",
+        "name": "T&E SOFT",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e135870e3299",
+        "name": "Tactics（NEXTON）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-taito",
+        "name": "TAITO（タイトー）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-08cbddd5e450",
+        "name": "TAKERU",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3fc0babaf7f8",
+        "name": "TamaMako gaming",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b01843ba1268",
+        "name": "Team Salvato",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tiare",
+        "name": "Tiare",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5f291db8e809",
+        "name": "TikGames",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tinmachine",
+        "name": "TinMachine",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-0b5ee01c0e65",
+        "name": "TOHO Games",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-toho",
+        "name": "TOHO（東宝）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-9832231b6baa",
+        "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-tokuma",
+        "name": "Tokuma Shoten（徳間書店）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-2793ee33b030",
+        "name": "Tokyo Shoseki",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-aa2256b9c684",
+        "name": "TOKYOTOON",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-toneworks",
+        "name": "tone work’s",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-679a14238228",
+        "name": "Tonkin House（トンキンハウス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8039f82ef72c",
+        "name": "Toshiba EMI（東芝EMI）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-77c5d6e9dcc8",
+        "name": "TYPE-MOON",
+        "status": "pending"
+      }
+    ]
+  }
+}
