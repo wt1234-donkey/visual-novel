@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "cb54e356f55702bdca357d538963c78a8a6b18d1",
+  "audit": "data/entity-creator-a-recheck1-review-20261026.md",
+  "previousReview": "data/entity-creator-numeric-review-20261026.md",
+  "policy": "326实体首轮已登记；二轮按上一轮结束时39项unresolved身份的sortFamilies排序复查。只按当事方原件核身份，不改原始发行、专题职责、内容或位置。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZR-A1-I01",
+      "entityId": "entity-name-4750f74061fe",
+      "rawName": "Accolade",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6.pdf"
+      ],
+      "note": "1996原版Star Control 3说明书法律声明、保修与许可条款均具名Accolade, Inc.，据此核为该版历史发行公司；Legend人员的开发与系统职责不归给Accolade。与2010年成立的同名医疗公司不合并。"
+    },
+    {
+      "reviewId": "AZR-A1-I02",
+      "entityId": "entity-name-c31f977d8bac",
+      "rawName": "Activision",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://investor.activision.com/static-files/88e856e3-7c9d-45ad-ba93-f2f8fcd80cb9"
+      ],
+      "note": "当事公司1997年证券申报以Activision, Inc.为发行主体，并在其业务部分列Return to Zork等Zork产品。核定本库1990年代Activision发行署名对应历史公司，不扩大到后来集团／子公司或每作开发。"
+    },
+    {
+      "reviewId": "AZR-A1-I03",
+      "entityId": "entity-name-f0d25e9c6d82",
+      "rawName": "âge",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://www.age-soft.com/former/kimiita_oshirase.html",
+        "https://age-soft.com/main/products/"
+      ],
+      "note": "当事方公告明确称アージュ品牌且落款株式会社アシッド，官方目录另列Muv-Luv作品；核定âge为品牌，不把品牌等同法人或建立未审核的运营时间关系。保留g052/g053原发行publisher及两条原作productionBrand，不因类型订正自动转换历史发行职责。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-4750f74061fe",
+      "status": "perTitleInternalProductionDeferred",
+      "sources": [
+        "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6.pdf"
+      ],
+      "reason": "说明书将Accolade与Legend职员分列；只核公司类型，原作开发、制作协作与授权范围须按具名职员职责另核。",
+      "workIds": [
+        "legend-entertainment-star-control-3"
+      ]
+    },
+    {
+      "entityId": "entity-name-c31f977d8bac",
+      "status": "perTitleDevelopmentDeferred",
+      "sources": [
+        "https://investor.activision.com/static-files/88e856e3-7c9d-45ad-ba93-f2f8fcd80cb9"
+      ],
+      "reason": "1997公司申报支持历史公司与Zork产品线，不证明五部游戏由公司内部独立开发；保留此前已核大审判官原作层职责及其余第三方分工。",
+      "workIds": [
+        "g1088",
+        "g1090",
+        "g1189",
+        "g1091",
+        "g1190"
+      ]
+    },
+    {
+      "entityId": "entity-name-6ed2a96c53cd",
+      "status": "imprintOrLegalPublisherDeferred",
+      "sources": [
+        "https://worldofspectrum.org/archive/books/secret-of-arendarvon-castle-the"
+      ],
+      "reason": "馆藏仅著录Addison-Wesley Productions为1985书籍出版名义和作者，缺封底／版权页能区分法人、部门或出版品牌的原件；两条发行保持原署名，不能凭Productions推开发。",
+      "workIds": [
+        "g1272",
+        "g1273"
+      ]
+    },
+    {
+      "entityId": "entity-name-490ea790703a",
+      "status": "companyVersusDevelopmentLabelDeferred",
+      "sources": [
+        "https://store.steampowered.com/app/836840/Simon_the_Sorcerer__Legacy_Edition_English/"
+      ],
+      "reason": "权利方后发Legacy版商店将Adventure Soft列开发、MojoTouch列发行；原作制作已登记，但该开发名不能确定1993游戏的法人形态、Adventure Soft Publishing及Headfirst等历史连续性，身份仍unknown。",
+      "workIds": [
+        "g1089"
+      ]
+    },
+    {
+      "entityId": "entity-name-f0d25e9c6d82",
+      "status": "operatorDatesAndLaterReleasesDeferred",
+      "sources": [
+        "https://www.age-soft.com/former/kimiita_oshirase.html",
+        "https://age-soft.com/main/products/"
+      ],
+      "reason": "当事方支持品牌与法人区分，不自动建立经营起止日期或把后来的aNCHOR移植和两条旧发行publisher改成品牌发行；原作层制作品牌已登记。",
+      "workIds": [
+        "g052",
+        "g053"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-4750f74061fe",
+      "name": "Accolade",
+      "status": "identityResolved",
+      "sources": [
+        "https://device.report/m/641008c8b769ab2a81e989e882b706f958c324e431158f537892f8a104143de6.pdf"
+      ],
+      "reason": "说明书将Accolade与Legend职员分列；只核公司类型，原作开发、制作协作与授权范围须按具名职员职责另核。",
+      "workIds": [
+        "legend-entertainment-star-control-3"
+      ]
+    },
+    {
+      "entityId": "entity-name-c31f977d8bac",
+      "name": "Activision",
+      "status": "identityResolved",
+      "sources": [
+        "https://investor.activision.com/static-files/88e856e3-7c9d-45ad-ba93-f2f8fcd80cb9"
+      ],
+      "reason": "1997公司申报支持历史公司与Zork产品线，不证明五部游戏由公司内部独立开发；保留此前已核大审判官原作层职责及其余第三方分工。",
+      "workIds": [
+        "g1088",
+        "g1090",
+        "g1189",
+        "g1091",
+        "g1190"
+      ]
+    },
+    {
+      "entityId": "entity-name-6ed2a96c53cd",
+      "name": "Addison-Wesley Productions",
+      "status": "identityDeferred",
+      "sources": [
+        "https://worldofspectrum.org/archive/books/secret-of-arendarvon-castle-the"
+      ],
+      "reason": "馆藏仅著录Addison-Wesley Productions为1985书籍出版名义和作者，缺封底／版权页能区分法人、部门或出版品牌的原件；两条发行保持原署名，不能凭Productions推开发。",
+      "workIds": [
+        "g1272",
+        "g1273"
+      ]
+    },
+    {
+      "entityId": "entity-name-490ea790703a",
+      "name": "Adventure Soft",
+      "status": "identityDeferred",
+      "sources": [
+        "https://store.steampowered.com/app/836840/Simon_the_Sorcerer__Legacy_Edition_English/"
+      ],
+      "reason": "权利方后发Legacy版商店将Adventure Soft列开发、MojoTouch列发行；原作制作已登记，但该开发名不能确定1993游戏的法人形态、Adventure Soft Publishing及Headfirst等历史连续性，身份仍unknown。",
+      "workIds": [
+        "g1089"
+      ]
+    },
+    {
+      "entityId": "entity-name-f0d25e9c6d82",
+      "name": "âge",
+      "status": "identityResolved",
+      "sources": [
+        "https://www.age-soft.com/former/kimiita_oshirase.html",
+        "https://age-soft.com/main/products/"
+      ],
+      "reason": "当事方支持品牌与法人区分，不自动建立经营起止日期或把后来的aNCHOR移植和两条旧发行publisher改成品牌发行；原作层制作品牌已登记。",
+      "workIds": [
+        "g052",
+        "g053"
+      ]
+    }
+  ],
+  "recheckProgress": {
+    "letter": "A",
+    "normalization": "沿首轮结束时39项unresolved显示名的sortFamilies快照；拉丁重音折合基本字母",
+    "total": 39,
+    "processedEntityIds": [
+      "entity-name-4750f74061fe",
+      "entity-name-c31f977d8bac",
+      "entity-name-6ed2a96c53cd",
+      "entity-name-490ea790703a",
+      "entity-name-f0d25e9c6d82"
+    ],
+    "nextEntityId": "entity-name-b8b1293f82fa",
+    "nextName": "Alchemist",
+    "baselineQueue": [
+      {
+        "entityId": "entity-name-4750f74061fe",
+        "name": "Accolade"
+      },
+      {
+        "entityId": "entity-name-c31f977d8bac",
+        "name": "Activision"
+      },
+      {
+        "entityId": "entity-name-6ed2a96c53cd",
+        "name": "Addison-Wesley Productions"
+      },
+      {
+        "entityId": "entity-name-490ea790703a",
+        "name": "Adventure Soft"
+      },
+      {
+        "entityId": "entity-name-f0d25e9c6d82",
+        "name": "âge"
+      },
+      {
+        "entityId": "entity-name-b8b1293f82fa",
+        "name": "Alchemist"
+      },
+      {
+        "entityId": "entity-name-bd36baf4b6a9",
+        "name": "AltPlus / KADOKAWA / TriFort（オルトプラス／KADOKAWA／トライフォート）"
+      },
+      {
+        "entityId": "entity-name-788994ba8dfb",
+        "name": "American Laser Games"
+      },
+      {
+        "entityId": "entity-name-7f11db7a66f2",
+        "name": "Arsys Software"
+      },
+      {
+        "entityId": "entity-name-80a218385951",
+        "name": "Asoberu! BD-GAME（あそべる！BD-GAME）"
+      },
+      {
+        "entityId": "entity-name-8b16f2bf500e",
+        "name": "Byakuya Shobo（白夜書房）"
+      },
+      {
+        "entityId": "entity-name-21dcd9c9c1e7",
+        "name": "CoreMoreco"
+      },
+      {
+        "entityId": "entity-name-16c097f224f4",
+        "name": "DMM GAMES／AUGUST"
+      },
+      {
+        "entityId": "entity-name-fb6db91d6827",
+        "name": "E3 Staff（イースリースタッフ）"
+      },
+      {
+        "entityId": "entity-name-b06c3e4e3ae1",
+        "name": "EXNOA（DG REMAKE）"
+      },
+      {
+        "entityId": "entity-name-5f2bf730e86e",
+        "name": "EXNOA（DMM GAMES）"
+      },
+      {
+        "entityId": "entity-name-fdc56bbd260d",
+        "name": "FANZA GAMES（DG REMAKE）"
+      },
+      {
+        "entityId": "entity-name-0956fc2c3ad0",
+        "name": "General Products"
+      },
+      {
+        "entityId": "entity-name-3de89d1ab0a5",
+        "name": "IMYUIC(ALICESOFT)"
+      },
+      {
+        "entityId": "entity-name-d7900289691e",
+        "name": "Interchannel"
+      },
+      {
+        "entityId": "entity-name-0483335f6a4f",
+        "name": "J. K. Greye Software"
+      },
+      {
+        "entityId": "entity-name-82fc3d1bfdaa",
+        "name": "KADOKAWA"
+      },
+      {
+        "entityId": "entity-name-0f93dc471cd5",
+        "name": "KADOKAWA / AltPlus / scopes（KADOKAWA／オルトプラス／scopes）"
+      },
+      {
+        "entityId": "entity-name-9ba14a4f9578",
+        "name": "LOGiN（ログイン）"
+      },
+      {
+        "entityId": "entity-name-770b8bb9bcbc",
+        "name": "Matsushita Electric Industrial / Panasoft（松下電器産業／パナソフト）"
+      },
+      {
+        "entityId": "entity-name-5714be41cf55",
+        "name": "Michael Toy／Glenn Wichman（原作者传播）"
+      },
+      {
+        "entityId": "entity-name-5963707789d1",
+        "name": "mirai works"
+      },
+      {
+        "entityId": "entity-name-588f588386f3",
+        "name": "Moe APP（萌えAPP）"
+      },
+      {
+        "entityId": "entity-name-95984e43e41f",
+        "name": "NetEase Games"
+      },
+      {
+        "entityId": "entity-name-8c9d353d6fe9",
+        "name": "Silky’s Plus Alpha"
+      },
+      {
+        "entityId": "entity-name-456a2209f1ad",
+        "name": "Sunflower Ocean"
+      },
+      {
+        "entityId": "entity-name-b1b599d0fabf",
+        "name": "Syawase Works China"
+      },
+      {
+        "entityId": "entity-name-389c2f591e55",
+        "name": "Synergy Inc."
+      },
+      {
+        "entityId": "entity-name-3fc0babaf7f8",
+        "name": "TamaMako gaming"
+      },
+      {
+        "entityId": "entity-name-40e00ac41438",
+        "name": "XING（エクシング）"
+      },
+      {
+        "entityId": "entity-name-e1232b52eff7",
+        "name": "发行方待核实（GREE）"
+      },
+      {
+        "entityId": "entity-name-d1903e2fafb1",
+        "name": "发行方待核实（Mobage）"
+      },
+      {
+        "entityId": "entity-name-de3ed19ac095",
+        "name": "未核实（1988年前身关联；目录署名冲突）"
+      },
+      {
+        "entityId": "entity-name-a978e18d1d4b",
+        "name": "未核实（馆藏归入ChampionSoft前身关联）"
+      }
+    ]
+  }
+}
