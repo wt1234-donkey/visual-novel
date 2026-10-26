@@ -65545,6 +65545,21 @@
       "territory": null,
       "reviewId": "AZT2-C03",
       "reviewRecord": "data/entity-creator-t2-review-20261026.md"
+    },
+    {
+      "id": "credit-9d1592e337a23c0e",
+      "entityId": "entity-toho",
+      "targetType": "work",
+      "targetId": "toho-phanpara",
+      "workId": "toho-phanpara",
+      "role": "originalProduction",
+      "rawCredit": "企画・制作：株式会社サムザップ、東宝株式会社",
+      "status": "sourceReviewed",
+      "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+      "note": "2023-11-21首发原公告具名东宝参与游戏企画・制作，另列Sumzap负责开发・运营；originalProduction表示共同参与原作制作，不断言东宝技术开发、独占创作或合同发行。仅解除东宝专题本作一条旧待核，保留Sumzap既有制作，不传播到TOHO Games、其它IP或书目位置。",
+      "territory": null,
+      "reviewId": "AZT3-C01",
+      "reviewRecord": "data/entity-creator-t3-review-20261026.md"
     }
   ],
   "dossierMemberships": [
@@ -90367,11 +90382,11 @@
       "workId": "toho-phanpara",
       "placement": "related",
       "roles": [
-        "catalogueAssociation"
+        "originalProduction"
       ],
-      "group": "unresolved",
-      "source": "https://www.toho.co.jp/anime/lineup-games/",
-      "status": "pendingRole"
+      "group": "original",
+      "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+      "status": "existingEvidence"
     },
     {
       "dossierId": "toho",

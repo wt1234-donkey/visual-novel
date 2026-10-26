@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "e0f205de3eca72b03e67a8993528b2a5bdad433b",
+  "audit": "data/entity-creator-t3-review-20261026.md",
+  "previousReview": "data/entity-creator-t2-review-20261026.md",
+  "policy": "按T组第9—12项连续核查；原作企画制作、技术开发、配信及品牌身份分开，解除专题待核必须核对自身旧状态，不沿母子主体传播。登记包括明确缺口，不表示所有职责已解决。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZT3-I01",
+      "entityId": "entity-name-0b5ee01c0e65",
+      "rawName": "TOHO Games",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.toho.co.jp/sns/",
+        "https://sakuna-hinuka.jp/news/209/"
+      ],
+      "note": "东宝官方SNS列表正文直接称TOHO Games为东宝的游戏レーベル，核为brand，与东宝公司节点分开。显式preserveReleaseRoles:true保留两条历史publisher，不因品牌身份自动生成publishingBrand、originalPublishingBrand或制作角色；不从当前品牌关系推所有历史游戏合同归属。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZT3-I02",
+      "entityId": "entity-name-9832231b6baa",
+      "rawName": "徳間書店インターメディア",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://id.ndl.go.jp/auth/ndlna/001283900",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000000043118",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I028765203"
+      ],
+      "note": "国会图书馆原始典据001283900直接列徳間書店インターメディア株式会社及简称，来源为1996ファミマガweekly；其Technopolis、Famimaga书目交叉支持历史出版公司，核为company。NDL是书目权威记录，不冒称公司登记原件。旧GAMEテクノポリス等别名兼容映射保留，不把品牌文字等同法人正式名，也不据出版公司身份推八部游戏原作制作。"
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZT3-C01",
+      "entityId": "entity-toho",
+      "dossierId": "toho",
+      "workId": "toho-phanpara",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "企画・制作：株式会社サムザップ、東宝株式会社",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "before": {
+        "roles": [
+          "catalogueAssociation"
+        ],
+        "group": "unresolved",
+        "status": "pendingRole"
+      },
+      "source": "https://www.cyberagent.co.jp/news/detail/id=29520",
+      "note": "2023-11-21首发原公告具名东宝参与游戏企画・制作，另列Sumzap负责开发・运营；originalProduction表示共同参与原作制作，不断言东宝技术开发、独占创作或合同发行。仅解除东宝专题本作一条旧待核，保留Sumzap既有制作，不传播到TOHO Games、其它IP或书目位置。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-tinmachine",
+      "name": "TinMachine",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://tinmachine.co.jp/release.html",
+        "https://tinmachine.co.jp/release/tinmachine_20060530.pdf",
+        "https://www.tinmachine.co.jp/release/tinmachine_20080527.pdf",
+        "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf"
+      ],
+      "reason": "六部既有范围的原作制作与逐手机版移植开发仍待STAFF、明确制作实绩或原件。2005-10-11及2007-08-02公告链接本次不可读，不声称重验其正文；对可读人形公告看过两页扫描，其余两份只核文本。GAINAX授权、监修和原作职责保持独立。",
+      "workIds": [
+        "g814",
+        "g821",
+        "g827",
+        "g828",
+        "g829",
+        "gainax-evarpg"
+      ]
+    },
+    {
+      "entityId": "entity-name-0b5ee01c0e65",
+      "name": "TOHO Games",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.toho.co.jp/sns/",
+        "https://sakuna-hinuka.jp/news/209/"
+      ],
+      "reason": "现官网品牌说明不独立证明Hinuka逐作开发、制作或品牌启用时点。首发活动页可读但不是开发STAFF；不新建2026新预告作品、不补后发移植、不追加历史运营起止或推定品牌独占制作。",
+      "workIds": [
+        "toho-sakuna-hinuka"
+      ]
+    },
+    {
+      "entityId": "entity-toho",
+      "name": "TOHO（東宝）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://www.cyberagent.co.jp/news/detail/id=29520",
+        "https://www.cyberagent.co.jp/news/print/id=29520",
+        "https://www.toho.co.jp/anime/lineup-games/"
+      ],
+      "reason": "除Phantom Parade具名企画制作外，其余十七项专题引用的历史开发、授权、监修、联合制作与发行合同仍分别待核。Kaiju8、Hinuka及其实际开发者不因公司／品牌关联自动补角色；PC与MSX Lupin独立作品身份保留，书目与主库位置不变。",
+      "workIds": [
+        "g112",
+        "g630",
+        "g1212",
+        "g1213",
+        "g1214",
+        "toho-cagliostro-msx",
+        "toho-babylon-msx",
+        "toho-touch-fc",
+        "toho-ranma",
+        "toho-super-godzilla",
+        "toho-yamato",
+        "toho-trading-battle",
+        "toho-times-of-lore",
+        "toho-phanpara",
+        "toho-kaiju8",
+        "toho-sakuna-hinuka",
+        "toho-cinemascope-godzilla",
+        "toho-touch-pc"
+      ]
+    },
+    {
+      "entityId": "entity-name-9832231b6baa",
+      "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+      "status": "historicalIdentityOrVersionRolesDeferred",
+      "sources": [
+        "https://id.ndl.go.jp/auth/ndlna/001283900",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000000043118",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I028765203"
+      ],
+      "reason": "八部游戏的原作开发、GAMEテクノポリス制作品牌范围及后发版开发仍待逐作STAFF。原手册扫描线索Tesera Booklet超浏览读取大小，Love Quest手册候选链接不可读，未声称看过扫描。1985设立及1997合并线索未用书目年份替代核定，不改日期或与德间母公司合并ID。",
+      "workIds": [
+        "g918",
+        "g919",
+        "g920",
+        "g921",
+        "g922",
+        "tokuma-filena",
+        "tokuma-lovequest",
+        "tokuma-littlemaster3"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-tinmachine",
+      "name": "TinMachine",
+      "status": "existingCompanyProductionRolesDeferred",
+      "sources": [
+        "https://tinmachine.co.jp/release.html",
+        "https://tinmachine.co.jp/release/tinmachine_20060530.pdf",
+        "https://www.tinmachine.co.jp/release/tinmachine_20080527.pdf",
+        "https://www.tinmachine.co.jp/release/tinmachine_20060901.pdf"
+      ],
+      "reason": "保留既有TinMachine公司身份及六部作品的十一条发行署名。原站2006人形たちの宴公告两页扫描可读，明确配信和GAINAX相关应用；2008序A.D.V.与2006使徒育成公告可读文本也以配信为核心。这些材料及版权栏不足以独立证明逐作开发，不把2006—2007手机移植倒填1992／1993原作开发。",
+      "workIds": [
+        "g814",
+        "g821",
+        "g827",
+        "g828",
+        "g829",
+        "gainax-evarpg"
+      ]
+    },
+    {
+      "entityId": "entity-name-0b5ee01c0e65",
+      "name": "TOHO Games",
+      "status": "brandIdentityReviewedRolesPreserved",
+      "sources": [
+        "https://www.toho.co.jp/sns/",
+        "https://sakuna-hinuka.jp/news/209/"
+      ],
+      "reason": "东宝官方SNS列表正文直接称TOHO Games为东宝的游戏レーベル，核为brand，与东宝公司节点分开。显式preserveReleaseRoles:true保留两条历史publisher，不因品牌身份自动生成publishingBrand、originalPublishingBrand或制作角色；不从当前品牌关系推所有历史游戏合同归属。",
+      "workIds": [
+        "toho-sakuna-hinuka"
+      ]
+    },
+    {
+      "entityId": "entity-toho",
+      "name": "TOHO（東宝）",
+      "status": "scopedPlanningAndProductionReviewed",
+      "sources": [
+        "https://www.cyberagent.co.jp/news/detail/id=29520",
+        "https://www.cyberagent.co.jp/news/print/id=29520",
+        "https://www.toho.co.jp/anime/lineup-games/"
+      ],
+      "reason": "2023-11-21首发原公告及其印刷版明确企画・制作为Sumzap与东宝，开发・运营为Sumzap。只追加toho-phanpara一条originalProduction，表示东宝参与游戏企画制作而非程序开发；核对该作东宝专题旧pendingRole后解除一条待核，保留S10已登记Sumzap原作制作与实际发行。",
+      "workIds": [
+        "g112",
+        "g630",
+        "g1212",
+        "g1213",
+        "g1214",
+        "toho-cagliostro-msx",
+        "toho-babylon-msx",
+        "toho-touch-fc",
+        "toho-ranma",
+        "toho-super-godzilla",
+        "toho-yamato",
+        "toho-trading-battle",
+        "toho-times-of-lore",
+        "toho-phanpara",
+        "toho-kaiju8",
+        "toho-sakuna-hinuka",
+        "toho-cinemascope-godzilla",
+        "toho-touch-pc"
+      ]
+    },
+    {
+      "entityId": "entity-name-9832231b6baa",
+      "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+      "status": "historicalCompanyIdentityReviewed",
+      "sources": [
+        "https://id.ndl.go.jp/auth/ndlna/001283900",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000000043118",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I028765203"
+      ],
+      "reason": "国会图书馆原始典据001283900直接列徳間書店インターメディア株式会社及简称，来源为1996ファミマガweekly；其Technopolis、Famimaga书目交叉支持历史出版公司，核为company。NDL是书目权威记录，不冒称公司登记原件。旧GAMEテクノポリス等别名兼容映射保留，不把品牌文字等同法人正式名，也不据出版公司身份推八部游戏原作制作。",
+      "workIds": [
+        "g918",
+        "g919",
+        "g920",
+        "g921",
+        "g922",
+        "tokuma-filena",
+        "tokuma-lovequest",
+        "tokuma-littlemaster3"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "T",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 19,
+    "processedEntityIds": [
+      "entity-te_soft",
+      "entity-name-e135870e3299",
+      "entity-taito",
+      "entity-name-08cbddd5e450",
+      "entity-name-3fc0babaf7f8",
+      "entity-name-b01843ba1268",
+      "entity-tiare",
+      "entity-name-5f291db8e809",
+      "entity-tinmachine",
+      "entity-name-0b5ee01c0e65",
+      "entity-toho",
+      "entity-name-9832231b6baa"
+    ],
+    "nextEntityId": "entity-tokuma",
+    "nextName": "Tokuma Shoten（徳間書店）",
+    "queue": [
+      {
+        "entityId": "entity-te_soft",
+        "name": "T&E SOFT",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-e135870e3299",
+        "name": "Tactics（NEXTON）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-taito",
+        "name": "TAITO（タイトー）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-08cbddd5e450",
+        "name": "TAKERU",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-3fc0babaf7f8",
+        "name": "TamaMako gaming",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-b01843ba1268",
+        "name": "Team Salvato",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tiare",
+        "name": "Tiare",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-5f291db8e809",
+        "name": "TikGames",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tinmachine",
+        "name": "TinMachine",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0b5ee01c0e65",
+        "name": "TOHO Games",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-toho",
+        "name": "TOHO（東宝）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-9832231b6baa",
+        "name": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-tokuma",
+        "name": "Tokuma Shoten（徳間書店）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-2793ee33b030",
+        "name": "Tokyo Shoseki",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-aa2256b9c684",
+        "name": "TOKYOTOON",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-toneworks",
+        "name": "tone work’s",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-679a14238228",
+        "name": "Tonkin House（トンキンハウス）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-8039f82ef72c",
+        "name": "Toshiba EMI（東芝EMI）",
+        "status": "pending"
+      },
+      {
+        "entityId": "entity-name-77c5d6e9dcc8",
+        "name": "TYPE-MOON",
+        "status": "pending"
+      }
+    ]
+  }
+}
