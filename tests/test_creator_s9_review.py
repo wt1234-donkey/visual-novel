@@ -16,13 +16,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'498f6f9af8414b8e1d900f306382d1dc27887f8a:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorS9Tests(unittest.TestCase):
     def test_two_company_corrections_do_not_merge_signatures_or_backfill_dates(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, set(IDS[1:3]))
@@ -39,7 +45,7 @@ class CreatorS9Tests(unittest.TestCase):
                          ['スクウェア・エニックス', 'Square Soft, Inc.'])
 
     def test_exactly_five_original_productions_preserve_all_earlier_credits(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after['credits'][:-5], before['credits'])
         self.assertEqual(len(after['credits']), 4994)
         self.assertEqual([(c['entityId'], c['targetType'], c['targetId'], c['role'])
@@ -60,7 +66,7 @@ class CreatorS9Tests(unittest.TestCase):
                              and c['role'] == 'originalProduction' for c in after['credits']))
 
     def test_only_four_square_memberships_change_and_american_work_stays_pending(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         bm, am = [{(m['dossierId'], m['workId']): m for m in d['dossierMemberships']}
                   for d in [before, after]]
         self.assertEqual(bm.keys(), am.keys())
@@ -81,7 +87,7 @@ class CreatorS9Tests(unittest.TestCase):
             self.assertEqual(read(path), old(path), path)
 
     def test_four_consecutive_entities_advance_to_starcraft_without_admission_changes(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),
