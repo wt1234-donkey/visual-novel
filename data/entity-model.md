@@ -206,3 +206,8 @@ Sol Press及两条Sony Computer Entertainment原文独立订正为历史公司�
 ## S组第九批历史主体与原作创作（2026-10-26）
 
 Square Enix日文署名及美国Square Soft独立核为company，2008前后同名公司时期保留缺口，不倒填日期或合并节点。美国开发者亲述与手册转录支持Evermore一条制作；官方加藤简介支持日本Square四作原作创作参与，原发行不推开发。四项Square专题由发行组显示为原作组，Evermore父专题仍待核，内容和收录位置保持。S进度36／42，下一项StarCraft。详见[独立审计](entity-creator-s9-review-20261026.md)。
+
+
+## S组第十批历史公司与联合发行边界（2026-10-26）
+
+StarCraft、Sumzap、Sunnyside Soft依原厂手册／公司概要分别核定company；Sunflower Ocean仅确认联合发行，保留unknown。具名上线公告与原期刊开发说明支持Sumzap一部、Sunnyside两部原作制作，产品线收购不建法人合并关系，三个父专题引用仍pendingRole。原作品、内容、发行及年代保持，S进度40／42，下一项Syawase Works China。详见[独立审计](entity-creator-s10-review-20261026.md)。
