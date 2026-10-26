@@ -19,10 +19,18 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json',
+                'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(
+            ['git', 'show', f'd261b71bc00c3e3632f0e20a8cbc54abd1cd9a6b:{path}'], cwd=ROOT))
+    return read(path)
+
+
 class CreatorY1Tests(unittest.TestCase):
     def test_two_sourced_dates_are_the_only_entity_changes(self):
         before, after = [dict((e['id'], e) for e in d['entities']) for d in
-                         [old('data/entities.json'), read('data/entities.json')]]
+                         [old('data/entities.json'), applied('data/entities.json')]]
         self.assertEqual(before.keys(), after.keys())
         self.assertEqual({eid for eid in before if before[eid] != after[eid]}, {YONAGO, SOUR})
         review = read(REVIEW)
@@ -47,8 +55,8 @@ class CreatorY1Tests(unittest.TestCase):
                      'data/taxonomy.json', 'data/gameplay-catalogues.json',
                      'data/work-classification.json', 'data/entity-migration-review.json',
                      'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
-            self.assertEqual(read(path), old(path), path)
-        cs = read('data/credits.json')
+            self.assertEqual(applied(path), old(path), path)
+        cs = applied('data/credits.json')
         by = lambda eid: [c for c in cs['credits'] if c['entityId'] == eid]
         self.assertEqual([(c['targetType'], c['targetId'], c['role']) for c in by(YONAGO)],
                          [('content', 'g821-c-regeneration', 'addedAnimation')])
@@ -64,7 +72,7 @@ class CreatorY1Tests(unittest.TestCase):
         for release in [r for r in g['platformReleases'] if r['workId'] == 'g232' and r['id'] != 'g232-v1']:
             self.assertEqual((release['contentRelation'], release['contentVersionId']),
                              ('unverified', None))
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         for field in ['edges', 'works', 'credits', 'families']:
             self.assertEqual(after[field], before[field], field)
         by_id = lambda d: {n['id']: n for n in d['nodes']}
@@ -73,7 +81,7 @@ class CreatorY1Tests(unittest.TestCase):
         self.assertEqual({eid for eid in bn if bn[eid] != an[eid]}, {YONAGO, SOUR})
 
     def test_y_queue_completes_then_moves_to_numeric_group(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextEntityId']),

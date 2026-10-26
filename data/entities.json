@@ -1709,11 +1709,20 @@
         "dramatic create"
       ],
       "sources": [
-        "https://www.hunex.co.jp/archives/service/dramaticcreate"
+        "https://www.hunex.co.jp/archives/service/dramaticcreate",
+        "https://www.hunex.co.jp/archives/company/history"
       ],
       "verification": "sourceReviewed",
       "historyNote": "",
-      "dates": []
+      "dates": [
+        {
+          "kind": "brandActivityStarted",
+          "value": "2014",
+          "precision": "year",
+          "source": "https://www.hunex.co.jp/archives/company/history",
+          "status": "sourceReviewed"
+        }
+      ]
     },
     {
       "id": "entity-tinmachine",
@@ -2415,15 +2424,18 @@
     {
       "id": "entity-name-ee1a7668cd89",
       "name": "07th Expansion",
-      "type": "unknown",
+      "type": "team",
       "aliases": [
         "07th Expansion"
       ],
       "sources": [
-        "https://07th-expansion.net/Soft/Prolog.htm"
+        "https://07th-expansion.net/Soft/Prolog.htm",
+        "https://07th-expansion.net/contact",
+        "https://07th-expansion.net/umi_saku/",
+        "https://07th-expansion.net/otameshi"
       ],
-      "verification": "unresolved",
-      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "verification": "sourceReviewed",
+      "historyNote": "官网明确07th Expansion为同人PC游戏中心的同人サークル，海猫介绍自称本社团2007年发表原作，下载页介绍其制作的小说游戏。核定制作团队而非法人公司；g051-v1与g174-v1原publisher原样保持，后发ENTERGRAM版本不归于本社团开发。",
       "dates": []
     },
     {
