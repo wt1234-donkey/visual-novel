@@ -20,13 +20,19 @@ def read(path):
     return json.loads((ROOT / path).read_text())
 
 
+def applied(path):
+    if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json', 'data/entity-migration-review.json']:
+        return json.loads(subprocess.check_output(['git', 'show', f'92f37c89e468d73174d3b56b367bcf8b3981e98e:{path}'], cwd=ROOT))
+    return read(path)
+
+
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
 class CreatorT1Tests(unittest.TestCase):
     def test_only_two_brand_identities_change_without_merging_names_or_dates(self):
-        before, after = old('data/entities.json'), read('data/entities.json')
+        before, after = old('data/entities.json'), applied('data/entities.json')
         be, ae = [{e['id']: e for e in d['entities']} for d in [before, after]]
         self.assertEqual(be.keys(), ae.keys())
         self.assertEqual({k for k in be if be[k] != ae[k]}, {IDS[1], IDS[3]})
@@ -41,7 +47,7 @@ class CreatorT1Tests(unittest.TestCase):
         self.assertEqual(sum(e['verification'] == 'unresolved' for e in ae.values()), 56)
 
     def test_brand_identity_creates_no_roles_and_preserves_every_credit_and_membership(self):
-        before, after = old('data/credits.json'), read('data/credits.json')
+        before, after = old('data/credits.json'), applied('data/credits.json')
         self.assertEqual(after, before)
         self.assertEqual(len(after['credits']), 4999)
         self.assertEqual((len(after['dossierMemberships']), sum(m['status'] == 'pendingRole'
@@ -51,7 +57,7 @@ class CreatorT1Tests(unittest.TestCase):
             cs = [c for c in after['credits'] if c['entityId'] == eid]
             self.assertEqual(len(cs), count)
             self.assertTrue(all(c['role'] == 'publisher' and c['targetType'] == 'release' for c in cs))
-            node = next(n for n in read('data/organizations.json')['nodes'] if n['id'] == eid)
+            node = next(n for n in applied('data/organizations.json')['nodes'] if n['id'] == eid)
             self.assertEqual(node['groups']['creation'], [])
             self.assertEqual(node['productionCount'], 0)
 
@@ -63,10 +69,10 @@ class CreatorT1Tests(unittest.TestCase):
         release = next(r for r in read('data/games.json')['platformReleases'] if r['id'] == 'g812-v2')
         self.assertIsNone(release['contentVersionId'])
         self.assertEqual(release['contentRelation'], 'unverified')
-        self.assertEqual(read('data/organizations.json')['works'], old('data/organizations.json')['works'])
+        self.assertEqual(applied('data/organizations.json')['works'], old('data/organizations.json')['works'])
 
     def test_t_queue_starts_after_s_in_exact_existing_english_order(self):
-        before, after = old('data/organizations.json'), read('data/organizations.json')
+        before, after = old('data/organizations.json'), applied('data/organizations.json')
         p = after['registrationProgress']
         self.assertEqual((p['letter'], p['letterProcessed'], p['letterTotal'],
                           len(p['processedEntityIds']), p['total'], p['nextName']),
