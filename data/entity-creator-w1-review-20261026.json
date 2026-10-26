@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "53139aa69307e698f21cea1cccb06453a46c887e",
+  "audit": "data/entity-creator-w1-review-20261026.md",
+  "previousReview": "data/entity-creator-v1-review-20261026.md",
+  "policy": "按W组五项连续核查，区分WFS法律公司与其游戏品牌、WhisperGames发行名义与法人、Wolf历史公司与1985街机原作；逐作制作与2022 Steam发行开发分层，不新增未核内容或改原出版署名。",
+  "identityCorrections": [
+    {
+      "reviewId": "AZW1-I01",
+      "entityId": "entity-name-a7663faeee46",
+      "rawName": "WFS（WRIGHT FLYER STUDIOS）",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.wfs.games/news/20181001_01.html",
+        "https://www.wfs.games/news/20210830_01.html",
+        "https://www.wfs.games/news/20220210_01.html"
+      ],
+      "note": "2018年Wright Flyer Studios株式会社明确更名株式会社WFS；2021和2022官方将同名Wright Flyer Studios列为WFS的游戏品牌。复合原发行名以WFS这一现公司承接其旧法人名称，独立WRIGHT FLYER STUDIOS节点表述产品品牌；原移动版两条publisher保持。"
+    },
+    {
+      "reviewId": "AZW1-I03",
+      "entityId": "entity-name-0d7ac5f6433b",
+      "rawName": "WhisperGames",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.whisperinteractive.com/",
+        "https://www.gamescom.global/en/exhibitor/whisper-interactive",
+        "https://store.steampowered.com/app/1909810/Seventh_Lair/"
+      ],
+      "note": "WhisperGames自家网站以此名对外经营全球发行与本地化；展会具名法人为Whisper Interactive (Xiamen) Co., Ltd.，Steam在Seventh Lair将WhisperGames列为Publisher、NOVECT列Developer。仅将公开发行名义核为brand，与法律公司名称区分；原publisher保留，不推本地化或开发。",
+      "preserveReleaseRoles": true
+    },
+    {
+      "reviewId": "AZW1-I04",
+      "entityId": "entity-name-10c3ce8b67e2",
+      "rawName": "Wolf Team",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.gamepres.org/catalog/?cat=1&id=8811003934009&nav=brand",
+        "https://www.gamepres.org/catalog/?id=8811000812003",
+        "https://www.gavas.jp/products/detail.php?product_id=5814"
+      ],
+      "note": "游戏保存协会的具体1988 Arcus和1990あーくしゅ馆藏把Wolf Team列为品牌、発売元明确株式会社ウルフチーム，核历史公司身份。现有1992 Mega-CD Road Blaster FX发行保留；不能以1985 Data East街机原作署名推Wolf原作制作或移植开发。"
+    },
+    {
+      "reviewId": "AZW1-I05",
+      "entityId": "entity-name-9e9cc680be5a",
+      "rawName": "WRIGHT FLYER STUDIOS",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "sources": [
+        "https://www.wfs.games/news/20210830_01.html",
+        "https://www.wfs.games/news/20220210_01.html",
+        "https://heaven-burns-red.com/",
+        "https://store.steampowered.com/app/1973710/"
+      ],
+      "note": "WFS官方2021品牌公告及2022首发说明明确Wright Flyer Studios为WFS游戏品牌；原公司名在2018已改为WFS。Steam对应2022 PC发行保留旧publisher；该品牌与WFS公司节点不合并。",
+      "preserveReleaseRoles": true
+    }
+  ],
+  "creditAdditions": [
+    {
+      "reviewId": "AZW1-C01",
+      "entityId": "entity-name-9e9cc680be5a",
+      "dossierId": null,
+      "workId": "key-rpg-hbr",
+      "targetType": "work",
+      "role": "productionBrand",
+      "rawCredit": "WRIGHT FLYER STUDIOS × Key",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeWorkRoles": [],
+      "source": "https://heaven-burns-red.com/",
+      "note": "游戏第一方官网具名企画・制作WRIGHT FLYER STUDIOS × Key，原2022移动作品限定品牌共同制作；Key既有coDeveloper保持，公司WFS移动端publisher不能自动变为原作开发。"
+    },
+    {
+      "reviewId": "AZW1-C02",
+      "entityId": "entity-name-9e9cc680be5a",
+      "dossierId": null,
+      "workId": "key-rpg-hbr",
+      "targetType": "release",
+      "targetId": "key-rpg-hbr-v3",
+      "role": "developer",
+      "rawCredit": "WRIGHT FLYER STUDIOS",
+      "status": "sourceReviewed",
+      "expectedPlacement": "related",
+      "beforeTargetRoles": [
+        "publisher"
+      ],
+      "source": "https://store.steampowered.com/app/1973710/",
+      "note": "Steam商店明确2022-08-10 PC发行Developer WRIGHT FLYER STUDIOS；仅此已登记PC发行层补developer，现有contentRelation unverified与contentVersionId null不改，不据此回填移动版。"
+    }
+  ],
+  "deferredReviews": [
+    {
+      "entityId": "entity-name-a7663faeee46",
+      "name": "WFS（WRIGHT FLYER STUDIOS）",
+      "status": "historicalCompanyAndBrandRelationDeferred",
+      "sources": [
+        "https://www.wfs.games/news/20181001_01.html",
+        "https://www.wfs.games/news/20210830_01.html",
+        "https://www.wfs.games/news/20220210_01.html"
+      ],
+      "reason": "WFS公司更名和品牌分层已有同期公告，本批保留两个原发行节点原文与当前ID，不在缺少独立关系审计入口的情况下新增operatedBy时段关系；WFS版权和集团持股不自动承接Key分工，移动版发行publisher不等于独立原作开发。",
+      "workIds": [
+        "key-rpg-hbr"
+      ]
+    },
+    {
+      "entityId": "entity-whale",
+      "name": "Whale（ホエール）",
+      "status": "specificWorkProductionDeferred",
+      "sources": [
+        "https://www.mirai-soft.net/guide.php"
+      ],
+      "reason": "原Whale导览直读502，虽既有brand和g1263发行品牌均保留，本批不依百科或旧产品第三方信息追加原作制作；minatosoft与hawkeye的两项pendingRole维持。",
+      "workIds": [
+        "g1263"
+      ]
+    },
+    {
+      "entityId": "entity-name-0d7ac5f6433b",
+      "name": "WhisperGames",
+      "status": "legalIdentityAndLocalizationDeferred",
+      "sources": [
+        "https://www.whisperinteractive.com/",
+        "https://www.gamescom.global/en/exhibitor/whisper-interactive",
+        "https://store.steampowered.com/app/1909810/Seventh_Lair/"
+      ],
+      "reason": "WhisperGames品牌署名与展会具名Whisper Interactive (Xiamen) Co., Ltd.分开，未核商标注册或双方工商连续性；官网自述一般本地化业务不足以证明其对Seventh Lair某版实际翻译，NOVECT原作制作保持。",
+      "workIds": [
+        "g193"
+      ]
+    },
+    {
+      "entityId": "entity-name-10c3ce8b67e2",
+      "name": "Wolf Team",
+      "status": "historicalVersionDevelopmentDeferred",
+      "sources": [
+        "https://www.gamepres.org/catalog/?cat=1&id=8811003934009&nav=brand",
+        "https://www.gamepres.org/catalog/?id=8811000812003",
+        "https://www.gavas.jp/products/detail.php?product_id=5814"
+      ],
+      "reason": "具体馆藏对1988和1990历史公司身份有效，不能直接证明1992 Mega-CD Road Blaster FX的人员或技术移植职责；原1985 Data East原作与1992增补内容保持区分，公司设立、沿革及股权日期不补写。",
+      "workIds": [
+        "g085"
+      ]
+    },
+    {
+      "entityId": "entity-name-9e9cc680be5a",
+      "name": "WRIGHT FLYER STUDIOS",
+      "status": "brandAndPlatformDevelopmentReviewed",
+      "sources": [
+        "https://www.wfs.games/news/20210830_01.html",
+        "https://www.wfs.games/news/20220210_01.html",
+        "https://heaven-burns-red.com/",
+        "https://store.steampowered.com/app/1973710/"
+      ],
+      "reason": "第一方原作官网“企画・制作”仅支持HBR一条品牌制作；Steam商店Developer只支持2022 PC发行一条。未确认Steam与移动首批内容同一，未知contentRelation保留；没有公司WFS、Key母公司VISUAL ARTS自动开发职责。",
+      "workIds": [
+        "key-rpg-hbr"
+      ]
+    }
+  ],
+  "reviewedEntities": [
+    {
+      "entityId": "entity-name-a7663faeee46",
+      "name": "WFS（WRIGHT FLYER STUDIOS）",
+      "status": "companyIdentityReviewed",
+      "sources": [
+        "https://www.wfs.games/news/20181001_01.html",
+        "https://www.wfs.games/news/20210830_01.html",
+        "https://www.wfs.games/news/20220210_01.html"
+      ],
+      "reason": "2018年Wright Flyer Studios株式会社明确更名株式会社WFS；2021和2022官方将同名Wright Flyer Studios列为WFS的游戏品牌。复合原发行名以WFS这一现公司承接其旧法人名称，独立WRIGHT FLYER STUDIOS节点表述产品品牌；原移动版两条publisher保持。",
+      "workIds": [
+        "key-rpg-hbr"
+      ]
+    },
+    {
+      "entityId": "entity-whale",
+      "name": "Whale（ホエール）",
+      "status": "existingBrandIdentityReviewed",
+      "sources": [
+        "https://www.mirai-soft.net/guide.php"
+      ],
+      "reason": "既有品牌／原作发行品牌档案保留；本批官方旧导览直读502，缺少可读逐作制作STAFF。不把minatosoft和hawkeye专题关联或旧发行品牌自动转为原作制作。",
+      "workIds": [
+        "g1263"
+      ]
+    },
+    {
+      "entityId": "entity-name-0d7ac5f6433b",
+      "name": "WhisperGames",
+      "status": "brandIdentityReviewed",
+      "sources": [
+        "https://www.whisperinteractive.com/",
+        "https://www.gamescom.global/en/exhibitor/whisper-interactive",
+        "https://store.steampowered.com/app/1909810/Seventh_Lair/"
+      ],
+      "reason": "WhisperGames自家网站以此名对外经营全球发行与本地化；展会具名法人为Whisper Interactive (Xiamen) Co., Ltd.，Steam在Seventh Lair将WhisperGames列为Publisher、NOVECT列Developer。仅将公开发行名义核为brand，与法律公司名称区分；原publisher保留，不推本地化或开发。",
+      "workIds": [
+        "g193"
+      ]
+    },
+    {
+      "entityId": "entity-name-10c3ce8b67e2",
+      "name": "Wolf Team",
+      "status": "companyIdentityReviewed",
+      "sources": [
+        "https://www.gamepres.org/catalog/?cat=1&id=8811003934009&nav=brand",
+        "https://www.gamepres.org/catalog/?id=8811000812003",
+        "https://www.gavas.jp/products/detail.php?product_id=5814"
+      ],
+      "reason": "游戏保存协会的具体1988 Arcus和1990あーくしゅ馆藏把Wolf Team列为品牌、発売元明确株式会社ウルフチーム，核历史公司身份。现有1992 Mega-CD Road Blaster FX发行保留；不能以1985 Data East街机原作署名推Wolf原作制作或移植开发。",
+      "workIds": [
+        "g085"
+      ]
+    },
+    {
+      "entityId": "entity-name-9e9cc680be5a",
+      "name": "WRIGHT FLYER STUDIOS",
+      "status": "brandIdentityReviewed",
+      "sources": [
+        "https://www.wfs.games/news/20210830_01.html",
+        "https://www.wfs.games/news/20220210_01.html",
+        "https://heaven-burns-red.com/",
+        "https://store.steampowered.com/app/1973710/"
+      ],
+      "reason": "WFS官方2021品牌公告及2022首发说明明确Wright Flyer Studios为WFS游戏品牌；原公司名在2018已改为WFS。Steam对应2022 PC发行保留旧publisher；该品牌与WFS公司节点不合并。",
+      "workIds": [
+        "key-rpg-hbr"
+      ]
+    }
+  ],
+  "progress": {
+    "letter": "W",
+    "normalization": "英文字母A—Z；拉丁重音折合基本字母；数字和其他名称置后",
+    "total": 5,
+    "processedEntityIds": [
+      "entity-name-a7663faeee46",
+      "entity-whale",
+      "entity-name-0d7ac5f6433b",
+      "entity-name-10c3ce8b67e2",
+      "entity-name-9e9cc680be5a"
+    ],
+    "nextEntityId": "entity-xbox_game_studios",
+    "nextName": "Xbox Game Studios",
+    "queue": [
+      {
+        "entityId": "entity-name-a7663faeee46",
+        "name": "WFS（WRIGHT FLYER STUDIOS）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-whale",
+        "name": "Whale（ホエール）",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-0d7ac5f6433b",
+        "name": "WhisperGames",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-10c3ce8b67e2",
+        "name": "Wolf Team",
+        "status": "reviewed"
+      },
+      {
+        "entityId": "entity-name-9e9cc680be5a",
+        "name": "WRIGHT FLYER STUDIOS",
+        "status": "reviewed"
+      }
+    ]
+  }
+}
