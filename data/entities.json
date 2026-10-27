@@ -4377,18 +4377,29 @@
       "name": "Brøderbund",
       "type": "company",
       "aliases": [
-        "Brøderbund"
+        "Brøderbund",
+        "Broderbund",
+        "Brøderbund Software"
       ],
       "sources": [
         "https://cyan.com/games/myst/",
         "https://www.jordanmechner.com/en/games-movies/prince-of-persia/",
         "https://www.jordanmechner.com/downloads/archive/whoswho.pdf",
         "https://cyan.com/company/support/",
-        "https://cyan.com/company/about-cyan/"
+        "https://cyan.com/company/about-cyan/",
+        "https://www.museumofplay.org/blog/preserving-the-broderbund-story/"
       ],
       "verification": "sourceReviewed",
-      "historyNote": "《Prince of Persia》作者本人明确Brøderbund发行1989年Apple II原版，档案称Brøderbund Software有CEO和共同创办人；Cyan明确Brøderbund曾发行《Myst》实体版并自述本社创作。仅核定既有署名的公司身份，不将发行方改成两部原作的开发方，也不并入后续版权公司。",
-      "dates": []
+      "historyNote": "Doug与Gary Carlston于1980年创立Brøderbund；1998年由The Learning Company收购。1999年TLC并入Mattel是后续母公司变化，不把新主体倒填1980—1997游戏。Myst、Last Express分别保留Cyan与Smoking Car的实际创作；早期Ultrasoft作品只确认历史发行关系。",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1980",
+          "precision": "year",
+          "source": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
+          "status": "sourceReviewed"
+        }
+      ]
     },
     {
       "id": "entity-name-40ed6431d1a6",
@@ -7629,6 +7640,20 @@
       ],
       "firstYearBasis": "关联主库作品最早原作首发年",
       "firstYear": 1992
+    },
+    {
+      "id": "broderbund",
+      "name": "Brøderbund",
+      "dossierType": "company",
+      "entityIds": [
+        "entity-name-e0c32a99a906"
+      ],
+      "scope": "以Brøderbund历史出版关系聚合叙事作品；Myst由Cyan制作，The Last Express由Smoking Car Productions制作。早期Ultrasoft输入式冒险作专题书目，其他教育问答、运动与工具软件不计叙事作品。",
+      "sources": [
+        "https://www.museumofplay.org/blog/preserving-the-broderbund-story/"
+      ],
+      "firstYearBasis": "关联主库作品最早原作首发年",
+      "firstYear": 1993
     }
   ],
   "displayNames": {

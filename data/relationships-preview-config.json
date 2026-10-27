@@ -169,6 +169,17 @@
         "preview-bandai-spirits",
         "preview-banpresto-prize-brand"
       ]
+    },
+    {
+      "id": "broderbund",
+      "title": "Brøderbund 与 The Learning Company",
+      "subtitle": "1980创办、历史出版与1998收购",
+      "root": "preview-learning-company-1998",
+      "focus": "entity-name-e0c32a99a906",
+      "entityIds": [
+        "preview-learning-company-1998",
+        "entity-name-e0c32a99a906"
+      ]
     }
   ],
   "previewNodes": [
@@ -371,6 +382,29 @@
       ],
       "verification": "previewReviewed",
       "historyNote": "官方史记2019年4月整合后作为景品类别品牌启用。此展示节点不是2009—2013年游戏的已核制作品牌，不继承旧游戏公司职责。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-learning-company-1998",
+      "name": "The Learning Company（1998年收购方）",
+      "type": "company",
+      "aliases": [
+        "TLC"
+      ],
+      "sources": [
+        "https://www.museumofplay.org/blog/preserving-the-broderbund-story/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "The Learning Company于1998年收购Brøderbund；此展示节点仅用于当年的组织沿革，不将早期游戏署名转移给收购方。",
       "dates": [],
       "stats": {
         "main": 0,
@@ -622,6 +656,18 @@
       "source": "https://www.bandaispirits.co.jp/about/business/",
       "dateLabel": "2019年4月／现行官网",
       "note": "官方沿革与业务页确认景品品牌；不推定2009年起的游戏品牌由BANDAI SPIRITS运营，不将旧游戏目录转作景品品牌创作。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "broderbund-tlc-acquisition-1998",
+      "parent": "preview-learning-company-1998",
+      "child": "entity-name-e0c32a99a906",
+      "kind": "family",
+      "label": "1998年收购",
+      "status": "previewReviewed",
+      "source": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
+      "dateLabel": "1998年",
+      "note": "只确认收购关系与年份；法人实体与后续权利承接未核，不将早期发行职责倒归The Learning Company。",
       "basis": "previewSupplement"
     }
   ],
