@@ -29,6 +29,9 @@ def validate_edition_credits(work):
                and x['reason'] and source_url_valid(x['source']) for x in credits), '发行关系字段不完整或早于原作'
 
 work_ids = {work['id'] for work in works}
+from work_notes import validate_work_notes
+validate_work_notes(json.loads((ROOT / 'data/work-notes.json').read_text(encoding='utf-8')),
+                    work_ids, {c['id'] for c in coverage['companies']})
 version_ids = {version['id'] for version in versions}
 assert len(work_ids) == len(works) and len(version_ids) == len(versions), '重复 ID'
 assert {work['category'] for work in works} == {'文字冒险', '视觉小说', '互动动画', 'Galgame'}

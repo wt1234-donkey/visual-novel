@@ -20304,7 +20304,7 @@
     "leland": {
       "title": "Leland 作品与玩法类型参考",
       "updated": "2026-10-27",
-      "scope": "原版互动动画正文只复用g045；下列11项沿用既有Cinematronics专题的后继公司参考索引，并以原版传单目录核对类型与边界。目录行可能是别名、套件或年份异文，不作完整发行总数。",
+      "scope": "按本次Leland清单补齐街机、未发行原型、转换套件、家用机与Williams体系的团队延续。正文仍只引用g045；Space Ace套件关联既有g044。套件、改作及团队项目独立标明，表格行数不代表独立游戏总数或主库收录数。",
       "groups": [
         {
           "title": "已收主库的叙事互动动画",
@@ -20317,8 +20317,8 @@
           ]
         },
         {
-          "title": "1987—1991年体育、竞速、棋盘与动作参考",
-          "note": "现有专题目录中的Leland组逐项复用；涉及传单年与旧目录年份冲突者保留待核，类型参考不产生主库身份。",
+          "title": "1987—1991年街机与原型作品（16项）",
+          "note": "保留原有11条参考并补齐5项；年份是资料标年，存在异文时明确保留。美国发行、其他团队开发、套件与未发行原型分开。",
           "source": "https://flyers.arcade-museum.com/videogames/search/gallery?manuf_id=1482",
           "rows": [
             {
@@ -20343,13 +20343,15 @@
               "title": "John Elway’s Team Quarterback",
               "type": "美式足球",
               "relation": "Leland产品／玩法参考（不收叙事正文）",
-              "note": "体育竞技；馆藏传单目录标1985，既有参考清单标1988，日期待原件交叉核定。"
+              "note": "1988（MAME驱动标年）；旧传单目录标1985，保留冲突说明，不当作已核精确首发日。",
+              "source": "https://github.com/mamedev/mame/blob/master/src/mame/cinematronics/leland.cpp"
             },
             {
               "title": "All American Football",
               "type": "美式足球",
               "relation": "Leland产品／玩法参考（不收叙事正文）",
-              "note": "体育竞技；馆藏传单目录标1987，既有参考清单为1988／1989，暂不统一发行年。"
+              "note": "1989（MAME驱动标年）；旧传单目录标1987。采用实际游戏名All American Football，All-American Quarterback保留为旧资料名称线索。",
+              "source": "https://github.com/mamedev/mame/blob/master/src/mame/cinematronics/leland.cpp"
             },
             {
               "title": "Ironman Ivan Stewart’s Super Off Road",
@@ -20365,27 +20367,63 @@
             },
             {
               "title": "Pig Out: Dine Like a Swine",
-              "type": "平台动作",
+              "type": "平台动作／食物收集",
               "relation": "Leland产品／玩法参考（不收叙事正文）",
-              "note": "1990；多人平台动作，不因角色设定补为叙事作品。"
+              "note": "1990；多人平台动作，以收集食物为主要目标；修正前述清单的迷宫动作概括。"
             },
             {
               "title": "Ataxx / Attax",
               "type": "棋盘策略",
               "relation": "Leland产品／玩法参考（不收叙事正文）",
-              "note": "1990／1991目录异文；黑白棋式规则对战；本表保留年表拼写差异。"
+              "note": "1990（MAME标年）；旧目录另有1991。回合制棋盘规则；保留Ataxx／Attax拼写异文。",
+              "source": "https://github.com/mamedev/mame/blob/master/src/mame/cinematronics/leland.cpp"
             },
             {
               "title": "Brute Force",
               "type": "清版动作",
               "relation": "Leland产品／玩法参考（不收叙事正文）",
-              "note": "1991；后继Leland的即时动作。"
+              "note": "1990—1991；同期报道与目录标年有异文。以清版战斗为核心，背景设定不足以作为主库叙事准入依据。"
             },
             {
               "title": "Danny Sullivan’s Indy Heat",
               "type": "赛车竞速",
               "relation": "Leland产品／玩法参考（不收叙事正文）",
               "note": "1991；后继Leland。"
+            },
+            {
+              "title": "Viper",
+              "type": "载具战斗／动作射击",
+              "relation": "Leland街机／仅玩法参考",
+              "note": "1988；Danger Zone的后续载具射击作品，原作与前身游戏不合并。",
+              "source": "https://github.com/mamedev/mame/blob/master/src/mame/cinematronics/leland.cpp"
+            },
+            {
+              "title": "Super Dodge Ball",
+              "type": "体育动作／躲避球",
+              "relation": "Technōs Japan原作／Leland北美发行",
+              "note": "1987日本原作、1988北美Leland清单年份；不把北美代理发行写成Leland原作开发。",
+              "source": "https://onitama.tv/gamemachine/pdf/19871215p.pdf"
+            },
+            {
+              "title": "Aaaargh!",
+              "type": "怪兽动作／街机动作",
+              "relation": "Virgin／Arcadia关联项目；Leland发行参考",
+              "note": "1988；前述清单列Leland参与街机发行，开发与合作分工仍需原版职员表进一步核定；不由公司关联推定完整开发。",
+              "source": "https://en.wikipedia.org/wiki/Leland_Corporation"
+            },
+            {
+              "title": "Super Off-Road Track-Pak",
+              "type": "越野竞速／追加赛道",
+              "relation": "Super Off-Road扩展套件／非独立叙事新作",
+              "note": "1989；增加赛道的套件项目，不能与原作合计为两部独立叙事作品。",
+              "source": "https://github.com/mamedev/mame/blob/master/src/mame/cinematronics/leland.cpp"
+            },
+            {
+              "title": "Asylum（未发行原型）",
+              "type": "俯视／斜视角射击与迷宫动作",
+              "relation": "Leland原型／未正式发行",
+              "note": "1991原型标年；不把原型年份当作商业首发年，不进入叙事主库。",
+              "source": "https://www.arcade-history.com/?id=137&n=asylum&page=detail"
             }
           ]
         },
@@ -20398,7 +20436,9 @@
               "title": "Space Ace（1991转换套件）",
               "type": "互动动画／限时反应",
               "relation": "复用g044；不新增内容版本",
-              "note": "仅核出输入和难度变化；Cinematronics原作与Leland转换业务分开。"
+              "note": "1991；Leland面向Dragon’s Lair II机台的转换套件，部分位置增加斜向输入并取消难度选择。未查到新增动画、人物或剧情的确证；原作标年为1984。主库g044与Cinematronics原作记录复用。",
+              "catalogueWorkId": "g044",
+              "catalogueDossierId": "cinematronics"
             },
             {
               "title": "Dragon’s Lair／Space Ace原版",
@@ -20406,6 +20446,125 @@
               "relation": "Cinematronics原作／Leland不计入本专题主库署名数",
               "note": "分别复用g010、g044旧作品，不更改1983、1984年发行字段。",
               "source": "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf"
+            },
+            {
+              "title": "Up Your Alley（过渡期参考）",
+              "type": "保龄球体育",
+              "relation": "Cinematronics署名／不追溯改归Leland",
+              "note": "1987；MAME保留Cinematronics署名，属于更名前后边界线索。",
+              "source": "https://github.com/mamedev/mame/blob/master/src/mame/cinematronics/leland.cpp"
+            }
+          ]
+        },
+        {
+          "title": "1992—1995年家用机作品（6项）",
+          "note": "按Leland Corporation／Leland Interactive Media署名及作品目录列参考。1994年收购后发行的作品不自动代表Leland仍是独立经营主体。",
+          "source": "https://www.mobygames.com/company/1353/rowe-resources-inc/",
+          "rows": [
+            {
+              "title": "Pro Quarterback",
+              "type": "体育模拟／美式橄榄球",
+              "relation": "Leland开发／Tradewest发行参考",
+              "note": "1992；SNES、Genesis；体育玩法为核心。",
+              "source": "https://gamefaqs.gamespot.com/snes/588590-pro-quarterback/boxes/40343"
+            },
+            {
+              "title": "Super Off Road: The Baja",
+              "type": "越野竞速／赛车",
+              "relation": "Leland Interactive Media开发／Tradewest发行参考",
+              "note": "1993；SNES；是后续赛车作品，与原作普通移植分开。",
+              "source": "https://www.mobygames.com/game/47253/super-off-road-the-baja/"
+            },
+            {
+              "title": "Fun ’N Games（Genesis／SNES）",
+              "type": "休闲合集／绘画与音乐工具",
+              "relation": "Leland Interactive Media作品参考",
+              "note": "1993年Genesis、1994年SNES；绘画、音乐和小游戏为核心，不作为叙事作品。",
+              "source": "https://en.wikipedia.org/wiki/Fun_%27n_Games"
+            },
+            {
+              "title": "Troy Aikman NFL Football",
+              "type": "体育模拟／美式橄榄球",
+              "relation": "Leland Interactive Media开发参考",
+              "note": "1994；SNES、Genesis；1995年Jaguar另有发行；逐平台开发和发行署名不互相外推。",
+              "source": "https://snescentral.com/article.php?id=0729"
+            },
+            {
+              "title": "Double Dragon V: The Shadow Falls",
+              "type": "2D格斗／对战动作",
+              "relation": "Leland Interactive Media开发；Jaguar移植另记",
+              "note": "1994；SNES、Genesis；1995年Jaguar由Telegames移植。以对战为核心，动画IP和剧情背景不等于叙事主导。",
+              "source": "https://www.mobygames.com/game/7088/double-dragon-v-the-shadow-falls/releases/snes/"
+            },
+            {
+              "title": "Kyle Petty’s No Fear Racing",
+              "type": "赛车竞速／场地赛车",
+              "relation": "Leland Interactive Media开发参考",
+              "note": "1995；SNES；日本版名Circuit USA。",
+              "source": "https://www.mobygames.com/game/39265/kyle-pettys-no-fear-racing/"
+            }
+          ]
+        },
+        {
+          "title": "1995年改作内容与版本关系待核（1项）",
+          "note": "有不同玩法内容的线索，尚未完成逐项增量对比；只作目录参考，不生成内容版本或平台发行。",
+          "source": "https://www.mobygames.com/game/43880/fun-n-games/",
+          "rows": [
+            {
+              "title": "Fun ’N Games（3DO改作）",
+              "type": "休闲合集／绘画音乐与小游戏",
+              "relation": "Williams Entertainment开发；关联早期同名合集",
+              "note": "1995；3DO资料将其与Genesis／SNES版区分。具体新增小游戏、美术、音频及独立作品／内容版本身份需比较，不能直接当作普通移植或Leland新原创。",
+              "source": "https://www.mobygames.com/game/43880/fun-n-games/releases/"
+            }
+          ]
+        },
+        {
+          "title": "1995—1996年Williams体系团队延续（6项）",
+          "note": "按收购后的实际署名及具体平台列历史参考；既不全归Leland独立原作，也不据移植参与把整部原作的开发职责转移。",
+          "source": "https://en.wikipedia.org/wiki/Leland_Corporation",
+          "rows": [
+            {
+              "title": "Mortal Kombat 3（PlayStation／Windows关联）",
+              "type": "2D格斗／对战动作",
+              "relation": "Williams时期移植参考；原作Midway",
+              "note": "1995；PlayStation版有Williams开发资料，Windows关联范围仍需逐版核对。",
+              "source": "https://playstationmuseum.com/index.php/product/scus-94201/"
+            },
+            {
+              "title": "DOOM（PlayStation）",
+              "type": "第一人称射击／科幻恐怖",
+              "relation": "id Software原作／Williams移植",
+              "note": "1995；仅限定PlayStation改编，不外推到DOS原作或其他主机版本。",
+              "source": "https://www.mobygames.com/game/30997/doom/releases/playstation/"
+            },
+            {
+              "title": "Final DOOM（PlayStation）",
+              "type": "第一人称射击／科幻恐怖",
+              "relation": "id Software原作／Williams移植",
+              "note": "1996；仅限定PlayStation版。",
+              "source": "https://www.mobygames.com/game/30998/final-doom/releases/"
+            },
+            {
+              "title": "Mortal Kombat Trilogy（Nintendo 64）",
+              "type": "2D格斗／对战动作",
+              "relation": "Williams Entertainment团队参与",
+              "note": "1996；Nintendo 64职员表单列Williams团队，不能外推到PlayStation等版本。",
+              "source": "https://www.mobygames.com/game/2036/mortal-kombat-trilogy/credits/n64/"
+            },
+            {
+              "title": "Robotron X",
+              "type": "全向射击／街机动作",
+              "relation": "Player 1主要开发／Williams关联；协作范围待核",
+              "note": "1996；保留前述清单中的团队协作线索，具体工种和平台范围尚未核定，不写成Leland主开发。",
+              "source": "https://www.mobygames.com/game/13604/robotron-x/releases/"
+            },
+            {
+              "title": "Cruis’n USA（Nintendo 64）",
+              "type": "赛车竞速／街机驾驶",
+              "relation": "Williams Entertainment移植",
+              "note": "1996；Nintendo 64版本参与与街机原作开发分开。",
+              "source": "https://www.mobygames.com/game/3587/cruisn-usa/credits/n64/"
             }
           ]
         }
