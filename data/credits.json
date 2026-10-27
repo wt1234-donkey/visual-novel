@@ -41759,6 +41759,58 @@
       "territory": null
     },
     {
+      "id": "credit-f0720a528cc5071a",
+      "entityId": "entity-name-21365baf366d",
+      "targetType": "release",
+      "targetId": "g1283-v1",
+      "workId": "g1283",
+      "role": "publisher",
+      "rawCredit": "Chunsoft",
+      "status": "existingCredit",
+      "source": "https://collection.rcgs.jp/page/PACKAGE0002381",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-1cc7f726809800a3",
+      "entityId": "entity-name-21365baf366d",
+      "targetType": "release",
+      "targetId": "g1284-v1",
+      "workId": "g1284",
+      "role": "publisher",
+      "rawCredit": "Chunsoft",
+      "status": "existingCredit",
+      "source": "https://awards.cesa.or.jp/2005/prizelist/2004-2005/d.html",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-6faa06eb0101418d",
+      "entityId": "entity-sega",
+      "targetType": "release",
+      "targetId": "g1283-v2",
+      "workId": "g1283",
+      "role": "publisher",
+      "rawCredit": "世嘉",
+      "status": "existingCredit",
+      "source": "https://www.spike-chunsoft.co.jp/pages/games/segachun/index.html",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-bd2b572c925b212c",
+      "entityId": "entity-name-21365baf366d",
+      "targetType": "release",
+      "targetId": "g1284-v2",
+      "workId": "g1284",
+      "role": "publisher",
+      "rawCredit": "Chunsoft",
+      "status": "existingCredit",
+      "source": "https://awards.cesa.or.jp/2005/prizelist/2004-2005/d.html",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
       "id": "credit-06c97adc1fb6de71",
       "entityId": "entity-name-a7663faeee46",
       "targetType": "release",
@@ -66060,6 +66112,19 @@
       "territory": null,
       "reviewId": "AAB-A-07",
       "reviewRecord": "data/entity-role-adventure-alice-audit-20261027.json"
+    },
+    {
+      "id": "credit-5d4d1221590bda3c",
+      "entityId": "entity-name-21365baf366d",
+      "targetType": "work",
+      "targetId": "g1284",
+      "workId": "g1284",
+      "role": "originalProduction",
+      "rawCredit": "Chunsoft",
+      "status": "sourceReviewed",
+      "source": "https://awards.cesa.or.jp/2005/prizelist/2004-2005/d.html",
+      "note": "CESA获奖资料明确发行、销售、开发均为Chunsoft；仅核本作原作制作，不扩展至其他合作、后继或集团作品。",
+      "territory": null
     }
   ],
   "dossierMemberships": [
@@ -91916,6 +91981,131 @@
       ],
       "group": "release",
       "source": "https://id.ndl.go.jp/auth/ndlna/001283900",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g021",
+      "placement": "main",
+      "roles": [
+        "originalProduction",
+        "publisher"
+      ],
+      "group": "original",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g022",
+      "placement": "main",
+      "roles": [
+        "originalProduction",
+        "publisher"
+      ],
+      "group": "original",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g034",
+      "placement": "main",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "pendingRole"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g055",
+      "placement": "main",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "pendingRole"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g170",
+      "placement": "main",
+      "roles": [
+        "originalProduction",
+        "publisher"
+      ],
+      "group": "original",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g178",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g179",
+      "placement": "main",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "pendingRole"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g180",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g181",
+      "placement": "main",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "pendingRole"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g1283",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "chunsoft",
+      "workId": "g1284",
+      "placement": "main",
+      "roles": [
+        "originalProduction",
+        "publisher"
+      ],
+      "group": "original",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
       "status": "existingEvidence"
     }
   ]

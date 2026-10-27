@@ -106001,6 +106001,195 @@
           "workIds": []
         }
       ]
+    },
+    {
+      "id": "chunsoft",
+      "name": "Chunsoft",
+      "foundedAt": "1984",
+      "foundedSource": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "checkedAt": "2026-10-27",
+      "status": "初步独立专题：复用九部主库，补入两作及两项新增剧本内容",
+      "scope": "历史Chunsoft公司专题，以2012年合并前的叙事开发／发行及限定后发内容为范围。11部主库引用中9部既有、2部新增；Spike与合并后Spike Chunsoft保持独立身份，后发实际发行不回写。",
+      "versionScope": "新增《街》1998原作、2006 PSP两篇追加，以及《金八先生》2004原作、2005两话追加。PS普通移植、廉价版和一般店头铺货不新增内容；所有旧版关系与身份保持。",
+      "publisherNote": "官方史记Chunsoft成立于1984年，1992以弟切草开始自社发行。2012年原公告明确Chunsoft为存续公司、Spike为消灭公司并改商号Spike Chunsoft；原历史署名ID继续分开保存，不自动合并既有实体或继承游戏开发职责。1984按年登记，不伪造注册日。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>11部主库引用（9部既有＋2部新增）；制作、历史发行、后发发行与待核职责分别显示。</strong></p><p class=\"scope-note\">RPG原档案：<a href=\"enix.html#enix-dq1\">勇者斗恶龙I</a> / <a href=\"enix.html#enix-dq2\">II</a> / <a href=\"enix.html#enix-dq3\">III</a> / <a href=\"enix.html#enix-dq4\">IV</a> / <a href=\"enix.html#enix-torneko2\">特鲁尼克大冒险2</a> / <a href=\"enix.html#enix-torneko3\">3</a>。跳转既有目录，不复制发行或将全部续作开发归本公司。</p>",
+      "workIds": [
+        "g021",
+        "g022",
+        "g034",
+        "g055",
+        "g170",
+        "g178",
+        "g179",
+        "g180",
+        "g181",
+        "g1283",
+        "g1284"
+      ],
+      "catalogueEntryCount": 11,
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "auditTitle": "原作、增补与历史署名核对",
+      "auditSourceLabel": "官方公司沿革",
+      "auditLabel": "初步11部叙事引用；不是Chunsoft全部开发或发行目录。",
+      "auditNote": "本轮只有《金八先生》追加一条有CESA具名依据的原作制作职责。已有角色与台账结论保持；新增专题待核项不冒充已完成审核。详见data/chunsoft-audit-20261027.md。",
+      "sectionTitle": "从有声小说到群像与关键词叙事",
+      "description": "Chunsoft独立专题：有声小说、街与金八先生、原作与新增剧本，以及2012合并沿革。",
+      "profileTitle": "叙事方式与历史公司范围",
+      "creativeProfile": {
+        "thesis": "编辑观察：选项分支、多人物故事切换及关键词事件构成这批作品的不同叙事路径。公司、发行、合作与合并后的名义分别保存。",
+        "phases": [
+          {
+            "period": "1992—1998",
+            "heading": "自社有声小说与群像",
+            "analysis": "弟切草开始自社发行；街让不同人物的选择相互影响，并通过人物故事切换推进。演员出镜和有声小说名称不自动表示全对白语音。",
+            "basis": "编辑观察",
+            "source": "https://www.spike-chunsoft.co.jp/company/about/"
+          },
+          {
+            "period": "2004—2006",
+            "heading": "关键词叙事与明确增补",
+            "analysis": "金八先生使用关键词与并行故事组织校园事件；完全版新增两话。街PSP特別篇新增两篇图文故事，增补在原作品内分层。",
+            "basis": "编辑观察",
+            "source": "https://www.spike-chunsoft.co.jp/pages/games/3bp/info01.html"
+          },
+          {
+            "period": "2006—2012",
+            "heading": "合作发行与合并",
+            "analysis": "SEGA×CHUN为合作项目，世嘉发行不代表收购Chunsoft。2012吸收合并与商号变更依据原公告与当前官方史分别确认。",
+            "basis": "编辑观察",
+            "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "弟切草",
+          "status": "复用既有主库",
+          "reason": "“有声小说”指音乐与音效，不保证角色配音。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+          "workIds": [
+            "g021"
+          ]
+        },
+        {
+          "title": "镰鼬之夜",
+          "status": "复用既有主库",
+          "reason": " 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/kama/",
+          "workIds": [
+            "g022"
+          ]
+        },
+        {
+          "title": "428：被封锁的涩谷",
+          "status": "复用既有主库",
+          "reason": "“有声小说”不等于对白配音；首发 2008 年。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.nintendo.co.jp/wii/software/rtoj/index.html",
+          "workIds": [
+            "g034"
+          ]
+        },
+        {
+          "title": "极限脱出：9 小时 9 人 9 扇门",
+          "status": "复用既有主库",
+          "reason": "2017 年《The Nonary Games》合集为本作新增配音。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/zeroescape/doublepack/",
+          "workIds": [
+            "g055"
+          ]
+        },
+        {
+          "title": "极限脱出ADV：善人死亡",
+          "status": "复用既有主库",
+          "reason": "原版明确署名 CHUNSOFT，虽然原官网后来收归 Spike Chunsoft 域名。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/zendesu/mb/products/index.html",
+          "workIds": [
+            "g170"
+          ]
+        },
+        {
+          "title": "恐怖惊魂夜 2：监狱岛童谣",
+          "status": "复用既有主库",
+          "reason": "有声小说指背景音乐与音效；角色配音依版本核查。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/kama2/info.html",
+          "workIds": [
+            "g178"
+          ]
+        },
+        {
+          "title": "恐怖惊魂夜×3：三日月岛事件的真相",
+          "status": "复用既有主库",
+          "reason": "收录前两作的主要篇章，但数据库仍将第三部的新剧情作为独立作品。原版由世嘉发行、Chunsoft 开发。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/segachun/kama3.html",
+          "workIds": [
+            "g179"
+          ]
+        },
+        {
+          "title": "真恐怖惊魂夜：第11位来访者",
+          "status": "复用既有主库",
+          "reason": "独立的新人物与新案件；发行时署名 CHUNSOFT，规范厂商名称为 Chunsoft。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/shinkama/products/index.html",
+          "workIds": [
+            "g180"
+          ]
+        },
+        {
+          "title": "忌火起草",
+          "status": "复用既有主库",
+          "reason": "官方说明原版全部对白有配音；世嘉负责发行、Chunsoft 负责开发。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/imabikiso/storycharacter.html",
+          "workIds": [
+            "g181"
+          ]
+        },
+        {
+          "title": "街：命运的交叉点",
+          "status": "本轮新增原作／增补",
+          "reason": "原作1998年Saturn，PS普通移植不在本轮增加；2006 PSP特別篇新增两篇剧情，归同一作品的增补内容。实拍演员出镜不等于全文人声配音。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://collection.rcgs.jp/page/PACKAGE0002381",
+          "workIds": [
+            "g1283"
+          ]
+        },
+        {
+          "title": "3年B组金八先生：站上传说的讲台",
+          "status": "本轮新增原作／增补",
+          "reason": "2005完全版新增两话，是原作的增补内容，不建第二部游戏。CESA记先行发行2005-07-28；官网记一般店头销售09-29，记录首次新增内容批次，普通铺货不重复。RPD为叙事方式称谓，不由该词推定传统战斗RPG。 专题引用不自动核定未登记的开发职责；不同历史发行名义继续保留。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/3b/gameinfo.html",
+          "workIds": [
+            "g1284"
+          ]
+        },
+        {
+          "title": "《金八先生》完全版先行与店头销售",
+          "status": "范围／待核说明",
+          "reason": "CESA确认2005-07-28完全版；官网一般店头09-29。新增两话按最早批次登记，不把后发铺货重复计版。",
+          "source": "https://awards.cesa.or.jp/2005/prizelist/2004-2005/d.html",
+          "workIds": []
+        },
+        {
+          "title": "2012吸收与商号变更",
+          "status": "范围／待核说明",
+          "reason": "原公告计划2012-04-01，Chunsoft为存续、Spike为消灭；当前官方沿革确认2012年4月合并。三个旧署名ID不自动合并。",
+          "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
+          "workIds": []
+        },
+        {
+          "title": "待核：完整目录与逐作职责",
+          "status": "范围／待核说明",
+          "reason": "TRICK×LOGIC、RPG与移动作品、海外发行及旧作后发新增内容仍待逐项原件。Door Door等玩法核心作品不按创始人经历纳入叙事主库。",
+          "source": "https://www.spike-chunsoft.co.jp/company/about/",
+          "workIds": []
+        },
+        {
+          "title": "待核：合作和前后期范围",
+          "status": "范围／待核说明",
+          "reason": "428、999、镰鼬×3、忌火起草等进入专题仍需逐作登记开发分工；2012合并后的AI、弹丸、零时困境不自动视作旧Chunsoft原作。",
+          "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+          "workIds": []
+        }
+      ]
     }
   ],
   "schemaVersion": 2,
