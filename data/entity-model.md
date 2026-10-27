@@ -248,3 +248,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 数字及其他批次使用 `entity-creator-numeric-review-20261026.json` 与同名Markdown，依5pb.、07th Expansion、GREE及Mobage待核发行、1988目录冲突、1982前身占位六项收尾。07th官网支持团队身份与两部原作层制作职责，其余历史发行及未知内容保持；现有326个实体均已按批登记审查，39项身份和601项专题职责仍保留待核，当前排序队列完成，无下一项。详见独立审计。
 
 2026-10-26 第二轮身份复核使用 `entity-creator-a-recheck1-review-20261026.json` 与同名Markdown，从首轮结束时39项`unresolved`的显示名排序连续复核前五项。Accolade原版说明书、Activision当事公司证券申报、âge品牌公告支持三项身份订正；Addison-Wesley Productions与Adventure Soft法律／名义边界继续待核。首轮326项进度不重置，二轮5／39，余36项身份待核，下一项Alchemist。作品职责、原发行与内容保持，详见独立审计。
+
+2026-10-27 组织与沿革接入第十轮已整理台账，独立身份审核为 `entity-organization-review-20261027.json`。仅CoreMoreco具名订正为品牌，保留旧发行职责；637条逐版结论通过组织页展示，不自动解除589项专题职责待核。组织上下文、历史节点与合作关系使用独立带记录ID的配置，不改变正式作品与关系继承。详见 `organization-verification-20261027.md`。

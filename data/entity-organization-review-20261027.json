@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-27",
+  "baseCommit": "e05836e6a4b5989dc3e7a03343ae7ee0b19fd61f",
+  "audit": "data/organization-verification-20261027.md",
+  "policy": "按第十轮已整理台账订正明确品牌身份；逐版职责仅作证据展示，不批量解除专题待核。",
+  "identityCorrections": [
+    {
+      "reviewId": "ORG10-I01",
+      "entityId": "entity-name-21dcd9c9c1e7",
+      "rawName": "CoreMoreco",
+      "before": {
+        "type": "unknown",
+        "verification": "unresolved"
+      },
+      "type": "brand",
+      "status": "sourceReviewed",
+      "preserveReleaseRoles": true,
+      "sources": [
+        "https://w.atwiki.jp/ercr/pages/4789.html"
+      ],
+      "note": "第十轮身份第5项：2004年《ちびママ》职员表转录明确品牌CoreMoreco、企画コアモアコ、販売ホビボックス。核为制作／企划品牌而非法人或销售公司；证据为职员表二手转录，尚非本轮实物重验。保留原发行字段和既有publisher职责，职责纠正需另作逐版本审核。"
+    }
+  ],
+  "creditAdditions": [],
+  "deferredReviews": []
+}

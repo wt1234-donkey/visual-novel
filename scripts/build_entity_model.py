@@ -161,6 +161,7 @@ def build():
  review_batches.append(read(FIVE_PHASE_REVIEW))
  review_batches.append(read(NITROPLUS_ROLE_REVIEW))
  review_batches.append(read(ADVENTURE_ALICE_ROLE_REVIEW))
+ review_batches.append(read("data/entity-organization-review-20261027.json"))
  identity_reviews={x['entityId']:x for batch in review_batches for x in batch['identityCorrections']}
  assert len(identity_reviews)==sum(len(batch['identityCorrections']) for batch in review_batches),'重复的主体订正'
  entities={}; aliases={}; dossiers=[]; relations=[]; credits=[]; memberships=[]; reviews=[]; placements=[]; names_review=[]; conflicts=[]

@@ -5,6 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 from urllib.parse import quote
 from build_relationships_preview import build as preview_build
+from organization_verification import attach_verification
 ROOT = Path(__file__).resolve().parents[1]
 CREATION_ROLES = {'originalProduction', 'developer', 'coDeveloper', 'productionBrand'}
 UNRESOLVED = {'pendingRole', 'unresolved', 'pending'}
@@ -129,7 +130,7 @@ def build():
                    'works': {wid: {'id': wid, 'title': w.get('chineseTitle') or w['title'], 'originalTitle': w.get('originalTitle', ''),
                                    'year': w['firstYear'], 'placement': placement, 'href': href, 'category': w.get('category', '')}
                              for wid, (w, placement, href) in works.items()}})
-    return result
+    return attach_verification(result)
 
 
 if __name__ == '__main__':

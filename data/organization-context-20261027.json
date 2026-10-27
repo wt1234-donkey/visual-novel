@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "nodeNotes": [
+    {
+      "entityId": "entity-name-21dcd9c9c1e7",
+      "recordIds": [
+        "identity-5"
+      ],
+      "note": "CoreMoreco是《ちびママ》的品牌／企划署名，销售另署HOBIBOX；品牌与销售公司分开。"
+    },
+    {
+      "entityId": "entity-name-b06c3e4e3ae1",
+      "recordIds": [
+        "identity-7"
+      ],
+      "note": "EXNOA为法人、DG REMAKE为重制品牌；此复合历史署名保留，不将2021年前后重制职责倒填1992年原作。"
+    },
+    {
+      "entityId": "entity-name-5f2bf730e86e",
+      "recordIds": [
+        "identity-8"
+      ],
+      "note": "EXNOA与对外服务／发行品牌DMM GAMES分开；Climax的原创及新剧情监修保留Minato Soft职责。"
+    },
+    {
+      "entityId": "entity-name-fdc56bbd260d",
+      "recordIds": [
+        "identity-9"
+      ],
+      "note": "FANZA GAMES为成人向服务／渠道品牌。与DG REMAKE的并列署名不足以证明六个版本由同一法人发行。"
+    },
+    {
+      "entityId": "entity-name-16c097f224f4",
+      "recordIds": [
+        "identity-6"
+      ],
+      "note": "DMM GAMES／AUGUST是合作署名组合，不是一家法人；剧本、美术、音乐与发行／运营分别核对。"
+    },
+    {
+      "entityId": "entity-name-0f93dc471cd5",
+      "recordIds": [
+        "identity-20"
+      ],
+      "note": "KADOKAWA、AltPlus、scopes为不同参与公司，联合署名不另建一个单一公司；逐项开发范围以当期公告为准。"
+    },
+    {
+      "entityId": "entity-name-bd36baf4b6a9",
+      "recordIds": [
+        "identity-34"
+      ],
+      "note": "AltPlus、KADOKAWA、TriFort为项目参与公司组合；不能据联合署名建立股权或母子公司树。"
+    },
+    {
+      "entityId": "entity-name-e1232b52eff7",
+      "recordIds": [
+        "identity-36"
+      ],
+      "note": "GREE已证实为2016年移动分发平台，实际提供／发行／运营法人仍待核。"
+    },
+    {
+      "entityId": "entity-name-d1903e2fafb1",
+      "recordIds": [
+        "identity-37"
+      ],
+      "note": "Mobage已证实为2016年移动分发平台，平台名称不自动作为发行法人。"
+    },
+    {
+      "entityId": "entity-name-8c9d353d6fe9",
+      "recordIds": [
+        "identity-24",
+        "duty-549"
+      ],
+      "note": "Alpha与WASABI保留各版差别；2019年Steam版开发署名不能改成发行署名，实际发行另列Sekai Project。"
+    },
+    {
+      "entityId": "entity-melbournehouse",
+      "recordIds": [
+        "duty-363",
+        "duty-364",
+        "duty-365",
+        "duty-366",
+        "duty-368",
+        "duty-369",
+        "duty-370",
+        "duty-371",
+        "duty-372",
+        "duty-373"
+      ],
+      "note": "Melbourne House出版业务与Beam开发团队沿革分开；2002年Infogrames Melbourne House、2004年Atari Melbourne House保留当时名称，第三方分地区发行不能由旧名覆盖。"
+    },
+    {
+      "entityId": "entity-infocom",
+      "recordIds": [
+        "duty-225",
+        "duty-245"
+      ],
+      "note": "1989年原团队结束之后的Infocom商标／发行名义与原Cambridge开发团队分开，后期作品须按版次核对。"
+    },
+    {
+      "entityId": "entity-tokuma",
+      "recordIds": [
+        "duty-584",
+        "duty-585",
+        "duty-586",
+        "duty-587",
+        "duty-588"
+      ],
+      "note": "徳間書店本社、Tokuma Shoten Intermedia（TIM）及GAME Technopolis出版品牌分层理解；原版版权／发行关联不等于本社内制全部工种。"
+    },
+    {
+      "entityId": "entity-nanawind",
+      "recordIds": [
+        "duty-416",
+        "duty-417",
+        "duty-418",
+        "duty-419"
+      ],
+      "note": "旅行部四篇分别发售，NanaWind／LunaSystem共同署名；LunaSystem原制作不归并给NanaWind，合作展示不形成母子公司关系。"
+    },
+    {
+      "entityId": "entity-hulotte",
+      "recordIds": [
+        "duty-209"
+      ],
+      "note": "HULOTTE ROI子品牌保留独立署名，2020年《ココロのカタチとイロとオト》按ROI原版品牌理解。"
+    },
+    {
+      "entityId": "entity-applique",
+      "recordIds": [
+        "duty-116",
+        "duty-117",
+        "duty-118",
+        "duty-119"
+      ],
+      "note": "2009—2011年四部作品属于Applique -Imouto-品牌原版范围；旧站域名不构成上游公司承担全部开发的证明。"
+    }
+  ],
+  "edgeReviews": [
+    {
+      "parent": "entity-hulotte",
+      "child": "entity-hulotte_roi",
+      "recordIds": [
+        "duty-209"
+      ],
+      "label": "独立子品牌",
+      "dateLabel": "2020年原作及另设品牌公告；运营起止未核",
+      "note": "官方逐作站与另设ROI品牌公告支持HULOTTE / ROI品牌层次。未知起止时间不解释为持续至今；不向母品牌汇总制作职责。"
+    }
+  ],
+  "cooperations": [
+    {
+      "id": "nanawind-lunasystem-travel",
+      "entityIds": [
+        "entity-nanawind",
+        "entity-name-a548db0984af"
+      ],
+      "recordIds": [
+        "duty-416",
+        "duty-417",
+        "duty-418",
+        "duty-419"
+      ],
+      "label": "NanaWind / LunaSystem · 旅行部四篇合作",
+      "note": "官网四篇日期与双品牌署名支持特定项目合作。LunaSystem原作制作沿用已核记录，NanaWind合作范围仅据原公告，不产生运营／股权／名称合并关系。"
+    }
+  ],
+  "events": [
+    {
+      "id": "melbourne-2002",
+      "entityIds": [
+        "entity-melbournehouse"
+      ],
+      "year": 2002,
+      "title": "Infogrames Melbourne House 当期开发署名",
+      "note": "《Men in Black II》PS2版开发使用Infogrames Melbourne House Pty Ltd；发行署名及GameCube移植团队分别保存。此处记录当期用名，不声明与1970年代出版法人相同。",
+      "recordIds": [
+        "duty-368"
+      ]
+    },
+    {
+      "id": "melbourne-2004",
+      "entityIds": [
+        "entity-melbournehouse"
+      ],
+      "year": 2004,
+      "title": "Atari Melbourne House 当期开发署名",
+      "note": "《Transformers》PS2开发署Atari Melbourne House Pty Ltd；美国与欧洲／澳洲发行主体分别核对。",
+      "recordIds": [
+        "duty-372"
+      ]
+    },
+    {
+      "id": "infocom-1996",
+      "entityIds": [
+        "entity-infocom"
+      ],
+      "year": 1996,
+      "title": "原团队结束后的商标／系列延续",
+      "note": "《Zork Nemesis》保留Activision开发发行及Mac版Quicksilver移植；Infocom标志不作为旧法人参与开发的证据。",
+      "recordIds": [
+        "duty-225"
+      ]
+    },
+    {
+      "id": "infocom-1997",
+      "entityIds": [
+        "entity-infocom"
+      ],
+      "year": 1997,
+      "title": "前成员参与与原公司身份分开",
+      "note": "《The Undiscovered Underground》为Activision宣传游戏；前Infocom作者参与不代表原Infocom部门恢复。",
+      "recordIds": [
+        "duty-245"
+      ]
+    },
+    {
+      "id": "silkys-2014",
+      "entityIds": [
+        "entity-silkys_plus",
+        "entity-silkys_wasabi"
+      ],
+      "year": 2014,
+      "title": "WASABI原作品牌",
+      "note": "《七色轮回》2014-09-26 PC原版使用SILKY’S PLUS WASABI署名。",
+      "recordIds": [
+        "duty-549"
+      ]
+    },
+    {
+      "id": "silkys-2015",
+      "entityIds": [
+        "entity-silkys_plus",
+        "entity-name-8c9d353d6fe9"
+      ],
+      "year": 2015,
+      "title": "Alpha相关Vita增补版",
+      "note": "《七色轮回》2015-09-17 Vita版加入新CG和情节，后发版署名不覆盖WASABI原作。",
+      "recordIds": [
+        "duty-549"
+      ]
+    },
+    {
+      "id": "hulotte-2020",
+      "entityIds": [
+        "entity-hulotte",
+        "entity-hulotte_roi"
+      ],
+      "year": 2020,
+      "title": "HULOTTE ROI独立子品牌作品",
+      "note": "《心之形、色与音》2020-12-25原版与ROI另设品牌公告分别列证；原版署名保持ROI。",
+      "recordIds": [
+        "duty-209"
+      ]
+    }
+  ]
+}

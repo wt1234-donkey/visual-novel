@@ -32,3 +32,7 @@
 2026-10-22 A字母第二批：依序核查Alchemist、Alice Blue、AliceNoir、Alicesoft，累计12／32个A主体，新增40条ALICESOFT制作品牌（主库23、关联17），其余职责证据缺口逐项保留。下一家AltPlus / KADOKAWA / TriFort；本批证据见 `entity-creator-a2-review-20261022.md`。
 
 2026-10-22 A字母第三批：从AltPlus联合署名依序到Applique，累计20／32个主体，新增14条主库创作记录（American Laser Games原作制作2、Applique -Imouto-制作品牌4、Applique制作品牌8）。下一家为AQUAPLUS公司身份；独立证据与未决范围见 `entity-creator-a3-review-20261022.md`。
+
+## 2026-10-27 第十轮已整理结果
+
+接入第十轮637条核查结论，逐主体／作品查看状态、范围和来源；补充16处组织说明与7个历史节点。HULOTTE ROI关系补充原始品牌公告；NanaWind／LunaSystem合作单独显示。CoreMoreco按独立审核订正为品牌，正式身份待核32项、专题职责待核仍589项。详见 [本轮接入记录](organization-verification-20261027.md)。旧节中的数量保留为当时快照，以当前页面派生统计为准。
