@@ -153,6 +153,20 @@
         "preview-ultra-software",
         "entity-name-c87c2b9662fc"
       ]
+    },
+    {
+      "id": "banpresto",
+      "title": "Banpresto／万普：游戏与景品沿革",
+      "subtitle": "旧游戏公司、同名新公司及品牌分别保存",
+      "root": "entity-banpresto",
+      "focus": "entity-banpresto",
+      "entityIds": [
+        "entity-banpresto",
+        "entity-name-40ed6431d1a6",
+        "preview-banpresto-prize-2008",
+        "preview-bandai-spirits",
+        "preview-banpresto-prize-brand"
+      ]
     }
   ],
   "nodes": [
@@ -279,6 +293,71 @@
           "id": "g551",
           "title": "危险天狗传说",
           "year": 1989
+        }
+      ]
+    },
+    {
+      "id": "entity-banpresto",
+      "name": "Banpresto（バンプレスト）",
+      "type": "company",
+      "aliases": [
+        "Banpresto",
+        "バンプレスト",
+        "Banpresto（バンプレスト）"
+      ],
+      "sources": [
+        "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+        "https://www.bandainamco.co.jp/about/history/corporate.html"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "2008年集团原公告具名1977-04-30成立的株式会社バンプレスト为吸收合并的消灭公司；本ID的既有Banpresto发行均属2008年4月前，核为旧游戏公司。2008年新设景品法人及后续游戏／景品品牌不并入本ID；历史专题继续包含品牌关联，不因此把后五部实际发行或开发回填给旧公司。",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1977-04-30",
+          "precision": "day",
+          "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+          "status": "sourceReviewed"
+        }
+      ],
+      "nameParts": {
+        "english": "Banpresto",
+        "japanese": "バンプレスト",
+        "basis": "existingBilingualName",
+        "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf"
+      },
+      "stats": {
+        "main": 16,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "banpresto",
+          "name": "Banpresto（バンプレスト）"
+        }
+      ],
+      "works": [
+        {
+          "id": "g1064",
+          "title": "必杀仕事人",
+          "year": 1990
+        },
+        {
+          "id": "g913",
+          "title": "我的女神（1993年冒险游戏）",
+          "year": 1993
+        },
+        {
+          "id": "g1065",
+          "title": "美少女战士（1994年冒险游戏）",
+          "year": 1994
+        },
+        {
+          "id": "g1066",
+          "title": "天地无用！魉皇鬼（1994年冒险游戏）",
+          "year": 1994
         }
       ]
     },
@@ -1022,6 +1101,50 @@
           "id": "g178",
           "title": "恐怖惊魂夜 2：监狱岛童谣",
           "year": 2002
+        }
+      ]
+    },
+    {
+      "id": "entity-name-40ed6431d1a6",
+      "name": "Bandai Namco Games",
+      "type": "company",
+      "aliases": [
+        "Bandai Namco Games"
+      ],
+      "sources": [
+        "https://game.watch.impress.co.jp/docs/review/169797.html",
+        "https://www.bandainamcoent.co.jp/corporate/150401/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "官方2015年4月1日更名公告明确旧公司名株式会社バンダイナムコゲームス及新公司名。只确认历史公司身份，保持既有Bandai Namco Games署名，不改为现名，也不合并Namco、Bandai、Banpresto或其他地区主体。",
+      "dates": [],
+      "stats": {
+        "main": 5,
+        "related": 1,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g1075",
+          "title": "龙与虎 Portable！",
+          "year": 2009
+        },
+        {
+          "id": "g1076",
+          "title": "我的妹妹哪有这么可爱！Portable",
+          "year": 2011
+        },
+        {
+          "id": "g1077",
+          "title": "我的妹妹哪有这么可爱！Portable不可能有续作",
+          "year": 2012
+        },
+        {
+          "id": "g1078",
+          "title": "心连·情结：随机预知",
+          "year": 2012
         }
       ]
     },
@@ -1989,6 +2112,72 @@
       "works": [],
       "dossiers": [],
       "previewOnly": true
+    },
+    {
+      "id": "preview-banpresto-prize-2008",
+      "name": "Banpresto（バンプレスト）· 2008年景品公司",
+      "type": "company",
+      "aliases": [],
+      "sources": [
+        "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+        "https://www.bandaispirits.co.jp/about/history/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "2008年4月1日新设，承接景品业务；与1977年旧游戏公司不同。2019年被BANDAI SPIRITS吸收，不追加历史游戏开发／发行。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-bandai-spirits",
+      "name": "BANDAI SPIRITS（バンダイスピリッツ）",
+      "type": "company",
+      "aliases": [],
+      "sources": [
+        "https://www.bandaispirits.co.jp/pdf/20190222.pdf",
+        "https://www.bandaispirits.co.jp/about/history/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "2018年成立，2019年吸收同名新万普景品公司；不是2008年吸收旧游戏公司的Bandai Namco Games。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-banpresto-prize-brand",
+      "name": "Banpresto（バンプレスト）· 景品品牌",
+      "type": "brand",
+      "aliases": [],
+      "sources": [
+        "https://www.bandaispirits.co.jp/about/history/",
+        "https://www.bandaispirits.co.jp/about/history/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "官方史记2019年4月整合后作为景品类别品牌启用。此展示节点不是2009—2013年游戏的已核制作品牌，不继承旧游戏公司职责。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
     }
   ],
   "edges": [
@@ -2411,6 +2600,66 @@
       "dateLabel": "1991—1992年手册署名范围",
       "note": "Nightshade及Star Trek原说明书将ULTRA／ULTRAGAMES商标列属Ultra Software Corporation，并提供公司保修；仅确认公司与发行品牌不同，不由商标权推断开发、控制时间或全部游戏合同。",
       "basis": "previewSupplement"
+    },
+    {
+      "id": "banpresto-game-absorption-2008",
+      "parent": "entity-banpresto",
+      "child": "entity-name-40ed6431d1a6",
+      "kind": "succession",
+      "label": "旧游戏公司被吸收",
+      "status": "previewReviewed",
+      "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+      "dateLabel": "2008-04-01（公告；官方史确认当月）",
+      "note": "原公告明确旧万普为消灭公司，Bandai Namco Games为存续公司，承接游戏业务；不是景品新法人吸收旧游戏公司。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "banpresto-prize-split-2008",
+      "parent": "entity-banpresto",
+      "child": "preview-banpresto-prize-2008",
+      "kind": "succession",
+      "label": "景品业务新设分割",
+      "status": "previewReviewed",
+      "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+      "dateLabel": "2008-04-01（公告；官方史确认当月）",
+      "note": "原公告先将景品业务新设分割至同名新公司，旧公司随后被Bandai Namco Games吸收。新法人不承继旧公司全部游戏开发署名。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "banpresto-prize-shareholder-2008",
+      "parent": "entity-name-40ed6431d1a6",
+      "child": "preview-banpresto-prize-2008",
+      "kind": "parent",
+      "label": "新设直后100%持股",
+      "status": "previewReviewed",
+      "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+      "dateLabel": "2008-04-01直后（公告范围）",
+      "note": "公告列新景品公司股份经吸收合并承继后由Bandai Namco Games持有100%；这里只展示当时结构，不外推整个后续期间。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "banpresto-prize-absorption-2019",
+      "parent": "preview-banpresto-prize-2008",
+      "child": "preview-bandai-spirits",
+      "kind": "succession",
+      "label": "景品公司被吸收",
+      "status": "previewReviewed",
+      "source": "https://www.bandaispirits.co.jp/pdf/20190222.pdf",
+      "dateLabel": "2019年4月（官方史）",
+      "note": "2月22日公告明确BANDAI SPIRITS存续并承继万普权利义务；当前官方史确认2019年4月整合。此对象是2008年新景品公司，旧游戏公司已在2008年消灭。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "banpresto-prize-brand-2019",
+      "parent": "preview-bandai-spirits",
+      "child": "preview-banpresto-prize-brand",
+      "kind": "brand",
+      "label": "景品类别品牌",
+      "status": "previewReviewed",
+      "source": "https://www.bandaispirits.co.jp/about/business/",
+      "dateLabel": "2019年4月／现行官网",
+      "note": "官方沿革与业务页确认景品品牌；不推定2009年起的游戏品牌由BANDAI SPIRITS运营，不将旧游戏目录转作景品品牌创作。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [
@@ -2490,6 +2739,16 @@
       "status": "previewReviewed",
       "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
       "note": "存续公司商号变更；历史署名ID及各自游戏职责不自动合并。"
+    },
+    {
+      "id": "banpresto-games-name-2015",
+      "fromId": "entity-name-40ed6431d1a6",
+      "toId": "entity-name-40ed6431d1a6",
+      "oldName": "Bandai Namco Games",
+      "newName": "Bandai Namco Entertainment",
+      "dateLabel": "2015年（官方集团沿革）",
+      "source": "https://www.bandainamco.co.jp/about/history/corporate.html",
+      "note": "同一游戏承接公司的商号变更；历史发行原文及实体ID保持，不等于万普景品公司更名。"
     }
   ],
   "reference": {

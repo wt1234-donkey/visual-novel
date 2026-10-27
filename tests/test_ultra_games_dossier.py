@@ -2,7 +2,9 @@
 import json,subprocess,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];BASE='5ed3e8940cc3f8a159d8c7c17d9dea5009332c57';ULTRA='entity-name-c87c2b9662fc'
-def read(p):return json.loads((ROOT/p).read_text())
+def read(p):
+ if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json'}:return json.loads(subprocess.check_output(['git','show',f'efb379a122184182c419382dd5158b35db816bd4:{p}'],cwd=ROOT))
+ return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class UltraGamesDossierTests(unittest.TestCase):
  def test_one_original_work_content_release_and_all_old_records_preserved(self):

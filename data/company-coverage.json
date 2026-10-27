@@ -70097,8 +70097,8 @@
       "name": "Banpresto",
       "foundedAt": "1977-04-30",
       "foundedSource": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
-      "checkedAt": "2026-10-16",
-      "status": "具名叙事目录21部：旧万普16部＋品牌延续5部",
+      "checkedAt": "2026-10-27",
+      "status": "既有21部叙事目录完善：旧公司身份、2008分拆吸收及2019景品品牌沿革补充",
       "workIds": [
         "g1064",
         "g913",
@@ -70145,13 +70145,13 @@
       "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
       "scope": "按本轮用户确认目录收录21部叙事作品：旧万普发行时期16部（含电影少女），万代南梦宫旗下万普品牌延续5部。以阅读、对话选择和调查推进为主；玩法核心RPG、动作、日常养成、麻将及棋盘游戏不计入本目录。此为具名范围完成，不宣称全部历史授权产品无遗漏。",
       "versionScope": "同一作品只建一个作品ID。新增内容包括同级生2的PS新人物与SFC南云麻耶、天地无用FX新增清音篇、俺妹Refine新增独白录音与事件，以及随机预知三篇下载剧情；普通移植、再版、翻译与限定包装不增版。原有历史发行继续保留。",
-      "publisherNote": "万普旧游戏公司成立于1977/04/30，游戏业务在2008年并入Bandai Namco Games。本专题将旧万普发行和后续万普品牌分开；“品牌延续”作品的实际发行方仍记Bandai Namco Games，不倒填为Banpresto。2008年新设景品公司与旧游戏公司另作区分。",
+      "publisherNote": "1977年4月30日成立的旧万普游戏公司，在2008年重组中为消灭公司，Bandai Namco Games为存续公司；同日新设的同名景品公司是另一个法人，2019年再被BANDAI SPIRITS吸收。旧游戏公司、后续游戏品牌关联、景品公司与现行景品品牌不合并。旧16部及后5部目录继续保留，实际发行与开发分别判断。",
       "sectionTitle": "旧万普与品牌延续的叙事作品",
       "description": "万普21部具名叙事作品专题：旧公司16部与品牌延续5部分期展示，含电影少女，补齐有内容增量的版本和互动标签。",
-      "auditTitle": "叙事目录、内容增量与排除边界",
+      "auditTitle": "叙事目录、历史法人及业务承接核对",
       "auditSourceLabel": "集团官方重组公告（含旧公司成立日期）",
       "auditLabel": "用户确认的21部作品均有共享主库记录；增补、套装与排除项另行说明。",
-      "auditNote": "电影少女按用户确认纳入叙事目录。原库5部作品复用ID，新增16部；旧专题9部RPG保留原始JSON存档并退出当前叙事统计。品牌归属不覆盖实际发行署名。配音覆盖和操作只按已引用资料记录，不由题材推断。",
+      "auditNote": "本轮沿用21部具名叙事目录、历史版本和九部RPG存档；补入主库作品说明、旧公司身份及七个沿革节点。未取得足以新增独立叙事作品的证据，作品／内容／平台数量不扩充。2008与2019分别针对不同法人，后续5部游戏不倒填旧万普发行或开发。",
       "creativeProfile": {
         "thesis": "编辑观察：本目录展示发行品牌组织叙事作品的不同路径，开发团队并不统一。角色改编、怪谈讲述、案件调查与后期轻小说IF路线分别保留各自操作及时代身份。",
         "phases": [
@@ -70441,10 +70441,41 @@
           "reason": "不补这类玩法核心作品；同内容的移植、廉价版、翻译与限定包装不另录为内容版本。",
           "source": "https://asobigokoro.work/bandai-namco-game-title-list/",
           "workIds": []
+        },
+        {
+          "title": "1977旧法人／2008同名新法人",
+          "status": "原公告核定／分别建沿革节点",
+          "reason": "2008年原公告列旧公司成立1977-04-30，旧法人被Bandai Namco Games吸收；同日另设景品公司。法人同名不表示连续为同一公司。",
+          "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+          "workIds": []
+        },
+        {
+          "title": "2019景品公司吸收与品牌延续",
+          "status": "公告与官方史核对",
+          "reason": "2月22日公告明确BANDAI SPIRITS为存续公司；官方史确认2019年4月整合并启用景品类别品牌。不是旧游戏公司到2019年才解散。",
+          "source": "https://www.bandaispirits.co.jp/pdf/20190222.pdf",
+          "workIds": []
+        },
+        {
+          "title": "现有主库补充与待核",
+          "status": "补充说明／不新增游戏",
+          "reason": "学校怪谈、晦、四十八、同级生2及后续五部品牌关联作品补九条说明。后五部正式品牌职责、各作原始开发工种与完整目录仍待逐项原件；发行不自动变开发。",
+          "source": "https://www.bandainamco.co.jp/about/history/corporate.html",
+          "workIds": [
+            "g304",
+            "g1061",
+            "g1062",
+            "g1063",
+            "g1075",
+            "g1076",
+            "g1077",
+            "g1078",
+            "g1079"
+          ]
         }
       ],
       "overviewLabel": "具名叙事作品",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>旧万普发行时期：16部 · 品牌延续：5部。</strong> 后5部实际发行方为Bandai Namco Games；《同级生2》原作仍保留ELF署名，万普版本仅关联其新增内容。</p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>旧万普发行时期：16部 · 品牌延续：5部。</strong> 后5部实际发行方为Bandai Namco Games；《同级生2》原作仍保留ELF署名，万普版本仅关联其新增内容。</p><p class=\"scope-note\"><a href=\"organizations.html?family=banpresto&amp;node=entity-banpresto\">组织关系与沿革</a>：旧游戏公司、2008年新景品公司及2019年景品品牌分别展示；同名与集团承接不自动继承创作职责。</p>",
       "workGroups": [
         {
           "id": "original-banpresto",

@@ -985,17 +985,34 @@
     },
     {
       "id": "entity-banpresto",
-      "name": "Banpresto",
-      "type": "unknown",
+      "name": "Banpresto（バンプレスト）",
+      "type": "company",
       "aliases": [
-        "Banpresto"
+        "Banpresto",
+        "バンプレスト",
+        "Banpresto（バンプレスト）"
       ],
       "sources": [
-        "https://www.bandainamco.co.jp/releases/images/3/42276.pdf"
+        "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+        "https://www.bandainamco.co.jp/about/history/corporate.html"
       ],
-      "verification": "existingDossier",
-      "historyNote": "万普旧游戏公司成立于1977/04/30，游戏业务在2008年并入Bandai Namco Games。本专题将旧万普发行和后续万普品牌分开；“品牌延续”作品的实际发行方仍记Bandai Namco Games，不倒填为Banpresto。2008年新设景品公司与旧游戏公司另作区分。",
-      "dates": []
+      "verification": "sourceReviewed",
+      "historyNote": "2008年集团原公告具名1977-04-30成立的株式会社バンプレスト为吸收合并的消灭公司；本ID的既有Banpresto发行均属2008年4月前，核为旧游戏公司。2008年新设景品法人及后续游戏／景品品牌不并入本ID；历史专题继续包含品牌关联，不因此把后五部实际发行或开发回填给旧公司。",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1977-04-30",
+          "precision": "day",
+          "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+          "status": "sourceReviewed"
+        }
+      ],
+      "nameParts": {
+        "english": "Banpresto",
+        "japanese": "バンプレスト",
+        "basis": "existingBilingualName",
+        "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf"
+      }
     },
     {
       "id": "entity-adventure_international",
@@ -7209,7 +7226,7 @@
     },
     {
       "id": "banpresto",
-      "name": "Banpresto",
+      "name": "Banpresto（バンプレスト）",
       "dossierType": "history",
       "entityIds": [
         "entity-banpresto"
@@ -7770,7 +7787,8 @@
     "Brother Industries": "Brother Industries（ブラザー工業）",
     "Chunsoft": "Chunsoft（チュンソフト）",
     "Japan Home Video": "Japan Home Video（ジャパンホームビデオ）",
-    "TENKY": "TENKY（テンキー）"
+    "TENKY": "TENKY（テンキー）",
+    "Banpresto": "Banpresto（バンプレスト）"
   },
   "policy": "实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。"
 }

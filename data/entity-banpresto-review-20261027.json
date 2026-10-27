@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-27",
+  "baseCommit": "efb379a122184182c419382dd5158b35db816bd4",
+  "audit": "data/banpresto-audit-20261027.md",
+  "identityCorrections": [
+    {
+      "reviewId": "BAN27-I1",
+      "entityId": "entity-banpresto",
+      "rawName": "Banpresto",
+      "before": {
+        "type": "unknown",
+        "verification": "existingDossier"
+      },
+      "type": "company",
+      "status": "sourceReviewed",
+      "applyToExistingDossier": true,
+      "sources": [
+        "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+        "https://www.bandainamco.co.jp/about/history/corporate.html"
+      ],
+      "note": "2008年集团原公告具名1977-04-30成立的株式会社バンプレスト为吸收合并的消灭公司；本ID的既有Banpresto发行均属2008年4月前，核为旧游戏公司。2008年新设景品法人及后续游戏／景品品牌不并入本ID；历史专题继续包含品牌关联，不因此把后五部实际发行或开发回填给旧公司。",
+      "historicalPublisherScope": {
+        "rawPublisher": "Banpresto",
+        "beforeYear": 2008,
+        "releaseIds": [
+          "g1061-v1",
+          "g1061-v2",
+          "g1062-v1",
+          "g1063-v1",
+          "g1064-v-original",
+          "g1065-v-original",
+          "g1066-v-original",
+          "g1067-v-original",
+          "g1068-v-original",
+          "g1069-v-original",
+          "g1070-v-original",
+          "g1071-v-original",
+          "g1072-v-original",
+          "g1073-v-original",
+          "g1074-v-original",
+          "g304-v-banpresto-ps",
+          "g304-v-banpresto-sfc",
+          "g913-v1"
+        ]
+      }
+    }
+  ],
+  "creditAdditions": [],
+  "dateFacts": [
+    {
+      "entityId": "entity-banpresto",
+      "before": [],
+      "kind": "established",
+      "value": "1977-04-30",
+      "precision": "day",
+      "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
+      "status": "sourceReviewed",
+      "note": "原重组公告第2页明确旧万普公司成立日，不用2008年新景品法人日期替代。"
+    }
+  ]
+}
