@@ -105777,6 +105777,188 @@
         }
       ],
       "profileTitle": "销售渠道与服务沿革"
+    },
+    {
+      "id": "tokuma_intermedia",
+      "name": "徳間書店インターメディア",
+      "foundedAt": "1985",
+      "foundedSource": "https://ja.wikipedia.org/wiki/徳間書店インターメディア",
+      "checkedAt": "2026-10-27",
+      "status": "初步独立公司专题；复用综合专题并新增两部电脑叙事",
+      "scope": "独立呈现德间书店Intermedia的公司、品牌署名及1997年后的业务沿革。复用6部主库并链接3部既有RPG关联，新增2部电脑菜单叙事；不把母公司1954创立年赋给Intermedia。",
+      "versionScope": "原作与首次新增内容分层；复用已有g918—g923及相关RPG内容、发行ID。新增两作仅记PC-98原作批次；普通移植、合集及未核版差不增加内容。",
+      "publisherNote": "NDL典据确认Intermedia株式会社的历史公司名义。二手沿革记1985设立、1997-06-01并入德间书店，后以德间书店／Intermedia Company名义继续；NDL1985出版记录支持当时已有活动，不是公司登记原件。母公司、历史子公司、品牌和社内部门不是可互换的法人，旧署名和兼容别名保持。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>8部主库引用（6部已有、2部新增），3部RPG跳转原档案。Intermedia参与不等于全部原作开发；首发NEC、后发德间本体等实际署名分别保留。</strong></p><p class=\"scope-note\">既有RPG：<a href=\"tokuma.html#tokuma-filena\">永远的菲蕾娜</a> / <a href=\"tokuma.html#tokuma-lovequest\">爱情任务</a> / <a href=\"tokuma.html#tokuma-littlemaster3\">小小大师：虹色魔石</a></p>",
+      "workIds": [
+        "g918",
+        "g919",
+        "g920",
+        "g921",
+        "g922",
+        "g923",
+        "g1279",
+        "g1280"
+      ],
+      "relatedSectionTitle": "共享的三部RPG关联",
+      "relatedIntro": "三部RPG通过页首链接跳转德间综合专题原档案；不复制主库、内容、发行或专题关联对象。",
+      "source": "https://id.ndl.go.jp/auth/ndlna/001283900",
+      "catalogueEntryCount": 11,
+      "auditTitle": "公司、既有作品与本轮新增核对",
+      "auditSourceLabel": "NDL公司典据",
+      "auditLabel": "首批8部主库引用与3部既有RPG档案链接；不是完整作品总目。",
+      "auditNote": "新增游戏的年代、玩法与人物以二手目录和游玩资料交叉核对；法律合并原件、品牌界限、旧作版差和未展开目录另列待核。原有德间综合专题及旧锚点保留。详见data/tokuma-intermedia-audit.md。",
+      "sectionTitle": "电脑恋爱叙事与光盘主机合作",
+      "profileTitle": "公司、游戏署名与出版业务沿革",
+      "description": "德间书店Intermedia独立专题：电脑叙事、共享RPG、母公司关系和后续社内公司沿革。",
+      "creativeProfile": {
+        "thesis": "编辑观察：这批作品从电脑菜单叙事延伸至光盘主机合作。原始产品署名、品牌制作、公司发行与后发新增内容各自记录，跨媒介题材不等于统一开发团队。",
+        "phases": [
+          {
+            "period": "1985—1996",
+            "heading": "出版公司与游戏目录",
+            "analysis": "NDL书目分别列Intermedia编辑／出版和德间书店销售，支持历史名义独立。1985设立说另依二手公司沿革，不能把杂志创刊日写成法人登记日。",
+            "basis": "编辑观察",
+            "source": "https://ndlsearch.ndl.go.jp/books/R100000002-I000000043347"
+          },
+          {
+            "period": "1991—1994",
+            "heading": "电脑菜单叙事",
+            "analysis": "本轮补入《只将爱献给你》与《忒塞拉》；其预设行动选择与二手剧情记录支持叙事准入，未将社区开发字段直接升级为公司完整开发职责。",
+            "basis": "编辑观察",
+            "source": "https://kiisu.egono.com/main.php?key=tesela"
+          },
+          {
+            "period": "1997及以后",
+            "heading": "并入与社内公司名义",
+            "analysis": "二手沿革记1997并入德间书店，后续Intermedia Company为社内部门名义。旧公司、母公司和后续业务连续性分别说明，尚待同期公告补证。",
+            "basis": "编辑观察",
+            "source": "https://ja.wikipedia.org/wiki/徳間書店インターメディア"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "烈火少女缠组",
+          "status": "复用既有主库身份",
+          "reason": "HuneX开发，德间书店与NEC-HE共同制作；开发商官网发行署名为德间书店，主库保留该署名，不将合作方自动改成唯一发行商。PS版追加事件但也有删减，单列内容差异。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://www.hunex.co.jp/archives/works/pc-fx",
+          "workIds": [
+            "g918"
+          ]
+        },
+        {
+          "title": "秘密的花园",
+          "status": "复用既有主库身份",
+          "reason": "1992年电脑原作属于GAMEテクノポリス；1993年PC Engine版制作发行署名为德间书店Intermedia。本轮先保留原版，主机版尚缺逐项内容变化依据，不因平台不同新增一条。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://ja.wikipedia.org/wiki/秘密の花園_(ゲーム)",
+          "workIds": [
+            "g919"
+          ]
+        },
+        {
+          "title": "初恋物语",
+          "status": "复用既有主库身份",
+          "reason": "采用《Fami通》游戏史文章的1993年PC-98首发口径；部分公司汇总表记1992/12/15，保留异文。PC Engine版1994/04/28已确认发售与配音，尚未核清相较电脑版的具体新增内容；SS版有新增剧本，单列内容版。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://www.famitsu.com/news/202311/12323632.html",
+          "workIds": [
+            "g920"
+          ]
+        },
+        {
+          "title": "电脑天使：Digital Ange",
+          "status": "复用既有主库身份",
+          "reason": "先作为《初恋物语》的剧中作品，随后独立为漫画和游戏。1993年电脑原作、1994年追加两年后故事的PC Engine版及1997年改变设定与人物设计的SS版归于同一作品；漫画、广播剧与赠品CD不另计游戏。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://ja.wikipedia.org/wiki/電脳天使",
+          "workIds": [
+            "g921"
+          ]
+        },
+        {
+          "title": "少女之梦：Virgin Dream",
+          "status": "复用既有主库身份",
+          "reason": "1994/04/08 PC-98原版由GAMEテクノポリス发行；1996/05/31 PC Engine版有发售与演员依据，但具体新增内容尚需核对，本轮不机械补一条移植版本。美少女育成作为广义Galgame检索，不写成纯恋爱视觉小说。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://www.mobygames.com/game/49063/virgin-dream/",
+          "workIds": [
+            "g922"
+          ]
+        },
+        {
+          "title": "续·初恋物语：修学旅行",
+          "status": "复用既有主库身份",
+          "reason": "独立续作，与第一作没有连续剧情。PC-FX首发发行方为NEC Home Electronics，德间Intermedia负责开发；PS版加入大学入学前春假及菜穗路线。SS版同样有该路线，但尚无相较先发PS版的进一步新增内容证据，因此不另列版本。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://ja.wikipedia.org/wiki/続_初恋物語_〜修学旅行〜",
+          "workIds": [
+            "g923"
+          ]
+        },
+        {
+          "title": "キミだけに愛を…",
+          "status": "本轮新增原作",
+          "reason": "PC-98原作目录记1991年8月；X68000档案另记1991-10-10，MSX资料另有9月，未以同年份推为同期首发。FM TOWNS合集不另造独立作品。 资料以二手目录／游玩记录为主，不冒称原始开发合同核查。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://chaser.my.coocan.jp/guide/tech.htm",
+          "workIds": [
+            "g1279"
+          ]
+        },
+        {
+          "title": "Ⅳ -テセラ- キミは、汚れた天使か聖なる魔女か！？",
+          "status": "本轮新增原作",
+          "reason": "PC-98目录记1992-08-21；X68000档案另记1992-09-25，仅录前者原作批次。人物初始特征影响部分相处，不据此宣称主线分歧；具体制作分工仍待原版职员表。 资料以二手目录／游玩记录为主，不冒称原始开发合同核查。 本专题关联不自动改变具体开发、品牌、发行职责。",
+          "source": "https://kiisu.egono.com/main.php?key=tesela",
+          "workIds": [
+            "g1280"
+          ]
+        },
+        {
+          "title": "永远的菲蕾娜",
+          "status": "跳转既有RPG档案",
+          "reason": "继续使用tokuma-filena及其原作内容、发行；不新建副本身份或转入主库。 通过页首链接查看原档案，不创建本专题重复数据。",
+          "source": "https://ja.wikipedia.org/wiki/永遠のフィレーナ",
+          "workIds": []
+        },
+        {
+          "title": "爱情任务",
+          "status": "跳转既有RPG档案",
+          "reason": "继续使用tokuma-lovequest及其原作内容、发行；不新建副本身份或转入主库。 通过页首链接查看原档案，不创建本专题重复数据。",
+          "source": "https://ja.wikipedia.org/wiki/ラブクエスト",
+          "workIds": []
+        },
+        {
+          "title": "小小大师：虹色魔石",
+          "status": "跳转既有RPG档案",
+          "reason": "继续使用tokuma-littlemaster3及其原作内容、发行；不新建副本身份或转入主库。 通过页首链接查看原档案，不创建本专题重复数据。",
+          "source": "https://ja.wikipedia.org/wiki/リトルマスター〜虹色の魔石〜",
+          "workIds": []
+        },
+        {
+          "title": "1985设立与1997并入",
+          "status": "沿革范围／待补原件",
+          "reason": "1985设立与1997-06-01并入德间书店见二手沿革；NDL支持出版公司身份与1985活动，不是登记或合并原件。",
+          "source": "https://ja.wikipedia.org/wiki/徳間書店インターメディア",
+          "workIds": []
+        },
+        {
+          "title": "待核：品牌与同名部门",
+          "status": "沿革范围／待补原件",
+          "reason": "GAMEテクノポリス旧兼容别名保持，不把品牌名当法人正式名。1997年后Intermedia Company署名不追溯归到旧法人。",
+          "source": "https://id.ndl.go.jp/auth/ndlna/001283900",
+          "workIds": []
+        },
+        {
+          "title": "待核：电脑目录与版差",
+          "status": "沿革范围／待补原件",
+          "reason": "AYUMI、Tokimeki SECIL、Dragon Eyes、Continental、新宿Labyrinth等仍需逐作核对操作、首发及身份。PCE秘密花园、初恋、Virgin Dream的新增内容边界沿用旧专题待核，不补纯移植。",
+          "source": "https://ja.wikipedia.org/wiki/徳間書店インターメディア",
+          "workIds": []
+        },
+        {
+          "title": "待核：制作工种与合作",
+          "status": "沿革范围／待补原件",
+          "reason": "续初恋的Intermedia开发记载与NEC发行分开；新作FairyTale／IDES合作分工仍待原版职员表，不据版权行追加整作开发。",
+          "source": "https://raido.moe/staff/pce/pce_hatsukoi_monogatari.html",
+          "workIds": []
+        }
+      ]
     }
   ],
   "schemaVersion": 2,
