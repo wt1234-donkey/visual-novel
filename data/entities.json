@@ -2322,10 +2322,11 @@
       "sources": [
         "https://flyers.arcade-museum.com/videogames/show/314",
         "https://flyers.arcade-museum.com/videogames/show/315",
-        "https://flyers.arcade-museum.com/videogame-flyers/0/dragons-lair-ii-00316-02.jpg"
+        "https://flyers.arcade-museum.com/videogame-flyers/0/dragons-lair-ii-00316-02.jpg",
+        "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf"
       ],
       "verification": "sourceReviewed",
-      "historyNote": "原版Dragon’s Lair II传单背面正文具名Leland Corporation，底部联系地址与标志具名The Leland Corporation。馆录标1991，传单版权行标1990；仅据具名材料独立确认历史公司类别，不由年份异文更改既有发行日期。传单同时区分Sullivan Bluth动画合作，产品宣传、制造与版权均不足以直接核定全部游戏开发工种；g045旧发行保持，不追加原作制作或公司沿革关系。",
+      "historyNote": "原版Dragon’s Lair II传单具名The Leland Corporation，1991年街机发行沿用g045。1988年同期Play Meter报道：1987年Tradewest收购Cinematronics资产后，业务重组为The Leland Corporation；资产交易日不等同Leland法人成立日，旧公司作品、动画合作和开发职责也不由此转归Leland。详见data/leland-audit.md。",
       "dates": []
     },
     {
@@ -7399,6 +7400,20 @@
       ],
       "firstYearBasis": "关联主库作品最早原作首发年",
       "firstYear": 1982
+    },
+    {
+      "id": "leland",
+      "name": "Leland",
+      "dossierType": "company",
+      "entityIds": [
+        "entity-name-547f933b0469"
+      ],
+      "scope": "正文只引用Leland署名的1991年互动动画《Dragon’s Lair II: Time Warp》（g045）。11项同期体育、赛车、棋盘及动作街机列在末尾玩法参考，不作为叙事主库作品。Cinematronics原版《Dragon’s Lair》和《Space Ace》保留其原有专题及历史发行身份。",
+      "sources": [
+        "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf"
+      ],
+      "firstYearBasis": "关联主库作品最早原作首发年",
+      "firstYear": 1991
     }
   ],
   "displayNames": {
