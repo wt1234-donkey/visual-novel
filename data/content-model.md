@@ -50,3 +50,7 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 node --test tests/*.test.mjs
 python3 scripts/build_company_pages.py --check
 ```
+
+## 有来源的补充说明（2026-10-27）
+
+`work-notes.json` 保存已经存在的主库作品的历史背景、未形成新增内容身份的版本差异和角色补充。记录只引用既有作品ID，附来源及相关专题锚点，由首页与专题卡片共同展示；不改写原始作品／发行字段，不参与作品、内容、平台或正式职责的统计与筛选。它不是普通移植发行清单，不能用来替代具有确证新增内容的正式内容版本。由 `validate_data.py` 校验作品、专题和来源引用。

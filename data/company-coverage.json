@@ -105534,9 +105534,9 @@
       "id": "leland",
       "name": "Leland",
       "checkedAt": "2026-10-27",
-      "status": "复用一部既有主库叙事；组织沿革与非叙事目录分层核对",
-      "scope": "正文只引用Leland署名的1991年互动动画《Dragon’s Lair II: Time Warp》（g045）。11项同期体育、赛车、棋盘及动作街机列在末尾玩法参考，不作为叙事主库作品。Cinematronics原版《Dragon’s Lair》和《Space Ace》保留其原有专题及历史发行身份。",
-      "versionScope": "复用g045原作内容和1991年街机首发；1991年Space Ace转换套件的按键与难度调整、普通再版和三部曲合集均未有已核的新可玩剧情依据，不新增内容版本或普通移植发行。",
+      "status": "补齐街机、家用机与团队延续参考；两部既有主库作品补充来源说明",
+      "scope": "叙事正文引用Leland署名的《Dragon’s Lair II: Time Warp》（g045）。末尾按街机、转换套件、家用机和收购后团队四个范围补齐本次清单，体育、赛车、棋盘、格斗及未发行原型仅作玩法参考。《Space Ace》（g044）关联1991转换套件说明，原作仍归Cinematronics。",
+      "versionScope": "复用g045原作及1991街机发行；主库g044补充1991年Space Ace转换套件的斜向输入与取消难度选择说明。未核出新增动画、人物或剧情，不新建内容版本或纯平台发行。Fun ’N Games的1995年3DO改作单列参考，具体新增内容与作品身份仍待逐项比较。",
       "publisherNote": "1987年Tradewest收购Cinematronics资产；1988年同期《Play Meter》记述重组后以The Leland Corporation开展业务。1987指业务重组时期，不主张确切法人设立日或两个法人连续。Leland Cook为人名，不能因此将其与公司合并。",
       "publisherWorkText": "<p class=\"scope-note\"><strong>1部主库叙事、1条已收首发：Dragon’s Lair II（g045）。Leland的发行署名与Sullivan Bluth的动画合作分开，不从宣传单推定全部开发工种。</strong></p>",
       "workIds": [
@@ -105549,10 +105549,10 @@
       "source": "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf",
       "auditTitle": "后继业务、作品身份与归档边界",
       "auditSourceLabel": "1988年同期公司报道",
-      "auditLabel": "一部既有主库作品复用；无重复新作或推定内容版。",
-      "auditNote": "1987年收购与1988年重组报道不能独证Leland精确注册日；原版传单直接署名公司。逐项依据与缺口见data/leland-audit.md。",
+      "auditLabel": "保留一部专题正文；两部主库作品增加来源补充；清单不等于新增游戏数。",
+      "auditNote": "清单补充依据与未决项见data/leland-catalogue-completion-20261027.md；此前组织沿革核对保存在data/leland-audit.md。后续团队作品保留Williams等实际署名。",
       "sectionTitle": "时间旅行互动动画",
-      "description": "Leland街机互动动画专题：Dragon’s Lair II的既有主库身份与1987年Cinematronics资产承接沿革。",
+      "description": "Leland与Leland Interactive Media专题：互动动画主库关联、1987—1995年街机和家用机参考、1995—1996年Williams团队延续作品。",
       "creativeProfile": {
         "thesis": "编辑观察：这部续作把连续手绘动画、旅行场景和限时动作输入连成救援故事；这里仅讨论Leland署名发行的一部作品，不把动画团队的工作划为Leland单方开发。",
         "phases": [
@@ -105569,6 +105569,20 @@
             "analysis": "原版销售传单署The Leland Corporation并宣传Dragon’s Lair II，保留与初代分开的g045作品身份；传单所述动画合作不支持一揽子认定Leland创作了所有动画和程序。",
             "basis": "编辑观察",
             "source": "https://flyers.arcade-museum.com/videogames/show/315"
+          },
+          {
+            "period": "1992—1995",
+            "heading": "Leland Interactive Media与家用机作品",
+            "analysis": "清单从街机延伸到SNES、Genesis的体育、赛车、格斗和绘画音乐合集。Leland Interactive Media是这一时期使用的名义；1994年收购前后仍有旧名署名，不能按发行年机械推定独立公司状态。",
+            "basis": "编辑观察",
+            "source": "https://www.mobygames.com/company/1353/rowe-resources-inc/"
+          },
+          {
+            "period": "1995—1996",
+            "heading": "Williams体系中的移植与团队延续",
+            "analysis": "PlayStation版DOOM、Final DOOM及Nintendo 64版Cruis’n USA的资料署Williams Entertainment。此处以团队历史关联展示，逐版本注明移植或协作，不改写原作制作方，也不将这些项目纳入Leland叙事正文。",
+            "basis": "编辑观察",
+            "source": "https://www.mobygames.com/game/3587/cruisn-usa/credits/n64/"
           }
         ]
       },
@@ -105605,9 +105619,30 @@
         },
         {
           "title": "体育、赛车、棋盘与动作街机",
-          "status": "11项仅玩法参考",
-          "reason": "Leland宣传资料及同期公司报道可识别体育、竞速、射击与棋盘等产品；剧情主导与独立叙事身份没有充分依据，不因厂商署名扩入主库。年份相互冲突处不据目录推定精确首发。",
+          "status": "16项街机与原型仅作玩法参考",
+          "reason": "原有11项补齐Viper、Super Dodge Ball、Aaaargh!、Super Off-Road Track-Pak和Asylum。发行代理、扩展套件与未发行原型分开标记；Brute Force保留1990—1991异文。",
           "source": "https://flyers.arcade-museum.com/videogames/search/gallery?manuf_id=1482",
+          "workIds": []
+        },
+        {
+          "title": "Leland Interactive Media家用机清单",
+          "status": "6项家用机作品与1项3DO改作参考",
+          "reason": "补齐Pro Quarterback、The Baja、Fun ’N Games、Troy Aikman、Double Dragon V和Kyle Petty。1995年3DO Fun ’N Games为Williams署名的改作线索；未逐项比较新增素材，不生成主库内容版本。",
+          "source": "https://www.mobygames.com/company/1353/rowe-resources-inc/",
+          "workIds": []
+        },
+        {
+          "title": "Williams体系的六项团队延续作品",
+          "status": "仅作后继团队参考；不登记为独立Leland原作",
+          "reason": "逐版本区分MK3、DOOM、Final DOOM、MK Trilogy、Robotron X和Cruis’n USA；Robotron X主要开发为Player 1，Leland团队协作范围仍待原始职员表核定。",
+          "source": "https://www.mobygames.com/game/13604/robotron-x/releases/",
+          "workIds": []
+        },
+        {
+          "title": "两部主库作品的来源补充",
+          "status": "引用既有g044、g045；作品／内容／发行总数不变",
+          "reason": "《Space Ace》记录1991套件操作变化；《Dragon’s Lair II》补充动画制作与Leland街机制造发行的分工说明。补充说明独立显示，不把后发版本关系倒填至原作发行。",
+          "source": "https://www.dragons-lair-project.com/games/pages/sa.asp",
           "workIds": []
         }
       ]

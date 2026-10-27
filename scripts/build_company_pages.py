@@ -7,11 +7,14 @@ from pathlib import Path
 from source_urls import source_url_valid
 from entity_model import MODEL, DOSSIERS, MEMBERSHIPS, GROUPS, POSITION, card_details, dossier_identity, membership_description
 from entity_names import display_name
+from work_notes import validate_work_notes
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
 coverage = json.loads((ROOT / 'data/company-coverage.json').read_text(encoding='utf-8'))
 works = {work['id']: work for work in data['works']}
+work_notes = json.loads((ROOT / 'data/work-notes.json').read_text(encoding='utf-8'))
+validate_work_notes(work_notes, works, {c['id'] for c in coverage['companies']})
 gameplay_catalogues = json.loads((ROOT / 'data/gameplay-catalogues.json').read_text(encoding='utf-8'))
 escape = html.escape
 
@@ -100,11 +103,16 @@ def card(work, versions=None, anchors=(), version_label='个平台版本', conte
     version_panel = ('<p class="scope-note">仅专题收录 · 含文字输入玩法，不新增至主数据库。</p>' if catalogue_only else
                      f'<details class="version-panel"><summary>查看 {len(contents)} 个内容版本 · {len(versions)} 条平台发行</summary><div class="version-list">{"".join(content_rows)}</div></details>')
     context = f'<p class="scope-note">{escape(context_note)}</p>' if context_note else ''
+    supplements = ''.join(
+        f'<details class="work-supplement"><summary>{escape(note["title"])}</summary>'
+        f'<p class="changes">{escape(note["text"])}</p>{link(note["source"], "补充依据")}'
+        f' <a class="source-link" href="{note["dossierId"]}.html#{note["anchor"]}">相关专题</a></details>'
+        for note in work_notes['works'].get(work['id'], []))
     return f'''<article class="card" id="{work['id']}">{legacy_anchors}
 <div class="card-top"><span class="year">{work['firstYear']}</span><span class="category">{escape(work['category'])}{' · ' + escape(context_label) if context_label else ''}</span></div>
 <h3>{escape(display_title)}</h3>{original_line}{context}
 <p class="intro">{escape(work['synopsis'])}</p>
-{card_details(work, versions)}
+{card_details(work, versions)}{supplements}
 <div class="interaction-tags" aria-label="互动方式">{interaction_tags}</div>{interaction_evidence}
 <div class="card-meta"><span>{escape(work['subcategory'])} · {escape(work['genre'])}</span><span>主要角色 · {escape(' / '.join(work['characters']))}</span></div>
 {f'<p class="character-evidence">{link(work["charactersSource"], "角色依据")}{(" · " + escape(work["charactersNote"])) if work.get("charactersNote") else ""}</p>' if work.get('charactersSource') else ''}
@@ -145,6 +153,11 @@ def gameplay_appendix(company):
             else:
                 assert item['title'] and item['type'] and item['relation']
                 title = escape(item['title'])
+                if ref := item.get('catalogueWorkId'):
+                    assert ref in works, '参考清单引用了不存在的主库作品'
+                    dossier = next(c for c in coverage['companies'] if c['id'] == item['catalogueDossierId'])
+                    assert ref in dossier['workIds'], '主库参考链接不在目标专题'
+                    title = f'<a href="{dossier["id"]}.html#{ref}">{title}</a>'
                 if anchor := item.get('anchor'):
                     assert anchor in local, '附录作品锚点不在本专题'
                     title = f'<a href="#{escape(anchor, quote=True)}">{title}</a>'

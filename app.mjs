@@ -4,11 +4,13 @@ import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs
 const $=id=>document.getElementById(id);
 const fields={query:$('search'),category:$('category'),subcategory:$('subcategory'),company:$('legacy-company-select'),publisher:$('company-select'),brand:$('brand-select'),developer:$('developer-select'),participant:$('participant-select'),participantRole:$('participant-role'),dossier:$('dossier-select'),dossierRelation:$('dossier-relation'),platform:$('platform'),from:$('from'),to:$('to'),voice:$('voice'),sort:$('sort'),contentStatus:$('content-status'),interaction:$('interaction')};
 let entityIndex;
+let workNotes={};
 const label=(tag,className,text)=>{const el=document.createElement(tag);if(className)el.className=className;el.textContent=text;return el};
 const safeLink=(url,title)=>{const a=label('a','source-link',title);try{const u=new URL(url);if(['https:','http:'].includes(u.protocol)){a.href=u.href;a.target='_blank';a.rel='noopener noreferrer'}}catch{}return a};
 
 function renderCard({work,platformReleases:versions,contentVersions}){
   const card=label('article','card','');
+  card.id=work.id;
   const top=label('div','card-top','');
   top.append(label('span','year',String(work.firstYear)),label('span','category category-'+work.category,work.category));
   const displayTitle=work.chineseTitle||work.title;
@@ -33,6 +35,15 @@ function renderCard({work,platformReleases:versions,contentVersions}){
   }
   relationPanel.append(label('p','scope-note','原作、增补内容与具体发行分别署名；已登记品牌关系不代表所有历史时期均由同一公司经营。'));
   card.append(relationPanel);
+
+  for(const note of workNotes[work.id]||[]){
+    const panel=document.createElement('details');panel.className='work-supplement';
+    panel.append(label('summary','',note.title),label('p','changes',note.text),safeLink(note.source,'补充依据 ↗'));
+    if(/^[a-z0-9_-]+$/.test(note.dossierId)&&/^[a-zA-Z0-9_-]+$/.test(note.anchor)){
+      const a=label('a','source-link','相关专题');a.href=note.dossierId+'.html#'+note.anchor;panel.append(a);
+    }
+    card.append(panel);
+  }
 
   const tags=label('div','interaction-tags','');tags.setAttribute('aria-label','互动方式');
   for(const mode of work.interactionModes||[])tags.append(label('span','interaction-tag'+(mode==='待核实'?' pending-tag':''),mode));
@@ -81,9 +92,10 @@ function readFilters(){return {...Object.fromEntries(Object.entries(fields).map(
 
 async function main(){
   try {
-    const responses=await Promise.all(['games.json','taxonomy.json','entity-catalogue.json'].map(path=>fetch('./data/'+path+'?v=20261021-names')));
+    const responses=await Promise.all(['games.json','taxonomy.json','entity-catalogue.json','work-notes.json'].map(path=>fetch('./data/'+path+'?v=20261027-leland')));
     if(responses.some(r=>!r.ok))throw Error('HTTP '+responses.find(r=>!r.ok).status);
-    const [data,taxonomy,catalogue]=await Promise.all(responses.map(r=>r.json()));
+    const [data,taxonomy,catalogue,notes]=await Promise.all(responses.map(r=>r.json()));
+    workNotes=notes.works;
     entityIndex=createEntityIndex(data,catalogue.model,catalogue);
     const typeCounts=new Map();for(const e of catalogue.model.entities)typeCounts.set(e.type,(typeCounts.get(e.type)||0)+1);
     $('entity-stat-status').textContent=`${typeCounts.get('company')||0}个公司／组织 · ${typeCounts.get('brand')||0}个品牌 · ${catalogue.model.dossiers.length}个专题；其他团队、刊物和待核身份见主体档案。`;
@@ -163,6 +175,7 @@ async function main(){
     }
     $('clear').addEventListener('click',()=>{for(const [key,node] of Object.entries(fields))node.value=key==='sort'?'oldest':'';$('include-affiliates').checked=false;fillSubcategories();render();fields.query.focus()});
     render();
+    if(/^#g\d+$/.test(location.hash))document.getElementById(location.hash.slice(1))?.scrollIntoView();
   }catch(error){$('result-count').textContent='数据加载失败';$('empty').hidden=false;$('empty').querySelector('span').textContent='请从 GitHub Pages 或本地 HTTP 服务访问；'+error.message}
 }
 main();

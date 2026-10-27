@@ -16,6 +16,23 @@ def read(path):
 
 
 class LelandDossierTests(unittest.TestCase):
+    def test_pending_catalogue_expansion_preserves_published_organization_results(self):
+        published = '8c16099af18e77b618f747223952d4e140e67b8f'
+        def before(path):
+            return subprocess.check_output(['git', 'show', f'{published}:{path}'], cwd=ROOT)
+        for path in ['data/games.json', 'data/credits.json', 'data/organizations.json',
+                     'data/organization-context-20261027.json',
+                     'data/organization-verification-20261027.json',
+                     'data/entity-organization-review-20261027.json',
+                     'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
+            self.assertEqual((ROOT / path).read_bytes(), before(path), path)
+        prior = json.loads(before('data/entities.json'))
+        current = read('data/entities.json')
+        self.assertEqual(current['entities'], prior['entities'])
+        self.assertEqual(current['relations'], prior['relations'])
+        self.assertEqual([d for d in current['dossiers'] if d['id'] != 'leland'],
+                         [d for d in prior['dossiers'] if d['id'] != 'leland'])
+
     def test_existing_catalogue_objects_and_main_navigation_are_preserved(self):
         def before(path):
             return subprocess.check_output(['git', 'show', f'{PRE_LELAND}:{path}'], cwd=ROOT)
