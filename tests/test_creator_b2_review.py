@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,7 +50,7 @@ class CreatorB2Tests(unittest.TestCase):
                      'data/work-classification.json', 'data/entity-migration-baseline.json',
                      'data/content-migration-baseline.json', 'index.html', 'app.mjs',
                      'filter.mjs', 'styles.css', 'data/entity-creator-b1-review-20261023.json']:
-            self.assertEqual((ROOT / path).read_bytes(),
+            self.assertEqual(catalogue_bytes(ROOT, path),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
 
 if __name__ == '__main__':

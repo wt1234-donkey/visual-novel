@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '6d3d3f5be873cf8ba4c9923e6cce6ac7bacbafc6'
@@ -12,7 +13,7 @@ REVIEW = 'data/entity-creator-x1-review-20261026.json'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def old(path):

@@ -3,13 +3,14 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 ROOT=Path(__file__).resolve().parents[1]
 SNAPSHOT='cf0d917d25c2dd281c91b80df851130e63263e0d'
 BASE='ed957dbf835749edd56aba54eec944a143f22a2d'
 def read(p):
     if p in {"data/entities.json", "data/credits.json", "data/organizations.json"}:
         return json.loads(subprocess.check_output(["git", "show", f"{SNAPSHOT}:{p}"], cwd=ROOT))
-    return json.loads((ROOT/p).read_text())
+    return json.loads(catalogue_bytes(ROOT, p).decode())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class CreatorK3Tests(unittest.TestCase):
     def test_one_identity_and_two_originals(self):

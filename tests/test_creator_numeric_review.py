@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '7be9bd94fd8b0b3cd3c964bdd7d6c43bc8ee4a2e'
@@ -14,7 +15,7 @@ IDS = ['entity-5pb', SEVEN, 'entity-name-e1232b52eff7',
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def old(path):

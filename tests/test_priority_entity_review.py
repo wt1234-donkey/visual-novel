@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW_BASE = 'f146070527470017120c08973ada0fca398c00ee'
@@ -10,7 +11,7 @@ REVIEW_APPLIED = 'ee0694de5dc51cc773bf9e76ae72a375da82211d'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def previous(path, revision=REVIEW_BASE):
@@ -23,7 +24,7 @@ class PriorityEntityReviewTests(unittest.TestCase):
         for path in ['data/games.json', 'data/company-coverage.json', 'data/taxonomy.json',
                      'data/gameplay-catalogues.json', 'data/entity-migration-baseline.json',
                      'data/content-migration-baseline.json']:
-            self.assertEqual((ROOT / path).read_bytes(), subprocess.check_output(
+            self.assertEqual(catalogue_bytes(ROOT, path), subprocess.check_output(
                 ['git', 'show', f'{REVIEW_BASE}:{path}'], cwd=ROOT), path)
         before = previous('data/entities.json')
         after = previous('data/entities.json', REVIEW_APPLIED)
@@ -85,7 +86,7 @@ class PriorityEntityReviewTests(unittest.TestCase):
                  ('minatosoft.html', 'g1251', 'original', 'main', 'A5'),
                  ('minatosoft.html', 'minatosoft-climax', 'licensed', 'related', 'A6')]
         for path, wid, group, placement, review_id in cases:
-            page = (ROOT / path).read_text()
+            page = catalogue_bytes(ROOT, path).decode()
             start = page.index(f'id="{wid}"')
             wrapper = page[page.rfind('<div class="dossier-card-wrapper"', 0, start):start]
             card = page[start:page.index('</article>', start)]

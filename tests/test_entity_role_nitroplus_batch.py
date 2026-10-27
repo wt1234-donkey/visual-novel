@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_TREE = '8a520a639b38bd38b8eb11aae16fdb2dd6eb201d'
@@ -10,7 +11,7 @@ NITROPLUS_TREE = '99d54acbeda8976b27df552ecc0709718cc7b600'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text(encoding='utf-8'))
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def base(path):

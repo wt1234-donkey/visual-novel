@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'ee0694de5dc51cc773bf9e76ae72a375da82211d'
@@ -10,7 +11,7 @@ APPLIED = 'b9a5a7e7f10568e005c58bdc346e04b7e8cec399'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def before(path, revision=BASE):
@@ -84,7 +85,7 @@ class FollowupEntityReviewTests(unittest.TestCase):
                      'data/content-migration-baseline.json', 'data/work-classification.json',
                      'data/entity-priority-review-20261022.json',
                      'data/entity-priority-review-20261022.md']:
-            self.assertEqual((ROOT / path).read_bytes(), subprocess.check_output(
+            self.assertEqual(catalogue_bytes(ROOT, path), subprocess.check_output(
                 ['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
 
     def test_minato_cards_explain_separate_production_evidence(self):

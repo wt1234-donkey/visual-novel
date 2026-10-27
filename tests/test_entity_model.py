@@ -15,8 +15,10 @@ class EntityMigrationTests(unittest.TestCase):
   for path,value in build_pages().items():self.assertEqual((ROOT/path).read_text(),value,path)
  def test_every_existing_dossier_anchor_survives_and_each_work_is_rendered_once(self):
   baseline=read('data/entity-migration-baseline.json')['baseCommit']
+  historical=set(read('data/entity-migration-baseline.json')['originalDossiers'])
   for company in read('data/company-coverage.json')['companies']:
-   path=company['id']+'.html';before=subprocess.check_output(['git','show',baseline+':'+path],cwd=ROOT,text=True);after=(ROOT/path).read_text()
+   path=company['id']+'.html';after=(ROOT/path).read_text()
+   before=subprocess.check_output(['git','show',baseline+':'+path],cwd=ROOT,text=True) if company['id'] in historical else ''
    old=set(re.findall(r'\bid="([^"]+)"',before));new=re.findall(r'\bid="([^"]+)"',after)
    self.assertFalse(old-set(new),(path,old-set(new)));self.assertEqual(len(new),len(set(new)),path)
    ids=[*company['workIds'],*[w['id'] for w in company.get('relatedGames',[])],*[w['id'] for w in company.get('dossierOnlyWorks',[])]]

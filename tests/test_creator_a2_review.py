@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'c5abca055efbae673c53d8275579e9f42ae815b7'
@@ -42,7 +43,7 @@ class CreatorA2ReviewTests(unittest.TestCase):
   paths = ['data/entities.json','data/entity-migration-review.json','data/games.json','data/company-coverage.json','data/taxonomy.json','data/gameplay-catalogues.json','data/work-classification.json','data/entity-migration-baseline.json','data/content-migration-baseline.json','index.html','app.mjs','filter.mjs','styles.css']
   paths += [f'data/entity-creator-a-review-20261022.{ext}' for ext in ['json','md']]
   for path in paths:
-   actual = subprocess.check_output(['git','show',f'{APPLIED}:{path}'],cwd=ROOT) if path in ['data/entities.json','data/entity-migration-review.json'] else (ROOT/path).read_bytes()
+   actual = subprocess.check_output(['git','show',f'{APPLIED}:{path}'],cwd=ROOT) if path in ['data/entities.json','data/entity-migration-review.json'] else catalogue_bytes(ROOT, path)
    self.assertEqual(actual, subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
  def test_progress_is_contiguous_and_unverified_brands_do_not_inherit(self):
   review = read('data/entity-creator-a2-review-20261022.json');org = applied('data/organizations.json');p = org['registrationProgress']

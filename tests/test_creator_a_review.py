@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 ROOT=Path(__file__).resolve().parents[1]
 BASE='d8f37e90abf47af94e9285167a26b6865497e332'
@@ -34,7 +35,7 @@ class CreatorAReviewTests(unittest.TestCase):
  def test_core_catalogue_baselines_and_all_prior_evidence_unchanged(self):
   paths=['data/games.json','data/company-coverage.json','data/taxonomy.json','data/gameplay-catalogues.json','data/work-classification.json','data/entity-migration-baseline.json','data/content-migration-baseline.json','index.html','app.mjs','filter.mjs','styles.css']
   paths += [f'data/entity-{batch}-review-20261022.{ext}' for batch in ['priority','followup','third','fourth'] for ext in ['json','md']]
-  for p in paths:self.assertEqual((ROOT/p).read_bytes(),subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT),p)
+  for p in paths:self.assertEqual(catalogue_bytes(ROOT, p),subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT),p)
  def test_sequential_progress_and_scope_are_explicit(self):
   review=read('data/entity-creator-a-review-20261022.json');progress=review['progress']
   self.assertEqual(progress['total'],32);self.assertEqual(len(progress['processedEntityIds']),8)

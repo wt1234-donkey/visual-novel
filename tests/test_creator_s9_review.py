@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'a5c6f50f4f6aa62752f328003af9ba13dbd62477'
@@ -13,7 +14,7 @@ SQUARE_WORKS = ['g1210', 'square-chronotrigger', 'square-xenogears', 'square-chr
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def applied(path):

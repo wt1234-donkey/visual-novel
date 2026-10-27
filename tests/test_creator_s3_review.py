@@ -5,6 +5,7 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,7 +19,7 @@ import build_entity_model as builder
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def applied(path):
