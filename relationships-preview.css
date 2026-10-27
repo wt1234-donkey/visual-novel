@@ -17,3 +17,5 @@ body[data-source] .family-nav{overflow-x:hidden}body[data-source] .family-button
 .verification-controls label{display:grid;gap:7px;color:#52685b;font-size:13px}.verification-controls select{padding:10px 14px;background:#fff;border:1px solid #cddbd1;border-radius:8px;font:inherit}
 .verification-status{display:inline-block;border-radius:7px;padding:6px 10px;font-size:12px;white-space:nowrap;background:#eef1ef;color:#52685b}.verification-status.confirmed{background:#e3f1e8;color:#23613c}.verification-status.limited{background:#e7eef9;color:#345b87}.verification-status.conflict{background:#fae8e7;color:#8c3932}.verification-status.pending{background:#f0f1ef;color:#69736b}
 .verification-record>p{line-height:1.8}.verification-note{border-left:3px solid #9dbba8;padding-left:12px;margin:14px 0;font-size:13px;line-height:1.75}.verification-note a{overflow-wrap:anywhere}.verification-note p{margin:5px 0 10px}
+
+.verification-controls label.verification-changed{display:flex;align-items:center;gap:8px}.verification-history{margin:14px 0;padding:12px;background:#f5f7f3;border-radius:8px}

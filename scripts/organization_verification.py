@@ -1,4 +1,5 @@
-"""Attach the frozen round-ten evidence ledger without promoting scoped credits."""
+"""Attach versioned evidence ledgers without promoting scoped credits."""
+import hashlib
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -8,11 +9,31 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def attach_verification(result):
     read = lambda name: json.loads((ROOT / 'data' / name).read_text())
-    ledger = read('organization-verification-20261027.json')
+    baseline_path = ROOT / 'data/organization-verification-20261027.json'
+    ledger = read(baseline_path.name)
+    baseline_source = ledger['source']
+    delta = read('organization-verification-round16-20261027.json')
+    assert hashlib.sha256(baseline_path.read_bytes()).hexdigest() == delta['baselineSha256']
     context = read('organization-context-20261027.json')
+    supplement = read('organization-context-round16-20261027.json')
+    for key in ['nodeNotes', 'edgeReviews', 'events', 'cooperations']:
+        context[key].extend(supplement[key])
     nodes = {n['id']: n for n in result['nodes']}
     records = {r['recordId']: r for r in ledger['records']}
     assert len(records) == len(ledger['records']), '重复台账记录'
+    histories = {}
+    for row in delta['records']:
+        ref = row['recordId']
+        assert ref in records and ref not in histories, '新增台账引用或重复更新'
+        previous = records[ref]
+        frozen = ['category', 'id', 'topic', 'game', 'placement', 'need', 'oldUrl',
+                  'recordId', 'entityId', 'workId']
+        assert all(row[key] == previous[key] for key in frozen), '冻结作品或主体引用变更'
+        assert previous['status'] == '仍待核' and row['sources']
+        assert 11 <= row['newRound'] <= delta['source']['round']
+        histories[ref] = {'round': baseline_source['round'], **{
+            key: previous[key] for key in ['status', 'detail', 'sources', 'strength']}}
+        records[ref] = row
     by_entity = defaultdict(lambda: defaultdict(list))
     for r in records.values():
         assert r['entityId'] in nodes and r['workId'] in result['works']
@@ -45,10 +66,12 @@ def attach_verification(result):
     result['organizationEvents'] = context['events']
     result['cooperations'] = context['cooperations']
     result['verificationLedger'] = {
-        'reviewedAt': ledger['reviewedAt'], 'source': ledger['source'],
-        'policy': ledger['policy'], 'records': records,
+        'reviewedAt': delta['reviewedAt'], 'source': delta['source'],
+        'previousSource': baseline_source, 'policy': delta['policy'], 'records': records,
+        'changedRecordIds': list(histories), 'changedCount': len(histories),
+        'recordHistory': histories,
         'counts': dict(Counter(r['status'] for r in records.values())),
         'entityCount': sum(bool(rows) for rows in by_entity.values()), 'total': len(records),
-        'audit': 'data/organization-verification-20261027.md'}
-    result['updated'] = ledger['reviewedAt']
+        'audit': delta['audit']}
+    result['updated'] = delta['reviewedAt']
     return result
