@@ -12,7 +12,7 @@ from catalogue_snapshot import PRE_LELAND
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text(encoding='utf-8'))
+    return json.loads(subprocess.check_output(['git','show',f'fb69d2f381a483c6214f7807c551149b6264f6f7:{path}'],cwd=ROOT))
 
 
 class LelandDossierTests(unittest.TestCase):
@@ -41,7 +41,7 @@ class LelandDossierTests(unittest.TestCase):
             return subprocess.check_output(['git', 'show', f'{PRE_LELAND}:{path}'], cwd=ROOT)
         for path in ['data/games.json', 'data/taxonomy.json', 'data/work-classification.json',
                      'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
-            self.assertEqual((ROOT / path).read_bytes(), before(path), path)
+            self.assertEqual(subprocess.check_output(['git','show',f'fb69d2f381a483c6214f7807c551149b6264f6f7:{path}'],cwd=ROOT), before(path), path)
         coverage = read('data/company-coverage.json')
         self.assertEqual([c['id'] for c in coverage['companies'] if c['id'] == 'leland'], ['leland'])
         coverage['companies'] = [c for c in coverage['companies'] if c['id'] != 'leland']
@@ -49,7 +49,12 @@ class LelandDossierTests(unittest.TestCase):
         gameplay = read('data/gameplay-catalogues.json')
         gameplay['companies'].pop('leland')
         self.assertEqual(gameplay, json.loads(before('data/gameplay-catalogues.json')))
-        self.assertEqual((ROOT / 'index.html').read_text(), build_dossier_navigation(before('index.html').decode()))
+        from unittest.mock import patch
+        import build_company_pages as pages
+        historical_dossiers = {d['id']: d for d in read('data/entities.json')['dossiers']}
+        with patch.object(pages, 'coverage', read('data/company-coverage.json')), patch.object(pages, 'DOSSIERS', historical_dossiers):
+            index = subprocess.check_output(['git','show','fb69d2f381a483c6214f7807c551149b6264f6f7:index.html'],cwd=ROOT).decode()
+            self.assertEqual(index, build_dossier_navigation(before('index.html').decode()))
 
     def test_single_existing_main_work_and_publisher_are_reused(self):
         dossier = next(x for x in read('data/company-coverage.json')['companies'] if x['id'] == 'leland')

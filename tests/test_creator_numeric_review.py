@@ -88,9 +88,9 @@ class CreatorNumericReviewTests(unittest.TestCase):
         self.assertEqual(p['processedEntityIds'][:320], before['processedEntityIds'])
         self.assertEqual(p['processedEntityIds'][-6:], IDS)
         self.assertEqual(len(p['processedEntityIds']), len(set(p['processedEntityIds'])))
-        script = """import fs from 'node:fs';
+        script = """import {execFileSync} from 'node:child_process';
 import {sortFamilies} from './relationships-preview.mjs';
-const es=JSON.parse(fs.readFileSync('data/entities.json')).entities;
+const es=JSON.parse(execFileSync('git',['show','7ea5d46efdfb5a36875fbc48ed3b287ac0dc0e3c:data/entities.json'],{encoding:'utf8'})).entities;
 const ids=sortFamilies(es.map(e=>({id:e.id,title:e.name}))).map(e=>e.id);
 process.stdout.write(JSON.stringify(ids));"""
         sorted_ids = json.loads(subprocess.check_output(

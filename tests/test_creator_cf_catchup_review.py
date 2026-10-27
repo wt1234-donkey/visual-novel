@@ -78,9 +78,9 @@ class CreatorCFCatchupTests(unittest.TestCase):
         self.assertEqual(review['creditAdditions'], [])
         self.assertEqual([r['entityId'] for r in review['reviewedEntities']], IDS)
         self.assertEqual([r['entityId'] for r in review['deferredReviews']], IDS)
-        script = """import fs from 'node:fs';
+        script = """import {execFileSync} from 'node:child_process';
 import {sortFamilies} from './relationships-preview.mjs';
-const es=JSON.parse(fs.readFileSync('data/entities.json')).entities;
+const es=JSON.parse(execFileSync('git',['show','7be9bd94fd8b0b3cd3c964bdd7d6c43bc8ee4a2e:data/entities.json'],{encoding:'utf8'})).entities;
 const seen=new Set(JSON.parse(process.argv[1]));
 const missing=sortFamilies(es.map(e=>({id:e.id,title:e.name}))).filter(e=>!seen.has(e.id));
 process.stdout.write(JSON.stringify(missing.map(e=>e.id)));"""

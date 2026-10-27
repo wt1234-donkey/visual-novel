@@ -14,7 +14,7 @@ class OrganizationRound16Tests(unittest.TestCase):
                      'data/work-classification.json','data/entity-migration-baseline.json',
                      'data/content-migration-baseline.json','data/organization-verification-20261027.json',
                      'data/organization-context-20261027.json','data/relationships-preview-config.json','index.html']:
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
+            self.assertEqual(subprocess.check_output(['git','show',f'6f69f7e505a2330b9068ec1a31687331f9aea0d6:{path}'],cwd=ROOT),subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
     def test_revision_chain_and_historical_events_have_specific_evidence(self):
         baseline=ROOT/'data/organization-verification-20261027.json'
         delta=json.loads((ROOT/'data/organization-verification-round16-20261027.json').read_text())

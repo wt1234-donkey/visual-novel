@@ -220,7 +220,7 @@ def build(company):
     profile_rows = ''.join(f'''<article class="profile-phase"><span class="profile-period">{escape(phase['period'])}</span>
 <h3>{escape(phase['heading'])}</h3><p>{escape(phase['analysis'])}</p>
 <div class="profile-basis"><span>{escape(phase['basis'])}</span>{link(phase['source'], '阅读依据')}</div></article>''' for phase in profile['phases'])
-    profile_section = f'''<section class="creative-profile" id="identity"><div class="section-heading"><div><p class="eyebrow">CREATIVE PROFILE</p><h2>作品怎样形成自己的风格</h2></div></div>
+    profile_section = f'''<section class="creative-profile" id="identity"><div class="section-heading"><div><p class="eyebrow">CREATIVE PROFILE</p><h2>{escape(company.get("profileTitle", "作品怎样形成自己的风格"))}</h2></div></div>
 <p class="profile-lead">{escape(profile['thesis'])}</p><div class="profile-phases">{profile_rows}</div>
 <p class="profile-caveat">时期划分是依据作品目录与厂商资料所做的编辑归纳；“厂商说明”引用其公开文字。“编辑观察”仅说明作品中可见的变化，不推断未经证实的经营或创作动机。</p></section>'''
     work_cards = '<div class="cards">' + ''.join(card(w, anchors=legacy_anchors.get(w['id'], ()), version_label=company.get('versionPanelLabel', '个平台版本')) for w in selected) + '</div>'

@@ -102,7 +102,7 @@ ADVENTURE_ALICE_ROLE_REVIEW = 'data/entity-role-adventure-alice-review-20261027.
 TYPE_LABELS = {'company':'公司／组织','brand':'品牌','team':'制作团队','publication':'刊物／出版名义','individual':'个人','unknown':'身份待核','history':'沿革专题'}
 ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
 BRANDS = set('key aniplex_exe sprite madosoft yuzusoft innocent_grey minori august toneworks asaproject leaf sagaplanets smee favorite cuffs cube sphere palette silkys silkys_plus alicesoft overdrive cocktailsoft macadamia fairytale cabbage hulotte laplacian applique clochette nanawind harukaze sorahane hummingbird_soft minatosoft'.split())
-HISTORIES = {'sierra','sierra_on_line','falcom','te_soft','banpresto'}
+HISTORIES = {'sierra','sierra_on_line','falcom','te_soft','banpresto','takeru'}
 NAMES = {'key':['Key'], 'novect':['NOVECT','Novectacle'], 'aniplex_exe':['ANIPLEX.EXE'], 'sprite':['sprite','sprite games'], 'madosoft':['まどそふと'], 'yuzusoft':['ゆずソフト'], 'innocent_grey':['Innocent Grey'], 'minori':['minori'], 'august':['AUGUST'], 'toneworks':['tone work’s',"tone work's"], 'asaproject':['ASa Project'], 'elf':['ELF','エルフ'], 'leaf':['Leaf'], 'sagaplanets':['SAGA PLANETS'], 'smee':['SMEE'], 'favorite':['FAVORITE'], 'cuffs':['CUFFS'], 'cube':['CUBE'], 'sphere':['Sphere'], 'palette':['ぱれっと'], 'silkys':['Silky’s',"Silky's"], 'silkys_plus':['Silky’s Plus',"Silky's Plus"], 'alicesoft':['Alicesoft','ALICESOFT','アリスソフト'], 'nitroplus':['Nitroplus','NITRO PLUS'], 'overdrive':['OVERDRIVE'], 'jast':['JAST（日本）'], 'cocktailsoft':['Cocktail Soft','カクテルソフト','カクテル・ソフト'], 'macadamia':['Macadamia Soft'], 'fairytale':['フェアリーテール','FairyTale','FAIRYTALE'], 'gaina':['GAINA','BENTEN Film'], 'gainax':['GAINAX'], 'jhv':['Japan Home Video'], 'cabbage':['きゃべつそふと','Cabbage Soft'], 'hulotte':['HULOTTE'], 'laplacian':['Laplacian'], 'applique':['あっぷりけ'], 'clochette':['Clochette'], 'nanawind':['NanaWind'], 'harukaze':['HARUKAZE','HARU❀KAZE'], 'sorahane':['SORAHANE'], 'taito':['TAITO（太东）','TAITO'], 'nec_he':['NEC Home Electronics'], 'tokuma':['徳間書店'], 'sega':['世嘉','SEGA'], 'shopro':['小学館プロダクション'], 'hokubu':['北部通信工業'], 'konami':['Konami'], 'hudson':['Hudson Soft（哈德森）','Hudson Soft'], 'sinclair':['Sinclair Research'], 'cinematronics':['Cinematronics'], 'microsoft':['Microsoft'], 'enix':['Enix（艾尼克斯）','Enix'], 'dataeast':['Data East'], 'ascii':['ASCII'], 'melbournehouse':['Melbourne House'], 'koei':['光荣','KOEI'], 'banpresto':['Banpresto'], 'adventure_international':['Adventure International'], 'infocom':['Infocom'], 'sierra':['On-Line Systems','Sierra On-Line'], 'sierra_on_line':['Sierra On-Line'], 'psk':['PSK'], 'microcabin':['Micro Cabin','マイクロキャビン'], 'legend_uk':['Legend（英国）'], 'legend_entertainment':['Legend Entertainment'], 'te_soft':['T&E SOFT'], 'carry_lab':['Carry Lab','キャリーラボ'], 'champion_soft':['チャンピオンソフト','ChampionSoft','Champion Soft'], 'hummingbird_soft':['HummingBird Soft','ハミングバードソフト'], 'riverhill_soft':['Riverhill Soft','リバーヒルソフト'], 'falcom':['日本ファルコム','Falcom'], 'ibm':['IBM'], 'mosaic':['Mosaic Publishing'], 'square':['Square','スクウェア'], 'toho':['東宝','TOHO'], 'db_soft':['dB-SOFT'], 'comptiq':['Comptiq','コンプティーク'], 'minatosoft':['みなとそふと','Minato Soft'], 'hawkeye':['株式会社ホークアイ','Hawk Eye'], 'addison_wesley':['Addison-Wesley','Addison-Wesley Publishing Company']}
 EXTRAS = [
  ('visualarts','VISUAL ARTS','company',['VisualArt’s','VisualArts','VISUAL ARTS'], 'https://visual-arts.jp/blog_2024_1/'),
@@ -176,7 +176,7 @@ def build():
   name='Sierra On-Line（原On-Line Systems）' if cid in {'sierra','sierra_on_line'} else c['name']
   # Leland already has a reviewed stable ID from its historical release name.
   # A new dossier must attach to that identity instead of manufacturing entity-leland.
-  ident='entity-name-547f933b0469' if cid=='leland' else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
+  ident={'leland':'entity-name-547f933b0469','takeru':'entity-name-08cbddd5e450'}.get(cid) if cid in {'leland','takeru'} else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
   dossiers.append({'id':cid,'name':c['name'],'dossierType':'history' if cid in HISTORIES else kind,'entityIds':[ident],'scope':c['scope'],'sources':[c['source']],'firstYearBasis':'关联主库作品最早原作首发年','firstYear':min((w['firstYear'] for w in d['works'] if w['id'] in c['workIds']),default=None)})
  for eid,name,kind,names,source in EXTRAS:add_entity(eid,name,kind,names,source,'sourceReviewed')
  # Publisher brand/company homographs remain distinct. Raw AQUAPLUS alone is a publishing-brand signature.
@@ -311,6 +311,15 @@ def build():
  # Dossier memberships are separate from production assertions. Every existing member remains present.
  bywork=defaultdict(list)
  for x in credits:bywork[x['workId']].append(x)
+ if 'takeru' in companies:
+  # TAKERU dossier reuses the already reviewed sales-service identity. No game creation is inferred.
+  takeru=entities['entity-name-08cbddd5e450']
+  assert takeru['type']=='brand' and takeru['verification']=='sourceReviewed'
+  takeru['historyNote']=companies['takeru']['publisherNote']+' 既有冻结核查记录原文保留；本轮新增渠道专题与限定组织关系，见data/takeru-audit.md。'
+  takeru['aliases']=list(dict.fromkeys([*takeru['aliases'],'ソフトベンダーTAKERU','武尊']))
+  brother=add_entity('brother','Brother Industries','company',['Brother Industries','ブラザー工業株式会社'],'https://global.brother/ja/digest/history/takeru','sourceReviewed',note='TAKERU系统开发及服务主体；不由终端开发推定游戏开发。')
+  relations.append({'from':takeru['id'],'to':brother,'type':'operatedBy','period':{'from':1986,'to':None,'precision':'year','openEnd':'notAsserted'},'status':'sourceReviewed','source':companies['takeru']['source'],'note':'1986年服务由Brother推出；关系只说明初始运营来源，不声称持续至今。1994年向XING移交的精确时间仍待同期原件，1997是服务结束而非Brother注销。'})
+  takeru['dates']=[{'kind':'serviceStarted','value':'1986','precision':'year','source':companies['takeru']['source'],'status':'sourceReviewed'},{'kind':'serviceEnded','value':'1997','precision':'year','source':companies['takeru']['source'],'status':'sourceReviewed'}]
  dossier_lookup={x['id']:x for x in dossiers}
  for c in coverage['companies']:
   subject=set(dossier_lookup[c['id']]['entityIds'])
