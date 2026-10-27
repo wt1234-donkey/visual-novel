@@ -41733,6 +41733,32 @@
       "territory": null
     },
     {
+      "id": "credit-cf6bb812fd6c0a55",
+      "entityId": "entity-sega",
+      "targetType": "release",
+      "targetId": "g1281-v1",
+      "workId": "g1281",
+      "role": "publisher",
+      "rawCredit": "世嘉",
+      "status": "existingCredit",
+      "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-ec3b2f187175aa25",
+      "entityId": "entity-sega",
+      "targetType": "release",
+      "targetId": "g1282-v1",
+      "workId": "g1282",
+      "role": "publisher",
+      "rawCredit": "世嘉",
+      "status": "existingCredit",
+      "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
       "id": "credit-06c97adc1fb6de71",
       "entityId": "entity-name-a7663faeee46",
       "targetType": "release",
@@ -78979,6 +79005,28 @@
     {
       "dossierId": "sega",
       "workId": "g935",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.sega.jp/history/companyTimeline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "sega",
+      "workId": "g1281",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.sega.jp/history/companyTimeline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "sega",
+      "workId": "g1282",
       "placement": "main",
       "roles": [
         "publisher"

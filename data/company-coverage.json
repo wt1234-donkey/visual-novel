@@ -38540,14 +38540,14 @@
       "name": "世嘉（SEGA）",
       "foundedAt": "1960-06-03",
       "foundedSource": "https://www.sega.co.jp/company/outline/index.html",
-      "checkedAt": "2026-10-12",
-      "status": "本轮十七部主库相关作品及三部跨类型关联核对；其余历史叙事清单待补",
-      "scope": "复用原库五部世嘉实际发行作品，新增十二部叙事作品，另列两部Roommania生活模拟与新樱花大战动作冒险。樱花大战1—5以广义Galgame检索，保留战术玩法；实拍互动电影使用明确细分类。并非世嘉全部游戏或全部叙事作品清单。",
+      "checkedAt": "2026-10-27",
+      "status": "既有专题续补两部Dreamcast独立叙事；初步完善官方组织沿革",
+      "scope": "复用原库五部世嘉实际发行作品，新增十二部叙事作品，另列两部Roommania生活模拟与新樱花大战动作冒险。樱花大战1—5以广义Galgame检索，保留战术玩法；实拍互动电影使用明确细分类。并非世嘉全部游戏或全部叙事作品清单。 2026-10-27续补Dreamcast《ラブひな》两作，现19部主库引用及3部原跨类型关联；既有身份、附录和旧锚点全部保留。",
       "versionScope": "首发保留；后发行版仅在有可核实的新剧情、角色、路线、关卡、CG／重绘素材或新配音等内容时单列。同内容换平台、换商店、再版、包装变更与仅提高分辨率不新增版本；新增内容须写明差异与来源。未知差异先列核对说明。 本轮十二条首发、两条确认新增内容的后版，共十四条。其余移植与未知差异只作说明；全部旧记录保留。",
       "versionPanelLabel": "条首发／内容记录",
       "versionCountLabel": "首发、内容版与保留旧记录",
-      "publisherNote": "公司官网记1960年6月3日成立。本专题按世嘉实际发行或合作角色收录，不把世嘉主机上的第三方游戏都归到世嘉。RED、System Sacom、Digital Pictures、Chunsoft及GAINAX的开发／原作身份分别保留，后版显示实际发行商。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>17部主库相关作品均有世嘉发行记录，另列3部跨类型关联作。</strong></p>",
+      "publisherNote": "公司官网记1960年6月3日成立。本专题按世嘉实际发行或合作角色收录，不把世嘉主机上的第三方游戏都归到世嘉。RED、System Sacom、Digital Pictures、Chunsoft及GAINAX的开发／原作身份分别保留，后版显示实际发行商。 2026-10-27增加1960—2021官方更名与集团重组节点；原entity-sega和历史发行解析保持。SEGA Sammy、SEGA Group与SEGA Interactive为独立展示节点，不能把共同控股设立或子公司吸收称为Sammy与SEGA合为同一法人。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>19部主库相关作品（既有17部＋本轮2部），3部原跨类型关联。世嘉发行、第三方制作和集团归属分别登记。</strong></p>",
       "workIds": [
         "g034",
         "g179",
@@ -38565,7 +38565,9 @@
         "g932",
         "g933",
         "g934",
-        "g935"
+        "g935",
+        "g1281",
+        "g1282"
       ],
       "relatedGames": [
         {
@@ -38765,12 +38767,12 @@
       "relatedSectionTitle": "人生介入与3D动作冒险",
       "relatedCountLabel": "按主要玩法归类",
       "relatedIntro": "Roommania系列以生活介入模拟为中心，新樱花大战以3D动作战斗为中心；叙事存在，但主玩法与本轮四类主目录分别说明。",
-      "catalogueEntryCount": 20,
+      "catalogueEntryCount": 22,
       "source": "https://www.sega.jp/history/companyTimeline/",
       "auditTitle": "成立口径、发行角色与内容版本核对",
       "auditSourceLabel": "世嘉官方沿革",
-      "auditLabel": "十七部主库相关作品、三部关联作及未核清单。",
-      "auditNote": "本轮核对范围不等于公司完整产品目录。未知差异不写成已证实同内容，也不以换平台、包装或重制称谓自动新增版本。",
+      "auditLabel": "现19部主库引用、3部跨类型关联；本轮新增两作及初步官方沿革，不宣称穷尽世嘉目录。",
+      "auditNote": "本轮核对范围不等于公司完整产品目录。未知差异不写成已证实同内容，也不以换平台、包装或重制称谓自动新增版本。 2026-10-27续补依据与待核项见data/sega-dossier-expansion-20261027.md；集团关系只在组织页作带年代展示，不自动继承子公司作品或开发职责。",
       "sectionTitle": "从光盘探索与实拍电影到华击团和原创动画",
       "creativeProfile": {
         "thesis": "编辑观察：这批世嘉发行作品展示了光盘探索、实拍互动电影、动画冒险和恋爱战术混合的不同路径。出版范围依实际角色核对，不能把厂商等同于单一开发团队。",
@@ -38802,6 +38804,13 @@
             "analysis": "热血之潮有新增剧情及新画面，Night Trap周年版增加模式和可玩原型；新樱花大战转向3D动作冒险。内容增加与平台变化分别判断。",
             "basis": "编辑观察",
             "source": "https://sakura-taisen.com/archives/game/atsuki/faq.html"
+          },
+          {
+            "period": "2000—2001",
+            "heading": "漫画角色与原创轮盘叙事",
+            "analysis": "Dreamcast《ラブひな》两部以原创故事、人物关系和命令轮盘推进。第二作增加各角色新故事，同时重收前作奖励篇；新作与旧篇再录分开计数。",
+            "basis": "编辑观察",
+            "source": "https://game.watch.impress.co.jp/docs/20010207/sega.htm"
           }
         ]
       },
@@ -39125,8 +39134,41 @@
           "reason": "Sonic、Shenmue、Yakuza、Phantasy Star、Shining等主要玩法与四类主库不同，需独立关联清单；ATLUS、Creative Assembly等子公司不把自身成立时间合并到世嘉。",
           "source": "https://www.sega.jp/history/companyTimeline/",
           "workIds": []
+        },
+        {
+          "title": "ラブひな 突然のエンゲージ・ハプニング",
+          "status": "本轮新增独立叙事",
+          "reason": "CR命令轮盘以按键时机决定结果；攻略明确可目押し。事件选择、关系与学力影响后续情节，不把轮盘写成普通静态行动菜单。 SEGA为该次发行方，不据发行或版权行登记完整原作开发。 原作首发及内容各一条，普通包装不另建身份。",
+          "source": "https://sesesega.blog.fc2.com/blog-entry-418.html",
+          "workIds": [
+            "g1281"
+          ]
+        },
+        {
+          "title": "ラブひな スマイル・アゲイン",
+          "status": "本轮新增独立叙事",
+          "reason": "同期报道明确七名角色各有一篇故事，并重收前作奖励篇。按独立第二作记录；重收的旧篇不另建新作品或再次计新增内容。轮盘结果影响事件，具体按键时序未单独核实。 SEGA为该次发行方，不据发行或版权行登记完整原作开发。 原作首发及内容各一条，普通包装不另建身份。",
+          "source": "https://game.watch.impress.co.jp/docs/20010207/sega.htm",
+          "workIds": [
+            "g1282"
+          ]
+        },
+        {
+          "title": "官方沿革与集团重组",
+          "status": "原始公告＋官方历史交叉核对",
+          "reason": "1960成立、1965／2000／2015／2020名称变化和2004共同控股设立分别说明；2021公告为计划，2021官方历史确认合并已经发生。集团、历史中间控股、公司与开发方分开。",
+          "source": "https://www.sega.co.jp/company/history/",
+          "workIds": []
+        },
+        {
+          "title": "待核：完整叙事目录及开发分工",
+          "status": "首批范围之外继续待核",
+          "reason": "Mega-CD、Saturn及后续平台叙事仍未穷尽；Love Hina开发团队、既有后发版差和收购工作室的具体作品职责须逐作核原件，不从SEGA品牌或硬件平台推定。",
+          "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+          "workIds": []
         }
-      ]
+      ],
+      "profileTitle": "叙事作品、发行合作与公司沿革"
     },
     {
       "id": "shopro",
