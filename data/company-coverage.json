@@ -106368,6 +106368,171 @@
           }
         ]
       }
+    },
+    {
+      "id": "broderbund",
+      "name": "Brøderbund",
+      "checkedAt": "2026-10-28",
+      "established": "1980",
+      "establishedSource": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
+      "status": "初建叙事发行专题：既有Myst加两部新主库，早期输入式两部仅专题",
+      "scope": "以Brøderbund历史出版关系聚合叙事作品；Myst由Cyan制作，The Last Express由Smoking Car Productions制作。早期Ultrasoft输入式冒险作专题书目，其他教育问答、运动与工具软件不计叙事作品。",
+      "versionScope": "新增两部独立主库作品及各自首批内容/发行；后发Mac、移植和重制仅在有明确新增内容及首发证据时另建。",
+      "publisherNote": "Doug与Gary Carlston于1980年创立Brøderbund；1998年由The Learning Company收购。1999年TLC并入Mattel是后续母公司变化，不把新主体倒填1980—1997游戏。Myst、Last Express分别保留Cyan与Smoking Car的实际创作；早期Ultrasoft作品只确认历史发行关系。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>3部主库叙事：复用《神秘岛》g1060，新收《一级谋杀案》g1286与《最后的快车》g1287。</strong>1982—1983年两部键入冒险仅专题书目。Brøderbund为这些版次的发行名义，不据此推定一切原作开发。 <a href=\"organizations.html?node=entity-name-e0c32a99a906\">查看组织沿革</a>。</p>",
+      "workIds": [
+        "g1060",
+        "g1286",
+        "g1287"
+      ],
+      "publisherWorkIds": [
+        "g1060",
+        "g1286",
+        "g1287"
+      ],
+      "dossierOnlyWorks": [
+        {
+          "id": "broderbund-mask-sun",
+          "title": "太阳面具",
+          "chineseTitle": "太阳面具",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Mask of the Sun",
+          "titleAliases": [
+            "The Mask of the Sun"
+          ],
+          "firstYear": 1982,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式图文冒险",
+          "genre": "考古探险／阿兹特克遗迹",
+          "characters": [
+            "Mac Steele"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/masksun-alt2-manual.pdf",
+          "synopsis": "考古学家Mac Steele寻找传说中的太阳面具，追查遗迹与诅咒线索。",
+          "notes": "Ultrasoft开发，Brøderbund在北美出版；德语/Ariolasoft版不混作同一发行主体。输入式原作只列专题。",
+          "source": "https://www.mocagh.org/broderbund/masksun-alt2-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原版手册示例要求输入动词/名词行动命令，属于自由词句解析，不以图像展示误判为菜单。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/masksun-alt2-manual.pdf"
+          ]
+        },
+        {
+          "id": "broderbund-serpents-star",
+          "title": "蛇之星",
+          "chineseTitle": "蛇之星",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Serpent's Star",
+          "titleAliases": [
+            "Serpents Star"
+          ],
+          "firstYear": 1983,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式图文冒险",
+          "genre": "考古探险／续作",
+          "characters": [
+            "Mac Steele"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/serpentstar-alt.pdf",
+          "synopsis": "考古学家Mac Steele再度追寻古代遗物，在多地调查并解开新谜题。",
+          "notes": "Ultrasoft创作的续作；本轮只核Brøderbund馆藏版与原手册，精确各机种发行日暂不外推。",
+          "source": "https://www.mocagh.org/broderbund/serpentstar-alt.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "保存的原版说明资料列可输入复合英文指令，属于行动词句输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/serpentstar-alt.pdf"
+          ]
+        }
+      ],
+      "catalogueEntryCount": 5,
+      "source": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
+      "description": "Brøderbund叙事发行专题：早期图文输入冒险、Cyan《Myst》、实拍法庭调查与Smoking Car《The Last Express》。",
+      "sectionTitle": "从神秘岛到实拍与实时悬疑",
+      "entries": [
+        {
+          "title": "The Mask of the Sun",
+          "status": "仅专题输入书目",
+          "reason": "Ultrasoft制作的图文解析器游戏，保留Brøderbund版次出版关系；不新增主库身份。",
+          "source": "https://www.mocagh.org/broderbund/masksun-alt2-manual.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-mask-sun"
+          ]
+        },
+        {
+          "title": "The Serpent's Star",
+          "status": "仅专题输入书目",
+          "reason": "Ultrasoft制作的图文解析器游戏，保留Brøderbund版次出版关系；不新增主库身份。",
+          "source": "https://www.mocagh.org/broderbund/serpentstar-alt.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-serpents-star"
+          ]
+        },
+        {
+          "title": "Myst",
+          "status": "复用主库",
+          "reason": "Cyan创作、Brøderbund初版发行；保留既有g1060。",
+          "source": "https://cyan.com/games/myst/",
+          "workIds": [
+            "g1060"
+          ]
+        },
+        {
+          "title": "In the 1st Degree",
+          "status": "新增主库",
+          "reason": "1995年美国Windows版法庭调查，实拍访谈与庭审构成叙事。",
+          "source": "https://www.mobygames.com/game/2035/in-the-1st-degree/releases/win3x/",
+          "workIds": [
+            "g1286"
+          ]
+        },
+        {
+          "title": "The Last Express",
+          "status": "新增主库",
+          "reason": "1997年三CD原版，Smoking Car制作、Brøderbund发行。",
+          "source": "https://www.jordanmechner.com/en/games-movies/the-last-express/",
+          "workIds": [
+            "g1287"
+          ]
+        }
+      ],
+      "auditTitle": "叙事准入与历史职责核对",
+      "auditSourceLabel": "博物馆馆藏、原作者与原版手册",
+      "auditLabel": "三部主库与两部输入式书目；仅初步核对，不宣称全发行目录穷尽。",
+      "auditNote": "Brøderbund的出版署名与Cyan、Ultrasoft、Smoking Car创作分别保存。1998收购及后续品牌使用单列沿革；初版年份按来源年级精度。",
+      "creativeProfile": {
+        "thesis": "专题共同点是Brøderbund的历史出版及发行渠道；岛屿探索、法庭实拍与列车时序悬疑来自不同创作团队。",
+        "phases": [
+          {
+            "period": "1982—1983",
+            "heading": "Ultrasoft的输入式探险",
+            "analysis": "太阳面具及续作使用词句解析与图像并置，显示早期外部团队作品的发行合作。",
+            "basis": "编辑观察",
+            "source": "https://www.mocagh.org/broderbund/masksun-alt2-manual.pdf"
+          },
+          {
+            "period": "1993—1995",
+            "heading": "光盘悬疑和法庭实拍",
+            "analysis": "Cyan的Myst与1995年法庭访谈作品均采用场景、线索与视听资料，但故事结构不同。",
+            "basis": "编辑观察",
+            "source": "https://www.mobygames.com/game/2035/in-the-1st-degree/"
+          },
+          {
+            "period": "1997",
+            "heading": "列车实时叙事",
+            "analysis": "Smoking Car的列车故事引入时间进程与回溯；作者确认Brøderbund为三CD原版出版者。",
+            "basis": "编辑观察",
+            "source": "https://www.jordanmechner.com/en/games-movies/the-last-express/"
+          }
+        ]
+      }
     }
   ],
   "schemaVersion": 2,

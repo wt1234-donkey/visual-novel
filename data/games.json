@@ -39253,6 +39253,74 @@
       "interactionSources": [
         "https://www.gamingalexandria.com/highquality/NES/Star%20Trek%2025th%20Anniversary/Star%20Trek%2025th%20Anniversary%20-%20Manual%20(Searchable).pdf"
       ]
+    },
+    {
+      "id": "g1286",
+      "title": "一级谋杀案",
+      "chineseTitle": "一级谋杀案",
+      "chineseTitleType": "站内编辑译名",
+      "originalTitle": "In the 1st Degree",
+      "titleAliases": [
+        "In the First Degree"
+      ],
+      "firstYear": 1995,
+      "category": "互动动画",
+      "subcategory": "实拍影像·剧情分支",
+      "genre": "刑侦／证人访谈／法庭辩论",
+      "characters": [
+        "Sterling Granger",
+        "James Tobin",
+        "Cynthia Charleston"
+      ],
+      "charactersSource": "https://www.mobygames.com/game/2035/in-the-1st-degree/",
+      "synopsis": "检察官Granger调查画廊谋杀案，审阅证据与采访录像，选择向证人追问的主题和提问，在庭审中建立起诉论证。",
+      "notes": "1995年Brøderbund美国Windows首批发行；仅按已核首批内容录一版。具体完整开发工种未由出版署名推定。",
+      "source": "https://www.mobygames.com/game/2035/in-the-1st-degree/",
+      "interactionModes": [
+        "点击调查",
+        "菜单指令",
+        "选项分支"
+      ],
+      "interactionNote": "在案卷、录像与人物之间选择调查，再从预设话题和问题中询问证人并进行庭审；这些选择会影响证词与裁决，不将采访主题误判为自由词句解析。",
+      "interactionBasis": "来源核对",
+      "interactionSources": [
+        "https://www.mobygames.com/game/2035/in-the-1st-degree/",
+        "https://www.latimes.com/archives/la-xpm-1995-10-06-ls-53826-story.html"
+      ]
+    },
+    {
+      "id": "g1287",
+      "title": "最后的快车",
+      "chineseTitle": "最后的快车",
+      "chineseTitleType": "站内编辑译名",
+      "originalTitle": "The Last Express",
+      "titleAliases": [
+        "末班列车",
+        "东方快车末班车"
+      ],
+      "firstYear": 1997,
+      "category": "文字冒险",
+      "subcategory": "光盘图文冒险",
+      "genre": "历史悬疑／东方快车／时序探索",
+      "characters": [
+        "Robert Cath",
+        "Anna Wolff"
+      ],
+      "charactersSource": "https://www.jordanmechner.com/en/games-movies/the-last-express/",
+      "synopsis": "1914年赴君士坦丁堡的东方快车上，Robert Cath卷入谋杀与各国旅客的阴谋；玩家在持续流逝的车上时间中探查、交谈并重试不同事件路径。",
+      "notes": "Smoking Car Productions制作，Brøderbund出版1997年原版。2012年DotEmu重制不是原版增补的自动证据；本批不增普通移植或后续重制内容版。",
+      "source": "https://www.jordanmechner.com/en/games-movies/the-last-express/",
+      "interactionModes": [
+        "点击调查",
+        "选项分支",
+        "谜题操作"
+      ],
+      "interactionNote": "原版手册记述点击移动、调查物品、与乘客交谈、格斗及蛋形时钟的回溯；事件发生的时间和行动可影响进程。格斗是限定场景操作，未据此把作品整体标为即时战斗。",
+      "interactionBasis": "来源核对",
+      "interactionSources": [
+        "https://mocagh.org/broderbund/lastexpress-manual.pdf",
+        "https://www.jordanmechner.com/en/games-movies/the-last-express/"
+      ]
     }
   ],
   "platformReleases": [
@@ -84255,6 +84323,42 @@
       "contentRelation": "original",
       "contentNote": "独立NES原作，不与同名异作合并。",
       "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1286-v1",
+      "workId": "g1286",
+      "year": 1995,
+      "platform": "Windows 3.x（美国）",
+      "publisher": "Brøderbund",
+      "publisherCompanies": [
+        "Brøderbund"
+      ],
+      "kind": "原作首批内容",
+      "voice": "有",
+      "differences": "美国Windows版1995年发行。不同Macintosh版具体内容关系暂不新增发行行。",
+      "source": "https://www.mobygames.com/game/2035/in-the-1st-degree/releases/win3x/",
+      "contentVersionId": "g1286-c-original",
+      "contentRelation": "original",
+      "contentNote": "1995首批原作内容。",
+      "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1287-v1",
+      "workId": "g1287",
+      "year": 1997,
+      "platform": "PC CD-ROM（美国）",
+      "publisher": "Brøderbund",
+      "publisherCompanies": [
+        "Brøderbund"
+      ],
+      "kind": "原作首批内容",
+      "voice": "有",
+      "differences": "原作者明确1997年Brøderbund以三CD套装出版；软件版权为Smoking Car Productions。后来的普通移植与2012重制不并入此发行。",
+      "source": "https://www.jordanmechner.com/en/games-movies/the-last-express/",
+      "contentVersionId": "g1287-c-original",
+      "contentRelation": "original",
+      "contentNote": "1997首批原作内容。",
+      "releaseRole": "contentDebut"
     }
   ],
   "contentVersions": [
@@ -105057,6 +105161,32 @@
       "source": "https://www.gamingalexandria.com/highquality/NES/Star%20Trek%2025th%20Anniversary/Star%20Trek%2025th%20Anniversary%20-%20Manual%20(Searchable).pdf",
       "evidenceReleaseIds": [
         "g1285-v1"
+      ],
+      "addedContent": []
+    },
+    {
+      "id": "g1286-c-original",
+      "workId": "g1286",
+      "label": "1995年原作／首批内容",
+      "firstYear": 1995,
+      "basis": "original",
+      "evidence": "1995年Windows版实拍法庭调查；调查与庭审构成完整首发作品。",
+      "source": "https://www.mobygames.com/game/2035/in-the-1st-degree/",
+      "evidenceReleaseIds": [
+        "g1286-v1"
+      ],
+      "addedContent": []
+    },
+    {
+      "id": "g1287-c-original",
+      "workId": "g1287",
+      "label": "1997年原作／首批内容",
+      "firstYear": 1997,
+      "basis": "original",
+      "evidence": "原作者记1997年由Brøderbund出版三CD原版；手册记录时间回溯与列车调查。",
+      "source": "https://www.jordanmechner.com/en/games-movies/the-last-express/",
+      "evidenceReleaseIds": [
+        "g1287-v1"
       ],
       "addedContent": []
     }

@@ -167,6 +167,17 @@
         "preview-bandai-spirits",
         "preview-banpresto-prize-brand"
       ]
+    },
+    {
+      "id": "broderbund",
+      "title": "Brøderbund 与 The Learning Company",
+      "subtitle": "1980创办、历史出版与1998收购",
+      "root": "preview-learning-company-1998",
+      "focus": "entity-name-e0c32a99a906",
+      "entityIds": [
+        "preview-learning-company-1998",
+        "entity-name-e0c32a99a906"
+      ]
     }
   ],
   "nodes": [
@@ -1314,6 +1325,64 @@
       ]
     },
     {
+      "id": "entity-name-e0c32a99a906",
+      "name": "Brøderbund",
+      "type": "company",
+      "aliases": [
+        "Brøderbund",
+        "Broderbund",
+        "Brøderbund Software"
+      ],
+      "sources": [
+        "https://cyan.com/games/myst/",
+        "https://www.jordanmechner.com/en/games-movies/prince-of-persia/",
+        "https://www.jordanmechner.com/downloads/archive/whoswho.pdf",
+        "https://cyan.com/company/support/",
+        "https://cyan.com/company/about-cyan/",
+        "https://www.museumofplay.org/blog/preserving-the-broderbund-story/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "Doug与Gary Carlston于1980年创立Brøderbund；1998年由The Learning Company收购。1999年TLC并入Mattel是后续母公司变化，不把新主体倒填1980—1997游戏。Myst、Last Express分别保留Cyan与Smoking Car的实际创作；早期Ultrasoft作品只确认历史发行关系。",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1980",
+          "precision": "year",
+          "source": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
+          "status": "sourceReviewed"
+        }
+      ],
+      "stats": {
+        "main": 3,
+        "related": 1,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "broderbund",
+          "name": "Brøderbund"
+        }
+      ],
+      "works": [
+        {
+          "id": "g1060",
+          "title": "神秘岛：MYST",
+          "year": 1993
+        },
+        {
+          "id": "g1286",
+          "title": "一级谋杀案",
+          "year": 1995
+        },
+        {
+          "id": "g1287",
+          "title": "最后的快车",
+          "year": 1997
+        }
+      ]
+    },
+    {
       "id": "entity-nitrochiral",
       "name": "NITRO CHiRAL",
       "type": "brand",
@@ -2178,6 +2247,29 @@
       "works": [],
       "dossiers": [],
       "previewOnly": true
+    },
+    {
+      "id": "preview-learning-company-1998",
+      "name": "The Learning Company（1998年收购方）",
+      "type": "company",
+      "aliases": [
+        "TLC"
+      ],
+      "sources": [
+        "https://www.museumofplay.org/blog/preserving-the-broderbund-story/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "The Learning Company于1998年收购Brøderbund；此展示节点仅用于当年的组织沿革，不将早期游戏署名转移给收购方。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
     }
   ],
   "edges": [
@@ -2659,6 +2751,18 @@
       "source": "https://www.bandaispirits.co.jp/about/business/",
       "dateLabel": "2019年4月／现行官网",
       "note": "官方沿革与业务页确认景品品牌；不推定2009年起的游戏品牌由BANDAI SPIRITS运营，不将旧游戏目录转作景品品牌创作。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "broderbund-tlc-acquisition-1998",
+      "parent": "preview-learning-company-1998",
+      "child": "entity-name-e0c32a99a906",
+      "kind": "family",
+      "label": "1998年收购",
+      "status": "previewReviewed",
+      "source": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
+      "dateLabel": "1998年",
+      "note": "只确认收购关系与年份；法人实体与后续权利承接未核，不将早期发行职责倒归The Learning Company。",
       "basis": "previewSupplement"
     }
   ],
