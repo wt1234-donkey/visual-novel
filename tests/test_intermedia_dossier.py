@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='329447b4c8ee6c7656301a4a0ab5f1fe9edd51cf'
 E='entity-name-9832231b6baa'
-def read(p):return json.loads((ROOT/p).read_text())
+def read(p):return json.loads(subprocess.check_output(['git','show',f'508efa3f228b7dc5ca52d1ecc086d813848462a4:{p}'],cwd=ROOT))
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class IntermediaDossierTests(unittest.TestCase):
  def test_exact_two_narratives_and_only_their_original_debuts_are_added(self):

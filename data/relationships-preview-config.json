@@ -131,6 +131,80 @@
       "works": [],
       "dossiers": [],
       "previewOnly": true
+    },
+    {
+      "id": "preview-sega-sammy",
+      "name": "SEGA SAMMY HOLDINGS（セガサミーホールディングス）",
+      "type": "company",
+      "aliases": [
+        "SEGA SAMMY",
+        "セガサミーホールディングス株式会社"
+      ],
+      "sources": [
+        "https://www.sega.co.jp/company/history/",
+        "https://www.sega.co.jp/release/210129_1.pdf"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "2004年共同控股公司，与SEGA及Sammy分别为不同法人；2021关系按当时公告展示，不自动断言所有时期股权。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-sega-group",
+      "name": "SEGA Group（セガグループ）",
+      "type": "company",
+      "aliases": [
+        "SEGA Holdings",
+        "セガホールディングス"
+      ],
+      "sources": [
+        "https://www.sega.co.jp/company/history/",
+        "https://www.sega.co.jp/release/210129_1.pdf"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "2015设立的中间控股公司，2020改名SEGA Group，2021被SEGA吸收；不是1960年成立的SEGA同一实体。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-sega-interactive",
+      "name": "SEGA Interactive（セガ・インタラクティブ）",
+      "type": "company",
+      "aliases": [
+        "株式会社セガ・インタラクティブ"
+      ],
+      "sources": [
+        "https://www.sega.co.jp/company/history/",
+        "https://www.sega.co.jp/release/210129_1.pdf"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "2015公司分割新设，2020与SEGA Games合并；此节点不追加任何游戏开发或发行职责。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
     }
   ],
   "previewEdges": [
@@ -181,6 +255,54 @@
       "dateLabel": "1985—1997（二手沿革；登记原件待核）",
       "note": "二手公司史记1985设立、1997并入母公司。NDL支持独立公司出版名义；此为初步展示关系，不替代法律登记，也不将旧作或后续社内部门职责自动继承。",
       "basis": "previewSupplement"
+    },
+    {
+      "id": "sega-sammy-group-2021",
+      "parent": "preview-sega-sammy",
+      "child": "preview-sega-group",
+      "kind": "family",
+      "label": "历史持股",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/release/210129_1.pdf",
+      "dateLabel": "2021重组前；公告记100%",
+      "note": "2021公告列SEGA Group为SEGA Sammy全资子公司；吸收合并后中间控股消灭，不外推为现行关系。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "sega-sammy-direct-2021",
+      "parent": "preview-sega-sammy",
+      "child": "entity-sega",
+      "kind": "family",
+      "label": "重组后直接子公司",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/release/210129_1.pdf",
+      "dateLabel": "2021-04-01重组",
+      "note": "公告安排将SEGA Group持有的SEGA股份分配给SEGA Sammy；官方沿革确认2021吸收合并。共同持股关系不产生游戏制作署名。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "sega-group-absorption-2021",
+      "parent": "preview-sega-group",
+      "child": "entity-sega",
+      "kind": "succession",
+      "label": "吸收合并",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/company/history/",
+      "dateLabel": "2021年；SEGA为存续公司",
+      "note": "SEGA为存续方吸收SEGA Group，不是SEGA被控股公司吸收，也不是Sammy并入SEGA。公告与官方沿革相互核对。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "sega-interactive-absorption-2020",
+      "parent": "preview-sega-interactive",
+      "child": "entity-sega",
+      "kind": "succession",
+      "label": "业务合并与商号变更",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/company/history/",
+      "dateLabel": "2020年",
+      "note": "官方史记SEGA Games与SEGA Interactive合并并改名SEGA；不将两家公司历年作品开发一并倒填给统一署名。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [
@@ -205,6 +327,50 @@
       "status": "existingDossier",
       "source": "https://novect.net/",
       "note": "旧名取自既有主体档案明确说明，官网现用NOVECT。其他检索别名不自动作为旧名。"
+    },
+    {
+      "id": "sega-name-1965",
+      "fromId": "entity-sega",
+      "toId": "entity-sega",
+      "oldName": "Nihon Goraku Bussan（日本娯楽物産）",
+      "newName": "SEGA Enterprises（セガ・エンタープライゼス）",
+      "dateLabel": "1965年（官方沿革）",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/company/history/",
+      "note": "同一正式SEGA ID下展示官方记载的名称沿革，不改写历史发行原文；其他新设／合并公司保持独立展示节点。"
+    },
+    {
+      "id": "sega-name-2000",
+      "fromId": "entity-sega",
+      "toId": "entity-sega",
+      "oldName": "SEGA Enterprises",
+      "newName": "SEGA",
+      "dateLabel": "2000年（官方沿革）",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/company/history/",
+      "note": "同一正式SEGA ID下展示官方记载的名称沿革，不改写历史发行原文；其他新设／合并公司保持独立展示节点。"
+    },
+    {
+      "id": "sega-name-2015",
+      "fromId": "entity-sega",
+      "toId": "entity-sega",
+      "oldName": "SEGA",
+      "newName": "SEGA Games（セガゲームス）",
+      "dateLabel": "2015年（官方沿革）",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/company/history/",
+      "note": "同一正式SEGA ID下展示官方记载的名称沿革，不改写历史发行原文；其他新设／合并公司保持独立展示节点。"
+    },
+    {
+      "id": "sega-name-2020",
+      "fromId": "entity-sega",
+      "toId": "entity-sega",
+      "oldName": "SEGA Games",
+      "newName": "SEGA",
+      "dateLabel": "2020年（官方沿革）",
+      "status": "previewReviewed",
+      "source": "https://www.sega.co.jp/company/history/",
+      "note": "同一正式SEGA ID下展示官方记载的名称沿革，不改写历史发行原文；其他新设／合并公司保持独立展示节点。"
     }
   ]
 }
