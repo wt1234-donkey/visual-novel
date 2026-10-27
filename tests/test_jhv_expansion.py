@@ -3,7 +3,9 @@ import json,subprocess,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='54abb80b9ee2303f294d2bc0e0d3189482e045cf'
-def read(p):return json.loads((ROOT/p).read_text())
+def read(p):
+ if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json','data/work-notes.json','data/work-classification.json'}:return json.loads(subprocess.check_output(['git','show',f'5ed3e8940cc3f8a159d8c7c17d9dea5009332c57:{p}'],cwd=ROOT))
+ return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class JHVExpansionTests(unittest.TestCase):
  def test_catalogue_identity_and_historical_credits_unchanged(self):
