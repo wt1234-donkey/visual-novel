@@ -51,7 +51,7 @@ class LelandDossierTests(unittest.TestCase):
         current_entities = {e['id']: e for e in model['entities']}
         self.assertEqual(old_entities.keys(), current_entities.keys())
         self.assertEqual({eid for eid in old_entities if old_entities[eid] != current_entities[eid]},
-                         {'entity-name-547f933b0469'})
+                         {'entity-name-547f933b0469', 'entity-name-21dcd9c9c1e7'})
         self.assertEqual(model['relations'], prior['relations'])
         self.assertEqual([d for d in model['dossiers'] if d['id'] != 'leland'], prior['dossiers'])
         entity = next(e for e in model['entities'] if e['id'] == 'entity-name-547f933b0469')
