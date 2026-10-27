@@ -88,8 +88,9 @@ class CreatorT1Tests(unittest.TestCase):
         self.assertEqual([q['entityId'] for q in queue[:4]], IDS)
         # Use the same JavaScript sorter as the public catalogue, including punctuation.
         script = """import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
 import {sortFamilies} from './relationships-preview.mjs';
-const es=JSON.parse(fs.readFileSync('data/entities.json')).entities;
+const es=JSON.parse(execFileSync('git',['show','92f37c89e468d73174d3b56b367bcf8b3981e98e:data/entities.json'],{encoding:'utf8',maxBuffer:4*1024*1024})).entities;
 process.stdout.write(JSON.stringify(sortFamilies(es.filter(e=>e.name.toLowerCase().startsWith('t'))
  .map(e=>({id:e.id,title:e.name}))).map(e=>e.id)));"""
         actual = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', script], cwd=ROOT))

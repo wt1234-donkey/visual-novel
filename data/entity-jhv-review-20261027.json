@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-27",
+  "baseCommit": "54abb80b9ee2303f294d2bc0e0d3189482e045cf",
+  "audit": "data/jhv-audit-20261027.md",
+  "identityCorrections": [],
+  "creditAdditions": [
+    {
+      "reviewId": "JHV27-C1",
+      "entityId": "entity-headroom",
+      "dossierId": null,
+      "workId": "g830",
+      "targetType": "work",
+      "role": "originalProduction",
+      "rawCredit": "HEADROOM",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.namura.net/xkd.com/product/graduation.html",
+      "note": "原总监作品页明确HEADROOM第一回作品，并具名总监、设计及程序；只核首作，不倒推JHV开发或集团归属。"
+    },
+    {
+      "reviewId": "JHV27-C2",
+      "entityId": "entity-headroom",
+      "dossierId": null,
+      "workId": "g831",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "HEADROOM",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.namura.net/xkd.com/product/neogeneration.html",
+      "note": "二代原总监作品页具名HEADROOM制作人窪田正義及总监竹内信和；限定企划／总监制作合作，不宣称独立承担全部程序。"
+    },
+    {
+      "reviewId": "JHV27-C3",
+      "entityId": "entity-tenky",
+      "dossierId": null,
+      "workId": "g831",
+      "targetType": "work",
+      "role": "coDeveloper",
+      "rawCredit": "TENKY",
+      "status": "sourceReviewed",
+      "expectedPlacement": "main",
+      "beforeWorkRoles": [],
+      "source": "https://www.namura.net/xkd.com/product/neogeneration.html",
+      "note": "二代作品页具名TENKY制作人成田伸子、设计鹿妻秀行、程序佐藤伸；限定本作合作，不由版权署名推定全系列开发。"
+    }
+  ],
+  "dateFacts": [
+    {
+      "entityId": "entity-jhv",
+      "before": [],
+      "kind": "established",
+      "value": "1984-05-26",
+      "precision": "day",
+      "source": "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03",
+      "status": "sourceReviewed",
+      "note": "现行官方公司概要；旧官网只记1984年5月，二手5月9日作为异文保留。"
+    },
+    {
+      "entityId": "entity-headroom",
+      "before": [],
+      "kind": "established",
+      "value": "1991",
+      "precision": "year",
+      "source": "https://www.namura.net/xkd.com/xkd.html",
+      "status": "sourceReviewed",
+      "note": "创始参加者履历记1991年HEADROOM设立；团队身份不冒充已核法人。"
+    },
+    {
+      "entityId": "entity-tenky",
+      "before": [],
+      "kind": "established",
+      "value": "1989-12-14",
+      "precision": "day",
+      "source": "https://www.tenky.co.jp/company.html",
+      "status": "sourceReviewed",
+      "note": "TENKY官方公司概要记设立日期。"
+    }
+  ]
+}

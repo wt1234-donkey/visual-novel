@@ -98,8 +98,9 @@ class CreatorT4Tests(unittest.TestCase):
         queue = review['progress']['queue']
         self.assertEqual([q['status'] for q in queue], ['reviewed'] * 16 + ['pending'] * 3)
         script = """import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
 import {sortFamilies} from './relationships-preview.mjs';
-const es=JSON.parse(fs.readFileSync('data/entities.json')).entities;
+const es=JSON.parse(execFileSync('git',['show','41aa48d6c62b67c30cf6f516f33dc5aa59e1cdc3:data/entities.json'],{encoding:'utf8',maxBuffer:4*1024*1024})).entities;
 process.stdout.write(JSON.stringify(sortFamilies(es.filter(e=>e.name.toLowerCase().startsWith('t'))
  .map(e=>({id:e.id,title:e.name}))).map(e=>e.id)));"""
         actual = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', script], cwd=ROOT))
