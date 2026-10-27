@@ -176,7 +176,7 @@ def build():
   name='Sierra On-Line（原On-Line Systems）' if cid in {'sierra','sierra_on_line'} else c['name']
   # Leland already has a reviewed stable ID from its historical release name.
   # A new dossier must attach to that identity instead of manufacturing entity-leland.
-  ident={'leland':'entity-name-547f933b0469','takeru':'entity-name-08cbddd5e450','tokuma_intermedia':'entity-name-9832231b6baa'}.get(cid) if cid in {'leland','takeru','tokuma_intermedia'} else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
+  ident={'leland':'entity-name-547f933b0469','takeru':'entity-name-08cbddd5e450','tokuma_intermedia':'entity-name-9832231b6baa','chunsoft':'entity-name-21365baf366d'}.get(cid) if cid in {'leland','takeru','tokuma_intermedia','chunsoft'} else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
   dossiers.append({'id':cid,'name':c['name'],'dossierType':'history' if cid in HISTORIES else kind,'entityIds':[ident],'scope':c['scope'],'sources':[c['source']],'firstYearBasis':'关联主库作品最早原作首发年','firstYear':min((w['firstYear'] for w in d['works'] if w['id'] in c['workIds']),default=None)})
  for eid,name,kind,names,source in EXTRAS:add_entity(eid,name,kind,names,source,'sourceReviewed')
  # Publisher brand/company homographs remain distinct. Raw AQUAPLUS alone is a publishing-brand signature.
@@ -308,6 +308,8 @@ def build():
  assert leland['type']=='company' and leland['verification']=='sourceReviewed'
  leland['historyNote']='原版Dragon’s Lair II传单具名The Leland Corporation，1991年街机发行沿用g045。1988年同期Play Meter报道：1987年Tradewest收购Cinematronics资产后，业务重组为The Leland Corporation；资产交易日不等同Leland法人成立日，旧公司作品、动画合作和开发职责也不由此转归Leland。详见data/leland-audit.md。'
  leland['sources']=list(dict.fromkeys([*leland['sources'],'https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf']))
+ if 'chunsoft' in companies:
+  credit('entity-name-21365baf366d','work','g1284','originalProduction','https://awards.cesa.or.jp/2005/prizelist/2004-2005/d.html',status='sourceReviewed',note='CESA获奖资料明确发行、销售、开发均为Chunsoft；仅核本作原作制作，不扩展至其他合作、后继或集团作品。')
  # Dossier memberships are separate from production assertions. Every existing member remains present.
  bywork=defaultdict(list)
  for x in credits:bywork[x['workId']].append(x)

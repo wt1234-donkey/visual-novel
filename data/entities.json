@@ -2331,17 +2331,25 @@
     },
     {
       "id": "entity-name-21365baf366d",
-      "name": "Chunsoft",
+      "name": "Chunsoft（チュンソフト）",
       "type": "company",
       "aliases": [
-        "Chunsoft"
+        "Chunsoft",
+        "チュンソフト",
+        "Chunsoft（チュンソフト）"
       ],
       "sources": [
         "https://www.spike-chunsoft.co.jp/company/outline/"
       ],
       "verification": "sourceReviewed",
       "historyNote": "官方沿革明确株式会社チュンソフト于1984年成立，2012年与Spike合并；该历史公司身份与Spike、Spike Chunsoft各自保留，不合并ID、不自动追溯现行公司的历史开发职责。",
-      "dates": []
+      "dates": [],
+      "nameParts": {
+        "english": "Chunsoft",
+        "japanese": "チュンソフト",
+        "basis": "existingBilingualName",
+        "source": "https://www.spike-chunsoft.co.jp/company/about/"
+      }
     },
     {
       "id": "entity-name-8865f66ec578",
@@ -7496,6 +7504,20 @@
       ],
       "firstYearBasis": "关联主库作品最早原作首发年",
       "firstYear": 1991
+    },
+    {
+      "id": "chunsoft",
+      "name": "Chunsoft（チュンソフト）",
+      "dossierType": "company",
+      "entityIds": [
+        "entity-name-21365baf366d"
+      ],
+      "scope": "历史Chunsoft公司专题，以2012年合并前的叙事开发／发行及限定后发内容为范围。11部主库引用中9部既有、2部新增；Spike与合并后Spike Chunsoft保持独立身份，后发实际发行不回写。",
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/"
+      ],
+      "firstYearBasis": "关联主库作品最早原作首发年",
+      "firstYear": 1992
     }
   ],
   "displayNames": {
@@ -7651,7 +7673,8 @@
     "株式会社ハブロッツ（萌えAPP）": "Moe APP（萌えAPP）",
     "株式会社ジャックインザボックス（萌えAPP）": "Moe APP（萌えAPP）",
     "GAMEテクノポリス": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
-    "Brother Industries": "Brother Industries（ブラザー工業）"
+    "Brother Industries": "Brother Industries（ブラザー工業）",
+    "Chunsoft": "Chunsoft（チュンソフト）"
   },
   "policy": "实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。"
 }

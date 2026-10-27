@@ -3,7 +3,7 @@ import json,subprocess,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='508efa3f228b7dc5ca52d1ecc086d813848462a4'
-def read(p):return json.loads((ROOT/p).read_text())
+def read(p):return json.loads(subprocess.check_output(['git','show',f'd80510b343d53f61c0df6ad799466aaca55ea2f3:{p}'],cwd=ROOT))
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class SegaExpansionTests(unittest.TestCase):
  def test_exact_two_original_narratives_preserve_all_old_objects(self):

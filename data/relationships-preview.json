@@ -116,6 +116,18 @@
         "preview-sega-interactive",
         "entity-sega"
       ]
+    },
+    {
+      "id": "chunsoft",
+      "title": "Chunsoft（チュンソフト）与合并沿革",
+      "subtitle": "历史署名分别保留；不是当前集团全部作品",
+      "root": "entity-name-21365baf366d",
+      "focus": "entity-name-21365baf366d",
+      "entityIds": [
+        "entity-name-21365baf366d",
+        "entity-name-6d5cd9b9dc38",
+        "entity-name-8a871cf93bfd"
+      ]
     }
   ],
   "nodes": [
@@ -776,6 +788,62 @@
       ]
     },
     {
+      "id": "entity-name-21365baf366d",
+      "name": "Chunsoft（チュンソフト）",
+      "type": "company",
+      "aliases": [
+        "Chunsoft",
+        "チュンソフト",
+        "Chunsoft（チュンソフト）"
+      ],
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/company/outline/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "官方沿革明确株式会社チュンソフト于1984年成立，2012年与Spike合并；该历史公司身份与Spike、Spike Chunsoft各自保留，不合并ID、不自动追溯现行公司的历史开发职责。",
+      "dates": [],
+      "nameParts": {
+        "english": "Chunsoft",
+        "japanese": "チュンソフト",
+        "basis": "existingBilingualName",
+        "source": "https://www.spike-chunsoft.co.jp/company/about/"
+      },
+      "stats": {
+        "main": 7,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 4,
+      "dossiers": [
+        {
+          "id": "chunsoft",
+          "name": "Chunsoft（チュンソフト）"
+        }
+      ],
+      "works": [
+        {
+          "id": "g021",
+          "title": "弟切草",
+          "year": 1992
+        },
+        {
+          "id": "g022",
+          "title": "镰鼬之夜",
+          "year": 1994
+        },
+        {
+          "id": "g1283",
+          "title": "街：命运的交叉点",
+          "year": 1998
+        },
+        {
+          "id": "g178",
+          "title": "恐怖惊魂夜 2：监狱岛童谣",
+          "year": 2002
+        }
+      ]
+    },
+    {
       "id": "entity-name-547f933b0469",
       "name": "Leland",
       "type": "company",
@@ -808,6 +876,87 @@
           "id": "g045",
           "title": "龙穴历险记 II：时间扭曲",
           "year": 1991
+        }
+      ]
+    },
+    {
+      "id": "entity-name-6d5cd9b9dc38",
+      "name": "Spike",
+      "type": "company",
+      "aliases": [
+        "Spike"
+      ],
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/pages/zendesu/about/index.html",
+        "https://www.spike-chunsoft.co.jp/company/outline/",
+        "https://www.spike-chunsoft.co.jp/company/about/",
+        "https://www.spike-chunsoft.co.jp/recruit/interview/interview02/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "官方沿革及公司介绍明确2005业务分割后株式会社スパイク、2012年4月合并；本节点2009—2010两项发行属于该历史公司，不将1989旧业务起点、1997同名公司或合并后的公司混作同一法人。公司原作目录与内部开发访谈支持g035原作制作一条，保留g055发行不推开发。",
+      "dates": [],
+      "stats": {
+        "main": 2,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 1,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g055",
+          "title": "极限脱出：9 小时 9 人 9 扇门",
+          "year": 2009
+        },
+        {
+          "id": "g035",
+          "title": "弹丸论破：希望的学园与绝望高中生",
+          "year": 2010
+        }
+      ]
+    },
+    {
+      "id": "entity-name-8a871cf93bfd",
+      "name": "Spike Chunsoft",
+      "type": "company",
+      "aliases": [
+        "Spike Chunsoft"
+      ],
+      "sources": [
+        "https://www.spike-chunsoft.co.jp/pages/zeroescape/doublepack/",
+        "https://www.spike-chunsoft.co.jp/company/",
+        "https://www.spike-chunsoft.co.jp/company/outline/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "2026-10-22依据官方公司页及沿革确认公司身份；2012年4月Spike与Chunsoft合并后的署名。保留Spike、Chunsoft及海外主体的独立身份，不由公司身份推定逐作开发职责。原发行署名不变。",
+      "dates": [],
+      "stats": {
+        "main": 14,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 2,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g179",
+          "title": "恐怖惊魂夜×3：三日月岛事件的真相",
+          "year": 2006
+        },
+        {
+          "id": "g034",
+          "title": "428：被封锁的涩谷",
+          "year": 2008
+        },
+        {
+          "id": "g618",
+          "title": "混沌之脑",
+          "year": 2008
+        },
+        {
+          "id": "g054",
+          "title": "命运石之门",
+          "year": 2009
         }
       ]
     },
@@ -1043,7 +1192,7 @@
         "basis": "catalogueSpelling"
       },
       "stats": {
-        "main": 20,
+        "main": 21,
         "related": 6,
         "bibliography": 0
       },
@@ -1857,6 +2006,30 @@
       "dateLabel": "2020年",
       "note": "官方史记SEGA Games与SEGA Interactive合并并改名SEGA；不将两家公司历年作品开发一并倒填给统一署名。",
       "basis": "previewSupplement"
+    },
+    {
+      "id": "chunsoft-successor-2012",
+      "parent": "entity-name-21365baf366d",
+      "child": "entity-name-8a871cf93bfd",
+      "kind": "succession",
+      "label": "吸收后商号变更",
+      "status": "previewReviewed",
+      "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
+      "dateLabel": "2012-04-01（公告；官方史确认当月合并）",
+      "note": "原公告明确Chunsoft为存续公司，吸收Spike后改商号；现有模型仍保留前后历史署名ID，不自动合并或重分配作品。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "spike-absorbed-2012",
+      "parent": "entity-name-6d5cd9b9dc38",
+      "child": "entity-name-8a871cf93bfd",
+      "kind": "succession",
+      "label": "被吸收后业务延续",
+      "status": "previewReviewed",
+      "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
+      "dateLabel": "2012-04-01（公告；官方史确认当月合并）",
+      "note": "原公告明确Spike为消灭公司，不能写成Spike吸收Chunsoft。合并关系不单独证明每款游戏的开发工种。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [
@@ -1925,6 +2098,17 @@
       "status": "previewReviewed",
       "source": "https://www.sega.co.jp/company/history/",
       "note": "同一正式SEGA ID下展示官方记载的名称沿革，不改写历史发行原文；其他新设／合并公司保持独立展示节点。"
+    },
+    {
+      "id": "chunsoft-name-2012",
+      "fromId": "entity-name-21365baf366d",
+      "toId": "entity-name-8a871cf93bfd",
+      "oldName": "Chunsoft（チュンソフト）",
+      "newName": "Spike Chunsoft（スパイク・チュンソフト）",
+      "dateLabel": "2012-04-01",
+      "status": "previewReviewed",
+      "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
+      "note": "存续公司商号变更；历史署名ID及各自游戏职责不自动合并。"
     }
   ],
   "reference": {

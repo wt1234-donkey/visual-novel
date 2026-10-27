@@ -118,6 +118,18 @@
         "preview-sega-interactive",
         "entity-sega"
       ]
+    },
+    {
+      "id": "chunsoft",
+      "title": "Chunsoft（チュンソフト）与合并沿革",
+      "subtitle": "历史署名分别保留；不是当前集团全部作品",
+      "root": "entity-name-21365baf366d",
+      "focus": "entity-name-21365baf366d",
+      "entityIds": [
+        "entity-name-21365baf366d",
+        "entity-name-6d5cd9b9dc38",
+        "entity-name-8a871cf93bfd"
+      ]
     }
   ],
   "previewNodes": [
@@ -316,6 +328,30 @@
       "dateLabel": "2020年",
       "note": "官方史记SEGA Games与SEGA Interactive合并并改名SEGA；不将两家公司历年作品开发一并倒填给统一署名。",
       "basis": "previewSupplement"
+    },
+    {
+      "id": "chunsoft-successor-2012",
+      "parent": "entity-name-21365baf366d",
+      "child": "entity-name-8a871cf93bfd",
+      "kind": "succession",
+      "label": "吸收后商号变更",
+      "status": "previewReviewed",
+      "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
+      "dateLabel": "2012-04-01（公告；官方史确认当月合并）",
+      "note": "原公告明确Chunsoft为存续公司，吸收Spike后改商号；现有模型仍保留前后历史署名ID，不自动合并或重分配作品。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "spike-absorbed-2012",
+      "parent": "entity-name-6d5cd9b9dc38",
+      "child": "entity-name-8a871cf93bfd",
+      "kind": "succession",
+      "label": "被吸收后业务延续",
+      "status": "previewReviewed",
+      "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
+      "dateLabel": "2012-04-01（公告；官方史确认当月合并）",
+      "note": "原公告明确Spike为消灭公司，不能写成Spike吸收Chunsoft。合并关系不单独证明每款游戏的开发工种。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [
@@ -384,6 +420,17 @@
       "status": "previewReviewed",
       "source": "https://www.sega.co.jp/company/history/",
       "note": "同一正式SEGA ID下展示官方记载的名称沿革，不改写历史发行原文；其他新设／合并公司保持独立展示节点。"
+    },
+    {
+      "id": "chunsoft-name-2012",
+      "fromId": "entity-name-21365baf366d",
+      "toId": "entity-name-8a871cf93bfd",
+      "oldName": "Chunsoft（チュンソフト）",
+      "newName": "Spike Chunsoft（スパイク・チュンソフト）",
+      "dateLabel": "2012-04-01",
+      "status": "previewReviewed",
+      "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
+      "note": "存续公司商号变更；历史署名ID及各自游戏职责不自动合并。"
     }
   ]
 }
