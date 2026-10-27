@@ -33507,11 +33507,11 @@
     {
       "id": "jhv",
       "name": "Japan Home Video",
-      "checkedAt": "2026-10-08",
-      "status": "本轮五部主库与四部跨类型核查完成；历史目录及日期异文仍有待补项",
-      "scope": "Japan Home Video（JHV／ジャパンホームビデオ）实际发行的历史游戏，以及这些作品可核实的原作与主要移植。只排除词句键入解析器；养成、菜单、点击和直接操作保留，RPG／战略／格斗在关联区显示。",
-      "versionScope": "五部主库作品25条版本、四部关联游戏8条记录；增强、合集和移植复用作品。原作署名与后来发行方分别保留。兼用光盘可按对应机种列记录，不等于不同游戏。未宣称穷尽所有地区、廉价再版与系列后续。",
-      "publisherNote": "Japan Home Video（简称JHV）以影像发行著称，也曾发行电脑游戏。这里按实际发行关系整理《毕业》、客船逃生和SF叙事软件；HEADROOM、TENKY、Beluga及其他开发主体分别说明。授权移植不当作JHV独立创作。",
+      "checkedAt": "2026-10-27",
+      "status": "既有专题完善：五部主库、四部关联，补充制作分工与组织沿革；日期异文和玩法待核继续保留",
+      "scope": "Japan Home Video实际发行的历史游戏。保留既有五部主库与四部跨类型记录；HEADROOM、TENKY等制作方与JHV发行方分别登记，不按视频版权或同IP自动扩充。",
+      "versionScope": "按当前三层模型展示作品、内容版本与历史平台发行；保留既有25条主库发行和8条关联发行。普通移植、复刻与合售不另计新作，本轮不追加纯平台发行。",
+      "publisherNote": "Japan Home Video（ジャパンホームビデオ，JHV）为影像企划、制作与发行公司，现行官网记成立于1984年5月26日，旧官网仅记1984年5月。游戏目录按实际发行署名整理；HEADROOM、TENKY等制作方不属于已核的JHV子公司。官网列E-Station为关联公司，但未说明持股方向及起止时期。",
       "workIds": [
         "g830",
         "g831",
@@ -33870,7 +33870,7 @@
           ]
         }
       ],
-      "publisherWorkText": "<p class=\"scope-note\"><strong>五部主库作品均有JHV实际发行版本；其他平台按各自发行公司筛选。</strong></p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>五部主库作品均有JHV实际发行版本。</strong>本轮补充《毕业》HEADROOM原作制作，以及《毕业II》HEADROOM／TENKY限定合作职责。JHV仍按发行方登记，其他平台发行署名保留。<a href=\"organizations.html?family=jhv&amp;node=entity-jhv\">查看组织关系与沿革</a>。</p>",
       "overviewLabel": "已核实相关游戏（含跨类型）",
       "versionCountLabel": "主库与关联区版本记录",
       "description": "Japan Home Video／JHV游戏专题：毕业系列、Atlantia、URM及跨类型游戏，实际发行署名、平台版本与历史目录核对。",
@@ -33880,10 +33880,10 @@
       "relatedIntro": "这些游戏有明确JHV发行记录，核心玩法属于战略、动作冒险、RPG或格斗；保留类型说明，放在四类主库之外。Arsys与SNK原作的授权移植保留原发行年与署名。",
       "catalogueEntryCount": 9,
       "source": "https://www.jhv.jp/",
-      "auditTitle": "历史游戏目录与范围核对",
-      "auditSourceLabel": "JHV现行官网",
+      "auditTitle": "发行、制作分工与组织沿革核对（2026-10-27）",
+      "auditSourceLabel": "JHV官方站点（公司概要见核对条目）",
       "auditLabel": "已核实九部相关游戏，另列合集、日期异文与待补记录。",
-      "auditNote": "本轮完成指已处理所列来源中的项目；现行官网不是完整历史游戏目录。Sensual Angels互动性质、若干精确发行日期及其他合集／再版仍待核实，不算入已确认数量。",
+      "auditNote": "沿用既有五部主库、四部关联的作品身份，本轮补入主库作品说明、三条限定制作职责及组织节点。未找到足以新增独立叙事作品的确证，数量不扩充。Sensual Angels、URM年代、若干移植内容与准确发行日期仍待核。",
       "creativeProfile": {
         "thesis": "JHV目录呈现的是发行选择：角色养成、调查逃生与光盘SF叙事并存，再扩展到战略和授权格斗。它们由不同开发主体制作；以下风格归纳来自具体作品，不把发行商写成所有作品的统一开发团队。",
         "phases": [
@@ -34100,8 +34100,39 @@
           "workIds": [
             "g833"
           ]
+        },
+        {
+          "title": "公司成立日期与组织边界",
+          "status": "官网已核／异文保留",
+          "reason": "现行官网明确1984年5月26日，旧官网仅记1984年5月；二手资料5月9日不优先于官网。E-Station仅列关联公司，持股方向与关系起点待核。HEADROOM、TENKY按游戏合作方展示，不画成子公司。",
+          "source": "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03",
+          "workIds": [],
+          "relatedIds": []
+        },
+        {
+          "title": "《毕业》与《毕业II》的创作分工",
+          "status": "补充正式制作职责",
+          "reason": "导演原件称首作为HEADROOM第一回作品；二代列HEADROOM制作人与总监，以及TENKY制作人、设计与程序。分别登记一条首作制作和两条二代合作职责，不扩展至全系列或JHV开发。",
+          "source": "https://www.namura.net/xkd.com/product/neogeneration.html",
+          "workIds": [
+            "g830",
+            "g831"
+          ],
+          "relatedIds": []
+        },
+        {
+          "title": "复刻与动画的媒介边界",
+          "status": "不新增作品／不推定游戏开发",
+          "reason": "2004公告明确两部PC-98原作在Windows中原样再现；角色设定集不构成新游戏。JHV《永远的阿塞莉娅》官网为动画站，PS2游戏发行方明确另为日本一，故不自动纳入JHV游戏目录。",
+          "source": "https://www.iid.co.jp/legacy/news/press/pdf/2004/040511.pdf",
+          "workIds": [
+            "g830",
+            "g831"
+          ],
+          "relatedIds": []
         }
-      ]
+      ],
+      "foundedAt": "1984-05-26"
     },
     {
       "id": "cabbage",

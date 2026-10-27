@@ -525,19 +525,35 @@
     },
     {
       "id": "entity-jhv",
-      "name": "Japan Home Video",
+      "name": "Japan Home Video（ジャパンホームビデオ）",
       "type": "company",
       "aliases": [
         "Japan Home Video",
         "JHV",
-        "ジャパンホームビデオ"
+        "ジャパンホームビデオ",
+        "Japan Home Video（ジャパンホームビデオ）"
       ],
       "sources": [
-        "https://www.jhv.jp/"
+        "https://www.jhv.jp/",
+        "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03"
       ],
       "verification": "existingDossier",
-      "historyNote": "Japan Home Video（简称JHV）以影像发行著称，也曾发行电脑游戏。这里按实际发行关系整理《毕业》、客船逃生和SF叙事软件；HEADROOM、TENKY、Beluga及其他开发主体分别说明。授权移植不当作JHV独立创作。",
-      "dates": []
+      "historyNote": "Japan Home Video（ジャパンホームビデオ，JHV）为影像企划、制作与发行公司，现行官网记成立于1984年5月26日，旧官网仅记1984年5月。游戏目录按实际发行署名整理；HEADROOM、TENKY等制作方不属于已核的JHV子公司。官网列E-Station为关联公司，但未说明持股方向及起止时期。",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1984-05-26",
+          "precision": "day",
+          "source": "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03",
+          "status": "sourceReviewed"
+        }
+      ],
+      "nameParts": {
+        "english": "Japan Home Video",
+        "japanese": "ジャパンホームビデオ",
+        "basis": "existingBilingualName",
+        "source": "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03"
+      }
     },
     {
       "id": "entity-cabbage",
@@ -1412,6 +1428,61 @@
       "verification": "existingDossier",
       "historyNote": "Addison-Wesley为美国出版社及地区发行体系，不等于所有作品的开发工作室。托尔金游戏由Beam Software开发、Melbourne House先发行部分原作；Rhiannon开发少女教育冒险；书籍式冒险由Hal Renko与Sam Edwards等创作。公司成立远早于1949，依据本次具名要求建立出版商专题。",
       "dates": []
+    },
+    {
+      "id": "entity-headroom",
+      "name": "HEADROOM",
+      "type": "team",
+      "aliases": [
+        "HEADROOM",
+        "ヘッドルーム"
+      ],
+      "sources": [
+        "https://www.namura.net/xkd.com/product/graduation.html",
+        "https://www.namura.net/xkd.com/xkd.html"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1991",
+          "precision": "year",
+          "source": "https://www.namura.net/xkd.com/xkd.html",
+          "status": "sourceReviewed"
+        }
+      ]
+    },
+    {
+      "id": "entity-tenky",
+      "name": "TENKY（テンキー）",
+      "type": "company",
+      "aliases": [
+        "TENKY",
+        "有限会社テンキー",
+        "テンキー",
+        "TENKY（テンキー）"
+      ],
+      "sources": [
+        "https://www.tenky.co.jp/company.html"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [
+        {
+          "kind": "established",
+          "value": "1989-12-14",
+          "precision": "day",
+          "source": "https://www.tenky.co.jp/company.html",
+          "status": "sourceReviewed"
+        }
+      ],
+      "nameParts": {
+        "english": "TENKY",
+        "japanese": "テンキー",
+        "basis": "existingBilingualName",
+        "source": "https://www.tenky.co.jp/company.html"
+      }
     },
     {
       "id": "entity-visualarts",
@@ -6779,12 +6850,12 @@
     },
     {
       "id": "jhv",
-      "name": "Japan Home Video",
+      "name": "Japan Home Video（ジャパンホームビデオ）",
       "dossierType": "company",
       "entityIds": [
         "entity-jhv"
       ],
-      "scope": "Japan Home Video（JHV／ジャパンホームビデオ）实际发行的历史游戏，以及这些作品可核实的原作与主要移植。只排除词句键入解析器；养成、菜单、点击和直接操作保留，RPG／战略／格斗在关联区显示。",
+      "scope": "Japan Home Video实际发行的历史游戏。保留既有五部主库与四部跨类型记录；HEADROOM、TENKY等制作方与JHV发行方分别登记，不按视频版权或同IP自动扩充。",
       "sources": [
         "https://www.jhv.jp/"
       ],
@@ -7674,7 +7745,9 @@
     "株式会社ジャックインザボックス（萌えAPP）": "Moe APP（萌えAPP）",
     "GAMEテクノポリス": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
     "Brother Industries": "Brother Industries（ブラザー工業）",
-    "Chunsoft": "Chunsoft（チュンソフト）"
+    "Chunsoft": "Chunsoft（チュンソフト）",
+    "Japan Home Video": "Japan Home Video（ジャパンホームビデオ）",
+    "TENKY": "TENKY（テンキー）"
   },
   "policy": "实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。"
 }

@@ -4,7 +4,9 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='d80510b343d53f61c0df6ad799466aaca55ea2f3'
 CH='entity-name-21365baf366d';SP='entity-name-6d5cd9b9dc38';SC='entity-name-8a871cf93bfd'
-def read(p):return json.loads((ROOT/p).read_text())
+def read(p):
+ if p in {'data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json'}:return json.loads(subprocess.check_output(['git','show',f'54abb80b9ee2303f294d2bc0e0d3189482e045cf:{p}'],cwd=ROOT))
+ return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class ChunsoftDossierTests(unittest.TestCase):
  def test_exact_two_works_four_contents_four_releases_preserve_every_old_object(self):

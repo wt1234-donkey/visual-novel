@@ -130,6 +130,19 @@
         "entity-name-6d5cd9b9dc38",
         "entity-name-8a871cf93bfd"
       ]
+    },
+    {
+      "id": "jhv",
+      "title": "Japan Home Video／制作合作与关联公司",
+      "subtitle": "合作、发行与公司关联分别说明",
+      "root": "entity-jhv",
+      "focus": "entity-jhv",
+      "entityIds": [
+        "entity-jhv",
+        "entity-headroom",
+        "entity-tenky",
+        "preview-jhv-estation"
+      ]
     }
   ],
   "previewNodes": [
@@ -220,6 +233,29 @@
       ],
       "verification": "previewReviewed",
       "historyNote": "2015公司分割新设，2020与SEGA Games合并；此节点不追加任何游戏开发或发行职责。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-jhv-estation",
+      "name": "E-Station（イーステーション）",
+      "type": "company",
+      "aliases": [
+        "株式会社イーステーション"
+      ],
+      "sources": [
+        "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "JHV现行官方公司概要仅列为关联公司；资本方向、持股比例及关系起止未核，不推定其参与历史游戏开发。",
       "dates": [],
       "stats": {
         "main": 0,
@@ -351,6 +387,42 @@
       "source": "https://pdf.irpocket.com/C3715/oWM7/taOF/xAiP.pdf",
       "dateLabel": "2012-04-01（公告；官方史确认当月合并）",
       "note": "原公告明确Spike为消灭公司，不能写成Spike吸收Chunsoft。合并关系不单独证明每款游戏的开发工种。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "jhv-headroom-cooperation",
+      "parent": "entity-jhv",
+      "child": "entity-headroom",
+      "kind": "cooperation",
+      "label": "制作与发行合作",
+      "status": "previewReviewed",
+      "source": "https://www.namura.net/xkd.com/product/neogeneration.html",
+      "dateLabel": "1992—1994（所核作品范围）",
+      "note": "HEADROOM制作毕业首作，并与TENKY合作二代，JHV发行；合作连线不是母子公司、收购或作品归属继承。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "jhv-tenky-cooperation",
+      "parent": "entity-jhv",
+      "child": "entity-tenky",
+      "kind": "cooperation",
+      "label": "制作与发行合作",
+      "status": "previewReviewed",
+      "source": "https://www.namura.net/xkd.com/product/neogeneration.html",
+      "dateLabel": "1994（毕业II）",
+      "note": "TENKY在毕业II承担具名制作、设计和程序，JHV为发行方；不推定TENKY为JHV子公司。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "jhv-estation-affiliation",
+      "parent": "entity-jhv",
+      "child": "preview-jhv-estation",
+      "kind": "affiliation",
+      "label": "官网列关联公司",
+      "status": "previewReviewed",
+      "source": "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03",
+      "dateLabel": "起止未核（现行官网）",
+      "note": "官网只列関連会社，未说明母子方向或持股比例；不把版面方向解释为控制关系，也不推定历史游戏开发。",
       "basis": "previewSupplement"
     }
   ],
