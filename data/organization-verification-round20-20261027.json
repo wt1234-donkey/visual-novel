@@ -1,0 +1,1389 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-27",
+  "baseCommit": "6f69f7e505a2330b9068ec1a31687331f9aea0d6",
+  "source": {
+    "title": "叙事游戏年鉴_身份与专题职责核查_可筛选网页_第二十轮(1).html",
+    "libraryFileId": "libfile_7d812d258c948191b3aa99d2dd5d2957",
+    "sha256": "d062c676a9b7d7c4afadc1f5da2f21dda038158c6bfc57a3706669e3f2462927",
+    "round": 20
+  },
+  "baselineFiles": {
+    "organization-verification-20261027.json": "5a69917bd0f4b50a1f4265ac7408ca85b6d9dded08ec53b5860dcb92b75cd376",
+    "organization-verification-round16-20261027.json": "f39065c35521563d8daa47818cd336fb224fed32a978e429755165f7fbc5debb"
+  },
+  "policy": "保留第十轮及第十六轮原始记录，叠加第二十轮相较第十六轮37条修订。证据轮次沿用原台账字段；快照修订轮次独立标示。台账状态不自动变更正式法人、开发职责或作品位置。",
+  "audit": "data/organization-verification-round20-20261027.md",
+  "records": [
+    {
+      "category": "身份",
+      "id": 1,
+      "topic": "Addison-Wesley Productions",
+      "game": "阿伦达文城堡的秘密  g1272",
+      "placement": "发行 g1272-v-original",
+      "need": "《阿伦达文城堡的秘密》当期版本版权页、手册或发行公告，需明确「Addison-Wesley Productions」的历史主体及职责",
+      "oldUrl": "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/",
+      "status": "部分证据",
+      "detail": "《The Secret of Arendarvon Castle》1984年多机种英文图书附输入式游戏，图书出版方有Addison-Wesley Publishing Company／英国Addison-Wesley Publishers Ltd.的当期证据；ZX Spectrum的World of Spectrum截图目录把某个版本标为“Addison-Wesley Productions”，但未找到带该名称的注册法人文书或原版版权页。暂确认目录署名和关联，不将Productions独立建为法人。",
+      "sources": [
+        {
+          "title": "1984原作图书版本ISBN及发行方",
+          "url": "https://www.thevideogamelibrary.org/book/the-secret-of-arendarvon-castle"
+        },
+        {
+          "title": "ZX Spectrum保存目录称Productions",
+          "url": "https://worldofspectrum.net/pub/sinclair/books/z/ZXSpectrumGamesScreenshotCatalog.pdf"
+        },
+        {
+          "title": "BBC Micro收藏署Addison-Wesley Publications",
+          "url": "https://www.bbcmicro.co.uk/game.php?id=2216"
+        }
+      ],
+      "strength": "逐版图书记录＋历史目录",
+      "newRound": 17,
+      "recordId": "identity-1",
+      "entityId": "entity-name-6ed2a96c53cd",
+      "workId": "g1272"
+    },
+    {
+      "category": "身份",
+      "id": 2,
+      "topic": "Addison-Wesley Productions",
+      "game": "对抗者  g1273",
+      "placement": "发行 g1273-v-original",
+      "need": "《对抗者》当期版本版权页、手册或发行公告，需明确「Addison-Wesley Productions」的历史主体及职责",
+      "oldUrl": "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/",
+      "status": "部分证据",
+      "detail": "《The Antagonists》（《对抗者》）约1984/85年由Addison-Wesley以程序清单图书出版，ZX Spectrum历史站列“Addison-Wesley Productions”为出版者之一，而1985年Commodore 64版逐作发行记录列Addison-Wesley Publishers Ltd.和Addison-Wesley Nederland。只能证明Productions作为目录名存在，不能据此确认是独立于Addison-Wesley Publishing Company的法人。",
+      "sources": [
+        {
+          "title": "ZX Spectrum历史数据库的Productions名称",
+          "url": "https://worldofspectrum.net/item/0005951/"
+        },
+        {
+          "title": "MobyGames 1985 C64发行记录",
+          "url": "https://www.mobygames.com/game/179676/the-antagonists/"
+        },
+        {
+          "title": "当期图书出版详情",
+          "url": "https://www.thevideogamelibrary.org/book/the-antagonists"
+        }
+      ],
+      "strength": "多平台历史出版署名",
+      "newRound": 17,
+      "recordId": "identity-2",
+      "entityId": "entity-name-6ed2a96c53cd",
+      "workId": "g1273"
+    },
+    {
+      "category": "身份",
+      "id": 19,
+      "topic": "KADOKAWA",
+      "game": "野良与皇女与流浪猫之心  g900",
+      "placement": "发行 g900-v1, g900-v10, g900-v11, g900-v12, g900-v2, g900-v3, g900-v4, g900-v5, g900-v6, g900-v7, g900-v8, g900-v9",
+      "need": "《野良与皇女与流浪猫之心》当期版本版权页、手册或发行公告，需明确「KADOKAWA」的历史主体及职责",
+      "oldUrl": "https://www.kadokawa.co.jp/product/game1624/",
+      "status": "限版确认",
+      "detail": "《ノラと皇女と野良猫ハート》2016年PC原作由HARUKAZE品牌制作／发售；2017-09-28日本PS Vita实体版由HARUKAZE发行（VLJM-38023）、移植程序由iMel公司承担；2018年PS4及Switch HD版亦由HARUKAZE品牌推出。KADOKAWA官方仅证实它于2016年发行本作官方视觉书／附加剧情光盘，不能据其书籍版权页推广为上述游戏版本发行方。证实的是具体版本职责差异，未排除其他衍生版权合作。",
+      "sources": [
+        {
+          "title": "HARUKAZE主办的主机版官方作品页",
+          "url": "https://nora-anime.net/nora1cs/"
+        },
+        {
+          "title": "iMel移植制作公司逐作自述",
+          "url": "https://imel.co.jp/%E7%A7%BB%E6%A4%8D%E9%96%8B%E7%99%BA%EF%BC%9Aharukaze%E6%A7%98-%E3%83%8E%E3%83%A9%E3%81%A8%E7%9A%87%E5%A5%B3%E3%81%A8%E9%87%8E%E8%89%AF%E7%8C%AB%E3%83%8F%E3%83%BC%E3%83%88-psvita/"
+        },
+        {
+          "title": "KADOKAWA版权书籍及特典光盘的官方商品页",
+          "url": "https://www.kadokawa.co.jp/product/321602000671/"
+        },
+        {
+          "title": "PS Vita实体版HARUKAZE实际发行记录",
+          "url": "https://www.suruga-ya.jp/product/detail/105001863"
+        }
+      ],
+      "strength": "当事厂商官方+实际移植制作公司+实体商品",
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "KADOKAWA官方证实其出版2016年《ノラと皇女と野良猫ハート》公式视觉书（还附加剧情光盘），但该证据是“书籍／追加内容出版”，不构成它发行游戏各版本的证据；原游戏为HARUKAZE作品。",
+          "previousStrength": "官方/原始",
+          "previousSources": [
+            {
+              "title": "KADOKAWA书籍产品页",
+              "url": "https://www.kadokawa.co.jp/product/321602000671/"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "identity-19",
+      "entityId": "entity-name-82fc3d1bfdaa",
+      "workId": "g900"
+    },
+    {
+      "category": "身份",
+      "id": 33,
+      "topic": "エクシング",
+      "game": "毕业 ～Graduation～  g830",
+      "placement": "发行 g830-v1, g830-v2, g830-v3, g830-v4, g830-v5, g830-v6, g830-v7, g830-v8, g830-v9",
+      "need": "《毕业 ～Graduation～》当期版本版权页、手册或发行公告，需明确「XING（エクシング）」的历史主体及职责",
+      "oldUrl": "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
+      "status": "限版确认",
+      "detail": "《卒業～Graduation～》的1992年6月PC-9801原版由ジャパンホームビデオ（JHV）发行、HEADROOM班底创作，原版总监督与程序人员的本人作品履历直接列“発売メーカー：JHV”。XING（エクシング）参与的为之后X68000电脑移植版出版，而非1992年原作发行。这一行仅确定XING在后续特定平台的有限发行角色；应继续以该移植版原包装确认确切批次。",
+      "sources": [
+        {
+          "title": "原PC98总监督本人回顾及当时JHV发行署名",
+          "url": "https://www.namura.net/xkd.com/product/graduation.html"
+        },
+        {
+          "title": "跨平台和X68000发行商分列清单",
+          "url": "https://bgm.tv/subject/701926"
+        }
+      ],
+      "strength": "直接创作者原版署名＋跨版平台出版目录",
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "《卒業～Graduation～》1992年PC-98首发的制作人个人履历署“発売メーカー：JHV”，总监与程序为HEADROOM团队；目前不能把XING套用于原版（可能仅后续平台）。",
+          "previousStrength": "资料库/二手",
+          "previousSources": [
+            {
+              "title": "首发参与者制作履历",
+              "url": "https://www.namura.net/xkd.com/product/graduation.html"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "identity-33",
+      "entityId": "entity-name-40e00ac41438",
+      "workId": "g830"
+    },
+    {
+      "category": "专题职责",
+      "id": 4,
+      "topic": "Addison-Wesley Publishing Company",
+      "game": "阿伦达文城堡的秘密  g1272",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g1272-v-original）中「Addison-Wesley Publishing Company」的具名职责与适用版本",
+      "oldUrl": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+      "status": "证据充分",
+      "detail": "《The Secret of Arendarvon Castle》1984年以附BASIC源程序的120页互动图书形式发行，英美版ISBN例如PC/PCjr 0-201-16486-8、C64 0-201-14563-4；原设计及程序编撰者为Kasper Boon、Alex Pelsmaeker与Arend Rensink，Addison-Wesley Publishing Company是该批图书出版商，不是实际编程原作者。各语言版另涉The Book Company等，应逐版区别。",
+      "sources": [
+        {
+          "title": "1984多平台出版ISBN与发行资料",
+          "url": "https://www.thevideogamelibrary.org/book/the-secret-of-arendarvon-castle"
+        },
+        {
+          "title": "当年印刷游戏作者职员转录",
+          "url": "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/credits/c64/"
+        },
+        {
+          "title": "当期英国媒体出版报道",
+          "url": "https://www.electronicsandbooks.com/edt/manual/Magazine/Z/ZX%20Computing%20UK/ZXComputing_Apr-May_1985%20c20110322%20%5B132%5D.pdf"
+        }
+      ],
+      "strength": "原书版本资料",
+      "newRound": 17,
+      "recordId": "duty-4",
+      "entityId": "entity-addison_wesley",
+      "workId": "g1272"
+    },
+    {
+      "category": "专题职责",
+      "id": 5,
+      "topic": "Addison-Wesley Publishing Company",
+      "game": "对抗者  g1273",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g1273-v-original）中「Addison-Wesley Publishing Company」的具名职责与适用版本",
+      "oldUrl": "https://www.mobygames.com/company/3739/addison-wesley-publishing-company-inc/games/sort%3A-title/",
+      "status": "证据充分",
+      "detail": "《The Antagonists》是1984/85年以源程序附书出版的BASIC文字冒险；ISBN 0-201-16491-4为1984年美国C64英文版本图书。出版者明确是Addison-Wesley Publishing Company／相关英国或荷兰分公司，而不是把署名Productions当成独立制作法人；作者Kasper Boon（Hal Renko）、Alex Pelsmaeker（Sam Edwards）及Hermie Hermens负责程序、剧情构思。",
+      "sources": [
+        {
+          "title": "图书原版ISBN及出版商署名",
+          "url": "https://www.thevideogamelibrary.org/book/the-antagonists"
+        },
+        {
+          "title": "创作过程及版权主体专题采访资料",
+          "url": "https://if50.substack.com/p/the-antagonists"
+        },
+        {
+          "title": "C64版逐作作者职员表",
+          "url": "https://www.mobygames.com/game/179676/the-antagonists/"
+        }
+      ],
+      "strength": "图书实物书目信息",
+      "newRound": 17,
+      "recordId": "duty-5",
+      "entityId": "entity-addison_wesley",
+      "workId": "g1273"
+    },
+    {
+      "category": "专题职责",
+      "id": 40,
+      "topic": "Adventure International",
+      "game": "巨洞冒险  g089",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g089-v1、g089-v2、g089-v3、g089-v4）中「Adventure International」的具名职责与适用版本",
+      "oldUrl": "https://www.mocagh.org/ai/ai-v3i2catalog.pdf",
+      "status": "限版确认",
+      "detail": "《巨洞冒险》原始Crowther/Woods大型机程序不由Adventure International开发，但其1981年美国Apple II《Other Venture 1: Classic Adventure》确有独立商业发行实物：Computer Game Museum保存Adventure International包装（袋装和泡沫盒两种），MobyGames单独登记1981年Apple II发行及John Rausch编写的移植程序。仅据此确认AI在Apple II特定商业改编版的发行，不可泛化到主库g089全部四个发行版本、1982年Melbourne House或1981年IBM PC《Microsoft Adventure》。",
+      "sources": [
+        {
+          "title": "Computer Game Museum保存的Apple II原始袋装实物",
+          "url": "https://www.mocagh.org/loadpage.php?getgame=aiclassicadv-alt"
+        },
+        {
+          "title": "同作泡沫塑料包装版本",
+          "url": "https://www.mocagh.org/loadpage.php?getgame=aiclassicadv"
+        },
+        {
+          "title": "1981 Apple II版作者、发行商与内容区别",
+          "url": "https://www.mobygames.com/game/81076/classic-adventure/"
+        },
+        {
+          "title": "1981 AI发行目录所载Apple II Other Venture经典冒险",
+          "url": "https://gamingafter40.blogspot.com/2011/09/cover-to-cover-adventure-international_10.html"
+        }
+      ],
+      "strength": "游戏原始实物及逐作逐平台发行档案",
+      "newRound": 18,
+      "recordId": "duty-40",
+      "entityId": "entity-adventure_international",
+      "workId": "g089"
+    },
+    {
+      "category": "专题职责",
+      "id": 43,
+      "topic": "Alicesoft",
+      "game": "国盗战：Combat 47  alicesoft-extra-combat47",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（alicesoft-extra-combat47-v1、alicesoft-extra-combat47-v2）中「Alicesoft」的具名职责与适用版本",
+      "oldUrl": "https://www.alicesoft.com/game/index.html",
+      "status": "部分证据",
+      "detail": "《国盗りゲーム》被游戏历史馆列为1982年战略模拟旧作，之后以《コンバット-47》之名在1983年发行，1983年10月《Oh!PC》当期新品列表已显示“コンバット47／チャンピオンソフト”。白木善喜为所记原作者。本次确认1983年Champion Soft发行记录及作品更名线索；1982年的初始法定主体仍与“Champion Soft于1983年成立”记载不合，缺原盒版权，不可改写为Alicesoft首次发行。",
+      "sources": [
+        {
+          "title": "Oh!FM-7早期发行品牌与国盗り/Combat47目录",
+          "url": "https://fm-7.com/museum/products/512hn302/"
+        },
+        {
+          "title": "1983年10月杂志同期产品目录",
+          "url": "https://000.la.coocan.jp/p6/ohpc.html"
+        },
+        {
+          "title": "白木善喜作者目录",
+          "url": "https://fm-7.com/museum/products/ae92d2mz/"
+        }
+      ],
+      "strength": "历史机种实物馆藏",
+      "newRound": 17,
+      "recordId": "duty-43",
+      "entityId": "entity-alicesoft",
+      "workId": "alicesoft-extra-combat47"
+    },
+    {
+      "category": "专题职责",
+      "id": 44,
+      "topic": "Alicesoft",
+      "game": "销售翻倍大作战：电脑商战  alicesoft-extra-computerwars",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（alicesoft-extra-computerwars-v1、alicesoft-extra-computerwars-v2）中「Alicesoft」的具名职责与适用版本",
+      "oldUrl": "https://www.alicesoft.com/game/index.html",
+      "status": "部分证据",
+      "detail": "《売上倍増大作戦》旧馆藏定为1982年的经营模拟，随后《コンピュータウォーズ》出现在Champion Soft 1983年产品目录，原作者均有白木善喜署名。能确认更名关系、模拟玩法和后续Champion Soft署名，但1982年首发主体早于档案所载1983年法人设立，尚缺1982原始包装作最终法律确认。不能视作Alicesoft品牌首发或剧情游戏。",
+      "sources": [
+        {
+          "title": "1982首版与1983后续名称及发行馆藏",
+          "url": "https://fm-7.com/museum/products/512hn302/"
+        },
+        {
+          "title": "白木善喜原作者出版作品目录",
+          "url": "https://fm-7.com/museum/products/ae92d2mz/"
+        },
+        {
+          "title": "跨年改名与游戏类型",
+          "url": "https://w.atwiki.jp/gcmatome/pages/5673.html"
+        }
+      ],
+      "strength": "历史机种实物馆藏",
+      "newRound": 17,
+      "recordId": "duty-44",
+      "entityId": "entity-alicesoft",
+      "workId": "alicesoft-extra-computerwars"
+    },
+    {
+      "category": "专题职责",
+      "id": 50,
+      "topic": "Alicesoft",
+      "game": "翡翠之眸  alicesoft-extra-hisui",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（alicesoft-extra-hisui-v1）中「Alicesoft」的具名职责与适用版本",
+      "oldUrl": "https://www.alicesoft.com/game/index.html",
+      "status": "限版确认",
+      "detail": "《翡翠の眸 ～ひすいのひとみ～》实际为2003年8月29日Windows版，零售商品原件记录明确“メーカー：AliceNoir（アリスノワール）”；属于Alicesoft相关子品牌Alice Noir，而不是以Alicesoft主品牌发行的1980年代作品。玩法带麻将风格对战，是否进入叙事主库须另判；目前可确认此版本商业品牌，尚不等于法定发行主体已获原版权页证实。",
+      "sources": [
+        {
+          "title": "2003 Windows原版零售商品署名和日期",
+          "url": "https://www.suruga-ya.jp/product/detail/145009628"
+        },
+        {
+          "title": "子品牌历史作品列表",
+          "url": "https://w.atwiki.jp/gcmatome/pages/5673.html"
+        }
+      ],
+      "strength": "实体版商品信息",
+      "newRound": 17,
+      "recordId": "duty-50",
+      "entityId": "entity-alicesoft",
+      "workId": "alicesoft-extra-hisui"
+    },
+    {
+      "category": "专题职责",
+      "id": 51,
+      "topic": "Alicesoft",
+      "game": "Hopper：派对游戏  alicesoft-extra-hopper",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（alicesoft-extra-hopper-v1）中「Alicesoft」的具名职责与适用版本",
+      "oldUrl": "https://www.alicesoft.com/game/index.html",
+      "status": "证据充分",
+      "detail": "《パーティ・ゲーム ホッパー（Party Game Hopper）》1988年12月MSX2原版开发发行署名均为Champion Soft Co., Ltd.，商品编号MXCP-12014；Generation MSX保存完整外盒、磁盘、勘误单与官方回执等影像。玩法是最多20人分组参与的桌面/派对游戏，非独立剧情AVG，不能将Alicesoft相关前身作品误记为1989年后Alicesoft品牌首发。",
+      "sources": [
+        {
+          "title": "MSX2实物编号、1988月份、开发发行记录",
+          "url": "https://generation-msx.nl/software/champion-soft-co-ltd/party-game-hopper/release/1741"
+        },
+        {
+          "title": "游戏类别及玩法资料",
+          "url": "https://generation-msx.nl/software/champion-soft-co-ltd/party-game-hopper/1741"
+        }
+      ],
+      "strength": "实物扫描与发行原编号",
+      "newRound": 17,
+      "recordId": "duty-51",
+      "entityId": "entity-alicesoft",
+      "workId": "alicesoft-extra-hopper"
+    },
+    {
+      "category": "专题职责",
+      "id": 136,
+      "topic": "ASCII",
+      "game": "英雄大和武尊  ascii-yamato",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（ascii-yamato-v1）中「ASCII」的具名职责与适用版本",
+      "oldUrl": "https://weekly.ascii.jp/elem/000/002/615/2615668/",
+      "status": "限版确认",
+      "detail": "《英雄ヤマトタケル》1985年10月PC-8801版的PC-88历史发售月表明确记作“アスキー”发行；同期1985年12月《LOGiN》实物书目亦含本作专题评论，支持其当时在售。1987年PC-9801发行名单也列ASCII，但不同平台移植制作人目前缺原盘职员表，本条只确认ASCII对应机种的发行关联。",
+      "sources": [
+        {
+          "title": "1985 PC-88各软件发行月份目录",
+          "url": "https://www.gamepres.org/pc88/library/ascii.html"
+        },
+        {
+          "title": "1985年PC-88逐月发售名单",
+          "url": "https://www.8-bits.info/gamelist/index.php?%40Page%40=15"
+        },
+        {
+          "title": "同期1985年12月LOGiN刊物封面商品目录",
+          "url": "https://www.suruga-ya.jp/product/detail/ZNOTI8512"
+        }
+      ],
+      "strength": "历史出版月表",
+      "newRound": 17,
+      "recordId": "duty-136",
+      "entityId": "entity-ascii",
+      "workId": "ascii-yamato"
+    },
+    {
+      "category": "专题职责",
+      "id": 147,
+      "topic": "Carry Lab（キャリーラボ）",
+      "game": "魔塔崩坏  carry-lab-matou",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（carry-lab-matou-v-original）中「Carry Lab（キャリーラボ）」的具名职责与适用版本",
+      "oldUrl": "https://d4e.co.jp/lights_cat/carry_lab",
+      "status": "限版确认",
+      "detail": "《魔塔の崩壊》（Matou no Houkai: The Hero of Babel）1988年9月2日日本FC磁碟机原版，发行主体为Pony Canyon（ポニーキャニオン），游戏制作方为Carry Lab（キャリーラボ），早期游戏记录明确两家分工；商品编码PNF-MAT。玩法以动作闯关为主，不应仅凭故事背景列为叙事主库。",
+      "sources": [
+        {
+          "title": "发行/开发双署名与原盘代码及日期",
+          "url": "https://superfamicom.org/famicom/info/matou-no-houkai-the-hero-of-babel"
+        },
+        {
+          "title": "1988年日本FDS发行日索引",
+          "url": "https://www.gavas.jp/user_data/famicom_game_title.php"
+        },
+        {
+          "title": "逐机种厂商记录",
+          "url": "https://chronodrawer.org/1988/g/game/"
+        }
+      ],
+      "strength": "早期发行机种记录",
+      "newRound": 17,
+      "recordId": "duty-147",
+      "entityId": "entity-carry_lab",
+      "workId": "carry-lab-matou"
+    },
+    {
+      "category": "专题职责",
+      "id": 150,
+      "topic": "Cinematronics",
+      "game": "龙穴历险记 II：时间扭曲  g045",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g045-v1）中「Cinematronics」的具名职责与适用版本",
+      "oldUrl": "https://allincolorforaquarter.blogspot.com/2012/11/the-ultimate-so-far-history-of.html",
+      "status": "限版确认",
+      "detail": "《Dragon’s Lair II: Time Warp》1990年DOS/Amiga/Atari ST电脑改编版由ReadySoft制作发行；1991年美国街机版由Leland Corporation发行、Sullivan Bluth Interactive Media开发。此处Cinematronics仅能确认为原系列历史前身关联，不能在缺乏对应游戏时代原盘署名时视作1991街机版当期直接发行者或完整制作方。",
+      "sources": [
+        {
+          "title": "街机1991与各计算机版分别列开发/发行",
+          "url": "https://www.mobygames.com/game/10396/dragons-lair-ii-time-warp/releases/"
+        },
+        {
+          "title": "电脑改编版另立1990年作品及ReadySoft开发",
+          "url": "https://www.mobygames.com/game/54807/dragons-lair-ii-time-warp/"
+        }
+      ],
+      "strength": "逐平台分版原始发行目录",
+      "newRound": 11,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "《Dragon’s Lair II: Time Warp》1991年美国街机版由Leland Corporation发行、Sullivan Bluth Interactive Media开发；1987年前的Cinematronics名称已在公司沿革中被Leland替代。1990年ReadySoft电脑移植另属另一版，不能认定1991街机为Cinematronics原名直接发行。",
+          "previousStrength": "逐版发行署名",
+          "previousSources": [
+            {
+              "title": "1991街机版本明确发行/开发",
+              "url": "https://www.mobygames.com/game/10396/dragons-lair-ii-time-warp/releases/"
+            },
+            {
+              "title": "Cinematronics-Leland公司沿革",
+              "url": "https://www.mobygames.com/company/1353/rowe-resources-inc/"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-150",
+      "entityId": "entity-cinematronics",
+      "workId": "g045"
+    },
+    {
+      "category": "专题职责",
+      "id": 161,
+      "topic": "FairyTale（フェアリーテール）",
+      "game": "丘比特之约  g792",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g792-v1、g792-v2、g792-v3）中「FairyTale（フェアリーテール）」的具名职责与适用版本",
+      "oldUrl": "https://fandc.co.jp/catalog/pc",
+      "status": "证据充分",
+      "detail": "原清单所记《丘比特之约》（g792）的对应作品可据Cupid Mel撮合恋爱剧情及F&C的FairyTale/月星组原版目录定位为《たまきゅう》（Tama-cue）。F&C一方的2003年版权表明确列©2003 Tsukiboshi-Gumi/HQ/F&C；产品目录明确2003年6月27日日本Windows初回版，发行品牌为月星组／フェアリーテール，类型ADV+SLG。2004年1月29日Dreamcast版由NEC Interchannel发行，2009/2010年的数字再发行仍须与2003初版分别列示。该行可证F&C旗下月星组／FairyTale的原作品牌及2003初版出版，不能推广为FairyTale主品牌独立开发所有移植版。",
+      "sources": [
+        {
+          "title": "F&C官网2003年原版及月星组品牌的逐作商品目录",
+          "url": "https://fandc.co.jp/catalog/pc?direction=asc&page=18&sort=r.position"
+        },
+        {
+          "title": "F&C逐作版权署名©2003 Tsukiboshi-Gumi/HQ/F&C",
+          "url": "https://fandc.co.jp/extra/copyright"
+        },
+        {
+          "title": "剧情中的Cupid人物与原作发行归属",
+          "url": "https://www.gtaku.net/vngameinfo/137044"
+        }
+      ],
+      "strength": "当事厂商官网商品目录与版权列表",
+      "newRound": 19,
+      "recordId": "duty-161",
+      "entityId": "entity-fairytale",
+      "workId": "g792"
+    },
+    {
+      "category": "专题职责",
+      "id": 170,
+      "topic": "GAINAX",
+      "game": "美少女梦工厂4  g823",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g823-v1、g823-v2、g823-v3）中「GAINAX」的具名职责与适用版本",
+      "oldUrl": "https://d4e.co.jp/lights_cat/gainax",
+      "status": "限版确认",
+      "detail": "《美少女夢工場4》2005-09-01日本PS2版原包装商品编号SLPM-65936，销售厂商CyberFront，版权署©GAINAX ©GeneX；2004年制作同期采访明确由GeneX负责开发、GAINAX系列创办人赤井孝美监修。后续2005韩版及2006日版Windows另有GAINAX地区发行记录，2008 DS版亦有不同发行商。可确认GAINAX版权及监修／后续指定地区发行，而不能宣称GAINAX为2005年日版PS2唯一开发或发行主体。",
+      "sources": [
+        {
+          "title": "2005 PS2实体商品与版权©GAINAX ©GeneX",
+          "url": "https://mediaworld.co.jp/products/10402007001"
+        },
+        {
+          "title": "2004年开发制作当时采访",
+          "url": "https://www.gamespot.com/articles/princess-maker-4-announced-for-ps2/1100-6108206/"
+        },
+        {
+          "title": "各国各平台发售记录",
+          "url": "https://gamefaqs.gamespot.com/ps2/924506-princess-maker-4/data"
+        }
+      ],
+      "strength": "原版实物及开发当期媒体采访",
+      "newRound": 6,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "《Princess Maker 4》2005年日本PS2版资料列West One／GeneX实作，CyberFront/Jinx参与发行；GAINAX在2005年韩版、2006年日本Windows版被记为发行方，故“GAINAX全平台开发发行”与逐版数据相冲突。2004年GameSpot同期采访称GeneX开发，GAINAX负责系列与监督关系。",
+          "previousStrength": "当期行业采访报道",
+          "previousSources": [
+            {
+              "title": "2004年开发表述与2005版信息",
+              "url": "https://www.gamespot.com/articles/princess-maker-4-announced-for-ps2/1100-6108206/"
+            },
+            {
+              "title": "平台、地域、各发行主体",
+              "url": "https://gamefaqs.gamespot.com/ps2/924506-princess-maker-4/data"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-170",
+      "entityId": "entity-gainax",
+      "workId": "g823"
+    },
+    {
+      "category": "专题职责",
+      "id": 173,
+      "topic": "GAINAX",
+      "game": "偶像崇拜者  gainax-gotz",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（gainax-gotz-v-original）中「GAINAX」的具名职责与适用版本",
+      "oldUrl": "https://d4e.co.jp/lights_cat/gainax",
+      "status": "证据充分",
+      "detail": "清单所写《偶像崇拜者》（gainax-gotz）可唯一对应德文标题《GÖTZENDIENER／ゲッツェンディーナー》（“偶像崇拜者”是标题字义，而非偶像养成类游戏）。1994年11月25日日本PC Engine SUPER CD-ROM²版由NEC Home Electronics发行；原片尾明确“制作 GAINAX”，Studio Alex参与程序开发，赤井孝美等有美术工作署名。这是一款迷宫逃脱动作/解谜冒险，不是偶像题材，也不应将GAINAX的制作归属扩展为当期发行方。",
+      "sources": [
+        {
+          "title": "1994年原版片尾职员表转录含“Produced by Gainax / Published by NEC”",
+          "url": "https://www.mobygames.com/game/42786/gotzendiener/credits/turbografx-cd/"
+        },
+        {
+          "title": "PC Engine日本版开发与出版逐版记录",
+          "url": "https://www.mobygames.com/game/42786/gotzendiener/releases/"
+        },
+        {
+          "title": "1994年PC Engine创作和作品类型介绍",
+          "url": "https://www.hardcoregaming101.net/gotzendiener/"
+        }
+      ],
+      "strength": "原版44名职员表及1994年发行记录",
+      "newRound": 18,
+      "recordId": "duty-173",
+      "entityId": "entity-gainax",
+      "workId": "gainax-gotz"
+    },
+    {
+      "category": "专题职责",
+      "id": 200,
+      "topic": "Hawk Eye（株式会社ホークアイ）",
+      "game": "魔法少女魔法爱琳  g1267",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g1267-v-original）中「Hawk Eye（株式会社ホークアイ）」的具名职责与适用版本",
+      "oldUrl": "https://www.mirai-soft.net/guide.php",
+      "status": "限版确认",
+      "detail": "《魔法少女魔法爱琳》对应《魔法少女まじかる☆あーりん》（Mahō Shōjo Magical Arin），并非独立发行的Hawk Eye主品牌长篇。mirai官方频道在2017年2月17日宣传：2017年3月24日发行《ハナヒメ*アブソリュート！》视觉Fanbook，所附特别碟包含主人公绫音路线的后日谈短篇ADV，另加新CG与配音。原始品牌应保留mirai，这份原始视频只能证明mirai的创作/出版宣传，尚不能确认Hawk Eye作为法定开发或发行主体的具体职责。",
+      "sources": [
+        {
+          "title": "mirai官方频道2017年当期原版宣传与附赠内容说明",
+          "url": "https://www.youtube.com/watch?v=wx42NMVq2Y0"
+        },
+        {
+          "title": "原版日文名、2017年日期及mirai署名互证",
+          "url": "https://www.moyu.moe/patch/2613/introduction"
+        }
+      ],
+      "strength": "制作品牌一方当期发售公告，Hawk Eye法律主体尚未证实",
+      "newRound": 18,
+      "recordId": "duty-200",
+      "entityId": "entity-hawkeye",
+      "workId": "g1267"
+    },
+    {
+      "category": "专题职责",
+      "id": 218,
+      "topic": "IBM",
+      "game": "巨洞冒险  g089",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g089-v1、g089-v2、g089-v3、g089-v4）中「IBM」的具名职责与适用版本",
+      "oldUrl": "https://www.mobygames.com/company/28/international-business-machines-corporation-ibm/games/",
+      "status": "证据充分",
+      "detail": "1981年IBM PC首发的《Microsoft Adventure》是《Colossal Cave Adventure》改编/移植版本，由IBM发行、Softwin Associates程序开发、微软制作；IBM原说明书列1981年IBM与Microsoft双版权、游戏开屏署Gordon Letwin。只将1981年IBM PC版的发行和出版版权归于IBM，不得把1976/77 Crowther/Woods原始主机版归IBM。",
+      "sources": [
+        {
+          "title": "IBM PC历史博物馆展示微软Adventure的1981年手册及磁盘",
+          "url": "https://www.pcjs.org/software/pcx86/game/microsoft/adventure/"
+        },
+        {
+          "title": "逐平台美国发行记录",
+          "url": "https://www.mobygames.com/game/4074/microsoft-adventure/releases/"
+        },
+        {
+          "title": "微软官方1981年编年史",
+          "url": "https://learn.microsoft.com/en-us/shows/history/history-of-microsoft-1981"
+        },
+        {
+          "title": "1981年原版手册的转录，含IBM与Microsoft版权",
+          "url": "https://www.trs-80.org/microsoft-adventure.html"
+        }
+      ],
+      "strength": "1981原始随盘文档转录",
+      "newRound": 17,
+      "recordId": "duty-218",
+      "entityId": "entity-ibm",
+      "workId": "g089"
+    },
+    {
+      "category": "专题职责",
+      "id": 245,
+      "topic": "Infocom",
+      "game": "佐克：未发现的地下世界  infocom-undiscovered-underground",
+      "placement": "仅专题书目",
+      "need": "本作原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「Infocom」的具名职责与适用版本",
+      "oldUrl": "https://www.eblong.com/infocom/",
+      "status": "证据充分",
+      "detail": "《Zork: The Undiscovered Underground》1997年发行者为Activision，非历史Infocom独立法人。互动小说档案明确列编剧Marc Blank、Michael Berlyn及程序员Gerry Kevin Wilson、Inform 6/Z-code 5格式和1997年8月28日原版内部序列号；旧Infocom成员参加新作，不等于已停用的Infocom公司为开发／发行主体。本项可以在1997年原版范围内明确否定旧Infocom独立发行的数据库误归属。",
+      "sources": [
+        {
+          "title": "互动小说档案逐作1997年出版与职员表",
+          "url": "https://www.ifwiki.org/Zork%3A_The_Undiscovered_Underground"
+        },
+        {
+          "title": "原版开发/发行均Activision的逐作目录",
+          "url": "https://www.mobygames.com/game/19360/zork-the-undiscovered-underground/"
+        }
+      ],
+      "strength": "原版软件序列号及参与者逐作资料",
+      "newRound": 3,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "《Zork: The Undiscovered Underground》是1997年Activision为《Grand Inquisitor》发行的免费宣传游戏，原Infocom部门已在1989年关闭。作者Marc Blank与Michael Berlyn是前Infocom人员，但本作不得因此记为历史Infocom法人发行或开发。",
+          "previousStrength": "历史发行记录",
+          "previousSources": [
+            {
+              "title": "1997年版本号与Activision发行方",
+              "url": "https://www.ifwiki.org/Zork%3A_The_Undiscovered_Underground"
+            },
+            {
+              "title": "当期随附说明书转载",
+              "url": "https://www.lemon64.com/doc/zork-the-undiscovered-underground/697"
+            },
+            {
+              "title": "Adventure Gamers项目说明",
+              "url": "https://adventuregamers.com/games/zork-the-undiscovered-underground"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-245",
+      "entityId": "entity-infocom",
+      "workId": "infocom-undiscovered-underground"
+    },
+    {
+      "category": "专题职责",
+      "id": 302,
+      "topic": "KOEI（光栄）",
+      "game": "恋恋天使大人：安琪莉可  koei-loveangel",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（koei-loveangel-v1）中「KOEI（光栄）」的具名职责与适用版本",
+      "oldUrl": "https://www.koeitecmo.co.jp/recruit/company/history/",
+      "status": "限版确认",
+      "detail": "《恋恋天使大人：安琪莉可》对应《ラブラブ♥天使様 ～アンジェリーク～》，不是1994年KOEI原版《アンジェリーク》。2011年2月14日GREE与株式会社コーエーテクモゲームス双方原始新闻稿明确该社交游戏采用KOEI TECMO拥有版权的旧作角色，通过GREE运营；2011年11月30日两家公司发表正式上线新闻。证实的是2011年KOEI TECMO GAMES与GREE的联合提供/发行关系，不应回写为合并前“光栄（KOEI）”法人独立开发，原版实际程序工种还待片尾或供应合同。",
+      "sources": [
+        {
+          "title": "GREE及KOEI TECMO于2011年2月14日联合原始公告",
+          "url": "https://hd.gree.net/jp/ja/news/press/2011/0214.html"
+        },
+        {
+          "title": "2011年11月30日当期正式上线联合公告全文",
+          "url": "https://www.4gamer.net/games/126/G012649/20111130008/"
+        }
+      ],
+      "strength": "当事双方2011年新闻稿区分版权和运营主体",
+      "newRound": 18,
+      "recordId": "duty-302",
+      "entityId": "entity-koei",
+      "workId": "koei-loveangel"
+    },
+    {
+      "category": "专题职责",
+      "id": 320,
+      "topic": "Konami",
+      "game": "达尔文的悖论！  konami-darwin",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（konami-darwin-v-original-1、konami-darwin-v-original-2、konami-darwin-v-original-3、konami-darwin-v-original-4）中「Konami」的具名职责与适用版本",
+      "oldUrl": "https://www.konami.com/corporate/en/history/index.html",
+      "status": "证据充分",
+      "detail": "《Darwin’s Paradox!》2026年4月2日在Steam发行；Valve官方商品页逐字明确Developer: ZDT Studio，Publisher: KONAMI。KONAMI当期作品官网版权“©Konami Digital Entertainment”“©2026 ZDT Studio”亦分别支持两方职责。可明确KONAMI发行与ZDT Studio开发，不能把KONAMI版权单独当作自研程序工种。",
+      "sources": [
+        {
+          "title": "Steam原版发行商品明确开发ZDT、发行KONAMI",
+          "url": "https://store.steampowered.com/app/2989180/Darwins_Paradox/"
+        },
+        {
+          "title": "KONAMI当事公司作品版权",
+          "url": "https://www.konami.com/games/darwins_paradox/jp/ja/"
+        }
+      ],
+      "strength": "平台销售方原始发行商品+版权方官方页",
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "部分证据",
+          "previousDetail": "KONAMI官方《Darwin’s Paradox!》页面载明Konami Digital Entertainment与ZDT Studio的版权/品牌署名，证明有发行与创作相关关系，但页面未用具名发行/开发栏目精确界定两者全部工种。",
+          "previousStrength": "具体游戏或版本",
+          "previousSources": [
+            {
+              "title": "KONAMI游戏官方站及ZDT版权署名",
+              "url": "https://www.konami.com/games/darwins_paradox/jp/ja/"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-320",
+      "entityId": "entity-konami",
+      "workId": "konami-darwin"
+    },
+    {
+      "category": "专题职责",
+      "id": 336,
+      "topic": "Konami",
+      "game": "寂静岭：起源  konami-sh-origins",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（konami-sh-origins-v-original）中「Konami」的具名职责与适用版本",
+      "oldUrl": "https://www.konami.com/corporate/en/history/index.html",
+      "status": "限版确认",
+      "detail": "《Silent Hill: Origins》（日本《SILENT HILL ZERO》）2007年11月6日北美PSP原版开发为Climax Studios、发行为Konami，商品码ULUS-10285；2007年12月6日日本PSP版亦为Konami发行，2008年PS2版有独立发行日期。2006年对当时制作人的采访直接说明Climax负责制作。因此Konami应列发行与IP而非PSP原版唯一程序开发团队。",
+      "sources": [
+        {
+          "title": "2006年制作人当事采访",
+          "url": "https://www.shacknews.com/article/43196/silent-hill-origins-interview"
+        },
+        {
+          "title": "PSP原版Konami/Climax各地区商品编号",
+          "url": "https://gamefaqs.gamespot.com/psp/933072-silent-hill-origins/data"
+        }
+      ],
+      "strength": "当期制作人采访＋原始商品编号与发行目录",
+      "newRound": 7,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "部分证据",
+          "previousDetail": "《Silent Hill: Origins》相关历史作品资料将PSP原版开发方列为Climax Studios、发行方列Konami（2007）；但本次未取得原版PSP职员表或当年发行包装直接复核，暂按部分证据保留，以防混入2008 PS2移植人员。",
+          "previousStrength": "百科/二手汇总",
+          "previousSources": [
+            {
+              "title": "2007 PSP原版二手归属线索",
+              "url": "https://en.wikipedia.org/wiki/Silent_Hill:_Origins"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-336",
+      "entityId": "entity-konami",
+      "workId": "konami-sh-origins"
+    },
+    {
+      "category": "专题职责",
+      "id": 345,
+      "topic": "Konami",
+      "game": "幻想水浒传：编织百年之时  konami-woven",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（konami-woven-v-original）中「Konami」的具名职责与适用版本",
+      "oldUrl": "https://www.konami.com/corporate/en/history/index.html",
+      "status": "限版确认",
+      "detail": "《幻想水滸伝 紡がれし百年の時》2012年2月9日日本PSP原版发行方为KONAMI Digital Entertainment；游戏专门历史目录、日文游戏百科与MobyGames一致将实际开发方列为GAE（Global A Entertainment前后称谓），而部分英文百科型站点把发行主体Konami误列开发者。确认Konami该版发行及GAE主开发归属；具体合作分包仍需原版完整人员表。",
+      "sources": [
+        {
+          "title": "日文游戏历史目录明确GAE开发/KONAMI发行",
+          "url": "https://consoledictionary.com/games/27855"
+        },
+        {
+          "title": "作品行业游戏百科明确GAE与发行职责",
+          "url": "https://w.atwiki.jp/gcmatome/pages/2235.html"
+        },
+        {
+          "title": "逐作游戏公司及201人职员表",
+          "url": "https://www.mobygames.com/game/118318/genso-suikoden-tsumugareshi-hyakunen-no-toki/"
+        }
+      ],
+      "strength": "日本逐作发行档案与演职员表双向核对",
+      "newRound": 7,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "《幻想水滸伝 紡がれし百年の時》2012年2月9日日本PSP版发行方均指向Konami，但实际开发者线索冲突：GameSpot及GameFAQs列Konami开发，MobyGames逐作登记Global A Entertainment开发（另有201人职员表）。在核对原版片尾或开发合同前不可断言某一主开发方。",
+          "previousStrength": "相互矛盾的独立资料",
+          "previousSources": [
+            {
+              "title": "逐作开发方为Global A的记录",
+              "url": "https://www.mobygames.com/game/118318/genso-suikoden-tsumugareshi-hyakunen-no-toki/"
+            },
+            {
+              "title": "GameSpot列Konami为开发方",
+              "url": "https://www.gamespot.com/games/genso-suikoden-tsumugareshi-hyakunen-no-toki/"
+            },
+            {
+              "title": "GameFAQs 2012 PSP商品项",
+              "url": "https://gamefaqs.gamespot.com/psp/643848-genso-suikoden-tsumugareshi-hyakunen-no-toki/data"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-345",
+      "entityId": "entity-konami",
+      "workId": "konami-woven"
+    },
+    {
+      "category": "专题职责",
+      "id": 362,
+      "topic": "Melbourne House",
+      "game": "巨洞冒险  g089",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g089-v1、g089-v2、g089-v3、g089-v4）中「Melbourne House」的具名职责与适用版本",
+      "oldUrl": "https://ourdigitalheritage.org/hostedArchives/playitagain/companies/melbourne-house/index.html",
+      "status": "限版确认",
+      "detail": "1982年英国ZX Spectrum《Classic Adventure》为基于早期《Colossal Cave Adventure》的独立移植，英国计算机史博物馆按原实体登记“Software House: Melbourne House”、作者John Jones-Steele；另一资料记Abersoft首发并后由Melbourne House重售。故Melbourne House能确认指定ZX Spectrum版本的发行，非Crowther/Woods原版开发或全部平台发行。",
+      "sources": [
+        {
+          "title": "英国计算机史馆1982实体登记软件公司及作者",
+          "url": "https://www.computinghistory.org.uk/cgi/archive.pl?author=&order=Date&platform=ZX+Spectrum&publisher=&type=Games"
+        },
+        {
+          "title": "Abersoft与Melbourne House原版沿革",
+          "url": "https://thegamesdb.net/game.php?id=136657"
+        }
+      ],
+      "strength": "馆藏原实物产品编目",
+      "newRound": 17,
+      "recordId": "duty-362",
+      "entityId": "entity-melbournehouse",
+      "workId": "g089"
+    },
+    {
+      "category": "专题职责",
+      "id": 386,
+      "topic": "Microsoft",
+      "game": "幽灵现场  g970",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g970-v1）中「Microsoft」的具名职责与适用版本",
+      "oldUrl": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "status": "限版确认",
+      "detail": "《Ghostscape》最初是Psionic3D在2008年制作发布的Flash点击恐怖冒险。2011年Windows Phone Xbox LIVE版仍由Psionic Games开发，现代回溯资料将该版发行商归入Xbox Game Studios／Microsoft体系（2011年的原始公司署名仍须以当年商店页面核查）；2010年Microsoft公开WP7首发名单也将开发者明确标为Psionic而不是“MGS”。因此仅确认微软2011版的渠道发行关联，不能说Microsoft原创开发2008 Flash作品。",
+      "sources": [
+        {
+          "title": "2011 WP Xbox版发行与开发主体",
+          "url": "https://www.trueachievements.com/game/Ghostscape/achievements"
+        },
+        {
+          "title": "2008创作方原发布署名",
+          "url": "https://armorgames.com/play/2521/ghostscape"
+        },
+        {
+          "title": "2010 Microsoft发布产品阵容各开发商",
+          "url": "https://www.engadget.com/2010-08-16-microsoft-details-xbox-live-and-launch-game-lineup-for-windows-p.html"
+        }
+      ],
+      "strength": "WP历史平台商品档案",
+      "newRound": 17,
+      "recordId": "duty-386",
+      "entityId": "entity-microsoft",
+      "workId": "g970"
+    },
+    {
+      "category": "专题职责",
+      "id": 390,
+      "topic": "Microsoft",
+      "game": "摇摆管人编年史  g974",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g974-v1）中「Microsoft」的具名职责与适用版本",
+      "oldUrl": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "status": "证据充分",
+      "detail": "《摇摆管人编年史》（g974）准确英文标题为《The Wavy Tube Man Chronicles》。微软2011年7月22日针对《The Gunstringer》的同步发售公告明确其为免费的追加内容（DLC），游戏原版2011年9月在Xbox 360上架；由Twisted Pixel Games开发、Microsoft Corporation/Microsoft Studios发行。由项目制作人写作的2011年Game Developer文章明确记载这是该项目的真人影像FMV DLC。2012年Windows 8/Windows RT系统又推出独立应用版，含场景选择与幕后材料，不能将移植的独立应用视为2011年首次原生完整游戏。其主要玩法是实拍影像轨道射击，主库叙事性收录标准应另判，发行和原创开发不可合并。",
+      "sources": [
+        {
+          "title": "该作品Xbox360/Windows版逐版开发和出版主体",
+          "url": "https://www.mobygames.com/game/160173/the-wavy-tube-man-chronicles/"
+        },
+        {
+          "title": "微软2011年法语官方新闻稿提及免费同日DLC",
+          "url": "https://download.microsoft.com/documents/France/Vision/0191/8e3bd482fce14f63bfc7f75a9e33db9d/pr_gunstringer_retail_.pdf"
+        },
+        {
+          "title": "Game Developer 2011制作人详述真人DLC制作",
+          "url": "https://www.gamedeveloper.com/business/behind-the-scenes-with-twisted-pixel-s-i-the-gunstringer-i-"
+        },
+        {
+          "title": "2012后续Windows独立应用说明",
+          "url": "https://gameinformer.com/b/news/archive/2012/11/12/the-wavy-tube-man-chronicles-coming-to-pc"
+        }
+      ],
+      "strength": "微软当时公关原件及原版制作人后记互证",
+      "newRound": 19,
+      "recordId": "duty-390",
+      "entityId": "entity-microsoft",
+      "workId": "g974"
+    },
+    {
+      "category": "专题职责",
+      "id": 459,
+      "topic": "Nitroplus",
+      "game": "命运石之门 0  g634",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g634-v1、g634-v2、g634-v3、g634-v4、g634-v5、g634-v6、g634-v7）中「Nitroplus」的具名职责与适用版本",
+      "oldUrl": "https://nitro-origin.com/works/game/",
+      "status": "限版确认",
+      "detail": "《STEINS;GATE 0》2015年日本PlayStation版由5pb./MAGES体系开发发行；Spike Chunsoft后续欧美Steam及Switch商品明确“Developer MAGES.”。2009年《STEINS;GATE》版权由5pb.与Nitroplus共有，但这一事实不能直接推断Nitroplus自研或发行了2015年的续作。现确认Nitroplus的系列/IP关联，而非2015年该版独立发行主体。",
+      "sources": [
+        {
+          "title": "全球发行方原版产品页列实际开发MAGES",
+          "url": "https://www.spike-chunsoft.com/games/steinsgate-0/"
+        },
+        {
+          "title": "Nitroplus官方版权授权关系需联系MAGES",
+          "url": "https://www.nitroplus.co.jp/company/license/amateur/"
+        }
+      ],
+      "strength": "当事发行商游戏产品署名及系列版权说明",
+      "newRound": 4,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "部分证据",
+          "previousDetail": "Nitroplus官方版权授权页面明确《STEINS;GATE 0》相关授权申请应联系 MAGES.，而非由Nitroplus当前页面直接受理，并列其参加的CHAOS;HEAD/STEINS;GATE联合版权；此证据不能证明Nitroplus是《STEINS;GATE 0》此版的单独发行或开发方。若旧条目是“出版社=原开发”的自动归纳，应限定为IP/关联主体线索。",
+          "previousStrength": "品牌授权分工直接证据",
+          "previousSources": [
+            {
+              "title": "公司官网权利分工与MAGES转介",
+              "url": "https://www.nitroplus.co.jp/company/license/amateur/"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-459",
+      "entityId": "entity-nitroplus",
+      "workId": "g634"
+    },
+    {
+      "category": "专题职责",
+      "id": 460,
+      "topic": "Nitroplus",
+      "game": "机器人笔记 DaSH  g635",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g635-v1、g635-v2、g635-v3）中「Nitroplus」的具名职责与适用版本",
+      "oldUrl": "https://nitro-origin.com/works/game/",
+      "status": "限版确认",
+      "detail": "《ROBOTICS;NOTES DaSH》2019年1月31日日本PS4/Switch原版开发发行均为MAGES.（原5pb.业务），2020年欧美Switch和PC版本由Spike Chunsoft负责地区发行，原开发仍MAGES。Nitroplus现有官方授权说明只涉及科学ADV相关系列，无法据此认定其直接制作本作。该条可确认本作实际原版开发发行方及后续分销差别。",
+      "sources": [
+        {
+          "title": "2019日本与2020欧美平台逐版开发/发行",
+          "url": "https://www.mobygames.com/game/151455/roboticsnotes-dash/releases/"
+        },
+        {
+          "title": "Nitroplus官方版权与MAGES权限关系",
+          "url": "https://www.nitroplus.co.jp/company/license/amateur/"
+        }
+      ],
+      "strength": "按国家及平台逐版发行登记＋当事版权声明",
+      "newRound": 4,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "部分证据",
+          "previousDetail": "Nitroplus官方版权授权页面明确《ROBOTICS;NOTES》相关授权申请应联系 MAGES.，而非由Nitroplus当前页面直接受理，并列其参加的CHAOS;HEAD/STEINS;GATE联合版权；此证据不能证明Nitroplus是《ROBOTICS;NOTES》此版的单独发行或开发方。若旧条目是“出版社=原开发”的自动归纳，应限定为IP/关联主体线索。",
+          "previousStrength": "品牌授权分工直接证据",
+          "previousSources": [
+            {
+              "title": "公司官网权利分工与MAGES转介",
+              "url": "https://www.nitroplus.co.jp/company/license/amateur/"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-460",
+      "entityId": "entity-nitroplus",
+      "workId": "g635"
+    },
+    {
+      "category": "专题职责",
+      "id": 461,
+      "topic": "Nitroplus",
+      "game": "混沌之子  g636",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g636-v1、g636-v2、g636-v3、g636-v4、g636-v5、g636-v6、g636-v7、g636-v8、g636-v9）中「Nitroplus」的具名职责与适用版本",
+      "oldUrl": "https://nitro-origin.com/works/game/",
+      "status": "限版确认",
+      "detail": "《CHAOS;CHILD》2014年Xbox One开始发行、2015年日本PS平台由5pb.开发发行；2016年Windows日版同由5pb.发行，2019年欧美PC版发行方为Spike Chunsoft、主开发5pb./MAGES。海外官方产品页直接列Developer: MAGES Inc.。2008年旧作CHAOS;HEAD版权行出现Nitroplus，不意味着Nitroplus独立发行2014—2019年的《CHAOS;CHILD》。",
+      "sources": [
+        {
+          "title": "发行方Spike Chunsoft产品页直列MAGES开发",
+          "url": "https://www.spike-chunsoft.com/games/chaoschild/"
+        },
+        {
+          "title": "2015日版及2019欧美版跨平台职责",
+          "url": "https://www.mobygames.com/game/97206/chaoschild/releases/"
+        },
+        {
+          "title": "Nitroplus版权关系说明",
+          "url": "https://www.nitroplus.co.jp/company/license/amateur/"
+        }
+      ],
+      "strength": "海外实际发行方署名＋按国版本记录",
+      "newRound": 4,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "部分证据",
+          "previousDetail": "Nitroplus官方版权授权页面明确《CHAOS;CHILD》相关授权申请应联系 MAGES.，而非由Nitroplus当前页面直接受理，并列其参加的CHAOS;HEAD/STEINS;GATE联合版权；此证据不能证明Nitroplus是《CHAOS;CHILD》此版的单独发行或开发方。若旧条目是“出版社=原开发”的自动归纳，应限定为IP/关联主体线索。",
+          "previousStrength": "品牌授权分工直接证据",
+          "previousSources": [
+            {
+              "title": "公司官网权利分工与MAGES转介",
+              "url": "https://www.nitroplus.co.jp/company/license/amateur/"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-461",
+      "entityId": "entity-nitroplus",
+      "workId": "g636"
+    },
+    {
+      "category": "专题职责",
+      "id": 497,
+      "topic": "Riverhill Soft（リバーヒルソフト）",
+      "game": "狼人杀人事件  g1176",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g1176-v-original）中「Riverhill Soft（リバーヒルソフト）」的具名职责与适用版本",
+      "oldUrl": "https://fm-7.com/museum/products/j1fvt21v/",
+      "status": "限版确认",
+      "detail": "《狼男殺人事件》有平台/销售渠道分版：PC-88版1984年12月的发行记录列Union Planning（ユニオンプランニング）出版、Riverhill Soft开发；FM-7游戏保存馆藏则将1985年前后FM-7版列为Riverhill Soft开发并发行。差异在平台与版次上可以并存，不必认定某一游戏百科“全平台发行商”单一正确。现可限定确认Riverhill制作参与及FM-7发行归属，但首批商品日期仍近似，留存原盘核实建议。",
+      "sources": [
+        {
+          "title": "FM-7历史馆藏列Riverhill Soft开发发行",
+          "url": "https://fm-7.com/museum/products/j1fvt21v/"
+        },
+        {
+          "title": "1984 PC-88历史发行者Union Planning",
+          "url": "https://www.8-bits.info/gamelist/PC88/tips/tips_r6XSYw1vjMuibzKj.php"
+        }
+      ],
+      "strength": "实体版本馆藏＋不同平台历史出版资料",
+      "newRound": 6,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "FM-7馆藏列《狼男殺人事件》为Riverhill Soft开发发行（1985?年），制作人员档案列Rika Suzuki、Kazuyuki Yamamoto等；另PC-88档案把1984年12月版出版方标为Union Planning、开发方Riverhill Soft。可能是平台或发行批次差异，须看当年盒背，不能简单统一发行主体。",
+          "previousStrength": "不同平台历史资料冲突",
+          "previousSources": [
+            {
+              "title": "FM-7旧机种作品目录",
+              "url": "https://fm-7.com/museum/products/j1fvt21v/"
+            },
+            {
+              "title": "PC-88 Union Planning发行记录",
+              "url": "https://www.8-bits.info/gamelist/PC88/tips/tips_r6XSYw1vjMuibzKj.php"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-497",
+      "entityId": "entity-riverhill_soft",
+      "workId": "g1176"
+    },
+    {
+      "category": "专题职责",
+      "id": 498,
+      "topic": "Riverhill Soft（リバーヒルソフト）",
+      "game": "谜之假面舞会  g1183",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g1183-v-original）中「Riverhill Soft（リバーヒルソフト）」的具名职责与适用版本",
+      "oldUrl": "https://fm-7.com/museum/products/j1fvt21v/",
+      "status": "限版确认",
+      "detail": "《谜之假面舞会》应对日文《謎のマスカレード》：立命馆大学游戏保存馆有1990年3月2日PC Engine HuCARD原装实物（商品号NCS90003／JAN4988616001085），实体出版发行者明确是日本コンピュータシステム（NCS，旗下游戏品牌Masaya）。作品属于Riverhill Soft于1988年开创的《藤堂龍之介探偵日記／琥珀色の遺言》推理ADV的改编版，逐版目录列Riverhill Soft为开发、NCS为PCE版发行。Riverhill的开发或原作版权关联不能写成1990年PCE版的直接发行。",
+      "sources": [
+        {
+          "title": "立命馆大学1990年3月2日原始实体HuCARD馆藏",
+          "url": "https://collection.rcgs.jp/page/PACKAGE0000594"
+        },
+        {
+          "title": "同作原版与1990移植版逐平台资料",
+          "url": "https://www.mobygames.com/game/54290/todo-ryunosuke-tantei-nikki-kohakuiro-no-yuigon/"
+        },
+        {
+          "title": "Masaya版权承继方列1990年PC Engine商业发行",
+          "url": "https://www.e-xtreme.co.jp/service/ip/masaya/"
+        },
+        {
+          "title": "1990年PC Engine版开发与发行双署名",
+          "url": "https://retrogamebm.com/nazo-no-mascarade-pce/"
+        }
+      ],
+      "strength": "保存机构原版实物／商品编码及逐版开发资料",
+      "newRound": 18,
+      "recordId": "duty-498",
+      "entityId": "entity-riverhill_soft",
+      "workId": "g1183"
+    },
+    {
+      "category": "专题职责",
+      "id": 514,
+      "topic": "Sierra On-Line",
+      "game": "迷失时空  g1119",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g1119-v-original）中「Sierra On-Line」的具名职责与适用版本",
+      "oldUrl": "https://www.sierragamers.com/sierra-games/",
+      "status": "限版确认",
+      "detail": "《Lost in Time》1993年DOS初版由Coktel Vision开发发行，原版英文手册记Muriel Tramis负责项目创作。1995年美国“SierraOriginals”再发行及1996年德国“SierraOriginals”再发行由Sierra On-Line发行、仍由Coktel Vision开发；2000年代的再次数字发行不得反推其原始开发者。Sierra的可确证职责限这些指定再版，不是1993年Coktel初版的独立原创开发。",
+      "sources": [
+        {
+          "title": "1993原版及1995/1996 SierraOriginals分别列发行/开发",
+          "url": "https://www.mobygames.com/game/6098/lost-in-time/releases/"
+        },
+        {
+          "title": "SierraOriginals实体包装档案",
+          "url": "https://www.mobygames.com/game/6098/lost-in-time/covers/"
+        },
+        {
+          "title": "原版制作人员及工程组署名",
+          "url": "https://www.mobygames.com/game/6098/lost-in-time/"
+        }
+      ],
+      "strength": "实体包装系列与逐版国家、原版人员资料",
+      "newRound": 3,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "《Lost in Time》原版英文手册首页印有COKTEL VISION，次页直接列出制作“Production: Coktel Vision”及Muriel Tramis等主创，不能把它当成Sierra On-Line单独原创的作品；Sierra可能只在指定地区承担发行，须继续核查具体发行版。",
+          "previousStrength": "原版具名制作原件",
+          "previousSources": [
+            {
+              "title": "原始英文手册制作职员表",
+              "url": "https://sierrahelp.com/Documents/Manuals/Lost_in_Time_-_Manual.pdf"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-514",
+      "entityId": "entity-sierra_company",
+      "workId": "g1119"
+    },
+    {
+      "category": "专题职责",
+      "id": 558,
+      "topic": "Sinclair Research",
+      "game": "巨洞冒险  g089",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g089-v1、g089-v2、g089-v3、g089-v4）中「Sinclair Research」的具名职责与适用版本",
+      "oldUrl": "https://find-and-update.company-information.service.gov.uk/company/01135105",
+      "status": "仍待核",
+      "detail": "第20轮仍待核：已以World of Spectrum的Sinclair Research出版方完整索引、英国计算机历史馆实物、ZX Spectrum各独立改编版交叉核验；Abersoft的《Adventure 1》（1982）、Level 9的《Colossal Adventure》（1982/1983）、Melbourne House的《Classic Adventure》（1983）、Anubis的《Colossal Cave Adventure》（1985）均有不同的出版主体。Sinclair Research确曾重新发行Artic的《Adventure A: Planet of Death》等其他文字冒险，但目前没有清单g089所指《巨洞冒险》作为Sinclair Research出版产品的具体盒背、官方商品目录条目或原始说明书。仅凭Spectrum机型名称不能确定Sinclair Research出版，因此保留“仍待核”，不强行结案。",
+      "sources": [
+        {
+          "title": "World of Spectrum - Sinclair Research发行作品全目录（含其他冒险作品，而不含g089）",
+          "url": "https://worldofspectrum.org/archive/publishers/Sinclair-Research-Ltd"
+        },
+        {
+          "title": "1982 ZX Spectrum Adventure 1：Abersoft及后续Melbourne House版本",
+          "url": "https://worldofspectrum.org/archive/software/text-adventures/adventure-1-abersoft"
+        },
+        {
+          "title": "1983 Level 9 Colossal Adventure实物馆藏",
+          "url": "https://www.computinghistory.org.uk/det/47792/Colossal-Adventure/"
+        },
+        {
+          "title": "Anubis版本1985年实物数据库",
+          "url": "https://worldofspectrum.net/item/0006099/"
+        },
+        {
+          "title": "出版社Sinclair Research重新发行Artic原作等文字冒险的档案",
+          "url": "https://worldofspectrum.net/publisher/13390/"
+        }
+      ],
+      "strength": "新查证为排除性版本证据及旧出版商完整索引，尚无Sinclair参与此游戏特定版次的肯定性证据。",
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-558",
+      "entityId": "entity-sinclair",
+      "workId": "g089"
+    },
+    {
+      "category": "专题职责",
+      "id": 559,
+      "topic": "Sinclair Research",
+      "game": "莫登的任务  g137",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g137-v1）中「Sinclair Research」的具名职责与适用版本",
+      "oldUrl": "https://find-and-update.company-information.service.gov.uk/company/01135105",
+      "status": "限版确认",
+      "detail": "《Mordon’s Quest》1985年ZX Spectrum原版的实物磁带和封面由Melbourne House发行，原作者John Jones-Steele；1985年英国《Sinclair User》当期评论还明确称其是Melbourne House发行的《Classic Adventure》续作。此处“Sinclair”可以是主机／杂志名称，并非Sinclair Research商品发行证据；目前确认1985年原版不应标作Sinclair Research开发发行，后续假设再版仍需独立证据。",
+      "sources": [
+        {
+          "title": "World of Spectrum原始磁带与封面完整著录",
+          "url": "https://worldofspectrum.net/item/0006704/"
+        },
+        {
+          "title": "1985年原版发行资料",
+          "url": "https://worldofspectrum.org/archive/software/text-adventures/mordons-quest-melbourne-house"
+        },
+        {
+          "title": "1985年媒体评论的发行语境",
+          "url": "https://retrodelights.co.uk/games/mordon-s-quest/"
+        }
+      ],
+      "strength": "原磁带封面和同期发行评论",
+      "newRound": 5,
+      "reviewHistory": [
+        {
+          "round": 20,
+          "oldStatus": "证据冲突",
+          "previousDetail": "World of Spectrum逐作馆藏只检到1985年《Mordon’s Quest》由Melbourne House原始发行及John Jones-Steele署名，未显示Sinclair Research版本。现有“Sinclair参与”线索与原版馆藏归属不一致，暂列证据冲突而非断言其绝无地区再版。",
+          "previousStrength": "带原版包装图像的档案",
+          "previousSources": [
+            {
+              "title": "原版磁带/说明书馆藏索引",
+              "url": "https://worldofspectrum.org/archive/software/text-adventures/mordons-quest-melbourne-house"
+            }
+          ]
+        }
+      ],
+      "lastReviewedRound": 20,
+      "reviewedRounds": [
+        20
+      ],
+      "recordId": "duty-559",
+      "entityId": "entity-sinclair",
+      "workId": "g137"
+    },
+    {
+      "category": "专题职责",
+      "id": 579,
+      "topic": "TOHO（東宝）",
+      "game": "哥斯拉：宽银幕冒险  toho-cinemascope-godzilla",
+      "placement": "仅专题书目",
+      "need": "本作原版包装／说明书／片尾职员表（书目所指原版，尚无发行ID）中「TOHO（東宝）」的具名职责与适用版本",
+      "oldUrl": "https://www.toho.co.jp/anime/lineup-games/",
+      "status": "限版确认",
+      "detail": "此前未查到对应原名的《哥斯拉：宽银幕冒险》确有独立游戏实体和1984年发行目录：正确日文名《シネスコ・アドベンチャー ゴジラ》（CinemaScope Adventure: Godzilla）。日本游戏保存协会PC-8801游戏年表记1984年11月发行商「東宝」、ADV类型，发行价4,800日元、硬件PC-8801以上；剧情为1954电影的三章文字冒险改编。PC-88和FM-7等其他版本在二手专业目录可见，但当前一手存档尚不能分别指认FM-7的发行工种和原程序开发团队，故本行仅限确认1984年PC-8801原版由TOHO发行；不能把「东宝发行」直接扩大为所有程序开发职务。",
+      "sources": [
+        {
+          "title": "日本游戏保存协会1984年11月PC-8801逐作原始发行目录",
+          "url": "https://www.gamepres.org/pc88/library/1984/1984_11.htm"
+        },
+        {
+          "title": "1984年各平台别名与题材查证",
+          "url": "https://wikizilla.org/wiki/CinemaScope_Adventure:_Godzilla"
+        },
+        {
+          "title": "GameFAQs东宝开发/发行按平台列表",
+          "url": "https://gamefaqs.gamespot.com/games/company/72714-toho"
+        }
+      ],
+      "strength": "长期保存机构原版商品历史目录与游戏百科交叉",
+      "newRound": 19,
+      "recordId": "duty-579",
+      "entityId": "entity-toho",
+      "workId": "toho-cinemascope-godzilla"
+    },
+    {
+      "category": "专题职责",
+      "id": 589,
+      "topic": "Yuzusoft（ゆずソフト）",
+      "game": "拼花回忆  g232",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g232-v1、g232-v2、g232-v3、g232-v4、g232-v5）中「Yuzusoft（ゆずソフト）」的具名职责与适用版本",
+      "oldUrl": "https://www.yuzu-soft.com/products.html",
+      "status": "证据充分",
+      "detail": "《拼花回忆》（g232）对应2021年全年龄视觉小说《PARQUET》（パルケ）。EXNOA/DMM GAMES于2021年8月2日官方新闻稿明确游戏由株式会社ユノス制作，实际原作品品牌是ゆずソフトSOUR（YUZUSOFT SOUR），它是Yuzusoft的全年龄姐妹品牌；2021年7月31日先在DMM GAMES/DLsite发行日本PC数字版。Steam版2021年8月27日列开发YUZUSOFTSOUR、发行NekoNyan及HIKARI FIELD；日本iOS/Android应用商店明确属于JUNOS INC./株式会社ユノス对应发行，不应将这些地域/渠道版直接写作Yuzusoft主品牌独立发行。可确认Yuzusoft体系姐妹品牌、2021年原版制作与发行历史，但需保留本作SOUR原始品牌。",
+      "sources": [
+        {
+          "title": "2021年EXNOA官方发布：制作ユノス、品牌SOUR、7月31日原版",
+          "url": "https://dmmgames.co.jp/news/detail/id%3D465"
+        },
+        {
+          "title": "DMM原版7月31日发行及主创署名",
+          "url": "https://dlsoft.dmm.com/detail/yuzu_0005/"
+        },
+        {
+          "title": "Steam不同地区发行方及8月27日日期",
+          "url": "https://store.steampowered.com/app/1662840/PARQUET/"
+        },
+        {
+          "title": "苹果日本官方应用商店法人/品牌版权",
+          "url": "https://apps.apple.com/jp/app/parquet/id1574602770"
+        }
+      ],
+      "strength": "实际制作法人/发行方当事公告与平台记录互证",
+      "newRound": 19,
+      "recordId": "duty-589",
+      "entityId": "entity-yuzusoft",
+      "workId": "g232"
+    }
+  ]
+}

@@ -18,6 +18,7 @@ def attach_verification(result):
     supplement = read('organization-context-round16-20261027.json')
     for key in ['nodeNotes', 'edgeReviews', 'events', 'cooperations']:
         context[key].extend(supplement[key])
+        context[key].extend(read('organization-context-round20-20261027.json')[key])
     nodes = {n['id']: n for n in result['nodes']}
     records = {r['recordId']: r for r in ledger['records']}
     assert len(records) == len(ledger['records']), '重复台账记录'
@@ -34,6 +35,23 @@ def attach_verification(result):
         histories[ref] = {'round': baseline_source['round'], **{
             key: previous[key] for key in ['status', 'detail', 'sources', 'strength']}}
         records[ref] = row
+    series = {ref: [entry] for ref, entry in histories.items()}
+    revision = read('organization-verification-round20-20261027.json')
+    for name, sha in revision['baselineFiles'].items():
+        assert hashlib.sha256((ROOT / 'data' / name).read_bytes()).hexdigest() == sha
+    changed = []
+    for row in revision['records']:
+        ref = row['recordId']
+        assert ref in records and ref not in changed
+        previous = records[ref]
+        assert all(row[key] == previous[key] for key in frozen), '冻结主体或作品发生变化'
+        assert row['sources'], '修订须保留逐项来源，包括仍待核的检索记录'
+        entry = {'round': delta['source']['round'], **{
+            key: previous[key] for key in ['status', 'detail', 'sources', 'strength']}}
+        series.setdefault(ref, []).append(entry)
+        histories[ref] = entry
+        records[ref] = row
+        changed.append(ref)
     by_entity = defaultdict(lambda: defaultdict(list))
     for r in records.values():
         assert r['entityId'] in nodes and r['workId'] in result['works']
@@ -66,12 +84,12 @@ def attach_verification(result):
     result['organizationEvents'] = context['events']
     result['cooperations'] = context['cooperations']
     result['verificationLedger'] = {
-        'reviewedAt': delta['reviewedAt'], 'source': delta['source'],
-        'previousSource': baseline_source, 'policy': delta['policy'], 'records': records,
-        'changedRecordIds': list(histories), 'changedCount': len(histories),
-        'recordHistory': histories,
+        'reviewedAt': revision['reviewedAt'], 'source': revision['source'],
+        'previousSource': delta['source'], 'policy': revision['policy'], 'records': records,
+        'changedRecordIds': changed, 'changedCount': len(changed),
+        'recordHistory': histories, 'recordHistories': series,
         'counts': dict(Counter(r['status'] for r in records.values())),
         'entityCount': sum(bool(rows) for rows in by_entity.values()), 'total': len(records),
-        'audit': delta['audit']}
-    result['updated'] = delta['reviewedAt']
+        'audit': revision['audit']}
+    result['updated'] = revision['reviewedAt']
     return result
