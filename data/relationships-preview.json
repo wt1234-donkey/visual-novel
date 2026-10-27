@@ -141,6 +141,18 @@
         "entity-tenky",
         "preview-jhv-estation"
       ]
+    },
+    {
+      "id": "ultra_games",
+      "title": "Konami／Ultra Software／Ultra Games",
+      "subtitle": "历史全资关系与商标归属；开发职责另核",
+      "root": "entity-konami",
+      "focus": "entity-name-c87c2b9662fc",
+      "entityIds": [
+        "entity-konami",
+        "preview-ultra-software",
+        "entity-name-c87c2b9662fc"
+      ]
     }
   ],
   "nodes": [
@@ -614,6 +626,54 @@
       ]
     },
     {
+      "id": "entity-konami",
+      "name": "Konami",
+      "type": "company",
+      "aliases": [
+        "Konami"
+      ],
+      "sources": [
+        "https://www.konami.com/corporate/en/history/index.html"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "科乐美于1969/03/21创业，1973/03/19法人设立，本专题按创业日期排序，补齐此前顺序漏项。2006年成立的Konami Digital Entertainment在新增版本保留实际发行方署名，厂商筛选归入Konami；两种公司日期不混用。",
+      "dates": [],
+      "stats": {
+        "main": 26,
+        "related": 57,
+        "bibliography": 0
+      },
+      "productionCount": 1,
+      "dossiers": [
+        {
+          "id": "konami",
+          "name": "Konami"
+        }
+      ],
+      "works": [
+        {
+          "id": "g1216",
+          "title": "莎罗姆：魔城传说III",
+          "year": 1987
+        },
+        {
+          "id": "g040",
+          "title": "掠夺者",
+          "year": 1988
+        },
+        {
+          "id": "g1229",
+          "title": "理纱的妖精传说",
+          "year": 1988
+        },
+        {
+          "id": "g1230",
+          "title": "小麻烦千惠：爆弹女孩的幸福寻找",
+          "year": 1988
+        }
+      ]
+    },
+    {
       "id": "entity-microsoft",
       "name": "Microsoft",
       "type": "company",
@@ -1079,6 +1139,54 @@
           "id": "g054",
           "title": "命运石之门",
           "year": 2009
+        }
+      ]
+    },
+    {
+      "id": "entity-name-c87c2b9662fc",
+      "name": "Ultra Games",
+      "type": "brand",
+      "aliases": [
+        "Ultra Games"
+      ],
+      "sources": [
+        "https://www.gamesdatabase.org/game/nintendo-nes/nightshade",
+        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5a/Computer_Entertainer_7-5.pdf"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "1992 NES Nightshade原说明书扫描明确ULTRA／ULTRAGAMES为Ultra Software Corporation注册商标，手册封面、介绍与保修部分将ULTRA作为对外发行标识，核为brand。原文Ultra Games与法律公司Ultra Software Corporation不合并，不从Konami版权或游戏发行名义推原作开发；显式preserveReleaseRoles:true保留一条历史publisher。",
+      "dates": [
+        {
+          "kind": "brandActivityStarted",
+          "value": "1988",
+          "precision": "year",
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Computer_Entertainer_7-5.pdf",
+          "status": "sourceReviewed"
+        }
+      ],
+      "stats": {
+        "main": 2,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "ultra_games",
+          "name": "Ultra Games"
+        }
+      ],
+      "works": [
+        {
+          "id": "g1029",
+          "title": "夜影：Nightshade",
+          "year": 1992
+        },
+        {
+          "id": "g1285",
+          "title": "星际迷航：25周年（NES）",
+          "year": 1992
         }
       ]
     },
@@ -1858,6 +1966,29 @@
       "works": [],
       "dossiers": [],
       "previewOnly": true
+    },
+    {
+      "id": "preview-ultra-software",
+      "name": "Ultra Software Corporation",
+      "type": "company",
+      "aliases": [],
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8a/Computer_Entertainer_6-10.pdf",
+        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+        "https://www.gamingalexandria.com/highquality/NES/Star%20Trek%2025th%20Anniversary/Star%20Trek%2025th%20Anniversary%20-%20Manual%20(Searchable).pdf"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "原说明书具名公司保修与Ultra商标；1988同期报道记Konami全资子公司。仅为组织展示节点，不合并发行品牌，不赋予游戏开发或发行职责。成立及吸收法律日期待核。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
     }
   ],
   "edges": [
@@ -2255,6 +2386,30 @@
       "source": "https://www.jhv.jp/ccke6h9d5-56/i-am-a-title-03",
       "dateLabel": "起止未核（现行官网）",
       "note": "官网只列関連会社，未说明母子方向或持股比例；不把版面方向解释为控制关系，也不推定历史游戏开发。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "ultra-konami-historical",
+      "parent": "entity-konami",
+      "child": "preview-ultra-software",
+      "kind": "parent",
+      "label": "同期报道：全资子公司",
+      "status": "previewReviewed",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Computer_Entertainer_6-10.pdf",
+      "dateLabel": "1988年已见（法律起止未核）",
+      "note": "1988年1月Computer Entertainer称Ultra Software为Konami全资但独立的子公司。报道未具名直接持股的具体美国法人；图中的Konami是集团历史参照，不认定日本主体直接持股，也不外推至今。仅取得刊物索引正文，原扫描大文件直读失败。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "ultra-trademark-owner",
+      "parent": "preview-ultra-software",
+      "child": "entity-name-c87c2b9662fc",
+      "kind": "trademark",
+      "label": "商标归属／公司与品牌",
+      "status": "previewReviewed",
+      "source": "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+      "dateLabel": "1991—1992年手册署名范围",
+      "note": "Nightshade及Star Trek原说明书将ULTRA／ULTRAGAMES商标列属Ultra Software Corporation，并提供公司保修；仅确认公司与发行品牌不同，不由商标权推断开发、控制时间或全部游戏合同。",
       "basis": "previewSupplement"
     }
   ],

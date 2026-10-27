@@ -41811,6 +41811,19 @@
       "territory": null
     },
     {
+      "id": "credit-d467aeb15e1c6c8c",
+      "entityId": "entity-name-c87c2b9662fc",
+      "targetType": "release",
+      "targetId": "g1285-v1",
+      "workId": "g1285",
+      "role": "publisher",
+      "rawCredit": "Ultra Games",
+      "status": "existingCredit",
+      "source": "https://www.gamesdatabase.org/game/nintendo-nes/star-trek-25th-anniversary",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
       "id": "credit-06c97adc1fb6de71",
       "entityId": "entity-name-a7663faeee46",
       "targetType": "release",
@@ -92151,6 +92164,28 @@
       ],
       "group": "original",
       "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "ultra_games",
+      "workId": "g1029",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "ultra_games",
+      "workId": "g1285",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
       "status": "existingEvidence"
     }
   ]

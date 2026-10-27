@@ -4290,11 +4290,20 @@
       ],
       "sources": [
         "https://www.gamesdatabase.org/game/nintendo-nes/nightshade",
-        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf"
+        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5a/Computer_Entertainer_7-5.pdf"
       ],
       "verification": "sourceReviewed",
       "historyNote": "1992 NES Nightshade原说明书扫描明确ULTRA／ULTRAGAMES为Ultra Software Corporation注册商标，手册封面、介绍与保修部分将ULTRA作为对外发行标识，核为brand。原文Ultra Games与法律公司Ultra Software Corporation不合并，不从Konami版权或游戏发行名义推原作开发；显式preserveReleaseRoles:true保留一条历史publisher。",
-      "dates": []
+      "dates": [
+        {
+          "kind": "brandActivityStarted",
+          "value": "1988",
+          "precision": "year",
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Computer_Entertainer_7-5.pdf",
+          "status": "sourceReviewed"
+        }
+      ]
     },
     {
       "id": "entity-name-906fa9d6b292",
@@ -7586,6 +7595,20 @@
       "scope": "历史Chunsoft公司专题，以2012年合并前的叙事开发／发行及限定后发内容为范围。11部主库引用中9部既有、2部新增；Spike与合并后Spike Chunsoft保持独立身份，后发实际发行不回写。",
       "sources": [
         "https://www.spike-chunsoft.co.jp/company/outline/"
+      ],
+      "firstYearBasis": "关联主库作品最早原作首发年",
+      "firstYear": 1992
+    },
+    {
+      "id": "ultra_games",
+      "name": "Ultra Games",
+      "dossierType": "brand",
+      "entityIds": [
+        "entity-name-c87c2b9662fc"
+      ],
+      "scope": "Ultra Games历史发行品牌的叙事作品。复用1992 NES《夜影》，新增同年NES《星际迷航：25周年》；动作、体育、竞技与策略目录另作范围说明，不因Konami关系自动收录或赋予开发职责。",
+      "sources": [
+        "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf"
       ],
       "firstYearBasis": "关联主库作品最早原作首发年",
       "firstYear": 1992
