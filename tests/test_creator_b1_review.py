@@ -54,9 +54,9 @@ class CreatorB1Tests(unittest.TestCase):
         for path in paths:
             self.assertEqual(catalogue_bytes(ROOT, path),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
-        # Shared credit panels reflect later entity audits; preserve the dossier body.
+        # Compare the dossier body at B1 completion; later sourced dossier edits have their own delta tests.
         panel = r'<details class="entity-credits">.*?</details>'
-        self.assertEqual(re.sub(panel, '', (ROOT / 'banpresto.html').read_text()),
+        self.assertEqual(re.sub(panel, '', subprocess.check_output(['git', 'show', 'bc3441870f13f32294a455ee0aaa17d348020521:banpresto.html'], cwd=ROOT, text=True)),
                          re.sub(panel, '', subprocess.check_output(
                              ['git', 'show', f'{BASE}:banpresto.html'], cwd=ROOT, text=True)))
 

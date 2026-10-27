@@ -166,6 +166,7 @@ def build():
  review_batches.append(read("data/entity-organization-review-20261027.json"))
  review_batches.append(read("data/entity-jhv-review-20261027.json"))
  review_batches.append(read("data/entity-ultra-review-20261027.json"))
+ review_batches.append(read("data/entity-banpresto-review-20261027.json"))
  identity_reviews={x['entityId']:x for batch in review_batches for x in batch['identityCorrections']}
  assert len(identity_reviews)==sum(len(batch['identityCorrections']) for batch in review_batches),'重复的主体订正'
  entities={}; aliases={}; dossiers=[]; relations=[]; credits=[]; memberships=[]; reviews=[]; placements=[]; names_review=[]; conflicts=[]
@@ -182,6 +183,15 @@ def build():
   # A new dossier must attach to that identity instead of manufacturing entity-leland.
   ident={'leland':'entity-name-547f933b0469','takeru':'entity-name-08cbddd5e450','tokuma_intermedia':'entity-name-9832231b6baa','chunsoft':'entity-name-21365baf366d','ultra_games':'entity-name-c87c2b9662fc'}.get(cid) if cid in {'leland','takeru','tokuma_intermedia','chunsoft','ultra_games'} else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
   dossiers.append({'id':cid,'name':c['name'],'dossierType':'history' if cid in HISTORIES else kind,'entityIds':[ident],'scope':c['scope'],'sources':[c['source']],'firstYearBasis':'关联主库作品最早原作首发年','firstYear':min((w['firstYear'] for w in d['works'] if w['id'] in c['workIds']),default=None)})
+ # Independently reviewed existing dossier identities are checked before release resolution.
+ for reviewed in identity_reviews.values():
+  if not reviewed.get('applyToExistingDossier'):continue
+  entity=entities[reviewed['entityId']]
+  assert entity['name']==reviewed['rawName'] and reviewed['status']=='sourceReviewed'
+  assert all(entity[key]==value for key,value in reviewed['before'].items()),'专题主体旧值与独立订正记录不符'
+  assert reviewed['type']=='company' and reviewed['sources'] and reviewed['note']
+  entity.update(type=reviewed['type'],verification=reviewed['status'],historyNote=reviewed['note'])
+  entity['sources']=list(dict.fromkeys([*entity['sources'],*reviewed['sources']]))
  for eid,name,kind,names,source in EXTRAS:add_entity(eid,name,kind,names,source,'sourceReviewed')
  # Publisher brand/company homographs remain distinct. Raw AQUAPLUS alone is a publishing-brand signature.
  aliases[canonical('AQUAPLUS')]='entity-aquaplus_brand'
@@ -241,6 +251,13 @@ def build():
     if w['id'] in allworks and digest(w)!=digest(allworks[w['id']]):conflicts.append({'id':w['id'],'dossierId':c['id'],'status':'pendingDuplicate'})
     allworks.setdefault(w['id'],w);locations.setdefault(w['id'],loc)
     if loc=='related':allreleases.extend(w['platformReleases']);allcontents.extend(w['contentVersions'])
+ # Reviewed historical dossier identity cannot silently absorb a later same-name company.
+ for reviewed in identity_reviews.values():
+  if not reviewed.get('applyToExistingDossier'):continue
+  scope=reviewed['historicalPublisherScope']
+  scoped=[r for r in allreleases if r['publisher']==scope['rawPublisher']]
+  assert sorted(r['id'] for r in scoped)==scope['releaseIds'] and scoped,'历史发行范围与主体订正记录不符'
+  assert all(r['year']<scope['beforeYear'] for r in scoped),'不能把同名后继发行倒填旧公司'
  # Explicit splitting rules preserve raw brands that the legacy corporate index previously flattened.
  def release_entities(r):
   raw=r['publisher']; key=canonical(raw)
