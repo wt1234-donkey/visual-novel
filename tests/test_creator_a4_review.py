@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,7 +70,7 @@ class CreatorA4ReviewTests(unittest.TestCase):
                   for batch in ['priority', 'followup', 'third', 'fourth', 'creator-a', 'creator-a2', 'creator-a3']
                   for ext in ['json', 'md']]
         for path in paths:
-            self.assertEqual((ROOT / path).read_bytes(),
+            self.assertEqual(catalogue_bytes(ROOT, path),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
 
     def test_contiguous_progress_and_no_parent_or_version_inheritance(self):

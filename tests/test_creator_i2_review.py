@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '142723dfcfc155e16f3eccbdefbdeca0649706d7'
@@ -12,7 +13,7 @@ SNAPSHOT = 'c9b7398600cd385e8aabcc58fc8991ad23721446'
 def read(path):
     if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
         return json.loads(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{path}'], cwd=ROOT))
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def old(path):

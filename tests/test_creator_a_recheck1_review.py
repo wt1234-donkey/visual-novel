@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '7ea5d46efdfb5a36875fbc48ed3b287ac0dc0e3c'
@@ -11,7 +12,7 @@ RECHECK_TREE = '025762765317e2e71b1889fb4f95e164d8588b75'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def old(path):

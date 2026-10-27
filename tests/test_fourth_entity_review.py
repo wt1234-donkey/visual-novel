@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'd5a778252b49b0b2b1de19de775692cbcd0f548a'
@@ -10,7 +11,7 @@ APPLIED = 'd8f37e90abf47af94e9285167a26b6865497e332'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def before(path, revision=BASE):
@@ -78,7 +79,7 @@ class FourthEntityReviewTests(unittest.TestCase):
         paths += [f'data/entity-{batch}-review-20261022.{ext}'
                   for batch in ['priority', 'followup', 'third'] for ext in ['json', 'md']]
         for path in paths:
-            self.assertEqual((ROOT / path).read_bytes(), subprocess.check_output(
+            self.assertEqual(catalogue_bytes(ROOT, path), subprocess.check_output(
                 ['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
 
     def test_book_cards_explain_source_without_becoming_main_works(self):

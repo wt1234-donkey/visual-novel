@@ -94,6 +94,17 @@
       "entityIds": [
         "entity-novect"
       ]
+    },
+    {
+      "id": "leland",
+      "title": "Cinematronics / Leland",
+      "subtitle": "1987年资产承接与业务重组",
+      "root": "entity-cinematronics",
+      "focus": "entity-name-547f933b0469",
+      "entityIds": [
+        "entity-cinematronics",
+        "entity-name-547f933b0469"
+      ]
     }
   ],
   "previewNodes": [
@@ -146,6 +157,18 @@
       "dateLabel": "具体时间待核",
       "note": "待核线索：既有档案区分原Silky’s与后来独立品牌。人员独立的原始公告、组织连续性和时间仍需补证；此连线不表示股权、母子公司或旧作继承。",
       "basis": "previewCandidate"
+    },
+    {
+      "id": "leland-business-succession-1987",
+      "parent": "entity-cinematronics",
+      "child": "entity-name-547f933b0469",
+      "kind": "succession",
+      "label": "资产承接／后继业务",
+      "status": "sourceReviewed",
+      "source": "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf",
+      "dateLabel": "1987年资产收购；1988年同期报道",
+      "note": "Tradewest收购Cinematronics资产后重组街机业务，以The Leland Corporation名义运营。此连线表示业务沿革，不推定两法人同一、母子持股或前身作品开发职责。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [

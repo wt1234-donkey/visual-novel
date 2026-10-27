@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT = '25bc47deb8471e58f36f2667fb7d60734c0d8f44'
@@ -12,7 +13,7 @@ BASE = 'c9b7398600cd385e8aabcc58fc8991ad23721446'
 def read(path):
     if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json'}:
         return json.loads(subprocess.check_output(['git', 'show', f'{SNAPSHOT}:{path}'], cwd=ROOT))
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def old(path):
@@ -56,7 +57,7 @@ class CreatorI3Tests(unittest.TestCase):
         self.assertEqual(read('data/organizations.json')['works'], old('data/organizations.json')['works'])
         for path in ['data/games.json', 'data/company-coverage.json', 'data/taxonomy.json',
                      'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
-            self.assertEqual((ROOT / path).read_bytes(),
+            self.assertEqual(catalogue_bytes(ROOT, path),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
 
 

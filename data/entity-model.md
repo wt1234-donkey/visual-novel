@@ -61,6 +61,8 @@
 
 2026-10-27 A 段合并核查 Adventure International 36 项与 Alicesoft 75 项；逐项见 `entity-role-adventure-alice-audit-20261027.md` 与 JSON。1981 图形冒险说明书逐项区分作者、图形工具和发行，不能外推1978原版；Alicesoft官网明确1989才启用该品牌，2000年代子品牌作品单列其自有制作品牌。仅《HENTAI LABYRINTH》有当事导演署名的 Alicesoft 品牌企划制作协力，六条 Alice Blue／AliceNoir 品牌制作记录不解除母专题待核。110项保留待核，专题职责待核现为589项。
 
+2026-10-27 新增 Leland 专题后为81个专题，复用既有 `g045`、`g045-c-original` 和 `g045-v1`，主库作品、内容版本、平台发行数量不变。原有 `entity-name-547f933b0469` 公司身份保持，沿革依据1987、1988年同期《Play Meter》；资产承接仅为组织页的限定展示连线，不把 Cinematronics 的旧作或动画合作推定为 Leland 开发。见 `leland-audit.md`。
+
 编辑角色与主体规则后运行：
 
 ```sh

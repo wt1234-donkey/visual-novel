@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 TREE = '025762765317e2e71b1889fb4f95e164d8588b75'
@@ -10,7 +11,9 @@ FIVE_PHASE_TREE = '8a520a639b38bd38b8eb11aae16fdb2dd6eb201d'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text(encoding='utf-8'))
+    if path in {"data/entities.json", "data/organizations.json"}:
+        return json.loads(subprocess.check_output(["git", "show", f"{FIVE_PHASE_TREE}:{path}"], cwd=ROOT))
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def prior(path):

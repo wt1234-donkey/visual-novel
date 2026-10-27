@@ -92,6 +92,17 @@
       "entityIds": [
         "entity-novect"
       ]
+    },
+    {
+      "id": "leland",
+      "title": "Cinematronics / Leland",
+      "subtitle": "1987年资产承接与业务重组",
+      "root": "entity-cinematronics",
+      "focus": "entity-name-547f933b0469",
+      "entityIds": [
+        "entity-cinematronics",
+        "entity-name-547f933b0469"
+      ]
     }
   ],
   "nodes": [
@@ -282,6 +293,44 @@
           "id": "g122",
           "title": "太空奇遇",
           "year": 1983
+        }
+      ]
+    },
+    {
+      "id": "entity-cinematronics",
+      "name": "Cinematronics",
+      "type": "company",
+      "aliases": [
+        "Cinematronics"
+      ],
+      "sources": [
+        "https://allincolorforaquarter.blogspot.com/2012/11/the-ultimate-so-far-history-of.html"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "史家Keith Smith据历史材料将创业时间记为1975年4月；所展示公司章程的州登记章为1975/05/13，创业与法人登记分开。专题按创业月份接在1973年厂商之后；与同年4月的Microsoft不推定日级先后。这里指美国街机公司，不是1994年的同名Cinematronics, LLC。",
+      "dates": [],
+      "stats": {
+        "main": 2,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "cinematronics",
+          "name": "Cinematronics"
+        }
+      ],
+      "works": [
+        {
+          "id": "g010",
+          "title": "龙穴历险记",
+          "year": 1983
+        },
+        {
+          "id": "g044",
+          "title": "太空王牌",
+          "year": 1984
         }
       ]
     },
@@ -710,6 +759,42 @@
           "id": "g1269",
           "title": "宿星的女朋友2",
           "year": 2018
+        }
+      ]
+    },
+    {
+      "id": "entity-name-547f933b0469",
+      "name": "Leland",
+      "type": "company",
+      "aliases": [
+        "Leland"
+      ],
+      "sources": [
+        "https://flyers.arcade-museum.com/videogames/show/314",
+        "https://flyers.arcade-museum.com/videogames/show/315",
+        "https://flyers.arcade-museum.com/videogame-flyers/0/dragons-lair-ii-00316-02.jpg",
+        "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "原版Dragon’s Lair II传单具名The Leland Corporation，1991年街机发行沿用g045。1988年同期Play Meter报道：1987年Tradewest收购Cinematronics资产后，业务重组为The Leland Corporation；资产交易日不等同Leland法人成立日，旧公司作品、动画合作和开发职责也不由此转归Leland。详见data/leland-audit.md。",
+      "dates": [],
+      "stats": {
+        "main": 1,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "leland",
+          "name": "Leland"
+        }
+      ],
+      "works": [
+        {
+          "id": "g045",
+          "title": "龙穴历险记 II：时间扭曲",
+          "year": 1991
         }
       ]
     },
@@ -1556,6 +1641,18 @@
       "dateLabel": "具体时间待核",
       "note": "待核线索：既有档案区分原Silky’s与后来独立品牌。人员独立的原始公告、组织连续性和时间仍需补证；此连线不表示股权、母子公司或旧作继承。",
       "basis": "previewCandidate"
+    },
+    {
+      "id": "leland-business-succession-1987",
+      "parent": "entity-cinematronics",
+      "child": "entity-name-547f933b0469",
+      "kind": "succession",
+      "label": "资产承接／后继业务",
+      "status": "sourceReviewed",
+      "source": "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf",
+      "dateLabel": "1987年资产收购；1988年同期报道",
+      "note": "Tradewest收购Cinematronics资产后重组街机业务，以The Leland Corporation名义运营。此连线表示业务沿革，不推定两法人同一、母子持股或前身作品开发职责。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [

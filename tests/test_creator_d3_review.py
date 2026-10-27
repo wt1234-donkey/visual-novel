@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,7 +63,7 @@ class CreatorD3Tests(unittest.TestCase):
                          old_nodes['entity-name-4c4c2f63075a']['groups'])
         for path in ['data/games.json', 'data/company-coverage.json', 'data/entity-migration-baseline.json',
                      'data/content-migration-baseline.json', 'data/entity-creator-d2-review-20261023.json']:
-            self.assertEqual((ROOT / path).read_bytes(),
+            self.assertEqual(catalogue_bytes(ROOT, path),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
 
 

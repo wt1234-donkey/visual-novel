@@ -173,7 +173,9 @@ def build():
   eid='sierra_company' if cid in {'sierra','sierra_on_line'} else cid
   kind='brand' if cid in BRANDS else 'team' if cid=='novect' else 'publication' if cid=='comptiq' else 'unknown' if cid in {'falcom','te_soft','banpresto'} else 'company'
   name='Sierra On-Line（原On-Line Systems）' if cid in {'sierra','sierra_on_line'} else c['name']
-  ident=add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
+  # Leland already has a reviewed stable ID from its historical release name.
+  # A new dossier must attach to that identity instead of manufacturing entity-leland.
+  ident='entity-name-547f933b0469' if cid=='leland' else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
   dossiers.append({'id':cid,'name':c['name'],'dossierType':'history' if cid in HISTORIES else kind,'entityIds':[ident],'scope':c['scope'],'sources':[c['source']],'firstYearBasis':'关联主库作品最早原作首发年','firstYear':min((w['firstYear'] for w in d['works'] if w['id'] in c['workIds']),default=None)})
  for eid,name,kind,names,source in EXTRAS:add_entity(eid,name,kind,names,source,'sourceReviewed')
  # Publisher brand/company homographs remain distinct. Raw AQUAPLUS alone is a publishing-brand signature.
@@ -301,6 +303,10 @@ def build():
   credits[-1].update(reviewId=reviewed['reviewId'],reviewRecord=audit)
   if cid:reviewed_memberships[(cid,wid)]=reviewed
  assert set(identity_reviews)<=entities.keys(),'主体订正记录未命中既有身份'
+ leland=entities['entity-name-547f933b0469']
+ assert leland['type']=='company' and leland['verification']=='sourceReviewed'
+ leland['historyNote']='原版Dragon’s Lair II传单具名The Leland Corporation，1991年街机发行沿用g045。1988年同期Play Meter报道：1987年Tradewest收购Cinematronics资产后，业务重组为The Leland Corporation；资产交易日不等同Leland法人成立日，旧公司作品、动画合作和开发职责也不由此转归Leland。详见data/leland-audit.md。'
+ leland['sources']=list(dict.fromkeys([*leland['sources'],'https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf']))
  # Dossier memberships are separate from production assertions. Every existing member remains present.
  bywork=defaultdict(list)
  for x in credits:bywork[x['workId']].append(x)

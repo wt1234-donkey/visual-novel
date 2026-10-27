@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '570bf41078e39f9d91fb192bef6ef0ad62d66639'
@@ -42,7 +43,7 @@ class CreatorA3ReviewTests(unittest.TestCase):
   paths=['data/entities.json','data/entity-migration-review.json','data/games.json','data/company-coverage.json','data/taxonomy.json','data/gameplay-catalogues.json','data/work-classification.json','data/entity-migration-baseline.json','data/content-migration-baseline.json','index.html','app.mjs','filter.mjs','styles.css']
   paths += [f'data/entity-{batch}-review-20261022.{ext}' for batch in ['priority','followup','third','fourth','creator-a','creator-a2'] for ext in ['json','md']]
   for path in paths:
-   actual = subprocess.check_output(['git','show',f'{APPLIED}:{path}'],cwd=ROOT) if path in ['data/entities.json','data/entity-migration-review.json'] else (ROOT/path).read_bytes()
+   actual = subprocess.check_output(['git','show',f'{APPLIED}:{path}'],cwd=ROOT) if path in ['data/entities.json','data/entity-migration-review.json'] else catalogue_bytes(ROOT, path)
    self.assertEqual(actual,subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
  def test_alphabetical_progress_and_unconfirmed_scopes_do_not_gain_creation(self):
   org=applied('data/organizations.json');p=org['registrationProgress'];ns={n['id']:n for n in org['nodes']}

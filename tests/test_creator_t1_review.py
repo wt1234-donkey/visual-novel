@@ -5,6 +5,7 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,7 +18,7 @@ IDS = ['entity-te_soft', 'entity-name-e135870e3299',
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(catalogue_bytes(ROOT, path).decode())
 
 
 def applied(path):

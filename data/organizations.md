@@ -1,5 +1,7 @@
 # 组织与沿革 · 创作厂商目录
 
+2026-10-27 补入 Cinematronics / Leland 的业务与资产承接展示组。同期报道证明1987年 Tradewest 收购 Cinematronics 资产，重组后使用 The Leland Corporation 名义；连线不表示两法人相同或旧作品职责继承。Leland 节点复用原发行名义已核的稳定 ID，并链接新专题。详见 `leland-audit.md`。
+
 2026-10-22，基于用户认可的关系树预览，提供正式跳转页 `organizations.html`。原主库仅增加顶部“组织与沿革”链接；原卡片、筛选、发行、版本、专题与五年排序不变。`relationships-preview.html` 旧入口继续有效。
 
 ## 读取边界

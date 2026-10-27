@@ -4,6 +4,7 @@ import re
 import subprocess
 import unittest
 from pathlib import Path
+from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,7 +52,7 @@ class CreatorB1Tests(unittest.TestCase):
                  'data/entity-creator-a6-review-20261023.json',
                  'data/entity-creator-a6-review-20261023.md']
         for path in paths:
-            self.assertEqual((ROOT / path).read_bytes(),
+            self.assertEqual(catalogue_bytes(ROOT, path),
                              subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path)
         # Shared credit panels reflect later entity audits; preserve the dossier body.
         panel = r'<details class="entity-credits">.*?</details>'
