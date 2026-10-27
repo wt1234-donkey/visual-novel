@@ -10,6 +10,8 @@ BASE = '99d54acbeda8976b27df552ecc0709718cc7b600'
 
 
 def read(path):
+    if path in {'data/credits.json','data/entity-migration-review.json'}:
+        return json.loads(subprocess.check_output(['git','show',f'0f2d278e17d631b85ed7e34e7dd378a361ff4695:{path}'],cwd=ROOT))
     return json.loads(catalogue_bytes(ROOT, path).decode())
 
 

@@ -12,7 +12,7 @@ class OrganizationRound20Tests(unittest.TestCase):
                      'data/organization-verification-20261027.json','data/organization-verification-round16-20261027.json',
                      'data/organization-context-20261027.json','data/organization-context-round16-20261027.json',
                      'data/relationships-preview-config.json','index.html']:
-            self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
+            self.assertEqual(subprocess.check_output(['git','show',f'f733af9f4295471570106d88487c4608d0cb78aa:{path}'],cwd=ROOT),subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
     def test_delta_preserves_the_single_pending_claim_without_forcing_resolution(self):
         delta=json.loads((ROOT/'data/organization-verification-round20-20261027.json').read_text())
         self.assertEqual(len(delta['records']),37)

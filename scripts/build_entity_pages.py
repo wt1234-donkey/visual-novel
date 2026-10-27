@@ -36,7 +36,7 @@ def build():
    if eid not in [r['from'],r['to']]:continue
    period=r['period'];period_text=(f'起点 {period["from"]}' if period.get('from') else '起点未核')+'；终点未核（不表示持续至今）'
    related.append(f'<li>{entity_link(r["from"])} → {entity_link(r["to"])}：{e(r["note"])}<span class="credit-scope">{period_text}</span><a class="source-link" href="{e(r["source"],quote=True)}" target="_blank" rel="noopener noreferrer">来源 ↗</a></li>')
-  date_names={'established':'公司成立','brandStarted':'品牌启用','brandActivityStarted':'品牌活动起点','renamedBentenFilm':'更名BENTEN Film','renamedSierraOnLine':'更名Sierra On-Line'}
+  date_names={'serviceStarted':'服务登场','serviceEnded':'服务结束','established':'公司成立','brandStarted':'品牌启用','brandActivityStarted':'品牌活动起点','renamedBentenFilm':'更名BENTEN Film','renamedSierraOnLine':'更名Sierra On-Line'}
   precision_names={'year':'年级资料','month':'月级资料','day':'日级资料'}
   date_text=' · '.join(f'{date_names[x["kind"]]}：{x["value"]}（{precision_names[x["precision"]]}）' for x in entity['dates'])
   role_text=' · '.join(f'{e(MODEL["roleLabels"][role])} {len(ids)}部' for role,ids in roles[eid].items()) or '暂无已登记的具体作品职责'

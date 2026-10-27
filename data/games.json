@@ -38977,6 +38977,37 @@
         "https://advgamer.com/dennoh-gakuen4-ape-hunter-j/",
         "https://d4e.co.jp/light/電脳学園iv　エイプハンターj"
       ]
+    },
+    {
+      "id": "g1278",
+      "title": "ジャック ラスベガス連続殺人",
+      "originalTitle": "ジャック ラスベガス連続殺人",
+      "chineseTitle": "杰克：拉斯维加斯连环杀人案",
+      "chineseTitleType": "站内编辑译名",
+      "titleAliases": [
+        "JACK",
+        "ジャック／ラスベガス連続殺人"
+      ],
+      "firstYear": 1988,
+      "category": "文字冒险",
+      "subcategory": "图文选项／调查",
+      "genre": "刑侦推理／菜单指令冒险",
+      "characters": [
+        "洛杉矶警署刑警（主人公）"
+      ],
+      "charactersNote": "以剧情身份记录主人公；未取得原版人物表，不补造姓名。",
+      "charactersSource": "https://bangumi.tv/subject/600410",
+      "synopsis": "一名洛杉矶刑警调查相继发生的命案，从受害者及遗留线索追查案件之间的联系。",
+      "notes": "本次仅收1988年PC-8801/SR原作批次。8BITS分别记载销售名义为Brother工业TAKERU、开发为Thinking Rabbit；该社区档案不是原版职员表，具体制作工种仍待原件补核。",
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_kj8bBQKPtmYRZvZG.php",
+      "interactionModes": [
+        "菜单指令"
+      ],
+      "interactionNote": "8BITS明确列数字键选择命令、Return确认；不是据ADV标签推断，也不把启动或存档输入算作文字解析器。",
+      "interactionBasis": "来源核对",
+      "interactionSources": [
+        "https://www.8-bits.info/gamelist/PC88/info/info_kj8bBQKPtmYRZvZG.php"
+      ]
     }
   ],
   "platformReleases": [
@@ -83799,6 +83830,24 @@
       "contentRelation": "original",
       "contentNote": "原作／首批已核内容。",
       "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1278-v1",
+      "workId": "g1278",
+      "year": 1988,
+      "platform": "PC-88",
+      "publisher": "TAKERU",
+      "publisherCompanies": [
+        "TAKERU"
+      ],
+      "kind": "首发",
+      "voice": "未核实",
+      "differences": "8BITS记1988年11月PC-8801/SR、两张5.25英寸磁盘，销售名义为Brother工业TAKERU。这里沿用渠道实体，不据销售资料把Brother登记为原作开发。",
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_kj8bBQKPtmYRZvZG.php",
+      "contentVersionId": "g1278-c-original",
+      "contentRelation": "original",
+      "contentNote": "原作／首批内容；本次未建立后发版本。",
+      "releaseRole": "contentDebut"
     }
   ],
   "contentVersions": [
@@ -104459,6 +104508,19 @@
       "source": "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
       "evidenceReleaseIds": [
         "gainax-dennou4-v1"
+      ],
+      "addedContent": []
+    },
+    {
+      "id": "g1278-c-original",
+      "workId": "g1278",
+      "label": "原作／首批内容",
+      "firstYear": 1988,
+      "basis": "original",
+      "evidence": "8BITS记1988年11月PC-8801/SR原版；不将后发移植或再版另作新内容。",
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_kj8bBQKPtmYRZvZG.php",
+      "evidenceReleaseIds": [
+        "g1278-v1"
       ],
       "addedContent": []
     }

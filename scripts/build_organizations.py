@@ -131,7 +131,14 @@ def build():
                    'works': {wid: {'id': wid, 'title': w.get('chineseTitle') or w['title'], 'originalTitle': w.get('originalTitle', ''),
                                    'year': w['firstYear'], 'placement': placement, 'href': href, 'category': w.get('category', '')}
                              for wid, (w, placement, href) in works.items()}})
-    return attach_unfinished(attach_verification(result), model, credits)
+    result = attach_verification(result)
+    # New sourced milestones do not rewrite the frozen verification ledger.
+    milestones = read('takeru-history-20261027')['events']
+    for event in milestones:
+        assert set(event['entityIds']) <= ids and event['sources'] and not event['recordIds']
+    result['organizationEvents'] += milestones
+    assert len({event['id'] for event in result['organizationEvents']}) == len(result['organizationEvents'])
+    return attach_unfinished(result, model, credits)
 
 
 if __name__ == '__main__':

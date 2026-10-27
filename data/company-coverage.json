@@ -105646,6 +105646,137 @@
           "workIds": []
         }
       ]
+    },
+    {
+      "id": "takeru",
+      "name": "TAKERU",
+      "checkedAt": "2026-10-27",
+      "status": "初步建立销售渠道专题；作品与组织沿革逐项区分",
+      "scope": "Brother软件自动贩售服务专题，运行1986—1997。3部主库作品中2部复用旧身份、1部新补录；《玛德琳》含文字输入，仅专题书目。不是同名Sur de Wave开发公司的作品合集。",
+      "versionScope": "保留原作首年及既有历史发行。普通TAKERU再发行不新建内容；未核先后不补纯移植。",
+      "publisherNote": "TAKERU是软件销售系统／服务品牌，非独立游戏开发公司。Brother开发终端不等于制作渠道所售游戏。1986为服务登场年，1997为服务结束年，不是法人设立和注销日；1992年JOYSOUND为技术应用延续，不是TAKERU公司更名。",
+      "publisherWorkIds": [
+        "g743",
+        "g812",
+        "g1278"
+      ],
+      "workIds": [
+        "g743",
+        "g812",
+        "g1278"
+      ],
+      "catalogueEntryCount": 4,
+      "source": "https://global.brother/ja/digest/history/takeru",
+      "auditTitle": "首批作品、渠道与沿革核对",
+      "auditSourceLabel": "Brother官方历史与逐作资料",
+      "auditLabel": "首批4项作品归档；另列未完成的目录与时间核查，不宣称穷尽销售目录。",
+      "auditNote": "《杰克》日期及菜单操作来自8BITS社区档案，尚待原版手册补证；《玛德琳》的1987年与文字输入来自二手作品资料。运营移交的精确时间、完整目录与Sorcerian新增剧本仍待原件逐项比对。见data/takeru-audit.md。",
+      "sectionTitle": "渠道销售中的推理与分支叙事",
+      "description": "TAKERU软件贩售渠道专题：Brother组织关系、1986—1997服务沿革、叙事作品和未完成核查。",
+      "creativeProfile": {
+        "thesis": "编辑观察：这是跨制作方的软件销售渠道，不宜概括为统一画风或叙事风格。目录将原作者、制作品牌、销售名义和内容版本分别保留。",
+        "phases": [
+          {
+            "period": "1986—1997",
+            "heading": "软件自贩服务与多家作品",
+            "analysis": "Brother官方记载服务1986年登场、1997年结束。终端销售软件并打印说明书；所售产品来自不同厂商，也包括同人软件。",
+            "basis": "厂商说明",
+            "source": "https://global.brother/ja/digest/history/takeru"
+          },
+          {
+            "period": "1992",
+            "heading": "技术向通信卡拉OK延续",
+            "analysis": "Brother说明TAKERU的数据配送构想被用于1992年诞生的JOYSOUND；这是技术与新业务的联系，不是所有游戏版权或开发团队的承继。",
+            "basis": "厂商说明",
+            "source": "https://global.brother/ja/digest/history/takeru"
+          }
+        ]
+      },
+      "dossierOnlyWorks": [
+        {
+          "id": "takeru-madeline",
+          "title": "マデリーン ～亡き王女のためのパヴァーヌ～",
+          "originalTitle": "マデリーン ～亡き王女のためのパヴァーヌ～",
+          "chineseTitle": "玛德琳：为逝去公主而作的帕凡舞曲",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "Madeline"
+          ],
+          "firstYear": 1987,
+          "category": "文字冒险",
+          "subcategory": "图文指令",
+          "genre": "文字输入／图形冒险",
+          "characters": [
+            "古美术商（叙述者）"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/5619.html",
+          "synopsis": "一名古美术商从边境小镇老人处接触一段旧事，并探寻围绕公主与王国的谜团。",
+          "notes": "Brother官方历史明确提及TAKERU专售及Thinking Rabbit发行；年份、操作方式和人物身份另依二手资料，精确日期与各平台先后待原件核查。不建立主库内容或发行。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/5619.html",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "作品资料明确为命令输入式ADV；保留仅专题书目，不将TAKERU渠道作为文字输入准入的新增例外。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/5619.html"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "title": "Cocktail Soft增刊号",
+          "status": "首批归档",
+          "reason": "复用1991年MSX2首发及原作内容；Cocktail Soft制作品牌与TAKERU销售署名分开。",
+          "source": "https://generation-msx.nl/software/cocktail-soft/cocktail-soft-special-edition/1626",
+          "workIds": [
+            "g743"
+          ]
+        },
+        {
+          "title": "战斗肌肤恐慌",
+          "status": "首批归档",
+          "reason": "复用1989原作；1990-12-15 TAKERU为旧再发行证据，不替换原作年，也不解除旧unverified内容关系。",
+          "source": "https://github.com/mamedev/mame/blob/master/hash/pc8801_flop.xml",
+          "workIds": [
+            "g812"
+          ]
+        },
+        {
+          "title": "杰克：拉斯维加斯连环杀人案",
+          "status": "首批归档",
+          "reason": "新增1988年菜单刑侦叙事及一个原作内容、一个首次发行；日期和操作明确，开发工种仍待原件。",
+          "source": "https://www.8-bits.info/gamelist/PC88/info/info_kj8bBQKPtmYRZvZG.php",
+          "workIds": [
+            "g1278"
+          ]
+        },
+        {
+          "title": "玛德琳",
+          "status": "文字输入／仅专题；年份待原件复核",
+          "reason": "官方明确TAKERU专售；二手资料记1987年与文字输入，依现有准入边界仅专题。",
+          "source": "https://global.brother/ja/digest/history/takeru",
+          "workIds": [],
+          "dossierIds": [
+            "takeru-madeline"
+          ]
+        },
+        {
+          "title": "未完成：1994年业务移交",
+          "status": "待同期原件",
+          "reason": "暂不将网络转述的精确移交日写入正式关系；需对照TAKERU PRESS事务局、XING同期公告及联系人变化。",
+          "source": "https://download.file-hunter.com/Magazines/JP/Takeru%20Press/Takeru_Press_1996_10_11.pdf",
+          "workIds": []
+        },
+        {
+          "title": "未完成：专售增补与完整目录",
+          "status": "待去重及新增内容比较",
+          "reason": "官方提及Selected Sorcerian等追加剧本；须比对原剧本、发行年月与平台，区分依赖本体的新增内容和独立作品。Cocktail Soft增刊号2保持原关联身份cocktailsoft-r13，本轮不复制。",
+          "source": "https://global.brother/ja/digest/history/takeru",
+          "workIds": []
+        }
+      ],
+      "profileTitle": "销售渠道与服务沿革"
     }
   ],
   "schemaVersion": 2,

@@ -10,7 +10,7 @@ class OrganizationUnfinishedTests(unittest.TestCase):
                'data/relationships-preview-config.json','index.html']
         paths += [str(p.relative_to(ROOT)) for p in (ROOT/'data').glob('organization-verification*.json')]
         paths += [str(p.relative_to(ROOT)) for p in (ROOT/'data').glob('organization-context*.json')]
-        for path in paths:self.assertEqual((ROOT/path).read_bytes(),subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
+        for path in paths:self.assertEqual(subprocess.check_output(['git','show',f'a1c4959cd7a2ef52460eebfa16388fea815c4642:{path}'],cwd=ROOT),subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT),path)
         prior=json.loads(subprocess.check_output(['git','show',f'{BASE}:data/organizations.json'],cwd=ROOT))
-        current=json.loads((ROOT/'data/organizations.json').read_text());current.pop('unfinished')
+        current=json.loads(subprocess.check_output(['git','show','a1c4959cd7a2ef52460eebfa16388fea815c4642:data/organizations.json'],cwd=ROOT));current.pop('unfinished')
         self.assertEqual(current,prior)

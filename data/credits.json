@@ -41694,6 +41694,19 @@
       "territory": null
     },
     {
+      "id": "credit-7cc658a92b08ea98",
+      "entityId": "entity-name-08cbddd5e450",
+      "targetType": "release",
+      "targetId": "g1278-v1",
+      "workId": "g1278",
+      "role": "publisher",
+      "rawCredit": "TAKERU",
+      "status": "existingCredit",
+      "source": "https://www.8-bits.info/gamelist/PC88/info/info_kj8bBQKPtmYRZvZG.php",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
       "id": "credit-06c97adc1fb6de71",
       "entityId": "entity-name-a7663faeee46",
       "targetType": "release",
@@ -91698,6 +91711,50 @@
       "group": "release",
       "source": "https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf",
       "status": "existingEvidence"
+    },
+    {
+      "dossierId": "takeru",
+      "workId": "g743",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://global.brother/ja/digest/history/takeru",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "takeru",
+      "workId": "g812",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://global.brother/ja/digest/history/takeru",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "takeru",
+      "workId": "g1278",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://global.brother/ja/digest/history/takeru",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "takeru",
+      "workId": "takeru-madeline",
+      "placement": "bibliography",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://global.brother/ja/digest/history/takeru",
+      "status": "pendingRole"
     }
   ]
 }

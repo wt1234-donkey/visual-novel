@@ -3506,7 +3506,9 @@
       "name": "TAKERU",
       "type": "brand",
       "aliases": [
-        "TAKERU"
+        "TAKERU",
+        "ソフトベンダーTAKERU",
+        "武尊"
       ],
       "sources": [
         "https://generation-msx.nl/software/cocktail-soft/cocktail-soft-special-edition/1626",
@@ -3514,8 +3516,23 @@
         "https://museum.global.brother/guide/zone/2/32?lang=ja"
       ],
       "verification": "sourceReviewed",
-      "historyNote": "Brother官方品牌史将TAKERU明确为1986—1997运行的软件自动售卖系统／服务，核为销售服务brand，不是游戏开发公司或制作团队。Brother开发自动售卖机不是开发所售游戏，原三条publisher署名照旧，不自动生成publishingBrand、originalPublishingBrand或productionBrand，不新建Brother实体或经营关系。",
-      "dates": []
+      "historyNote": "TAKERU是软件销售系统／服务品牌，非独立游戏开发公司。Brother开发终端不等于制作渠道所售游戏。1986为服务登场年，1997为服务结束年，不是法人设立和注销日；1992年JOYSOUND为技术应用延续，不是TAKERU公司更名。 既有冻结核查记录原文保留；本轮新增渠道专题与限定组织关系，见data/takeru-audit.md。",
+      "dates": [
+        {
+          "kind": "serviceStarted",
+          "value": "1986",
+          "precision": "year",
+          "source": "https://global.brother/ja/digest/history/takeru",
+          "status": "sourceReviewed"
+        },
+        {
+          "kind": "serviceEnded",
+          "value": "1997",
+          "precision": "year",
+          "source": "https://global.brother/ja/digest/history/takeru",
+          "status": "sourceReviewed"
+        }
+      ]
     },
     {
       "id": "entity-name-8447c5d78187",
@@ -5740,6 +5757,29 @@
         "japanese": "フリュー",
         "basis": "catalogueSpelling"
       }
+    },
+    {
+      "id": "entity-brother",
+      "name": "Brother Industries（ブラザー工業）",
+      "type": "company",
+      "aliases": [
+        "Brother Industries",
+        "ブラザー工業株式会社",
+        "ブラザー工業",
+        "Brother Industries（ブラザー工業）"
+      ],
+      "sources": [
+        "https://global.brother/ja/digest/history/takeru"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "TAKERU系统开发及服务主体；不由终端开发推定游戏开发。",
+      "dates": [],
+      "nameParts": {
+        "english": "Brother Industries",
+        "japanese": "ブラザー工業",
+        "basis": "existingBilingualName",
+        "source": "https://global.brother/ja/digest/history/takeru"
+      }
     }
   ],
   "relations": [
@@ -6278,6 +6318,20 @@
       "status": "sourceReviewed",
       "source": "https://www.mirai-soft.net/guide.php",
       "note": "官方署名mirai（株式会社ホークアイ）。"
+    },
+    {
+      "from": "entity-name-08cbddd5e450",
+      "to": "entity-brother",
+      "type": "operatedBy",
+      "period": {
+        "from": 1986,
+        "to": null,
+        "precision": "year",
+        "openEnd": "notAsserted"
+      },
+      "status": "sourceReviewed",
+      "source": "https://global.brother/ja/digest/history/takeru",
+      "note": "1986年服务由Brother推出；关系只说明初始运营来源，不声称持续至今。1994年向XING移交的精确时间仍待同期原件，1997是服务结束而非Brother注销。"
     }
   ],
   "dossiers": [
@@ -7414,6 +7468,20 @@
       ],
       "firstYearBasis": "关联主库作品最早原作首发年",
       "firstYear": 1991
+    },
+    {
+      "id": "takeru",
+      "name": "TAKERU",
+      "dossierType": "history",
+      "entityIds": [
+        "entity-name-08cbddd5e450"
+      ],
+      "scope": "Brother软件自动贩售服务专题，运行1986—1997。3部主库作品中2部复用旧身份、1部新补录；《玛德琳》含文字输入，仅专题书目。不是同名Sur de Wave开发公司的作品合集。",
+      "sources": [
+        "https://global.brother/ja/digest/history/takeru"
+      ],
+      "firstYearBasis": "关联主库作品最早原作首发年",
+      "firstYear": 1988
     }
   ],
   "displayNames": {
@@ -7568,7 +7636,8 @@
     "Whale": "Whale（ホエール）",
     "株式会社ハブロッツ（萌えAPP）": "Moe APP（萌えAPP）",
     "株式会社ジャックインザボックス（萌えAPP）": "Moe APP（萌えAPP）",
-    "GAMEテクノポリス": "Tokuma Shoten Intermedia（徳間書店インターメディア）"
+    "GAMEテクノポリス": "Tokuma Shoten Intermedia（徳間書店インターメディア）",
+    "Brother Industries": "Brother Industries（ブラザー工業）"
   },
   "policy": "实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。"
 }
