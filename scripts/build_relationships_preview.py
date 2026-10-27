@@ -24,8 +24,10 @@ def build():
     for c in credits['credits']:
         byentity[c['entityId']].append(c)
     ids = {eid for family in config['families'] for eid in family['entityIds']}
+    preview_ids = {node['id'] for node in config['previewNodes']}
+    assert ids <= entities.keys() | preview_ids, '关系家族引用了不存在的节点'
     nodes = []
-    for eid in sorted(ids):
+    for eid in sorted(ids - preview_ids):
         entity = entities[eid]
         direct = byentity[eid]
         workids = {c['workId'] for c in direct}
