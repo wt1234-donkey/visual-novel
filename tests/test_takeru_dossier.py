@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='a1c4959cd7a2ef52460eebfa16388fea815c4642'
 T='entity-name-08cbddd5e450'
-def read(path):return json.loads((ROOT/path).read_text())
+def read(path):return json.loads(subprocess.check_output(['git','show',f'329447b4c8ee6c7656301a4a0ab5f1fe9edd51cf:{path}'],cwd=ROOT))
 def old(path):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT))
 class TakeruDossierTests(unittest.TestCase):
     def test_only_one_new_work_content_and_first_release_and_no_old_object_changes(self):

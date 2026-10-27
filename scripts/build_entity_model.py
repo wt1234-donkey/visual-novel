@@ -176,7 +176,7 @@ def build():
   name='Sierra On-Line（原On-Line Systems）' if cid in {'sierra','sierra_on_line'} else c['name']
   # Leland already has a reviewed stable ID from its historical release name.
   # A new dossier must attach to that identity instead of manufacturing entity-leland.
-  ident={'leland':'entity-name-547f933b0469','takeru':'entity-name-08cbddd5e450'}.get(cid) if cid in {'leland','takeru'} else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
+  ident={'leland':'entity-name-547f933b0469','takeru':'entity-name-08cbddd5e450','tokuma_intermedia':'entity-name-9832231b6baa'}.get(cid) if cid in {'leland','takeru','tokuma_intermedia'} else add_entity(eid,name,kind,NAMES.get(cid,[]),c['source'],note=c['publisherNote'])
   dossiers.append({'id':cid,'name':c['name'],'dossierType':'history' if cid in HISTORIES else kind,'entityIds':[ident],'scope':c['scope'],'sources':[c['source']],'firstYearBasis':'关联主库作品最早原作首发年','firstYear':min((w['firstYear'] for w in d['works'] if w['id'] in c['workIds']),default=None)})
  for eid,name,kind,names,source in EXTRAS:add_entity(eid,name,kind,names,source,'sourceReviewed')
  # Publisher brand/company homographs remain distinct. Raw AQUAPLUS alone is a publishing-brand signature.
