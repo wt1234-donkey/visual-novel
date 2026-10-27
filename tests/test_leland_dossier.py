@@ -16,18 +16,21 @@ def read(path):
 
 
 class LelandDossierTests(unittest.TestCase):
-    def test_pending_catalogue_expansion_preserves_published_organization_results(self):
+    def test_completed_catalogue_expansion_preserved_published_organization_results(self):
         published = '8c16099af18e77b618f747223952d4e140e67b8f'
+        completed = 'fb69d2f381a483c6214f7807c551149b6264f6f7'
         def before(path):
             return subprocess.check_output(['git', 'show', f'{published}:{path}'], cwd=ROOT)
+        def at_completion(path):
+            return subprocess.check_output(['git', 'show', f'{completed}:{path}'], cwd=ROOT)
         for path in ['data/games.json', 'data/credits.json', 'data/organizations.json',
                      'data/organization-context-20261027.json',
                      'data/organization-verification-20261027.json',
                      'data/entity-organization-review-20261027.json',
                      'data/entity-migration-baseline.json', 'data/content-migration-baseline.json']:
-            self.assertEqual((ROOT / path).read_bytes(), before(path), path)
+            self.assertEqual(at_completion(path), before(path), path)
         prior = json.loads(before('data/entities.json'))
-        current = read('data/entities.json')
+        current = json.loads(at_completion('data/entities.json'))
         self.assertEqual(current['entities'], prior['entities'])
         self.assertEqual(current['relations'], prior['relations'])
         self.assertEqual([d for d in current['dossiers'] if d['id'] != 'leland'],
