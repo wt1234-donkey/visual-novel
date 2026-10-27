@@ -1,3 +1,4 @@
+import {initUnfinished} from './organization-unfinished.mjs?v=20261027-unfinished';
 const TYPES={company:'公司',brand:'品牌',team:'团队',unknown:'身份待核',publication:'刊物',individual:'个人'};
 const STATUS={sourceReviewed:'来源已核',existingDossier:'沿用档案',previewReviewed:'预览补充',pending:'关系待核',unresolved:'身份待核'};
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -77,6 +78,7 @@ async function init(){
   let data;
   try{const response=await fetch(document.body.dataset.source||'data/relationships-preview.json');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
   catch(error){console.error('组织目录读取失败',error);workspace.setAttribute('aria-busy','false');$('graph-stage').innerHTML='<p class="error-message">关系资料暂时无法读取。请刷新重试，或先查看<a href="entities.html">主体档案</a>。</p>';$('family-nav').innerHTML='<p class="no-results">暂时无法读取家族列表。</p>';if($('creator-grid')){$('creator-grid').innerHTML='<p class="error-message">作品目录读取失败，请刷新重试或查看主体档案。</p>';$('creator-work-list').textContent='作品职责暂时无法读取。';}return;}
+  initUnfinished(data);
   const nodes=new Map(data.nodes.map(n=>[n.id,n]));
   const params=new URLSearchParams(location.search);
   let family=data.families.find(f=>f.id===params.get('family'))||data.families.find(f=>[f.root,...f.entityIds].includes(params.get('node')))||data.families.find(f=>f.id===document.body.dataset.defaultFamily)||data.families[0];
