@@ -57983,6 +57983,51 @@
       "territory": null
     },
     {
+      "id": "credit-a78569ed3574b6c8",
+      "entityId": "entity-nextninja",
+      "targetType": "release",
+      "targetId": "g209-v2",
+      "workId": "g209",
+      "role": "serviceProvider",
+      "rawCredit": "株式会社NextNinja",
+      "status": "sourceReviewed",
+      "source": "https://web.archive.org/web/20160808151439/http://www.mbga.jp:80/_game_intro?game_id=12024891",
+      "note": "2016年对应移动应用页的提供方；平台名称与原始发行字段保持，不推定PC版或其他移动渠道的出版法人。",
+      "territory": null,
+      "reviewId": "identity-37",
+      "reviewRecord": "data/organization-round28-closure-20261028.md"
+    },
+    {
+      "id": "credit-d6a9791d46e238d4",
+      "entityId": "entity-nextninja",
+      "targetType": "release",
+      "targetId": "g209-v3",
+      "workId": "g209",
+      "role": "serviceProvider",
+      "rawCredit": "株式会社NextNinja",
+      "status": "sourceReviewed",
+      "source": "https://web.archive.org/web/20160808133739/http://jp.apps.gree.net:80/ja/73010",
+      "note": "2016年对应移动应用页的提供方；平台名称与原始发行字段保持，不推定PC版或其他移动渠道的出版法人。",
+      "territory": null,
+      "reviewId": "identity-36",
+      "reviewRecord": "data/organization-round28-closure-20261028.md"
+    },
+    {
+      "id": "credit-2c303119b8b3636a",
+      "entityId": "entity-sinclair",
+      "targetType": "edition",
+      "targetId": "g089-ql-classic-adventures-1985",
+      "workId": "g089",
+      "role": "publisher",
+      "rawCredit": "Sinclair Research Ltd",
+      "status": "sourceReviewed",
+      "source": "https://www.mocagh.org/firstera/qladv-manual.pdf",
+      "note": "说明书第2—3页确认合辑中The Adventure，Sinclair初版出版及包装文档版权；软件为Abersoft，非Crowther/Woods原作开发。独立补充版次关系，不猜配g089-v1—v4，不计新增内容版本。",
+      "territory": null,
+      "reviewId": "duty-558",
+      "reviewRecord": "data/organization-round28-closure-20261028.md"
+    },
+    {
       "id": "credit-d0c3d5b9da155426",
       "entityId": "entity-key",
       "targetType": "work",
@@ -81595,11 +81640,11 @@
       "workId": "g089",
       "placement": "main",
       "roles": [
-        "catalogueAssociation"
+        "publisher"
       ],
-      "group": "unresolved",
+      "group": "release",
       "source": "https://find-and-update.company-information.service.gov.uk/company/01135105",
-      "status": "pendingRole"
+      "status": "existingEvidence"
     },
     {
       "dossierId": "sinclair",
@@ -83567,12 +83612,10 @@
       "dossierId": "ascii",
       "workId": "ascii-anearth",
       "placement": "related",
-      "roles": [
-        "catalogueAssociation"
-      ],
-      "group": "unresolved",
-      "source": "https://weekly.ascii.jp/elem/000/002/615/2615668/",
-      "status": "pendingRole"
+      "roles": [],
+      "group": "reference",
+      "source": "https://www.sega.jp/history/hard/segasaturn/software_l.html",
+      "status": "sourceReviewedCorrection"
     },
     {
       "dossierId": "ascii",
@@ -92675,6 +92718,21 @@
       "group": "original",
       "source": "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/",
       "status": "existingEvidence"
+    }
+  ],
+  "scopedEditions": [
+    {
+      "id": "g089-ql-classic-adventures-1985",
+      "workId": "g089",
+      "title": "QL Classic Adventures／The Adventure",
+      "year": 1985,
+      "platform": "Sinclair QL／Microdrive",
+      "publisher": "Sinclair Research Ltd",
+      "softwareCredit": "Abersoft Ltd",
+      "contentRelation": "unverified",
+      "contentVersionId": null,
+      "source": "https://www.mocagh.org/firstera/qladv-manual.pdf",
+      "note": "说明书第2—3页确认合辑中The Adventure，Sinclair初版出版及包装文档版权；软件为Abersoft，非Crowther/Woods原作开发。独立补充版次关系，不猜配g089-v1—v4，不计新增内容版本。"
     }
   ]
 }

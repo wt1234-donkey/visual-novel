@@ -5,8 +5,8 @@ import {unfinishedRows,filterUnfinished,unfinishedPage} from '../organization-un
 const read=name=>JSON.parse(readFileSync(new URL('../data/'+name,import.meta.url),'utf8'));
 const data=read('organizations.json'),credits=read('credits.json'),rows=unfinishedRows(data);
 test('unfinished categories exactly preserve explicit unresolved identities and dossier duties',()=>{
-  assert.deepEqual(data.unfinished.counts,{identity:32,duty:602,creation:809,evidence:481,chronology:47,relation:1});
-  assert.equal(rows.length,1972);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
+  assert.deepEqual(data.unfinished.counts,{identity:32,duty:600,creation:809,evidence:480,chronology:47,relation:1});
+  assert.equal(rows.length,1969);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='identity').map(r=>r.entityIds[0])),new Set(data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').map(n=>n.id)));
   const expected=new Set(credits.dossierMemberships.filter(m=>m.status==='pendingRole'||m.group==='unresolved').map(m=>'duty:'+m.dossierId+':'+m.workId));
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='duty').map(r=>r.id)),expected);
@@ -20,10 +20,10 @@ test('missing creation means no registered direct creation, never no known publi
   assert.ok(rows.filter(r=>r.kind==='creation').every(r=>r.detail.includes('不表示没有创作者')));
 });
 test('pending, conflict, partial and version-limited evidence stay distinct and overlap formal duty queues',()=>{
-  const expected=Object.values(data.verificationLedger.records).filter(r=>r.status!=='证据充分');
+  const expected=Object.values(data.verificationLedger.records).filter(r=>r.status!=='证据充分'&&r.status!=='归属纠正');
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='evidence').map(r=>r.recordId)),new Set(expected.map(r=>r.recordId)));
-  const pending=filterUnfinished(rows,{kind:'evidence',status:'仍待核',query:'Sinclair'});assert.deepEqual(pending.map(r=>r.recordId),['duty-558']);assert.ok(pending[0].sources.length);
-  assert.equal(filterUnfinished(rows,{kind:'evidence',status:'限版确认'}).length,388);
+  const pending=filterUnfinished(rows,{kind:'evidence',status:'仍待核',query:'Sinclair'});assert.deepEqual(pending,[]);
+  assert.equal(filterUnfinished(rows,{kind:'evidence',status:'限版确认'}).length,391);
   assert.ok(rows.some(a=>a.kind==='duty'&&rows.some(b=>b.kind==='evidence'&&a.workId===b.workId)));
 });
 test('pending relation is not duplicated as a date gap, and missing rename dates are explicitly listed',()=>{

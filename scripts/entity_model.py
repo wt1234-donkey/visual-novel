@@ -15,7 +15,7 @@ MEMBERSHIPS={(m['dossierId'],m['workId']):m for m in CREDITS['dossierMemberships
 WORK_CREDITS=defaultdict(list)
 for c in CREDITS['credits']:WORK_CREDITS[c['workId']].append(c)
 ESC=html.escape
-GROUPS={'original':'本品牌／原作制作','cooperation':'联合制作与创作合作','release':'发行、代理与移植','licensed':'授权、监修与版权关联','unresolved':'其他专题关联／职责待核'}
+GROUPS={'original':'本品牌／原作制作','cooperation':'联合制作与创作合作','release':'发行、代理与移植','licensed':'授权、监修与版权关联','unresolved':'其他专题关联／职责待核','reference':'归属纠正／历史对照'}
 POSITION={'main':'主库引用','related':'叙事／跨类型关联','bibliography':'仅专题书目'}
 
 def entity_link(eid):
@@ -31,7 +31,7 @@ def card_details(work,versions):
   key=(c['entityId'],c['role'],c['targetType'])
   if key in seen:continue
   seen.add(key)
-  scope={'work':'原作／作品','content':'对应新增内容','release':'对应平台发行'}[c['targetType']]
+  scope={'work':'原作／作品','content':'对应新增内容','release':'对应平台发行','edition':'独立核对的限定版次'}[c['targetType']]
   evidence='本轮来源核对' if c['status']=='sourceReviewed' else '沿用既有资料'
   review_note=(f'<p class="scope-note">{ESC(c["note"])} <a href="{ESC(c["reviewRecord"],quote=True)}">核查记录 {ESC(c["reviewId"])}</a></p>' if c.get('reviewRecord') else '')
   rows.append(f'<li>{entity_link(c["entityId"])} · {ESC(MODEL["roleLabels"][c["role"]])}<span class="credit-scope">{scope} · {evidence}</span> <a class="source-link" href="{ESC(c["source"],quote=True)}" target="_blank" rel="noopener noreferrer">依据 ↗</a>{review_note}</li>')
@@ -52,4 +52,5 @@ def dossier_identity(company):
 
 def membership_description(cid,wid):
  m=MEMBERSHIPS[(cid,wid)]
+ if m['group']=='reference':return '专题归属纠正：本作保留历史对照锚点，未登记该主体的具体参与职责。'
  return '专题关系：'+'、'.join(MODEL['roleLabels'][role] for role in m['roles'])+'。'

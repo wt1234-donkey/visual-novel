@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-28",
+  "source": {
+    "title": "第二十八轮四项已取得结论接入数据库（第三十轮）",
+    "round": 30,
+    "priorReportLibraryFileId": "libfile_6590785c491c819192074e637a638987"
+  },
+  "previousSource": {
+    "title": "五条未解决身份职责原件复核（第二十九轮）",
+    "round": 29,
+    "priorReportTitle": "叙事游戏年鉴_身份与专题职责核查_可筛选网页_第二十八轮.html",
+    "priorReportLibraryFileId": "libfile_6590785c491c819192074e637a638987"
+  },
+  "policy": "只叠加第28轮三项限版确认和一项归属纠正；历史原始字段、旧发行署名、作品ID及内容身份冻结。实际GREE/Mobage提供方仅限定2016应用，QL出版仅限定1985合辑；1997 Saturn的ASCII直接发行旧说撤销。",
+  "audit": "data/organization-round28-closure-20261028.md",
+  "records": [
+    {
+      "category": "身份",
+      "id": 36,
+      "topic": "发行方待核实（GREE）",
+      "game": "任性娇羞的恋爱  g209",
+      "placement": "发行 g209-v1, g209-v2, g209-v3",
+      "need": "《任性娇羞的恋爱》当期版本版权页、手册或发行公告，需明确「发行方待核实（GREE）」的历史主体及职责",
+      "oldUrl": "https://madosoft.net/news/303",
+      "status": "限版确认",
+      "detail": "第28轮：从まどそふと2016-08-04公告的存档提取准确入口jp.apps.gree.net/ja/73010，随后取得2016-08-08 13:37:39 UTC的GREE官方应用页存档。页面标题为《ナマイキデレーション》，“提供”字段明确为株式会社NextNinja，页面结构化数据publisher亦同。由此确认GREE版的服务/内容提供主体为株式会社NextNinja；GREE仅在此结论中作为平台，不能替换为作品发行法人。原清单同时列g209-v1/v2/v3，本文不凭顺序猜测哪一个对应GREE；须按平台与时间匹配后才能用于版本行。",
+      "sources": [
+        {
+          "title": "原厂2016公告的2023存档：链接明确指向GREE 73010",
+          "url": "https://web.archive.org/web/20230606204558/https://madosoft.net/news/303"
+        },
+        {
+          "title": "GREE官方2016-08-08存档：提供 株式会社NextNinja",
+          "url": "https://web.archive.org/web/20160808133739/http://jp.apps.gree.net:80/ja/73010"
+        },
+        {
+          "title": "まどそふと2016年官方新闻存档",
+          "url": "https://madosoft.net/news/?page=15"
+        },
+        {
+          "title": "まどそふと原作产品介绍：2013年Windows制作主体",
+          "url": "https://madosoft.net/namaiki/whatsnamaiki.php"
+        },
+        {
+          "title": "2016年9月DMM版独立公告，不能混作GREE版",
+          "url": "https://madosoft.net/news/336"
+        },
+        {
+          "title": "GREE公司官方历史资料",
+          "url": "https://hd.gree.net/jp/ja/corporate/origin/index.html"
+        }
+      ],
+      "strength": "原厂公告入口＋同期GREE官方应用页存档，准确应用编号闭环",
+      "newRound": 10,
+      "recordId": "identity-36",
+      "entityId": "entity-name-e1232b52eff7",
+      "workId": "g209",
+      "round28": {
+        "result": "已确认：GREE版提供方NextNinja",
+        "scope": "2016年GREE应用73010，存档于2016-08-08",
+        "action": "2016年GREE版提供方使用株式会社NextNinja；保留GREE平台字段，与2013年PC原作及2016年9月DMM Android版分开。",
+        "residual": "提供方问题已在该版闭合；原清单冻结版本ID与平台的映射尚需回到数据行逐一匹配，不能批量套用。",
+        "previousStatus": "部分证据"
+      }
+    },
+    {
+      "category": "身份",
+      "id": 37,
+      "topic": "发行方待核实（Mobage）",
+      "game": "任性娇羞的恋爱  g209",
+      "placement": "发行 g209-v1, g209-v2, g209-v3",
+      "need": "《任性娇羞的恋爱》当期版本版权页、手册或发行公告，需明确「发行方待核实（Mobage）」的历史主体及职责",
+      "oldUrl": "https://madosoft.net/news/303",
+      "status": "限版确认",
+      "detail": "第28轮：从原厂公告存档提取Mobage应用game_id=12024891，取得2016-08-08 15:14:39 UTC的Mobage官方介绍页存档。页面标题对应《ナマイキデレーション》，介绍区明确写“サービス提供：株式会社NextNinja”。本作该移动版的服务提供方由此闭合为株式会社NextNinja，平台经营者DeNA不应据此被填成作品提供方。此证据仅覆盖该2016年Mobage应用；g209-v1/v2/v3是原清单冻结范围，未按平台逐条映射前不能全部改为NextNinja。",
+      "sources": [
+        {
+          "title": "原厂2016公告的2023存档：Mobage准确game_id",
+          "url": "https://web.archive.org/web/20230606204558/https://madosoft.net/news/303"
+        },
+        {
+          "title": "Mobage官方2016-08-08存档：服务提供 株式会社NextNinja",
+          "url": "https://web.archive.org/web/20160808151439/http://www.mbga.jp:80/_game_intro?game_id=12024891"
+        },
+        {
+          "title": "まどそふと2016年官方新闻存档",
+          "url": "https://madosoft.net/news/?page=15"
+        },
+        {
+          "title": "2013年原厂原作产品与制作人员",
+          "url": "https://madosoft.net/namaiki/whatsnamaiki.php"
+        },
+        {
+          "title": "2016年DeNA同期官方说明其运营Mobage平台",
+          "url": "https://dena.com/jp/news/2930/"
+        },
+        {
+          "title": "Mobage法定平台运营者声明（非作品发行声明）",
+          "url": "https://www.mbga.jp/www/tokushoho.html"
+        }
+      ],
+      "strength": "原厂公告入口＋同期Mobage官方应用页存档，准确应用编号闭环",
+      "newRound": 10,
+      "recordId": "identity-37",
+      "entityId": "entity-name-d1903e2fafb1",
+      "workId": "g209",
+      "round28": {
+        "result": "已确认：Mobage版提供方NextNinja",
+        "scope": "2016年Mobage应用12024891，存档于2016-08-08",
+        "action": "2016年Mobage版服务提供方使用株式会社NextNinja；Mobage及DeNA保留为平台/平台经营方。",
+        "residual": "提供方问题已在该版闭合；不据此确认PC版、DMM Android版或其他地域/年份版的发行关系。",
+        "previousStatus": "部分证据"
+      }
+    },
+    {
+      "category": "专题职责",
+      "id": 120,
+      "topic": "ASCII",
+      "game": "圣夜物语：AnEarth Fantasy Stories  ascii-anearth",
+      "placement": "关联作品",
+      "need": "本作原版包装／说明书／片尾职员表（ascii-anearth-v1）中「ASCII」的具名职责与适用版本",
+      "oldUrl": "https://weekly.ascii.jp/elem/000/002/615/2615668/",
+      "status": "归属纠正",
+      "detail": "第28轮：SEGA官方“セガサターン／ソフトライセンシー発売”表明确在1997年3月28日列《エイナス ファンタジーストーリーズ ザ・ファーストボリューム》，厂商メディアワークス、编号T-27801G。结合此前1995年PC Engine版Hudson发行记录，原ASCII专题不能继续把两版视作ASCII直接发行作品。原清单引用的ASCII公司沿革并非逐作职责证明；2008年后ASCII Media Works的名称也不能倒推为1995/1997年的ASCII。处理为纠正专题依据，而非正面确认ASCII参与，更不宣称已证明ASCII在任何工种中绝无参与。",
+      "sources": [
+        {
+          "title": "本轮新增：SEGA官方Saturn授权发行表，1997-03-28 / T-27801G",
+          "url": "https://www.sega.jp/history/hard/segasaturn/software_l.html"
+        },
+        {
+          "title": "国立美术馆媒体艺术数据库：1995年PC Engine实物包著录（检索摘要可见）",
+          "url": "https://mediaarts-db.artmuseums.go.jp/id/M725793"
+        },
+        {
+          "title": "1995 PC Engine原版开发发行",
+          "url": "https://www.mobygames.com/game/42727/seiya-monogatari-anearth-fantasy-stories/"
+        },
+        {
+          "title": "1997重制版与新增内容",
+          "url": "https://www.mobygames.com/game/42729/anearth-fantasy-stories-the-first-volume/releases/"
+        },
+        {
+          "title": "1997年Saturn零售实体编号、发行及版权列示",
+          "url": "https://mediaworld.co.jp/products/10290596001"
+        },
+        {
+          "title": "Saturn收藏档案：EAN/厂商及1997版",
+          "url": "https://www.satakore.com/sega-saturn-game,,T-27801G,,AnEarth-Fantasy-Stories-The-First-Volume-JPN.html"
+        },
+        {
+          "title": "高桥名人介绍Hudson PC Engine版及1997移植沿革",
+          "url": "https://ameblo.jp/meijin16shot/entry-12657004511.html"
+        }
+      ],
+      "strength": "SEGA官方授权发行目录＋既有逐版实物/档案对照；纠正而非确认原归属",
+      "newRound": 11,
+      "recordId": "duty-120",
+      "entityId": "entity-ascii",
+      "workId": "ascii-anearth",
+      "round28": {
+        "result": "已纠正：不再作为ASCII直接发行证据",
+        "scope": "1997年Saturn T-27801G；1995年PC Engine作版本对照",
+        "action": "撤除未获证据支持的ASCII直接发行归属；按版次采用Hudson／Media Works，并将后来的公司沿革关系单列。",
+        "residual": "本轮闭合的是错误直接归属的处理；若要新增ASCII的其他具体创作职责，仍须另取具名职员表。",
+        "previousStatus": "部分证据"
+      }
+    },
+    {
+      "category": "专题职责",
+      "id": 558,
+      "topic": "Sinclair Research",
+      "game": "巨洞冒险  g089",
+      "placement": "主库",
+      "need": "本作原版包装／说明书／片尾职员表（g089-v1、g089-v2、g089-v3、g089-v4）中「Sinclair Research」的具名职责与适用版本",
+      "oldUrl": "https://find-and-update.company-information.service.gov.uk/company/01135105",
+      "status": "限版确认",
+      "detail": "第28轮：补查此前遗漏的Sinclair QL平台。1985年《QL Classic Adventures》原版说明书第2页说明The Adventure是Crowther与Woods原作的更新版，并与Mordon’s Quest同装一盒Microdrive；第3页出版信息列Sinclair Research Ltd，程序版权属Abersoft Ltd，包装及文档版权属Sinclair Research Ltd。因此可以在1985年QL合辑版本范围内确认Sinclair出版及包装文档关系，程序制作归Abersoft。此前ZX81/ZX Spectrum上其他公司的版本既不否定此QL版，也不能被此证据改写。",
+      "sources": [
+        {
+          "title": "本轮关键原件：1985 QL Classic Adventures说明书，第2—3页",
+          "url": "https://www.mocagh.org/firstera/qladv-manual.pdf"
+        },
+        {
+          "title": "World of Spectrum Sinclair Research出版社目录",
+          "url": "https://worldofspectrum.org/archive/publishers/Sinclair-Research-Ltd"
+        },
+        {
+          "title": "Abersoft《Adventure 1》发行信息",
+          "url": "https://worldofspectrum.org/archive/software/text-adventures/adventure-1-abersoft"
+        },
+        {
+          "title": "Level 9《Colossal Adventure》实物馆藏",
+          "url": "https://www.computinghistory.org.uk/det/47792/Colossal-Adventure/"
+        }
+      ],
+      "strength": "原版说明书第2、3页；逐页读取并目视核对版权信息",
+      "recordId": "duty-558",
+      "entityId": "entity-sinclair",
+      "workId": "g089",
+      "round28": {
+        "result": "已确认：1985年QL版Sinclair出版关系",
+        "scope": "QL Classic Adventures合集中The Adventure；非所有g089版次",
+        "action": "在Sinclair专题注明1985年QL合辑中的The Adventure及角色分工；不把Sinclair写成1976/1977原作开发者，也不自动给g089-v1至v4全部增加该发行方。",
+        "residual": "QL版关系已确认；现有冻结版本ID是否包含QL版未建立对应，作为独立版次关系记录，不猜配ID。",
+        "previousStatus": "仍待核"
+      }
+    }
+  ],
+  "scopedEdition": {
+    "id": "g089-ql-classic-adventures-1985",
+    "workId": "g089",
+    "title": "QL Classic Adventures／The Adventure",
+    "year": 1985,
+    "platform": "Sinclair QL／Microdrive",
+    "publisher": "Sinclair Research Ltd",
+    "softwareCredit": "Abersoft Ltd",
+    "contentRelation": "unverified",
+    "contentVersionId": null,
+    "source": "https://www.mocagh.org/firstera/qladv-manual.pdf",
+    "note": "说明书第2—3页确认合辑中The Adventure，Sinclair初版出版及包装文档版权；软件为Abersoft，非Crowther/Woods原作开发。独立补充版次关系，不猜配g089-v1—v4，不计新增内容版本。"
+  },
+  "asciiCorrection": {
+    "workId": "ascii-anearth",
+    "dossierId": "ascii",
+    "oldEditionPublisher": "ASCII",
+    "newEditionPublisher": "メディアワークス",
+    "year": 1997,
+    "platform": "Sega Saturn",
+    "catalogueNumber": "T-27801G",
+    "source": "https://www.sega.jp/history/hard/segasaturn/software_l.html",
+    "note": "原专题历史字段曾错署ASCII；SEGA官方1997-03-28授权发行表写メディアワークス。1995 PC Engine原版ハドソン保持，ASCII专题只作归属纠正参考，不再作为参与职责待核。"
+  }
+}
