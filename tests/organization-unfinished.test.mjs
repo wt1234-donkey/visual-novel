@@ -4,9 +4,10 @@ import {readFileSync} from 'node:fs';
 import {unfinishedRows,filterUnfinished,unfinishedPage} from '../organization-unfinished.mjs';
 const read=name=>JSON.parse(readFileSync(new URL('../data/'+name,import.meta.url),'utf8'));
 const data=read('organizations.json'),credits=read('credits.json'),rows=unfinishedRows(data);
+const addedUncredited=['g1303','g1304','g1305','g1306'].filter(id=>data.works[id]?.placement==='main').length;
 test('unfinished categories exactly preserve explicit unresolved identities and dossier duties',()=>{
-  assert.deepEqual(data.unfinished.counts,{identity:32,duty:602,creation:811,evidence:480,chronology:51});
-  assert.equal(rows.length,1976);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
+  assert.deepEqual(data.unfinished.counts,{identity:32,duty:602,creation:811+addedUncredited,evidence:480,chronology:51});
+  assert.equal(rows.length,1976+addedUncredited);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='identity').map(r=>r.entityIds[0])),new Set(data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').map(n=>n.id)));
   const expected=new Set(credits.dossierMemberships.filter(m=>m.status==='pendingRole'||m.group==='unresolved').map(m=>'duty:'+m.dossierId+':'+m.workId));
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='duty').map(r=>r.id)),expected);

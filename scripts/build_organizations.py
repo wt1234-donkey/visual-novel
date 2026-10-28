@@ -135,7 +135,7 @@ def build():
                              for wid, (w, placement, href) in works.items()}})
     result = attach_verification(result)
     # New sourced milestones do not rewrite the frozen verification ledger.
-    milestones = [event for name in ['takeru-history-20261027','tokuma-intermedia-history-20261027','sega-history-20261027','chunsoft-history-20261027','jhv-history-20261027','ultra-games-history-20261027','banpresto-history-20261027','broderbund-history-20261028','lucasarts-history-20261028','nec-avenue-history-20261028','silkys-history-20261028','microsoft-history-20261028','nec-home-electronics-history-20261028'] for event in read(name)['events']]
+    milestones = [event for name in ['takeru-history-20261027','tokuma-intermedia-history-20261027','sega-history-20261027','chunsoft-history-20261027','jhv-history-20261027','ultra-games-history-20261027','banpresto-history-20261027','broderbund-history-20261028','lucasarts-history-20261028','nec-avenue-history-20261028','silkys-history-20261028','microsoft-history-20261028','nec-home-electronics-history-20261028','seven-dossiers-history-20261028'] for event in read(name)['events']]
     for event in milestones:
         assert set(event['entityIds']) <= ids and event['sources'] and not event['recordIds']
     result['organizationEvents'] += milestones
