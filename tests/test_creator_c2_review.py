@@ -1,4 +1,5 @@
 """C2 assigns only historically scoped Chunsoft originals and Coktel identity."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorC2Tests(unittest.TestCase):
     def test_only_sourced_identity_and_work_credits(self):
         review = read('data/entity-creator-c2-review-20261023.json')

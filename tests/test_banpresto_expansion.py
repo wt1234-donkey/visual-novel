@@ -5,7 +5,10 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1];BASE='efb379a122184182c419382dd5158b35db816bd4';sys.path.insert(0,str(ROOT/'scripts'))
 import build_entity_model as builder
 REVIEW='data/entity-banpresto-review-20261027.json'
-def read(p):return json.loads((ROOT/p).read_text())
+def read(p):
+ if p != REVIEW and p in {'data/games.json','data/credits.json','data/work-classification.json','data/taxonomy.json','data/entity-migration-baseline.json','data/content-migration-baseline.json','data/company-coverage.json','data/entities.json','data/work-notes.json','data/organizations.json'}:
+  return json.loads(subprocess.check_output(['git','show',f'4cd26b3:{p}'],cwd=ROOT))
+ return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class BanprestoExpansionTests(unittest.TestCase):
  def test_all_work_content_release_and_scoped_credits_preserved(self):

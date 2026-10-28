@@ -1,4 +1,5 @@
 """B2 changes two identities while preserving scoped release credits and work objects."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -7,7 +8,7 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '25dbfb53406b05a00e3bd6fe4df6ad6bdd2e1c69'
+BASE = '983232fd634dfeb4ca7a213d821b1a3007e72b3d'  # Parent of the B2 audit.
 
 def read(path):
     return load_snapshot(ROOT, path)
@@ -15,6 +16,7 @@ def read(path):
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
+@requires_baseline(ROOT, BASE)
 class CreatorB2Tests(unittest.TestCase):
     def test_only_two_sourced_identity_corrections(self):
         before, after = old('data/entities.json'), read('data/entities.json')

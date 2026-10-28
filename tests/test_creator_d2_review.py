@@ -1,4 +1,5 @@
 """D2 identity corrections preserve the historical release and creation records."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorD2Tests(unittest.TestCase):
     def test_scoped_corrections_and_unchanged_credits(self):
         review = read('data/entity-creator-d2-review-20261023.json')

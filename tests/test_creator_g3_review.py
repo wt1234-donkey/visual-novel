@@ -1,4 +1,5 @@
 """G3 completes G with one bounded original brand creation credit."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorG3Tests(unittest.TestCase):
     def test_recorded_identity_and_scoped_creation(self):
         review = read('data/entity-creator-g3-review-20261024.json')

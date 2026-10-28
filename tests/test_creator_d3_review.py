@@ -1,4 +1,5 @@
 """D3 registers only the sourced Broken Age original and DreamWorks identity."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorD3Tests(unittest.TestCase):
     def test_single_identity_and_original_credit(self):
         review = read('data/entity-creator-d3-review-20261023.json')

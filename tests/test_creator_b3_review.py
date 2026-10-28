@@ -1,4 +1,5 @@
 """Verify B3 correction evidence and absence of inferred creation credits."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -7,7 +8,7 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = 'fa95711de1b628a7e34bf4bf01f596ec8dff925d'
+BASE = '057e68083f0bbbed4e58d74a064bb3bd33b13023'  # Parent of the B3 audit.
 
 def read(path):
     return load_snapshot(ROOT, path)
@@ -15,6 +16,7 @@ def read(path):
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
+@requires_baseline(ROOT, BASE)
 class CreatorB3Tests(unittest.TestCase):
     def test_scoped_changes_and_no_new_creators(self):
         review = read('data/entity-creator-b3-review-20261023.json')

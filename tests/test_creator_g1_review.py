@@ -1,4 +1,5 @@
 """G1 registers original Zeliard creation without moving a related work into the main catalogue."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorG1Tests(unittest.TestCase):
     def test_sourced_identity_changes_and_one_scoped_credit(self):
         review = read('data/entity-creator-g1-review-20261024.json')

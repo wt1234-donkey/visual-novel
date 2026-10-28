@@ -4,6 +4,7 @@ import subprocess
 import unittest
 from pathlib import Path
 from catalogue_snapshot import catalogue_bytes
+from historical_snapshot import cf_applied
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'd261b71bc00c3e3632f0e20a8cbc54abd1cd9a6b'
@@ -24,8 +25,7 @@ def old(path):
 def applied(path):
     if path in ['data/entities.json', 'data/credits.json', 'data/organizations.json',
                 'data/entity-migration-review.json']:
-        return json.loads(subprocess.check_output(
-            ['git', 'show', f'7be9bd94fd8b0b3cd3c964bdd7d6c43bc8ee4a2e:{path}'], cwd=ROOT))
+        return cf_applied(ROOT, path)
     return read(path)
 
 
@@ -78,14 +78,17 @@ class CreatorCFCatchupTests(unittest.TestCase):
         self.assertEqual(review['creditAdditions'], [])
         self.assertEqual([r['entityId'] for r in review['reviewedEntities']], IDS)
         self.assertEqual([r['entityId'] for r in review['deferredReviews']], IDS)
-        script = """import {execFileSync} from 'node:child_process';
-import {sortFamilies} from './relationships-preview.mjs';
-const es=JSON.parse(execFileSync('git',['show','7be9bd94fd8b0b3cd3c964bdd7d6c43bc8ee4a2e:data/entities.json'],{encoding:'utf8'})).entities;
+        script = """import {sortFamilies} from './relationships-preview.mjs';
+const es=JSON.parse(process.argv[2]);
 const seen=new Set(JSON.parse(process.argv[1]));
 const missing=sortFamilies(es.map(e=>({id:e.id,title:e.name}))).filter(e=>!seen.has(e.id));
 process.stdout.write(JSON.stringify(missing.map(e=>e.id)));"""
-        actual = json.loads(subprocess.check_output(
-            ['node', '--input-type=module', '-e', script, json.dumps(before['registrationProgress']['processedEntityIds'])], cwd=ROOT))
+        names = [{'id': e['id'], 'name': e['name']}
+                 for e in applied('data/entities.json')['entities']]
+        actual = json.loads(subprocess.check_output([
+            'node', '--input-type=module', '-e', script,
+            json.dumps(before['registrationProgress']['processedEntityIds']),
+            json.dumps(names)], cwd=ROOT))
         self.assertEqual(actual[:8], IDS)
         self.assertEqual(actual[8], p['nextEntityId'])
 

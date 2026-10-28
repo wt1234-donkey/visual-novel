@@ -1,4 +1,5 @@
 """H2 adds only independently sourced HULOTTE brand production and two Human identities."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorH2Tests(unittest.TestCase):
     def test_two_identity_corrections_preserve_distinct_publishers(self):
         review = read('data/entity-creator-h2-review-20261024.json')

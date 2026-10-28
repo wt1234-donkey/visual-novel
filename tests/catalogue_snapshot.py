@@ -9,7 +9,7 @@ import subprocess
 
 PRE_LELAND = '0f2d278e17d631b85ed7e34e7dd378a361ff4695'
 # Historical audits also predate the sourced annotation display in the app.
-CHANGED_CATALOGUE = {'data/games.json', 'data/work-classification.json', 'data/company-coverage.json', 'data/gameplay-catalogues.json', 'index.html', 'app.mjs'}
+CHANGED_CATALOGUE = {'data/games.json', 'data/work-classification.json', 'data/company-coverage.json', 'data/gameplay-catalogues.json', 'data/taxonomy.json', 'index.html', 'app.mjs'}
 
 @lru_cache(maxsize=None)
 def _snapshot_bytes(root, path):

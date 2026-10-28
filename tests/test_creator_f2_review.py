@@ -1,4 +1,5 @@
 """F2 completes F with five sourced identity corrections and no new creative credit."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorF2Tests(unittest.TestCase):
     def test_only_separately_recorded_identity_changes(self):
         review = read('data/entity-creator-f2-review-20261024.json')

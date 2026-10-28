@@ -1,4 +1,5 @@
 """C4 finishes C without transferring brand or publisher credits into development."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorC4Tests(unittest.TestCase):
     def test_exact_identity_diff_and_unchanged_credits(self):
         review = read('data/entity-creator-c4-review-20261023.json')

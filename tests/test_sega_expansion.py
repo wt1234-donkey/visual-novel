@@ -1,6 +1,7 @@
 """SEGA keeps its dossier identity while two narratives and scoped history are added."""
 import json,subprocess,unittest
 from pathlib import Path
+from historical_paths import shared_paths
 ROOT=Path(__file__).resolve().parents[1]
 BASE='508efa3f228b7dc5ca52d1ecc086d813848462a4'
 def read(p):return json.loads(subprocess.check_output(['git','show',f'd80510b343d53f61c0df6ad799466aaca55ea2f3:{p}'],cwd=ROOT))
@@ -50,7 +51,6 @@ class SegaExpansionTests(unittest.TestCase):
   self.assertIn('计划',a['organizationEvents'][-1]['note']);self.assertIn('确认',a['organizationEvents'][-1]['note'])
   self.assertEqual(a['unfinished']['counts'],{'identity':32,'duty':591,'creation':804,'evidence':481,'chronology':44,'relation':1})
  def test_frozen_evidence_and_migration_rules_stay_unchanged(self):
-  for pattern in ['organization-context*.json','organization-verification*.json']:
-   for p in (ROOT/'data').glob(pattern):self.assertEqual(read(str(p.relative_to(ROOT))),old(str(p.relative_to(ROOT))))
+  for p in shared_paths(ROOT, BASE, 'd80510b343d53f61c0df6ad799466aaca55ea2f3', ['organization-context*.json','organization-verification*.json']):self.assertEqual(read(p),old(p))
   for p in ['data/taxonomy.json','data/entity-migration-baseline.json','data/content-migration-baseline.json']:
    self.assertEqual(read(p),old(p))

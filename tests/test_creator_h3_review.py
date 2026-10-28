@@ -1,4 +1,5 @@
 """H3 closes H with four scoped production records and intact legacy roles."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorH3Tests(unittest.TestCase):
     def test_four_work_roles_do_not_rewrite_historical_release_or_identity(self):
         review = read('data/entity-creator-h3-review-20261024.json')

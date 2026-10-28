@@ -4,9 +4,9 @@ import subprocess
 import unittest
 from pathlib import Path
 from catalogue_snapshot import catalogue_bytes
+from historical_snapshot import cf_applied
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '7be9bd94fd8b0b3cd3c964bdd7d6c43bc8ee4a2e'
 REVIEW = 'data/entity-creator-numeric-review-20261026.json'
 SEVEN = 'entity-name-ee1a7668cd89'
 IDS = ['entity-5pb', SEVEN, 'entity-name-e1232b52eff7',
@@ -19,7 +19,12 @@ def read(path):
 
 
 def old(path):
-    return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
+    if path in {'data/entities.json', 'data/credits.json', 'data/organizations.json',
+                'data/entity-migration-review.json'}:
+        return cf_applied(ROOT, path)
+    # The numeric tail did not alter these catalogue and migration baselines.
+    return json.loads(subprocess.check_output(
+        ['git', 'show', f'7ea5d46efdfb5a36875fbc48ed3b287ac0dc0e3c:{path}'], cwd=ROOT))
 
 
 def applied(path):

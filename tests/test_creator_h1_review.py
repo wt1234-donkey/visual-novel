@@ -1,4 +1,5 @@
 """H1 registers one documented company identity without extending creation roles."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorH1Tests(unittest.TestCase):
     def test_sourced_company_identity_does_not_create_work_credit(self):
         review = read('data/entity-creator-h1-review-20261024.json')
