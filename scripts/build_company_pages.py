@@ -155,9 +155,11 @@ def gameplay_appendix(company):
                 assert item['title'] and item['type'] and item['relation']
                 title = escape(item['title'])
                 if ref := item.get('catalogueWorkId'):
-                    assert ref in works, '参考清单引用了不存在的主库作品'
                     dossier = next(c for c in coverage['companies'] if c['id'] == item['catalogueDossierId'])
-                    assert ref in dossier['workIds'], '主库参考链接不在目标专题'
+                    targets = (set(dossier['workIds'])
+                               | {w['id'] for w in dossier.get('relatedGames', [])}
+                               | {w['id'] for w in dossier.get('dossierOnlyWorks', [])})
+                    assert ref in targets, '参考链接不在目标专题的主库、关联或书目中'
                     title = f'<a href="{dossier["id"]}.html#{ref}">{title}</a>'
                 if anchor := item.get('anchor'):
                     assert anchor in local, '附录作品锚点不在本专题'

@@ -79,7 +79,9 @@ test('RPG first publishers and Hellfire dependency survive the Sierra associatio
     const w=co.relatedGames.find(w=>w.id==='sierra-on-line-'+id);
     assert.equal(w.firstYear,1987);
     assert.equal(w.platformReleases[0].publisher,pub);
-    assert.equal(w.platformReleases.length,1);
+    assert.equal(w.platformReleases.filter(r=>r.contentRelation==='original').length,1);
+    assert.ok(w.platformReleases.every(r=>r.releaseRole==='contentDebut'));
+    assert.ok(w.platformReleases.slice(1).every(r=>r.contentRelation==='added'&&w.contentVersions.some(c=>c.id===r.contentVersionId&&c.basis==='added'&&c.addedContent.length)));
     assert.ok(!data.works.some(x=>x.id===w.id));
   }
   const diablo=co.relatedGames.find(w=>w.id==='sierra-on-line-diablo-hellfire');
