@@ -70,13 +70,14 @@
     },
     {
       "id": "silkys",
-      "title": "ELF / Silky’s",
-      "subtitle": "衍生组织与待核线索",
+      "title": "ELF / Silky’s / NightWind",
+      "subtitle": "旧品牌、独立公司与新品牌",
       "root": "entity-elf",
       "focus": "entity-silkys_plus",
       "entityIds": [
         "entity-elf",
         "entity-silkys",
+        "entity-nightwind",
         "entity-silkys_plus",
         "entity-silkys_wasabi",
         "entity-silkys_a5",
@@ -1642,6 +1643,30 @@
       ]
     },
     {
+      "id": "entity-nightwind",
+      "name": "NightWind（ナイトウィンド）",
+      "type": "company",
+      "aliases": [
+        "NightWind（ナイトウィンド）",
+        "株式会社ナイトウィンド",
+        "NightWind"
+      ],
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000001.000159011.html"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": []
+    },
+    {
       "id": "entity-nitrochiral",
       "name": "NITRO CHiRAL",
       "type": "brand",
@@ -1919,7 +1944,7 @@
         "https://ja.wikipedia.org/wiki/シルキーズ"
       ],
       "verification": "existingDossier",
-      "historyNote": "Silky’s 是 ELF 的衍生品牌；原品牌与 2014 年后独立创立的 Silky’s Plus 分开归档。原作中已有五部在 ELF 专题因后续改编发行出现，本页沿用同一作品 ID。",
+      "historyNote": "历史Silky’s品牌与ELF的品牌家族关系沿用原专题；保存协会的1994年包装目录另记「株式会社シルキーズ」发行署名，具体法人身份尚未核定，不据此合并法人。NightWind于2013年11月成立，其Silky’s Plus于2014年启用，既有旧作与新品牌分别归档。2021年《同級生リメイク》的新品牌开发职责仅限该次发行。",
       "dates": [],
       "stats": {
         "main": 29,
@@ -2052,14 +2077,14 @@
         "https://ja.wikipedia.org/wiki/シルキーズプラス"
       ],
       "verification": "existingDossier",
-      "historyNote": "2014 年起活动的独立品牌，不能与原 Silky’s 的历史作品直接合并。专题按作品品牌组织；主机与海外版本仍保留 Silky’s Plus Alpha、Entergram、Sekai Project 等实际发行署名。",
+      "historyNote": "NightWind（株式会社ナイトウィンド）2013年11月设立，Silky’s Plus于2014年作为独立新品牌启用；与原Silky’s作品及ELF法人分开。2021年《同級生リメイク》由本品牌承担大部分开发，但属ELF原作的后发重制参与，保留在原作品ID下，不另计本品牌原作。主机与海外版本仍保留实际发行署名。",
       "dates": [],
       "stats": {
-        "main": 5,
+        "main": 6,
         "related": 0,
         "bibliography": 0
       },
-      "productionCount": 0,
+      "productionCount": 1,
       "dossiers": [
         {
           "id": "silkys_plus",
@@ -2067,6 +2092,11 @@
         }
       ],
       "works": [
+        {
+          "id": "g046",
+          "title": "同级生",
+          "year": 1992
+        },
         {
           "id": "g476",
           "title": "罐头少女的终末世界",
@@ -2080,11 +2110,6 @@
         {
           "id": "g478",
           "title": "罐头少女的终末世界：Another 八乙女华江篇",
-          "year": 2021
-        },
-        {
-          "id": "g479",
-          "title": "冬滚滚",
           "year": 2021
         }
       ]
@@ -2835,7 +2860,19 @@
       "basis": "existingIndex"
     },
     {
-      "id": "existing-38",
+      "id": "existing-37",
+      "parent": "entity-nightwind",
+      "child": "entity-silkys_plus",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://prtimes.jp/main/html/rd/p/000000001.000159011.html",
+      "note": "NightWind为Silky’s Plus品牌活动主体；2013年公司设立与2014年品牌启用分开，不追溯原Silky’s作品或权利。",
+      "dateLabel": "2014起；终点未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-39",
       "parent": "entity-hawkeye",
       "child": "entity-minatosoft",
       "kind": "brand",
@@ -2847,7 +2884,7 @@
       "basis": "existingIndex"
     },
     {
-      "id": "existing-39",
+      "id": "existing-40",
       "parent": "entity-hawkeye",
       "child": "entity-mirai",
       "kind": "brand",
@@ -2875,12 +2912,12 @@
       "parent": "entity-silkys",
       "child": "entity-silkys_plus",
       "kind": "spinOff",
-      "label": "成员独立 · 待核",
-      "status": "pending",
-      "source": "https://ja.wikipedia.org/wiki/シルキーズプラス",
-      "dateLabel": "具体时间待核",
-      "note": "待核线索：既有档案区分原Silky’s与后来独立品牌。人员独立的原始公告、组织连续性和时间仍需补证；此连线不表示股权、母子公司或旧作继承。",
-      "basis": "previewCandidate"
+      "label": "人员独立／新品牌启用",
+      "status": "previewReviewed",
+      "source": "https://news.livedoor.com/article/detail/8982431/?p=2",
+      "dateLabel": "2014-06-17公开说明；终点未核",
+      "note": "2014年Silky’s Plus官方公告称ELF及Silky’s开发人员独立成立新公司并启用新品牌；仅记人员与品牌来源，不表示旧品牌的法人、资产或作品权利由新公司承接。",
+      "basis": "previewSupplement"
     },
     {
       "id": "leland-business-succession-1987",

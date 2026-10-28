@@ -5,8 +5,8 @@ import {unfinishedRows,filterUnfinished,unfinishedPage} from '../organization-un
 const read=name=>JSON.parse(readFileSync(new URL('../data/'+name,import.meta.url),'utf8'));
 const data=read('organizations.json'),credits=read('credits.json'),rows=unfinishedRows(data);
 test('unfinished categories exactly preserve explicit unresolved identities and dossier duties',()=>{
-  assert.deepEqual(data.unfinished.counts,{identity:32,duty:600,creation:810,evidence:480,chronology:47,relation:1});
-  assert.equal(rows.length,1970);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
+  assert.deepEqual(data.unfinished.counts,{identity:32,duty:600,creation:810,evidence:480,chronology:49});
+  assert.equal(rows.length,1971);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='identity').map(r=>r.entityIds[0])),new Set(data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').map(n=>n.id)));
   const expected=new Set(credits.dossierMemberships.filter(m=>m.status==='pendingRole'||m.group==='unresolved').map(m=>'duty:'+m.dossierId+':'+m.workId));
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='duty').map(r=>r.id)),expected);
@@ -26,8 +26,8 @@ test('pending, conflict, partial and version-limited evidence stay distinct and 
   assert.equal(filterUnfinished(rows,{kind:'evidence',status:'限版确认'}).length,391);
   assert.ok(rows.some(a=>a.kind==='duty'&&rows.some(b=>b.kind==='evidence'&&a.workId===b.workId)));
 });
-test('pending relation is not duplicated as a date gap, and missing rename dates are explicitly listed',()=>{
-  const spin=rows.filter(r=>r.edgeId==='preview-silkys-origin');assert.equal(spin.length,1);assert.equal(spin[0].kind,'relation');
+test('reviewed personnel link leaves its unknown endpoint in chronology, and missing rename dates are listed',()=>{
+  const spin=rows.filter(r=>r.edgeId==='preview-silkys-origin');assert.equal(spin.length,1);assert.equal(spin[0].kind,'chronology');
   assert.ok(rows.some(r=>r.historyId==='novect-name'&&r.kind==='chronology'));
   assert.ok(rows.filter(r=>r.kind==='chronology').every(r=>r.detail.includes('未核')||r.detail.includes('待核')));
 });
