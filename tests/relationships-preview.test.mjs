@@ -10,14 +10,16 @@ test('typed ownership, brand family, names and derivation remain separate',()=>{
   assert.ok(familyEdges(data,family('alicesoft')).some(e=>e.kind==='family'));
   assert.equal(historiesFor(data,family('microsoft'))[0].oldName,'Microsoft Studios');
   const spin=familyEdges(data,family('silkys')).find(e=>e.kind==='spinOff');
-  assert.equal(spin.status,'pending');assert.equal(spin.basis,'previewCandidate');
-  assert.equal(familyEdges(data,family('silkys'),false).some(e=>e.kind==='spinOff'),false);
+  assert.equal(spin.status,'previewReviewed');assert.equal(spin.basis,'previewSupplement');
+  assert.equal(familyEdges(data,family('silkys'),false).some(e=>e.kind==='spinOff'),true);
+  assert.ok(familyEdges(data,family('silkys'),false).some(e=>e.parent==='entity-nightwind'&&e.child==='entity-silkys_plus'));
 });
 test('collapsed nodes and hidden candidates do not reappear as disconnected roots',()=>{
   const collapsed=layoutFamily(data,family('alicesoft'),{collapsed:new Set(['entity-alicesoft'])});
   assert.equal(collapsed.nodes.length,2);
   const hidden=layoutFamily(data,family('silkys'),{showPending:false});
-  assert.ok(!hidden.nodes.some(n=>n.id==='entity-silkys_plus'));
+  assert.ok(hidden.nodes.some(n=>n.id==='entity-silkys_plus'));
+  assert.ok(hidden.nodes.some(n=>n.id==='entity-nightwind'));
   const cyclic={...data,edges:[...data.edges,{id:'cycle',parent:'entity-alice_blue',child:'entity-champion_soft',kind:'family'}]};
   const graph=layoutFamily(cyclic,family('alicesoft'));assert.equal(graph.nodes.length,4);
   assert.equal(new Set(graph.nodes.map(n=>n.id)).size,4);

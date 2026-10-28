@@ -347,7 +347,7 @@
         "https://ja.wikipedia.org/wiki/シルキーズ"
       ],
       "verification": "existingDossier",
-      "historyNote": "Silky’s 是 ELF 的衍生品牌；原品牌与 2014 年后独立创立的 Silky’s Plus 分开归档。原作中已有五部在 ELF 专题因后续改编发行出现，本页沿用同一作品 ID。",
+      "historyNote": "历史Silky’s品牌与ELF的品牌家族关系沿用原专题；保存协会的1994年包装目录另记「株式会社シルキーズ」发行署名，具体法人身份尚未核定，不据此合并法人。NightWind于2013年11月成立，其Silky’s Plus于2014年启用，既有旧作与新品牌分别归档。2021年《同級生リメイク》的新品牌开发职责仅限该次发行。",
       "dates": []
     },
     {
@@ -362,7 +362,7 @@
         "https://ja.wikipedia.org/wiki/シルキーズプラス"
       ],
       "verification": "existingDossier",
-      "historyNote": "2014 年起活动的独立品牌，不能与原 Silky’s 的历史作品直接合并。专题按作品品牌组织；主机与海外版本仍保留 Silky’s Plus Alpha、Entergram、Sekai Project 等实际发行署名。",
+      "historyNote": "NightWind（株式会社ナイトウィンド）2013年11月设立，Silky’s Plus于2014年作为独立新品牌启用；与原Silky’s作品及ELF法人分开。2021年《同級生リメイク》由本品牌承担大部分开发，但属ELF原作的后发重制参与，保留在原作品ID下，不另计本品牌原作。主机与海外版本仍保留实际发行署名。",
       "dates": []
     },
     {
@@ -1445,6 +1445,22 @@
       ],
       "verification": "existingDossier",
       "historyNote": "Addison-Wesley为美国出版社及地区发行体系，不等于所有作品的开发工作室。托尔金游戏由Beam Software开发、Melbourne House先发行部分原作；Rhiannon开发少女教育冒险；书籍式冒险由Hal Renko与Sam Edwards等创作。公司成立远早于1949，依据本次具名要求建立出版商专题。",
+      "dates": []
+    },
+    {
+      "id": "entity-nightwind",
+      "name": "NightWind（ナイトウィンド）",
+      "type": "company",
+      "aliases": [
+        "NightWind（ナイトウィンド）",
+        "株式会社ナイトウィンド",
+        "NightWind"
+      ],
+      "sources": [
+        "https://prtimes.jp/main/html/rd/p/000000001.000159011.html"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
       "dates": []
     },
     {
@@ -6423,6 +6439,20 @@
       "status": "existingDossier",
       "source": "https://ja.wikipedia.org/wiki/シルキーズ",
       "note": "原品牌关系，不与Silky’s Plus合并。"
+    },
+    {
+      "from": "entity-silkys_plus",
+      "to": "entity-nightwind",
+      "type": "operatedBy",
+      "period": {
+        "from": 2014,
+        "to": null,
+        "precision": "year",
+        "openEnd": "notAsserted"
+      },
+      "status": "sourceReviewed",
+      "source": "https://prtimes.jp/main/html/rd/p/000000001.000159011.html",
+      "note": "NightWind为Silky’s Plus品牌活动主体；2013年公司设立与2014年品牌启用分开，不追溯原Silky’s作品或权利。"
     },
     {
       "from": "entity-macadamia",

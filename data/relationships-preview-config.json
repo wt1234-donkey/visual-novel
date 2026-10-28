@@ -72,13 +72,14 @@
     },
     {
       "id": "silkys",
-      "title": "ELF / Silky’s",
-      "subtitle": "衍生组织与待核线索",
+      "title": "ELF / Silky’s / NightWind",
+      "subtitle": "旧品牌、独立公司与新品牌",
       "root": "entity-elf",
       "focus": "entity-silkys_plus",
       "entityIds": [
         "entity-elf",
         "entity-silkys",
+        "entity-nightwind",
         "entity-silkys_plus",
         "entity-silkys_wasabi",
         "entity-silkys_a5",
@@ -548,12 +549,12 @@
       "parent": "entity-silkys",
       "child": "entity-silkys_plus",
       "kind": "spinOff",
-      "label": "成员独立 · 待核",
-      "status": "pending",
-      "source": "https://ja.wikipedia.org/wiki/シルキーズプラス",
-      "dateLabel": "具体时间待核",
-      "note": "待核线索：既有档案区分原Silky’s与后来独立品牌。人员独立的原始公告、组织连续性和时间仍需补证；此连线不表示股权、母子公司或旧作继承。",
-      "basis": "previewCandidate"
+      "label": "人员独立／新品牌启用",
+      "status": "previewReviewed",
+      "source": "https://news.livedoor.com/article/detail/8982431/?p=2",
+      "dateLabel": "2014-06-17公开说明；终点未核",
+      "note": "2014年Silky’s Plus官方公告称ELF及Silky’s开发人员独立成立新公司并启用新品牌；仅记人员与品牌来源，不表示旧品牌的法人、资产或作品权利由新公司承接。",
+      "basis": "previewSupplement"
     },
     {
       "id": "leland-business-succession-1987",
