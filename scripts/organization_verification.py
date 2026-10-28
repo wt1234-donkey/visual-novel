@@ -52,6 +52,24 @@ def attach_verification(result):
         histories[ref] = entry
         records[ref] = row
         changed.append(ref)
+    followup = read('organization-verification-five-followup-20261028.json')
+    assert followup['previousSource'] == revision['source'], '五项复核基线来源改变'
+    assert len(followup['records']) == 5
+    assert {row['recordId'] for row in followup['records']} == {
+        'identity-1', 'identity-2', 'identity-40', 'identity-41', 'identity-42'}
+    changed = []
+    for row in followup['records']:
+        ref = row['recordId']
+        previous = records[ref]
+        assert all(row[key] == previous[key] for key in frozen), '五项复核冻结引用改变'
+        assert row['status'] == previous['status'], '未找到定论时不能改变结论状态'
+        assert row['sources'], '五项复核须附逐项来源'
+        entry = {'round': revision['source']['round'], **{
+            key: previous[key] for key in ['status', 'detail', 'sources', 'strength']}}
+        series.setdefault(ref, []).append(entry)
+        histories[ref] = entry
+        records[ref] = row
+        changed.append(ref)
     by_entity = defaultdict(lambda: defaultdict(list))
     for r in records.values():
         assert r['entityId'] in nodes and r['workId'] in result['works']
@@ -84,12 +102,12 @@ def attach_verification(result):
     result['organizationEvents'] = context['events']
     result['cooperations'] = context['cooperations']
     result['verificationLedger'] = {
-        'reviewedAt': revision['reviewedAt'], 'source': revision['source'],
-        'previousSource': delta['source'], 'policy': revision['policy'], 'records': records,
+        'reviewedAt': followup['reviewedAt'], 'source': followup['source'],
+        'previousSource': revision['source'], 'policy': followup['policy'], 'records': records,
         'changedRecordIds': changed, 'changedCount': len(changed),
         'recordHistory': histories, 'recordHistories': series,
         'counts': dict(Counter(r['status'] for r in records.values())),
         'entityCount': sum(bool(rows) for rows in by_entity.values()), 'total': len(records),
-        'audit': revision['audit']}
-    result['updated'] = revision['reviewedAt']
+        'audit': followup['audit']}
+    result['updated'] = followup['reviewedAt']
     return result

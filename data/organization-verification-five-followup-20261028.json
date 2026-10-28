@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-28",
+  "source": {
+    "title": "五条未解决身份职责原件复核（第二十九轮）",
+    "round": 29,
+    "priorReportTitle": "叙事游戏年鉴_身份与专题职责核查_可筛选网页_第二十八轮.html",
+    "priorReportLibraryFileId": "libfile_6590785c491c819192074e637a638987"
+  },
+  "previousSource": {
+    "title": "叙事游戏年鉴_身份与专题职责核查_可筛选网页_第二十轮(1).html",
+    "libraryFileId": "libfile_7d812d258c948191b3aa99d2dd5d2957",
+    "sha256": "d062c676a9b7d7c4afadc1f5da2f21dda038158c6bfc57a3706669e3f2462927",
+    "round": 20
+  },
+  "policy": "仅复核五条未结身份职责；当期题名页或版权页只支持所署出版者，回顾目录只作线索。冻结作品、发行版次、主体ID和原清单线索；不将目录品牌推为独立法人、开发者或1982法定发行主体。",
+  "audit": "data/organization-verification-five-followup-20261028.md",
+  "records": [
+    {
+      "category": "身份",
+      "id": 1,
+      "topic": "Addison-Wesley Productions",
+      "game": "阿伦达文城堡的秘密  g1272",
+      "placement": "发行 g1272-v-original",
+      "need": "《阿伦达文城堡的秘密》当期版本版权页、手册或发行公告，需明确「Addison-Wesley Productions」的历史主体及职责",
+      "oldUrl": "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/",
+      "status": "部分证据",
+      "detail": "1984年《The Secret of Arendarvon Castle》BBC Micro原版扫描可见Addison-Wesley Publishing Company题名页；该扫描目前可辨部分不足以核定“Addison-Wesley Productions”的法人身份或其对该版的具体发行职责。旧目录的Productions标签只作为历史检索名保留；须取得该版可辨版权页、包装或登记文件，才能判定该名称的法律关系。",
+      "sources": [
+        {
+          "title": "BBC Micro原版扫描：题名页署Addison-Wesley Publishing Company（前次核查第28轮）",
+          "url": "https://archive.org/details/arendarvon"
+        },
+        {
+          "title": "ZX Spectrum历史目录的Productions署名",
+          "url": "https://worldofspectrum.net/pub/sinclair/books/z/ZXSpectrumGamesScreenshotCatalog.pdf"
+        }
+      ],
+      "strength": "原版题名页＋目录名，法人仍缺证",
+      "newRound": 17,
+      "recordId": "identity-1",
+      "entityId": "entity-name-6ed2a96c53cd",
+      "workId": "g1272"
+    },
+    {
+      "category": "身份",
+      "id": 2,
+      "topic": "Addison-Wesley Productions",
+      "game": "对抗者  g1273",
+      "placement": "发行 g1273-v-original",
+      "need": "《对抗者》当期版本版权页、手册或发行公告，需明确「Addison-Wesley Productions」的历史主体及职责",
+      "oldUrl": "https://www.mobygames.com/game/179572/the-secret-of-arendarvon-castle/",
+      "status": "部分证据",
+      "detail": "1985年《The Antagonists》BBC Micro原版扫描的版权页署英国Addison-Wesley Publishers Ltd.及美国Addison-Wesley Publishing Company, Inc.（ISBN 0-201-15734-9）；这能限定当期图书出版主体，却不能证明目录名“Addison-Wesley Productions”是独立法人或开发者。原清单oldUrl误指《Arendarvon Castle》，保留冻结线索并在此标错。仍需当期Productions署名的包装、版权或登记原件。",
+      "sources": [
+        {
+          "title": "1985年BBC Micro原版扫描：版权页及英国软件订购资料（前次核查第28轮）",
+          "url": "https://archive.org/details/Antagonists"
+        },
+        {
+          "title": "ZX Spectrum历史目录的Productions名称",
+          "url": "https://worldofspectrum.net/item/0005951/"
+        }
+      ],
+      "strength": "1985年版权页＋历史目录，Productions法人未证",
+      "newRound": 17,
+      "recordId": "identity-2",
+      "entityId": "entity-name-6ed2a96c53cd",
+      "workId": "g1273"
+    },
+    {
+      "category": "身份",
+      "id": 40,
+      "topic": "未核实（馆藏归入ChampionSoft前身关联）",
+      "game": "国盗战：Combat 47  alicesoft-extra-combat47",
+      "placement": "发行 alicesoft-extra-combat47-v1, alicesoft-extra-combat47-v2",
+      "need": "《国盗战：Combat 47》当期版本版权页、手册或发行公告，需明确「未核实（馆藏归入ChampionSoft前身关联）」的历史主体及职责",
+      "oldUrl": "https://fm-7.com/museum/products/eut10qpw/",
+      "status": "证据冲突",
+      "detail": "Oh!FM-7馆藏把《国盗りゲーム》列为1982年，说明后来改名《コンバット-47》并列1983年；ALICESOFT官方说明前身于1983年1月创办、3月法人化。馆藏回顾归类不能倒推1982原版的法定发行者。须取得1982原版包装／广告的发行署名及当时经营主体文件；1983改名版也须与原版逐版区分。",
+      "sources": [
+        {
+          "title": "ALICESOFT官方公司史：1983年1月设立、3月法人化",
+          "url": "https://www.alicesoft.com/outline/contents.html"
+        },
+        {
+          "title": "Oh!FM-7馆藏：1982国盗りゲーム",
+          "url": "https://fm-7.com/museum/products/eut10qpw/"
+        },
+        {
+          "title": "Oh!FM-7馆藏：1983コンバット-47",
+          "url": "https://fm-7.com/museum/products/5a1blrll/"
+        },
+        {
+          "title": "Oh!FM-7厂商页：早期由エスティエル産業销售、1983年9月另设合资销售公司",
+          "url": "https://fm-7.com/museum/products/512hn302/"
+        }
+      ],
+      "strength": "馆藏逐版目录＋官方创办时间，1982法人仍冲突",
+      "recordId": "identity-40",
+      "entityId": "entity-name-a978e18d1d4b",
+      "workId": "alicesoft-extra-combat47",
+      "newRound": 13
+    },
+    {
+      "category": "身份",
+      "id": 41,
+      "topic": "未核实（馆藏归入ChampionSoft前身关联）",
+      "game": "销售翻倍大作战：电脑商战  alicesoft-extra-computerwars",
+      "placement": "发行 alicesoft-extra-computerwars-v1, alicesoft-extra-computerwars-v2",
+      "need": "《销售翻倍大作战：电脑商战》当期版本版权页、手册或发行公告，需明确「未核实（馆藏归入ChampionSoft前身关联）」的历史主体及职责",
+      "oldUrl": "https://fm-7.com/museum/products/eut10qpw/",
+      "status": "证据冲突",
+      "detail": "Oh!FM-7馆藏把《売上倍増大作戦》列为1982年，说明后来改名《コンピュータウォーズ》并列1983年；馆藏记录后者程序清单时间戳83/03/29。ALICESOFT官方给出的创办和法人化时间分别为1983年1月、3月。程序时间戳只限定后版资料，不证明1982原版发行法律主体；当期原版封套／广告与主体文件仍缺。",
+      "sources": [
+        {
+          "title": "ALICESOFT官方公司史：1983年创办及法人化",
+          "url": "https://www.alicesoft.com/outline/contents.html"
+        },
+        {
+          "title": "Oh!FM-7馆藏：1982売上倍増大作戦",
+          "url": "https://fm-7.com/museum/products/x3auvpz4/"
+        },
+        {
+          "title": "Oh!FM-7馆藏：1983コンピュータウォーズ及清单时间戳",
+          "url": "https://fm-7.com/museum/products/f3yz2fxy/"
+        },
+        {
+          "title": "Oh!FM-7厂商页：早期销售分工",
+          "url": "https://fm-7.com/museum/products/512hn302/"
+        }
+      ],
+      "strength": "馆藏逐版目录／程序时间戳＋官方沿革，1982法人仍冲突",
+      "recordId": "identity-41",
+      "entityId": "entity-name-a978e18d1d4b",
+      "workId": "alicesoft-extra-computerwars",
+      "newRound": 13
+    },
+    {
+      "category": "身份",
+      "id": 42,
+      "topic": "未核实（馆藏归入ChampionSoft前身关联）",
+      "game": "天堂与地狱：婚礼竞赛  alicesoft-extra-weddingrace",
+      "placement": "发行 alicesoft-extra-weddingrace-v1, alicesoft-extra-weddingrace-v2",
+      "need": "《天堂与地狱：婚礼竞赛》当期版本版权页、手册或发行公告，需明确「未核实（馆藏归入ChampionSoft前身关联）」的历史主体及职责",
+      "oldUrl": "https://fm-7.com/museum/products/eut10qpw/",
+      "status": "证据冲突",
+      "detail": "Oh!FM-7馆藏把《天国と地獄》列为1982年，说明后来改名《ウエディングレース》并列1983年；ALICESOFT官方记载1983年1月创办、3月法人化。馆藏对早期品牌的回顾归类与当年法定发行者是两种不同事实。缺1982原版包装／广告上的发行主体及其经营身份原件，不能把两版统一追认给后来的ALICESOFT。",
+      "sources": [
+        {
+          "title": "ALICESOFT官方公司史：1983年创办及法人化",
+          "url": "https://www.alicesoft.com/outline/contents.html"
+        },
+        {
+          "title": "Oh!FM-7馆藏：1982天国と地獄",
+          "url": "https://fm-7.com/museum/products/mttloqf5/"
+        },
+        {
+          "title": "Oh!FM-7馆藏：1983ウエディングレース",
+          "url": "https://fm-7.com/museum/products/dzemd2z1/"
+        },
+        {
+          "title": "Oh!FM-7厂商页：早期销售分工",
+          "url": "https://fm-7.com/museum/products/512hn302/"
+        }
+      ],
+      "strength": "馆藏逐版目录＋官方沿革，1982法人仍冲突",
+      "recordId": "identity-42",
+      "entityId": "entity-name-a978e18d1d4b",
+      "workId": "alicesoft-extra-weddingrace",
+      "newRound": 13
+    }
+  ]
+}
