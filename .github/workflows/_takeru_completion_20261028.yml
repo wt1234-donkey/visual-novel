@@ -1,0 +1,49 @@
+name: Complete reviewed TAKERU catalogue
+on:
+  push:
+    branches: [codex/takeru-catalogue-completion-20261028]
+    paths: [scripts/_apply_takeru_completion_20261028.py]
+permissions:
+  contents: write
+jobs:
+  generate-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Apply reviewed source and remove temporary workflow
+        run: python3 scripts/_apply_takeru_completion_20261028.py
+      - name: Generate catalogue and derived pages
+        run: |
+          python3 scripts/sync_versions_csv.py
+          python3 scripts/export_content_csv.py
+          python3 scripts/export_interaction_csv.py
+          python3 scripts/build_entity_model.py
+          python3 scripts/build_entity_pages.py
+          python3 scripts/build_company_pages.py
+      - name: Validate data and generated files
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+          python3 scripts/build_company_pages.py --check
+          git diff --check
+      - name: Run complete regression suites
+        run: |
+          python3 -m unittest discover -s tests -p 'test_*.py'
+          node --test tests/*.test.mjs
+      - name: Commit verified catalogue to this task branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Generate and verify complete TAKERU catalogue'
+          git push origin HEAD:codex/takeru-catalogue-completion-20261028
