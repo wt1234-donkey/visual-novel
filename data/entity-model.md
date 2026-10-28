@@ -252,3 +252,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-27 组织与沿革接入第十轮已整理台账，独立身份审核为 `entity-organization-review-20261027.json`。仅CoreMoreco具名订正为品牌，保留旧发行职责；637条逐版结论通过组织页展示，不自动解除589项专题职责待核。组织上下文、历史节点与合作关系使用独立带记录ID的配置，不改变正式作品与关系继承。详见 `organization-verification-20261027.md`。
 
 2026-10-28 第28轮四项结论按 `organization-round28-closure-20261028.json` 接入第30轮台账。GREE／Mobage 仅在对应 `g209-v3`／`g209-v2` 发行层记录 NextNinja 的服务提供方；1985 年 QL 合辑以独立 `scopedEditions` 版次索引和 `edition` 范围的 Sinclair 出版职责表示，不猜配旧版 ID 或新增主库内容；ASCII 的 AnEarth 土星版错署经 SEGA 官方目录订正为メディアワークス，旧专题卡转历史对照。原始发行字段及先前台账快照不改写；详见[四项落库审计](organization-round28-closure-20261028.md)。
+
+2026-10-28 Microsoft专题增补两部主库原作，独立登记Lionhead Studios和Obsidian Entertainment的逐作制作职责及2006／2018年起的组织关系。2000年游戏部门、2019年品牌更名作为具名事件；发行与开发不互推，旧19部专题作品、旧发行字段及各品牌历史署名保持。详见[Microsoft增补审计](microsoft-expansion-audit-20261028.md)。

@@ -107,6 +107,8 @@ HISTORIES = {'sierra','sierra_on_line','falcom','te_soft','banpresto','takeru'}
 NAMES = {'key':['Key'], 'novect':['NOVECT','Novectacle'], 'aniplex_exe':['ANIPLEX.EXE'], 'sprite':['sprite','sprite games'], 'madosoft':['まどそふと'], 'yuzusoft':['ゆずソフト'], 'innocent_grey':['Innocent Grey'], 'minori':['minori'], 'august':['AUGUST'], 'toneworks':['tone work’s',"tone work's"], 'asaproject':['ASa Project'], 'elf':['ELF','エルフ'], 'leaf':['Leaf'], 'sagaplanets':['SAGA PLANETS'], 'smee':['SMEE'], 'favorite':['FAVORITE'], 'cuffs':['CUFFS'], 'cube':['CUBE'], 'sphere':['Sphere'], 'palette':['ぱれっと'], 'silkys':['Silky’s',"Silky's"], 'silkys_plus':['Silky’s Plus',"Silky's Plus"], 'alicesoft':['Alicesoft','ALICESOFT','アリスソフト'], 'nitroplus':['Nitroplus','NITRO PLUS'], 'overdrive':['OVERDRIVE'], 'jast':['JAST（日本）'], 'cocktailsoft':['Cocktail Soft','カクテルソフト','カクテル・ソフト'], 'macadamia':['Macadamia Soft'], 'fairytale':['フェアリーテール','FairyTale','FAIRYTALE'], 'gaina':['GAINA','BENTEN Film'], 'gainax':['GAINAX'], 'jhv':['Japan Home Video'], 'cabbage':['きゃべつそふと','Cabbage Soft'], 'hulotte':['HULOTTE'], 'laplacian':['Laplacian'], 'applique':['あっぷりけ'], 'clochette':['Clochette'], 'nanawind':['NanaWind'], 'harukaze':['HARUKAZE','HARU❀KAZE'], 'sorahane':['SORAHANE'], 'taito':['TAITO（太东）','TAITO'], 'nec_he':['NEC Home Electronics'], 'tokuma':['徳間書店'], 'sega':['世嘉','SEGA'], 'shopro':['小学館プロダクション'], 'hokubu':['北部通信工業'], 'konami':['Konami'], 'hudson':['Hudson Soft（哈德森）','Hudson Soft'], 'sinclair':['Sinclair Research'], 'cinematronics':['Cinematronics'], 'microsoft':['Microsoft'], 'enix':['Enix（艾尼克斯）','Enix'], 'dataeast':['Data East'], 'ascii':['ASCII'], 'melbournehouse':['Melbourne House'], 'koei':['光荣','KOEI'], 'banpresto':['Banpresto'], 'adventure_international':['Adventure International'], 'infocom':['Infocom'], 'sierra':['On-Line Systems','Sierra On-Line'], 'sierra_on_line':['Sierra On-Line'], 'psk':['PSK'], 'microcabin':['Micro Cabin','マイクロキャビン'], 'legend_uk':['Legend（英国）'], 'legend_entertainment':['Legend Entertainment'], 'te_soft':['T&E SOFT'], 'carry_lab':['Carry Lab','キャリーラボ'], 'champion_soft':['チャンピオンソフト','ChampionSoft','Champion Soft'], 'hummingbird_soft':['HummingBird Soft','ハミングバードソフト'], 'riverhill_soft':['Riverhill Soft','リバーヒルソフト'], 'falcom':['日本ファルコム','Falcom'], 'ibm':['IBM'], 'mosaic':['Mosaic Publishing'], 'square':['Square','スクウェア'], 'toho':['東宝','TOHO'], 'db_soft':['dB-SOFT'], 'comptiq':['Comptiq','コンプティーク'], 'minatosoft':['みなとそふと','Minato Soft'], 'hawkeye':['株式会社ホークアイ','Hawk Eye'], 'addison_wesley':['Addison-Wesley','Addison-Wesley Publishing Company']}
 EXTRAS = [
  ('nightwind','NightWind（ナイトウィンド）','company',['株式会社ナイトウィンド','NightWind'],'https://prtimes.jp/main/html/rd/p/000000001.000159011.html'),
+ ('lionhead','Lionhead Studios','company',['Lionhead Studios'],'https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/'),
+ ('obsidian','Obsidian Entertainment','company',['Obsidian Entertainment'],'https://www.microsoft.com/en-us/Investor/Acquisition-History'),
  ('nextninja','NextNinja','company',['株式会社NextNinja'],'https://web.archive.org/web/20160808133739/http://jp.apps.gree.net:80/ja/73010'),
  ('lucasfilm_games_legacy','Lucasfilm Games','team',['Lucasfilm Games（1982年起游戏部门）'],'https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/'),
  ('headroom','HEADROOM','team',['HEADROOM','ヘッドルーム'],'https://www.namura.net/xkd.com/product/graduation.html'),
@@ -202,7 +204,10 @@ def build():
  aliases[canonical('Nitroplus')]='entity-nitroplus_brand';aliases[canonical('NITRO PLUS')]='entity-nitroplus_brand'
  for eid,name,parent,names in SUBBRANDS:
   add_entity(eid,name,'brand',names,companies[parent]['source'],note='历史品牌／子品牌署名独立保存；不等于法人公司。')
-  relations.append({'from':'entity-'+eid,'to':'entity-'+parent,'type':'brandFamily','period':{'from':None,'to':None,'precision':'unknown'},'status':'existingDossier','source':companies[parent]['source'],'note':'既有专题的品牌家族关系，未知时段不外推为历年经营归属。'})
+  if eid=='xbox_game_studios':
+   relations.append({'from':'entity-'+eid,'to':'entity-'+parent,'type':'brandFamily','period':{'from':2019,'to':None,'precision':'year','openEnd':'notAsserted'},'status':'sourceReviewed','source':'https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/','note':'2019-02-05公告将Microsoft Studios更名Xbox Game Studios；不追溯覆盖旧发行品牌。'})
+  else:
+   relations.append({'from':'entity-'+eid,'to':'entity-'+parent,'type':'brandFamily','period':{'from':None,'to':None,'precision':'unknown'},'status':'existingDossier','source':companies[parent]['source'],'note':'既有专题的品牌家族关系，未知时段不外推为历年经营归属。'})
  def relation(child,parent,source,note,status='sourceReviewed',start=None):
   relations.append({'from':'entity-'+child,'to':'entity-'+parent,'type':'operatedBy','period':{'from':start,'to':None,'precision':'year' if start else 'unknown','openEnd':'notAsserted'},'status':status,'source':source,'note':note})
  relation('key','visualarts','https://visual-arts.jp/blog_2024_1/','公司与品牌分开；不由当前运营关系反推所有历史版本的合同发行方。')
@@ -221,6 +226,8 @@ def build():
  relation('macadamia','db_soft',companies['macadamia']['source'],'历史品牌归属；法人起止另核。','existingDossier')
  relation('minatosoft','hawkeye',companies['hawkeye']['source'],'品牌活动起点不当作法人成立日。','existingDossier')
  relation('mirai','hawkeye','https://www.mirai-soft.net/guide.php','官方署名mirai（株式会社ホークアイ）。')
+ relation('lionhead','microsoft','https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/','2006年收购英国Lionhead；2004年Fable合作早于收购，既有作品不倒推为内部制作。',start=2006)
+ relation('obsidian','microsoft','https://www.microsoft.com/en-us/Investor/Acquisition-History','投资者收购记录列2018-11-10；Obsidian继续独立具名开发，不将收购前发行倒填微软。',start=2018)
  # Preserve source-level alias distinctions; only use old aliases where they do not collapse a declared child brand.
  def resolve(raw,source):
   key=canonical(raw)
@@ -291,6 +298,13 @@ def build():
  credit('entity-sinclair','edition',edition['id'],'publisher',edition['source'],
         raw=edition['publisher'],status='sourceReviewed',work_id='g089',note=edition['note'])
  credits[-1].update(reviewId='duty-558',reviewRecord=closure['audit'])
+ for eid,wid,source in [
+  ('entity-lionhead','g1300','https://news.microsoft.com/source/2008/07/14/xbox-360-unveils-gameplay-for-every-passion/'),
+  ('entity-obsidian','g1301','https://www.xbox.com/en-US/games/avowed/')]:
+  assert wid in allworks and any(r['workId']==wid and r['contentRelation']=='original' for r in allreleases)
+  credit(eid,'work',wid,'originalProduction',source,status='sourceReviewed',
+         note='逐作官方制作／开发署名；Microsoft发行品牌与实际开发团队分开。')
+  credits[-1].update(reviewId='MS-20261028-'+wid,reviewRecord='data/microsoft-expansion-audit-20261028.md')
  # Brand catalogues provide affiliation beyond whether a brand self-published a given port.
  for cid in ['key','leaf','innocent_grey','minori','august','toneworks','asaproject','sagaplanets','smee','favorite','cuffs','cube','sphere','palette','cabbage','madosoft','sprite','harukaze','sorahane','clochette']:
   c=companies[cid]

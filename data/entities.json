@@ -890,7 +890,7 @@
         "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/"
       ],
       "verification": "existingDossier",
-      "historyNote": "Microsoft于1975/04/04创立，按创业时间进入1975年4月候选组。2019年官方明确Microsoft Studios更名为Xbox Game Studios；发行字段保留当年的品牌名称，归档筛选统一到Microsoft，开发方DONTNOD、Access Games、INTERIOR/NIGHT和Obsidian分别注明。",
+      "historyNote": "Microsoft于1975/04/04创立，按创业时间进入1975年4月候选组。2019年官方明确Microsoft Studios更名为Xbox Game Studios；发行字段保留当年的品牌名称，归档筛选统一到Microsoft，开发方DONTNOD、Access Games、INTERIOR/NIGHT和Obsidian分别注明。 2000年微软设专门游戏部门；2006收购Lionhead、2018收购Obsidian，2019 Microsoft Studios改名Xbox Game Studios。工作室收购仅作组织关系，不能倒填其此前全部作品；新增两作各保留Lionhead／Obsidian开发署名。",
       "dates": []
     },
     {
@@ -1458,6 +1458,34 @@
       ],
       "sources": [
         "https://prtimes.jp/main/html/rd/p/000000001.000159011.html"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": []
+    },
+    {
+      "id": "entity-lionhead",
+      "name": "Lionhead Studios",
+      "type": "company",
+      "aliases": [
+        "Lionhead Studios"
+      ],
+      "sources": [
+        "https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": []
+    },
+    {
+      "id": "entity-obsidian",
+      "name": "Obsidian Entertainment",
+      "type": "company",
+      "aliases": [
+        "Obsidian Entertainment"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/Investor/Acquisition-History"
       ],
       "verification": "sourceReviewed",
       "historyNote": "",
@@ -6237,13 +6265,14 @@
       "to": "entity-microsoft",
       "type": "brandFamily",
       "period": {
-        "from": null,
+        "from": 2019,
         "to": null,
-        "precision": "unknown"
+        "precision": "year",
+        "openEnd": "notAsserted"
       },
-      "status": "existingDossier",
+      "status": "sourceReviewed",
       "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
-      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。"
+      "note": "2019-02-05公告将Microsoft Studios更名Xbox Game Studios；不追溯覆盖旧发行品牌。"
     },
     {
       "from": "entity-microsoft_home",
@@ -6495,6 +6524,34 @@
       "status": "sourceReviewed",
       "source": "https://www.mirai-soft.net/guide.php",
       "note": "官方署名mirai（株式会社ホークアイ）。"
+    },
+    {
+      "from": "entity-lionhead",
+      "to": "entity-microsoft",
+      "type": "operatedBy",
+      "period": {
+        "from": 2006,
+        "to": null,
+        "precision": "year",
+        "openEnd": "notAsserted"
+      },
+      "status": "sourceReviewed",
+      "source": "https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/",
+      "note": "2006年收购英国Lionhead；2004年Fable合作早于收购，既有作品不倒推为内部制作。"
+    },
+    {
+      "from": "entity-obsidian",
+      "to": "entity-microsoft",
+      "type": "operatedBy",
+      "period": {
+        "from": 2018,
+        "to": null,
+        "precision": "year",
+        "openEnd": "notAsserted"
+      },
+      "status": "sourceReviewed",
+      "source": "https://www.microsoft.com/en-us/Investor/Acquisition-History",
+      "note": "投资者收购记录列2018-11-10；Obsidian继续独立具名开发，不将收购前发行倒填微软。"
     },
     {
       "from": "entity-name-08cbddd5e450",
@@ -7219,7 +7276,7 @@
       "entityIds": [
         "entity-microsoft"
       ],
-      "scope": "本专题覆盖用户选定的19部微软发行或合作、后版关联叙事作品；作品含独立游戏及一部独立叙事DLC模块，不声称是Microsoft所有电子游戏或所有叙事游戏的完整目录。历史原作、合作发行和微软普通移植关联均注明。",
+      "scope": "本专题覆盖21部已核Microsoft发行或合作关联叙事作品，包括两部选择驱动的动作RPG；不是Microsoft所有游戏、子公司作品或叙事游戏的完整目录。各历史发行、开发团队与品牌逐项区分。",
       "sources": [
         "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/"
       ],
