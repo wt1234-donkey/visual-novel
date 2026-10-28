@@ -58,14 +58,16 @@
     {
       "id": "microsoft",
       "title": "Microsoft / Xbox",
-      "subtitle": "旧名与更名沿革",
+      "subtitle": "游戏部门、工作室与2019品牌更名",
       "root": "entity-microsoft",
       "focus": "entity-xbox_game_studios",
       "entityIds": [
         "entity-microsoft",
         "entity-microsoft_studios",
         "entity-xbox_game_studios",
-        "entity-microsoft_home"
+        "entity-microsoft_home",
+        "entity-lionhead",
+        "entity-obsidian"
       ]
     },
     {
@@ -792,6 +794,34 @@
       ]
     },
     {
+      "id": "entity-lionhead",
+      "name": "Lionhead Studios",
+      "type": "company",
+      "aliases": [
+        "Lionhead Studios"
+      ],
+      "sources": [
+        "https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 1,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 1,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g1300",
+          "title": "神鬼寓言II",
+          "year": 2008
+        }
+      ]
+    },
+    {
       "id": "entity-lucasfilm_games_legacy",
       "name": "Lucasfilm Games",
       "type": "team",
@@ -846,7 +876,7 @@
         "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/"
       ],
       "verification": "existingDossier",
-      "historyNote": "Microsoft于1975/04/04创立，按创业时间进入1975年4月候选组。2019年官方明确Microsoft Studios更名为Xbox Game Studios；发行字段保留当年的品牌名称，归档筛选统一到Microsoft，开发方DONTNOD、Access Games、INTERIOR/NIGHT和Obsidian分别注明。",
+      "historyNote": "Microsoft于1975/04/04创立，按创业时间进入1975年4月候选组。2019年官方明确Microsoft Studios更名为Xbox Game Studios；发行字段保留当年的品牌名称，归档筛选统一到Microsoft，开发方DONTNOD、Access Games、INTERIOR/NIGHT和Obsidian分别注明。 2000年微软设专门游戏部门；2006收购Lionhead、2018收购Obsidian，2019 Microsoft Studios改名Xbox Game Studios。工作室收购仅作组织关系，不能倒填其此前全部作品；新增两作各保留Lionhead／Obsidian开发署名。",
       "dates": [],
       "stats": {
         "main": 2,
@@ -916,13 +946,18 @@
       "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
       "dates": [],
       "stats": {
-        "main": 5,
+        "main": 6,
         "related": 0,
         "bibliography": 0
       },
       "productionCount": 0,
       "dossiers": [],
       "works": [
+        {
+          "id": "g1300",
+          "title": "神鬼寓言II",
+          "year": 2008
+        },
         {
           "id": "g974",
           "title": "摇摆管人编年史",
@@ -936,11 +971,6 @@
         {
           "id": "g972",
           "title": "迪士尼仙子：隐藏的宝藏",
-          "year": 2013
-        },
-        {
-          "id": "g973",
-          "title": "小美人鱼：海底宝藏",
           "year": 2013
         }
       ]
@@ -1876,6 +1906,34 @@
       ]
     },
     {
+      "id": "entity-obsidian",
+      "name": "Obsidian Entertainment",
+      "type": "company",
+      "aliases": [
+        "Obsidian Entertainment"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/Investor/Acquisition-History"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 1,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 1,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g1301",
+          "title": "宣誓",
+          "year": 2025
+        }
+      ]
+    },
+    {
       "id": "entity-sega",
       "name": "SEGA（セガ）",
       "type": "company",
@@ -2298,7 +2356,7 @@
       "historyNote": "历史品牌／子品牌署名独立保存；不等于法人公司。",
       "dates": [],
       "stats": {
-        "main": 3,
+        "main": 4,
         "related": 0,
         "bibliography": 0
       },
@@ -2319,6 +2377,11 @@
           "id": "g965",
           "title": "隐迹渐现",
           "year": 2022
+        },
+        {
+          "id": "g1301",
+          "title": "宣誓",
+          "year": 2025
         }
       ]
     },
@@ -2769,10 +2832,10 @@
       "child": "entity-xbox_game_studios",
       "kind": "family",
       "label": "品牌家族",
-      "status": "existingDossier",
+      "status": "sourceReviewed",
       "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
-      "note": "既有专题的品牌家族关系，未知时段不外推为历年经营归属。",
-      "dateLabel": "起止时间未核",
+      "note": "2019-02-05公告将Microsoft Studios更名Xbox Game Studios；不追溯覆盖旧发行品牌。",
+      "dateLabel": "2019起；终点未核",
       "basis": "existingIndex"
     },
     {
@@ -2893,6 +2956,30 @@
       "source": "https://www.mirai-soft.net/guide.php",
       "note": "官方署名mirai（株式会社ホークアイ）。",
       "dateLabel": "起止时间未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-41",
+      "parent": "entity-microsoft",
+      "child": "entity-lionhead",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/",
+      "note": "2006年收购英国Lionhead；2004年Fable合作早于收购，既有作品不倒推为内部制作。",
+      "dateLabel": "2006起；终点未核",
+      "basis": "existingIndex"
+    },
+    {
+      "id": "existing-42",
+      "parent": "entity-microsoft",
+      "child": "entity-obsidian",
+      "kind": "brand",
+      "label": "品牌运营",
+      "status": "sourceReviewed",
+      "source": "https://www.microsoft.com/en-us/Investor/Acquisition-History",
+      "note": "投资者收购记录列2018-11-10；Obsidian继续独立具名开发，不将收购前发行倒填微软。",
+      "dateLabel": "2018起；终点未核",
       "basis": "existingIndex"
     },
     {

@@ -42006,6 +42006,58 @@
       "territory": null
     },
     {
+      "id": "credit-7a551c041c9642a7",
+      "entityId": "entity-microsoft_studios",
+      "targetType": "release",
+      "targetId": "g1300-v1",
+      "workId": "g1300",
+      "role": "publishingBrand",
+      "rawCredit": "Microsoft Game Studios",
+      "status": "existingCredit",
+      "source": "https://news.microsoft.com/source/2009/08/19/compassion-or-cruelty-the-race-for-the-crown-of-albion-begins-in-fable-iii-exclusively-on-xbox-360/",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-1721d05d9eeb6e97",
+      "entityId": "entity-microsoft_studios",
+      "targetType": "work",
+      "targetId": "g1300",
+      "workId": "g1300",
+      "role": "originalPublishingBrand",
+      "rawCredit": "Microsoft Game Studios",
+      "status": "existingCredit",
+      "source": "https://news.microsoft.com/source/2009/08/19/compassion-or-cruelty-the-race-for-the-crown-of-albion-begins-in-fable-iii-exclusively-on-xbox-360/",
+      "note": "原作首发品牌署名；不等于该品牌独立完成全部程序、美术或剧本。",
+      "territory": null
+    },
+    {
+      "id": "credit-cfb3a7b100b888d2",
+      "entityId": "entity-xbox_game_studios",
+      "targetType": "release",
+      "targetId": "g1301-v1",
+      "workId": "g1301",
+      "role": "publishingBrand",
+      "rawCredit": "Xbox Game Studios",
+      "status": "existingCredit",
+      "source": "https://news.xbox.com/en-us/2025/02/18/avowed-available-now-your-journey-awaits/",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-27d8ea53023527c7",
+      "entityId": "entity-xbox_game_studios",
+      "targetType": "work",
+      "targetId": "g1301",
+      "workId": "g1301",
+      "role": "originalPublishingBrand",
+      "rawCredit": "Xbox Game Studios",
+      "status": "existingCredit",
+      "source": "https://news.xbox.com/en-us/2025/02/18/avowed-available-now-your-journey-awaits/",
+      "note": "原作首发品牌署名；不等于该品牌独立完成全部程序、美术或剧本。",
+      "territory": null
+    },
+    {
       "id": "credit-06c97adc1fb6de71",
       "entityId": "entity-name-a7663faeee46",
       "targetType": "release",
@@ -58065,6 +58117,36 @@
       "territory": null,
       "reviewId": "duty-558",
       "reviewRecord": "data/organization-round28-closure-20261028.md"
+    },
+    {
+      "id": "credit-f3cbfd2de2e1d93f",
+      "entityId": "entity-lionhead",
+      "targetType": "work",
+      "targetId": "g1300",
+      "workId": "g1300",
+      "role": "originalProduction",
+      "rawCredit": "Lionhead Studios",
+      "status": "sourceReviewed",
+      "source": "https://news.microsoft.com/source/2008/07/14/xbox-360-unveils-gameplay-for-every-passion/",
+      "note": "逐作官方制作／开发署名；Microsoft发行品牌与实际开发团队分开。",
+      "territory": null,
+      "reviewId": "MS-20261028-g1300",
+      "reviewRecord": "data/microsoft-expansion-audit-20261028.md"
+    },
+    {
+      "id": "credit-b6a7c70f3fbcfd80",
+      "entityId": "entity-obsidian",
+      "targetType": "work",
+      "targetId": "g1301",
+      "workId": "g1301",
+      "role": "originalProduction",
+      "rawCredit": "Obsidian Entertainment",
+      "status": "sourceReviewed",
+      "source": "https://www.xbox.com/en-US/games/avowed/",
+      "note": "逐作官方制作／开发署名；Microsoft发行品牌与实际开发团队分开。",
+      "territory": null,
+      "reviewId": "MS-20261028-g1301",
+      "reviewRecord": "data/microsoft-expansion-audit-20261028.md"
     },
     {
       "id": "credit-d0c3d5b9da155426",
@@ -82009,6 +82091,28 @@
     {
       "dossierId": "microsoft",
       "workId": "g965",
+      "placement": "main",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "status": "pendingRole"
+    },
+    {
+      "dossierId": "microsoft",
+      "workId": "g1300",
+      "placement": "main",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+      "status": "pendingRole"
+    },
+    {
+      "dossierId": "microsoft",
+      "workId": "g1301",
       "placement": "main",
       "roles": [
         "catalogueAssociation"
