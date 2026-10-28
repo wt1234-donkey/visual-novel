@@ -38844,14 +38844,14 @@
       "name": "世嘉（SEGA）",
       "foundedAt": "1960-06-03",
       "foundedSource": "https://www.sega.co.jp/company/outline/index.html",
-      "checkedAt": "2026-10-27",
-      "status": "既有专题续补两部Dreamcast独立叙事；初步完善官方组织沿革",
-      "scope": "复用原库五部世嘉实际发行作品，新增十二部叙事作品，另列两部Roommania生活模拟与新樱花大战动作冒险。樱花大战1—5以广义Galgame检索，保留战术玩法；实拍互动电影使用明确细分类。并非世嘉全部游戏或全部叙事作品清单。 2026-10-27续补Dreamcast《ラブひな》两作，现19部主库引用及3部原跨类型关联；既有身份、附录和旧锚点全部保留。",
-      "versionScope": "首发保留；后发行版仅在有可核实的新剧情、角色、路线、关卡、CG／重绘素材或新配音等内容时单列。同内容换平台、换商店、再版、包装变更与仅提高分辨率不新增版本；新增内容须写明差异与来源。未知差异先列核对说明。 本轮十二条首发、两条确认新增内容的后版，共十四条。其余移植与未知差异只作说明；全部旧记录保留。",
+      "checkedAt": "2026-10-28",
+      "status": "项目清单补核：31部主库引用与36部跨类型关联",
+      "scope": "保留原19部主库与3部关联，新增11部主库原作并复用Rise of the Dragon；现31部主库引用、36部跨类型关联。电脑原作、同源改编、重制与独立外传分别处理；末尾逐项列出其他玩法、集团参考及影视媒介。并非SEGA全部发行史。",
+      "versionScope": "全部旧作品、内容和发行对象保留；本轮新作登记原作首批，有明确资料的四组后续新增内容单列。多平台同批共享内容ID；同名游戏、普通移植、合集、流媒体观看及未知差异不自动新增。",
       "versionPanelLabel": "条首发／内容记录",
       "versionCountLabel": "首发、内容版与保留旧记录",
       "publisherNote": "公司官网记1960年6月3日成立。本专题按世嘉实际发行或合作角色收录，不把世嘉主机上的第三方游戏都归到世嘉。RED、System Sacom、Digital Pictures、Chunsoft及GAINAX的开发／原作身份分别保留，后版显示实际发行商。 2026-10-27增加1960—2021官方更名与集团重组节点；原entity-sega和历史发行解析保持。SEGA Sammy、SEGA Group与SEGA Interactive为独立展示节点，不能把共同控股设立或子公司吸收称为Sammy与SEGA合为同一法人。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>19部主库相关作品（既有17部＋本轮2部），3部原跨类型关联。世嘉发行、第三方制作和集团归属分别登记。</strong></p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>31部主库引用（原19部＋新增11部＋复用1部），36部跨类型关联（原3部＋新增33部）。</strong>主机平台、品牌发行、实际开发与集团关系分别保留。</p>",
       "workIds": [
         "g034",
         "g179",
@@ -38871,7 +38871,19 @@
         "g934",
         "g935",
         "g1281",
-        "g1282"
+        "g1282",
+        "g1320",
+        "g1321",
+        "g1322",
+        "g1323",
+        "g1324",
+        "g1325",
+        "g1326",
+        "g1327",
+        "g1328",
+        "g1329",
+        "g1330",
+        "g1102"
       ],
       "relatedGames": [
         {
@@ -39066,18 +39078,2975 @@
           "interactionSources": [
             "https://www.sega.jp/game/detail/sakura-taisen-shin-sakura/"
           ]
+        },
+        {
+          "id": "sega-ps1",
+          "title": "ファンタシースター",
+          "originalTitle": "ファンタシースター",
+          "chineseTitle": "梦幻之星",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1987,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "アリサ",
+            "ミャウ",
+            "ラシーク"
+          ],
+          "charactersSource": "https://ages.sega.jp/vol32/ps1.html",
+          "synopsis": "少女阿莉莎为追查兄长之死，和伙伴穿越阿尔戈尔的三颗行星，反抗拉西克的统治。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://ages.sega.jp/vol32/ps1.html",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "在城镇与迷宫中移动，战斗选择攻击、法术和道具；不以SF题材当作纯视觉小说。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ages.sega.jp/vol32/ps1.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-ps1-c-original",
+              "workId": "sega-ps1",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987-12-20原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://phantasystar.sega.jp/20th/history/",
+              "evidenceReleaseIds": [
+                "sega-ps1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-ps1-v-original",
+              "workId": "sega-ps1",
+              "year": 1987,
+              "platform": "SEGA Mark III",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1987-12-20原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://phantasystar.sega.jp/20th/history/",
+              "contentVersionId": "sega-ps1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-ps2",
+          "title": "ファンタシースターII 還らざる時の終わりに",
+          "originalTitle": "ファンタシースターII 還らざる時の終わりに",
+          "chineseTitle": "梦幻之星II：不归的终点",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1989,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "ユーシス",
+            "ネイ"
+          ],
+          "charactersSource": "https://ages.sega.jp/vol32/ps2.html",
+          "synopsis": "政府探员尤西斯与妮等伙伴追查生物怪物的出现，逐渐发现维持行星文明的巨大系统背后的秘密。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://ages.sega.jp/vol32/ps2.html",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "地图与迷宫移动结合队伍指令战斗；作品介绍及原版战斗画面支持RPG操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ages.sega.jp/vol32/ps2.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-ps2-c-original",
+              "workId": "sega-ps2",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989-03-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://phantasystar.sega.jp/20th/history/",
+              "evidenceReleaseIds": [
+                "sega-ps2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-ps2-v-original",
+              "workId": "sega-ps2",
+              "year": 1989,
+              "platform": "Mega Drive",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1989-03-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://phantasystar.sega.jp/20th/history/",
+              "contentVersionId": "sega-ps2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-ps3",
+          "title": "時の継承者 ファンタシースターIII",
+          "originalTitle": "時の継承者 ファンタシースターIII",
+          "chineseTitle": "梦幻之星III：时之继承者",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1990,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "ケイン",
+            "マーリナ",
+            "ミュー"
+          ],
+          "charactersSource": "https://vc.sega.jp/vc_ps3/",
+          "synopsis": "凯因在婚礼上失去新娘，跨越世界寻找她；婚姻选择使旅程延伸到后代，并揭开世界的来历。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://vc.sega.jp/vc_ps3/",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令",
+            "选项分支"
+          ],
+          "interactionNote": "队伍探索与指令战斗并存；官方明确结婚选择改变下一代主人公及故事结局。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://vc.sega.jp/vc_ps3/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-ps3-c-original",
+              "workId": "sega-ps3",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "1990-04-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_ps3/",
+              "evidenceReleaseIds": [
+                "sega-ps3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-ps3-v-original",
+              "workId": "sega-ps3",
+              "year": 1990,
+              "platform": "Mega Drive",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1990-04-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_ps3/",
+              "contentVersionId": "sega-ps3-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-ps4",
+          "title": "ファンタシースター 千年紀の終りに",
+          "originalTitle": "ファンタシースター 千年紀の終りに",
+          "chineseTitle": "梦幻之星：千年纪的终结",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "ルディ",
+            "ライラ"
+          ],
+          "charactersSource": "https://vc.sega.jp/vc_ps4/",
+          "synopsis": "年轻猎人鲁迪与各族伙伴调查生物怪物和古代机器，迎向阿尔戈尔星系长久灾难的根源。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://vc.sega.jp/vc_ps4/",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "官方介绍有队伍、宏指令与组合攻击；仍为角色扮演，漫画式过场不转为互动漫画。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://vc.sega.jp/vc_ps4/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-ps4-c-original",
+              "workId": "sega-ps4",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993-12-17原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_ps4/",
+              "evidenceReleaseIds": [
+                "sega-ps4-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-ps4-v-original",
+              "workId": "sega-ps4",
+              "year": 1993,
+              "platform": "Mega Drive",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1993-12-17原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_ps4/",
+              "contentVersionId": "sega-ps4-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-shining-darkness",
+          "title": "シャイニング＆ザ・ダクネス",
+          "originalTitle": "シャイニング＆ザ・ダクネス",
+          "chineseTitle": "光明与黑暗",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "主人公（剣士）"
+          ],
+          "charactersSource": "https://www.sega.jp/mdmini2/assets/manual/pdf/JP_Shining-in-the-Darkness.pdf",
+          "synopsis": "年轻剑士进入迷宫追寻失踪的公主与父亲，并和同伴对抗威胁王国的力量。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://www.sega.jp/mdmini2/assets/manual/pdf/JP_Shining-in-the-Darkness.pdf",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "原说明书的方向探索、战斗菜单与魔法道具操作支持第一人称迷宫RPG。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.sega.jp/mdmini2/assets/manual/pdf/JP_Shining-in-the-Darkness.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-shining-darkness-c-original",
+              "workId": "sega-shining-darkness",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991-03-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://shining-world.jp/portal/game/retro.shtml",
+              "evidenceReleaseIds": [
+                "sega-shining-darkness-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-shining-darkness-v-original",
+              "workId": "sega-shining-darkness",
+              "year": 1991,
+              "platform": "Mega Drive",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1991-03-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://shining-world.jp/portal/game/retro.shtml",
+              "contentVersionId": "sega-shining-darkness-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-shining-force1",
+          "title": "シャイニング・フォース 神々の遺産",
+          "originalTitle": "シャイニング・フォース 神々の遺産",
+          "chineseTitle": "光明力量：诸神的遗产",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1992,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "光之军势的主人公",
+            "ダークソル"
+          ],
+          "charactersSource": "https://vc.sega.jp/vc_shiningforce/",
+          "synopsis": "光之军势集结不同种族的伙伴，抵御鲁恩法斯特的入侵，阻止黑暗龙复活。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://vc.sega.jp/vc_shiningforce/",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "官方系统说明按速度顺序移动、攻击及使用魔法，战斗经验用于成长与转职。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://vc.sega.jp/vc_shiningforce/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-shining-force1-c-original",
+              "workId": "sega-shining-force1",
+              "label": "原作／首批内容",
+              "firstYear": 1992,
+              "basis": "original",
+              "evidence": "1992-03-20原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_shiningforce/",
+              "evidenceReleaseIds": [
+                "sega-shining-force1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-shining-force1-v-original",
+              "workId": "sega-shining-force1",
+              "year": 1992,
+              "platform": "Mega Drive",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1992-03-20原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_shiningforce/",
+              "contentVersionId": "sega-shining-force1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-shining-force2",
+          "title": "シャイニング・フォースII 古えの封印",
+          "originalTitle": "シャイニング・フォースII 古えの封印",
+          "chineseTitle": "光明力量II：古代封印",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "ボウイ",
+            "アストラル"
+          ],
+          "charactersSource": "https://vc.sega.jp/vc_shiningforce2/",
+          "synopsis": "博伊与伙伴因古老封印被破坏而卷入危机，率领光之军势寻找拯救世界的方法。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://vc.sega.jp/vc_shiningforce2/",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "官方介绍地图单位战斗与成长系统；有剧情但主要操作是战术RPG。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://vc.sega.jp/vc_shiningforce2/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-shining-force2-c-original",
+              "workId": "sega-shining-force2",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993-10-01原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_shiningforce2/",
+              "evidenceReleaseIds": [
+                "sega-shining-force2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-shining-force2-v-original",
+              "workId": "sega-shining-force2",
+              "year": 1993,
+              "platform": "Mega Drive",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1993-10-01原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_shiningforce2/",
+              "contentVersionId": "sega-shining-force2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-shining-wisdom",
+          "title": "シャイニング・ウィズダム",
+          "originalTitle": "シャイニング・ウィズダム",
+          "chineseTitle": "光明智慧",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "动作角色扮演",
+          "subcategory": "动作角色扮演",
+          "genre": "动作角色扮演／剧情关联",
+          "characters": [
+            "マルス"
+          ],
+          "charactersSource": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "synopsis": "奥德甘的士兵马尔斯追查精灵与巨人传说，面对可能毁灭王国的阴谋。",
+          "notes": "采用官方硬件目录1995-08-11；旧系列页镜像记7月21日，保留日期异文。镜像中的资料不作为后发移植已核证据。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "官方旧页镜像说明连按提升移动速度及魔法、使用装备与组合物品探索。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://backup.segakore.fr/shining-world.jp/game/series2.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-shining-wisdom-c-original",
+              "workId": "sega-shining-wisdom",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995-08-11原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "evidenceReleaseIds": [
+                "sega-shining-wisdom-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-shining-wisdom-v-original",
+              "workId": "sega-shining-wisdom",
+              "year": 1995,
+              "platform": "Saturn",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1995-08-11原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "contentVersionId": "sega-shining-wisdom-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-sf3-1",
+          "title": "シャイニング・フォースIII シナリオ1 王都の巨神",
+          "originalTitle": "シャイニング・フォースIII シナリオ1 王都の巨神",
+          "chineseTitle": "光明力量III：王都巨神",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1997,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "シンビオス"
+          ],
+          "charactersSource": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "synopsis": "共和国青年辛比奥斯护送和平会议使团，却卷入帝国与共和国的冲突及教团阴谋。",
+          "notes": "以官方旧系列页镜像和SEGA硬件目录交叉核对；镜像标题“邪神官”有异文，采用产品名“邪神宮”。资料赠送盘不另算第四部故事。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "官方旧系列页与原作玩法说明支持单位部署和指令战斗；三部各自发行、各有剧情，存档联动不使其成为同一内容的三个平台。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://backup.segakore.fr/shining-world.jp/game/series2.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-sf3-1-c-original",
+              "workId": "sega-sf3-1",
+              "label": "原作／首批内容",
+              "firstYear": 1997,
+              "basis": "original",
+              "evidence": "1997-12-11原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "evidenceReleaseIds": [
+                "sega-sf3-1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-sf3-1-v-original",
+              "workId": "sega-sf3-1",
+              "year": 1997,
+              "platform": "Saturn",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1997-12-11原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "contentVersionId": "sega-sf3-1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-sf3-2",
+          "title": "シャイニング・フォースIII シナリオ2 狙われた神子",
+          "originalTitle": "シャイニング・フォースIII シナリオ2 狙われた神子",
+          "chineseTitle": "光明力量III：被狙击的神子",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "メディオン"
+          ],
+          "charactersSource": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "synopsis": "帝国王子梅迪恩从另一阵营追寻和平会议背后的真相，经历与前作并行而不同的旅程。",
+          "notes": "以官方旧系列页镜像和SEGA硬件目录交叉核对；镜像标题“邪神官”有异文，采用产品名“邪神宮”。资料赠送盘不另算第四部故事。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "官方旧系列页与原作玩法说明支持单位部署和指令战斗；三部各自发行、各有剧情，存档联动不使其成为同一内容的三个平台。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://backup.segakore.fr/shining-world.jp/game/series2.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-sf3-2-c-original",
+              "workId": "sega-sf3-2",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "1998-04-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "evidenceReleaseIds": [
+                "sega-sf3-2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-sf3-2-v-original",
+              "workId": "sega-sf3-2",
+              "year": 1998,
+              "platform": "Saturn",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1998-04-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "contentVersionId": "sega-sf3-2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-sf3-3",
+          "title": "シャイニング・フォースIII シナリオ3 氷壁の邪神宮",
+          "originalTitle": "シャイニング・フォースIII シナリオ3 氷壁の邪神宮",
+          "chineseTitle": "光明力量III：冰壁邪神宫",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1998,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "ジュリアン"
+          ],
+          "charactersSource": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "synopsis": "佣兵朱利安发现操纵教团的力量，联合此前两支军势迎向最终战斗。",
+          "notes": "以官方旧系列页镜像和SEGA硬件目录交叉核对；镜像标题“邪神官”有异文，采用产品名“邪神宮”。资料赠送盘不另算第四部故事。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "官方旧系列页与原作玩法说明支持单位部署和指令战斗；三部各自发行、各有剧情，存档联动不使其成为同一内容的三个平台。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://backup.segakore.fr/shining-world.jp/game/series2.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-sf3-3-c-original",
+              "workId": "sega-sf3-3",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "1998-09-23原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "evidenceReleaseIds": [
+                "sega-sf3-3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-sf3-3-v-original",
+              "workId": "sega-sf3-3",
+              "year": 1998,
+              "platform": "Saturn",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1998-09-23原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/segasaturn/software.html",
+              "contentVersionId": "sega-sf3-3-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-arcadia",
+          "title": "エターナルアルカディア",
+          "originalTitle": "エターナルアルカディア",
+          "chineseTitle": "永恒的阿卡迪亚",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2000,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "ヴァイス",
+            "アイカ",
+            "ファイナ"
+          ],
+          "charactersSource": "https://game.watch.impress.co.jp/docs/20030210/ea.htm",
+          "synopsis": "空贼少年维斯与艾卡、菲娜在浮空岛之间航行，卷入古代力量与帝国扩张的争夺。",
+          "notes": "@barai与通常版共用原作，不按付费解锁方式另建游戏。Legends具体追加内容后续逐项核，不补普通移植。",
+          "source": "https://game.watch.impress.co.jp/docs/20030210/ea.htm",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令",
+            "战术策略"
+          ],
+          "interactionNote": "队伍指令战斗与舰船战斗分别存在；不将空中航海题材直接写成实时驾驶。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://game.watch.impress.co.jp/docs/20030210/ea.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-arcadia-c-original",
+              "workId": "sega-arcadia",
+              "label": "原作／首批内容",
+              "firstYear": 2000,
+              "basis": "original",
+              "evidence": "2000-10-05原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "evidenceReleaseIds": [
+                "sega-arcadia-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-arcadia-v-original",
+              "workId": "sega-arcadia",
+              "year": 2000,
+              "platform": "Dreamcast",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2000-10-05原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "contentVersionId": "sega-arcadia-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-pso",
+          "title": "ファンタシースターオンライン",
+          "originalTitle": "ファンタシースターオンライン",
+          "chineseTitle": "梦幻之星Online",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2000,
+          "category": "动作角色扮演",
+          "subcategory": "动作角色扮演",
+          "genre": "动作角色扮演／剧情关联",
+          "characters": [
+            "猎人（玩家角色）",
+            "リコ"
+          ],
+          "charactersSource": "https://phantasystar.sega.jp/20th/history/",
+          "synopsis": "先锋移民船的猎人降落拉古奥尔，循着失踪调查者留下的资料，查明先遣殖民地的遭遇。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://phantasystar.sega.jp/20th/history/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "官方历史说明网络队伍探索与实时动作战斗；在线会话和角色命名不等于单机解析器冒险。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://phantasystar.sega.jp/20th/history/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-pso-c-original",
+              "workId": "sega-pso",
+              "label": "原作／首批内容",
+              "firstYear": 2000,
+              "basis": "original",
+              "evidence": "2000-12-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "evidenceReleaseIds": [
+                "sega-pso-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-pso-v-original",
+              "workId": "sega-pso",
+              "year": 2000,
+              "platform": "Dreamcast",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2000-12-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "contentVersionId": "sega-pso-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-rentahero",
+          "title": "レンタヒーロー",
+          "originalTitle": "レンタヒーロー",
+          "chineseTitle": "租借英雄",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "动作角色扮演",
+          "subcategory": "动作角色扮演",
+          "genre": "动作角色扮演／剧情关联",
+          "characters": [
+            "租借装甲的主人公"
+          ],
+          "charactersSource": "https://vc.sega.jp/vc_rentahero/",
+          "synopsis": "主角意外租得强化装甲，为支付租金接受居民委托，并逐渐卷入城市背后的危机。",
+          "notes": "2000 No.1沿用基本故事并重新制作；在附录说明内容关系，未仅据“重制”再造独立作品。",
+          "source": "https://vc.sega.jp/vc_rentahero/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "资源经营"
+          ],
+          "interactionNote": "官方介绍城镇探索、即时战斗及装甲租费管理；不把公司名称SECA当作现实SEGA法律关系。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://vc.sega.jp/vc_rentahero/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-rentahero-c-original",
+              "workId": "sega-rentahero",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991-09-20原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_rentahero/",
+              "evidenceReleaseIds": [
+                "sega-rentahero-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-rentahero-v-original",
+              "workId": "sega-rentahero",
+              "year": 1991,
+              "platform": "Mega Drive",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1991-09-20原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://vc.sega.jp/vc_rentahero/",
+              "contentVersionId": "sega-rentahero-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-valkyria1",
+          "title": "戦場のヴァルキュリア",
+          "originalTitle": "戦場のヴァルキュリア",
+          "chineseTitle": "战场女武神",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2008,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "ウェルキン・ギュンター",
+            "アリシア"
+          ],
+          "charactersSource": "https://portal.valkyria.jp/vc1/ps3/",
+          "synopsis": "威尔金率领第七小队保卫被帝国侵略的加利亚，在战火中面对族群歧视与古代力量。",
+          "notes": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。",
+          "source": "https://portal.valkyria.jp/vc1/ps3/",
+          "interactionModes": [
+            "战术策略",
+            "直接移动",
+            "瞄准射击"
+          ],
+          "interactionNote": "官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://portal.valkyria.jp/vc1/ps3/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-valkyria1-c-original",
+              "workId": "sega-valkyria1",
+              "label": "原作／首批内容",
+              "firstYear": 2008,
+              "basis": "original",
+              "evidence": "2008-04-24原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc1/ps3/",
+              "evidenceReleaseIds": [
+                "sega-valkyria1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-valkyria1-v-original",
+              "workId": "sega-valkyria1",
+              "year": 2008,
+              "platform": "PlayStation 3",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2008-04-24原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc1/ps3/",
+              "contentVersionId": "sega-valkyria1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-valkyria2",
+          "title": "戦場のヴァルキュリア2 ガリア王立士官学校",
+          "originalTitle": "戦場のヴァルキュリア2 ガリア王立士官学校",
+          "chineseTitle": "战场女武神2：加利亚王立士官学校",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2010,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "アバン"
+          ],
+          "charactersSource": "https://portal.valkyria.jp/vc2/",
+          "synopsis": "阿邦与士官学校同学一面学习，一面在加利亚内战中承担越来越沉重的战斗。",
+          "notes": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。",
+          "source": "https://portal.valkyria.jp/vc2/",
+          "interactionModes": [
+            "战术策略",
+            "直接移动",
+            "瞄准射击"
+          ],
+          "interactionNote": "官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://portal.valkyria.jp/vc2/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-valkyria2-c-original",
+              "workId": "sega-valkyria2",
+              "label": "原作／首批内容",
+              "firstYear": 2010,
+              "basis": "original",
+              "evidence": "2010-01-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc2/",
+              "evidenceReleaseIds": [
+                "sega-valkyria2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-valkyria2-v-original",
+              "workId": "sega-valkyria2",
+              "year": 2010,
+              "platform": "PSP",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2010-01-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc2/",
+              "contentVersionId": "sega-valkyria2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-valkyria3",
+          "title": "戦場のヴァルキュリア3",
+          "originalTitle": "戦場のヴァルキュリア3",
+          "chineseTitle": "战场女武神3",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2011,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "クルト・アーヴィング"
+          ],
+          "charactersSource": "https://portal.valkyria.jp/vc3/",
+          "synopsis": "被诬陷的军官克鲁特进入不许使用姓名的惩罚部队，试图重建队伍并夺回自己的身份。",
+          "notes": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。",
+          "source": "https://portal.valkyria.jp/vc3/",
+          "interactionModes": [
+            "战术策略",
+            "直接移动",
+            "瞄准射击"
+          ],
+          "interactionNote": "官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://portal.valkyria.jp/vc3/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-valkyria3-c-original",
+              "workId": "sega-valkyria3",
+              "label": "原作／首批内容",
+              "firstYear": 2011,
+              "basis": "original",
+              "evidence": "2011-01-27原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc3/",
+              "evidenceReleaseIds": [
+                "sega-valkyria3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-valkyria3-v-original",
+              "workId": "sega-valkyria3",
+              "year": 2011,
+              "platform": "PSP",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2011-01-27原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc3/",
+              "contentVersionId": "sega-valkyria3-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-valkyria4",
+          "title": "戦場のヴァルキュリア4",
+          "originalTitle": "戦場のヴァルキュリア4",
+          "chineseTitle": "战场女武神4",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2018,
+          "category": "策略角色扮演",
+          "subcategory": "策略角色扮演",
+          "genre": "策略角色扮演／剧情关联",
+          "characters": [
+            "クロード・ウォレス",
+            "ラズ",
+            "レイリィ"
+          ],
+          "charactersSource": "https://portal.valkyria.jp/vc4/about/",
+          "synopsis": "克劳德率领联邦E小队参加直取帝国首都的作战，在严寒与牺牲中守护同伴的约定。",
+          "notes": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。",
+          "source": "https://portal.valkyria.jp/vc4/about/",
+          "interactionModes": [
+            "战术策略",
+            "直接移动",
+            "瞄准射击"
+          ],
+          "interactionNote": "官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://portal.valkyria.jp/vc4/about/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-valkyria4-c-original",
+              "workId": "sega-valkyria4",
+              "label": "原作／首批内容",
+              "firstYear": 2018,
+              "basis": "original",
+              "evidence": "2018-03-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc4/about/",
+              "evidenceReleaseIds": [
+                "sega-valkyria4-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-valkyria4-v-original",
+              "workId": "sega-valkyria4",
+              "year": 2018,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2018-03-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://portal.valkyria.jp/vc4/about/",
+              "contentVersionId": "sega-valkyria4-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-shenmue1",
+          "title": "シェンムー 一章 横須賀",
+          "originalTitle": "シェンムー 一章 横須賀",
+          "chineseTitle": "莎木：一章横须贺",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "芭月涼",
+            "藍帝"
+          ],
+          "charactersSource": "https://shenmue1-2.sega.jp/",
+          "synopsis": "芭月凉为查明父亲被杀的真相，在横须贺的日常生活与地下网络中搜集线索。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://shenmue1-2.sega.jp/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "限时反应"
+          ],
+          "interactionNote": "官网明确自由空间活动、格斗与QTE；不是传统静态菜单视觉小说。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://shenmue1-2.sega.jp/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-shenmue1-c-original",
+              "workId": "sega-shenmue1",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "1999-12-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "evidenceReleaseIds": [
+                "sega-shenmue1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-shenmue1-v-original",
+              "workId": "sega-shenmue1",
+              "year": 1999,
+              "platform": "Dreamcast",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1999-12-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "contentVersionId": "sega-shenmue1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-shenmue2",
+          "title": "シェンムーII",
+          "originalTitle": "シェンムーII",
+          "chineseTitle": "莎木II",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2001,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "芭月涼",
+            "レン",
+            "シェンファ"
+          ],
+          "charactersSource": "https://shenmue1-2.sega.jp/",
+          "synopsis": "凉前往香港和九龙延续调查，在新伙伴帮助下接近镜子与父亲过往的秘密。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://shenmue1-2.sega.jp/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "限时反应"
+          ],
+          "interactionNote": "官网区分两作并介绍探索、格斗与QTE；2018合集不另建第三部作品。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://shenmue1-2.sega.jp/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-shenmue2-c-original",
+              "workId": "sega-shenmue2",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001-09-06原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "evidenceReleaseIds": [
+                "sega-shenmue2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-shenmue2-v-original",
+              "workId": "sega-shenmue2",
+              "year": 2001,
+              "platform": "Dreamcast",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2001-09-06原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "contentVersionId": "sega-shenmue2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-blue6",
+          "title": "青の6号 歳月不待人 -TIME AND TIDE-",
+          "originalTitle": "青の6号 歳月不待人 -TIME AND TIDE-",
+          "chineseTitle": "青之六号：岁月不待人",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2000,
+          "category": "探索冒险",
+          "subcategory": "探索冒险",
+          "genre": "探索冒险／剧情关联",
+          "characters": [
+            "速水鉄"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/4731.html",
+          "synopsis": "速水铁在被海水吞没的世界从事打捞与探索，这段原创故事讲述他加入青之六号之前的经历。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4731.html",
+          "interactionModes": [
+            "驾驶操控",
+            "资源经营"
+          ],
+          "interactionNote": "资料说明潜航打捞、补给及装备管理；保留潜艇探索玩法，不将OVA影片本身记为游戏内容。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/4731.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-blue6-c-original",
+              "workId": "sega-blue6",
+              "label": "原作／首批内容",
+              "firstYear": 2000,
+              "basis": "original",
+              "evidence": "2000-12-07原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "evidenceReleaseIds": [
+                "sega-blue6-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-blue6-v-original",
+              "workId": "sega-blue6",
+              "year": 2000,
+              "platform": "Dreamcast",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2000-12-07原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "contentVersionId": "sega-blue6-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-segagaga",
+          "title": "セガガガ",
+          "originalTitle": "セガガガ",
+          "chineseTitle": "世嘉嘎嘎",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2001,
+          "category": "经营角色扮演",
+          "subcategory": "经营角色扮演",
+          "genre": "经营角色扮演／剧情关联",
+          "characters": [
+            "鈴木タロウ"
+          ],
+          "charactersSource": "https://w.atwiki.jp/gcmatome/pages/2185.html",
+          "synopsis": "少年进入濒临失败的游戏公司，在开发现场招募人员、制作游戏，力图重建公司的市场地位。",
+          "notes": "3月D-Direct原作与5月一般零售是渠道变化，不新建第二内容；游戏公司戏仿不是现实沿革证据。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/2185.html",
+          "interactionModes": [
+            "资源经营",
+            "战斗指令"
+          ],
+          "interactionNote": "通过RPG式说服战招募开发者，再管理制作与销售；模拟经营与角色冒险并存。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/2185.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-segagaga-c-original",
+              "workId": "sega-segagaga",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001-03-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "evidenceReleaseIds": [
+                "sega-segagaga-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-segagaga-v-original",
+              "workId": "sega-segagaga",
+              "year": 2001,
+              "platform": "Dreamcast",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2001-03-29原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
+              "contentVersionId": "sega-segagaga-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-switch",
+          "title": "SWITCH",
+          "originalTitle": "SWITCH",
+          "chineseTitle": "开关",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "益智冒险",
+          "subcategory": "益智冒险",
+          "genre": "益智冒险／剧情关联",
+          "characters": [
+            "スラップ",
+            "スティック"
+          ],
+          "charactersSource": "https://advgamer.com/switch-mega-cd/",
+          "synopsis": "斯拉普与狗伙伴穿过开关控制的荒诞世界，尝试恢复失常的电脑系统。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://advgamer.com/switch-mega-cd/",
+          "interactionModes": [
+            "点击调查",
+            "谜题操作"
+          ],
+          "interactionNote": "攻略说明点击场景开关触发笑料与通路；保留试错谜题核心，不因官方ADV标签就纳入四类叙事主库。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://advgamer.com/switch-mega-cd/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-switch-c-original",
+              "workId": "sega-switch",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993-04-23原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/mega-cd/software.html",
+              "evidenceReleaseIds": [
+                "sega-switch-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-switch-v-original",
+              "workId": "sega-switch",
+              "year": 1993,
+              "platform": "Mega-CD",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "1993-04-23原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/history/hard/mega-cd/software.html",
+              "contentVersionId": "sega-switch-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-yakuza1",
+          "title": "龍が如く",
+          "originalTitle": "龍が如く",
+          "chineseTitle": "如龙",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2005,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "桐生一馬",
+            "澤村遥"
+          ],
+          "charactersSource": "https://ryu-ga-gotoku.com/one/story.html",
+          "synopsis": "桐生出狱后回到神室町，为保护少女遥卷入百亿日元失踪案，并重新面对昔日的亲友。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://ryu-ga-gotoku.com/one/story.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "街区探索、交涉与可操作格斗组成剧情动作冒险；系列名不代替每部作品身份。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ryu-ga-gotoku.com/one/story.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-yakuza1-c-original",
+              "workId": "sega-yakuza1",
+              "label": "原作／首批内容",
+              "firstYear": 2005,
+              "basis": "original",
+              "evidence": "2005-12-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/story/one/",
+              "evidenceReleaseIds": [
+                "sega-yakuza1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-yakuza1-v-original",
+              "workId": "sega-yakuza1",
+              "year": 2005,
+              "platform": "PlayStation 2",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2005-12-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/story/one/",
+              "contentVersionId": "sega-yakuza1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-yakuza3",
+          "title": "龍が如く3",
+          "originalTitle": "龍が如く3",
+          "chineseTitle": "如龙3",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2009,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "桐生一馬",
+            "澤村遥",
+            "峯義孝"
+          ],
+          "charactersSource": "https://www.sega.jp/game/detail/ryu-ga-gotoku-three/",
+          "synopsis": "桐生在冲绳经营孤儿院，却因土地开发与东城会争端再次面对政治和黑道交织的阴谋。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://www.sega.jp/game/detail/ryu-ga-gotoku-three/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "官网明确街区活动与战斗；2026极3的新增剧情另作同作品内容。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.sega.jp/game/detail/ryu-ga-gotoku-three/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-yakuza3-c-original",
+              "workId": "sega-yakuza3",
+              "label": "原作／首批内容",
+              "firstYear": 2009,
+              "basis": "original",
+              "evidence": "2009-02-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/game/detail/ryu-ga-gotoku-three/",
+              "evidenceReleaseIds": [
+                "sega-yakuza3-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "sega-yakuza3-c-kiwami3",
+              "workId": "sega-yakuza3",
+              "label": "极3／新增戏剧场景与内容",
+              "firstYear": 2026,
+              "basis": "added",
+              "comparedTo": "sega-yakuza3-c-original",
+              "evidence": "相较2009原作，加入深化人物的戏剧场景、重新制作的场景与战斗内容；Dark Ties作为同捆原创外传另有作品ID，未混入本内容重复计数。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "evidenceReleaseIds": [
+                "sega-yakuza3-v-kiwami3-1",
+                "sega-yakuza3-v-kiwami3-2",
+                "sega-yakuza3-v-kiwami3-3",
+                "sega-yakuza3-v-kiwami3-4",
+                "sega-yakuza3-v-kiwami3-5"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较2009原作，加入深化人物的戏剧场景、重新制作的场景与战斗内容；Dark Ties作为同捆原创外传另有作品ID，未混入本内容重复计数。",
+                  "source": "https://ryu-ga-gotoku.com/kiwami3/"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-yakuza3-v-original",
+              "workId": "sega-yakuza3",
+              "year": 2009,
+              "platform": "PlayStation 3",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2009-02-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/game/detail/ryu-ga-gotoku-three/",
+              "contentVersionId": "sega-yakuza3-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza3-v-kiwami3-1",
+              "workId": "sega-yakuza3",
+              "year": 2026,
+              "platform": "PlayStation 4",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "极3／新增戏剧场景与内容",
+              "voice": "有（部分）",
+              "differences": "2026-02-12；相较2009原作，加入深化人物的戏剧场景、重新制作的场景与战斗内容；Dark Ties作为同捆原创外传另有作品ID，未混入本内容重复计数。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-yakuza3-c-kiwami3",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza3-v-kiwami3-2",
+              "workId": "sega-yakuza3",
+              "year": 2026,
+              "platform": "PlayStation 5",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "极3／新增戏剧场景与内容",
+              "voice": "有（部分）",
+              "differences": "2026-02-12；相较2009原作，加入深化人物的戏剧场景、重新制作的场景与战斗内容；Dark Ties作为同捆原创外传另有作品ID，未混入本内容重复计数。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-yakuza3-c-kiwami3",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza3-v-kiwami3-3",
+              "workId": "sega-yakuza3",
+              "year": 2026,
+              "platform": "Xbox Series X|S",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "极3／新增戏剧场景与内容",
+              "voice": "有（部分）",
+              "differences": "2026-02-12；相较2009原作，加入深化人物的戏剧场景、重新制作的场景与战斗内容；Dark Ties作为同捆原创外传另有作品ID，未混入本内容重复计数。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-yakuza3-c-kiwami3",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza3-v-kiwami3-4",
+              "workId": "sega-yakuza3",
+              "year": 2026,
+              "platform": "Nintendo Switch 2",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "极3／新增戏剧场景与内容",
+              "voice": "有（部分）",
+              "differences": "2026-02-12；相较2009原作，加入深化人物的戏剧场景、重新制作的场景与战斗内容；Dark Ties作为同捆原创外传另有作品ID，未混入本内容重复计数。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-yakuza3-c-kiwami3",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza3-v-kiwami3-5",
+              "workId": "sega-yakuza3",
+              "year": 2026,
+              "platform": "Windows（Steam）",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "极3／新增戏剧场景与内容",
+              "voice": "有（部分）",
+              "differences": "2026-02-12；相较2009原作，加入深化人物的戏剧场景、重新制作的场景与战斗内容；Dark Ties作为同捆原创外传另有作品ID，未混入本内容重复计数。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-yakuza3-c-kiwami3",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-yakuza7",
+          "title": "龍が如く7 光と闇の行方",
+          "originalTitle": "龍が如く7 光と闇の行方",
+          "chineseTitle": "如龙7：光与暗的去向",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2020,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "春日一番",
+            "ナンバ",
+            "足立宏一"
+          ],
+          "charactersSource": "https://ryu-ga-gotoku.com/seven/",
+          "synopsis": "春日一番出狱后跌入横滨社会的底层，与伙伴一同追查背叛并争取重新立足。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://ryu-ga-gotoku.com/seven/",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "官方明确“Live Command RPG”战斗，区别于前作即时格斗；后发International未自动追加普通平台。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ryu-ga-gotoku.com/seven/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-yakuza7-c-original",
+              "workId": "sega-yakuza7",
+              "label": "原作／首批内容",
+              "firstYear": 2020,
+              "basis": "original",
+              "evidence": "2020-01-16原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/seven/",
+              "evidenceReleaseIds": [
+                "sega-yakuza7-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-yakuza7-v-original",
+              "workId": "sega-yakuza7",
+              "year": 2020,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2020-01-16原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/seven/",
+              "contentVersionId": "sega-yakuza7-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-yakuza7gaiden",
+          "title": "龍が如く7外伝 名を消した男",
+          "originalTitle": "龍が如く7外伝 名を消した男",
+          "chineseTitle": "如龙7外传：无名之龙",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2023,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "桐生一馬",
+            "赤目"
+          ],
+          "charactersSource": "https://ryu-ga-gotoku.com/gaiden/",
+          "synopsis": "隐去姓名的桐生为大道寺一派执行任务，在大阪遭遇仍牵动昔日身份的冲突。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://ryu-ga-gotoku.com/gaiden/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "官网区分应龙和特工战斗风格，直接探索街区与完成委托；不是7的回合制扩展包。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ryu-ga-gotoku.com/gaiden/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-yakuza7gaiden-c-original",
+              "workId": "sega-yakuza7gaiden",
+              "label": "原作／首批内容",
+              "firstYear": 2023,
+              "basis": "original",
+              "evidence": "2023-11-09原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/gaiden/",
+              "evidenceReleaseIds": [
+                "sega-yakuza7gaiden-v-original-1",
+                "sega-yakuza7gaiden-v-original-2",
+                "sega-yakuza7gaiden-v-original-3",
+                "sega-yakuza7gaiden-v-original-4",
+                "sega-yakuza7gaiden-v-original-5"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-yakuza7gaiden-v-original-1",
+              "workId": "sega-yakuza7gaiden",
+              "year": 2023,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2023-11-09原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/gaiden/",
+              "contentVersionId": "sega-yakuza7gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza7gaiden-v-original-2",
+              "workId": "sega-yakuza7gaiden",
+              "year": 2023,
+              "platform": "PlayStation 5",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2023-11-09原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/gaiden/",
+              "contentVersionId": "sega-yakuza7gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza7gaiden-v-original-3",
+              "workId": "sega-yakuza7gaiden",
+              "year": 2023,
+              "platform": "Xbox One",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2023-11-09原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/gaiden/",
+              "contentVersionId": "sega-yakuza7gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza7gaiden-v-original-4",
+              "workId": "sega-yakuza7gaiden",
+              "year": 2023,
+              "platform": "Xbox Series X|S",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2023-11-09原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/gaiden/",
+              "contentVersionId": "sega-yakuza7gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza7gaiden-v-original-5",
+              "workId": "sega-yakuza7gaiden",
+              "year": 2023,
+              "platform": "Windows（Steam）",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2023-11-09原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/gaiden/",
+              "contentVersionId": "sega-yakuza7gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-yakuza8",
+          "title": "龍が如く8",
+          "originalTitle": "龍が如く8",
+          "chineseTitle": "如龙8",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2024,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "角色扮演／剧情关联",
+          "characters": [
+            "春日一番",
+            "桐生一馬"
+          ],
+          "charactersSource": "https://ryu-ga-gotoku.com/eight/",
+          "synopsis": "春日前往夏威夷寻找母亲，和面对人生最后战斗的桐生共同经历一段跨越日本与夏威夷的旅程。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://ryu-ga-gotoku.com/eight/",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "官网介绍可调整站位的Live Command战斗，保留队伍RPG类型；双主角不等于可任意切换视角的阅读系统。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ryu-ga-gotoku.com/eight/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-yakuza8-c-original",
+              "workId": "sega-yakuza8",
+              "label": "原作／首批内容",
+              "firstYear": 2024,
+              "basis": "original",
+              "evidence": "2024-01-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/eight/",
+              "evidenceReleaseIds": [
+                "sega-yakuza8-v-original-1",
+                "sega-yakuza8-v-original-2",
+                "sega-yakuza8-v-original-3",
+                "sega-yakuza8-v-original-4",
+                "sega-yakuza8-v-original-5"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-yakuza8-v-original-1",
+              "workId": "sega-yakuza8",
+              "year": 2024,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2024-01-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/eight/",
+              "contentVersionId": "sega-yakuza8-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8-v-original-2",
+              "workId": "sega-yakuza8",
+              "year": 2024,
+              "platform": "PlayStation 5",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2024-01-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/eight/",
+              "contentVersionId": "sega-yakuza8-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8-v-original-3",
+              "workId": "sega-yakuza8",
+              "year": 2024,
+              "platform": "Xbox One",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2024-01-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/eight/",
+              "contentVersionId": "sega-yakuza8-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8-v-original-4",
+              "workId": "sega-yakuza8",
+              "year": 2024,
+              "platform": "Xbox Series X|S",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2024-01-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/eight/",
+              "contentVersionId": "sega-yakuza8-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8-v-original-5",
+              "workId": "sega-yakuza8",
+              "year": 2024,
+              "platform": "Windows（Steam）",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2024-01-26原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/eight/",
+              "contentVersionId": "sega-yakuza8-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-yakuza8gaiden",
+          "title": "龍が如く8外伝 Pirates in Hawaii",
+          "originalTitle": "龍が如く8外伝 Pirates in Hawaii",
+          "chineseTitle": "如龙8外传：夏威夷海盗",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2025,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "真島吾朗",
+            "ノア"
+          ],
+          "charactersSource": "https://ryu-ga-gotoku.com/pirate/",
+          "synopsis": "失忆的真岛吾朗在夏威夷海域组建船员，作为海盗寻找自己的过去并卷入宝藏争夺。",
+          "notes": "实际日期采用官方更新后的2025-02-21，不采用初期公布的2月28日。",
+          "source": "https://ryu-ga-gotoku.com/pirate/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "驾驶操控"
+          ],
+          "interactionNote": "官网展示狂犬与海盗动作风格、船只航行和海战；剧情外传是独立游戏，不与如龙8同作合并。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ryu-ga-gotoku.com/pirate/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-yakuza8gaiden-c-original",
+              "workId": "sega-yakuza8gaiden",
+              "label": "原作／首批内容",
+              "firstYear": 2025,
+              "basis": "original",
+              "evidence": "2025-02-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/pirate/",
+              "evidenceReleaseIds": [
+                "sega-yakuza8gaiden-v-original-1",
+                "sega-yakuza8gaiden-v-original-2",
+                "sega-yakuza8gaiden-v-original-3",
+                "sega-yakuza8gaiden-v-original-4",
+                "sega-yakuza8gaiden-v-original-5"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-yakuza8gaiden-v-original-1",
+              "workId": "sega-yakuza8gaiden",
+              "year": 2025,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2025-02-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/pirate/",
+              "contentVersionId": "sega-yakuza8gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8gaiden-v-original-2",
+              "workId": "sega-yakuza8gaiden",
+              "year": 2025,
+              "platform": "PlayStation 5",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2025-02-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/pirate/",
+              "contentVersionId": "sega-yakuza8gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8gaiden-v-original-3",
+              "workId": "sega-yakuza8gaiden",
+              "year": 2025,
+              "platform": "Xbox One",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2025-02-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/pirate/",
+              "contentVersionId": "sega-yakuza8gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8gaiden-v-original-4",
+              "workId": "sega-yakuza8gaiden",
+              "year": 2025,
+              "platform": "Xbox Series X|S",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2025-02-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/pirate/",
+              "contentVersionId": "sega-yakuza8gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-yakuza8gaiden-v-original-5",
+              "workId": "sega-yakuza8gaiden",
+              "year": 2025,
+              "platform": "Windows（Steam）",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2025-02-21原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/pirate/",
+              "contentVersionId": "sega-yakuza8gaiden-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-judgeeyes",
+          "title": "JUDGE EYES：死神の遺言",
+          "originalTitle": "JUDGE EYES：死神の遺言",
+          "chineseTitle": "审判之眼：死神的遗言",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2018,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "八神隆之",
+            "海藤正治"
+          ],
+          "charactersSource": "https://ryu-ga-gotoku.com/judgeeyes/",
+          "synopsis": "前律师八神在神室町调查连环杀人案，逐步揭开司法、医学与旧案之间的联系。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://ryu-ga-gotoku.com/judgeeyes/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "点击调查"
+          ],
+          "interactionNote": "官网说明实地调查、证据与格斗；点击调查只概述观察证据模块，未穷尽小游戏。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ryu-ga-gotoku.com/judgeeyes/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-judgeeyes-c-original",
+              "workId": "sega-judgeeyes",
+              "label": "原作／首批内容",
+              "firstYear": 2018,
+              "basis": "original",
+              "evidence": "2018-12-13原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/topics/detail/190522_1/",
+              "evidenceReleaseIds": [
+                "sega-judgeeyes-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "sega-judgeeyes-c-cast2019",
+              "workId": "sega-judgeeyes",
+              "label": "2019角色模型与新录音替换",
+              "firstYear": 2019,
+              "basis": "added",
+              "comparedTo": "sega-judgeeyes-c-original",
+              "evidence": "羽村京平的角色模型及音声重新替换；官方明确其他故事不变。以具体新模型与录音为增量依据，不以廉价版名称为依据。",
+              "source": "https://www.sega.jp/topics/detail/190522_1/",
+              "evidenceReleaseIds": [
+                "sega-judgeeyes-v-cast2019-1"
+              ],
+              "addedContent": [
+                {
+                  "description": "羽村京平的角色模型及音声重新替换；官方明确其他故事不变。以具体新模型与录音为增量依据，不以廉价版名称为依据。",
+                  "source": "https://www.sega.jp/topics/detail/190522_1/"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-judgeeyes-v-original",
+              "workId": "sega-judgeeyes",
+              "year": 2018,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2018-12-13原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/topics/detail/190522_1/",
+              "contentVersionId": "sega-judgeeyes-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-judgeeyes-v-cast2019-1",
+              "workId": "sega-judgeeyes",
+              "year": 2019,
+              "platform": "PlayStation 4",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "2019角色模型与新录音替换",
+              "voice": "有（部分）",
+              "differences": "2019-07-18；羽村京平的角色模型及音声重新替换；官方明确其他故事不变。以具体新模型与录音为增量依据，不以廉价版名称为依据。",
+              "source": "https://www.sega.jp/topics/detail/190522_1/",
+              "contentVersionId": "sega-judgeeyes-c-cast2019",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-lostjudgment",
+          "title": "LOST JUDGMENT：裁かれざる記憶",
+          "originalTitle": "LOST JUDGMENT：裁かれざる記憶",
+          "chineseTitle": "审判之逝：湮灭的记忆",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2021,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "八神隆之",
+            "海藤正治"
+          ],
+          "charactersSource": "https://www.sega.jp/game/detail/lost-judgment/",
+          "synopsis": "八神前往横滨，围绕校园欺凌与复仇案件调查真相，同时面对法律和正义的冲突。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://www.sega.jp/game/detail/lost-judgment/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "点击调查"
+          ],
+          "interactionNote": "官方说明侦探调查动作与格斗，且2021首批平台不含后发2022 Steam版。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.sega.jp/game/detail/lost-judgment/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-lostjudgment-c-original",
+              "workId": "sega-lostjudgment",
+              "label": "原作／首批内容",
+              "firstYear": 2021,
+              "basis": "original",
+              "evidence": "2021-09-24原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/game/detail/lost-judgment/",
+              "evidenceReleaseIds": [
+                "sega-lostjudgment-v-original-1",
+                "sega-lostjudgment-v-original-2",
+                "sega-lostjudgment-v-original-3",
+                "sega-lostjudgment-v-original-4"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "sega-lostjudgment-c-kaito",
+              "workId": "sega-lostjudgment",
+              "label": "海藤正治的事件簿DLC",
+              "firstYear": 2022,
+              "basis": "added",
+              "comparedTo": "sega-lostjudgment-c-original",
+              "evidence": "追加以海藤正治为主角的独立事件故事；依赖本体的剧情DLC记同作新增内容，后发Steam捆绑不重复。",
+              "source": "https://ryu-ga-gotoku.com/info/detail/000026.html",
+              "evidenceReleaseIds": [
+                "sega-lostjudgment-v-kaito-1",
+                "sega-lostjudgment-v-kaito-2",
+                "sega-lostjudgment-v-kaito-3",
+                "sega-lostjudgment-v-kaito-4"
+              ],
+              "addedContent": [
+                {
+                  "description": "追加以海藤正治为主角的独立事件故事；依赖本体的剧情DLC记同作新增内容，后发Steam捆绑不重复。",
+                  "source": "https://ryu-ga-gotoku.com/info/detail/000026.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-lostjudgment-v-original-1",
+              "workId": "sega-lostjudgment",
+              "year": 2021,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2021-09-24原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/game/detail/lost-judgment/",
+              "contentVersionId": "sega-lostjudgment-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-lostjudgment-v-original-2",
+              "workId": "sega-lostjudgment",
+              "year": 2021,
+              "platform": "PlayStation 5",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2021-09-24原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/game/detail/lost-judgment/",
+              "contentVersionId": "sega-lostjudgment-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-lostjudgment-v-original-3",
+              "workId": "sega-lostjudgment",
+              "year": 2021,
+              "platform": "Xbox One",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2021-09-24原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/game/detail/lost-judgment/",
+              "contentVersionId": "sega-lostjudgment-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-lostjudgment-v-original-4",
+              "workId": "sega-lostjudgment",
+              "year": 2021,
+              "platform": "Xbox Series X|S",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2021-09-24原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://www.sega.jp/game/detail/lost-judgment/",
+              "contentVersionId": "sega-lostjudgment-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-lostjudgment-v-kaito-1",
+              "workId": "sega-lostjudgment",
+              "year": 2022,
+              "platform": "PlayStation 4",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "海藤正治的事件簿DLC",
+              "voice": "有（部分）",
+              "differences": "2022-03-28；追加以海藤正治为主角的独立事件故事；依赖本体的剧情DLC记同作新增内容，后发Steam捆绑不重复。",
+              "source": "https://ryu-ga-gotoku.com/info/detail/000026.html",
+              "contentVersionId": "sega-lostjudgment-c-kaito",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-lostjudgment-v-kaito-2",
+              "workId": "sega-lostjudgment",
+              "year": 2022,
+              "platform": "PlayStation 5",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "海藤正治的事件簿DLC",
+              "voice": "有（部分）",
+              "differences": "2022-03-28；追加以海藤正治为主角的独立事件故事；依赖本体的剧情DLC记同作新增内容，后发Steam捆绑不重复。",
+              "source": "https://ryu-ga-gotoku.com/info/detail/000026.html",
+              "contentVersionId": "sega-lostjudgment-c-kaito",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-lostjudgment-v-kaito-3",
+              "workId": "sega-lostjudgment",
+              "year": 2022,
+              "platform": "Xbox One",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "海藤正治的事件簿DLC",
+              "voice": "有（部分）",
+              "differences": "2022-03-28；追加以海藤正治为主角的独立事件故事；依赖本体的剧情DLC记同作新增内容，后发Steam捆绑不重复。",
+              "source": "https://ryu-ga-gotoku.com/info/detail/000026.html",
+              "contentVersionId": "sega-lostjudgment-c-kaito",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-lostjudgment-v-kaito-4",
+              "workId": "sega-lostjudgment",
+              "year": 2022,
+              "platform": "Xbox Series X|S",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "海藤正治的事件簿DLC",
+              "voice": "有（部分）",
+              "differences": "2022-03-28；追加以海藤正治为主角的独立事件故事；依赖本体的剧情DLC记同作新增内容，后发Steam捆绑不重复。",
+              "source": "https://ryu-ga-gotoku.com/info/detail/000026.html",
+              "contentVersionId": "sega-lostjudgment-c-kaito",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-sonic-frontiers",
+          "title": "ソニックフロンティア",
+          "originalTitle": "ソニックフロンティア",
+          "chineseTitle": "索尼克未知边境",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2022,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "ソニック",
+            "エミー",
+            "テイルス"
+          ],
+          "charactersSource": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+          "synopsis": "索尼克与伙伴因混沌翡翠的信号来到星坠群岛，在古代遗迹和电子空间中寻找失散同伴。",
+          "notes": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。",
+          "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "官方开放区域探索结合战斗与岛屿机关；故事存在不改变动作核心。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-sonic-frontiers-c-original",
+              "workId": "sega-sonic-frontiers",
+              "label": "原作／首批内容",
+              "firstYear": 2022,
+              "basis": "original",
+              "evidence": "2022-11-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+              "evidenceReleaseIds": [
+                "sega-sonic-frontiers-v-original-1",
+                "sega-sonic-frontiers-v-original-2",
+                "sega-sonic-frontiers-v-original-3",
+                "sega-sonic-frontiers-v-original-4",
+                "sega-sonic-frontiers-v-original-5",
+                "sega-sonic-frontiers-v-original-6"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "sega-sonic-frontiers-c-finalhorizon",
+              "workId": "sega-sonic-frontiers",
+              "label": "超·完全决战／新故事与可操作角色",
+              "firstYear": 2023,
+              "basis": "added",
+              "comparedTo": "sega-sonic-frontiers-c-original",
+              "evidence": "乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+              "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html",
+              "evidenceReleaseIds": [
+                "sega-sonic-frontiers-v-finalhorizon-1",
+                "sega-sonic-frontiers-v-finalhorizon-2",
+                "sega-sonic-frontiers-v-finalhorizon-3",
+                "sega-sonic-frontiers-v-finalhorizon-4",
+                "sega-sonic-frontiers-v-finalhorizon-5",
+                "sega-sonic-frontiers-v-finalhorizon-6"
+              ],
+              "addedContent": [
+                {
+                  "description": "乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+                  "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-sonic-frontiers-v-original-1",
+              "workId": "sega-sonic-frontiers",
+              "year": 2022,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2022-11-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+              "contentVersionId": "sega-sonic-frontiers-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-original-2",
+              "workId": "sega-sonic-frontiers",
+              "year": 2022,
+              "platform": "PlayStation 5",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2022-11-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+              "contentVersionId": "sega-sonic-frontiers-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-original-3",
+              "workId": "sega-sonic-frontiers",
+              "year": 2022,
+              "platform": "Xbox One",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2022-11-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+              "contentVersionId": "sega-sonic-frontiers-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-original-4",
+              "workId": "sega-sonic-frontiers",
+              "year": 2022,
+              "platform": "Xbox Series X|S",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2022-11-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+              "contentVersionId": "sega-sonic-frontiers-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-original-5",
+              "workId": "sega-sonic-frontiers",
+              "year": 2022,
+              "platform": "Windows（Steam）",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2022-11-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+              "contentVersionId": "sega-sonic-frontiers-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-original-6",
+              "workId": "sega-sonic-frontiers",
+              "year": 2022,
+              "platform": "Nintendo Switch",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2022-11-08原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+              "contentVersionId": "sega-sonic-frontiers-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-finalhorizon-1",
+              "workId": "sega-sonic-frontiers",
+              "year": 2023,
+              "platform": "PlayStation 4",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "超·完全决战／新故事与可操作角色",
+              "voice": "有（部分）",
+              "differences": "2023-09-29；乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+              "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html",
+              "contentVersionId": "sega-sonic-frontiers-c-finalhorizon",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-finalhorizon-2",
+              "workId": "sega-sonic-frontiers",
+              "year": 2023,
+              "platform": "PlayStation 5",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "超·完全决战／新故事与可操作角色",
+              "voice": "有（部分）",
+              "differences": "2023-09-29；乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+              "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html",
+              "contentVersionId": "sega-sonic-frontiers-c-finalhorizon",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-finalhorizon-3",
+              "workId": "sega-sonic-frontiers",
+              "year": 2023,
+              "platform": "Xbox One",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "超·完全决战／新故事与可操作角色",
+              "voice": "有（部分）",
+              "differences": "2023-09-29；乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+              "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html",
+              "contentVersionId": "sega-sonic-frontiers-c-finalhorizon",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-finalhorizon-4",
+              "workId": "sega-sonic-frontiers",
+              "year": 2023,
+              "platform": "Xbox Series X|S",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "超·完全决战／新故事与可操作角色",
+              "voice": "有（部分）",
+              "differences": "2023-09-29；乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+              "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html",
+              "contentVersionId": "sega-sonic-frontiers-c-finalhorizon",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-finalhorizon-5",
+              "workId": "sega-sonic-frontiers",
+              "year": 2023,
+              "platform": "Windows（Steam）",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "超·完全决战／新故事与可操作角色",
+              "voice": "有（部分）",
+              "differences": "2023-09-29；乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+              "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html",
+              "contentVersionId": "sega-sonic-frontiers-c-finalhorizon",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-sonic-frontiers-v-finalhorizon-6",
+              "workId": "sega-sonic-frontiers",
+              "year": 2023,
+              "platform": "Nintendo Switch",
+              "publisher": "SEGA",
+              "publisherCompanies": [
+                "SEGA"
+              ],
+              "kind": "超·完全决战／新故事与可操作角色",
+              "voice": "有（部分）",
+              "differences": "2023-09-29；乌拉诺斯岛追加新故事，艾米、纳克鲁斯和塔尔斯成为可操作角色，并加入新任务与机关；2026 Switch 2整合版不自动算第二次新增。",
+              "source": "https://sonic.sega.jp/SonicFrontiers/information/230929.html",
+              "contentVersionId": "sega-sonic-frontiers-c-finalhorizon",
+              "contentRelation": "added",
+              "contentNote": "有具体新增剧情、角色或新录音／素材；普通移植不另计。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "sega-dark-ties",
+          "title": "龍が如く3外伝 Dark Ties",
+          "originalTitle": "龍が如く3外伝 Dark Ties",
+          "chineseTitle": "如龙3外传：Dark Ties",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [],
+          "firstYear": 2026,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "动作冒险／剧情关联",
+          "characters": [
+            "峯義孝",
+            "神田強",
+            "堂島大吾"
+          ],
+          "charactersSource": "https://ryu-ga-gotoku.com/kiwami3/",
+          "synopsis": "失去公司的峯义孝被黑道之间的羁绊吸引，追随神田进入东城会并逐渐走向权力核心。",
+          "notes": "官方已发布2026-02-12上市公告。原作与极3共用商品包，但此原创外传单独建立作品内容，不再为整包建第三部作品。",
+          "source": "https://ryu-ga-gotoku.com/kiwami3/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "官网区分峯主角的独立故事、格斗与地下战斗模块；和极3同捆不表示同一个原作故事。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://ryu-ga-gotoku.com/kiwami3/"
+          ],
+          "contentVersions": [
+            {
+              "id": "sega-dark-ties-c-original",
+              "workId": "sega-dark-ties",
+              "label": "原作／首批内容",
+              "firstYear": 2026,
+              "basis": "original",
+              "evidence": "2026-02-12原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "evidenceReleaseIds": [
+                "sega-dark-ties-v-original-1",
+                "sega-dark-ties-v-original-2",
+                "sega-dark-ties-v-original-3",
+                "sega-dark-ties-v-original-4",
+                "sega-dark-ties-v-original-5"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "sega-dark-ties-v-original-1",
+              "workId": "sega-dark-ties",
+              "year": 2026,
+              "platform": "PlayStation 4",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2026-02-12原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-dark-ties-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-dark-ties-v-original-2",
+              "workId": "sega-dark-ties",
+              "year": 2026,
+              "platform": "PlayStation 5",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2026-02-12原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-dark-ties-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-dark-ties-v-original-3",
+              "workId": "sega-dark-ties",
+              "year": 2026,
+              "platform": "Xbox Series X|S",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2026-02-12原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-dark-ties-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-dark-ties-v-original-4",
+              "workId": "sega-dark-ties",
+              "year": 2026,
+              "platform": "Nintendo Switch 2",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2026-02-12原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-dark-ties-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "sega-dark-ties-v-original-5",
+              "workId": "sega-dark-ties",
+              "year": 2026,
+              "platform": "Windows（Steam）",
+              "publisher": "セガ",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "独立作品首发",
+              "voice": "未核实",
+              "differences": "2026-02-12原作批次；仅记有来源的首次发行，不把同年其他地区或普通移植自动归入同期。",
+              "source": "https://ryu-ga-gotoku.com/kiwami3/",
+              "contentVersionId": "sega-dark-ties-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／首次已核批次。",
+              "releaseRole": "contentDebut"
+            }
+          ]
         }
       ],
-      "relatedSectionTitle": "人生介入与3D动作冒险",
+      "relatedSectionTitle": "剧情RPG、动作调查与经营冒险",
       "relatedCountLabel": "按主要玩法归类",
-      "relatedIntro": "Roommania系列以生活介入模拟为中心，新樱花大战以3D动作战斗为中心；叙事存在，但主玩法与本轮四类主目录分别说明。",
-      "catalogueEntryCount": 22,
+      "relatedIntro": "保留各作实际战斗、探索和模拟玩法。集团作品只在附录参考，不自动上推为世嘉开发。",
+      "catalogueEntryCount": 67,
       "source": "https://www.sega.jp/history/companyTimeline/",
       "auditTitle": "成立口径、发行角色与内容版本核对",
       "auditSourceLabel": "世嘉官方沿革",
-      "auditLabel": "现19部主库引用、3部跨类型关联；本轮新增两作及初步官方沿革，不宣称穷尽世嘉目录。",
-      "auditNote": "本轮核对范围不等于公司完整产品目录。未知差异不写成已证实同内容，也不以换平台、包装或重制称谓自动新增版本。 2026-10-27续补依据与待核项见data/sega-dossier-expansion-20261027.md；集团关系只在组织页作带年代展示，不自动继承子公司作品或开发职责。",
-      "sectionTitle": "从光盘探索与实拍电影到华击团和原创动画",
+      "auditLabel": "31部主库引用、36部跨类型关联及124行玩法核对项目；同源、影视与集团边界明确标注。",
+      "auditNote": "逐项来源、旧身份保留、日期异文、同捆与新增内容边界见data/sega-catalogue-completion-20261028.md；未宣称已核清全部普通移植与DLC。",
+      "sectionTitle": "从侦探菜单、实拍调查到星际RPG与剧情动作",
       "creativeProfile": {
         "thesis": "编辑观察：这批世嘉发行作品展示了光盘探索、实拍互动电影、动画冒险和恋爱战术混合的不同路径。出版范围依实际角色核对，不能把厂商等同于单一开发团队。",
         "phases": [
@@ -39115,6 +42084,13 @@
             "analysis": "Dreamcast《ラブひな》两部以原创故事、人物关系和命令轮盘推进。第二作增加各角色新故事，同时重收前作奖励篇；新作与旧篇再录分开计数。",
             "basis": "编辑观察",
             "source": "https://game.watch.impress.co.jp/docs/20010207/sega.htm"
+          },
+          {
+            "period": "1987—2026",
+            "heading": "叙事与主要操作分别呈现",
+            "analysis": "洛蕾塔以预设调查命令展开，实拍刑侦不等于自由观看电影；角色RPG与现代剧情动作另列关联。极3新增戏剧内容归如龙3，峯义孝的原创外传单独记录，同捆包装不重复计游戏。",
+            "basis": "编辑观察",
+            "source": "https://ryu-ga-gotoku.com/kiwami3/"
           }
         ]
       },
@@ -39420,8 +42396,8 @@
         },
         {
           "title": "其余Mega-CD／Saturn叙事作品",
-          "status": "后续待核目录",
-          "reason": "笑面推销员、SWITCH、侏罗纪公园、Fahrenheit、湾仔Connection、RAMPO、学校怪谈、TORICO等需继续核剧情、互动形式和首发版本，本轮不宣称已穷尽世嘉全部叙事作品。",
+          "status": "本轮逐项补核",
+          "reason": "已展开笑面推销员、Jurassic Park、Fahrenheit、湾仔、RAMPO、学校怪谈、TORICO；SWITCH保留益智冒险关联。具体来源见新增卡片，未知移植增量继续待核。",
           "source": "https://www.sega.jp/history/hard/mega-cd/software.html",
           "workIds": []
         },
@@ -39435,7 +42411,7 @@
         {
           "title": "平台第三方与跨类型大系列",
           "status": "范围说明",
-          "reason": "Sonic、Shenmue、Yakuza、Phantasy Star、Shining等主要玩法与四类主库不同，需独立关联清单；ATLUS、Creative Assembly等子公司不把自身成立时间合并到世嘉。",
+          "reason": "已展开原清单中的Phantasy Star、Shining、Shenmue、如龙及战场女武神等剧情关联；其他集团和第三方作品在附录保存，不继承其开发职责。",
           "source": "https://www.sega.jp/history/companyTimeline/",
           "workIds": []
         },
@@ -39470,9 +42446,544 @@
           "reason": "Mega-CD、Saturn及后续平台叙事仍未穷尽；Love Hina开发团队、既有后发版差和收购工作室的具体作品职责须逐作核原件，不从SEGA品牌或硬件平台推定。",
           "source": "https://www.sega.jp/history/hard/dreamcast/software.html",
           "workIds": []
+        },
+        {
+          "title": "ロレッタの肖像",
+          "status": "本轮补入主库",
+          "reason": "发行日采用SEGA官方SG-1000目录；不因兼容SC-3000／Mark III分别制造原作。 游玩记录明确使用命令选择推进调查；续关密码不标文字输入。",
+          "source": "https://aristo.exblog.jp/9231254/",
+          "workIds": [
+            "g1320"
+          ]
+        },
+        {
+          "title": "笑ゥせぇるすまん（メガCD）",
+          "status": "本轮补入主库",
+          "reason": "本条只指Mega-CD三篇产品；不与其他厂商的同名电脑作品合并。三篇不拆成三部独立游戏。 攻略明确光标调查、行动及回应分支；勇气篇另有移动准心挥拳的可操作片段。",
+          "source": "https://sesesega.blog.fc2.com/blog-entry-572.html",
+          "workIds": [
+            "g1321"
+          ]
+        },
+        {
+          "title": "Jurassic Park（Sega CD）",
+          "status": "本轮补入主库",
+          "reason": "采用有同期报道依据的1994首发年；MobyGames与GameFAQs记1993，保留异文。1993广告的计划发售不单独证明已上市；日本1994-09-30不当全球首发。同名卡带、Game Gear和Sega CD并非同一程序。 原版说明书记录场景、物品工具与镇静武器操作；以恐龙卵搜集和环境调查为核心，区别于MD卡带动作版。",
+          "source": "https://manualzz.com/doc/24804389/jurassic-park---sega-cd---manual",
+          "workIds": [
+            "g1322"
+          ]
+        },
+        {
+          "title": "ワンチャイコネクション",
+          "status": "本轮补入主库",
+          "reason": "游玩资料明确通过预设命令展开询问与调查；实拍影像不等于任意电影分支。",
+          "source": "https://sesesega.hatenablog.jp/entry/wanchaiconnection",
+          "workIds": [
+            "g1323"
+          ]
+        },
+        {
+          "title": "RAMPO",
+          "status": "本轮补入主库",
+          "reason": "与同名电影两剪辑版分开；游戏原创场景和电影不是三部游戏。 攻略记录房间搜索、道具使用及不同回应；实拍与CG场景服务于多结局调查。",
+          "source": "https://sesesega.hatenablog.jp/entry/rampo",
+          "workIds": [
+            "g1324"
+          ]
+        },
+        {
+          "title": "学校の怪談",
+          "status": "本轮补入主库",
+          "reason": "攻略说明场景点击与部分QTE推进；恐怖题材本身不作为战斗指令依据。",
+          "source": "https://sesesega.hatenablog.jp/entry/gakkounokaidan",
+          "workIds": [
+            "g1325"
+          ]
+        },
+        {
+          "title": "おまかせ！退魔業（セイバーズ）",
+          "status": "本轮补入主库",
+          "reason": "按广义关系冒险收录，保留可操作动作战斗；不写成纯阅读视觉小说。 资料明确同行者与好感分支、2D场景移动、攻击与封印；其余队员可接收概略战术指示。起名中的作弊码不是自由行动文字输入。",
+          "source": "https://saturnnews.net/omakase-savers/",
+          "workIds": [
+            "g1326"
+          ]
+        },
+        {
+          "title": "月花霧幻譚 TORICO",
+          "status": "本轮补入主库",
+          "reason": "精神上延续梦见馆的探索风格，但主人公、故事与产品身份独立，不并为梦见馆移植。 通过第一人称场景调查、物品取得和机关推进；不将空间探索直接标为即时动作。",
+          "source": "https://sesesega.hatenablog.jp/entry/lunacy",
+          "workIds": [
+            "g1327"
+          ]
+        },
+        {
+          "title": "少女革命ウテナ いつか革命される物語",
+          "status": "本轮补入主库",
+          "reason": "保留女性主人公与关系分支，不因动画题材统一写成男性向恋爱养成。 通过叙事选择改变人物关系与心之高洁参数；不从决斗剧情推定玩家可实时格斗。",
+          "source": "https://www.gamer.ne.jp/news/201802170001/",
+          "workIds": [
+            "g1328"
+          ]
+        },
+        {
+          "title": "機動戦艦ナデシコ The blank of 3 years",
+          "status": "本轮补入主库",
+          "reason": "电视版与剧场版之间的独立游戏故事；与前作“やっぱり最後は愛が勝つ？”及DC策略作品分开。 攻略系统说明预设回应影响人格矩阵、亲密度与各角色路线；未据战舰剧情附会战术战斗。",
+          "source": "https://actionhp.sakura.ne.jp/tss/otoi/otoi_b3ykiso.htm",
+          "workIds": [
+            "g1329"
+          ]
+        },
+        {
+          "title": "Fahrenheit（1995）",
+          "status": "本轮补入主库",
+          "reason": "Sega CD与32X CD曾同捆；32X画质差异未单独认定新内容，不重复造第二作品。日本发行记录仍需核，不采用二手列表所写日本1995-09-01。 按实拍第一人称火场中的方向和救援决定推进，错误或延误影响生存；不与2005年Quantic Dream同名作品合并。",
+          "source": "https://en.wikipedia.org/wiki/Fahrenheit_(1995_video_game)",
+          "workIds": [
+            "g1330"
+          ]
+        },
+        {
+          "title": "Rise of the Dragon",
+          "status": "复用g1102",
+          "reason": "1990 DOS原作身份保留。官方记录1992-09-25世嘉Mega-CD发行；配音与原版新增内容的边界待核，不为平台补一条未知新发行。",
+          "source": "https://www.sega.jp/history/hard/mega-cd/software.html",
+          "workIds": [
+            "g1102"
+          ]
+        },
+        {
+          "title": "ファンタシースター",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 在城镇与迷宫中移动，战斗选择攻击、法术和道具；不以SF题材当作纯视觉小说。",
+          "source": "https://ages.sega.jp/vol32/ps1.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-ps1"
+          ]
+        },
+        {
+          "title": "ファンタシースターII 還らざる時の終わりに",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 地图与迷宫移动结合队伍指令战斗；作品介绍及原版战斗画面支持RPG操作。",
+          "source": "https://ages.sega.jp/vol32/ps2.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-ps2"
+          ]
+        },
+        {
+          "title": "時の継承者 ファンタシースターIII",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 队伍探索与指令战斗并存；官方明确结婚选择改变下一代主人公及故事结局。",
+          "source": "https://vc.sega.jp/vc_ps3/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-ps3"
+          ]
+        },
+        {
+          "title": "ファンタシースター 千年紀の終りに",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官方介绍有队伍、宏指令与组合攻击；仍为角色扮演，漫画式过场不转为互动漫画。",
+          "source": "https://vc.sega.jp/vc_ps4/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-ps4"
+          ]
+        },
+        {
+          "title": "シャイニング＆ザ・ダクネス",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 原说明书的方向探索、战斗菜单与魔法道具操作支持第一人称迷宫RPG。",
+          "source": "https://www.sega.jp/mdmini2/assets/manual/pdf/JP_Shining-in-the-Darkness.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "sega-shining-darkness"
+          ]
+        },
+        {
+          "title": "シャイニング・フォース 神々の遺産",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官方系统说明按速度顺序移动、攻击及使用魔法，战斗经验用于成长与转职。",
+          "source": "https://vc.sega.jp/vc_shiningforce/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-shining-force1"
+          ]
+        },
+        {
+          "title": "シャイニング・フォースII 古えの封印",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官方介绍地图单位战斗与成长系统；有剧情但主要操作是战术RPG。",
+          "source": "https://vc.sega.jp/vc_shiningforce2/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-shining-force2"
+          ]
+        },
+        {
+          "title": "シャイニング・ウィズダム",
+          "status": "本轮跨类型关联",
+          "reason": "采用官方硬件目录1995-08-11；旧系列页镜像记7月21日，保留日期异文。镜像中的资料不作为后发移植已核证据。 官方旧页镜像说明连按提升移动速度及魔法、使用装备与组合物品探索。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-shining-wisdom"
+          ]
+        },
+        {
+          "title": "シャイニング・フォースIII シナリオ1 王都の巨神",
+          "status": "本轮跨类型关联",
+          "reason": "以官方旧系列页镜像和SEGA硬件目录交叉核对；镜像标题“邪神官”有异文，采用产品名“邪神宮”。资料赠送盘不另算第四部故事。 官方旧系列页与原作玩法说明支持单位部署和指令战斗；三部各自发行、各有剧情，存档联动不使其成为同一内容的三个平台。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-sf3-1"
+          ]
+        },
+        {
+          "title": "シャイニング・フォースIII シナリオ2 狙われた神子",
+          "status": "本轮跨类型关联",
+          "reason": "以官方旧系列页镜像和SEGA硬件目录交叉核对；镜像标题“邪神官”有异文，采用产品名“邪神宮”。资料赠送盘不另算第四部故事。 官方旧系列页与原作玩法说明支持单位部署和指令战斗；三部各自发行、各有剧情，存档联动不使其成为同一内容的三个平台。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-sf3-2"
+          ]
+        },
+        {
+          "title": "シャイニング・フォースIII シナリオ3 氷壁の邪神宮",
+          "status": "本轮跨类型关联",
+          "reason": "以官方旧系列页镜像和SEGA硬件目录交叉核对；镜像标题“邪神官”有异文，采用产品名“邪神宮”。资料赠送盘不另算第四部故事。 官方旧系列页与原作玩法说明支持单位部署和指令战斗；三部各自发行、各有剧情，存档联动不使其成为同一内容的三个平台。",
+          "source": "https://backup.segakore.fr/shining-world.jp/game/series2.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-sf3-3"
+          ]
+        },
+        {
+          "title": "エターナルアルカディア",
+          "status": "本轮跨类型关联",
+          "reason": "@barai与通常版共用原作，不按付费解锁方式另建游戏。Legends具体追加内容后续逐项核，不补普通移植。 队伍指令战斗与舰船战斗分别存在；不将空中航海题材直接写成实时驾驶。",
+          "source": "https://game.watch.impress.co.jp/docs/20030210/ea.htm",
+          "workIds": [],
+          "relatedIds": [
+            "sega-arcadia"
+          ]
+        },
+        {
+          "title": "ファンタシースターオンライン",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官方历史说明网络队伍探索与实时动作战斗；在线会话和角色命名不等于单机解析器冒险。",
+          "source": "https://phantasystar.sega.jp/20th/history/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-pso"
+          ]
+        },
+        {
+          "title": "レンタヒーロー",
+          "status": "本轮跨类型关联",
+          "reason": "2000 No.1沿用基本故事并重新制作；在附录说明内容关系，未仅据“重制”再造独立作品。 官方介绍城镇探索、即时战斗及装甲租费管理；不把公司名称SECA当作现实SEGA法律关系。",
+          "source": "https://vc.sega.jp/vc_rentahero/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-rentahero"
+          ]
+        },
+        {
+          "title": "戦場のヴァルキュリア",
+          "status": "本轮跨类型关联",
+          "reason": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。 官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "source": "https://portal.valkyria.jp/vc1/ps3/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-valkyria1"
+          ]
+        },
+        {
+          "title": "戦場のヴァルキュリア2 ガリア王立士官学校",
+          "status": "本轮跨类型关联",
+          "reason": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。 官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "source": "https://portal.valkyria.jp/vc2/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-valkyria2"
+          ]
+        },
+        {
+          "title": "戦場のヴァルキュリア3",
+          "status": "本轮跨类型关联",
+          "reason": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。 官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "source": "https://portal.valkyria.jp/vc3/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-valkyria3"
+          ]
+        },
+        {
+          "title": "戦場のヴァルキュリア4",
+          "status": "本轮跨类型关联",
+          "reason": "仅记日本原作批次，后发海外平台不推定同期。重制、Extra Edition、DLC及后来合集的具体增量仍需逐项登记。 官方BLiTZ说明在战术配置与单位实际移动、瞄准间切换；不是仅选择剧情或单纯按回合动画演出。",
+          "source": "https://portal.valkyria.jp/vc4/about/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-valkyria4"
+          ]
+        },
+        {
+          "title": "シェンムー 一章 横須賀",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官网明确自由空间活动、格斗与QTE；不是传统静态菜单视觉小说。",
+          "source": "https://shenmue1-2.sega.jp/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-shenmue1"
+          ]
+        },
+        {
+          "title": "シェンムーII",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官网区分两作并介绍探索、格斗与QTE；2018合集不另建第三部作品。",
+          "source": "https://shenmue1-2.sega.jp/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-shenmue2"
+          ]
+        },
+        {
+          "title": "青の6号 歳月不待人 -TIME AND TIDE-",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 资料说明潜航打捞、补给及装备管理；保留潜艇探索玩法，不将OVA影片本身记为游戏内容。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4731.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-blue6"
+          ]
+        },
+        {
+          "title": "セガガガ",
+          "status": "本轮跨类型关联",
+          "reason": "3月D-Direct原作与5月一般零售是渠道变化，不新建第二内容；游戏公司戏仿不是现实沿革证据。 通过RPG式说服战招募开发者，再管理制作与销售；模拟经营与角色冒险并存。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/2185.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-segagaga"
+          ]
+        },
+        {
+          "title": "SWITCH",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 攻略说明点击场景开关触发笑料与通路；保留试错谜题核心，不因官方ADV标签就纳入四类叙事主库。",
+          "source": "https://advgamer.com/switch-mega-cd/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-switch"
+          ]
+        },
+        {
+          "title": "龍が如く",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 街区探索、交涉与可操作格斗组成剧情动作冒险；系列名不代替每部作品身份。",
+          "source": "https://ryu-ga-gotoku.com/one/story.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-yakuza1"
+          ]
+        },
+        {
+          "title": "龍が如く3",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官网明确街区活动与战斗；2026极3的新增剧情另作同作品内容。",
+          "source": "https://www.sega.jp/game/detail/ryu-ga-gotoku-three/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-yakuza3"
+          ]
+        },
+        {
+          "title": "龍が如く7 光と闇の行方",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官方明确“Live Command RPG”战斗，区别于前作即时格斗；后发International未自动追加普通平台。",
+          "source": "https://ryu-ga-gotoku.com/seven/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-yakuza7"
+          ]
+        },
+        {
+          "title": "龍が如く7外伝 名を消した男",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官网区分应龙和特工战斗风格，直接探索街区与完成委托；不是7的回合制扩展包。",
+          "source": "https://ryu-ga-gotoku.com/gaiden/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-yakuza7gaiden"
+          ]
+        },
+        {
+          "title": "龍が如く8",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官网介绍可调整站位的Live Command战斗，保留队伍RPG类型；双主角不等于可任意切换视角的阅读系统。",
+          "source": "https://ryu-ga-gotoku.com/eight/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-yakuza8"
+          ]
+        },
+        {
+          "title": "龍が如く8外伝 Pirates in Hawaii",
+          "status": "本轮跨类型关联",
+          "reason": "实际日期采用官方更新后的2025-02-21，不采用初期公布的2月28日。 官网展示狂犬与海盗动作风格、船只航行和海战；剧情外传是独立游戏，不与如龙8同作合并。",
+          "source": "https://ryu-ga-gotoku.com/pirate/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-yakuza8gaiden"
+          ]
+        },
+        {
+          "title": "JUDGE EYES：死神の遺言",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官网说明实地调查、证据与格斗；点击调查只概述观察证据模块，未穷尽小游戏。",
+          "source": "https://ryu-ga-gotoku.com/judgeeyes/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-judgeeyes"
+          ]
+        },
+        {
+          "title": "LOST JUDGMENT：裁かれざる記憶",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官方说明侦探调查动作与格斗，且2021首批平台不含后发2022 Steam版。",
+          "source": "https://www.sega.jp/game/detail/lost-judgment/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-lostjudgment"
+          ]
+        },
+        {
+          "title": "ソニックフロンティア",
+          "status": "本轮跨类型关联",
+          "reason": "跨类型关联，不计四类主库；后发普通移植、合集与系列总称不重复建原作。 官方开放区域探索结合战斗与岛屿机关；故事存在不改变动作核心。",
+          "source": "https://sonic.sega.jp/SonicChannel/gametitle/SonicFrontiers.html",
+          "workIds": [],
+          "relatedIds": [
+            "sega-sonic-frontiers"
+          ]
+        },
+        {
+          "title": "龍が如く3外伝 Dark Ties",
+          "status": "本轮跨类型关联",
+          "reason": "官方已发布2026-02-12上市公告。原作与极3共用商品包，但此原创外传单独建立作品内容，不再为整包建第三部作品。 官网区分峯主角的独立故事、格斗与地下战斗模块；和极3同捆不表示同一个原作故事。",
+          "source": "https://ryu-ga-gotoku.com/kiwami3/",
+          "workIds": [],
+          "relatedIds": [
+            "sega-dark-ties"
+          ]
         }
       ],
-      "profileTitle": "叙事作品、发行合作与公司沿革"
+      "profileTitle": "叙事作品、发行合作与公司沿革",
+      "dossierGroups": [
+        {
+          "id": "sega-narratives",
+          "title": "菜单、分支、调查与互动影像",
+          "description": "31部主库作品；原身份与历史发行保留。",
+          "workIds": [
+            "g034",
+            "g179",
+            "g181",
+            "g450",
+            "g815",
+            "g924",
+            "g925",
+            "g926",
+            "g927",
+            "g928",
+            "g929",
+            "g930",
+            "g931",
+            "g932",
+            "g933",
+            "g934",
+            "g935",
+            "g1281",
+            "g1282",
+            "g1320",
+            "g1321",
+            "g1322",
+            "g1323",
+            "g1324",
+            "g1325",
+            "g1326",
+            "g1327",
+            "g1328",
+            "g1329",
+            "g1330",
+            "g1102"
+          ]
+        },
+        {
+          "id": "sega-classic-rpg",
+          "title": "科幻、迷宫与战术RPG",
+          "description": "原清单的Phantasy Star、Shining、Arcadia、租借英雄及战场女武神。",
+          "workIds": [
+            "sega-ps1",
+            "sega-ps2",
+            "sega-ps3",
+            "sega-ps4",
+            "sega-shining-darkness",
+            "sega-shining-force1",
+            "sega-shining-force2",
+            "sega-shining-wisdom",
+            "sega-sf3-1",
+            "sega-sf3-2",
+            "sega-sf3-3",
+            "sega-arcadia",
+            "sega-pso",
+            "sega-rentahero",
+            "sega-valkyria1",
+            "sega-valkyria2",
+            "sega-valkyria3",
+            "sega-valkyria4"
+          ]
+        },
+        {
+          "id": "sega-later-crossgenre",
+          "title": "自由探索、动作调查与经营故事",
+          "description": "Shenmue、青之六号、SGGG、如龙和其他跨类型故事。",
+          "workIds": [
+            "sega-shenmue1",
+            "sega-shenmue2",
+            "sega-blue6",
+            "sega-segagaga",
+            "sega-switch",
+            "sega-yakuza1",
+            "sega-yakuza3",
+            "sega-yakuza7",
+            "sega-yakuza7gaiden",
+            "sega-yakuza8",
+            "sega-yakuza8gaiden",
+            "sega-judgeeyes",
+            "sega-lostjudgment",
+            "sega-sonic-frontiers",
+            "sega-dark-ties"
+          ]
+        },
+        {
+          "id": "sega-original-related",
+          "title": "原有跨类型关联",
+          "description": "两部Roommania与新樱花大战的旧档案原样保留。",
+          "workIds": [
+            "sega-roommania",
+            "sega-new-roommania",
+            "sega-new-sakura"
+          ]
+        }
+      ]
     },
     {
       "id": "shopro",

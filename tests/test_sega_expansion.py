@@ -22,7 +22,7 @@ class SegaExpansionTests(unittest.TestCase):
   self.assertEqual(after['sega']['workIds'],before['sega']['workIds']+['g1281','g1282'])
   self.assertEqual(after['sega']['relatedGames'],before['sega']['relatedGames'])
   self.assertEqual(after['sega']['entries'][:len(before['sega']['entries'])],before['sega']['entries'])
-  page=(ROOT/'sega.html').read_text();self.assertEqual(page.count('<article class="card"'),22)
+  page=subprocess.check_output(['git','show','d80510b343d53f61c0df6ad799466aaca55ea2f3:sega.html'],cwd=ROOT,text=True);self.assertEqual(page.count('<article class="card"'),22)
   for wid in before['sega']['workIds']:self.assertIn('id="'+wid+'"',page)
  def test_formal_entities_and_credits_do_not_inherit_group_game_development(self):
   b,a=old('data/entities.json'),read('data/entities.json')
