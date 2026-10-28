@@ -42058,6 +42058,19 @@
       "territory": null
     },
     {
+      "id": "credit-1ee4916011e01c9a",
+      "entityId": "entity-nec_he",
+      "targetType": "release",
+      "targetId": "g1302-v1",
+      "workId": "g1302",
+      "role": "publisher",
+      "rawCredit": "NEC Home Electronics",
+      "status": "existingCredit",
+      "source": "https://www.suruga-ya.jp/kaitori/kaitori_detail/162000236",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
       "id": "credit-06c97adc1fb6de71",
       "entityId": "entity-name-a7663faeee46",
       "targetType": "release",
@@ -49516,6 +49529,32 @@
       "rawCredit": "NEC Home Electronics",
       "status": "existingCredit",
       "source": "https://raido.moe/staff/pcfx/pcfx_comic_road.html",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-25f384a02fe385ad",
+      "entityId": "entity-nec_he",
+      "targetType": "release",
+      "targetId": "neche-magicoal-v1",
+      "workId": "neche-magicoal",
+      "role": "publisher",
+      "rawCredit": "NEC Home Electronics",
+      "status": "existingCredit",
+      "source": "https://www.hunex.co.jp/archives/works/pc-engine",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-5cdc5a92b15634f1",
+      "entityId": "entity-nec_he",
+      "targetType": "release",
+      "targetId": "neche-miraculum-v1",
+      "workId": "neche-miraculum",
+      "role": "publisher",
+      "rawCredit": "NEC Home Electronics",
+      "status": "existingCredit",
+      "source": "https://www2u.biglobe.ne.jp/~comefx99/mc.htm",
       "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
       "territory": null
     },
@@ -79260,6 +79299,28 @@
     },
     {
       "dossierId": "nec_he",
+      "workId": "g923",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.hunex.co.jp/archives/works/pc-fx",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "nec_he",
+      "workId": "g1302",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.hunex.co.jp/archives/works/pc-fx",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "nec_he",
       "workId": "neche-bluebreaker",
       "placement": "related",
       "roles": [
@@ -79294,6 +79355,28 @@
     {
       "dossierId": "nec_he",
       "workId": "neche-comicroad",
+      "placement": "related",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.hunex.co.jp/archives/works/pc-fx",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "nec_he",
+      "workId": "neche-magicoal",
+      "placement": "related",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.hunex.co.jp/archives/works/pc-fx",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "nec_he",
+      "workId": "neche-miraculum",
       "placement": "related",
       "roles": [
         "publisher"

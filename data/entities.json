@@ -709,18 +709,26 @@
     },
     {
       "id": "entity-nec_he",
-      "name": "NEC Home Electronics",
+      "name": "NEC Home Electronics（日本電気ホームエレクトロニクス）",
       "type": "company",
       "aliases": [
         "NEC Home Electronics",
-        "NECホームエレクトロニクス"
+        "NECホームエレクトロニクス",
+        "日本電気ホームエレクトロニクス",
+        "NEC Home Electronics（日本電気ホームエレクトロニクス）"
       ],
       "sources": [
         "https://www.hunex.co.jp/archives/works/pc-fx"
       ],
       "verification": "existingDossier",
-      "historyNote": "1953年6月1日，新日本电气从NEC的无线电部门分离独立，1983年更名为日本电气家用电子。原库有三部实际发行作品却未建专题，且成立时间早于太东，本次补齐此前漏项。",
-      "dates": []
+      "historyNote": "NEC于1953/06/01另设新日本电气，1983/07更名NEC Home Electronics；2000年结束业务活动、2001/02解散。1992年该公司与Human共同设立HuneX，后者2000年独立。1995年另设的NEC Interchannel汇集其光媒体软件业务人员与经验，并非NEC-HE改名。实际发行方和开发方须按作品及版本分别核对。",
+      "dates": [],
+      "nameParts": {
+        "english": "NEC Home Electronics",
+        "japanese": "日本電気ホームエレクトロニクス",
+        "basis": "catalogueSpelling",
+        "source": "https://jpn.nec.com/contactus/faq/sales_end.html"
+      }
     },
     {
       "id": "entity-tokuma",
@@ -7145,12 +7153,12 @@
     },
     {
       "id": "nec_he",
-      "name": "NEC Home Electronics",
+      "name": "NEC Home Electronics（日本電気ホームエレクトロニクス）",
       "dossierType": "company",
       "entityIds": [
         "entity-nec_he"
       ],
-      "scope": "复用原库三部NEC-HE发行作品，新增九部独立叙事游戏及四部跨类型关联作。包括有制作依据的Fire Woman，保留Tokuma发行署名；不并入Avenue、Interchannel或所有PC-FX第三方游戏。",
+      "scope": "沿用既有12部主库作品及4部跨类型关联；复用《続 初恋物語 ～修学旅行～》主库身份及其既有PC-FX发行，新增1993年互动绘本《原由子の眠れぬ夜の小さなお話》一部原作，以及《マジクール》《ミラークルム》两部剧情RPG关联。NEC Home Electronics、NEC Avenue与NEC Interchannel各自保留法人及发行身份；不把主机第三方目录统算公司原创。",
       "sources": [
         "https://www.hunex.co.jp/archives/works/pc-fx"
       ],
@@ -7959,7 +7967,8 @@
     "Chunsoft": "Chunsoft（チュンソフト）",
     "Japan Home Video": "Japan Home Video（ジャパンホームビデオ）",
     "TENKY": "TENKY（テンキー）",
-    "Banpresto": "Banpresto（バンプレスト）"
+    "Banpresto": "Banpresto（バンプレスト）",
+    "NEC Home Electronics": "NEC Home Electronics（日本電気ホームエレクトロニクス）"
   },
   "policy": "实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。"
 }
