@@ -40652,6 +40652,39 @@
       "interactionSources": [
         "https://en.wikipedia.org/wiki/Fahrenheit_(1995_video_game)"
       ]
+    },
+    {
+      "id": "g1331",
+      "title": "诡计与逻辑：第一季",
+      "originalTitle": "TRICK×LOGIC Season 1",
+      "chineseTitle": "诡计与逻辑：第一季",
+      "chineseTitleType": "站内编辑译名",
+      "titleAliases": [
+        "トリックロジック シーズン1",
+        "TRICK x LOGIC Season 1"
+      ],
+      "firstYear": 2010,
+      "category": "视觉小说",
+      "subcategory": "剧情分支／冒险",
+      "genre": "推理小说／关键词组合解谜",
+      "characters": [
+        "天才检察官（玩家）"
+      ],
+      "charactersSource": "https://mediaworld.co.jp/products/10210938003",
+      "synopsis": "玩家阅读冥界藏书中的未解决案件，从文本提取关键词，组合疑问与推理并填写调查结论，逐步解开作家设计的谜团。",
+      "notes": "2010-07-22 PSP首发，第一季含案件1—4推理及解答，并附案件5推理篇。第二季及分话下载有重叠，尚未拆核首次内容批次，不将案件5预告重复建作。实际发行SCE，Chunsoft合作制作不等于其自社发行。",
+      "source": "https://www.4gamer.net/games/105/G010573/20100722025/",
+      "interactionModes": [
+        "阅读推进",
+        "菜单指令",
+        "谜题操作"
+      ],
+      "interactionNote": "阅读案件文本、选择关键词组合ナゾ／ヒラメキ并填入调书；预设词语选择不是自由文字输入，不把解答等级当剧情路线分支。",
+      "interactionBasis": "来源核对",
+      "interactionSources": [
+        "https://www.4gamer.net/games/105/G010573/20100702069/",
+        "https://www.4gamer.net/games/105/G010573/20100722025/"
+      ]
     }
   ],
   "platformReleases": [
@@ -86482,6 +86515,24 @@
       "contentRelation": "original",
       "contentNote": "原作／首次已核批次。",
       "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1331-v1",
+      "workId": "g1331",
+      "year": 2010,
+      "platform": "PlayStation Portable（日本）",
+      "publisher": "Sony Computer Entertainment",
+      "publisherCompanies": [
+        "Sony Computer Entertainment"
+      ],
+      "kind": "原作首发",
+      "voice": "未核实",
+      "differences": "2010-07-22第一季首批UMD／下载内容；同平台包装不拆行。",
+      "source": "https://www.4gamer.net/games/105/G010573/20100722025/",
+      "contentVersionId": "g1331-c-original",
+      "contentRelation": "original",
+      "contentNote": "第一季原作首批内容。",
+      "releaseRole": "contentDebut"
     }
   ],
   "contentVersions": [
@@ -107888,6 +107939,19 @@
       "source": "https://en.wikipedia.org/wiki/Fahrenheit_(1995_video_game)",
       "evidenceReleaseIds": [
         "g1330-v-original"
+      ],
+      "addedContent": []
+    },
+    {
+      "id": "g1331-c-original",
+      "workId": "g1331",
+      "label": "第一季原作内容",
+      "firstYear": 2010,
+      "basis": "original",
+      "evidence": "2010-07-22发售报道；案件1—4完整内容及案件5推理篇，第二季解答与后续案件另核。",
+      "source": "https://www.4gamer.net/games/105/G010573/20100722025/",
+      "evidenceReleaseIds": [
+        "g1331-v1"
       ],
       "addedContent": []
     }

@@ -33507,7 +33507,7 @@
     {
       "id": "jhv",
       "name": "Japan Home Video",
-      "checkedAt": "2026-10-27",
+      "checkedAt": "2026-10-29",
       "status": "既有专题完善：五部主库、四部关联，补充制作分工与组织沿革；日期异文和玩法待核继续保留",
       "scope": "Japan Home Video实际发行的历史游戏。保留既有五部主库与四部跨类型记录；HEADROOM、TENKY等制作方与JHV发行方分别登记，不按视频版权或同IP自动扩充。",
       "versionScope": "按当前三层模型展示作品、内容版本与历史平台发行；保留既有25条主库发行和8条关联发行。普通移植、复刻与合售不另计新作，本轮不追加纯平台发行。",
@@ -33883,7 +33883,7 @@
       "auditTitle": "发行、制作分工与组织沿革核对（2026-10-27）",
       "auditSourceLabel": "JHV官方站点（公司概要见核对条目）",
       "auditLabel": "已核实九部相关游戏，另列合集、日期异文与待补记录。",
-      "auditNote": "沿用既有五部主库、四部关联的作品身份，本轮补入主库作品说明、三条限定制作职责及组织节点。未找到足以新增独立叙事作品的确证，数量不扩充。Sensual Angels、URM年代、若干移植内容与准确发行日期仍待核。",
+      "auditNote": "沿用既有五部主库、四部关联的作品身份，本轮补入主库作品说明、三条限定制作职责及组织节点。未找到足以新增独立叙事作品的确证，数量不扩充。Sensual Angels、URM年代、若干移植内容与准确发行日期仍待核。 2026-10-29复核仍无新增准入确证，五部主库及四部关联复用，详见data/manufacturer-update-20261029.md。",
       "creativeProfile": {
         "thesis": "JHV目录呈现的是发行选择：角色养成、调查逃生与光盘SF叙事并存，再扩展到战略和授权格斗。它们由不同开发主体制作；以下风格归纳来自具体作品，不把发行商写成所有作品的统一开发团队。",
         "phases": [
@@ -111176,8 +111176,8 @@
       "name": "Chunsoft",
       "foundedAt": "1984",
       "foundedSource": "https://www.spike-chunsoft.co.jp/company/outline/",
-      "checkedAt": "2026-10-27",
-      "status": "初步独立专题：复用九部主库，补入两作及两项新增剧本内容",
+      "checkedAt": "2026-10-29",
+      "status": "12部主库引用；追加TRICK×LOGIC第一季，第二季分话内容待核",
       "scope": "历史Chunsoft公司专题，以2012年合并前的叙事开发／发行及限定后发内容为范围。11部主库引用中9部既有、2部新增；Spike与合并后Spike Chunsoft保持独立身份，后发实际发行不回写。",
       "versionScope": "新增《街》1998原作、2006 PSP两篇追加，以及《金八先生》2004原作、2005两话追加。PS普通移植、廉价版和一般店头铺货不新增内容；所有旧版关系与身份保持。",
       "publisherNote": "官方史记Chunsoft成立于1984年，1992以弟切草开始自社发行。2012年原公告明确Chunsoft为存续公司、Spike为消灭公司并改商号Spike Chunsoft；原历史署名ID继续分开保存，不自动合并既有实体或继承游戏开发职责。1984按年登记，不伪造注册日。",
@@ -111193,14 +111193,15 @@
         "g180",
         "g181",
         "g1283",
-        "g1284"
+        "g1284",
+        "g1331"
       ],
-      "catalogueEntryCount": 11,
+      "catalogueEntryCount": 12,
       "source": "https://www.spike-chunsoft.co.jp/company/outline/",
       "auditTitle": "原作、增补与历史署名核对",
       "auditSourceLabel": "官方公司沿革",
       "auditLabel": "初步11部叙事引用；不是Chunsoft全部开发或发行目录。",
-      "auditNote": "本轮只有《金八先生》追加一条有CESA具名依据的原作制作职责。已有角色与台账结论保持；新增专题待核项不冒充已完成审核。详见data/chunsoft-audit-20261027.md。",
+      "auditNote": "本轮只有《金八先生》追加一条有CESA具名依据的原作制作职责。已有角色与台账结论保持；新增专题待核项不冒充已完成审核。详见data/chunsoft-audit-20261027.md。 本轮补核见data/manufacturer-update-20261029.md。",
       "sectionTitle": "从有声小说到群像与关键词叙事",
       "description": "Chunsoft独立专题：有声小说、街与金八先生、原作与新增剧本，以及2012合并沿革。",
       "profileTitle": "叙事方式与历史公司范围",
@@ -111357,6 +111358,15 @@
           "reason": "428、999、镰鼬×3、忌火起草等进入专题仍需逐作登记开发分工；2012合并后的AI、弹丸、零时困境不自动视作旧Chunsoft原作。",
           "source": "https://www.spike-chunsoft.co.jp/company/outline/",
           "workIds": []
+        },
+        {
+          "title": "TRICK×LOGIC Season 1",
+          "status": "本次新增主库",
+          "reason": "2010-07-22 PSP首发，第一季含案件1—4推理及解答，并附案件5推理篇。第二季及分话下载有重叠，尚未拆核首次内容批次，不将案件5预告重复建作。实际发行SCE，Chunsoft合作制作不等于其自社发行。",
+          "source": "https://www.4gamer.net/games/105/G010573/20100722025/",
+          "workIds": [
+            "g1331"
+          ]
         }
       ]
     },
@@ -111365,8 +111375,8 @@
       "name": "Ultra Games",
       "brandActivityFrom": "1988",
       "brandActivitySource": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Computer_Entertainer_7-5.pdf",
-      "checkedAt": "2026-10-27",
-      "status": "初步发行品牌专题：复用夜影，补入NES星际迷航；组织法律日期与剩余目录待核",
+      "checkedAt": "2026-10-29",
+      "status": "2部主库复用，新增1部潜入动作叙事关联",
       "scope": "Ultra Games历史发行品牌的叙事作品。复用1992 NES《夜影》，新增同年NES《星际迷航：25周年》；动作、体育、竞技与策略目录另作范围说明，不因Konami关系自动收录或赋予开发职责。",
       "versionScope": "本轮新增一部独立作品、一个原作内容和一条首批NES发行；普通地区版、合集、模拟器上架不追加。同名NES／Game Boy／电脑游戏分开判断，不按标题自动合并。",
       "publisherNote": "Ultra Games为发行品牌，沿用已核商标身份。原说明书将ULTRA／ULTRAGAMES商标与Ultra Software Corporation公司署名分开；1988年同期刊物记Ultra Software为Konami全资子公司并成为独立许可商。1988表示已有品牌／发行活动，不冒充法人成立日期；1987／1988设立异文及1992结束／吸收尚待法律原件。",
@@ -111383,7 +111393,7 @@
       "source": "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
       "auditTitle": "叙事准入、同名异作与历史发行品牌",
       "auditSourceLabel": "Nightshade原说明书／商标原件",
-      "auditNote": "完成本轮两部叙事作品及目录范围登记，不宣称穷尽Ultra全发行史。同期刊物只取得索引正文，扫描大文件直读失败；公司设立、精确直接持股与退出法律过程仍待原件。",
+      "auditNote": "完成本轮两部叙事作品及目录范围登记，不宣称穷尽Ultra全发行史。同期刊物只取得索引正文，扫描大文件直读失败；公司设立、精确直接持股与退出法律过程仍待原件。 本轮原手册补核与类型边界见data/manufacturer-update-20261029.md。",
       "description": "Ultra Games发行品牌专题：夜影、NES星际迷航25周年、同名异作边界与Konami历史关系。",
       "sectionTitle": "菜单调查、道具谜题与实时动作",
       "entries": [
@@ -111453,6 +111463,16 @@
           "reason": "同期1988年1月报道记Ultra Software是Konami全资子公司；这不是当月新设的法律证明。目录1987／1988成立异文、1992结束与吸收过程待法律原件。五作限制动机仅为二手历史解释。",
           "source": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Computer_Entertainer_6-10.pdf",
           "workIds": []
+        },
+        {
+          "title": "Snake's Revenge",
+          "status": "新增跨类型叙事关联",
+          "reason": "独立NES潜入行动故事，原手册证实玩法及Ultra署名；不与MSX2续作合并。",
+          "source": "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "ultra-snakes-revenge"
+          ]
         }
       ],
       "auditLabel": "两部叙事作品及目录范围说明；不是全发行目录完成声明。",
@@ -111474,7 +111494,78 @@
             "source": "https://www.gamingalexandria.com/highquality/NES/Star%20Trek%2025th%20Anniversary/Star%20Trek%2025th%20Anniversary%20-%20Manual%20(Searchable).pdf"
           }
         ]
-      }
+      },
+      "relatedGames": [
+        {
+          "id": "ultra-snakes-revenge",
+          "title": "Snake’s Revenge",
+          "originalTitle": "Snake's Revenge",
+          "chineseTitle": "斯内克的复仇",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "スネークズリベンジ"
+          ],
+          "firstYear": 1990,
+          "category": "动作冒险",
+          "subcategory": "潜入动作",
+          "genre": "军事潜入／营救行动",
+          "characters": [
+            "Solid Snake",
+            "John Turner",
+            "Nick Myer"
+          ],
+          "charactersSource": "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf",
+          "synopsis": "斯内克率队潜入敌方基地，救援被关押人员并摧毁新型Metal Gear。无线电情报、潜入行动与横向关卡共同推进任务。",
+          "notes": "1990 NES独立续作，与MSX2 Metal Gear 2: Solid Snake不同；不以非正史身份合并作品。Ultra为北美发行署名，欧洲Konami后发不扩列普通平台发行。",
+          "source": "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "瞄准射击",
+            "菜单指令"
+          ],
+          "interactionNote": "原手册列潜入／横向关卡、装备与电台等操作；无线电消息不是自由文本解析，任务剧情不当作选项分支。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-snakes-revenge-c-original",
+              "workId": "ultra-snakes-revenge",
+              "label": "NES原作内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "原手册1990 Ultra署名与独立任务剧情；不混同MSX2续作。",
+              "source": "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf",
+              "evidenceReleaseIds": [
+                "ultra-snakes-revenge-v1"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-snakes-revenge-v1",
+              "workId": "ultra-snakes-revenge",
+              "year": 1990,
+              "platform": "NES（北美）",
+              "publisher": "Ultra Games",
+              "publisherCompanies": [
+                "Ultra Games"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1990年NES北美原作，原手册署名Ultra；不据后发合集再建原作。",
+              "source": "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf",
+              "contentVersionId": "ultra-snakes-revenge-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "broderbund",
@@ -112487,6 +112578,90 @@
           "source": "https://memoriesoff.jp/historia/titles/5/",
           "workIds": [
             "g168"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capcom",
+      "name": "CAPCOM（カプコン）",
+      "foundedAt": "1979-05-30",
+      "foundedSource": "https://www.capcom.co.jp/ir/company/info.html",
+      "checkedAt": "2026-10-29",
+      "status": "首批4部既有逆转裁判作品；非完整发行史",
+      "scope": "库内已存在的CAPCOM叙事发行首批专题；复用四部逆转裁判，不扩录纯格斗、射击与体育。",
+      "versionScope": "原作、增补、发行对象全部复用；不以合集或普通移植重复计作品。",
+      "publisherNote": "官方区分法人设立1979-05-30与游戏业务创业1983-06-11；旧Capcom与现行法人沿革不以创作年份代替。发行署名不自动推定所有作品开发职责。",
+      "publisherWorkText": "<p class=\"scope-note\">首批复用4部逆转裁判，成立日期与游戏业务创业日期分别记录。</p>",
+      "workIds": [
+        "g049",
+        "g172",
+        "g173",
+        "g182"
+      ],
+      "catalogueEntryCount": 4,
+      "source": "https://www.capcom.co.jp/ir/company/info.html",
+      "auditTitle": "原作、增补与历史署名核对",
+      "auditSourceLabel": "官方公司沿革",
+      "auditLabel": "首批四部，非完整目录",
+      "auditNote": "见data/manufacturer-update-20261029.md；四部作品全部复用，更多叙事系列及后发内容待核。",
+      "sectionTitle": "法庭推理叙事首批目录",
+      "description": "CAPCOM叙事游戏首批目录、内容版本与发行记录。",
+      "profileTitle": "叙事方式与历史公司范围",
+      "creativeProfile": {
+        "thesis": "以调查和法庭证言矛盾推动推理叙事。",
+        "phases": [
+          {
+            "period": "2001—2007",
+            "heading": "逆转裁判首批四作",
+            "analysis": "按既有作品及发行证据复用，不将重制合集另建新作。",
+            "basis": "编辑观察",
+            "source": "https://www.ace-attorney.com/"
+          },
+          {
+            "period": "法人设立与创业",
+            "heading": "1979设立／1983创业分别记载",
+            "analysis": "官方区分法人设立1979-05-30与游戏业务创业1983-06-11；旧Capcom与现行法人沿革不以创作年份代替。发行署名不自动推定所有作品开发职责。",
+            "basis": "厂商说明",
+            "source": "https://www.capcom.co.jp/ir/company/info.html"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "逆転裁判",
+          "status": "复用主库",
+          "reason": "复用既有内容及发行身份，不重复收录。",
+          "source": "https://www.capcom.co.jp/ir/news/html/151221.html",
+          "workIds": [
+            "g049"
+          ]
+        },
+        {
+          "title": "逆転裁判２",
+          "status": "复用主库",
+          "reason": "复用既有内容及发行身份，不重复收录。",
+          "source": "https://www.nintendo.co.jp/n08/before/02_1011.html",
+          "workIds": [
+            "g172"
+          ]
+        },
+        {
+          "title": "逆転裁判３",
+          "status": "复用主库",
+          "reason": "复用既有内容及发行身份，不重复收录。",
+          "source": "https://www.nintendo.co.jp/n08/before/0312_0401.html",
+          "workIds": [
+            "g173"
+          ]
+        },
+        {
+          "title": "逆転裁判４",
+          "status": "复用主库",
+          "reason": "复用既有内容及发行身份，不重复收录。",
+          "source": "https://www.nintendo.co.jp/ds/software/agcj/index.html",
+          "workIds": [
+            "g182"
           ]
         }
       ]

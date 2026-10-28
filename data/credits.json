@@ -42448,6 +42448,19 @@
       "territory": null
     },
     {
+      "id": "credit-d25e66bd08f9021c",
+      "entityId": "entity-name-8865f66ec578",
+      "targetType": "release",
+      "targetId": "g1331-v1",
+      "workId": "g1331",
+      "role": "publisher",
+      "rawCredit": "Sony Computer Entertainment",
+      "status": "existingCredit",
+      "source": "https://www.4gamer.net/games/105/G010573/20100722025/",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
       "id": "credit-06c97adc1fb6de71",
       "entityId": "entity-name-a7663faeee46",
       "targetType": "release",
@@ -59669,6 +59682,19 @@
       "rawCredit": "テクノポリスソフト",
       "status": "existingCredit",
       "source": "https://www.onionsoft.net/history.html",
+      "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
+      "territory": null
+    },
+    {
+      "id": "credit-50587e3a5ce2c1eb",
+      "entityId": "entity-name-c87c2b9662fc",
+      "targetType": "release",
+      "targetId": "ultra-snakes-revenge-v1",
+      "workId": "ultra-snakes-revenge",
+      "role": "publisher",
+      "rawCredit": "Ultra Games",
+      "status": "existingCredit",
+      "source": "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf",
       "note": "仅规范化此条历史发行署名；不据此推定开发职责。",
       "territory": null
     },
@@ -95199,6 +95225,17 @@
       "status": "existingEvidence"
     },
     {
+      "dossierId": "chunsoft",
+      "workId": "g1331",
+      "placement": "main",
+      "roles": [
+        "catalogueAssociation"
+      ],
+      "group": "unresolved",
+      "source": "https://www.spike-chunsoft.co.jp/company/outline/",
+      "status": "pendingRole"
+    },
+    {
       "dossierId": "ultra_games",
       "workId": "g1029",
       "placement": "main",
@@ -95213,6 +95250,17 @@
       "dossierId": "ultra_games",
       "workId": "g1285",
       "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "ultra_games",
+      "workId": "ultra-snakes-revenge",
+      "placement": "related",
       "roles": [
         "publisher"
       ],
@@ -95741,6 +95789,50 @@
       ],
       "group": "release",
       "source": "https://game.watch.impress.co.jp/docs/20070202/kid.htm",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "capcom",
+      "workId": "g049",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.capcom.co.jp/ir/company/info.html",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "capcom",
+      "workId": "g172",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.capcom.co.jp/ir/company/info.html",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "capcom",
+      "workId": "g173",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.capcom.co.jp/ir/company/info.html",
+      "status": "existingEvidence"
+    },
+    {
+      "dossierId": "capcom",
+      "workId": "g182",
+      "placement": "main",
+      "roles": [
+        "publisher"
+      ],
+      "group": "release",
+      "source": "https://www.capcom.co.jp/ir/company/info.html",
       "status": "existingEvidence"
     }
   ],
