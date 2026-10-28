@@ -40,3 +40,14 @@ CAPCOM官网区分1979-05-30法人设立与1983-06-11创业。专题首批最早
 4. Ultra：Mission: Impossible已定位原手册，准入范围尚待逐项比较；Metal Gear NES版本与Konami旧身份复用，普通地区移植不扩录。
 5. 新专题后续：CAPCOM首批以外的叙事系列及增补内容；再按data/dossier-queue-20261029.json核对已有发行但缺专题的候选。队列前列为Konami Digital Entertainment、Koei Tecmo Games、VISUAL ARTS、ENTERGRAM、PROTOTYPE；已有集团专题可涵盖者不强制再建，不据候选队列推定成立日或原作开发。
 6. 本文写入时发布尚待进行；最终PR、合并提交及Pages状态由本次运行结果报告，不将准备动作写成上线成功。
+
+
+## 发布回执
+
+- PR：https://github.com/wt1234-donkey/visual-novel/pull/170，已合并。
+- 分支数据提交：896b96818f230867a23807a8adeea085d58a90e3。
+- main合并提交：3fb3ca3ef0713000cce16f3c60e155782947c6a2。
+- 远程Git树996bc3a996ef61e6cbfb97b6a4718c424a8c1059与本地通过验证的树一致；命令行缺登录凭据后使用已连接GitHub账号上传，每文件blob哈希逐一核对一致。
+- Pages数据发布：https://github.com/wt1234-donkey/visual-novel/actions/runs/40733101886；build、deploy与report-build-status全部success。
+- 站点：https://wt1234-donkey.github.io/visual-novel/；新专题capcom.html。该回执仅补充本轮记录，不修改已上线数据。
+- 下次从上方未完成事项第1项（原始完整表格）及第2项（第二季分话与UMD内容关系）继续；不可重复新增g1331、ultra-snakes-revenge或CAPCOM既有四作。
