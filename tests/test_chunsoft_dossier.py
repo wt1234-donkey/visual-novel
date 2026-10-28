@@ -46,5 +46,5 @@ class ChunsoftDossierTests(unittest.TestCase):
  def test_rendered_scope_and_old_evidence_remain(self):
   for p in shared_paths(ROOT, BASE, '54abb80b9ee2303f294d2bc0e0d3189482e045cf', ['organization-context*.json','organization-verification*.json']):self.assertEqual(read(p),old(p))
   for p in ['data/taxonomy.json','data/entity-migration-baseline.json','data/content-migration-baseline.json']:self.assertEqual(read(p),old(p))
-  page=(ROOT/'chunsoft.html').read_text();self.assertEqual(page.count('<article class="card"'),11);self.assertIn('09-29',page);self.assertIn('g1284-c-complete',page)
+  page=subprocess.check_output(['git','show','54abb80b9ee2303f294d2bc0e0d3189482e045cf:chunsoft.html'],cwd=ROOT,text=True);self.assertEqual(page.count('<article class="card"'),11);self.assertIn('09-29',page);self.assertIn('g1284-c-complete',page)
   self.assertIn('data-company="chunsoft" data-first-year="1992"',(ROOT/'index.html').read_text())

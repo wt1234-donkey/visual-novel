@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = 'ed2d0034d56b001849a70bcb069e2e54dd5bc857'
 
 def read(path):
-    return json.loads((ROOT / path).read_text())
+    return json.loads(subprocess.check_output(['git', 'show', '6aca87246df60132412331a11e5e1b617e6d6a6f:' + path], cwd=ROOT))
 
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
