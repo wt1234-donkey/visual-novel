@@ -250,3 +250,5 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-26 第二轮身份复核使用 `entity-creator-a-recheck1-review-20261026.json` 与同名Markdown，从首轮结束时39项`unresolved`的显示名排序连续复核前五项。Accolade原版说明书、Activision当事公司证券申报、âge品牌公告支持三项身份订正；Addison-Wesley Productions与Adventure Soft法律／名义边界继续待核。首轮326项进度不重置，二轮5／39，余36项身份待核，下一项Alchemist。作品职责、原发行与内容保持，详见独立审计。
 
 2026-10-27 组织与沿革接入第十轮已整理台账，独立身份审核为 `entity-organization-review-20261027.json`。仅CoreMoreco具名订正为品牌，保留旧发行职责；637条逐版结论通过组织页展示，不自动解除589项专题职责待核。组织上下文、历史节点与合作关系使用独立带记录ID的配置，不改变正式作品与关系继承。详见 `organization-verification-20261027.md`。
+
+2026-10-28 第28轮四项结论按 `organization-round28-closure-20261028.json` 接入第30轮台账。GREE／Mobage 仅在对应 `g209-v3`／`g209-v2` 发行层记录 NextNinja 的服务提供方；1985 年 QL 合辑以独立 `scopedEditions` 版次索引和 `edition` 范围的 Sinclair 出版职责表示，不猜配旧版 ID 或新增主库内容；ASCII 的 AnEarth 土星版错署经 SEGA 官方目录订正为メディアワークス，旧专题卡转历史对照。原始发行字段及先前台账快照不改写；详见[四项落库审计](organization-round28-closure-20261028.md)。

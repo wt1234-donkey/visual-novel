@@ -8,6 +8,7 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 from entity_names import apply_names, NAMES as DISPLAY_NAMES, display_name
+from round28_corrections import corrected_coverage, review as round28_review
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '35b988136f016199d26121e41ca8d7b99d18e310'
@@ -100,11 +101,12 @@ FIVE_PHASE_REVIEW = 'data/entity-verification-five-phase-review-20261026.json'
 NITROPLUS_ROLE_REVIEW = 'data/entity-role-nitroplus-review-20261027.json'
 ADVENTURE_ALICE_ROLE_REVIEW = 'data/entity-role-adventure-alice-review-20261027.json'
 TYPE_LABELS = {'company':'公司／组织','brand':'品牌','team':'制作团队','publication':'刊物／出版名义','individual':'个人','unknown':'身份待核','history':'沿革专题'}
-ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
+ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','serviceProvider':'移动版服务提供','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
 BRANDS = set('key aniplex_exe sprite madosoft yuzusoft innocent_grey minori august toneworks asaproject leaf sagaplanets smee favorite cuffs cube sphere palette silkys silkys_plus alicesoft overdrive cocktailsoft macadamia fairytale cabbage hulotte laplacian applique clochette nanawind harukaze sorahane hummingbird_soft minatosoft ultra_games'.split())
 HISTORIES = {'sierra','sierra_on_line','falcom','te_soft','banpresto','takeru'}
 NAMES = {'key':['Key'], 'novect':['NOVECT','Novectacle'], 'aniplex_exe':['ANIPLEX.EXE'], 'sprite':['sprite','sprite games'], 'madosoft':['まどそふと'], 'yuzusoft':['ゆずソフト'], 'innocent_grey':['Innocent Grey'], 'minori':['minori'], 'august':['AUGUST'], 'toneworks':['tone work’s',"tone work's"], 'asaproject':['ASa Project'], 'elf':['ELF','エルフ'], 'leaf':['Leaf'], 'sagaplanets':['SAGA PLANETS'], 'smee':['SMEE'], 'favorite':['FAVORITE'], 'cuffs':['CUFFS'], 'cube':['CUBE'], 'sphere':['Sphere'], 'palette':['ぱれっと'], 'silkys':['Silky’s',"Silky's"], 'silkys_plus':['Silky’s Plus',"Silky's Plus"], 'alicesoft':['Alicesoft','ALICESOFT','アリスソフト'], 'nitroplus':['Nitroplus','NITRO PLUS'], 'overdrive':['OVERDRIVE'], 'jast':['JAST（日本）'], 'cocktailsoft':['Cocktail Soft','カクテルソフト','カクテル・ソフト'], 'macadamia':['Macadamia Soft'], 'fairytale':['フェアリーテール','FairyTale','FAIRYTALE'], 'gaina':['GAINA','BENTEN Film'], 'gainax':['GAINAX'], 'jhv':['Japan Home Video'], 'cabbage':['きゃべつそふと','Cabbage Soft'], 'hulotte':['HULOTTE'], 'laplacian':['Laplacian'], 'applique':['あっぷりけ'], 'clochette':['Clochette'], 'nanawind':['NanaWind'], 'harukaze':['HARUKAZE','HARU❀KAZE'], 'sorahane':['SORAHANE'], 'taito':['TAITO（太东）','TAITO'], 'nec_he':['NEC Home Electronics'], 'tokuma':['徳間書店'], 'sega':['世嘉','SEGA'], 'shopro':['小学館プロダクション'], 'hokubu':['北部通信工業'], 'konami':['Konami'], 'hudson':['Hudson Soft（哈德森）','Hudson Soft'], 'sinclair':['Sinclair Research'], 'cinematronics':['Cinematronics'], 'microsoft':['Microsoft'], 'enix':['Enix（艾尼克斯）','Enix'], 'dataeast':['Data East'], 'ascii':['ASCII'], 'melbournehouse':['Melbourne House'], 'koei':['光荣','KOEI'], 'banpresto':['Banpresto'], 'adventure_international':['Adventure International'], 'infocom':['Infocom'], 'sierra':['On-Line Systems','Sierra On-Line'], 'sierra_on_line':['Sierra On-Line'], 'psk':['PSK'], 'microcabin':['Micro Cabin','マイクロキャビン'], 'legend_uk':['Legend（英国）'], 'legend_entertainment':['Legend Entertainment'], 'te_soft':['T&E SOFT'], 'carry_lab':['Carry Lab','キャリーラボ'], 'champion_soft':['チャンピオンソフト','ChampionSoft','Champion Soft'], 'hummingbird_soft':['HummingBird Soft','ハミングバードソフト'], 'riverhill_soft':['Riverhill Soft','リバーヒルソフト'], 'falcom':['日本ファルコム','Falcom'], 'ibm':['IBM'], 'mosaic':['Mosaic Publishing'], 'square':['Square','スクウェア'], 'toho':['東宝','TOHO'], 'db_soft':['dB-SOFT'], 'comptiq':['Comptiq','コンプティーク'], 'minatosoft':['みなとそふと','Minato Soft'], 'hawkeye':['株式会社ホークアイ','Hawk Eye'], 'addison_wesley':['Addison-Wesley','Addison-Wesley Publishing Company']}
 EXTRAS = [
+ ('nextninja','NextNinja','company',['株式会社NextNinja'],'https://web.archive.org/web/20160808133739/http://jp.apps.gree.net:80/ja/73010'),
  ('lucasfilm_games_legacy','Lucasfilm Games','team',['Lucasfilm Games（1982年起游戏部门）'],'https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/'),
  ('headroom','HEADROOM','team',['HEADROOM','ヘッドルーム'],'https://www.namura.net/xkd.com/product/graduation.html'),
  ('tenky','TENKY','company',['TENKY','有限会社テンキー'],'https://www.tenky.co.jp/company.html'),
@@ -158,7 +160,7 @@ def digest(x): return hashlib.sha256(json.dumps(x,ensure_ascii=False,sort_keys=T
 def render_json(d): return json.dumps(d,ensure_ascii=False,indent=2)+'\n'
 
 def build():
- d=read('data/games.json'); coverage=read('data/company-coverage.json'); taxonomy=read('data/taxonomy.json'); companies={c['id']:c for c in coverage['companies']}
+ d=read('data/games.json'); coverage=corrected_coverage(read('data/company-coverage.json')); taxonomy=read('data/taxonomy.json'); companies={c['id']:c for c in coverage['companies']}
  review_batches=[read(PRIORITY_REVIEW),read(FOLLOWUP_REVIEW),read(THIRD_REVIEW),read(FOURTH_REVIEW),read(CREATOR_A_REVIEW),read(CREATOR_A2_REVIEW),read(CREATOR_A3_REVIEW),read(CREATOR_A4_REVIEW),read(CREATOR_A5_REVIEW),read(CREATOR_A6_REVIEW),read(CREATOR_B1_REVIEW),read(CREATOR_B2_REVIEW),read(CREATOR_B3_REVIEW),read(CREATOR_C1_REVIEW),read(CREATOR_C2_REVIEW),read(CREATOR_C3_REVIEW),read(CREATOR_C4_REVIEW),read(CREATOR_D1_REVIEW),read(CREATOR_D2_REVIEW),read(CREATOR_D3_REVIEW),read(CREATOR_E1_REVIEW),read(CREATOR_E2_REVIEW),read(CREATOR_E3_REVIEW),read(CREATOR_F1_REVIEW),read(CREATOR_F2_REVIEW),read(CREATOR_G1_REVIEW),read(CREATOR_G2_REVIEW),read(CREATOR_G3_REVIEW),read(CREATOR_H1_REVIEW),read(CREATOR_H2_REVIEW),read(CREATOR_H3_REVIEW),read(CREATOR_I1_REVIEW),read(CREATOR_I2_REVIEW),read(CREATOR_I3_REVIEW),read(CREATOR_I4_REVIEW),read(CREATOR_J1_REVIEW),read(CREATOR_K1_REVIEW),read(CREATOR_K2_REVIEW),read(CREATOR_K3_REVIEW),read(CREATOR_L1_REVIEW),read(CREATOR_L2_REVIEW),read(CREATOR_L3_REVIEW),read(CREATOR_M1_REVIEW),read(CREATOR_M2_REVIEW),read(CREATOR_M3_REVIEW),read(CREATOR_M4_REVIEW),read(CREATOR_M5_REVIEW),read(CREATOR_M6_REVIEW),read(CREATOR_N1_REVIEW),read(CREATOR_N2_REVIEW),read(CREATOR_N3_REVIEW),read(CREATOR_N4_REVIEW),read(CREATOR_N5_REVIEW),read(CREATOR_O1_REVIEW),read(CREATOR_P1_REVIEW),read(CREATOR_P2_REVIEW),read(CREATOR_P3_REVIEW),read(CREATOR_Q1_REVIEW),read(CREATOR_R1_REVIEW),read(CREATOR_R2_REVIEW),read(CREATOR_S1_REVIEW),read(CREATOR_S2_REVIEW),read(CREATOR_S3_REVIEW),read(CREATOR_S4_REVIEW),read(CREATOR_S5_REVIEW),read(CREATOR_S6_REVIEW),read(CREATOR_S7_REVIEW),read(CREATOR_S8_REVIEW),read(CREATOR_S9_REVIEW),read(CREATOR_S10_REVIEW),read(CREATOR_S11_REVIEW),read(CREATOR_T1_REVIEW),read(CREATOR_T2_REVIEW),read(CREATOR_T3_REVIEW),read(CREATOR_T4_REVIEW),read(CREATOR_T5_REVIEW),read(CREATOR_U1_REVIEW),read(CREATOR_V1_REVIEW),read(CREATOR_W1_REVIEW),read(CREATOR_X1_REVIEW),read(CREATOR_Y1_REVIEW),read(CREATOR_CF_CATCHUP_REVIEW),read(CREATOR_NUMERIC_REVIEW)]
  review_batches.append(read(CREATOR_A_RECHECK1_REVIEW))
  review_batches.append(read(FIVE_PHASE_REVIEW))
@@ -274,6 +276,19 @@ def build():
    credit(eid,'release',r['id'],role,r['source'],r['publisher'],note='仅规范化此条历史发行署名；不据此推定开发职责。',work_id=r['workId'])
    if role=='publishingBrand' and r['year']==allworks[r['workId']]['firstYear'] and r['contentRelation']=='original':
     credit(eid,'work',r['workId'],'originalPublishingBrand',r['source'],r['publisher'],note='原作首发品牌署名；不等于该品牌独立完成全部程序、美术或剧本。')
+ closure=round28_review(); edition=closure['scopedEdition']
+ assert edition['workId']=='g089' and edition['id'] not in {r['id'] for r in allreleases}
+ for record_id,release_id in [('identity-37','g209-v2'),('identity-36','g209-v3')]:
+  item=next(r for r in closure['records'] if r['recordId']==record_id)
+  source=item['sources'][1]['url']
+  assert next(r for r in allreleases if r['id']==release_id)['workId']=='g209'
+  credit('entity-nextninja','release',release_id,'serviceProvider',source,
+         raw='株式会社NextNinja',status='sourceReviewed',work_id='g209',
+         note='2016年对应移动应用页的提供方；平台名称与原始发行字段保持，不推定PC版或其他移动渠道的出版法人。')
+  credits[-1].update(reviewId=record_id,reviewRecord=closure['audit'])
+ credit('entity-sinclair','edition',edition['id'],'publisher',edition['source'],
+        raw=edition['publisher'],status='sourceReviewed',work_id='g089',note=edition['note'])
+ credits[-1].update(reviewId='duty-558',reviewRecord=closure['audit'])
  # Brand catalogues provide affiliation beyond whether a brand self-published a given port.
  for cid in ['key','leaf','innocent_grey','minori','august','toneworks','asaproject','sagaplanets','smee','favorite','cuffs','cube','sphere','palette','cabbage','madosoft','sprite','harukaze','sorahane','clochette']:
   c=companies[cid]
@@ -369,6 +384,9 @@ def build():
    else:group='unresolved'
    membership_source=reviewed_memberships.get((c['id'],wid),{}).get('source',c['source'])
    memberships.append({'dossierId':c['id'],'workId':wid,'placement':locations[wid],'roles':roles,'group':group,'source':membership_source,'status':'pendingRole' if group=='unresolved' else 'existingEvidence'})
+ ascii_member=next(m for m in memberships if m['dossierId']=='ascii' and m['workId']=='ascii-anearth')
+ assert ascii_member['roles']==['catalogueAssociation'] and ascii_member['status']=='pendingRole'
+ ascii_member.update(roles=[],group='reference',status='sourceReviewedCorrection',source=closure['asciiCorrection']['source'])
  for wid,w in allworks.items():
   loc=locations[wid]
   record={'workId':wid,'placement':loc,'narrativeAssessment':'notReassessed','decision':'retainExistingPlacement','source':w['source'],'reason':'本轮为实体与关系迁移，沿用既有收录；不从类型标签或互动方式自动推定叙事主次。','interactionModes':w['interactionModes']}
@@ -413,7 +431,7 @@ def build():
   baseline['objects']={field:{x['id']:digest(x) for x in d[field]} for field in ['works','contentVersions','platformReleases']}
   baseline['originalDossiers']={cid:{'workIds':c['workIds'],'relatedIds':[w['id'] for w in c.get('relatedGames',[])],'bibliographyIds':[w['id'] for w in c.get('dossierOnlyWorks',[])]} for cid,c in companies.items()}
 
- return {'data/entities.json':model,'data/credits.json':{'schemaVersion':1,'updated':DATE,'credits':credits,'dossierMemberships':memberships},'data/work-classification.json':{'schemaVersion':1,'updated':DATE,'placements':placements,'reviewQueue':reviews,'policy':'保留既有位置；未重新核定叙事主次，不自动转入主库。'},'data/entity-migration-review.json':{'updated':DATE,'nameMappings':mapping,'pendingIdentities':names_review,'pendingMembershipCount':sum(x['status']=='pendingRole' for x in memberships),'identityConflicts':conflicts,'aliasPolicy':'旧taxonomy别名仅作兼容归档；新实体索引保留子品牌，所有实体关系单独记录。'},'data/entity-migration-baseline.json':baseline}
+ return {'data/entities.json':model,'data/credits.json':{'schemaVersion':1,'updated':DATE,'credits':credits,'dossierMemberships':memberships,'scopedEditions':[edition]},'data/work-classification.json':{'schemaVersion':1,'updated':DATE,'placements':placements,'reviewQueue':reviews,'policy':'保留既有位置；未重新核定叙事主次，不自动转入主库。'},'data/entity-migration-review.json':{'updated':DATE,'nameMappings':mapping,'pendingIdentities':names_review,'pendingMembershipCount':sum(x['status']=='pendingRole' for x in memberships),'identityConflicts':conflicts,'aliasPolicy':'旧taxonomy别名仅作兼容归档；新实体索引保留子品牌，所有实体关系单独记录。'},'data/entity-migration-baseline.json':baseline}
 
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()

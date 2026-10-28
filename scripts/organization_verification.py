@@ -70,6 +70,22 @@ def attach_verification(result):
         histories[ref] = entry
         records[ref] = row
         changed.append(ref)
+    closure = read('organization-round28-closure-20261028.json')
+    assert closure['previousSource'] == followup['source']
+    assert {r['recordId'] for r in closure['records']} == {
+        'identity-36', 'identity-37', 'duty-120', 'duty-558'}
+    changed = []
+    for row in closure['records']:
+        ref = row['recordId']
+        previous = records[ref]
+        assert all(row[key] == previous[key] for key in frozen), '第二十八轮结论冻结引用改变'
+        assert row['sources'] and row['status'] in {'限版确认', '归属纠正'}
+        entry = {'round': followup['source']['round'], **{
+            key: previous[key] for key in ['status', 'detail', 'sources', 'strength']}}
+        series.setdefault(ref, []).append(entry)
+        histories[ref] = entry
+        records[ref] = row
+        changed.append(ref)
     by_entity = defaultdict(lambda: defaultdict(list))
     for r in records.values():
         assert r['entityId'] in nodes and r['workId'] in result['works']
@@ -102,12 +118,12 @@ def attach_verification(result):
     result['organizationEvents'] = context['events']
     result['cooperations'] = context['cooperations']
     result['verificationLedger'] = {
-        'reviewedAt': followup['reviewedAt'], 'source': followup['source'],
-        'previousSource': revision['source'], 'policy': followup['policy'], 'records': records,
+        'reviewedAt': closure['reviewedAt'], 'source': closure['source'],
+        'previousSource': followup['source'], 'policy': closure['policy'], 'records': records,
         'changedRecordIds': changed, 'changedCount': len(changed),
         'recordHistory': histories, 'recordHistories': series,
         'counts': dict(Counter(r['status'] for r in records.values())),
         'entityCount': sum(bool(rows) for rows in by_entity.values()), 'total': len(records),
-        'audit': followup['audit']}
-    result['updated'] = followup['reviewedAt']
+        'audit': closure['audit']}
+    result['updated'] = closure['reviewedAt']
     return result

@@ -33,15 +33,20 @@ def validate():
   assert dossier['dossierType'] in m['typeLabels'] and set(dossier['entityIds'])<=entities.keys()
  assert len(c['credits'])==len({x['id'] for x in c['credits']})
  assert len(c['credits'])==len({(x['entityId'],x['targetType'],x['targetId'],x['role']) for x in c['credits']})
- maps={'work':allworks,'release':releases,'content':contents}
+ editions={r['id']:r for r in c.get('scopedEditions',[])}
+ assert all(r['workId'] in allworks and r['contentVersionId'] is None and r['contentRelation']=='unverified' and source_url_valid(r['source']) for r in editions.values())
+ maps={'work':allworks,'release':releases,'content':contents,'edition':editions}
  for cr in c['credits']:
   assert cr['entityId'] in entities and cr['role'] in m['roleLabels'] and source_url_valid(cr['source'])
   target=maps[cr['targetType']][cr['targetId']]
   assert cr['workId']==(target['id'] if cr['targetType']=='work' else target['workId'])
-  if cr['role'] in {'publisher','publishingBrand','portDeveloper'}:assert cr['targetType']=='release'
+  if cr['role'] in {'publisher','publishingBrand','portDeveloper'}:assert cr['targetType'] in {'release','edition'}
+  if cr['targetType']=='edition':assert cr['role']=='publisher' and cr['status']=='sourceReviewed'
   if cr['status']=='existingCredit' and cr['targetType']=='release':assert cr['rawCredit']==target['publisher']
  assert {(x['dossierId'],x['workId']) for x in c['dossierMemberships']}==expected_members
  assert len(c['dossierMemberships'])==len(expected_members)
+ corrected=next(x for x in c['dossierMemberships'] if x['dossierId']=='ascii' and x['workId']=='ascii-anearth')
+ assert corrected['group']=='reference' and corrected['roles']==[] and corrected['status']=='sourceReviewedCorrection'
  placements={x['workId']:x for x in p['placements']};assert set(placements)==set(allworks)
  assert {wid for wid,x in placements.items() if x['placement']=='main'}=={w['id'] for w in d['works']}
  assert all(x['decision']=='retainExistingPlacement' and x['narrativeAssessment']=='notReassessed' for x in placements.values())

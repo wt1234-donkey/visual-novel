@@ -7,11 +7,12 @@ from pathlib import Path
 from source_urls import source_url_valid
 from entity_model import MODEL, DOSSIERS, MEMBERSHIPS, GROUPS, POSITION, card_details, dossier_identity, membership_description
 from entity_names import display_name
+from round28_corrections import corrected_coverage
 from work_notes import validate_work_notes
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
-coverage = json.loads((ROOT / 'data/company-coverage.json').read_text(encoding='utf-8'))
+coverage = corrected_coverage(json.loads((ROOT / 'data/company-coverage.json').read_text(encoding='utf-8')))
 works = {work['id']: work for work in data['works']}
 work_notes = json.loads((ROOT / 'data/work-notes.json').read_text(encoding='utf-8'))
 validate_work_notes(work_notes, works, {c['id'] for c in coverage['companies']})
