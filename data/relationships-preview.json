@@ -191,6 +191,20 @@
         "entity-name-57509c825879",
         "preview-lucasfilm-games-2021"
       ]
+    },
+    {
+      "id": "nec_avenue",
+      "title": "NEC Avenue与NEC集团游戏业务",
+      "subtitle": "历史法人、另设公司与限定权利承接",
+      "root": "preview-nec-corporation",
+      "focus": "entity-name-0b22f68e63fb",
+      "entityIds": [
+        "preview-nec-corporation",
+        "entity-name-0b22f68e63fb",
+        "entity-nec_he",
+        "entity-name-46fe3a3fcf5f",
+        "preview-nec-interchannel-2004"
+      ]
     }
   ],
   "nodes": [
@@ -1117,6 +1131,56 @@
       ]
     },
     {
+      "id": "entity-name-0b22f68e63fb",
+      "name": "NEC Avenue",
+      "type": "company",
+      "aliases": [
+        "NEC Avenue",
+        "NECアベニュー"
+      ],
+      "sources": [
+        "https://gamefaqs.gamespot.com/games/company/72693-elf",
+        "https://www.mtwo.co.jp/blog/2023/07/21/pr230721/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "M2与Lightweight于2023年7月21日的当事方权利转让公告明确具名ＮＥＣアベニュー株式会社，并将其历史发行、Interchannel后来持权及Lightweight转让分别叙述，支持旧NEC Avenue为历史公司类别。仅订正类型；不由2023持权链证明当年作品开发或历次法人的完全同一，不将PC Engine范围自动推广到旧电脑／其他主机发行。四条既有NEC Avenue／NECアベニュー原文与发行保留，与NEC Home Electronics及两个NEC Interchannel节点不合并，不自动新建沿革关系。",
+      "dates": [],
+      "stats": {
+        "main": 4,
+        "related": 2,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "nec_avenue",
+          "name": "NEC Avenue"
+        }
+      ],
+      "works": [
+        {
+          "id": "g830",
+          "title": "毕业 ～Graduation～",
+          "year": 1992
+        },
+        {
+          "id": "g959",
+          "title": "诞生 ～Debut～",
+          "year": 1993
+        },
+        {
+          "id": "g1299",
+          "title": "CAL III 完结篇",
+          "year": 1994
+        },
+        {
+          "id": "g304",
+          "title": "同级生2",
+          "year": 1995
+        }
+      ]
+    },
+    {
       "id": "entity-name-21365baf366d",
       "name": "Chunsoft（チュンソフト）",
       "type": "company",
@@ -1213,6 +1277,46 @@
           "id": "g1078",
           "title": "心连·情结：随机预知",
           "year": 2012
+        }
+      ]
+    },
+    {
+      "id": "entity-name-46fe3a3fcf5f",
+      "name": "NEC Interchannel",
+      "type": "company",
+      "aliases": [
+        "NEC Interchannel"
+      ],
+      "sources": [
+        "https://gamefaqs.gamespot.com/games/company/72693-elf",
+        "https://support.nec-lavie.jp/e-manual/m/nx/vs/s2990302/wd/v1/mst/vs2comn1.pdf",
+        "https://game.watch.impress.co.jp/docs/20040617/ic.htm"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "NEC原厂1999年STEP2入門手册直接下载并提取正文，PDF第166页出现NECインターチャネル株式会社、第167页出现1998 NEC Interchannel,Ltd.，英日公司名足以独立订正本批英文原发行节点为历史公司类别。2004同期更名公告报道用于限定后期名称，不倒改旧发行；该手册中的其他软件不是本库新增作品，也不能作为三个旧游戏的开发依据。本批保留三条旧发行，暂不追加原作／移植制作；下一项日文NECインターチャネル节点仍单列待核，不自动合并英文、日文或2004／2006后期Interchannel身份，亦不新增更名关系。",
+      "dates": [],
+      "stats": {
+        "main": 3,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g830",
+          "title": "毕业 ～Graduation～",
+          "year": 1992
+        },
+        {
+          "id": "g1066",
+          "title": "天地无用！魉皇鬼（1994年冒险游戏）",
+          "year": 1994
+        },
+        {
+          "id": "g304",
+          "title": "同级生2",
+          "year": 1995
         }
       ]
     },
@@ -1485,6 +1589,55 @@
           "id": "g1287",
           "title": "最后的快车",
           "year": 1997
+        }
+      ]
+    },
+    {
+      "id": "entity-nec_he",
+      "name": "NEC Home Electronics",
+      "type": "company",
+      "aliases": [
+        "NEC Home Electronics",
+        "NECホームエレクトロニクス"
+      ],
+      "sources": [
+        "https://www.hunex.co.jp/archives/works/pc-fx"
+      ],
+      "verification": "existingDossier",
+      "historyNote": "1953年6月1日，新日本电气从NEC的无线电部门分离独立，1983年更名为日本电气家用电子。原库有三部实际发行作品却未建专题，且成立时间早于太东，本次补齐此前漏项。",
+      "dates": [],
+      "stats": {
+        "main": 12,
+        "related": 9,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "dossiers": [
+        {
+          "id": "nec_he",
+          "name": "NEC Home Electronics"
+        }
+      ],
+      "works": [
+        {
+          "id": "g767",
+          "title": "脑死亡：亡灵的呼喊",
+          "year": 1992
+        },
+        {
+          "id": "g768",
+          "title": "脑死亡2",
+          "year": 1993
+        },
+        {
+          "id": "g913",
+          "title": "我的女神（1993年冒险游戏）",
+          "year": 1993
+        },
+        {
+          "id": "g831",
+          "title": "毕业II ～Neo Generation～",
+          "year": 1994
         }
       ]
     },
@@ -2418,6 +2571,50 @@
       "works": [],
       "dossiers": [],
       "previewOnly": true
+    },
+    {
+      "id": "preview-nec-corporation",
+      "name": "NEC Corporation（日本電気）",
+      "type": "company",
+      "aliases": [
+        "日本電気株式会社"
+      ],
+      "sources": [
+        "https://shashi.shibusawa.or.jp/details_nenpyo.php?class=&d=all&page=143&query=&sid=5890"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "母公司展示节点；不把子公司作品发行或开发自动归到NEC本社。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-nec-interchannel-2004",
+      "name": "Interchannel（インターチャネル）· 2004年名义",
+      "type": "company",
+      "aliases": [],
+      "sources": [
+        "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "历史NEC Interchannel的2004年商号阶段展示；既有Interchannel原署名身份暂不合并。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
     }
   ],
   "edges": [
@@ -2948,6 +3145,54 @@
       "dateLabel": "2021年起",
       "note": "现行业务以合作／授权为主；作品由各第三方按具体署名归属，不将历史LucasArts原作职责继承给新品牌。",
       "basis": "previewSupplement"
+    },
+    {
+      "id": "nec-avenue-nec-parent",
+      "parent": "preview-nec-corporation",
+      "child": "entity-name-0b22f68e63fb",
+      "kind": "parent",
+      "label": "集团设立",
+      "status": "previewReviewed",
+      "source": "https://shashi.shibusawa.or.jp/details_nenpyo.php?class=&d=all&page=143&query=&sid=5890",
+      "dateLabel": "1987/10/02—1999/01",
+      "note": "母公司社史记录子公司成立及清算；不把两法人合并。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "nec-he-nec-parent",
+      "parent": "preview-nec-corporation",
+      "child": "entity-nec_he",
+      "kind": "parent",
+      "label": "另一集团公司",
+      "status": "previewReviewed",
+      "source": "https://jpn.nec.com/corporateblog/202307/02.html",
+      "dateLabel": "1953年起",
+      "note": "NEC Home Electronics先于Avenue独立设立，游戏发行署名各自保留。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "nec-interchannel-nec-parent",
+      "parent": "preview-nec-corporation",
+      "child": "entity-name-46fe3a3fcf5f",
+      "kind": "parent",
+      "label": "1995年新设",
+      "status": "previewReviewed",
+      "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html",
+      "dateLabel": "1995/10—2004/03",
+      "note": "集团三处CD-ROM／游戏软件人力与经验汇集；不是Avenue法人改名，也非三公司法定合并。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "nec-avenue-to-interchannel",
+      "parent": "entity-name-0b22f68e63fb",
+      "child": "entity-name-46fe3a3fcf5f",
+      "kind": "family",
+      "label": "软件业务人材承接",
+      "status": "previewReviewed",
+      "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html",
+      "dateLabel": "1995年起",
+      "note": "员工和经验汇集到新公司，具体资产及各作品合同不据此推定。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [
@@ -3048,6 +3293,17 @@
       "status": "previewReviewed",
       "source": "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/",
       "note": "官方记第二个十年使用LucasArts名义。这里仅标示业务名称阶段，不宣称两个节点法律上合并或同一公司。"
+    },
+    {
+      "id": "nec-interchannel-name-2004",
+      "fromId": "entity-name-46fe3a3fcf5f",
+      "toId": "preview-nec-interchannel-2004",
+      "oldName": "NEC Interchannel",
+      "newName": "Interchannel",
+      "dateLabel": "2004/07/01",
+      "status": "previewReviewed",
+      "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html",
+      "note": "历史公司更名展示；既有原始发行署名和另存的同名实体ID不自动改写或合并。"
     }
   ],
   "reference": {
