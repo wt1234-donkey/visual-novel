@@ -106743,6 +106743,260 @@
           "workIds": []
         }
       ]
+    },
+    {
+      "id": "nec_avenue",
+      "name": "NEC Avenue",
+      "foundedAt": "1987-10-02",
+      "foundedSource": "https://shashi.shibusawa.or.jp/details_nenpyo.php?class=&d=all&page=143&query=&sid=5890",
+      "checkedAt": "2026-10-28",
+      "status": "初步专题：三部既有主库复用，新增一部叙事完结篇与两部跨类型关联",
+      "scope": "1987—1999历史NEC Avenue：以有据可核的叙事游戏及剧情RPG／动作叙事为首批。四部主库引用（其中三部既有）和两部跨类型关联，不代表全部发行目录。",
+      "versionScope": "新独立续篇只建一条原作内容与首批发行；既有移植发行保持原样。同日PC-98内容、其他移植或复刻均不凭机种新增内容身份。",
+      "publisherNote": "NEC Avenue是1987年设立、1999年清算的NEC集团公司；NEC Home Electronics是另一独立公司。1995年NEC Interchannel另设并承接多处软件人员与业务；其后更名与特定PC Engine游戏权利转让不代表所有作品开发和版权自动同一。",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>4部主库引用：3部复用＋1部新增；另列2部跨类型关联。</strong>原作、移植发行及外部开发按实际署名分开。<a href=\"organizations.html?family=nec_avenue&amp;node=entity-name-0b22f68e63fb\">查看组织关系与沿革</a>。</p>",
+      "workIds": [
+        "g830",
+        "g959",
+        "g304",
+        "g1299"
+      ],
+      "relatedGames": [
+        {
+          "id": "necavenue-monster-maker",
+          "title": "モンスターメーカー 闇の竜騎士",
+          "originalTitle": "モンスターメーカー 闇の竜騎士",
+          "firstYear": 1994,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "奇幻／怪物养成RPG",
+          "characters": [
+            "ライア",
+            "ディアーネ",
+            "ルフィーア"
+          ],
+          "charactersSource": "https://raido.moe/staff/pce/pce_monster_maker.html",
+          "charactersNote": "原版片尾或同期产品资料所见角色；不推定完整阵容。",
+          "synopsis": "以骑士与伙伴的冒险展开奇幻RPG，探索地图、迎战敌人并培育怪物。",
+          "notes": "原版片尾列翔企画／遊企画／Office K及NEC Avenue等分工，NEC员工参与企划、剧本、图像；不能将所有程序开发归NEC Avenue。1994/03/30发行。",
+          "source": "https://raido.moe/staff/pce/pce_monster_maker.html",
+          "platformReleases": [
+            {
+              "id": "necavenue-monster-maker-v1",
+              "workId": "necavenue-monster-maker",
+              "year": 1994,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "NEC Avenue",
+              "kind": "原作／首批内容",
+              "voice": "有",
+              "differences": "历史NEC Avenue署名；仅登记此独立游戏首次发行，后发授权与改编另核。",
+              "source": "https://raido.moe/staff/pce/pce_monster_maker.html",
+              "contentVersionId": "necavenue-monster-maker-c-original",
+              "contentRelation": "original",
+              "contentNote": "本作原作；不把系列其他游戏并作移植。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "necavenue-monster-maker-c-original",
+              "workId": "necavenue-monster-maker",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "原版片尾列翔企画／遊企画／Office K及NEC Avenue等分工，NEC员工参与企划、剧本、图像；不能将所有程序开发归NEC Avenue。1994/03/30发行。",
+              "source": "https://raido.moe/staff/pce/pce_monster_maker.html",
+              "evidenceReleaseIds": [
+                "necavenue-monster-maker-v1"
+              ],
+              "addedContent": []
+            }
+          ],
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "依据RPG玩法和片尾角色资料归纳；操作细节未逐页原说明书核对。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://raido.moe/staff/pce/pce_monster_maker.html"
+          ]
+        },
+        {
+          "id": "necavenue-basted",
+          "title": "BASTED",
+          "originalTitle": "BASTED",
+          "firstYear": 1994,
+          "category": "动作冒险",
+          "subcategory": "动作冒险",
+          "genre": "幻想／动画叙事动作",
+          "characters": [
+            "主人公（原名待核）"
+          ],
+          "charactersSource": "https://mediaworld.co.jp/products/10016587003",
+          "charactersNote": "原版片尾或同期产品资料所见角色；不推定完整阵容。",
+          "synopsis": "在幻想场景间推进战斗，并以动画段落承接剧情的动作游戏。",
+          "notes": "1994/10/21 PC Engine版，包装版权标AIC与NEC Avenue；动画参与和发行分开，非纯视觉小说。",
+          "source": "https://mediaworld.co.jp/products/10016587003",
+          "platformReleases": [
+            {
+              "id": "necavenue-basted-v1",
+              "workId": "necavenue-basted",
+              "year": 1994,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "NEC Avenue",
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "历史NEC Avenue署名；仅登记此独立游戏首次发行，后发授权与改编另核。",
+              "source": "https://mediaworld.co.jp/products/10016587003",
+              "contentVersionId": "necavenue-basted-c-original",
+              "contentRelation": "original",
+              "contentNote": "本作原作；不把系列其他游戏并作移植。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "necavenue-basted-c-original",
+              "workId": "necavenue-basted",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994/10/21 PC Engine版，包装版权标AIC与NEC Avenue；动画参与和发行分开，非纯视觉小说。",
+              "source": "https://mediaworld.co.jp/products/10016587003",
+              "evidenceReleaseIds": [
+                "necavenue-basted-v1"
+              ],
+              "addedContent": []
+            }
+          ],
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "俯视角行动和实时战斗为主，预制动画推动剧情；角色姓名及具体按键仍待原说明书。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://mediaworld.co.jp/products/10016587003",
+            "https://www.mobygames.com/game/48720/basted/"
+          ]
+        }
+      ],
+      "relatedSectionTitle": "剧情RPG与动作叙事",
+      "relatedCountLabel": "跨类型关联，不计主库四类",
+      "relatedIntro": "独立首发游戏按实际玩法归跨类型：RPG的怪物养成、战斗与动作游戏的实时战斗均不能归为纯视觉小说。",
+      "catalogueEntryCount": 9,
+      "source": "https://shashi.shibusawa.or.jp/details_nenpyo.php?class=&d=all&page=143&query=&sid=5890",
+      "auditTitle": "原作首批、历史署名与权利范围",
+      "auditSourceLabel": "NEC母公司社史",
+      "auditLabel": "四部主库引用、两部跨类型关联与组织沿革；非NEC Avenue完整游戏目录。",
+      "auditNote": "同期PC-98 CAL III内容差异、部分授权移植的实际制作与详细法人承接仍待核。详见data/nec-avenue-audit-20261028.md。",
+      "sectionTitle": "从偶像养成到神话数码漫画",
+      "description": "NEC Avenue历史专题：叙事作品、角色扮演关联与NEC集团软件业务沿革。",
+      "profileTitle": "作品阶段与发行边界",
+      "creativeProfile": {
+        "thesis": "编辑观察：1990年代NEC Avenue同时发行电脑原作、家用机改编和合作原创游戏。首发内容、开发、音画制作及现行权利分别核对。",
+        "phases": [
+          {
+            "period": "1987—1993",
+            "heading": "独立公司与游戏发行业务",
+            "analysis": "母公司社史记1987设立；卒業PCE发行与誕生PC-98原作体现不同首发关系。",
+            "basis": "编辑观察",
+            "source": "https://shashi.shibusawa.or.jp/details_nenpyo.php?class=&d=all&page=143&query=&sid=5890"
+          },
+          {
+            "period": "1994—1996",
+            "heading": "数码漫画与合作RPG",
+            "analysis": "CAL III原片尾列Birdy Soft原案；Monster Maker列多方原案、程序和NEC员工具体企划与剧本。",
+            "basis": "编辑观察",
+            "source": "https://raido.moe/staff/pce/pce_monster_maker.html"
+          },
+          {
+            "period": "1995—2004",
+            "heading": "NEC Interchannel另设与更名",
+            "analysis": "三处软件业务人力汇入1995年新公司，2004年转出NEC控制并更名；不将不同公司作同一身份。",
+            "basis": "编辑观察",
+            "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html"
+          }
+        ]
+      },
+      "entries": [
+        {
+          "title": "1987年成立与1999年清算",
+          "status": "母公司社史确认",
+          "reason": "NEC百年史记1987/10/02设立NECアベニュー(株)、1999年1月清算；成立日与PC Engine发行年分开。",
+          "source": "https://shashi.shibusawa.or.jp/details_nenpyo.php?class=&d=all&page=143&query=&sid=5890",
+          "workIds": []
+        },
+        {
+          "title": "CAL III 完結編",
+          "status": "新增独立续篇 g1299",
+          "reason": "首发批次收录PC Engine版；Birdy Soft原案与NEC Avenue发行分开，同日PC-98内容差异待核。",
+          "source": "https://raido.moe/staff/pce/pce_cal_3.html",
+          "workIds": [
+            "g1299"
+          ]
+        },
+        {
+          "title": "卒業／誕生／同級生2",
+          "status": "复用三部既有作品",
+          "reason": "g830、g959、g304的原作与历史发行不复制；卒業的NEC Avenue PCE新增内容沿原记录，养成例外不作为本轮新作准入。",
+          "source": "https://raido.moe/staff/pce/pce_tanjou_debut.html",
+          "workIds": [
+            "g830",
+            "g959",
+            "g304"
+          ]
+        },
+        {
+          "title": "モンスターメーカー 闇の竜騎士",
+          "status": "跨类型RPG关联",
+          "reason": "独立RPG首发，以原片尾区分NEC参与企划剧本和外部原案／程序；不计四类主库。",
+          "source": "https://raido.moe/staff/pce/pce_monster_maker.html",
+          "workIds": [],
+          "relatedIds": [
+            "necavenue-monster-maker"
+          ]
+        },
+        {
+          "title": "BASTED",
+          "status": "跨类型动作叙事关联",
+          "reason": "AIC动画版权与NEC Avenue发行并列；动作战斗主导，不误标为视觉小说。",
+          "source": "https://mediaworld.co.jp/products/10016587003",
+          "workIds": [],
+          "relatedIds": [
+            "necavenue-basted"
+          ]
+        },
+        {
+          "title": "1995年NEC Interchannel另设",
+          "status": "组织沿革",
+          "reason": "由NEC、NEC Home Electronics和NEC Avenue软件部门人力汇集而设；不同于NEC Avenue法人更名。",
+          "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html",
+          "workIds": []
+        },
+        {
+          "title": "2004年Interchannel改名",
+          "status": "组织沿革",
+          "reason": "NEC Interchannel在股权转移后于2004/07/01更名；历史发行署名不回写。",
+          "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html",
+          "workIds": []
+        },
+        {
+          "title": "2023年PC Engine游戏权利转让",
+          "status": "限定权利范围",
+          "reason": "M2与Lightweight公告仅涉及后者持有的NEC Avenue发行PC Engine游戏软件权利；不涵盖全部IP、开发归属或所有平台。",
+          "source": "https://www.mtwo.co.jp/blog/2023/07/21/pr230721/",
+          "workIds": []
+        },
+        {
+          "title": "CAL II、DE・JA、魔導物語I",
+          "status": "后续逐版核查",
+          "reason": "原作早于NEC Avenue移植或另有原版权利方；未核具体新增内容前不以移植另建作品或版本。",
+          "source": "https://raido.moe/staff/pce/pce_deja.html",
+          "workIds": []
+        }
+      ]
     }
   ],
   "schemaVersion": 2,

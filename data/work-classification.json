@@ -14834,6 +14834,18 @@
       ]
     },
     {
+      "workId": "g1299",
+      "placement": "main",
+      "narrativeAssessment": "notReassessed",
+      "decision": "retainExistingPlacement",
+      "source": "https://www.tg-16.com/contributors/dshadoff/Daigirin/Daigirin_1997_06_NEC_Extract.pdf",
+      "reason": "本轮为实体与关系迁移，沿用既有收录；不从类型标签或互动方式自动推定叙事主次。",
+      "interactionModes": [
+        "阅读推进",
+        "选项分支"
+      ]
+    },
+    {
       "workId": "key-rpg-hbr",
       "placement": "related",
       "narrativeAssessment": "notReassessed",
@@ -25972,6 +25984,30 @@
       "reason": "本轮为实体与关系迁移，沿用既有收录；不从类型标签或互动方式自动推定叙事主次。",
       "interactionModes": [
         "文字输入"
+      ]
+    },
+    {
+      "workId": "necavenue-monster-maker",
+      "placement": "related",
+      "narrativeAssessment": "notReassessed",
+      "decision": "retainExistingPlacement",
+      "source": "https://raido.moe/staff/pce/pce_monster_maker.html",
+      "reason": "本轮为实体与关系迁移，沿用既有收录；不从类型标签或互动方式自动推定叙事主次。",
+      "interactionModes": [
+        "直接移动",
+        "战斗指令"
+      ]
+    },
+    {
+      "workId": "necavenue-basted",
+      "placement": "related",
+      "narrativeAssessment": "notReassessed",
+      "decision": "retainExistingPlacement",
+      "source": "https://mediaworld.co.jp/products/10016587003",
+      "reason": "本轮为实体与关系迁移，沿用既有收录；不从类型标签或互动方式自动推定叙事主次。",
+      "interactionModes": [
+        "直接移动",
+        "即时动作"
       ]
     }
   ],
@@ -38924,6 +38960,34 @@
       ],
       "status": "existingScopeRestriction",
       "nextStep": "区分原有范围限制与资料不足；输入标签本身不触发自动增删。"
+    },
+    {
+      "workId": "necavenue-monster-maker",
+      "placement": "related",
+      "narrativeAssessment": "notReassessed",
+      "decision": "retainExistingPlacement",
+      "source": "https://raido.moe/staff/pce/pce_monster_maker.html",
+      "reason": "本轮为实体与关系迁移，沿用既有收录；不从类型标签或互动方式自动推定叙事主次。",
+      "interactionModes": [
+        "直接移动",
+        "战斗指令"
+      ],
+      "status": "needsNarrativeEvidence",
+      "nextStep": "逐作比较叙事与系统主次；仅有ADV／RPG或IP标签不足以转入主库。"
+    },
+    {
+      "workId": "necavenue-basted",
+      "placement": "related",
+      "narrativeAssessment": "notReassessed",
+      "decision": "retainExistingPlacement",
+      "source": "https://mediaworld.co.jp/products/10016587003",
+      "reason": "本轮为实体与关系迁移，沿用既有收录；不从类型标签或互动方式自动推定叙事主次。",
+      "interactionModes": [
+        "直接移动",
+        "即时动作"
+      ],
+      "status": "needsNarrativeEvidence",
+      "nextStep": "逐作比较叙事与系统主次；仅有ADV／RPG或IP标签不足以转入主库。"
     }
   ],
   "policy": "保留既有位置；未重新核定叙事主次，不自动转入主库。"

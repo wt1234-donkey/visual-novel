@@ -39687,6 +39687,42 @@
       "interactionSources": [
         "https://www.gog.com/en/game/escape_from_monkey_island"
       ]
+    },
+    {
+      "id": "g1299",
+      "title": "CAL III 完结篇",
+      "chineseTitle": "CAL III 完结篇",
+      "chineseTitleType": "站内编辑译名",
+      "originalTitle": "キャルIII 完結編",
+      "titleAliases": [
+        "CAL III 完結編",
+        "Cal III Kanketsuhen"
+      ],
+      "firstYear": 1994,
+      "category": "文字冒险",
+      "subcategory": "图文选项／调查",
+      "genre": "神话／异世界恋爱冒险",
+      "characters": [
+        "ワタル",
+        "結城美加",
+        "チェス",
+        "ヴィーナス"
+      ],
+      "charactersSource": "https://raido.moe/staff/pce/pce_cal_3.html",
+      "charactersNote": "人物以PC Engine原作片尾转录为据；中文标题为站内编辑译名。",
+      "synopsis": "ワタル再赴时之世界，为救ヴィーナス及其分身結城美加，追索系列悬念的终局。",
+      "notes": "与前两作是不同故事的续篇；PC Engine 1994年3月25日原作批次已核。同期PC-98版的内容同异仍待原件，不为其猜测新内容版本。原案署名Birdy Soft，NEC Avenue发行。",
+      "source": "https://www.tg-16.com/contributors/dshadoff/Daigirin/Daigirin_1997_06_NEC_Extract.pdf",
+      "interactionModes": [
+        "阅读推进",
+        "选项分支"
+      ],
+      "interactionNote": "以大量对话和预制回应推进，选择场面较少且故事大体单线；启动调试模式的键位不属于叙事输入。",
+      "interactionBasis": "来源核对",
+      "interactionSources": [
+        "https://www.gavas.jp/products/detail.php?product_id=6262",
+        "https://www.tg-16.com/contributors/dshadoff/Daigirin/Daigirin_1997_06_NEC_Extract.pdf"
+      ]
     }
   ],
   "platformReleases": [
@@ -84923,6 +84959,24 @@
       "contentRelation": "original",
       "contentNote": "独立原作首次内容；普通移植与后发重制另核。",
       "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1299-v1",
+      "workId": "g1299",
+      "year": 1994,
+      "platform": "PC Engine SUPER CD-ROM²",
+      "publisher": "NEC Avenue",
+      "publisherCompanies": [
+        "NEC Avenue"
+      ],
+      "kind": "原作／首批内容",
+      "voice": "有",
+      "differences": "1994/03/25首发批次；原版片尾有配音演员名单。PC-98同日产品的素材差异待核，不据此多建一条内容版。",
+      "source": "https://raido.moe/staff/pce/pce_cal_3.html",
+      "contentVersionId": "g1299-c-original",
+      "contentRelation": "original",
+      "contentNote": "独立续篇的原作内容；只录已核平台首批发行。",
+      "releaseRole": "contentDebut"
     }
   ],
   "contentVersions": [
@@ -105894,6 +105948,19 @@
       "source": "https://www.gog.com/en/game/escape_from_monkey_island",
       "evidenceReleaseIds": [
         "g1298-v1"
+      ],
+      "addedContent": []
+    },
+    {
+      "id": "g1299-c-original",
+      "workId": "g1299",
+      "label": "原作／首批内容",
+      "firstYear": 1994,
+      "basis": "original",
+      "evidence": "1994年3月25日PC Engine《CAL III 完結編》独立完结篇；原片尾列Birdy Soft企划原案与NEC Avenue发行。",
+      "source": "https://raido.moe/staff/pce/pce_cal_3.html",
+      "evidenceReleaseIds": [
+        "g1299-v1"
       ],
       "addedContent": []
     }
