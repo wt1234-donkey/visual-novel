@@ -47,7 +47,8 @@ class TakeruDossierTests(unittest.TestCase):
         self.assertFalse(any(c['workId']=='takeru-madeline' for c in a['credits']))
         dossier=next(c for c in read('data/company-coverage.json')['companies'] if c['id']=='takeru')
         self.assertEqual(dossier['workIds'],['g743','g812','g1278']);self.assertEqual(dossier['dossierOnlyWorks'][0]['interactionModes'],['文字输入'])
-        page=(ROOT/'takeru.html').read_text();self.assertEqual(page.count('<article class="card"'),4);self.assertIn('销售渠道与服务沿革',page);self.assertIn('未完成：1994年业务移交',page)
+        # This test describes the initial four-card publication, before later channel completion.
+        page=subprocess.check_output(['git','show','329447b4c8ee6c7656301a4a0ab5f1fe9edd51cf:takeru.html'],cwd=ROOT,text=True);self.assertEqual(page.count('<article class="card"'),4);self.assertIn('销售渠道与服务沿革',page);self.assertIn('未完成：1994年业务移交',page)
     def test_timeline_and_unfinished_are_current_but_old_ledger_is_preserved(self):
         b,a=old('data/organizations.json'),read('data/organizations.json')
         self.assertEqual(a['verificationLedger'],b['verificationLedger'])

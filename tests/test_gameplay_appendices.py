@@ -13,7 +13,7 @@ import build_company_pages as pages
 class GameplayAppendixTests(unittest.TestCase):
     def test_complete_reference_tables_are_last_and_do_not_add_cards(self):
         expected = {'adventure_international', 'infocom', 'sierra', 'koei', 'ascii', 'melbournehouse', 'psk', 'sierra_on_line', 'sinclair', 'microcabin', 'cinematronics', 'dataeast', 'enix', 'hudson', 'legend_uk', 'legend_entertainment', 'te_soft', 'carry_lab', 'champion_soft', 'hummingbird_soft', 'riverhill_soft', 'falcom', 'ibm', 'mosaic', 'taito', 'square', 'toho', 'db_soft'}
-        expected.update({'jast', 'comptiq', 'fairytale', 'konami', 'minatosoft', 'hawkeye', 'addison_wesley', 'alicesoft', 'gainax', 'leland'})
+        expected.update({'jast', 'comptiq', 'fairytale', 'konami', 'minatosoft', 'hawkeye', 'addison_wesley', 'alicesoft', 'gainax', 'leland', 'takeru'})
         self.assertEqual(set(pages.gameplay_catalogues['companies']), expected)
         for company in pages.coverage['companies']:
             page = pages.build(company)
@@ -58,6 +58,18 @@ class GameplayAppendixTests(unittest.TestCase):
             self.assertNotIn('<img onerror=', appendix)
             entry['groups'][0]['rows'] = [{'workId': 'not-a-company-work'}]
             with self.assertRaises(KeyError):
+                pages.gameplay_appendix(company)
+
+    def test_cross_dossier_reference_reuses_related_identity_and_checks_target_membership(self):
+        company = next(c for c in pages.coverage['companies'] if c['id'] == 'takeru')
+        entry = deepcopy(pages.gameplay_catalogues['companies']['takeru'])
+        row = {'title':'Sorcerian','type':'追加剧情','relation':'复用关联',
+               'catalogueWorkId':'sierra-on-line-sorcerian','catalogueDossierId':'sierra_on_line'}
+        entry['groups'][0]['rows'] = [row]
+        with patch.dict(pages.gameplay_catalogues['companies'], {'takeru':entry}):
+            self.assertIn('sierra_on_line.html#sierra-on-line-sorcerian', pages.gameplay_appendix(company))
+            row['catalogueDossierId'] = 'leland'
+            with self.assertRaises(AssertionError):
                 pages.gameplay_appendix(company)
 
 
