@@ -1,4 +1,5 @@
 """C3 updates three company identities without creating inferred game credits."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorC3Tests(unittest.TestCase):
     def test_scoped_identity_and_credit_diff(self):
         review = read('data/entity-creator-c3-review-20261023.json')

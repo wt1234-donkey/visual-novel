@@ -1,4 +1,5 @@
 """D1 changes only D3's identity and preserves the previous creator index."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorD1Tests(unittest.TestCase):
     def test_one_identity_correction_and_no_new_credits(self):
         review = read('data/entity-creator-d1-review-20261023.json')

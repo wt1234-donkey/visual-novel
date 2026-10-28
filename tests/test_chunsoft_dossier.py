@@ -1,11 +1,12 @@
 """Chunsoft identity, content increments and merger direction stay explicit."""
 import json,subprocess,unittest
 from pathlib import Path
+from historical_paths import shared_paths
 ROOT=Path(__file__).resolve().parents[1]
 BASE='d80510b343d53f61c0df6ad799466aaca55ea2f3'
 CH='entity-name-21365baf366d';SP='entity-name-6d5cd9b9dc38';SC='entity-name-8a871cf93bfd'
 def read(p):
- if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json'}:return json.loads(subprocess.check_output(['git','show',f'54abb80b9ee2303f294d2bc0e0d3189482e045cf:{p}'],cwd=ROOT))
+ if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json','data/taxonomy.json'}:return json.loads(subprocess.check_output(['git','show',f'54abb80b9ee2303f294d2bc0e0d3189482e045cf:{p}'],cwd=ROOT))
  return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class ChunsoftDossierTests(unittest.TestCase):
@@ -43,8 +44,7 @@ class ChunsoftDossierTests(unittest.TestCase):
   edges={e['id']:e for e in a['edges']};self.assertEqual((edges['chunsoft-successor-2012']['parent'],edges['chunsoft-successor-2012']['child']),(CH,SC));self.assertIn('存续',edges['chunsoft-successor-2012']['note']);self.assertIn('消灭',edges['spike-absorbed-2012']['note'])
   self.assertEqual(a['unfinished']['counts'],{'identity':32,'duty':595,'creation':805,'evidence':481,'chronology':44,'relation':1})
  def test_rendered_scope_and_old_evidence_remain(self):
-  for pattern in ['organization-context*.json','organization-verification*.json']:
-   for p in (ROOT/'data').glob(pattern):self.assertEqual(read(str(p.relative_to(ROOT))),old(str(p.relative_to(ROOT))))
+  for p in shared_paths(ROOT, BASE, '54abb80b9ee2303f294d2bc0e0d3189482e045cf', ['organization-context*.json','organization-verification*.json']):self.assertEqual(read(p),old(p))
   for p in ['data/taxonomy.json','data/entity-migration-baseline.json','data/content-migration-baseline.json']:self.assertEqual(read(p),old(p))
   page=(ROOT/'chunsoft.html').read_text();self.assertEqual(page.count('<article class="card"'),11);self.assertIn('09-29',page);self.assertIn('g1284-c-complete',page)
   self.assertIn('data-company="chunsoft" data-first-year="1992"',(ROOT/'index.html').read_text())

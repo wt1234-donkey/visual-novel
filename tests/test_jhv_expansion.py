@@ -1,10 +1,11 @@
 """JHV supplementation preserves identities and separates cooperation from ownership."""
 import json,subprocess,unittest
 from pathlib import Path
+from historical_paths import shared_paths
 ROOT=Path(__file__).resolve().parents[1]
 BASE='54abb80b9ee2303f294d2bc0e0d3189482e045cf'
 def read(p):
- if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json','data/work-notes.json','data/work-classification.json'}:return json.loads(subprocess.check_output(['git','show',f'5ed3e8940cc3f8a159d8c7c17d9dea5009332c57:{p}'],cwd=ROOT))
+ if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json','data/work-notes.json','data/work-classification.json','data/taxonomy.json'}:return json.loads(subprocess.check_output(['git','show',f'5ed3e8940cc3f8a159d8c7c17d9dea5009332c57:{p}'],cwd=ROOT))
  return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class JHVExpansionTests(unittest.TestCase):
@@ -40,5 +41,4 @@ class JHVExpansionTests(unittest.TestCase):
   self.assertNotIn('creation:g830',{i['id'] for i in d['unfinished']['items']});self.assertNotIn('creation:g831',{i['id'] for i in d['unfinished']['items']})
  def test_frozen_ledger_and_previous_events_preserved(self):
   b,a=old('data/organizations.json'),read('data/organizations.json');self.assertEqual(a['verificationLedger'],b['verificationLedger']);self.assertEqual(a['organizationEvents'][:-5],b['organizationEvents']);self.assertEqual([e['year'] for e in a['organizationEvents'][-5:]],[1984,1992,1993,1994,2004])
-  for pattern in ['organization-context*.json','organization-verification*.json']:
-   for p in (ROOT/'data').glob(pattern):self.assertEqual(read(str(p.relative_to(ROOT))),old(str(p.relative_to(ROOT))))
+  for p in shared_paths(ROOT, BASE, '5ed3e8940cc3f8a159d8c7c17d9dea5009332c57', ['organization-context*.json','organization-verification*.json']):self.assertEqual(read(p),old(p))

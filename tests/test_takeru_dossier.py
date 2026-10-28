@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from historical_paths import shared_paths
 ROOT=Path(__file__).resolve().parents[1]
 BASE='a1c4959cd7a2ef52460eebfa16388fea815c4642'
 T='entity-name-08cbddd5e450'
@@ -23,7 +24,7 @@ class TakeruDossierTests(unittest.TestCase):
         prior,current=old('data/company-coverage.json'),read('data/company-coverage.json')
         current['companies']=[c for c in current['companies'] if c['id']!='takeru'];self.assertEqual(current,prior)
         paths=['data/taxonomy.json','data/entity-migration-baseline.json','data/content-migration-baseline.json','data/gameplay-catalogues.json']
-        paths += [str(p.relative_to(ROOT)) for glob in ['organization-context*.json','organization-verification*.json'] for p in (ROOT/'data').glob(glob)]
+        paths += shared_paths(ROOT, BASE, '329447b4c8ee6c7656301a4a0ab5f1fe9edd51cf', ['organization-context*.json','organization-verification*.json'])
         for p in paths:self.assertEqual(read(p),old(p),p)
     def test_service_identity_is_reused_and_only_initial_operator_added(self):
         prior,current=old('data/entities.json'),read('data/entities.json')

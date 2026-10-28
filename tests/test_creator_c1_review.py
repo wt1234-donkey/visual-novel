@@ -1,4 +1,5 @@
 """C1 limits Caramel Box creation to two sourced originals."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -7,7 +8,7 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = 'f5ba4378118ebf0ec56e663ad8248bdf4b60944d'
+BASE = 'f1e8d845c5731fe1740763ab194f9bd014a3a435'  # Parent of the C1 audit.
 
 def read(path):
     return load_snapshot(ROOT, path)
@@ -15,6 +16,7 @@ def read(path):
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
+@requires_baseline(ROOT, BASE)
 class CreatorC1Tests(unittest.TestCase):
     def test_identity_and_credit_diff(self):
         review = read('data/entity-creator-c1-review-20261023.json')

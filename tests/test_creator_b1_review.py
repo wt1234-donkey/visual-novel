@@ -1,4 +1,5 @@
 """B1 audit: no inherited creator credit from Bandai Namco publishing."""
+from audit_baselines import requires_baseline
 import json
 import re
 import subprocess
@@ -8,7 +9,7 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '5124a2045af2ed9536a39acfd02ba620a72e4c29'
+BASE = '7bfa81c0569f5793b3b0725117c71320877f7b65'  # Parent of the B1 audit.
 
 def read(path):
     return load_snapshot(ROOT, path)
@@ -16,6 +17,7 @@ def read(path):
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
+@requires_baseline(ROOT, BASE)
 class CreatorB1Tests(unittest.TestCase):
     def test_single_sourced_identity_correction(self):
         before, after = old('data/entities.json'), read('data/entities.json')

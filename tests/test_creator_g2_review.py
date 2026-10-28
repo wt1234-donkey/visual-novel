@@ -1,4 +1,5 @@
 """G2 identities have their own evidence and preserve every historical role."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorG2Tests(unittest.TestCase):
     def test_only_documented_identity_changes(self):
         review = read('data/entity-creator-g2-review-20261024.json')

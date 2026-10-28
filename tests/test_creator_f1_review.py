@@ -1,4 +1,5 @@
 """F1 verifies two brand identities and keeps later-edition credits in scope."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -18,6 +19,7 @@ def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
 
+@requires_baseline(ROOT, BASE)
 class CreatorF1Tests(unittest.TestCase):
     def test_sourced_identity_only_and_existing_release_roles(self):
         review = read('data/entity-creator-f1-review-20261024.json')

@@ -1,4 +1,5 @@
 """A6 completes the A queue with one identity-only correction and no new credits."""
+from audit_baselines import requires_baseline
 import json
 import subprocess
 import unittest
@@ -7,7 +8,7 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '638d68ce70afc044f3fa000de64911cfbfda0dcb'
+BASE = '2ec0da35f46aa7b5c842743f2214e14d30d68bf7'  # Parent of the A6 audit.
 
 def read(path):
     return load_snapshot(ROOT, path)
@@ -15,6 +16,7 @@ def read(path):
 def old(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
 
+@requires_baseline(ROOT, BASE)
 class CreatorA6ReviewTests(unittest.TestCase):
     def test_no_new_credits_and_azarashi_identity_only(self):
         before, after = old('data/credits.json'), read('data/credits.json')

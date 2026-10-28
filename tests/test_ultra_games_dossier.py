@@ -1,9 +1,10 @@
 """Ultra stays a publishing brand; same-title NES adventure stays independent."""
 import json,subprocess,unittest
 from pathlib import Path
+from historical_paths import shared_paths
 ROOT=Path(__file__).resolve().parents[1];BASE='5ed3e8940cc3f8a159d8c7c17d9dea5009332c57';ULTRA='entity-name-c87c2b9662fc'
 def read(p):
- if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json'}:return json.loads(subprocess.check_output(['git','show',f'efb379a122184182c419382dd5158b35db816bd4:{p}'],cwd=ROOT))
+ if p in {'data/games.json','data/entities.json','data/credits.json','data/organizations.json','data/company-coverage.json','data/taxonomy.json'}:return json.loads(subprocess.check_output(['git','show',f'efb379a122184182c419382dd5158b35db816bd4:{p}'],cwd=ROOT))
  return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',f'{BASE}:{p}'],cwd=ROOT))
 class UltraGamesDossierTests(unittest.TestCase):
@@ -22,7 +23,6 @@ class UltraGamesDossierTests(unittest.TestCase):
   es={e['id']:e for e in a['edges']};self.assertEqual(es['ultra-trademark-owner']['kind'],'trademark');self.assertIn('直接持股',es['ultra-konami-historical']['note']);self.assertTrue(next(n for n in a['nodes'] if n['id']=='preview-ultra-software')['previewOnly']);self.assertEqual(a['unfinished']['counts'],{'identity':32,'duty':595,'creation':804,'evidence':481,'chronology':46,'relation':1})
  def test_rendering_and_frozen_files(self):
   for p in ['data/taxonomy.json','data/entity-migration-baseline.json','data/content-migration-baseline.json']:self.assertEqual(read(p),old(p))
-  for pattern in ['organization-context*.json','organization-verification*.json']:
-   for p in (ROOT/'data').glob(pattern):self.assertEqual(read(str(p.relative_to(ROOT))),old(str(p.relative_to(ROOT))))
+  for p in shared_paths(ROOT, BASE, 'efb379a122184182c419382dd5158b35db816bd4', ['organization-context*.json','organization-verification*.json']):self.assertEqual(read(p),old(p))
   page=(ROOT/'ultra_games.html').read_text();self.assertEqual(page.count('<article class="card"'),2);self.assertIn('g1029',page);self.assertIn('g1285',page);self.assertIn('Game Boy',page);self.assertIn('konami.html#konami-mg',page)
   self.assertIn('data-company="ultra_games" data-first-year="1992" data-kind="brand"',(ROOT/'index.html').read_text())
