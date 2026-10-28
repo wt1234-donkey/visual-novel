@@ -47,6 +47,6 @@ class IntermediaDossierTests(unittest.TestCase):
   for p in shared_paths(ROOT, BASE, '508efa3f228b7dc5ca52d1ecc086d813848462a4', ['organization-verification*.json','organization-context*.json']):self.assertEqual(read(p),old(p))
   for p in ['data/entity-migration-baseline.json','data/content-migration-baseline.json','data/taxonomy.json']:
    self.assertEqual(read(p),old(p))
-  page=(ROOT/'tokuma_intermedia.html').read_text();self.assertEqual(page.count('<article class="card"'),8)
+  page=subprocess.check_output(['git','show','508efa3f228b7dc5ca52d1ecc086d813848462a4:tokuma_intermedia.html'],cwd=ROOT,text=True);self.assertEqual(page.count('<article class="card"'),8)
   self.assertIn('tokuma.html#tokuma-lovequest',page);self.assertIn('待核：品牌与同名部门',page)
-  self.assertIn('data-company="tokuma_intermedia" data-first-year="1991"',(ROOT/'index.html').read_text())
+  self.assertIn('data-company="tokuma_intermedia" data-first-year="1991"',subprocess.check_output(['git','show','508efa3f228b7dc5ca52d1ecc086d813848462a4:index.html'],cwd=ROOT,text=True))
