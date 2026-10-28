@@ -180,6 +180,19 @@
         "preview-learning-company-1998",
         "entity-name-e0c32a99a906"
       ]
+    },
+    {
+      "id": "lucasarts",
+      "title": "Lucasfilm Games／LucasArts",
+      "subtitle": "1982年部门、历史公司及2021年品牌分期",
+      "root": "preview-lucasfilm-parent",
+      "focus": "entity-name-57509c825879",
+      "entityIds": [
+        "preview-lucasfilm-parent",
+        "entity-lucasfilm_games_legacy",
+        "entity-name-57509c825879",
+        "preview-lucasfilm-games-2021"
+      ]
     }
   ],
   "previewNodes": [
@@ -405,6 +418,48 @@
       ],
       "verification": "previewReviewed",
       "historyNote": "The Learning Company于1998年收购Brøderbund；此展示节点仅用于当年的组织沿革，不将早期游戏署名转移给收购方。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-lucasfilm-parent",
+      "name": "Lucasfilm Ltd.",
+      "type": "company",
+      "aliases": [],
+      "sources": [
+        "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "官方将1982游戏小组称为Lucasfilm计算机部门下的小组；本展示节点不自动继承每部游戏开发或具体历史发行。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
+    },
+    {
+      "id": "preview-lucasfilm-games-2021",
+      "name": "Lucasfilm Games · 现行名义",
+      "type": "brand",
+      "aliases": [],
+      "sources": [
+        "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "2021起官方重新使用Lucasfilm Games，当前更多以合作、授权为业务；与1982内部团队作分期展示，不能由同名推断完全相同法人。",
       "dates": [],
       "stats": {
         "main": 0,
@@ -669,6 +724,42 @@
       "dateLabel": "1998年",
       "note": "只确认收购关系与年份；法人实体与后续权利承接未核，不将早期发行职责倒归The Learning Company。",
       "basis": "previewSupplement"
+    },
+    {
+      "id": "lucasfilm-games-1982",
+      "parent": "preview-lucasfilm-parent",
+      "child": "entity-lucasfilm_games_legacy",
+      "kind": "parent",
+      "label": "1982年内部游戏小组",
+      "status": "previewReviewed",
+      "source": "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/",
+      "dateLabel": "1982年",
+      "note": "当时属于Lucasfilm Computer Division；不声称独立法人设立。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "lucasarts-historical",
+      "parent": "preview-lucasfilm-parent",
+      "child": "entity-name-57509c825879",
+      "kind": "parent",
+      "label": "九十年代历史游戏公司",
+      "status": "previewReviewed",
+      "source": "https://www.mocagh.org/lucasfilm/lucasarts-98catalog.pdf",
+      "dateLabel": "1998原目录可见",
+      "note": "1998原版目录具名LucasArts Entertainment Company；只支持当时历史公司身份，成立与重组精确法律日期待核。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "lucasfilm-games-current",
+      "parent": "preview-lucasfilm-parent",
+      "child": "preview-lucasfilm-games-2021",
+      "kind": "brand",
+      "label": "现行游戏品牌",
+      "status": "previewReviewed",
+      "source": "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/",
+      "dateLabel": "2021年起",
+      "note": "现行业务以合作／授权为主；作品由各第三方按具体署名归属，不将历史LucasArts原作职责继承给新品牌。",
+      "basis": "previewSupplement"
     }
   ],
   "nameHistory": [
@@ -758,6 +849,17 @@
       "dateLabel": "2015年（官方集团沿革）",
       "source": "https://www.bandainamco.co.jp/about/history/corporate.html",
       "note": "同一游戏承接公司的商号变更；历史发行原文及实体ID保持，不等于万普景品公司更名。"
+    },
+    {
+      "id": "lucasarts-name-phase",
+      "fromId": "entity-lucasfilm_games_legacy",
+      "toId": "entity-name-57509c825879",
+      "oldName": "Lucasfilm Games",
+      "newName": "LucasArts",
+      "dateLabel": "1990年代初（精确法律日期待核）",
+      "status": "previewReviewed",
+      "source": "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/",
+      "note": "官方记第二个十年使用LucasArts名义。这里仅标示业务名称阶段，不宣称两个节点法律上合并或同一公司。"
     }
   ]
 }
