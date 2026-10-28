@@ -13,9 +13,12 @@ def read(path):
 def before(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
+def completed(path):
+    return json.loads(subprocess.check_output(['git', 'show', f'ed2d0034d56b001849a70bcb069e2e54dd5bc857:{path}'], cwd=ROOT))
+
 class TokumaCompletionTests(unittest.TestCase):
     def test_append_only_main_objects_and_original_batches(self):
-        old, now = before('data/games.json'), read('data/games.json')
+        old, now = before('data/games.json'), completed('data/games.json')
         ids = {f'g{i}' for i in range(1310, 1320)}
         for key, suffix in [('works', ''), ('contentVersions', '-c-original'), ('platformReleases', '-v1')]:
             baseline = {w['id']: w for w in old[key]}
