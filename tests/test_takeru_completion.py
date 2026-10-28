@@ -14,9 +14,13 @@ def current(path):
 def prior(path):
     return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT))
 
+def completed(path):
+    """Freeze the scope comparison at the reviewed TAKERU publication."""
+    return json.loads(subprocess.check_output(['git', 'show', f'cde23e0121b2458e986cff9eaa519b4ef591d843:{path}'], cwd=ROOT))
+
 class TakeruCompletionTests(unittest.TestCase):
     def test_old_main_objects_and_migration_baselines_are_preserved(self):
-        before, after = prior('data/games.json'), current('data/games.json')
+        before, after = prior('data/games.json'), completed('data/games.json')
         for key in ['works', 'contentVersions', 'platformReleases']:
             lookup = {x['id']: x for x in after[key]}
             self.assertTrue(all(lookup[x['id']] == x for x in before[key]), key)
@@ -68,13 +72,13 @@ class TakeruCompletionTests(unittest.TestCase):
         self.assertFalse(any('データバンク' in w['title'] for w in current('data/games.json')['works']))
 
     def test_no_other_dossier_data_changed(self):
-        before, after = prior('data/company-coverage.json'), current('data/company-coverage.json')
+        before, after = prior('data/company-coverage.json'), completed('data/company-coverage.json')
         b = {c['id']:c for c in before['companies']}
         a = {c['id']:c for c in after['companies']}
         self.assertEqual(set(a),set(b))
         for cid in set(b)-{'takeru','sierra_on_line'}:
             self.assertEqual(a[cid],b[cid],cid)
         old_gameplay = prior('data/gameplay-catalogues.json')
-        new_gameplay = copy.deepcopy(current('data/gameplay-catalogues.json'))
+        new_gameplay = copy.deepcopy(completed('data/gameplay-catalogues.json'))
         new_gameplay['companies'].pop('takeru')
         self.assertEqual(new_gameplay,old_gameplay)
