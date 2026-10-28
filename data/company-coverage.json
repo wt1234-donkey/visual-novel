@@ -37554,13 +37554,13 @@
       "name": "NEC Home Electronics",
       "foundedAt": "1953-06-01",
       "foundedSource": "https://jpn.nec.com/corporateblog/202307/02.html",
-      "checkedAt": "2026-10-12",
-      "status": "本轮十二部主库作品及四部关联作品核对；其余授权与跨类型清单待补",
-      "scope": "复用原库三部NEC-HE发行作品，新增九部独立叙事游戏及四部跨类型关联作。包括有制作依据的Fire Woman，保留Tokuma发行署名；不并入Avenue、Interchannel或所有PC-FX第三方游戏。",
-      "versionScope": "首发保留；后发行版仅在有可核实的新剧情、角色、路线、关卡、CG／重绘素材或新配音等内容时单列。同内容换平台、换商店、再版、包装变更与仅提高分辨率不新增版本；新增内容须写明差异与来源。未知差异先列核对说明。 此前记录保留，本轮新增九条原版及四条有新增内容依据的后版，共十三条；未核移植只列说明。",
+      "checkedAt": "2026-10-28",
+      "status": "14部主库作品及6部跨类型关联，补核与HuneX合资、Interchannel业务人材沿革",
+      "scope": "沿用既有12部主库作品及4部跨类型关联；复用《続 初恋物語 ～修学旅行～》主库身份及其既有PC-FX发行，新增1993年互动绘本《原由子の眠れぬ夜の小さなお話》一部原作，以及《マジクール》《ミラークルム》两部剧情RPG关联。NEC Home Electronics、NEC Avenue与NEC Interchannel各自保留法人及发行身份；不把主机第三方目录统算公司原创。",
+      "versionScope": "原有历史首发、内容增补及未核版本保留；本轮只给1993年互动绘本新增一个原作内容身份和一个首发平台发行，并给两部剧情RPG关联分别登记原作首批。已在主库的《続 初恋物語》PC-FX版直接复用g923-v1，不重复新增普通平台记录。",
       "versionCountLabel": "首发、内容版与保留旧记录",
       "versionPanelLabel": "条首发／内容记录",
-      "publisherNote": "1953年6月1日，新日本电气从NEC的无线电部门分离独立，1983年更名为日本电气家用电子。原库有三部实际发行作品却未建专题，且成立时间早于太东，本次补齐此前漏项。",
+      "publisherNote": "NEC于1953/06/01另设新日本电气，1983/07更名NEC Home Electronics；2000年结束业务活动、2001/02解散。1992年该公司与Human共同设立HuneX，后者2000年独立。1995年另设的NEC Interchannel汇集其光媒体软件业务人员与经验，并非NEC-HE改名。实际发行方和开发方须按作品及版本分别核对。",
       "publisherWorkIds": [
         "g767",
         "g768",
@@ -37572,7 +37572,9 @@
         "g914",
         "g915",
         "g916",
-        "g917"
+        "g917",
+        "g923",
+        "g1302"
       ],
       "coProducedWorkIds": [
         "g918"
@@ -37589,7 +37591,9 @@
         "g915",
         "g916",
         "g917",
-        "g918"
+        "g918",
+        "g923",
+        "g1302"
       ],
       "relatedGames": [
         {
@@ -37843,27 +37847,157 @@
           "interactionSources": [
             "https://raido.moe/staff/pcfx/pcfx_comic_road.html"
           ]
+        },
+        {
+          "id": "neche-magicoal",
+          "title": "マジクール",
+          "originalTitle": "マジクール",
+          "chineseTitle": "魔法炭",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "マジクール"
+          ],
+          "firstYear": 1993,
+          "category": "角色扮演",
+          "subcategory": "动作角色扮演",
+          "genre": "魔法动作RPG",
+          "characters": [
+            "ルーン",
+            "ルリ"
+          ],
+          "charactersNote": "按所引游戏辞典或同期攻略记可操作人物；不把NPC数推成可攻略路线。",
+          "charactersSource": "https://www.hunex.co.jp/archives/works/pc-engine",
+          "synopsis": "少年魔导士ルーン与精灵使少女ルリ以魔法探索关卡，一人控制、另一人由电脑操纵。",
+          "notes": "跨类型剧情RPG关联；仅记录原作首次游戏内容，版权和开发署名不从发行方推断。",
+          "source": "https://www.hunex.co.jp/archives/works/pc-engine",
+          "platformReleases": [
+            {
+              "id": "neche-magicoal-v1",
+              "workId": "neche-magicoal",
+              "year": 1993,
+              "platform": "PC Engine SUPER CD-ROM²",
+              "publisher": "NEC Home Electronics",
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1993/10/29 HuneX官方目录列NEC-HE发行、RPG；1997年游戏辞典记实时魔法攻击与双主角控制。",
+              "source": "https://www.hunex.co.jp/archives/works/pc-engine",
+              "contentVersionId": "neche-magicoal-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容，未据普通移植制造增补。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "neche-magicoal-c-original",
+              "workId": "neche-magicoal",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993/10/29 HuneX官方目录列NEC-HE发行、RPG；1997年游戏辞典记实时魔法攻击与双主角控制。",
+              "source": "https://www.hunex.co.jp/archives/works/pc-engine",
+              "evidenceReleaseIds": [
+                "neche-magicoal-v1"
+              ],
+              "addedContent": []
+            }
+          ],
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "1993/10/29 HuneX官方目录列NEC-HE发行、RPG；1997年游戏辞典记实时魔法攻击与双主角控制。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.hunex.co.jp/archives/works/pc-engine"
+          ]
+        },
+        {
+          "id": "neche-miraculum",
+          "title": "ミラークルム ザ・ラスト・レベレーション",
+          "originalTitle": "ミラークルム ザ・ラスト・レベレーション",
+          "chineseTitle": "奇迹启示录",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ミラークルム ザ・ラスト・レベレーション"
+          ],
+          "firstYear": 1996,
+          "category": "角色扮演",
+          "subcategory": "角色扮演",
+          "genre": "奇幻剧情RPG",
+          "characters": [
+            "ジェイ",
+            "レイラ",
+            "シンディ"
+          ],
+          "charactersNote": "按所引游戏辞典或同期攻略记可操作人物；不把NPC数推成可攻略路线。",
+          "charactersSource": "https://www2u.biglobe.ne.jp/~comefx99/mc.htm",
+          "synopsis": "骑士ジェイ与伙伴穿越城镇和迷宫，为阻止魔族及邪神复活而战；装备、天气与战斗机制推动冒险。",
+          "notes": "跨类型剧情RPG关联；仅记录原作首次游戏内容，版权和开发署名不从发行方推断。",
+          "source": "https://www2u.biglobe.ne.jp/~comefx99/mc.htm",
+          "platformReleases": [
+            {
+              "id": "neche-miraculum-v1",
+              "workId": "neche-miraculum",
+              "year": 1996,
+              "platform": "PC-FX",
+              "publisher": "NEC Home Electronics",
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1996/03/29 PC-FX首次发行；同期攻略明确RayForce开发、NEC-HE发行，并给出迷宫、战斗换装及固定机关线索。",
+              "source": "https://www2u.biglobe.ne.jp/~comefx99/mc.htm",
+              "contentVersionId": "neche-miraculum-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容，未据普通移植制造增补。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "neche-miraculum-c-original",
+              "workId": "neche-miraculum",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996/03/29 PC-FX首次发行；同期攻略明确RayForce开发、NEC-HE发行，并给出迷宫、战斗换装及固定机关线索。",
+              "source": "https://www2u.biglobe.ne.jp/~comefx99/mc.htm",
+              "evidenceReleaseIds": [
+                "neche-miraculum-v1"
+              ],
+              "addedContent": []
+            }
+          ],
+          "interactionModes": [
+            "直接移动",
+            "战斗指令",
+            "谜题操作"
+          ],
+          "interactionNote": "1996/03/29 PC-FX首次发行；同期攻略明确RayForce开发、NEC-HE发行，并给出迷宫、战斗换装及固定机关线索。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www2u.biglobe.ne.jp/~comefx99/mc.htm"
+          ]
         }
       ],
-      "relatedSectionTitle": "RPG、策略与漫画家养成",
+      "relatedSectionTitle": "动作RPG、剧情RPG与策略／养成关联",
       "relatedCountLabel": "按主要玩法归类",
-      "relatedIntro": "四部有NEC-HE发行依据的跨类型作品。RPG、战术与职业养成保留原类型，未加到四类主库统计。",
-      "catalogueEntryCount": 12,
+      "relatedIntro": "六部战斗、策略或养成为主要玩法的关联作品，保留NEC-HE实际发行和其他开发方的分工，不计入四类叙事主目录。",
+      "catalogueEntryCount": 14,
       "source": "https://www.hunex.co.jp/archives/works/pc-fx",
       "auditTitle": "公司身份、作品署名与内容变化核对",
       "auditSourceLabel": "合作开发商历史目录",
-      "auditLabel": "十二部主库相关作品、四部跨类型作品；范围与未核项目逐条列出。",
-      "auditNote": "不是全部PC Engine／PC-FX软件清单。旧目录的NEC简称、合作和代理销售均须核具体角色；模板日期和异文保留，不按新版本重复计数。",
-      "sectionTitle": "从恐怖调查、动画冒险到恋爱与校园养成",
+      "auditLabel": "14部主库相关作品、6部跨类型关联；原始发行、组织与职责界限另列。",
+      "auditNote": "历史12＋4范围保留；2026年10月增补一个首发互动绘本、复用一部已收录续作和两部剧情RPG关联。其余PC Engine／PC-FX第三方、授权移植及纯养成／纯竞技仍按内容证据核查。",
+      "sectionTitle": "从1993年互动绘本到PC-FX叙事作品",
       "creativeProfile": {
-        "thesis": "编辑观察：NEC-HE的这批叙事产品伴随CD主机发展，使用人物语音、动画与选择推进故事，并与HuneX、Datawest、HEADROOM及出版方合作。专题关注实际游戏内容与公司角色，不把一个平台的软件都视为平台厂商原创。",
+        "thesis": "编辑观察：NEC Home Electronics在PC Engine／PC-FX时期尝试朗读互动绘本、动画故事与人物叙事，并通过HuneX等团队承接实际开发。此处按原始发行及作品内容归档，主机平台本身不代表所有游戏的制作归属。",
         "phases": [
           {
             "period": "1993—1995",
             "heading": "光盘里的调查与角色表演",
-            "analysis": "Private Eye Dol以地图、对话和调查组织偶像侦探故事，Cutey Honey FX结合角色动画与可操作部分。电脑作品的主机授权与自有制作分别核署名。",
+            "analysis": "1993年《原由子の眠れぬ夜の小さなお話》将朗读、音乐与场景热点结合；Private Eye Dol随后以地图、对话和调查组织偶像侦探故事。电脑作品的主机授权与自有制作分别核署名。",
             "basis": "编辑观察",
-            "source": "https://www.hunex.co.jp/archives/works/pc-engine"
+            "source": "https://www.tg-16.com/contributors/dshadoff/Daigirin/Daigirin_1997_06_NEC_Extract.pdf"
           },
           {
             "period": "1996—1997",
@@ -38128,8 +38262,47 @@
           "reason": "女神天国第一作、Magicoal、Linda3、Emerald Dragon、Espion-Age-nts等仍需独立内容与开发发行核查；本轮不宣称NEC全部游戏穷尽。",
           "source": "https://www.hunex.co.jp/archives/works/pc-engine",
           "workIds": []
+        },
+        {
+          "title": "原由子の眠れぬ夜の小さなお話",
+          "status": "新增主库原作",
+          "workIds": [
+            "g1302"
+          ],
+          "reason": "1993年SUPER CD-ROM²原版；以阅读朗读和场景物件点击推进短篇故事，纸质绘本不重复计游戏。",
+          "source": "https://www.tg-16.com/contributors/dshadoff/Daigirin/Daigirin_1997_06_NEC_Extract.pdf"
+        },
+        {
+          "title": "続 初恋物語 ～修学旅行～",
+          "status": "复用主库／既有NEC-HE发行",
+          "workIds": [
+            "g923"
+          ],
+          "reason": "主库既有1997年PC-FX NEC Home Electronics原作发行g923-v1；1998年PS增补由德间发行，不复制或改写作品身份。",
+          "source": "https://www.tg-16.com/contributors/dshadoff/Daigirin/Daigirin_1997_06_NEC_Extract.pdf"
+        },
+        {
+          "title": "マジクール",
+          "status": "跨类型关联",
+          "workIds": [],
+          "relatedIds": [
+            "neche-magicoal"
+          ],
+          "reason": "动作RPG，角色实时移动与魔法战斗为主；官方HuneX历史目录列NEC-HE发行。",
+          "source": "https://www.hunex.co.jp/archives/works/pc-engine"
+        },
+        {
+          "title": "ミラークルム ザ・ラスト・レベレーション",
+          "status": "跨类型关联",
+          "workIds": [],
+          "relatedIds": [
+            "neche-miraculum"
+          ],
+          "reason": "剧情RPG，迷宫探索与装备／战斗指令主导；1996年PC-FX由NEC-HE发行、RayForce开发分别署名。",
+          "source": "https://www2u.biglobe.ne.jp/~comefx99/mc.htm"
         }
-      ]
+      ],
+      "publisherWorkText": "<p class=\"scope-note\"><strong>14部主库相关作品、6部跨类型关联。</strong> 新入库的1993年互动绘本只登记首次游戏内容；《続 初恋物語》复用既有作品和PC-FX发行。<a href=\"organizations.html?family=nec_avenue&amp;node=entity-nec_he#workspace\">查看NEC集团、HuneX合资与Interchannel沿革</a>。公司发行、合作开发和IP授权分开记录。</p>"
     },
     {
       "id": "tokuma",

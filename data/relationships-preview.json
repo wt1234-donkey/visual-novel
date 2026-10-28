@@ -197,8 +197,8 @@
     },
     {
       "id": "nec_avenue",
-      "title": "NEC Avenue与NEC集团游戏业务",
-      "subtitle": "历史法人、另设公司与限定权利承接",
+      "title": "NEC集团游戏业务：Home Electronics / Avenue / Interchannel",
+      "subtitle": "独立法人、合资开发与软件业务人材",
       "root": "preview-nec-corporation",
       "focus": "entity-name-0b22f68e63fb",
       "entityIds": [
@@ -206,7 +206,9 @@
         "entity-name-0b22f68e63fb",
         "entity-nec_he",
         "entity-name-46fe3a3fcf5f",
-        "preview-nec-interchannel-2004"
+        "preview-nec-interchannel-2004",
+        "entity-hunex",
+        "preview-human-corporation"
       ]
     }
   ],
@@ -628,6 +630,45 @@
           "id": "g831",
           "title": "毕业II ～Neo Generation～",
           "year": 1994
+        }
+      ]
+    },
+    {
+      "id": "entity-hunex",
+      "name": "HuneX",
+      "type": "company",
+      "aliases": [
+        "HuneX",
+        "ヒューネックス"
+      ],
+      "sources": [
+        "https://www.hunex.co.jp/archives/company/history"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "",
+      "dates": [],
+      "stats": {
+        "main": 3,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 1,
+      "dossiers": [],
+      "works": [
+        {
+          "id": "g916",
+          "title": "初吻物语",
+          "year": 1998
+        },
+        {
+          "id": "g838",
+          "title": "樱色之云＊绯色之恋",
+          "year": 2020
+        },
+        {
+          "id": "g840",
+          "title": "宝石心学院",
+          "year": 2022
         }
       ]
     },
@@ -1625,28 +1666,36 @@
     },
     {
       "id": "entity-nec_he",
-      "name": "NEC Home Electronics",
+      "name": "NEC Home Electronics（日本電気ホームエレクトロニクス）",
       "type": "company",
       "aliases": [
         "NEC Home Electronics",
-        "NECホームエレクトロニクス"
+        "NECホームエレクトロニクス",
+        "日本電気ホームエレクトロニクス",
+        "NEC Home Electronics（日本電気ホームエレクトロニクス）"
       ],
       "sources": [
         "https://www.hunex.co.jp/archives/works/pc-fx"
       ],
       "verification": "existingDossier",
-      "historyNote": "1953年6月1日，新日本电气从NEC的无线电部门分离独立，1983年更名为日本电气家用电子。原库有三部实际发行作品却未建专题，且成立时间早于太东，本次补齐此前漏项。",
+      "historyNote": "NEC于1953/06/01另设新日本电气，1983/07更名NEC Home Electronics；2000年结束业务活动、2001/02解散。1992年该公司与Human共同设立HuneX，后者2000年独立。1995年另设的NEC Interchannel汇集其光媒体软件业务人员与经验，并非NEC-HE改名。实际发行方和开发方须按作品及版本分别核对。",
       "dates": [],
+      "nameParts": {
+        "english": "NEC Home Electronics",
+        "japanese": "日本電気ホームエレクトロニクス",
+        "basis": "catalogueSpelling",
+        "source": "https://jpn.nec.com/contactus/faq/sales_end.html"
+      },
       "stats": {
-        "main": 12,
-        "related": 9,
+        "main": 13,
+        "related": 11,
         "bibliography": 0
       },
       "productionCount": 0,
       "dossiers": [
         {
           "id": "nec_he",
-          "name": "NEC Home Electronics"
+          "name": "NEC Home Electronics（日本電気ホームエレクトロニクス）"
         }
       ],
       "works": [
@@ -1654,6 +1703,11 @@
           "id": "g767",
           "title": "脑死亡：亡灵的呼喊",
           "year": 1992
+        },
+        {
+          "id": "g1302",
+          "title": "原由子的不眠夜小故事",
+          "year": 1993
         },
         {
           "id": "g768",
@@ -1664,11 +1718,6 @@
           "id": "g913",
           "title": "我的女神（1993年冒险游戏）",
           "year": 1993
-        },
-        {
-          "id": "g831",
-          "title": "毕业II ～Neo Generation～",
-          "year": 1994
         }
       ]
     },
@@ -2703,6 +2752,30 @@
       "works": [],
       "dossiers": [],
       "previewOnly": true
+    },
+    {
+      "id": "preview-human-corporation",
+      "name": "Human（ヒューマン）",
+      "type": "company",
+      "aliases": [
+        "ヒューマン株式会社",
+        "Human Corporation"
+      ],
+      "sources": [
+        "https://www.hunex.co.jp/archives/company/history"
+      ],
+      "verification": "previewReviewed",
+      "historyNote": "HuneX官方沿革所述1992年共同出资方，仅为合资关系展示；不代替该公司独立身份核查或给其增加NEC作品职责。",
+      "dates": [],
+      "stats": {
+        "main": 0,
+        "related": 0,
+        "bibliography": 0
+      },
+      "productionCount": 0,
+      "works": [],
+      "dossiers": [],
+      "previewOnly": true
     }
   ],
   "edges": [
@@ -3290,8 +3363,8 @@
       "label": "另一集团公司",
       "status": "previewReviewed",
       "source": "https://jpn.nec.com/corporateblog/202307/02.html",
-      "dateLabel": "1953年起",
-      "note": "NEC Home Electronics先于Avenue独立设立，游戏发行署名各自保留。",
+      "dateLabel": "1953/06/01设立—2001/02解散",
+      "note": "NEC将无线电事业部分离设立新日本电气，1983年更名；2000年结束业务活动，2001年2月解散。独立法人及发行署名不与NEC Avenue混同。",
       "basis": "previewSupplement"
     },
     {
@@ -3316,6 +3389,42 @@
       "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html",
       "dateLabel": "1995年起",
       "note": "员工和经验汇集到新公司，具体资产及各作品合同不据此推定。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "nec-he-hunex-1992",
+      "parent": "entity-nec_he",
+      "child": "entity-hunex",
+      "kind": "parent",
+      "label": "共同出资HuneX",
+      "status": "previewReviewed",
+      "source": "https://www.hunex.co.jp/archives/company/history",
+      "dateLabel": "1992年设立—2000年独立",
+      "note": "HuneX自述由Human与NEC Home Electronics共同出资设立，2000年独立；不据此将其所有开发作品改归两出资方，也不推定双方具体持股比例。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "human-hunex-1992",
+      "parent": "preview-human-corporation",
+      "child": "entity-hunex",
+      "kind": "parent",
+      "label": "共同出资HuneX",
+      "status": "previewReviewed",
+      "source": "https://www.hunex.co.jp/archives/company/history",
+      "dateLabel": "1992年设立—2000年独立",
+      "note": "HuneX自述由Human与NEC Home Electronics共同出资设立，2000年独立；不据此将其所有开发作品改归两出资方，也不推定双方具体持股比例。",
+      "basis": "previewSupplement"
+    },
+    {
+      "id": "nec-he-to-interchannel-1995",
+      "parent": "entity-nec_he",
+      "child": "entity-name-46fe3a3fcf5f",
+      "kind": "family",
+      "label": "光媒体软件人材／经验汇集",
+      "status": "previewReviewed",
+      "source": "https://dengekionline.com/data/news/2004/6/17/44e007f152e4f2eab4cdaeaba6cbd188.html",
+      "dateLabel": "1995年10月新设",
+      "note": "同期报道明确NEC-HE光媒体事业部的CD-ROM软件人材与经验进入新设Interchannel；不是NEC-HE法人更名、合并，也不推定全部游戏合同转移。",
       "basis": "previewSupplement"
     }
   ],
