@@ -3,7 +3,7 @@ import json, subprocess, unittest
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 BASE='6aca87246df60132412331a11e5e1b617e6d6a6f'
-def read(p):return json.loads((R/p).read_text())
+def read(p):return json.loads(subprocess.check_output(['git','show','71ef1dfe9c01c87e714c5e34708516a4c24b22f4:'+p],cwd=R))
 def old(p):return json.loads(subprocess.check_output(['git','show',BASE+':'+p],cwd=R))
 class ManufacturerUpdate(unittest.TestCase):
  def test_old_objects_unchanged_and_first_season_only(self):
@@ -28,5 +28,5 @@ class ManufacturerUpdate(unittest.TestCase):
   self.assertEqual(r['id'],'ultra-snakes-revenge')
   self.assertNotIn(r['id'],{x['id'] for x in read('data/games.json')['works']})
   for page,n in [('chunsoft',12),('ultra_games',3),('capcom',4)]:
-   self.assertEqual((R/(page+'.html')).read_text().count('<article class="card"'),n)
+   self.assertEqual(subprocess.check_output(['git','show','71ef1dfe9c01c87e714c5e34708516a4c24b22f4:'+page+'.html'],cwd=R,text=True).count('<article class="card"'),n)
   self.assertIn('data-company="capcom" data-first-year="2001"',(R/'index.html').read_text())

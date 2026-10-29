@@ -111177,11 +111177,11 @@
       "foundedAt": "1984",
       "foundedSource": "https://www.spike-chunsoft.co.jp/company/outline/",
       "checkedAt": "2026-10-29",
-      "status": "12部主库引用；追加TRICK×LOGIC第一季，第二季分话内容待核",
-      "scope": "历史Chunsoft公司专题，以2012年合并前的叙事开发／发行及限定后发内容为范围。11部主库引用中9部既有、2部新增；Spike与合并后Spike Chunsoft保持独立身份，后发实际发行不回写。",
-      "versionScope": "新增《街》1998原作、2006 PSP两篇追加，以及《金八先生》2004原作、2005两话追加。PS普通移植、廉价版和一般店头铺货不新增内容；所有旧版关系与身份保持。",
+      "status": "完整扩充批次：13部主库引用、16部新关联、8部跨专题身份复用；3项后发新增内容及2项同期变体",
+      "scope": "历史Chunsoft与逐作开发、监修、发行关联；包括音声小说、早期限定主机移植、剧情RPG及有任务叙事的混合玩法。2012合并后的新作另列边界，不把母公司或现行品牌职责倒填。",
+      "versionScope": "16部新关联各建原作首批；DS、DS2、天空探险队三项具体新内容归旧作增补。赤／青同日双平台共用一个原作内容，时／暗对应版共用故事身份。普通VC、廉价版、后发同内容与合集不增列。",
       "publisherNote": "官方史记Chunsoft成立于1984年，1992以弟切草开始自社发行。2012年原公告明确Chunsoft为存续公司、Spike为消灭公司并改商号Spike Chunsoft；原历史署名ID继续分开保存，不自动合并既有实体或继承游戏开发职责。1984按年登记，不伪造注册日。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>11部主库引用（9部既有＋2部新增）；制作、历史发行、后发发行与待核职责分别显示。</strong></p><p class=\"scope-note\">RPG原档案：<a href=\"enix.html#enix-dq1\">勇者斗恶龙I</a> / <a href=\"enix.html#enix-dq2\">II</a> / <a href=\"enix.html#enix-dq3\">III</a> / <a href=\"enix.html#enix-dq4\">IV</a> / <a href=\"enix.html#enix-torneko2\">特鲁尼克大冒险2</a> / <a href=\"enix.html#enix-torneko3\">3</a>。跳转既有目录，不复制发行或将全部续作开发归本公司。</p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>13部主库引用、16部新增跨类型档案；另8项既有作品通过原档案复用，不复制内容与发行。</strong></p><p class=\"scope-note\">合作开发、监修、实际发行与后发移植分开。波多比亚1983原作与JESUS1987原作的导航年不代表Chunsoft当时已参与；本专题限定其后发Famicom关联。</p><p class=\"scope-note\"><a href=\"enix.html#enix-dq1\">dq1</a> / <a href=\"enix.html#enix-dq2\">dq2</a> / <a href=\"enix.html#enix-dq3\">dq3</a> / <a href=\"enix.html#enix-dq4\">dq4</a> / <a href=\"enix.html#enix-dq5\">dq5</a> / <a href=\"enix.html#enix-torneko2\">torneko2</a> / <a href=\"enix.html#enix-torneko3\">torneko3</a></p>",
       "workIds": [
         "g021",
         "g022",
@@ -111194,14 +111194,15 @@
         "g181",
         "g1283",
         "g1284",
-        "g1331"
+        "g1331",
+        "g979"
       ],
-      "catalogueEntryCount": 12,
+      "catalogueEntryCount": 29,
       "source": "https://www.spike-chunsoft.co.jp/company/outline/",
       "auditTitle": "原作、增补与历史署名核对",
       "auditSourceLabel": "官方公司沿革",
-      "auditLabel": "初步11部叙事引用；不是Chunsoft全部开发或发行目录。",
-      "auditNote": "本轮只有《金八先生》追加一条有CESA具名依据的原作制作职责。已有角色与台账结论保持；新增专题待核项不冒充已完成审核。详见data/chunsoft-audit-20261027.md。 本轮补核见data/manufacturer-update-20261029.md。",
+      "auditLabel": "13部主库引用＋16部跨类型档案；另链接7部旧关联，避免复制。",
+      "auditNote": "逐项对照及版本边界见data/chunsoft-catalogue-completion-20261029.md与chunsoft-source-review-20261029.json。原12部与全部旧身份保留。",
       "sectionTitle": "从有声小说到群像与关键词叙事",
       "description": "Chunsoft独立专题：有声小说、街与金八先生、原作与新增剧本，以及2012合并沿革。",
       "profileTitle": "叙事方式与历史公司范围",
@@ -111346,13 +111347,6 @@
           "workIds": []
         },
         {
-          "title": "待核：完整目录与逐作职责",
-          "status": "范围／待核说明",
-          "reason": "TRICK×LOGIC、RPG与移动作品、海外发行及旧作后发新增内容仍待逐项原件。Door Door等玩法核心作品不按创始人经历纳入叙事主库。",
-          "source": "https://www.spike-chunsoft.co.jp/company/about/",
-          "workIds": []
-        },
-        {
           "title": "待核：合作和前后期范围",
           "status": "范围／待核说明",
           "reason": "428、999、镰鼬×3、忌火起草等进入专题仍需逐作登记开发分工；2012合并后的AI、弹丸、零时困境不自动视作旧Chunsoft原作。",
@@ -111366,6 +111360,1481 @@
           "source": "https://www.4gamer.net/games/105/G010573/20100722025/",
           "workIds": [
             "g1331"
+          ]
+        },
+        {
+          "title": "ジーザス",
+          "status": "复用旧主库／限定移植关联",
+          "reason": "仅关联1989 Famicom移植范围；1987 Enix电脑原作不倒填Chunsoft开发。",
+          "source": "https://gamefaqs.gamespot.com/nes/579413-jesus-kyoufu-no-bio-monster/data",
+          "workIds": [
+            "g979"
+          ]
+        },
+        {
+          "title": "トルネコの大冒険 不思議のダンジョン",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "1993-09-19；第一作由Chunsoft发行，不能把Enix系列版权方当作本次发行方。",
+          "source": "https://collection.rcgs.jp/page/PACKAGE0001602",
+          "workIds": [],
+          "relatedIds": [
+            "chun-torneko1"
+          ]
+        },
+        {
+          "title": "不思議のダンジョン2 風来のシレン",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "1995-12-01；DS重制归同作新增内容，VC及普通移动移植不独立建作。",
+          "source": "https://www.nintendo.co.jp/wii/vc/vc_sr/vc_sr_01.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-shiren1"
+          ]
+        },
+        {
+          "title": "風来のシレンGB 月影村の怪物",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "1996-11-22；GB独立故事，不与初代或GB2合并；1999 Windows版差另核。",
+          "source": "https://www.suruga-ya.jp/product/detail/165000629",
+          "workIds": [],
+          "relatedIds": [
+            "chun-shiren-gb"
+          ]
+        },
+        {
+          "title": "不思議のダンジョン 風来のシレン2 鬼襲来！シレン城！",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2000-09-27采用Chunsoft官方产品日期；RCGS实物著录的出版者名为任天堂株式会社、责任表示为Chunsoft，开发与发行分开。RCGS日期字段误作09-17，与官网冲突，不照抄。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/shiren2/",
+          "workIds": [],
+          "relatedIds": [
+            "chun-shiren2"
+          ]
+        },
+        {
+          "title": "風来のシレンGB2 砂漠の魔城",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2001-07-19，采用官方日期，不采用个别回顾文章7月27日；DS2为同故事重制增补。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/shirengb2/info.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-shiren-gb2"
+          ]
+        },
+        {
+          "title": "不思議のダンジョン 風来のシレン外伝 女剣士アスカ見参！",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2002-02-07；官方明确Chunsoft监修、SEGA发行，不将Chunsoft写为原作独占开发。Windows版首发2002-12-20，但具体增量另核后再建内容。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/asukapc/asukadc.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-asuka"
+          ]
+        },
+        {
+          "title": "不思議のダンジョン 風来のシレン3 からくり屋敷の眠り姫",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2008-06-05；2010 PSP新增迷宫另核，普通廉价版不增内容。",
+          "source": "https://www.nintendo.co.jp/wii/software/rfsj/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-shiren3"
+          ]
+        },
+        {
+          "title": "不思議のダンジョン 風来のシレン4 神の眼と悪魔のヘソ",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2010-02-25；Chunsoft开发与Spike发行分开；2012 plus另核新增迷宫。",
+          "source": "https://www.nintendo.co.jp/ds/software/b4fj/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-shiren4"
+          ]
+        },
+        {
+          "title": "不思議のダンジョン 風来のシレン5 フォーチュンタワーと運命のダイス",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2010-12-09；后续plus与平台新增迷宫须按首次增量核对，不另造续作。",
+          "source": "https://www.nintendo.co.jp/ds/software/b5fj/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-shiren5"
+          ]
+        },
+        {
+          "title": "ザ・ナイトメア・オブ・ドルアーガ 不思議のダンジョン",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2004-07-29；ARIKA发行，Chunsoft系统合作不等于其发行或独占制作。",
+          "source": "https://arika.co.jp/game/game_jp.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-druaga"
+          ]
+        },
+        {
+          "title": "ホームランド",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2005-04-29网络通販首发，6月30店售不新增发行；2007-04-30网络服务结束，单人内容仍可游玩。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/homeland/",
+          "workIds": [],
+          "relatedIds": [
+            "chun-homeland"
+          ]
+        },
+        {
+          "title": "ポケモン不思議のダンジョン 青の救助隊・赤の救助隊",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2005-11-17同期双平台；赤／青共享故事身份，平台与出场差异另记，不各造同剧情新作。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/",
+          "workIds": [],
+          "relatedIds": [
+            "chun-pokemon-rescue"
+          ]
+        },
+        {
+          "title": "ポケモン不思議のダンジョン 時の探検隊・闇の探検隊",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2007-09-13；时／暗为同期对应版，同故事身份；天空版新增剧情归增补。",
+          "source": "https://www.pokemon.co.jp/game/ds/dungeon2007/",
+          "workIds": [],
+          "relatedIds": [
+            "chun-pokemon-explorers"
+          ]
+        },
+        {
+          "title": "ファミコンジャンプII 最強の7人",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "1991-12-02；Bandai发行，Chunsoft同期自列开发目录；非第一作的普通移植。",
+          "source": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-jump2"
+          ]
+        },
+        {
+          "title": "ぞんびだいすき",
+          "status": "新增跨类型叙事／RPG",
+          "reason": "2011-01-20；有明确任务故事的动作／经营混合关联，不作为纯日常养成扩录，也不归四类主目录。",
+          "source": "https://www.nintendo.co.jp/ds/software/bzbj/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "chun-zombie"
+          ]
+        },
+        {
+          "title": "ポケモン不思議のダンジョン 冒険団",
+          "status": "新增关联；三个版本归同一作品",
+          "reason": "2009-08-04三部同期独立配信对应版；共用故事／玩法框架，村庄、迷宫与阵容区别记为同作内容变体，不造三部独立故事。",
+          "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+          "workIds": [],
+          "relatedIds": [
+            "chun-pokemon-adventure"
+          ]
+        }
+      ],
+      "relatedGames": [
+        {
+          "id": "chun-torneko1",
+          "title": "特鲁尼克大冒险：不可思议的迷宫",
+          "originalTitle": "トルネコの大冒険 不思議のダンジョン",
+          "chineseTitle": "特鲁尼克大冒险：不可思议的迷宫",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "トルネコの大冒険 不思議のダンジョン"
+          ],
+          "firstYear": 1993,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "トルネコ",
+            "ネネ",
+            "ポポロ"
+          ],
+          "charactersSource": "https://collection.rcgs.jp/page/PACKAGE0001602",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "商人特鲁尼克为开店与家人的生活进入不断变化的迷宫寻找宝物。",
+          "notes": "1993-09-19；第一作由Chunsoft发行，不能把Enix系列版权方当作本次发行方。",
+          "source": "https://collection.rcgs.jp/page/PACKAGE0001602",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://collection.rcgs.jp/page/PACKAGE0001602"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-torneko1-c-original",
+              "workId": "chun-torneko1",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993-09-19；第一作由Chunsoft发行，不能把Enix系列版权方当作本次发行方。",
+              "source": "https://collection.rcgs.jp/page/PACKAGE0001602",
+              "evidenceReleaseIds": [
+                "chun-torneko1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-torneko1-v-original",
+              "workId": "chun-torneko1",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "Chunsoft",
+              "publisherCompanies": [
+                "Chunsoft"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1993-09-19；第一作由Chunsoft发行，不能把Enix系列版权方当作本次发行方。",
+              "source": "https://collection.rcgs.jp/page/PACKAGE0001602",
+              "contentVersionId": "chun-torneko1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-shiren1",
+          "title": "风来之西林：不可思议的迷宫2",
+          "originalTitle": "不思議のダンジョン2 風来のシレン",
+          "chineseTitle": "风来之西林：不可思议的迷宫2",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "不思議のダンジョン2 風来のシレン"
+          ],
+          "firstYear": 1995,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "シレン",
+            "コッパ"
+          ],
+          "charactersSource": "https://www.nintendo.co.jp/wii/vc/vc_sr/vc_sr_01.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "西林与伙伴前往桌山寻找黄金乡，在村镇相遇与迷宫冒险中揭开旅途的秘密。",
+          "notes": "1995-12-01；DS重制归同作新增内容，VC及普通移动移植不独立建作。",
+          "source": "https://www.nintendo.co.jp/wii/vc/vc_sr/vc_sr_01.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/wii/vc/vc_sr/vc_sr_01.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-shiren1-c-original",
+              "workId": "chun-shiren1",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995-12-01；DS重制归同作新增内容，VC及普通移动移植不独立建作。",
+              "source": "https://www.nintendo.co.jp/wii/vc/vc_sr/vc_sr_01.html",
+              "evidenceReleaseIds": [
+                "chun-shiren1-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "chun-shiren1-c-added",
+              "workId": "chun-shiren1",
+              "label": "风来之西林DS：新事件／迷宫",
+              "firstYear": 2006,
+              "basis": "added",
+              "comparedTo": "chun-shiren1-c-original",
+              "evidence": "相较1995原作，新增迷宫、事件、怪物及道具；不把Wi-Fi或普通移植本身当增量。",
+              "source": "https://www.nintendo.co.jp/ds/software/afuj/index.html",
+              "evidenceReleaseIds": [
+                "chun-shiren1-v-added"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较1995原作，新增迷宫、事件、怪物及道具；不把Wi-Fi或普通移植本身当增量。",
+                  "source": "https://www.nintendo.co.jp/ds/software/afuj/index.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-shiren1-v-original",
+              "workId": "chun-shiren1",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "Chunsoft",
+              "publisherCompanies": [
+                "Chunsoft"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1995-12-01；DS重制归同作新增内容，VC及普通移动移植不独立建作。",
+              "source": "https://www.nintendo.co.jp/wii/vc/vc_sr/vc_sr_01.html",
+              "contentVersionId": "chun-shiren1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "chun-shiren1-v-added",
+              "workId": "chun-shiren1",
+              "year": 2006,
+              "platform": "Nintendo DS",
+              "publisher": "世嘉",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "首次内容增补",
+              "voice": "未核实",
+              "differences": "相较1995原作，新增迷宫、事件、怪物及道具；不把Wi-Fi或普通移植本身当增量。",
+              "source": "https://www.nintendo.co.jp/ds/software/afuj/index.html",
+              "contentVersionId": "chun-shiren1-c-added",
+              "contentRelation": "added",
+              "contentNote": "相较1995原作，新增迷宫、事件、怪物及道具；不把Wi-Fi或普通移植本身当增量。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-shiren-gb",
+          "title": "风来之西林GB：月影村的怪物",
+          "originalTitle": "風来のシレンGB 月影村の怪物",
+          "chineseTitle": "风来之西林GB：月影村的怪物",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "風来のシレンGB 月影村の怪物"
+          ],
+          "firstYear": 1996,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "シレン",
+            "コッパ"
+          ],
+          "charactersSource": "https://www.suruga-ya.jp/product/detail/165000629",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "西林来到月影村，调查村中怪物与祭祀背后的秘密，并通过迷宫展开救援。",
+          "notes": "1996-11-22；GB独立故事，不与初代或GB2合并；1999 Windows版差另核。",
+          "source": "https://www.suruga-ya.jp/product/detail/165000629",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.suruga-ya.jp/product/detail/165000629"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-shiren-gb-c-original",
+              "workId": "chun-shiren-gb",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996-11-22；GB独立故事，不与初代或GB2合并；1999 Windows版差另核。",
+              "source": "https://www.suruga-ya.jp/product/detail/165000629",
+              "evidenceReleaseIds": [
+                "chun-shiren-gb-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-shiren-gb-v-original",
+              "workId": "chun-shiren-gb",
+              "year": 1996,
+              "platform": "Game Boy",
+              "publisher": "Chunsoft",
+              "publisherCompanies": [
+                "Chunsoft"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1996-11-22；GB独立故事，不与初代或GB2合并；1999 Windows版差另核。",
+              "source": "https://www.suruga-ya.jp/product/detail/165000629",
+              "contentVersionId": "chun-shiren-gb-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-shiren2",
+          "title": "风来之西林2：鬼来袭！西林城！",
+          "originalTitle": "不思議のダンジョン 風来のシレン2 鬼襲来！シレン城！",
+          "chineseTitle": "风来之西林2：鬼来袭！西林城！",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "不思議のダンジョン 風来のシレン2 鬼襲来！シレン城！"
+          ],
+          "firstYear": 2000,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "シレン",
+            "コッパ"
+          ],
+          "charactersSource": "https://www.spike-chunsoft.co.jp/pages/games/shiren2/",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "少年西林在旅途中帮助村民建造城堡，进入迷宫采集材料并抵御鬼族袭击。",
+          "notes": "2000-09-27采用Chunsoft官方产品日期；RCGS实物著录的出版者名为任天堂株式会社、责任表示为Chunsoft，开发与发行分开。RCGS日期字段误作09-17，与官网冲突，不照抄。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/shiren2/",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.spike-chunsoft.co.jp/pages/games/shiren2/"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-shiren2-c-original",
+              "workId": "chun-shiren2",
+              "label": "原作／首批内容",
+              "firstYear": 2000,
+              "basis": "original",
+              "evidence": "2000-09-27采用Chunsoft官方产品日期；RCGS实物著录的出版者名为任天堂株式会社、责任表示为Chunsoft，开发与发行分开。RCGS日期字段误作09-17，与官网冲突，不照抄。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/shiren2/",
+              "evidenceReleaseIds": [
+                "chun-shiren2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-shiren2-v-original",
+              "workId": "chun-shiren2",
+              "year": 2000,
+              "platform": "Nintendo 64",
+              "publisher": "任天堂",
+              "publisherCompanies": [
+                "任天堂"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2000-09-27采用Chunsoft官方产品日期；RCGS实物著录的出版者名为任天堂株式会社、责任表示为Chunsoft，开发与发行分开。RCGS日期字段误作09-17，与官网冲突，不照抄。",
+              "source": "https://collection.rcgs.jp/page/PACKAGE0004604",
+              "contentVersionId": "chun-shiren2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-shiren-gb2",
+          "title": "风来之西林GB2：沙漠魔城",
+          "originalTitle": "風来のシレンGB2 砂漠の魔城",
+          "chineseTitle": "风来之西林GB2：沙漠魔城",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "風来のシレンGB2 砂漠の魔城"
+          ],
+          "firstYear": 2001,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "シレン",
+            "コッパ"
+          ],
+          "charactersSource": "https://www.spike-chunsoft.co.jp/pages/games/shirengb2/info.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "青年西林来到异国沙漠的城下町，卷入公主与魔城的事件。",
+          "notes": "2001-07-19，采用官方日期，不采用个别回顾文章7月27日；DS2为同故事重制增补。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/shirengb2/info.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.spike-chunsoft.co.jp/pages/games/shirengb2/info.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-shiren-gb2-c-original",
+              "workId": "chun-shiren-gb2",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001-07-19，采用官方日期，不采用个别回顾文章7月27日；DS2为同故事重制增补。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/shirengb2/info.html",
+              "evidenceReleaseIds": [
+                "chun-shiren-gb2-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "chun-shiren-gb2-c-added",
+              "workId": "chun-shiren-gb2",
+              "label": "风来之西林DS2：新增迷宫与重绘事件",
+              "firstYear": 2008,
+              "basis": "added",
+              "comparedTo": "chun-shiren-gb2-c-original",
+              "evidence": "相较2001 GB2，新增迷宫、强化事件画面并重制图像；GB2世界与故事不另算独立新作。",
+              "source": "https://www.nintendo.co.jp/ds/software/ywfj/index.html",
+              "evidenceReleaseIds": [
+                "chun-shiren-gb2-v-added"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较2001 GB2，新增迷宫、强化事件画面并重制图像；GB2世界与故事不另算独立新作。",
+                  "source": "https://www.nintendo.co.jp/ds/software/ywfj/index.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-shiren-gb2-v-original",
+              "workId": "chun-shiren-gb2",
+              "year": 2001,
+              "platform": "Game Boy Color",
+              "publisher": "Chunsoft",
+              "publisherCompanies": [
+                "Chunsoft"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2001-07-19，采用官方日期，不采用个别回顾文章7月27日；DS2为同故事重制增补。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/shirengb2/info.html",
+              "contentVersionId": "chun-shiren-gb2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "chun-shiren-gb2-v-added",
+              "workId": "chun-shiren-gb2",
+              "year": 2008,
+              "platform": "Nintendo DS",
+              "publisher": "世嘉",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "首次内容增补",
+              "voice": "未核实",
+              "differences": "相较2001 GB2，新增迷宫、强化事件画面并重制图像；GB2世界与故事不另算独立新作。",
+              "source": "https://www.nintendo.co.jp/ds/software/ywfj/index.html",
+              "contentVersionId": "chun-shiren-gb2-c-added",
+              "contentRelation": "added",
+              "contentNote": "相较2001 GB2，新增迷宫、强化事件画面并重制图像；GB2世界与故事不另算独立新作。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-asuka",
+          "title": "风来之西林外传：女剑士阿斯卡参上！",
+          "originalTitle": "不思議のダンジョン 風来のシレン外伝 女剣士アスカ見参！",
+          "chineseTitle": "风来之西林外传：女剑士阿斯卡参上！",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "不思議のダンジョン 風来のシレン外伝 女剣士アスカ見参！"
+          ],
+          "firstYear": 2002,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "アスカ",
+            "コッパ"
+          ],
+          "charactersSource": "https://www.spike-chunsoft.co.jp/pages/games/asukapc/asukadc.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "阿斯卡和语鼬伙伴在新的土地上展开独立冒险，以秘技和道具突破迷宫。",
+          "notes": "2002-02-07；官方明确Chunsoft监修、SEGA发行，不将Chunsoft写为原作独占开发。Windows版首发2002-12-20，但具体增量另核后再建内容。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/asukapc/asukadc.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.spike-chunsoft.co.jp/pages/games/asukapc/asukadc.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-asuka-c-original",
+              "workId": "chun-asuka",
+              "label": "原作／首批内容",
+              "firstYear": 2002,
+              "basis": "original",
+              "evidence": "2002-02-07；官方明确Chunsoft监修、SEGA发行，不将Chunsoft写为原作独占开发。Windows版首发2002-12-20，但具体增量另核后再建内容。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/asukapc/asukadc.html",
+              "evidenceReleaseIds": [
+                "chun-asuka-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-asuka-v-original",
+              "workId": "chun-asuka",
+              "year": 2002,
+              "platform": "Dreamcast",
+              "publisher": "世嘉",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2002-02-07；官方明确Chunsoft监修、SEGA发行，不将Chunsoft写为原作独占开发。Windows版首发2002-12-20，但具体增量另核后再建内容。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/asukapc/asukadc.html",
+              "contentVersionId": "chun-asuka-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-shiren3",
+          "title": "风来之西林3：机关屋的睡公主",
+          "originalTitle": "不思議のダンジョン 風来のシレン3 からくり屋敷の眠り姫",
+          "chineseTitle": "风来之西林3：机关屋的睡公主",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "不思議のダンジョン 風来のシレン3 からくり屋敷の眠り姫"
+          ],
+          "firstYear": 2008,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "シレン",
+            "コッパ",
+            "アスカ",
+            "センセー"
+          ],
+          "charactersSource": "https://www.nintendo.co.jp/wii/software/rfsj/index.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "西林遇见师父后，与阿斯卡等伙伴进入神秘机关屋，追寻古老传说。",
+          "notes": "2008-06-05；2010 PSP新增迷宫另核，普通廉价版不增内容。",
+          "source": "https://www.nintendo.co.jp/wii/software/rfsj/index.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/wii/software/rfsj/index.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-shiren3-c-original",
+              "workId": "chun-shiren3",
+              "label": "原作／首批内容",
+              "firstYear": 2008,
+              "basis": "original",
+              "evidence": "2008-06-05；2010 PSP新增迷宫另核，普通廉价版不增内容。",
+              "source": "https://www.nintendo.co.jp/wii/software/rfsj/index.html",
+              "evidenceReleaseIds": [
+                "chun-shiren3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-shiren3-v-original",
+              "workId": "chun-shiren3",
+              "year": 2008,
+              "platform": "Wii",
+              "publisher": "世嘉",
+              "publisherCompanies": [
+                "世嘉"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2008-06-05；2010 PSP新增迷宫另核，普通廉价版不增内容。",
+              "source": "https://www.nintendo.co.jp/wii/software/rfsj/index.html",
+              "contentVersionId": "chun-shiren3-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-shiren4",
+          "title": "风来之西林4：神之眼与恶魔之脐",
+          "originalTitle": "不思議のダンジョン 風来のシレン4 神の眼と悪魔のヘソ",
+          "chineseTitle": "风来之西林4：神之眼与恶魔之脐",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "不思議のダンジョン 風来のシレン4 神の眼と悪魔のヘソ"
+          ],
+          "firstYear": 2010,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "シレン",
+            "コッパ",
+            "カミナ"
+          ],
+          "charactersSource": "https://www.nintendo.co.jp/ds/software/b4fj/index.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "西林漂流至南方小岛，为救出替自己辩护而被囚禁的少女，寻找传说中的秘宝。",
+          "notes": "2010-02-25；Chunsoft开发与Spike发行分开；2012 plus另核新增迷宫。",
+          "source": "https://www.nintendo.co.jp/ds/software/b4fj/index.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/ds/software/b4fj/index.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-shiren4-c-original",
+              "workId": "chun-shiren4",
+              "label": "原作／首批内容",
+              "firstYear": 2010,
+              "basis": "original",
+              "evidence": "2010-02-25；Chunsoft开发与Spike发行分开；2012 plus另核新增迷宫。",
+              "source": "https://www.nintendo.co.jp/ds/software/b4fj/index.html",
+              "evidenceReleaseIds": [
+                "chun-shiren4-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-shiren4-v-original",
+              "workId": "chun-shiren4",
+              "year": 2010,
+              "platform": "Nintendo DS",
+              "publisher": "Spike",
+              "publisherCompanies": [
+                "Spike"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2010-02-25；Chunsoft开发与Spike发行分开；2012 plus另核新增迷宫。",
+              "source": "https://www.nintendo.co.jp/ds/software/b4fj/index.html",
+              "contentVersionId": "chun-shiren4-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-shiren5",
+          "title": "风来之西林5：命运塔与命运的骰子",
+          "originalTitle": "不思議のダンジョン 風来のシレン5 フォーチュンタワーと運命のダイス",
+          "chineseTitle": "风来之西林5：命运塔与命运的骰子",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "不思議のダンジョン 風来のシレン5 フォーチュンタワーと運命のダイス"
+          ],
+          "firstYear": 2010,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "シレン",
+            "コッパ",
+            "ジロきち",
+            "おユウ"
+          ],
+          "charactersSource": "https://www.nintendo.co.jp/ds/software/b5fj/index.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "西林一行帮助希望改变恋人命运的青年，挑战传说可以改写命运的高塔。",
+          "notes": "2010-12-09；后续plus与平台新增迷宫须按首次增量核对，不另造续作。",
+          "source": "https://www.nintendo.co.jp/ds/software/b5fj/index.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/ds/software/b5fj/index.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-shiren5-c-original",
+              "workId": "chun-shiren5",
+              "label": "原作／首批内容",
+              "firstYear": 2010,
+              "basis": "original",
+              "evidence": "2010-12-09；后续plus与平台新增迷宫须按首次增量核对，不另造续作。",
+              "source": "https://www.nintendo.co.jp/ds/software/b5fj/index.html",
+              "evidenceReleaseIds": [
+                "chun-shiren5-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-shiren5-v-original",
+              "workId": "chun-shiren5",
+              "year": 2010,
+              "platform": "Nintendo DS",
+              "publisher": "Chunsoft",
+              "publisherCompanies": [
+                "Chunsoft"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2010-12-09；后续plus与平台新增迷宫须按首次增量核对，不另造续作。",
+              "source": "https://www.nintendo.co.jp/ds/software/b5fj/index.html",
+              "contentVersionId": "chun-shiren5-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-druaga",
+          "title": "德鲁亚加的噩梦：不可思议的迷宫",
+          "originalTitle": "ザ・ナイトメア・オブ・ドルアーガ 不思議のダンジョン",
+          "chineseTitle": "德鲁亚加的噩梦：不可思议的迷宫",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ザ・ナイトメア・オブ・ドルアーガ 不思議のダンジョン"
+          ],
+          "firstYear": 2004,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "ギル",
+            "カイ"
+          ],
+          "charactersSource": "https://arika.co.jp/game/game_jp.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "吉尔面对新的迷宫危机，踏入危险地城寻找失踪的凯，结合德鲁亚加世界观与迷宫探索。",
+          "notes": "2004-07-29；ARIKA发行，Chunsoft系统合作不等于其发行或独占制作。",
+          "source": "https://arika.co.jp/game/game_jp.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://arika.co.jp/game/game_jp.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-druaga-c-original",
+              "workId": "chun-druaga",
+              "label": "原作／首批内容",
+              "firstYear": 2004,
+              "basis": "original",
+              "evidence": "2004-07-29；ARIKA发行，Chunsoft系统合作不等于其发行或独占制作。",
+              "source": "https://arika.co.jp/game/game_jp.html",
+              "evidenceReleaseIds": [
+                "chun-druaga-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-druaga-v-original",
+              "workId": "chun-druaga",
+              "year": 2004,
+              "platform": "PlayStation 2",
+              "publisher": "ARIKA",
+              "publisherCompanies": [
+                "ARIKA"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2004-07-29；ARIKA发行，Chunsoft系统合作不等于其发行或独占制作。",
+              "source": "https://arika.co.jp/game/game_jp.html",
+              "contentVersionId": "chun-druaga-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-homeland",
+          "title": "家园：HOMELAND",
+          "originalTitle": "ホームランド",
+          "chineseTitle": "家园：HOMELAND",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ホームランド"
+          ],
+          "firstYear": 2005,
+          "category": "角色扮演",
+          "subcategory": "剧情RPG",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "クエスター（玩家角色）"
+          ],
+          "charactersSource": "https://www.spike-chunsoft.co.jp/pages/games/homeland/",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "玩家化身冒险者进入异世界，通过与当地角色及伙伴协同行动触发不同故事。",
+          "notes": "2005-04-29网络通販首发，6月30店售不新增发行；2007-04-30网络服务结束，单人内容仍可游玩。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/homeland/",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "角色移动、会话与战斗指令推动冒险；联机聊天与单人剧情命令分开，不据多人聊天推定单人解析器。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.spike-chunsoft.co.jp/pages/games/homeland/"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-homeland-c-original",
+              "workId": "chun-homeland",
+              "label": "原作／首批内容",
+              "firstYear": 2005,
+              "basis": "original",
+              "evidence": "2005-04-29网络通販首发，6月30店售不新增发行；2007-04-30网络服务结束，单人内容仍可游玩。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/homeland/",
+              "evidenceReleaseIds": [
+                "chun-homeland-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-homeland-v-original",
+              "workId": "chun-homeland",
+              "year": 2005,
+              "platform": "Nintendo GameCube",
+              "publisher": "Chunsoft",
+              "publisherCompanies": [
+                "Chunsoft"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2005-04-29网络通販首发，6月30店售不新增发行；2007-04-30网络服务结束，单人内容仍可游玩。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/homeland/",
+              "contentVersionId": "chun-homeland-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-pokemon-rescue",
+          "title": "宝可梦不可思议迷宫：赤／青之救助队",
+          "originalTitle": "ポケモン不思議のダンジョン 青の救助隊・赤の救助隊",
+          "chineseTitle": "宝可梦不可思议迷宫：赤／青之救助队",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ポケモン不思議のダンジョン 青の救助隊・赤の救助隊",
+            "宝可梦不可思议迷宫：红／蓝救援队",
+            "赤之救助队",
+            "青之救助队"
+          ],
+          "firstYear": 2005,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "变成宝可梦的主人公",
+            "救助队伙伴"
+          ],
+          "charactersSource": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "变成宝可梦的人类与伙伴结成救助队，在接连发生的灾害中寻找自身变化与世界危机的原因。",
+          "notes": "2005-11-17同期双平台；赤／青共享故事身份，平台与出场差异另记，不各造同剧情新作。",
+          "source": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.spike-chunsoft.co.jp/pages/games/pokedun/"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-pokemon-rescue-c-original",
+              "workId": "chun-pokemon-rescue",
+              "label": "原作／首批内容",
+              "firstYear": 2005,
+              "basis": "original",
+              "evidence": "2005-11-17同期双平台；赤／青共享故事身份，平台与出场差异另记，不各造同剧情新作。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/",
+              "evidenceReleaseIds": [
+                "chun-pokemon-rescue-v-original-1",
+                "chun-pokemon-rescue-v-original-2"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-pokemon-rescue-v-original-1",
+              "workId": "chun-pokemon-rescue",
+              "year": 2005,
+              "platform": "Nintendo DS（青之救助队）",
+              "publisher": "The Pokémon Company",
+              "publisherCompanies": [
+                "The Pokémon Company"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2005-11-17同期双平台；赤／青共享故事身份，平台与出场差异另记，不各造同剧情新作。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/",
+              "contentVersionId": "chun-pokemon-rescue-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／同期首批内容；配对版的地图或出场差异见发行说明。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "chun-pokemon-rescue-v-original-2",
+              "workId": "chun-pokemon-rescue",
+              "year": 2005,
+              "platform": "Game Boy Advance（赤之救助队）",
+              "publisher": "The Pokémon Company",
+              "publisherCompanies": [
+                "The Pokémon Company"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2005-11-17同期双平台；赤／青共享故事身份，平台与出场差异另记，不各造同剧情新作。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/",
+              "contentVersionId": "chun-pokemon-rescue-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／同期首批内容；配对版的地图或出场差异见发行说明。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-pokemon-explorers",
+          "title": "宝可梦不可思议迷宫：时／暗之探险队",
+          "originalTitle": "ポケモン不思議のダンジョン 時の探検隊・闇の探検隊",
+          "chineseTitle": "宝可梦不可思议迷宫：时／暗之探险队",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ポケモン不思議のダンジョン 時の探検隊・闇の探検隊",
+            "宝可梦不可思议迷宫：时间／黑暗探险队",
+            "天空之探险队"
+          ],
+          "firstYear": 2007,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "失忆的主人公",
+            "探险队伙伴",
+            "ジュプトル"
+          ],
+          "charactersSource": "https://www.pokemon.co.jp/game/ds/dungeon2007/",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "失忆的主人公化为宝可梦，和伙伴加入公会，追查时之齿轮被盗与世界时间停止的真相。",
+          "notes": "2007-09-13；时／暗为同期对应版，同故事身份；天空版新增剧情归增补。",
+          "source": "https://www.pokemon.co.jp/game/ds/dungeon2007/",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.pokemon.co.jp/game/ds/dungeon2007/"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-pokemon-explorers-c-original",
+              "workId": "chun-pokemon-explorers",
+              "label": "原作／首批内容",
+              "firstYear": 2007,
+              "basis": "original",
+              "evidence": "2007-09-13；时／暗为同期对应版，同故事身份；天空版新增剧情归增补。",
+              "source": "https://www.pokemon.co.jp/game/ds/dungeon2007/",
+              "evidenceReleaseIds": [
+                "chun-pokemon-explorers-v-original"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "chun-pokemon-explorers-c-added",
+              "workId": "chun-pokemon-explorers",
+              "label": "天空之探险队：新增特别篇与角色",
+              "firstYear": 2009,
+              "basis": "added",
+              "comparedTo": "chun-pokemon-explorers-c-original",
+              "evidence": "相较2007时／暗探险队，加入新的故事篇章、可选宝可梦与玩法；不是仅普通移植。",
+              "source": "https://www.nintendo.co.jp/ds/c2sj/index.html",
+              "evidenceReleaseIds": [
+                "chun-pokemon-explorers-v-added"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较2007时／暗探险队，加入新的故事篇章、可选宝可梦与玩法；不是仅普通移植。",
+                  "source": "https://www.nintendo.co.jp/ds/c2sj/index.html"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-pokemon-explorers-v-original",
+              "workId": "chun-pokemon-explorers",
+              "year": 2007,
+              "platform": "Nintendo DS",
+              "publisher": "The Pokémon Company",
+              "publisherCompanies": [
+                "The Pokémon Company"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2007-09-13；时／暗为同期对应版，同故事身份；天空版新增剧情归增补。",
+              "source": "https://www.pokemon.co.jp/game/ds/dungeon2007/",
+              "contentVersionId": "chun-pokemon-explorers-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／同期首批内容；配对版的地图或出场差异见发行说明。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "chun-pokemon-explorers-v-added",
+              "workId": "chun-pokemon-explorers",
+              "year": 2009,
+              "platform": "Nintendo DS",
+              "publisher": "The Pokémon Company",
+              "publisherCompanies": [
+                "The Pokémon Company"
+              ],
+              "kind": "首次内容增补",
+              "voice": "未核实",
+              "differences": "相较2007时／暗探险队，加入新的故事篇章、可选宝可梦与玩法；不是仅普通移植。",
+              "source": "https://www.nintendo.co.jp/ds/c2sj/index.html",
+              "contentVersionId": "chun-pokemon-explorers-c-added",
+              "contentRelation": "added",
+              "contentNote": "相较2007时／暗探险队，加入新的故事篇章、可选宝可梦与玩法；不是仅普通移植。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-pokemon-adventure",
+          "title": "宝可梦不可思议迷宫：冒险团（炎／岚／光）",
+          "originalTitle": "ポケモン不思議のダンジョン 冒険団",
+          "chineseTitle": "宝可梦不可思议迷宫：冒险团（炎／岚／光）",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "すすめ！炎の冒険団",
+            "いくぞ！嵐の冒険団",
+            "めざせ！光の冒険団"
+          ],
+          "firstYear": 2009,
+          "category": "角色扮演",
+          "subcategory": "随机迷宫探索",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "炎之冒险团成员"
+          ],
+          "charactersSource": "https://www.pokemon.co.jp/game/wii/dungeon/",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "宝可梦们在对应村庄组成冒险团，接受委托并探索迷宫。炎、岚、光三个对应版使用不同据点、迷宫和伙伴阵容。",
+          "notes": "2009-08-04三部同期独立配信对应版；共用故事／玩法框架，村庄、迷宫与阵容区别记为同作内容变体，不造三部独立故事。",
+          "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战斗指令"
+          ],
+          "interactionNote": "按格移动、选择道具及战斗行动，探索随机迷宫；同步回合行动不标即时动作；救助密码及起名不标自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.pokemon.co.jp/game/wii/dungeon/"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-pokemon-adventure-c-original",
+              "workId": "chun-pokemon-adventure",
+              "label": "炎之冒险团：原作内容",
+              "firstYear": 2009,
+              "basis": "original",
+              "evidence": "2009-08-04；三部独立配信产品之一，村庄、迷宫与可选宝可梦不同，不把系列目录总行另计作品。",
+              "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+              "evidenceReleaseIds": [
+                "chun-pokemon-adventure-v-fire"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "chun-pokemon-adventure-c-storm",
+              "workId": "chun-pokemon-adventure",
+              "label": "岚之冒险团：同期内容变体",
+              "firstYear": 2009,
+              "basis": "added",
+              "comparedTo": "chun-pokemon-adventure-c-original",
+              "evidence": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+              "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+              "evidenceReleaseIds": [
+                "chun-pokemon-adventure-v-storm"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+                  "source": "https://www.pokemon.co.jp/game/wii/dungeon/"
+                }
+              ]
+            },
+            {
+              "id": "chun-pokemon-adventure-c-light",
+              "workId": "chun-pokemon-adventure",
+              "label": "光之冒险团：同期内容变体",
+              "firstYear": 2009,
+              "basis": "added",
+              "comparedTo": "chun-pokemon-adventure-c-original",
+              "evidence": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+              "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+              "evidenceReleaseIds": [
+                "chun-pokemon-adventure-v-light"
+              ],
+              "addedContent": [
+                {
+                  "description": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+                  "source": "https://www.pokemon.co.jp/game/wii/dungeon/"
+                }
+              ]
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-pokemon-adventure-v-fire",
+              "workId": "chun-pokemon-adventure",
+              "year": 2009,
+              "platform": "WiiWare（炎之冒险团）",
+              "publisher": "The Pokémon Company",
+              "publisherCompanies": [
+                "The Pokémon Company"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2009-08-04；三部独立配信产品之一，村庄、迷宫与可选宝可梦不同，不把系列目录总行另计作品。",
+              "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+              "contentVersionId": "chun-pokemon-adventure-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作／同期首批内容；配对版的地图或出场差异见发行说明。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "chun-pokemon-adventure-v-storm",
+              "workId": "chun-pokemon-adventure",
+              "year": 2009,
+              "platform": "WiiWare（岚之冒险团）",
+              "publisher": "The Pokémon Company",
+              "publisherCompanies": [
+                "The Pokémon Company"
+              ],
+              "kind": "同期对应内容",
+              "voice": "未核实",
+              "differences": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+              "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+              "contentVersionId": "chun-pokemon-adventure-c-storm",
+              "contentRelation": "added",
+              "contentNote": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "chun-pokemon-adventure-v-light",
+              "workId": "chun-pokemon-adventure",
+              "year": 2009,
+              "platform": "WiiWare（光之冒险团）",
+              "publisher": "The Pokémon Company",
+              "publisherCompanies": [
+                "The Pokémon Company"
+              ],
+              "kind": "同期对应内容",
+              "voice": "未核实",
+              "differences": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+              "source": "https://www.pokemon.co.jp/game/wii/dungeon/",
+              "contentVersionId": "chun-pokemon-adventure-c-light",
+              "contentRelation": "added",
+              "contentNote": "相较同期炎之冒险团，本对应版采用不同村庄、迷宫和登场宝可梦阵容；官方明确有地图与角色差异，不声称新增独立主线。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-jump2",
+          "title": "Famicom Jump II：最强的七人",
+          "originalTitle": "ファミコンジャンプII 最強の7人",
+          "chineseTitle": "Famicom Jump II：最强的七人",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ファミコンジャンプII 最強の7人"
+          ],
+          "firstYear": 1991,
+          "category": "角色扮演",
+          "subcategory": "剧情RPG",
+          "genre": "剧情／冒险／角色成长",
+          "characters": [
+            "孫悟空",
+            "空条承太郎",
+            "両津勘吉"
+          ],
+          "charactersSource": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "来自Jump漫画的英雄分别展开冒险，逐渐汇合队伍，对抗共同的敌人。",
+          "notes": "1991-12-02；Bandai发行，Chunsoft同期自列开发目录；非第一作的普通移植。",
+          "source": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html",
+          "interactionModes": [
+            "直接移动",
+            "菜单指令",
+            "战术策略"
+          ],
+          "interactionNote": "地图行走、会话与队伍战术战斗，固定行动选项不标自然语言输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-jump2-c-original",
+              "workId": "chun-jump2",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991-12-02；Bandai发行，Chunsoft同期自列开发目录；非第一作的普通移植。",
+              "source": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html",
+              "evidenceReleaseIds": [
+                "chun-jump2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-jump2-v-original",
+              "workId": "chun-jump2",
+              "year": 1991,
+              "platform": "Famicom",
+              "publisher": "Bandai",
+              "publisherCompanies": [
+                "Bandai"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "1991-12-02；Bandai发行，Chunsoft同期自列开发目录；非第一作的普通移植。",
+              "source": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html",
+              "contentVersionId": "chun-jump2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "chun-zombie",
+          "title": "最爱僵尸",
+          "originalTitle": "ぞんびだいすき",
+          "chineseTitle": "最爱僵尸",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "ぞんびだいすき"
+          ],
+          "firstYear": 2011,
+          "category": "动作策略",
+          "subcategory": "群体指挥／经营",
+          "genre": "任务叙事／群体动作",
+          "characters": [
+            "变为僵尸的农民群体"
+          ],
+          "charactersSource": "https://www.nintendo.co.jp/ds/software/bzbj/index.html",
+          "charactersNote": "仅记录来源可支持的人物或玩家角色身份；不臆造固定姓名。",
+          "synopsis": "遭袭的农民变为僵尸，组成队伍进入城镇夺回重要物品，恢复被毁的家园。",
+          "notes": "2011-01-20；有明确任务故事的动作／经营混合关联，不作为纯日常养成扩录，也不归四类主目录。",
+          "source": "https://www.nintendo.co.jp/ds/software/bzbj/index.html",
+          "interactionModes": [
+            "战术策略",
+            "即时动作",
+            "资源经营"
+          ],
+          "interactionNote": "以触笔指挥僵尸群移动、袭击和取回物品，再使用所得修复牧场；触笔指挥不等于场景热点调查。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/ds/software/bzbj/index.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "chun-zombie-c-original",
+              "workId": "chun-zombie",
+              "label": "原作／首批内容",
+              "firstYear": 2011,
+              "basis": "original",
+              "evidence": "2011-01-20；有明确任务故事的动作／经营混合关联，不作为纯日常养成扩录，也不归四类主目录。",
+              "source": "https://www.nintendo.co.jp/ds/software/bzbj/index.html",
+              "evidenceReleaseIds": [
+                "chun-zombie-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "chun-zombie-v-original",
+              "workId": "chun-zombie",
+              "year": 2011,
+              "platform": "Nintendo DS",
+              "publisher": "Chunsoft",
+              "publisherCompanies": [
+                "Chunsoft"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2011-01-20；有明确任务故事的动作／经营混合关联，不作为纯日常养成扩录，也不归四类主目录。",
+              "source": "https://www.nintendo.co.jp/ds/software/bzbj/index.html",
+              "contentVersionId": "chun-zombie-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首批内容。",
+              "releaseRole": "contentDebut"
+            }
           ]
         }
       ]

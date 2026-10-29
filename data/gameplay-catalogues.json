@@ -22115,12 +22115,13 @@
       ]
     },
     "chunsoft": {
-      "title": "附录：本轮游戏类型与收录对照",
-      "scope": "据现有专题、历史审计和本轮取得的来源整理；原对话完整表格未取回，不宣称覆盖全部发行史。",
+      "title": "附录：Chunsoft游戏类型清单逐项对照",
+      "updated": "2026-10-29",
+      "scope": "依据项目清单检索恢复的具名候选，逐项结合官方与历史资料补核。覆盖早期开发、音声小说、迷宫RPG、合作作品及移动边界；不宣称已取回逐字原表。",
       "groups": [
         {
-          "title": "已收主库作品",
-          "note": "引用既有作品ID，实际发行与制作关系分别核对。",
+          "title": "音声小说与既有主库叙事",
+          "note": "复用旧身份；Portopia与JESUS只关联特定Famicom制作／移植，原作年不倒填公司史。",
           "source": "https://www.spike-chunsoft.co.jp/company/outline/",
           "rows": [
             {
@@ -22158,20 +22159,266 @@
             },
             {
               "workId": "g1331"
+            },
+            {
+              "workId": "g979"
             }
           ]
         },
         {
-          "title": "边界与继续核查位置",
-          "note": "不制造作品、内容或发行对象；可见待核不代表已完成完整清单比对。",
-          "source": "https://www.4gamer.net/games/105/G010573/20100702069/",
+          "title": "新补录剧情RPG与混合叙事",
+          "note": "新增16部独立故事／产品档案；同故事对应版归一个作品，迷宫、角色和新增篇章按内容版本区分。",
+          "source": "https://archive.chofusai.jp/pamphlet/46th.pdf",
           "rows": [
             {
+              "workId": "chun-torneko1"
+            },
+            {
+              "workId": "chun-shiren1"
+            },
+            {
+              "workId": "chun-shiren-gb"
+            },
+            {
+              "workId": "chun-shiren2"
+            },
+            {
+              "workId": "chun-shiren-gb2"
+            },
+            {
+              "workId": "chun-asuka"
+            },
+            {
+              "workId": "chun-shiren3"
+            },
+            {
+              "workId": "chun-shiren4"
+            },
+            {
+              "workId": "chun-shiren5"
+            },
+            {
+              "workId": "chun-druaga"
+            },
+            {
+              "workId": "chun-homeland"
+            },
+            {
+              "workId": "chun-pokemon-rescue"
+            },
+            {
+              "workId": "chun-pokemon-explorers"
+            },
+            {
+              "workId": "chun-pokemon-adventure"
+            },
+            {
+              "workId": "chun-jump2"
+            },
+            {
+              "workId": "chun-zombie"
+            }
+          ]
+        },
+        {
+          "title": "已有Enix专题档案复用",
+          "note": "七部RPG及波多比亚旧身份全部复用，不复制；Chunsoft关系限定原作或具名后发平台。",
+          "source": "https://archive.chofusai.jp/pamphlet/46th.pdf",
+          "rows": [
+            {
+              "title": "勇者斗恶龙I",
+              "type": "角色扮演",
+              "relation": "复用已有跨类型身份",
+              "catalogueWorkId": "enix-dq1",
+              "catalogueDossierId": "enix",
+              "note": "按历史开发关联，不改Enix原作发行或复制数据。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            },
+            {
+              "title": "勇者斗恶龙II：恶灵的众神",
+              "type": "角色扮演",
+              "relation": "复用已有跨类型身份",
+              "catalogueWorkId": "enix-dq2",
+              "catalogueDossierId": "enix",
+              "note": "按历史开发关联，不改Enix原作发行或复制数据。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            },
+            {
+              "title": "勇者斗恶龙III：传说的起点",
+              "type": "角色扮演",
+              "relation": "复用已有跨类型身份",
+              "catalogueWorkId": "enix-dq3",
+              "catalogueDossierId": "enix",
+              "note": "按历史开发关联，不改Enix原作发行或复制数据。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            },
+            {
+              "title": "勇者斗恶龙IV：被引导的人们",
+              "type": "角色扮演",
+              "relation": "复用已有跨类型身份",
+              "catalogueWorkId": "enix-dq4",
+              "catalogueDossierId": "enix",
+              "note": "按历史开发关联，不改Enix原作发行或复制数据。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            },
+            {
+              "title": "勇者斗恶龙V：天空的新娘",
+              "type": "角色扮演",
+              "relation": "复用已有跨类型身份",
+              "catalogueWorkId": "enix-dq5",
+              "catalogueDossierId": "enix",
+              "note": "按历史开发关联，不改Enix原作发行或复制数据。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            },
+            {
+              "title": "特鲁尼克大冒险2：不可思议的迷宫",
+              "type": "角色扮演",
+              "relation": "复用已有跨类型身份",
+              "catalogueWorkId": "enix-torneko2",
+              "catalogueDossierId": "enix",
+              "note": "按历史开发关联，不改Enix原作发行或复制数据。",
+              "source": "https://en.wikipedia.org/wiki/Torneko:_The_Last_Hope"
+            },
+            {
+              "title": "特鲁尼克大冒险3：不可思议的迷宫",
+              "type": "角色扮演",
+              "relation": "复用已有跨类型身份",
+              "catalogueWorkId": "enix-torneko3",
+              "catalogueDossierId": "enix",
+              "note": "按历史开发关联，不改Enix原作发行或复制数据。",
+              "source": "https://en.wikipedia.org/wiki/Dragon_Quest_Characters:_Torneko_no_Daib%C5%8Dken_3"
+            },
+            {
+              "title": "波多比亚连续杀人事件（1985 FC关联）",
+              "type": "菜单／输入式叙事",
+              "relation": "复用Enix旧主库身份，限定平台说明",
+              "catalogueWorkId": "g007",
+              "catalogueDossierId": "enix",
+              "note": "原作含文字输入与菜单标签；1985 FC为固定菜单操作，不改原作标签或新增普通移植。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            }
+          ]
+        },
+        {
+          "title": "同作内容增补与重制",
+          "note": "DS、DS2、天空版归既有故事身份，不虚增三部独立作品。",
+          "source": "https://www.nintendo.co.jp/ds/software/afuj/index.html",
+          "rows": [
+            {
+              "title": "风来之西林DS：新事件／迷宫",
+              "type": "同作新增内容",
+              "relation": "追加内容版本",
+              "note": "相较1995原作，新增迷宫、事件、怪物及道具；不把Wi-Fi或普通移植本身当增量。",
+              "anchor": "chun-shiren1",
+              "source": "https://www.nintendo.co.jp/ds/software/afuj/index.html"
+            },
+            {
+              "title": "风来之西林DS2：新增迷宫与重绘事件",
+              "type": "同作新增内容",
+              "relation": "追加内容版本",
+              "note": "相较2001 GB2，新增迷宫、强化事件画面并重制图像；GB2世界与故事不另算独立新作。",
+              "anchor": "chun-shiren-gb2",
+              "source": "https://www.nintendo.co.jp/ds/software/ywfj/index.html"
+            },
+            {
+              "title": "天空之探险队：新增特别篇与角色",
+              "type": "同作新增内容",
+              "relation": "追加内容版本",
+              "note": "相较2007时／暗探险队，加入新的故事篇章、可选宝可梦与玩法；不是仅普通移植。",
+              "anchor": "chun-pokemon-explorers",
+              "source": "https://www.nintendo.co.jp/ds/c2sj/index.html"
+            },
+            {
+              "title": "WiiWare炎／岚／光之冒险团",
+              "type": "同作同期内容变体",
+              "relation": "三版归一个作品，2项内容变体",
+              "anchor": "chun-pokemon-adventure",
+              "note": "2009-08-04三部同期独立配信对应版；共用故事／玩法框架，村庄、迷宫与阵容区别记为同作内容变体，不造三部独立故事。",
+              "source": "https://www.pokemon.co.jp/game/wii/dungeon/"
+            }
+          ]
+        },
+        {
+          "title": "非叙事、同源版本与待补原件",
+          "note": "逐项留存去向，不以目录行数当作独立游戏总量。",
+          "source": "https://archive.chofusai.jp/pamphlet/46th.pdf",
+          "rows": [
+            {
+              "title": "Door Door",
+              "type": "动作益智",
+              "relation": "排除非叙事",
+              "note": "早期个人作品与Chunsoft后续移植分开，不按创始人作品自动准入。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            },
+            {
+              "title": "Tetris 2 + Bombliss",
+              "type": "益智",
+              "relation": "排除非叙事",
+              "note": "玩法驱动的方块益智，不建剧情或RPG档案。",
+              "source": "https://archive.chofusai.jp/pamphlet/46th.pdf"
+            },
+            {
+              "title": "BS風来のシレン スララを救え",
+              "type": "广播联动迷宫",
+              "relation": "待补原件",
+              "note": "独立广播节目与原作改编边界及首发周次尚缺具体原件，不当1995普通版自动复制。",
+              "source": "https://dengekionline.com/articles/51906/"
+            },
+            {
+              "title": "KOWA-OTO",
+              "type": "听觉恐怖／迷宫逃脱",
+              "relation": "参考／叙事边界待核",
+              "note": "已确认2010声音定位逃脱操作，尚不足以把气氛与追逐当完整独立剧情；不虚构角色路线。",
+              "source": "https://www.inside-games.jp/article/2010/09/15/44414.html"
+            },
+            {
+              "title": "Rush Hour Train",
+              "type": "铁路／列车益智",
+              "relation": "排除／待补操作原件",
+              "note": "移动目录线索未显示符合剧情或RPG要求，不能因Chunsoft署名就准入。",
+              "source": "https://gamefaqs.gamespot.com/games/company/72650-chunsoft"
+            },
+            {
+              "title": "Escape Flash",
+              "type": "脱出益智",
+              "relation": "待核剧情独立性",
+              "note": "名称和ADV标签不代替剧情、角色及具体交互证据。",
+              "source": "https://www.metacritic.com/game/escape-flash/"
+            },
+            {
               "title": "TRICK×LOGIC Season 2",
-              "type": "推理小说／关键词解谜",
-              "relation": "待核首次内容批次",
-              "note": "2010年先分话下载后UMD，案件5推理与第一季重叠；解答和6—10话首次配信待逐话拆核。",
+              "type": "推理小说／分话下载",
+              "relation": "首次内容批次待核",
+              "note": "7月分话先行、9月UMD与第一季案件5推理篇重叠；需按各推理／解答首次配信拆核，不将整包视为9月新原作。",
               "source": "https://www.4gamer.net/games/105/G010573/20100702069/"
+            },
+            {
+              "title": "女剣士アスカ見参！for Windows",
+              "type": "同故事移植／扩展",
+              "relation": "版本差异待核",
+              "note": "2002-12-20原件确认Chunsoft发行，但新增迷宫的具体首次内容仍需核，不仅凭Windows移植增版。",
+              "source": "https://www.spike-chunsoft.co.jp/pages/games/asukapc/"
+            },
+            {
+              "title": "風来のシレン3 ポータブル",
+              "type": "同作新增迷宫",
+              "relation": "待核首次增量",
+              "note": "已定位2010 PSP新增迷宫报道，后续需与Wii配信迷宫逐项比较。",
+              "source": "https://game.watch.impress.co.jp/docs/news/340499.html"
+            },
+            {
+              "title": "風来のシレン4 plus／5 plus",
+              "type": "同作扩展",
+              "relation": "后续内容待核",
+              "note": "2012后实际开发与发行分期核对，不倒填旧Chunsoft职责。",
+              "source": "https://www.spike-chunsoft.co.jp/"
+            },
+            {
+              "title": "救助隊DX／マグナゲート／超不思議のダンジョン",
+              "type": "后继公司作品／重制",
+              "relation": "分期边界",
+              "note": "救助队DX为旧作重制而非第三部原作；其余2012后新作不自动归旧Chunsoft。",
+              "source": "https://www.pokemon.co.jp/ex/dungeonDX/about/"
             }
           ]
         }

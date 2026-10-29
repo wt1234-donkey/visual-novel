@@ -73,6 +73,15 @@
       "source": "https://aria-soft.com/product"
     },
     {
+      "rawName": "ARIKA",
+      "entityIds": [
+        "entity-name-56412379bbca"
+      ],
+      "legacyCanonical": null,
+      "status": "mapped",
+      "source": "https://arika.co.jp/game/game_jp.html"
+    },
+    {
       "rawName": "ASCII",
       "entityIds": [
         "entity-ascii"
@@ -375,6 +384,15 @@
       "legacyCanonical": null,
       "status": "mapped",
       "source": "https://www.suruga-ya.jp/product/detail/144002407"
+    },
+    {
+      "rawName": "Bandai",
+      "entityIds": [
+        "entity-name-b3aa04d7953f"
+      ],
+      "legacyCanonical": null,
+      "status": "mapped",
+      "source": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html"
     },
     {
       "rawName": "Bandai Namco Games",
@@ -2627,6 +2645,15 @@
       "source": "https://teamsalvato.com/news/ddlc-is-now-available-on-ios-and-android/"
     },
     {
+      "rawName": "The Pokémon Company",
+      "entityIds": [
+        "entity-name-8b6b2957f42a"
+      ],
+      "legacyCanonical": null,
+      "status": "mapped",
+      "source": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/"
+    },
+    {
       "rawName": "Tiare",
       "entityIds": [
         "entity-tiare"
@@ -4392,9 +4419,30 @@
       "status": "pendingIdentity",
       "source": "https://dmmgames.co.jp/news/detail/id=1562",
       "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
+    },
+    {
+      "entityId": "entity-name-56412379bbca",
+      "rawName": "ARIKA",
+      "status": "pendingIdentity",
+      "source": "https://arika.co.jp/game/game_jp.html",
+      "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
+    },
+    {
+      "entityId": "entity-name-8b6b2957f42a",
+      "rawName": "The Pokémon Company",
+      "status": "pendingIdentity",
+      "source": "https://www.spike-chunsoft.co.jp/pages/games/pokedun/",
+      "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
+    },
+    {
+      "entityId": "entity-name-b3aa04d7953f",
+      "rawName": "Bandai",
+      "status": "pendingIdentity",
+      "source": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html",
+      "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
     }
   ],
-  "pendingMembershipCount": 620,
+  "pendingMembershipCount": 623,
   "identityConflicts": [],
   "aliasPolicy": "旧taxonomy别名仅作兼容归档；新实体索引保留子品牌，所有实体关系单独记录。"
 }
