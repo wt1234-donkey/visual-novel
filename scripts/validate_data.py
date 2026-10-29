@@ -20,6 +20,8 @@ from interaction_model import validate_interactions
 validate_interactions(data, coverage, taxonomy)
 from content_model import validate_content_model
 validate_content_model(data, coverage)
+from jhv_content_review import validate_review
+validate_review(data, coverage)
 works, versions = data['works'], data['platformReleases']
 
 def validate_edition_credits(work):

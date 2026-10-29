@@ -22426,7 +22426,7 @@
     },
     "jhv": {
       "title": "附录：本轮游戏类型与收录对照",
-      "scope": "据现有专题、历史审计和本轮取得的来源整理；原对话完整表格未取回，不宣称覆盖全部发行史。",
+      "scope": "按项目历史清单检索恢复的九个作品名逐项对照现有身份，并用外部资料补核。检索结果不是原始表格全文；九项全部复用，不宣称穷尽JHV所有历史游戏。2026-10-29新增三项内容身份、补核两条复刻关系，不以表格行数充当新作数。",
       "groups": [
         {
           "title": "已收主库作品",
@@ -22470,6 +22470,41 @@
           ]
         },
         {
+          "title": "本轮补录的具体内容（共享已有作品）",
+          "note": "原发行均已存在，只补内容身份与关联，主库和专题同步；不增加平台记录。",
+          "source": "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
+          "rows": [
+            {
+              "title": "卒業FINAL",
+              "type": "新增片头动画",
+              "relation": "主库g830／g830-c-final",
+              "note": "复用g830-v6；相较先行PC Engine内容新增片头，毕业旅行传闻不采用。",
+              "source": "https://lunchbox360.livedoor.biz/archives/10550095.html"
+            },
+            {
+              "title": "卒業II SPECIAL",
+              "type": "新增片头与结局图像",
+              "relation": "主库g831／g831-c-special",
+              "note": "复用g831-v6；不以SPECIAL标题单独建作，发行仍为SharRock。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=3599"
+            },
+            {
+              "title": "Star Cruiser II for CD-ROM",
+              "type": "重绘CG／CD-DA音乐",
+              "relation": "关联jhv-star2／jhv-star2-c-cd",
+              "note": "PC-9821与FMT共盘，一个内容身份，复用v2、v3，1994年内日期冲突保留。",
+              "source": "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm"
+            },
+            {
+              "title": "2004卒業復刻版（一、二代）",
+              "type": "同原作内容",
+              "relation": "g830-v9／g831-v9",
+              "note": "官方公告明确原样再现，分别回链各自原作内容；不新建合集作品。",
+              "source": "https://www.iid.co.jp/legacy/news/press/pdf/2004/040511.pdf"
+            }
+          ]
+        },
+        {
           "title": "边界与继续核查位置",
           "note": "不制造作品、内容或发行对象；可见待核不代表已完成完整清单比对。",
           "source": "https://github.com/mamedev/mame/blob/master/hash/pc98.xml",
@@ -22487,6 +22522,13 @@
               "relation": "年代与工种待核",
               "note": "复用现有作品；不把年代异文或Beluga参与直接当作新增内容。",
               "source": "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm"
+            },
+            {
+              "title": "餓狼伝説SPECIAL FM TOWNS",
+              "type": "2D对战格斗",
+              "relation": "参考，未入正文",
+              "note": "JHV发行有二手线索；按现行不新增纯竞技作品规则，仅保留参考，不沿用侍魂历史例外扩大收录。",
+              "source": "https://www.retroplace.com/en/games/45926--fatal-fury-special"
             }
           ]
         }
