@@ -11,9 +11,11 @@ from build_company_pages import build_dossier_navigation
 
 
 class OrganizationTests(unittest.TestCase):
-    def test_main_page_only_adds_navigation_link(self):
+    def test_retained_advanced_page_preserves_previous_catalogue(self):
         old = subprocess.check_output(['git', 'show', '6f2e754:index.html'], cwd=ROOT, text=True)
-        new = (ROOT / 'index.html').read_text()
+        # The work-first homepage replaces the old shell; its compatibility and
+        # complete dossier navigation are checked in discovery.test.mjs.
+        new = (ROOT / 'catalogue.html').read_text().replace('<title>高级发行检索 · ', '<title>', 1)
         self.assertEqual(new.replace('<a href="organizations.html">组织与沿革</a>', '', 1), build_dossier_navigation(old))
         self.assertEqual(new.count('href="organizations.html"'), 1)
 
