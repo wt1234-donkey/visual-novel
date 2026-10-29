@@ -256,3 +256,8 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 2026-10-28 第28轮四项结论按 `organization-round28-closure-20261028.json` 接入第30轮台账。GREE／Mobage 仅在对应 `g209-v3`／`g209-v2` 发行层记录 NextNinja 的服务提供方；1985 年 QL 合辑以独立 `scopedEditions` 版次索引和 `edition` 范围的 Sinclair 出版职责表示，不猜配旧版 ID 或新增主库内容；ASCII 的 AnEarth 土星版错署经 SEGA 官方目录订正为メディアワークス，旧专题卡转历史对照。原始发行字段及先前台账快照不改写；详见[四项落库审计](organization-round28-closure-20261028.md)。
 
 2026-10-28 Microsoft专题增补两部主库原作，独立登记Lionhead Studios和Obsidian Entertainment的逐作制作职责及2006／2018年起的组织关系。2000年游戏部门、2019年品牌更名作为具名事件；发行与开发不互推，旧19部专题作品、旧发行字段及各品牌历史署名保持。详见[Microsoft增补审计](microsoft-expansion-audit-20261028.md)。
+
+
+## 万普独立追加审核（2026-10-29）
+
+`banpresto-source-review-20261029.json`为51条新录／恢复的2008年前旧万普发行保存独立完整对象审核，不改20261027冻结18条原审核或迁移基线。生成器检查新增ID唯一、完整发行对象相等及严格早于2008；七条日文Bandai Namco Games发行按限定ID复用旧英文主体，原署名不改。新游戏厂牌与旧游戏法人、景品主体分开，厂牌职责仅按银翼之觉醒2012厂商明确发文限定两条首次发行，不把相邻续作自动当已核职责。

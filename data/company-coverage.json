@@ -73993,8 +73993,8 @@
       "name": "Banpresto",
       "foundedAt": "1977-04-30",
       "foundedSource": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
-      "checkedAt": "2026-10-27",
-      "status": "既有21部叙事目录完善：旧公司身份、2008分拆吸收及2019景品品牌沿革补充",
+      "checkedAt": "2026-10-29",
+      "status": "ADV／RPG扩充与类型清单上线；原清单全文仍待取得",
       "workIds": [
         "g1064",
         "g913",
@@ -74016,7 +74016,11 @@
         "g1076",
         "g1077",
         "g1078",
-        "g1079"
+        "g1079",
+        "g1333",
+        "g1334",
+        "g1335",
+        "g1336"
       ],
       "publisherWorkIds": [
         "g1064",
@@ -74034,20 +74038,3301 @@
         "g1072",
         "g1073",
         "g1074",
-        "g1063"
+        "g1063",
+        "g1333",
+        "g1334",
+        "g1335",
+        "g1336"
       ],
-      "relatedGames": [],
-      "catalogueEntryCount": 21,
+      "relatedGames": [
+        {
+          "id": "banpresto-sn1",
+          "title": "召唤之夜",
+          "originalTitle": "サモンナイト",
+          "chineseTitle": "召唤之夜",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト"
+          ],
+          "firstYear": 2000,
+          "category": "剧情 RPG",
+          "subcategory": "战术RPG／夜会话",
+          "genre": "异世界召唤／群像冒险",
+          "characters": [
+            "被召唤的高中生（玩家）",
+            "召唤师与异界伙伴"
+          ],
+          "synopsis": "一名现代日本高中生被召唤至异世界利因巴姆，在伙伴协助下学习召唤术并寻找自己的去向。人物交流与战术战斗交替推进，夜会话建立不同的关系。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。2008年DS版已知系统变化，尚未据此确认符合本轮标准的具体新素材，暂不追加内容身份。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9113",
+          "interactionModes": [
+            "选项分支",
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "通过人物会话与夜会话作选择，战斗在格子地图上安排单位移动、攻击及召唤。RPG指令与故事选择并列，不把配置菜单泛化为调查菜单。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=9113",
+            "https://www.nintendo.co.jp/ds/software/ysmj/index.html"
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-sn1-v1",
+              "workId": "banpresto-sn1",
+              "year": 2000,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2000/01/06的PS原作；原版内容独立建档，不用2008年DS发行日期覆盖原作年。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9113",
+              "contentVersionId": "banpresto-sn1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-sn1-c-original",
+              "workId": "banpresto-sn1",
+              "label": "原作内容",
+              "firstYear": 2000,
+              "basis": "original",
+              "evidence": "2000/01/06的PS原作；原版内容独立建档，不用2008年DS发行日期覆盖原作年。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9113",
+              "evidenceReleaseIds": [
+                "banpresto-sn1-v1"
+              ],
+              "addedContent": []
+            }
+          ]
+        },
+        {
+          "id": "banpresto-sn2",
+          "title": "召唤之夜2",
+          "originalTitle": "サモンナイト2",
+          "chineseTitle": "召唤之夜2",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト2"
+          ],
+          "firstYear": 2001,
+          "category": "剧情 RPG",
+          "subcategory": "战术RPG／夜会话",
+          "genre": "见习召唤师／圣女传说",
+          "characters": [
+            "见习召唤师（玩家）",
+            "兄弟子",
+            "旅途中的伙伴"
+          ],
+          "synopsis": "见习召唤师离开苍之派阀，与兄弟子及伙伴在各地旅行，逐渐卷入围绕圣女的冲突。旅途中通过召唤术战斗及人物交流，探明世界与自身命运的联系。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。剧情与操作由后继官方说明交叉核对，原版日期与发行署名另据2001年同期目录。",
+          "source": "https://www.nintendo.co.jp/ds/software/yskj/index.html",
+          "interactionModes": [
+            "选项分支",
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "人物事件与夜会话选择配合格子战场的单位行动、攻击和召唤指令；不是自由词句输入冒险。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/ds/software/yskj/index.html"
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-sn2-v1",
+              "workId": "banpresto-sn2",
+              "year": 2001,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2001/08/02的PS原作；同期发售表列Banpresto与战术RPG类型。后继DS商品页只用于作品剧情交叉核对，不将其署名倒填PS版。",
+              "source": "https://game.watch.impress.co.jp/docs/20011225/ps.htm",
+              "contentVersionId": "banpresto-sn2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "banpresto-sn2-v2",
+              "workId": "banpresto-sn2",
+              "year": 2008,
+              "platform": "Nintendo DS",
+              "publisher": "バンダイナムコゲームス",
+              "publisherCompanies": [
+                "バンダイナムコゲームス"
+              ],
+              "kind": "DS版：新增召唤兽",
+              "voice": "未核实",
+              "differences": "相对2001年PS原作，2008/08/07的DS版由官方明确列出新规召唤兽；新可用召唤内容作为增补依据，同时改用召唤沟通等系统。未将系统便利性本身当新剧情。",
+              "source": "https://www.nintendo.co.jp/ds/software/yskj/index.html",
+              "contentVersionId": "banpresto-sn2-c-added-2008",
+              "contentRelation": "added",
+              "contentNote": "首次新增内容，具体增量及比较对象见内容版本；不因换平台自动建版。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-sn2-c-original",
+              "workId": "banpresto-sn2",
+              "label": "原作内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001/08/02的PS原作；同期发售表列Banpresto与战术RPG类型。后继DS商品页只用于作品剧情交叉核对，不将其署名倒填PS版。",
+              "source": "https://game.watch.impress.co.jp/docs/20011225/ps.htm",
+              "evidenceReleaseIds": [
+                "banpresto-sn2-v1"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "banpresto-sn2-c-added-2008",
+              "workId": "banpresto-sn2",
+              "label": "DS版：新增召唤兽",
+              "firstYear": 2008,
+              "basis": "added",
+              "comparedTo": "banpresto-sn2-c-original",
+              "evidence": "相对2001年PS原作，2008/08/07的DS版由官方明确列出新规召唤兽；新可用召唤内容作为增补依据，同时改用召唤沟通等系统。未将系统便利性本身当新剧情。",
+              "source": "https://www.nintendo.co.jp/ds/software/yskj/index.html",
+              "evidenceReleaseIds": [
+                "banpresto-sn2-v2"
+              ],
+              "addedContent": [
+                {
+                  "description": "相对2001年PS原作，2008/08/07的DS版由官方明确列出新规召唤兽；新可用召唤内容作为增补依据，同时改用召唤沟通等系统。未将系统便利性本身当新剧情。",
+                  "source": "https://www.nintendo.co.jp/ds/software/yskj/index.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "banpresto-sn3",
+          "title": "召唤之夜3",
+          "originalTitle": "サモンナイト3",
+          "chineseTitle": "召唤之夜3",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト3"
+          ],
+          "firstYear": 2003,
+          "category": "剧情 RPG",
+          "subcategory": "战术RPG／夜会话",
+          "genre": "漂流孤岛／师生与异界居民",
+          "characters": [
+            "レックス",
+            "アティ",
+            "受教的学生",
+            "岛上的居民"
+          ],
+          "synopsis": "担任家庭教师的主人公与学生乘船遭遇风暴，漂流到居住着不同异界居民的岛屿。在寻找离岛方法时，他们发现岛屿的隐秘，并面对拔剑力量与守护他人的抉择。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。2012年PSP版首次新增插画、部分人物录音及战斗会话，归入同作的增补内容。",
+          "source": "https://w.atwiki.jp/storyteller/pages/1560.html",
+          "interactionModes": [
+            "选项分支",
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "会话选择与战术格子战斗结合；新版本资料直接展示特殊指令、召唤协作及战斗会话，不以战斗题材推断玩法。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://game.watch.impress.co.jp/docs/news/557821.html"
+          ],
+          "charactersSource": "https://game.watch.impress.co.jp/docs/news/557821.html",
+          "platformReleases": [
+            {
+              "id": "banpresto-sn3-v1",
+              "workId": "banpresto-sn3",
+              "year": 2003,
+              "platform": "PlayStation 2",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2003/08/07的PS2原作；同期发售表核对原始发行主体Banpresto。",
+              "source": "https://game.watch.impress.co.jp/docs/ship/200308_1.htm",
+              "contentVersionId": "banpresto-sn3-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "banpresto-sn3-v2",
+              "workId": "banpresto-sn3",
+              "year": 2012,
+              "platform": "PSP",
+              "publisher": "バンダイナムコゲームス",
+              "publisherCompanies": [
+                "バンダイナムコゲームス"
+              ],
+              "kind": "PSP版：新增插画、人物录音与战斗会话",
+              "voice": "有（部分）",
+              "differences": "相对2003年PS2原作，2012/10/04的PSP版增加事件插画、重录部分角色声音及大量战斗会话；傀儡单位等系统另说明。具体素材与录音增量使本版单列，UMD和下载包装不拆内容身份。",
+              "source": "https://game.watch.impress.co.jp/docs/news/557821.html",
+              "contentVersionId": "banpresto-sn3-c-added-2012",
+              "contentRelation": "added",
+              "contentNote": "首次新增内容，具体增量及比较对象见内容版本；不因换平台自动建版。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-sn3-c-original",
+              "workId": "banpresto-sn3",
+              "label": "原作内容",
+              "firstYear": 2003,
+              "basis": "original",
+              "evidence": "2003/08/07的PS2原作；同期发售表核对原始发行主体Banpresto。",
+              "source": "https://game.watch.impress.co.jp/docs/ship/200308_1.htm",
+              "evidenceReleaseIds": [
+                "banpresto-sn3-v1"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "banpresto-sn3-c-added-2012",
+              "workId": "banpresto-sn3",
+              "label": "PSP版：新增插画、人物录音与战斗会话",
+              "firstYear": 2012,
+              "basis": "added",
+              "comparedTo": "banpresto-sn3-c-original",
+              "evidence": "相对2003年PS2原作，2012/10/04的PSP版增加事件插画、重录部分角色声音及大量战斗会话；傀儡单位等系统另说明。具体素材与录音增量使本版单列，UMD和下载包装不拆内容身份。",
+              "source": "https://game.watch.impress.co.jp/docs/news/557821.html",
+              "evidenceReleaseIds": [
+                "banpresto-sn3-v2"
+              ],
+              "addedContent": [
+                {
+                  "description": "相对2003年PS2原作，2012/10/04的PSP版增加事件插画、重录部分角色声音及大量战斗会话；傀儡单位等系统另说明。具体素材与录音增量使本版单列，UMD和下载包装不拆内容身份。",
+                  "source": "https://game.watch.impress.co.jp/docs/news/557821.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "banpresto-sn4",
+          "title": "召唤之夜4",
+          "originalTitle": "サモンナイト4",
+          "chineseTitle": "召唤之夜4",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト4"
+          ],
+          "firstYear": 2006,
+          "category": "剧情 RPG",
+          "subcategory": "战术RPG／夜会话",
+          "genre": "旅宿小镇／龙之子",
+          "characters": [
+            "ライ",
+            "フェア",
+            "リシェル",
+            "ルシアン",
+            "竜の子"
+          ],
+          "synopsis": "经营旅店兼食堂的少年或少女，遇见从虹色蛋中出生、把自己当作父母的龙之子。小镇的生活由此被各方势力打断，主人公与伙伴踏上保护龙之子的旅程。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。旅店是主人公身份和剧情背景，不据此归为日常经营收录。",
+          "source": "https://game.watch.impress.co.jp/docs/20060628/sn.htm",
+          "interactionModes": [
+            "选项分支",
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "故事选择与战场单位部署、移动及技能指令结合；角色交流属于RPG叙事，不将本作改记为日程养成。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://game.watch.impress.co.jp/docs/news/571705.html",
+            "https://game.watch.impress.co.jp/docs/news/557821.html"
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-sn4-v1",
+              "workId": "banpresto-sn4",
+              "year": 2006,
+              "platform": "PlayStation 2",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2006年PS2原作；同年11月发售。人物与开篇据同期厂商发表报道，既有原作年另由2012年回顾报道交叉确认。",
+              "source": "https://game.watch.impress.co.jp/docs/20060628/sn.htm",
+              "contentVersionId": "banpresto-sn4-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "banpresto-sn4-v2",
+              "workId": "banpresto-sn4",
+              "year": 2012,
+              "platform": "PSP",
+              "publisher": "バンダイナムコゲームス",
+              "publisherCompanies": [
+                "バンダイナムコゲームス"
+              ],
+              "kind": "PSP版：新增事件插画与白夜战斗事件",
+              "voice": "未核实",
+              "differences": "相对2006年PS2原作，2012/11/15的PSP版为番外篇增加新绘事件插画，加入无尽回廊深处与白夜成员相关的事件及可用傀儡单位；本轮以新绘素材和新增事件为依据，不将旧番外篇整体误称首次新增。",
+              "source": "https://game.watch.impress.co.jp/docs/news/571705.html",
+              "contentVersionId": "banpresto-sn4-c-added-2012",
+              "contentRelation": "added",
+              "contentNote": "首次新增内容，具体增量及比较对象见内容版本；不因换平台自动建版。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-sn4-c-original",
+              "workId": "banpresto-sn4",
+              "label": "原作内容",
+              "firstYear": 2006,
+              "basis": "original",
+              "evidence": "2006年PS2原作；同年11月发售。人物与开篇据同期厂商发表报道，既有原作年另由2012年回顾报道交叉确认。",
+              "source": "https://game.watch.impress.co.jp/docs/20060628/sn.htm",
+              "evidenceReleaseIds": [
+                "banpresto-sn4-v1"
+              ],
+              "addedContent": []
+            },
+            {
+              "id": "banpresto-sn4-c-added-2012",
+              "workId": "banpresto-sn4",
+              "label": "PSP版：新增事件插画与白夜战斗事件",
+              "firstYear": 2012,
+              "basis": "added",
+              "comparedTo": "banpresto-sn4-c-original",
+              "evidence": "相对2006年PS2原作，2012/11/15的PSP版为番外篇增加新绘事件插画，加入无尽回廊深处与白夜成员相关的事件及可用傀儡单位；本轮以新绘素材和新增事件为依据，不将旧番外篇整体误称首次新增。",
+              "source": "https://game.watch.impress.co.jp/docs/news/571705.html",
+              "evidenceReleaseIds": [
+                "banpresto-sn4-v2"
+              ],
+              "addedContent": [
+                {
+                  "description": "相对2006年PS2原作，2012/11/15的PSP版为番外篇增加新绘事件插画，加入无尽回廊深处与白夜成员相关的事件及可用傀儡单位；本轮以新绘素材和新增事件为依据，不将旧番外篇整体误称首次新增。",
+                  "source": "https://game.watch.impress.co.jp/docs/news/571705.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "banpresto-craft1",
+          "title": "召唤之夜：铸剑物语",
+          "originalTitle": "サモンナイト クラフトソード物語",
+          "chineseTitle": "召唤之夜：铸剑物语",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト クラフトソード物語"
+          ],
+          "firstYear": 2003,
+          "category": "剧情 RPG",
+          "subcategory": "动作RPG／武器锻造",
+          "genre": "锻冶师成长／召唤兽伙伴",
+          "characters": [
+            "クリュウ",
+            "プラティ",
+            "护卫兽伙伴"
+          ],
+          "synopsis": "海上都市的年轻锻冶师与护卫兽结为伙伴，制作武器、挑战对手并探索地下迷宫。在争取锻冶师荣誉的过程中，逐步卷入城市中更深的事件。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。三部铸剑作品分别采用独立故事，不作为同作的不同版本。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4379.html",
+          "interactionModes": [
+            "选项分支",
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "直接移动探索，进入横向即时战斗后自行操作攻击与防御；夜会话与个人结局保留选项分支。锻造通过菜单完成，此处不将装备菜单标为菜单调查。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/4379.html"
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-craft1-v1",
+              "workId": "banpresto-craft1",
+              "year": 2003,
+              "platform": "Game Boy Advance",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2003/04/25的GBA原作；任天堂当期授权软件表列Banpresto及武器创造战斗RPG。",
+              "source": "https://www.nintendo.co.jp/n08/before/03_0406.html",
+              "contentVersionId": "banpresto-craft1-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-craft1-c-original",
+              "workId": "banpresto-craft1",
+              "label": "原作内容",
+              "firstYear": 2003,
+              "basis": "original",
+              "evidence": "2003/04/25的GBA原作；任天堂当期授权软件表列Banpresto及武器创造战斗RPG。",
+              "source": "https://www.nintendo.co.jp/n08/before/03_0406.html",
+              "evidenceReleaseIds": [
+                "banpresto-craft1-v1"
+              ],
+              "addedContent": []
+            }
+          ]
+        },
+        {
+          "id": "banpresto-craft2",
+          "title": "召唤之夜：铸剑物语2",
+          "originalTitle": "サモンナイト クラフトソード物語2",
+          "chineseTitle": "召唤之夜：铸剑物语2",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト クラフトソード物語2"
+          ],
+          "firstYear": 2004,
+          "category": "剧情 RPG",
+          "subcategory": "动作RPG／武器锻造",
+          "genre": "魔刃与血脉／召唤兽伙伴",
+          "characters": [
+            "エッジ",
+            "エア",
+            "リョウガ",
+            "ディナ"
+          ],
+          "synopsis": "年轻锻冶师与护卫兽寻找能封印召唤兽的魔刃，同时面对自己血脉背负的命运。制作武器、探索和即时战斗推进新的独立冒险。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。",
+          "source": "https://www.hmv.co.jp/artist_Game-Soft-Game-Boy-Advance_000000000173699/item_サモンナイト-クラフトソード物語-2_1405864",
+          "interactionModes": [
+            "选项分支",
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "延续直接移动、横向即时战斗及夜会话选择；片尾名单只用于角色与录音证据，操作依据另见系列玩法资料。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://puzzlebyrinth.com/articles/blog-toki-33",
+            "https://w.atwiki.jp/girlgame/pages/623.html"
+          ],
+          "charactersSource": "https://raido.moe/staff/gba/gba_summon_night_csm_2.html",
+          "platformReleases": [
+            {
+              "id": "banpresto-craft2-v1",
+              "workId": "banpresto-craft2",
+              "year": 2004,
+              "platform": "Game Boy Advance",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "有（部分）",
+              "differences": "2004/08/20的GBA原作；日期与发行据任天堂当期表。片尾资料列有Voice Cast，故记部分配音；不据演员名单声称剧情全语音。",
+              "source": "https://www.nintendo.co.jp/n08/before/04_0810.html",
+              "contentVersionId": "banpresto-craft2-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-craft2-c-original",
+              "workId": "banpresto-craft2",
+              "label": "原作内容",
+              "firstYear": 2004,
+              "basis": "original",
+              "evidence": "2004/08/20的GBA原作；日期与发行据任天堂当期表。片尾资料列有Voice Cast，故记部分配音；不据演员名单声称剧情全语音。",
+              "source": "https://www.nintendo.co.jp/n08/before/04_0810.html",
+              "evidenceReleaseIds": [
+                "banpresto-craft2-v1"
+              ],
+              "addedContent": []
+            }
+          ]
+        },
+        {
+          "id": "banpresto-craft3",
+          "title": "召唤之夜：铸剑物语 起源之石",
+          "originalTitle": "サモンナイト クラフトソード物語 ～はじまりの石～",
+          "chineseTitle": "召唤之夜：铸剑物语 起源之石",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト クラフトソード物語 ～はじまりの石～"
+          ],
+          "firstYear": 2005,
+          "category": "剧情 RPG",
+          "subcategory": "动作RPG／武器锻造",
+          "genre": "见习锻冶师／魔石与旅人",
+          "characters": [
+            "リッチバーン",
+            "リフモニカ",
+            "ミューノ"
+          ],
+          "synopsis": "见习锻冶师在村中工房修行，与来到工房的少女相遇，随后卷入围绕魔石与召唤兽的事件。玩家以锻造、探索和战斗推进故事，并在夜会话中深化人物关系。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。",
+          "source": "https://mediaworld.co.jp/products/10190785001",
+          "interactionModes": [
+            "选项分支",
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "探索与即时动作战斗推进剧情，夜间人物会话与结局选择提供分支；以作品本身的玩法资料分类，不从RPG名称直接推出回合制。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://w.atwiki.jp/gcmatome/pages/4381.html",
+            "https://w.atwiki.jp/girlgame/pages/623.html"
+          ],
+          "charactersSource": "https://raido.moe/staff/gba/gba_summon_night_csm_3.html",
+          "platformReleases": [
+            {
+              "id": "banpresto-craft3-v1",
+              "workId": "banpresto-craft3",
+              "year": 2005,
+              "platform": "Game Boy Advance",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "有（部分）",
+              "differences": "2005/12/08的GBA原作；任天堂软件表及片尾转录相互核对。片尾列Voice Cast，部分配音不等于全语音。",
+              "source": "https://www.nintendo.co.jp/n08/index.html",
+              "contentVersionId": "banpresto-craft3-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-craft3-c-original",
+              "workId": "banpresto-craft3",
+              "label": "原作内容",
+              "firstYear": 2005,
+              "basis": "original",
+              "evidence": "2005/12/08的GBA原作；任天堂软件表及片尾转录相互核对。片尾列Voice Cast，部分配音不等于全语音。",
+              "source": "https://www.nintendo.co.jp/n08/index.html",
+              "evidenceReleaseIds": [
+                "banpresto-craft3-v1"
+              ],
+              "addedContent": []
+            }
+          ]
+        },
+        {
+          "id": "banpresto-ex",
+          "title": "召唤之夜外传：破晓之翼",
+          "originalTitle": "サモンナイトエクステーゼ 夜明けの翼",
+          "chineseTitle": "召唤之夜外传：破晓之翼",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイトエクステーゼ 夜明けの翼"
+          ],
+          "firstYear": 2005,
+          "category": "剧情 RPG",
+          "subcategory": "动作RPG／双主人公切换",
+          "genre": "记忆与灵魂／异世界冒险",
+          "characters": [
+            "レオン",
+            "エイナ",
+            "ノヴァ"
+          ],
+          "synopsis": "失去记忆的两位主人公发现彼此的灵魂共享一个身体，在陌生世界中交替行动。两人寻找记忆及身体异常的原因，并决定如何面对共同的未来。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。双主人公切换改变操作方式，独立于系列战术RPG本篇。",
+          "source": "https://120en.net/ekusuteeze.html",
+          "interactionModes": [
+            "选项分支",
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "双主人公切换、场景移动与即时攻击推动冒险，夜会话及结局选择另记选项分支；有魂共享剧情不等于单纯阅读作品。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://120en.net/ekusuteeze.html",
+            "https://w.atwiki.jp/snex/pages/5.html"
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-ex-v1",
+              "workId": "banpresto-ex",
+              "year": 2005,
+              "platform": "PlayStation 2",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2005/08/04的PS2原作；同期发行报道核对Banpresto与动作RPG类型，后续实际发行另有片尾及攻略资料留存。",
+              "source": "https://game.watch.impress.co.jp/docs/20050523/sum.htm",
+              "contentVersionId": "banpresto-ex-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-ex-c-original",
+              "workId": "banpresto-ex",
+              "label": "原作内容",
+              "firstYear": 2005,
+              "basis": "original",
+              "evidence": "2005/08/04的PS2原作；同期发行报道核对Banpresto与动作RPG类型，后续实际发行另有片尾及攻略资料留存。",
+              "source": "https://game.watch.impress.co.jp/docs/20050523/sum.htm",
+              "evidenceReleaseIds": [
+                "banpresto-ex-v1"
+              ],
+              "addedContent": []
+            }
+          ]
+        },
+        {
+          "id": "banpresto-twin",
+          "title": "召唤之夜：双生时代 精灵们的共鸣",
+          "originalTitle": "サモンナイト ツインエイジ～精霊たちの共鳴[こえ]～",
+          "chineseTitle": "召唤之夜：双生时代 精灵们的共鸣",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "サモンナイト ツインエイジ～精霊たちの共鳴[こえ]～"
+          ],
+          "firstYear": 2007,
+          "category": "剧情 RPG",
+          "subcategory": "触笔动作RPG／双主人公",
+          "genre": "人与精灵／异世界冒险",
+          "characters": [
+            "リーハ",
+            "アルド"
+          ],
+          "synopsis": "在人类与精灵共同生活的世界，莉哈与阿尔德结伴旅行，为恢复和平与伙伴并肩战斗。双主人公操作及夜会话把即时战斗与人物关系连接起来。",
+          "notes": "独立剧情RPG，保留实际类型，在专题RPG区建档；不是四类主目录的视觉小说。普通移植、廉价版和翻译不另加行。所有触笔操作并不等于场景热点调查。",
+          "source": "https://www.nintendo.co.jp/ds/software/as7j/index.html",
+          "interactionModes": [
+            "选项分支",
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "官方明确说明移动、会话与战斗都用触笔操作，可切换主人公并划线发动魔法；按直接移动、即时动作与夜会话选择记录，不把所有触笔操作统一当点击调查。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/ds/software/as7j/index.html"
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-twin-v1",
+              "workId": "banpresto-twin",
+              "year": 2007,
+              "platform": "Nintendo DS",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作首发",
+              "voice": "未核实",
+              "differences": "2007/08/30的DS原作；任天堂产品页明列旧Banpresto、日期、世界及触笔移动和战斗。配音范围未据该页猜测。",
+              "source": "https://www.nintendo.co.jp/ds/software/as7j/index.html",
+              "contentVersionId": "banpresto-twin-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作内容的首次发行；同内容后发平台不另录。",
+              "releaseRole": "contentDebut"
+            }
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-twin-c-original",
+              "workId": "banpresto-twin",
+              "label": "原作内容",
+              "firstYear": 2007,
+              "basis": "original",
+              "evidence": "2007/08/30的DS原作；任天堂产品页明列旧Banpresto、日期、世界及触笔移动和战斗。配音范围未据该页猜测。",
+              "source": "https://www.nintendo.co.jp/ds/software/as7j/index.html",
+              "evidenceReleaseIds": [
+                "banpresto-twin-v1"
+              ],
+              "addedContent": []
+            }
+          ]
+        },
+        {
+          "id": "banpresto-oni1",
+          "title": "鬼忍降魔録 ONI",
+          "originalTitle": "鬼忍降魔録 ONI",
+          "titleAliases": [],
+          "firstYear": 1990,
+          "category": "RPG",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "characters": [
+            "天地丸"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "天地丸在忍者村遇袭后追查身世与仇敌。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "interactionModes": [
+            "战斗指令"
+          ],
+          "interactionNote": "资料明确指令选择战斗及转身，不把起名当行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d3p.co.jp/oni/game/",
+            "https://ja.wikipedia.org/wiki/ONIシリーズ",
+            "https://consoledictionary.com/games/9362"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-oni1-c-original",
+              "workId": "banpresto-oni1",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "1990年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.d3p.co.jp/oni/game/",
+              "evidenceReleaseIds": [
+                "banpresto-oni1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-oni1-v-original",
+              "workId": "banpresto-oni1",
+              "year": 1990,
+              "platform": "Game Boy",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1990年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://ja.wikipedia.org/wiki/ONIシリーズ",
+              "contentVersionId": "banpresto-oni1-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-oni2",
+          "title": "ONI II 隠忍伝説",
+          "originalTitle": "ONI II 隠忍伝説",
+          "titleAliases": [],
+          "firstYear": 1992,
+          "category": "RPG",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "characters": [
+            "高野丸"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "高野丸追查鬼忍降魔录的谜团，面对退魔师的宿命。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "interactionModes": [
+            "战斗指令"
+          ],
+          "interactionNote": "战斗使用预设指令，含自动攻击；本作未沿用前作的战斗转身。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d3p.co.jp/oni/game/",
+            "https://ja.wikipedia.org/wiki/ONIシリーズ",
+            "https://consoledictionary.com/games/9460"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-oni2-c-original",
+              "workId": "banpresto-oni2",
+              "label": "原作／首批内容",
+              "firstYear": 1992,
+              "basis": "original",
+              "evidence": "1992年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.d3p.co.jp/oni/game/",
+              "evidenceReleaseIds": [
+                "banpresto-oni2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-oni2-v-original",
+              "workId": "banpresto-oni2",
+              "year": 1992,
+              "platform": "Game Boy",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1992年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://ja.wikipedia.org/wiki/ONIシリーズ",
+              "contentVersionId": "banpresto-oni2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-oni3",
+          "title": "ONI III 黒の破壊神",
+          "originalTitle": "ONI III 黒の破壊神",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "RPG",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "characters": [
+            "常葉丸",
+            "清志郎",
+            "静那"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "五章人物分别经历妖异事件，最后汇合面对破坏神的威胁。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核五章故事、前后排配置及转身；原版完整控制表尚待手册复核，暂不按RPG类型套用指令标签。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d3p.co.jp/oni/game/",
+            "https://ja.wikipedia.org/wiki/ONIシリーズ"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-oni3-c-original",
+              "workId": "banpresto-oni3",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.d3p.co.jp/oni/game/",
+              "evidenceReleaseIds": [
+                "banpresto-oni3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-oni3-v-original",
+              "workId": "banpresto-oni3",
+              "year": 1993,
+              "platform": "Game Boy",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://ja.wikipedia.org/wiki/ONIシリーズ",
+              "contentVersionId": "banpresto-oni3-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-oni4",
+          "title": "ONI IV 鬼神の血族",
+          "originalTitle": "ONI IV 鬼神の血族",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "RPG",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "characters": [
+            "音鬼丸",
+            "御琴"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "音鬼丸寻找出生后便失散的双胞胎妹妹御琴。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核GB原作及兄妹故事；难度和咨询命令不足以穷尽操作，完整互动方式待原手册。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d3p.co.jp/oni/game/",
+            "https://ja.wikipedia.org/wiki/ONIシリーズ"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-oni4-c-original",
+              "workId": "banpresto-oni4",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.d3p.co.jp/oni/game/",
+              "evidenceReleaseIds": [
+                "banpresto-oni4-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-oni4-v-original",
+              "workId": "banpresto-oni4",
+              "year": 1994,
+              "platform": "Game Boy",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1994年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://ja.wikipedia.org/wiki/ONIシリーズ",
+              "contentVersionId": "banpresto-oni4-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-oni5",
+          "title": "ONI V 隠忍を継ぐ者",
+          "originalTitle": "ONI V 隠忍を継ぐ者",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "RPG",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "characters": [
+            "天地丸",
+            "常葉丸"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "跨越时代的历代人物汇聚，将GB系列的因缘连为终章。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核独立续作、人物和叙事关联；完整控制尚待原手册，不把各作转身差异抹平。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d3p.co.jp/oni/game/",
+            "https://ja.wikipedia.org/wiki/ONIシリーズ"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-oni5-c-original",
+              "workId": "banpresto-oni5",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.d3p.co.jp/oni/game/",
+              "evidenceReleaseIds": [
+                "banpresto-oni5-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-oni5-v-original",
+              "workId": "banpresto-oni5",
+              "year": 1995,
+              "platform": "Game Boy",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://ja.wikipedia.org/wiki/ONIシリーズ",
+              "contentVersionId": "banpresto-oni5-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-oni-kishin",
+          "title": "鬼神降臨伝ONI",
+          "originalTitle": "鬼神降臨伝ONI",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "RPG",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "characters": [
+            "北斗丸",
+            "源頼遠"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "镰仓少年北斗丸与养兄赖远接受妖怪退治之命，逐渐发现自身来历。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核神降与助战NPC，原版控制表未完整取得；不由助战或故事战斗推定所有行动皆可直接操控。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d3p.co.jp/oni/game/",
+            "https://ja.wikipedia.org/wiki/ONIシリーズ"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-oni-kishin-c-original",
+              "workId": "banpresto-oni-kishin",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.d3p.co.jp/oni/game/",
+              "evidenceReleaseIds": [
+                "banpresto-oni-kishin-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-oni-kishin-v-original",
+              "workId": "banpresto-oni-kishin",
+              "year": 1994,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://ja.wikipedia.org/wiki/ONIシリーズ",
+              "contentVersionId": "banpresto-oni-kishin-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-oni-bakumatsu",
+          "title": "幕末降臨伝ONI",
+          "originalTitle": "幕末降臨伝ONI",
+          "titleAliases": [],
+          "firstYear": 1996,
+          "category": "RPG",
+          "subcategory": "和风剧情RPG",
+          "genre": "和风剧情RPG",
+          "characters": [
+            "大和丸",
+            "十郎太"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "大和丸加入影之新选组，在幕末动荡中磨炼力量并迎战妖怪。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "interactionModes": [
+            "直接移动",
+            "战斗指令"
+          ],
+          "interactionNote": "流程明确移动调查、与人物交谈、攻击与术的分工以及防御；固定菜单与起名非自由解析器。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.d3p.co.jp/oni/game/",
+            "https://ja.wikipedia.org/wiki/ONIシリーズ",
+            "https://bakumatukourinndenn-oni.kouryaku.red/entry1.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-oni-bakumatsu-c-original",
+              "workId": "banpresto-oni-bakumatsu",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.d3p.co.jp/oni/game/",
+              "evidenceReleaseIds": [
+                "banpresto-oni-bakumatsu-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-oni-bakumatsu-v-original",
+              "workId": "banpresto-oni-bakumatsu",
+              "year": 1996,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1996年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://ja.wikipedia.org/wiki/ONIシリーズ",
+              "contentVersionId": "banpresto-oni-bakumatsu-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-hero-senki",
+          "title": "ヒーロー戦記 プロジェクトオリュンポス",
+          "originalTitle": "ヒーロー戦記 プロジェクトオリュンポス",
+          "titleAliases": [],
+          "firstYear": 1992,
+          "category": "RPG",
+          "subcategory": "英雄群像RPG",
+          "genre": "英雄群像RPG",
+          "characters": [
+            "アムロ・レイ",
+            "南光太郎",
+            "モロボシ・ダン"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "行星埃尔皮斯上的宙斯小队追查各类恐怖组织交织的阴谋。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2082",
+          "interactionModes": [
+            "战斗指令"
+          ],
+          "interactionNote": "产品游玩记录明确战斗指令选择；不从特摄英雄身份推断即时动作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2082"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-hero-senki-c-original",
+              "workId": "banpresto-hero-senki",
+              "label": "原作／首批内容",
+              "firstYear": 1992,
+              "basis": "original",
+              "evidence": "1992年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2082",
+              "evidenceReleaseIds": [
+                "banpresto-hero-senki-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-hero-senki-v-original",
+              "workId": "banpresto-hero-senki",
+              "year": 1992,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1992年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2082",
+              "contentVersionId": "banpresto-hero-senki-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-soul-sword",
+          "title": "ソウル＆ソード",
+          "originalTitle": "ソウル＆ソード",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "RPG",
+          "subcategory": "自由剧本RPG",
+          "genre": "自由剧本RPG",
+          "characters": [
+            "冒険者（プレイヤー）"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "冒险者在火山岛自由承接短篇事件，已完成事件与旅途时长共同影响旅程的终点。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2124",
+          "interactionModes": [
+            "选项分支"
+          ],
+          "interactionNote": "事件选择及完成数影响结局；战斗操作尚不作穷尽描述。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2124",
+            "https://www.super-famicom.jp/data/so/so_0003.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-soul-sword-c-original",
+              "workId": "banpresto-soul-sword",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2124",
+              "evidenceReleaseIds": [
+                "banpresto-soul-sword-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-soul-sword-v-original",
+              "workId": "banpresto-soul-sword",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2124",
+              "contentVersionId": "banpresto-soul-sword-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-gaia-saver",
+          "title": "ガイアセイバー ヒーロー最大の作戦",
+          "originalTitle": "ガイアセイバー ヒーロー最大の作戦",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "RPG",
+          "subcategory": "英雄群像RPG",
+          "genre": "英雄群像RPG",
+          "characters": [
+            "ウルトラマン",
+            "仮面ライダー",
+            "ガンダム"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "不同英雄在八话事件中应对危及地球的袭击，并面对灾难带来的损失。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2132",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核RPG叙事与首次原作身份；所取产品资料未给足完整控制证据，互动方式暂待核实，不按类型猜测操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2132"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-gaia-saver-c-original",
+              "workId": "banpresto-gaia-saver",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2132",
+              "evidenceReleaseIds": [
+                "banpresto-gaia-saver-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-gaia-saver-v-original",
+              "workId": "banpresto-gaia-saver",
+              "year": 1994,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2132",
+              "contentVersionId": "banpresto-gaia-saver-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-slayers-sfc",
+          "title": "スレイヤーズ（SFC）",
+          "originalTitle": "スレイヤーズ（SFC）",
+          "titleAliases": [
+            "Slayers Super Famicom"
+          ],
+          "firstYear": 1994,
+          "category": "RPG",
+          "subcategory": "小说改编RPG",
+          "genre": "小说改编RPG",
+          "characters": [
+            "リナ（記憶を失った主人公）"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "失去记忆的莉娜踏上旅程，逐渐接近自身身份与原作世界隐藏的谜底。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2149",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核RPG叙事与首次原作身份；所取产品资料未给足完整控制证据，互动方式暂待核实，不按类型猜测操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2149"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-slayers-sfc-c-original",
+              "workId": "banpresto-slayers-sfc",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2149",
+              "evidenceReleaseIds": [
+                "banpresto-slayers-sfc-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-slayers-sfc-v-original",
+              "workId": "banpresto-slayers-sfc",
+              "year": 1994,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2149",
+              "contentVersionId": "banpresto-slayers-sfc-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-granhistoria",
+          "title": "グランヒストリア 幻史世界記",
+          "originalTitle": "グランヒストリア 幻史世界記",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "RPG",
+          "subcategory": "改写历史RPG",
+          "genre": "改写历史RPG",
+          "characters": [
+            "異世界から来た主人公（プレイヤー）"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "主人公利用世界记预知未来，试图改变历史，阻止二十年后的大陆灭亡。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2196",
+          "interactionModes": [
+            "选项分支"
+          ],
+          "interactionNote": "资料明确玩家抉择决定人物生死和历史变化；战斗控制未以此推断。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2196"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-granhistoria-c-original",
+              "workId": "banpresto-granhistoria",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2196",
+              "evidenceReleaseIds": [
+                "banpresto-granhistoria-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-granhistoria-v-original",
+              "workId": "banpresto-granhistoria",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2196",
+              "contentVersionId": "banpresto-granhistoria-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-verne-world",
+          "title": "ヴェルヌワールド",
+          "originalTitle": "ヴェルヌワールド",
+          "titleAliases": [
+            "Verne World",
+            "ヴェルヌ・ワールド"
+          ],
+          "firstYear": 1995,
+          "category": "RPG",
+          "subcategory": "主题乐园冒险RPG",
+          "genre": "主题乐园冒险RPG",
+          "characters": [
+            "テーマパークを訪れた9人の少年少女"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "九名少年少女在凡尔纳主题乐园遭遇机器人失控，寻找遭囚的人们并追查事件真相。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2209",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核RPG叙事与首次原作身份；所取产品资料未给足完整控制证据，互动方式暂待核实，不按类型猜测操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2209"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-verne-world-c-original",
+              "workId": "banpresto-verne-world",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2209",
+              "evidenceReleaseIds": [
+                "banpresto-verne-world-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-verne-world-v-original",
+              "workId": "banpresto-verne-world",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2209",
+              "contentVersionId": "banpresto-verne-world-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-traverse",
+          "title": "トラバース スターライト＆プレーリー",
+          "originalTitle": "トラバース スターライト＆プレーリー",
+          "titleAliases": [],
+          "firstYear": 1996,
+          "category": "RPG",
+          "subcategory": "自由剧本RPG",
+          "genre": "自由剧本RPG",
+          "characters": [
+            "ギャント",
+            "バルモア",
+            "ソニア"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "青年与伙伴在各国寻找冒险，自由决定事件次序，旅途中形成自己的归宿。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2249",
+          "interactionModes": [
+            "选项分支",
+            "战斗指令"
+          ],
+          "interactionNote": "自由选择约40个事件，战斗菜单含SPECIAL行动；选择事件次序与固定按键均不等于自由文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2249",
+            "https://www.super-famicom.jp/data/to/to_0043.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-traverse-c-original",
+              "workId": "banpresto-traverse",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2249",
+              "evidenceReleaseIds": [
+                "banpresto-traverse-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-traverse-v-original",
+              "workId": "banpresto-traverse",
+              "year": 1996,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1996年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2249",
+              "contentVersionId": "banpresto-traverse-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-farland2-sfc",
+          "title": "ファーランドストーリー2（SFC）",
+          "originalTitle": "ファーランドストーリー2（SFC）",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "RPG",
+          "subcategory": "原创续篇战术RPG",
+          "genre": "原创续篇战术RPG",
+          "characters": [
+            "リアド"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "SFC首作二十年后的新一代在战争中结识同伴，展开独立原创故事。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2228",
+          "interactionModes": [
+            "战术策略"
+          ],
+          "interactionNote": "按关卡推进、编成单位并成长；与PC-98的第二作《アーク王の遠征》为不同作品，不混用其故事或首发年。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=2228",
+            "https://www.super-famicom.jp/data/hu/hu_0004.html",
+            "https://s-rpg-navi.com/f-story2/entry27.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-farland2-sfc-c-original",
+              "workId": "banpresto-farland2-sfc",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2228",
+              "evidenceReleaseIds": [
+                "banpresto-farland2-sfc-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-farland2-sfc-v-original",
+              "workId": "banpresto-farland2-sfc",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=2228",
+              "contentVersionId": "banpresto-farland2-sfc-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-slayers-wonderful",
+          "title": "スレイヤーズわんだほ～",
+          "originalTitle": "スレイヤーズわんだほ～",
+          "titleAliases": [
+            "スレイヤーズわんだほー",
+            "Slayers Wonderful"
+          ],
+          "firstYear": 1998,
+          "category": "RPG",
+          "subcategory": "小说改编RPG",
+          "genre": "小说改编RPG",
+          "characters": [
+            "リナ＝インバース"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "莉娜等人离开熟悉的舞台，卷入游戏原创的魔法冒险事件。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9115",
+          "interactionModes": [
+            "直接移动"
+          ],
+          "interactionNote": "产品资料明确3D角色移动与模拟摇杆对应战斗；尚不细分整套战斗指令。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=9115"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-slayers-wonderful-c-original",
+              "workId": "banpresto-slayers-wonderful",
+              "label": "原作／首批内容",
+              "firstYear": 1998,
+              "basis": "original",
+              "evidence": "1998年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9115",
+              "evidenceReleaseIds": [
+                "banpresto-slayers-wonderful-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-slayers-wonderful-v-original",
+              "workId": "banpresto-slayers-wonderful",
+              "year": 1998,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1998年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9115",
+              "contentVersionId": "banpresto-slayers-wonderful-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-superhero",
+          "title": "スーパーヒーロー作戦",
+          "originalTitle": "スーパーヒーロー作戦",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "RPG",
+          "subcategory": "跨作品剧情RPG",
+          "genre": "跨作品剧情RPG",
+          "characters": [
+            "ウルトラマン",
+            "宇宙刑事ギャバン",
+            "人造人間キカイダー"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "特摄英雄与高达人物在共同世界相遇，追查威胁地球的危机。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9116",
+          "interactionModes": [
+            "战斗指令"
+          ],
+          "interactionNote": "游玩记录明确战斗回合与变身占用一回合；不将特摄格斗场面直接标即时动作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=9116"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-superhero-c-original",
+              "workId": "banpresto-superhero",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "1999年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9116",
+              "evidenceReleaseIds": [
+                "banpresto-superhero-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-superhero-v-original",
+              "workId": "banpresto-superhero",
+              "year": 1999,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1999年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9116",
+              "contentVersionId": "banpresto-superhero-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-superhero-daidal",
+          "title": "スーパーヒーロー作戦 ダイダルの野望",
+          "originalTitle": "スーパーヒーロー作戦 ダイダルの野望",
+          "titleAliases": [],
+          "firstYear": 2000,
+          "category": "RPG",
+          "subcategory": "特摄群像RPG",
+          "genre": "特摄群像RPG",
+          "characters": [
+            "ウルトラマンガイア",
+            "仮面ライダー"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "不同特摄作品的英雄在独立新事件中并肩作战，原作名场面与跨作品阴谋交织。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9117",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核RPG叙事与首次原作身份；所取产品资料未给足完整控制证据，互动方式暂待核实，不按类型猜测操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=9117"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-superhero-daidal-c-original",
+              "workId": "banpresto-superhero-daidal",
+              "label": "原作／首批内容",
+              "firstYear": 2000,
+              "basis": "original",
+              "evidence": "2000年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9117",
+              "evidenceReleaseIds": [
+                "banpresto-superhero-daidal-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-superhero-daidal-v-original",
+              "workId": "banpresto-superhero-daidal",
+              "year": 2000,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2000年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=9117",
+              "contentVersionId": "banpresto-superhero-daidal-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-magna-carta",
+          "title": "マグナカルタ（PS2）",
+          "originalTitle": "マグナカルタ（PS2）",
+          "titleAliases": [
+            "Magna Carta Tears of Blood"
+          ],
+          "firstYear": 2004,
+          "category": "RPG",
+          "subcategory": "种族战争RPG",
+          "genre": "种族战争RPG",
+          "characters": [
+            "カリンツ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "卡琳兹置身人类与亚颂的战争，仇恨与跨种族的情感使既定立场受到挑战。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13464",
+          "interactionModes": [
+            "战斗指令",
+            "限时反应"
+          ],
+          "interactionNote": "战斗采用影响圈与指令环，按键时机改变攻击效果；不并入2001年韩国PC同名作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=13464"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-magna-carta-c-original",
+              "workId": "banpresto-magna-carta",
+              "label": "原作／首批内容",
+              "firstYear": 2004,
+              "basis": "original",
+              "evidence": "2004年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=13464",
+              "evidenceReleaseIds": [
+                "banpresto-magna-carta-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-magna-carta-v-original",
+              "workId": "banpresto-magna-carta",
+              "year": 2004,
+              "platform": "PlayStation 2",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2004年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=13464",
+              "contentVersionId": "banpresto-magna-carta-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-ar-tonelico",
+          "title": "アルトネリコ 世界の終わりで詩い続ける少女",
+          "originalTitle": "アルトネリコ 世界の終わりで詩い続ける少女",
+          "titleAliases": [
+            "Ar tonelico Melody of Elemia"
+          ],
+          "firstYear": 2006,
+          "category": "RPG",
+          "subcategory": "诗魔法剧情RPG",
+          "genre": "诗魔法剧情RPG",
+          "characters": [
+            "ライナー・バルセルト"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "守塔骑士莱纳在浮游大陆与少女们相遇，面对世界危机与诗魔法背后的心灵联系。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://dengekionline.com/data/news/2005/11/30/dae8537df54f5de21b461281143d7c2f.html",
+          "interactionModes": [
+            "待核实"
+          ],
+          "interactionNote": "已核RPG叙事与首次原作身份；所取产品资料未给足完整控制证据，互动方式暂待核实，不按类型猜测操作。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://dengekionline.com/data/news/2005/11/30/dae8537df54f5de21b461281143d7c2f.html"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-ar-tonelico-c-original",
+              "workId": "banpresto-ar-tonelico",
+              "label": "原作／首批内容",
+              "firstYear": 2006,
+              "basis": "original",
+              "evidence": "2006年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://dengekionline.com/data/news/2005/11/30/dae8537df54f5de21b461281143d7c2f.html",
+              "evidenceReleaseIds": [
+                "banpresto-ar-tonelico-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-ar-tonelico-v-original",
+              "workId": "banpresto-ar-tonelico",
+              "year": 2006,
+              "platform": "PlayStation 2",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2006年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://dengekionline.com/data/news/2005/11/30/dae8537df54f5de21b461281143d7c2f.html",
+              "contentVersionId": "banpresto-ar-tonelico-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-ar-tonelico2",
+          "title": "アルトネリコ2 世界に響く少女たちの創造詩",
+          "originalTitle": "アルトネリコ2 世界に響く少女たちの創造詩",
+          "titleAliases": [
+            "Ar tonelico II Melody of Metafalica"
+          ],
+          "firstYear": 2007,
+          "category": "RPG",
+          "subcategory": "诗魔法剧情RPG",
+          "genre": "诗魔法剧情RPG",
+          "characters": [
+            "ルカ",
+            "レーヴァテイルの少女たち"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "少年与诗魔法少女们在新的地区建立信任，面对世界崩坏的危机。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13450",
+          "interactionModes": [
+            "战斗指令",
+            "限时反应"
+          ],
+          "interactionNote": "游玩记录明确攻击、防御的阶段和时机按键，诗魔法为战斗系统；不由歌曲题材标节奏演奏。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gavas.jp/products/detail.php?product_id=13450"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-ar-tonelico2-c-original",
+              "workId": "banpresto-ar-tonelico2",
+              "label": "原作／首批内容",
+              "firstYear": 2007,
+              "basis": "original",
+              "evidence": "2007年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=13450",
+              "evidenceReleaseIds": [
+                "banpresto-ar-tonelico2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-ar-tonelico2-v-original",
+              "workId": "banpresto-ar-tonelico2",
+              "year": 2007,
+              "platform": "PlayStation 2",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2007年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://www.gavas.jp/products/detail.php?product_id=13450",
+              "contentVersionId": "banpresto-ar-tonelico2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-onepiece-luffy",
+          "title": "From TV animation ONE PIECE 夢のルフィ海賊団誕生！",
+          "originalTitle": "From TV animation ONE PIECE 夢のルフィ海賊団誕生！",
+          "titleAliases": [
+            "One Piece Yume no Luffy Kaizokudan Tanjou"
+          ],
+          "firstYear": 2001,
+          "category": "RPG",
+          "subcategory": "IF航路剧情RPG",
+          "genre": "IF航路剧情RPG",
+          "characters": [
+            "ルフィ",
+            "ゾロ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "路飞在出海途中招募船员，自选航路与事件条件塑造原作之外的海贼团故事。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://mediaworld.co.jp/products/10182195001",
+          "interactionModes": [
+            "菜单指令",
+            "选项分支"
+          ],
+          "interactionNote": "产品说明明确航路选择、岛屿事件与船员编成改变IF故事；不凭遭遇战文字推定具体战斗按钮。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://mediaworld.co.jp/products/10182195001"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-onepiece-luffy-c-original",
+              "workId": "banpresto-onepiece-luffy",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001年Game Boy／Game Boy Color共通原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://mediaworld.co.jp/products/10182195001",
+              "evidenceReleaseIds": [
+                "banpresto-onepiece-luffy-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-onepiece-luffy-v-original",
+              "workId": "banpresto-onepiece-luffy",
+              "year": 2001,
+              "platform": "Game Boy／Game Boy Color共通",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2001年Game Boy／Game Boy Color共通原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://mediaworld.co.jp/products/10182195001",
+              "contentVersionId": "banpresto-onepiece-luffy-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srw1",
+          "title": "スーパーロボット大戦",
+          "originalTitle": "スーパーロボット大戦",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "ガンダム",
+            "マジンガーZ",
+            "ゲッターロボ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "拟人化机器人为救出受控制的伙伴，讨伐吉尔吉尔刚。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srw1-c-original",
+              "workId": "banpresto-srw1",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦",
+              "evidenceReleaseIds": [
+                "banpresto-srw1-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srw1-v-original",
+              "workId": "banpresto-srw1",
+              "year": 1991,
+              "platform": "Game Boy",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1991年Game Boy原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦",
+              "contentVersionId": "banpresto-srw1-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srw2",
+          "title": "第2次スーパーロボット大戦",
+          "originalTitle": "第2次スーパーロボット大戦",
+          "titleAliases": [],
+          "firstYear": 1991,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "マサキ・アンドー",
+            "ビアン・ゾルダーク"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "跨作品驾驶员与原创敌组织DC的冲突开启旧系列的独立战争故事。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/第2次スーパーロボット大戦",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/第2次スーパーロボット大戦",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srw2-c-original",
+              "workId": "banpresto-srw2",
+              "label": "原作／首批内容",
+              "firstYear": 1991,
+              "basis": "original",
+              "evidence": "1991年Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/第2次スーパーロボット大戦",
+              "evidenceReleaseIds": [
+                "banpresto-srw2-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srw2-v-original",
+              "workId": "banpresto-srw2",
+              "year": 1991,
+              "platform": "Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1991年Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/第2次スーパーロボット大戦",
+              "contentVersionId": "banpresto-srw2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srw3",
+          "title": "第3次スーパーロボット大戦",
+          "originalTitle": "第3次スーパーロボット大戦",
+          "titleAliases": [],
+          "firstYear": 1993,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "マサキ・アンドー"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "旧系列在DC战争后进入新的冲突，地球部队面对外来势力与旧敌。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/第3次スーパーロボット大戦",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/第3次スーパーロボット大戦",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srw3-c-original",
+              "workId": "banpresto-srw3",
+              "label": "原作／首批内容",
+              "firstYear": 1993,
+              "basis": "original",
+              "evidence": "1993年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/第3次スーパーロボット大戦",
+              "evidenceReleaseIds": [
+                "banpresto-srw3-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srw3-v-original",
+              "workId": "banpresto-srw3",
+              "year": 1993,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1993年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/第3次スーパーロボット大戦",
+              "contentVersionId": "banpresto-srw3-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwex",
+          "title": "スーパーロボット大戦EX",
+          "originalTitle": "スーパーロボット大戦EX",
+          "titleAliases": [],
+          "firstYear": 1994,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "マサキ",
+            "リューネ",
+            "シュウ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "三位主人公的故事在地底世界拉·基亚斯交错展开。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦EX",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令",
+            "选项分支"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。 主角或路线选择影响故事展开。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦EX",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwex-c-original",
+              "workId": "banpresto-srwex",
+              "label": "原作／首批内容",
+              "firstYear": 1994,
+              "basis": "original",
+              "evidence": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦EX",
+              "evidenceReleaseIds": [
+                "banpresto-srwex-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwex-v-original",
+              "workId": "banpresto-srwex",
+              "year": 1994,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1994年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦EX",
+              "contentVersionId": "banpresto-srwex-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srw4",
+          "title": "第4次スーパーロボット大戦",
+          "originalTitle": "第4次スーパーロボット大戦",
+          "titleAliases": [],
+          "firstYear": 1995,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "主人公（8人から選択）"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "可选原创主人公加入战争，旧系列诸势力的冲突走向决战。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/第4次スーパーロボット大戦",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令",
+            "选项分支"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。 主角或路线选择影响故事展开。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/第4次スーパーロボット大戦",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srw4-c-original",
+              "workId": "banpresto-srw4",
+              "label": "原作／首批内容",
+              "firstYear": 1995,
+              "basis": "original",
+              "evidence": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/第4次スーパーロボット大戦",
+              "evidenceReleaseIds": [
+                "banpresto-srw4-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srw4-v-original",
+              "workId": "banpresto-srw4",
+              "year": 1995,
+              "platform": "Super Famicom",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1995年Super Famicom原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/第4次スーパーロボット大戦",
+              "contentVersionId": "banpresto-srw4-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwnew",
+          "title": "新スーパーロボット大戦",
+          "originalTitle": "新スーパーロボット大戦",
+          "titleAliases": [],
+          "firstYear": 1996,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "リュウセイ・ダテ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "SRX人物与跨作品驾驶员在独立于旧系列的世界中对抗异星威胁。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/新スーパーロボット大戦",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/新スーパーロボット大戦",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwnew-c-original",
+              "workId": "banpresto-srwnew",
+              "label": "原作／首批内容",
+              "firstYear": 1996,
+              "basis": "original",
+              "evidence": "1996年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/新スーパーロボット大戦",
+              "evidenceReleaseIds": [
+                "banpresto-srwnew-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwnew-v-original",
+              "workId": "banpresto-srwnew",
+              "year": 1996,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1996年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/新スーパーロボット大戦",
+              "contentVersionId": "banpresto-srwnew-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwcompact",
+          "title": "スーパーロボット大戦COMPACT",
+          "originalTitle": "スーパーロボット大戦COMPACT",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "ガンダムシリーズ／マジンガーシリーズの登場人物"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "多个机器人作品的角色共同迎敌，章节内自由安排战场次序。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦COMPACT",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "资料明确自由决定章节内战场次序、单位养成及菜单操作；按战术策略与战斗指令概括，不虚构原创主角。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦COMPACT",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwcompact-c-original",
+              "workId": "banpresto-srwcompact",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "1999年WonderSwan原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦COMPACT",
+              "evidenceReleaseIds": [
+                "banpresto-srwcompact-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwcompact-v-original",
+              "workId": "banpresto-srwcompact",
+              "year": 1999,
+              "platform": "WonderSwan",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1999年WonderSwan原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦COMPACT",
+              "contentVersionId": "banpresto-srwcompact-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srw64",
+          "title": "スーパーロボット大戦64",
+          "originalTitle": "スーパーロボット大戦64",
+          "titleAliases": [],
+          "firstYear": 1999,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "アークライト・ブルー",
+            "セレイン・メネス"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "四种原创主人公经历战争与阵营抉择，不同路线导向各自的和平道路。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦64",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令",
+            "选项分支"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。 主角或路线选择影响故事展开。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦64",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srw64-c-original",
+              "workId": "banpresto-srw64",
+              "label": "原作／首批内容",
+              "firstYear": 1999,
+              "basis": "original",
+              "evidence": "1999年Nintendo 64原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦64",
+              "evidenceReleaseIds": [
+                "banpresto-srw64-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srw64-v-original",
+              "workId": "banpresto-srw64",
+              "year": 1999,
+              "platform": "Nintendo 64",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1999年Nintendo 64原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦64",
+              "contentVersionId": "banpresto-srw64-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwalpha",
+          "title": "スーパーロボット大戦α",
+          "originalTitle": "スーパーロボット大戦α",
+          "titleAliases": [],
+          "firstYear": 2000,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "クスハ・ミズハ",
+            "ブルックリン・ラックフィールド"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "原创主人公与多部机器人作品的驾驶员在同一世界汇聚，迎战地球内外的敌人。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwalpha-c-original",
+              "workId": "banpresto-srwalpha",
+              "label": "原作／首批内容",
+              "firstYear": 2000,
+              "basis": "original",
+              "evidence": "2000年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α",
+              "evidenceReleaseIds": [
+                "banpresto-srwalpha-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwalpha-v-original",
+              "workId": "banpresto-srwalpha",
+              "year": 2000,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2000年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α",
+              "contentVersionId": "banpresto-srwalpha-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwag",
+          "title": "スーパーロボット大戦α外伝",
+          "originalTitle": "スーパーロボット大戦α外伝",
+          "titleAliases": [],
+          "firstYear": 2001,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "ゼンガー・ゾンボルト"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "部队意外抵达荒废的未来地球，在冲突中寻找回到当代并阻止灾难的方法。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α外伝",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α外伝",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwag-c-original",
+              "workId": "banpresto-srwag",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α外伝",
+              "evidenceReleaseIds": [
+                "banpresto-srwag-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwag-v-original",
+              "workId": "banpresto-srwag",
+              "year": 2001,
+              "platform": "PlayStation",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2001年PlayStation原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α外伝",
+              "contentVersionId": "banpresto-srwag-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwa",
+          "title": "スーパーロボット大戦A",
+          "originalTitle": "スーパーロボット大戦A",
+          "titleAliases": [],
+          "firstYear": 2001,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "アクセル・アルマー",
+            "ラミア・ラヴレス"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "来自平行世界的主人公在当地部队中建立羁绊，面对原阵营的行动。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦A",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦A",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwa-c-original",
+              "workId": "banpresto-srwa",
+              "label": "原作／首批内容",
+              "firstYear": 2001,
+              "basis": "original",
+              "evidence": "2001年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦A",
+              "evidenceReleaseIds": [
+                "banpresto-srwa-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwa-v-original",
+              "workId": "banpresto-srwa",
+              "year": 2001,
+              "platform": "Game Boy Advance",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2001年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦A",
+              "contentVersionId": "banpresto-srwa-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwog",
+          "title": "スーパーロボット大戦ORIGINAL GENERATION",
+          "originalTitle": "スーパーロボット大戦ORIGINAL GENERATION",
+          "titleAliases": [],
+          "firstYear": 2002,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "リュウセイ・ダテ",
+            "キョウスケ・ナンブ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "两位原创主角的部队在地球与外来威胁中汇合，形成OG世界的起点。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦ORIGINAL_GENERATION",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令",
+            "选项分支"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。 主角或路线选择影响故事展开。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦ORIGINAL_GENERATION",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwog-c-original",
+              "workId": "banpresto-srwog",
+              "label": "原作／首批内容",
+              "firstYear": 2002,
+              "basis": "original",
+              "evidence": "2002年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦ORIGINAL_GENERATION",
+              "evidenceReleaseIds": [
+                "banpresto-srwog-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwog-v-original",
+              "workId": "banpresto-srwog",
+              "year": 2002,
+              "platform": "Game Boy Advance",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2002年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦ORIGINAL_GENERATION",
+              "contentVersionId": "banpresto-srwog-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwd",
+          "title": "スーパーロボット大戦D",
+          "originalTitle": "スーパーロボット大戦D",
+          "titleAliases": [],
+          "firstYear": 2003,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "シャア",
+            "トレーズ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "地球消失迫使原本敌对的势力结盟，寻找异常事件背后的真相。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦D",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦D",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwd-c-original",
+              "workId": "banpresto-srwd",
+              "label": "原作／首批内容",
+              "firstYear": 2003,
+              "basis": "original",
+              "evidence": "2003年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦D",
+              "evidenceReleaseIds": [
+                "banpresto-srwd-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwd-v-original",
+              "workId": "banpresto-srwd",
+              "year": 2003,
+              "platform": "Game Boy Advance",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2003年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦D",
+              "contentVersionId": "banpresto-srwd-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwmx",
+          "title": "スーパーロボット大戦MX",
+          "originalTitle": "スーパーロボット大戦MX",
+          "titleAliases": [],
+          "firstYear": 2004,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "ヒューゴ・メディオ",
+            "アクア・ケントルム"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "雨果与阿库娅在战斗中接近特种机体计划背后的秘密。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦MX",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦MX",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwmx-c-original",
+              "workId": "banpresto-srwmx",
+              "label": "原作／首批内容",
+              "firstYear": 2004,
+              "basis": "original",
+              "evidence": "2004年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦MX",
+              "evidenceReleaseIds": [
+                "banpresto-srwmx-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwmx-v-original",
+              "workId": "banpresto-srwmx",
+              "year": 2004,
+              "platform": "PlayStation 2",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2004年PlayStation 2原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦MX",
+              "contentVersionId": "banpresto-srwmx-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srwj",
+          "title": "スーパーロボット大戦J",
+          "originalTitle": "スーパーロボット大戦J",
+          "titleAliases": [],
+          "firstYear": 2005,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "紫雲統夜",
+            "カルヴィナ・クーランジュ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "主角与搭档投入跨作品战争，伙伴的选择与出击经历塑造人物关系及结局。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦J",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "逐作系统资料记述地图单位行动、武器／精神等预设战斗指令与整备；不将起名和设置视为自由行动文字输入。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦J",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srwj-c-original",
+              "workId": "banpresto-srwj",
+              "label": "原作／首批内容",
+              "firstYear": 2005,
+              "basis": "original",
+              "evidence": "2005年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦J",
+              "evidenceReleaseIds": [
+                "banpresto-srwj-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srwj-v-original",
+              "workId": "banpresto-srwj",
+              "year": 2005,
+              "platform": "Game Boy Advance",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2005年Game Boy Advance原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦J",
+              "contentVersionId": "banpresto-srwj-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-srww",
+          "title": "スーパーロボット大戦W",
+          "originalTitle": "スーパーロボット大戦W",
+          "titleAliases": [],
+          "firstYear": 2007,
+          "category": "RPG",
+          "subcategory": "剧情战术RPG",
+          "genre": "剧情战术RPG",
+          "characters": [
+            "カズマ・アーディガン"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "两部相隔一段时间的战争故事将原作与续作人物的命运衔接起来。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦W",
+          "interactionModes": [
+            "战术策略",
+            "战斗指令"
+          ],
+          "interactionNote": "DS下屏操作面板可触控选择移动、攻击等指令；地图触控不等于ADV场景热点调查。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦W",
+            "https://www.suparobo.jp/srw_lineup"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-srww-c-original",
+              "workId": "banpresto-srww",
+              "label": "原作／首批内容",
+              "firstYear": 2007,
+              "basis": "original",
+              "evidence": "2007年Nintendo DS原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦W",
+              "evidenceReleaseIds": [
+                "banpresto-srww-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-srww-v-original",
+              "workId": "banpresto-srww",
+              "year": 2007,
+              "platform": "Nintendo DS",
+              "publisher": "Banpresto",
+              "publisherCompanies": [
+                "Banpresto"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2007年Nintendo DS原作首发；类型、发行身份与故事依据所引逐作资料核对，不将后发移植当原作。",
+              "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦W",
+              "contentVersionId": "banpresto-srww-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-accel1",
+          "title": "アクセル・ワールド -銀翼の覚醒-",
+          "originalTitle": "アクセル・ワールド -銀翼の覚醒-",
+          "titleAliases": [],
+          "firstYear": 2012,
+          "category": "剧情模拟",
+          "subcategory": "原创剧情ADV／战斗养成模拟",
+          "genre": "原创剧情ADV／战斗养成模拟",
+          "characters": [
+            "ハルユキ",
+            "黒雪姫",
+            "タクム",
+            "チユリ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "春雪与伙伴往返现实学园和加速世界，在原作之外的独立故事中面对新的抉择与战斗。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.4gamer.net/games/154/G015459/20120517059/",
+          "interactionModes": [
+            "选项分支",
+            "日程养成",
+            "战斗指令"
+          ],
+          "interactionNote": "专题资料区分会话选择、训练安排与加速世界战斗；属于原创剧情与战斗结合，非纯日常养成。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.4gamer.net/games/154/G015459/20120517059/",
+            "https://dengekionline.com/pr/amw20th_game/accelworld/",
+            "https://dengekionline.com/elem/000/000/578/578146/"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-accel1-c-original",
+              "workId": "banpresto-accel1",
+              "label": "原作／首批内容",
+              "firstYear": 2012,
+              "basis": "original",
+              "evidence": "2012-09-13 PS3与PSP同期首发，共用一个原作内容；实际发行Bandai Namco Games，万普厂牌关联不等于旧公司发行。",
+              "source": "https://www.4gamer.net/games/154/G015459/20120517059/",
+              "evidenceReleaseIds": [
+                "banpresto-accel1-v-original-1",
+                "banpresto-accel1-v-original-2"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-accel1-v-original-1",
+              "workId": "banpresto-accel1",
+              "year": 2012,
+              "platform": "PlayStation 3",
+              "publisher": "バンダイナムコゲームス",
+              "publisherCompanies": [
+                "バンダイナムコゲームス"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2012-09-13 PS3与PSP同期首发，共用一个原作内容；实际发行Bandai Namco Games，万普厂牌关联不等于旧公司发行。",
+              "source": "https://www.4gamer.net/games/154/G015459/20120517059/",
+              "contentVersionId": "banpresto-accel1-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "banpresto-accel1-v-original-2",
+              "workId": "banpresto-accel1",
+              "year": 2012,
+              "platform": "PlayStation Portable",
+              "publisher": "バンダイナムコゲームス",
+              "publisherCompanies": [
+                "バンダイナムコゲームス"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2012-09-13 PS3与PSP同期首发，共用一个原作内容；实际发行Bandai Namco Games，万普厂牌关联不等于旧公司发行。",
+              "source": "https://www.4gamer.net/games/154/G015459/20120517059/",
+              "contentVersionId": "banpresto-accel1-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "banpresto-accel2",
+          "title": "アクセル・ワールド -加速の頂点-",
+          "originalTitle": "アクセル・ワールド -加速の頂点-",
+          "titleAliases": [],
+          "firstYear": 2013,
+          "category": "剧情模拟",
+          "subcategory": "原创剧情ADV／战斗养成模拟",
+          "genre": "原创剧情ADV／战斗养成模拟",
+          "characters": [
+            "ハルユキ",
+            "黒雪姫",
+            "タクム",
+            "チユリ"
+          ],
+          "charactersNote": "人物或原作身份据所引资料；未推定未署名制作职责。",
+          "synopsis": "春雪与伙伴往返现实学园和加速世界，在原作之外的独立故事中面对新的抉择与战斗。",
+          "notes": "剧情RPG／ADV混合作品。仅建首次原作内容；普通移植、再版与包装不重复建作。",
+          "source": "https://www.4gamer.net/games/182/G018235/",
+          "interactionModes": [
+            "选项分支",
+            "日程养成",
+            "战斗指令"
+          ],
+          "interactionNote": "专题资料区分会话选择、训练安排与加速世界战斗；属于原创剧情与战斗结合，非纯日常养成。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.4gamer.net/games/182/G018235/",
+            "https://dengekionline.com/pr/amw20th_game/accelworld/",
+            "https://dengekionline.com/elem/000/000/578/578146/"
+          ],
+          "contentVersions": [
+            {
+              "id": "banpresto-accel2-c-original",
+              "workId": "banpresto-accel2",
+              "label": "原作／首批内容",
+              "firstYear": 2013,
+              "basis": "original",
+              "evidence": "2013-01-31 PS3与PSP同期首发，共用一个原作内容；实际发行Bandai Namco Games，万普厂牌关联不等于旧公司发行。",
+              "source": "https://www.4gamer.net/games/182/G018235/",
+              "evidenceReleaseIds": [
+                "banpresto-accel2-v-original-1",
+                "banpresto-accel2-v-original-2"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "banpresto-accel2-v-original-1",
+              "workId": "banpresto-accel2",
+              "year": 2013,
+              "platform": "PlayStation 3",
+              "publisher": "バンダイナムコゲームス",
+              "publisherCompanies": [
+                "バンダイナムコゲームス"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2013-01-31 PS3与PSP同期首发，共用一个原作内容；实际发行Bandai Namco Games，万普厂牌关联不等于旧公司发行。",
+              "source": "https://www.4gamer.net/games/182/G018235/",
+              "contentVersionId": "banpresto-accel2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "banpresto-accel2-v-original-2",
+              "workId": "banpresto-accel2",
+              "year": 2013,
+              "platform": "PlayStation Portable",
+              "publisher": "バンダイナムコゲームス",
+              "publisherCompanies": [
+                "バンダイナムコゲームス"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "2013-01-31 PS3与PSP同期首发，共用一个原作内容；实际发行Bandai Namco Games，万普厂牌关联不等于旧公司发行。",
+              "source": "https://www.4gamer.net/games/182/G018235/",
+              "contentVersionId": "banpresto-accel2-c-original",
+              "contentRelation": "original",
+              "contentNote": "仅首次内容批次；普通后发移植不扩平台记录。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "catalogueEntryCount": 74,
       "source": "https://www.bandainamco.co.jp/releases/images/3/42276.pdf",
-      "scope": "按本轮用户确认目录收录21部叙事作品：旧万普发行时期16部（含电影少女），万代南梦宫旗下万普品牌延续5部。以阅读、对话选择和调查推进为主；玩法核心RPG、动作、日常养成、麻将及棋盘游戏不计入本目录。此为具名范围完成，不宣称全部历史授权产品无遗漏。",
-      "versionScope": "同一作品只建一个作品ID。新增内容包括同级生2的PS新人物与SFC南云麻耶、天地无用FX新增清音篇、俺妹Refine新增独白录音与事件，以及随机预知三篇下载剧情；普通移植、再版、翻译与限定包装不增版。原有历史发行继续保留。",
-      "publisherNote": "1977年4月30日成立的旧万普游戏公司，在2008年重组中为消灭公司，Bandai Namco Games为存续公司；同日新设的同名景品公司是另一个法人，2019年再被BANDAI SPIRITS吸收。旧游戏公司、后续游戏品牌关联、景品公司与现行景品品牌不合并。旧16部及后5部目录继续保留，实际发行与开发分别判断。",
-      "sectionTitle": "旧万普与品牌延续的叙事作品",
-      "description": "万普21部具名叙事作品专题：旧公司16部与品牌延续5部分期展示，含电影少女，补齐有内容增量的版本和互动标签。",
-      "auditTitle": "叙事目录、历史法人及业务承接核对",
+      "scope": "按2026-10-29用户授权扩充ADV及RPG。叙事ADV同步主库；剧情RPG及ADV／战斗模拟进入共享跨类型关联。旧万普与后续万普游戏厂牌分开，普通移植、再版、组合包装不重复建作；不宣称完整历史产品穷尽。",
+      "versionScope": "新作品只记首批原作；PS3／PSP同期首发共用一个内容ID。九部历史RPG完整复用其已有内容与发行。机战F与IMPACT、Farland首作合辑尚待厘清内容身份，不重复建作。",
+      "publisherNote": "1977年4月30日成立的旧万普游戏公司，在2008年重组中为消灭公司，Bandai Namco Games为存续公司；同日新设的同名景品公司是另一个法人，2019年再被BANDAI SPIRITS吸收。旧游戏公司、后续游戏品牌关联、景品公司与现行景品品牌不合并。旧16部及后5部目录继续保留，实际发行与开发分别判断。 本轮新录的2008年前原作按实际署名归旧公司；加速世界两作保留Bandai Namco Games发行。",
+      "sectionTitle": "万普ADV与RPG作品",
+      "description": "Banpresto（万普）ADV／RPG专题：新增冒险、ONI、机战和原创RPG，恢复召唤之夜原身份，附游戏及游戏类型逐项对照。",
+      "auditTitle": "万普的游戏及游戏类型清单核对",
       "auditSourceLabel": "集团官方重组公告（含旧公司成立日期）",
-      "auditLabel": "用户确认的21部作品均有共享主库记录；增补、套装与排除项另行说明。",
-      "auditNote": "本轮沿用21部具名叙事目录、历史版本和九部RPG存档；补入主库作品说明、旧公司身份及七个沿革节点。未取得足以新增独立叙事作品的证据，作品／内容／平台数量不扩充。2008与2019分别针对不同法人，后续5部游戏不倒填旧万普发行或开发。",
+      "auditLabel": "本轮按ADV／RPG范围逐作补核；标题摘要不冒充原表全文。",
+      "auditNote": "此前仅21部叙事目录过窄，九部召唤之夜恢复原ID。新增作品、复用身份、重制／合辑待核与后续品牌分别列示，详细来源及继续位置见data/banpresto-completion-20261029.md。",
       "creativeProfile": {
         "thesis": "编辑观察：本目录展示发行品牌组织叙事作品的不同路径，开发团队并不统一。角色改编、怪谈讲述、案件调查与后期轻小说IF路线分别保留各自操作及时代身份。",
         "phases": [
@@ -74071,6 +77356,13 @@
             "analysis": "旧公司并入后的发行主体改为Bandai Namco Games。龙与虎、俺妹、随机预知和群奏活剧通过角色分支、后日谈或多视角扩展原作；本专题明确标为品牌延续。",
             "basis": "编辑观察",
             "source": "https://asobigokoro.work/bandai-namco-game-title-list/"
+          },
+          {
+            "period": "1990—2007",
+            "heading": "剧情RPG与跨作品群像",
+            "analysis": "ONI以时代与人物承接组织七个和风原作，召唤之夜将战术或动作战斗与人物关系结合，机战各作使用不同世界设定与战场推进故事；同属发行谱系不代表统一开发团队。",
+            "basis": "编辑观察",
+            "source": "https://www.d3p.co.jp/oni/game/"
           }
         ]
       },
@@ -74312,15 +77604,26 @@
         },
         {
           "title": "召唤之夜等玩法核心RPG",
-          "status": "内容归并／范围说明",
-          "reason": "依新范围退出叙事目录；首批9部原对象完整保存到banpresto-rpg-history.json，不删除历史考证。",
+          "status": "本轮范围订正／恢复原身份",
+          "reason": "2026-10-29按ADV／RPG范围恢复九部旧ID及完整对象；保留历史快照，不把恢复当新增作品。",
           "source": "https://www.nintendo.co.jp/ds/software/as7j/index.html",
-          "workIds": []
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-sn1",
+            "banpresto-sn2",
+            "banpresto-sn3",
+            "banpresto-sn4",
+            "banpresto-craft1",
+            "banpresto-craft2",
+            "banpresto-craft3",
+            "banpresto-ex",
+            "banpresto-twin"
+          ]
         },
         {
-          "title": "狙われた探偵／北斗の拳／松本零士999",
+          "title": "狙われた探偵／北斗の拳（旧参考）",
           "status": "内容归并／范围说明",
-          "reason": "动作关卡、指令格斗或射击挑战占重要地位，本次从严排除。不能只凭ADV类型名称纳入。",
+          "reason": "其具体作品版本与叙事准入继续待核；松本零士999本轮另依可操作故事选择与探索证据补入g1334，不再沿用旧排除结论。",
           "source": "https://w.atwiki.jp/gcmatome/pages/1994.html",
           "workIds": []
         },
@@ -74368,6 +77671,532 @@
             "g1078",
             "g1079"
           ]
+        },
+        {
+          "title": "召唤之夜",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9113",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-sn1"
+          ]
+        },
+        {
+          "title": "召唤之夜2",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://www.nintendo.co.jp/ds/software/yskj/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-sn2"
+          ]
+        },
+        {
+          "title": "召唤之夜3",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://w.atwiki.jp/storyteller/pages/1560.html",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-sn3"
+          ]
+        },
+        {
+          "title": "召唤之夜4",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://game.watch.impress.co.jp/docs/20060628/sn.htm",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-sn4"
+          ]
+        },
+        {
+          "title": "召唤之夜：铸剑物语",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://w.atwiki.jp/gcmatome/pages/4379.html",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-craft1"
+          ]
+        },
+        {
+          "title": "召唤之夜：铸剑物语2",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://www.hmv.co.jp/artist_Game-Soft-Game-Boy-Advance_000000000173699/item_サモンナイト-クラフトソード物語-2_1405864",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-craft2"
+          ]
+        },
+        {
+          "title": "召唤之夜：铸剑物语 起源之石",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://mediaworld.co.jp/products/10190785001",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-craft3"
+          ]
+        },
+        {
+          "title": "召唤之夜外传：破晓之翼",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://120en.net/ekusuteeze.html",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-ex"
+          ]
+        },
+        {
+          "title": "召唤之夜：双生时代 精灵们的共鸣",
+          "status": "恢复旧RPG身份",
+          "reason": "复用存档对象与原ID；历史证据不改写。",
+          "source": "https://www.nintendo.co.jp/ds/software/as7j/index.html",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-twin"
+          ]
+        },
+        {
+          "title": "3×3 EYES 獣魔奉還",
+          "status": "新增主库ADV",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.super-famicom.jp/data/sa/sa_0022.html",
+          "workIds": [
+            "g1333"
+          ]
+        },
+        {
+          "title": "松本零士999 ～Story of Galaxy Express 999～",
+          "status": "新增主库ADV",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9157",
+          "workIds": [
+            "g1334"
+          ]
+        },
+        {
+          "title": "ルパン三世 コロンブスの遺産は朱に染まる",
+          "status": "新增主库ADV",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13480",
+          "workIds": [
+            "g1335"
+          ]
+        },
+        {
+          "title": "ルパン三世 ルパンには死を、銭形には恋を",
+          "status": "新增主库ADV",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13481",
+          "workIds": [
+            "g1336"
+          ]
+        },
+        {
+          "title": "鬼忍降魔録 ONI",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-oni1"
+          ]
+        },
+        {
+          "title": "ONI II 隠忍伝説",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-oni2"
+          ]
+        },
+        {
+          "title": "ONI III 黒の破壊神",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-oni3"
+          ]
+        },
+        {
+          "title": "ONI IV 鬼神の血族",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-oni4"
+          ]
+        },
+        {
+          "title": "ONI V 隠忍を継ぐ者",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-oni5"
+          ]
+        },
+        {
+          "title": "鬼神降臨伝ONI",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-oni-kishin"
+          ]
+        },
+        {
+          "title": "幕末降臨伝ONI",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.d3p.co.jp/oni/game/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-oni-bakumatsu"
+          ]
+        },
+        {
+          "title": "ヒーロー戦記 プロジェクトオリュンポス",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2082",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-hero-senki"
+          ]
+        },
+        {
+          "title": "ソウル＆ソード",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2124",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-soul-sword"
+          ]
+        },
+        {
+          "title": "ガイアセイバー ヒーロー最大の作戦",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2132",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-gaia-saver"
+          ]
+        },
+        {
+          "title": "スレイヤーズ（SFC）",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2149",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-slayers-sfc"
+          ]
+        },
+        {
+          "title": "グランヒストリア 幻史世界記",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2196",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-granhistoria"
+          ]
+        },
+        {
+          "title": "ヴェルヌワールド",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2209",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-verne-world"
+          ]
+        },
+        {
+          "title": "トラバース スターライト＆プレーリー",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2249",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-traverse"
+          ]
+        },
+        {
+          "title": "ファーランドストーリー2（SFC）",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=2228",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-farland2-sfc"
+          ]
+        },
+        {
+          "title": "スレイヤーズわんだほ～",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9115",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-slayers-wonderful"
+          ]
+        },
+        {
+          "title": "スーパーヒーロー作戦",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9116",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-superhero"
+          ]
+        },
+        {
+          "title": "スーパーヒーロー作戦 ダイダルの野望",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=9117",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-superhero-daidal"
+          ]
+        },
+        {
+          "title": "マグナカルタ（PS2）",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13464",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-magna-carta"
+          ]
+        },
+        {
+          "title": "アルトネリコ 世界の終わりで詩い続ける少女",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://dengekionline.com/data/news/2005/11/30/dae8537df54f5de21b461281143d7c2f.html",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-ar-tonelico"
+          ]
+        },
+        {
+          "title": "アルトネリコ2 世界に響く少女たちの創造詩",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=13450",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-ar-tonelico2"
+          ]
+        },
+        {
+          "title": "From TV animation ONE PIECE 夢のルフィ海賊団誕生！",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://mediaworld.co.jp/products/10182195001",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-onepiece-luffy"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srw1"
+          ]
+        },
+        {
+          "title": "第2次スーパーロボット大戦",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/第2次スーパーロボット大戦",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srw2"
+          ]
+        },
+        {
+          "title": "第3次スーパーロボット大戦",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/第3次スーパーロボット大戦",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srw3"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦EX",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦EX",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwex"
+          ]
+        },
+        {
+          "title": "第4次スーパーロボット大戦",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/第4次スーパーロボット大戦",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srw4"
+          ]
+        },
+        {
+          "title": "新スーパーロボット大戦",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/新スーパーロボット大戦",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwnew"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦COMPACT",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦COMPACT",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwcompact"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦64",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦64",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srw64"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦α",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwalpha"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦α外伝",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦α外伝",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwag"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦A",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦A",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwa"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦ORIGINAL GENERATION",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦ORIGINAL_GENERATION",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwog"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦D",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦D",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwd"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦MX",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦MX",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwmx"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦J",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦J",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srwj"
+          ]
+        },
+        {
+          "title": "スーパーロボット大戦W",
+          "status": "新增剧情RPG关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://srw.wiki.cre.jp/wiki/スーパーロボット大戦W",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-srww"
+          ]
+        },
+        {
+          "title": "アクセル・ワールド -銀翼の覚醒-",
+          "status": "品牌延续关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.4gamer.net/games/154/G015459/20120517059/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-accel1"
+          ]
+        },
+        {
+          "title": "アクセル・ワールド -加速の頂点-",
+          "status": "品牌延续关联",
+          "reason": "按逐作来源核对叙事／类型与首批原作，实际发行与厂牌关系分别保留。",
+          "source": "https://www.4gamer.net/games/182/G018235/",
+          "workIds": [],
+          "relatedIds": [
+            "banpresto-accel2"
+          ]
         }
       ],
       "overviewLabel": "具名叙事作品",
@@ -74376,7 +78205,7 @@
         {
           "id": "original-banpresto",
           "title": "旧万普发行时期",
-          "description": "16部。按作品原作年份排序；移植由万普发行的《同级生2》保留1995年原作身份，万普新增内容始于1997年。",
+          "description": "旧万普游戏公司实际发行的20部主库叙事作品；RPG另列跨类型关联，不混计主库。",
           "workIds": [
             "g1064",
             "g913",
@@ -74393,7 +78222,11 @@
             "g1072",
             "g1073",
             "g1074",
-            "g1063"
+            "g1063",
+            "g1333",
+            "g1334",
+            "g1335",
+            "g1336"
           ]
         },
         {
@@ -74412,8 +78245,8 @@
       ],
       "historicalArchive": {
         "path": "data/banpresto-rpg-history.json",
-        "title": "首批RPG历史存档（不计入本次叙事目录）",
-        "note": "首批9部召唤之夜RPG的作品、内容版本、发行与来源完整保留于存档。因战斗玩法为核心，退出当前叙事作品卡片与统计；原有深层链接仍可定位到此处。",
+        "title": "九部RPG历史存档（本轮已恢复原ID）",
+        "note": "此JSON保留当时因窄范围移出的原始快照；本轮九部均以同一ID恢复关联库。下列名称仅链接当前卡片，存档不另计作品、内容或发行。",
         "works": [
           {
             "id": "banpresto-sn1",
@@ -74452,6 +78285,10 @@
             "title": "召唤之夜：双生时代 精灵们的共鸣"
           }
         ]
+      },
+      "workContexts": {
+        "banpresto-accel1": "品牌延续：实际Bandai Namco Games发行；2012厂商发文明确万普游戏厂牌，不归旧公司。",
+        "banpresto-accel2": "品牌延续目录关联：实际Bandai Namco Games发行；本轮尚无逐版厂牌职责证据，正式参与关系保留待核。"
       }
     },
     {

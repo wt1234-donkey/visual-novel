@@ -200,6 +200,12 @@ def build():
   entity.update(type=reviewed['type'],verification=reviewed['status'],historyNote=reviewed['note'])
   entity['sources']=list(dict.fromkeys([*entity['sources'],*reviewed['sources']]))
  for eid,name,kind,names,source in EXTRAS:add_entity(eid,name,kind,names,source,'sourceReviewed')
+ banpresto_additions=read('data/banpresto-source-review-20261029.json')
+ game_label=add_entity('banpresto-game-label','Banpresto Game Label（バンプレストレーベル）','brand',
+                       ['バンプレストレーベル','Banpresto Game Label'],
+                       'https://www.4gamer.net/games/154/G015459/20120517059/','sourceReviewed',
+                       '2012年メーカー発表文区分発売元Bandai Namco Games与游戏厂牌。旧公司、景品公司及景品品牌各为不同身份。')
+ next(x for x in dossiers if x['id']=='banpresto')['entityIds'].append(game_label)
  # Publisher brand/company homographs remain distinct. Raw AQUAPLUS alone is a publishing-brand signature.
  aliases[canonical('AQUAPLUS')]='entity-aquaplus_brand'
  aliases[canonical('Nitroplus')]='entity-nitroplus_brand';aliases[canonical('NITRO PLUS')]='entity-nitroplus_brand'
@@ -269,10 +275,35 @@ def build():
   if not reviewed.get('applyToExistingDossier'):continue
   scope=reviewed['historicalPublisherScope']
   scoped=[r for r in allreleases if r['publisher']==scope['rawPublisher']]
-  assert sorted(r['id'] for r in scoped)==scope['releaseIds'] and scoped,'历史发行范围与主体订正记录不符'
+  expected=set(scope['releaseIds'])
+  if reviewed['entityId']=='entity-banpresto':
+   additions=banpresto_additions['historicalPublisherAdditions']
+   actual={r['id']:r for r in scoped}
+   assert len(additions)==len({a['release']['id'] for a in additions}),'万普追加审核ID重复'
+   for addition in additions:
+    r=addition['release']
+    assert addition['entityId']=='entity-banpresto' and addition['source']==r['source'] and addition['reason']
+    assert r['id'] not in expected and actual.get(r['id'])==r,'万普追加发行与独立审核记录不符'
+    assert r['publisher']==scope['rawPublisher'] and r['year']<2008,'新主体不能倒填旧万普'
+    expected.add(r['id'])
+  assert {r['id'] for r in scoped}==expected and scoped,'历史发行范围与主体订正记录不符'
   assert all(r['year']<scope['beforeYear'] for r in scoped),'不能把同名后继发行倒填旧公司'
+ # The publisher and the later game label are separately evidenced for this first batch only.
+ for r in allreleases:
+  if r['workId']=='banpresto-accel1':
+   assert r['publisher']=='バンダイナムコゲームス' and r['year']==2012
+   credit(game_label,'release',r['id'],'publishingBrand',
+          'https://www.4gamer.net/games/154/G015459/20120517059/',
+          raw='バンプレストレーベル',status='sourceReviewed',work_id=r['workId'],
+          note='メーカー发文明确区分発売元与厂牌，仅限定2012首批，不追溯归旧万普公司。')
  # Explicit splitting rules preserve raw brands that the legacy corporate index previously flattened.
  def release_entities(r):
+  scoped_resolution=next((x for x in banpresto_additions['scopedPublisherResolutions'] if x['releaseId']==r['id']),None)
+  if scoped_resolution:
+   assert r['publisher']==scoped_resolution['rawPublisher']=='バンダイナムコゲームス'
+   assert scoped_resolution['entityId']==aliases[canonical('Bandai Namco Games')]=='entity-name-40ed6431d1a6'
+   assert scoped_resolution['source'] and scoped_resolution['reason']
+   return [scoped_resolution['entityId']]
   raw=r['publisher']; key=canonical(raw)
   if key in aliases:return [aliases[key]]
   if raw in taxonomy['nonCompanyCredits']:return []

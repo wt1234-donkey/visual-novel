@@ -51,3 +51,8 @@ CAPCOM官网区分1979-05-30法人设立与1983-06-11创业。专题首批最早
 - Pages数据发布：https://github.com/wt1234-donkey/visual-novel/actions/runs/40733101886；build、deploy与report-build-status全部success。
 - 站点：https://wt1234-donkey.github.io/visual-novel/；新专题capcom.html。该回执仅补充本轮记录，不修改已上线数据。
 - 下次从上方未完成事项第1项（原始完整表格）及第2项（第二季分话与UMD内容关系）继续；不可重复新增g1331、ultra-snakes-revenge或CAPCOM既有四作。
+
+
+## 2026-10-29 万普后续扩充
+
+按后续用户ADV／RPG授权完成44部新作品（4主库、40共享关联）与九部召唤之夜原身份恢复；万普正文74部、类型表79行。主库1333／1551内容／2549发行。上文为先前批次的当时记录，最新万普明细、验证、未完成及继续位置见[本轮进度](banpresto-completion-20261029.md)，最终发布回执以本轮PR为准。
