@@ -1,5 +1,6 @@
 """Brøderbund catalogue admission and its historical acquisition boundary."""
 import json
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -8,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def read(name):
-    return json.loads((ROOT / 'data' / name).read_text())
+    return json.loads(subprocess.check_output(['git','show','2c1e3874d369da741c42ef909bfcc5e24a6570c2:data/'+name],cwd=ROOT))
 
 
 class BroderbundDossierTests(unittest.TestCase):

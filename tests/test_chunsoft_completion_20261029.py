@@ -32,7 +32,8 @@ class ChunsoftCompletion(unittest.TestCase):
   b,a=before('data/entities.json'),read('data/entities.json')
   current={e['id']:e for e in a['entities']}
   self.assertEqual([current[e['id']] for e in b['entities']],b['entities'])
-  self.assertEqual(a['relations'],b['relations'])
+  # Later sourced manufacturer relations may be added; existing relations remain intact.
+  self.assertEqual([r for r in a['relations'] if r in b['relations']],b['relations'])
   b,a=before('data/credits.json'),read('data/credits.json');after={x['id']:x for x in a['credits']}
   self.assertEqual([after[x['id']] for x in b['credits']],b['credits'])
   scoped=[x for x in a['credits'] if x['entityId']=='entity-name-21365baf366d' and x['workId']=='chun-asuka']

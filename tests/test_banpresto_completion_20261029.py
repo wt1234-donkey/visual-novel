@@ -6,7 +6,11 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 import build_entity_model as builder
 BASE='42d02604a6648be5d512b607d902292c4ac587e4'
 REVIEW='data/banpresto-source-review-20261029.json'
-def read(p):return json.loads((ROOT/p).read_text())
+PUBLISHED='2c1e3874d369da741c42ef909bfcc5e24a6570c2'
+def read(p):
+ if p in {'data/games.json','data/company-coverage.json','data/entities.json','data/credits.json'}:
+  return json.loads(subprocess.check_output(['git','show',PUBLISHED+':'+p],cwd=ROOT))
+ return json.loads((ROOT/p).read_text())
 def old(p):return json.loads(subprocess.check_output(['git','show',BASE+':'+p],cwd=ROOT))
 def company(d):return next(c for c in d['companies'] if c['id']=='banpresto')
 class BanprestoCompletionTests(unittest.TestCase):

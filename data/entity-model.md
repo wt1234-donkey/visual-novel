@@ -261,3 +261,8 @@ S11完成Syawase Works China、Synergy Inc.两项登记，S为42／42，下一�
 ## 万普独立追加审核（2026-10-29）
 
 `banpresto-source-review-20261029.json`为51条新录／恢复的2008年前旧万普发行保存独立完整对象审核，不改20261027冻结18条原审核或迁移基线。生成器检查新增ID唯一、完整发行对象相等及严格早于2008；七条日文Bandai Namco Games发行按限定ID复用旧英文主体，原署名不改。新游戏厂牌与旧游戏法人、景品主体分开，厂牌职责仅按银翼之觉醒2012厂商明确发文限定两条首次发行，不把相邻续作自动当已核职责。
+
+
+## Brøderbund与Red Orb限定版次（2026-10-29）
+
+沿革专题保留Brøderbund公司与Red Orb发行厂牌各自身份，1997品牌关系不外推后继发行。`broderbund-scoped-editions-20261029.json`保存Ring1999北美Mindscape／Red Orb限定版次，不制造普通移植内容或发行。edition参与允许来源审核的publishingBrand，但须对应brand主体、同一原署名与独立reviewRecord；既有publisher限定版次不改。

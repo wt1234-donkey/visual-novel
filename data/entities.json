@@ -2004,6 +2004,21 @@
       "dates": []
     },
     {
+      "id": "entity-red-orb",
+      "name": "Red Orb Entertainment",
+      "type": "brand",
+      "aliases": [
+        "Red Orb Entertainment",
+        "Red Orb"
+      ],
+      "sources": [
+        "https://www.wired.com/1997/06/gaming-dream-job-red-orb-seeks-warmongers/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "1997同期报道明确Brøderbund游戏发行部门与厂牌；收购后仍使用该名，不等于旧Brøderbund法人继续承担全部发行。",
+      "dates": []
+    },
+    {
       "id": "entity-silkys_wasabi",
       "name": "Silky’s Plus WASABI",
       "type": "brand",
@@ -4879,6 +4894,20 @@
       "dates": []
     },
     {
+      "id": "entity-name-5c3e5767f284",
+      "name": "Cryo Interactive Entertainment",
+      "type": "unknown",
+      "aliases": [
+        "Cryo Interactive Entertainment"
+      ],
+      "sources": [
+        "https://www.abandonware-france.org/ltf_abandon/ltf_jeu.php?fic=editions&id=2080"
+      ],
+      "verification": "unresolved",
+      "historyNote": "发行原文已保留；法人／品牌身份尚待核实。",
+      "dates": []
+    },
+    {
       "id": "entity-name-a7663faeee46",
       "name": "WFS（WRIGHT FLYER STUDIOS）",
       "type": "company",
@@ -6069,6 +6098,20 @@
     }
   ],
   "relations": [
+    {
+      "from": "entity-red-orb",
+      "to": "entity-name-e0c32a99a906",
+      "type": "brandFamily",
+      "period": {
+        "from": 1997,
+        "to": null,
+        "precision": "year",
+        "openEnd": "notAsserted"
+      },
+      "status": "sourceReviewed",
+      "source": "https://www.wired.com/1997/06/gaming-dream-job-red-orb-seeks-warmongers/",
+      "note": "只确认1997报道时的发行部门／品牌关系；结束时间未在本关系中断定，不把1999后继版次倒推旧公司职责。"
+    },
     {
       "from": "entity-silkys_wasabi",
       "to": "entity-silkys_plus",
@@ -7858,11 +7901,12 @@
     {
       "id": "broderbund",
       "name": "Brøderbund",
-      "dossierType": "company",
+      "dossierType": "history",
       "entityIds": [
-        "entity-name-e0c32a99a906"
+        "entity-name-e0c32a99a906",
+        "entity-red-orb"
       ],
-      "scope": "以Brøderbund历史出版关系聚合叙事作品；Myst由Cyan制作，The Last Express由Smoking Car Productions制作。早期Ultrasoft输入式冒险作专题书目，其他教育问答、运动与工具软件不计叙事作品。",
+      "scope": "聚合Brøderbund历史出版、Red Orb游戏厂牌及明确限定的后继地区版次。普通移植和包装不重复建作；输入式ADV／RPG沿用仅专题书目，纯体育、战争策略、工具和教育练习不凭类型自动扩主库。",
       "sources": [
         "https://www.museumofplay.org/blog/preserving-the-broderbund-story/"
       ],

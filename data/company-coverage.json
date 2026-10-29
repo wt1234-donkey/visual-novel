@@ -117502,23 +117502,35 @@
     {
       "id": "broderbund",
       "name": "Brøderbund",
-      "checkedAt": "2026-10-28",
+      "checkedAt": "2026-10-29",
       "established": "1980",
       "establishedSource": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
-      "status": "初建叙事发行专题：既有Myst加两部新主库，早期输入式两部仅专题",
-      "scope": "以Brøderbund历史出版关系聚合叙事作品；Myst由Cyan制作，The Last Express由Smoking Car Productions制作。早期Ultrasoft输入式冒险作专题书目，其他教育问答、运动与工具软件不计叙事作品。",
-      "versionScope": "新增两部独立主库作品及各自首批内容/发行；后发Mac、移植和重制仅在有明确新增内容及首发证据时另建。",
+      "status": "按ADV／RPG清单补录6主库、1关联和6输入书目，复用Riven及跨专题身份",
+      "scope": "聚合Brøderbund历史出版、Red Orb游戏厂牌及明确限定的后继地区版次。普通移植和包装不重复建作；输入式ADV／RPG沿用仅专题书目，纯体育、战争策略、工具和教育练习不凭类型自动扩主库。",
+      "versionScope": "新作只建首批原作；Riven复用g1001与既有原作内容，只补1997全球电脑首批。Ring原作1998 Cryo与1999 Mindscape／Red Orb地区版分开；不把新地区署名当新内容。",
       "publisherNote": "Doug与Gary Carlston于1980年创立Brøderbund；1998年由The Learning Company收购。1999年TLC并入Mattel是后续母公司变化，不把新主体倒填1980—1997游戏。Myst、Last Express分别保留Cyan与Smoking Car的实际创作；早期Ultrasoft作品只确认历史发行关系。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>3部主库叙事：复用《神秘岛》g1060，新收《一级谋杀案》g1286与《最后的快车》g1287。</strong>1982—1983年两部键入冒险仅专题书目。Brøderbund为这些版次的发行名义，不据此推定一切原作开发。 <a href=\"organizations.html?node=entity-name-e0c32a99a906\">查看组织沿革</a>。</p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>10部主库引用、1部跨类型RPG、8部输入式书目。</strong>按原作实际Brøderbund发行署名为8部主库；Red Orb厂牌和后继地区版另外说明，不等于旧公司统一开发。</p>",
       "workIds": [
         "g1060",
         "g1286",
-        "g1287"
+        "g1287",
+        "g1337",
+        "g1338",
+        "g1339",
+        "g1340",
+        "g1341",
+        "g1342",
+        "g1001"
       ],
       "publisherWorkIds": [
         "g1060",
         "g1286",
-        "g1287"
+        "g1287",
+        "g1337",
+        "g1338",
+        "g1339",
+        "g1341",
+        "g1001"
       ],
       "dossierOnlyWorks": [
         {
@@ -117578,12 +117590,205 @@
           "interactionSources": [
             "https://www.mocagh.org/broderbund/serpentstar-alt.pdf"
           ]
+        },
+        {
+          "id": "broderbund-cyborg",
+          "title": "半机械人",
+          "chineseTitle": "半机械人",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Cyborg",
+          "titleAliases": [
+            "Cyborg"
+          ],
+          "firstYear": 1981,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式叙事冒险",
+          "genre": "科幻／人机共生",
+          "characters": [
+            "Cyborg（玩家）"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/cyborg-alt2-manual.pdf",
+          "synopsis": "半人半机器的实验者在陌生环境醒来，与体内的电脑意识共同寻找生存和完成任务的方法。",
+          "notes": "含文字输入，沿用当前仅专题书目规则；不把输入原作重新包装为无输入主库作品。",
+          "source": "https://www.mocagh.org/broderbund/cyborg-alt2-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "Mac手册虽有扫描和方向图标，仍明确要求动词＋名词及复句输入。原作1981由Sentient出版；本专题关联Brøderbund后续Mac版，不能用1984版权字样重写原作年。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/cyborg-alt2-manual.pdf",
+            "https://www.museumofplay.org/app/uploads/2023/04/Finding-Aid-to-the-Michael-and-Muffy-Berlyn-papers_040723.pdf"
+          ]
+        },
+        {
+          "id": "broderbund-mindwheel",
+          "title": "心智之轮",
+          "chineseTitle": "心智之轮",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Mindwheel",
+          "titleAliases": [
+            "Mindwheel"
+          ],
+          "firstYear": 1985,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式叙事冒险",
+          "genre": "文学化科幻／精神世界",
+          "characters": [
+            "Mind Adventurer（玩家）",
+            "Doctor Virgil"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/mindwheel-manual-inside.pdf",
+          "synopsis": "文明濒临毁灭，心灵探险者受维吉尔博士引导，穿越逝者的精神世界寻找拯救现实的智慧。",
+          "notes": "含文字输入，沿用当前仅专题书目规则；不把输入原作重新包装为无输入主库作品。",
+          "source": "https://www.mocagh.org/broderbund/mindwheel-manual-inside.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原参考卡以英文句子、对象和对话推进，非菜单冒险。暂按已核1985实发目录记年；手册1984版权和部分1984目录说法另留待核，不据版权年断首发。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/mindwheel-manual-inside.pdf",
+            "https://www.mocagh.org/broderbund/synapse-electronicnovel-refcard-atari.pdf",
+            "https://gamefaqs.gamespot.com/pc/938202-mindwheel/data"
+          ]
+        },
+        {
+          "id": "broderbund-brimstone",
+          "title": "硫磺石：高文之梦",
+          "chineseTitle": "硫磺石：高文之梦",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Brimstone: The Dream of Gawain",
+          "titleAliases": [
+            "Brimstone: The Dream of Gawain"
+          ],
+          "firstYear": 1985,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式叙事冒险",
+          "genre": "亚瑟传说／梦境奇幻",
+          "characters": [
+            "Sir Gawain",
+            "Fum"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/brimstone-manual.pdf",
+          "synopsis": "高文深入Ulro的梦境冥界，追踪恶魔并穿越象征性的试炼。",
+          "notes": "含文字输入，沿用当前仅专题书目规则；不把输入原作重新包装为无输入主库作品。",
+          "source": "https://www.mocagh.org/broderbund/brimstone-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "Electronic Novels参考卡要求输入完整行动及对象、交谈句式，不能因人物／冒险类型误作战斗RPG。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/brimstone-manual.pdf",
+            "https://www.mocagh.org/broderbund/synapse-electronicnovel-refcard-atari.pdf"
+          ]
+        },
+        {
+          "id": "broderbund-essex",
+          "title": "埃塞克斯",
+          "chineseTitle": "埃塞克斯",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Essex",
+          "titleAliases": [
+            "Essex"
+          ],
+          "firstYear": 1985,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式叙事冒险",
+          "genre": "太空航行／救援悬疑",
+          "characters": [
+            "冒险者（玩家）",
+            "Dee",
+            "Chief"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/essex-manual-inside.pdf",
+          "synopsis": "玩家指挥Essex及其乘员，在行星和深空之间探索、调查并开展救援，面对随时间变化的事件。",
+          "notes": "含文字输入，沿用当前仅专题书目规则；不把输入原作重新包装为无输入主库作品。",
+          "source": "https://www.mocagh.org/broderbund/essex-manual-inside.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "原参考卡明确英文行动与会话输入；出版系列、Synapse创作与Brøderbund历史关联分别保留。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/essex-manual-inside.pdf",
+            "https://www.mocagh.org/broderbund/synapse-electronicnovel-refcard-atari.pdf"
+          ]
+        },
+        {
+          "id": "broderbund-breakers",
+          "title": "破局者",
+          "chineseTitle": "破局者",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Breakers",
+          "titleAliases": [
+            "Breakers"
+          ],
+          "firstYear": 1986,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式叙事冒险",
+          "genre": "科幻／走私与奴役",
+          "characters": [
+            "冒险者（玩家）",
+            "Nate Grey"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/breakers-manual.pdf",
+          "synopsis": "玩家卷入宇宙走私与奴役网络，追查自己的身份及暗中尾随者的目的。",
+          "notes": "含文字输入，沿用当前仅专题书目规则；不把输入原作重新包装为无输入主库作品。",
+          "source": "https://www.mocagh.org/broderbund/breakers-manual.pdf",
+          "interactionModes": [
+            "文字输入"
+          ],
+          "interactionNote": "Atari ST参考卡依然要求键入英文行动与对话，不因鼠标设备就判为点击式游戏。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/breakers-manual.pdf",
+            "https://www.mocagh.org/broderbund/breakers-refcard.pdf"
+          ]
+        },
+        {
+          "id": "broderbund-uukrul",
+          "title": "乌克鲁尔的黑暗之心",
+          "chineseTitle": "乌克鲁尔的黑暗之心",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "The Dark Heart of Uukrul",
+          "titleAliases": [
+            "The Dark Heart of Uukrul"
+          ],
+          "firstYear": 1989,
+          "category": "文字输入／仅专题",
+          "subcategory": "输入式剧情RPG",
+          "genre": "奇幻队伍RPG／地下城解谜",
+          "characters": [
+            "战士",
+            "圣武士",
+            "牧师",
+            "魔法师",
+            "Mara"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/uukrul-manual.pdf",
+          "synopsis": "四位冒险者奉西方议会之命深入地下城Eriosthe，沿着失联小队的踪迹寻找并击败乌克鲁尔。",
+          "notes": "含文字输入，沿用当前仅专题书目规则；不把输入原作重新包装为无输入主库作品。",
+          "source": "https://www.mocagh.org/broderbund/uukrul-manual.pdf",
+          "interactionModes": [
+            "文字输入",
+            "菜单指令",
+            "战斗指令",
+            "谜题操作"
+          ],
+          "interactionNote": "手册除菜单与战斗指令外，还要求键入已知传送地点名称和暗门词语；这不是人物起名或单次安装密码，按输入式RPG保留书目。固定法术／祷告名与自由行动词句另作区分。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/uukrul-manual.pdf",
+            "https://ourdigitalheritage.org/hostedArchives/playitagain/games/the-dark-heart-of-uukrul/index.html"
+          ]
         }
       ],
-      "catalogueEntryCount": 5,
+      "catalogueEntryCount": 19,
       "source": "https://www.museumofplay.org/blog/preserving-the-broderbund-story/",
-      "description": "Brøderbund叙事发行专题：早期图文输入冒险、Cyan《Myst》、实拍法庭调查与Smoking Car《The Last Express》。",
-      "sectionTitle": "从神秘岛到实拍与实时悬疑",
+      "description": "Brøderbund的冒险与RPG专题：童话寻物、时空悬疑、输入式电子小说与科幻队伍RPG，附游戏及游戏类型对照。",
+      "sectionTitle": "Brøderbund与Red Orb的ADV／RPG",
       "entries": [
         {
           "title": "The Mask of the Sun",
@@ -117631,12 +117836,145 @@
           "workIds": [
             "g1287"
           ]
+        },
+        {
+          "title": "Darby the Dragon",
+          "status": "新增主库ADV",
+          "reason": "使用鼠标调查、收集和交付物品解决寻药旅途中的问题；不是只有游离于故事的识字练习。",
+          "source": "https://darbythedragon.fandom.com/wiki/Darby_the_Dragon",
+          "workIds": [
+            "g1337"
+          ]
+        },
+        {
+          "title": "Gregory and the Hot Air Balloon",
+          "status": "新增主库ADV",
+          "reason": "寻找并交付任务物品解决修理气球与返家的障碍；故事书阅读和游乐场小游戏是可选活动，不另建独立作品。",
+          "source": "https://aypos-library.neocities.org/archives/capitol/content",
+          "workIds": [
+            "g1338"
+          ]
+        },
+        {
+          "title": "Koala Lumpur: Journey to the Edge",
+          "status": "新增主库ADV",
+          "reason": "手册将苍蝇Fly作为鼠标光标：点击通道、对象与物品让伙伴行动，滚动画面调查360度环境；并非自由键入指令。",
+          "source": "https://oldgamesdownload.com/wp-content/uploads/Koala_Lumpur_Journey_to_the_Edge_Manual_Win_EN.pdf",
+          "workIds": [
+            "g1339"
+          ]
+        },
+        {
+          "title": "The Journeyman Project 3: Legacy of Time",
+          "status": "新增主库ADV",
+          "reason": "手册说明全景热点、物品拖放、生物服扫描与伪装界面；保存名和系统安装路径不算游戏行动文字输入。",
+          "source": "https://www.zanotowane.pl/1112/1021/",
+          "workIds": [
+            "g1340"
+          ]
+        },
+        {
+          "title": "Rugrats Adventure Game",
+          "status": "新增主库ADV",
+          "reason": "手册明确房间热点、物品栏拖放和道具解谜，另含限时搜物与接饼干等活动；起名只是存档选择，不是解析器。",
+          "source": "https://manuals.plus/m/f82812227b27b2a20a21ae095071b22b2375e7202a09d689f6f43e2c52d06199",
+          "workIds": [
+            "g1341"
+          ]
+        },
+        {
+          "title": "Ring: The Legend of the Nibelungen",
+          "status": "新增主库ADV",
+          "reason": "以预渲染全景热点、库存道具与机关推进各角色篇章；角色篇章不自动标自由视角切换。",
+          "source": "https://www.abandonware-france.org/ltf_abandon/ltf_jeu.php?fic=editions&id=2080",
+          "workIds": [
+            "g1342"
+          ]
+        },
+        {
+          "title": "Centauri Alliance",
+          "status": "新增剧情RPG关联",
+          "reason": "手册明确按键／鼠标选择人物、设备和网格战斗行动；五字母异能编码、人物命名与保存名不作自然语言行动解析器。",
+          "source": "https://www.mocagh.org/broderbund/centauri-manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "broderbund-centauri"
+          ]
+        },
+        {
+          "title": "Cyborg",
+          "status": "新增输入式书目",
+          "reason": "Mac手册虽有扫描和方向图标，仍明确要求动词＋名词及复句输入。原作1981由Sentient出版；本专题关联Brøderbund后续Mac版，不能用1984版权字样重写原作年。",
+          "source": "https://www.mocagh.org/broderbund/cyborg-alt2-manual.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-cyborg"
+          ]
+        },
+        {
+          "title": "Mindwheel",
+          "status": "新增输入式书目",
+          "reason": "原参考卡以英文句子、对象和对话推进，非菜单冒险。暂按已核1985实发目录记年；手册1984版权和部分1984目录说法另留待核，不据版权年断首发。",
+          "source": "https://www.mocagh.org/broderbund/mindwheel-manual-inside.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-mindwheel"
+          ]
+        },
+        {
+          "title": "Brimstone: The Dream of Gawain",
+          "status": "新增输入式书目",
+          "reason": "Electronic Novels参考卡要求输入完整行动及对象、交谈句式，不能因人物／冒险类型误作战斗RPG。",
+          "source": "https://www.mocagh.org/broderbund/brimstone-manual.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-brimstone"
+          ]
+        },
+        {
+          "title": "Essex",
+          "status": "新增输入式书目",
+          "reason": "原参考卡明确英文行动与会话输入；出版系列、Synapse创作与Brøderbund历史关联分别保留。",
+          "source": "https://www.mocagh.org/broderbund/essex-manual-inside.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-essex"
+          ]
+        },
+        {
+          "title": "Breakers",
+          "status": "新增输入式书目",
+          "reason": "Atari ST参考卡依然要求键入英文行动与对话，不因鼠标设备就判为点击式游戏。",
+          "source": "https://www.mocagh.org/broderbund/breakers-manual.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-breakers"
+          ]
+        },
+        {
+          "title": "The Dark Heart of Uukrul",
+          "status": "新增输入式书目",
+          "reason": "手册除菜单与战斗指令外，还要求键入已知传送地点名称和暗门词语；这不是人物起名或单次安装密码，按输入式RPG保留书目。固定法术／祷告名与自由行动词句另作区分。",
+          "source": "https://www.mocagh.org/broderbund/uukrul-manual.pdf",
+          "workIds": [],
+          "dossierIds": [
+            "broderbund-uukrul"
+          ]
+        },
+        {
+          "title": "Riven: The Sequel to Myst",
+          "status": "复用g1001／补全球原作首批",
+          "reason": "1997-10-31全球电脑原作的五张混合CD，兼容Windows 95与Macintosh；Brøderbund实际发行，复用g1001-c-original。不覆盖12月日本PS的Enix署名，不新建Riven作品或重复原作内容。",
+          "source": "https://www.mobygames.com/game/1262/riven-the-sequel-to-myst/releases/",
+          "workIds": [
+            "g1001"
+          ]
         }
       ],
       "auditTitle": "叙事准入与历史职责核对",
       "auditSourceLabel": "博物馆馆藏、原作者与原版手册",
-      "auditLabel": "三部主库与两部输入式书目；仅初步核对，不宣称全发行目录穷尽。",
-      "auditNote": "Brøderbund的出版署名与Cyan、Ultrasoft、Smoking Car创作分别保存。1998收购及后续品牌使用单列沿革；初版年份按来源年级精度。",
+      "auditLabel": "原项目18个恢复标题逐项对照；补充公开目录线索另列，表格不增加正文计数。",
+      "auditNote": "恢复的是历史答复标题摘要，并非逐字原表。Riven、Blackstone等已有身份复用；Centauri与Uukrul作为公开资料补充。首发年异文、收购后厂牌、未核重制与下一步见data/broderbund-completion-20261029.md。",
       "creativeProfile": {
         "thesis": "专题共同点是Brøderbund的历史出版及发行渠道；岛屿探索、法庭实拍与列车时序悬疑来自不同创作团队。",
         "phases": [
@@ -117660,9 +117998,130 @@
             "analysis": "Smoking Car的列车故事引入时间进程与回溯；作者确认Brøderbund为三CD原版出版者。",
             "basis": "编辑观察",
             "source": "https://www.jordanmechner.com/en/games-movies/the-last-express/"
+          },
+          {
+            "period": "1985—1990",
+            "heading": "电子小说与队伍RPG",
+            "analysis": "Synapse的电子小说采用词句交互，Centauri把种族编队与网格战斗相连，Uukrul把固定战斗指令和关键词探索并置；同一出版谱系保留不同创作团队。",
+            "basis": "编辑观察",
+            "source": "https://www.mocagh.org/broderbund/centauri-manual.pdf"
+          },
+          {
+            "period": "1996—1999",
+            "heading": "儿童任务、时空调查与后继厂牌",
+            "analysis": "Darby、Gregory及Rugrats用物品任务衔接故事，Koala以光标角色组织调查；Red Orb时期与收购后地区发行不混作旧公司原作开发。",
+            "basis": "编辑观察",
+            "source": "https://aypos-library.neocities.org/archives/capitol/content"
           }
         ]
-      }
+      },
+      "workContexts": {
+        "g1340": "Red Orb原版厂牌：1998原作；该厂牌与Brøderbund公司的身份分开。",
+        "g1342": "后继厂牌关联：1998法国原作由Cryo发行；本专题关联1999北美Mindscape／Red Orb版次，不倒填为旧Brøderbund原作。",
+        "g1001": "复用Enix专题的g1001；新增1997全球电脑原作发行，Enix日本发行与2024未核重制记录均保持。"
+      },
+      "relatedGames": [
+        {
+          "id": "broderbund-centauri",
+          "title": "星际联盟",
+          "chineseTitle": "星际联盟",
+          "chineseTitleType": "站内编辑译名",
+          "originalTitle": "Centauri Alliance",
+          "titleAliases": [
+            "Centauri Alliance"
+          ],
+          "firstYear": 1990,
+          "category": "RPG",
+          "subcategory": "科幻队伍RPG",
+          "genre": "科幻队伍RPG／网格战术",
+          "characters": [
+            "联盟冒险队（玩家）"
+          ],
+          "charactersSource": "https://www.mocagh.org/broderbund/centauri-manual.pdf",
+          "charactersNote": "角色名或明确的玩家身份取所引本作资料。",
+          "synopsis": "来自六个种族的队员在银河战争中组成探险队，穿行前哨与异星迷宫，执行联盟不断变化的任务。",
+          "notes": "原作首次内容；普通移植、重发行或组合包装不单独增加作品和内容身份。 当前按C64已核1990实发记年，1989版权不等于发售；AppleII最早发行与全球先后待原件复核。",
+          "source": "https://www.mocagh.org/broderbund/centauri-manual.pdf",
+          "interactionModes": [
+            "菜单指令",
+            "战斗指令",
+            "战术策略"
+          ],
+          "interactionNote": "手册明确按键／鼠标选择人物、设备和网格战斗行动；五字母异能编码、人物命名与保存名不作自然语言行动解析器。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.mocagh.org/broderbund/centauri-manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "broderbund-centauri-c-original",
+              "workId": "broderbund-centauri",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "按C64实发目录记录1990原作；手册含1989版权字样，不能用版权年替代实发年。Apple II首次先后与1989说法仍待原件，不宣称两机种同期。",
+              "source": "https://www.lemon64.com/game/centauri-alliance",
+              "evidenceReleaseIds": [
+                "broderbund-centauri-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "broderbund-centauri-v-original",
+              "workId": "broderbund-centauri",
+              "year": 1990,
+              "platform": "Commodore 64",
+              "publisher": "Brøderbund",
+              "publisherCompanies": [
+                "Brøderbund"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "按C64实发目录记录1990原作；手册含1989版权字样，不能用版权年替代实发年。Apple II首次先后与1989说法仍待原件，不宣称两机种同期。",
+              "source": "https://www.lemon64.com/game/centauri-alliance",
+              "contentVersionId": "broderbund-centauri-c-original",
+              "contentRelation": "original",
+              "contentNote": "首批原作；不追加未经内容对照的普通移植或翻译版。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        }
+      ],
+      "workGroups": [
+        {
+          "id": "broderbund-publications",
+          "title": "Brøderbund历史发行",
+          "description": "既有主库与本轮新增童话／图形叙事；Riven复用共享身份。",
+          "workIds": [
+            "g1060",
+            "g1286",
+            "g1287",
+            "g1337",
+            "g1338",
+            "g1339",
+            "g1341",
+            "g1001"
+          ]
+        },
+        {
+          "id": "red-orb-original",
+          "title": "Red Orb原版厂牌",
+          "description": "1998时空旅人计划3的原版厂牌，和原作Presto创作分别判断。",
+          "workIds": [
+            "g1340"
+          ]
+        },
+        {
+          "id": "red-orb-successor-edition",
+          "title": "后继厂牌：限定地区版次",
+          "description": "Ring为1998 Cryo原作，本专题仅关联1999 Mindscape／Red Orb北美版，不倒署旧Brøderbund。",
+          "workIds": [
+            "g1342"
+          ]
+        }
+      ]
     },
     {
       "id": "lucasarts",
