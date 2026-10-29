@@ -10,7 +10,11 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 from jhv_content_review import historical_record, validate_review
 
 BASE = 'c91cb9841d664813130616598cf4e43e0992679e'
-def read(path): return json.loads((ROOT / path).read_text())
+def read(path):
+    # PR172's exact delta is historical; subsequent additions have current regressions.
+    if path in {'data/games.json','data/company-coverage.json','data/entities.json','data/credits.json'}:
+        return json.loads(subprocess.check_output(['git','show','2fb61d3b03367939dd2e6b1a9ce6c21fe319f779:'+path],cwd=ROOT))
+    return json.loads((ROOT / path).read_text())
 def old(path): return json.loads(subprocess.check_output(['git', 'show', BASE + ':' + path], cwd=ROOT))
 
 

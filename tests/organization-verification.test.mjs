@@ -82,7 +82,7 @@ test('round 28 results map only the reviewed mobile channels, QL edition, and Sa
     ['identity-36','release','g209-v3','serviceProvider'],
     ['duty-558','edition','g089-ql-classic-adventures-1985','publisher']]);
   assert.ok(scoped.every(c=>c.status==='sourceReviewed'&&c.source&&c.reviewRecord));
-  assert.equal(credits.scopedEditions.length,1);
+  assert.deepEqual(credits.scopedEditions.find(e=>e.id===closure.scopedEdition.id),closure.scopedEdition);
   assert.equal(games.platformReleases.some(r=>r.id==='g089-ql-classic-adventures-1985'),false);
   assert.equal(scoped.some(c=>['g089-v1','g089-v2','g089-v3','g089-v4'].includes(c.targetId)),false);
   const ascii=credits.dossierMemberships.find(m=>m.dossierId==='ascii'&&m.workId==='ascii-anearth');

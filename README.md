@@ -1,5 +1,7 @@
 # 叙事游戏年鉴
 
+Ultra Games按恢复的26项标题逐项补核：新增《Mission: Impossible》1部主库及7部跨类型关联，复用4个旧身份；Metal Gear只在旧作中补FC新增内容。共新增8部作品／9个内容／9条首次发行，另六项北美发行职责作为限定版次保存，不以普通移植扩数。主库当前1329部／1547内容／2545发行，Ultra正文11张卡。[专题](ultra_games.html)与[准入、去重及下次继续位置](data/ultra-completion-20261029.md)。
+
 Japan Home Video已复核恢复的九项清单，全部复用原身份；补录《卒業FINAL》《卒業II SPECIAL》两项主库影像增量和《Star Cruiser II》CD版一项关联内容，并将2004两作复刻分别回链原作。新增独立作品0部、内容3项、平台发行0条；主库当前1328部／1546项内容／2544条发行。[专题](jhv.html)与[逐项记录、证据及待核项](data/jhv-completion-20261029.md)。
 
 Chunsoft专题已按项目清单候选扩充：新增16部剧情RPG／跨类型档案、5项具体增补／对应变体，共21个新内容与22条首批发行；另复用JESUS主库身份及8项Enix旧档案。现正文29卡片，配对版与重制不重复建作；完整去向、来源及待核边界见[本轮对照](data/chunsoft-catalogue-completion-20261029.md)及[专题](chunsoft.html)。

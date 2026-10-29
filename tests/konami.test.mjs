@@ -59,8 +59,9 @@ test('new material, platform variants and ordinary ports remain separate',()=>{
  const ps=delta.platformReleases.find(r=>r.platform==='PlayStation 5'),pc=delta.platformReleases.find(r=>r.platform==='Windows'),xb=delta.platformReleases.find(r=>r.platform==='Xbox Series X|S');
  assert.equal(ps.contentVersionId,pc.contentVersionId);assert.notEqual(ps.contentVersionId,xb.contentVersionId);
  for(const c of delta.contentVersions.filter(c=>c.basis==='added')){assert.equal(c.comparedTo,'konami-mgs3-c-original');assert.ok(c.addedContent.length);}
- assert.equal(co.relatedGames.reduce((n,w)=>n+w.contentVersions.length,0),89);
- assert.equal(co.relatedGames.reduce((n,w)=>n+w.platformReleases.length,0),129);
+ // Preserve this batch's historical totals; Ultra's later FC increment has its own regression.
+ assert.equal(co.relatedGames.flatMap(w=>w.contentVersions).filter(c=>c.id!=='konami-mg-c-famicom').length,89);
+ assert.equal(co.relatedGames.flatMap(w=>w.platformReleases).filter(r=>r.id!=='konami-mg-v-famicom').length,129);
 });
 
 test('all Konami identities render once and complete source rows remain reviewable',()=>{
