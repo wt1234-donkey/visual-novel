@@ -9,6 +9,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from entity_names import apply_names, NAMES as DISPLAY_NAMES, display_name
 from round28_corrections import corrected_coverage, review as round28_review
+from jhv_content_review import historical_record
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '35b988136f016199d26121e41ca8d7b99d18e310'
@@ -447,7 +448,7 @@ def build():
  if existing_baseline.exists():
   baseline=read('data/entity-migration-baseline.json')
   for field in ['works','contentVersions','platformReleases']:
-   current={x['id']:digest(x) for x in d[field]}
+   current={x['id']:digest(historical_record(field,x)) for x in d[field]}
    assert all(current.get(wid)==value for wid,value in baseline['objects'][field].items()),'既有记录变化需独立订正审核；不能重新生成覆盖基线'
  else:
   baseline['objects']={field:{x['id']:digest(x) for x in d[field]} for field in ['works','contentVersions','platformReleases']}

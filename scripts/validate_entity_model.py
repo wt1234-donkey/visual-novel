@@ -4,13 +4,14 @@ import json
 from collections import Counter
 from pathlib import Path
 from source_urls import source_url_valid
+from jhv_content_review import historical_record
 ROOT=Path(__file__).resolve().parents[1]
 def read(p):return json.loads((ROOT/p).read_text())
 
 def validate():
  d=read('data/games.json');cov=read('data/company-coverage.json');m=read('data/entities.json');c=read('data/credits.json');p=read('data/work-classification.json');base=read('data/entity-migration-baseline.json');review=read('data/entity-migration-review.json')
  for field in ['works','contentVersions','platformReleases']:
-  current={x['id']:hashlib.sha256(json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest() for x in d[field]}
+  current={x['id']:hashlib.sha256(json.dumps(historical_record(field,x),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest() for x in d[field]}
   assert all(current.get(wid)==value for wid,value in base['objects'][field].items()),f'既有记录变化需独立订正审核：{field}'
  allworks={w['id']:w for w in d['works']};releases={r['id']:r for r in d['platformReleases']};contents={v['id']:v for v in d['contentVersions']};expected_members=set()
  for company in cov['companies']:

@@ -33510,7 +33510,7 @@
       "checkedAt": "2026-10-29",
       "status": "既有专题完善：五部主库、四部关联，补充制作分工与组织沿革；日期异文和玩法待核继续保留",
       "scope": "Japan Home Video实际发行的历史游戏。保留既有五部主库与四部跨类型记录；HEADROOM、TENKY等制作方与JHV发行方分别登记，不按视频版权或同IP自动扩充。",
-      "versionScope": "按当前三层模型展示作品、内容版本与历史平台发行；保留既有25条主库发行和8条关联发行。普通移植、复刻与合售不另计新作，本轮不追加纯平台发行。",
+      "versionScope": "按当前三层模型展示作品、内容版本与历史平台发行；保留既有25条主库发行和8条关联发行。普通移植、复刻与合售不另计新作，本轮不追加纯平台发行。 2026-10-29独立审核只调整六条既有发行的内容关联，保留发行字段和两份迁移基线；新增内容三项，新增发行零条。",
       "publisherNote": "Japan Home Video（ジャパンホームビデオ，JHV）为影像企划、制作与发行公司，现行官网记成立于1984年5月26日，旧官网仅记1984年5月。游戏目录按实际发行署名整理；HEADROOM、TENKY等制作方不属于已核的JHV子公司。官网列E-Station为关联公司，但未说明持股方向及起止时期。",
       "workIds": [
         "g830",
@@ -33665,9 +33665,9 @@
               "voice": "未核实",
               "differences": "PC-9821／FMT兼用CD；CD-DA音乐与部分256色重绘。实物目录记1994/08/26，MAME另记1994/04，月日异文未定。",
               "source": "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "jhv-star2-c-cd",
+              "contentRelation": "added",
+              "contentNote": "2026-10-29独立复核：部分CG重绘及CD-DA音乐构成增量；两个平台使用同一兼用光盘，共享一个内容ID。仅核共同年份1994，保留月日异文。",
               "releaseRole": "legacy"
             },
             {
@@ -33683,9 +33683,9 @@
               "voice": "未核实",
               "differences": "与PC-9821使用同一兼用光盘；为FMT对应平台另列记录，非独立续作。资料月份冲突，统一只取1994年。",
               "source": "https://github.com/mamedev/mame/blob/master/hash/fmtowns_cd.xml",
-              "contentVersionId": null,
-              "contentRelation": "unverified",
-              "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+              "contentVersionId": "jhv-star2-c-cd",
+              "contentRelation": "added",
+              "contentNote": "2026-10-29独立复核：部分CG重绘及CD-DA音乐构成增量；两个平台使用同一兼用光盘，共享一个内容ID。仅核共同年份1994，保留月日异文。",
               "releaseRole": "legacy"
             }
           ],
@@ -33702,6 +33702,26 @@
                 "jhv-star2-v1"
               ],
               "addedContent": []
+            },
+            {
+              "id": "jhv-star2-c-cd",
+              "workId": "jhv-star2",
+              "label": "for CD-ROM：重绘图像与CD-DA音乐",
+              "firstYear": 1994,
+              "basis": "added",
+              "evidence": "实物收藏目录说明CD版相较Arsys软盘原版，将部分CG重绘为256色并改用CD-DA背景音乐。PC-9821／FM TOWNS共用一张兼用光盘，同一内容只计一次；1994年内月日冲突未解决。",
+              "source": "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
+              "evidenceReleaseIds": [
+                "jhv-star2-v2",
+                "jhv-star2-v3"
+              ],
+              "addedContent": [
+                {
+                  "description": "实物收藏目录说明CD版相较Arsys软盘原版，将部分CG重绘为256色并改用CD-DA背景音乐。PC-9821／FM TOWNS共用一张兼用光盘，同一内容只计一次；1994年内月日冲突未解决。",
+                  "source": "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm"
+                }
+              ],
+              "comparedTo": "jhv-star2-c-original"
             }
           ],
           "interactionModes": [
@@ -33880,10 +33900,10 @@
       "relatedIntro": "这些游戏有明确JHV发行记录，核心玩法属于战略、动作冒险、RPG或格斗；保留类型说明，放在四类主库之外。Arsys与SNK原作的授权移植保留原发行年与署名。",
       "catalogueEntryCount": 9,
       "source": "https://www.jhv.jp/",
-      "auditTitle": "发行、制作分工与组织沿革核对（2026-10-27）",
-      "auditSourceLabel": "JHV官方站点（公司概要见核对条目）",
+      "auditTitle": "Japan Home Video清单对照与内容补核",
+      "auditSourceLabel": "2026-10-29逐项对照与内容补核",
       "auditLabel": "已核实九部相关游戏，另列合集、日期异文与待补记录。",
-      "auditNote": "沿用既有五部主库、四部关联的作品身份，本轮补入主库作品说明、三条限定制作职责及组织节点。未找到足以新增独立叙事作品的确证，数量不扩充。Sensual Angels、URM年代、若干移植内容与准确发行日期仍待核。 2026-10-29复核仍无新增准入确证，五部主库及四部关联复用，详见data/manufacturer-update-20261029.md。",
+      "auditNote": "九部已知清单作品均已有身份，本轮复用五部主库与四部关联，不重复建作。补录主库两项3DO影像增量、关联一项CD重绘／音乐内容，补核两条2004复刻与原作同内容关系；详见data/jhv-completion-20261029.md。",
       "creativeProfile": {
         "thesis": "JHV目录呈现的是发行选择：角色养成、调查逃生与光盘SF叙事并存，再扩展到战略和授权格斗。它们由不同开发主体制作；以下风格归纳来自具体作品，不把发行商写成所有作品的统一开发团队。",
         "phases": [
@@ -34129,6 +34149,22 @@
             "g830",
             "g831"
           ],
+          "relatedIds": []
+        },
+        {
+          "title": "内容版本补核（2026-10-29）",
+          "status": "内容补核",
+          "reason": "主库g830-c-final、g831-c-special及关联jhv-star2-c-cd新增；六条旧发行复用，两个CD平台共用内容，复刻合集回链原作。",
+          "source": "https://retroblues.sakura.ne.jp/regeokiba/jhv/jhv.htm",
+          "workIds": [],
+          "relatedIds": []
+        },
+        {
+          "title": "餓狼伝説SPECIAL（FM TOWNS候选）",
+          "status": "玩法参考／不扩正文",
+          "reason": "原清单外补充线索。二手资料称1996年JHV移植；纯竞技格斗不按旧侍魂历史例外扩大正文，保留参考，JHV具体版本署名仍宜以原包装核实。",
+          "source": "https://www.retroplace.com/en/games/45926--fatal-fury-special",
+          "workIds": [],
           "relatedIds": []
         }
       ],

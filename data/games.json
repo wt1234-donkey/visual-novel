@@ -72323,9 +72323,9 @@
       "voice": "有（部分）",
       "differences": "1994/12/09；基于电脑／PC Engine版调整校园活动，增强版不另建作品。",
       "source": "https://ja.wikipedia.org/wiki/卒業_〜Graduation〜",
-      "contentVersionId": null,
-      "contentRelation": "unverified",
-      "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+      "contentVersionId": "g830-c-final",
+      "contentRelation": "added",
+      "contentNote": "2026-10-29独立复核：3DO新增片头动画，关联g830-c-final；沿用1994/12/09原发行及SharRock署名，不新增发行。",
       "releaseRole": "legacy"
     },
     {
@@ -72377,9 +72377,9 @@
       "voice": "有（部分）",
       "differences": "2004/07/23；一、二代同盘，仿真运行PC-98原版。此条对应首作，角色资料书不另算游戏。",
       "source": "https://www.suruga-ya.jp/product/detail/145011428",
-      "contentVersionId": null,
-      "contentRelation": "unverified",
-      "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+      "contentVersionId": "g830-c-original",
+      "contentRelation": "same",
+      "contentNote": "2026-10-29核对IRI-CT当事公告：PC-98原作原样再现，关联本作原作内容；同盘合集与附属设定集不产生新增游戏内容。",
       "releaseRole": "legacy"
     },
     {
@@ -72485,9 +72485,9 @@
       "voice": "有（部分）",
       "differences": "1995/11/22；SPECIAL版归入二代，发行署名SharRock／北部通信工業。",
       "source": "https://ja.wikipedia.org/wiki/卒業II_〜Neo_Generation〜",
-      "contentVersionId": null,
-      "contentRelation": "unverified",
-      "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+      "contentVersionId": "g831-c-special",
+      "contentRelation": "added",
+      "contentNote": "2026-10-29独立复核：3DO SPECIAL新增原创片头及结局图像，关联g831-c-special；沿用1995/11/22原发行，不将JHV原作关系倒填本版发行。",
       "releaseRole": "legacy"
     },
     {
@@ -72539,9 +72539,9 @@
       "voice": "有（部分）",
       "differences": "2004/07/23；同盘运行二代PC-98原版。此条对应二代，合集不新增第三部作品，JHV版权标记不是此版发行署名。",
       "source": "https://www.suruga-ya.jp/product/detail/145011428",
-      "contentVersionId": null,
-      "contentRelation": "unverified",
-      "contentNote": "旧资料未完成逐版内容对照；保留发行证据，不推定新增内容或与原版完全相同。",
+      "contentVersionId": "g831-c-original",
+      "contentRelation": "same",
+      "contentNote": "2026-10-29核对IRI-CT当事公告：PC-98原作原样再现，关联本作原作内容；同盘合集与附属设定集不产生新增游戏内容。",
       "releaseRole": "legacy"
     },
     {
@@ -107954,6 +107954,44 @@
         "g1331-v1"
       ],
       "addedContent": []
+    },
+    {
+      "id": "g830-c-final",
+      "workId": "g830",
+      "label": "卒業FINAL：新增片头动画",
+      "firstYear": 1994,
+      "basis": "added",
+      "evidence": "3DO实机评测展示独有全动画片头；相较PC Engine先行内容，片头为本版新增影像。清华祭歌曲并非全部新录，不以画面分辨率或界面调整计内容；所谓毕业旅行证据有争议，不作为依据。",
+      "source": "https://lunchbox360.livedoor.biz/archives/10550095.html",
+      "evidenceReleaseIds": [
+        "g830-v6"
+      ],
+      "addedContent": [
+        {
+          "description": "3DO实机评测展示独有全动画片头；相较PC Engine先行内容，片头为本版新增影像。清华祭歌曲并非全部新录，不以画面分辨率或界面调整计内容；所谓毕业旅行证据有争议，不作为依据。",
+          "source": "https://lunchbox360.livedoor.biz/archives/10550095.html"
+        }
+      ],
+      "comparedTo": "g830-c-3"
+    },
+    {
+      "id": "g831-c-special",
+      "workId": "g831",
+      "label": "卒業II SPECIAL：片头与结局图像",
+      "firstYear": 1995,
+      "basis": "added",
+      "evidence": "3DO版资料明确新增原创片头动画和其他机种没有的结局图像；按同一二代作品的增补内容登记。未取得完整新增事件表，不编写路线或逐事件数量。",
+      "source": "https://www.gavas.jp/products/detail.php?product_id=3599",
+      "evidenceReleaseIds": [
+        "g831-v6"
+      ],
+      "addedContent": [
+        {
+          "description": "3DO版资料明确新增原创片头动画和其他机种没有的结局图像；按同一二代作品的增补内容登记。未取得完整新增事件表，不编写路线或逐事件数量。",
+          "source": "https://www.gavas.jp/products/detail.php?product_id=3599"
+        }
+      ],
+      "comparedTo": "g831-c-original"
     }
   ]
 }
