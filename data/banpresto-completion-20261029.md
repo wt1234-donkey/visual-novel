@@ -103,3 +103,11 @@
 - 新增标题／原名／别名经过NFKC、大小写及符号规范化，与此前活跃库无精确冲突；九部恢复对象与原档逐对象相等。
 - 最终本轮6项专项回归、三个生成器--check及git diff --check再次通过。
 - 最终分支提交、PR、main合并SHA、Pages运行及公开页面校验结果以本轮PR正文的发布回执为准；本文件在发布前写入，不预填成功。
+
+## 分支与PR回执（合并前）
+
+- PR：[wt1234-donkey/visual-novel #174](https://github.com/wt1234-donkey/visual-novel/pull/174)。
+- 远程数据提交：a74a89052be0ce217ae3c1b24268397a2114ce3c。
+- 数据树：fe0c746425347ffb35a57578795feccd6c0bae5c，与本地已验证树完全相同；34个blob哈希逐一核对。
+- 分支：work/banpresto-adv-rpg-20261029。
+- 合并与Pages部署在本回执写入时待执行；最终main合并SHA、Pages工作流链接、各阶段状态及公开页面核对结果，记录在上方PR正文的“发布回执”中。
