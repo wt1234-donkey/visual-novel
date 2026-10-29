@@ -299,6 +299,19 @@ def build():
  credit('entity-sinclair','edition',edition['id'],'publisher',edition['source'],
         raw=edition['publisher'],status='sourceReviewed',work_id='g089',note=edition['note'])
  credits[-1].update(reviewId='duty-558',reviewRecord=closure['audit'])
+ # Regional publication evidence does not create ordinary port releases or work copies.
+ ultra_editions=read('data/ultra-scoped-editions-20261029.json')
+ scoped_editions=[edition]
+ assert len(ultra_editions['editions'])==len({e['id'] for e in ultra_editions['editions']})==6
+ for reviewed in ultra_editions['editions']:
+  assert reviewed['workId'] in allworks and reviewed['publisher']=='Ultra Games'
+  assert reviewed['id'] not in {r['id'] for r in allreleases}
+  assert reviewed['contentVersionId'] is None and reviewed['contentRelation']=='unverified'
+  assert reviewed['platform'] in {'NES（北美）','Game Boy（北美）'}
+  scoped_editions.append(reviewed)
+  credit('entity-name-c87c2b9662fc','edition',reviewed['id'],'publisher',reviewed['source'],
+         raw=reviewed['publisher'],status='sourceReviewed',work_id=reviewed['workId'],note=reviewed['note'])
+  credits[-1].update(reviewId='ULTRA-20261029-'+reviewed['workId'],reviewRecord=ultra_editions['audit'])
  for eid,wid,source in [
   ('entity-lionhead','g1300','https://news.microsoft.com/source/2008/07/14/xbox-360-unveils-gameplay-for-every-passion/'),
   ('entity-obsidian','g1301','https://www.xbox.com/en-US/games/avowed/')]:
@@ -383,6 +396,11 @@ def build():
  for reviewed in read('data/chunsoft-scoped-credits-20261029.json')['credits']:
   assert reviewed['workId'] in allworks and locations[reviewed['workId']]=='related'
   credit('entity-name-21365baf366d','work',reviewed['workId'],reviewed['role'],reviewed['source'],status='sourceReviewed',note=reviewed['note'])
+ # New Ultra memberships cite each game's evidence, not the dossier's Nightshade source.
+ for row in read('data/ultra-source-review-20261029.json')['rows']:
+  if row['decision'] not in {'addMain','addRelated'}:continue
+  assert row['workId'] in allworks and row['source']
+  reviewed_memberships[('ultra_games',row['workId'])]={'source':row['source']}
  # Dossier memberships are separate from production assertions. Every existing member remains present.
  bywork=defaultdict(list)
  for x in credits:bywork[x['workId']].append(x)
@@ -454,7 +472,7 @@ def build():
   baseline['objects']={field:{x['id']:digest(x) for x in d[field]} for field in ['works','contentVersions','platformReleases']}
   baseline['originalDossiers']={cid:{'workIds':c['workIds'],'relatedIds':[w['id'] for w in c.get('relatedGames',[])],'bibliographyIds':[w['id'] for w in c.get('dossierOnlyWorks',[])]} for cid,c in companies.items()}
 
- return {'data/entities.json':model,'data/credits.json':{'schemaVersion':1,'updated':DATE,'credits':credits,'dossierMemberships':memberships,'scopedEditions':[edition]},'data/work-classification.json':{'schemaVersion':1,'updated':DATE,'placements':placements,'reviewQueue':reviews,'policy':'保留既有位置；未重新核定叙事主次，不自动转入主库。'},'data/entity-migration-review.json':{'updated':DATE,'nameMappings':mapping,'pendingIdentities':names_review,'pendingMembershipCount':sum(x['status']=='pendingRole' for x in memberships),'identityConflicts':conflicts,'aliasPolicy':'旧taxonomy别名仅作兼容归档；新实体索引保留子品牌，所有实体关系单独记录。'},'data/entity-migration-baseline.json':baseline}
+ return {'data/entities.json':model,'data/credits.json':{'schemaVersion':1,'updated':DATE,'credits':credits,'dossierMemberships':memberships,'scopedEditions':scoped_editions},'data/work-classification.json':{'schemaVersion':1,'updated':DATE,'placements':placements,'reviewQueue':reviews,'policy':'保留既有位置；未重新核定叙事主次，不自动转入主库。'},'data/entity-migration-review.json':{'updated':DATE,'nameMappings':mapping,'pendingIdentities':names_review,'pendingMembershipCount':sum(x['status']=='pendingRole' for x in memberships),'identityConflicts':conflicts,'aliasPolicy':'旧taxonomy别名仅作兼容归档；新实体索引保留子品牌，所有实体关系单独记录。'},'data/entity-migration-baseline.json':baseline}
 
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()

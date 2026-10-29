@@ -566,6 +566,15 @@
       "source": null
     },
     {
+      "rawName": "Cinemaware",
+      "entityIds": [
+        "entity-name-ba9922f8cdbe"
+      ],
+      "legacyCanonical": null,
+      "status": "mapped",
+      "source": "https://gamefaqs.gamespot.com/amiga/575285-defender-of-the-crown/data"
+    },
+    {
       "rawName": "Clochette",
       "entityIds": [
         "entity-clochette"
@@ -1677,6 +1686,15 @@
       "legacyCanonical": null,
       "status": "mapped",
       "source": "https://github.com/mamedev/mame/blob/master/hash/msx2_flop.xml"
+    },
+    {
+      "rawName": "MicroProse",
+      "entityIds": [
+        "entity-name-da5dc1c82a02"
+      ],
+      "legacyCanonical": null,
+      "status": "mapped",
+      "source": "https://www.c64sets.com/pirates/manual.pdf"
     },
     {
       "rawName": "Microsoft",
@@ -4439,6 +4457,20 @@
       "rawName": "Bandai",
       "status": "pendingIdentity",
       "source": "https://tk-nz.game.coocan.jp/gamedatabase/software/DB_NTC1_FC1991.html",
+      "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
+    },
+    {
+      "entityId": "entity-name-da5dc1c82a02",
+      "rawName": "MicroProse",
+      "status": "pendingIdentity",
+      "source": "https://www.c64sets.com/pirates/manual.pdf",
+      "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
+    },
+    {
+      "entityId": "entity-name-ba9922f8cdbe",
+      "rawName": "Cinemaware",
+      "status": "pendingIdentity",
+      "source": "https://gamefaqs.gamespot.com/amiga/575285-defender-of-the-crown/data",
       "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
     }
   ],

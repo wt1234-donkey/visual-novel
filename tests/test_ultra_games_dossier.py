@@ -25,4 +25,5 @@ class UltraGamesDossierTests(unittest.TestCase):
   for p in ['data/taxonomy.json','data/entity-migration-baseline.json','data/content-migration-baseline.json']:self.assertEqual(read(p),old(p))
   for p in shared_paths(ROOT, BASE, 'efb379a122184182c419382dd5158b35db816bd4', ['organization-context*.json','organization-verification*.json']):self.assertEqual(read(p),old(p))
   page=subprocess.check_output(['git','show','efb379a122184182c419382dd5158b35db816bd4:ultra_games.html'],cwd=ROOT,text=True);self.assertEqual(page.count('<article class="card"'),2);self.assertIn('g1029',page);self.assertIn('g1285',page);self.assertIn('Game Boy',page);self.assertIn('konami.html#konami-mg',page)
-  self.assertIn('data-company="ultra_games" data-first-year="1992" data-kind="brand"',(ROOT/'index.html').read_text())
+  published_index=subprocess.check_output(['git','show','efb379a122184182c419382dd5158b35db816bd4:index.html'],cwd=ROOT,text=True)
+  self.assertIn('data-company="ultra_games" data-first-year="1992" data-kind="brand"',published_index)

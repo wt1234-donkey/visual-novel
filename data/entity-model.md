@@ -57,6 +57,8 @@
 
 ## 更新与校验
 
+2026-10-29 Ultra补录沿用独立`scopedEditions`，由`ultra-scoped-editions-20261029.json`保存六项有手册支持的北美发行名义；生成器只追加具名版次的publisher职责，不产生普通平台发行、原作开发或母公司继承。原作首批保留Konami、MicroProse、Cinemaware等实际署名；未知内容关联不猜配，详见`ultra-completion-20261029.md`。
+
 2026-10-27 集中核查Nitroplus专题原有72项待核职责，逐项出处和版本限制见 `entity-role-nitroplus-audit-20261027.md` 及同名JSON。11部作品的原作制作或限定联合制作有当事方原件，另单列《STEINS;GATE》2010 Windows移植开发；其余61项保留待核。联合制作的机械设计／脚本企划在署名备注限定，不表示完整程序开发。
 
 2026-10-27 A 段合并核查 Adventure International 36 项与 Alicesoft 75 项；逐项见 `entity-role-adventure-alice-audit-20261027.md` 与 JSON。1981 图形冒险说明书逐项区分作者、图形工具和发行，不能外推1978原版；Alicesoft官网明确1989才启用该品牌，2000年代子品牌作品单列其自有制作品牌。仅《HENTAI LABYRINTH》有当事导演署名的 Alicesoft 品牌企划制作协力，六条 Alice Blue／AliceNoir 品牌制作记录不解除母专题待核。110项保留待核，专题职责待核现为589项。

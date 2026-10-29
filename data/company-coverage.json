@@ -46760,6 +46760,25 @@
                 "konami-mg-v-original"
               ],
               "addedContent": []
+            },
+            {
+              "id": "konami-mg-c-famicom",
+              "workId": "konami-mg",
+              "label": "Famicom改编：新增森林与场景重构",
+              "firstYear": 1987,
+              "basis": "added",
+              "comparedTo": "konami-mg-c-original",
+              "evidence": "相较MSX2原作，Famicom改为伞降森林开场并重构游戏区域；具体场景与演出变化构成增量。地区英文改写与续关密码本身不作为新增内容依据。",
+              "source": "https://mgcvt.com/mg_fc/",
+              "evidenceReleaseIds": [
+                "konami-mg-v-famicom"
+              ],
+              "addedContent": [
+                {
+                  "description": "加入原MSX2开场没有的森林潜入场景，改用伞降演出并重构地图；不把纯端口或密码功能计为内容增量。",
+                  "source": "https://mgcvt.com/mg_fc/"
+                }
+              ]
             }
           ],
           "platformReleases": [
@@ -46779,6 +46798,24 @@
               "contentVersionId": "konami-mg-c-original",
               "contentRelation": "original",
               "contentNote": "原作首次内容批次；同内容后发移植与再版不扩列。",
+              "releaseRole": "contentDebut"
+            },
+            {
+              "id": "konami-mg-v-famicom",
+              "workId": "konami-mg",
+              "year": 1987,
+              "platform": "Famicom（日本）",
+              "publisher": "Konami",
+              "publisherCompanies": [
+                "Konami"
+              ],
+              "kind": "Famicom首次新增内容",
+              "voice": "未核实",
+              "differences": "1987/12/22日本FC改编；较MSX2新增森林及变更场景。1988年Ultra北美NES属后发限定版次，不重复登记平台发行。",
+              "source": "https://mgcvt.com/mg_fc/",
+              "contentVersionId": "konami-mg-c-famicom",
+              "contentRelation": "added",
+              "contentNote": "同一作品的有据新增区域与演出；比较原作内容，不另建Metal Gear NES作品。",
               "releaseRole": "contentDebut"
             }
           ]
@@ -112881,25 +112918,27 @@
       "brandActivityFrom": "1988",
       "brandActivitySource": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Computer_Entertainer_7-5.pdf",
       "checkedAt": "2026-10-29",
-      "status": "2部主库复用，新增1部潜入动作叙事关联",
-      "scope": "Ultra Games历史发行品牌的叙事作品。复用1992 NES《夜影》，新增同年NES《星际迷航：25周年》；动作、体育、竞技与策略目录另作范围说明，不因Konami关系自动收录或赋予开发职责。",
-      "versionScope": "本轮新增一部独立作品、一个原作内容和一条首批NES发行；普通地区版、合集、模拟器上架不追加。同名NES／Game Boy／电脑游戏分开判断，不按标题自动合并。",
+      "status": "26项标题逐项对照：新增1部主库、7部跨类型关联，复用既有身份",
+      "scope": "Ultra Games历史发行品牌的叙事、RPG及跨类型任务故事；按原作、增补、限定北美发行分开。完整对照恢复的NES17项与GB9项，不把体育、益智或射击目录全部当叙事。",
+      "versionScope": "本轮新增8部独立作品（1主库、7关联）、8个原作内容与8条原作首批发行；另为既有Metal Gear补1项FC新增内容及1条首批发行。六项北美版发行职责放独立版次索引，不当普通平台发行扩数。",
       "publisherNote": "Ultra Games为发行品牌，沿用已核商标身份。原说明书将ULTRA／ULTRAGAMES商标与Ultra Software Corporation公司署名分开；1988年同期刊物记Ultra Software为Konami全资子公司并成为独立许可商。1988表示已有品牌／发行活动，不冒充法人成立日期；1987／1988设立异文及1992结束／吸收尚待法律原件。",
-      "publisherWorkText": "<p class=\"scope-note\"><strong>2部主库引用：1部既有＋1部新增；均按Ultra历史发行范围关联。</strong>发行品牌不等于原作开发；Beam及Interplay的开发目录说明不自动转成Ultra开发。</p><p class=\"scope-note\">潜入动作既有目录：<a href=\"konami.html#konami-mg\">Metal Gear</a>；不复制旧发行或新增普通北美移植。<a href=\"organizations.html?family=ultra_games&amp;node=entity-name-c87c2b9662fc\">查看组织关系与沿革</a>。</p>",
+      "publisherWorkText": "<p class=\"scope-note\"><strong>3部主库引用：既有夜影、NES星际迷航与本轮新增Mission: Impossible。</strong>7部新增跨类型关联与既有Snake’s Revenge另列。原作并非全部由Ultra首发；具体北美版发行依据以限定版次署名展示。</p><p class=\"scope-note\">Metal Gear复用<a href=\"konami.html#konami-mg\">Konami旧身份</a>及其FC增补，不复制作品。<a href=\"data/ultra-completion-20261029.md\">本轮逐项记录</a>；<a href=\"organizations.html?family=ultra_games&amp;node=entity-name-c87c2b9662fc\">组织与沿革</a>。</p>",
       "workIds": [
         "g1029",
-        "g1285"
+        "g1285",
+        "g1332"
       ],
       "publisherWorkIds": [
         "g1029",
-        "g1285"
+        "g1285",
+        "g1332"
       ],
-      "catalogueEntryCount": 2,
+      "catalogueEntryCount": 11,
       "source": "https://www.retrogames.cz/manualy/NES/Nightshade_-_NES_-_Manual.pdf",
-      "auditTitle": "叙事准入、同名异作与历史发行品牌",
+      "auditTitle": "Ultra 26项清单、准入与内容首批核对",
       "auditSourceLabel": "Nightshade原说明书／商标原件",
-      "auditNote": "完成本轮两部叙事作品及目录范围登记，不宣称穷尽Ultra全发行史。同期刊物只取得索引正文，扫描大文件直读失败；公司设立、精确直接持股与退出法律过程仍待原件。 本轮原手册补核与类型边界见data/manufacturer-update-20261029.md。",
-      "description": "Ultra Games发行品牌专题：夜影、NES星际迷航25周年、同名异作边界与Konami历史关系。",
+      "auditNote": "本轮新增8部作品，复用Nightshade、NES Star Trek、Snake’s Revenge及Konami Metal Gear。正文11张卡，另链接Metal Gear，不重复复制。六项地区职责不推开发，TMNT II首次新增关卡的地区批次仍待核；详见data/ultra-completion-20261029.md。",
+      "description": "Ultra发行专题：谍报调查、同名星际迷航异作、神龟三作、开放航海与骑士故事；体育和普通移植边界分别列出。",
       "sectionTitle": "菜单调查、道具谜题与实时动作",
       "entries": [
         {
@@ -112913,7 +112952,7 @@
         },
         {
           "title": "Star Trek: 25th Anniversary（NES，1992）",
-          "status": "新增主库／独立冒险",
+          "status": "复用既有主库（2026-10-27已补）",
           "reason": "原说明书支持任务故事、道具解谜、船员调查与直接移动／战斗；不与同名电脑和Game Boy游戏合并。",
           "source": "https://www.gamingalexandria.com/highquality/NES/Star%20Trek%2025th%20Anniversary/Star%20Trek%2025th%20Anniversary%20-%20Manual%20(Searchable).pdf",
           "workIds": [
@@ -112922,24 +112961,37 @@
         },
         {
           "title": "Metal Gear与Snake’s Revenge",
-          "status": "潜入动作／原目录与候选",
-          "reason": "Metal Gear既有Konami关联档案另页链接；Snake’s Revenge不是Metal Gear 2: Solid Snake的替代名称。未逐作重核叙事主次前不转主库，不新增纯地区移植。",
-          "source": "https://en.wikipedia.org/wiki/Ultra_Games",
-          "workIds": []
+          "status": "既有身份复用／内容补录",
+          "reason": "Metal Gear只链接Konami旧身份，新增1987 FC森林内容；1988北美Ultra署名限定版次。Snake’s Revenge复用原关联，不重复新建。",
+          "source": "https://www.nesfiles.com/NES/Metal_Gear/Metal_Gear.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "ultra-snakes-revenge"
+          ]
         },
         {
           "title": "Mission: Impossible、Teenage Mutant Ninja Turtles及RollerGames",
-          "status": "动作目录／准入另核",
-          "reason": "有故事背景不足以证明调查叙事主导，本轮不因授权IP或ADV标签直接加入四类主库。该结论不是断言不存在故事。",
-          "source": "https://en.wikipedia.org/wiki/Ultra_Games",
-          "workIds": []
+          "status": "已逐项准入",
+          "reason": "Mission以对话线索、通行证及机关补主库；TMNT与RollerGames依原手册进入跨类型区，不按IP或体育名称自动决定。",
+          "source": "https://www.world-of-nintendo.com/manuals/nes/mission_impossible.shtml",
+          "workIds": [
+            "g1332"
+          ],
+          "relatedIds": [
+            "ultra-tmnt-nes",
+            "ultra-rollergames"
+          ]
         },
         {
           "title": "Defender of the Crown、Silent Service、Pirates!",
-          "status": "战略／模拟目录",
-          "reason": "保留为后续范围线索；NES改编与电脑原作关系须逐版核定，不直接复制其他厂商身份、内容或发行。",
-          "source": "https://en.wikipedia.org/wiki/Ultra_Games",
-          "workIds": []
+          "status": "叙事生涯关联／纯模拟另列",
+          "reason": "Pirates与Defender有角色生涯、营救／会话事件，新增关联；Silent Service潜艇战争模拟只列玩法参考。原作首年与Ultra后发NES版分开。",
+          "source": "https://www.c64sets.com/pirates/manual.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "ultra-pirates",
+            "ultra-defender"
+          ]
         },
         {
           "title": "Skate or Die!、Ski or Die、Kings of the Beach、Base Wars及GB体育赛车",
@@ -112951,9 +113003,12 @@
         {
           "title": "Gyruss、Q*bert、Nemesis、Quarth、Operation C",
           "status": "射击／益智／动作",
-          "reason": "玩法参考，不作为独立叙事作品补主库。Game Boy《Star Trek》也需独立判断，不当NES版平台移植。",
+          "reason": "这些项目仍为射击／益智参考；GB Star Trek已经按独立情节与行星调查另建关联，不再留作笼统候选。",
           "source": "https://en.wikipedia.org/wiki/Ultra_Games",
-          "workIds": []
+          "workIds": [],
+          "relatedIds": [
+            "ultra-star-trek-gb"
+          ]
         },
         {
           "title": "Palcom与DOS／C64署名",
@@ -112971,16 +113026,27 @@
         },
         {
           "title": "Snake's Revenge",
-          "status": "新增跨类型叙事关联",
+          "status": "复用既有跨类型叙事关联",
           "reason": "独立NES潜入行动故事，原手册证实玩法及Ultra署名；不与MSX2续作合并。",
           "source": "https://www.retrogames.cz/manualy/NES/Snakes_Revenge_-_NES_-_Manual.pdf",
           "workIds": [],
           "relatedIds": [
             "ultra-snakes-revenge"
           ]
+        },
+        {
+          "title": "TMNT II与Fall of the Foot Clan",
+          "status": "两部身份新增／同源内容与地区分开",
+          "reason": "TMNT II复用其1989街机原作身份，NES新增两关但首批地区日序待核；Fall为独立GB救援篇，不按相同IP合并。",
+          "source": "https://www.nesfiles.com/NES/Teenage_Mutant_Ninja_Turtles_2/Teenage_Mutant_Ninja_Turtles_2.pdf",
+          "workIds": [],
+          "relatedIds": [
+            "ultra-tmnt-arcade",
+            "ultra-tmnt-fall"
+          ]
         }
       ],
-      "auditLabel": "两部叙事作品及目录范围说明；不是全发行目录完成声明。",
+      "auditLabel": "恢复26个标题逐项作出处理；原始表格逐字全文仍未取回。",
       "creativeProfile": {
         "thesis": "Ultra的共同点首先是历史发行品牌；菜单调查、动作和各制作方风格分别说明，不把发行范围等同统一开发团队。",
         "phases": [
@@ -112994,9 +113060,16 @@
           {
             "period": "1992",
             "heading": "调查解谜与实时动作的结合",
-            "analysis": "本专题两作通过城市或行星探索、菜单指令和线索道具推进任务，同时保留战斗。叙事形式来自作品与说明书，不能外推Ultra全部动作、体育或策略目录。",
+            "analysis": "Nightshade与NES Star Trek通过城市或行星调查推进任务，同时保留战斗；本轮补入Mission: Impossible的情报、证件与机关。不将这一判断外推所有授权动作或体育游戏。",
             "basis": "编辑观察",
             "source": "https://www.gamingalexandria.com/highquality/NES/Star%20Trek%2025th%20Anniversary/Star%20Trek%2025th%20Anniversary%20-%20Manual%20(Searchable).pdf"
+          },
+          {
+            "period": "1990—1992",
+            "heading": "营救任务与平台差异",
+            "analysis": "Mission: Impossible凭情报、证件和机关进入混合冒险；GB Star Trek以行星搜索与舰船战斗为关联。RollerGames NES是救援动作，TMNT的家用机原作、街机改编和独立GB篇章分开。",
+            "basis": "编辑观察",
+            "source": "https://www.world-of-nintendo.com/manuals/nes/mission_impossible.shtml"
           }
         ]
       },
@@ -113069,8 +113142,525 @@
               "releaseRole": "contentDebut"
             }
           ]
+        },
+        {
+          "id": "ultra-star-trek-gb",
+          "title": "星际迷航：25周年（Game Boy）",
+          "originalTitle": "Star Trek: 25th Anniversary",
+          "chineseTitle": "星际迷航：25周年（Game Boy）",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "Star Trek Game Boy",
+            "Star Trek 25th Anniversary GB",
+            "星际迷航 GB"
+          ],
+          "firstYear": 1992,
+          "category": "动作冒险",
+          "subcategory": "舰船战斗／行星调查",
+          "genre": "科幻／末日机器与武器回收",
+          "characters": [
+            "James T. Kirk",
+            "U.S.S. Enterprise船员",
+            "Klingon部队"
+          ],
+          "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+          "charactersSource": "https://device.report/m/12c9171869a0ebe113d9ad923d1cac09a2481522cdc752d3b845d54d80fedfb9.pdf",
+          "synopsis": "末日机器威胁星际文明，能够制止它的武器却被夺走并拆散。Kirk率Enterprise前往三颗行星收集十二块组件，再与末日机器决战。",
+          "notes": "与NES g1285及电脑同名作拥有不同情节、地图和操作，独立建档。以射击和行星搜索为核心，列跨类型关联，不当作NES的普通移植。手册1991版权与目录1992发行分开。",
+          "source": "https://device.report/m/12c9171869a0ebe113d9ad923d1cac09a2481522cdc752d3b845d54d80fedfb9.pdf",
+          "interactionModes": [
+            "阅读推进",
+            "直接移动",
+            "瞄准射击",
+            "驾驶操控"
+          ],
+          "interactionNote": "手册纸本页7—11：操纵飞船射击、Kirk地面移动；Start按情境读取传感器、三录仪及队员通讯。消息阅读不推为剧情分支，星历密码只用于续关。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://device.report/m/12c9171869a0ebe113d9ad923d1cac09a2481522cdc752d3b845d54d80fedfb9.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-star-trek-gb-c-original",
+              "workId": "ultra-star-trek-gb",
+              "label": "原作／首批内容",
+              "firstYear": 1992,
+              "basis": "original",
+              "evidence": "北美DMG-RK-USA原作，目录交叉记1992年2月；不采用手册1991版权年当发售年。",
+              "source": "https://gamefaqs.gamespot.com/gameboy/585922-star-trek-25th-anniversary/data",
+              "evidenceReleaseIds": [
+                "ultra-star-trek-gb-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-star-trek-gb-v-original",
+              "workId": "ultra-star-trek-gb",
+              "year": 1992,
+              "platform": "Game Boy（北美）",
+              "publisher": "Ultra Games",
+              "publisherCompanies": [
+                "Ultra Games"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "北美DMG-RK-USA原作，目录交叉记1992年2月；不采用手册1991版权年当发售年。",
+              "source": "https://gamefaqs.gamespot.com/gameboy/585922-star-trek-25th-anniversary/data",
+              "contentVersionId": "ultra-star-trek-gb-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "ultra-tmnt-nes",
+          "title": "忍者神龟／激龟忍者传（1989家用机原作）",
+          "originalTitle": "激亀忍者伝",
+          "chineseTitle": "忍者神龟：激龟忍者传",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "Teenage Mutant Ninja Turtles NES",
+            "Teenage Mutant Hero Turtles NES",
+            "Geki Kame Ninja Den",
+            "激龟忍者传"
+          ],
+          "firstYear": 1989,
+          "category": "动作冒险",
+          "subcategory": "地图探索／角色切换",
+          "genre": "营救／道具与城市探索",
+          "characters": [
+            "Leonardo",
+            "Raphael",
+            "Donatello",
+            "Michaelangelo",
+            "April",
+            "Splinter"
+          ],
+          "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+          "charactersSource": "https://www.nintendo.co.jp/wii/vc/vc_gkn/vc_gkn_01.html",
+          "synopsis": "四名龟忍者穿行纽约地上与地下，营救April、找回被俘同伴并追查Shredder。地图、绳索和战斗车辆帮助他们深入敌人的据点。",
+          "notes": "与1989街机TMNT为两部不同游戏。首批为日本FC；北美Ultra NES以限定版次记录。日文版April家族设定与英文版记者设定不同，保留差异，不将地区称谓拆作。",
+          "source": "https://www.nintendo.co.jp/wii/vc/vc_gkn/vc_gkn_01.html",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "驾驶操控"
+          ],
+          "interactionNote": "任天堂原作介绍区分地上、室内和水中场面；Ultra手册记录地图、队员切换、攻击跳跃、绳索与战斗车辆，不据地图界面贴点击调查。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.nintendo.co.jp/wii/vc/vc_gkn/vc_gkn_01.html",
+            "https://www.world-of-nintendo.com/manuals/nes/teenage_mutan_ninja_turtl.shtml"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-tmnt-nes-c-original",
+              "workId": "ultra-tmnt-nes",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "任天堂原作资料明确1989年5月12日日本FC首发；不是同年街机游戏。",
+              "source": "https://www.nintendo.co.jp/wii/vc/vc_gkn/vc_gkn_01.html",
+              "evidenceReleaseIds": [
+                "ultra-tmnt-nes-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-tmnt-nes-v-original",
+              "workId": "ultra-tmnt-nes",
+              "year": 1989,
+              "platform": "Famicom（日本）",
+              "publisher": "Konami",
+              "publisherCompanies": [
+                "Konami"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "任天堂原作资料明确1989年5月12日日本FC首发；不是同年街机游戏。",
+              "source": "https://www.nintendo.co.jp/wii/vc/vc_gkn/vc_gkn_01.html",
+              "contentVersionId": "ultra-tmnt-nes-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "ultra-tmnt-arcade",
+          "title": "忍者神龟（街机原作／NES II改编）",
+          "originalTitle": "Teenage Mutant Ninja Turtles",
+          "chineseTitle": "忍者神龟：街机营救篇",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "Teenage Mutant Ninja Turtles II: The Arcade Game",
+            "TMNT II NES",
+            "T.M.N.T. FC",
+            "スーパー亀忍者"
+          ],
+          "firstYear": 1989,
+          "category": "剧情动作",
+          "subcategory": "合作清版／任务营救",
+          "genre": "纽约／April与Shredder",
+          "characters": [
+            "Leonardo",
+            "Raphael",
+            "Donatello",
+            "Michaelangelo",
+            "April O’Neil",
+            "Shredder"
+          ],
+          "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+          "charactersSource": "https://www.konami.com/games/us/en/topics/2029/",
+          "synopsis": "四名龟忍者突破Foot Clan的围堵，营救April并追击Shredder；NES改编在此营救框架中加入赏金猎人与新场景。",
+          "notes": "官方合集明确区分本作街机和家用机首作。原清单TMNT II: The Arcade Game归入本作的NES改编；手册确认Tora、Shogun两处新增关卡，但首次地区批次日序未核，不新增内容身份或普通NES发行。",
+          "source": "https://www.konami.com/games/us/en/topics/2029/",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "街机合作清版；NES原手册方向移动、A跳跃、B攻击，不能把选龟界面当作故事分支或纯对战格斗。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://manuals.plus/m/1462f4192233ed801a7d251930a90b4eecea11dc79496726283701c592dc44f0",
+            "https://www.nesfiles.com/NES/Teenage_Mutant_Ninja_Turtles_2/Teenage_Mutant_Ninja_Turtles_2.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-tmnt-arcade-c-original",
+              "workId": "ultra-tmnt-arcade",
+              "label": "原作／首批内容",
+              "firstYear": 1989,
+              "basis": "original",
+              "evidence": "1989街机原版手册署Konami并列四人机型，官方经典目录亦独立列出本作；后续NES II改编不另建同源作品。",
+              "source": "https://manuals.plus/m/1462f4192233ed801a7d251930a90b4eecea11dc79496726283701c592dc44f0",
+              "evidenceReleaseIds": [
+                "ultra-tmnt-arcade-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-tmnt-arcade-v-original",
+              "workId": "ultra-tmnt-arcade",
+              "year": 1989,
+              "platform": "Arcade（北美）",
+              "publisher": "Konami",
+              "publisherCompanies": [
+                "Konami"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1989街机原版手册署Konami并列四人机型，官方经典目录亦独立列出本作；后续NES II改编不另建同源作品。",
+              "source": "https://manuals.plus/m/1462f4192233ed801a7d251930a90b4eecea11dc79496726283701c592dc44f0",
+              "contentVersionId": "ultra-tmnt-arcade-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "ultra-tmnt-fall",
+          "title": "忍者神龟：Foot Clan的覆灭",
+          "originalTitle": "Teenage Mutant Ninja Turtles: Fall of the Foot Clan",
+          "chineseTitle": "忍者神龟：Foot Clan的覆灭",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "TMNT Fall of the Foot Clan",
+            "Teenage Mutant Hero Turtles: Fall of the Foot Clan",
+            "ティーンエイジ ミュータント ニンジャ タートルズ（GB）"
+          ],
+          "firstYear": 1990,
+          "category": "剧情动作",
+          "subcategory": "横版平台／阶段营救",
+          "genre": "April营救／便携机独立篇",
+          "characters": [
+            "Leonardo",
+            "Raphael",
+            "Donatello",
+            "Michaelangelo",
+            "April O’Neil",
+            "Shredder",
+            "Krang"
+          ],
+          "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+          "charactersSource": "https://www.world-of-nintendo.com/manuals/game_boy/teenage_mutant_ninja_t.shtml",
+          "synopsis": "龟忍者在五个独立场景追击Foot Clan，营救April。完整贯穿各阶段才能看到最终救援结局。",
+          "notes": "独立GB篇章，不与NES首作、街机或NES II合并。日版较早的8月3日发行由Konami署名；Ultra北美版独立核发行职责，不凭同年认定与日版同日。",
+          "source": "https://www.world-of-nintendo.com/manuals/game_boy/teenage_mutant_ninja_t.shtml",
+          "interactionModes": [
+            "直接移动",
+            "即时动作",
+            "谜题操作"
+          ],
+          "interactionNote": "手册规定左右移动、跳跃攻击，隐藏奖励含猜数谜题；可选起始关卡，只有从第一关贯通才能看完整结局。这不是可改写故事的分支。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.world-of-nintendo.com/manuals/game_boy/teenage_mutant_ninja_t.shtml"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-tmnt-fall-c-original",
+              "workId": "ultra-tmnt-fall",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "DMG-NTJ-JPN原作发行1990年8月3日；只列有确切日的原始首批，北美发行另核版次，不宣称两地同日。",
+              "source": "https://collection.rcgs.jp/page/PACKAGE0001209",
+              "evidenceReleaseIds": [
+                "ultra-tmnt-fall-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-tmnt-fall-v-original",
+              "workId": "ultra-tmnt-fall",
+              "year": 1990,
+              "platform": "Game Boy（日本）",
+              "publisher": "Konami",
+              "publisherCompanies": [
+                "Konami"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "DMG-NTJ-JPN原作发行1990年8月3日；只列有确切日的原始首批，北美发行另核版次，不宣称两地同日。",
+              "source": "https://collection.rcgs.jp/page/PACKAGE0001209",
+              "contentVersionId": "ultra-tmnt-fall-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "ultra-pirates",
+          "title": "席德·梅尔的海盗！（1987原作）",
+          "originalTitle": "Sid Meier's Pirates!",
+          "chineseTitle": "席德·梅尔的海盗！",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "Pirates! 1987",
+            "Sid Meier Pirates NES",
+            "海盗 1987"
+          ],
+          "firstYear": 1987,
+          "category": "角色扮演",
+          "subcategory": "航海生涯／开放事件",
+          "genre": "加勒比／亲人寻找与个人命运",
+          "characters": [
+            "海盗船长（玩家）",
+            "失散亲人",
+            "殖民地总督"
+          ],
+          "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+          "charactersSource": "https://www.c64sets.com/pirates/manual.pdf",
+          "synopsis": "从初出茅庐的船长开始，玩家在加勒比航行、贸易和决斗，寻找亲人并与总督和贵族交涉。生涯选择影响财富、婚姻、地位及退休结局。",
+          "notes": "原始MicroProse C64作品与Ultra NES改编共用作品身份；不混入2004重制或Pirates! Gold。NES1991后发差异未完成原作逐项比对，只存限定发行职责，不制造新增内容。",
+          "source": "https://www.c64sets.com/pirates/manual.pdf",
+          "interactionModes": [
+            "选项分支",
+            "菜单指令",
+            "驾驶操控",
+            "即时动作",
+            "战术策略",
+            "资源经营"
+          ],
+          "interactionNote": "原作手册以光标选择行动及会话，航海操舵、剑术即时操作、陆战与分赃经营并存；起名、存档不是行动解析器。NES控制差异另见手册。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.c64sets.com/pirates/manual.pdf"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-pirates-c-original",
+              "workId": "ultra-pirates",
+              "label": "原作／首批内容",
+              "firstYear": 1987,
+              "basis": "original",
+              "evidence": "1987年MicroProse C64原作，手册版权及C64程序署名相符；NES为1991年的Ultra后发改编，不倒改原始年份。",
+              "source": "https://www.c64sets.com/pirates/manual.pdf",
+              "evidenceReleaseIds": [
+                "ultra-pirates-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-pirates-v-original",
+              "workId": "ultra-pirates",
+              "year": 1987,
+              "platform": "Commodore 64",
+              "publisher": "MicroProse",
+              "publisherCompanies": [
+                "MicroProse"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1987年MicroProse C64原作，手册版权及C64程序署名相符；NES为1991年的Ultra后发改编，不倒改原始年份。",
+              "source": "https://www.c64sets.com/pirates/manual.pdf",
+              "contentVersionId": "ultra-pirates-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "ultra-defender",
+          "title": "王冠捍卫者",
+          "originalTitle": "Defender of the Crown",
+          "chineseTitle": "王冠捍卫者",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "Defender of the Crown 1986",
+            "王冠守护者"
+          ],
+          "firstYear": 1986,
+          "category": "策略叙事",
+          "subcategory": "骑士生涯／王位争夺",
+          "genre": "中世纪／救援与领土战争",
+          "characters": [
+            "Saxon骑士（玩家）",
+            "Robin Hood",
+            "Norman诸侯"
+          ],
+          "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+          "charactersSource": "https://www.gamesdatabase.org/Media/SYSTEM/Commodore_Amiga/Manual/formated/Defender_of_the_Crown_-_1986_-_Cinemaware.htm",
+          "synopsis": "国王死后，骑士在分裂的英格兰争夺王位。玩家在征战之余求助Robin Hood、突入城堡营救被囚女性，并在荣誉和领地之间作出抉择。",
+          "notes": "以具名骑士、救援事件及角色结局构成的战略叙事关联收录，非纯军舰驾驶模拟。1986 Amiga原作与1989 Ultra NES改编共用身份；不混入后来的Robin Hood: Defender of the Crown。",
+          "source": "https://www.gamesdatabase.org/Media/SYSTEM/Commodore_Amiga/Manual/formated/Defender_of_the_Crown_-_1986_-_Cinemaware.htm",
+          "interactionModes": [
+            "菜单指令",
+            "战术策略",
+            "资源经营",
+            "即时动作",
+            "瞄准射击"
+          ],
+          "interactionNote": "原作手册为菜单行动、军队与领地管理、即时马上比武和剑斗、投石瞄准；NES还有弩守城，但原作未核该模块，不倒填到所有平台。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.gamesdatabase.org/Media/SYSTEM/Commodore_Amiga/Manual/formated/Defender_of_the_Crown_-_1986_-_Cinemaware.htm"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-defender-c-original",
+              "workId": "ultra-defender",
+              "label": "原作／首批内容",
+              "firstYear": 1986,
+              "basis": "original",
+              "evidence": "1986年11月Amiga原作，Cinemaware发行；Ultra手册为1989 NES后发版本，不能当作全作首发。",
+              "source": "https://gamefaqs.gamespot.com/amiga/575285-defender-of-the-crown/data",
+              "evidenceReleaseIds": [
+                "ultra-defender-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-defender-v-original",
+              "workId": "ultra-defender",
+              "year": 1986,
+              "platform": "Amiga",
+              "publisher": "Cinemaware",
+              "publisherCompanies": [
+                "Cinemaware"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "1986年11月Amiga原作，Cinemaware发行；Ultra手册为1989 NES后发版本，不能当作全作首发。",
+              "source": "https://gamefaqs.gamespot.com/amiga/575285-defender-of-the-crown/data",
+              "contentVersionId": "ultra-defender-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+              "releaseRole": "contentDebut"
+            }
+          ]
+        },
+        {
+          "id": "ultra-rollergames",
+          "title": "轮滑救援：RollerGames（NES）",
+          "originalTitle": "RollerGames",
+          "chineseTitle": "轮滑救援：RollerGames",
+          "chineseTitleType": "站内编辑译名",
+          "titleAliases": [
+            "Roller Games NES",
+            "Rollergames NES"
+          ],
+          "firstYear": 1990,
+          "category": "剧情动作",
+          "subcategory": "轮滑动作／清版救援",
+          "genre": "VIPER绑架事件／城市追击",
+          "characters": [
+            "Ice Box",
+            "Rolling Thunder",
+            "California Kid",
+            "Emerson “Skeeter” Bankhead"
+          ],
+          "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+          "charactersSource": "https://www.world-of-nintendo.com/manuals/nes/rollergames.shtml",
+          "synopsis": "VIPER犯罪组织渗透轮滑队并绑架委员长。三支队伍的代表穿越街道、下水道和废料场，在陷阱与格斗中追踪绑架者并救出人质。",
+          "notes": "原NES手册明确为六阶段救援动作，不能按同名节目、轮滑外观或体育目录标签排除。与同名街机体育游戏分开；不声称有日本FC首发。",
+          "source": "https://www.world-of-nintendo.com/manuals/nes/rollergames.shtml",
+          "interactionModes": [
+            "直接移动",
+            "即时动作"
+          ],
+          "interactionNote": "方向移动、A跳跃、B攻击；普通与自动卷轴段落结合，阶段更换代表，不能将选队解释为叙事分支。",
+          "interactionBasis": "来源核对",
+          "interactionSources": [
+            "https://www.world-of-nintendo.com/manuals/nes/rollergames.shtml"
+          ],
+          "contentVersions": [
+            {
+              "id": "ultra-rollergames-c-original",
+              "workId": "ultra-rollergames",
+              "label": "原作／首批内容",
+              "firstYear": 1990,
+              "basis": "original",
+              "evidence": "北美NES-U5-USA，发行目录记1990年9月，Ultra原说明书相符；与同名街机作分开。",
+              "source": "https://nescartdb.com/profile/view/441/rollergames",
+              "evidenceReleaseIds": [
+                "ultra-rollergames-v-original"
+              ],
+              "addedContent": []
+            }
+          ],
+          "platformReleases": [
+            {
+              "id": "ultra-rollergames-v-original",
+              "workId": "ultra-rollergames",
+              "year": 1990,
+              "platform": "NES（北美）",
+              "publisher": "Ultra Games",
+              "publisherCompanies": [
+                "Ultra Games"
+              ],
+              "kind": "原作／首批内容",
+              "voice": "未核实",
+              "differences": "北美NES-U5-USA，发行目录记1990年9月，Ultra原说明书相符；与同名街机作分开。",
+              "source": "https://nescartdb.com/profile/view/441/rollergames",
+              "contentVersionId": "ultra-rollergames-c-original",
+              "contentRelation": "original",
+              "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+              "releaseRole": "contentDebut"
+            }
+          ]
         }
-      ]
+      ],
+      "relatedSectionTitle": "剧情动作、开放生涯与策略叙事关联",
+      "relatedIntro": "这些作品保留动作、探索或策略的核心操作，不改写成纯视觉小说；Ultra后发北美版与更早Konami、MicroProse、Cinemaware原作职责分别展示。",
+      "relatedCountLabel": "跨类型关联作品"
     },
     {
       "id": "broderbund",

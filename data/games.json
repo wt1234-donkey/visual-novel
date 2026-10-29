@@ -40685,6 +40685,47 @@
         "https://www.4gamer.net/games/105/G010573/20100702069/",
         "https://www.4gamer.net/games/105/G010573/20100722025/"
       ]
+    },
+    {
+      "id": "g1332",
+      "title": "碟中谍：Mission: Impossible（NES）",
+      "originalTitle": "Mission: Impossible",
+      "chineseTitle": "碟中谍：不可能的任务（NES）",
+      "chineseTitleType": "站内编辑译名",
+      "titleAliases": [
+        "Mission Impossible NES",
+        "碟中谍 NES",
+        "不可能的任务 NES"
+      ],
+      "firstYear": 1990,
+      "category": "文字冒险",
+      "subcategory": "动作解谜融合",
+      "genre": "谍报营救／情报与机关解谜",
+      "characters": [
+        "Max Harte",
+        "Grant Collier",
+        "Nicholas Black",
+        "Shannon Reed",
+        "Dr. O"
+      ],
+      "charactersNote": "角色取原说明书或所引原作资料；地区设定差异不强行统一。",
+      "charactersSource": "https://www.world-of-nintendo.com/manuals/nes/mission_impossible.shtml",
+      "synopsis": "IMF小队追查博士与特工遭绑架的事件。玩家在潜入途中获取情报和证件，利用队员能力与机关开关打通路线，逐步查明绑架阴谋并营救人质。",
+      "notes": "以原说明书中的俘虏情报、必要证件与机关推进为动作解谜准入依据，不只凭影视IP或故事简介。自动卷轴快艇、滑雪段落仍明确保留；不与1998年同名游戏合并。",
+      "source": "https://www.world-of-nintendo.com/manuals/nes/mission_impossible.shtml",
+      "interactionModes": [
+        "阅读推进",
+        "直接移动",
+        "即时动作",
+        "瞄准射击",
+        "驾驶操控",
+        "谜题操作"
+      ],
+      "interactionNote": "手册说明对话窗口含关键情报、ID卡控制通行、开关解除机关；方向键移动、A/B攻击，暂停切换特工，另有驾驶快艇及滑雪。续关密码不是自由行动词句输入。",
+      "interactionBasis": "来源核对",
+      "interactionSources": [
+        "https://www.world-of-nintendo.com/manuals/nes/mission_impossible.shtml"
+      ]
     }
   ],
   "platformReleases": [
@@ -86533,6 +86574,24 @@
       "contentRelation": "original",
       "contentNote": "第一季原作首批内容。",
       "releaseRole": "contentDebut"
+    },
+    {
+      "id": "g1332-v-original",
+      "workId": "g1332",
+      "year": 1990,
+      "platform": "NES（北美）",
+      "publisher": "Ultra Games",
+      "publisherCompanies": [
+        "Ultra Games"
+      ],
+      "kind": "原作／首批内容",
+      "voice": "未核实",
+      "differences": "1990年北美NES原作；NES-U4-USA原说明书确认Ultra发行名义，发行目录记1990年9月。",
+      "source": "https://www.digitpress.com/library/manuals/nes/Mission%20Impossible.pdf",
+      "contentVersionId": "g1332-c-original",
+      "contentRelation": "original",
+      "contentNote": "原作首次内容；地区署名另以限定版次核对，不据版权年推发行年。",
+      "releaseRole": "contentDebut"
     }
   ],
   "contentVersions": [
@@ -107992,6 +108051,19 @@
         }
       ],
       "comparedTo": "g831-c-original"
+    },
+    {
+      "id": "g1332-c-original",
+      "workId": "g1332",
+      "label": "原作／首批内容",
+      "firstYear": 1990,
+      "basis": "original",
+      "evidence": "1990年北美NES原作；NES-U4-USA原说明书确认Ultra发行名义，发行目录记1990年9月。",
+      "source": "https://www.digitpress.com/library/manuals/nes/Mission%20Impossible.pdf",
+      "evidenceReleaseIds": [
+        "g1332-v-original"
+      ],
+      "addedContent": []
     }
   ]
 }
