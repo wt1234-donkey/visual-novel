@@ -42,7 +42,10 @@ def validate():
   target=maps[cr['targetType']][cr['targetId']]
   assert cr['workId']==(target['id'] if cr['targetType']=='work' else target['workId'])
   if cr['role'] in {'publisher','publishingBrand','portDeveloper'}:assert cr['targetType'] in {'release','edition'}
-  if cr['targetType']=='edition':assert cr['role']=='publisher' and cr['status']=='sourceReviewed'
+  if cr['targetType']=='edition':
+   assert cr['status']=='sourceReviewed'
+   assert cr['role']=='publisher' or (cr['role']=='publishingBrand' and entities[cr['entityId']]['type']=='brand'
+          and cr['rawCredit']==target['publisher'] and cr.get('reviewRecord')), '限定版次厂牌须有独立身份、原署名与审核记录'
   if cr['status']=='existingCredit' and cr['targetType']=='release':assert cr['rawCredit']==target['publisher']
  assert {(x['dossierId'],x['workId']) for x in c['dossierMemberships']}==expected_members
  assert len(c['dossierMemberships'])==len(expected_members)

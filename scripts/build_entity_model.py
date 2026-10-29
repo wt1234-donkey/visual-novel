@@ -104,7 +104,7 @@ ADVENTURE_ALICE_ROLE_REVIEW = 'data/entity-role-adventure-alice-review-20261027.
 TYPE_LABELS = {'company':'公司／组织','brand':'品牌','team':'制作团队','publication':'刊物／出版名义','individual':'个人','unknown':'身份待核','history':'沿革专题'}
 ROLE_LABELS = {'originalProduction':'原作制作','developer':'开发','coDeveloper':'联合制作','productionBrand':'制作品牌','originalPublishingBrand':'原作发行品牌','publisher':'发行署名','publishingBrand':'发行品牌','serviceProvider':'移动版服务提供','portDeveloper':'移植开发','localizer':'本地化','licensor':'授权合作','supervisor':'监修','copyrightCredit':'版权署名','catalogueAssociation':'专题关联（职责待核）','addedAnimation':'新增动画制作'}
 BRANDS = set('key aniplex_exe sprite madosoft yuzusoft innocent_grey minori august toneworks asaproject leaf sagaplanets smee favorite cuffs cube sphere palette silkys silkys_plus alicesoft overdrive cocktailsoft macadamia fairytale cabbage hulotte laplacian applique clochette nanawind harukaze sorahane hummingbird_soft minatosoft ultra_games'.split())
-HISTORIES = {'sierra','sierra_on_line','falcom','te_soft','banpresto','takeru'}
+HISTORIES = {'sierra','sierra_on_line','falcom','te_soft','banpresto','takeru','broderbund'}
 NAMES = {'key':['Key'], 'novect':['NOVECT','Novectacle'], 'aniplex_exe':['ANIPLEX.EXE'], 'sprite':['sprite','sprite games'], 'madosoft':['まどそふと'], 'yuzusoft':['ゆずソフト'], 'innocent_grey':['Innocent Grey'], 'minori':['minori'], 'august':['AUGUST'], 'toneworks':['tone work’s',"tone work's"], 'asaproject':['ASa Project'], 'elf':['ELF','エルフ'], 'leaf':['Leaf'], 'sagaplanets':['SAGA PLANETS'], 'smee':['SMEE'], 'favorite':['FAVORITE'], 'cuffs':['CUFFS'], 'cube':['CUBE'], 'sphere':['Sphere'], 'palette':['ぱれっと'], 'silkys':['Silky’s',"Silky's"], 'silkys_plus':['Silky’s Plus',"Silky's Plus"], 'alicesoft':['Alicesoft','ALICESOFT','アリスソフト'], 'nitroplus':['Nitroplus','NITRO PLUS'], 'overdrive':['OVERDRIVE'], 'jast':['JAST（日本）'], 'cocktailsoft':['Cocktail Soft','カクテルソフト','カクテル・ソフト'], 'macadamia':['Macadamia Soft'], 'fairytale':['フェアリーテール','FairyTale','FAIRYTALE'], 'gaina':['GAINA','BENTEN Film'], 'gainax':['GAINAX'], 'jhv':['Japan Home Video'], 'cabbage':['きゃべつそふと','Cabbage Soft'], 'hulotte':['HULOTTE'], 'laplacian':['Laplacian'], 'applique':['あっぷりけ'], 'clochette':['Clochette'], 'nanawind':['NanaWind'], 'harukaze':['HARUKAZE','HARU❀KAZE'], 'sorahane':['SORAHANE'], 'taito':['TAITO（太东）','TAITO'], 'nec_he':['NEC Home Electronics'], 'tokuma':['徳間書店'], 'sega':['世嘉','SEGA'], 'shopro':['小学館プロダクション'], 'hokubu':['北部通信工業'], 'konami':['Konami'], 'hudson':['Hudson Soft（哈德森）','Hudson Soft'], 'sinclair':['Sinclair Research'], 'cinematronics':['Cinematronics'], 'microsoft':['Microsoft'], 'enix':['Enix（艾尼克斯）','Enix'], 'dataeast':['Data East'], 'ascii':['ASCII'], 'melbournehouse':['Melbourne House'], 'koei':['光荣','KOEI'], 'banpresto':['Banpresto'], 'adventure_international':['Adventure International'], 'infocom':['Infocom'], 'sierra':['On-Line Systems','Sierra On-Line'], 'sierra_on_line':['Sierra On-Line'], 'psk':['PSK'], 'microcabin':['Micro Cabin','マイクロキャビン'], 'legend_uk':['Legend（英国）'], 'legend_entertainment':['Legend Entertainment'], 'te_soft':['T&E SOFT'], 'carry_lab':['Carry Lab','キャリーラボ'], 'champion_soft':['チャンピオンソフト','ChampionSoft','Champion Soft'], 'hummingbird_soft':['HummingBird Soft','ハミングバードソフト'], 'riverhill_soft':['Riverhill Soft','リバーヒルソフト'], 'falcom':['日本ファルコム','Falcom'], 'ibm':['IBM'], 'mosaic':['Mosaic Publishing'], 'square':['Square','スクウェア'], 'toho':['東宝','TOHO'], 'db_soft':['dB-SOFT'], 'comptiq':['Comptiq','コンプティーク'], 'minatosoft':['みなとそふと','Minato Soft'], 'hawkeye':['株式会社ホークアイ','Hawk Eye'], 'addison_wesley':['Addison-Wesley','Addison-Wesley Publishing Company']}
 EXTRAS = [
  ('nightwind','NightWind（ナイトウィンド）','company',['株式会社ナイトウィンド','NightWind'],'https://prtimes.jp/main/html/rd/p/000000001.000159011.html'),
@@ -206,6 +206,14 @@ def build():
                        'https://www.4gamer.net/games/154/G015459/20120517059/','sourceReviewed',
                        '2012年メーカー発表文区分発売元Bandai Namco Games与游戏厂牌。旧公司、景品公司及景品品牌各为不同身份。')
  next(x for x in dossiers if x['id']=='banpresto')['entityIds'].append(game_label)
+ red_orb=add_entity('red-orb','Red Orb Entertainment','brand',['Red Orb','Red Orb Entertainment'],
+                    'https://www.wired.com/1997/06/gaming-dream-job-red-orb-seeks-warmongers/','sourceReviewed',
+                    '1997同期报道明确Brøderbund游戏发行部门与厂牌；收购后仍使用该名，不等于旧Brøderbund法人继续承担全部发行。')
+ next(x for x in dossiers if x['id']=='broderbund')['entityIds'].append(red_orb)
+ relations.append({'from':red_orb,'to':'entity-name-e0c32a99a906','type':'brandFamily',
+                   'period':{'from':1997,'to':None,'precision':'year','openEnd':'notAsserted'},
+                   'status':'sourceReviewed','source':'https://www.wired.com/1997/06/gaming-dream-job-red-orb-seeks-warmongers/',
+                   'note':'只确认1997报道时的发行部门／品牌关系；结束时间未在本关系中断定，不把1999后继版次倒推旧公司职责。'})
  # Publisher brand/company homographs remain distinct. Raw AQUAPLUS alone is a publishing-brand signature.
  aliases[canonical('AQUAPLUS')]='entity-aquaplus_brand'
  aliases[canonical('Nitroplus')]='entity-nitroplus_brand';aliases[canonical('NITRO PLUS')]='entity-nitroplus_brand'
@@ -343,6 +351,16 @@ def build():
   credit('entity-name-c87c2b9662fc','edition',reviewed['id'],'publisher',reviewed['source'],
          raw=reviewed['publisher'],status='sourceReviewed',work_id=reviewed['workId'],note=reviewed['note'])
   credits[-1].update(reviewId='ULTRA-20261029-'+reviewed['workId'],reviewRecord=ultra_editions['audit'])
+ broderbund_editions=read('data/broderbund-scoped-editions-20261029.json')
+ for reviewed in broderbund_editions['editions']:
+  assert reviewed['workId']=='g1342' and reviewed['workId'] in allworks
+  assert reviewed['publisher']=='Red Orb Entertainment' and reviewed['actualPublisher']=='Mindscape, Inc.'
+  assert reviewed['year']==1999 and reviewed['contentVersionId'] is None and reviewed['contentRelation']=='unverified'
+  assert reviewed['id'] not in {r['id'] for r in allreleases} and reviewed['id'] not in {e['id'] for e in scoped_editions}
+  scoped_editions.append(reviewed)
+  credit(red_orb,'edition',reviewed['id'],'publishingBrand',reviewed['source'],
+         raw=reviewed['publisher'],status='sourceReviewed',work_id=reviewed['workId'],note=reviewed['note'])
+  credits[-1].update(reviewId='BRODERBUND-20261029-RING-US',reviewRecord=broderbund_editions['audit'])
  for eid,wid,source in [
   ('entity-lionhead','g1300','https://news.microsoft.com/source/2008/07/14/xbox-360-unveils-gameplay-for-every-passion/'),
   ('entity-obsidian','g1301','https://www.xbox.com/en-US/games/avowed/')]:

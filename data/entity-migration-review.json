@@ -602,6 +602,15 @@
       "source": "https://w.atwiki.jp/ercr/pages/4789.html"
     },
     {
+      "rawName": "Cryo Interactive Entertainment",
+      "entityIds": [
+        "entity-name-5c3e5767f284"
+      ],
+      "legacyCanonical": null,
+      "status": "mapped",
+      "source": "https://www.abandonware-france.org/ltf_abandon/ltf_jeu.php?fic=editions&id=2080"
+    },
+    {
       "rawName": "Cyan Worlds Inc.",
       "entityIds": [],
       "legacyCanonical": "Cyan Worlds",
@@ -2158,6 +2167,15 @@
       "legacyCanonical": null,
       "status": "mapped",
       "source": "https://birdsanctuary.co.uk/the-pawn/5/"
+    },
+    {
+      "rawName": "Red Orb Entertainment",
+      "entityIds": [
+        "entity-red-orb"
+      ],
+      "legacyCanonical": null,
+      "status": "mapped",
+      "source": "https://www.mobygames.com/game/680/the-journeyman-project-3-legacy-of-time/releases/"
     },
     {
       "rawName": "Riverhill Soft",
@@ -4357,6 +4375,13 @@
       "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
     },
     {
+      "entityId": "entity-name-5c3e5767f284",
+      "rawName": "Cryo Interactive Entertainment",
+      "status": "pendingIdentity",
+      "source": "https://www.abandonware-france.org/ltf_abandon/ltf_jeu.php?fic=editions&id=2080",
+      "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
+    },
+    {
       "entityId": "entity-name-16c097f224f4",
       "rawName": "DMM GAMES／AUGUST",
       "status": "pendingIdentity",
@@ -4483,7 +4508,7 @@
       "reason": "未以名称后缀推定法人或品牌；保留原发行署名。"
     }
   ],
-  "pendingMembershipCount": 624,
+  "pendingMembershipCount": 630,
   "identityConflicts": [],
   "aliasPolicy": "旧taxonomy别名仅作兼容归档；新实体索引保留子品牌，所有实体关系单独记录。"
 }

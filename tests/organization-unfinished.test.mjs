@@ -9,7 +9,11 @@ test('unfinished categories exactly preserve explicit unresolved identities and 
   const pending=credits.dossierMemberships.filter(m=>m.status==='pendingRole'||m.group==='unresolved');
   const created=new Set(data.nodes.flatMap(n=>n.groups?.creation||[]).map(r=>r.workId));
   const missing=Object.values(data.works).filter(w=>w.placement==='main'&&!created.has(w.id));
-  assert.deepEqual(data.unfinished.counts,{identity:data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').length,duty:pending.length,creation:missing.length,evidence:480,chronology:51});
+  const datedEdges=data.edges.filter(e=>!['pending','unresolved'].includes(e.status)&&/未核|待核/.test(e.dateLabel));
+  const datedNames=data.nameHistory.filter(n=>/未核|待核/.test(n.dateLabel));
+  const chronology=new Set([...datedEdges.map(e=>'edge:'+e.id),...datedNames.map(n=>'history:'+n.id)]);
+  assert.deepEqual(new Set(rows.filter(r=>r.kind==='chronology').map(r=>r.id)),chronology);
+  assert.deepEqual(data.unfinished.counts,{identity:data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').length,duty:pending.length,creation:missing.length,evidence:480,chronology:chronology.size});
   assert.equal(rows.length,Object.values(data.unfinished.counts).reduce((a,b)=>a+b,0));assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='identity').map(r=>r.entityIds[0])),new Set(data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').map(n=>n.id)));
   const expected=new Set(credits.dossierMemberships.filter(m=>m.status==='pendingRole'||m.group==='unresolved').map(m=>'duty:'+m.dossierId+':'+m.workId));

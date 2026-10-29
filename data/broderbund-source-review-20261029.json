@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-29",
+  "baseCommit": "2c1e3874d369da741c42ef909bfcc5e24a6570c2",
+  "audit": "data/broderbund-completion-20261029.md",
+  "sourceListRecovery": "个人上下文2026-10-28T15:09:42Z答复标题摘要恢复18项，非原表逐字全文；逐作事实另核原手册、馆藏、原作者及发行资料。",
+  "originalTitles": [
+    "The Mask of the Sun",
+    "The Serpent's Star",
+    "Myst",
+    "In the 1st Degree",
+    "The Last Express",
+    "Cyborg",
+    "Mindwheel",
+    "Brimstone: The Dream of Gawain",
+    "Essex",
+    "Breakers",
+    "Darby the Dragon",
+    "Gregory and the Hot Air Balloon",
+    "Riven: The Sequel to Myst",
+    "Koala Lumpur: Journey to the Edge",
+    "The Journeyman Project 3: Legacy of Time",
+    "Rugrats Adventure Game",
+    "Ring: The Legend of the Nibelungen",
+    "John Saul's Blackstone Chronicles"
+  ],
+  "newMainWorkIds": [
+    "g1337",
+    "g1338",
+    "g1339",
+    "g1340",
+    "g1341",
+    "g1342"
+  ],
+  "newRelatedWorkIds": [
+    "broderbund-centauri"
+  ],
+  "newBibliographyWorkIds": [
+    "broderbund-cyborg",
+    "broderbund-mindwheel",
+    "broderbund-brimstone",
+    "broderbund-essex",
+    "broderbund-breakers",
+    "broderbund-uukrul"
+  ],
+  "reusedMainWorkIds": [
+    "g1001"
+  ],
+  "newOriginalRelease": {
+    "id": "g1001-v-broderbund-original",
+    "workId": "g1001",
+    "year": 1997,
+    "platform": "Windows 95／Macintosh（混合光盘）",
+    "publisher": "Brøderbund",
+    "publisherCompanies": [
+      "Brøderbund"
+    ],
+    "kind": "全球原作／首批内容",
+    "voice": "未核实",
+    "differences": "1997-10-31全球电脑原作的五张混合CD，兼容Windows 95与Macintosh；Brøderbund实际发行，复用g1001-c-original。不覆盖12月日本PS的Enix署名，不新建Riven作品或重复原作内容。",
+    "source": "https://www.mobygames.com/game/1262/riven-the-sequel-to-myst/releases/",
+    "contentVersionId": "g1001-c-original",
+    "contentRelation": "original",
+    "contentNote": "补核此前未入库的全球原作首批发行；原作内容身份保持。",
+    "releaseRole": "contentDebut"
+  },
+  "crossDossierReuses": [
+    {
+      "title": "John Saul’s Blackstone Chronicles: An Adventure in Terror",
+      "type": "恐怖点击ADV／患者姓名输入",
+      "relation": "复用Legend既有书目",
+      "note": "复用legend-entertainment-blackstone；原手册Red Orb商标署Mindscape，属于收购后厂牌关联，不复制为无输入主库游戏。",
+      "source": "https://mysterymanor.net/gamemanuals/Blackstone%20Chronicles%20Manual.pdf",
+      "catalogueWorkId": "legend-entertainment-blackstone",
+      "catalogueDossierId": "legend_entertainment"
+    },
+    {
+      "title": "Prince of Persia",
+      "type": "已有剧情动作／跨专题",
+      "relation": "复用Riverhill关联",
+      "note": "仅跳转既有身份，不因Broderbund原版出版另造作品；后续家用差异另核。",
+      "source": "https://www.jordanmechner.com/en/games-movies/prince-of-persia/",
+      "catalogueWorkId": "riverhill-prince",
+      "catalogueDossierId": "riverhill_soft"
+    },
+    {
+      "title": "Ancient Land of Ys",
+      "type": "Ys原作的海外版次／RPG",
+      "relation": "复用Falcom关联",
+      "note": "Kyodai地区发行与Falcom原作身份分开；本轮不录无确证新增内容的普通地区移植。",
+      "source": "https://www.mocagh.org/loadpage.php?getgame=ys",
+      "catalogueWorkId": "falcom-ys1",
+      "catalogueDossierId": "falcom"
+    },
+    {
+      "title": "Murder Club",
+      "type": "杀人俱乐部海外版次／ADV",
+      "relation": "复用主库既有身份",
+      "note": "复用g942，不把Kyodai海外标题当全新游戏；限定出版证据继续核对。",
+      "source": "https://www.mocagh.org/loadpage.php?getcompany=broderbund&npp=25&series=Other+Games&start=0&whatsnew=0",
+      "catalogueWorkId": "g942",
+      "catalogueDossierId": "riverhill_soft"
+    }
+  ],
+  "pending": [
+    {
+      "title": "The Journeyman Project／Turbo!／Buried in Time",
+      "type": "时空点击ADV／重发行关系待核",
+      "relation": "内容与版次待核",
+      "note": "前两作原版Sanctuary Woods与后续Brøderbund出版不能混写；先核Turbo及1997重发行具体差异，不把加速／合售自动计增补。",
+      "source": "https://thejourneymanproject.com/presto/journeyman2/bit_manual.html"
+    },
+    {
+      "title": "Where in Time Is Carmen Sandiego?（1997）",
+      "type": "剧情教育ADV／重制身份待核",
+      "relation": "与1989原作先作内容比较",
+      "note": "1997固定历史人物与道具解谜不同于旧作随机追踪；需先厘清重制与独立故事关系。1999 Great Chase改名不自动新建作品。",
+      "source": "https://www.adventuregamedb.com/g/where_in_time_is_carmen_sandiego_"
+    }
+  ],
+  "dateNotes": [
+    "Mindwheel：暂按1985实发目录，1984版权与少数目录说法待核。",
+    "Centauri：C64目录为1990，1989版权不作实发；Apple II先后待核。"
+  ]
+}
