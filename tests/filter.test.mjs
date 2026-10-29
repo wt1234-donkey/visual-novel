@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
+import {execFileSync} from 'node:child_process';
 import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from '../filter.mjs';
 
 const data=JSON.parse(readFileSync(new URL('../data/games.json',import.meta.url),'utf8'));
@@ -37,9 +38,9 @@ test('Banpresto brand continuation is visible without rewriting the actual publi
 });
 
 test('Banpresto narrative scope preserves RPG evidence in a separate linked archive',()=>{
-  const co=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='banpresto');
+  const co=JSON.parse(execFileSync('git',['show','42d02604a6648be5d512b607d902292c4ac587e4:data/company-coverage.json'],{cwd:new URL('..',import.meta.url),encoding:'utf8',maxBuffer:64*1024*1024})).companies.find(c=>c.id==='banpresto');
   const archive=JSON.parse(readFileSync(new URL('../'+co.historicalArchive.path,import.meta.url),'utf8'));
-  const page=readFileSync(new URL('../banpresto.html',import.meta.url),'utf8');
+  const page=execFileSync('git',['show','42d02604a6648be5d512b607d902292c4ac587e4:banpresto.html'],{cwd:new URL('..',import.meta.url),encoding:'utf8',maxBuffer:64*1024*1024});
   assert.equal(co.relatedGames.length,0);
   assert.ok(page.includes(`href="${co.historicalArchive.path}"`));
   for(const w of archive.relatedGames){

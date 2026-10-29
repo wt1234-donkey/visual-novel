@@ -8,7 +8,11 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='2fb61d3b03367939dd2e6b1a9ce6c21fe319f779'
 ULTRA='entity-name-c87c2b9662fc'
 NEW_RELATED={'ultra-star-trek-gb','ultra-tmnt-nes','ultra-tmnt-arcade','ultra-tmnt-fall','ultra-pirates','ultra-defender','ultra-rollergames'}
-def read(path):return json.loads((ROOT/path).read_text())
+PUBLISHED='42d02604a6648be5d512b607d902292c4ac587e4'
+def read(path):
+ if path in {'data/games.json','data/company-coverage.json','data/credits.json','data/entities.json'}:
+  return json.loads(subprocess.check_output(['git','show',PUBLISHED+':'+path],cwd=ROOT))
+ return json.loads((ROOT/path).read_text())
 def before(path):return json.loads(subprocess.check_output(['git','show',BASE+':'+path],cwd=ROOT))
 def company(data,cid):return next(c for c in data['companies'] if c['id']==cid)
 

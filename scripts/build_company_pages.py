@@ -284,7 +284,12 @@ def build(company):
     if archive := company.get('historicalArchive'):
         path = Path(archive['path'])
         assert path.parts[0] == 'data' and '..' not in path.parts and (ROOT / path).is_file(), '历史存档路径不正确'
-        archived_links = ''.join(f'<li id="{escape(w["id"], quote=True)}">{escape(w["title"])}</li>' for w in archive['works'])
+        active_ids = {w['id'] for w in all_games}
+        archived_links = ''.join(
+            f'<li><a href="#{escape(w["id"], quote=True)}">{escape(w["title"])}</a></li>'
+            if w['id'] in active_ids else
+            f'<li id="{escape(w["id"], quote=True)}">{escape(w["title"])}</li>'
+            for w in archive['works'])
         historical_section = f'<details class="scope-note" id="historical-archive"><summary>{escape(archive["title"])}</summary><p>{escape(archive["note"])}</p><a href="{escape(archive["path"], quote=True)}">查看完整历史记录（JSON）</a><ul>{archived_links}</ul></details>'
     appendix = gameplay_appendix(company)
     appendix_nav = '<a href="#gameplay-catalogue">玩法总表</a>' if appendix else ''

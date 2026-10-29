@@ -1988,6 +1988,22 @@
       "dates": []
     },
     {
+      "id": "entity-banpresto-game-label",
+      "name": "Banpresto Game Label（バンプレストレーベル）",
+      "type": "brand",
+      "aliases": [
+        "Banpresto Game Label（バンプレストレーベル）",
+        "バンプレストレーベル",
+        "Banpresto Game Label"
+      ],
+      "sources": [
+        "https://www.4gamer.net/games/154/G015459/20120517059/"
+      ],
+      "verification": "sourceReviewed",
+      "historyNote": "2012年メーカー発表文区分発売元Bandai Namco Games与游戏厂牌。旧公司、景品公司及景品品牌各为不同身份。",
+      "dates": []
+    },
+    {
       "id": "entity-silkys_wasabi",
       "name": "Silky’s Plus WASABI",
       "type": "brand",
@@ -7437,9 +7453,10 @@
       "name": "Banpresto（バンプレスト）",
       "dossierType": "history",
       "entityIds": [
-        "entity-banpresto"
+        "entity-banpresto",
+        "entity-banpresto-game-label"
       ],
-      "scope": "按本轮用户确认目录收录21部叙事作品：旧万普发行时期16部（含电影少女），万代南梦宫旗下万普品牌延续5部。以阅读、对话选择和调查推进为主；玩法核心RPG、动作、日常养成、麻将及棋盘游戏不计入本目录。此为具名范围完成，不宣称全部历史授权产品无遗漏。",
+      "scope": "按2026-10-29用户授权扩充ADV及RPG。叙事ADV同步主库；剧情RPG及ADV／战斗模拟进入共享跨类型关联。旧万普与后续万普游戏厂牌分开，普通移植、再版、组合包装不重复建作；不宣称完整历史产品穷尽。",
       "sources": [
         "https://www.bandainamco.co.jp/releases/images/3/42276.pdf"
       ],
@@ -8109,7 +8126,8 @@
     "Japan Home Video": "Japan Home Video（ジャパンホームビデオ）",
     "TENKY": "TENKY（テンキー）",
     "Banpresto": "Banpresto（バンプレスト）",
-    "NEC Home Electronics": "NEC Home Electronics（日本電気ホームエレクトロニクス）"
+    "NEC Home Electronics": "NEC Home Electronics（日本電気ホームエレクトロニクス）",
+    "バンプレストレーベル": "Banpresto Game Label（バンプレストレーベル）"
   },
   "policy": "实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。"
 }
