@@ -331,11 +331,14 @@ if __name__ == '__main__':
         else:
             target.write_text(output, encoding='utf-8')
         print(f'{target.name}: {len(company["workIds"]) + len(company.get("relatedGames", [])) + len(company.get("dossierOnlyWorks", []))} 部相关游戏，已同步')
-    index_path = ROOT / 'index.html'
-    index = index_path.read_text(encoding='utf-8')
-    ordered_index = build_dossier_navigation(index)
-    if args.check:
-        assert index == ordered_index, '首页专题链接未按主库最早作品年份分组'
-    else:
-        index_path.write_text(ordered_index, encoding='utf-8')
-    print('index.html: 专题链接按主库最早作品年份分组，已同步')
+    for page_name in ('index.html', 'catalogue.html'):
+        index_path = ROOT / page_name
+        if not index_path.exists():
+            continue
+        index = index_path.read_text(encoding='utf-8')
+        ordered_index = build_dossier_navigation(index)
+        if args.check:
+            assert index == ordered_index, f'{page_name} 专题链接未按主库最早作品年份分组'
+        else:
+            index_path.write_text(ordered_index, encoding='utf-8')
+        print(f'{page_name}: 专题链接按主库最早作品年份分组，已同步')
