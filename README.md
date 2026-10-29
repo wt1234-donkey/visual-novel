@@ -1,5 +1,8 @@
 # 叙事游戏年鉴
 
+Chunsoft专题已按项目清单候选扩充：新增16部剧情RPG／跨类型档案、5项具体增补／对应变体，共21个新内容与22条首批发行；另复用JESUS主库身份及8项Enix旧档案。现正文29卡片，配对版与重制不重复建作；完整去向、来源及待核边界见[本轮对照](data/chunsoft-catalogue-completion-20261029.md)及[专题](chunsoft.html)。
+
+
 > **维护目标：`wt1234-donkey/visual-novel`。** 自 2026-10-15 起，所有修改、新增、合并和 Pages 发布均在此仓库进行；原 `wwangtao833-dev/visual-novel` 保留，不回写。
 
 FairyTale专题已补齐[119项／10组玩法总表](fairytale.html#gameplay-catalogue)。按2026-10-19要求允许文字输入叙事，现有65部主库与27部关联复用；本轮未确认可新增的独立叙事。Lipstick V2和杂集的缺项见[核对记录](data/fairytale-audit.md)。

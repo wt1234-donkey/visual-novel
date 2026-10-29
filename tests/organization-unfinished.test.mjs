@@ -9,7 +9,7 @@ test('unfinished categories exactly preserve explicit unresolved identities and 
   const pending=credits.dossierMemberships.filter(m=>m.status==='pendingRole'||m.group==='unresolved');
   const created=new Set(data.nodes.flatMap(n=>n.groups?.creation||[]).map(r=>r.workId));
   const missing=Object.values(data.works).filter(w=>w.placement==='main'&&!created.has(w.id));
-  assert.deepEqual(data.unfinished.counts,{identity:32,duty:pending.length,creation:missing.length,evidence:480,chronology:51});
+  assert.deepEqual(data.unfinished.counts,{identity:data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').length,duty:pending.length,creation:missing.length,evidence:480,chronology:51});
   assert.equal(rows.length,Object.values(data.unfinished.counts).reduce((a,b)=>a+b,0));assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
   assert.deepEqual(new Set(rows.filter(r=>r.kind==='identity').map(r=>r.entityIds[0])),new Set(data.nodes.filter(n=>!n.previewOnly&&n.verification==='unresolved').map(n=>n.id)));
   const expected=new Set(credits.dossierMemberships.filter(m=>m.status==='pendingRole'||m.group==='unresolved').map(m=>'duty:'+m.dossierId+':'+m.workId));

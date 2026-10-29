@@ -378,6 +378,10 @@ def build():
   broderbund['dates']=[{'kind':'established','value':'1980','precision':'year','source':companies['broderbund']['establishedSource'],'status':'sourceReviewed'}]
  if 'chunsoft' in companies:
   credit('entity-name-21365baf366d','work','g1284','originalProduction','https://awards.cesa.or.jp/2005/prizelist/2004-2005/d.html',status='sourceReviewed',note='CESA获奖资料明确发行、销售、开发均为Chunsoft；仅核本作原作制作，不扩展至其他合作、后继或集团作品。')
+ # Source-scoped Chunsoft catalogue additions; no developer inference from publisher.
+ for reviewed in read('data/chunsoft-scoped-credits-20261029.json')['credits']:
+  assert reviewed['workId'] in allworks and locations[reviewed['workId']]=='related'
+  credit('entity-name-21365baf366d','work',reviewed['workId'],reviewed['role'],reviewed['source'],status='sourceReviewed',note=reviewed['note'])
  # Dossier memberships are separate from production assertions. Every existing member remains present.
  bywork=defaultdict(list)
  for x in credits:bywork[x['workId']].append(x)

@@ -62,13 +62,13 @@ class TokumaCompletionTests(unittest.TestCase):
                 self.assertNotIn('contentVersions', r)
 
     def test_no_rewriting_old_entities_relations_or_company_development(self):
-        old, now = before('data/entities.json'), read('data/entities.json')
+        old, now = before('data/entities.json'), completed('data/entities.json')
         expected = old['entities']
         intermedia = next(e for e in expected if e['id'] == 'entity-name-9832231b6baa')
         intermedia['aliases'].insert(2, 'テクノポリスソフト')
         self.assertEqual(now['entities'], expected)
         self.assertEqual(now['relations'], old['relations'])
-        old, now = before('data/credits.json'), read('data/credits.json')
+        old, now = before('data/credits.json'), completed('data/credits.json')
         baseline = {c['id']: c for c in old['credits']}
         current = {c['id']: c for c in now['credits']}
         self.assertEqual({i: current[i] for i in baseline}, baseline)
