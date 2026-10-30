@@ -62,7 +62,6 @@ for item in intake["items"]:
     note = f"{year}年原作首批内容；具体首发署名与内容版本尚未逐平台终核。"
     work = dict(
         id=wid, title=item["title"], chineseTitle=item.get("chineseTitle", ""),
-        chineseTitleType=("通行译名" if item.get("chineseTitle") else ""),
         originalTitle=item["originalTitle"], titleAliases=alias, firstYear=year,
         category=category, subcategory=types[category],
         genre=("非RPG叙事游戏／" + category + "（独立题材待编）"),
@@ -73,6 +72,8 @@ for item in intake["items"]:
         interactionNote="具体交互操作需逐作品查说明书或实机；不从题材和ADV分类推定互动方式。",
         interactionBasis="既有资料归纳", interactionSources=[source]
     )
+    if item.get("chineseTitle"):
+        work["chineseTitleType"] = "通行译名"
     company = taxonomy["publisherAliases"].get(publisher, publisher)
     rel = dict(id=rid, workId=wid, year=year, platform=item["platform"], publisher=publisher,
                publisherCompanies=[company], kind="原作／首次内容发行", voice="未核实",
