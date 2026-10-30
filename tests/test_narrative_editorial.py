@@ -28,12 +28,15 @@ class NarrativeEditorialTests(unittest.TestCase):
         six4=json.loads((ROOT/'data/narrative-evidence-six-studios-r4-20261031.json').read_text())['entries']
         six4_complete=sum(all(row.get(f) for f in ('position','style','theme','structure')) for row in six4.values())
         six4_partial=len(six4)-six4_complete
+        round5=json.loads((ROOT/'data/narrative-evidence-giga-light-circus-r5-20261031.json').read_text())['entries']
+        round5_complete=sum(all(row.get(f) for f in ('position','style','theme','structure')) for row in round5.values())
+        round5_partial=len(round5)-round5_complete
         self.assertEqual(sum(counts.values()),1339+new)
-        self.assertEqual(counts,{'complete':1318+fully_filled+round2_complete+round3_complete+six4_complete,'partial':20+partial_filled+round2_partial+round3_partial+six4_partial,'missing':1+new-len(patches)-len(round2)-len(round3)-len(six4)})
+        self.assertEqual(counts,{'complete':1318+fully_filled+round2_complete+round3_complete+six4_complete+round5_complete,'partial':20+partial_filled+round2_partial+round3_partial+six4_partial+round5_partial,'missing':1+new-len(patches)-len(round2)-len(round3)-len(six4)-len(round5)})
         baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
         for wid,entry in baseline.items():
             self.assertEqual(self.data['works'][wid],entry)
-        for wid,patch in {**patches,**round2,**round3,**six4}.items():
+        for wid,patch in {**patches,**round2,**round3,**six4,**round5}.items():
             record=self.data['works'][wid]
             self.assertEqual(record['status'],'editorialObservation' if all(record.get(k) for k in ('position','style','theme','structure')) else 'partial')
             for field in ('position','style','theme','structure'):
