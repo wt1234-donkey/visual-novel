@@ -8,6 +8,11 @@ on:
       - data/non-rpg-intake-18-studios-20261030.json
       - scripts/apply_non_rpg_intake_20261030.py
       - .github/workflows/non-rpg-18-studios-intake.yml
+      - tests/test_broderbund_completion_20261029.py
+      - tests/test_chunsoft_completion_20261029.py
+      - tests/test_narrative_editorial.py
+      - tests/test_creator_u1_review.py
+      - tests/test_creator_v1_review.py
 
 permissions:
   contents: write

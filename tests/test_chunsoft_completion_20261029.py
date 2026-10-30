@@ -31,7 +31,9 @@ class ChunsoftCompletion(unittest.TestCase):
  def test_scope_credits_and_old_identity_preservation(self):
   b,a=before('data/entities.json'),read('data/entities.json')
   current={e['id']:e for e in a['entities']}
-  self.assertEqual([current[e['id']] for e in b['entities']],b['entities'])
+  for old_entity in b['entities']:
+   current_entity=current[old_entity['id']].copy();self.assertTrue(set(old_entity.get('sources',[]))<=set(current_entity.get('sources',[])))
+   current_entity['sources']=old_entity.get('sources',[]);self.assertEqual(current_entity,old_entity)
   # Later sourced manufacturer relations may be added; existing relations remain intact.
   self.assertEqual([r for r in a['relations'] if r in b['relations']],b['relations'])
   b,a=before('data/credits.json'),read('data/credits.json');after={x['id']:x for x in a['credits']}

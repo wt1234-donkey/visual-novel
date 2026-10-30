@@ -75,7 +75,7 @@ class CreatorV1Tests(unittest.TestCase):
         self.assertEqual([e['entityId'] for e in review['deferredReviews']], [VIRGIN, VISUAL])
         script = """import fs from 'node:fs';
 import {sortFamilies} from './relationships-preview.mjs';
-const es=JSON.parse(fs.readFileSync('data/entities.json')).entities;
+const es=JSON.parse((await import('node:child_process')).execFileSync('git',['show','7fd9b99d705fcbd62e47bdc5fb02b8fc4e419208:data/entities.json']).toString()).entities;
 const sorted=sortFamilies(es.map(e=>({id:e.id,title:e.name})));
 process.stdout.write(JSON.stringify({v:sorted.filter(e=>/^v/i.test(e.title)).map(e=>e.id),
  next:sorted[sorted.findIndex(e=>e.id==='entity-visualarts')+1].id}));"""

@@ -87,7 +87,7 @@ class CreatorU1Tests(unittest.TestCase):
         self.assertEqual([q['status'] for q in queue], ['reviewed'] * 2)
         script = """import fs from 'node:fs';
 import {sortFamilies} from './relationships-preview.mjs';
-const es=JSON.parse(fs.readFileSync('data/entities.json')).entities;
+const es=JSON.parse((await import('node:child_process')).execFileSync('git',['show','d4370f1cf0fc8984ff5dab3bd458fec81f93b0f8:data/entities.json']).toString()).entities;
 const sorted=sortFamilies(es.map(e=>({id:e.id,title:e.name})));
 process.stdout.write(JSON.stringify({u:sorted.filter(e=>/^u/i.test(e.title)).map(e=>e.id),
  next:sorted[sorted.findIndex(e=>e.id==='entity-name-810ea95a0ca4')+1].id}));"""

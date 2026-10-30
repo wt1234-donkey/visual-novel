@@ -13,7 +13,7 @@ class BroderbundCompletionTests(unittest.TestCase):
   a,b=read('data/games.json'),old('data/games.json')
   for field,n in [('works',6),('contentVersions',6),('platformReleases',7)]:
    bm={x['id']:x for x in b[field]};am={x['id']:x for x in a[field]}
-   self.assertEqual({i:am[i] for i in bm},bm);self.assertEqual(len(am)-len(bm),n)
+   self.assertEqual({i:am[i] for i in bm},bm);self.assertEqual(len(am)-len(bm),n+len(read('data/non-rpg-intake-18-studios-result.json')['added']))
   a,b=read('data/company-coverage.json'),old('data/company-coverage.json')
   self.assertEqual([c for c in a['companies'] if c['id']!='broderbund'],[c for c in b['companies'] if c['id']!='broderbund'])
   for p in ['data/content-migration-baseline.json','data/entity-migration-baseline.json','data/taxonomy.json']:self.assertEqual(read(p),old(p))
@@ -39,7 +39,9 @@ class BroderbundCompletionTests(unittest.TestCase):
   e=read('data/entities.json');es={x['id']:x for x in e['entities']};self.assertEqual(es['entity-red-orb']['type'],'brand')
   oldes={x['id']:x for x in old('data/entities.json')['entities']}
   self.assertTrue(all(r in e['relations'] for r in old('data/entities.json')['relations']))
-  self.assertEqual({i:es[i] for i in oldes},oldes)
+  for i,old_entity in oldes.items():
+   current=es[i].copy();self.assertTrue(set(old_entity.get('sources',[]))<=set(current.get('sources',[])))
+   current['sources']=old_entity.get('sources',[]);self.assertEqual(current,old_entity)
   co=next(c for c in e['dossiers'] if c['id']=='broderbund');self.assertEqual(co['dossierType'],'history');self.assertIn('entity-red-orb',co['entityIds'])
   g=read('data/games.json');self.assertEqual(next(r for r in g['platformReleases'] if r['workId']=='g1340')['publisher'],'Red Orb Entertainment');self.assertEqual(next(r for r in g['platformReleases'] if r['workId']=='g1342')['publisher'],'Cryo Interactive Entertainment')
   cr=read('data/credits.json');ed=next(e for e in cr['scopedEditions'] if e['id']=='broderbund-ring-redorb-us-1999');self.assertEqual(ed['actualPublisher'],'Mindscape, Inc.');self.assertIsNone(ed['contentVersionId']);self.assertNotIn(ed['id'],{r['id'] for r in g['platformReleases']})

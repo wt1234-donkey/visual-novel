@@ -15,8 +15,9 @@ class NarrativeEditorialTests(unittest.TestCase):
 
     def test_frozen_work_review_and_field_sources(self):
         counts=validate(self.data)
-        self.assertEqual(sum(counts.values()),1339)
-        self.assertEqual(counts,{'complete':1318,'partial':20,'missing':1})
+        new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added'])
+        self.assertEqual(sum(counts.values()),1339+new)
+        self.assertEqual(counts,{'complete':1318,'partial':20,'missing':1+new})
 
     def test_existing_record_does_not_imply_four_fields(self):
         record=self.data['works']['g745']
