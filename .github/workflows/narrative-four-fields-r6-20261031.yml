@@ -1,0 +1,54 @@
+name: Complete evidenced narrative gaps of 56 works (round six)
+on:
+  push:
+    branches:
+      - editorial/narrative-56-r6-20261031
+    paths:
+      - data/narrative-evidence-round6-20261031.json
+      - data/narrative-56-pre-r6-audit-20261031.json
+      - scripts/complete_narrative_fields_round6_20261031.py
+      - tests/test_narrative_editorial.py
+      - .github/workflows/narrative-four-fields-r6-20261031.yml
+permissions:
+  contents: write
+concurrency:
+  group: sixth-narrative-review-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  update-audit-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply evidence-scoped editorial amendments
+        run: python3 scripts/complete_narrative_fields_round6_20261031.py
+      - name: Rebuild authoritative pending four-field audit
+        run: python3 scripts/audit_narrative_pending_20261030.py
+      - name: Verify narrative source provenance and all model regressions
+        run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Commit validated generated editorial records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery-editorial.json data/narrative-pending-*.json
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m "Write evidenced sixth-round narrative fields and refresh unresolved gaps"
+            git fetch origin editorial/narrative-56-r6-20261031
+            git rebase origin/editorial/narrative-56-r6-20261031
+            git push origin HEAD:editorial/narrative-56-r6-20261031
+          fi
