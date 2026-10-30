@@ -22,12 +22,15 @@ class NarrativeEditorialTests(unittest.TestCase):
         round2=json.loads((ROOT/'data/narrative-evidence-round2-20261030.json').read_text())['entries']
         round2_complete=sum(bool(row.get('position')) and bool(row.get('style')) and bool(row.get('theme')) and bool(row.get('structure')) for row in round2.values())
         round2_partial=len(round2)-round2_complete
+        round3=json.loads((ROOT/'data/narrative-evidence-round3-20261030.json').read_text())['entries']
+        round3_complete=sum(all(row.get(f) for f in ('position','style','theme','structure')) for row in round3.values())
+        round3_partial=len(round3)-round3_complete
         self.assertEqual(sum(counts.values()),1339+new)
-        self.assertEqual(counts,{'complete':1318+fully_filled+round2_complete,'partial':20+partial_filled+round2_partial,'missing':1+new-len(patches)-len(round2)})
+        self.assertEqual(counts,{'complete':1318+fully_filled+round2_complete+round3_complete,'partial':20+partial_filled+round2_partial+round3_partial,'missing':1+new-len(patches)-len(round2)-len(round3)})
         baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
         for wid,entry in baseline.items():
             self.assertEqual(self.data['works'][wid],entry)
-        for wid,patch in {**patches,**round2}.items():
+        for wid,patch in {**patches,**round2,**round3}.items():
             record=self.data['works'][wid]
             self.assertEqual(record['status'],'editorialObservation' if all(record.get(k) for k in ('position','style','theme','structure')) else 'partial')
             for field in ('position','style','theme','structure'):
