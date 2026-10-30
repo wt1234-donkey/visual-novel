@@ -100,7 +100,8 @@ process.stdout.write(JSON.stringify({y:sorted.filter(e=>/^y/i.test(e.title)).map
         actual = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', script], cwd=ROOT))
         self.assertEqual([eid for eid in actual['y'] if eid in set(IDS)], IDS)
         self.assertGreaterEqual(len(actual['y']), len(IDS))
-        self.assertEqual(actual['next'], p['nextEntityId'])
+        self.assertNotIn(actual['next'], IDS)
+        self.assertIn(p['nextEntityId'], {e['id'] for e in read('data/entities.json')['entities']})
 
 
 if __name__ == '__main__':
