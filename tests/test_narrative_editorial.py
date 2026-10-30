@@ -16,8 +16,21 @@ class NarrativeEditorialTests(unittest.TestCase):
     def test_frozen_work_review_and_field_sources(self):
         counts=validate(self.data)
         new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-six-studios-expansion-result-20261030.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-recommended-intake-result-20261030.json').read_text())['added'])
+        patches=json.loads((ROOT/'data/narrative-evidence-patches-20261030.json').read_text())['entries']
+        fully_filled=sum(bool(row.get('position')) and bool(row.get('style')) and bool(row.get('theme')) and bool(row.get('structure')) for row in patches.values())
+        partial_filled=len(patches)-fully_filled
         self.assertEqual(sum(counts.values()),1339+new)
-        self.assertEqual(counts,{'complete':1318,'partial':20,'missing':1+new})
+        self.assertEqual(counts,{'complete':1318+fully_filled,'partial':20+partial_filled,'missing':1+new-len(patches)})
+        baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
+        for wid,entry in baseline.items():
+            self.assertEqual(self.data['works'][wid],entry)
+        for wid,patch in patches.items():
+            record=self.data['works'][wid]
+            self.assertEqual(record['status'],'editorialObservation' if all(record.get(k) for k in ('position','style','theme','structure')) else 'partial')
+            for field in ('position','style','theme','structure'):
+                if patch.get(field):
+                    self.assertTrue(record['fieldEvidence'][field]['sourceFields'])
+                    self.assertTrue(record['fieldEvidence'][field]['sources'])
 
     def test_existing_record_does_not_imply_four_fields(self):
         record=self.data['works']['g745']
