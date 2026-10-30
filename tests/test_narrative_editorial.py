@@ -31,12 +31,30 @@ class NarrativeEditorialTests(unittest.TestCase):
         round5=json.loads((ROOT/'data/narrative-evidence-giga-light-circus-r5-20261031.json').read_text())['entries']
         round5_complete=sum(all(row.get(f) for f in ('position','style','theme','structure')) for row in round5.values())
         round5_partial=len(round5)-round5_complete
+        round6=json.loads((ROOT/'data/narrative-evidence-round6-20261031.json').read_text())['entries']
+        frozen=json.loads((ROOT/'data/narrative-56-pre-r6-audit-20261031.json').read_text())
+        self.assertEqual(len(frozen['entries']),56)
+        self.assertEqual(sum(len(row['missing']) for row in frozen['entries'].values()),139)
+        expected={'complete':1531,'partial':31,'missing':25}
+        for wid, patch in round6.items():
+            self.assertIn(wid,frozen['entries'])
+            missing=set(frozen['entries'][wid]['missing'])
+            supplied={f for f in ('position','style','theme','structure') if patch.get(f)}
+            self.assertTrue(supplied)
+            self.assertTrue(supplied.issubset(missing),f'{wid}: patch changes already completed field')
+            if len(missing)==4:
+                expected['missing']-=1
+                if missing.issubset(supplied):expected['complete']+=1
+                else:expected['partial']+=1
+            elif missing.issubset(supplied):
+                expected['partial']-=1
+                expected['complete']+=1
         self.assertEqual(sum(counts.values()),1339+new)
-        self.assertEqual(counts,{'complete':1318+fully_filled+round2_complete+round3_complete+six4_complete+round5_complete,'partial':20+partial_filled+round2_partial+round3_partial+six4_partial+round5_partial,'missing':1+new-len(patches)-len(round2)-len(round3)-len(six4)-len(round5)})
+        self.assertEqual(counts,expected)
         baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
         for wid,entry in baseline.items():
             self.assertEqual(self.data['works'][wid],entry)
-        for wid,patch in {**patches,**round2,**round3,**six4,**round5}.items():
+        for wid,patch in {**patches,**round2,**round3,**six4,**round5,**round6}.items():
             record=self.data['works'][wid]
             self.assertEqual(record['status'],'editorialObservation' if all(record.get(k) for k in ('position','style','theme','structure')) else 'partial')
             for field in ('position','style','theme','structure'):
