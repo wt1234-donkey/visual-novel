@@ -47,5 +47,7 @@ jobs:
           git add -u
           if ! git diff --cached --quiet; then
             git commit -m "Apply round-three narrative metadata and recalculate gaps"
+            git fetch origin editorial/four-fields-round3-20261030
+            git rebase origin/editorial/four-fields-round3-20261030
             git push origin HEAD:editorial/four-fields-round3-20261030
           fi
