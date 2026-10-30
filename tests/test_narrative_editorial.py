@@ -15,7 +15,7 @@ class NarrativeEditorialTests(unittest.TestCase):
 
     def test_frozen_work_review_and_field_sources(self):
         counts=validate(self.data)
-        new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added'])
+        new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-six-studios-expansion-result-20261030.json').read_text())['added'])
         self.assertEqual(sum(counts.values()),1339+new)
         self.assertEqual(counts,{'complete':1318,'partial':20,'missing':1+new})
 
