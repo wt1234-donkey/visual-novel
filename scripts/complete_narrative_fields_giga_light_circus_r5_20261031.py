@@ -38,7 +38,7 @@ for wid,patch in patches.items():
         source_fields=['games.works.synopsis']
         rationale='基于已有逐作品剧情梗概进行受限编辑归纳；原来源是继承存档，本轮未宣称另行核对官网。'
     else:
-        if patch['evidenceKind'] not in ('contemporary-original-walkthrough','original-promotional-copy','licensed-port-announcement','contemporary-original-quote','licensed-port-original-premise','archived-original-summary','historical-promotional-republication','documented-original-playthrough','developer-and-contemporary-review','developer-retrospective-crossover','historical-original-credits'):
+        if patch['evidenceKind'] not in ('contemporary-original-walkthrough','original-promotional-copy','licensed-port-announcement','contemporary-original-quote','licensed-port-original-premise','archived-original-summary','historical-promotional-republication','documented-original-playthrough','contemporary-original-review','developer-and-contemporary-review','developer-retrospective-crossover','historical-original-credits'):
             raise ValueError(f'{wid}: unexpected evidence kind')
         source=patch['source']
         evidence_text=patch['evidenceText']
