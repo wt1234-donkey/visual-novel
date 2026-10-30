@@ -65,7 +65,7 @@ for row in intake["items"]:
     modes=row.get("interactionModes", ["待核实"])
     note=f"{row['year']}年首批内容暂存记录；首发署名与具体内容仍需进一步核实。"
     characters=row.get("characters") or ["原作叙事主体（姓名待编）"]
-    w=dict(id=wid,title=row["title"],chineseTitle=row["title"],chineseTitleType="通行译名",
+    w=dict(id=wid,title=row["title"],chineseTitle=row.get("chineseTitle", ""),
        originalTitle=original,titleAliases=[original],firstYear=row["year"],
        category=row["category"],subcategory=types[row["category"]],genre="叙事型ADV／视觉小说（题材待编）",
        characters=characters,charactersNote="主要人物姓名与角色关系尚未采编；所示主体为数据占位，不代表具名角色。",
