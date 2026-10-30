@@ -73,7 +73,7 @@ for row in intake["items"]:
        notes=f"2026-10-30六组品牌非RPG补录；候选创作品牌：{row['group']}。年份取自具名品牌或第三方作品目录，制作、发行及个人职责仍待终核。中文名以原名暂代，并非确定的通行译名。",
        source=source,interactionModes=modes,
        interactionNote="作品为叙事类候选；交互方式暂未依原说明书或实机逐条核实。",
-       interactionBasis="待核实",interactionSources=[source])
+       interactionBasis="既有资料归纳",interactionSources=[source])
     publisher=row["publisher"]
     companies=taxonomy["publisherAliases"].get(publisher,publisher)
     v=dict(id=rid,workId=wid,year=row["year"],platform=row["platform"],publisher=publisher,
