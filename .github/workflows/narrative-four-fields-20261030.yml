@@ -48,5 +48,7 @@ jobs:
           git add -u
           if ! git diff --cached --quiet; then
             git commit -m "Record validated narrative field evidence and remaining gaps"
+            git fetch origin editorial/four-fields-evidence-20261030
+            git rebase origin/editorial/four-fields-evidence-20261030
             git push origin HEAD:editorial/four-fields-evidence-20261030
           fi
