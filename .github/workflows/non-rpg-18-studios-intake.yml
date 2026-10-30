@@ -7,6 +7,7 @@ on:
     paths:
       - data/non-rpg-intake-18-studios-20261030.json
       - scripts/apply_non_rpg_intake_20261030.py
+      - scripts/build_entity_model.py
       - scripts/preserve_historical_entity_evidence.py
       - .github/workflows/non-rpg-18-studios-intake.yml
       - tests/test_broderbund_completion_20261029.py
@@ -39,9 +40,7 @@ jobs:
           python3 scripts/sync_versions_csv.py
           python3 scripts/export_content_csv.py
           python3 scripts/export_interaction_csv.py
-          cp data/entities.json /tmp/nonrpg-existing-entities.json
           python3 scripts/build_entity_model.py
-          python3 scripts/preserve_historical_entity_evidence.py /tmp/nonrpg-existing-entities.json
           python3 scripts/build_entity_pages.py
           python3 scripts/build_relationships_preview.py
           python3 scripts/build_company_pages.py
