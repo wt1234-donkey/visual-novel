@@ -509,6 +509,15 @@ def build():
   assert fact['source'] and fact['note'] and fact['value']
   entity['dates'].append({key:fact[key] for key in ['kind','value','precision','source','status']})
   entity['sources']=list(dict.fromkeys([*entity['sources'],fact['source']]))
+ # Appending releases must not silently erase evidence sources already preserved
+ # in the published entity catalogue. Stable union makes a second build identical.
+ previous_path=ROOT/'data/entities.json'
+ if previous_path.exists():
+  previous_entities={e['id']:e for e in read('data/entities.json')['entities']}
+  for eid,entity in entities.items():
+   prev=previous_entities.get(eid)
+   if prev is not None:
+    entity['sources']=list(dict.fromkeys([*prev.get('sources',[]),*entity.get('sources',[])]))
  apply_names(entities,dossiers)
  model={'schemaVersion':1,'updated':DATE,'typeLabels':TYPE_LABELS,'roleLabels':ROLE_LABELS,'entities':list(entities.values()),'relations':relations,'dossiers':dossiers,'displayNames':{raw:display_name(raw) for raw in DISPLAY_NAMES},'policy':'实体、参与角色、收录位置相互独立；不以当前品牌归属倒填历史署名。'}
  existing_baseline=ROOT/'data/entity-migration-baseline.json'
