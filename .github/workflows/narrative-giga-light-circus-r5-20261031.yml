@@ -1,0 +1,53 @@
+name: Audit GIGA light CIRCUS narrative evidence R5
+on:
+  push:
+    branches:
+      - editorial/giga-light-circus-r5-20261031
+    paths:
+      - data/narrative-evidence-giga-light-circus-r5-20261031.json
+      - scripts/complete_narrative_fields_giga_light_circus_r5_20261031.py
+      - tests/test_narrative_editorial.py
+      - .github/workflows/narrative-giga-light-circus-r5-20261031.yml
+permissions:
+  contents: write
+concurrency:
+  group: gigalightcircus-r5-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  editorial-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply scoped narrative evidence
+        run: python3 scripts/complete_narrative_fields_giga_light_circus_r5_20261031.py
+      - name: Recompute all editorial gaps
+        run: python3 scripts/audit_narrative_pending_20261030.py
+      - name: Verify full game model, evidence and regressions
+        run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Commit validated generated editorials
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery-editorial.json data/narrative-pending-*.json
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m "Record source-qualified studio narrative evidence and remaining gaps"
+            git fetch origin editorial/giga-light-circus-r5-20261031
+            git rebase origin/editorial/giga-light-circus-r5-20261031
+            git push origin HEAD:editorial/giga-light-circus-r5-20261031
+          fi
