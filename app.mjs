@@ -95,6 +95,7 @@ async function main(){
     const responses=await Promise.all(['games.json','taxonomy.json','entity-catalogue.json','work-notes.json'].map(path=>fetch('./data/'+path+'?v=20261027-leland')));
     if(responses.some(r=>!r.ok))throw Error('HTTP '+responses.find(r=>!r.ok).status);
     const [data,taxonomy,catalogue,notes]=await Promise.all(responses.map(r=>r.json()));
+    const supplementalResponse=await fetch('./data/non-rpg-creator-supplement-20261030.json?v=20261030');if(!supplementalResponse.ok)throw Error('non-RPG supplement HTTP '+supplementalResponse.status);const supplemental=await supplementalResponse.json();const existingWorkIds=new Set(data.works.map(w=>w.id));for(const w of supplemental.works)if(!existingWorkIds.has(w.id))data.works.push(w);const existingReleaseIds=new Set(data.platformReleases.map(v=>v.id));for(const v of supplemental.platformReleases)if(!existingReleaseIds.has(v.id))data.platformReleases.push(v);const existingContentIds=new Set(data.contentVersions.map(v=>v.id));for(const v of supplemental.contentVersions)if(!existingContentIds.has(v.id))data.contentVersions.push(v);
     workNotes=notes.works;
     entityIndex=createEntityIndex(data,catalogue.model,catalogue);
     const typeCounts=new Map();for(const e of catalogue.model.entities)typeCounts.set(e.type,(typeCounts.get(e.type)||0)+1);
