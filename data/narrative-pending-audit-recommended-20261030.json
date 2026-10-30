@@ -1,30 +1,7 @@
 {
   "group": "recommended",
-  "size": 6,
+  "size": 3,
   "pending": [
-    {
-      "id": "g1504",
-      "title": "TRianThology",
-      "originalTitle": "トライアンソロジー ～三面鏡の国のアリス～",
-      "year": 2016,
-      "category": "视觉小说",
-      "genre": "非RPG叙事游戏／视觉小说（独立题材待编）",
-      "source": "https://www.07thexpansion.mangagamer.org/",
-      "synopsis": "叙事作品候选：具体剧情、核心角色和分支结构仍需以本作的独立来源逐字段编目。",
-      "notes": "创作关联组：07th Expansion；发行署名：07th Expansion。不能据发行署名推定开发或个人编剧、原画、音乐职责。 本条为2026-10-30作品身份首批补录，独立叙事来源、确切首发平台和内容差异待复核。",
-      "characters": [
-        "叙事主体（角色姓名未编目）"
-      ],
-      "existing": {},
-      "missing": [
-        "position",
-        "style",
-        "theme",
-        "structure"
-      ],
-      "reviewQuestions": [],
-      "editorSources": []
-    },
     {
       "id": "g1505",
       "title": "Ciconia When They Cry - Phase 1",
@@ -61,52 +38,6 @@
       ]
     },
     {
-      "id": "g1509",
-      "title": "Tsukihime",
-      "originalTitle": "月姫",
-      "year": 2000,
-      "category": "视觉小说",
-      "genre": "非RPG叙事游戏／视觉小说（独立题材待编）",
-      "source": "https://typemoon.com/game/",
-      "synopsis": "叙事作品候选：具体剧情、核心角色和分支结构仍需以本作的独立来源逐字段编目。",
-      "notes": "创作关联组：TYPE-MOON；发行署名：TYPE-MOON。不能据发行署名推定开发或个人编剧、原画、音乐职责。 本条为2026-10-30作品身份首批补录，独立叙事来源、确切首发平台和内容差异待复核。",
-      "characters": [
-        "叙事主体（角色姓名未编目）"
-      ],
-      "existing": {},
-      "missing": [
-        "position",
-        "style",
-        "theme",
-        "structure"
-      ],
-      "reviewQuestions": [],
-      "editorSources": []
-    },
-    {
-      "id": "g1526",
-      "title": "The Mr. Rabbit Magic Show",
-      "originalTitle": "The Mr. Rabbit Magic Show",
-      "year": 2025,
-      "category": "文字冒险",
-      "genre": "非RPG叙事游戏／文字冒险（独立题材待编）",
-      "source": "https://www.rustylake.com/faq/",
-      "synopsis": "叙事作品候选：具体剧情、核心角色和分支结构仍需以本作的独立来源逐字段编目。",
-      "notes": "创作关联组：Rusty Lake；发行署名：Rusty Lake。不能据发行署名推定开发或个人编剧、原画、音乐职责。 本条为2026-10-30作品身份首批补录，独立叙事来源、确切首发平台和内容差异待复核。",
-      "characters": [
-        "叙事主体（角色姓名未编目）"
-      ],
-      "existing": {},
-      "missing": [
-        "position",
-        "style",
-        "theme",
-        "structure"
-      ],
-      "reviewQuestions": [],
-      "editorSources": []
-    },
-    {
       "id": "g1559",
       "title": "HoneyComing",
       "originalTitle": "HoneyComing",
@@ -119,15 +50,26 @@
       "characters": [
         "叙事主体（角色姓名未编目）"
       ],
-      "existing": {},
+      "existing": {
+        "position": "以恋爱课程为舞台的校园人物故事",
+        "style": [
+          "恋爱",
+          "校园"
+        ],
+        "theme": [
+          "恋爱课程",
+          "学园"
+        ]
+      },
       "missing": [
-        "position",
-        "style",
-        "theme",
         "structure"
       ],
-      "reviewQuestions": [],
-      "editorSources": []
+      "reviewQuestions": [
+        "本作叙事结构缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
+      ],
+      "editorSources": [
+        "https://www.hook-net.jp/htm/old_news/old_news_2010.htm"
+      ]
     },
     {
       "id": "g1560",
@@ -142,15 +84,27 @@
       "characters": [
         "叙事主体（角色姓名未编目）"
       ],
-      "existing": {},
+      "existing": {
+        "position": "宿舍生活中的学园情感故事",
+        "style": [
+          "校园",
+          "温情"
+        ],
+        "theme": [
+          "校园",
+          "宿舍",
+          "恋爱"
+        ]
+      },
       "missing": [
-        "position",
-        "style",
-        "theme",
         "structure"
       ],
-      "reviewQuestions": [],
-      "editorSources": []
+      "reviewQuestions": [
+        "本作叙事结构缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
+      ],
+      "editorSources": [
+        "https://www.hook-net.jp/htm/product.htm"
+      ]
     }
   ]
 }
