@@ -31,6 +31,7 @@ jobs:
           if [ -f scripts/complete_narrative_fields_20261030.py ]; then
             python3 scripts/complete_narrative_fields_20261030.py
           fi
+          python3 scripts/audit_narrative_pending_20261030.py
       - name: Verify narrative and full catalogue tests
         run: |
           python3 scripts/validate_narrative_editorial.py
