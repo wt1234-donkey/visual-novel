@@ -1,0 +1,48 @@
+name: Verify original-work narrative source scope round six
+on:
+  push:
+    branches:
+      - editorial/source-scope-five-20261031-rebased
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: python3 scripts/complete_narrative_fields_round3_20261031.py
+      - run: python3 scripts/audit_narrative_pending_20261030.py
+      - run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Persist validated additions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery-editorial.json data/narrative-pending-*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Persist source-scoped four-field narrative evidence"
+            git fetch origin editorial/source-scope-five-20261031-rebased
+            git reset --hard origin/editorial/source-scope-five-20261031-rebased
+            python3 scripts/complete_narrative_fields_round3_20261031.py
+            python3 scripts/audit_narrative_pending_20261030.py
+            python3 scripts/validate_narrative_editorial.py
+            git add data/discovery-editorial.json data/narrative-pending-*.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record validated narrative edits against current branch"
+              git push origin HEAD:editorial/source-scope-five-20261031-rebased
+            fi
+          fi
