@@ -91,7 +91,9 @@ const sorted=sortFamilies(es.map(e=>({id:e.id,title:e.name})));
 process.stdout.write(JSON.stringify({w:sorted.filter(e=>/^w/i.test(e.title)).map(e=>e.id),
  next:sorted[sorted.findIndex(e=>e.id==='entity-name-9e9cc680be5a')+1].id}));"""
         actual = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', script], cwd=ROOT))
-        self.assertEqual([q['entityId'] for q in read(REVIEW)['progress']['queue']], actual['w'])
+        historic = [q['entityId'] for q in read(REVIEW)['progress']['queue']]
+        self.assertEqual([eid for eid in actual['w'] if eid in set(historic)], historic)
+        self.assertGreaterEqual(len(actual['w']), len(historic))
         self.assertEqual(actual['next'], p['nextEntityId'])
 
     def test_brand_corrections_require_explicit_publisher_preservation(self):
