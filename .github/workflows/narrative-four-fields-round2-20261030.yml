@@ -1,0 +1,50 @@
+name: Complete round-two evidence-backed four-field narrative profiles
+on:
+  push:
+    branches:
+      - editorial/four-fields-round2-20261030
+    paths:
+      - data/narrative-evidence-round2-20261030.json
+      - scripts/complete_narrative_fields_round2_20261030.py
+      - tests/test_narrative_editorial.py
+      - .github/workflows/narrative-four-fields-round2-20261030.yml
+permissions:
+  contents: write
+jobs:
+  narrative-round2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply official-source narrative edits
+        run: python3 scripts/complete_narrative_fields_round2_20261030.py
+      - name: Recompute all unresolved four-field gaps
+        run: python3 scripts/audit_narrative_pending_20261030.py
+      - name: Check complete catalogue and narrative provenance
+        run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Save generated narrative records and gap audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery-editorial.json data/narrative-pending-*.json
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m "Record round-two narrative evidence and update unresolved work list"
+            git fetch origin editorial/four-fields-round2-20261030
+            git rebase origin/editorial/four-fields-round2-20261030
+            git push origin HEAD:editorial/four-fields-round2-20261030
+          fi
