@@ -231,7 +231,10 @@
       "sourceFields": [
         "original story text, period playthrough, or licensed retelling as individually marked"
       ],
-      "note": "只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。"
+      "note": "只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。",
+      "supportingSources": [
+        "https://blog.livedoor.jp/k_o_blog/archives/38135517.html"
+      ]
     },
     "g1456": {
       "position": "公主转学搅动学园秩序的荒诞恋爱喜剧",
@@ -299,7 +302,7 @@
       "sourceFields": [
         "original story text, period playthrough, or licensed retelling as individually marked"
       ],
-      "note": "只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。"
+      "note": "只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。 2002年玩家实玩评论是二级史料，已区分原版与后续改编。"
     },
     "g1493": {
       "position": "吸血者社群内部连环谋杀引发的黑色悬疑",
@@ -365,7 +368,10 @@
       "sourceFields": [
         "original story text, period playthrough, or licensed retelling as individually marked"
       ],
-      "note": "只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。"
+      "note": "只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。",
+      "supportingSources": [
+        "https://asternaru.livedoor.blog/archives/29236482.html"
+      ]
     },
     "g1500": {
       "position": "特异地震灾难后青年与同伴寻求生存的末日故事",
@@ -385,6 +391,51 @@
         "original story text, period playthrough, or licensed retelling as individually marked"
       ],
       "note": "只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。"
+    },
+    "g1491": {
+      "position": "漫长宇宙航行中最后人类少年的身份和成长故事",
+      "style": [
+        "科幻",
+        "感伤",
+        "童话寓言"
+      ],
+      "theme": [
+        "宇宙远未来",
+        "人类灭绝",
+        "机器人",
+        "虚拟家庭"
+      ],
+      "structure": [
+        "破损的圣埃克苏佩里号上只有高智能机器人持续航行，机器人发现封存的人类少年一彦后，以扮演家人和朋友的方式帮助他成长，玩家通过与多名机器人少女的关系逐渐理解船上真相"
+      ],
+      "source": "https://dengekionline.com/elem/000/000/251/251383/",
+      "supportingSources": [
+        "https://dengekionline.com/elem/000/000/304/304618/",
+        "https://www.amiami.jp/top/detail/detail?gcode=TVG-PSP-1338"
+      ],
+      "evidenceText": "Dengeki 2010年正式移植宣传引述2007年PC原作的共通剧情：濒临死亡的宇宙、无人类的远航船、最后沉睡人类男孩一彦和高智能机器人。厂商声明2010年PSP版本新增3名人物、Grand End路线及大幅新故事，本条刻意不把这些新增内容记入2007原版。",
+      "evidenceKind": "licensed-port-original-premise",
+      "sourceFields": [
+        "2007 PC story quoted in authorized 2010 PSP original-staff announcement",
+        "explicit additions relative to PC documented"
+      ],
+      "note": "PC共通开篇和原有机器人家庭关系可记；2010 PSP追加Grand End、新角色与新结局不回填原作。"
+    },
+    "g1455": {
+      "structure": [
+        "原版分为明确的第一至第四章，每章有对应的脚本作者和专属片尾曲；不据四章便臆测四位女主角路线"
+      ],
+      "source": "https://w.atwiki.jp/ercr/pages/1437.html",
+      "supportingSources": [
+        "https://artist.cdjournal.com/d/renge-vocal-album/4107090605"
+      ],
+      "evidenceText": "原版2007年8月31日的人员署名清单把出演人物、脚本和演出按第一至第四章分别列出：第一章倉嶋秀二，第二章桑原文彦，第三章まり，第四章黒瀧糸由；每章不同ED主题歌。具体情节风格和题材仍缺独立剧情文字，故仅补结构。",
+      "evidenceKind": "historical-original-credits",
+      "sourceFields": [
+        "original PC title credits listed per four distinct episodes",
+        "per-chapter ending theme songs"
+      ],
+      "note": "仅原版明确四章的事实；没有原剧情梗概，不推断题材风格、人物路线或情绪基调。"
     }
   }
 }
