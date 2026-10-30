@@ -35,7 +35,7 @@ class NarrativeEditorialTests(unittest.TestCase):
         frozen=json.loads((ROOT/'data/narrative-56-pre-r6-audit-20261031.json').read_text())
         self.assertEqual(len(frozen['entries']),56)
         self.assertEqual(sum(len(row['missing']) for row in frozen['entries'].values()),139)
-        expected={'complete':1531,'partial':31,'missing':25}
+        expected={'complete':1531,'partial':33,'missing':23}
         for wid, patch in round6.items():
             self.assertIn(wid,frozen['entries'])
             missing=set(frozen['entries'][wid]['missing'])
