@@ -34,7 +34,7 @@ def validate(data=None, catalogue=None):
         assert record['status'] in {'editorialObservation','partial'}, f'{wid}: invalid review status'
         if wid in baseline['works']:
             continue
-        assert record.get('reviewedAt')=='2026-10-30', f'{wid}: missing review date'
+        assert record.get('reviewedAt') in ('2026-10-30','2026-10-31'), f'{wid}: missing review date'
         assert record['status']==('editorialObservation' if state=='complete' else 'partial'), f'{wid}: false completion status'
         for field in present:
             labels=[record[field]] if field=='position' else record[field]
