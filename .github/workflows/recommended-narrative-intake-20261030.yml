@@ -10,6 +10,8 @@ on:
       - .github/workflows/recommended-narrative-intake-20261030.yml
       - tests/test_broderbund_completion_20261029.py
       - tests/test_narrative_editorial.py
+      - tests/test_creator_w1_review.py
+      - tests/test_creator_y1_review.py
 
 permissions:
   contents: write
