@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data index.html catalogue.html entities.html organizations.html company*.html || true
+          git add data index.html catalogue.html entities.html organizations.html
           git add -u
           if ! git diff --cached --quiet; then
             git commit -m "Generate and validate non-RPG catalogue additions (2026-10-30)"
