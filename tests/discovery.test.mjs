@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createEntityIndex} from '../entities.mjs';
 import {filterCatalogue} from '../filter.mjs';
-import {createAtlas,filterAtlas,creatorCredits,creatorWorkIds,creditScope,metadataValues,PENDING,titleOf} from '../discovery-model.mjs';
+import {createAtlas,filterAtlas,creatorCredits,creatorWorkIds,creditScope,metadataValues,PENDING,titleOf,narrativeState,narrativeCounts} from '../discovery-model.mjs';
 const read=path=>JSON.parse(readFileSync(new URL('../data/'+path+'.json',import.meta.url),'utf8'));
 const data=read('games'),catalogue=read('entity-catalogue'),editorial=read('discovery-editorial'),creators=read('creator-credits');
 const atlas=createAtlas(data,catalogue,editorial,creators,read('work-notes'));
@@ -19,9 +19,9 @@ test('new discovery uses the entire authoritative main catalogue and preserves r
 });
 test('content filters keep uncurated distinct from no matching narrative content',()=>{
  const ids=Object.keys(editorial.works);
- assert.equal(ids.length,8);
+ assert.ok(ids.length>=8);
  const pending=filterAtlas(atlas,{facets:{theme:PENDING}});
- assert.equal(pending.length,data.works.length-ids.length);
+ assert.equal(pending.length,data.works.filter(w=>!metadataValues(atlas,w,'theme').length).length);
  assert.ok(!pending.some(w=>w.id==='g039'));
  assert.ok(filterAtlas(atlas,{facets:{theme:'科幻'}}).some(w=>w.id==='g054'));
  assert.ok(filterAtlas(atlas,{facets:{gameplay:'战术策略'}}).some(w=>w.id==='g151'));
@@ -63,9 +63,9 @@ test('all new editorial and personal records have valid identities, roles and so
   if(c.scope.type==='release')assert.equal(data.platformReleases.find(r=>r.id===c.scope.releaseId)?.workId,c.workId);
  }
  for(const [wid,m] of Object.entries(editorial.works)){
-  assert.ok(atlas.works.has(wid));assert.equal(m.status,'editorialObservation');
-  assert.ok(m.basis&&m.sources.length&&m.position);
-  for(const field of ['style','theme','structure'])assert.ok(m[field].length);
+  assert.ok(atlas.works.has(wid));assert.ok(['editorialObservation','partial'].includes(m.status));
+  assert.ok(m.basis&&m.sources.length);
+  if(narrativeState(atlas,atlas.works.get(wid))!=='complete')assert.ok(m.openQuestions?.length);
  }
 });
 test('publishing, release-only port work and parent relations do not become original creative credits',()=>{
@@ -105,4 +105,33 @@ test('both homepage and retained advanced catalogue keep all existing dossier li
  assert.ok(advanced.includes('app.mjs'));
  assert.ok(home.includes('href="catalogue.html"'));
  assert.ok(home.includes('href="organizations.html"')||readFileSync(new URL('../discovery.mjs',import.meta.url),'utf8').includes('organizations.html'));
+});
+
+test('completion is counted per work, not by existence of an editorial object',()=>{
+ const selected=data.works.find(w=>!['g039','g030','g192','g054','g227','g151','g029','g032'].includes(w.id));
+ const base=structuredClone(editorial);
+ base.works[selected.id]={position:'叙事与解谜并重',style:['探索'],theme:['奇幻']};
+ const partial=createAtlas(data,catalogue,base,creators);
+ assert.equal(narrativeState(partial,selected),'partial');
+ assert.ok(filterAtlas(partial,{cataloguing:'partial'}).some(w=>w.id===selected.id));
+ assert.ok(!filterAtlas(partial,{cataloguing:'complete'}).some(w=>w.id===selected.id));
+ assert.ok(filterAtlas(partial,{facets:{structure:PENDING}}).some(w=>w.id===selected.id));
+ base.works[selected.id].structure=['目标驱动'];
+ const complete=createAtlas(data,catalogue,base,creators);
+ assert.equal(narrativeState(complete,selected),'complete');
+ const counts=narrativeCounts(complete);assert.equal(counts.complete+counts.partial+counts.missing,data.works.length);
+ delete base.works[selected.id];
+ const missing=createAtlas(data,catalogue,base,creators);
+ assert.equal(narrativeState(missing,selected),'missing');
+ assert.ok(filterAtlas(missing,{cataloguing:'missing'}).some(w=>w.id===selected.id));
+});
+test('narrative annotations are searched without auto-inferencing topology from play modes',()=>{
+ const d=structuredClone(editorial);const w=data.works.find(w=>w.interactionModes.includes('文字输入'));
+ delete d.works[w.id];
+ const a=createAtlas(data,catalogue,d,creators);
+ assert.deepEqual(metadataValues(a,w,'structure'),[]);
+ d.works[w.id]={position:'叙事与解谜并重',style:['本测试独有叙事风格'],theme:['寻宝'],structure:['目标驱动']};
+ const b=createAtlas(data,catalogue,d,creators);
+ assert.deepEqual(filterAtlas(b,{query:'本测试独有叙事风格'}).map(x=>x.id),[w.id]);
+ assert.deepEqual(metadataValues(b,w,'structure'),['目标驱动']);
 });
