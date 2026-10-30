@@ -2,6 +2,16 @@ import {normalize,filterCatalogue} from './filter.mjs';
 export const CREATOR_ROLES={writer:'剧作者',artist:'画师',musician:'音乐创作者'};
 export const MAKER_ROLES=new Set(['productionBrand','originalProduction','developer','coDeveloper']);
 export const PENDING='__pending__';
+export const NARRATIVE_FIELDS=['position','style','theme','structure'];
+export function narrativeState(atlas,work){
+ const filled=NARRATIVE_FIELDS.filter(key=>metadataValues(atlas,work,key).length);
+ return filled.length===4?'complete':filled.length?'partial':'missing';
+}
+export function narrativeCounts(atlas){
+ const counts={complete:0,partial:0,missing:0};
+ for(const work of atlas.data.works)counts[narrativeState(atlas,work)]++;
+ return counts;
+}
 export const titleOf=work=>work.chineseTitle||work.title;
 const group=(rows,key)=>{const map=new Map();for(const row of rows){const k=row[key];if(!map.has(k))map.set(k,[]);map.get(k).push(row)}return map};
 export function createAtlas(data,catalogue,editorial,creators,notes={works:{}}){
@@ -16,7 +26,7 @@ export function createAtlas(data,catalogue,editorial,creators,notes={works:{}}){
   for(const w of data.works){
     const names=(personal.get(w.id)||[]).flatMap(c=>{const p=people.get(c.personId);return [p?.name,p?.alias]});
     const makers=(organization.get(w.id)||[]).filter(c=>MAKER_ROLES.has(c.role)).flatMap(c=>{const e=entities.get(c.entityId);return [e?.name,...(e?.aliases||[])]});
-    search.set(w.id,normalize([w.title,w.chineseTitle,w.originalTitle,...(w.titleAliases||[]),w.genre,w.synopsis,w.category,w.subcategory,...w.characters,...(w.interactionModes||[]),...names,...makers].join(' ')));
+    search.set(w.id,normalize([w.title,w.chineseTitle,w.originalTitle,...(w.titleAliases||[]),w.genre,w.synopsis,w.category,w.subcategory,...w.characters,...(w.interactionModes||[]),...names,...makers,...['position','style','theme','structure'].flatMap(key=>{const value=editorial.works[w.id]?.[key];return Array.isArray(value)?value:[value||'']})].join(' ')));
   }
   return {data,catalogue,editorial,creators,notes,works,entities,people,personal,organization,releases,contents,search};
 }
@@ -46,11 +56,11 @@ export function filterAtlas(atlas,filters={},entityIndex=null){
     candidates=candidates.filter(w=>ids.has(w.id));
   }
   const query=normalize(filters.query);
-  let out=candidates.filter(w=>(!query||atlas.search.get(w.id).includes(query))&&Object.entries(filters.facets||{}).every(([key,value])=>!value||(value===PENDING?metadataValues(atlas,w,key).length===0:metadataValues(atlas,w,key).includes(value))));
+  let out=candidates.filter(w=>(!filters.cataloguing||narrativeState(atlas,w)===filters.cataloguing)&&(!query||atlas.search.get(w.id).includes(query))&&Object.entries(filters.facets||{}).every(([key,value])=>!value||(value===PENDING?metadataValues(atlas,w,key).length===0:metadataValues(atlas,w,key).includes(value))));
   if(filters.sort==='newest')out.sort((a,b)=>b.firstYear-a.firstYear||titleOf(a).localeCompare(titleOf(b),'zh'));
   else if(filters.sort==='oldest')out.sort((a,b)=>a.firstYear-b.firstYear||titleOf(a).localeCompare(titleOf(b),'zh'));
   else if(filters.sort==='title')out.sort((a,b)=>titleOf(a).localeCompare(titleOf(b),'zh'));
-  else {const featured=Object.keys(atlas.editorial.works);out.sort((a,b)=>(featured.includes(a.id)?featured.indexOf(a.id):-1+1e5)-(featured.includes(b.id)?featured.indexOf(b.id):-1+1e5)||a.firstYear-b.firstYear||titleOf(a).localeCompare(titleOf(b),'zh'));}
+  else {const order=new Map((atlas.editorial.featuredWorkIds||Object.keys(atlas.editorial.works).slice(0,8)).map((id,i)=>[id,i]));out.sort((a,b)=>(order.get(a.id)??100000)-(order.get(b.id)??100000)||a.firstYear-b.firstYear||titleOf(a).localeCompare(titleOf(b),'zh'));}
   return out;
 }
 export function productionCredits(atlas,wid){return (atlas.organization.get(wid)||[]).filter(c=>MAKER_ROLES.has(c.role)&&['work','content'].includes(c.targetType));}

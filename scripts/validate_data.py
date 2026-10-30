@@ -18,6 +18,8 @@ command_work_ids.update(wid for company in coverage['companies']
                         for wid in company.get('authorizedCommandWorkIds', []))
 from interaction_model import validate_interactions
 validate_interactions(data, coverage, taxonomy)
+from validate_narrative_editorial import validate as validate_narrative_editorial
+validate_narrative_editorial(catalogue=data)
 from content_model import validate_content_model
 validate_content_model(data, coverage)
 from jhv_content_review import validate_review
