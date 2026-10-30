@@ -36,6 +36,13 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Apply four-field evidence to remaining narrative profiles"
             git fetch origin editorial/four-fields-round3-20261031
-            git rebase origin/editorial/four-fields-round3-20261031
-            git push origin HEAD:editorial/four-fields-round3-20261031
+            git reset --hard origin/editorial/four-fields-round3-20261031
+            python3 scripts/complete_narrative_fields_round3_20261031.py
+            python3 scripts/audit_narrative_pending_20261030.py
+            python3 scripts/validate_narrative_editorial.py
+            git add data/discovery-editorial.json data/narrative-pending-*.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Apply verified third-round narrative edits on latest branch"
+              git push origin HEAD:editorial/four-fields-round3-20261031
+            fi
           fi
