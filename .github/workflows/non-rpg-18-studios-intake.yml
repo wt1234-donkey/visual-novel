@@ -3,7 +3,7 @@ name: Expand six non-RPG narrative studio catalogues (2026-10-30)
 on:
   push:
     branches:
-      - catalog/non-rpg-18-studios-20261030
+      - catalog/six-studios-non-rpg-expansion-20261030
     paths:
       - data/non-rpg-six-studios-expansion-20261030.json
       - scripts/apply_six_studios_expansion_20261030.py
@@ -11,7 +11,6 @@ on:
       - scripts/apply_non_rpg_intake_20261030.py
       - scripts/build_entity_model.py
       - scripts/preserve_historical_entity_evidence.py
-      - .github/workflows/non-rpg-18-studios-intake.yml
       - tests/test_broderbund_completion_20261029.py
       - tests/test_chunsoft_completion_20261029.py
       - tests/test_narrative_editorial.py
