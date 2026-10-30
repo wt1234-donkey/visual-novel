@@ -1,0 +1,54 @@
+name: Rebased sixth-round 53-work evidence review
+on:
+  push:
+    branches:
+      - editorial/narrative-53-rebased-r6-20261031
+    paths:
+      - data/narrative-evidence-rebased-r6-20261031.json
+      - data/narrative-53-pre-merge-r6-audit-20261031.json
+      - scripts/complete_narrative_fields_rebased_r6_20261031.py
+      - tests/test_narrative_editorial.py
+      - .github/workflows/narrative-rebased-r6-20261031.yml
+permissions:
+  contents: write
+concurrency:
+  group: narrative-53-rebased-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  safe-complete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Add only previously missing narrative evidence
+        run: python3 scripts/complete_narrative_fields_rebased_r6_20261031.py
+      - name: Rebuild exact pending-work audits
+        run: python3 scripts/audit_narrative_pending_20261030.py
+      - name: Validate field evidence and complete catalogue
+        run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Save validated generated output to rebased branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery-editorial.json data/narrative-pending-*.json
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m "Safely reconcile newest main and record verified narrative fields"
+            git fetch origin editorial/narrative-53-rebased-r6-20261031
+            git rebase origin/editorial/narrative-53-rebased-r6-20261031
+            git push origin HEAD:editorial/narrative-53-rebased-r6-20261031
+          fi
