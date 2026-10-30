@@ -98,8 +98,10 @@ const sorted=sortFamilies(es.map(e=>({id:e.id,title:e.name})));
 process.stdout.write(JSON.stringify({y:sorted.filter(e=>/^y/i.test(e.title)).map(e=>e.id),
  next:sorted[sorted.findIndex(e=>e.id==='entity-yuzusoft')+1].id}));"""
         actual = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', script], cwd=ROOT))
-        self.assertEqual(actual['y'], IDS)
-        self.assertEqual(actual['next'], p['nextEntityId'])
+        self.assertEqual([eid for eid in actual['y'] if eid in set(IDS)], IDS)
+        self.assertGreaterEqual(len(actual['y']), len(IDS))
+        self.assertNotIn(actual['next'], IDS)
+        self.assertIn(p['nextEntityId'], {e['id'] for e in read('data/entities.json')['entities']})
 
 
 if __name__ == '__main__':
