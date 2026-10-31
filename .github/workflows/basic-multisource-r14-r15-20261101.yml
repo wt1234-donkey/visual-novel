@@ -111,6 +111,7 @@ jobs:
           git add data/basic-r14-r15-last-failure.json
           if ! git diff --cached --quiet; then
             git commit -m "Record import diagnostic for rounds 14 and 15"
+            git stash push --include-untracked -m "Unverified import workspace, not for PR"
             git fetch origin catalog/basic-r14-r15-multisource-20261101
             git rebase origin/catalog/basic-r14-r15-multisource-20261101
             git push origin HEAD:catalog/basic-r14-r15-multisource-20261101
