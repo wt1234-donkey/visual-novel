@@ -8,13 +8,14 @@ import datetime as dt
 import json
 import os
 import re
+import unicodedata
 from pathlib import Path
 
 from source_urls import source_url_valid
 
 ROOT = Path(__file__).resolve().parents[1]
 PATHS = {'editorial': 'discovery-editorial.json', 'notes': 'work-notes.json',
-         'people': 'creator-credits.json', 'credits': 'creator-credits.json'}
+         'people': 'creator-credits.json', 'credits': 'creator-credits.json', 'newWork': 'games.json'}
 FIELDS = ('position', 'style', 'theme', 'structure')
 ROLES = {'writer', 'artist', 'musician'}
 ID = re.compile(r'[a-z0-9][a-z0-9_-]{1,119}\Z')
@@ -25,17 +26,28 @@ def read(name, root=ROOT):
 
 
 def load(root=ROOT):
-    return {'editorial': read(PATHS['editorial'], root), 'notes': read(PATHS['notes'], root),
+    return {'games': read('games.json', root), 'editorial': read(PATHS['editorial'], root), 'notes': read(PATHS['notes'], root),
             'creators': read(PATHS['people'], root)}
 
 
 def value(data, resource, key):
+    if resource == 'newWork':
+        games = data.get('games', {})
+        work = next((w for w in games.get('works', []) if w['id'] == key), None)
+        return None if work is None else {'work': work, 'contentVersions': [c for c in games['contentVersions'] if c['workId'] == key], 'platformReleases': [r for r in games['platformReleases'] if r['workId'] == key]}
     if resource in ('editorial', 'notes'):
         return data[resource]['works'].get(key)
     return next((row for row in data['creators'][resource] if row['id'] == key), None)
 
 
 def assign(data, resource, key, row):
+    if resource == 'newWork':
+        games = data['games']
+        for field in ('works', 'contentVersions', 'platformReleases'):
+            games[field] = [r for r in games[field] if r.get('workId', r.get('id')) != key]
+            if row is not None:
+                games[field].extend(copy.deepcopy([row['work']] if field == 'works' else row[field]))
+        return
     if resource in ('editorial', 'notes'):
         if row is None:
             data[resource]['works'].pop(key, None)
@@ -105,6 +117,8 @@ def validate_rows(data, games, dossiers, changed):
     assert len({c['id'] for c in credits}) == len(credits), '署名 ID 重复'
     for resource, key in changed:
         row = value(data, resource, key)
+        if resource == 'newWork':
+            continue
         if resource == 'editorial':
             assert key in works, '编目必须引用主库作品'
             validate_editorial(row)
@@ -143,6 +157,65 @@ def validate_rows(data, games, dossiers, changed):
         assert c['personId'] in people and c['role'] in people[c['personId']]['roles'], '个人职责与已有署名不一致'
 
 
+def library_records(games):
+    coverage = read('company-coverage.json')
+    records = list(games['works'])
+    for company in coverage['companies']:
+        records.extend(company.get('relatedGames', []))
+        records.extend(company.get('dossierOnlyWorks', []))
+    extra = read('non-rpg-creator-supplement-20261030.json')
+    records.extend(extra['works'])
+    return records
+
+
+def name_key(s):
+    return ''.join(c for c in unicodedata.normalize('NFKC', s).casefold() if c.isalnum())
+
+
+def validate_new_work(bundle, key, games):
+    assert isinstance(bundle, dict) and set(bundle) == {'work', 'contentVersions', 'platformReleases'}, '新作须包含作品、原作内容和首次发行'
+    w = bundle['work']
+    required = {'id','title','originalTitle','firstYear','category','subcategory','genre','characters','charactersNote','synopsis','notes','source','interactionModes','interactionNote','interactionBasis','interactionSources'}
+    assert isinstance(w, dict) and set(w) == required, '新作品字段不完整或含未知字段'
+    assert w['id'] == key and re.fullmatch(r'g[0-9]{3,8}', key), '作品 ID 无效'
+    records = library_records(games)
+    assert not any(r['id'] == key for r in records), '作品 ID 已存在于主库或专题，请重新生成 ID'
+    names = {name_key(w[f]) for f in ('title','originalTitle') if isinstance(w[f],str) and name_key(w[f])}
+    assert len(names) and all(text(w[f], maximum=300) for f in ('title','originalTitle'))
+    for old in records:
+        oldnames = {name_key(old.get(f,'')) for f in ('title','chineseTitle','originalTitle')} | {name_key(a) for a in old.get('titleAliases',[])}
+        assert not names & (oldnames - {''}), f"名称与已有作品 {old['id']} 重复，请复用其身份或先核查同名作品"
+    assert type(w['firstYear']) is int and 1976 <= w['firstYear'] <= dt.date.today().year
+    taxonomy = read('taxonomy.json')
+    assert w['category'] in taxonomy['subcategories'] and w['subcategory'] in taxonomy['subcategories'][w['category']]
+    assert w['subcategory'] not in {'纯文本指令','图文指令'}, '此类输入式书目须通过具名专题准入审查'
+    assert all(text(w[f]) for f in ('genre','synopsis','interactionNote')) and source_url_valid(w['source'])
+    assert isinstance(w['characters'], list) and w['characters'] and all(text(c) and '待核实' not in c for c in w['characters'])
+    assert isinstance(w['charactersNote'],str) and '待核实' not in w['charactersNote'] and isinstance(w['notes'],str)
+    from interaction_model import validate_interactions
+    validate_interactions({'works':[w]}, {'companies':[]}, taxonomy)
+    contents, releases = bundle['contentVersions'], bundle['platformReleases']
+    assert isinstance(contents,list) and len(contents) == 1 and contents[0]['basis'] == 'original', '一部新作只能建立一个原作内容'
+    assert isinstance(releases,list) and 1 <= len(releases) <= 10, '填写1至10项有依据的首批发行'
+    assert set(contents[0]) == {'id','workId','label','firstYear','basis','evidence','source','evidenceReleaseIds','addedContent'}
+    assert contents[0]['workId'] == key and text(contents[0]['evidence'],10) and text(contents[0]['label'])
+    for r in releases:
+        assert set(r) == {'id','workId','year','platform','publisher','publisherCompanies','kind','voice','differences','source','contentVersionId','contentRelation','contentNote','releaseRole'}
+        assert r['workId'] == key and r['contentRelation'] == 'original' and r['releaseRole'] == 'contentDebut'
+        assert type(r['year']) is int and r['year'] == w['firstYear']
+        assert all(text(r[f]) for f in ('platform','publisher','kind','differences','contentNote')) and source_url_valid(r['source'])
+        assert r['voice'] in {'有','无','未核实','有（部分）','有（主角部分）'}
+        raw = r['publisher']
+        expected = [] if raw in taxonomy['nonCompanyCredits'] else taxonomy['jointCredits'].get(raw,[taxonomy['publisherAliases'].get(raw,raw)])
+        assert r['publisherCompanies'] == expected, '发行方归档须遵循现有别名规则'
+    assert len({(r['platform'],r['publisher']) for r in releases}) == len(releases), '首批平台发行重复'
+    for field in ('contentVersions','platformReleases'):
+        known = {r['id'] for r in games[field]}
+        assert all(ID.fullmatch(r['id']) and r['id'].startswith(key+'-') and r['id'] not in known for r in bundle[field]), '内容或发行 ID 重复或不属于新作品'
+    from content_model import validate_collection
+    validate_collection([w], contents, releases)
+
+
 def apply_package(package, current, games, baseline, dossiers):
     assert isinstance(package, dict) and set(package) == {'schemaVersion', 'createdAt', 'reason', 'operations'}, '更新包结构无效'
     assert package['schemaVersion'] == 1 and text(package['reason'], maximum=2000), '需要修改说明'
@@ -151,14 +224,18 @@ def apply_package(package, current, games, baseline, dossiers):
     assert isinstance(ops, list) and 0 < len(ops) <= 30, '一次提交1至30项记录'
     changed = []
     result = copy.deepcopy(current)
-    for op in ops:
+    result.setdefault('games', copy.deepcopy(games))
+    for op in sorted(ops, key=lambda op: op.get('resource') != 'newWork'):
         assert isinstance(op, dict) and set(op) == {'resource', 'key', 'before', 'after'}, '更新项字段无效'
         resource, key = op['resource'], op['key']
         assert resource in PATHS and isinstance(key, str) and ID.fullmatch(key), '不允许的资源或记录 ID'
         assert (resource, key) not in changed, '同一记录不能重复修改'
         assert op['after'] is not None, '不支持删除历史记录'
         assert value(current, resource, key) == op['before'], f'{resource}/{key}: 数据库已变化，请重新载入并核对'
-        if resource == 'editorial':
+        if resource == 'newWork':
+            assert op['before'] is None, '不能通过新作入口覆盖已有作品'
+            validate_new_work(op['after'], key, result['games'])
+        elif resource == 'editorial':
             assert key not in baseline['works'], '最初八部编目须走独立审查，请添加补充说明'
         elif resource == 'credits':
             assert op['before'] is None, '已有署名订正须走独立审查，请添加补充说明'
@@ -170,7 +247,7 @@ def apply_package(package, current, games, baseline, dossiers):
             assert set(op['before']['roles']) <= set(op['after']['roles']), '不能移除已有职责'
         assign(result, resource, key, op['after'])
         changed.append((resource, key))
-    validate_rows(result, games, dossiers, changed)
+    validate_rows(result, result['games'], dossiers, changed)
     return result
 
 
@@ -190,7 +267,7 @@ def apply_file(path, root=ROOT):
     result['editorial']['updatedAt'] = today
     result['creators']['updated'] = today
     result['notes']['updated'] = today
-    outputs = {PATHS['editorial']: result['editorial'], PATHS['notes']: result['notes'],
+    outputs = {'games.json': result['games'], PATHS['editorial']: result['editorial'], PATHS['notes']: result['notes'],
                PATHS['people']: result['creators'], 'management-history.json': history}
     # Keep the frozen review scope while updating its live completion counts.
     report = read('narrative-cataloguing-20261030.json', root)

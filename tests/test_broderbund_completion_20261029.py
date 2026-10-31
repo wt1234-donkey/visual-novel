@@ -11,9 +11,10 @@ def company(d):return next(c for c in d['companies'] if c['id']=='broderbund')
 class BroderbundCompletionTests(unittest.TestCase):
  def test_append_only_shared_database_and_other_dossiers(self):
   a,b=read('data/games.json'),old('data/games.json')
+  managed=[op['after'] for batch in read('data/management-history.json')['batches'] for op in batch['operations'] if op['resource']=='newWork']
   for field,n in [('works',6),('contentVersions',6),('platformReleases',7)]:
    bm={x['id']:x for x in b[field]};am={x['id']:x for x in a[field]}
-   self.assertEqual({i:am[i] for i in bm},bm);self.assertEqual(len(am)-len(bm),n+len(read('data/non-rpg-intake-18-studios-result.json')['added'])+len(read('data/non-rpg-six-studios-expansion-result-20261030.json')['added'])+len(read('data/non-rpg-recommended-intake-result-20261030.json')['added']))
+   self.assertEqual({i:am[i] for i in bm},bm);self.assertEqual(len(am)-len(bm),n+sum(1 if field=='works' else len(bundle[field]) for bundle in managed)+len(read('data/non-rpg-intake-18-studios-result.json')['added'])+len(read('data/non-rpg-six-studios-expansion-result-20261030.json')['added'])+len(read('data/non-rpg-recommended-intake-result-20261030.json')['added']))
   a,b=read('data/company-coverage.json'),old('data/company-coverage.json')
   self.assertEqual([c for c in a['companies'] if c['id']!='broderbund'],[c for c in b['companies'] if c['id']!='broderbund'])
   for p in ['data/content-migration-baseline.json','data/entity-migration-baseline.json','data/taxonomy.json']:self.assertEqual(read(p),old(p))
