@@ -1,6 +1,6 @@
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const kind={'new-basic':'待提升基础索引','main-linked':'完整主库已有','dossier-linked':'厂商专题已有','promoted-basic':'主库基础身份已纳入','promoted-dossier':'主库已关联专题','identity-review':'作品与版本身份待核'};
+const kind={'new-basic':'待提升基础索引','main-linked':'完整主库已有','dossier-linked':'厂商专题已有','promoted-basic':'主库基础身份已纳入','promoted-dossier':'主库已关联专题','identity-review':'作品与版本身份待核','main-registry-linked':'已关联主库身份'};
 let entries=[],filtered=[],page=0;
 const size=25;
 function optionBox(element,values){
@@ -54,10 +54,25 @@ async function start(){
        $('stat-linked').textContent=(main.summary.existingComplete+main.summary.promotedDossier).toLocaleString('zh-CN');
      }
    }catch(err){console.warn('主库基础身份层暂不可用',err);}
-   $('stat-total').textContent=obj.summary.displayTotal.toLocaleString('zh-CN');
-   if(!$('stat-new').textContent.match(/[0-9]/))$('stat-new').textContent=obj.summary.newBasic.toLocaleString('zh-CN');
+   try{
+     const next=await fetch('data/adv-rpg-next-studio-review-20261031.json',{cache:'no-store'});
+     if(next.ok){
+       const add=await next.json();
+       const normal=t=>String(t||'').normalize('NFKC').toLowerCase().replace(/[^\\p{L}\\p{N}]/gu,'');
+       const existing=new Set(entries.map(x=>normal(x.title)+'|'+x.year));
+       for(const r of add.records){
+         const key=normal(r.title)+'|'+r.year;
+         if(existing.has(key))continue;
+         entries.push({...r,id:'batch2-'+key,matchedWorkId:r.registryId,
+           status:r.status==='linked-existing-registry'||r.status==='linked-existing-full-or-dossier'?'main-registry-linked':r.status});
+         existing.add(key);
+       }
+     }
+   }catch(err){console.warn('第二批ADV/RPG作品审核表尚不可用',err);}
+   $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
+   try{const mainReg=await (await fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'})).json();$('stat-new').textContent=mainReg.summary.promotedBasic.toLocaleString('zh-CN');$('stat-linked').textContent=(mainReg.summary.promotedDossier+mainReg.summary.existingComplete).toLocaleString('zh-CN')}catch(err){console.warn('主库统计暂不可用',err)}
    if(!$('stat-linked').textContent.match(/[0-9]/))$('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
-   $('stat-groups').textContent=obj.summary.groups.toLocaleString('zh-CN');
+   $('stat-groups').textContent=(new Set(entries.map(x=>x.group))).size.toLocaleString('zh-CN');
    optionBox($('gameplay'),entries.map(r=>r.gameplay));
    optionBox($('group'),entries.map(r=>r.group));
    $('q').addEventListener('input',filterAndDraw);
