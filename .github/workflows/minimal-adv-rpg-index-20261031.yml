@@ -1,0 +1,52 @@
+name: Build lightweight project ADV RPG work index
+on:
+  push:
+    branches: [catalog/minimal-adv-rpg-20261031]
+    paths:
+      - data/adv-rpg-minimal-candidates-20261031.json
+      - scripts/build_adv_rpg_minimal_index_20261031.py
+      - tests/test_minimal_adv_rpg_index_20261031.py
+      - minimal-adv-rpg.html
+      - minimal-adv-rpg.mjs
+      - .github/workflows/minimal-adv-rpg-index-20261031.yml
+permissions:
+  contents: write
+concurrency:
+  group: minimal-adv-rpg-index-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build-audit-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Reconcile project game candidates with main and dossier works
+        run: python3 scripts/build_adv_rpg_minimal_index_20261031.py
+      - name: Validate minimal index and original records
+        run: |
+          python3 -m unittest discover -s tests -p "test_minimal_adv_rpg_index_20261031.py"
+          node --check minimal-adv-rpg.mjs
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Commit reviewed generated index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/adv-rpg-minimal-index-20261031.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate deduplicated minimal ADV RPG works index"
+            git fetch origin catalog/minimal-adv-rpg-20261031
+            git rebase origin/catalog/minimal-adv-rpg-20261031
+            git push origin HEAD:catalog/minimal-adv-rpg-20261031
+          fi

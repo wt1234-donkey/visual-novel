@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#66518c">
+  <meta name="description" content="叙事作品轻量索引：按作品名称、最初发行年份、ADV/RPG主要玩法和厂商关联筛选。">
+  <title>ADV／RPG 基础作品索引 · 叙事游戏年鉴</title>
+  <style>
+    :root{color-scheme:dark;--bg:#151320;--panel:#211d30;--muted:#b7b1c8;--line:#46405c;--accent:#c5adff}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f0ff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:var(--accent)}.wrap{max-width:1240px;margin:auto;padding:22px 22px 64px}
+    header{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:38px}
+    nav{display:flex;gap:18px;flex-wrap:wrap}.brand{text-decoration:none;font-size:18px;font-weight:780;color:#f5f0ff}
+    h1{font-size:clamp(28px,4vw,44px);letter-spacing:-.025em;margin:5px 0 12px}
+    h2{font-size:19px}.eyebrow{color:var(--accent);letter-spacing:.16em;font-size:12px;font-weight:650}
+    .intro{max-width:870px;color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
+    .stats div,.filters,.results,.notice{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .stats strong{display:block;font-size:28px;font-variant-numeric:tabular-nums}
+    .stats small{color:var(--muted)}
+    .filters{display:grid;grid-template-columns:minmax(230px,2fr) repeat(3,minmax(130px,1fr));gap:12px;margin-bottom:16px}
+    label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+    input,select{font:inherit;background:#151320;color:#fff;border:1px solid #655c79;border-radius:9px;padding:10px;min-width:0}
+    input:focus,select:focus{outline:2px solid #ac90ec;outline-offset:2px}
+    .results{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:690px}
+    th{text-align:left;font-size:12px;color:var(--muted);font-weight:650;border-bottom:1px solid var(--line);padding:10px}
+    td{border-bottom:1px solid #373148;padding:12px 10px;vertical-align:top;font-size:14px}td:first-child{font-weight:650}
+    .minor{font-size:12px;color:var(--muted);font-weight:normal}.pill{display:inline-block;padding:2px 9px;border:1px solid #6c598d;border-radius:20px;font-size:12px;white-space:nowrap}
+    .count{color:var(--muted);margin:0 0 12px}.buttons{display:flex;gap:12px;align-items:center;justify-content:center;margin:22px 0}
+    button{border:1px solid var(--line);color:#f5f0ff;background:#2e2940;border-radius:9px;padding:9px 15px;cursor:pointer}button:disabled{opacity:.4;cursor:default}
+    .notice{margin-top:18px;color:var(--muted);font-size:14px}
+    @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
+  </style>
+  <script type="module" src="minimal-adv-rpg.mjs?v=20261031"></script>
+</head>
+<body><div class="wrap">
+  <header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav><a href="index.html">作品发现</a><a href="catalogue.html">高级发行检索</a><a href="organizations.html">组织与沿革</a><a href="https://github.com/wt1234-donkey/visual-novel">GitHub</a></nav></header>
+  <main>
+    <div class="eyebrow">LIGHTWEIGHT NARRATIVE WORKS · ADV / RPG</div>
+    <h1>叙事作品 · 基础补录索引</h1>
+    <p class="intro">按照先前整理的厂商游戏清单，优先记录作品名、最初发行年份和主要玩法。对已有主库及厂商专题的作品进行关联去重；新确认候选先放入轻量作品索引，不制造角色、剧情、人物署名或不存在的内容版本。</p>
+    <section class="stats" aria-label="当前基础作品索引统计">
+      <div><strong id="stat-total">—</strong><small>索引可查询记录</small></div>
+      <div><strong id="stat-new">—</strong><small>本轮新建基础记录</small></div>
+      <div><strong id="stat-linked">—</strong><small>候选匹配已有作品</small></div>
+      <div><strong id="stat-groups">—</strong><small>本轮覆盖厂商关联组</small></div>
+    </section>
+    <section class="filters" aria-label="筛选作品">
+      <label>作品名／别名搜索<input id="q" type="search" placeholder="输入中、英、日文作品名"></label>
+      <label>玩法<select id="gameplay"><option value="">全部玩法</option></select></label>
+      <label>厂商关联组<select id="group"><option value="">全部厂商</option></select></label>
+      <label>收录状态<select id="status"><option value="">全部状态</option><option value="new-basic">本轮新增</option><option value="main-linked">主库已有</option><option value="dossier-linked">厂商专题已有</option><option value="identity-review">身份待核</option></select></label>
+    </section>
+    <section class="results"><p class="count" id="count" role="status">正在读取索引……</p>
+    <table><thead><tr><th>作品名称</th><th>首发年份</th><th>主要玩法</th><th>厂商关联</th><th>编目状态</th><th>依据</th></tr></thead>
+    <tbody id="rows"></tbody></table>
+    <div class="buttons"><button id="prev" type="button">上一页</button><span id="pagination" aria-live="polite"></span><button id="next" type="button">下一页</button></div>
+    </section>
+    <div class="notice"><strong>收录说明：</strong>“新增基础记录”只表示这次建立了作品身份、年份与主要玩法，不代表已经进入原来强制填写角色和内容版本的完整主库；“厂商专题已有”保留既有身份，不重复建立作品。厂商分组表示编目关联，不自动断言开发／发行职责；部分早期作品的首发机种与具体日期仍需复核。<p><a href="data/adv-rpg-minimal-index-20261031.json">查看完整基础索引 JSON</a> · <a href="data/adv-rpg-minimal-candidates-20261031.json">查看本轮候选来源清单</a></p></div>
+  </main>
+</div></body></html>
