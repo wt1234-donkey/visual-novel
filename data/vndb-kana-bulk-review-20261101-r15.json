@@ -1,0 +1,6430 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "source": "https://api.vndb.org/kana/vn",
+  "sourceDocs": "https://api.vndb.org/kana",
+  "sourceLicense": "https://vndb.org/d17",
+  "scope": "VNDB visual novels, original name/alias/year and vndb id only; no claims about creators or versions",
+  "request": {
+    "sort": "id",
+    "pageSize": 100,
+    "pageCountCap": 250,
+    "limitNew": 500
+  },
+  "summary": {
+    "scanned": 1256,
+    "newDistinctWorks": 500,
+    "before": 7310,
+    "after": 7810,
+    "existing-external-id": 527,
+    "existing-work-matched": 191,
+    "year-or-alias-conflict": 8,
+    "edition-or-pack-held": 22,
+    "missing-unreleased-or-future-year": 8
+  },
+  "records": [
+    {
+      "id": "vndb-v1",
+      "title": "Minna de Nyan Nyan",
+      "aliases": [
+        "みんなでニャンニャン"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v1",
+      "sourceRefs": [
+        "vndb:v1"
+      ]
+    },
+    {
+      "id": "vndb-v6",
+      "title": "Kira",
+      "aliases": [
+        "雪花 -きら-",
+        "Yukibana",
+        "Yuki Hana"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v6",
+      "sourceRefs": [
+        "vndb:v6"
+      ]
+    },
+    {
+      "id": "vndb-v8",
+      "title": "Natsu no Hi no Resonance",
+      "aliases": [
+        "夏の日のレザナンス"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v8",
+      "sourceRefs": [
+        "vndb:v8"
+      ]
+    },
+    {
+      "id": "vndb-v31",
+      "title": "Gimai - Hitomi",
+      "aliases": [
+        "義妹・仁美"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v31",
+      "sourceRefs": [
+        "vndb:v31"
+      ]
+    },
+    {
+      "id": "vndb-v39",
+      "title": "40-nichi 40-ya no Ame",
+      "aliases": [
+        "40日40夜の雨",
+        "Yonjuunichi Yonjuuya no Ame"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v39",
+      "sourceRefs": [
+        "vndb:v39"
+      ]
+    },
+    {
+      "id": "vndb-v40",
+      "title": "The noose",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v40",
+      "sourceRefs": [
+        "vndb:v40"
+      ]
+    },
+    {
+      "id": "vndb-v41",
+      "title": "Yu-u-e-n-chi",
+      "aliases": [
+        "ゆ・う・え・ん・ち"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v41",
+      "sourceRefs": [
+        "vndb:v41"
+      ]
+    },
+    {
+      "id": "vndb-v42",
+      "title": "Koiyoubi",
+      "aliases": [
+        "恋ようび"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v42",
+      "sourceRefs": [
+        "vndb:v42"
+      ]
+    },
+    {
+      "id": "vndb-v43",
+      "title": "Xchange",
+      "aliases": [
+        "エックスチェンジ"
+      ],
+      "firstYear": 1997,
+      "source": "https://vndb.org/v43",
+      "sourceRefs": [
+        "vndb:v43"
+      ]
+    },
+    {
+      "id": "vndb-v49",
+      "title": "Tsukihime PLUS-DISC",
+      "aliases": [
+        "月姫 PLUS-DISC",
+        "PLUS-DISK",
+        "PLUS+DISC"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v49",
+      "sourceRefs": [
+        "vndb:v49"
+      ]
+    },
+    {
+      "id": "vndb-v53",
+      "title": "Otoko Dogeza Jigoku",
+      "aliases": [
+        "男土下座地獄",
+        "[X] GENUFLECT"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v53",
+      "sourceRefs": [
+        "vndb:v53"
+      ]
+    },
+    {
+      "id": "vndb-v54",
+      "title": "Shiawase no Katachi",
+      "aliases": [
+        "しあわせのかたち"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v54",
+      "sourceRefs": [
+        "vndb:v54"
+      ]
+    },
+    {
+      "id": "vndb-v55",
+      "title": "Ishika to Honori",
+      "aliases": [
+        "イシカとホノリ"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v55",
+      "sourceRefs": [
+        "vndb:v55"
+      ]
+    },
+    {
+      "id": "vndb-v56",
+      "title": "Piece of Wonder",
+      "aliases": [
+        "ピースオブワンダー"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v56",
+      "sourceRefs": [
+        "vndb:v56"
+      ]
+    },
+    {
+      "id": "vndb-v58",
+      "title": "Mukou no Yume",
+      "aliases": [
+        "向日の夢"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v58",
+      "sourceRefs": [
+        "vndb:v58"
+      ]
+    },
+    {
+      "id": "vndb-v59",
+      "title": "Hoshi no Furu Oka",
+      "aliases": [
+        "星の降る丘"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v59",
+      "sourceRefs": [
+        "vndb:v59"
+      ]
+    },
+    {
+      "id": "vndb-v60",
+      "title": "Ai Yori Aoshi",
+      "aliases": [
+        "藍より青し",
+        "Bluer than Indigo"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v60",
+      "sourceRefs": [
+        "vndb:v60"
+      ]
+    },
+    {
+      "id": "vndb-v62",
+      "title": "Manatsu no Kagerou",
+      "aliases": [
+        "真夏のかげろう"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v62",
+      "sourceRefs": [
+        "vndb:v62"
+      ]
+    },
+    {
+      "id": "vndb-v63",
+      "title": "Dragonia",
+      "aliases": [
+        "ドラゴニア"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v63",
+      "sourceRefs": [
+        "vndb:v63"
+      ]
+    },
+    {
+      "id": "vndb-v64",
+      "title": "Private Nurse",
+      "aliases": [
+        "プライベートナース"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v64",
+      "sourceRefs": [
+        "vndb:v64"
+      ]
+    },
+    {
+      "id": "vndb-v69",
+      "title": "Higurashi no Naku Koro ni Rei",
+      "aliases": [
+        "ひぐらしのなく頃に礼",
+        "Higurashi Rei",
+        "When They Cry 2+"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v69",
+      "sourceRefs": [
+        "vndb:v69"
+      ]
+    },
+    {
+      "id": "vndb-v72",
+      "title": "Watashi no Kuroneko",
+      "aliases": [
+        "私の黒猫"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v72",
+      "sourceRefs": [
+        "vndb:v72"
+      ]
+    },
+    {
+      "id": "vndb-v79",
+      "title": "true tears",
+      "aliases": [
+        "トゥルーティアーズ"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v79",
+      "sourceRefs": [
+        "vndb:v79"
+      ]
+    },
+    {
+      "id": "vndb-v88",
+      "title": "ef - a fairy tale of the two.",
+      "aliases": [
+        "ever forever",
+        "eternal feather",
+        "emotional flutter",
+        "two, only two",
+        "two stories",
+        "ふたつの物語",
+        "the fairy tale is not just one, but are only two.",
+        "エフ ア フェアリー テイル オブ ザ トゥー"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v88",
+      "sourceRefs": [
+        "vndb:v88"
+      ]
+    },
+    {
+      "id": "vndb-v91",
+      "title": "Yachoukitan",
+      "aliases": [
+        "夜蝶綺譚"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v91",
+      "sourceRefs": [
+        "vndb:v91"
+      ]
+    },
+    {
+      "id": "vndb-v101",
+      "title": "Shukketsubo ~Senseki no Oetsu~",
+      "aliases": [
+        "出血簿〜鮮赤の嗚咽〜"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v101",
+      "sourceRefs": [
+        "vndb:v101"
+      ]
+    },
+    {
+      "id": "vndb-v105",
+      "title": "Killer Queen",
+      "aliases": [
+        "キラークイーン"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v105",
+      "sourceRefs": [
+        "vndb:v105"
+      ]
+    },
+    {
+      "id": "vndb-v108",
+      "title": "Natsu, Semi, Shoujo",
+      "aliases": [
+        "夏、セミ、少女"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v108",
+      "sourceRefs": [
+        "vndb:v108"
+      ]
+    },
+    {
+      "id": "vndb-v109",
+      "title": "Tottemo Pheromone",
+      "aliases": [
+        "とってもフェロモン"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v109",
+      "sourceRefs": [
+        "vndb:v109"
+      ]
+    },
+    {
+      "id": "vndb-v110",
+      "title": "Koisuru Oukoku",
+      "aliases": [
+        "恋する王国",
+        "Beloved Kingdom",
+        "Fall-In-Love Kingdom",
+        "Kingdom of Love"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v110",
+      "sourceRefs": [
+        "vndb:v110"
+      ]
+    },
+    {
+      "id": "vndb-v111",
+      "title": "Tokimeki Check-in!",
+      "aliases": [
+        "ときめきCheck in!"
+      ],
+      "firstYear": 1998,
+      "source": "https://vndb.org/v111",
+      "sourceRefs": [
+        "vndb:v111"
+      ]
+    },
+    {
+      "id": "vndb-v112",
+      "title": "Snow Drop",
+      "aliases": [
+        "スノードロップ"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v112",
+      "sourceRefs": [
+        "vndb:v112"
+      ]
+    },
+    {
+      "id": "vndb-v115",
+      "title": "Houkago Ren'ai Club ~Koi no Etude~",
+      "aliases": [
+        "放課後恋愛クラブ ～恋のエチュード～",
+        "After School Romance Club",
+        "CRC",
+        "HRC",
+        "放課後恋愛倶楽部"
+      ],
+      "firstYear": 1996,
+      "source": "https://vndb.org/v115",
+      "sourceRefs": [
+        "vndb:v115"
+      ]
+    },
+    {
+      "id": "vndb-v116",
+      "title": "Pururun Café",
+      "aliases": [
+        "ぷるるんカフェ"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v116",
+      "sourceRefs": [
+        "vndb:v116"
+      ]
+    },
+    {
+      "id": "vndb-v118",
+      "title": "Watashi ni Kon'ya☆Ai ni Kite",
+      "aliases": [
+        "私に今夜☆会いに来て"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v118",
+      "sourceRefs": [
+        "vndb:v118"
+      ]
+    },
+    {
+      "id": "vndb-v119",
+      "title": "DIVI-DEAD",
+      "aliases": [
+        "ディブァイデッド",
+        "ディヴァイデッド"
+      ],
+      "firstYear": 1998,
+      "source": "https://vndb.org/v119",
+      "sourceRefs": [
+        "vndb:v119"
+      ]
+    },
+    {
+      "id": "vndb-v120",
+      "title": "Shoujo Settai",
+      "aliases": [
+        "娼女接待"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v120",
+      "sourceRefs": [
+        "vndb:v120"
+      ]
+    },
+    {
+      "id": "vndb-v121",
+      "title": "Chain Ushinawareta Ashiato",
+      "aliases": [
+        "チェーン　失われた足跡",
+        "Chain　失われた足跡"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v121",
+      "sourceRefs": [
+        "vndb:v121"
+      ]
+    },
+    {
+      "id": "vndb-v122",
+      "title": "Doushin ~Sanshimai no Etude~",
+      "aliases": [
+        "同心～三姉妹のエチュード～"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v122",
+      "sourceRefs": [
+        "vndb:v122"
+      ]
+    },
+    {
+      "id": "vndb-v123",
+      "title": "Anata no Osanazuma",
+      "aliases": [
+        "あなたの幼妻"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v123",
+      "sourceRefs": [
+        "vndb:v123"
+      ]
+    },
+    {
+      "id": "vndb-v124",
+      "title": "Enzai",
+      "aliases": [
+        "eine falsche Beschuldigung"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v124",
+      "sourceRefs": [
+        "vndb:v124"
+      ]
+    },
+    {
+      "id": "vndb-v125",
+      "title": "SILVER CHAOS",
+      "aliases": [],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v125",
+      "sourceRefs": [
+        "vndb:v125"
+      ]
+    },
+    {
+      "id": "vndb-v126",
+      "title": "Jewel Knights - Crusaders",
+      "aliases": [
+        "ジュエルナイツ・クルセイダーズ",
+        "Крестоносцы - рыцари самоцветов"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v126",
+      "sourceRefs": [
+        "vndb:v126"
+      ]
+    },
+    {
+      "id": "vndb-v127",
+      "title": "Youjuu Senki -A.D. 2048-",
+      "aliases": [
+        "妖獣戦記 －Ａ．Ｄ．２０４８－"
+      ],
+      "firstYear": 1993,
+      "source": "https://vndb.org/v127",
+      "sourceRefs": [
+        "vndb:v127"
+      ]
+    },
+    {
+      "id": "vndb-v128",
+      "title": "Xchange2",
+      "aliases": [
+        "エックスチェンジ2"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v128",
+      "sourceRefs": [
+        "vndb:v128"
+      ]
+    },
+    {
+      "id": "vndb-v129",
+      "title": "Xchange3",
+      "aliases": [
+        "えっくすちぇんじ3",
+        "エックスチェンジ3"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v129",
+      "sourceRefs": [
+        "vndb:v129"
+      ]
+    },
+    {
+      "id": "vndb-v130",
+      "title": "Yin-Yang! X Change Alternative",
+      "aliases": [
+        "Yin-Yang! Another X-Change"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v130",
+      "sourceRefs": [
+        "vndb:v130"
+      ]
+    },
+    {
+      "id": "vndb-v132",
+      "title": "Watashi ni Kon'ya Ai ni Kite 2 ~Oyome-san wa Hime Miko~",
+      "aliases": [
+        "私に今夜会いに来て２～お嫁さんは姫巫女～"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v132",
+      "sourceRefs": [
+        "vndb:v132"
+      ]
+    },
+    {
+      "id": "vndb-v133",
+      "title": "Ecchi na Bunny-san wa Kirai?",
+      "aliases": [
+        "エッチなバニーさんは嫌い?"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v133",
+      "sourceRefs": [
+        "vndb:v133"
+      ]
+    },
+    {
+      "id": "vndb-v134",
+      "title": "Ecchi na Bunny-san wa Kirai? 2",
+      "aliases": [
+        "エッチなバニーさんは嫌い？2"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v134",
+      "sourceRefs": [
+        "vndb:v134"
+      ]
+    },
+    {
+      "id": "vndb-v135",
+      "title": "Gibo",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v135",
+      "sourceRefs": [
+        "vndb:v135"
+      ]
+    },
+    {
+      "id": "vndb-v136",
+      "title": "Heart de Roommate",
+      "aliases": [
+        "はぁと de ルームメイト"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v136",
+      "sourceRefs": [
+        "vndb:v136"
+      ]
+    },
+    {
+      "id": "vndb-v137",
+      "title": "Kango Shichau zo",
+      "aliases": [
+        "看護しちゃうぞ"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v137",
+      "sourceRefs": [
+        "vndb:v137"
+      ]
+    },
+    {
+      "id": "vndb-v138",
+      "title": "Hitozuma Hime Club",
+      "aliases": [
+        "人妻姫倶楽部",
+        "Secret Wive's Club"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v138",
+      "sourceRefs": [
+        "vndb:v138"
+      ]
+    },
+    {
+      "id": "vndb-v139",
+      "title": "Zettai Fukujuu Meirei",
+      "aliases": [
+        "絶対服従命令",
+        "绝对服从命令",
+        "ABSOLUT GEHORSAM BEFEHL"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v139",
+      "sourceRefs": [
+        "vndb:v139"
+      ]
+    },
+    {
+      "id": "vndb-v140",
+      "title": "Tsukushite Agechau 4 ~Watashi-tachi no Mitsugetsu~",
+      "aliases": [
+        "尽くしてあげちゃう４　～私たちの蜜月～"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v140",
+      "sourceRefs": [
+        "vndb:v140"
+      ]
+    },
+    {
+      "id": "vndb-v141",
+      "title": "Meshimase Idol",
+      "aliases": [
+        "召しませアイドル",
+        "Please Enjoy the Idol"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v141",
+      "sourceRefs": [
+        "vndb:v141"
+      ]
+    },
+    {
+      "id": "vndb-v142",
+      "title": "Little My Maid",
+      "aliases": [
+        "リトルMyメイド"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v142",
+      "sourceRefs": [
+        "vndb:v142"
+      ]
+    },
+    {
+      "id": "vndb-v143",
+      "title": "Se-n-se-i 2",
+      "aliases": [
+        "せ・ん・せ・い2"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v143",
+      "sourceRefs": [
+        "vndb:v143"
+      ]
+    },
+    {
+      "id": "vndb-v144",
+      "title": "Kuro no Tsuki",
+      "aliases": [
+        "蒼黒の月",
+        "Darkness of the Moon"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v144",
+      "sourceRefs": [
+        "vndb:v144"
+      ]
+    },
+    {
+      "id": "vndb-v145",
+      "title": "Rinkaiten ~Critical Point~",
+      "aliases": [
+        "臨界点 ～クリティカル・ポイント～"
+      ],
+      "firstYear": 1998,
+      "source": "https://vndb.org/v145",
+      "sourceRefs": [
+        "vndb:v145"
+      ]
+    },
+    {
+      "id": "vndb-v146",
+      "title": "Adam: The Double Factor",
+      "aliases": [
+        "アダムザダブルファクター"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v146",
+      "sourceRefs": [
+        "vndb:v146"
+      ]
+    },
+    {
+      "id": "vndb-v148",
+      "title": "Tsuki",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v148",
+      "sourceRefs": [
+        "vndb:v148"
+      ]
+    },
+    {
+      "id": "vndb-v149",
+      "title": "Kango Shichau zo 2 ~Joshi Ryou wa Moeteiru ka~",
+      "aliases": [
+        "看護しちゃうぞ２　～女子寮は萌えているか～",
+        "I'm Gonna Nurse You 2"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v149",
+      "sourceRefs": [
+        "vndb:v149"
+      ]
+    },
+    {
+      "id": "vndb-v152",
+      "title": "GLO-RI-A ~Kindan no Ketsuzoku~",
+      "aliases": [
+        "GLO・RI・A ～禁断の血族～",
+        "グロリア"
+      ],
+      "firstYear": 1996,
+      "source": "https://vndb.org/v152",
+      "sourceRefs": [
+        "vndb:v152"
+      ]
+    },
+    {
+      "id": "vndb-v153",
+      "title": "Koneko Doumei",
+      "aliases": [
+        "仔猫同盟",
+        "Catgirl Alliance"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v153",
+      "sourceRefs": [
+        "vndb:v153"
+      ]
+    },
+    {
+      "id": "vndb-v154",
+      "title": "Seiai Gakuen Fechika",
+      "aliases": [
+        "性愛学園ふぇち科",
+        "CFA"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v154",
+      "sourceRefs": [
+        "vndb:v154"
+      ]
+    },
+    {
+      "id": "vndb-v155",
+      "title": "Kazoku Keikaku",
+      "aliases": [
+        "家族計画",
+        "Kazokei"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v155",
+      "sourceRefs": [
+        "vndb:v155"
+      ]
+    },
+    {
+      "id": "vndb-v157",
+      "title": "Binetsu Kyoushi Chieri",
+      "aliases": [
+        "微熱教師 ちえり",
+        "Binetsu Kyoushi Cherry"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v157",
+      "sourceRefs": [
+        "vndb:v157"
+      ]
+    },
+    {
+      "id": "vndb-v158",
+      "title": "Ikazuchi no Senshi Raidy",
+      "aliases": [
+        "雷の戦士ライディ"
+      ],
+      "firstYear": 1994,
+      "source": "https://vndb.org/v158",
+      "sourceRefs": [
+        "vndb:v158"
+      ]
+    },
+    {
+      "id": "vndb-v159",
+      "title": "DOR",
+      "aliases": [],
+      "firstYear": 1992,
+      "source": "https://vndb.org/v159",
+      "sourceRefs": [
+        "vndb:v159"
+      ]
+    },
+    {
+      "id": "vndb-v172",
+      "title": "Exodus Guilty",
+      "aliases": [
+        "エクソダスギルティー"
+      ],
+      "firstYear": 1998,
+      "source": "https://vndb.org/v172",
+      "sourceRefs": [
+        "vndb:v172"
+      ]
+    },
+    {
+      "id": "vndb-v190",
+      "title": "May Club",
+      "aliases": [
+        "五月倶楽部",
+        "Ｖ．Ｒ．デート 五月倶楽部",
+        "VR-DATE Simulator May-Club",
+        "メイクラブ"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v190",
+      "sourceRefs": [
+        "vndb:v190"
+      ]
+    },
+    {
+      "id": "vndb-v191",
+      "title": "Miko Miko Nurse",
+      "aliases": [
+        "巫女みこナース",
+        "Fujomiko Nurse"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v191",
+      "sourceRefs": [
+        "vndb:v191"
+      ]
+    },
+    {
+      "id": "vndb-v199",
+      "title": "Prism Heart",
+      "aliases": [
+        "プリズム・ハート"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v199",
+      "sourceRefs": [
+        "vndb:v199"
+      ]
+    },
+    {
+      "id": "vndb-v209",
+      "title": "Natsu no Owari ni",
+      "aliases": [
+        "なつのおわりに"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v209",
+      "sourceRefs": [
+        "vndb:v209"
+      ]
+    },
+    {
+      "id": "vndb-v212",
+      "title": "Himekishi Lilia ~Mashoku no Oujou ni Otsu~",
+      "aliases": [
+        "姫騎士リリア～魔触の王城に堕つ～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v212",
+      "sourceRefs": [
+        "vndb:v212"
+      ]
+    },
+    {
+      "id": "vndb-v222",
+      "title": "Adagio",
+      "aliases": [
+        "アダージオ"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v222",
+      "sourceRefs": [
+        "vndb:v222"
+      ]
+    },
+    {
+      "id": "vndb-v224",
+      "title": "FLOOD OF TEARS",
+      "aliases": [
+        "FOT"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v224",
+      "sourceRefs": [
+        "vndb:v224"
+      ]
+    },
+    {
+      "id": "vndb-v225",
+      "title": "Yume Goshi no Sora",
+      "aliases": [
+        "夢越しの空",
+        "the caged vagrant",
+        "籠の旅人"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v225",
+      "sourceRefs": [
+        "vndb:v225"
+      ]
+    },
+    {
+      "id": "vndb-v226",
+      "title": "Kare to Kare no Hazama De ~White Labyrinth~",
+      "aliases": [
+        "カレと彼の間で　～ホワイトラビリンス～",
+        "The Space Between ～White Labyrinth～",
+        "karekare"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v226",
+      "sourceRefs": [
+        "vndb:v226"
+      ]
+    },
+    {
+      "id": "vndb-v227",
+      "title": "Hissatsu Panda Samurai",
+      "aliases": [
+        "必殺パンダ侍"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v227",
+      "sourceRefs": [
+        "vndb:v227"
+      ]
+    },
+    {
+      "id": "vndb-v229",
+      "title": "Kawaisou na Kotori",
+      "aliases": [
+        "かわいそうな小鳥"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v229",
+      "sourceRefs": [
+        "vndb:v229"
+      ]
+    },
+    {
+      "id": "vndb-v235",
+      "title": "Shizuku",
+      "aliases": [
+        "雫 -しずく-",
+        "Drip",
+        "Leaf Visual Novel Series Volume 1"
+      ],
+      "firstYear": 1996,
+      "source": "https://vndb.org/v235",
+      "sourceRefs": [
+        "vndb:v235"
+      ]
+    },
+    {
+      "id": "vndb-v239",
+      "title": "A Happy Valentine",
+      "aliases": [],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v239",
+      "sourceRefs": [
+        "vndb:v239"
+      ]
+    },
+    {
+      "id": "vndb-v244",
+      "title": "12nin no Onna Kyoushi Re-Innovation -In-",
+      "aliases": [
+        "十二人の女教師 RE-INNOVATION 「陰」"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v244",
+      "sourceRefs": [
+        "vndb:v244"
+      ]
+    },
+    {
+      "id": "vndb-v246",
+      "title": "Dousei",
+      "aliases": [
+        "Living Together",
+        "Cohabitation"
+      ],
+      "firstYear": 1997,
+      "source": "https://vndb.org/v246",
+      "sourceRefs": [
+        "vndb:v246"
+      ]
+    },
+    {
+      "id": "vndb-v253",
+      "title": "Inkou Haden Amatsu ~Hakudaku no Juin~",
+      "aliases": [
+        "淫皇覇伝アマツ ～白濁の呪印～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v253",
+      "sourceRefs": [
+        "vndb:v253"
+      ]
+    },
+    {
+      "id": "vndb-v260",
+      "title": "Another Dimension ~Tojikomerareta Gakuen~",
+      "aliases": [
+        "Another Dimension ～閉じ込められた学園～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v260",
+      "sourceRefs": [
+        "vndb:v260"
+      ]
+    },
+    {
+      "id": "vndb-v261",
+      "title": "Arts of Black ~Majo no Hakoniwa~",
+      "aliases": [
+        "アーツ オブ ブラック～魔女の箱庭～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v261",
+      "sourceRefs": [
+        "vndb:v261"
+      ]
+    },
+    {
+      "id": "vndb-v262",
+      "title": "Aruji no Tame ni Kane wa Naru",
+      "aliases": [
+        "お嬢様の為に鐘は鳴る",
+        "Arukane",
+        "O-Aruji no Tame ni Kane wa Naru",
+        "あるじのためにかねはなる",
+        "~The Bell Rings Because of the Master~"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v262",
+      "sourceRefs": [
+        "vndb:v262"
+      ]
+    },
+    {
+      "id": "vndb-v265",
+      "title": "Step×Steady",
+      "aliases": [
+        "SxS",
+        "Step by Steady",
+        "ステップバイステディー",
+        "すてっぷばいすてでぃ"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v265",
+      "sourceRefs": [
+        "vndb:v265"
+      ]
+    },
+    {
+      "id": "vndb-v267",
+      "title": "Boku ga Sadame Kimi ni wa Tsubasa o.",
+      "aliases": [
+        "僕がサダメ　君には翼を。",
+        "BokuTsuba"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v267",
+      "sourceRefs": [
+        "vndb:v267"
+      ]
+    },
+    {
+      "id": "vndb-v272",
+      "title": "D.C. ~Da Capo~ Onsen Hen",
+      "aliases": [
+        "D.C.~ダ・カーポ~温泉編"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v272",
+      "sourceRefs": [
+        "vndb:v272"
+      ]
+    },
+    {
+      "id": "vndb-v276",
+      "title": "D.C.P.K. ~Da CaPoker~",
+      "aliases": [
+        "D.C.P.K.～ダ・カーポーカー～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v276",
+      "sourceRefs": [
+        "vndb:v276"
+      ]
+    },
+    {
+      "id": "vndb-v278",
+      "title": "Men at Work! 2 ~Hunter Academy e Youkoso~",
+      "aliases": [
+        "メンアットワーク！２～ハンターアカデミーへようこそ～"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v278",
+      "sourceRefs": [
+        "vndb:v278"
+      ]
+    },
+    {
+      "id": "vndb-v279",
+      "title": "Sensei Da-isuki 2",
+      "aliases": [
+        "先生だーいすき2",
+        "先生だ～いすき2"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v279",
+      "sourceRefs": [
+        "vndb:v279"
+      ]
+    },
+    {
+      "id": "vndb-v280",
+      "title": "Chikan Kizoku",
+      "aliases": [
+        "痴漢貴族"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v280",
+      "sourceRefs": [
+        "vndb:v280"
+      ]
+    },
+    {
+      "id": "vndb-v281",
+      "title": "Sora no Mayoibito",
+      "aliases": [
+        "空の迷い人"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v281",
+      "sourceRefs": [
+        "vndb:v281"
+      ]
+    },
+    {
+      "id": "vndb-v285",
+      "title": "Sensei Da-isuki",
+      "aliases": [
+        "先生だーいすき",
+        "先生だ～いすき"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v285",
+      "sourceRefs": [
+        "vndb:v285"
+      ]
+    },
+    {
+      "id": "vndb-v286",
+      "title": "Wasurenagusa no Yoru",
+      "aliases": [
+        "勿忘草の夜"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v286",
+      "sourceRefs": [
+        "vndb:v286"
+      ]
+    },
+    {
+      "id": "vndb-v287",
+      "title": "The world to reverse.",
+      "aliases": [
+        "hallucinate",
+        "Flanca",
+        "フランカ"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v287",
+      "sourceRefs": [
+        "vndb:v287"
+      ]
+    },
+    {
+      "id": "vndb-v288",
+      "title": "Aru Fuyu no Monogatari",
+      "aliases": [
+        "ある冬の物語"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v288",
+      "sourceRefs": [
+        "vndb:v288"
+      ]
+    },
+    {
+      "id": "vndb-v289",
+      "title": "~Uta~",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v289",
+      "sourceRefs": [
+        "vndb:v289"
+      ]
+    },
+    {
+      "id": "vndb-v290",
+      "title": "~Uta~+αKURUSIMIMASU",
+      "aliases": [
+        "～歌～+αKURUSIMIMASU",
+        "~Uta~ Christmas"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v290",
+      "sourceRefs": [
+        "vndb:v290"
+      ]
+    },
+    {
+      "id": "vndb-v291",
+      "title": "io [Christmas Eve]",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v291",
+      "sourceRefs": [
+        "vndb:v291"
+      ]
+    },
+    {
+      "id": "vndb-v296",
+      "title": "Bloody Bride Imadoki no Vampire",
+      "aliases": [
+        "Bloody Bride いまどきのバンパイア"
+      ],
+      "firstYear": 1996,
+      "source": "https://vndb.org/v296",
+      "sourceRefs": [
+        "vndb:v296"
+      ]
+    },
+    {
+      "id": "vndb-v297",
+      "title": "Costume☆Player",
+      "aliases": [
+        "こすちゅーむ☆ぷれいやー",
+        "Kosu Chi Mu ☆ Pureiyaa"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v297",
+      "sourceRefs": [
+        "vndb:v297"
+      ]
+    },
+    {
+      "id": "vndb-v307",
+      "title": "BALDRHEAD ~Busou Kin'yuu Gaiden~",
+      "aliases": [
+        "BALDRHEAD～武装金融外伝～",
+        "バルドヘッド"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v307",
+      "sourceRefs": [
+        "vndb:v307"
+      ]
+    },
+    {
+      "id": "vndb-v308",
+      "title": "BALDRFIST",
+      "aliases": [
+        "Soukouhime BALDRFIST",
+        "Soukouhime Bal-Fis",
+        "Soukouhime BaruFisu",
+        "装甲姫バルフィス"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v308",
+      "sourceRefs": [
+        "vndb:v308"
+      ]
+    },
+    {
+      "id": "vndb-v313",
+      "title": "Aries",
+      "aliases": [
+        "Aries -アリエス-"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v313",
+      "sourceRefs": [
+        "vndb:v313"
+      ]
+    },
+    {
+      "id": "vndb-v314",
+      "title": "Yaminabe Aries ~Asu e no Chousenjou~",
+      "aliases": [
+        "闇鍋Aries～明日への挑戦状～",
+        "Yaminabe Aries ~Asu he no Chousenjou~"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v314",
+      "sourceRefs": [
+        "vndb:v314"
+      ]
+    },
+    {
+      "id": "vndb-v316",
+      "title": "Aries PureDream",
+      "aliases": [
+        "アリエス ピュアドリム"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v316",
+      "sourceRefs": [
+        "vndb:v316"
+      ]
+    },
+    {
+      "id": "vndb-v317",
+      "title": "Aries LoveDream",
+      "aliases": [
+        "アリエス ラブドリム"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v317",
+      "sourceRefs": [
+        "vndb:v317"
+      ]
+    },
+    {
+      "id": "vndb-v318",
+      "title": "Infantaria",
+      "aliases": [
+        "インファンタリア"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v318",
+      "sourceRefs": [
+        "vndb:v318"
+      ]
+    },
+    {
+      "id": "vndb-v319",
+      "title": "Suika ~Oo 157 Shou~",
+      "aliases": [
+        "水夏 ~SUIKAおー・157章~"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v319",
+      "sourceRefs": [
+        "vndb:v319"
+      ]
+    },
+    {
+      "id": "vndb-v320",
+      "title": "Archimedes no Wasuremono",
+      "aliases": [
+        "アルキメデスのわすれもの",
+        "Archimedes Forgotten Item",
+        "Circus Amusement Disk Volume 2"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v320",
+      "sourceRefs": [
+        "vndb:v320"
+      ]
+    },
+    {
+      "id": "vndb-v322",
+      "title": "Erosmash!",
+      "aliases": [
+        "えろすまっしゅ！"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v322",
+      "sourceRefs": [
+        "vndb:v322"
+      ]
+    },
+    {
+      "id": "vndb-v323",
+      "title": "Eternal Fantasy",
+      "aliases": [
+        "エターナルファンタジー"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v323",
+      "sourceRefs": [
+        "vndb:v323"
+      ]
+    },
+    {
+      "id": "vndb-v326",
+      "title": "From M",
+      "aliases": [
+        "フロムエム"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v326",
+      "sourceRefs": [
+        "vndb:v326"
+      ]
+    },
+    {
+      "id": "vndb-v331",
+      "title": "Utau Ehon 1 2 3 Hai!!",
+      "aliases": [
+        "うたう絵本1・2・3 ハイ！！",
+        "Utau Ehon 1 2 3 Hi!",
+        "Song Picture Book 1 2 3 Hi!"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v331",
+      "sourceRefs": [
+        "vndb:v331"
+      ]
+    },
+    {
+      "id": "vndb-v332",
+      "title": "Utau Ehon 4 5 6 Hi! Hi!",
+      "aliases": [
+        "うたう絵本4・5・6Hi！Hi！",
+        "Song Picture Book 4 5 6 Hi! Hi!",
+        "うたう絵本4・5・6ハイ！ハイ！"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v332",
+      "sourceRefs": [
+        "vndb:v332"
+      ]
+    },
+    {
+      "id": "vndb-v333",
+      "title": "Futari wa!?",
+      "aliases": [
+        "ふたりは!?"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v333",
+      "sourceRefs": [
+        "vndb:v333"
+      ]
+    },
+    {
+      "id": "vndb-v336",
+      "title": "Sukumizu ~Fetish☆ ni Narumon!~",
+      "aliases": [
+        "すくみず～フェチ☆になるもんっ！～",
+        "Sukumizu ~Fecchi☆ ni Narumon!~",
+        "Sukumizu ~Fetch☆ ni Narumon!~"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v336",
+      "sourceRefs": [
+        "vndb:v336"
+      ]
+    },
+    {
+      "id": "vndb-v337",
+      "title": "Sukumizu 2 ~Oyo-ge-na-i~",
+      "aliases": [
+        "すくみず２～泳・げ・な・い～",
+        "Sukumizu 2 ~I Can't Swim~"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v337",
+      "sourceRefs": [
+        "vndb:v337"
+      ]
+    },
+    {
+      "id": "vndb-v347",
+      "title": "Hissatsu Chikannin",
+      "aliases": [
+        "必殺痴漢人"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v347",
+      "sourceRefs": [
+        "vndb:v347"
+      ]
+    },
+    {
+      "id": "vndb-v349",
+      "title": "Hitozuma Harem ~Koko wa Hitozuma Rakuen-sou~",
+      "aliases": [
+        "人妻ハーレム～ここは人妻楽園荘～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v349",
+      "sourceRefs": [
+        "vndb:v349"
+      ]
+    },
+    {
+      "id": "vndb-v350",
+      "title": "Hitozuma Yuugi",
+      "aliases": [
+        "人妻遊戯",
+        "Hitozuma Yugi"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v350",
+      "sourceRefs": [
+        "vndb:v350"
+      ]
+    },
+    {
+      "id": "vndb-v351",
+      "title": "Hokenshitsu ~Magical Pure Lesson♪~",
+      "aliases": [
+        "保健室～マジカルピュアレッスン♪～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v351",
+      "sourceRefs": [
+        "vndb:v351"
+      ]
+    },
+    {
+      "id": "vndb-v355",
+      "title": "In'yoku Oyako",
+      "aliases": [
+        "淫欲母娘",
+        "Celeb Oyako Manko Aji Kurabe Shojo to Haha",
+        "セレブ親子マンコ味比べ 処女と母"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v355",
+      "sourceRefs": [
+        "vndb:v355"
+      ]
+    },
+    {
+      "id": "vndb-v356",
+      "title": "Iroha ~Aki no Yuuhi ni Kagefumi o~",
+      "aliases": [
+        "いろは～秋の夕日に影ふみを～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v356",
+      "sourceRefs": [
+        "vndb:v356"
+      ]
+    },
+    {
+      "id": "vndb-v359",
+      "title": "Kaketa Tsuki wa Modoranai",
+      "aliases": [
+        "かけた月は戻らない",
+        "cry for the moon",
+        "Kaketsuki",
+        "かけ月"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v359",
+      "sourceRefs": [
+        "vndb:v359"
+      ]
+    },
+    {
+      "id": "vndb-v365",
+      "title": "Kinku ni Saku Hana. ~Aiyoku no Hahakogusa~",
+      "aliases": [
+        "禁区に咲く花。 ～愛慾の母子草～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v365",
+      "sourceRefs": [
+        "vndb:v365"
+      ]
+    },
+    {
+      "id": "vndb-v366",
+      "title": "Kinku ni Saku Hana. ~Intoku no Mesu Shimai~",
+      "aliases": [
+        "禁区に咲く花。～淫徳の牝姉妹～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v366",
+      "sourceRefs": [
+        "vndb:v366"
+      ]
+    },
+    {
+      "id": "vndb-v367",
+      "title": "Koi Otome",
+      "aliases": [
+        "初恋撫子（こいおとめ）"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v367",
+      "sourceRefs": [
+        "vndb:v367"
+      ]
+    },
+    {
+      "id": "vndb-v371",
+      "title": "Koshitsu Byoushitsu",
+      "aliases": [
+        "個室病室"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v371",
+      "sourceRefs": [
+        "vndb:v371"
+      ]
+    },
+    {
+      "id": "vndb-v372",
+      "title": "Gouen no Soleil -Chaos Region-",
+      "aliases": [
+        "鋼炎のソレイユ－ChaosRegion－"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v372",
+      "sourceRefs": [
+        "vndb:v372"
+      ]
+    },
+    {
+      "id": "vndb-v373",
+      "title": "Tsui no Yakata ~Koibumi~",
+      "aliases": [
+        "終の館～恋文～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v373",
+      "sourceRefs": [
+        "vndb:v373"
+      ]
+    },
+    {
+      "id": "vndb-v374",
+      "title": "Tsui no Yakata ~Futatsuboshi~",
+      "aliases": [
+        "終の館～双ツ星～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v374",
+      "sourceRefs": [
+        "vndb:v374"
+      ]
+    },
+    {
+      "id": "vndb-v375",
+      "title": "Tsui no Yakata ~Tsumi to Batsu~",
+      "aliases": [
+        "終の館～罪と罰～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v375",
+      "sourceRefs": [
+        "vndb:v375"
+      ]
+    },
+    {
+      "id": "vndb-v376",
+      "title": "Tsui no Yakata ~Orihime~",
+      "aliases": [
+        "終の館 ～檻姫～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v376",
+      "sourceRefs": [
+        "vndb:v376"
+      ]
+    },
+    {
+      "id": "vndb-v377",
+      "title": "Tsui no Yakata ~Ningyou~",
+      "aliases": [
+        "終の館 ～人形～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v377",
+      "sourceRefs": [
+        "vndb:v377"
+      ]
+    },
+    {
+      "id": "vndb-v378",
+      "title": "Kouhou Miko ~Junketsu no Kouiku Shimai~",
+      "aliases": [
+        "肛奉巫女～純潔ノ肛育姉妹～",
+        "Anal Offering Shrine Maiden"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v378",
+      "sourceRefs": [
+        "vndb:v378"
+      ]
+    },
+    {
+      "id": "vndb-v380",
+      "title": "Goddamn & Je t'Aime",
+      "aliases": [
+        "ガッデーム＆ジュテーム",
+        "Gaddeemu & Juteemu",
+        "GDJD"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v380",
+      "sourceRefs": [
+        "vndb:v380"
+      ]
+    },
+    {
+      "id": "vndb-v381",
+      "title": "Kounai Shinshuu ~Shimai Joi Chijoku no Iryou Kiroku~",
+      "aliases": [
+        "肛内浸襲 ～姉妹女医 恥辱の医療記録～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v381",
+      "sourceRefs": [
+        "vndb:v381"
+      ]
+    },
+    {
+      "id": "vndb-v386",
+      "title": "Koushin Houjuu ~Usamimi Choukyou Shiroku Nureru Nyotai-tachi~",
+      "aliases": [
+        "口唇包柔～うさみみ調教白く濡れる女体たち～",
+        "口唇包柔（こうしんほうじゅう）～うさみみ調教白く濡れる女体たち～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v386",
+      "sourceRefs": [
+        "vndb:v386"
+      ]
+    },
+    {
+      "id": "vndb-v389",
+      "title": "Furufuru☆Full Moon",
+      "aliases": [
+        "ふるふる☆フルムーン",
+        "Le lapin est amoureux de la lune dans une saison pour grandir"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v389",
+      "sourceRefs": [
+        "vndb:v389"
+      ]
+    },
+    {
+      "id": "vndb-v390",
+      "title": "Mahou Shinkan Rilje ~Kizamareru Inmu~",
+      "aliases": [
+        "魔法神官リルジェ ～刻まれる淫夢～",
+        "Mahohshinkan Lylgie (Lylgie, the oracle of magic)"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v390",
+      "sourceRefs": [
+        "vndb:v390"
+      ]
+    },
+    {
+      "id": "vndb-v391",
+      "title": "Majiyome",
+      "aliases": [
+        "まじよめ",
+        "まじよめ ～魔神君の花嫁～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v391",
+      "sourceRefs": [
+        "vndb:v391"
+      ]
+    },
+    {
+      "id": "vndb-v393",
+      "title": "Metamoru Angel Nanami",
+      "aliases": [
+        "メタモルエンジェル菜々美"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v393",
+      "sourceRefs": [
+        "vndb:v393"
+      ]
+    },
+    {
+      "id": "vndb-v395",
+      "title": "moire",
+      "aliases": [
+        "モアレ"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v395",
+      "sourceRefs": [
+        "vndb:v395"
+      ]
+    },
+    {
+      "id": "vndb-v396",
+      "title": "Mousugu Natsuyasumi!",
+      "aliases": [
+        "もうすぐ夏休み！"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v396",
+      "sourceRefs": [
+        "vndb:v396"
+      ]
+    },
+    {
+      "id": "vndb-v397",
+      "title": "Tsuyokiss",
+      "aliases": [
+        "つよきす",
+        "tsuyokisu",
+        "Tuyokiss"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v397",
+      "sourceRefs": [
+        "vndb:v397"
+      ]
+    },
+    {
+      "id": "vndb-v398",
+      "title": "Tsuyokiss 2gakki",
+      "aliases": [
+        "つよきす2学期",
+        "Tsuyokiss 2nd",
+        "Tsuyokisu 2gakki",
+        "Tsuyo Kiss 2",
+        "Tuyokiss 2"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v398",
+      "sourceRefs": [
+        "vndb:v398"
+      ]
+    },
+    {
+      "id": "vndb-v404",
+      "title": "Muv-Luv Supplement",
+      "aliases": [
+        "マブラヴ サプリメント"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v404",
+      "sourceRefs": [
+        "vndb:v404"
+      ]
+    },
+    {
+      "id": "vndb-v407",
+      "title": "C.D. Christmas Days ~Circus Disc Christmas Days~",
+      "aliases": [
+        "C.D. Christmas Days ～サーカスディスク クリスマスデイズ～",
+        "CDCD"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v407",
+      "sourceRefs": [
+        "vndb:v407"
+      ]
+    },
+    {
+      "id": "vndb-v408",
+      "title": "Circus Land I ~Doki! Heroine Ippai Hatsunejima ★ Cosplay Miss Contest Matsuri ♪ Yoridori Midori de ♪ Suki na Ko Erande Kisekae Ikusei Date Dayo Nii-san ♪~",
+      "aliases": [
+        "CircusLand I ～ドキ！ヒロインいっぱい初音島★コスプレミスコン祭り♪ よりどりみどりで♪好きな子選んで着せ替え育成デートだょ 兄さん♪～",
+        "サーカスランドⅠ"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v408",
+      "sourceRefs": [
+        "vndb:v408"
+      ]
+    },
+    {
+      "id": "vndb-v410",
+      "title": "Onegai♪ Goshujin-sama!",
+      "aliases": [
+        "おねがい♪ご主人さまっ！"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v410",
+      "sourceRefs": [
+        "vndb:v410"
+      ]
+    },
+    {
+      "id": "vndb-v412",
+      "title": "Oishii Mahou no Tonaekata.",
+      "aliases": [
+        "おいしい魔法のとなえかた。"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v412",
+      "sourceRefs": [
+        "vndb:v412"
+      ]
+    },
+    {
+      "id": "vndb-v413",
+      "title": "Natsupochi",
+      "aliases": [
+        "なつぽち"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v413",
+      "sourceRefs": [
+        "vndb:v413"
+      ]
+    },
+    {
+      "id": "vndb-v416",
+      "title": "Repeat ~Kurikaesareru Toki Soshite...~",
+      "aliases": [
+        "Repeat ～繰り返される刻そして…～"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v416",
+      "sourceRefs": [
+        "vndb:v416"
+      ]
+    },
+    {
+      "id": "vndb-v417",
+      "title": "Sekien no Inganock -What a Beautiful People-",
+      "aliases": [
+        "赫炎のインガノック -What a beautiful people-",
+        "Inganock of the Rage Fire"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v417",
+      "sourceRefs": [
+        "vndb:v417"
+      ]
+    },
+    {
+      "id": "vndb-v435",
+      "title": "Chiralmori",
+      "aliases": [
+        "キラル盛",
+        "Chiral Amusement Disc"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v435",
+      "sourceRefs": [
+        "vndb:v435"
+      ]
+    },
+    {
+      "id": "vndb-v438",
+      "title": "Natsumelo",
+      "aliases": [
+        "夏めろ",
+        "Natsumero",
+        "summer melody"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v438",
+      "sourceRefs": [
+        "vndb:v438"
+      ]
+    },
+    {
+      "id": "vndb-v441",
+      "title": "Gift ~Niji-Iro Stories~",
+      "aliases": [
+        "Gift～にじいろストーリーズ～",
+        "Gift ~Rainbow-Colored Stories~"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v441",
+      "sourceRefs": [
+        "vndb:v441"
+      ]
+    },
+    {
+      "id": "vndb-v444",
+      "title": "Age Maniax ~Isumi Yon Shimai Saigo no Hi~",
+      "aliases": [
+        "アージュマニアックス ～伊隅四姉妹最期の日～"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v444",
+      "sourceRefs": [
+        "vndb:v444"
+      ]
+    },
+    {
+      "id": "vndb-v454",
+      "title": "Tsui ☆ Teru",
+      "aliases": [
+        "ツイ☆てる",
+        "Tuiteru"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v454",
+      "sourceRefs": [
+        "vndb:v454"
+      ]
+    },
+    {
+      "id": "vndb-v455",
+      "title": "Stellula Eques ~Shokuzai no Himekishi~",
+      "aliases": [
+        "ステルラエクエス～贖罪の姫騎士～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v455",
+      "sourceRefs": [
+        "vndb:v455"
+      ]
+    },
+    {
+      "id": "vndb-v457",
+      "title": "Maid-san★Spirits! ~Watashi no Naka ni Iru Anata~",
+      "aliases": [
+        "めいどさん★すぴりっつ！～わたしの中にいるあなた～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v457",
+      "sourceRefs": [
+        "vndb:v457"
+      ]
+    },
+    {
+      "id": "vndb-v459",
+      "title": "Mahou wa Ameiro?",
+      "aliases": [
+        "魔法はあめいろ？"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v459",
+      "sourceRefs": [
+        "vndb:v459"
+      ]
+    },
+    {
+      "id": "vndb-v460",
+      "title": "Hakudakuhime",
+      "aliases": [
+        "白濁姫"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v460",
+      "sourceRefs": [
+        "vndb:v460"
+      ]
+    },
+    {
+      "id": "vndb-v461",
+      "title": "Mainichi Suki Shite",
+      "aliases": [
+        "まいにち好きして"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v461",
+      "sourceRefs": [
+        "vndb:v461"
+      ]
+    },
+    {
+      "id": "vndb-v462",
+      "title": "One and Only",
+      "aliases": [],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v462",
+      "sourceRefs": [
+        "vndb:v462"
+      ]
+    },
+    {
+      "id": "vndb-v463",
+      "title": "Mitsuru Tsuki",
+      "aliases": [
+        "満つる月"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v463",
+      "sourceRefs": [
+        "vndb:v463"
+      ]
+    },
+    {
+      "id": "vndb-v465",
+      "title": "Imouto Watashi, Donna Koto Datte...",
+      "aliases": [
+        "妹 わたし、どんなことだって…"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v465",
+      "sourceRefs": [
+        "vndb:v465"
+      ]
+    },
+    {
+      "id": "vndb-v469",
+      "title": "Clear ~Crystal Stories~",
+      "aliases": [
+        "Clear～クリスタルストーリーズ～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v469",
+      "sourceRefs": [
+        "vndb:v469"
+      ]
+    },
+    {
+      "id": "vndb-v472",
+      "title": "Reitetsu Reisei Shikashite XXX!!",
+      "aliases": [
+        "冷徹冷静しかして×××！！",
+        "ReiRei"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v472",
+      "sourceRefs": [
+        "vndb:v472"
+      ]
+    },
+    {
+      "id": "vndb-v474",
+      "title": "Relict ~Toki no Wasuremono~",
+      "aliases": [
+        "Relict～トキの忘れもの～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v474",
+      "sourceRefs": [
+        "vndb:v474"
+      ]
+    },
+    {
+      "id": "vndb-v475",
+      "title": "Relict2 ~Episode Moon~",
+      "aliases": [
+        "Relict2～エピソード・ムーン～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v475",
+      "sourceRefs": [
+        "vndb:v475"
+      ]
+    },
+    {
+      "id": "vndb-v478",
+      "title": "White Breath ~With Faint Hope~",
+      "aliases": [
+        "ホワイトブレス ～with faint hope～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v478",
+      "sourceRefs": [
+        "vndb:v478"
+      ]
+    },
+    {
+      "id": "vndb-v480",
+      "title": "Fantasical",
+      "aliases": [
+        "ファンタジカル"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v480",
+      "sourceRefs": [
+        "vndb:v480"
+      ]
+    },
+    {
+      "id": "vndb-v482",
+      "title": "Tri☆Stars",
+      "aliases": [
+        "とらい☆すたーず",
+        "Try Stars"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v482",
+      "sourceRefs": [
+        "vndb:v482"
+      ]
+    },
+    {
+      "id": "vndb-v484",
+      "title": "Leku Tandoor Senki Revolution ~Monshou no Kioku~",
+      "aliases": [
+        "レクタンドール戦記　レヴォラシオン～紋章の記憶～",
+        "Rectandoll Senki Revolution"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v484",
+      "sourceRefs": [
+        "vndb:v484"
+      ]
+    },
+    {
+      "id": "vndb-v485",
+      "title": "Riding Incubus",
+      "aliases": [
+        "らいでぃんぐ いんきゅばす"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v485",
+      "sourceRefs": [
+        "vndb:v485"
+      ]
+    },
+    {
+      "id": "vndb-v486",
+      "title": "Scramble Heart",
+      "aliases": [
+        "スクランブルハート"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v486",
+      "sourceRefs": [
+        "vndb:v486"
+      ]
+    },
+    {
+      "id": "vndb-v488",
+      "title": "Senjou de Shoujo wa Kokoro o Sagasu",
+      "aliases": [
+        "戦場デ少女ハ心ヲサガス"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v488",
+      "sourceRefs": [
+        "vndb:v488"
+      ]
+    },
+    {
+      "id": "vndb-v489",
+      "title": "Senjou de Shoujo wa Karada o Kakeru",
+      "aliases": [
+        "戦場デ少女ハ躰ヲカケル"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v489",
+      "sourceRefs": [
+        "vndb:v489"
+      ]
+    },
+    {
+      "id": "vndb-v490",
+      "title": "Sentinel",
+      "aliases": [
+        "センチネル",
+        "Have a channel to sentiment in what time of time"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v490",
+      "sourceRefs": [
+        "vndb:v490"
+      ]
+    },
+    {
+      "id": "vndb-v496",
+      "title": "Minna Daisuki Kozukuri Banchou",
+      "aliases": [
+        "みんな大好き子づくりばんちょう"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v496",
+      "sourceRefs": [
+        "vndb:v496"
+      ]
+    },
+    {
+      "id": "vndb-v504",
+      "title": "Rei-Nana",
+      "aliases": [
+        "レイナナ"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v504",
+      "sourceRefs": [
+        "vndb:v504"
+      ]
+    },
+    {
+      "id": "vndb-v508",
+      "title": "Aozora Magiccer!!",
+      "aliases": [
+        "あおぞらマジカ！！",
+        "Aozora Majika!!",
+        "Aozora Magica!!"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v508",
+      "sourceRefs": [
+        "vndb:v508"
+      ]
+    },
+    {
+      "id": "vndb-v510",
+      "title": "Torikago",
+      "aliases": [
+        "鳥籠 -TORIKAGO-"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v510",
+      "sourceRefs": [
+        "vndb:v510"
+      ]
+    },
+    {
+      "id": "vndb-v513",
+      "title": "Colorful Aquarium",
+      "aliases": [
+        "カラフルアクアリウム"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v513",
+      "sourceRefs": [
+        "vndb:v513"
+      ]
+    },
+    {
+      "id": "vndb-v516",
+      "title": "Shutterchance Love",
+      "aliases": [
+        "シャッターチャンス・ラブ"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v516",
+      "sourceRefs": [
+        "vndb:v516"
+      ]
+    },
+    {
+      "id": "vndb-v518",
+      "title": "Shitsuraku no Miko",
+      "aliases": [
+        "失楽の神女",
+        "Shitsuraku no Kamijo",
+        "Shitsuraku no Shinme",
+        "Shitsu Raku No Kami Onna"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v518",
+      "sourceRefs": [
+        "vndb:v518"
+      ]
+    },
+    {
+      "id": "vndb-v521",
+      "title": "Hitogata Ruins",
+      "aliases": [
+        "ひとがたルイン"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v521",
+      "sourceRefs": [
+        "vndb:v521"
+      ]
+    },
+    {
+      "id": "vndb-v524",
+      "title": "Ayame ~Ningyou Ingi~",
+      "aliases": [
+        "AYAME～人形婬戯～",
+        "AYAME"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v524",
+      "sourceRefs": [
+        "vndb:v524"
+      ]
+    },
+    {
+      "id": "vndb-v525",
+      "title": "Silhouette",
+      "aliases": [
+        "シルエット"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v525",
+      "sourceRefs": [
+        "vndb:v525"
+      ]
+    },
+    {
+      "id": "vndb-v526",
+      "title": "TACTICSBRID",
+      "aliases": [
+        "タクティクスブリッド",
+        "Tacticsbirds"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v526",
+      "sourceRefs": [
+        "vndb:v526"
+      ]
+    },
+    {
+      "id": "vndb-v527",
+      "title": "Succubu ☆ Soon!",
+      "aliases": [
+        "さっきゅば☆SOON！",
+        "Succubu Hoshi!"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v527",
+      "sourceRefs": [
+        "vndb:v527"
+      ]
+    },
+    {
+      "id": "vndb-v533",
+      "title": "Miko-san Fighter! Ryouko-chan",
+      "aliases": [
+        "巫女さんファイター！涼子ちゃん",
+        "巫女涼子"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v533",
+      "sourceRefs": [
+        "vndb:v533"
+      ]
+    },
+    {
+      "id": "vndb-v535",
+      "title": "Sister Contrast!",
+      "aliases": [
+        "シスターコントラスト！"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v535",
+      "sourceRefs": [
+        "vndb:v535"
+      ]
+    },
+    {
+      "id": "vndb-v538",
+      "title": "Blue",
+      "aliases": [],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v538",
+      "sourceRefs": [
+        "vndb:v538"
+      ]
+    },
+    {
+      "id": "vndb-v543",
+      "title": "Utsurigi Nanakoi Tenkiame",
+      "aliases": [
+        "うつりぎ七恋天気あめ"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v543",
+      "sourceRefs": [
+        "vndb:v543"
+      ]
+    },
+    {
+      "id": "vndb-v544",
+      "title": "Yarukibako 2 - Episode V: ~Yarukineko no Gyakushuu~",
+      "aliases": [
+        "やるきばこ2 エピソードV：～やるきねこの逆襲～",
+        "Yaruki-Bako 2",
+        "Yarukineko Strikes Back"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v544",
+      "sourceRefs": [
+        "vndb:v544"
+      ]
+    },
+    {
+      "id": "vndb-v550",
+      "title": "Akai Canvas Series - Nadeshiko ~Aka no Rasen~",
+      "aliases": [
+        "赤いCanvasシリーズ なでしこ ～朱色のらせん～",
+        "赤いCanvasシリーズ　なでしこ～朱色（あか）のらせん～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v550",
+      "sourceRefs": [
+        "vndb:v550"
+      ]
+    },
+    {
+      "id": "vndb-v552",
+      "title": "Guren ni Somaru Gin no Rozario",
+      "aliases": [
+        "紅蓮に染まる銀のロザリオ"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v552",
+      "sourceRefs": [
+        "vndb:v552"
+      ]
+    },
+    {
+      "id": "vndb-v553",
+      "title": "Mashiro Botan",
+      "aliases": [
+        "ましろぼたん"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v553",
+      "sourceRefs": [
+        "vndb:v553"
+      ]
+    },
+    {
+      "id": "vndb-v555",
+      "title": "Blue Destiny",
+      "aliases": [
+        "ブルー・ディスティニー"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v555",
+      "sourceRefs": [
+        "vndb:v555"
+      ]
+    },
+    {
+      "id": "vndb-v558",
+      "title": "Kyouin Kyoushitsu ~Sensei no Okiniiri~",
+      "aliases": [
+        "教淫教室～先生のお気に入り～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v558",
+      "sourceRefs": [
+        "vndb:v558"
+      ]
+    },
+    {
+      "id": "vndb-v559",
+      "title": "Koufuku no Shokutaku ~Shiawase no Hane~",
+      "aliases": [
+        "幸福の食卓～しあわせのはね～",
+        "Table of Happiness"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v559",
+      "sourceRefs": [
+        "vndb:v559"
+      ]
+    },
+    {
+      "id": "vndb-v560",
+      "title": "Crimson Lake",
+      "aliases": [
+        "クリムゾン・レーキ"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v560",
+      "sourceRefs": [
+        "vndb:v560"
+      ]
+    },
+    {
+      "id": "vndb-v563",
+      "title": "Chicchai Maid-san",
+      "aliases": [
+        "ちっちゃいメイドさん"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v563",
+      "sourceRefs": [
+        "vndb:v563"
+      ]
+    },
+    {
+      "id": "vndb-v566",
+      "title": "Yotsunoha",
+      "aliases": [
+        "よつのは"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v566",
+      "sourceRefs": [
+        "vndb:v566"
+      ]
+    },
+    {
+      "id": "vndb-v569",
+      "title": "Gakuen☆Shinsengumi! ~Otome Gokoro to Kyokuchuu Hatto~",
+      "aliases": [
+        "学園☆新選組！～乙女ゴコロと局中法度～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v569",
+      "sourceRefs": [
+        "vndb:v569"
+      ]
+    },
+    {
+      "id": "vndb-v570",
+      "title": "Natsuiro Kouen ~Denpatou no Shita de Ai o Kataru~",
+      "aliases": [
+        "夏色公園 ～電波塔の下で愛を語る～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v570",
+      "sourceRefs": [
+        "vndb:v570"
+      ]
+    },
+    {
+      "id": "vndb-v580",
+      "title": "Men at Work! 3 ~Hunter-tachi no Seishun~",
+      "aliases": [
+        "メンアットワーク！３～ハンター達の青春～",
+        "Men at Work! 3 ~Hunters our Youth~"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v580",
+      "sourceRefs": [
+        "vndb:v580"
+      ]
+    },
+    {
+      "id": "vndb-v582",
+      "title": "Love Kiss! Anchor ~Anata no Kiss de Tsukamaete~",
+      "aliases": [
+        "らぶKiss！アンカー～あなたのキスでつかまえて～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v582",
+      "sourceRefs": [
+        "vndb:v582"
+      ]
+    },
+    {
+      "id": "vndb-v588",
+      "title": "Mawari Hime",
+      "aliases": [
+        "まわり姫"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v588",
+      "sourceRefs": [
+        "vndb:v588"
+      ]
+    },
+    {
+      "id": "vndb-v594",
+      "title": "Shogun 8",
+      "aliases": [
+        "SHOGUN8－ショーグンエイト－",
+        "Shougun 8",
+        "Shougun Eight"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v594",
+      "sourceRefs": [
+        "vndb:v594"
+      ]
+    },
+    {
+      "id": "vndb-v595",
+      "title": "Salvatore!",
+      "aliases": [
+        "サルバとーれ！"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v595",
+      "sourceRefs": [
+        "vndb:v595"
+      ]
+    },
+    {
+      "id": "vndb-v601",
+      "title": "Round a Go! Go!",
+      "aliases": [],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v601",
+      "sourceRefs": [
+        "vndb:v601"
+      ]
+    },
+    {
+      "id": "vndb-v603",
+      "title": "Ikazuchi no Senshi Raidy 2",
+      "aliases": [
+        "雷の戦士ライディ２",
+        "雷之战士莱蒂2"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v603",
+      "sourceRefs": [
+        "vndb:v603"
+      ]
+    },
+    {
+      "id": "vndb-v608",
+      "title": "Shopan!",
+      "aliases": [
+        "しょぱん！"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v608",
+      "sourceRefs": [
+        "vndb:v608"
+      ]
+    },
+    {
+      "id": "vndb-v609",
+      "title": "Shiokaze no Kieru Umi ni",
+      "aliases": [
+        "潮風の消える海に"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v609",
+      "sourceRefs": [
+        "vndb:v609"
+      ]
+    },
+    {
+      "id": "vndb-v610",
+      "title": "Osananajimi wa Bed Yakuza!",
+      "aliases": [
+        "幼なじみはベッドヤクザ！"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v610",
+      "sourceRefs": [
+        "vndb:v610"
+      ]
+    },
+    {
+      "id": "vndb-v611",
+      "title": "Renaissance",
+      "aliases": [
+        "ルネサンス"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v611",
+      "sourceRefs": [
+        "vndb:v611"
+      ]
+    },
+    {
+      "id": "vndb-v613",
+      "title": "Sortieange Mahou Club",
+      "aliases": [
+        "ソルティアンジュ魔法倶楽部"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v613",
+      "sourceRefs": [
+        "vndb:v613"
+      ]
+    },
+    {
+      "id": "vndb-v614",
+      "title": "Tounosawa Majutsu Kenkyuukai",
+      "aliases": [
+        "塔ノ沢魔術研究会"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v614",
+      "sourceRefs": [
+        "vndb:v614"
+      ]
+    },
+    {
+      "id": "vndb-v615",
+      "title": "Figurehead",
+      "aliases": [
+        "フィギュアヘッド"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v615",
+      "sourceRefs": [
+        "vndb:v615"
+      ]
+    },
+    {
+      "id": "vndb-v616",
+      "title": "Bifronte ~Kugaitou Kitan~",
+      "aliases": [
+        "BIFRONTE～公界島奇譚～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v616",
+      "sourceRefs": [
+        "vndb:v616"
+      ]
+    },
+    {
+      "id": "vndb-v623",
+      "title": "Trouble☆Majo Shiken ~Kaichou-sama to Tennenkko wa Majo Shimai! Nakadashi Ecchi de Maryoku Hokyuu o Otetsudai!~",
+      "aliases": [
+        "とらぶる☆魔女試験～会長様と天然っ娘は魔女姉妹！中出しエッチで魔力補給をお手伝い！～",
+        "Trouble - Witch exam"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v623",
+      "sourceRefs": [
+        "vndb:v623"
+      ]
+    },
+    {
+      "id": "vndb-v626",
+      "title": "Aa, Ojou-sama",
+      "aliases": [
+        "ああっお嬢様っ",
+        "Ah, Ojou-sama"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v626",
+      "sourceRefs": [
+        "vndb:v626"
+      ]
+    },
+    {
+      "id": "vndb-v627",
+      "title": "Fami☆Spi!! ~Familiar Spirits!!~",
+      "aliases": [
+        "ふぁみ☆すぴ!!～FamiliarSpirits!!～",
+        "Familiar Spirit!!",
+        "FamiSpi",
+        "ふぁみスピっ!!"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v627",
+      "sourceRefs": [
+        "vndb:v627"
+      ]
+    },
+    {
+      "id": "vndb-v630",
+      "title": "Arpeggio ~Kimi Iro no Melody~",
+      "aliases": [
+        "あるぺじお～きみいろのメロディ～",
+        "alpeggio"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v630",
+      "sourceRefs": [
+        "vndb:v630"
+      ]
+    },
+    {
+      "id": "vndb-v631",
+      "title": "Hareta Hi ni wa Tenshi ga Mieru ~Angel Report~",
+      "aliases": [
+        "晴れた日には天使が見える～Angel Report～",
+        "HareTen"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v631",
+      "sourceRefs": [
+        "vndb:v631"
+      ]
+    },
+    {
+      "id": "vndb-v633",
+      "title": "Hime-sama Ririshiku!",
+      "aliases": [
+        "姫さま凛々しく！",
+        "ひめりり"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v633",
+      "sourceRefs": [
+        "vndb:v633"
+      ]
+    },
+    {
+      "id": "vndb-v634",
+      "title": "Isamashii Chibi no Iinazuke",
+      "aliases": [
+        "いさましいちびの許婚"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v634",
+      "sourceRefs": [
+        "vndb:v634"
+      ]
+    },
+    {
+      "id": "vndb-v635",
+      "title": "Yumemite Night!",
+      "aliases": [
+        "夢みてナイト！",
+        "夢みてナイト！-The night of beautiful dreamer-"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v635",
+      "sourceRefs": [
+        "vndb:v635"
+      ]
+    },
+    {
+      "id": "vndb-v636",
+      "title": "Yukinochi, Fururu! ~Tokoro ni Yori, Koi Moyou~",
+      "aliases": [
+        "雪のち、ふるるっ！～ところにより、恋もよう～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v636",
+      "sourceRefs": [
+        "vndb:v636"
+      ]
+    },
+    {
+      "id": "vndb-v638",
+      "title": "Torakapu!",
+      "aliases": [
+        "とらかぷっ！",
+        "Trouble Captor!"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v638",
+      "sourceRefs": [
+        "vndb:v638"
+      ]
+    },
+    {
+      "id": "vndb-v643",
+      "title": "Debo no Subako",
+      "aliases": [
+        "でぼの巣箱"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v643",
+      "sourceRefs": [
+        "vndb:v643"
+      ]
+    },
+    {
+      "id": "vndb-v644",
+      "title": "Xvain ~Devil Out~",
+      "aliases": [
+        "X-vain エクスヴァイン"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v644",
+      "sourceRefs": [
+        "vndb:v644"
+      ]
+    },
+    {
+      "id": "vndb-v649",
+      "title": "Hitoyume -Autumnal Equinox Story-",
+      "aliases": [
+        "ひとゆめ -Autumnal Equinox Story-"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v649",
+      "sourceRefs": [
+        "vndb:v649"
+      ]
+    },
+    {
+      "id": "vndb-v650",
+      "title": "Negai",
+      "aliases": [
+        "ねがい"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v650",
+      "sourceRefs": [
+        "vndb:v650"
+      ]
+    },
+    {
+      "id": "vndb-v651",
+      "title": "Koigokoro",
+      "aliases": [
+        "恋ごころ",
+        "恋ごころSE"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v651",
+      "sourceRefs": [
+        "vndb:v651"
+      ]
+    },
+    {
+      "id": "vndb-v653",
+      "title": "Sister Sister",
+      "aliases": [
+        "シスターシスター"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v653",
+      "sourceRefs": [
+        "vndb:v653"
+      ]
+    },
+    {
+      "id": "vndb-v654",
+      "title": "Magical☆Prince",
+      "aliases": [
+        "まじかる☆プリンス"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v654",
+      "sourceRefs": [
+        "vndb:v654"
+      ]
+    },
+    {
+      "id": "vndb-v659",
+      "title": "Tsuki to Mahou to Taiyou to",
+      "aliases": [
+        "月と魔法と太陽と",
+        "Tsukito"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v659",
+      "sourceRefs": [
+        "vndb:v659"
+      ]
+    },
+    {
+      "id": "vndb-v662",
+      "title": "Apocalypse ~DEUS EX MACHINA~",
+      "aliases": [
+        "アポカリプス ～Deus Ex Machina～"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v662",
+      "sourceRefs": [
+        "vndb:v662"
+      ]
+    },
+    {
+      "id": "vndb-v663",
+      "title": "Axia",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v663",
+      "sourceRefs": [
+        "vndb:v663"
+      ]
+    },
+    {
+      "id": "vndb-v669",
+      "title": "Harem☆Party",
+      "aliases": [
+        "ハーレム☆パーティー"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v669",
+      "sourceRefs": [
+        "vndb:v669"
+      ]
+    },
+    {
+      "id": "vndb-v671",
+      "title": "Sweet Room ~Futari Dake no Himitsu no Amai Kuukan~",
+      "aliases": [
+        "Sweet Room～ふたりだけの秘密の甘い空間～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v671",
+      "sourceRefs": [
+        "vndb:v671"
+      ]
+    },
+    {
+      "id": "vndb-v672",
+      "title": "Trouble! Sister Room",
+      "aliases": [
+        "とらぶる！ シスタールーム"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v672",
+      "sourceRefs": [
+        "vndb:v672"
+      ]
+    },
+    {
+      "id": "vndb-v673",
+      "title": "Metorase ~Dokilove ☆ Shinkon Iinkai~",
+      "aliases": [
+        "メトラセ～ドキらぶ☆新婚委員会～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v673",
+      "sourceRefs": [
+        "vndb:v673"
+      ]
+    },
+    {
+      "id": "vndb-v674",
+      "title": "Dear Pianissimo",
+      "aliases": [
+        "ディアピアニッシモ",
+        "精灵协奏曲"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v674",
+      "sourceRefs": [
+        "vndb:v674"
+      ]
+    },
+    {
+      "id": "vndb-v675",
+      "title": "Akatsuki no Amaneka to Aoi Kyojin ~Pashiate Bunmei Kenkyuukai Koubouki~",
+      "aliases": [
+        "暁のアマネカと蒼い巨神 ーパシアテ文明研究会興亡記ー",
+        "Amaneka of Dawn and the Blue Giant - The Rise and Fall of the Pashiate Civilization Research Lab -"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v675",
+      "sourceRefs": [
+        "vndb:v675"
+      ]
+    },
+    {
+      "id": "vndb-v678",
+      "title": "Twin Way",
+      "aliases": [
+        "ツインウェイ"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v678",
+      "sourceRefs": [
+        "vndb:v678"
+      ]
+    },
+    {
+      "id": "vndb-v679",
+      "title": "Mi-ko-ko-n",
+      "aliases": [
+        "み・こ・こ・ん",
+        "巫女婚"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v679",
+      "sourceRefs": [
+        "vndb:v679"
+      ]
+    },
+    {
+      "id": "vndb-v680",
+      "title": "Trouble Days",
+      "aliases": [
+        "とらぶるDAYS"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v680",
+      "sourceRefs": [
+        "vndb:v680"
+      ]
+    },
+    {
+      "id": "vndb-v685",
+      "title": "Hide Mind",
+      "aliases": [],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v685",
+      "sourceRefs": [
+        "vndb:v685"
+      ]
+    },
+    {
+      "id": "vndb-v686",
+      "title": "Doushite? Ijitte Princess Final Road ~Mou! Mata Konna Tokoro de 3~",
+      "aliases": [
+        "どうして？いじってプリンセス Final Road～もう！またこんなところで3～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v686",
+      "sourceRefs": [
+        "vndb:v686"
+      ]
+    },
+    {
+      "id": "vndb-v687",
+      "title": "Kokyou no Uta",
+      "aliases": [
+        "故郷の詩"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v687",
+      "sourceRefs": [
+        "vndb:v687"
+      ]
+    },
+    {
+      "id": "vndb-v688",
+      "title": "Love Death 2 ~Realtime Lovers~",
+      "aliases": [
+        "らぶデス2～Realtime Lovers～",
+        "Love Desu 2"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v688",
+      "sourceRefs": [
+        "vndb:v688"
+      ]
+    },
+    {
+      "id": "vndb-v691",
+      "title": "Namida-bashi o Watatte",
+      "aliases": [
+        "なみだ橋をわたって"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v691",
+      "sourceRefs": [
+        "vndb:v691"
+      ]
+    },
+    {
+      "id": "vndb-v692",
+      "title": "Shikigami ~Kikyou no Hana ni Himetaru Omoi~",
+      "aliases": [
+        "式神 ～桔梗の華に秘めたる想い～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v692",
+      "sourceRefs": [
+        "vndb:v692"
+      ]
+    },
+    {
+      "id": "vndb-v693",
+      "title": "Tesuta ~Teach & Study~",
+      "aliases": [
+        "てすた～Teach＆Study～",
+        "TeStu"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v693",
+      "sourceRefs": [
+        "vndb:v693"
+      ]
+    },
+    {
+      "id": "vndb-v695",
+      "title": "Kissy Kissy ~Watashi no Tamago~",
+      "aliases": [
+        "Kissy Kissy ～わたしのたまご～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v695",
+      "sourceRefs": [
+        "vndb:v695"
+      ]
+    },
+    {
+      "id": "vndb-v696",
+      "title": "Love Hina Advance ~Shukufuku no Kane wa Naru kana~",
+      "aliases": [
+        "ラブひなアドバンス 祝福の鐘はなるかな"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v696",
+      "sourceRefs": [
+        "vndb:v696"
+      ]
+    },
+    {
+      "id": "vndb-v699",
+      "title": "Demon Parasite ~Akuma no You na Tenshi no Kanojo~",
+      "aliases": [
+        "デモンパラサイト～悪魔のような天使の彼女～",
+        "demopara",
+        "デモパラ"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v699",
+      "sourceRefs": [
+        "vndb:v699"
+      ]
+    },
+    {
+      "id": "vndb-v703",
+      "title": "Ojou-sama Kumikyoku",
+      "aliases": [
+        "お嬢様組曲",
+        "Ojokumi",
+        "おじょくみ"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v703",
+      "sourceRefs": [
+        "vndb:v703"
+      ]
+    },
+    {
+      "id": "vndb-v707",
+      "title": "Innyuu Sousakan Aria",
+      "aliases": [
+        "淫乳捜査官杏里亜",
+        "Lustful Investigator Aria"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v707",
+      "sourceRefs": [
+        "vndb:v707"
+      ]
+    },
+    {
+      "id": "vndb-v709",
+      "title": "Ecchi na Maid-san wa Suki Desu ka?",
+      "aliases": [
+        "エッチなメイドさんは好きですか？",
+        "Hなメイドさんは好きですか？"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v709",
+      "sourceRefs": [
+        "vndb:v709"
+      ]
+    },
+    {
+      "id": "vndb-v719",
+      "title": "Osouji Sentai Clean Keeper",
+      "aliases": [
+        "お掃除戦隊くりーんきーぱー"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v719",
+      "sourceRefs": [
+        "vndb:v719"
+      ]
+    },
+    {
+      "id": "vndb-v721",
+      "title": "Cobra Mission: Panic in Cobra City",
+      "aliases": [
+        "コブラミッション"
+      ],
+      "firstYear": 1991,
+      "source": "https://vndb.org/v721",
+      "sourceRefs": [
+        "vndb:v721"
+      ]
+    },
+    {
+      "id": "vndb-v729",
+      "title": "11eyes -Tsumi to Batsu to Aganai no Shoujo-",
+      "aliases": [
+        "11eyes－罪と罰と贖いの少女－",
+        "Sin, Damnation and the Atonement Girl"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v729",
+      "sourceRefs": [
+        "vndb:v729"
+      ]
+    },
+    {
+      "id": "vndb-v731",
+      "title": "Taimanin Asagi",
+      "aliases": [
+        "対魔忍アサギ"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v731",
+      "sourceRefs": [
+        "vndb:v731"
+      ]
+    },
+    {
+      "id": "vndb-v732",
+      "title": "Suzumiya Haruhi no Yakusoku",
+      "aliases": [
+        "涼宮ハルヒの約束"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v732",
+      "sourceRefs": [
+        "vndb:v732"
+      ]
+    },
+    {
+      "id": "vndb-v734",
+      "title": "Eimmy to Yobanaide",
+      "aliases": [
+        "エイミーと呼ばないでっ",
+        "Please Don't Call Me Eimmy"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v734",
+      "sourceRefs": [
+        "vndb:v734"
+      ]
+    },
+    {
+      "id": "vndb-v735",
+      "title": "Waku Waku Mahjong Panic! ~Shikigami Denshou~",
+      "aliases": [
+        "わくわく麻雀パニック！ ～式神伝承～"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v735",
+      "sourceRefs": [
+        "vndb:v735"
+      ]
+    },
+    {
+      "id": "vndb-v736",
+      "title": "Waku Waku Mahjong Panic! 2 ~Kokushi Musou~",
+      "aliases": [
+        "わくわく麻雀パニック！２ ～刻視夢想～"
+      ],
+      "firstYear": 1996,
+      "source": "https://vndb.org/v736",
+      "sourceRefs": [
+        "vndb:v736"
+      ]
+    },
+    {
+      "id": "vndb-v737",
+      "title": "Immoral Study Scenario 1: Shirakawa Reiko",
+      "aliases": [
+        "インモラルスタディ シナリオ1 白川玲子",
+        "インモラルスタディ1 白川玲子"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v737",
+      "sourceRefs": [
+        "vndb:v737"
+      ]
+    },
+    {
+      "id": "vndb-v738",
+      "title": "Immoral Study Scenario 2: Iijima Yuka",
+      "aliases": [
+        "インモラルスタディ シナリオ2 飯嶋由佳",
+        "Immoral Study: Yuka Ijima",
+        "Immoral Study Lesson 2: Yuka Ijima",
+        "インモラルスタディ2 飯島由佳"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v738",
+      "sourceRefs": [
+        "vndb:v738"
+      ]
+    },
+    {
+      "id": "vndb-v739",
+      "title": "Kindan no Ketsuzoku",
+      "aliases": [
+        "禁断の血族",
+        "Kinketsu"
+      ],
+      "firstYear": 1993,
+      "source": "https://vndb.org/v739",
+      "sourceRefs": [
+        "vndb:v739"
+      ]
+    },
+    {
+      "id": "vndb-v740",
+      "title": "Etsuraku no Gakuen",
+      "aliases": [
+        "悦楽の学園",
+        "Enigmatic School"
+      ],
+      "firstYear": 1994,
+      "source": "https://vndb.org/v740",
+      "sourceRefs": [
+        "vndb:v740"
+      ]
+    },
+    {
+      "id": "vndb-v744",
+      "title": "Agnus Dei",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v744",
+      "sourceRefs": [
+        "vndb:v744"
+      ]
+    },
+    {
+      "id": "vndb-v748",
+      "title": "Apathy ~Narugami Gakuen Toshi Densetsu Tanteikyoku~",
+      "aliases": [
+        "アパシー 〜鳴神学園都市伝説探偵局〜"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v748",
+      "sourceRefs": [
+        "vndb:v748"
+      ]
+    },
+    {
+      "id": "vndb-v754",
+      "title": "Silfade Kenbunroku",
+      "aliases": [
+        "シルフェイド見聞録",
+        "Records of Silfade",
+        "シル見"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v754",
+      "sourceRefs": [
+        "vndb:v754"
+      ]
+    },
+    {
+      "id": "vndb-v756",
+      "title": "Finalist",
+      "aliases": [
+        "ふぁいなりすと",
+        "Fainarisuto"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v756",
+      "sourceRefs": [
+        "vndb:v756"
+      ]
+    },
+    {
+      "id": "vndb-v758",
+      "title": "W Wish",
+      "aliases": [
+        "Double Wish",
+        "ダブルウィッシュ",
+        "W～ウイッシュ～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v758",
+      "sourceRefs": [
+        "vndb:v758"
+      ]
+    },
+    {
+      "id": "vndb-v766",
+      "title": "Meikuru! Welcome to Happy Maid Life!!",
+      "aliases": [
+        "めいくるッ！ Welcome to Happy Maid Life!!"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v766",
+      "sourceRefs": [
+        "vndb:v766"
+      ]
+    },
+    {
+      "id": "vndb-v767",
+      "title": "Komusume",
+      "aliases": [
+        "コムスメ",
+        "コムスメ【孤高娘】 ～学舎は萌えているか？～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v767",
+      "sourceRefs": [
+        "vndb:v767"
+      ]
+    },
+    {
+      "id": "vndb-v779",
+      "title": "Kankeizu ~Yutori-kun no Gyakushuu~",
+      "aliases": [
+        "姦系図～ゆとり君の逆襲～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v779",
+      "sourceRefs": [
+        "vndb:v779"
+      ]
+    },
+    {
+      "id": "vndb-v785",
+      "title": "Majokko Tricolor",
+      "aliases": [
+        "魔女っ娘とりこロール"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v785",
+      "sourceRefs": [
+        "vndb:v785"
+      ]
+    },
+    {
+      "id": "vndb-v786",
+      "title": "Suezen! ~Tane o Nozomu Kanojo~",
+      "aliases": [
+        "すえぜん！～種を望む彼女～",
+        "種を望む彼女・すえぜん！"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v786",
+      "sourceRefs": [
+        "vndb:v786"
+      ]
+    },
+    {
+      "id": "vndb-v788",
+      "title": "Maneji! Ikimasu!! ~Chitsuyosen ni Kaketa Natsu 2008~",
+      "aliases": [
+        "マネジ！　イキます！！～膣予選に賭けた夏2008～",
+        "Here goes the manager! Summer 2008"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v788",
+      "sourceRefs": [
+        "vndb:v788"
+      ]
+    },
+    {
+      "id": "vndb-v789",
+      "title": "Surikomi Shoujo ~Hontou ni Kimi wa Boku no Kanojo Nandayo~",
+      "aliases": [
+        "擦り込み少女～本当に君はボクの彼女なんだよ～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v789",
+      "sourceRefs": [
+        "vndb:v789"
+      ]
+    },
+    {
+      "id": "vndb-v790",
+      "title": "Palmyra ~Nessa no Umi to Binaru Senki~",
+      "aliases": [
+        "Palmyra～熱砂の海と美なる戦姫～",
+        "Palmyra ~The sea of heated sand and the beautiful war princess~",
+        "パルミュラ～熱砂の海と美なる戦姫～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v790",
+      "sourceRefs": [
+        "vndb:v790"
+      ]
+    },
+    {
+      "id": "vndb-v795",
+      "title": "Hapikuri -Happy Christmas-",
+      "aliases": [
+        "はぴくり －HAPPY CHRISTMAS－",
+        "Hapi Kuri"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v795",
+      "sourceRefs": [
+        "vndb:v795"
+      ]
+    },
+    {
+      "id": "vndb-v803",
+      "title": "Nijiiro Alchemikan ~Magic of Alchemy~",
+      "aliases": [
+        "虹色あるけミカン～Magic of alchemy～",
+        "虹色炼金橘子"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v803",
+      "sourceRefs": [
+        "vndb:v803"
+      ]
+    },
+    {
+      "id": "vndb-v809",
+      "title": "Aion Garden",
+      "aliases": [
+        "アイオンガーデン"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v809",
+      "sourceRefs": [
+        "vndb:v809"
+      ]
+    },
+    {
+      "id": "vndb-v811",
+      "title": "Samayou Mitama ni Yasuragi no Toki o",
+      "aliases": [
+        "彷徨う魂に安らぎの刻を",
+        "Time of Peace to the Restless Souls"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v811",
+      "sourceRefs": [
+        "vndb:v811"
+      ]
+    },
+    {
+      "id": "vndb-v819",
+      "title": "Ars:Magna!",
+      "aliases": [
+        "あるすまぐな！-ARS：MAGNA-"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v819",
+      "sourceRefs": [
+        "vndb:v819"
+      ]
+    },
+    {
+      "id": "vndb-v822",
+      "title": "Hiru wa Idol, Yoru wa Ai Dorei! ~Kon'ya no Maiku wa Anata no Seiki~",
+      "aliases": [
+        "昼はアイドル、夜は愛奴隷！～今夜のマイクはあなたの性器～",
+        "Idol by Day and a Sex Slave by Night -today's microphone is your sperm-"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v822",
+      "sourceRefs": [
+        "vndb:v822"
+      ]
+    },
+    {
+      "id": "vndb-v823",
+      "title": "KISS x 500 KISSken, Hatsudou",
+      "aliases": [
+        "KISS×500 KISS権、発動"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v823",
+      "sourceRefs": [
+        "vndb:v823"
+      ]
+    },
+    {
+      "id": "vndb-v829",
+      "title": "Himi ☆ Tsui",
+      "aliases": [
+        "ひみ☆ツイ",
+        "Himitsu Twins",
+        "精爆☆双姬"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v829",
+      "sourceRefs": [
+        "vndb:v829"
+      ]
+    },
+    {
+      "id": "vndb-v830",
+      "title": "Moe Nikki",
+      "aliases": [
+        "萌日記"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v830",
+      "sourceRefs": [
+        "vndb:v830"
+      ]
+    },
+    {
+      "id": "vndb-v831",
+      "title": "Happy Princess ~Another Fairytale~",
+      "aliases": [
+        "はっぴぃプリンセス～Another Fairytale～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v831",
+      "sourceRefs": [
+        "vndb:v831"
+      ]
+    },
+    {
+      "id": "vndb-v832",
+      "title": "Verdia Gensoukyoku",
+      "aliases": [
+        "ヴェルディア幻奏曲"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v832",
+      "sourceRefs": [
+        "vndb:v832"
+      ]
+    },
+    {
+      "id": "vndb-v839",
+      "title": "Yuki-sensei no Jissen Sex Jugyou ~Minna Oshiete Ageru~",
+      "aliases": [
+        "優希先生の実践セックス授業～みーんな教えてあげる～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v839",
+      "sourceRefs": [
+        "vndb:v839"
+      ]
+    },
+    {
+      "id": "vndb-v841",
+      "title": "CooL!! ~Tsuyoki na Otome no Pure Love Story~",
+      "aliases": [
+        "CooL!! ～強娘純恋歌～",
+        "CooL!! つよきなおとめのピュア・ラブストーリー"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v841",
+      "sourceRefs": [
+        "vndb:v841"
+      ]
+    },
+    {
+      "id": "vndb-v844",
+      "title": "Tsundere de Yandere na Osananajimi - Takanashi Futaba-san to H na Koto o Suru Game",
+      "aliases": [
+        "ツンデレでヤンデレな幼馴染・小鳥遊双葉さんとＨなことをするゲーム"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v844",
+      "sourceRefs": [
+        "vndb:v844"
+      ]
+    },
+    {
+      "id": "vndb-v847",
+      "title": "Eternal Kingdom ~Horobi no Majo to Densetsu no Ken~",
+      "aliases": [
+        "ETERNAL KINGDOM～滅びの魔女と伝説の剣～",
+        "Eternal Kingdom ~The Witch of Destruction and the Sword of Legend~",
+        "エターナル・キングダム"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v847",
+      "sourceRefs": [
+        "vndb:v847"
+      ]
+    },
+    {
+      "id": "vndb-v848",
+      "title": "Futago Mono Twin Pack",
+      "aliases": [
+        "双子モノ　Twin Pack",
+        "Twin Story of Serina & Haruna",
+        "Futago Mono Twins Pack"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v848",
+      "sourceRefs": [
+        "vndb:v848"
+      ]
+    },
+    {
+      "id": "vndb-v851",
+      "title": "Ratirica",
+      "aliases": [
+        "ラティリカ"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v851",
+      "sourceRefs": [
+        "vndb:v851"
+      ]
+    },
+    {
+      "id": "vndb-v866",
+      "title": "Reconstruction 01",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v866",
+      "sourceRefs": [
+        "vndb:v866"
+      ]
+    },
+    {
+      "id": "vndb-v867",
+      "title": "Lakeside Sunset",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v867",
+      "sourceRefs": [
+        "vndb:v867"
+      ]
+    },
+    {
+      "id": "vndb-v868",
+      "title": "Colorless Day",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v868",
+      "sourceRefs": [
+        "vndb:v868"
+      ]
+    },
+    {
+      "id": "vndb-v869",
+      "title": "Silliness",
+      "aliases": [
+        "The Quest For A Nintendo Wii"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v869",
+      "sourceRefs": [
+        "vndb:v869"
+      ]
+    },
+    {
+      "id": "vndb-v870",
+      "title": "The Best Eroge Ever",
+      "aliases": [
+        "TBEE"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v870",
+      "sourceRefs": [
+        "vndb:v870"
+      ]
+    },
+    {
+      "id": "vndb-v871",
+      "title": "Real Life: A Bishoujo Adventure",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v871",
+      "sourceRefs": [
+        "vndb:v871"
+      ]
+    },
+    {
+      "id": "vndb-v874",
+      "title": "Heartful Memories ~Little Witch Parfait 2~",
+      "aliases": [
+        "ハートフルメモリーズ 〜Little Witch Parfait 2〜"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v874",
+      "sourceRefs": [
+        "vndb:v874"
+      ]
+    },
+    {
+      "id": "vndb-v875",
+      "title": "Naisho no Jikan",
+      "aliases": [
+        "ナイショのじかん",
+        "loli的时间"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v875",
+      "sourceRefs": [
+        "vndb:v875"
+      ]
+    },
+    {
+      "id": "vndb-v881",
+      "title": "Oishinbo Kyuukyoku no Menu Sanbonshoubu",
+      "aliases": [
+        "美味しんぼ 究極のメニュー三本勝負"
+      ],
+      "firstYear": 1989,
+      "source": "https://vndb.org/v881",
+      "sourceRefs": [
+        "vndb:v881"
+      ]
+    },
+    {
+      "id": "vndb-v883",
+      "title": "Dancing Crazies",
+      "aliases": [
+        "ダンシング・クレイジーズ"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v883",
+      "sourceRefs": [
+        "vndb:v883"
+      ]
+    },
+    {
+      "id": "vndb-v884",
+      "title": "Sailor Moon Dating Simulator: Sailor Saturn",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v884",
+      "sourceRefs": [
+        "vndb:v884"
+      ]
+    },
+    {
+      "id": "vndb-v885",
+      "title": "Sailor Moon Dating Simulator: Moon Maid",
+      "aliases": [
+        "SMDS"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v885",
+      "sourceRefs": [
+        "vndb:v885"
+      ]
+    },
+    {
+      "id": "vndb-v886",
+      "title": "Sailor Moon Dating Simulator 3",
+      "aliases": [
+        "SMDS3"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v886",
+      "sourceRefs": [
+        "vndb:v886"
+      ]
+    },
+    {
+      "id": "vndb-v894",
+      "title": "SIN: Kurotoki Iro no Shoujo",
+      "aliases": [
+        "SIN 黒朱鷺色の少女"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v894",
+      "sourceRefs": [
+        "vndb:v894"
+      ]
+    },
+    {
+      "id": "vndb-v895",
+      "title": "Mashou no Nie",
+      "aliases": [
+        "魔将の贄",
+        "The Queen and Princess as your rewards"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v895",
+      "sourceRefs": [
+        "vndb:v895"
+      ]
+    },
+    {
+      "id": "vndb-v898",
+      "title": "Hinatabokko",
+      "aliases": [
+        "ひなたぼっこ"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v898",
+      "sourceRefs": [
+        "vndb:v898"
+      ]
+    },
+    {
+      "id": "vndb-v899",
+      "title": "Ryoujoku Guerilla Gari",
+      "aliases": [
+        "凌辱ゲリラ狩り",
+        "Rape Guerilla Hunting",
+        "SMDoD"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v899",
+      "sourceRefs": [
+        "vndb:v899"
+      ]
+    },
+    {
+      "id": "vndb-v900",
+      "title": "Boku no Mesu Hisho wa Doukyuusei",
+      "aliases": [
+        "僕の牝秘書は同級生"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v900",
+      "sourceRefs": [
+        "vndb:v900"
+      ]
+    },
+    {
+      "id": "vndb-v901",
+      "title": "Oishii Bou ga 2 Hon",
+      "aliases": [
+        "美味しい棒が2本",
+        "Two tasty rods"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v901",
+      "sourceRefs": [
+        "vndb:v901"
+      ]
+    },
+    {
+      "id": "vndb-v902",
+      "title": "Shimai Don ~Shirudaku de~",
+      "aliases": [
+        "姉妹丼～汁だくで～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v902",
+      "sourceRefs": [
+        "vndb:v902"
+      ]
+    },
+    {
+      "id": "vndb-v905",
+      "title": "Howling Dream",
+      "aliases": [
+        "하울링 드림"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v905",
+      "sourceRefs": [
+        "vndb:v905"
+      ]
+    },
+    {
+      "id": "vndb-v906",
+      "title": "Reminiscence",
+      "aliases": [
+        "회상록",
+        "回想錄"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v906",
+      "sourceRefs": [
+        "vndb:v906"
+      ]
+    },
+    {
+      "id": "vndb-v908",
+      "title": "Mamapuri!? ~Wagaya no Dousei Tsuushinbo~",
+      "aliases": [
+        "ママぷりっ!? ～我が家の同棲通信簿～",
+        "Mamapuri!? ~Live-in My Report Card~"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v908",
+      "sourceRefs": [
+        "vndb:v908"
+      ]
+    },
+    {
+      "id": "vndb-v909",
+      "title": "Bomi Namaitdeon Jari",
+      "aliases": [
+        "봄이 남아있던 자리",
+        "Bomjari"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v909",
+      "sourceRefs": [
+        "vndb:v909"
+      ]
+    },
+    {
+      "id": "vndb-v912",
+      "title": "Little Monica Monogatari",
+      "aliases": [
+        "リトルモニカ物語",
+        "The Story of Little Monica",
+        "Little Monica Story"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v912",
+      "sourceRefs": [
+        "vndb:v912"
+      ]
+    },
+    {
+      "id": "vndb-v917",
+      "title": "Sono Hanabira ni Kuchizuke o",
+      "aliases": [
+        "その花びらにくちづけを",
+        "Kissing the Petals",
+        "SonoHana 1",
+        "Sonohanabirani Kuchidukewo (Kissing the petal)"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v917",
+      "sourceRefs": [
+        "vndb:v917"
+      ]
+    },
+    {
+      "id": "vndb-v919",
+      "title": "Zero - Heureum-ui Won",
+      "aliases": [
+        "제로 - 흐름의 원",
+        "Zero - Circle of Flow"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v919",
+      "sourceRefs": [
+        "vndb:v919"
+      ]
+    },
+    {
+      "id": "vndb-v920",
+      "title": "Scarred Gem - Jeonglyeongseog-ui Guae",
+      "aliases": [
+        "스카드 잼 - 정령석의 구애"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v920",
+      "sourceRefs": [
+        "vndb:v920"
+      ]
+    },
+    {
+      "id": "vndb-v921",
+      "title": "Plus+ ~Nae Gioksog-ui Ireum~",
+      "aliases": [
+        "PLUS+ ~내 기억속의 이름~",
+        "Plus+ ~The Name in My Memory"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v921",
+      "sourceRefs": [
+        "vndb:v921"
+      ]
+    },
+    {
+      "id": "vndb-v922",
+      "title": "Sono Hanabira ni Kuchizuke o: Watashi no Ouji-sama",
+      "aliases": [
+        "その花びらにくちづけを わたしの王子さま",
+        "A Kiss for the Petals: My Prince",
+        "SonoHana 2",
+        "花吻在上2",
+        "亲吻那片花瓣2",
+        "Kissing the petal 2 My dear prince"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v922",
+      "sourceRefs": [
+        "vndb:v922"
+      ]
+    },
+    {
+      "id": "vndb-v923",
+      "title": "Night Wizard Mahou Taisen ~The Peace Plan to Save the World~",
+      "aliases": [
+        "ナイトウィザード　魔法大戦～The Peace Plan to Save the World～"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v923",
+      "sourceRefs": [
+        "vndb:v923"
+      ]
+    },
+    {
+      "id": "vndb-v924",
+      "title": "Night Wizard: The VIDEO GAME ~Denial of the World~",
+      "aliases": [
+        "ナイトウィザード The VIDEO GAME～Denial of the World～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v924",
+      "sourceRefs": [
+        "vndb:v924"
+      ]
+    },
+    {
+      "id": "vndb-v927",
+      "title": "White ~Setsunasa no Kakera~",
+      "aliases": [
+        "White ～セツナサのカケラ～",
+        "ほわいと",
+        "ホワイト"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v927",
+      "sourceRefs": [
+        "vndb:v927"
+      ]
+    },
+    {
+      "id": "vndb-v928",
+      "title": "Revenir",
+      "aliases": [
+        "ルベニール"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v928",
+      "sourceRefs": [
+        "vndb:v928"
+      ]
+    },
+    {
+      "id": "vndb-v929",
+      "title": "Kidou Shoukan Victoire",
+      "aliases": [
+        "機動娼艦ヴィクトワール"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v929",
+      "sourceRefs": [
+        "vndb:v929"
+      ]
+    },
+    {
+      "id": "vndb-v932",
+      "title": "Harayome-san wa Elf Hime ~Oshikake Kozukuri Shinkon Seikatsu~",
+      "aliases": [
+        "孕嫁さんはエルフ姫～押しかけ子づくり新婚生活～",
+        "The pregnant girl is an elven princess"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v932",
+      "sourceRefs": [
+        "vndb:v932"
+      ]
+    },
+    {
+      "id": "vndb-v934",
+      "title": "Clover",
+      "aliases": [
+        "클로버"
+      ],
+      "firstYear": 2009,
+      "source": "https://vndb.org/v934",
+      "sourceRefs": [
+        "vndb:v934"
+      ]
+    },
+    {
+      "id": "vndb-v935",
+      "title": "Tears -Contact-",
+      "aliases": [
+        "티어즈 컨택트"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v935",
+      "sourceRefs": [
+        "vndb:v935"
+      ]
+    },
+    {
+      "id": "vndb-v940",
+      "title": "Gakuen Redux",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v940",
+      "sourceRefs": [
+        "vndb:v940"
+      ]
+    },
+    {
+      "id": "vndb-v941",
+      "title": "Wings",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v941",
+      "sourceRefs": [
+        "vndb:v941"
+      ]
+    },
+    {
+      "id": "vndb-v942",
+      "title": "Wings II: Fragments of You",
+      "aliases": [
+        "Wings II"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v942",
+      "sourceRefs": [
+        "vndb:v942"
+      ]
+    },
+    {
+      "id": "vndb-v946",
+      "title": "Fade",
+      "aliases": [],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v946",
+      "sourceRefs": [
+        "vndb:v946"
+      ]
+    },
+    {
+      "id": "vndb-v947",
+      "title": "C.D.C.D.2",
+      "aliases": [
+        "C.D.C.D.2 ～シーディーシーディー2～",
+        "Circus Disk Christmas Days 2"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v947",
+      "sourceRefs": [
+        "vndb:v947"
+      ]
+    },
+    {
+      "id": "vndb-v949",
+      "title": "Ori, Ochi, Onoe",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v949",
+      "sourceRefs": [
+        "vndb:v949"
+      ]
+    },
+    {
+      "id": "vndb-v950",
+      "title": "The Rutabega",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v950",
+      "sourceRefs": [
+        "vndb:v950"
+      ]
+    },
+    {
+      "id": "vndb-v951",
+      "title": "Higurashi no Naku Koro ni Fun",
+      "aliases": [],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v951",
+      "sourceRefs": [
+        "vndb:v951"
+      ]
+    },
+    {
+      "id": "vndb-v955",
+      "title": "Open Days",
+      "aliases": [],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v955",
+      "sourceRefs": [
+        "vndb:v955"
+      ]
+    },
+    {
+      "id": "vndb-v956",
+      "title": "Dante's Wrath",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v956",
+      "sourceRefs": [
+        "vndb:v956"
+      ]
+    },
+    {
+      "id": "vndb-v957",
+      "title": "Nerr2Babe",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v957",
+      "sourceRefs": [
+        "vndb:v957"
+      ]
+    },
+    {
+      "id": "vndb-v959",
+      "title": "Volume 7",
+      "aliases": [
+        "Vol.7",
+        "ボリュームセブン"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v959",
+      "sourceRefs": [
+        "vndb:v959"
+      ]
+    },
+    {
+      "id": "vndb-v961",
+      "title": "Goshujin-sama Da~isuki",
+      "aliases": [
+        "ご主人様だ～いすき",
+        "ご主人様だーいすき"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v961",
+      "sourceRefs": [
+        "vndb:v961"
+      ]
+    },
+    {
+      "id": "vndb-v967",
+      "title": "Oharai Onee-san! ~Otouto o Yuuwaku Shinasai~",
+      "aliases": [
+        "お祓いお姉さん! ～弟を誘惑しなさいっ～",
+        "Exorcism sister! - seduce your little brother -"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v967",
+      "sourceRefs": [
+        "vndb:v967"
+      ]
+    },
+    {
+      "id": "vndb-v968",
+      "title": "Canvas 3 ~Hakugin no Portrait~",
+      "aliases": [
+        "Canvas3 ～白銀のポートレート～",
+        "Silver Portait"
+      ],
+      "firstYear": 2009,
+      "source": "https://vndb.org/v968",
+      "sourceRefs": [
+        "vndb:v968"
+      ]
+    },
+    {
+      "id": "vndb-v969",
+      "title": "D.C. Girl's Symphony ~Da Capo Girl's Symphony~",
+      "aliases": [
+        "D.C. Girl’s Symphony～ダ・カーポ～ガールズ シンフォニー",
+        "DCGS"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v969",
+      "sourceRefs": [
+        "vndb:v969"
+      ]
+    },
+    {
+      "id": "vndb-v971",
+      "title": "Rinkan Club",
+      "aliases": [
+        "輪姦倶楽部",
+        "The Group Sex Club",
+        "Rinkan Kurabu",
+        "轮奸俱乐部"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v971",
+      "sourceRefs": [
+        "vndb:v971"
+      ]
+    },
+    {
+      "id": "vndb-v974",
+      "title": "Sugata",
+      "aliases": [
+        "―スガタ―"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v974",
+      "sourceRefs": [
+        "vndb:v974"
+      ]
+    },
+    {
+      "id": "vndb-v979",
+      "title": "Harukoi * Otome ~Otome no Sono de Gokigen'you.~",
+      "aliases": [
+        "春恋＊乙女～乙女の園でごきげんよう。～",
+        "Springtime Romance Maidens ~Greetings from the Maidens' Garden~",
+        "春恋＊少女"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v979",
+      "sourceRefs": [
+        "vndb:v979"
+      ]
+    },
+    {
+      "id": "vndb-v981",
+      "title": "Happy Breeding",
+      "aliases": [
+        "はっぴ～ぶり～でぃんぐ",
+        "HapiBuri",
+        "はぴぶり"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v981",
+      "sourceRefs": [
+        "vndb:v981"
+      ]
+    },
+    {
+      "id": "vndb-v983",
+      "title": "Karen",
+      "aliases": [
+        "夏恋　～karen～"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v983",
+      "sourceRefs": [
+        "vndb:v983"
+      ]
+    },
+    {
+      "id": "vndb-v986",
+      "title": "Peropero Sasete ~Mimikko Maid Hatsujouki~",
+      "aliases": [
+        "ペロペロさせて～みみっこメイド発情期～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v986",
+      "sourceRefs": [
+        "vndb:v986"
+      ]
+    },
+    {
+      "id": "vndb-v987",
+      "title": "Be My Master",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v987",
+      "sourceRefs": [
+        "vndb:v987"
+      ]
+    },
+    {
+      "id": "vndb-v989",
+      "title": "Lucy's Revenge",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v989",
+      "sourceRefs": [
+        "vndb:v989"
+      ]
+    },
+    {
+      "id": "vndb-v990",
+      "title": "Hikari's Ribbon",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v990",
+      "sourceRefs": [
+        "vndb:v990"
+      ]
+    },
+    {
+      "id": "vndb-v991",
+      "title": "Taimanin Asagi Gaiden ~Chaos Arena Hen~",
+      "aliases": [
+        "対魔忍アサギ外伝～カオス・アリーナ編～",
+        "Taimanin Asagi Chaos Arena",
+        "对魔忍阿莎姬外传：混沌竞技场篇"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v991",
+      "sourceRefs": [
+        "vndb:v991"
+      ]
+    },
+    {
+      "id": "vndb-v993",
+      "title": "Samayou Midara na Lunatics ~Tsuki no Hime Otogi Zoushi~",
+      "aliases": [
+        "彷徨う淫らなルナティクス～月の姫お伽草子～",
+        "Wandering Deviant Lunatics - Moon Princess Otogizoushi"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v993",
+      "sourceRefs": [
+        "vndb:v993"
+      ]
+    },
+    {
+      "id": "vndb-v994",
+      "title": "Tail Tale",
+      "aliases": [
+        "ている・ている"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v994",
+      "sourceRefs": [
+        "vndb:v994"
+      ]
+    },
+    {
+      "id": "vndb-v995",
+      "title": "Altered Pink ~Tokumu Sentai Duel Ranger~",
+      "aliases": [
+        "アルタードピンク～特務戦隊デュエルレンジャー～",
+        "Altered Pink ~Special Squadron Dual Ranger~"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v995",
+      "sourceRefs": [
+        "vndb:v995"
+      ]
+    },
+    {
+      "id": "vndb-v996",
+      "title": "Aa, Subarashiki Haramasekai",
+      "aliases": [
+        "嗚呼、素晴らしき孕ま世界",
+        "Ah, It's a wonderful world of child making"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v996",
+      "sourceRefs": [
+        "vndb:v996"
+      ]
+    },
+    {
+      "id": "vndb-v997",
+      "title": "Dress Wizard!",
+      "aliases": [
+        "ドレス・ウィザード！"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v997",
+      "sourceRefs": [
+        "vndb:v997"
+      ]
+    },
+    {
+      "id": "vndb-v998",
+      "title": "Koisuru Otome ~Shikigami 2008~",
+      "aliases": [
+        "恋する式（おとめ）～SHIKIGAMI 2008～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v998",
+      "sourceRefs": [
+        "vndb:v998"
+      ]
+    },
+    {
+      "id": "vndb-v1003",
+      "title": "Dual Hearts",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1003",
+      "sourceRefs": [
+        "vndb:v1003"
+      ]
+    },
+    {
+      "id": "vndb-v1004",
+      "title": "Minzoku Injou",
+      "aliases": [
+        "民族淫嬢"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1004",
+      "sourceRefs": [
+        "vndb:v1004"
+      ]
+    },
+    {
+      "id": "vndb-v1005",
+      "title": "RenAi Blogger",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1005",
+      "sourceRefs": [
+        "vndb:v1005"
+      ]
+    },
+    {
+      "id": "vndb-v1008",
+      "title": "Kiss yori Amakute Fukai Mono",
+      "aliases": [
+        "キスより甘くて深いもの",
+        "Kissyori Fukakute Amaimono",
+        "The thing which it is sweeter than a kiss, and is deep",
+        "kissama"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1008",
+      "sourceRefs": [
+        "vndb:v1008"
+      ]
+    },
+    {
+      "id": "vndb-v1010",
+      "title": "Keitai Shoujo",
+      "aliases": [
+        "ケータイ少女",
+        "Mobile Phone Girl"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1010",
+      "sourceRefs": [
+        "vndb:v1010"
+      ]
+    },
+    {
+      "id": "vndb-v1011",
+      "title": "Gakuen Heaven: Okawari!",
+      "aliases": [
+        "学園へヴン おかわりっ!"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1011",
+      "sourceRefs": [
+        "vndb:v1011"
+      ]
+    },
+    {
+      "id": "vndb-v1012",
+      "title": "Koko wa Rakuen-sou",
+      "aliases": [
+        "ここは楽園荘"
+      ],
+      "firstYear": 1994,
+      "source": "https://vndb.org/v1012",
+      "sourceRefs": [
+        "vndb:v1012"
+      ]
+    },
+    {
+      "id": "vndb-v1013",
+      "title": "Koko wa Rakuen-sou 2",
+      "aliases": [
+        "ここは楽園荘2"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v1013",
+      "sourceRefs": [
+        "vndb:v1013"
+      ]
+    },
+    {
+      "id": "vndb-v1017",
+      "title": "Kamiten -Futari ga Ore o Neratteru-",
+      "aliases": [
+        "かみてん－死神と天使（ふたり）が俺を狙ってる－",
+        "Kamiten -Shinigami to Tenshi ga Ore o Neratteru-"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1017",
+      "sourceRefs": [
+        "vndb:v1017"
+      ]
+    },
+    {
+      "id": "vndb-v1019",
+      "title": "Sengoku no Imouto Shichinin no Imouto",
+      "aliases": [
+        "戦国の妹 七人の妹"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1019",
+      "sourceRefs": [
+        "vndb:v1019"
+      ]
+    },
+    {
+      "id": "vndb-v1020",
+      "title": "Ultimate Hunter",
+      "aliases": [
+        "アルティメットハンター",
+        "U_Hunter"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v1020",
+      "sourceRefs": [
+        "vndb:v1020"
+      ]
+    },
+    {
+      "id": "vndb-v1029",
+      "title": "Tiara",
+      "aliases": [
+        "ティアラ",
+        "てぃありゃ"
+      ],
+      "firstYear": 2009,
+      "source": "https://vndb.org/v1029",
+      "sourceRefs": [
+        "vndb:v1029"
+      ]
+    },
+    {
+      "id": "vndb-v1030",
+      "title": "Bible Black -The Infection-",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1030",
+      "sourceRefs": [
+        "vndb:v1030"
+      ]
+    },
+    {
+      "id": "vndb-v1031",
+      "title": "Airebo ~IDOL☆REVOLUTION~",
+      "aliases": [
+        "あいれぼ～IDOL☆REVOLUTION～",
+        "IRevo ~IDOL☆REVOLUTION~"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1031",
+      "sourceRefs": [
+        "vndb:v1031"
+      ]
+    },
+    {
+      "id": "vndb-v1032",
+      "title": "Akimaho!",
+      "aliases": [
+        "あきまほ!"
+      ],
+      "firstYear": 2009,
+      "source": "https://vndb.org/v1032",
+      "sourceRefs": [
+        "vndb:v1032"
+      ]
+    },
+    {
+      "id": "vndb-v1033",
+      "title": "Jeolmanghui 1-bu ~Ilh-eobeorin Nag-won~",
+      "aliases": [
+        "절망희 1부 ~잃어버린 낙원~",
+        "Riapsed/Erised ~Lost Arcadia~"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1033",
+      "sourceRefs": [
+        "vndb:v1033"
+      ]
+    },
+    {
+      "id": "vndb-v1034",
+      "title": "Jeolmanghui Jeon-ya ~The Prologue~",
+      "aliases": [
+        "절망희 전야 ~The Prologue~",
+        "Riapsed/Erised ~The Prologue~"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1034",
+      "sourceRefs": [
+        "vndb:v1034"
+      ]
+    },
+    {
+      "id": "vndb-v1035",
+      "title": "The Loop",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1035",
+      "sourceRefs": [
+        "vndb:v1035"
+      ]
+    },
+    {
+      "id": "vndb-v1038",
+      "title": "Mystereet ~Other Side of Church~",
+      "aliases": [
+        "ミステリート～アザーサイド・オブ・チャーチ～"
+      ],
+      "firstYear": 2009,
+      "source": "https://vndb.org/v1038",
+      "sourceRefs": [
+        "vndb:v1038"
+      ]
+    },
+    {
+      "id": "vndb-v1040",
+      "title": "Kiss yori Saki ni Koi yori Hayaku",
+      "aliases": [
+        "キスよりさきに恋よりはやく",
+        "キス恋",
+        "kisukoi",
+        "kisskoi"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1040",
+      "sourceRefs": [
+        "vndb:v1040"
+      ]
+    },
+    {
+      "id": "vndb-v1043",
+      "title": "Guren Tenshou -Rasetsu-",
+      "aliases": [
+        "紅蓮天衝－羅刹－"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v1043",
+      "sourceRefs": [
+        "vndb:v1043"
+      ]
+    },
+    {
+      "id": "vndb-v1044",
+      "title": "Guren",
+      "aliases": [
+        "blood shadow(dub anime)",
+        "crimson lotus"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v1044",
+      "sourceRefs": [
+        "vndb:v1044"
+      ]
+    },
+    {
+      "id": "vndb-v1045",
+      "title": "Guren Tenshou -Shura-",
+      "aliases": [
+        "紅蓮天衝－修羅－"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v1045",
+      "sourceRefs": [
+        "vndb:v1045"
+      ]
+    },
+    {
+      "id": "vndb-v1050",
+      "title": "Injoku no Seiki ~Kaikan ni Ochita Hime~",
+      "aliases": [
+        "淫辱の性姫～快姦二堕チタ姫～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1050",
+      "sourceRefs": [
+        "vndb:v1050"
+      ]
+    },
+    {
+      "id": "vndb-v1055",
+      "title": "Aguni ~Unmei no Saki~",
+      "aliases": [
+        "Aguni～運命の先～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1055",
+      "sourceRefs": [
+        "vndb:v1055"
+      ]
+    },
+    {
+      "id": "vndb-v1058",
+      "title": "colorfull!!",
+      "aliases": [
+        "カラフル！！～colorfull!!～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1058",
+      "sourceRefs": [
+        "vndb:v1058"
+      ]
+    },
+    {
+      "id": "vndb-v1062",
+      "title": "3jigen Shoujo o Hogo Shimashita",
+      "aliases": [
+        "3次元少女を保護しました",
+        "Sanjigen Shoujo o Hogo Shimashita"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1062",
+      "sourceRefs": [
+        "vndb:v1062"
+      ]
+    },
+    {
+      "id": "vndb-v1063",
+      "title": "Kurukuru Fanatic",
+      "aliases": [
+        "くるくる・ファナティック"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1063",
+      "sourceRefs": [
+        "vndb:v1063"
+      ]
+    },
+    {
+      "id": "vndb-v1064",
+      "title": "Kaiware!",
+      "aliases": [
+        "かいわれっ！"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1064",
+      "sourceRefs": [
+        "vndb:v1064"
+      ]
+    },
+    {
+      "id": "vndb-v1070",
+      "title": "Rasen Kairou",
+      "aliases": [
+        "螺旋回廊"
+      ],
+      "firstYear": 2000,
+      "source": "https://vndb.org/v1070",
+      "sourceRefs": [
+        "vndb:v1070"
+      ]
+    },
+    {
+      "id": "vndb-v1087",
+      "title": "Saishuu Chikan Densha",
+      "aliases": [
+        "最終痴漢電車"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v1087",
+      "sourceRefs": [
+        "vndb:v1087"
+      ]
+    },
+    {
+      "id": "vndb-v1089",
+      "title": "Dokidoki Sister Paradise",
+      "aliases": [
+        "ドキドキしすたぁパラダイス",
+        "しすパラ",
+        "SisPara"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v1089",
+      "sourceRefs": [
+        "vndb:v1089"
+      ]
+    },
+    {
+      "id": "vndb-v1091",
+      "title": "Mahou Shoujo Ai",
+      "aliases": [
+        "魔法少女アイ",
+        "Carnage Heart Ai"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v1091",
+      "sourceRefs": [
+        "vndb:v1091"
+      ]
+    },
+    {
+      "id": "vndb-v1096",
+      "title": "Himemiko",
+      "aliases": [
+        "姫巫女"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1096",
+      "sourceRefs": [
+        "vndb:v1096"
+      ]
+    },
+    {
+      "id": "vndb-v1097",
+      "title": "Himemiko Sengetsu",
+      "aliases": [
+        "姫巫女・繊月"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1097",
+      "sourceRefs": [
+        "vndb:v1097"
+      ]
+    },
+    {
+      "id": "vndb-v1098",
+      "title": "Lady Sugarplum's Bad Day",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1098",
+      "sourceRefs": [
+        "vndb:v1098"
+      ]
+    },
+    {
+      "id": "vndb-v1100",
+      "title": "Choo☆Kanojo ~Ano Ko wa Tsuri Goro, Tsurare Goro~",
+      "aliases": [
+        "釣☆カノジョ～あの娘は釣り頃、釣られ頃～",
+        "Chou ☆ Kanojo",
+        "Tyou ☆ Kanojo",
+        "Tsuri ☆ Kanojo"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1100",
+      "sourceRefs": [
+        "vndb:v1100"
+      ]
+    },
+    {
+      "id": "vndb-v1101",
+      "title": "Koyoi mo Meshimase Alicetale",
+      "aliases": [
+        "今宵も召しませAlicetale",
+        "今宵も召しませアリステイル"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v1101",
+      "sourceRefs": [
+        "vndb:v1101"
+      ]
+    },
+    {
+      "id": "vndb-v1112",
+      "title": "Custom Reido 2",
+      "aliases": [
+        "カスタム隷奴II",
+        "Custom Slave 2"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v1112",
+      "sourceRefs": [
+        "vndb:v1112"
+      ]
+    },
+    {
+      "id": "vndb-v1114",
+      "title": "Ningyou no Yakata ~Inmu ni Dakereta Maid-tachi~",
+      "aliases": [
+        "人形の館～淫夢に抱かれたメイドたち～"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v1114",
+      "sourceRefs": [
+        "vndb:v1114"
+      ]
+    },
+    {
+      "id": "vndb-v1116",
+      "title": "Lost Passage",
+      "aliases": [
+        "ロストパッセージ"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v1116",
+      "sourceRefs": [
+        "vndb:v1116"
+      ]
+    },
+    {
+      "id": "vndb-v1118",
+      "title": "Triangle Heart",
+      "aliases": [
+        "とらいあんぐるハート",
+        "とらハ",
+        "toraha"
+      ],
+      "firstYear": 1998,
+      "source": "https://vndb.org/v1118",
+      "sourceRefs": [
+        "vndb:v1118"
+      ]
+    },
+    {
+      "id": "vndb-v1120",
+      "title": "Sengoku Hime ~Senran no Yo ni Honoo Tatsu~",
+      "aliases": [
+        "戦極姫～戦乱の世に焔立つ～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1120",
+      "sourceRefs": [
+        "vndb:v1120"
+      ]
+    },
+    {
+      "id": "vndb-v1123",
+      "title": "~Momiji~ \"Watashi... Ningyou ja Arimasen...\"",
+      "aliases": [
+        "～もみじ～ 「ワタシ...人形じゃありません...」"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v1123",
+      "sourceRefs": [
+        "vndb:v1123"
+      ]
+    },
+    {
+      "id": "vndb-v1124",
+      "title": "Haramase King",
+      "aliases": [
+        "孕ませ王",
+        "ハラマセキング",
+        "Haramase Ou"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1124",
+      "sourceRefs": [
+        "vndb:v1124"
+      ]
+    },
+    {
+      "id": "vndb-v1126",
+      "title": "Hajimete no Orusuban",
+      "aliases": [
+        "はじめてのおるすばん",
+        "HajiRusu",
+        "はじるす"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v1126",
+      "sourceRefs": [
+        "vndb:v1126"
+      ]
+    },
+    {
+      "id": "vndb-v1133",
+      "title": "Brightia",
+      "aliases": [
+        "ブライティアPLUS"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v1133",
+      "sourceRefs": [
+        "vndb:v1133"
+      ]
+    },
+    {
+      "id": "vndb-v1135",
+      "title": "Demiourgos no Musume ~Hitomi no Naka no Miko Hime~",
+      "aliases": [
+        "デミウルゴスの娘～瞳の中の巫女姫～",
+        "Daughter of Demiourgos"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v1135",
+      "sourceRefs": [
+        "vndb:v1135"
+      ]
+    },
+    {
+      "id": "vndb-v1137",
+      "title": "Maou no Musume-tachi",
+      "aliases": [
+        "魔王の娘たち",
+        "Devil Twins"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v1137",
+      "sourceRefs": [
+        "vndb:v1137"
+      ]
+    },
+    {
+      "id": "vndb-v1142",
+      "title": "La Vie de Chateau",
+      "aliases": [
+        "ラヴィドシャトゥ －La vie de chateau－"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v1142",
+      "sourceRefs": [
+        "vndb:v1142"
+      ]
+    },
+    {
+      "id": "vndb-v1144",
+      "title": "Chuuchuu Nurse",
+      "aliases": [
+        "ちゅうちゅうナース"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1144",
+      "sourceRefs": [
+        "vndb:v1144"
+      ]
+    },
+    {
+      "id": "vndb-v1145",
+      "title": "VenusBlood -CHIMERA-",
+      "aliases": [
+        "ヴィーナスブラッド・キメラ"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1145",
+      "sourceRefs": [
+        "vndb:v1145"
+      ]
+    },
+    {
+      "id": "vndb-v1146",
+      "title": "Little Piece Vol.1",
+      "aliases": [
+        "りとる・ピース vol.1"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1146",
+      "sourceRefs": [
+        "vndb:v1146"
+      ]
+    },
+    {
+      "id": "vndb-v1147",
+      "title": "Little Piece Vol.2",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1147",
+      "sourceRefs": [
+        "vndb:v1147"
+      ]
+    },
+    {
+      "id": "vndb-v1149",
+      "title": "Castle Fantasia",
+      "aliases": [
+        "キャッスルファンタジア",
+        "城堡幻想曲"
+      ],
+      "firstYear": 1998,
+      "source": "https://vndb.org/v1149",
+      "sourceRefs": [
+        "vndb:v1149"
+      ]
+    },
+    {
+      "id": "vndb-v1158",
+      "title": "Naisho Shishunki ~Himitsu ni Koi Suru Imouto-tachi~",
+      "aliases": [
+        "ないしょ思春期 ～ヒミツに恋する妹たち～",
+        "女子校生淫愛思春期　ヒミツな放課後"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1158",
+      "sourceRefs": [
+        "vndb:v1158"
+      ]
+    },
+    {
+      "id": "vndb-v1159",
+      "title": "Kokorono",
+      "aliases": [
+        "ココロノ"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1159",
+      "sourceRefs": [
+        "vndb:v1159"
+      ]
+    },
+    {
+      "id": "vndb-v1163",
+      "title": "Kagiroi ~Shaku Kei~",
+      "aliases": [
+        "かぎろひ～勺景～",
+        "Kagirohi"
+      ],
+      "firstYear": 2009,
+      "source": "https://vndb.org/v1163",
+      "sourceRefs": [
+        "vndb:v1163"
+      ]
+    },
+    {
+      "id": "vndb-v1166",
+      "title": "Sumeragi Ryouko no Bitch na 1 nichi",
+      "aliases": [
+        "皇涼子のBitchな1日",
+        "Sumeragi Ryoko no Bitch na Ichinichi"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1166",
+      "sourceRefs": [
+        "vndb:v1166"
+      ]
+    },
+    {
+      "id": "vndb-v1169",
+      "title": "Ren no Koi",
+      "aliases": [
+        "恋の恋～れんのこい～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1169",
+      "sourceRefs": [
+        "vndb:v1169"
+      ]
+    },
+    {
+      "id": "vndb-v1172",
+      "title": "The Answer",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1172",
+      "sourceRefs": [
+        "vndb:v1172"
+      ]
+    },
+    {
+      "id": "vndb-v1177",
+      "title": "Little Little Election",
+      "aliases": [],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v1177",
+      "sourceRefs": [
+        "vndb:v1177"
+      ]
+    },
+    {
+      "id": "vndb-v1182",
+      "title": "ABANDONER - THE SEVERED DREAMS",
+      "aliases": [
+        "Project repeated scene Third episode",
+        "アバンドナー"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v1182",
+      "sourceRefs": [
+        "vndb:v1182"
+      ]
+    },
+    {
+      "id": "vndb-v1183",
+      "title": "LOST CHILD",
+      "aliases": [
+        "Project repeated scene second episode",
+        "ロストチャイルド"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1183",
+      "sourceRefs": [
+        "vndb:v1183"
+      ]
+    },
+    {
+      "id": "vndb-v1188",
+      "title": "\"Nakadashi\" Igai wa Kousoku Ihan!! ~Joshikousai Nottori Keikaku~",
+      "aliases": [
+        "“中出し”以外は校則違反!! ～女子校祭・乗っ取り計画～",
+        "Chuu Dashi Igai Ha Kousoku Ihan"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1188",
+      "sourceRefs": [
+        "vndb:v1188"
+      ]
+    },
+    {
+      "id": "vndb-v1189",
+      "title": "Ring Out!!",
+      "aliases": [
+        "リングアウト!!",
+        "Pro Lesring Ringout"
+      ],
+      "firstYear": 1995,
+      "source": "https://vndb.org/v1189",
+      "sourceRefs": [
+        "vndb:v1189"
+      ]
+    },
+    {
+      "id": "vndb-v1197",
+      "title": "Summer Radish Vacation!!",
+      "aliases": [
+        "Summer ラディッシュ・バケーション！！",
+        "I devote my summer to you.",
+        "サマー・ラディッシュ・バケーション!!",
+        "The foolish man's looking pig's hip"
+      ],
+      "firstYear": 2003,
+      "source": "https://vndb.org/v1197",
+      "sourceRefs": [
+        "vndb:v1197"
+      ]
+    },
+    {
+      "id": "vndb-v1206",
+      "title": "Explicit Proposal",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1206",
+      "sourceRefs": [
+        "vndb:v1206"
+      ]
+    },
+    {
+      "id": "vndb-v1208",
+      "title": "Zettai Joshi Ryouiki!",
+      "aliases": [
+        "絶対女子寮域！",
+        "Absolute Femdom"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1208",
+      "sourceRefs": [
+        "vndb:v1208"
+      ]
+    },
+    {
+      "id": "vndb-v1211",
+      "title": "Miharu - Alto Another Story",
+      "aliases": [
+        "みはる あるとアナザーストーリー"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1211",
+      "sourceRefs": [
+        "vndb:v1211"
+      ]
+    },
+    {
+      "id": "vndb-v1212",
+      "title": "Ano Sora no Mukougawa",
+      "aliases": [
+        "あの空の向こう側"
+      ],
+      "firstYear": 2004,
+      "source": "https://vndb.org/v1212",
+      "sourceRefs": [
+        "vndb:v1212"
+      ]
+    },
+    {
+      "id": "vndb-v1214",
+      "title": "You! Apron Chakuyou",
+      "aliases": [
+        "要！ エプロン着用",
+        "Aproned Only"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1214",
+      "sourceRefs": [
+        "vndb:v1214"
+      ]
+    },
+    {
+      "id": "vndb-v1216",
+      "title": "Aikagi 2 ~Nureta Kami ga Kawaku Mae ni~",
+      "aliases": [
+        "あいかぎ2 ～濡れた髪が乾く前に～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1216",
+      "sourceRefs": [
+        "vndb:v1216"
+      ]
+    },
+    {
+      "id": "vndb-v1219",
+      "title": "Chanter ~Kimi no Uta ga Todoitara~",
+      "aliases": [
+        "Chanter-キミの歌がとどいたら-",
+        "シャンテ"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1219",
+      "sourceRefs": [
+        "vndb:v1219"
+      ]
+    },
+    {
+      "id": "vndb-v1221",
+      "title": "Haitoku Shitei Soukan ~Ane no Midara na Yawaniku~",
+      "aliases": [
+        "背徳姉弟相姦～姉の淫らな柔肉～"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1221",
+      "sourceRefs": [
+        "vndb:v1221"
+      ]
+    },
+    {
+      "id": "vndb-v1222",
+      "title": "Gohoushi ★ Princess",
+      "aliases": [
+        "ご奉仕★プリンセス"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1222",
+      "sourceRefs": [
+        "vndb:v1222"
+      ]
+    },
+    {
+      "id": "vndb-v1223",
+      "title": "Hajimete Doushi",
+      "aliases": [
+        "はじめてどうし"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1223",
+      "sourceRefs": [
+        "vndb:v1223"
+      ]
+    },
+    {
+      "id": "vndb-v1225",
+      "title": "Imouto Gyaku Rape ~Midara na Tsubomi no Sasoi~",
+      "aliases": [
+        "妹逆レイプ～淫らなつぼみの誘い～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1225",
+      "sourceRefs": [
+        "vndb:v1225"
+      ]
+    },
+    {
+      "id": "vndb-v1226",
+      "title": "Kami-sama no Yado!",
+      "aliases": [
+        "かみさまの宿っ！"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1226",
+      "sourceRefs": [
+        "vndb:v1226"
+      ]
+    },
+    {
+      "id": "vndb-v1227",
+      "title": "My Tsuma",
+      "aliases": [
+        "Myつま"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1227",
+      "sourceRefs": [
+        "vndb:v1227"
+      ]
+    },
+    {
+      "id": "vndb-v1228",
+      "title": "Rouraku ~Ingi ni Ochiru~",
+      "aliases": [
+        "籠絡～淫戯に堕ちる～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1228",
+      "sourceRefs": [
+        "vndb:v1228"
+      ]
+    },
+    {
+      "id": "vndb-v1231",
+      "title": "Hikaei!",
+      "aliases": [
+        "ひかえぃ！",
+        "ひかえい！"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1231",
+      "sourceRefs": [
+        "vndb:v1231"
+      ]
+    },
+    {
+      "id": "vndb-v1232",
+      "title": "Kannabi",
+      "aliases": [
+        "かんなび－神奈備－"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1232",
+      "sourceRefs": [
+        "vndb:v1232"
+      ]
+    },
+    {
+      "id": "vndb-v1233",
+      "title": "Lovelove Choukyou Futago Shimai",
+      "aliases": [
+        "ら・ぶ・ら・ぶ・調教 ふたご姉妹"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1233",
+      "sourceRefs": [
+        "vndb:v1233"
+      ]
+    },
+    {
+      "id": "vndb-v1235",
+      "title": "Ninkyou Hana Otome",
+      "aliases": [
+        "任侠華乙女"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1235",
+      "sourceRefs": [
+        "vndb:v1235"
+      ]
+    },
+    {
+      "id": "vndb-v1236",
+      "title": "Yuuwaku Ren'ai ~Jitsu wa Kyonyuu de Muchimuchi de~",
+      "aliases": [
+        "ゆ～わく恋愛～実は巨乳でムチムチで～",
+        "Yu~waku Ren'ai"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1236",
+      "sourceRefs": [
+        "vndb:v1236"
+      ]
+    },
+    {
+      "id": "vndb-v1238",
+      "title": "Hachukano",
+      "aliases": [
+        "はちゅかの"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1238",
+      "sourceRefs": [
+        "vndb:v1238"
+      ]
+    },
+    {
+      "id": "vndb-v1240",
+      "title": "True World ~Shinjitsu no Sekai~",
+      "aliases": [
+        "TrueWorld～真実のセカイ～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1240",
+      "sourceRefs": [
+        "vndb:v1240"
+      ]
+    },
+    {
+      "id": "vndb-v1242",
+      "title": "Suisui -sweetheart swimmer-",
+      "aliases": [
+        "すぃすぃ- sweetheart swimmer -"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1242",
+      "sourceRefs": [
+        "vndb:v1242"
+      ]
+    },
+    {
+      "id": "vndb-v1243",
+      "title": "Tsukaima-sama wa Makai Princess ~Kanchigai Suruna! Naka ni Dasu no wa Tada no Maryoku Hokyuu da!!~",
+      "aliases": [
+        "使い魔様は魔界プリンセス～勘違いするな！中に出すのはただの魔力補給だ!!～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1243",
+      "sourceRefs": [
+        "vndb:v1243"
+      ]
+    },
+    {
+      "id": "vndb-v1244",
+      "title": "Boku no Miko wa Chiisana Koibito ~Chouai~",
+      "aliases": [
+        "ぼくの巫女は小さな恋妹～寵愛～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1244",
+      "sourceRefs": [
+        "vndb:v1244"
+      ]
+    },
+    {
+      "id": "vndb-v1245",
+      "title": "Himitsu Seikatsu ~Hitotsu Yane no Shita~",
+      "aliases": [
+        "秘密生活～ひとつ屋根の下～"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1245",
+      "sourceRefs": [
+        "vndb:v1245"
+      ]
+    },
+    {
+      "id": "vndb-v1247",
+      "title": "Zettai Princess no Oneman Butler",
+      "aliases": [
+        "絶対プリンセスのワンマンバトラー"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1247",
+      "sourceRefs": [
+        "vndb:v1247"
+      ]
+    },
+    {
+      "id": "vndb-v1249",
+      "title": "Majidashi! Royale ~Finish wa Watashi no Naka de~",
+      "aliases": [
+        "真剣出し！ロワイヤル～フィニッシュは私の中で～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1249",
+      "sourceRefs": [
+        "vndb:v1249"
+      ]
+    },
+    {
+      "id": "vndb-v1250",
+      "title": "Maid in Oshigoto",
+      "aliases": [
+        "メイドイン お仕事"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1250",
+      "sourceRefs": [
+        "vndb:v1250"
+      ]
+    },
+    {
+      "id": "vndb-v1253",
+      "title": "Ore to Kanojo wa Shujuu na Kankei",
+      "aliases": [
+        "オレと彼女は主従なカンケイ"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1253",
+      "sourceRefs": [
+        "vndb:v1253"
+      ]
+    },
+    {
+      "id": "vndb-v1255",
+      "title": "Please, Maid Me!",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1255",
+      "sourceRefs": [
+        "vndb:v1255"
+      ]
+    },
+    {
+      "id": "vndb-v1257",
+      "title": "School Project ☆",
+      "aliases": [
+        "School ぷろじぇくと☆"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1257",
+      "sourceRefs": [
+        "vndb:v1257"
+      ]
+    },
+    {
+      "id": "vndb-v1258",
+      "title": "Switch!! ~Boku ga Natsu ni Omou Koto~",
+      "aliases": [
+        "すいっチ!! ～ボクがナツに想うこと～"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1258",
+      "sourceRefs": [
+        "vndb:v1258"
+      ]
+    },
+    {
+      "id": "vndb-v1259",
+      "title": "Tama Tama ~Tonari no Kanojo wa Seiyuu no Tamago. Tamatama Umareta Koi no Tamago ga...~",
+      "aliases": [
+        "たまたま ～となりの彼女は声優のたまご。たまたま生まれた恋のたまごが…～"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1259",
+      "sourceRefs": [
+        "vndb:v1259"
+      ]
+    },
+    {
+      "id": "vndb-v1261",
+      "title": "Tokitama Phantasm",
+      "aliases": [
+        "ときたまふぁんたずむ"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1261",
+      "sourceRefs": [
+        "vndb:v1261"
+      ]
+    },
+    {
+      "id": "vndb-v1263",
+      "title": "Tonari no Maou Tsukai",
+      "aliases": [
+        "となりの魔王使い"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1263",
+      "sourceRefs": [
+        "vndb:v1263"
+      ]
+    },
+    {
+      "id": "vndb-v1264",
+      "title": "Toumei Ningen THE GAME",
+      "aliases": [
+        "透明人間 THE GAME"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1264",
+      "sourceRefs": [
+        "vndb:v1264"
+      ]
+    },
+    {
+      "id": "vndb-v1265",
+      "title": "Tsu-bo-mi",
+      "aliases": [
+        "つ・ぼ・み"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1265",
+      "sourceRefs": [
+        "vndb:v1265"
+      ]
+    },
+    {
+      "id": "vndb-v1266",
+      "title": "Tokyo Fuusa ~Kimi ga Tonari ni Ita Kinou~",
+      "aliases": [
+        "東京封鎖～キミが隣にいた昨日～",
+        "Tokyo Blockade",
+        "Toukyou Fusa"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1266",
+      "sourceRefs": [
+        "vndb:v1266"
+      ]
+    },
+    {
+      "id": "vndb-v1268",
+      "title": "Gibomai ~Haitoku no Kyouen~",
+      "aliases": [
+        "犠母妹～背徳の狂宴～",
+        "Step Sister"
+      ],
+      "firstYear": 2001,
+      "source": "https://vndb.org/v1268",
+      "sourceRefs": [
+        "vndb:v1268"
+      ]
+    },
+    {
+      "id": "vndb-v1270",
+      "title": "Aikagi ~Hidamari to Kanojo no Heyagi~",
+      "aliases": [
+        "あいかぎ～ひだまりと彼女の部屋着～"
+      ],
+      "firstYear": 2002,
+      "source": "https://vndb.org/v1270",
+      "sourceRefs": [
+        "vndb:v1270"
+      ]
+    },
+    {
+      "id": "vndb-v1271",
+      "title": "Seirei Gari",
+      "aliases": [
+        "星霊狩り"
+      ],
+      "firstYear": 1989,
+      "source": "https://vndb.org/v1271",
+      "sourceRefs": [
+        "vndb:v1271"
+      ]
+    },
+    {
+      "id": "vndb-v1273",
+      "title": "Sukumizu x Otome = Koigokoro",
+      "aliases": [
+        "すくみず×乙女＝恋心",
+        "Sukumizu Kakeru Otome = Koigokoro"
+      ],
+      "firstYear": 2008,
+      "source": "https://vndb.org/v1273",
+      "sourceRefs": [
+        "vndb:v1273"
+      ]
+    },
+    {
+      "id": "vndb-v1274",
+      "title": "Men at Work!",
+      "aliases": [
+        "メンアットワーク！",
+        "MAW!"
+      ],
+      "firstYear": 1999,
+      "source": "https://vndb.org/v1274",
+      "sourceRefs": [
+        "vndb:v1274"
+      ]
+    },
+    {
+      "id": "vndb-v1277",
+      "title": "Hidamari Basket",
+      "aliases": [
+        "ひだまりバスケット"
+      ],
+      "firstYear": 2009,
+      "source": "https://vndb.org/v1277",
+      "sourceRefs": [
+        "vndb:v1277"
+      ]
+    },
+    {
+      "id": "vndb-v1290",
+      "title": "Negaeba Kitto...",
+      "aliases": [
+        "願えばきっと…"
+      ],
+      "firstYear": 2006,
+      "source": "https://vndb.org/v1290",
+      "sourceRefs": [
+        "vndb:v1290"
+      ]
+    },
+    {
+      "id": "vndb-v1291",
+      "title": "May Queen ~Kotori Afterwards~",
+      "aliases": [
+        "May Queen ～小鳥 Afterwards～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1291",
+      "sourceRefs": [
+        "vndb:v1291"
+      ]
+    },
+    {
+      "id": "vndb-v1292",
+      "title": "Ryoujoku Soukan Zu ~Kyousei Ninshin Seieki Jigoku~",
+      "aliases": [
+        "陵辱相姦図 ～強制妊娠精液地獄～"
+      ],
+      "firstYear": 2005,
+      "source": "https://vndb.org/v1292",
+      "sourceRefs": [
+        "vndb:v1292"
+      ]
+    },
+    {
+      "id": "vndb-v1296",
+      "title": "Tsuki no Terasu",
+      "aliases": [
+        "月照～ツキノテラス～"
+      ],
+      "firstYear": 2007,
+      "source": "https://vndb.org/v1296",
+      "sourceRefs": [
+        "vndb:v1296"
+      ]
+    }
+  ],
+  "heldForIdentityReview": [
+    {
+      "id": "v85",
+      "title": "Tamayura",
+      "year": 2005,
+      "matches": [
+        [
+          "nextmoe-10201",
+          2006,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "id": "v160",
+      "title": "Monmon Gakuen -Ten.ko.sei-",
+      "year": 1998,
+      "matches": [
+        [
+          "g662",
+          1995,
+          "complete"
+        ]
+      ]
+    },
+    {
+      "id": "v275",
+      "title": "Sakuranbo Strasse",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v293",
+      "title": "Clock Up Fan Disc 4GHz",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v329",
+      "title": "GADGET -FanDisc-",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v354",
+      "title": "Iinchou wa Shounin Sezu! Fandisc ♪",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v358",
+      "title": "Kimi ga Nozomu Eien ~Special Fan Disc~",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v399",
+      "title": "Minikiss ~Tsuyokiss Fan Disc~",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v436",
+      "title": "Dra†Koi",
+      "year": 2005,
+      "matches": [
+        [
+          "g604",
+          2006,
+          "complete"
+        ]
+      ]
+    },
+    {
+      "id": "v512",
+      "title": "Ina☆Koi! Fandisc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v554",
+      "title": "Mashiro Botan Mini Fan Disc ~Yukana's White Valentine~",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v577",
+      "title": "Little Witch Fan Disc ~Chiisana Majo no Okuri Mono~",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v596",
+      "title": "Souten no Celenaria Fan Disc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v640",
+      "title": "Tori x Tori ~Ecchi Shite Kunnai to Itazura Shichau zo?~",
+      "year": 2006,
+      "matches": [
+        [
+          "nextmoe-19648",
+          2014,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "id": "v694",
+      "title": "Watashi wa Watashi no Mama, Dare ni Demo Kawareru",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v711",
+      "title": "Gyakuten Saiban",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v715",
+      "title": "Gyakuten Saiban 2",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v716",
+      "title": "Gyakuten Saiban 3",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v717",
+      "title": "Gyakuten Saiban 4",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v833",
+      "title": "Seinarukana Special Fan Disc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v872",
+      "title": "Forget Me Not",
+      "year": 2008,
+      "matches": [
+        [
+          "nextmoe-16804",
+          2014,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "id": "v916",
+      "title": "Nagomibako Innocent Grey Fandisc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v982",
+      "title": "Happy Breeding Imasara Fandisc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v984",
+      "title": "Majipuri -Wonder Cradle- Fandisc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v988",
+      "title": "Ripples",
+      "year": 2008,
+      "matches": [
+        [
+          "nextmoe-6054",
+          2026,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "id": "v1025",
+      "title": "ef - First Fan Disc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v1190",
+      "title": "Ashita no Nanami to Au Tame ni ~Ashita no Kimi to Au Tame ni~ Fandisc",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v1193",
+      "title": "Cross Days",
+      "year": 2010,
+      "matches": [
+        [
+          "nextmoe-394",
+          2012,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "id": "v1210",
+      "title": "Akiiro Ouka ~Akiiro Renka Fandisc~",
+      "reviewReason": "Possible derivative, DLC, demo or collection"
+    },
+    {
+      "id": "v1262",
+      "title": "Wanko to Lily",
+      "year": 2006,
+      "matches": [
+        [
+          "g403",
+          2007,
+          "complete"
+        ]
+      ]
+    }
+  ],
+  "caveats": [
+    "Source is VNDB Kana API, not NextMoe: source identity preserved.",
+    "Source license and attribution must be respected (VNDB Data License).",
+    "VN-level released can be less precise than first platform launch.",
+    "Editions, fan discs, same-title conflicts and source-year discrepancies are not forced in.",
+    "This is a lightweight foundation, not a curated story quality assessment."
+  ]
+}
