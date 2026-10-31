@@ -176,13 +176,29 @@ def validate_new_work(bundle, key, games):
     assert isinstance(bundle, dict) and set(bundle) == {'work', 'contentVersions', 'platformReleases'}, '新作须包含作品、原作内容和首次发行'
     w = bundle['work']
     required = {'id','title','originalTitle','firstYear','category','subcategory','genre','characters','charactersNote','synopsis','notes','source','interactionModes','interactionNote','interactionBasis','interactionSources'}
-    assert isinstance(w, dict) and set(w) == required, '新作品字段不完整或含未知字段'
+    optional = {'basicRegistryId', 'titleAliases', 'sourceRefs'}
+    assert isinstance(w, dict) and required <= set(w) <= required | optional, '新作品字段不完整或含未知字段'
+    if set(w) & optional:
+        assert optional <= set(w), '基础库补录须保留完整身份与别名'
+        basic = next((r for r in read('main-adv-rpg-works-20261031.json')['works'] if r['indexId'] == w['basicRegistryId']), None)
+        assert basic and basic['mainPlacement'] == 'promoted-basic', '基础身份不存在或已关联其他档案'
+        assert w['titleAliases'] == basic.get('aliases', []) and w['sourceRefs'] == basic.get('sourceRefs', []), '基础库别名或来源身份已变化，请重新读取'
+        assert w['firstYear'] == basic['firstYear'], '年份与基础身份不一致'
+        basic_names = {name_key(n) for n in [basic['title'], *basic.get('aliases', [])]}
+        assert any(name_key(w.get(f, '')) in basic_names for f in ('title', 'originalTitle')), '名称与基础身份不一致'
+        peers = [r for r in read('main-adv-rpg-works-20261031.json')['works'] if r['indexId'] != basic['indexId'] and r['mainPlacement'] == 'promoted-basic']
+        for peer in peers:
+            assert not basic_names & {name_key(n) for n in [peer['title'], *peer.get('aliases', [])]}, '基础库内部名称重复，请先核对身份'
+            assert not {str(r).lower() for r in w['sourceRefs']} & {str(r).lower() for r in peer.get('sourceRefs', [])}, '基础库内部来源身份重复'
+
     assert w['id'] == key and re.fullmatch(r'g[0-9]{3,8}', key), '作品 ID 无效'
     records = library_records(games)
     assert not any(r['id'] == key for r in records), '作品 ID 已存在于主库或专题，请重新生成 ID'
-    names = {name_key(w[f]) for f in ('title','originalTitle') if isinstance(w[f],str) and name_key(w[f])}
+    names = {name_key(n) for n in [w['title'], w['originalTitle'], *w.get('titleAliases', [])] if isinstance(n, str) and name_key(n)}
     assert len(names) and all(text(w[f], maximum=300) for f in ('title','originalTitle'))
     for old in records:
+        assert not w.get('basicRegistryId') or old.get('basicRegistryId') != w['basicRegistryId'], '基础身份已补录，请重新读取'
+        assert not {str(r).lower() for r in w.get('sourceRefs', [])} & {str(r).lower() for r in old.get('sourceRefs', [])}, '外部来源身份重复'
         oldnames = {name_key(old.get(f,'')) for f in ('title','chineseTitle','originalTitle')} | {name_key(a) for a in old.get('titleAliases',[])}
         assert not names & (oldnames - {''}), f"名称与已有作品 {old['id']} 重复，请复用其身份或先核查同名作品"
     assert type(w['firstYear']) is int and 1976 <= w['firstYear'] <= dt.date.today().year

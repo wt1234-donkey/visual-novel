@@ -65,3 +65,7 @@ python3 scripts/build_company_pages.py --check
 - 第三批审核：`data/nextmoe-bulk-review-20261101-r3.json`
 - 可升级清单：`data/basic-to-full-promotion-review-20261101.json`
 - 严格模型：`data/content-model.md` 和 `AGENTS.md`
+
+## 网页批量补录入口
+
+已提供 [基础库批量补录](../bulk-import.html)，可以直接读取本库身份、批量选择、导出／回填资料模板并生成现有资料管理工作流支持的更新包。操作见 [管理说明](../data/management-guide.md#基础库批量补录)。不再需要手工构造 `works/contentVersions/platformReleases`。
