@@ -23,6 +23,7 @@ REGISTRY = ROOT / "data/main-adv-rpg-works-20261031.json"
 AUDIT = ROOT / "data/nextmoe-bulk-review-20261101-r2.json"
 API = "https://api.nextmoe.dev/v2/catalog/works"
 BATCH = "nextmoe-galgame-bulk-20261101-r2"
+INDEX_PREFIX = "nextmoe-20261101-r2-"
 # These source IDs are known edition/compilation/identity collisions in the
 # inspected high-ranked batch. Hold for the work-versus-content-version audit.
 HELD_EDITION_IDS = {
@@ -223,7 +224,7 @@ def run(args):
                                  "year": year, "matches": sorted(collisions)[:10]})
                 continue
             work_id = "nextmoe-" + upstream_id
-            index_id = "nextmoe-20261101-r2-" + upstream_id
+            index_id = INDEX_PREFIX + upstream_id
             if work_id in taken_ids or index_id in taken_index_ids:
                 counts["duplicate-id"] += 1
                 continue
