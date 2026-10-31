@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {restoreHistorical} from '../management-model.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createEntityIndex} from '../entities.mjs';
@@ -8,6 +9,8 @@ const read=path=>JSON.parse(readFileSync(new URL('../data/'+path+'.json',import.
 const data=read('games'),catalogue=read('entity-catalogue'),editorial=read('discovery-editorial'),creators=read('creator-credits');
 const atlas=createAtlas(data,catalogue,editorial,creators,read('work-notes'));
 const index=createEntityIndex(data,catalogue.model,catalogue);
+const historical=restoreHistorical({editorial,creators,notes:read('work-notes')},read('management-history'));
+historical.atlas=createAtlas(data,catalogue,historical.editorial,historical.creators,historical.notes);
 test('new discovery uses the entire authoritative main catalogue and preserves records',()=>{
  const snapshot=JSON.stringify(data);
  assert.equal(filterAtlas(atlas).length,data.works.length);
@@ -35,12 +38,14 @@ test('work, character and personal name aliases are searchable',()=>{
  assert.equal(filterAtlas(atlas,{query:'__no_such_work__'}).length,0);
 });
 test('personal music and writing roles use separate work sets',()=>{
+ const {creators,atlas}=historical;
  assert.deepEqual([...creatorWorkIds(atlas,'person','jun','writer')].sort(),['g029','g030']);
  assert.deepEqual([...creatorWorkIds(atlas,'person','jun','musician')],['g030']);
  assert.equal(creatorCredits(atlas,'g039','musician').length,0);
  assert.equal(creatorCredits(atlas,'g039','artist')[0].label,'角色设计 / 雪菜、和纱原画');
 });
 test('official edition credits retain scope without adding ordinary ports',()=>{
+ const {creators,atlas}=historical;
  const allReleaseIds=new Set(data.platformReleases.map(r=>r.id));
  const clannad=creators.credits.filter(c=>c.workId==='g030');
  assert.ok(clannad.every(c=>c.scope.type==='externalEdition'&&c.scope.platform==='PlayStation Vita'&&c.scope.year===2014));
@@ -79,6 +84,7 @@ test('publishing, release-only port work and parent relations do not become orig
  assert.deepEqual(creatorWorkIds(atlas,'entity','entity-key'),direct);
 });
 test('collaboration candidates use actual joint-credit intersection without creating team identity',()=>{
+ const {creators,atlas}=historical;
  const c=creators.collaborations[0];assert.equal(c.status,'candidate');
  assert.deepEqual([...creatorWorkIds(atlas,'cooperation',c.id)].sort(),['g029','g030']);
  assert.ok(!catalogue.model.entities.some(e=>e.id===c.id));

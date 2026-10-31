@@ -1,4 +1,5 @@
 """Validate work-level narrative annotations and their field-level editorial evidence."""
+import datetime
 import hashlib
 import json
 from collections import Counter
@@ -16,7 +17,7 @@ def has_value(record,field):
     value=record.get(field)
     return isinstance(value,str) and bool(value.strip()) if field=='position' else isinstance(value,list) and bool(value) and all(isinstance(x,str) and x.strip() for x in value)
 
-def validate(data=None, catalogue=None):
+def validate(data=None, catalogue=None, check_report=True):
     data=data or read('data/discovery-editorial.json')
     catalogue=catalogue or read('data/games.json')
     baseline=read(BASELINE)
@@ -34,7 +35,9 @@ def validate(data=None, catalogue=None):
         assert record['status'] in {'editorialObservation','partial'}, f'{wid}: invalid review status'
         if wid in baseline['works']:
             continue
-        assert record.get('reviewedAt') in ('2026-10-30','2026-10-31'), f'{wid}: missing review date'
+        assert isinstance(record.get('reviewedAt'), str), f'{wid}: missing review date'
+        reviewed = datetime.date.fromisoformat(record['reviewedAt'])
+        assert datetime.date(2026, 10, 30) <= reviewed <= datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).date(), f'{wid}: invalid review date'
         assert record['status']==('editorialObservation' if state=='complete' else 'partial'), f'{wid}: false completion status'
         for field in present:
             labels=[record[field]] if field=='position' else record[field]
@@ -51,7 +54,7 @@ def validate(data=None, catalogue=None):
     counts['missing']+=len(workmap.keys()-data['works'].keys())
     assert not set(data.get('featuredWorkIds',[]))-workmap.keys(), 'Unknown featured work'
     report_path=ROOT/'data/narrative-cataloguing-20261030.json'
-    if report_path.exists():
+    if report_path.exists() and check_report:
         report=read('data/narrative-cataloguing-20261030.json')
         old_ids=set(baseline['works'])
         target=set(report['targetWorkIds'])

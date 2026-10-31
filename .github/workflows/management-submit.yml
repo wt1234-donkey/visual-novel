@@ -1,0 +1,90 @@
+name: 资料管理 · 校验并建立修改 PR
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 资料管理更新包（JSON）
+        required: true
+        type: string
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: catalogue-management
+  cancel-in-progress: false
+jobs:
+  validate-and-propose:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Parse and apply only permitted catalogue records
+        env:
+          MANAGEMENT_PACKAGE: ${{ inputs.package }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          request = os.environ['MANAGEMENT_PACKAGE']
+          if len(request) > 60000:
+              raise SystemExit('更新包过大，请分批提交')
+          Path(os.environ['RUNNER_TEMP'], 'management-package.json').write_text(request, encoding='utf-8')
+          PY
+          python3 scripts/manage_catalogue.py "$RUNNER_TEMP/management-package.json"
+      - name: Regenerate CSV indexes, dossiers and outstanding field audit
+        run: |
+          python3 scripts/sync_versions_csv.py
+          python3 scripts/export_content_csv.py
+          python3 scripts/export_interaction_csv.py
+          python3 scripts/build_company_pages.py
+          python3 scripts/audit_narrative_pending_20261030.py
+      - name: Validate current data and historical regressions
+        run: |
+          python3 scripts/manage_catalogue.py --check
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Commit validated data on an isolated branch
+        id: commit
+        env:
+          BRANCH: research/management-${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c "$BRANCH"
+          git add data '*.html'
+          git commit -m "Update researched catalogue records through management workspace"
+          git push origin "$BRANCH"
+          printf 'branch=%s\n' "$BRANCH" >> "$GITHUB_OUTPUT"
+      - name: Open review PR, or provide the compare link if bot PR creation is disabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.commit.outputs.branch }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          cat > "$RUNNER_TEMP/pr-body.md" <<'BODY'
+          此修改由资料管理台更新包生成。包含逐项来源、适用范围及管理历史；在独立分支运行了资料校验与全部历史回归。
+
+          请检查 Files changed 中的事实与证据，通过后合并 main。合并后等待 GitHub Pages 更新。
+          BODY
+          COMPARE="https://github.com/$REPOSITORY/compare/main...$BRANCH?expand=1"
+          if gh pr create --repo "$REPOSITORY" --base main --head "$BRANCH" --title '资料管理：有来源的作品编目更新' --body-file "$RUNNER_TEMP/pr-body.md" > "$RUNNER_TEMP/management-pr.txt"; then
+            printf '### 已建立资料修改 PR\n\n' >> "$GITHUB_STEP_SUMMARY"
+            cat "$RUNNER_TEMP/management-pr.txt" >> "$GITHUB_STEP_SUMMARY"
+          else
+            printf '### 修改已验证并推送到独立分支\n\n仓库未允许机器人创建 PR，或创建失败。请打开下方比较链接，手动点击 Create pull request：\n\n%s\n' "$COMPARE" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          printf '\n审核合并后才更新主站；若检查失败，查看失败步骤，main 不会被修改。\n' >> "$GITHUB_STEP_SUMMARY"
