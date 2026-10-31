@@ -18,7 +18,7 @@ class NarrativeEditorialTests(unittest.TestCase):
 
     def test_frozen_work_review_and_field_sources(self):
         counts=validate(self.data, catalogue=self.catalogue, check_report=False)
-        new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-six-studios-expansion-result-20261030.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-recommended-intake-result-20261030.json').read_text())['added'])
+        new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-six-studios-expansion-result-20261030.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-recommended-intake-result-20261030.json').read_text())['added']) + len(json.loads((ROOT/'data/project-title-year-import-result-20261031.json').read_text())['added'])
         patches=json.loads((ROOT/'data/narrative-evidence-patches-20261030.json').read_text())['entries']
         fully_filled=sum(bool(row.get('position')) and bool(row.get('style')) and bool(row.get('theme')) and bool(row.get('structure')) for row in patches.values())
         partial_filled=len(patches)-fully_filled
@@ -113,6 +113,7 @@ class NarrativeEditorialTests(unittest.TestCase):
         self.assertEqual(final_five,5)
         expected['partial']-=5
         expected['complete']+=5
+        expected['missing']+=len(json.loads((ROOT/'data/project-title-year-import-result-20261031.json').read_text())['added'])
         self.assertEqual(sum(counts.values()),1339+new)
         self.assertEqual(counts,expected)
         baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
