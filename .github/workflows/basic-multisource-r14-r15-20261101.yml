@@ -2,10 +2,6 @@ name: Basic registry rounds 14-15 — NextMoe and VNDB
 on:
   push:
     branches: [catalog/basic-r14-r15-multisource-20261101]
-    paths:
-      - scripts/import_basic_multisource_r14_r15_20261101.py
-      - scripts/import_nextmoe_basic_20261101_r2.py
-      - .github/workflows/basic-multisource-r14-r15-20261101.yml
   workflow_dispatch:
 permissions:
   contents: write
