@@ -94,7 +94,7 @@ def date_year(record):
 
 def get_page(page, limit, retry=4):
     params = urllib.parse.urlencode({
-        "page": page, "limit": limit, "sort": "popularity",
+        "page": page, "limit": limit, "sort": "rating_vndb",
         "nsfw": "true", "include": "titles,refs"
     })
     request = urllib.request.Request(
@@ -264,7 +264,7 @@ def run(args):
     audit = {
         "schema": 1, "date": "2026-10-31", "source": API,
         "scope": "NextMoe medium=galgame with VNDB identity, released by 2026-10-31, exclude DLC/trials, names/aliases and original year only",
-        "request": {"sort": "popularity", "pageCountCap": args.pages, "pageSize": args.limit,
+        "request": {"sort": "rating_vndb", "pageCountCap": args.pages, "pageSize": args.limit,
                     "limitNew": args.max_new},
         "summary": {"scanned": scanned, "newDistinctWorks": inc, "before": before,
                     "after": len(registry["works"]), **dict(counts)},
