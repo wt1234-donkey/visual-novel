@@ -1,0 +1,56 @@
+name: Promote 208 reviewed project ADV RPG works to main identity catalogue
+on:
+  push:
+    branches:
+      - catalog/promote-project-adv-rpg-main-20261031
+    paths:
+      - scripts/promote_adv_rpg_candidates_20261031.py
+      - data/main-adv-rpg-works-20261031.json
+      - discovery.mjs
+      - minimal-adv-rpg.html
+      - minimal-adv-rpg.mjs
+      - tests/test_main_adv_rpg_registry_20261031.py
+      - .github/workflows/promote-adv-rpg-main-20261031.yml
+permissions:
+  contents: write
+concurrency:
+  group: promote-main-adv-rpg-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test-and-update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Regenerate main work identity layer
+        run: python3 scripts/promote_adv_rpg_candidates_20261031.py
+      - name: Verify primary main registry, JavaScript and historical corpus
+        run: |
+          python3 -m unittest discover -s tests -p "test_main_adv_rpg_registry_20261031.py"
+          python3 -m unittest discover -s tests -p "test_minimal_adv_rpg_index_20261031.py"
+          node --check discovery.mjs
+          node --check minimal-adv-rpg.mjs
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Write generated index only after successful validation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Reconcile screened ADV RPG main registry with approved candidates"
+            git fetch origin catalog/promote-project-adv-rpg-main-20261031
+            git rebase origin/catalog/promote-project-adv-rpg-main-20261031
+            git push origin HEAD:catalog/promote-project-adv-rpg-main-20261031
+          fi
