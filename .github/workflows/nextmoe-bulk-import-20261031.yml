@@ -1,0 +1,64 @@
+name: Import NextMoe Galgame names and debut years
+on:
+  push:
+    branches:
+      - catalog/nextmoe-bulk-import-20261031
+    paths:
+      - scripts/import_nextmoe_basic_20261031.py
+      - .github/workflows/nextmoe-bulk-import-20261031.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: nextmoe-bulk-import-20261031
+  cancel-in-progress: false
+jobs:
+  fetch-dedupe-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fetch real NextMoe catalog rows, remove aliases and keep original release years
+        run: python3 scripts/import_nextmoe_basic_20261031.py --pages 50 --limit 100 --max-new 500 --delay 2.2
+      - name: Validate generated JSON and identity invariants
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/main-adv-rpg-works-20261031.json')
+          data=json.loads(p.read_text(encoding='utf-8'))
+          audit=json.loads(Path('data/nextmoe-bulk-review-20261031.json').read_text(encoding='utf-8'))
+          assert data['summary']['accepted']==len(data['works'])
+          assert data['summary']['promotedBasic']+data['summary']['promotedDossier']==data['summary']['addedToMainIdentityLayer']
+          assert len({w['id'] for w in data['works']})==len(data['works'])
+          assert len({w['indexId'] for w in data['works']})==len(data['works'])
+          assert audit['summary']['newDistinctWorks']>0
+          assert audit['summary']['newDistinctWorks']==len(audit['records'])
+          print(audit['summary'])
+          PY
+      - name: Run existing database and web tests
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+      - name: Commit verified newly added identities and source evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/nextmoe-bulk-review-20261031.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Import deduplicated NextMoe Galgame titles and debut years"
+            git fetch origin catalog/nextmoe-bulk-import-20261031
+            git rebase origin/catalog/nextmoe-bulk-import-20261031
+            git push origin HEAD:catalog/nextmoe-bulk-import-20261031
+          fi
