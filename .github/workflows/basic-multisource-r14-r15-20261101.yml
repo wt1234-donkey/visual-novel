@@ -101,7 +101,7 @@ jobs:
               "runUrl": "https://github.com/"+os.environ.get('GITHUB_REPOSITORY','')+"/actions/runs/"+os.environ.get('GITHUB_RUN_ID',''),
               "status": "failed",
               "logTail": lines
-          },ensure_ascii=False,indent=2)+"\\n",encoding='utf-8')
+          },ensure_ascii=False,indent=2)+"\n",encoding='utf-8')
           PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
