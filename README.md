@@ -331,4 +331,4 @@ Alicesoft 叙事作品转入主库（2026-10-04）：按专题现有“叙事／
 
 ## 资料管理入口
 
-打开 [`manage.html`](manage.html) 检索作品、编辑四项叙事编目、补充个人署名及有来源的版本说明。草稿可导入导出；通过 GitHub Actions 校验并生成修改分支与 PR，审核合并后更新主站。详见[使用说明](data/management-guide.md)。
+打开 [`manage.html`](manage.html) 添加独立新作品及原作首批发行、检索作品、编辑四项叙事编目、补充个人署名及有来源的版本说明。草稿可导入导出；通过 GitHub Actions 校验并生成修改分支与 PR，审核合并后更新主站。详见[使用说明](data/management-guide.md)。

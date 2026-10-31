@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {searchWorks,packageChanges,validatePackage,restoreHistorical,same,validURL} from '../management-model.mjs';
+import {searchWorks,packageChanges,validatePackage,restoreHistorical,same,validURL,makeNewWork,nextWorkId,duplicateWorks,validateNewBundle} from '../management-model.mjs';
 const read=n=>JSON.parse(readFileSync(new URL('../data/'+n+'.json',import.meta.url),'utf8'));
 const data={games:read('games'),editorial:read('discovery-editorial'),creators:read('creator-credits'),notes:read('work-notes')};
 test('Chinese, original title and IDs match existing identities',()=>{
@@ -22,4 +22,13 @@ test('invalid sources and missing evidence block submission',()=>{
  const changed=structuredClone(data);changed.editorial.works.g089.fieldEvidence.style.sources=['javascript:alert(1)'];
  assert.ok(validatePackage(packageChanges(data,changed,'核查','2026-10-31')).length);
  assert.ok(!validURL('data:text/html,bad'));
+});
+
+test('new original bundles share one content across first-batch platforms and survive draft export',()=>{
+ const taxonomy=read('taxonomy'),id=nextWorkId(data.games.works);
+ const b=makeNewWork({'work-id':id,title:'新原作表单测试',originalTitle:'New Work Form Test',year:'2026',category:'视觉小说',subcategory:'单线视觉小说',genre:'测试',characters:'主人公',synopsis:'仅供新增作品表单测试。',notes:'',source:'https://example.org/test',modes:['阅读推进'],'interaction-note':'阅读推进测试','interaction-sources':'https://example.org/test','content-evidence':'原作内容身份及首次发行资料的测试说明。','content-source':'https://example.org/test',platforms:'Windows\nLinux',publisher:'Key',voice:'未核实','release-evidence':'明确同一首批的测试资料。','release-source':'https://example.org/test'},taxonomy);
+ validateNewBundle(b);assert.equal(b.contentVersions.length,1);assert.equal(b.platformReleases.length,2);assert.equal(b.platformReleases[0].contentVersionId,b.platformReleases[1].contentVersionId);
+ const draft=structuredClone(data);draft.games.works.push(b.work);draft.games.contentVersions.push(...b.contentVersions);draft.games.platformReleases.push(...b.platformReleases);
+ const p=packageChanges(data,draft,'新增独立作品','2026-10-31');assert.equal(p.operations[0].resource,'newWork');assert.deepEqual(validatePackage(p),[]);assert.deepEqual(restoreHistorical(draft,{batches:[p]}),data);
+ assert.ok(duplicateWorks(data.games.works,{id:'new',title:data.games.works[0].title,originalTitle:''}).length);
 });

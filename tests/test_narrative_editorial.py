@@ -12,10 +12,12 @@ from manage_catalogue import restore_historical, load
 class NarrativeEditorialTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data=restore_historical(load(), json.loads((ROOT/'data/management-history.json').read_text()))['editorial']
+        historical=restore_historical(load(), json.loads((ROOT/'data/management-history.json').read_text()))
+        cls.data=historical['editorial']
+        cls.catalogue=historical['games']
 
     def test_frozen_work_review_and_field_sources(self):
-        counts=validate(self.data, check_report=False)
+        counts=validate(self.data, catalogue=self.catalogue, check_report=False)
         new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-six-studios-expansion-result-20261030.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-recommended-intake-result-20261030.json').read_text())['added'])
         patches=json.loads((ROOT/'data/narrative-evidence-patches-20261030.json').read_text())['entries']
         fully_filled=sum(bool(row.get('position')) and bool(row.get('style')) and bool(row.get('theme')) and bool(row.get('structure')) for row in patches.values())

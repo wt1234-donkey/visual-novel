@@ -48,6 +48,27 @@ class ManagementTests(unittest.TestCase):
         c=copy.deepcopy(self.data['creators']['credits'][0]);c.update(id='g030-writer-nonexistent',personId='nonexistent')
         self.package['operations']=[dict(resource='credits',key=c['id'],before=None,after=c)]
         with self.assertRaises(AssertionError):self.apply()
+    def new_work_package(self):
+        wid='g'+str(max(int(w['id'][1:]) for w in self.games['works'])+1);source='https://example.org/management-test'
+        w=dict(id=wid,title='管理台测试原作 '+wid,originalTitle='Management Test Original '+wid,firstYear=2026,category='视觉小说',subcategory='单线视觉小说',genre='测试叙事作品',characters=['测试主人公'],charactersNote='',synopsis='独立作品收录管线的隔离测试，不发布至正式数据库。',notes='',source=source,interactionModes=['阅读推进'],interactionNote='通过阅读推进叙事，仅供测试。',interactionBasis='来源核对',interactionSources=[source])
+        c=dict(id=wid+'-c-original',workId=wid,label='原作／首批内容',firstYear=2026,basis='original',evidence='原作首批版本及内容身份的隔离测试资料。',source=source,evidenceReleaseIds=[wid+'-v1'],addedContent=[])
+        r=dict(id=wid+'-v1',workId=wid,year=2026,platform='Windows',publisher='Key',publisherCompanies=['Key'],kind='原作',voice='未核实',differences='测试的首次发行批次，仅供隔离测试。',source=source,contentVersionId=c['id'],contentRelation='original',contentNote='测试的首次发行批次，仅供隔离测试。',releaseRole='contentDebut')
+        return dict(schemaVersion=1,createdAt='2026-10-31',reason='独立作品隔离测试',operations=[dict(resource='newWork',key=wid,before=None,after=dict(work=w,contentVersions=[c],platformReleases=[r]))])
+    def test_add_original_and_first_release_without_mutating_input(self):
+        p=self.new_work_package();result=self.apply(p)
+        self.assertEqual(len(result['games']['works']),len(self.data['games']['works'])+1)
+        self.assertEqual(restore_historical(result,{'batches':[p]}),self.data)
+    def test_duplicate_names_ids_and_missing_original_are_rejected(self):
+        p=self.new_work_package();p['operations'][0]['after']['work']['title']=self.games['works'][0]['title']
+        with self.assertRaisesRegex(AssertionError,'重复'):self.apply(p)
+        p=self.new_work_package();p['operations'][0]['after']['contentVersions']=[]
+        with self.assertRaises(AssertionError):self.apply(p)
+    def test_new_work_cannot_insert_later_port_or_claim_new_content(self):
+        p=self.new_work_package();p['operations'][0]['after']['platformReleases'][0]['contentRelation']='same'
+        with self.assertRaises(AssertionError):self.apply(p)
+    def test_second_first_batch_platform_shares_content_identity(self):
+        p=self.new_work_package();bundle=p['operations'][0]['after'];r=copy.deepcopy(bundle['platformReleases'][0]);r.update(id=bundle['work']['id']+'-v2',platform='Linux');bundle['platformReleases'].append(r);bundle['contentVersions'][0]['evidenceReleaseIds'].append(r['id'])
+        self.assertEqual(len(self.apply(p)['games']['contentVersions']),len(self.games['contentVersions'])+1)
     def test_current_history(self):
         validate_history()
 if __name__=='__main__':unittest.main()
