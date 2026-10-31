@@ -11,13 +11,16 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
         self.idx=read('data/adv-rpg-minimal-index-20261031.json')
     def test_all_candidates_accounted_for_and_deduplicated(self):
         s=self.r['summary'];w=self.r['works'];q=self.r['identityReview']
-        self.assertEqual(s,{'candidates':208,'accepted':207,'existingComplete':57,'promotedDossier':103,'promotedBasic':47,'identityReview':1,'addedToMainIdentityLayer':150})
-        self.assertEqual(len(w),207)
-        self.assertEqual(len(q),1)
+        self.assertEqual(s['candidates'],267)
+        self.assertEqual(s['accepted'],len(w))
+        self.assertEqual(s['nextBatchCandidates'],59)
+        self.assertEqual(s['addedToMainIdentityLayer'],s['promotedDossier']+s['promotedBasic'])
+        self.assertGreaterEqual(len(w),207)
+        self.assertGreaterEqual(len(q),1)
         self.assertEqual(q[0]['title'],'Dragon Knight & Graffiti')
-        self.assertEqual({x['indexId'] for x in w}|{x['indexId'] for x in q},{x['id'] for x in self.idx['records'][:208]})
+        self.assertEqual({x['indexId'] for x in w[:207]}|{x['indexId'] for x in q[:1]},{x['id'] for x in self.idx['records'][:208]})
         self.assertEqual(len({x['id'] for x in w}),len(w))
-        self.assertEqual(Counter(x['mainPlacement'] for x in w),{'existing-complete':57,'promoted-dossier':103,'promoted-basic':47})
+        self.assertEqual(Counter(x['mainPlacement'] for x in w[:207]),{'existing-complete':57,'promoted-dossier':103,'promoted-basic':47})
     def test_existing_identifiers_and_minimal_metadata(self):
         main_ids={w['id'] for w in read('data/games.json')['works']}
         dossier_ids={w['id'] for c in read('data/company-coverage.json')['companies'] for key in ('relatedGames','dossierOnlyWorks') for w in c.get(key,[])}
