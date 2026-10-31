@@ -11,7 +11,7 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
         self.idx=read('data/adv-rpg-minimal-index-20261031.json')
     def test_all_candidates_accounted_for_and_deduplicated(self):
         s=self.r['summary'];w=self.r['works'];q=self.r['identityReview']
-        self.assertEqual(s['candidates'],267)
+        self.assertEqual(s['candidates'],267+sum(b['summary']['candidates'] for b in self.r.get('batches',[])))
         self.assertEqual(s['accepted'],len(w))
         self.assertEqual(s['nextBatchCandidates'],59)
         self.assertEqual(s['addedToMainIdentityLayer'],s['promotedDossier']+s['promotedBasic'])

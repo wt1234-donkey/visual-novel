@@ -78,5 +78,12 @@ out={
     "identityReview":review
 }
 dest=ROOT/"data/main-adv-rpg-works-20261031.json"
+if dest.exists():
+    current=json.loads(dest.read_text(encoding='utf-8'))
+    if current.get('nextBatch') or current.get('batches'):
+        assert current['works'][:207]==accepted, 'First-batch identities changed; review before rebuilding later batches.'
+        assert current['identityReview'][:1]==review
+        print('First 208 candidates verified; later reviewed batches preserved.')
+        raise SystemExit(0)
 dest.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print(json.dumps(out["summary"],ensure_ascii=False))

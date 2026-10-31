@@ -13,6 +13,7 @@ def norm(v): return ''.join(c for c in unicodedata.normalize('NFKC',str(v or '')
 def names(w): return [w.get('title'),w.get('originalTitle'),w.get('chineseTitle'),*(w.get('titleAliases') or []),*(w.get('aliases') or [])]
 registry_path=ROOT/'data/main-adv-rpg-works-20261031.json'
 registry=load('data/main-adv-rpg-works-20261031.json')
+later_works=[w for w in registry['works'] if w.get('batch')]
 if registry.get('nextBatch',{}).get('source')=='data/adv-rpg-next-studio-candidates-20261031.json':
     # Recompute deterministically from the unchanged first batch, so correcting an identity
     # disambiguation rule never leaves duplicate entries or stale review decisions.
@@ -126,6 +127,16 @@ registry['summary']={
 registry['updated']='2026-10-31'
 registry['nextBatch']={'source':'data/adv-rpg-next-studio-candidates-20261031.json',
                        'review':'data/adv-rpg-next-studio-review-20261031.json','summary':dict(status)}
+if registry.get('batches'):
+    # Replaying this older batch must not discard later reviewed identities.
+    assert not ({w['id'] for w in later_works}&{w['id'] for w in registry['works']})
+    registry['works'].extend(later_works)
+    all_statuses=Counter(w['mainPlacement'] for w in registry['works'])
+    registry['summary'].update(
+        candidates=267+sum(b['summary']['candidates'] for b in registry['batches']),
+        accepted=len(registry['works']), existingComplete=all_statuses['existing-complete'],
+        promotedDossier=all_statuses['promoted-dossier'],promotedBasic=all_statuses['promoted-basic'],
+        addedToMainIdentityLayer=all_statuses['promoted-dossier']+all_statuses['promoted-basic'])
 registry_path.write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 review={'schema':1,'reviewedAt':'2026-10-31','summary':dict(status),'records':decisions,
         'policy':'Role claims require specific credits; no full narrative or edition creation. Source URLs for some catalogue-level entries do not independently prove a particular release platform.'}

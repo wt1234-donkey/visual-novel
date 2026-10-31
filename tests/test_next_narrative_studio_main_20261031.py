@@ -21,7 +21,7 @@ class NextNarrativeStudioTests(unittest.TestCase):
         self.assertEqual(reg['summary']['nextBatchNewBasic'],counts['promoted-basic'])
         self.assertEqual(reg['summary']['nextBatchLinkedExisting'],counts['linked-existing-registry']+counts['linked-existing-full-or-dossier'])
         self.assertEqual(reg['summary']['nextBatchHeld'],counts['identity-review'])
-        self.assertEqual(reg['summary']['candidates'],267)
+        self.assertEqual(reg['summary']['candidates'],267+sum(b['summary']['candidates'] for b in reg.get('batches',[])))
         self.assertEqual(reg['summary']['accepted'],len(reg['works']))
         self.assertEqual(len({w['id'] for w in reg['works']}),len(reg['works']))
         existing={w['id'] for w in reg['works']}

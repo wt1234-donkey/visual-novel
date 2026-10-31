@@ -1,0 +1,36 @@
+name: Verify third project narrative intake
+on:
+  push:
+    branches: [catalog/project-narrative-round3-20261031]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Verify deterministic intake and preserve earlier batches
+        run: |
+          python3 scripts/promote_adv_rpg_candidates_20261031.py
+          python3 scripts/promote_next_narrative_studios_20261031.py
+          python3 scripts/promote_narrative_round3_20261031.py --check
+          git diff --exit-code
+      - name: Validate data, history, rendering and JavaScript
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --check minimal-adv-rpg.mjs
+          node --test tests/*.test.mjs
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+          python3 scripts/build_company_pages.py --check
