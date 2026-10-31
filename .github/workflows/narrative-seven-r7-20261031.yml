@@ -1,0 +1,53 @@
+name: Complete seven original-scope four-field narrative works
+on:
+  push:
+    branches:
+      - editorial/seven-remaining-studios-r7-20261031
+    paths:
+      - data/narrative-evidence-seven-r7-20261031.json
+      - data/narrative-seven-r7-baseline-20261031.json
+      - scripts/complete_narrative_seven_r7_20261031.py
+      - tests/test_narrative_editorial.py
+      - .github/workflows/narrative-seven-r7-20261031.yml
+permissions:
+  contents: write
+concurrency:
+  group: seven-narrative-r7-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  repair-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fill only seven missing narrative records with individually scoped evidence
+        run: python3 scripts/complete_narrative_seven_r7_20261031.py
+      - name: Recalculate all outstanding story-field gaps
+        run: python3 scripts/audit_narrative_pending_20261030.py
+      - name: Run narrative, game, entity and historical regression checks
+        run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Commit only generated editorial and gap audit files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/discovery-editorial.json data/narrative-pending-*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Complete seven outstanding original-scope narrative descriptions"
+            git fetch origin editorial/seven-remaining-studios-r7-20261031
+            git rebase origin/editorial/seven-remaining-studios-r7-20261031
+            git push origin HEAD:editorial/seven-remaining-studios-r7-20261031
+          fi
