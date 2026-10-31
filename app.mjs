@@ -1,3 +1,4 @@
+import {applyWorkEdits} from './work-edit-model.mjs?v=20261101';
 import {createEntityIndex,entityWorkCounts,summarizeCredits,displayPublisherName,BRAND_ROLES,DEVELOPER_ROLES,PUBLISHER_ROLES} from './entities.mjs?v=20261021-names';
 import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261021-entities';
 
@@ -81,7 +82,7 @@ function renderCard({work,platformReleases:versions,contentVersions}){
   }
   for(const credit of work.editionCredits||[])container.append(label('p','changes',`历史发行补充：${credit.year} · ${credit.platform} · ${credit.publisher}。${credit.reason}`),safeLink(credit.source,'发行补充依据 ↗'));
   detail.append(container);card.append(detail);
-  const bottom=label('div','card-bottom','');bottom.append(safeLink(work.source,'作品来源 ↗'));
+  const bottom=label('div','card-bottom','');const edit=label('a','source-link','编辑作品／回撤');edit.href='index.html?edit='+encodeURIComponent(work.id)+'#work/'+encodeURIComponent(work.id)+'/profile';bottom.append(edit,safeLink(work.source,'作品来源 ↗'));
   if(work.charactersSource)bottom.append(safeLink(work.charactersSource,'角色依据 ↗'));
   if(work.notes)bottom.append(label('span','card-note',work.notes));
   card.append(bottom);
@@ -96,7 +97,7 @@ async function main(){
     if(responses.some(r=>!r.ok))throw Error('HTTP '+responses.find(r=>!r.ok).status);
     const [data,taxonomy,catalogue,notes]=await Promise.all(responses.map(r=>r.json()));
     const supplementalResponse=await fetch('./data/non-rpg-creator-supplement-20261030.json?v=20261030');if(!supplementalResponse.ok)throw Error('non-RPG supplement HTTP '+supplementalResponse.status);const supplemental=await supplementalResponse.json();const existingWorkIds=new Set(data.works.map(w=>w.id));for(const w of supplemental.works)if(!existingWorkIds.has(w.id))data.works.push(w);const existingReleaseIds=new Set(data.platformReleases.map(v=>v.id));for(const v of supplemental.platformReleases)if(!existingReleaseIds.has(v.id))data.platformReleases.push(v);const existingContentIds=new Set(data.contentVersions.map(v=>v.id));for(const v of supplemental.contentVersions)if(!existingContentIds.has(v.id))data.contentVersions.push(v);
-    workNotes=notes.works;
+    const editResponse=await fetch('./data/work-edit-history.json',{cache:'no-store'});if(!editResponse.ok)throw Error('作品修改记录读取失败');applyWorkEdits(data,await editResponse.json());workNotes=notes.works;
     entityIndex=createEntityIndex(data,catalogue.model,catalogue);
     const typeCounts=new Map();for(const e of catalogue.model.entities)typeCounts.set(e.type,(typeCounts.get(e.type)||0)+1);
     $('entity-stat-status').textContent=`${typeCounts.get('company')||0}个公司／组织 · ${typeCounts.get('brand')||0}个品牌 · ${catalogue.model.dossiers.length}个专题；其他团队、刊物和待核身份见主体档案。`;

@@ -16,7 +16,9 @@ class OrganizationTests(unittest.TestCase):
         # The work-first homepage replaces the old shell; its compatibility and
         # complete dossier navigation are checked in discovery.test.mjs.
         new = (ROOT / 'catalogue.html').read_text().replace('<title>高级发行检索 · ', '<title>', 1)
-        self.assertEqual(new.replace('<a href="organizations.html">组织与沿革</a>', '', 1), build_dossier_navigation(old))
+        # The direct editor updates the app asset cache key; retained catalogue markup stays identical.
+        retained = new.replace('app.mjs?v=20261101-direct-edit', 'app.mjs?v=20261021-names')
+        self.assertEqual(retained.replace('<a href="organizations.html">组织与沿革</a>', '', 1), build_dossier_navigation(old))
         self.assertEqual(new.count('href="organizations.html"'), 1)
 
     def test_catalogue_work_links_preserve_dossier_anchors(self):
