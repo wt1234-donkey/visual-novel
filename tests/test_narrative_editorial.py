@@ -7,14 +7,15 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from validate_narrative_editorial import validate, has_value
+from manage_catalogue import restore_historical, load
 
 class NarrativeEditorialTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data=json.loads((ROOT/'data/discovery-editorial.json').read_text())
+        cls.data=restore_historical(load(), json.loads((ROOT/'data/management-history.json').read_text()))['editorial']
 
     def test_frozen_work_review_and_field_sources(self):
-        counts=validate(self.data)
+        counts=validate(self.data, check_report=False)
         new=len(json.loads((ROOT/'data/non-rpg-intake-18-studios-result.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-six-studios-expansion-result-20261030.json').read_text())['added']) + len(json.loads((ROOT/'data/non-rpg-recommended-intake-result-20261030.json').read_text())['added'])
         patches=json.loads((ROOT/'data/narrative-evidence-patches-20261030.json').read_text())['entries']
         fully_filled=sum(bool(row.get('position')) and bool(row.get('style')) and bool(row.get('theme')) and bool(row.get('structure')) for row in patches.values())
@@ -108,6 +109,9 @@ class NarrativeEditorialTests(unittest.TestCase):
                 if patch.get(field):
                     self.assertTrue(record['fieldEvidence'][field]['sourceFields'])
                     self.assertTrue(record['fieldEvidence'][field]['sources'])
+
+    def test_current_managed_editorial_remains_valid(self):
+        validate()
 
     def test_existing_record_does_not_imply_four_fields(self):
         record=self.data['works']['g745']

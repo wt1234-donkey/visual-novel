@@ -327,3 +327,8 @@ Alicesoft 叙事作品转入主库（2026-10-04）：按专题现有“叙事／
 2026-10-21完成公司、品牌与参与角色结构迁移：80个专题保留原URL与作品身份，新增主体档案、分层参与署名、逐作位置审核与品牌／开发／发行独立检索。子品牌不再只作为公司别名处理；未核身份和职责保留待核，不据此批量变更主库收录。查看[主体档案](entities.html)、[作品分类审核](classification.html)、[数据规则](data/entity-model.md)和[迁移记录](data/entity-refactor-20261021-audit.md)。
 
 2026-10-27补齐[Leland专题](leland.html)：玩法参考由14行扩为33行，覆盖街机、原型、转换套件、家用机、3DO改作与Williams时期团队延续。主库Space Ace与Dragon’s Lair II增加可展开的来源补充，复用g044、g045，不新增重复作品、内容或普通移植发行。具体证据与待核范围见[补齐记录](data/leland-catalogue-completion-20261027.md)。
+
+
+## 资料管理入口
+
+打开 [`manage.html`](manage.html) 检索作品、编辑四项叙事编目、补充个人署名及有来源的版本说明。草稿可导入导出；通过 GitHub Actions 校验并生成修改分支与 PR，审核合并后更新主站。详见[使用说明](data/management-guide.md)。
