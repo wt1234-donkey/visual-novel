@@ -1,0 +1,45 @@
+name: Validate two-tier narrative catalogue
+on:
+  push:
+    branches: [feature/two-tier-narrative-library-20261101]
+    paths:
+      - curated.html
+      - curated.mjs
+      - data/curated-narrative-works.json
+      - minimal-adv-rpg.html
+      - minimal-adv-rpg.mjs
+      - discovery.mjs
+      - index.html
+      - tests/test_two_tier_narrative_20261101.py
+      - .github/workflows/two-tier-narrative-20261101.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-both-libraries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate narrative curation records against historical original works
+        run: python3 -m unittest discover -s tests -p test_two_tier_narrative_20261101.py -v
+      - name: Verify revised homepage and two searchable library scripts
+        run: |
+          node --check curated.mjs
+          node --check minimal-adv-rpg.mjs
+          node --check discovery.mjs
+      - name: Run existing catalogue and regression suite
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
