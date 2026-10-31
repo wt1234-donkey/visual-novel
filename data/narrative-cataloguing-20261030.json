@@ -4011,11 +4011,11 @@
     "g1342"
   ],
   "counts": {
-    "complete": 1318,
-    "partial": 20,
+    "complete": 1324,
+    "partial": 14,
     "missing": 1
   },
-  "newlyComplete": 1310,
+  "newlyComplete": 1316,
   "batches": [
     {
       "batch": 1,
@@ -4072,69 +4072,6 @@
       ]
     },
     {
-      "workId": "g328",
-      "title": "我的女友是劳动者",
-      "missingFields": [
-        "style",
-        "theme"
-      ],
-      "openQuestions": [
-        "现有简介仅说明多段成人剧情与动态演出；需要原版故事介绍或对应内容文本，才能确认具体冲突、剧情风格和故事题材，不从成人类型推出关系情节。"
-      ]
-    },
-    {
-      "workId": "g329",
-      "title": "麻吕的患者是劳动者",
-      "missingFields": [
-        "style",
-        "theme"
-      ],
-      "openQuestions": [
-        "现有简介只确认系列首篇／续篇和麻吕及前作人物关系；缺少可复核故事梗概，无法确认具体剧情风格及故事题材。检索找到的资料主要为人员目录与玩家评论，未当作原作剧情原件。"
-      ]
-    },
-    {
-      "workId": "g330",
-      "title": "麻吕的患者是劳动者2",
-      "missingFields": [
-        "style",
-        "theme"
-      ],
-      "openQuestions": [
-        "现有简介只确认系列首篇／续篇和麻吕及前作人物关系；缺少可复核故事梗概，无法确认具体剧情风格及故事题材。检索找到的资料主要为人员目录与玩家评论，未当作原作剧情原件。"
-      ]
-    },
-    {
-      "workId": "g331",
-      "title": "麻吕的患者是劳动者3 完结篇",
-      "missingFields": [
-        "style"
-      ],
-      "openQuestions": [
-        "现有简介只说明前两作角色关系的收束；需取得本作官方故事介绍或正文，才能确定其剧情风格。"
-      ]
-    },
-    {
-      "workId": "g533",
-      "title": "これD.P.S.？",
-      "missingFields": [
-        "style",
-        "theme"
-      ],
-      "openQuestions": [
-        {
-          "field": "style",
-          "question": "剧情风格缺少作品级充分说明；简介直接列出四篇独立故事及按篇更换人物舞台，可确认合集组织；逐篇剧情和语调未核，不能从科幻或黑暗字样的篇名推断题材与风格。",
-          "neededEvidence": "原版手册、包装剧情介绍或制作方的完整故事／系统说明，明确对应本作品而非同系列其他作品。"
-        },
-        {
-          "field": "theme",
-          "question": "故事题材缺少作品级充分说明；简介直接列出四篇独立故事及按篇更换人物舞台，可确认合集组织；逐篇剧情和语调未核，不能从科幻或黑暗字样的篇名推断题材与风格。",
-          "neededEvidence": "原版手册、包装剧情介绍或制作方的完整故事／系统说明，明确对应本作品而非同系列其他作品。"
-        }
-      ]
-    },
-    {
       "workId": "g566",
       "title": "婦警さんDA",
       "missingFields": [
@@ -4183,19 +4120,6 @@
           "field": "style",
           "question": "《妖精公寓特别篇：学园篇》尚缺足以确定剧情风格的具体情节／流程材料。远藤由美的学园番外与配套漫画可确认，具体情绪风格及分支结构缺少完整证据，不以校园推定轻松恋爱。",
           "requiredEvidence": "原版手册、剧情说明、可信实玩流程或作者资料，需对应此作品而非仅同名题材或后发版。"
-        }
-      ]
-    },
-    {
-      "workId": "g638",
-      "title": "ちびママ",
-      "missingFields": [
-        "structure"
-      ],
-      "openQuestions": [
-        {
-          "field": "structure",
-          "question": "叙事结构仍缺具体剧情或篇章证据：现有资料只确认家庭喜剧与角色，尚不能确定事件或篇章组织。需要本作原版故事介绍、手册或可核实流程。"
         }
       ]
     },
@@ -4292,18 +4216,10 @@
       "workId": "g769",
       "title": "アラベスク",
       "missingFields": [
-        "style",
-        "theme"
+        "style"
       ],
       "openQuestions": [
-        {
-          "field": "style",
-          "question": "现有《アラベスク》档案没有足以完成剧情风格的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        },
-        {
-          "field": "theme",
-          "question": "现有《アラベスク》档案没有足以完成故事题材的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        }
+        "该作仍缺style的具体原作资料：需要说明书、原版叙事/流程或可复核的同代介绍。"
       ]
     },
     {
@@ -5707,5 +5623,12 @@
     "g1340": "2cec720cc99866a621f768be2f601daf90b16891dc22a4da65f0567af21006c9",
     "g1341": "da7531764d31131327b2d98d7566dc0173be67278752ca436cc0181ee2dddf91",
     "g1342": "9d634d7e919d06e6263ddaf0e84d68b26b570cdddb39a4cefd01793dda74bd90"
-  }
+  },
+  "historicalCountsBeforeR9": {
+    "complete": 1318,
+    "partial": 20,
+    "missing": 1
+  },
+  "historicalRemainingCountBeforeR9": 21,
+  "lastRefreshedAt": "2026-10-31"
 }
