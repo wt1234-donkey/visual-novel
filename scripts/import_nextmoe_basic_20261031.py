@@ -214,10 +214,16 @@ def run(args):
         registry["summary"][key] += inc
     registry["updated"] = "2026-10-31"
     registry["batches"] = [b for b in registry.get("batches", []) if b.get("id") != BATCH]
+    # Earlier KUN batch introduced an append-only metadata source before the
+    # common per-batch 'candidates' accounting field was standardized.
+    for earlier in registry["batches"]:
+        summary = earlier.get("summary", {})
+        if "candidates" not in summary and earlier.get("id") == "kungal-firstyear-20261031":
+            summary["candidates"] = int(summary.get("newToRegistry", 0))
     registry["batches"].append({
         "id": BATCH, "source": API,
         "review": "data/nextmoe-bulk-review-20261031.json",
-        "summary": {"scanned": scanned, **dict(counts), "promoted-basic": inc,
+        "summary": {"candidates": inc, "scanned": scanned, **dict(counts), "promoted-basic": inc,
                     "year-or-alias-conflict-held": len(held)}
     })
     assert registry["summary"]["accepted"] == len(registry["works"])
