@@ -1,0 +1,54 @@
+name: R10 historical narrative audit and evidence checks
+on:
+  push:
+    branches:
+      - editorial/legacy15-r10-20261031
+    paths:
+      - data/narrative-legacy15-evidence-r10-20261031.json
+      - scripts/complete_narrative_legacy15_r10_20261031.py
+      - tests/test_narrative_editorial.py
+      - .github/workflows/narrative-legacy15-r10.yml
+permissions:
+  contents: write
+concurrency:
+  group: narrative-legacy15-r10-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify-and-write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply historical source-scoped edits
+        run: python3 scripts/complete_narrative_legacy15_r10_20261031.py
+      - name: Recalculate four-field gaps and living historical counts
+        run: |
+          python3 scripts/audit_narrative_pending_20261030.py
+          python3 scripts/refresh_narrative_1339_report_r10_20261031.py
+      - name: Validate all historical sources and regressions
+        run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Save validated editorial with audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery-editorial.json data/narrative-pending-*.json data/narrative-cataloguing-20261030.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record R10 historical narrative evidence and recalculate pending fields"
+            git fetch origin editorial/legacy15-r10-20261031
+            git rebase origin/editorial/legacy15-r10-20261031
+            git push origin HEAD:editorial/legacy15-r10-20261031
+          fi
