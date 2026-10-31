@@ -26,7 +26,10 @@ jobs:
       - name: Compile import code before any data changes
         run: python3 -m py_compile scripts/import_basic_multisource_r14_r15_20261101.py
       - name: Sequentially import round 14 from NextMoe and round 15 from VNDB
-        run: python3 scripts/import_basic_multisource_r14_r15_20261101.py --nextmoe-pages 100 --vndb-pages 250 --max-new 500 --delay 1.2
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/import_basic_multisource_r14_r15_20261101.py --nextmoe-pages 100 --vndb-pages 250 --max-new 500 --delay 1.2 2>&1 | tee /tmp/basic-r14-r15-import.log
       - name: Refresh strict main-registry upgrade audit queue
         run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
       - name: Audit source identity, cross-round uniqueness and counts
@@ -80,6 +83,31 @@ jobs:
           git add data/main-adv-rpg-works-20261031.json data/nextmoe-bulk-review-20261101-r14.json data/vndb-kana-bulk-review-20261101-r15.json data/basic-to-full-promotion-review-20261101.json
           if ! git diff --cached --quiet; then
             git commit -m "Append verified basic work identities, rounds 14 and 15"
+            git fetch origin catalog/basic-r14-r15-multisource-20261101
+            git rebase origin/catalog/basic-r14-r15-multisource-20261101
+            git push origin HEAD:catalog/basic-r14-r15-multisource-20261101
+          fi
+      - name: Preserve failure details on draft PR (not main)
+        if: failure()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, os
+          log=Path('/tmp/basic-r14-r15-import.log')
+          lines=log.read_text(encoding='utf-8',errors='replace').splitlines()[-100:] if log.exists() else []
+          target=Path('data/basic-r14-r15-last-failure.json')
+          target.write_text(json.dumps({
+              "runUrl": "https://github.com/"+os.environ.get('GITHUB_REPOSITORY','')+"/actions/runs/"+os.environ.get('GITHUB_RUN_ID',''),
+              "status": "failed",
+              "logTail": lines
+          },ensure_ascii=False,indent=2)+"\\n",encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/basic-r14-r15-last-failure.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record import diagnostic for rounds 14 and 15"
             git fetch origin catalog/basic-r14-r15-multisource-20261101
             git rebase origin/catalog/basic-r14-r15-multisource-20261101
             git push origin HEAD:catalog/basic-r14-r15-multisource-20261101
