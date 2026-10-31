@@ -41,6 +41,7 @@ jobs:
           audit=json.loads(Path('data/nextmoe-bulk-review-20261101-r3.json').read_text())
           review=json.loads(Path('data/basic-to-full-promotion-review-20261101.json').read_text())
           assert audit['summary']['newDistinctWorks']==len(audit['records'])>0
+          assert registry['batches'][-1]['review']=='data/nextmoe-bulk-review-20261101-r3.json'
           assert registry['summary']['accepted']==len(registry['works'])
           assert len({x['id'] for x in registry['works']})==len(registry['works'])
           assert len({x['indexId'] for x in registry['works']})==len(registry['works'])
