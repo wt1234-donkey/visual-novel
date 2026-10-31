@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#66518c">
+<meta name="description" content="精选叙事作品库：从广泛基础作品中依据剧情体验、叙事主题、已有证据与版本研究逐步筛选值得阅读与游玩的游戏。">
+<title>精选叙事作品库 · 叙事游戏年鉴</title>
+<style>
+:root{color-scheme:light dark;--page:light-dark(#f9f8f5,#17191e);--card:light-dark(#fff,#22242d);--text:light-dark(#272837,#f0edf4);--muted:light-dark(#6c6e7a,#b5b1c2);--accent:light-dark(#66518c,#ceb6f6);--border:light-dark(#e6e3e9,#454451);--soft:light-dark(#f0ecf7,#332d3d)}
+*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--text);font:14px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+a{color:var(--accent)}.wrap{max-width:1190px;margin:auto;padding:20px 22px 75px}
+header{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid var(--border);padding-bottom:16px}
+.brand{font-size:18px;font-weight:750;color:var(--text);text-decoration:none}nav{display:flex;gap:17px;flex-wrap:wrap}nav a{text-decoration:none;font-size:13px}
+.hero{padding:42px 0 20px}.kicker{font-size:11px;letter-spacing:.15em;color:var(--accent);font-weight:650}
+h1{font-size:clamp(29px,4vw,44px);line-height:1.2;margin:10px 0 16px}h2{font-size:19px;margin:0 0 12px}h3{font-size:17px;line-height:1.45;margin:0 0 4px}
+.intro{max-width:870px;font-size:15px;color:var(--muted);margin:0}.two-tier{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:25px 0}
+.tier{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:18px}.tier strong{display:block;font-size:16px}.tier p{font-size:13px;color:var(--muted);margin:6px 0 12px}.tier a{font-size:13px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0}
+input,select{color:var(--text);background:var(--card);border:1px solid var(--border);border-radius:9px;font:inherit;padding:10px 12px;max-width:100%}
+input{flex:1 1 260px;min-width:0}.count{margin:0 0 16px;color:var(--muted);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:22px;min-width:0}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.year{font-variant-numeric:tabular-nums;color:var(--muted);font-size:12px}.pill{font-size:11px;background:var(--soft);color:var(--accent);border-radius:5px;padding:4px 8px}
+.original{color:var(--muted);font-size:12px;margin:0 0 13px;overflow-wrap:anywhere}
+.summary{font-size:13px;margin:10px 0;color:var(--muted)}.why{margin:12px 0;font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.tag{color:var(--muted);background:var(--soft);padding:3px 7px;border-radius:4px;font-size:11px}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:17px;font-size:13px}
+.notice{border-top:1px solid var(--border);margin-top:35px;padding-top:20px;color:var(--muted);font-size:13px}
+.empty{grid-column:1/-1;border:1px dashed var(--border);border-radius:12px;padding:35px;text-align:center}
+@media(max-width:700px){.two-tier,.cards{grid-template-columns:1fr}.wrap{padding:18px 16px 50px}.hero{padding-top:30px}}
+</style>
+<script type="module" src="curated.mjs?v=20261101"></script>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav aria-label="数据库导航"><a href="index.html">作品发现</a><a href="minimal-adv-rpg.html">基础作品库</a><a href="manage.html">资料管理</a><a href="organizations.html">研究专题</a></nav></header>
+<main>
+<section class="hero"><span class="kicker">NARRATIVE SELECTION / 作品分层</span><h1>精选叙事作品库</h1><p class="intro">基础库负责尽可能完整地记录作品身份；这里着重帮助你寻找真正值得投入时间的故事。依据叙事主题、阅读体验、人物和结构的已有资料建立第一批精选初选，后续再复核创作者、个人偏好和最适合游玩的内容版本。不以热度、作品数量或厂商名气直接判断质量。</p></section>
+<section class="two-tier" aria-label="双层作品结构">
+<div class="tier"><strong>基础作品库 · 广泛覆盖</strong><p>尽量收全独立作品的名称、原作年份、别名、身份及来源；资料不足就保留待核，不制造剧情和创作署名。</p><a href="minimal-adv-rpg.html">浏览和检索基础身份 →</a></div>
+<div class="tier"><strong>精选叙事作品 · 精细筛选</strong><p>独立保存叙事推荐理由与审核阶段，关联同一个作品 ID。首批为编辑初选，不代表最终质量排名或所有版本均已核查。</p><a href="data/curated-narrative-works.json">查看精选清单及选录规则 →</a></div>
+</section>
+<section aria-label="精选作品列表"><h2>精选作品初选</h2><div class="toolbar"><input id="query" type="search" placeholder="按作品名、叙事主题或推荐理由搜索" aria-label="搜索精选作品"><select id="theme" aria-label="叙事主题"><option value="">全部主题</option></select><select id="sort" aria-label="排序"><option value="editorial">编辑展示顺序</option><option value="oldest">年份由早到晚</option><option value="newest">年份由近到远</option></select></div>
+<p id="count" class="count" role="status">正在读取精选作品……</p><div id="cards" class="cards"></div></section>
+<section class="notice"><strong>关于精选身份：</strong>本页首批作品来自网站此前已有的编辑展示列表和叙事资料。现阶段为“编辑精选初选”，而非所有候选都通过了完整的游玩评价。即使作品进入精选库，也不代表其全部移植版或重制版都具有相同的内容；请进入作品档案查看具体版本证据。未入选不代表质量差或不值得玩。</section>
+</main>
+</div>
+</body></html>

@@ -78,6 +78,31 @@ async function start(){
        }
      }
    }catch(err){console.warn('ADV/RPG后续批次审核表尚不可用',err);}
+   // The historical minimal index is only an original candidate pool.
+   // Pull every subsequently appended identity from the unified basic registry.
+   // Existing full/dossier identities are represented once, never doubled by aliases.
+   try{
+     const response=await fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'});
+     if(!response.ok)throw new Error('HTTP '+response.status);
+     const registry=await response.json();
+     const normalizeName=t=>String(t||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+     const representedIds=new Set(entries.flatMap(r=>[r.matchedWorkId,r.registryId].filter(Boolean)));
+     const representedIndexIds=new Set(entries.map(r=>r.id));
+     const nameYears=new Set(entries.map(r=>normalizeName(r.title)+'|'+r.year));
+     for(const w of registry.works){
+       const nameKey=normalizeName(w.title)+'|'+w.firstYear;
+       if(representedIds.has(w.id)||representedIndexIds.has(w.indexId)||nameYears.has(nameKey))continue;
+       const status=w.mainPlacement==='existing-complete'?'main-linked':w.mainPlacement;
+       entries.push({
+         id:w.indexId,matchedWorkId:w.id,title:w.title,aliases:w.aliases||[],
+         year:w.firstYear,gameplay:w.gameplay||'玩法待核',gameplayNote:w.gameplayNote||'',
+         group:w.group||'来源关联待核',source:w.source,status
+       });
+       representedIds.add(w.id);
+       representedIndexIds.add(w.indexId);
+       nameYears.add(nameKey);
+     }
+   }catch(err){console.warn('统一基础身份层完整记录暂不可用',err);}
    $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
    try{const mainReg=await (await fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'})).json();$('stat-new').textContent=mainReg.summary.promotedBasic.toLocaleString('zh-CN');$('stat-linked').textContent=(mainReg.summary.promotedDossier+mainReg.summary.existingComplete).toLocaleString('zh-CN')}catch(err){console.warn('主库统计暂不可用',err)}
    if(!$('stat-linked').textContent.match(/[0-9]/))$('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
