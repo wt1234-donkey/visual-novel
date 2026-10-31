@@ -4,13 +4,13 @@
   "role": "Primary main catalogue work-identity registry, separate from the complete dossier-only games.json schema.",
   "reviewPolicy": "Record title / first year / dominant gameplay and directly link existing identity; do not fabricate characters, releases, original creators or narrative editorials.",
   "summary": {
-    "candidates": 318,
-    "accepted": 309,
+    "candidates": 319,
+    "accepted": 310,
     "existingComplete": 93,
     "promotedDossier": 105,
-    "promotedBasic": 111,
+    "promotedBasic": 112,
     "identityReview": 3,
-    "addedToMainIdentityLayer": 216,
+    "addedToMainIdentityLayer": 217,
     "nextBatchCandidates": 59,
     "nextBatchNewBasic": 24,
     "nextBatchLinkedExisting": 35,
@@ -5069,6 +5069,25 @@
       "yearBasis": "鲲 Galgame 条目与可访问作品资料对照的原作首年（只核至年份）；版本/地区首发日待核。",
       "editorialScope": "基础作品身份：只收名称、原作年、玩法与来源；剧情、人物、创作署名、内容版本未编目。",
       "batch": "kungal-firstyear-20261031"
+    },
+    {
+      "id": "kungal-2022-friend-to-lover",
+      "indexId": "kungal-20261031-friend-to-lover",
+      "title": "友だちから恋びとへ",
+      "aliases": [
+        "从朋友到恋人（2022年、海豹社）"
+      ],
+      "firstYear": 2022,
+      "gameplay": "ADV",
+      "group": "制作品牌待核",
+      "source": "https://www.kungal.com/topic/4554?reply=16",
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "鲲站作品来源索引，不代表开发、品牌、发行职责已核实。",
+      "yearBasis": "鲲 Galgame 2026年10月作品推荐目录（仅核至原作年份）。",
+      "editorialScope": "基础作品身份：只收名称、原作年、玩法与来源；剧情、人物、创作署名、内容版本未编目。",
+      "batch": "kungal-firstyear-20261031",
+      "identityNote": "与原作2013年的《フレラバ ～Friend to Lover～》（g368，中文译名亦为“从朋友到恋人”）属于不同作品；本条保留日文原题以区分。"
     }
   ],
   "identityReview": [
@@ -5156,9 +5175,9 @@
       "review": "data/kungal-firstyear-review-20261031.json",
       "summary": {
         "candidates": 26,
-        "newToRegistry": 25,
-        "promoted-basic": 25,
-        "existing-name-skipped": 1
+        "newToRegistry": 26,
+        "promoted-basic": 26,
+        "existing-name-skipped": 0
       }
     }
   ],
