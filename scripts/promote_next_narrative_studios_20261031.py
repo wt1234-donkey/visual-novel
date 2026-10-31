@@ -14,10 +14,11 @@ def names(w): return [w.get('title'),w.get('originalTitle'),w.get('chineseTitle'
 registry_path=ROOT/'data/main-adv-rpg-works-20261031.json'
 registry=load('data/main-adv-rpg-works-20261031.json')
 if registry.get('nextBatch',{}).get('source')=='data/adv-rpg-next-studio-candidates-20261031.json':
-    previous=ROOT/'data/adv-rpg-next-studio-review-20261031.json'
-    assert previous.is_file() and len(load('data/adv-rpg-next-studio-review-20261031.json')['records'])==59
-    print('Next batch already present; preserving existing canonical references and review classifications.')
-    raise SystemExit(0)
+    # Recompute deterministically from the unchanged first batch, so correcting an identity
+    # disambiguation rule never leaves duplicate entries or stale review decisions.
+    assert len(registry['works'])>=207
+    registry['works']=registry['works'][:207]
+    registry.pop('nextBatch')
 seed=load('data/adv-rpg-next-studio-candidates-20261031.json')
 main=load('data/games.json')
 coverage=load('data/company-coverage.json')
@@ -61,6 +62,14 @@ for row in seed['records']:
     identical=[(wid,yr,loc) for wid,yr,loc in candidates if yr==year]
     close=[(wid,yr,loc) for wid,yr,loc in candidates if abs(yr-year)<=1]
     usable=identical or close
+    # Many past studio sweeps created a duplicate "supp26-" *supplemental* record for a
+    # canonical gNNNN detailed game. Same title AND same year resolve to the actual
+    # detailed main ID, not to a phantom ambiguity or a second new work identity.
+    if len(usable)>1:
+        canonical=[m for m in usable if m[2] in ('complete-main','primary-identity')]
+        subsidiary=[m for m in usable if m[2]=='supplement-complete']
+        if len(canonical)==1 and len(canonical)+len(subsidiary)==len(usable) and all(m[1]==canonical[0][1] for m in usable):
+            usable=canonical
     if len(usable)>1 or (candidates and not usable):
         decision='identity-review'
         detail='Ambiguous matching work identity or original-year discrepancy: '+repr(candidates)
