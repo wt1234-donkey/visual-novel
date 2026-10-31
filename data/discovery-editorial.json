@@ -110682,11 +110682,13 @@
       "status": "editorialObservation"
     },
     "g1452": {
-      "basis": "本轮针对具名作品核查产品官方故事介绍及具体事件组织；没有推断未明确列出的路线数量。 保留作品与原作版次的证据范围；不从舞台或类型推断正式路线或结局数。",
+      "basis": "在历史编目基础上逐字段补齐。本轮补缺时保留之前有独立依据的字段，限定原PC作品版本范围；网站、历史转录、玩家实玩评论的证据级别分别注明，不推定未证实的攻略路线或追加内容。 本轮针对具名作品核查产品官方故事介绍及具体事件组织；没有推断未明确列出的路线数量。 保留作品与原作版次的证据范围；不从舞台或类型推断正式路线或结局数。",
       "sources": [
+        "https://survivaleq.client.jp/mousou%20kujira.html",
+        "https://kanasimi.blogspot.com/2007_07_15_archive.html",
         "https://www.kadokawa.co.jp/product/200708000490/"
       ],
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-10-31",
       "cover": "最終試験くじら",
       "fieldEvidence": {
         "position": {
@@ -110718,6 +110720,18 @@
           "sourceFields": [
             "title-specific developer official product/story/retrospective or licensed adaptation with scope limitation"
           ]
+        },
+        "structure": {
+          "basis": "原作级别限定补录，资料等级：original-edition-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://survivaleq.client.jp/mousou%20kujira.html",
+            "https://kanasimi.blogspot.com/2007_07_15_archive.html"
+          ],
+          "evidenceText": "原PC版通关评述逐项列出不同人物路线及进入南云纱绘线的先决条件，并给出共同段日期；2007年另一独立通关评论补充确认各路线汇聚世界真相。不是使用授权漫画来推测游戏结构。",
+          "sourceFields": [
+            "original PC detailed route/unlock review",
+            "independent 2007 completed playthrough"
+          ]
         }
       },
       "position": "天空鲸鱼奇象下的少年少女夏日恋曲",
@@ -110730,9 +110744,9 @@
         "天空鲸鱼",
         "青梅竹马"
       ],
-      "status": "partial",
-      "openQuestions": [
-        "本作叙事结构缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
+      "status": "editorialObservation",
+      "structure": [
+        "原版7月6日至17日的共同日常通过选择进入多个女性角色的独立剧情；其他人物线为逐步揭露漂浮鲸鱼秘密的伏笔，完成主要人物线后才能进入南云纱绘的最终谜团线"
       ]
     },
     "g1508": {
@@ -112214,8 +112228,10 @@
       ]
     },
     "g1464": {
-      "basis": "本轮据具名作品资料审查，材料性质为「contemporary-original-walkthrough」；按宣传文案、发行说明、原版实玩或历史署名的实际证据范围作限定归纳，不能视为全部原厂重新外核。 只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。",
+      "basis": "在历史编目基础上逐字段补齐。本轮补缺时保留之前有独立依据的字段，限定原PC作品版本范围；网站、历史转录、玩家实玩评论的证据级别分别注明，不推定未证实的攻略路线或追加内容。 本轮据具名作品资料审查，材料性质为「contemporary-original-walkthrough」；按宣传文案、发行说明、原版实玩或历史署名的实际证据范围作限定归纳，不能视为全部原厂重新外核。 只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。",
       "sources": [
+        "https://www.suruga-ya.jp/kaitori/kaitori_detail/145022726",
+        "https://omochikaeri.wordpress.com/2010/01/01/january-2010-eroge-releases/",
         "https://sagaoz.net/foolmaker/game/k/curefull.html"
       ],
       "reviewedAt": "2026-10-31",
@@ -112230,16 +112246,59 @@
           "sourceFields": [
             "original story text, period playthrough, or licensed retelling as individually marked"
           ]
+        },
+        "position": {
+          "basis": "原作级别限定补录，资料等级：original-edition-retailer-promotional-copy。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.suruga-ya.jp/kaitori/kaitori_detail/145022726",
+            "https://omochikaeri.wordpress.com/2010/01/01/january-2010-eroge-releases/"
+          ],
+          "evidenceText": "2010年初版商品页面的发行商故事原文说明浅木悠也因足球受伤失去特招生资格，幼友木生遥菜给予支持；他考入新学校后发现应援社几近废部并决心与她共同复兴。以前确认的多人物分支攻略留存，不重写结构。",
+          "sourceFields": [
+            "original edition product storyline",
+            "contemporary release preview"
+          ]
+        },
+        "style": {
+          "basis": "原作级别限定补录，资料等级：original-edition-retailer-promotional-copy。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.suruga-ya.jp/kaitori/kaitori_detail/145022726",
+            "https://omochikaeri.wordpress.com/2010/01/01/january-2010-eroge-releases/"
+          ],
+          "evidenceText": "2010年初版商品页面的发行商故事原文说明浅木悠也因足球受伤失去特招生资格，幼友木生遥菜给予支持；他考入新学校后发现应援社几近废部并决心与她共同复兴。以前确认的多人物分支攻略留存，不重写结构。",
+          "sourceFields": [
+            "original edition product storyline",
+            "contemporary release preview"
+          ]
+        },
+        "theme": {
+          "basis": "原作级别限定补录，资料等级：original-edition-retailer-promotional-copy。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.suruga-ya.jp/kaitori/kaitori_detail/145022726",
+            "https://omochikaeri.wordpress.com/2010/01/01/january-2010-eroge-releases/"
+          ],
+          "evidenceText": "2010年初版商品页面的发行商故事原文说明浅木悠也因足球受伤失去特招生资格，幼友木生遥菜给予支持；他考入新学校后发现应援社几近废部并决心与她共同复兴。以前确认的多人物分支攻略留存，不重写结构。",
+          "sourceFields": [
+            "original edition product storyline",
+            "contemporary release preview"
+          ]
         }
       },
       "structure": [
         "原版攻略分别设有遥菜、凉音、彩香、都、瑞贵的个人线，按选择进入不同结局"
       ],
-      "status": "partial",
-      "openQuestions": [
-        "本作叙事定位缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。",
-        "本作剧情风格缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。",
-        "本作故事题材缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
+      "status": "editorialObservation",
+      "position": "足球特待资格受伤中断后，以帮助重建啦啦队为目标的校园人物故事",
+      "style": [
+        "校园青春",
+        "励志",
+        "恋爱喜剧"
+      ],
+      "theme": [
+        "运动受伤",
+        "社团复兴",
+        "应援",
+        "青梅竹马"
       ]
     },
     "g1465": {
@@ -113280,9 +113339,11 @@
       "status": "editorialObservation"
     },
     "g1500": {
-      "basis": "本轮据具名作品资料审查，材料性质为「developer-retrospective-crossover」；按宣传文案、发行说明、原版实玩或历史署名的实际证据范围作限定归纳，不能视为全部原厂重新外核。 只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。",
+      "basis": "在历史编目基础上逐字段补齐。本轮补缺时保留之前有独立依据的字段，限定原PC作品版本范围；网站、历史转录、玩家实玩评论的证据级别分别注明，不推定未证实的攻略路线或追加内容。 本轮据具名作品资料审查，材料性质为「developer-retrospective-crossover」；按宣传文案、发行说明、原版实玩或历史署名的实际证据范围作限定归纳，不能视为全部原厂重新外核。 只对来源明确支持的字段打标签；与PC原作不同的移植附加内容不倒填。第三方、实玩、商品转录须按来源类别呈现，不宣称全部由当前官网重新核实。",
       "sources": [
-        "https://www.light.gr.jp/light/products/baroque/special/crossover/"
+        "https://clover-in-the-dark.seesaa.net/article/456996595.html",
+        "https://www.light.gr.jp/light/products/baroque/special/crossover/",
+        "https://www.ymgal.games/ga27425"
       ],
       "reviewedAt": "2026-10-31",
       "cover": "虚空のバロック",
@@ -113316,6 +113377,19 @@
           "sourceFields": [
             "original story text, period playthrough, or licensed retelling as individually marked"
           ]
+        },
+        "structure": {
+          "basis": "原作级别限定补录，资料等级：contemporary-original-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://clover-in-the-dark.seesaa.net/article/456996595.html",
+            "https://www.light.gr.jp/light/products/baroque/special/crossover/",
+            "https://www.ymgal.games/ga27425"
+          ],
+          "evidenceText": "2018年2月原PC版完成后评论按地下商场、救援、地表、避难所的事件顺序重述剧情；原厂后来联动短篇确认特异地震与幸存者背景。只说明事件组织，不凭评论推定具体可通关路线数量。",
+          "sourceFields": [
+            "2018 original-PC completed playthrough recap",
+            "original developer later crossover background"
+          ]
         }
       },
       "position": "特异地震灾难后青年与同伴寻求生存的末日故事",
@@ -113328,9 +113402,9 @@
         "城市崩坏",
         "人际信任"
       ],
-      "status": "partial",
-      "openQuestions": [
-        "本作叙事结构缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
+      "status": "editorialObservation",
+      "structure": [
+        "以神代直在特异地震后于地下商场醒来为起点，先与古雅幸等幸存者汇合，再救出受困者、逃至地表并辗转临时避难所；灾害扩大与异常生物袭击构成连续求生主线"
       ]
     },
     "g1491": {
@@ -113414,8 +113488,9 @@
       "status": "editorialObservation"
     },
     "g1455": {
-      "basis": "本轮据具名作品资料审查，材料性质为「historical-original-credits」；按宣传文案、发行说明、原版实玩或历史署名的实际证据范围作限定归纳，不能视为全部原厂重新外核。 仅原版明确四章的事实；没有原剧情梗概，不推断题材风格、人物路线或情绪基调。",
+      "basis": "在历史编目基础上逐字段补齐。本轮补缺时保留之前有独立依据的字段，限定原PC作品版本范围；网站、历史转录、玩家实玩评论的证据级别分别注明，不推定未证实的攻略路线或追加内容。 本轮据具名作品资料审查，材料性质为「historical-original-credits」；按宣传文案、发行说明、原版实玩或历史署名的实际证据范围作限定归纳，不能视为全部原厂重新外核。 仅原版明确四章的事实；没有原剧情梗概，不推断题材风格、人物路线或情绪基调。",
       "sources": [
+        "https://ducklings.wordpress.com/2009/01/31/renge/",
         "https://w.atwiki.jp/ercr/pages/1437.html",
         "https://artist.cdjournal.com/d/renge-vocal-album/4107090605"
       ],
@@ -113433,16 +113508,62 @@
             "original PC title credits listed per four distinct episodes",
             "per-chapter ending theme songs"
           ]
+        },
+        "position": {
+          "basis": "原作级别限定补录，资料等级：contemporary-original-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://ducklings.wordpress.com/2009/01/31/renge/",
+            "https://w.atwiki.jp/ercr/pages/1437.html",
+            "https://artist.cdjournal.com/d/renge-vocal-album/4107090605"
+          ],
+          "evidenceText": "2009年1月有逐章原版通关的长篇评论分别论述第一至第四章的人物、亲密关系、情感困境及叙述视点；2007年原作片尾曲与人员署名独立确认四章。仅编辑缺少的定位、风格、题材；原有四章结构保留。",
+          "sourceFields": [
+            "contemporary hands-on four-chapter review",
+            "original four-chapter credits"
+          ]
+        },
+        "style": {
+          "basis": "原作级别限定补录，资料等级：contemporary-original-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://ducklings.wordpress.com/2009/01/31/renge/",
+            "https://w.atwiki.jp/ercr/pages/1437.html",
+            "https://artist.cdjournal.com/d/renge-vocal-album/4107090605"
+          ],
+          "evidenceText": "2009年1月有逐章原版通关的长篇评论分别论述第一至第四章的人物、亲密关系、情感困境及叙述视点；2007年原作片尾曲与人员署名独立确认四章。仅编辑缺少的定位、风格、题材；原有四章结构保留。",
+          "sourceFields": [
+            "contemporary hands-on four-chapter review",
+            "original four-chapter credits"
+          ]
+        },
+        "theme": {
+          "basis": "原作级别限定补录，资料等级：contemporary-original-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://ducklings.wordpress.com/2009/01/31/renge/",
+            "https://w.atwiki.jp/ercr/pages/1437.html",
+            "https://artist.cdjournal.com/d/renge-vocal-album/4107090605"
+          ],
+          "evidenceText": "2009年1月有逐章原版通关的长篇评论分别论述第一至第四章的人物、亲密关系、情感困境及叙述视点；2007年原作片尾曲与人员署名独立确认四章。仅编辑缺少的定位、风格、题材；原有四章结构保留。",
+          "sourceFields": [
+            "contemporary hands-on four-chapter review",
+            "original four-chapter credits"
+          ]
         }
       },
       "structure": [
         "原版分为明确的第一至第四章，每章有对应的脚本作者和专属片尾曲；不据四章便臆测四位女主角路线"
       ],
-      "status": "partial",
-      "openQuestions": [
-        "本作叙事定位缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。",
-        "本作剧情风格缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。",
-        "本作故事题材缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
+      "status": "editorialObservation",
+      "position": "围绕夏季亲密关系与人生抉择的四篇独立人物剧",
+      "style": [
+        "现实情感",
+        "苦涩",
+        "人物心理"
+      ],
+      "theme": [
+        "夏日",
+        "恋爱伦理",
+        "亲密关系",
+        "成长与选择"
       ]
     },
     "g1504": {
@@ -114388,6 +114509,236 @@
       "openQuestions": [
         "本作叙事结构缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
       ]
+    },
+    "g1462": {
+      "position": "自嘲恋爱故事套路的学园群像恋爱喜剧",
+      "style": [
+        "校园喜剧",
+        "元叙事",
+        "荒诞"
+      ],
+      "theme": [
+        "恋爱剧套路",
+        "青梅竹马",
+        "转学生",
+        "同居与误会"
+      ],
+      "structure": [
+        "以男主一日内接连遇到青梅竹马同床、撞上吐司转校生、义妹同居以及空降女仆等典型剧情桥段展开，连续升级的误会推动人物相遇和恋爱关系"
+      ],
+      "fieldEvidence": {
+        "position": {
+          "basis": "原作级别限定补录，资料等级：original-edition-retailer-promotional-copy。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.suruga-ya.jp/kaitori/kaitori_detail/145060876",
+            "https://shionlib.org/en/r55077"
+          ],
+          "evidenceText": "2018年PC初回限定版的原作商品文案逐项列出典型校园爱情套路及男主接连遭遇的事件。另有原版发行条目可交叉核对；不从商品文案推断正式路线数量。",
+          "sourceFields": [
+            "2018 original edition package story blurb",
+            "original edition release entry"
+          ]
+        },
+        "style": {
+          "basis": "原作级别限定补录，资料等级：original-edition-retailer-promotional-copy。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.suruga-ya.jp/kaitori/kaitori_detail/145060876",
+            "https://shionlib.org/en/r55077"
+          ],
+          "evidenceText": "2018年PC初回限定版的原作商品文案逐项列出典型校园爱情套路及男主接连遭遇的事件。另有原版发行条目可交叉核对；不从商品文案推断正式路线数量。",
+          "sourceFields": [
+            "2018 original edition package story blurb",
+            "original edition release entry"
+          ]
+        },
+        "theme": {
+          "basis": "原作级别限定补录，资料等级：original-edition-retailer-promotional-copy。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.suruga-ya.jp/kaitori/kaitori_detail/145060876",
+            "https://shionlib.org/en/r55077"
+          ],
+          "evidenceText": "2018年PC初回限定版的原作商品文案逐项列出典型校园爱情套路及男主接连遭遇的事件。另有原版发行条目可交叉核对；不从商品文案推断正式路线数量。",
+          "sourceFields": [
+            "2018 original edition package story blurb",
+            "original edition release entry"
+          ]
+        },
+        "structure": {
+          "basis": "原作级别限定补录，资料等级：original-edition-retailer-promotional-copy。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.suruga-ya.jp/kaitori/kaitori_detail/145060876",
+            "https://shionlib.org/en/r55077"
+          ],
+          "evidenceText": "2018年PC初回限定版的原作商品文案逐项列出典型校园爱情套路及男主接连遭遇的事件。另有原版发行条目可交叉核对；不从商品文案推断正式路线数量。",
+          "sourceFields": [
+            "2018 original edition package story blurb",
+            "original edition release entry"
+          ]
+        }
+      },
+      "sources": [
+        "https://www.suruga-ya.jp/kaitori/kaitori_detail/145060876",
+        "https://shionlib.org/en/r55077"
+      ],
+      "basis": "在历史编目基础上逐字段补齐。本轮补缺时保留之前有独立依据的字段，限定原PC作品版本范围；网站、历史转录、玩家实玩评论的证据级别分别注明，不推定未证实的攻略路线或追加内容。 ",
+      "reviewedAt": "2026-10-31",
+      "cover": "てんぷれっ!!",
+      "status": "editorialObservation"
+    },
+    "g1490": {
+      "position": "当代青年围绕不确定关系、假扮恋人与真正情感展开的群像",
+      "style": [
+        "现实主义",
+        "情感纠葛",
+        "苦涩"
+      ],
+      "theme": [
+        "假恋人关系",
+        "青春",
+        "自我认同",
+        "亲密关系"
+      ],
+      "structure": [
+        "以沉默寡言的来栖树及一之濑响等五名青年为人物中心，将校园中的相遇、虚假的恋人关系与各自真实情感交错呈现；不据此断言五条独立可攻略路线"
+      ],
+      "fieldEvidence": {
+        "position": {
+          "basis": "原作级别限定补录，资料等级：original-promotional-and-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.getchu.com/pc/salesranking200601.html",
+            "https://advgamer.com/imitation-lover/",
+            "https://www.eonet.ne.jp/~egp/review_imitationlover.html"
+          ],
+          "evidenceText": "2006年1月Getchu同月售卖文案明确真实恋爱ADV与真假恋人关系；原版评论具体列出来栖树、一之濑响、桐泽伊织等人物及其交错关系。只记录群像组织，不宣称角色分支数量。",
+          "sourceFields": [
+            "contemporary original retailer release synopsis",
+            "dated original player story review"
+          ]
+        },
+        "style": {
+          "basis": "原作级别限定补录，资料等级：original-promotional-and-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.getchu.com/pc/salesranking200601.html",
+            "https://advgamer.com/imitation-lover/",
+            "https://www.eonet.ne.jp/~egp/review_imitationlover.html"
+          ],
+          "evidenceText": "2006年1月Getchu同月售卖文案明确真实恋爱ADV与真假恋人关系；原版评论具体列出来栖树、一之濑响、桐泽伊织等人物及其交错关系。只记录群像组织，不宣称角色分支数量。",
+          "sourceFields": [
+            "contemporary original retailer release synopsis",
+            "dated original player story review"
+          ]
+        },
+        "theme": {
+          "basis": "原作级别限定补录，资料等级：original-promotional-and-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.getchu.com/pc/salesranking200601.html",
+            "https://advgamer.com/imitation-lover/",
+            "https://www.eonet.ne.jp/~egp/review_imitationlover.html"
+          ],
+          "evidenceText": "2006年1月Getchu同月售卖文案明确真实恋爱ADV与真假恋人关系；原版评论具体列出来栖树、一之濑响、桐泽伊织等人物及其交错关系。只记录群像组织，不宣称角色分支数量。",
+          "sourceFields": [
+            "contemporary original retailer release synopsis",
+            "dated original player story review"
+          ]
+        },
+        "structure": {
+          "basis": "原作级别限定补录，资料等级：original-promotional-and-playthrough-review。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.getchu.com/pc/salesranking200601.html",
+            "https://advgamer.com/imitation-lover/",
+            "https://www.eonet.ne.jp/~egp/review_imitationlover.html"
+          ],
+          "evidenceText": "2006年1月Getchu同月售卖文案明确真实恋爱ADV与真假恋人关系；原版评论具体列出来栖树、一之濑响、桐泽伊织等人物及其交错关系。只记录群像组织，不宣称角色分支数量。",
+          "sourceFields": [
+            "contemporary original retailer release synopsis",
+            "dated original player story review"
+          ]
+        }
+      },
+      "sources": [
+        "https://www.getchu.com/pc/salesranking200601.html",
+        "https://advgamer.com/imitation-lover/",
+        "https://www.eonet.ne.jp/~egp/review_imitationlover.html"
+      ],
+      "basis": "在历史编目基础上逐字段补齐。本轮补缺时保留之前有独立依据的字段，限定原PC作品版本范围；网站、历史转录、玩家实玩评论的证据级别分别注明，不推定未证实的攻略路线或追加内容。 ",
+      "reviewedAt": "2026-10-31",
+      "cover": "Imitation Lover",
+      "status": "editorialObservation"
+    },
+    "g1492": {
+      "position": "在海上学园都市等待末日之际，围绕无翼少年与有翼同学探寻世界终结的科幻群像",
+      "style": [
+        "末日科幻",
+        "奇幻",
+        "哲思"
+      ],
+      "theme": [
+        "海上学园都市",
+        "羽翼刻印",
+        "世界反复毁灭",
+        "牺牲与命运"
+      ],
+      "structure": [
+        "早坂司作为唯一无法由刻印生翼的学生面对末日预言；以多名有翼人物不同的愿望、抉择及反复到来的终末组织彼此交织的故事，不将世界观中的未来分岔冒称已核实的游戏路线数"
+      ],
+      "fieldEvidence": {
+        "position": {
+          "basis": "原作级别限定补录，资料等级：archived-original-story-transcription。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.animecharactersdatabase.com/jp/source.php?id=2497",
+            "https://w.atwiki.jp/ercr/pages/969.html"
+          ],
+          "evidenceText": "当时作品资料中保存的详细日文Story记述海上学园都市Noah、翼的刻印、斗技场13连胜成Ark的传说、早坂司和六位同伴及反复终结的世界；同期发行人员表可核对原作身份。资料为历史故事转载，并非本轮实时访问light原官网。",
+          "sourceFields": [
+            "historically transcribed original Japanese product story",
+            "original release cast/credits"
+          ]
+        },
+        "style": {
+          "basis": "原作级别限定补录，资料等级：archived-original-story-transcription。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.animecharactersdatabase.com/jp/source.php?id=2497",
+            "https://w.atwiki.jp/ercr/pages/969.html"
+          ],
+          "evidenceText": "当时作品资料中保存的详细日文Story记述海上学园都市Noah、翼的刻印、斗技场13连胜成Ark的传说、早坂司和六位同伴及反复终结的世界；同期发行人员表可核对原作身份。资料为历史故事转载，并非本轮实时访问light原官网。",
+          "sourceFields": [
+            "historically transcribed original Japanese product story",
+            "original release cast/credits"
+          ]
+        },
+        "theme": {
+          "basis": "原作级别限定补录，资料等级：archived-original-story-transcription。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.animecharactersdatabase.com/jp/source.php?id=2497",
+            "https://w.atwiki.jp/ercr/pages/969.html"
+          ],
+          "evidenceText": "当时作品资料中保存的详细日文Story记述海上学园都市Noah、翼的刻印、斗技场13连胜成Ark的传说、早坂司和六位同伴及反复终结的世界；同期发行人员表可核对原作身份。资料为历史故事转载，并非本轮实时访问light原官网。",
+          "sourceFields": [
+            "historically transcribed original Japanese product story",
+            "original release cast/credits"
+          ]
+        },
+        "structure": {
+          "basis": "原作级别限定补录，资料等级：archived-original-story-transcription。仅填此前缺项；不推断未明确证实的路线数量，亦不使用后发版新增剧情。",
+          "sources": [
+            "https://www.animecharactersdatabase.com/jp/source.php?id=2497",
+            "https://w.atwiki.jp/ercr/pages/969.html"
+          ],
+          "evidenceText": "当时作品资料中保存的详细日文Story记述海上学园都市Noah、翼的刻印、斗技场13连胜成Ark的传说、早坂司和六位同伴及反复终结的世界；同期发行人员表可核对原作身份。资料为历史故事转载，并非本轮实时访问light原官网。",
+          "sourceFields": [
+            "historically transcribed original Japanese product story",
+            "original release cast/credits"
+          ]
+        }
+      },
+      "sources": [
+        "https://www.animecharactersdatabase.com/jp/source.php?id=2497",
+        "https://w.atwiki.jp/ercr/pages/969.html"
+      ],
+      "basis": "在历史编目基础上逐字段补齐。本轮补缺时保留之前有独立依据的字段，限定原PC作品版本范围；网站、历史转录、玩家实玩评论的证据级别分别注明，不推定未证实的攻略路线或追加内容。 ",
+      "reviewedAt": "2026-10-31",
+      "cover": "Soranica Ele",
+      "status": "editorialObservation"
     }
   },
   "featuredWorkIds": [
