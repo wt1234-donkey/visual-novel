@@ -32,6 +32,8 @@ HELD_EDITION_IDS = {
     # fan-discs and alternate editions; separate work status needs evidence.
     "22085", "3509", "47817", "2734", "184", "5220",
     "2419", "4678", "149", "10698", "7776", "13550",
+    # Original-title/year ambiguity or dependent content, not independently admitted.
+    "242", "30198", "9492",
 }
 CUTOFF = dt.date(2026, 11, 1)
 
