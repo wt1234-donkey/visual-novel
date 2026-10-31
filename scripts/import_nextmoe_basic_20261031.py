@@ -63,6 +63,21 @@ def source_names(work):
         out.append(value)
     return out
 
+def has_vndb_identity(record):
+    # VNDB is a stronger independent visual-novel identity signal than the
+    # broad galgame medium (which also covers DLC, clickers, and action games).
+    for ref in record.get("refs") or []:
+        if not isinstance(ref, dict):
+            continue
+        source = str(ref.get("source") or "").strip().lower()
+        rid = str(ref.get("external_id") or ref.get("ref_id") or ref.get("value") or "")
+        if source == "vndb" and re.fullmatch(r"v\d+", rid):
+            return rid
+    return None
+
+def is_non_work_pack(title):
+    return bool(re.search(r"(?i)(?:DLC\d*|体験版|体验版|試玩版|试玩版|\bdemo\b|\btrial\b|\bappend\b|無料版|免费版|\bpatch\b|追加パック|追加コンテンツ|修正パッチ|サントラ|soundtrack)", title))
+
 def date_year(record):
     if record.get("release_status") != "released":
         return None
@@ -128,6 +143,13 @@ def existing_index(registry):
 
 def run(args):
     registry = load("data/main-adv-rpg-works-20261031.json")
+    # Replace this tentative source batch instead of compounding old imports.
+    previous = [w for w in registry["works"] if w.get("batch") == BATCH]
+    if previous:
+        registry["works"] = [w for w in registry["works"] if w.get("batch") != BATCH]
+        for key in ("candidates", "accepted", "promotedBasic", "addedToMainIdentityLayer"):
+            registry["summary"][key] -= len(previous)
+        registry["batches"] = [b for b in registry["batches"] if b.get("id") != BATCH]
     before = len(registry["works"])
     existing = existing_index(registry)
     taken_ids = {str(w["id"]) for w in registry["works"]}
@@ -145,6 +167,10 @@ def run(args):
                 counts["other-medium"] += 1
                 continue
             counts["galgame"] += 1
+            vndb_id = has_vndb_identity(item)
+            if not vndb_id:
+                counts["no-vndb-identity-held"] += 1
+                continue
             upstream_id = str(item.get("id") or "")
             if not upstream_id.isdecimal() or upstream_id in seen_upstream:
                 counts["missing-or-repeat-source-id"] += 1
@@ -157,6 +183,9 @@ def run(args):
             aliases = source_names(item)
             if not aliases:
                 counts["missing-title"] += 1
+                continue
+            if is_non_work_pack(aliases[0]):
+                counts["non-independent-pack-held"] += 1
                 continue
             collisions = set()
             for alias in aliases:
@@ -185,6 +214,7 @@ def run(args):
                 "gameplay": "Galgame（玩法待核）",
                 "group": "创作品牌待核",
                 "source": API.replace("/works", "/works/" + upstream_id),
+                "sourceRefs": ["vndb:" + vndb_id],
                 "mainPlacement": "promoted-basic",
                 "linkedRecordId": None,
                 "creditScope": "NextMoe/鲲 Galgame 论坛汇聚元数据，仅来源关联，未断言具体创作/发行职责。",
@@ -233,17 +263,17 @@ def run(args):
     assert len(taken_index_ids) == len(registry["works"])
     audit = {
         "schema": 1, "date": "2026-10-31", "source": API,
-        "scope": "NextMoe medium=galgame only, released by 2026-10-31, original name/aliases and debut year, no new content versions or platform releases",
+        "scope": "NextMoe medium=galgame with VNDB identity, released by 2026-10-31, exclude DLC/trials, names/aliases and original year only",
         "request": {"sort": "popularity", "pageCountCap": args.pages, "pageSize": args.limit,
                     "limitNew": args.max_new},
         "summary": {"scanned": scanned, "newDistinctWorks": inc, "before": before,
                     "after": len(registry["works"]), **dict(counts)},
         "records": [{"id": r["id"], "title": r["title"], "aliases": r["aliases"],
-                     "firstYear": r["firstYear"], "source": r["source"]} for r in additions],
+                     "firstYear": r["firstYear"], "source": r["source"], "sourceRefs": r["sourceRefs"]} for r in additions],
         "heldForIdentityReview": held[:1000],
         "caveats": [
             "This is an API-sorted partial batch, not complete KUN resource-site harvesting.",
-            "Medium galgame is a source label, not proof of specific ADV/RPG gameplay.",
+            "Medium galgame plus VNDB identity is an inclusion screen, not proof of story quality or specific ADV/RPG gameplay.",
             "No claims on ratings, quality, creator roles, content versions or translated edition chronology.",
             "Name/alias and matching-year collisions are skipped; differing-year conflicts are held, not merged or auto-added."
         ]
