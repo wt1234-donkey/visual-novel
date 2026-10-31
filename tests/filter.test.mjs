@@ -284,7 +284,8 @@ test('Palette chapters, editorial Chinese names, and original spellings stay sea
   const title=filterCatalogue(data,{query:'偷走我的心：月光狂想曲'})[0].work;
   assert.equal(title.chineseTitleType,'站内编辑译名');
   assert.equal(title.originalTitle,'すてぃーるMyはぁと～Rhapsody of moonlight～');
-  assert.equal(publisherWorkCounts(data).get('ぱれっと'),18);
+  const intake=JSON.parse(readFileSync(new URL('../data/project-title-year-import-result-20261031.json',import.meta.url),'utf8'));
+  assert.equal(publisherWorkCounts(data).get('ぱれっと'),18+intake.added.filter(x=>x.group==='ぱれっと').length);
 });
 
 test('Silky’s new Chinese names preserve original search and studio credit',()=>{

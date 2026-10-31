@@ -20,6 +20,7 @@ for w in db['works']:
     for f in missing:counts[f]+=1
     row=dict(id=w['id'],title=w['title'],originalTitle=w.get('originalTitle'),year=w['firstYear'],
              category=w['category'],genre=w.get('genre'),source=w.get('source'),
+             catalogueDepth=w.get('catalogueDepth','full'),
              synopsis=(w.get('synopsis') or '')[:850],notes=(w.get('notes') or '')[:650],
              characters=w.get('characters',[])[:4],existing={f:e.get(f) for f in fields if has(e,f)},
              missing=missing,reviewQuestions=e.get('openQuestions',[])[:2],editorSources=e.get('sources',[])[:3])
@@ -28,7 +29,8 @@ pending.sort(key=lambda r:int(r['id'][1:]))
 groups={'legacy':[r for r in pending if int(r['id'][1:])<=1339],
         'initial18':[r for r in pending if 1340<=int(r['id'][1:])<=1414],
         'six_studios':[r for r in pending if 1415<=int(r['id'][1:])<=1501],
-        'recommended':[r for r in pending if int(r['id'][1:])>=1502]}
+        'recommended':[r for r in pending if int(r['id'][1:])>=1502 and r['catalogueDepth']!='titleYearOnly'],
+        'name_year_only':[r for r in pending if r['catalogueDepth']=='titleYearOnly']}
 for name,rows in groups.items():
     (ROOT/f'data/narrative-pending-audit-{name}-20261030.json').write_text(
        json.dumps({'group':name,'size':len(rows),'pending':rows},ensure_ascii=False,indent=2)+'\n',encoding='utf8')
