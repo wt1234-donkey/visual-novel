@@ -2,6 +2,9 @@ name: Basic registry rounds 14-15 — NextMoe and VNDB
 on:
   push:
     branches: [catalog/basic-r14-r15-multisource-20261101]
+  pull_request:
+    branches: [main]
+    types: [edited, synchronize]
   workflow_dispatch:
 permissions:
   contents: write
