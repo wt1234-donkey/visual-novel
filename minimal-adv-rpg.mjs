@@ -1,6 +1,6 @@
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const kind={'new-basic':'本轮新增','main-linked':'主库已有','dossier-linked':'厂商专题已有','identity-review':'身份待核'};
+const kind={'new-basic':'待提升基础索引','main-linked':'完整主库已有','dossier-linked':'厂商专题已有','promoted-basic':'主库基础身份已纳入','promoted-dossier':'主库已关联专题','identity-review':'作品与版本身份待核'};
 let entries=[],filtered=[],page=0;
 const size=25;
 function optionBox(element,values){
@@ -39,9 +39,24 @@ async function start(){
    const obj=await response.json();
    if(!Array.isArray(obj.records)||!obj.summary)throw Error('档案格式无效');
    entries=obj.records;
+   try{
+     const promotion=await fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'});
+     if(promotion.ok){
+       const main=await promotion.json();
+       const statusByIndex=new Map(main.works.map(w=>[w.indexId,w.mainPlacement]));
+       const holding=new Set(main.identityReview.map(w=>w.indexId));
+       entries=entries.map(w=>{
+         if(holding.has(w.id))return {...w,status:'identity-review'};
+         const placement=statusByIndex.get(w.id);
+         return placement==='promoted-basic'?{...w,status:'promoted-basic'}:placement==='promoted-dossier'?{...w,status:'promoted-dossier'}:w;
+       });
+       $('stat-new').textContent=main.summary.promotedBasic.toLocaleString('zh-CN');
+       $('stat-linked').textContent=(main.summary.existingComplete+main.summary.promotedDossier).toLocaleString('zh-CN');
+     }
+   }catch(err){console.warn('主库基础身份层暂不可用',err);}
    $('stat-total').textContent=obj.summary.displayTotal.toLocaleString('zh-CN');
-   $('stat-new').textContent=obj.summary.newBasic.toLocaleString('zh-CN');
-   $('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
+   if(!$('stat-new').textContent.match(/[0-9]/))$('stat-new').textContent=obj.summary.newBasic.toLocaleString('zh-CN');
+   if(!$('stat-linked').textContent.match(/[0-9]/))$('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
    $('stat-groups').textContent=obj.summary.groups.toLocaleString('zh-CN');
    optionBox($('gameplay'),entries.map(r=>r.gameplay));
    optionBox($('group'),entries.map(r=>r.group));
