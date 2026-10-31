@@ -10,7 +10,7 @@ permissions:
   contents: write
 concurrency:
   group: basic-multisource-r14-r15-20261101
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   import-and-verify:
     runs-on: ubuntu-latest
