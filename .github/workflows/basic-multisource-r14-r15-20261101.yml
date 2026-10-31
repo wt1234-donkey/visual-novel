@@ -1,0 +1,90 @@
+name: Basic registry rounds 14-15 — NextMoe and VNDB
+on:
+  push:
+    branches: [catalog/basic-r14-r15-multisource-20261101]
+    paths:
+      - scripts/import_basic_multisource_r14_r15_20261101.py
+      - scripts/import_nextmoe_basic_20261101_r2.py
+      - .github/workflows/basic-multisource-r14-r15-20261101.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: basic-multisource-r14-r15-20261101
+  cancel-in-progress: false
+jobs:
+  import-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Compile import code before any data changes
+        run: python3 -m py_compile scripts/import_basic_multisource_r14_r15_20261101.py
+      - name: Sequentially import round 14 from NextMoe and round 15 from VNDB
+        run: python3 scripts/import_basic_multisource_r14_r15_20261101.py --nextmoe-pages 100 --vndb-pages 250 --max-new 500 --delay 1.2
+      - name: Refresh strict main-registry upgrade audit queue
+        run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Audit source identity, cross-round uniqueness and counts
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          def load(p):
+              return json.loads(Path(p).read_text(encoding="utf-8"))
+          r=load('data/main-adv-rpg-works-20261031.json')
+          assert r['summary']['accepted']==len(r['works'])
+          assert r['summary']['addedToMainIdentityLayer']==r['summary']['promotedBasic']+r['summary']['promotedDossier']
+          assert len({w['id'] for w in r['works']})==len(r['works'])
+          assert len({w['indexId'] for w in r['works']})==len(r['works'])
+          refs=[x for w in r['works'] for x in w.get('sourceRefs',[]) if str(x).startswith('vndb:v')]
+          assert len(set(refs))==len(refs), 'Repeated VNDB identity in registry'
+          expected=6810
+          for n, source, auditpath, prefix in (
+              (14,'nextmoe-galgame-bulk-20261101-r14','data/nextmoe-bulk-review-20261101-r14.json','nextmoe-20261101-r14-'),
+              (15,'vndb-kana-bulk-20261101-r15','data/vndb-kana-bulk-review-20261101-r15.json','vndb-20261101-r15-')):
+              a=load(auditpath)
+              b=next(b for b in r['batches'] if b['id']==source)
+              works=[w for w in r['works'] if w.get('batch')==source]
+              inc=a['summary']['newDistinctWorks']
+              assert 0<inc<=500
+              assert inc==len(works)==len(a['records'])==b['summary']['promoted-basic']
+              assert all(w['indexId'].startswith(prefix) for w in works)
+              assert b['review']==auditpath
+              assert a['summary']['before']==expected
+              expected+=inc
+              assert a['summary']['after']==expected
+              print('ROUND',n,'NEW',inc,'SCAN',a['summary']['scanned'],'TOTAL',expected)
+          assert len(r['works'])==expected
+          stage=load('data/basic-to-full-promotion-review-20261101.json')
+          assert stage['summary']['registryAccepted']==expected
+          assert all(w['readyForStrictGamesJson'] is False for w in stage['records'])
+          print('ALL_CHECKS_PASSED',expected)
+          PY
+      - name: Run complete existing strict data and website tests
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          node --check discovery.mjs
+      - name: Commit checked identities with per-source audit to this PR branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/nextmoe-bulk-review-20261101-r14.json data/vndb-kana-bulk-review-20261101-r15.json data/basic-to-full-promotion-review-20261101.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Append verified basic work identities, rounds 14 and 15"
+            git fetch origin catalog/basic-r14-r15-multisource-20261101
+            git rebase origin/catalog/basic-r14-r15-multisource-20261101
+            git push origin HEAD:catalog/basic-r14-r15-multisource-20261101
+          fi
