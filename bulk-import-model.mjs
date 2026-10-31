@@ -1,3 +1,4 @@
+import {prefillBasicValues} from './bulk-autofill.mjs?v=20261101-autofill';
 import {nameKey, validURL, makeNewWork, validateNewBundle, nextWorkId, same} from './management-model.mjs';
 
 export const REGISTRY_FILE='main-adv-rpg-works-20261031.json';
@@ -18,7 +19,7 @@ export function scanRegistry(registry,reserved){
   return {work:w,status,reason,matches};
  });
 }
-export function emptyValues(w){return {title:w.title,originalTitle:w.title,year:String(w.firstYear),source:w.source,category:'',subcategory:'',genre:'',synopsis:'',characters:'',notes:'',modes:['待核实'],'interaction-note':'','interaction-sources':w.source,'content-evidence':'','content-source':'',platforms:'',publisher:'',voice:'未核实','release-evidence':'','release-source':''};}
+export function emptyValues(w){return prefillBasicValues(w);}
 export function makeBasicBundle(record,id,taxonomy){
  const {identity:w,values:v}=record;
  if(!record.confirmed)throw Error('尚未确认独立作品、收录范围及首批证据');
@@ -49,6 +50,6 @@ export function prepareBulk(records,scan,reserved,taxonomy,reason,date){
 export function mergeMetadata(current,incoming,scan){
  if(incoming.schemaVersion!==1||!Array.isArray(incoming.records)||incoming.records.length>500)throw Error('请使用本页导出的批量资料模板（最多500部）');
  const result=structuredClone(current),seen=new Set(),lookup=new Map(scan.map(r=>[r.work.indexId,r]));
- for(const row of incoming.records){const id=row.identity?.indexId;if(!id||seen.has(id))throw Error('资料文件中身份缺失或重复');seen.add(id);const live=lookup.get(id);if(!live||live.status!=='available')throw Error(id+' 已有身份或发生冲突，请重新读取');if(!same(row.identity,live.work))throw Error(id+' 基础身份已变化，请重新导出');if(!row.values||typeof row.values!=='object'||Array.isArray(row.values)||typeof row.confirmed!=='boolean')throw Error(id+' 缺少 values／confirmed 字段');const clean=emptyValues(live.work);for(const k of Object.keys(clean)){const v=row.values[k];if(k==='modes'){if(!Array.isArray(v)||!v.every(x=>typeof x==='string'))throw Error('玩法须为字符串数组');clean[k]=v;}else if(typeof v!=='string')throw Error(k+' 须为文本');else clean[k]=v;}const item={identity:structuredClone(live.work),values:clean,confirmed:row.confirmed};const i=result.findIndex(x=>x.identity.indexId===id);if(i<0)result.push(item);else result[i]=item;}
+ for(const row of incoming.records){const id=row.identity?.indexId;if(!id||seen.has(id))throw Error('资料文件中身份缺失或重复');seen.add(id);const live=lookup.get(id);if(!live||live.status!=='available')throw Error(id+' 已有身份或发生冲突，请重新读取');if(!same(row.identity,live.work))throw Error(id+' 基础身份已变化，请重新导出');if(!row.values||typeof row.values!=='object'||Array.isArray(row.values)||typeof row.confirmed!=='boolean')throw Error(id+' 缺少 values／confirmed 字段');const clean=emptyValues(live.work);for(const k of Object.keys(clean)){const v=row.values[k];if(k==='modes'){if(!Array.isArray(v)||!v.every(x=>typeof x==='string'))throw Error('玩法须为字符串数组');clean[k]=v;}else if(typeof v!=='string')throw Error(k+' 须为文本');else clean[k]=v;}const item={identity:structuredClone(live.work),values:clean,confirmed:row.confirmed};if(row.autoFilled&&typeof row.autoFilled==='object'&&!Array.isArray(row.autoFilled)){item.autoFilled={};for(const k of Object.keys(clean))if(k==='modes'?Array.isArray(row.autoFilled[k])&&row.autoFilled[k].every(v=>typeof v==='string'):typeof row.autoFilled[k]==='string')item.autoFilled[k]=structuredClone(row.autoFilled[k]);}if(row.sourceDetails&&typeof row.sourceDetails==='object'&&typeof row.sourceDetails.source==='string'&&Array.isArray(row.sourceDetails.aliases)&&row.sourceDetails.aliases.every(v=>typeof v==='string'))item.sourceDetails=structuredClone(row.sourceDetails);const i=result.findIndex(x=>x.identity.indexId===id);if(i<0)result.push(item);else result[i]=item;}
  return result;
 }
