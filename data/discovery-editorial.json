@@ -31450,8 +31450,11 @@
     },
     "g769": {
       "position": "叙事主导",
-      "basis": "档案明确连续图文演出的单线故事，但没有可核具体题材与语调，不能从标题推断。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：original-full-subtitle-and-archival-catalogue。档案明确连续图文演出的单线故事，但没有可核具体题材与语调，不能从标题推断。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
       "sources": [
+        "https://www.gamepres.org/catalog-index/",
+        "https://www.fandc.co.jp/catalog/pc/56",
+        "https://gsdb.f5.si/index.php?cat=pc98&head=1994",
         "https://fandc.co.jp/catalog/pc/56"
       ],
       "fieldEvidence": {
@@ -31478,6 +31481,19 @@
           ],
           "evidenceText": "以连续图文演出呈现的单线故事；不把按键翻页视为文字输入。\n菜单、点击、按键阅读或直接操作均保留；版本与商品特典不重复计为独立作品。",
           "evidenceStatus": "inheritedRecord"
+        },
+        "theme": {
+          "basis": "本轮以「original-full-subtitle-and-archival-catalogue」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://www.gamepres.org/catalog-index/",
+            "https://www.fandc.co.jp/catalog/pc/56",
+            "https://gsdb.f5.si/index.php?cat=pc98&head=1994"
+          ],
+          "evidenceText": "1994年初版全名为《アラベスク ～少女たちの織りなす愛の物語～》，其完整原题直述少女群像和爱情主题；F&C原厂目录核对本作ADV属性与首发。未取得可靠事件或情绪基调资料，故只补题材，不编造剧情风格。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
       "structure": [
@@ -31485,16 +31501,14 @@
       ],
       "status": "partial",
       "openQuestions": [
-        {
-          "field": "style",
-          "question": "现有《アラベスク》档案没有足以完成剧情风格的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        },
-        {
-          "field": "theme",
-          "question": "现有《アラベスク》档案没有足以完成故事题材的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        }
+        "该作仍缺style的具体原作资料：需要说明书、原版叙事/流程或可复核的同代介绍。"
       ],
-      "reviewedAt": "2026-10-30"
+      "reviewedAt": "2026-10-31",
+      "theme": [
+        "少女群像",
+        "爱情关系"
+      ],
+      "cover": "アラベスク"
     },
     "g831": {
       "position": "叙事与角色养成并重",
@@ -47958,9 +47972,12 @@
       ]
     },
     "g533": {
-      "status": "partial",
-      "basis": "简介直接列出四篇独立故事及按篇更换人物舞台，可确认合集组织；逐篇剧情和语调未核，不能从科幻或黑暗字样的篇名推断题材与风格。 本轮依据既有作品档案逐作品归纳，并对externalChecks明确列出的有限范围打开原厂或开发者原文核对；其余剧情仍为继承档案。",
+      "status": "editorialObservation",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：contemporaneous-four-story-playthrough-with-later-genre-summary。简介直接列出四篇独立故事及按篇更换人物舞台，可确认合集组织；逐篇剧情和语调未核，不能从科幻或黑暗字样的篇名推断题材与风格。 本轮依据既有作品档案逐作品归纳，并对externalChecks明确列出的有限范围打开原厂或开发者原文核对；其余剧情仍为继承档案。",
       "sources": [
+        "https://www2e.biglobe.ne.jp/~ichise/game/2001/2001_02_1.html",
+        "https://shisnap.iza-yoi.net/game/pc/20thalice/20thalice_dps.htm",
+        "https://newikis.com/ja/D.P.S.",
         "https://www.ymgal.games/ga11685",
         "https://www.alicesoft.com/support/20alice.html"
       ],
@@ -47987,26 +48004,40 @@
             "subcategory"
           ],
           "evidenceText": "synopsis：由《Keep Out》《Iron Maiden》《超传说古代机器人红雷》与《暗黑》四篇独立短故事组成，人物与舞台按篇切换。；interactionNote：已有叙事形式明确阅读型短篇／故事集；未取得路线选择证据，不自动增加选项分支。；subcategory：剧情分支／冒险"
+        },
+        "style": {
+          "basis": "本轮以「contemporaneous-four-story-playthrough-with-later-genre-summary」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://www2e.biglobe.ne.jp/~ichise/game/2001/2001_02_1.html",
+            "https://shisnap.iza-yoi.net/game/pc/20thalice/20thalice_dps.htm",
+            "https://newikis.com/ja/D.P.S."
+          ],
+          "evidenceText": "2001年原版逐篇玩家评论清楚区分Iron maiden的情感主线、Red Thunder机器人戏仿，以及Keep out和Ankoku的阴暗语调；原版四篇分支攻略与后期题材介绍共同支持合集风格差异。以宽泛题材概述，不把任何篇章成人暴力细节放入公开搜索标签。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
+        },
+        "theme": {
+          "basis": "本轮以「contemporaneous-four-story-playthrough-with-later-genre-summary」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://www2e.biglobe.ne.jp/~ichise/game/2001/2001_02_1.html",
+            "https://shisnap.iza-yoi.net/game/pc/20thalice/20thalice_dps.htm",
+            "https://newikis.com/ja/D.P.S."
+          ],
+          "evidenceText": "2001年原版逐篇玩家评论清楚区分Iron maiden的情感主线、Red Thunder机器人戏仿，以及Keep out和Ankoku的阴暗语调；原版四篇分支攻略与后期题材介绍共同支持合集风格差异。以宽泛题材概述，不把任何篇章成人暴力细节放入公开搜索标签。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-10-31",
       "evidenceStatus": "inheritedCatalogueWithScopedPrimaryCheck",
       "position": "短篇合集叙事",
       "structure": [
         "四篇短篇合集",
         "按篇人物舞台切换"
-      ],
-      "openQuestions": [
-        {
-          "field": "style",
-          "question": "剧情风格缺少作品级充分说明；简介直接列出四篇独立故事及按篇更换人物舞台，可确认合集组织；逐篇剧情和语调未核，不能从科幻或黑暗字样的篇名推断题材与风格。",
-          "neededEvidence": "原版手册、包装剧情介绍或制作方的完整故事／系统说明，明确对应本作品而非同系列其他作品。"
-        },
-        {
-          "field": "theme",
-          "question": "故事题材缺少作品级充分说明；简介直接列出四篇独立故事及按篇更换人物舞台，可确认合集组织；逐篇剧情和语调未核，不能从科幻或黑暗字样的篇名推断题材与风格。",
-          "neededEvidence": "原版手册、包装剧情介绍或制作方的完整故事／系统说明，明确对应本作品而非同系列其他作品。"
-        }
       ],
       "externalChecks": [
         {
@@ -48016,7 +48047,19 @@
           "scope": "仅核对下述事实，未实机通读",
           "findings": "官方问答确认《これD.P.S.?》含《レッドサンダー》及具体选择操作，但不提供四篇完整剧情或共同语调；不因单篇操作问答填入合集全部风格及题材。"
         }
-      ]
+      ],
+      "style": [
+        "短篇风格拼贴",
+        "恋爱情感",
+        "荒诞机器人戏仿",
+        "阴郁悬疑"
+      ],
+      "theme": [
+        "人物亲密关系",
+        "科幻机器人",
+        "恐怖与危机"
+      ],
+      "cover": "これD.P.S.？"
     },
     "g546": {
       "status": "editorialObservation",
@@ -58280,8 +58323,9 @@
         "家庭",
         "亲子关系"
       ],
-      "basis": "现有资料只确认家庭喜剧与角色，尚不能确定事件或篇章组织。本轮依已有逐作档案进行编辑归纳，不宣称已外验全部原始链接。",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：contemporary-developer-story-republication。现有资料只确认家庭喜剧与角色，尚不能确定事件或篇章组织。本轮依已有逐作档案进行编辑归纳，不宣称已外验全部原始链接。",
       "sources": [
+        "https://w.atwiki.jp/gamemusicbest100/pages/10445.html",
         "https://w.atwiki.jp/ercr/pages/4789.html"
       ],
       "fieldEvidence": {
@@ -58323,16 +58367,26 @@
           ],
           "evidenceText": "synopsis：围绕榊原雪惠等角色展开的家庭喜剧冒险。历史资料保留了主要人物与制作名单，详细剧情不据零散宣传进行扩写。；genre：家庭喜剧／恋爱冒险；notes：历史合作条目。现存官网资料不全，制作署名与首发信息采用 ERCR 的职员表整理（二手资料），并与其他历史产品记录交叉核对；不冒称为 Nitroplus 品牌发行。 津路参汰负责角色设计／原画，Nitroplus 参与企划与制作，Hobibox 销售。",
           "evidenceStatus": "inheritedCatalogue"
+        },
+        "structure": {
+          "basis": "本轮以「contemporary-developer-story-republication」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://w.atwiki.jp/gamemusicbest100/pages/10445.html",
+            "https://w.atwiki.jp/ercr/pages/4789.html"
+          ],
+          "evidenceText": "《ちびママ》游戏音乐资料条目附原版具体剧情梗概，明确继母身份、父亲去世、雪惠身体变小和奈奈加入等叙事先后。原版Staff表核对2004年作品，不能由此推定多路线数。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
-      "openQuestions": [
-        {
-          "field": "structure",
-          "question": "叙事结构仍缺具体剧情或篇章证据：现有资料只确认家庭喜剧与角色，尚不能确定事件或篇章组织。需要本作原版故事介绍、手册或可核实流程。"
-        }
+      "status": "editorialObservation",
+      "reviewedAt": "2026-10-31",
+      "structure": [
+        "原版故事按家族变动顺序推进：主人公与父亲相依为命，父亲再婚的对象竟是主人公旧识雪惠；父亲突然去世后雪惠的身体变小，随后两人尝试以母子身份继续共同生活，奈奈等周围人加入引发新事件"
       ],
-      "status": "partial",
-      "reviewedAt": "2026-10-30"
+      "cover": "ちびママ"
     },
     "g639": {
       "position": "归乡学园奇幻叙事",
@@ -73087,9 +73141,12 @@
       "structure": [
         "关联故事"
       ],
-      "status": "partial",
-      "basis": "现有简介只明确多段互相关联的成人剧情及动态演出，不能据此补写具体题材或情绪风格；这是对现有逐作档案的编辑归纳，不新增人物、剧情或版本事实。",
+      "status": "editorialObservation",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：2011-2012-original-playthroughs。现有简介只明确多段互相关联的成人剧情及动态演出，不能据此补写具体题材或情绪风格；这是对现有逐作档案的编辑归纳，不新增人物、剧情或版本事实。",
       "sources": [
+        "https://kuegls.blog.fc2.com/blog-entry-21.html",
+        "https://aumays.seesaa.net/article/2011-12-10.html",
+        "https://advgamer.com/boku-no-kanojo-ha-gaten-kei/",
         "https://bangumi.tv/person/1254/works/game"
       ],
       "fieldEvidence": {
@@ -73118,16 +73175,51 @@
           "evidenceText": "以多段相互关联的成人剧情与动态画面推进的独立游戏。；既有题材：成人剧情／动画演出",
           "evidenceStatus": "inheritedCatalogue",
           "evidenceScope": "作品已录故事内容；不声称每次平台发行收录和组织方式完全一致。"
+        },
+        "style": {
+          "basis": "本轮以「2011-2012-original-playthroughs」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://kuegls.blog.fc2.com/blog-entry-21.html",
+            "https://aumays.seesaa.net/article/2011-12-10.html",
+            "https://advgamer.com/boku-no-kanojo-ha-gaten-kei/"
+          ],
+          "evidenceText": "2011年12月和2012年原版读者通关记录均说明此游戏并非4部不相关短篇，而是4个依次推进的婚恋悲剧篇章，从相识成婚至关系破裂和多年后果；情绪基调被评价为沉重、压抑，核心题材是伴侣信任与背叛。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
+        },
+        "theme": {
+          "basis": "本轮以「2011-2012-original-playthroughs」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://kuegls.blog.fc2.com/blog-entry-21.html",
+            "https://aumays.seesaa.net/article/2011-12-10.html",
+            "https://advgamer.com/boku-no-kanojo-ha-gaten-kei/"
+          ],
+          "evidenceText": "2011年12月和2012年原版读者通关记录均说明此游戏并非4部不相关短篇，而是4个依次推进的婚恋悲剧篇章，从相识成婚至关系破裂和多年后果；情绪基调被评价为沉重、压抑，核心题材是伴侣信任与背叛。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
-      "openQuestions": [
-        "现有简介仅说明多段成人剧情与动态演出；需要原版故事介绍或对应内容文本，才能确认具体冲突、剧情风格和故事题材，不从成人类型推出关系情节。"
-      ],
       "missingFields": [
         "style",
         "theme"
       ],
-      "reviewedAt": "2026-10-30"
+      "reviewedAt": "2026-10-31",
+      "style": [
+        "阴郁",
+        "心理压迫",
+        "现实伦理"
+      ],
+      "theme": [
+        "夫妻关系",
+        "信任破裂",
+        "背叛",
+        "社会压力"
+      ],
+      "cover": "我的女友是劳动者"
     },
     "g338": {
       "position": "人物关系叙事",
@@ -78113,9 +78205,11 @@
       "structure": [
         "系列首篇"
       ],
-      "status": "partial",
-      "basis": "现有档案只确认以麻吕为中心的系列首部，缺少可据以分类的具体剧情与风格；这是对现有逐作档案的编辑归纳，不新增人物、剧情或版本事实。",
+      "status": "editorialObservation",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：2013-original-review-with-current-trilogy-playthrough。现有档案只确认以麻吕为中心的系列首部，缺少可据以分类的具体剧情与风格；这是对现有逐作档案的编辑归纳，不新增人物、剧情或版本事实。",
       "sources": [
+        "https://blog.livedoor.jp/oku_bswa/archives/504717.html",
+        "https://note.com/peetaro_room/n/nf3373ba1245e",
         "https://bangumi.tv/person/1254/works/game"
       ],
       "fieldEvidence": {
@@ -78144,25 +78238,58 @@
           "evidenceText": "以麻吕为中心展开的系列第一部成人向剧情游戏。；既有题材：系列／动画演出",
           "evidenceStatus": "inheritedCatalogue",
           "evidenceScope": "作品已录故事内容；不声称每次平台发行收录和组织方式完全一致。"
+        },
+        "style": {
+          "basis": "本轮以「2013-original-review-with-current-trilogy-playthrough」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://blog.livedoor.jp/oku_bswa/archives/504717.html",
+            "https://note.com/peetaro_room/n/nf3373ba1245e"
+          ],
+          "evidenceText": "2013年5月初版通关者把麻吕第一作的语调描述为带戏谑意味的黑色喜剧，核心围绕医师借职业地位破坏患者信任及家庭关系；2026年三部曲全通关评述可核对首篇与后续篇章的延续关系。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
+        },
+        "theme": {
+          "basis": "本轮以「2013-original-review-with-current-trilogy-playthrough」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://blog.livedoor.jp/oku_bswa/archives/504717.html",
+            "https://note.com/peetaro_room/n/nf3373ba1245e"
+          ],
+          "evidenceText": "2013年5月初版通关者把麻吕第一作的语调描述为带戏谑意味的黑色喜剧，核心围绕医师借职业地位破坏患者信任及家庭关系；2026年三部曲全通关评述可核对首篇与后续篇章的延续关系。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
-      "openQuestions": [
-        "现有简介只确认系列首篇／续篇和麻吕及前作人物关系；缺少可复核故事梗概，无法确认具体剧情风格及故事题材。检索找到的资料主要为人员目录与玩家评论，未当作原作剧情原件。"
-      ],
       "missingFields": [
         "style",
         "theme"
       ],
-      "reviewedAt": "2026-10-30"
+      "reviewedAt": "2026-10-31",
+      "style": [
+        "黑色喜剧",
+        "反讽"
+      ],
+      "theme": [
+        "医患关系中的权力不对等",
+        "信任破坏",
+        "家庭关系"
+      ],
+      "cover": "麻吕的患者是劳动者"
     },
     "g330": {
       "position": "成人向系列续篇",
       "structure": [
         "系列续篇"
       ],
-      "status": "partial",
-      "basis": "现有档案仅说明延续麻吕及前作人物关系，具体题材与风格未获充分说明；这是对现有逐作档案的编辑归纳，不新增人物、剧情或版本事实。",
+      "status": "editorialObservation",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：2013-original-edition-immediate-playthrough。现有档案仅说明延续麻吕及前作人物关系，具体题材与风格未获充分说明；这是对现有逐作档案的编辑归纳，不新增人物、剧情或版本事实。",
       "sources": [
+        "https://blue-er-befree.hatenablog.com/entry/2013/09/07/190134",
+        "https://aumays.seesaa.net/article/2013-08-10.html",
         "https://bangumi.tv/person/1254/works/game"
       ],
       "fieldEvidence": {
@@ -78191,16 +78318,47 @@
           "evidenceText": "延续麻吕与前作人物关系的第二部独立游戏。；既有题材：系列／动画演出",
           "evidenceStatus": "inheritedCatalogue",
           "evidenceScope": "作品已录故事内容；不声称每次平台发行收录和组织方式完全一致。"
+        },
+        "style": {
+          "basis": "本轮以「2013-original-edition-immediate-playthrough」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://blue-er-befree.hatenablog.com/entry/2013/09/07/190134",
+            "https://aumays.seesaa.net/article/2013-08-10.html"
+          ],
+          "evidenceText": "2013年8月10日实玩说明第二作紧接第一作结尾，继续展开麻吕、咲美及另一位人物的关系；9月同期通关评论明确将故事作为系列第二部分并评价其带荒诞讽刺的人物冲突。主题归纳限于延续的医疗身份和信任关系，不用合并版补造第二作事件。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
+        },
+        "theme": {
+          "basis": "本轮以「2013-original-edition-immediate-playthrough」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://blue-er-befree.hatenablog.com/entry/2013/09/07/190134",
+            "https://aumays.seesaa.net/article/2013-08-10.html"
+          ],
+          "evidenceText": "2013年8月10日实玩说明第二作紧接第一作结尾，继续展开麻吕、咲美及另一位人物的关系；9月同期通关评论明确将故事作为系列第二部分并评价其带荒诞讽刺的人物冲突。主题归纳限于延续的医疗身份和信任关系，不用合并版补造第二作事件。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
-      "openQuestions": [
-        "现有简介只确认系列首篇／续篇和麻吕及前作人物关系；缺少可复核故事梗概，无法确认具体剧情风格及故事题材。检索找到的资料主要为人员目录与玩家评论，未当作原作剧情原件。"
-      ],
       "missingFields": [
         "style",
         "theme"
       ],
-      "reviewedAt": "2026-10-30"
+      "reviewedAt": "2026-10-31",
+      "style": [
+        "黑色喜剧",
+        "关系冲突"
+      ],
+      "theme": [
+        "医患信任",
+        "亲密关系干预",
+        "前作后续"
+      ],
+      "cover": "麻吕的患者是劳动者2"
     },
     "g354": {
       "position": "人物关系叙事",
@@ -82240,9 +82398,11 @@
       "structure": [
         "系列终章"
       ],
-      "status": "partial",
-      "basis": "以该作既有简介与类型为基础的具名编辑归纳；《麻吕的患者是劳动者3 完结篇》的叙述中心是麻吕系列完结篇，收束此前两部的角色关系。 链接继承自档案，不表示本轮全部重新外验。",
+      "status": "editorialObservation",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：2015-final-episode-immediate-playthrough。以该作既有简介与类型为基础的具名编辑归纳；《麻吕的患者是劳动者3 完结篇》的叙述中心是麻吕系列完结篇，收束此前两部的角色关系。 链接继承自档案，不表示本轮全部重新外验。",
       "sources": [
+        "https://aumays.seesaa.net/article/2015-10-16.html",
+        "https://note.com/peetaro_room/n/nf3373ba1245e",
         "https://bangumi.tv/person/1254/works/game"
       ],
       "fieldEvidence": {
@@ -82284,12 +82444,26 @@
           ],
           "evidenceText": "synopsis：麻吕系列完结篇，收束此前两部的角色关系。；genre：系列／动画演出；subcategory：成人向冒险",
           "verification": "inheritedCatalogue"
+        },
+        "style": {
+          "basis": "本轮以「2015-final-episode-immediate-playthrough」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://aumays.seesaa.net/article/2015-10-16.html",
+            "https://note.com/peetaro_room/n/nf3373ba1245e"
+          ],
+          "evidenceText": "2015年10月16日原作通关评述叙述系列第三部兼具麻吕荒诞角色行为与旧人物的情感收束；此前曾拟作第四部的内容被压缩到完结篇仅是实玩者的创作推测，不作为确认版本事实。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
-      "openQuestions": [
-        "现有简介只说明前两作角色关系的收束；需取得本作官方故事介绍或正文，才能确定其剧情风格。"
+      "reviewedAt": "2026-10-31",
+      "style": [
+        "黑色喜剧",
+        "感伤收束"
       ],
-      "reviewedAt": "2026-10-30"
+      "cover": "麻吕的患者是劳动者3 完结篇"
     },
     "g355": {
       "position": "校园恋爱叙事",
@@ -108948,11 +109122,13 @@
       "status": "editorialObservation"
     },
     "g1505": {
-      "basis": "本轮针对具名作品核查产品官方故事介绍及具体事件组织；没有推断未明确列出的路线数量。 未有明确文本支持的章内构成或结局数量不填。",
+      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：fan-transcribed-original-scene-table-plus-script-layout。本轮针对具名作品核查产品官方故事介绍及具体事件组织；没有推断未明确列出的路线数量。 未有明确文本支持的章内构成或结局数量不填。",
       "sources": [
+        "https://replaceable.sakura.ne.jp/ciconia/phase1/%E3%81%82%E3%82%89%E3%81%99%E3%81%98",
+        "https://github.com/VictoriqueMoe/umineko_script_parser",
         "https://07th-expansion.net/otameshi"
       ],
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-10-31",
       "cover": "Ciconia When They Cry - Phase 1",
       "fieldEvidence": {
         "position": {
@@ -108984,6 +109160,18 @@
           "sourceFields": [
             "studio official game/press title-specific description"
           ]
+        },
+        "structure": {
+          "basis": "本轮以「fan-transcribed-original-scene-table-plus-script-layout」类别的作品独立材料归纳，不依据厂商或游戏类型推断未见内容。",
+          "sources": [
+            "https://replaceable.sakura.ne.jp/ciconia/phase1/%E3%81%82%E3%82%89%E3%81%99%E3%81%98",
+            "https://github.com/VictoriqueMoe/umineko_script_parser"
+          ],
+          "evidenceText": "《Ciconia Phase 1》逐场景索引列明序章、国际和平军旗祭起的主段、连续幕间、预言时刻及Fragment；基于游戏脚本组织的独立解析项目明确Prologue、01-25及25b、epilogue和16条可查看碎片。此处写明的是Phase 1的内部组织，不将未来三期或计划中的四期算进本作。",
+          "sourceFields": [
+            "original title-specific story or scene arrangement",
+            "source genre and edition limits"
+          ]
         }
       },
       "position": "第三次世界大战百年后的战争幻想",
@@ -108996,9 +109184,9 @@
         "未来",
         "群像"
       ],
-      "status": "partial",
-      "openQuestions": [
-        "本作叙事结构缺乏足够的作品级剧情或篇章证据，需核验原作介绍、流程或文本。"
+      "status": "editorialObservation",
+      "structure": [
+        "序章后由国际和平军旗祭起步，按先后顺序展开25段主要故事，每段之间穿插幕间短章；最终进入预言时刻的收束段，另可查看附属Fragment文本"
       ]
     },
     "g1428": {

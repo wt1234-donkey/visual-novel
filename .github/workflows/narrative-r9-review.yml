@@ -1,0 +1,44 @@
+name: R9 narrative review checks
+on:
+  push:
+    branches: [editorial/final-22-narratives-r9-20261031]
+    paths:
+      - data/narrative-22-evidence-r9-20261031.json
+      - scripts/complete_narrative_22_r9_20261031.py
+      - tests/test_narrative_editorial.py
+      - .github/workflows/narrative-r9-review.yml
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: python3 scripts/complete_narrative_22_r9_20261031.py
+      - run: python3 scripts/audit_narrative_pending_20261030.py
+      - run: python3 scripts/refresh_narrative_1339_report_r9_20261031.py
+      - run: |
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery-editorial.json data/narrative-cataloguing-20261030.json data/narrative-pending-*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Apply narrative reviews R9"
+            git fetch origin editorial/final-22-narratives-r9-20261031
+            git rebase origin/editorial/final-22-narratives-r9-20261031
+            git push origin HEAD:editorial/final-22-narratives-r9-20261031
+          fi

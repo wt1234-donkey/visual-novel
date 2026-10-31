@@ -77,12 +77,31 @@ class NarrativeEditorialTests(unittest.TestCase):
         expected['missing']-=5
         expected['partial']-=1
         expected['complete']+=6
+        final22=json.loads((ROOT/'data/narrative-22-evidence-r9-20261031.json').read_text())['entries']
+        frozen22=json.loads((ROOT/'data/narrative-22-baseline-r9-20261031.json').read_text())
+        self.assertEqual(len(frozen22['records']),22)
+        self.assertEqual(frozen22['counts']['missingFields'],35)
+        self.assertEqual(len(final22),8)
+        completed_in_r9=0
+        for wid,row in final22.items():
+            missing=set(frozen22['records'][wid]['missing'])
+            supplied={f for f in ('position','style','theme','structure') if row.get(f)}
+            self.assertTrue(supplied.issubset(missing),f'{wid}: would override an existing field')
+            self.assertTrue(supplied)
+            for field in supplied:
+                self.assertTrue(self.data['works'][wid]['fieldEvidence'][field]['sources'])
+                self.assertTrue(self.data['works'][wid]['fieldEvidence'][field]['sourceFields'])
+            if supplied==missing:
+                completed_in_r9+=1
+                expected['partial']-=1
+                expected['complete']+=1
+        self.assertEqual(completed_in_r9,7)
         self.assertEqual(sum(counts.values()),1339+new)
         self.assertEqual(counts,expected)
         baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
         for wid,entry in baseline.items():
             self.assertEqual(self.data['works'][wid],entry)
-        for wid,patch in {**patches,**round2,**round3,**six4,**round5,**r6,**latest,**seven,**six8}.items():
+        for wid,patch in {**patches,**round2,**round3,**six4,**round5,**r6,**latest,**seven,**six8,**final22}.items():
             record=self.data['works'][wid]
             self.assertEqual(record['status'],'editorialObservation' if all(record.get(k) for k in ('position','style','theme','structure')) else 'partial')
             for field in ('position','style','theme','structure'):
