@@ -1,6 +1,6 @@
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const kind={'new-basic':'待提升基础索引','main-linked':'完整主库已有','dossier-linked':'厂商专题已有','promoted-basic':'主库基础身份已纳入','promoted-dossier':'主库已关联专题','identity-review':'作品与版本身份待核','main-registry-linked':'已关联主库身份'};
+const kind={'new-basic':'待提升基础索引','main-linked':'完整主库已有','dossier-linked':'厂商专题已有','promoted-basic':'主库基础身份已纳入','promoted-dossier':'主库已关联专题','identity-review':'作品与版本身份待核','eligibility-review':'叙事与玩法主次待核','main-registry-linked':'已关联主库身份'};
 let entries=[],filtered=[],page=0;
 const size=25;
 function optionBox(element,values){
@@ -12,8 +12,8 @@ function optionBox(element,values){
 function filterAndDraw(){
     const q=$('q').value.trim().normalize('NFKC').toLowerCase(),gp=$('gameplay').value,g=$('group').value,s=$('status').value;
     filtered=entries.filter(r=>{
-      const hay=[r.title,...(r.aliases||[]),r.group].join(' ').normalize('NFKC').toLowerCase();
-      return (!q||hay.includes(q))&&(!gp||r.gameplay===gp)&&(!g||r.group===g)&&(!s||r.status===s);
+      const hay=[r.title,...(r.aliases||[]),r.group,...(r.groups||[])].join(' ').normalize('NFKC').toLowerCase();
+      return (!q||hay.includes(q))&&(!gp||r.gameplay===gp)&&(!g||r.group===g||(r.groups||[]).includes(g))&&(!s||r.status===s);
     });
     page=0;render();
 }
@@ -25,7 +25,7 @@ function render(){
       const year=Number.isInteger(r.year)?r.year:'—';
       const label=kind[r.status]||'专题已有';
       const link=(r.source||'').startsWith('https://')?'<a href="'+safe(r.source)+'" target="_blank" rel="noopener noreferrer">资料</a>':'待核';
-      return '<tr><td>'+safe(r.title)+alias+'</td><td>'+year+'</td><td>'+safe(r.gameplay)+'</td><td>'+safe(r.group)+'</td><td><span class="pill">'+safe(label)+'</span>'+(r.matchedWorkId?'<div class="minor">'+safe(r.matchedWorkId)+'</div>':'')+'</td><td>'+link+'</td></tr>';
+      return '<tr><td>'+safe(r.title)+alias+'</td><td>'+year+'</td><td>'+safe(r.gameplay)+(r.gameplayNote?'<div class="minor">'+safe(r.gameplayNote)+'</div>':'')+'</td><td>'+safe(r.group)+'</td><td><span class="pill">'+safe(label)+'</span>'+(r.reason?'<div class="minor">'+safe(r.reason)+'</div>':'')+(r.matchedWorkId?'<div class="minor">'+safe(r.matchedWorkId)+'</div>':'')+'</td><td>'+link+'</td></tr>';
     }).join('')||'<tr><td colspan="6">未找到符合筛选条件的作品</td></tr>';
     $('count').textContent='找到 '+total+' 条记录，显示第 '+(total? page*size+1:0)+'—'+Math.min((page+1)*size,total)+' 条';
     $('pagination').textContent='第 '+(page+1)+' / '+n+' 页';
@@ -44,8 +44,10 @@ async function start(){
      if(promotion.ok){
        const main=await promotion.json();
        const statusByIndex=new Map(main.works.map(w=>[w.indexId,w.mainPlacement]));
+       const identityByIndex=new Map(main.works.map(w=>[w.indexId,w.id]));
        const holding=new Set(main.identityReview.map(w=>w.indexId));
        entries=entries.map(w=>{
+         w={...w,matchedWorkId:identityByIndex.get(w.id)||w.matchedWorkId};
          if(holding.has(w.id))return {...w,status:'identity-review'};
          const placement=statusByIndex.get(w.id);
          return placement==='promoted-basic'?{...w,status:'promoted-basic'}:placement==='promoted-dossier'?{...w,status:'promoted-dossier'}:w;
@@ -54,27 +56,34 @@ async function start(){
        $('stat-linked').textContent=(main.summary.existingComplete+main.summary.promotedDossier).toLocaleString('zh-CN');
      }
    }catch(err){console.warn('主库基础身份层暂不可用',err);}
-   try{
-     const next=await fetch('data/adv-rpg-next-studio-review-20261031.json',{cache:'no-store'});
+   for(const [batch,path] of [['batch2','data/adv-rpg-next-studio-review-20261031.json'],['batch3','data/adv-rpg-round3-review-20261031.json']])try{
+     const next=await fetch(path,{cache:'no-store'});
      if(next.ok){
        const add=await next.json();
        const normal=t=>String(t||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
        const existing=new Set(entries.map(x=>normal(x.title)+'|'+x.year));
        for(const r of add.records){
          const key=normal(r.title)+'|'+r.year;
+         const canonical=r.registryId&&entries.find(x=>x.matchedWorkId===r.registryId);
+         if(canonical){
+           canonical.aliases=[...new Set([...(canonical.aliases||[]),r.title,...(r.aliases||[])])].filter(t=>t!==canonical.title);
+           canonical.groups=[...new Set([...(canonical.groups||[]),canonical.group,r.group])];
+           canonical.gameplayNote=canonical.gameplayNote||r.gameplayNote;
+           continue;
+         }
          if(existing.has(key))continue;
-         entries.push({...r,id:'batch2-'+key,matchedWorkId:r.registryId,
-           status:r.status==='linked-existing-registry'||r.status==='linked-existing-full-or-dossier'?'main-registry-linked':r.status});
+         entries.push({...r,id:batch+'-'+key,matchedWorkId:r.registryId,
+           status:r.status==='existing-complete'?'main-linked':r.status==='linked-existing-registry'||r.status==='linked-existing-full-or-dossier'?'main-registry-linked':r.status});
          existing.add(key);
        }
      }
-   }catch(err){console.warn('第二批ADV/RPG作品审核表尚不可用',err);}
+   }catch(err){console.warn('ADV/RPG后续批次审核表尚不可用',err);}
    $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
    try{const mainReg=await (await fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'})).json();$('stat-new').textContent=mainReg.summary.promotedBasic.toLocaleString('zh-CN');$('stat-linked').textContent=(mainReg.summary.promotedDossier+mainReg.summary.existingComplete).toLocaleString('zh-CN')}catch(err){console.warn('主库统计暂不可用',err)}
    if(!$('stat-linked').textContent.match(/[0-9]/))$('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
-   $('stat-groups').textContent=(new Set(entries.map(x=>x.group))).size.toLocaleString('zh-CN');
+   $('stat-groups').textContent=(new Set(entries.flatMap(x=>[x.group,...(x.groups||[])]))).size.toLocaleString('zh-CN');
    optionBox($('gameplay'),entries.map(r=>r.gameplay));
-   optionBox($('group'),entries.map(r=>r.group));
+   optionBox($('group'),entries.flatMap(r=>[r.group,...(r.groups||[])]));
    $('q').addEventListener('input',filterAndDraw);
    for(const id of ['gameplay','group','status'])$(id).addEventListener('change',filterAndDraw);
    $('prev').addEventListener('click',()=>{page--;render()});
