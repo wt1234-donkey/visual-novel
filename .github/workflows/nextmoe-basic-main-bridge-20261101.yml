@@ -1,0 +1,70 @@
+name: NextMoe basic identities round 3 and main-site bulk bridge
+on:
+  push:
+    branches: [feature/basic-registry-bulk-bridge-r3-20261101]
+    paths:
+      - scripts/import_nextmoe_basic_20261101_r3.py
+      - scripts/stage_basic_registry_for_main.py
+      - discovery.mjs
+      - .github/workflows/nextmoe-basic-main-bridge-20261101.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: basic-main-bridge-r3-20261101
+  cancel-in-progress: false
+jobs:
+  import-stage-and-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fetch the next distinct Galgame identities with existing exact ID and alias dedupe
+        run: python3 scripts/import_nextmoe_basic_20261101_r3.py --pages 50 --limit 100 --max-new 500 --delay 2.2
+      - name: Stage the next 100 records for strict full-profile evidence review
+        run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Verify batch boundaries, sources and no overclaimed full records
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          registry=json.loads(Path('data/main-adv-rpg-works-20261031.json').read_text())
+          audit=json.loads(Path('data/nextmoe-bulk-review-20261101-r3.json').read_text())
+          review=json.loads(Path('data/basic-to-full-promotion-review-20261101.json').read_text())
+          assert audit['summary']['newDistinctWorks']==len(audit['records'])>0
+          assert registry['batches'][-1]['review']=='data/nextmoe-bulk-review-20261101-r3.json'
+          assert registry['summary']['accepted']==len(registry['works'])
+          assert len({x['id'] for x in registry['works']})==len(registry['works'])
+          assert len({x['indexId'] for x in registry['works']})==len(registry['works'])
+          assert all(x['readyForStrictGamesJson'] is False for x in review['records'])
+          assert len(review['records'])<=100
+          print(audit['summary'],review['summary'])
+          PY
+      - name: Validate main site and historical strict data separately
+        run: |
+          node --check discovery.mjs
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Commit verified new basic records and promotion review batch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/nextmoe-bulk-review-20261101-r3.json data/basic-to-full-promotion-review-20261101.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Import next 500 distinct basic identities and stage 100 main promotions"
+            git fetch origin feature/basic-registry-bulk-bridge-r3-20261101
+            git rebase origin/feature/basic-registry-bulk-bridge-r3-20261101
+            git push origin HEAD:feature/basic-registry-bulk-bridge-r3-20261101
+          fi

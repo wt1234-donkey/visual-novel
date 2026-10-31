@@ -278,7 +278,7 @@ def run(args):
             summary["candidates"] = int(summary.get("newToRegistry", 0))
     registry["batches"].append({
         "id": BATCH, "source": API,
-        "review": "data/nextmoe-bulk-review-20261101-r2.json",
+        "review": str(AUDIT.relative_to(ROOT)),
         "summary": {"candidates": inc, "scanned": scanned, **dict(counts), "promoted-basic": inc,
                     "year-or-alias-conflict-held": len(held)}
     })
