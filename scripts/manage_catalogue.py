@@ -165,7 +165,9 @@ def library_records(games):
         records.extend(company.get('dossierOnlyWorks', []))
     extra = read('non-rpg-creator-supplement-20261030.json')
     records.extend(extra['works'])
-    return records
+    from validate_work_edits import FIELDS as website_fields
+    edits = read('work-edit-history.json')['records']
+    return [r | {k:v for k,v in edits.get(r['id'],{}).get('overrides',{}).items() if k in website_fields} for r in records]
 
 
 def name_key(s):
