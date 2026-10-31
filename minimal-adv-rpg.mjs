@@ -58,7 +58,7 @@ async function start(){
      const next=await fetch('data/adv-rpg-next-studio-review-20261031.json',{cache:'no-store'});
      if(next.ok){
        const add=await next.json();
-       const normal=t=>String(t||'').normalize('NFKC').toLowerCase().replace(/[^\\p{L}\\p{N}]/gu,'');
+       const normal=t=>String(t||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
        const existing=new Set(entries.map(x=>normal(x.title)+'|'+x.year));
        for(const r of add.records){
          const key=normal(r.title)+'|'+r.year;
