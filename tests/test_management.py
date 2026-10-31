@@ -2,6 +2,7 @@ import copy
 import json
 import sys
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -69,6 +70,27 @@ class ManagementTests(unittest.TestCase):
     def test_second_first_batch_platform_shares_content_identity(self):
         p=self.new_work_package();bundle=p['operations'][0]['after'];r=copy.deepcopy(bundle['platformReleases'][0]);r.update(id=bundle['work']['id']+'-v2',platform='Linux');bundle['platformReleases'].append(r);bundle['contentVersions'][0]['evidenceReleaseIds'].append(r['id'])
         self.assertEqual(len(self.apply(p)['games']['contentVersions']),len(self.games['contentVersions'])+1)
+    def basic_package(self):
+        package=self.new_work_package();w=package['operations'][0]['after']['work']
+        basic=dict(id='bulk-test-basic',indexId='bulk-test-index',title=w['title'],aliases=['独立基础别名'],firstYear=w['firstYear'],source=w['source'],sourceRefs=['vndb:v99999999'],mainPlacement='promoted-basic')
+        w.update(basicRegistryId=basic['indexId'],titleAliases=basic['aliases'],sourceRefs=basic['sourceRefs'])
+        original=read
+        return package,basic,lambda name,*args,**kwargs: {'works':[basic]} if name=='main-adv-rpg-works-20261031.json' else original(name,*args,**kwargs)
+    def test_basic_bulk_preserves_identity_and_history(self):
+        p,basic,reader=self.basic_package()
+        with patch('manage_catalogue.read',side_effect=reader): result=self.apply(p)
+        w=result['games']['works'][-1]
+        self.assertEqual(w['basicRegistryId'],basic['indexId']);self.assertEqual(w['titleAliases'],basic['aliases']);self.assertEqual(w['sourceRefs'],basic['sourceRefs'])
+        self.assertEqual(restore_historical(result,{'batches':[p]}),self.data)
+    def test_basic_source_drift_or_alias_loss_rejected(self):
+        p,basic,reader=self.basic_package();p['operations'][0]['after']['work']['titleAliases']=[]
+        with patch('manage_catalogue.read',side_effect=reader),self.assertRaisesRegex(AssertionError,'已变化'): self.apply(p)
+    def test_basic_external_identity_collision_rejected_without_mutating_input(self):
+        p,basic,reader=self.basic_package()
+        self.data['games']['works'][0]['sourceRefs']=basic['sourceRefs']
+        before=copy.deepcopy(self.data)
+        with patch('manage_catalogue.read',side_effect=reader),self.assertRaisesRegex(AssertionError,'来源身份重复'): self.apply(p)
+        self.assertEqual(self.data,before)
     def test_current_history(self):
         validate_history()
 if __name__=='__main__':unittest.main()
