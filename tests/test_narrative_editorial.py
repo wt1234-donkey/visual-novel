@@ -52,12 +52,26 @@ class NarrativeEditorialTests(unittest.TestCase):
             elif missing.issubset(supplied):
                 expected['partial']-=1
                 expected['complete']+=1
+        seven= json.loads((ROOT/'data/narrative-evidence-seven-r7-20261031.json').read_text())['entries']
+        snapshot= json.loads((ROOT/'data/narrative-seven-r7-baseline-20261031.json').read_text())['records']
+        self.assertEqual(set(seven),set(snapshot))
+        self.assertEqual(len(seven),7)
+        for wid,patch in seven.items():
+            missing=set(snapshot[wid]['missing'])
+            supplied={k for k in ('position','style','theme','structure') if patch.get(k)}
+            self.assertEqual(supplied,missing)
+            if len(missing)==4:expected['missing']-=1
+            else:expected['partial']-=1
+            expected['complete']+=1
+            for k in supplied:
+                self.assertIn(k,self.data['works'][wid]['fieldEvidence'])
+                self.assertTrue(self.data['works'][wid]['fieldEvidence'][k]['sourceFields'])
         self.assertEqual(sum(counts.values()),1339+new)
         self.assertEqual(counts,expected)
         baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
         for wid,entry in baseline.items():
             self.assertEqual(self.data['works'][wid],entry)
-        for wid,patch in {**patches,**round2,**round3,**six4,**round5,**r6,**latest}.items():
+        for wid,patch in {**patches,**round2,**round3,**six4,**round5,**r6,**latest,**seven}.items():
             record=self.data['works'][wid]
             self.assertEqual(record['status'],'editorialObservation' if all(record.get(k) for k in ('position','style','theme','structure')) else 'partial')
             for field in ('position','style','theme','structure'):
