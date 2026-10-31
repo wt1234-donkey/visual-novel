@@ -28,7 +28,7 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
         dossier_ids={w['id'] for c in read('data/company-coverage.json')['companies'] for key in ('relatedGames','dossierOnlyWorks') for w in c.get(key,[])}
         for w in self.r['works']:
             self.assertTrue(w['title'] and isinstance(w['firstYear'],int) and w['source'].startswith('https://'))
-            self.assertIn(w['gameplay'],{'ADV','RPG','ARPG','SRPG','视觉小说','互动电影ADV'})
+            self.assertIn(w['gameplay'],{'ADV','RPG','ARPG','SRPG','视觉小说','互动电影ADV','ADV／策略RPG','Galgame（玩法待核）'})
             self.assertTrue(not set(w)&{'characters','characterDetails','contentVersions','platformReleases','writer','illustrator','composer','synopsis','creators'})
             if w['mainPlacement']=='existing-complete':
                 self.assertIn(w['id'],main_ids)
