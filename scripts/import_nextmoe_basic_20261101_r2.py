@@ -28,6 +28,10 @@ BATCH = "nextmoe-galgame-bulk-20261101-r2"
 HELD_EDITION_IDS = {
     "8", "9", "517", "2400", "2003", "657", "4218", "480",
     "2566", "12459", "4396", "533", "664", "652", "15385", "539",
+    # Round-two editorial holds: remakes, novelizations, side-story packs,
+    # fan-discs and alternate editions; separate work status needs evidence.
+    "22085", "3509", "47817", "2734", "184", "5220",
+    "2419", "4678", "149", "10698", "7776", "13550",
 }
 CUTOFF = dt.date(2026, 11, 1)
 
