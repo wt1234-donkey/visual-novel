@@ -15,6 +15,7 @@ def main():
     parser.add_argument("--limit", type=int, default=100)
     parser.add_argument("--max-new", type=int, default=500)
     parser.add_argument("--delay", type=float, default=2.2)
+    parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     assert 1 <= args.pages <= 100
     assert 1 <= args.limit <= 100
