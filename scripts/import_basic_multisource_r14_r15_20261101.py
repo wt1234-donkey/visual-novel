@@ -196,7 +196,7 @@ def import_round_15(args):
             work = {
                 "id": wid, "indexId": iid, "title": names[0],
                 "aliases": names[1:18], "firstYear": year,
-                "gameplay": "视觉小说（具体玩法待核）", "group": "创作品牌待核",
+                "gameplay": "视觉小说", "group": "创作品牌待核",
                 "source": "https://vndb.org/" + vid, "sourceRefs": [ref],
                 "mainPlacement": "promoted-basic", "linkedRecordId": None,
                 "creditScope": "VNDB 官方 Kana API 原作元数据；未断言开发、发行、创作职责。",
