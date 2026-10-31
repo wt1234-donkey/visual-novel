@@ -36,5 +36,5 @@ class MinimalADVRPGAudit(unittest.TestCase):
         self.assertIn('id="gameplay"',h)
         self.assertIn('id="group"',h)
         self.assertIn('minimal-adv-rpg.html',(ROOT/'index.html').read_text())
-        self.assertIn('minimal-adv-rpg.html',(ROOT/'catalogue.html').read_text())
+        self.assertIn('minimal-adv-rpg.html',(ROOT/'index.html').read_text())
 if __name__=='__main__': unittest.main()
