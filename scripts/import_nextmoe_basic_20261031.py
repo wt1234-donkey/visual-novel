@@ -23,6 +23,12 @@ REGISTRY = ROOT / "data/main-adv-rpg-works-20261031.json"
 AUDIT = ROOT / "data/nextmoe-bulk-review-20261031.json"
 API = "https://api.nextmoe.dev/v2/catalog/works"
 BATCH = "nextmoe-galgame-bulk-20261031"
+# These source IDs are known edition/compilation/identity collisions in the
+# inspected high-ranked batch. Hold for the work-versus-content-version audit.
+HELD_EDITION_IDS = {
+    "8", "9", "517", "2400", "2003", "657", "4218", "480",
+    "2566", "12459", "4396", "533", "664", "652", "15385", "539",
+}
 CUTOFF = dt.date(2026, 10, 31)
 
 def load(name):
@@ -176,6 +182,11 @@ def run(args):
                 counts["missing-or-repeat-source-id"] += 1
                 continue
             seen_upstream.add(upstream_id)
+            if upstream_id in HELD_EDITION_IDS:
+                counts["edition-or-compilation-held"] += 1
+                held.append({"sourceId": upstream_id, "title": item.get("display_name"),
+                             "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"})
+                continue
             year = date_year(item)
             if year is None:
                 counts["missing-unreleased-or-future-year"] += 1
