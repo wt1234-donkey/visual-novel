@@ -10,14 +10,14 @@
     "limitNew": 500
   },
   "summary": {
-    "scanned": 1325,
+    "scanned": 1328,
     "newDistinctWorks": 500,
     "before": 810,
     "after": 1310,
-    "galgame": 1325,
+    "galgame": 1328,
     "existing-work-matched": 276,
     "existing-external-id": 500,
-    "edition-or-compilation-held": 28,
+    "edition-or-compilation-held": 31,
     "year-or-alias-conflict": 6,
     "missing-unreleased-or-future-year": 5,
     "missing-title": 2,
@@ -432,16 +432,6 @@
       "source": "https://api.nextmoe.dev/v2/catalog/works/228259",
       "sourceRefs": [
         "vndb:v57568"
-      ]
-    },
-    {
-      "id": "nextmoe-242",
-      "title": "Ever17",
-      "aliases": [],
-      "firstYear": 2011,
-      "source": "https://api.nextmoe.dev/v2/catalog/works/242",
-      "sourceRefs": [
-        "vndb:v19373"
       ]
     },
     {
@@ -1706,18 +1696,6 @@
       "source": "https://api.nextmoe.dev/v2/catalog/works/29637",
       "sourceRefs": [
         "vndb:v30438"
-      ]
-    },
-    {
-      "id": "nextmoe-30198",
-      "title": "ひぐらしのなく頃に: Console Arcs",
-      "aliases": [
-        "Higurashi When They Cry - Console Arcs"
-      ],
-      "firstYear": 2007,
-      "source": "https://api.nextmoe.dev/v2/catalog/works/30198",
-      "sourceRefs": [
-        "vndb:v31157"
       ]
     },
     {
@@ -3180,20 +3158,6 @@
       "source": "https://api.nextmoe.dev/v2/catalog/works/7937",
       "sourceRefs": [
         "vndb:v18795"
-      ]
-    },
-    {
-      "id": "nextmoe-9492",
-      "title": "ひぐらしのなく頃に礼",
-      "aliases": [
-        "Higurashi When They Cry - Rei",
-        "寒蝉鸣泣之时 礼",
-        "寒蟬鳴泣之時 禮"
-      ],
-      "firstYear": 2006,
-      "source": "https://api.nextmoe.dev/v2/catalog/works/9492",
-      "sourceRefs": [
-        "vndb:v69"
       ]
     },
     {
@@ -6090,6 +6054,43 @@
       "sourceRefs": [
         "vndb:v44245"
       ]
+    },
+    {
+      "id": "nextmoe-50369",
+      "title": "泡沫のユークロニア -trail-",
+      "aliases": [
+        "Illusion of Itehari: trail",
+        "璃夢泡影之世外浮城 -trail-"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/50369",
+      "sourceRefs": [
+        "vndb:v53877"
+      ]
+    },
+    {
+      "id": "nextmoe-227217",
+      "title": "Fate/Zero",
+      "aliases": [],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/227217",
+      "sourceRefs": [
+        "vndb:v15808"
+      ]
+    },
+    {
+      "id": "nextmoe-31",
+      "title": "恋×シンアイ彼女",
+      "aliases": [
+        "Koi x Shin Ai Kanojo",
+        "想要传达给你的爱恋",
+        "想要傳達給你的愛戀"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31",
+      "sourceRefs": [
+        "vndb:v17516"
+      ]
     }
   ],
   "heldForIdentityReview": [
@@ -6255,6 +6256,11 @@
       "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
     },
     {
+      "sourceId": "242",
+      "title": "Ever17",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
       "sourceId": "149",
       "title": "Monika After Story",
       "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
@@ -6270,8 +6276,18 @@
       "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
     },
     {
+      "sourceId": "30198",
+      "title": "ひぐらしのなく頃に: Console Arcs",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
       "sourceId": "184",
       "title": "フレラバ ～Friend to Lover～ HD Renewal Edition",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "9492",
+      "title": "ひぐらしのなく頃に礼",
       "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
     },
     {
