@@ -8,6 +8,8 @@ on:
       - scripts/backfill_project_title_years_20261031.py
       - scripts/audit_narrative_pending_20261030.py
       - tests/test_narrative_editorial.py
+      - tests/filter.test.mjs
+      - tests/test_broderbund_completion_20261029.py
       - .github/workflows/project-title-year-backfill-20261031.yml
 permissions:
   contents: write
