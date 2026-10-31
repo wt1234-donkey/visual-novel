@@ -15,7 +15,7 @@ changed=0
 for wid, patch in patches.items():
     assert wid not in baseline and wid in catalogue
     record=dict(data['works'].get(wid,{ }))
-    assert record.get('status')=='partial',f'{wid}: no longer pending; inspect before edit'
+    assert record.get('status') in (None,'partial'),f'{wid}: already fully reviewed; inspect before edit'
     evidence=dict(record.get('fieldEvidence') or {})
     original_missing=set(frozen[wid]['missing'])
     for field in fields:
