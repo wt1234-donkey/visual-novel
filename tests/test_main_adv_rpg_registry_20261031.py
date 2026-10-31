@@ -23,6 +23,8 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
         self.assertEqual(Counter(x['mainPlacement'] for x in w[:207]),{'existing-complete':57,'promoted-dossier':103,'promoted-basic':47})
     def test_existing_identifiers_and_minimal_metadata(self):
         main_ids={w['id'] for w in read('data/games.json')['works']}
+        # Main discovery also loads independently verified non-RPG creator supplement dossiers.
+        main_ids.update(w['id'] for w in read('data/non-rpg-creator-supplement-20261030.json')['works'])
         dossier_ids={w['id'] for c in read('data/company-coverage.json')['companies'] for key in ('relatedGames','dossierOnlyWorks') for w in c.get(key,[])}
         for w in self.r['works']:
             self.assertTrue(w['title'] and isinstance(w['firstYear'],int) and w['source'].startswith('https://'))
