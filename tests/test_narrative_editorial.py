@@ -97,12 +97,26 @@ class NarrativeEditorialTests(unittest.TestCase):
                 expected['partial']-=1
                 expected['complete']+=1
         self.assertEqual(completed_in_r9,7)
+        legacy15=json.loads((ROOT/'data/narrative-legacy15-evidence-r10-20261031.json').read_text())['entries']
+        self.assertEqual(len(legacy15),6)
+        final_five=0
+        for wid,patch in legacy15.items():
+            supplied={f for f in ('position','style','theme','structure') if patch.get(f)}
+            self.assertTrue(supplied)
+            for f in supplied:
+                self.assertTrue(self.data['works'][wid]['fieldEvidence'][f]['sourceFields'])
+                self.assertTrue(self.data['works'][wid]['fieldEvidence'][f]['sources'])
+            if all(self.data['works'][wid].get(f) for f in ('position','style','theme','structure')):
+                final_five+=1
+        self.assertEqual(final_five,5)
+        expected['partial']-=5
+        expected['complete']+=5
         self.assertEqual(sum(counts.values()),1339+new)
         self.assertEqual(counts,expected)
         baseline=json.loads((ROOT/'data/narrative-editorial-baseline-20261029.json').read_text())['works']
         for wid,entry in baseline.items():
             self.assertEqual(self.data['works'][wid],entry)
-        for wid,patch in {**patches,**round2,**round3,**six4,**round5,**r6,**latest,**seven,**six8,**final22}.items():
+        for wid,patch in {**patches,**round2,**round3,**six4,**round5,**r6,**latest,**seven,**six8,**final22,**legacy15}.items():
             record=self.data['works'][wid]
             self.assertEqual(record['status'],'editorialObservation' if all(record.get(k) for k in ('position','style','theme','structure')) else 'partial')
             for field in ('position','style','theme','structure'):
