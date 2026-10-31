@@ -1,0 +1,85 @@
+name: Import NextMoe basic game identities — rounds 4 and 5
+on:
+  push:
+    branches: [catalog/nextmoe-bulk-r4-r5-20261101]
+    paths:
+      - scripts/import_nextmoe_basic_20261101_r4_r5.py
+      - scripts/import_nextmoe_basic_20261101_r2.py
+      - .github/workflows/nextmoe-bulk-r4-r5-20261101.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: nextmoe-bulk-r4-r5-20261101
+  cancel-in-progress: false
+jobs:
+  fetch-dedupe-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Import two successive source batches, checking existing work names aliases and year
+        run: python3 scripts/import_nextmoe_basic_20261101_r4_r5.py --pages 65 --limit 100 --max-new 500 --delay 2.2
+      - name: Refresh review queue for full main catalogue promotion
+        run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Check unique IDs, external references, batch accounting and source audit
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          load=lambda p:json.loads(Path(p).read_text(encoding='utf-8'))
+          r=load('data/main-adv-rpg-works-20261031.json')
+          assert len(r['works'])==r['summary']['accepted']
+          assert len({w['id'] for w in r['works']})==len(r['works'])
+          assert len({w['indexId'] for w in r['works']})==len(r['works'])
+          assert r['summary']['promotedBasic']+r['summary']['promotedDossier']==r['summary']['addedToMainIdentityLayer']
+          source_refs=[x for w in r['works'] for x in w.get('sourceRefs',[]) if str(x).startswith('vndb:v')]
+          assert len(source_refs)==len(set(source_refs)), 'duplicate VNDB external identities'
+          expected=1810
+          for n in (4,5):
+              suffix=f'20261101-r{n}'
+              audit=load('data/nextmoe-bulk-review-'+suffix+'.json')
+              batch=next(b for b in r['batches'] if b['id']==f'nextmoe-galgame-bulk-{suffix}')
+              assert batch['review']==f'data/nextmoe-bulk-review-{suffix}.json'
+              records=[w for w in r['works'] if w.get('batch')==batch['id']]
+              inc=audit['summary']['newDistinctWorks']
+              assert inc==len(records)==len(audit['records'])==batch['summary']['promoted-basic']>0
+              assert all(w['indexId'].startswith(f'nextmoe-{suffix}-') for w in records)
+              assert audit['summary']['before']==expected
+              expected+=inc
+              assert audit['summary']['after']==expected
+              print('round',n,'new',inc,'scanned',audit['summary']['scanned'])
+          assert expected==len(r['works'])
+          stage=load('data/basic-to-full-promotion-review-20261101.json')
+          assert stage['summary']['registryAccepted']==expected
+          assert all(w['readyForStrictGamesJson'] is False for w in stage['records'])
+          print('baseline',1810,'after',expected)
+          PY
+      - name: Run existing strict database and website regression suite
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          node --check discovery.mjs
+      - name: Commit independently verified sources and identity registry
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/nextmoe-bulk-review-20261101-r4.json data/nextmoe-bulk-review-20261101-r5.json data/basic-to-full-promotion-review-20261101.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Append deduplicated NextMoe works in rounds 4 and 5"
+            git fetch origin catalog/nextmoe-bulk-r4-r5-20261101
+            git rebase origin/catalog/nextmoe-bulk-r4-r5-20261101
+            git push origin HEAD:catalog/nextmoe-bulk-r4-r5-20261101
+          fi
