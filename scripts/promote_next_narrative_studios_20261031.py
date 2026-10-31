@@ -13,6 +13,11 @@ def norm(v): return ''.join(c for c in unicodedata.normalize('NFKC',str(v or '')
 def names(w): return [w.get('title'),w.get('originalTitle'),w.get('chineseTitle'),*(w.get('titleAliases') or []),*(w.get('aliases') or [])]
 registry_path=ROOT/'data/main-adv-rpg-works-20261031.json'
 registry=load('data/main-adv-rpg-works-20261031.json')
+if registry.get('nextBatch',{}).get('source')=='data/adv-rpg-next-studio-candidates-20261031.json':
+    previous=ROOT/'data/adv-rpg-next-studio-review-20261031.json'
+    assert previous.is_file() and len(load('data/adv-rpg-next-studio-review-20261031.json')['records'])==59
+    print('Next batch already present; preserving existing canonical references and review classifications.')
+    raise SystemExit(0)
 seed=load('data/adv-rpg-next-studio-candidates-20261031.json')
 main=load('data/games.json')
 coverage=load('data/company-coverage.json')
@@ -116,4 +121,27 @@ registry_path.write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n',e
 review={'schema':1,'reviewedAt':'2026-10-31','summary':dict(status),'records':decisions,
         'policy':'Role claims require specific credits; no full narrative or edition creation. Source URLs for some catalogue-level entries do not independently prove a particular release platform.'}
 (ROOT/'data/adv-rpg-next-studio-review-20261031.json').write_text(json.dumps(review,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+report=[
+'# 下一批叙事驱动 ADV／RPG 作品：11组厂商59部候选审核（2026-10-31）',
+'',
+'这是统一主库的基础作品身份层，独立于强制填写角色、版本和发行档案的\u0060data/games.json\u0060。所有记录保存首发年、玩法与来源。厂商组只表示本次清单检索关联；不自动判断实际制作、发行职责。',
+'',
+'## 实际入库与去重统计',
+'',
+'| 处理结果 | 作品数 |',
+'|---|---:|']
+for k,label in [('promoted-basic','全新基础作品身份'),('linked-existing-registry','上批主库身份已关联'),('linked-existing-full-or-dossier','已有完整主库或厂商专题身份关联'),('identity-review','版本或身份待核')]:
+    report.append('| '+label+' | '+str(status[k])+' |')
+report+=['| **合计** | **59** |','','## 59部逐作品审查清单','','| 创作/历史清单组 | 作品 | 首发年 | 玩法 | 状态 | 证据来源 |','|---|---|---:|---|---|---|']
+labels={'promoted-basic':'新收录','linked-existing-registry':'去重：主库已存在','linked-existing-full-or-dossier':'关联已有主库/专题','identity-review':'同名或年份冲突待核'}
+for r in decisions:
+    report.append('| '+r['group']+' | '+r['title'].replace('|','/')+' | '+str(r['year'])+' | '+r['gameplay']+' | '+labels[r['status']]+' | [厂商或作品资料]('+r['source']+') |')
+report+=['','## 身份与版次风险记录','','- 互动电影游戏以最早章节发行年份收录，后续合集、跨平台移植不自动新建作品。',
+'- inkle 的 Sorcery! 四部游戏分别含独立剧情内容，保存首次独立篇章发布年份；PC平台的合集和后发版另行核对。',
+'- Freebird To the Moon 系列采用系列单独完整作品与叙事独立短篇的区分，2024 Beach Episode 属于单独发行的原创附篇，不把它误记作既有作品同内容移植。',
+'- Grasshopper《The Silver Case》《Flower, Sun, and Rain》《The 25th Ward》以1999、2001、2005年原始版为准；2018合集和重制版不重新作为独立作品。',
+'- Telltale《The Expanse》列入 Deck Nine 的制作关联，厂商页可能还有Telltale发行关联，需逐游戏核对正式署名。',
+'- DON’T NOD 的《Banishers》和《Vampyr》属于故事和角色抉择占重要地位的RPG，但有动作战斗；本次保留其玩法性质而不将其误写成纯选项式ADV。',
+'- 所有缺少具体发行平台、版次、作者署名或角色资料的候选，仍仅为作品基础记录，不填造完整档案。','','## 验证入口','','`python3 scripts/promote_next_narrative_studios_20261031.py` 重新构建统一身份层与59条审计；`python3 -m unittest discover -s tests -p "test_next_narrative_studio_main_20261031.py"` 检查去重完整性。']
+(ROOT/'data/adv-rpg-next-studio-review-20261031.md').write_text('\n'.join(report)+'\n',encoding='utf-8')
 print('Screened next batch:',json.dumps(dict(status),ensure_ascii=False),'total primary works',len(registry['works']))
