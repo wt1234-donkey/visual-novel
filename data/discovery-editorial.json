@@ -13815,12 +13815,13 @@
     },
     "g749": {
       "position": "早期冒险档案",
-      "status": "partial",
-      "basis": "《热牛奶》：仅有多个场景与编号菜单的操作说明，缺少具体人物、冲突与事件内容；不能用菜单填充叙事风格、题材或结构。 本条基于现有逐作档案进行编辑归纳；没有把继承来源声称为本轮外部重验。",
+      "status": "editorialObservation",
+      "basis": "历史资料补证，优先明确叙事与非叙事形式的区别，未证明的作品路线和结局不推测。 《热牛奶》：仅有多个场景与编号菜单的操作说明，缺少具体人物、冲突与事件内容；不能用菜单填充叙事风格、题材或结构。 本条基于现有逐作档案进行编辑归纳；没有把继承来源声称为本轮外部重验。",
       "sources": [
+        "https://w.atwiki.jp/retropcgame/?page=%09%E3%81%BB%E3%81%A3%E3%81%A8+MILK%09",
         "https://fandc.co.jp/catalog/pc/334"
       ],
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-10-31",
       "evidenceStatus": "inheritedCatalogue",
       "fieldEvidence": {
         "position": {
@@ -13835,25 +13836,44 @@
           ],
           "evidenceText": "synopsis：以多个场景组成的早期冒险，通过编号菜单选择行动。；interactionModes：['菜单指令']；interactionNote：已有机种键位、指令选择说明或菜单调查类型明确；名称输入不视作词句冒险操作。",
           "verification": "inheritedCatalogueEditorial"
+        },
+        "style": {
+          "basis": "原作资料限定补录，资料类别：version-identified-pc88-walkthrough。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://w.atwiki.jp/retropcgame/?page=%09%E3%81%BB%E3%81%A3%E3%81%A8+MILK%09",
+            "https://fandc.co.jp/catalog/pc/334"
+          ],
+          "evidenceText": "注明PC-88原版的实机攻略记载编号菜单、森村/中森/仓桥等依次出现的场景、物品和信息关联及夸张人物反应。风格取攻略作者对失衡人物行为的评论，题材仅概括校园日常及人际边界，不复制成人露骨细节。F&C证实1987-06的ADV产品身份。",
+          "sourceFields": [
+            "PC-88 original gameplay walkthrough with scene and character sequence",
+            "publisher edition metadata"
+          ]
+        },
+        "theme": {
+          "basis": "原作资料限定补录，资料类别：version-identified-pc88-walkthrough。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://w.atwiki.jp/retropcgame/?page=%09%E3%81%BB%E3%81%A3%E3%81%A8+MILK%09",
+            "https://fandc.co.jp/catalog/pc/334"
+          ],
+          "evidenceText": "注明PC-88原版的实机攻略记载编号菜单、森村/中森/仓桥等依次出现的场景、物品和信息关联及夸张人物反应。风格取攻略作者对失衡人物行为的评论，题材仅概括校园日常及人际边界，不复制成人露骨细节。F&C证实1987-06的ADV产品身份。",
+          "sourceFields": [
+            "PC-88 original gameplay walkthrough with scene and character sequence",
+            "publisher edition metadata"
+          ]
+        },
+        "structure": {
+          "basis": "原作资料限定补录，资料类别：version-identified-pc88-walkthrough。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://w.atwiki.jp/retropcgame/?page=%09%E3%81%BB%E3%81%A3%E3%81%A8+MILK%09",
+            "https://fandc.co.jp/catalog/pc/334"
+          ],
+          "evidenceText": "注明PC-88原版的实机攻略记载编号菜单、森村/中森/仓桥等依次出现的场景、物品和信息关联及夸张人物反应。风格取攻略作者对失衡人物行为的评论，题材仅概括校园日常及人际边界，不复制成人露骨细节。F&C证实1987-06的ADV产品身份。",
+          "sourceFields": [
+            "PC-88 original gameplay walkthrough with scene and character sequence",
+            "publisher edition metadata"
+          ]
         }
       },
-      "openQuestions": [
-        {
-          "field": "style",
-          "question": "《热牛奶》尚缺足以确定剧情风格的具体情节／流程材料。仅有多个场景与编号菜单的操作说明，缺少具体人物、冲突与事件内容；不能用菜单填充叙事风格、题材或结构。",
-          "requiredEvidence": "原版手册、剧情说明、可信实玩流程或作者资料，需对应此作品而非仅同名题材或后发版。"
-        },
-        {
-          "field": "theme",
-          "question": "《热牛奶》尚缺足以确定故事题材的具体情节／流程材料。仅有多个场景与编号菜单的操作说明，缺少具体人物、冲突与事件内容；不能用菜单填充叙事风格、题材或结构。",
-          "requiredEvidence": "原版手册、剧情说明、可信实玩流程或作者资料，需对应此作品而非仅同名题材或后发版。"
-        },
-        {
-          "field": "structure",
-          "question": "《热牛奶》尚缺足以确定叙事结构的具体情节／流程材料。仅有多个场景与编号菜单的操作说明，缺少具体人物、冲突与事件内容；不能用菜单填充叙事风格、题材或结构。",
-          "requiredEvidence": "原版手册、剧情说明、可信实玩流程或作者资料，需对应此作品而非仅同名题材或后发版。"
-        }
-      ],
       "externalResearch": [
         {
           "url": "https://fandc.co.jp/catalog/pc/334",
@@ -13861,7 +13881,20 @@
           "outcome": "官方目录只有ADV、发售与平台等资料，没有具体人物冲突或事件简介，三项缺项保留。",
           "reviewedAt": "2026-10-30"
         }
-      ]
+      ],
+      "style": [
+        "荒诞闹剧",
+        "戏谑"
+      ],
+      "theme": [
+        "校园与日常遭遇",
+        "多人物互动",
+        "人际边界冲突"
+      ],
+      "structure": [
+        "以编号命令进行多场景冒险，原版PC-88实机攻略按森村优纪子、中森秋子、仓桥圆等人物的先后事件组织；道具和先前获得的信息影响后续人物场景"
+      ],
+      "cover": "ほっとMILK"
     },
     "g750": {
       "position": "剧情阅读主导",
@@ -20944,8 +20977,10 @@
     },
     "g759": {
       "position": "改编叙事冒险",
-      "basis": "当前摘要只说明同名漫画改编、图像对话与场景选择，未给出该游戏具体情节语调与故事组织。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
+      "basis": "历史资料补证，优先明确叙事与非叙事形式的区别，未证明的作品路线和结局不推测。 当前摘要只说明同名漫画改编、图像对话与场景选择，未给出该游戏具体情节语调与故事组织。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
       "sources": [
+        "https://w.atwiki.jp/retropcgame/pages/583.html",
+        "https://www.gamepres.org/pc88/library/1990/1990_5.htm",
         "https://fandc.co.jp/catalog/pc/5"
       ],
       "fieldEvidence": {
@@ -20972,23 +21007,49 @@
           ],
           "evidenceText": "漫画改编冒险\n根据同名漫画改编，结合图像、对话与场景选择。",
           "evidenceStatus": "inheritedRecord"
+        },
+        "style": {
+          "basis": "原作资料限定补录，资料类别：original-pc98-walkthrough-and-1990-contemporary-description。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://w.atwiki.jp/retropcgame/pages/583.html",
+            "https://www.gamepres.org/pc88/library/1990/1990_5.htm",
+            "https://fandc.co.jp/catalog/pc/5"
+          ],
+          "evidenceText": "PC-98原版逐场景攻略记录学校、运动场、街区及兽人界调查顺序；1990年PC-88同代发行说明明确天邪鬼长期追查超神、三界传说以及作品暴力黑暗基调。只概述调查主线，不把漫画或OVA具体篇章当成游戏内容。",
+          "sourceFields": [
+            "PC98 original command-by-command original game walkthrough",
+            "contemporary game premise",
+            "publisher confirmed ADV genre"
+          ]
+        },
+        "structure": {
+          "basis": "原作资料限定补录，资料类别：original-pc98-walkthrough-and-1990-contemporary-description。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://w.atwiki.jp/retropcgame/pages/583.html",
+            "https://www.gamepres.org/pc88/library/1990/1990_5.htm",
+            "https://fandc.co.jp/catalog/pc/5"
+          ],
+          "evidenceText": "PC-98原版逐场景攻略记录学校、运动场、街区及兽人界调查顺序；1990年PC-88同代发行说明明确天邪鬼长期追查超神、三界传说以及作品暴力黑暗基调。只概述调查主线，不把漫画或OVA具体篇章当成游戏内容。",
+          "sourceFields": [
+            "PC98 original command-by-command original game walkthrough",
+            "contemporary game premise",
+            "publisher confirmed ADV genre"
+          ]
         }
       },
       "theme": [
         "漫画改编"
       ],
-      "status": "partial",
-      "openQuestions": [
-        {
-          "field": "style",
-          "question": "现有《うろつき童子》档案没有足以完成剧情风格的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        },
-        {
-          "field": "structure",
-          "question": "现有《うろつき童子》档案没有足以完成叙事结构的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        }
+      "status": "editorialObservation",
+      "reviewedAt": "2026-10-31",
+      "style": [
+        "黑暗奇幻",
+        "超自然悬疑"
       ],
-      "reviewedAt": "2026-10-30"
+      "structure": [
+        "主人公天邪鬼从校园、体育场与周边街区调查超神传说与关键人物，随后通过收集证言和场景物件进入兽人界，围绕超神与三界传说继续追索"
+      ],
+      "cover": "うろつき童子"
     },
     "g813": {
       "position": "叙事与战斗调查并重",
@@ -24669,8 +24730,10 @@
     },
     "g566": {
       "position": "短篇叙事",
-      "basis": "现有记录只能确认《妇警VX》续篇在合集中的完成版，具体剧情与语调仍缺资料。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
+      "basis": "历史资料补证，优先明确叙事与非叙事形式的区别，未证明的作品路线和结局不推测。 现有记录只能确认《妇警VX》续篇在合集中的完成版，具体剧情与语调仍缺资料。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
       "sources": [
+        "https://hannylaboratory.blogspot.com/2021/10/blog-post_21.html",
+        "https://rynona.hiho.jp/games1985/2019/12/31/%E3%80%90pc98%E3%80%91%E3%82%A2%E3%83%AA%E3%82%B9%E3%81%AE%E9%A4%A8%E2%85%B1%E3%80%90%E3%82%A2%E3%83%AA%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%80%9118%E7%A6%81/",
         "https://alicecottage1989.blog.jp/archives/19289169.html"
       ],
       "fieldEvidence": {
@@ -24709,6 +24772,18 @@
           ],
           "evidenceText": "《妇警VX》的独立续篇，完整游戏收录于《ALICE之馆II》。现有资料能够确认续作关系和完成版归属，具体剧情、角色姓名及操作方式未完整核实。\n叙事形式／玩法：续篇短篇游戏（操作未完整核实）。《兰斯III》附盘只有未完成介绍／预告，不是已完成的可玩版本，不计新增作品或版本。完成版年份按合集1992年记录；个别独立条目误记1993，与合集目录不一致，保留差异说明。",
           "evidenceStatus": "inheritedRecord"
+        },
+        "style": {
+          "basis": "原作资料限定补录，资料类别：original-developer-retrospective。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://hannylaboratory.blogspot.com/2021/10/blog-post_21.html",
+            "https://rynona.hiho.jp/games1985/2019/12/31/%E3%80%90pc98%E3%80%91%E3%82%A2%E3%83%AA%E3%82%B9%E3%81%AE%E9%A4%A8%E2%85%B1%E3%80%90%E3%82%A2%E3%83%AA%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%80%9118%E7%A6%81/"
+          ],
+          "evidenceText": "《婦警さんDA》原作者2021年亲自说明本作是1992年《ALICEの館2》收录的迷你ADV，警察人物配置明显模仿当时漫画《逮捕しちゃうぞ》；‘漫画式戏仿’为对此形式的编辑归纳，不推定原版案件与幽默程度。",
+          "sourceFields": [
+            "original creator identifies contemporary manga as character-design reference",
+            "mini-adventure production account"
+          ]
         }
       },
       "theme": [
@@ -24718,14 +24793,12 @@
       "structure": [
         "独立短篇"
       ],
-      "status": "partial",
-      "openQuestions": [
-        {
-          "field": "style",
-          "question": "现有《妇警DA》档案没有足以完成剧情风格的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        }
+      "status": "editorialObservation",
+      "reviewedAt": "2026-10-31",
+      "style": [
+        "漫画式戏仿"
       ],
-      "reviewedAt": "2026-10-30"
+      "cover": "婦警さんDA"
     },
     "g567": {
       "position": "短篇叙事与救援并重",
@@ -28313,9 +28386,11 @@
     },
     "g705": {
       "position": "改编互动杂集",
-      "basis": "可确认围绕康介与静香的漫画互动杂集及三种游戏内容，但缺少可核实的具体剧情语调。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
+      "basis": "历史资料补证，优先明确叙事与非叙事形式的区别，未证明的作品路线和结局不推测。 可确认围绕康介与静香的漫画互动杂集及三种游戏内容，但缺少可核实的具体剧情语调。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
       "sources": [
-        "https://fandc.co.jp/catalog/pc/437"
+        "https://pc98library.tistory.com/177",
+        "https://fandc.co.jp/catalog/pc/437",
+        "https://w.atwiki.jp/retropcgame/pages/545.html"
       ],
       "fieldEvidence": {
         "position": {
@@ -28353,6 +28428,19 @@
           ],
           "evidenceText": "游人漫画改编的互动杂集，以康介与静香为中心收录不同玩法。\n三种游戏内容随同一产品发行，不拆成三部。",
           "evidenceStatus": "inheritedRecord"
+        },
+        "style": {
+          "basis": "原作资料限定补录，资料类别：historical-playthrough-plus-official-multi-part-product。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://pc98library.tistory.com/177",
+            "https://fandc.co.jp/catalog/pc/437",
+            "https://w.atwiki.jp/retropcgame/pages/545.html"
+          ],
+          "evidenceText": "2007年PC-98原版评论明确三种故事游戏并置：第一模块是学校连续事件的调查，第二模块是学园运动会相关多人故事，第三模块是围绕另一个人物的独立互动。F&C原厂确认同包三游戏。故‘学园悬疑/漫画式人物喜剧’只描述已证实模块的不同语调，不将漫画原作全部剧情回填。",
+          "sourceFields": [
+            "PC-98 three-module player review",
+            "publisher confirms three distinct games"
+          ]
         }
       },
       "theme": [
@@ -28362,14 +28450,13 @@
       "structure": [
         "同产品多模块"
       ],
-      "status": "partial",
-      "openQuestions": [
-        {
-          "field": "style",
-          "question": "现有《ANGEL》档案没有足以完成剧情风格的具体剧情依据；需要该作原版说明书、具体剧情介绍或可核实流程资料，不能由标题或ADV标签补造。"
-        }
+      "status": "editorialObservation",
+      "reviewedAt": "2026-10-31",
+      "style": [
+        "学园悬疑",
+        "漫画式人物喜剧"
       ],
-      "reviewedAt": "2026-10-30"
+      "cover": "ANGEL"
     },
     "g706": {
       "position": "奇幻冒险叙事",
@@ -31450,12 +31537,14 @@
     },
     "g769": {
       "position": "叙事主导",
-      "basis": "原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：original-full-subtitle-and-archival-catalogue。档案明确连续图文演出的单线故事，但没有可核具体题材与语调，不能从标题推断。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
+      "basis": "历史资料补证，优先明确叙事与非叙事形式的区别，未证明的作品路线和结局不推测。 原22部缺口专项。只处理新增可信资料支持的空缺，保留旧证据与版次边界；来源类型：original-full-subtitle-and-archival-catalogue。档案明确连续图文演出的单线故事，但没有可核具体题材与语调，不能从标题推断。本条依据既有档案作作品层编辑归纳，未宣称本轮已重新外验全部链接；结构标签描述事件、目标、视角或篇章组织，不额外断言未有证据的分支、结局数量。",
       "sources": [
+        "https://www.bilibili.com/video/BV12d4y1P7Z7/",
+        "https://kiisu.egono.com/type.php?data=D&keyword=100",
+        "https://fandc.co.jp/catalog/pc/56",
         "https://www.gamepres.org/catalog-index/",
         "https://www.fandc.co.jp/catalog/pc/56",
-        "https://gsdb.f5.si/index.php?cat=pc98&head=1994",
-        "https://fandc.co.jp/catalog/pc/56"
+        "https://gsdb.f5.si/index.php?cat=pc98&head=1994"
       ],
       "fieldEvidence": {
         "position": {
@@ -31494,21 +31583,35 @@
             "original title-specific story or scene arrangement",
             "source genre and edition limits"
           ]
+        },
+        "style": {
+          "basis": "原作资料限定补录，资料类别：recorded-original-gameplay-with-contemporaneous-review。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://www.bilibili.com/video/BV12d4y1P7Z7/",
+            "https://kiisu.egono.com/type.php?data=D&keyword=100",
+            "https://fandc.co.jp/catalog/pc/56"
+          ],
+          "evidenceText": "可见PC-98原版录屏及附注说明女主进入洋馆、与四名女仆发生关系，以大量文字、少量选择推进；较早的独立实玩评论将其归为馆内单线故事。‘对白主导的静态人物剧’是基于游戏呈现方式归纳的叙事风格，不将录屏制作者解释当成官方事实。",
+          "sourceFields": [
+            "original PC98 game recording and commentary",
+            "historical hands-on single-path review"
+          ]
         }
       },
       "structure": [
         "单线叙事"
       ],
-      "status": "partial",
-      "openQuestions": [
-        "该作仍缺style的具体原作资料：需要说明书、原版叙事/流程或可复核的同代介绍。"
-      ],
+      "status": "editorialObservation",
       "reviewedAt": "2026-10-31",
       "theme": [
         "少女群像",
         "爱情关系"
       ],
-      "cover": "アラベスク"
+      "cover": "アラベスク",
+      "style": [
+        "宅邸群像",
+        "对白主导的静态人物剧"
+      ]
     },
     "g831": {
       "position": "叙事与角色养成并重",
@@ -38403,8 +38506,9 @@
     },
     "g772": {
       "status": "partial",
-      "basis": "F&C原厂目录确认将《バーチャコール2》重编为剧情冒险；恋爱题材仅继承既有细分类。目录未写明2.2的具体情节语调、人物线或事件安排，改编关系本身不充当叙事结构证据。 本轮依据既有作品档案逐作品归纳，并对externalChecks明确列出的有限范围打开原厂或开发者原文核对；其余剧情仍为继承档案。",
+      "basis": "历史资料补证，优先明确叙事与非叙事形式的区别，未证明的作品路线和结局不推测。 F&C原厂目录确认将《バーチャコール2》重编为剧情冒险；恋爱题材仅继承既有细分类。目录未写明2.2的具体情节语调、人物线或事件安排，改编关系本身不充当叙事结构证据。 本轮依据既有作品档案逐作品归纳，并对externalChecks明确列出的有限范围打开原厂或开发者原文核对；其余剧情仍为继承档案。",
       "sources": [
+        "https://ja.wikid.org/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%82%B3%E3%83%BC%E3%83%AB",
         "https://fandc.co.jp/catalog/pc/660"
       ],
       "fieldEvidence": {
@@ -38428,25 +38532,28 @@
             "subcategory"
           ],
           "evidenceText": "继承subcategory：恋爱剧情冒险"
+        },
+        "structure": {
+          "basis": "原作资料限定补录，资料类别：secondary-side-story-history-with-publisher-scope。仅为原先缺项添加作品原版或原版限定证据。编辑性风格词与原文观察区分；保留未得到充分证明的故事细节或版本差异。",
+          "sources": [
+            "https://ja.wikid.org/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%82%B3%E3%83%BC%E3%83%AB",
+            "https://fandc.co.jp/catalog/pc/660"
+          ],
+          "evidenceText": "系列史明确《バーチャコール2.2》收录在1996《FairyTale Remix vol.3》，但不是《2》加固移植版，而是沿用该世界的原创男女主指令式单篇冒险；F&C官方单品页证实1996.11.29收录关系及剧情ADV属性。剧情风格仍无独立语调资料，故保留style未填。",
+          "sourceFields": [
+            "side-story identity and command ADV structure in secondary serial history",
+            "publisher original product wording"
+          ]
         }
       },
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-10-31",
       "evidenceStatus": "inheritedCatalogueWithScopedPrimaryCheck",
       "position": "系列改编叙事",
       "theme": [
         "恋爱"
       ],
       "openQuestions": [
-        {
-          "field": "style",
-          "question": "剧情风格缺少作品级充分说明；F&C原厂目录确认将《バーチャコール2》重编为剧情冒险；恋爱题材仅继承既有细分类。目录未写明2.2的具体情节语调、人物线或事件安排，改编关系本身不充当叙事结构证据。",
-          "neededEvidence": "原版手册、包装剧情介绍或制作方的完整故事／系统说明，明确对应本作品而非同系列其他作品。"
-        },
-        {
-          "field": "structure",
-          "question": "叙事结构缺少作品级充分说明；F&C原厂目录确认将《バーチャコール2》重编为剧情冒险；恋爱题材仅继承既有细分类。目录未写明2.2的具体情节语调、人物线或事件安排，改编关系本身不充当叙事结构证据。",
-          "neededEvidence": "原版手册、包装剧情介绍或制作方的完整故事／系统说明，明确对应本作品而非同系列其他作品。"
-        }
+        "仍需找到该原作专属的style故事情节或流程信息"
       ],
       "externalChecks": [
         {
@@ -38456,7 +38563,11 @@
           "scope": "仅核对下述事实，未实机通读",
           "findings": "F&C原厂商品页确认Remix第三卷同捆VirtuaCall2.2，并明确把第二作重编为剧情冒险；没有2.2的具体剧情、语调或内部叙事结构说明。"
         }
-      ]
+      ],
+      "structure": [
+        "沿用《バーチャコール2》世界设定的单篇旁支冒险，改用本作原创主人公和主要女性人物，按指令选项推进独立的短篇故事；它不是《2》的全剧本升级版"
+      ],
+      "cover": "バーチャコール2.2"
     },
     "g775": {
       "status": "editorialObservation",
