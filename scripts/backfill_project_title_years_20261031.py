@@ -53,7 +53,7 @@ for item in source['items']:
           'subcategory':'恋爱剧情冒险','genre':'剧情ADV（故事题材尚未编目）',
           'characters':['人物尚未编目'],
           'synopsis':'仅登记作品名称与首发年份，尚未进行独立剧情及人物编目。',
-          'notes':notes,'source':item['source'],
+          'notes':notes,'source':item['source'],'catalogueDepth':'titleYearOnly',
           'interactionModes':['待核实'],
           'interactionNote':'主要操作、分支和机种控制未核实；本批只建立名称与年份简目。',
           'interactionBasis':'既有资料归纳','interactionSources':[item['source']]}
