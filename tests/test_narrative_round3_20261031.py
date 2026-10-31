@@ -27,9 +27,9 @@ class RoundThreeTests(unittest.TestCase):
                          'existing-complete':1,'identity-review':1,'linked-existing-registry':6,
                          'eligibility-review':1,'promoted-dossier':2})
         reg = module.read(module.REGISTRY)
-        self.assertEqual(len(reg['works']),284)
-        self.assertEqual(reg['summary']['candidates'],293)
-        self.assertEqual(len({w['id'] for w in reg['works']}),284)
+        self.assertGreaterEqual(len(reg['works']),284)
+        self.assertGreaterEqual(reg['summary']['candidates'],293)
+        self.assertEqual(len({w['id'] for w in reg['works']}),len(reg['works']))
         by_id = {w['id']:w for w in reg['works']}
         for d in review['records']:
             if d['selection']=='defer':
@@ -41,10 +41,17 @@ class RoundThreeTests(unittest.TestCase):
         for wid in ['g1209','g1378','g1379','g1380','g1382','enix-endonesia','ascii-ufo']:
             self.assertIn(wid,by_id)
 
-    def test_regeneration_is_idempotent(self):
-        for path,value in module.build().items():
-            text=value if isinstance(value,str) else json.dumps(value,ensure_ascii=False,indent=2)+'\n'
-            self.assertEqual((ROOT/path).read_text(),text)
+    def test_reviewed_historical_batch_stays_unchanged_when_new_batches_are_appended(self):
+        # A historical one-batch generator must not be rerun to rebuild the entire
+        # cumulative registry after later independent data sources were imported.
+        review = module.read(module.REVIEW)
+        registry = module.read(module.REGISTRY)
+        self.assertEqual(review['summary']['newToRegistry'], 18)
+        identities = {row['id'] for row in registry['works']}
+        for decision in review['records']:
+            if decision.get('registryId'):
+                self.assertIn(decision['registryId'], identities)
+        self.assertEqual(len([row for row in registry['works'] if row.get('batch') == module.BATCH]), 18)
 
     def test_alias_resolution_rejects_year_and_identity_conflicts(self):
         key=module.norm('Title')
