@@ -43,14 +43,17 @@ for item in source['items']:
     wid='g'+str(counter);counter+=1
     cid=wid+'-c-original';rid=wid+'-v-original'
     brand=item['group']
-    company=tax['publisherAliases'].get(brand,brand)
+    publisher=item.get('publisher') or brand
+    company=tax['publisherAliases'].get(publisher,publisher)
+    category=item['category']
+    sub={'Galgame':'恋爱剧情冒险','文字冒险':'图文选项／调查','视觉小说':'剧情分支／冒险','互动动画':'全动画·剧情分支'}[category]
     title=name
     notes=('2026-10-31 项目厂商作品清单简目：目前仅核实作品原名、首发年份与厂牌关联。'
-           ' 首发平台暂按原PC版归档、发行主体和角色等尚待逐作复核；后续版本与独立新剧情不在本轮建立。')
+           ' 首发平台按具名来源的候选条目记录，开发和发行职责、角色等尚待逐作复核；后续版本与独立新剧情不在本轮建立。')
     work={'id':wid,'title':title,'chineseTitle':'','originalTitle':name,
           'titleAliases':list(dict.fromkeys(item.get('aliases') or [])),
-          'firstYear':item['year'],'category':item['category'],
-          'subcategory':'恋爱剧情冒险','genre':'剧情ADV（故事题材尚未编目）',
+          'firstYear':item['year'],'category':category,
+          'subcategory':sub,'genre':'叙事游戏（具体题材及玩法未编目）',
           'characters':['人物尚未编目'],
           'synopsis':'仅登记作品名称与首发年份，尚未进行独立剧情及人物编目。',
           'notes':notes,'source':item['source'],'catalogueDepth':'titleYearOnly',
@@ -61,7 +64,7 @@ for item in source['items']:
          'basis':'original','evidence':'以厂牌官方产品目录核定首发年份，原作具体内容差异另行考据。',
          'source':item['source'],'evidenceReleaseIds':[rid],'addedContent':[]}
     rel={'id':rid,'workId':wid,'year':item['year'],'platform':item['platform'],
-         'publisher':brand,'publisherCompanies':[company],
+         'publisher':publisher,'publisherCompanies':[company],
          'kind':'原作／首次内容发行','voice':'未核实',
          'differences':'原作首发年份来自具名厂牌作品目录；发行署名、机种及实际发售版本详细内容仍需复核。',
          'source':item['source'],'contentVersionId':cid,'contentRelation':'original',
