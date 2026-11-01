@@ -1,0 +1,54 @@
+name: Verify and stage 1970s interactive-fiction identities
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths:
+      - 'data/historical-interactive-fiction-a-intake-20261101.json'
+      - 'scripts/import_historical_interactive_fiction_a_20261101.py'
+      - '.github/workflows/historical-interactive-fiction-a-20261101.yml'
+permissions:
+  contents: write
+concurrency:
+  group: historical-interactive-fiction-1970s-\${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  verify-and-stage:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'catalog/historical-interactive-fiction-20261101'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: \${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Reproduce reviewed identities and audit
+        run: |
+          python3 -m py_compile scripts/import_historical_interactive_fiction_a_20261101.py
+          python3 scripts/import_historical_interactive_fiction_a_20261101.py
+          python3 scripts/import_historical_interactive_fiction_a_20261101.py --check
+          git diff --exit-code -- data/historical-interactive-fiction-1970s-audit-20261101.json docs/historical-interactive-fiction-1970s-20261101.md
+      - name: Required catalogue and regression checks
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Stage verified basic identities on this PR branch
+        env:
+          TARGET_BRANCH: \${{ github.head_ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/historical-interactive-fiction-1970s-audit-20261101.json docs/historical-interactive-fiction-1970s-20261101.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Stage audited 1970s interactive-fiction identities"
+            git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          fi
