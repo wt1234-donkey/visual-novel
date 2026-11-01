@@ -126,9 +126,7 @@ def run(args):
     existing_batch = any(b.get("id") == BATCH for b in registry.get("batches", []))
     if existing_batch:
         check_existing(registry, intake)
-        if args.check:
-            return
-        raise SystemExit("Batch already imported; refusing to append twice.")
+        return
     if args.check:
         raise SystemExit("Batch has not yet been imported.")
     before_registry = copy.deepcopy(registry)
@@ -185,7 +183,8 @@ def run(args):
             "title": row["title"],
             "aliases": row.get("aliases", []),
             "firstYear": row["firstYear"],
-            "gameplay": row["gameplay"],
+            "gameplay": "ADV",
+            "gameplayNote": row["gameplay"],
             "group": row["group"],
             "source": row["source"],
             "sourceRefs": row["sourceRefs"],
@@ -215,7 +214,8 @@ def run(args):
     old_count = len(before_registry["works"])
     registry["works"].extend(additions)
     n = len(additions)
-    for key in ("candidates", "accepted", "promotedBasic", "addedToMainIdentityLayer"):
+    registry["summary"]["candidates"] += len(intake["records"])
+    for key in ("accepted", "promotedBasic", "addedToMainIdentityLayer"):
         registry["summary"][key] += n
     registry["updated"] = "2026-11-01"
     registry["batches"].append({
