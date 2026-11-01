@@ -20,6 +20,9 @@ B25='nextmoe-galgame-bulk-20261101-r25'
 A24=ROOT/'data/vndb-kana-bulk-review-20261101-r24.json'
 A25=ROOT/'data/nextmoe-bulk-review-20261101-r25.json'
 REPORT=ROOT/'data/basic-r24-r25-diversity-20261101.json'
+SEED_VNDB=source.A22
+SEED_NEXTMOE=source.A23
+EXPECTED_VNDB_START='v6280'
 CAP=500
 load,save,norm=source.load,source.save,source.norm
 WINDOWS=[('1976-01-01','1999-12-31'),('2000-01-01','2009-12-31'),('2010-01-01','2026-11-01')]
@@ -90,7 +93,7 @@ def add_fresh(ctx,item,source_id,names,index,refs,extra=None):
 
 def fetch_vndb(ctx,index,refs):
     cursor=load(ctx['inputPath'])['summary']['cursorEnd']
-    assert cursor=='v6280'
+    assert cursor==EXPECTED_VNDB_START
     ctx['resumeStart']={'cursor':cursor}
     for page in range(1,26):
         if len(ctx['pending'])+len(ctx['fresh'])>=CAP:
@@ -101,7 +104,7 @@ def fetch_vndb(ctx,index,refs):
             cursor=item['id']
             add_fresh(ctx,item,cursor,previous.vndb_names(item),index,refs)
         ctx['trace'].append({'page':page,'cursorEnd':cursor,'returned':len(payload['results'])})
-        print('R24_LIVE',page,'SCANNED',ctx['liveScanned'],'ELIGIBLE',len(ctx['fresh']),cursor,flush=True)
+        print(ctx['batch'],'LIVE',page,'SCANNED',ctx['liveScanned'],'ELIGIBLE',len(ctx['fresh']),cursor,flush=True)
         if not payload['more']:
             break
         time.sleep(2)
@@ -184,7 +187,7 @@ def fetch_nextmoe(ctx,index,refs):
                     names.append(name)
                     seen.add(norm(name))
             add_fresh(ctx,vn,sid,names,index,refs,{'nextmoeSourceReleased':item.get('release_date')})
-        print('R25_LIVE','SCANNED',ctx['liveScanned'],'ELIGIBLE',len(ctx['fresh']),flush=True)
+        print(ctx['batch'],'LIVE','SCANNED',ctx['liveScanned'],'ELIGIBLE',len(ctx['fresh']),flush=True)
         time.sleep(2)
     ctx['resumeNext']={'paginationTrace':ctx['trace'],'unvisitedWindows':plan}
 
@@ -307,7 +310,7 @@ def check():
     summary=load(REPORT)['summary']
     assert summary['newDistinctWorks']==summary['uniqueVndbIds']==len(added)
     assert current['summary']['accepted']==len(current['works'])
-    print('R24_R25_CHECK_OK',len(old['works']),'+',len(added),'=',len(current['works']),json.dumps(summary),flush=True)
+    print('BASIC_CONTINUATION_CHECK_OK',len(old['works']),'+',len(added),'=',len(current['works']),json.dumps(summary),flush=True)
 
 
 def main():
@@ -316,8 +319,8 @@ def main():
     args=parser.parse_args()
     if not args.check:
         registry,index,refs=source.state()
-        c24=context('vndb',B24,source.A22,A24)
-        c25=context('nextmoe',B25,source.A23,A25)
+        c24=context('vndb',B24,SEED_VNDB,A24)
+        c25=context('nextmoe',B25,SEED_NEXTMOE,A25)
         # Both queues are reviewed and reserved before either source is fetched.
         drain(c24,index,refs)
         drain(c25,index,refs)
