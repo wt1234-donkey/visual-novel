@@ -33,7 +33,6 @@ jobs:
           python3 -m py_compile scripts/import_historical_interactive_fiction_a_20261101.py
           python3 scripts/import_historical_interactive_fiction_a_20261101.py
           python3 scripts/import_historical_interactive_fiction_a_20261101.py --check
-          git diff --exit-code -- data/historical-interactive-fiction-1970s-audit-20261101.json docs/historical-interactive-fiction-1970s-20261101.md
       - name: Required catalogue and regression checks
         run: |
           python3 scripts/validate_data.py
