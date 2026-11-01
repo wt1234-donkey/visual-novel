@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [main]
     types: [edited]
+    paths:
+      - 'scripts/import_basic_multisource_r14_r15_20261101.py'
+      - 'data/vndb-kana-bulk-review-20261101-r15.json'
+      - 'data/nextmoe-bulk-review-20261101-r14.json'
   workflow_dispatch:
 permissions:
   contents: write
