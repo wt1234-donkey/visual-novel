@@ -1,0 +1,348 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "criteria": "1970年代早期互动小说与直接前驱。firstYear按最早可核的创作/首个实质版本年份登记；首次公开传播、杂志刊载、商业销售和后续平台版本在evidenceNote中分别说明。仅收录有可追溯历史档案、作者资料、专业互动小说文献或博物馆藏品记录支持的身份与年份。前驱/原型明确标注，不冒充成熟解析器文字冒险。",
+  "records": [
+    {
+      "title": "Hunt the Wumpus",
+      "aliases": [
+        "Wumpus",
+        "Hunt The Wumpus"
+      ],
+      "firstYear": 1973,
+      "gameplay": "文字迷宫探索（互动小说前史）",
+      "group": "Gregory Yob / People's Computing Company（来源关联）",
+      "historicalScope": "precursor",
+      "platforms": [
+        "BASIC",
+        "早期分时系统"
+      ],
+      "source": "https://foldoc.org/wumpus",
+      "supportingSources": [
+        "https://inform-fiction.ifarchive.org/manual/Endmatter.pdf",
+        "https://www.catb.org/~esr/wumpus/README.html"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:hunt-the-wumpus"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "historical-reference-and-primary-publication",
+      "evidenceNote": "FOLDOC记载Gregory Yob约于1973年创作；其完整BASIC程序于Creative Computing第1卷第5期（1975年9—10月）刊载。此处firstYear登记创作年份，不把1975年杂志刊载误写成创作年。它是文字迷宫探索前驱，不具备Adventure式自然语言解析器，故单独标记precursor。"
+    },
+    {
+      "title": "Wander",
+      "aliases": [
+        "Wander (1974)",
+        "Peter Langston's Wander"
+      ],
+      "firstYear": 1974,
+      "gameplay": "文字世界模拟／互动小说原型",
+      "group": "Peter Langston / PSL Games（来源关联）",
+      "historicalScope": "proto-adventure",
+      "platforms": [
+        "Unix（PSL Games distribution）"
+      ],
+      "source": "https://www.inform-fiction.org/manual/html/s46.html",
+      "supportingSources": [],
+      "sourceRefs": [
+        "historical-if:1970s:wander"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "interactive-fiction-historical-bibliography",
+      "evidenceNote": "Graham Nelson的互动小说史将Peter Langston的Wander明确记为1974年，描述为含房间、状态和可携带物品的文字世界建模程序，并谨慎称其为proto-adventure。它兼具早期文字游戏与创作系统性质，不能等同成熟商业文字冒险。"
+    },
+    {
+      "title": "Colossal Cave Adventure",
+      "aliases": [
+        "Colossal Cave",
+        "ADVENT"
+      ],
+      "firstYear": 1976,
+      "gameplay": "文字冒险（自然语言／动词指令解析）",
+      "group": "BBN / Stanford AI Lab（历史关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "PDP-10"
+      ],
+      "source": "https://www.museumofplay.org/app/uploads/2023/05/Guide-to-the-Colossal-Cave-Adventure-Source-Code-1985.pdf",
+      "supportingSources": [
+        "https://www.catb.org/~esr/open-adventure/history.html",
+        "https://if50.textories.com/portal/games/Adventure.html",
+        "https://dhq-static.digitalhumanities.org/pdf/000009.pdf"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:colossal-cave-adventure"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "museum-archive-and-scholarly-history",
+      "evidenceNote": "The Strong博物馆档案指南将作品列为1976年发行；历史研究将Crowther的开发期界定为1975—1976学年，初版于1976年形成/传播。Don Woods在1977年扩展地图、叙事和系统功能，作为同一作品的重大版本演进记录，不重复创建第二个作品身份。"
+    },
+    {
+      "title": "Zork",
+      "aliases": [
+        "Dungeon (MIT mainframe original)"
+      ],
+      "firstYear": 1977,
+      "gameplay": "文字冒险（MDL解析器）",
+      "group": "MIT Laboratory for Computer Science（历史关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "PDP-10",
+        "ITS"
+      ],
+      "source": "https://github.com/MITDDC/zork",
+      "supportingSources": [
+        "https://archive.computerhistory.org/resources/access/text/2017/09/102661095/102661095-05-v8-n1-acc.pdf",
+        "https://inform-fiction.ifarchive.org/manual/Endmatter.pdf"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:zork-mainframe"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "university-archive-and-contemporary-history",
+      "evidenceNote": "MIT Libraries Department of Distinctive Collections公开保存1977年Zork源代码，档案说明作品由Tim Anderson、Marc Blank、Bruce Daniels和Dave Lebling等人在MIT创作。Computer History Review记载首个版本于1977年6月出现。Dungeon是早期流传名称；Infocom于1980—1982年将大型机作品拆分为商业三部曲，Zork I不是本条的首发年份。"
+    },
+    {
+      "title": "Stuga",
+      "aliases": [],
+      "firstYear": 1978,
+      "gameplay": "瑞典语文字冒险（解析器指令）",
+      "group": "QZ / Oden mainframe（历史关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "DEC-10 Oden",
+        "QZ time-sharing system"
+      ],
+      "source": "https://microheaven.com/svenska/stuga_historik.shtml",
+      "supportingSources": [
+        "https://stugan.org/",
+        "https://microheaven.com/PostInfocom/ThePostInfocomTextAdventureCollection.pdf"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:stuga"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "creator-history",
+      "evidenceNote": "作者相关历史记述称Kimmo Eriksson、Viggo Eriksson和Olle Johansson于1977年开始制作，首个版本在1978年秋完成，并于1978年末放到瑞典QZ公共主机区供用户运行。1986年PC商业版改名Stugan，属于后续平台发行，不替代1978年原始版本年份。"
+    },
+    {
+      "title": "Adventureland",
+      "aliases": [
+        "Adventure #1",
+        "Forest Adventure",
+        "SAGA 1"
+      ],
+      "firstYear": 1978,
+      "gameplay": "文字冒险（两词解析器）",
+      "group": "Adventure International（来源关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "TRS-80",
+        "BASIC"
+      ],
+      "source": "https://inform-fiction.ifarchive.org/manual/Endmatter.pdf",
+      "supportingSources": [
+        "https://www.solutionarchive.com/game/id,3/Adventureland.html",
+        "https://www.computinghistory.org.uk/cgi/archive.pl?platform=&publisher=Scott+Adams&type=Games"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:adventureland"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "interactive-fiction-bibliography-and-museum-catalogue",
+      "evidenceNote": "Graham Nelson的互动小说书目将Adventureland列为Scott Adams、Adventure International于1978年的作品；Solution Archive同样列1978年，并注明SoftSide首次广告出现在1979年1月刊。英国计算机历史中心的Exidy Sorcerer藏品记录为1979年，属于具体馆藏平台记录。基础身份firstYear采用最早实质版本1978，广告及馆藏年份保留为发行证据，不混为同一日期。"
+    },
+    {
+      "title": "Acheton",
+      "aliases": [
+        "Acheton (Cambridge Phoenix)"
+      ],
+      "firstYear": 1978,
+      "gameplay": "文字冒险（大型机解析器）",
+      "group": "Cambridge University Phoenix（历史关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "IBM 370 Phoenix"
+      ],
+      "source": "https://ifarchive.org/indexes/if-archive/phoenix/games/zcode/",
+      "supportingSources": [
+        "https://inform-fiction.ifarchive.org/manual/Endmatter.pdf",
+        "https://ifarchive.org/if-archive/phoenix/manuals/Acheton.pdf",
+        "https://inform-fiction.ifarchive.org/zmachine/phoenix.html"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:acheton"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "interactive-fiction-archive-and-contemporary-game-documentation",
+      "evidenceNote": "IF Archive的Cambridge Phoenix目录记载Acheton由David Seal、Jonathan Thackray和Jonathan Partington创作，年份为1978—1980；Inform书目将其首个实质版本范围列为1978—1979。Cambridge历史资料说明Thackray和Seal于1978年开始创作，后续继续扩展至1980年前后。firstYear取开始创作/首个实质版本1978，不把完成年份或后来的PC移植年份当作首发。"
+    },
+    {
+      "title": "Haunt",
+      "aliases": [
+        "Haunt (John Laird)",
+        "Haunt (OPS-4)"
+      ],
+      "firstYear": 1978,
+      "gameplay": "文字冒险（规则系统驱动）",
+      "group": "Carnegie Mellon University（历史关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "DEC-10",
+        "DEC-20"
+      ],
+      "source": "https://laird.engin.umich.edu/haunt/",
+      "supportingSources": [
+        "https://inform-fiction.ifarchive.org/manual/Endmatter.pdf",
+        "https://inform-fiction.ifarchive.org/manual/Chapter8.pdf"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:haunt"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "creator-primary-account-and-if-bibliography",
+      "evidenceNote": "作者John E. Laird的个人学术主页明确说明Haunt是受Adventure启发的文字互动冒险，开发始于其约1978—1981年在Carnegie Mellon读研期间；Inform书目将作品列为1978年。firstYear取开发起始年1978，后续开发跨至1981年，不代表1978年已完成最终版本。"
+    },
+    {
+      "title": "Dog Star Adventure",
+      "aliases": [],
+      "firstYear": 1979,
+      "gameplay": "文字冒险（BASIC两词解析器）",
+      "group": "Lance Micklus / TRS-80 Software Exchange / SoftSide（来源关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "TRS-80 Model I Level II"
+      ],
+      "source": "https://www.ifarchive.org/indexes/if-archive/games/source/basic/",
+      "supportingSources": [
+        "https://solutionarchive.com/game/id,3964/",
+        "https://www.mocagh.org/softguide/captain80.pdf",
+        "https://inform-fiction.ifarchive.org/manual/Endmatter.pdf"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:dog-star-adventure"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "archived-original-source-and-magazine-publication",
+      "evidenceNote": "IF Archive保存的dogstar.bas注明来源为SoftSide 1979年5月刊；Solution Archive记载原版磁带于TRS-80平台发行，并于1979年4月刊广告、5月刊登BASIC输入清单。原程序版权页标注1979。Death Planet是后续商业发行标题/版本，不另建原作身份。"
+    },
+    {
+      "title": "Pirate Adventure",
+      "aliases": [
+        "Pirate's Adventure",
+        "Pirate's Cove",
+        "Adventure #2"
+      ],
+      "firstYear": 1979,
+      "gameplay": "文字冒险（BASIC解析器）",
+      "group": "Scott Adams / Adventure International（来源关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "Exidy Sorcerer",
+        "TRS-80"
+      ],
+      "source": "https://www.solutionarchive.com/game/id,403/Pirate+Adventure.html",
+      "supportingSources": [
+        "https://www.computinghistory.org.uk/cgi/archive.pl?platform=&publisher=Scott+Adams&type=Games",
+        "https://www.sidonsystems.co.uk/adventure-archive/heritage/scott-adams/"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:pirate-adventure"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "museum-catalogue-and-archived-if-catalogue",
+      "evidenceNote": "Solution Archive将Pirate Adventure列为Adventure International于1979年的作品，作者Alexis Adams与Scott Adams；英国计算机历史中心的Exidy Sorcerer馆藏目录也将Adventure 2 'Pirate's Adventure'记为1979年。TRS-80与Exidy Sorcerer的具体版本日期不在本条中进一步推断。"
+    },
+    {
+      "title": "Voodoo Castle",
+      "aliases": [
+        "Adventure #4"
+      ],
+      "firstYear": 1979,
+      "gameplay": "文字冒险（BASIC解析器）",
+      "group": "Scott Adams / Adventure International（来源关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "Exidy Sorcerer",
+        "TRS-80"
+      ],
+      "source": "https://www.solutionarchive.com/game/id,578/Voodoo+Castle.html",
+      "supportingSources": [
+        "https://www.computinghistory.org.uk/cgi/archive.pl?platform=&publisher=Scott+Adams&type=Games",
+        "https://www.sidonsystems.co.uk/adventure-archive/heritage/scott-adams/"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:voodoo-castle"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "museum-catalogue",
+      "evidenceNote": "Solution Archive将Voodoo Castle列为Adventure International于1979年的作品，作者Alexis Adams与Scott Adams；英国计算机历史中心的Exidy Sorcerer馆藏目录同样记为1979年。来源只支持年粒度作品身份，不据此推断各平台的精确上市日期。"
+    },
+    {
+      "title": "The Count",
+      "aliases": [
+        "Count, The",
+        "Adventure #5"
+      ],
+      "firstYear": 1979,
+      "gameplay": "文字冒险（BASIC解析器）",
+      "group": "Scott Adams / Adventure International（来源关联）",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "Exidy Sorcerer",
+        "TRS-80"
+      ],
+      "source": "https://www.solutionarchive.com/game/id,95/Count,+The.html",
+      "supportingSources": [
+        "https://www.computinghistory.org.uk/cgi/archive.pl?platform=&publisher=Scott+Adams&type=Games",
+        "https://www.sidonsystems.co.uk/adventure-archive/heritage/scott-adams/"
+      ],
+      "sourceRefs": [
+        "historical-if:1970s:the-count"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "museum-catalogue",
+      "evidenceNote": "Solution Archive将The Count列为Adventure International于1979年的作品，作者Scott Adams；英国计算机历史中心的Exidy Sorcerer馆藏目录同样记为1979年。只采用年粒度作品记录，不推断不同微机版本的具体发行日。"
+    }
+  ],
+  "heldForReview": [
+    {
+      "title": "Mystery Fun House",
+      "reason": "部分二手清单列1979，但IF归档版本信息出现1981版权年份；尚未取得可统一原版首发的同期一手证据。"
+    },
+    {
+      "title": "Pyramid of Doom",
+      "reason": "不同目录对1979/1981年份存在冲突；须核对Scott Adams与Alvin Files合作原版的同期发行材料。"
+    },
+    {
+      "title": "Secret Mission / Mission Impossible",
+      "reason": "标题别名、作品编号及发行年份存在混用；需取得可核对的原版磁带或同期广告后再确定身份与年份。"
+    },
+    {
+      "title": "Journey to the Center of the Earth（Greg Hassett）",
+      "reason": "互动小说史文献特别提示该1978条目存在真实性/恶搞疑问，本批不纳入基础身份库。"
+    },
+    {
+      "title": "Hunt the Wumpus 的1975年刊载版本",
+      "reason": "与1973年创作身份属于同一作品；不另建1975年作品身份或内容版本，刊载年份只保留在证据说明。"
+    }
+  ],
+  "excludedByScope": [
+    {
+      "title": "SHRDLU",
+      "reason": "1972年自然语言理解研究系统，不是游戏作品。"
+    },
+    {
+      "title": "DND / PEDIT5",
+      "reason": "PLATO上的早期地下城RPG/迷宫游戏，与本批以文字冒险和互动小说为核心的收录边界不同；可另做计算机RPG前史专题。"
+    },
+    {
+      "title": "MUD1 / Essex MUD",
+      "reason": "多人在线虚拟世界/角色扮演系统，不作为本批单人互动小说作品入库。"
+    },
+    {
+      "title": "The Oregon Trail",
+      "reason": "历史旅行教育模拟，不属于本批文字冒险/互动小说核心类型。"
+    }
+  ]
+}

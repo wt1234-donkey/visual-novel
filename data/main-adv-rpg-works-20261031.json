@@ -4,13 +4,13 @@
   "role": "Primary main catalogue work-identity registry, separate from the complete dossier-only games.json schema.",
   "reviewPolicy": "Record title / first year / dominant gameplay and directly link existing identity; do not fabricate characters, releases, original creators or narrative editorials.",
   "summary": {
-    "candidates": 10842,
-    "accepted": 10833,
+    "candidates": 10854,
+    "accepted": 10840,
     "existingComplete": 93,
     "promotedDossier": 105,
-    "promotedBasic": 10635,
+    "promotedBasic": 10642,
     "identityReview": 3,
-    "addedToMainIdentityLayer": 10740,
+    "addedToMainIdentityLayer": 10747,
     "nextBatchCandidates": 59,
     "nextBatchNewBasic": 24,
     "nextBatchLinkedExisting": 35,
@@ -226668,6 +226668,205 @@
       "yearBasis": "已读取D4官方/官方发布稿，正文明确将1989标为原作年份；文章发布日期为复刻日期，不用于firstYear。",
       "editorialScope": "基本作品身份及年粒度原作年份；详细剧情、创作者及版本内容尚待专门编目。",
       "batch": "historical-western-jp-20261101"
+    },
+    {
+      "id": "historical-947d3a3c0fa90530",
+      "indexId": "basic-historical-1970s-20261101-947d3a3c0fa90530",
+      "title": "Hunt the Wumpus",
+      "aliases": [
+        "Wumpus",
+        "Hunt The Wumpus"
+      ],
+      "firstYear": 1973,
+      "gameplay": "ADV",
+      "gameplayNote": "文字迷宫探索（互动小说前史）",
+      "group": "Gregory Yob / People's Computing Company（来源关联）",
+      "source": "https://foldoc.org/wumpus",
+      "sourceRefs": [
+        "historical-if:1970s:hunt-the-wumpus"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "FOLDOC记载Gregory Yob约于1973年创作；其完整BASIC程序于Creative Computing第1卷第5期（1975年9—10月）刊载。此处firstYear登记创作年份，不把1975年杂志刊载误写成创作年。它是文字迷宫探索前驱，不具备Adventure式自然语言解析器，故单独标记precursor。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1970s-20261101",
+      "historicalScope": "precursor",
+      "platformCandidates": [
+        "BASIC",
+        "早期分时系统"
+      ],
+      "sourceNote": "FOLDOC记载Gregory Yob约于1973年创作；其完整BASIC程序于Creative Computing第1卷第5期（1975年9—10月）刊载。此处firstYear登记创作年份，不把1975年杂志刊载误写成创作年。它是文字迷宫探索前驱，不具备Adventure式自然语言解析器，故单独标记precursor。",
+      "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-396e1eb17319c58c",
+      "indexId": "basic-historical-1970s-20261101-396e1eb17319c58c",
+      "title": "Wander",
+      "aliases": [
+        "Wander (1974)",
+        "Peter Langston's Wander"
+      ],
+      "firstYear": 1974,
+      "gameplay": "ADV",
+      "gameplayNote": "文字世界模拟／互动小说原型",
+      "group": "Peter Langston / PSL Games（来源关联）",
+      "source": "https://www.inform-fiction.org/manual/html/s46.html",
+      "sourceRefs": [
+        "historical-if:1970s:wander"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "Graham Nelson的互动小说史将Peter Langston的Wander明确记为1974年，描述为含房间、状态和可携带物品的文字世界建模程序，并谨慎称其为proto-adventure。它兼具早期文字游戏与创作系统性质，不能等同成熟商业文字冒险。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1970s-20261101",
+      "historicalScope": "proto-adventure",
+      "platformCandidates": [
+        "Unix（PSL Games distribution）"
+      ],
+      "sourceNote": "Graham Nelson的互动小说史将Peter Langston的Wander明确记为1974年，描述为含房间、状态和可携带物品的文字世界建模程序，并谨慎称其为proto-adventure。它兼具早期文字游戏与创作系统性质，不能等同成熟商业文字冒险。",
+      "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-89c898cd4e1138ff",
+      "indexId": "basic-historical-1970s-20261101-89c898cd4e1138ff",
+      "title": "Zork",
+      "aliases": [
+        "Dungeon (MIT mainframe original)"
+      ],
+      "firstYear": 1977,
+      "gameplay": "ADV",
+      "gameplayNote": "文字冒险（MDL解析器）",
+      "group": "MIT Laboratory for Computer Science（历史关联）",
+      "source": "https://github.com/MITDDC/zork",
+      "sourceRefs": [
+        "historical-if:1970s:zork-mainframe"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "MIT Libraries Department of Distinctive Collections公开保存1977年Zork源代码，档案说明作品由Tim Anderson、Marc Blank、Bruce Daniels和Dave Lebling等人在MIT创作。Computer History Review记载首个版本于1977年6月出现。Dungeon是早期流传名称；Infocom于1980—1982年将大型机作品拆分为商业三部曲，Zork I不是本条的首发年份。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1970s-20261101",
+      "historicalScope": "core-interactive-fiction",
+      "platformCandidates": [
+        "PDP-10",
+        "ITS"
+      ],
+      "sourceNote": "MIT Libraries Department of Distinctive Collections公开保存1977年Zork源代码，档案说明作品由Tim Anderson、Marc Blank、Bruce Daniels和Dave Lebling等人在MIT创作。Computer History Review记载首个版本于1977年6月出现。Dungeon是早期流传名称；Infocom于1980—1982年将大型机作品拆分为商业三部曲，Zork I不是本条的首发年份。",
+      "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-653e32e13b8472d1",
+      "indexId": "basic-historical-1970s-20261101-653e32e13b8472d1",
+      "title": "Stuga",
+      "aliases": [],
+      "firstYear": 1978,
+      "gameplay": "ADV",
+      "gameplayNote": "瑞典语文字冒险（解析器指令）",
+      "group": "QZ / Oden mainframe（历史关联）",
+      "source": "https://microheaven.com/svenska/stuga_historik.shtml",
+      "sourceRefs": [
+        "historical-if:1970s:stuga"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "作者相关历史记述称Kimmo Eriksson、Viggo Eriksson和Olle Johansson于1977年开始制作，首个版本在1978年秋完成，并于1978年末放到瑞典QZ公共主机区供用户运行。1986年PC商业版改名Stugan，属于后续平台发行，不替代1978年原始版本年份。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1970s-20261101",
+      "historicalScope": "core-interactive-fiction",
+      "platformCandidates": [
+        "DEC-10 Oden",
+        "QZ time-sharing system"
+      ],
+      "sourceNote": "作者相关历史记述称Kimmo Eriksson、Viggo Eriksson和Olle Johansson于1977年开始制作，首个版本在1978年秋完成，并于1978年末放到瑞典QZ公共主机区供用户运行。1986年PC商业版改名Stugan，属于后续平台发行，不替代1978年原始版本年份。",
+      "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-4df71ef29eb25bd1",
+      "indexId": "basic-historical-1970s-20261101-4df71ef29eb25bd1",
+      "title": "Acheton",
+      "aliases": [
+        "Acheton (Cambridge Phoenix)"
+      ],
+      "firstYear": 1978,
+      "gameplay": "ADV",
+      "gameplayNote": "文字冒险（大型机解析器）",
+      "group": "Cambridge University Phoenix（历史关联）",
+      "source": "https://ifarchive.org/indexes/if-archive/phoenix/games/zcode/",
+      "sourceRefs": [
+        "historical-if:1970s:acheton"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "IF Archive的Cambridge Phoenix目录记载Acheton由David Seal、Jonathan Thackray和Jonathan Partington创作，年份为1978—1980；Inform书目将其首个实质版本范围列为1978—1979。Cambridge历史资料说明Thackray和Seal于1978年开始创作，后续继续扩展至1980年前后。firstYear取开始创作/首个实质版本1978，不把完成年份或后来的PC移植年份当作首发。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1970s-20261101",
+      "historicalScope": "core-interactive-fiction",
+      "platformCandidates": [
+        "IBM 370 Phoenix"
+      ],
+      "sourceNote": "IF Archive的Cambridge Phoenix目录记载Acheton由David Seal、Jonathan Thackray和Jonathan Partington创作，年份为1978—1980；Inform书目将其首个实质版本范围列为1978—1979。Cambridge历史资料说明Thackray和Seal于1978年开始创作，后续继续扩展至1980年前后。firstYear取开始创作/首个实质版本1978，不把完成年份或后来的PC移植年份当作首发。",
+      "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-5ba96742bc2cbacd",
+      "indexId": "basic-historical-1970s-20261101-5ba96742bc2cbacd",
+      "title": "Haunt",
+      "aliases": [
+        "Haunt (John Laird)",
+        "Haunt (OPS-4)"
+      ],
+      "firstYear": 1978,
+      "gameplay": "ADV",
+      "gameplayNote": "文字冒险（规则系统驱动）",
+      "group": "Carnegie Mellon University（历史关联）",
+      "source": "https://laird.engin.umich.edu/haunt/",
+      "sourceRefs": [
+        "historical-if:1970s:haunt"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "作者John E. Laird的个人学术主页明确说明Haunt是受Adventure启发的文字互动冒险，开发始于其约1978—1981年在Carnegie Mellon读研期间；Inform书目将作品列为1978年。firstYear取开发起始年1978，后续开发跨至1981年，不代表1978年已完成最终版本。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1970s-20261101",
+      "historicalScope": "core-interactive-fiction",
+      "platformCandidates": [
+        "DEC-10",
+        "DEC-20"
+      ],
+      "sourceNote": "作者John E. Laird的个人学术主页明确说明Haunt是受Adventure启发的文字互动冒险，开发始于其约1978—1981年在Carnegie Mellon读研期间；Inform书目将作品列为1978年。firstYear取开发起始年1978，后续开发跨至1981年，不代表1978年已完成最终版本。",
+      "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-09200d70e35e0e5f",
+      "indexId": "basic-historical-1970s-20261101-09200d70e35e0e5f",
+      "title": "Dog Star Adventure",
+      "aliases": [],
+      "firstYear": 1979,
+      "gameplay": "ADV",
+      "gameplayNote": "文字冒险（BASIC两词解析器）",
+      "group": "Lance Micklus / TRS-80 Software Exchange / SoftSide（来源关联）",
+      "source": "https://www.ifarchive.org/indexes/if-archive/games/source/basic/",
+      "sourceRefs": [
+        "historical-if:1970s:dog-star-adventure"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "IF Archive保存的dogstar.bas注明来源为SoftSide 1979年5月刊；Solution Archive记载原版磁带于TRS-80平台发行，并于1979年4月刊广告、5月刊登BASIC输入清单。原程序版权页标注1979。Death Planet是后续商业发行标题/版本，不另建原作身份。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1970s-20261101",
+      "historicalScope": "core-interactive-fiction",
+      "platformCandidates": [
+        "TRS-80 Model I Level II"
+      ],
+      "sourceNote": "IF Archive保存的dogstar.bas注明来源为SoftSide 1979年5月刊；Solution Archive记载原版磁带于TRS-80平台发行，并于1979年4月刊广告、5月刊登BASIC输入清单。原程序版权页标注1979。Death Planet是后续商业发行标题/版本，不另建原作身份。",
+      "evidenceLevel": "A-identity-year"
     }
   ],
   "identityReview": [
@@ -227168,6 +227367,19 @@
         "reviewedCandidates": 23,
         "deduplicated": 7,
         "held": 5
+      }
+    },
+    {
+      "id": "historical-interactive-fiction-1970s-20261101",
+      "source": "IF Archive, MIT/Strong archival records, author historical accounts and museum catalogue; see intake/audit",
+      "review": "data/historical-interactive-fiction-1970s-audit-20261101.json",
+      "summary": {
+        "candidates": 12,
+        "promoted-basic": 7,
+        "linked-existing": 4,
+        "held": 6,
+        "before": 10833,
+        "after": 10840
       }
     }
   ],
