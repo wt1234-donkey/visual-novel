@@ -1,0 +1,70 @@
+{
+  "checkedAtUtc": "2026-11-01T00:32:21.429293+00:00",
+  "site": "https://wt1234-donkey.github.io/visual-novel/",
+  "checks": {
+    "registry": {
+      "http": 200,
+      "url": "https://wt1234-donkey.github.io/visual-novel/data/main-adv-rpg-works-20261031.json",
+      "bytes": 7377840,
+      "sha256": "5488d1d80e3b207e97ca79374f34ba6bd846bcf94554dd2c2fb41870d6cecc0e",
+      "summaryAccepted": 7810,
+      "works": 7810,
+      "batch14": 500,
+      "batch15": 500,
+      "matchesMainBytes": true,
+      "sample14": [
+        {
+          "id": "nextmoe-1586",
+          "title": "エルフェンキング"
+        },
+        {
+          "id": "nextmoe-1680",
+          "title": "デカパイ♥ナマイキ♥妹魔王♥～デカチン♂ガチイキ討伐記～"
+        }
+      ],
+      "sample15": [
+        {
+          "id": "vndb-v1",
+          "title": "Minna de Nyan Nyan"
+        },
+        {
+          "id": "vndb-v6",
+          "title": "Kira"
+        }
+      ]
+    },
+    "audit14": {
+      "http": 200,
+      "url": "https://wt1234-donkey.github.io/visual-novel/data/nextmoe-bulk-review-20261101-r14.json",
+      "bytes": 177255,
+      "sha256": "13ae51f3d8123486d6674e13769186d56b5b382ddf986205023a557f5ad04277",
+      "newDistinctWorks": 500,
+      "recordCount": 500
+    },
+    "audit15": {
+      "http": 200,
+      "url": "https://wt1234-donkey.github.io/visual-novel/data/vndb-kana-bulk-review-20261101-r15.json",
+      "bytes": 147861,
+      "sha256": "cf21ca8a8a69af509c6af07ebeb445cf6d7f6aacbf29d7ab8356e9369fe4b7ab",
+      "newDistinctWorks": 500,
+      "recordCount": 500
+    },
+    "html": {
+      "http": 200,
+      "url": "https://wt1234-donkey.github.io/visual-novel/minimal-adv-rpg.html",
+      "bytes": 6561,
+      "sha256": "39fdb6cff6a819f15d0fd67c8119fe6832db9cbbb19ee95dc622a92be741ac0b",
+      "usesBasicScript": true
+    },
+    "script": {
+      "http": 200,
+      "url": "https://wt1234-donkey.github.io/visual-novel/minimal-adv-rpg.mjs",
+      "bytes": 8308,
+      "sha256": "b0ada386ee9741a38c8cf418051cb35a17512e97c63261c50ed7da6c505e6d2a",
+      "loadsUnifiedRegistry": true,
+      "rendersRegistryWorks": true
+    }
+  },
+  "errors": [],
+  "verifiedPublicly": true
+}
