@@ -1,0 +1,87 @@
+name: Basic registry rounds 16-17 — VNDB continuation and NextMoe deeper catalog
+on:
+  push:
+    branches: [catalog/basic-r16-r17-nextmoe-vndb-20261101]
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, edited, synchronize, ready_for_review]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: basic-r16-r17-20261101
+  cancel-in-progress: true
+jobs:
+  import-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Compile
+        run: python3 -m py_compile scripts/import_basic_r16_r17_20261101.py
+      - name: Import VNDB continuation then deeper NextMoe catalog
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/import_basic_r16_r17_20261101.py --max-new 500 --vndb-pages 250 --nextmoe-start-page 80 --nextmoe-pages 100 --delay 1.2 2>&1 | tee /tmp/r16-r17.log
+      - name: Refresh promotion review queue
+        run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Verify counts, source IDs and cross-batch uniqueness
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          def load(p): return json.loads(Path(p).read_text(encoding='utf-8'))
+          r=load('data/main-adv-rpg-works-20261031.json')
+          assert len(r['works'])==r['summary']['accepted']
+          assert len({w['id'] for w in r['works']})==len(r['works'])
+          assert len({w['indexId'] for w in r['works']})==len(r['works'])
+          v=[s for w in r['works'] for s in w.get('sourceRefs',[]) if s.startswith('vndb:v')]
+          assert len(v)==len(set(v)), 'VNDB identity duplicated'
+          prior=7810
+          for n,batch,path in [
+            (16,'vndb-kana-bulk-20261101-r16','data/vndb-kana-bulk-review-20261101-r16.json'),
+            (17,'nextmoe-galgame-bulk-20261101-r17','data/nextmoe-bulk-review-20261101-r17.json')]:
+            a=load(path); b=next(x for x in r['batches'] if x['id']==batch)
+            works=[w for w in r['works'] if w.get('batch')==batch]
+            inc=a['summary']['newDistinctWorks']
+            assert 0<inc<=500 and inc==len(works)==len(a['records'])==b['summary']['promoted-basic']
+            assert a['summary']['before']==prior and a['summary']['after']==prior+inc
+            assert b['review']==path
+            print('ROUND',n,'NEW',inc,'SCANNED',a['summary']['scanned'],'TOTAL',prior+inc)
+            prior+=inc
+          assert len(r['works'])==prior
+          assert r['summary']['addedToMainIdentityLayer']==r['summary']['promotedBasic']+r['summary']['promotedDossier']
+          q=load('data/basic-to-full-promotion-review-20261101.json')
+          assert q['summary']['registryAccepted']==prior
+          assert all(x['readyForStrictGamesJson'] is False for x in q['records'])
+          print('ALL_CHECKS_PASSED',prior)
+          PY
+      - name: Full existing tests
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          node --check discovery.mjs
+      - name: Commit the two audited batches to PR branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/vndb-kana-bulk-review-20261101-r16.json data/nextmoe-bulk-review-20261101-r17.json data/basic-to-full-promotion-review-20261101.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Append basic identity rounds 16 and 17"
+            git fetch origin catalog/basic-r16-r17-nextmoe-vndb-20261101
+            git rebase origin/catalog/basic-r16-r17-nextmoe-vndb-20261101
+            git push origin HEAD:catalog/basic-r16-r17-nextmoe-vndb-20261101
+          fi
