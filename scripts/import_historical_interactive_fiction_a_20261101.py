@@ -64,7 +64,7 @@ def make_report(audit, intake):
         lines.append(f"| {r['title']} | {r['firstYear']} | {r['historicalScope']} | {r['gameplay']} | {p} | [档案/资料]({r['source']}) |")
     lines += ["", "## 年份与版本核验说明", ""]
     for r in audit["records"]:
-        lines.append(f"- **{r['title']}（{r['firstYear']}）**：{r['yearBasis']}")
+        lines.append(f"- **{r['title']}（{r['firstYear']}）**：{r['evidenceNote']}")
     lines += ["", "## 已有身份关联（未重复新增）", ""]
     for r in audit["linkedExisting"]:
         lines.append(f"- {r['title']}：匹配已有身份 " + ", ".join(f"{m['workId']}（{m['year']}）" for m in r["matches"]))
