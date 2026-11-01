@@ -10,6 +10,8 @@ on:
       - 'tests/test_basic_r24_r25.py'
       - 'tests/test_basic_r48_r49_source_conflict.py'
       - 'scripts/import_basic_r48_r49_20261101.py'
+      - 'scripts/basic_source_date_review.py'
+      - 'tests/test_basic_source_date_review.py'
       - 'data/vndb-kana-bulk-review-20261101-r50.json'
 permissions:
   contents: write

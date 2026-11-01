@@ -42,6 +42,8 @@ def drain(ctx,index,refs):
         work=old['work']
         item={'id':old['vndbId'],'released':old['sourceReleased'],
               'devstatus':old['sourceDevstatus'],'developers':old['developers']}
+        if 'nextmoeSourceReleased' in old:
+            item['_nextmoeSourceReleased']=old['nextmoeSourceReleased']
         reused_before,held_before=len(ctx['reused']),len(ctx['held'])
         row=source.candidate(item,ctx['kind'],old['sourceId'],[work['title'],*work['aliases']],
             index,refs,ctx['counts'],ctx['reused'],ctx['held'],ctx['batch'])

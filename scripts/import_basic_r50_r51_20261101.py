@@ -1,12 +1,28 @@
 #!/usr/bin/env python3
 """Rounds 50-51: drain rounds 48-49 queues and resume their exact source cursors."""
 import import_basic_r24_r25_20261101 as engine
+from functools import partial
+from basic_source_date_review import reviewed_add_fresh, hold_date_conflict
 
-from import_basic_r48_r49_20261101 import reviewed_candidate
+from import_basic_r48_r49_20261101 import reviewed_candidate as prior_candidate
+
+original_add_fresh = engine.add_fresh
+
+
+def reviewed_candidate(item, source_kind, source_id, names, index, refs,
+                       counts, reused, held, batch):
+    ctx = {'kind': source_kind, 'counts': counts, 'held': held}
+    if hold_date_conflict(engine.previous.vndb_year, ctx, item, source_id, names,
+                          item.get('_nextmoeSourceReleased')):
+        return None
+    return prior_candidate(item, source_kind, source_id, names, index, refs,
+                           counts, reused, held, batch)
 
 
 def configure():
     engine.source.candidate = reviewed_candidate
+    engine.add_fresh = partial(reviewed_add_fresh, original_add_fresh,
+                              engine.previous.vndb_year)
     engine.BASE='1cb36f80beab55b47e76d6a8093df665ed0efe86'
     engine.B24='vndb-kana-bulk-20261101-r50'
     engine.B25='nextmoe-galgame-bulk-20261101-r51'
