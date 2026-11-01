@@ -8,6 +8,7 @@ on:
       - '.github/workflows/basic-r48-r49-20261101.yml'
       - 'scripts/import_basic_r24_r25_20261101.py'
       - 'tests/test_basic_r24_r25.py'
+      - 'tests/test_basic_r48_r49_source_conflict.py'
       - 'data/vndb-kana-bulk-review-20261101-r48.json'
 permissions:
   contents: write
