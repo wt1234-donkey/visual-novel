@@ -1,0 +1,107 @@
+name: Verify public Pages 14-15 basic registry
+on:
+  push:
+    branches: [verify/pages-r14-r15-public-20261101]
+    paths:
+      - .github/workflows/verify-pages-r14-r15-20261101.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify-public-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare public Pages content with main registry
+        run: |
+          python3 - <<'PY'
+          import datetime as dt
+          import hashlib
+          import json
+          import os
+          import time
+          import urllib.request
+          from pathlib import Path
+
+          root = "https://wt1234-donkey.github.io/visual-novel/"
+          registry_file = "data/main-adv-rpg-works-20261031.json"
+          audit14_file = "data/nextmoe-bulk-review-20261101-r14.json"
+          audit15_file = "data/vndb-kana-bulk-review-20261101-r15.json"
+          report = {"checkedAtUtc": dt.datetime.now(dt.timezone.utc).isoformat(),
+                    "site": root, "checks": {}, "errors": []}
+          def fetch(path):
+              url=root+path
+              last=None
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(url,headers={"Cache-Control":"no-cache",
+                         "User-Agent":"BasicIdentityPublicPagesVerification/1.0",
+                         "Accept":"*/*"})
+                      with urllib.request.urlopen(req,timeout=25) as resp:
+                          raw=resp.read()
+                          return raw, resp.status, resp.geturl()
+                  except Exception as exc:
+                      last=str(exc)
+                      if attempt<2: time.sleep(3)
+              raise RuntimeError(path+": "+last)
+          for path,tag in [(registry_file,"registry"),
+                           (audit14_file,"audit14"),(audit15_file,"audit15"),
+                           ("minimal-adv-rpg.html","html"),
+                           ("minimal-adv-rpg.mjs","script")]:
+              try:
+                  raw, status, finalurl = fetch(path)
+                  check={"http":status,"url":finalurl,"bytes":len(raw),
+                         "sha256":hashlib.sha256(raw).hexdigest()}
+                  if tag=="registry":
+                      obj=json.loads(raw)
+                      works=obj["works"]
+                      b14=[w for w in works if w.get("batch")=="nextmoe-galgame-bulk-20261101-r14"]
+                      b15=[w for w in works if w.get("batch")=="vndb-kana-bulk-20261101-r15"]
+                      local=Path(registry_file).read_bytes()
+                      check.update({"summaryAccepted":obj["summary"]["accepted"],
+                          "works":len(works),"batch14":len(b14),"batch15":len(b15),
+                          "matchesMainBytes":raw==local,
+                          "sample14": [{"id":w["id"],"title":w["title"]} for w in b14[:2]],
+                          "sample15": [{"id":w["id"],"title":w["title"]} for w in b15[:2]]})
+                  elif tag in ("audit14","audit15"):
+                      obj=json.loads(raw)
+                      check.update({"newDistinctWorks":obj["summary"]["newDistinctWorks"],
+                                    "recordCount":len(obj["records"])})
+                  elif tag=="html":
+                      text=raw.decode("utf-8",errors="replace")
+                      check["usesBasicScript"]="minimal-adv-rpg.mjs" in text
+                  else:
+                      text=raw.decode("utf-8",errors="replace")
+                      check["loadsUnifiedRegistry"]=registry_file in text
+                      check["rendersRegistryWorks"]="for(const w of registry.works)" in text
+                  report["checks"][tag]=check
+              except Exception as exc:
+                  report["errors"].append(str(exc))
+                  report["checks"][tag]={"error":str(exc)}
+          c=report["checks"]
+          reg=c.get("registry",{})
+          report["verifiedPublicly"]=not report["errors"] and (
+              reg.get("works")==7810 and reg.get("summaryAccepted")==7810
+              and reg.get("batch14")==500 and reg.get("batch15")==500
+              and reg.get("matchesMainBytes") is True
+              and c.get("audit14",{}).get("newDistinctWorks")==500
+              and c.get("audit15",{}).get("newDistinctWorks")==500
+              and c.get("html",{}).get("usesBasicScript") is True
+              and c.get("script",{}).get("loadsUnifiedRegistry") is True
+              and c.get("script",{}).get("rendersRegistryWorks") is True)
+          out=Path("qa/pages-r14-r15-public-check.json")
+          out.parent.mkdir(exist_ok=True)
+          out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          PY
+      - name: Record the independent public Pages evidence on verification branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add qa/pages-r14-r15-public-check.json
+          git commit -m "Record external Pages availability and basic registry round 14-15 proof"
+          git push origin HEAD:verify/pages-r14-r15-public-20261101
