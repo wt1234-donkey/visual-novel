@@ -67,7 +67,8 @@ jobs:
               expected+=inc
               assert a['summary']['after']==expected
               if n==17:
-                  assert all(w['gameplay'] in {'ADV','RPG'} and w.get('sourceTags') for w in works)
+                  assert a.get('filterVersion')==2, 'Bangumi narrative filter version must be 2'
+                  assert all(w['gameplay'] in {'ADV','RPG'} and w.get('sourceTags') and w.get('matchedSourceTags') for w in works)
                   assert all(w['sourceRefs'][0].startswith('bangumi:') for w in works)
               print('ROUND',n,'NEW',inc,'SCANNED',a['summary']['scanned'],'TOTAL',expected)
           assert len(r['works'])==expected
