@@ -84,3 +84,15 @@ Wikidata 项目 Q ID 可作为独立 source ID；外部目录 ID 必须原样保
 每次请求的车道、区间、实际使用游标及返回游标保存到第23批审计 `summary.paginationTrace`。下一批先消化 `deferredEligible`，再从最后未耗尽区间的返回游标继续，并保留尚未遍历的后续区间；不能将 `endPage=100` 误当成整个目录已经取完。
 
 官方契约：https://developer.nextmoe.dev/docs/pagination 、https://developer.nextmoe.dev/docs/v2/listCatalogWorks 。
+
+
+## 第24、25批：先消化暂存，再按真实断点续采
+
+基线为PR #225合并后的12,342部。本轮输入是第22批续批的474条和第23批的420条 `deferredEligible`，保留原审计不改写。两个队列都在网络采集前先对当前主库、专题、补充库、基础库和彼此重新去重，并预留其身份。已有VNDB ID沿用现有作品ID，冲突保持暂缓。
+
+- 第24批VNDB：先录用重查后合格的暂存候选，再从 `v6280` **之后**续采，只填补本批500部上限内的剩余名额。
+- 第25批NextMoe：先录用重查后合格的暂存候选，再从旧 `paginationTrace` 最后一条1976—1999区间的 `nextCursor` 原样续采，不重扫93页、不解析或拼造游标。该区间耗尽才依次转入2000—2009、2010—2026区间。
+- 每批至多新增500部。选择优先级严格为“原暂存候选→本轮续采候选”，只在同一优先级内部平衡年代和开发主体。新抓到但超出名额的合格候选完整进入新审计的 `deferredEligible`。
+- 每条原暂存候选都有 `pendingQueueReview` 处理去向；新收入记录标明 `intakeOrigin` 为 `deferred` 或 `live`，并保留源日期、来源ID、旧审计路径。
+- `reusedExisting` 明确区分 `targetState=registered-work` 与 `deferred-candidate`，避免把暂存身份误报为已入库作品。
+- 后续任务读取最新批次审计的新队列和新游标，不再重复消化旧队列。原作品、原批次、正式编目、创作署名和精选库不变。
