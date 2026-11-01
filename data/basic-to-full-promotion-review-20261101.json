@@ -4,11 +4,11 @@
   "destination": "data/games.json after the specified original-release evidence is reviewed",
   "reason": "strict 3-layer model cannot legitimately turn a title/year into a fictitious release",
   "summary": {
-    "registryAccepted": 10810,
-    "basicIdentities": 10612,
-    "stageableBasic": 10612,
+    "registryAccepted": 11342,
+    "basicIdentities": 11144,
+    "stageableBasic": 11142,
     "alreadyInMainOrDossier": 0,
-    "heldConflicts": 0,
+    "heldConflicts": 2,
     "offset": 0,
     "limit": 100,
     "staged": 100
@@ -1934,5 +1934,14 @@
     }
   ],
   "linkedExisting": [],
-  "heldForReview": []
+  "heldForReview": [
+    {
+      "id": "historical-947d3a3c0fa90530",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "historical-396e1eb17319c58c",
+      "reason": "invalid source or debut year"
+    }
+  ]
 }
