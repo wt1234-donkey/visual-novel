@@ -64,3 +64,23 @@ Wikidata 项目 Q ID 可作为独立 source ID；外部目录 ID 必须原样保
 ## 第20、21批的多样性核验
 
 本轮 VNDB 采用 ID 断点连续采集，NextMoe 采用目录分页连续采集，优先保证断点可复现和不漏掉来源序列中的候选。为避免把“跨年代/跨厂商/独立制作”当作未经验证的结论，配套生成 `data/basic-r20-r21-diversity-audit-20261101.json`：通过 VNDB ID 回查开发者 producer ID、名称和类型（公司 `co`、个人 `in`、业余团体 `ng`），并按年代统计。个人/业余团体仅作为独立创作信号，不直接推定独立工作室；无开发者字段也不代表没有开发者。下一批将结合该审计与 IFDB/IndieDB 等来源，优先补足年代和创作者类型分布不足的区间。
+
+
+## 第22批续批与第23批（2026-11-01）
+
+- 已上线的第22批 `v3968 → v4819` 保持不变。本次 VNDB 从 `v4819` 之后开始，独立标记为 `vndb-kana-bulk-20261101-r22-cont1`；NextMoe 第23批按用户要求从第93页重扫，旧条目按精确VNDB/来源ID复用，不改旧ID或重复建档。
+- 每个来源在限定页数内先建立约900条合格候选池，再按“年代×开发主体类型”轮流选择，每组内轮流取不同开发者，最多新增500部。以当前基础库稀缺年代优先开始；若候选池不足则如实报告。VNDB的 `in` / `ng` 只是个人/业余团体信号，不等于已证实独立制作。
+- NextMoe新候选回查VNDB，使用同一VNDB ID的作品级 `released` 年份；保留NextMoe原日期供比对，不用译版/目录日期覆盖原始年份。地区、版次和最初内容发行仍待逐项核实。
+- 同源或跨源已有身份只写入审计 `reusedExisting`，包含匹配到的旧作品ID，不追加新作品。新增NextMoe候选使用 `vndb-vNNN` 作为作品ID，另保留 `nextmoe:NNN` 来源引用。
+- 合格但未选中的候选完整保存在各审计 `deferredEligible` 中。下一批必须先读取该队列并对当前全库重新去重，再从 `cursorEnd` 或 `endPage` 之后续采；**不能只移动断点而丢弃队列**。不同来源的暂存候选可能在另一批已被选中，重读队列时需再按VNDB ID复用。
+- IFDB接入为补充候选适配器：按1976—1989、1990—2009、2010—2026三个时间范围各做一次低频搜索，每组最多保留20条最小事实字段。本轮不直接导入IFDB作品，只记录标题、TUID、源日期、作者字段、开发系统、链接及与现有库的名称匹配。后续大规模分析应读取IF Archive SQL导出，不分页爬取API。
+- IFDB官方接口：https://ifdb.org/api/ ，搜索JSON根地址为 `https://ifdb.org/search?json&game&searchfor=...`；不是将文档地址 `/api/search` 当作数据接口。可选补充源暂时无法访问时独立报告，不影响两个已授权来源的采集与验收。
+- `data/basic-r22-cont-r23-diversity-20261101.json` 保存实际年代、开发者类型和厂商分布。所有开发者信息只在审计层记录，不增补正式署名。
+
+### NextMoe分页上限与续采方式
+
+实际采集确认 `page=101&limit=100` 返回400 `INVALID_PARAMETER`：官方页码模式要求 `page × limit ≤ 10000`。因此第23批先如实完成第93—100页，然后改用官方支持的 `sort=id` 与 `released_after` / `released_before` 年代区间筛选，原样回传服务器的 `next_cursor`，不自行拼造游标或提高页码绕过上限。区间依次1976—1999、2000—2009、2010—2026-11-01，先补足早期覆盖。最多60次额外游标请求，仍遵守每批最多500部的新增上限。
+
+每次请求的车道、区间、实际使用游标及返回游标保存到第23批审计 `summary.paginationTrace`。下一批先消化 `deferredEligible`，再从最后未耗尽区间的返回游标继续，并保留尚未遍历的后续区间；不能将 `endPage=100` 误当成整个目录已经取完。
+
+官方契约：https://developer.nextmoe.dev/docs/pagination 、https://developer.nextmoe.dev/docs/v2/listCatalogWorks 。
