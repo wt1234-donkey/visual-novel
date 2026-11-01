@@ -21,6 +21,7 @@ class BangumiNarrativeTagFilterTests(unittest.TestCase):
 
     def test_rejects_generic_rpg_and_strategy_or_action_only_tags(self):
         self.assertIsNone(tag_kind(["RPG", "RTS"])[0])
+        self.assertIsNone(tag_kind(["RPG", "RTS", "剧情"])[0])
         self.assertIsNone(tag_kind(["RPG", "ARPG", "ACT"])[0])
         self.assertIsNone(tag_kind(["RPG", "MMORPG"])[0])
 
