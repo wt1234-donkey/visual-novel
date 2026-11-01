@@ -4,6 +4,11 @@ on:
     branches: [verify/pages-r14-r15-public-20261101]
     paths:
       - .github/workflows/verify-pages-r14-r15-20261101.yml
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, edited]
+    paths:
+      - .github/workflows/verify-pages-r14-r15-20261101.yml
   workflow_dispatch:
 permissions:
   contents: write
