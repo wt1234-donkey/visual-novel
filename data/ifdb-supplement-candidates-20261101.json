@@ -1,0 +1,780 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "source": "https://ifdb.org/",
+  "sourceDocs": "https://ifdb.org/api/search",
+  "attribution": "Interactive Fiction Database (IFDB), linked per listing; minimal factual metadata.",
+  "licenseBasis": "https://ifdb.org/tos",
+  "requests": [
+    {
+      "query": "published:1976-1989",
+      "url": "https://ifdb.org/search?json&game&searchfor=published%3A1976-1989",
+      "returned": 100
+    },
+    {
+      "query": "published:1990-2009",
+      "url": "https://ifdb.org/search?json&game&searchfor=published%3A1990-2009",
+      "returned": 100
+    },
+    {
+      "query": "published:2010-2026",
+      "url": "https://ifdb.org/search?json&game&searchfor=published%3A2010-2026",
+      "returned": 100
+    }
+  ],
+  "records": [
+    {
+      "sourceId": "xe6kb3cuqwie2q38",
+      "title": "Planetfall",
+      "firstYear": 1983,
+      "sourcePublished": "1983",
+      "source": "https://ifdb.org/viewgame?id=xe6kb3cuqwie2q38",
+      "sourceAuthor": "Steve Meretzky",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g006",
+          1983,
+          "complete"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "j18kjz80hxjtyayw",
+      "title": "Trinity",
+      "firstYear": 1986,
+      "sourcePublished": "1986",
+      "source": "https://ifdb.org/viewgame?id=j18kjz80hxjtyayw",
+      "sourceAuthor": "Brian Moriarty",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "infocom-trinity",
+          1986,
+          "historical-dossier"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "4h62dvooeg9ajtfa",
+      "title": "A Mind Forever Voyaging",
+      "firstYear": 1985,
+      "sourcePublished": "1985",
+      "source": "https://ifdb.org/viewgame?id=4h62dvooeg9ajtfa",
+      "sourceAuthor": "Steve Meretzky",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g043",
+          1985,
+          "complete"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "vu4xhul3abknifcr",
+      "title": "Enchanter",
+      "firstYear": 1983,
+      "sourcePublished": "1983",
+      "source": "https://ifdb.org/viewgame?id=vu4xhul3abknifcr",
+      "sourceAuthor": "Marc Blank, Dave Lebling",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g042",
+          1983,
+          "complete"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "ouv80gvsl32xlion",
+      "title": "The Hitchhiker's Guide to the Galaxy",
+      "firstYear": 1984,
+      "sourcePublished": "1984",
+      "source": "https://ifdb.org/viewgame?id=ouv80gvsl32xlion",
+      "sourceAuthor": "Douglas Adams and Steve Meretzky",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g011",
+          1984,
+          "complete"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "lidg5nx9ig0bwk55",
+      "title": "Sorcerer",
+      "firstYear": 1984,
+      "sourcePublished": "1984",
+      "source": "https://ifdb.org/viewgame?id=lidg5nx9ig0bwk55",
+      "sourceAuthor": "Steve Meretzky",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g067",
+          1984,
+          "complete"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "ddagftras22bnz8h",
+      "title": "Plundered Hearts",
+      "firstYear": 1987,
+      "sourcePublished": "1987",
+      "source": "https://ifdb.org/viewgame?id=ddagftras22bnz8h",
+      "sourceAuthor": "Amy Briggs",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "infocom-plundered-hearts",
+          1987,
+          "historical-dossier"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "z02joykzh66wfhcl",
+      "title": "Wishbringer",
+      "firstYear": 1985,
+      "sourcePublished": "1985",
+      "source": "https://ifdb.org/viewgame?id=z02joykzh66wfhcl",
+      "sourceAuthor": "Brian Moriarty",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g071",
+          1985,
+          "complete"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "9nlbhqnlyb169uge",
+      "title": "Stationfall",
+      "firstYear": 1987,
+      "sourcePublished": "1987",
+      "source": "https://ifdb.org/viewgame?id=9nlbhqnlyb169uge",
+      "sourceAuthor": "Steve Meretzky",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "infocom-stationfall",
+          1987,
+          "historical-dossier"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "t47hei9uq10xoar8",
+      "title": "Suspended",
+      "firstYear": 1983,
+      "sourcePublished": "1983",
+      "source": "https://ifdb.org/viewgame?id=t47hei9uq10xoar8",
+      "sourceAuthor": "Michael Berlyn",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g041",
+          1983,
+          "complete"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "bu2v2j5sqpf4usex",
+      "title": "The Guild of Thieves",
+      "firstYear": 1987,
+      "sourcePublished": "1987",
+      "source": "https://ifdb.org/viewgame?id=bu2v2j5sqpf4usex",
+      "sourceAuthor": "Rob Steggles",
+      "developmentSystem": null,
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "3p9fdt4fxr2goctw",
+      "title": "Leather Goddesses of Phobos",
+      "firstYear": 1986,
+      "sourcePublished": "1986",
+      "source": "https://ifdb.org/viewgame?id=3p9fdt4fxr2goctw",
+      "sourceAuthor": "Steve Meretzky",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "infocom-lgop",
+          1986,
+          "historical-dossier"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "17coplfu323xif76",
+      "title": "Zork Zero: The Revenge of Megaboz",
+      "firstYear": 1988,
+      "sourcePublished": "1988",
+      "source": "https://ifdb.org/viewgame?id=17coplfu323xif76",
+      "sourceAuthor": "Steve Meretzky",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "infocom-zork-zero",
+          1988,
+          "historical-dossier"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "9h6o1charof548ii",
+      "title": "Beyond Zork",
+      "firstYear": 1987,
+      "sourcePublished": "1987",
+      "source": "https://ifdb.org/viewgame?id=9h6o1charof548ii",
+      "sourceAuthor": "Brian Moriarty",
+      "developmentSystem": "ZIL",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "zoohwv5nqye7up2t",
+      "title": "Arthur: The Quest for Excalibur",
+      "firstYear": 1989,
+      "sourcePublished": "1989",
+      "source": "https://ifdb.org/viewgame?id=zoohwv5nqye7up2t",
+      "sourceAuthor": "Bob Bates",
+      "developmentSystem": "ZIL",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "infocom-arthur",
+          1989,
+          "historical-dossier"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "0dbnusxunq7fw5ro",
+      "title": "Zork I",
+      "firstYear": 1980,
+      "sourcePublished": "1980",
+      "source": "https://ifdb.org/viewgame?id=0dbnusxunq7fw5ro",
+      "sourceAuthor": "Marc Blank and Dave Lebling",
+      "developmentSystem": "ZIL",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "vrsot1zgy1wfcdru",
+      "title": "Zork III",
+      "firstYear": 1982,
+      "sourcePublished": "1982",
+      "source": "https://ifdb.org/viewgame?id=vrsot1zgy1wfcdru",
+      "sourceAuthor": "Dave Lebling, Marc Blank",
+      "developmentSystem": "ZIL",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "yzzm4puxyjakk8c4",
+      "title": "Zork II",
+      "firstYear": 1981,
+      "sourcePublished": "1981",
+      "source": "https://ifdb.org/viewgame?id=yzzm4puxyjakk8c4",
+      "sourceAuthor": "Dave Lebling, Marc Blank",
+      "developmentSystem": "ZIL",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "op0uw1gn1tjqmjt7",
+      "title": "Anchorhead",
+      "firstYear": 1998,
+      "sourcePublished": "1998-05-07",
+      "source": "https://ifdb.org/viewgame?id=op0uw1gn1tjqmjt7",
+      "sourceAuthor": "Michael Gentry",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "mohwfk47yjzii14w",
+      "title": "Lost Pig",
+      "firstYear": 2007,
+      "sourcePublished": "2007",
+      "source": "https://ifdb.org/viewgame?id=mohwfk47yjzii14w",
+      "sourceAuthor": "Admiral Jota",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "w5s3sv43s3p98v45",
+      "title": "The Gostak",
+      "firstYear": 2001,
+      "sourcePublished": "2001",
+      "source": "https://ifdb.org/viewgame?id=w5s3sv43s3p98v45",
+      "sourceAuthor": "Carl Muckenhoupt",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "p0cizeb3kiwzlm2p",
+      "title": "Savoir-Faire",
+      "firstYear": 2002,
+      "sourcePublished": "2002",
+      "source": "https://ifdb.org/viewgame?id=p0cizeb3kiwzlm2p",
+      "sourceAuthor": "Emily Short",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "4glrrfh7wrp9zz7b",
+      "title": "Violet",
+      "firstYear": 2008,
+      "sourcePublished": "2008",
+      "source": "https://ifdb.org/viewgame?id=4glrrfh7wrp9zz7b",
+      "sourceAuthor": "Jeremy Freese",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "2xyccw3pe0uovfad",
+      "title": "Spider and Web",
+      "firstYear": 1998,
+      "sourcePublished": "1998-05-04",
+      "source": "https://ifdb.org/viewgame?id=2xyccw3pe0uovfad",
+      "sourceAuthor": "Andrew Plotkin",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "1aliwzro4e48mdlt",
+      "title": "Worlds Apart",
+      "firstYear": 1999,
+      "sourcePublished": "1999",
+      "source": "https://ifdb.org/viewgame?id=1aliwzro4e48mdlt",
+      "sourceAuthor": "Suzanne Britton",
+      "developmentSystem": "TADS 2",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "ez2mcyx4zi98qlkh",
+      "title": "Blue Lacuna",
+      "firstYear": 2008,
+      "sourcePublished": "2008",
+      "source": "https://ifdb.org/viewgame?id=ez2mcyx4zi98qlkh",
+      "sourceAuthor": "Aaron A. Reed",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "9p8kh3im2j9h2881",
+      "title": "Bronze",
+      "firstYear": 2006,
+      "sourcePublished": "2006",
+      "source": "https://ifdb.org/viewgame?id=9p8kh3im2j9h2881",
+      "sourceAuthor": "Emily Short",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "u6wzkckne4zsafyl",
+      "title": "City of Secrets",
+      "firstYear": 2003,
+      "sourcePublished": "2003",
+      "source": "https://ifdb.org/viewgame?id=u6wzkckne4zsafyl",
+      "sourceAuthor": "Emily Short",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "ju778uv5xaswnlpl",
+      "title": "Photopia",
+      "firstYear": 1998,
+      "sourcePublished": "1998",
+      "source": "https://ifdb.org/viewgame?id=ju778uv5xaswnlpl",
+      "sourceAuthor": "Adam Cadre (as Opal O'Donnell)",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "xkai23ry99qdxce3",
+      "title": "Suveh Nux",
+      "firstYear": 2007,
+      "sourcePublished": "2007-11-19",
+      "source": "https://ifdb.org/viewgame?id=xkai23ry99qdxce3",
+      "sourceAuthor": "David Fisher",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "8upuvdnsk4sho6ac",
+      "title": "Treasures of a Slaver's Kingdom",
+      "firstYear": 2007,
+      "sourcePublished": "2007",
+      "source": "https://ifdb.org/viewgame?id=8upuvdnsk4sho6ac",
+      "sourceAuthor": "S. John Ross",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "032krqe6bjn5au78",
+      "title": "Slouching Towards Bedlam",
+      "firstYear": 2003,
+      "sourcePublished": "2003",
+      "source": "https://ifdb.org/viewgame?id=032krqe6bjn5au78",
+      "sourceAuthor": "Star C. Foster and Daniel Ravipinto",
+      "developmentSystem": "Inform 6, Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "jdrbw1htq4ah8q57",
+      "title": "Make It Good",
+      "firstYear": 2009,
+      "sourcePublished": "2009",
+      "source": "https://ifdb.org/viewgame?id=jdrbw1htq4ah8q57",
+      "sourceAuthor": "Jon Ingold",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "k6yq5koj2zjzstpt",
+      "title": "The Mulldoon Legacy",
+      "firstYear": 1999,
+      "sourcePublished": "1999",
+      "source": "https://ifdb.org/viewgame?id=k6yq5koj2zjzstpt",
+      "sourceAuthor": "Jon Ingold",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "z5xgyw0jbt9r3ah1",
+      "title": "Babel",
+      "firstYear": 1997,
+      "sourcePublished": "1997",
+      "source": "https://ifdb.org/viewgame?id=z5xgyw0jbt9r3ah1",
+      "sourceAuthor": "Ian Finley",
+      "developmentSystem": "TADS 2",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "9ntef9expou18abv",
+      "title": "The King of Shreds and Patches",
+      "firstYear": 2009,
+      "sourcePublished": "2009",
+      "source": "https://ifdb.org/viewgame?id=9ntef9expou18abv",
+      "sourceAuthor": "Jimmy Maher",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "3q9hg2onqjftx5vi",
+      "title": "Eric the Unready",
+      "firstYear": 1993,
+      "sourcePublished": "1993",
+      "source": "https://ifdb.org/viewgame?id=3q9hg2onqjftx5vi",
+      "sourceAuthor": "Bob Bates",
+      "developmentSystem": "None",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "legend-entertainment-eric-the-unready",
+          1993,
+          "historical-dossier"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "5e23lnq25gon9tp3",
+      "title": "All Things Devours",
+      "firstYear": 2004,
+      "sourcePublished": "2004",
+      "source": "https://ifdb.org/viewgame?id=5e23lnq25gon9tp3",
+      "sourceAuthor": "half sick of shadows",
+      "developmentSystem": "Inform 6",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "aearuuxv83plclpl",
+      "title": "Counterfeit Monkey",
+      "firstYear": 2012,
+      "sourcePublished": "2012-12-30",
+      "source": "https://ifdb.org/viewgame?id=aearuuxv83plclpl",
+      "sourceAuthor": "Emily Short",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "rtdcp8xzxnzi9c2t",
+      "title": "Type Help",
+      "firstYear": 2025,
+      "sourcePublished": "2025-01-25",
+      "source": "https://ifdb.org/viewgame?id=rtdcp8xzxnzi9c2t",
+      "sourceAuthor": "William Rous",
+      "developmentSystem": "Twine",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "du51t0qrhjqlnbij",
+      "title": "80 DAYS",
+      "firstYear": 2014,
+      "sourcePublished": "2014-07-31",
+      "source": "https://ifdb.org/viewgame?id=du51t0qrhjqlnbij",
+      "sourceAuthor": "inkle, Meg Jayanth",
+      "developmentSystem": "inklewriter",
+      "status": "existing-name-needs-identity-review",
+      "matches": [
+        [
+          "g1407",
+          2014,
+          "complete"
+        ],
+        [
+          "g1407",
+          2014,
+          "identity-registry"
+        ],
+        [
+          "supp26-inkle",
+          2014,
+          "supplement"
+        ]
+      ],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "6bcjwq5grob6fa6b",
+      "title": "Disco Elysium - The Final Cut",
+      "firstYear": 2019,
+      "sourcePublished": "2019-10-15",
+      "source": "https://ifdb.org/viewgame?id=6bcjwq5grob6fa6b",
+      "sourceAuthor": "ZA/UM",
+      "developmentSystem": "Custom",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "yutkd9u0oeog4br1",
+      "title": "Eat Me",
+      "firstYear": 2017,
+      "sourcePublished": "2017-10-01",
+      "source": "https://ifdb.org/viewgame?id=yutkd9u0oeog4br1",
+      "sourceAuthor": "Chandler Groover",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "94fj4mfrxzhzpp9s",
+      "title": "Never Gives Up Her Dead",
+      "firstYear": 2023,
+      "sourcePublished": "2023-12-22",
+      "source": "https://ifdb.org/viewgame?id=94fj4mfrxzhzpp9s",
+      "sourceAuthor": "Mathbrush",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "hslgyznv9n2hou7k",
+      "title": "Open Sorcery",
+      "firstYear": 2016,
+      "sourcePublished": "2016-05-05",
+      "source": "https://ifdb.org/viewgame?id=hslgyznv9n2hou7k",
+      "sourceAuthor": "Abigail Corfman",
+      "developmentSystem": "Twine",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "yspn49v69hzc8rtb",
+      "title": "Alias 'The Magpie'",
+      "firstYear": 2018,
+      "sourcePublished": "2018-10-01",
+      "source": "https://ifdb.org/viewgame?id=yspn49v69hzc8rtb",
+      "sourceAuthor": "J. J. Guest",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "pw1rbjt1t4n4n87s",
+      "title": "Junior Arithmancer",
+      "firstYear": 2018,
+      "sourcePublished": "2018-10-01",
+      "source": "https://ifdb.org/viewgame?id=pw1rbjt1t4n4n87s",
+      "sourceAuthor": "Mike Spivey",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "g0fl99ovcrq2sqzk",
+      "title": "Coloratura",
+      "firstYear": 2013,
+      "sourcePublished": "2013-09-29",
+      "source": "https://ifdb.org/viewgame?id=g0fl99ovcrq2sqzk",
+      "sourceAuthor": "Lynnea Glasser",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "41cr9x95gu6tlfeu",
+      "title": "The Impossible Bottle",
+      "firstYear": 2020,
+      "sourcePublished": "2020-10-01",
+      "source": "https://ifdb.org/viewgame?id=41cr9x95gu6tlfeu",
+      "sourceAuthor": "Linus Åkesson",
+      "developmentSystem": "Dialog",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "8e059ifaj1ztqqzd",
+      "title": "Stay?",
+      "firstYear": 2020,
+      "sourcePublished": "2020-11-15",
+      "source": "https://ifdb.org/viewgame?id=8e059ifaj1ztqqzd",
+      "sourceAuthor": "E. Jade Lomax",
+      "developmentSystem": "Ink",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "j0sata4yi32bi2xj",
+      "title": "The Bat",
+      "firstYear": 2024,
+      "sourcePublished": "2024-09-01",
+      "source": "https://ifdb.org/viewgame?id=j0sata4yi32bi2xj",
+      "sourceAuthor": "Chandler Groover",
+      "developmentSystem": "Inform 7",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "67r2qc21m5nzexv1",
+      "title": "Will Not Let Me Go",
+      "firstYear": 2017,
+      "sourcePublished": "2017-10-01",
+      "source": "https://ifdb.org/viewgame?id=67r2qc21m5nzexv1",
+      "sourceAuthor": "Stephen Granade",
+      "developmentSystem": "Twine",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "392ffjwtupz0jsv8",
+      "title": "The Den",
+      "firstYear": 2024,
+      "sourcePublished": "2024-09-01",
+      "source": "https://ifdb.org/viewgame?id=392ffjwtupz0jsv8",
+      "sourceAuthor": "Ben Jackson",
+      "developmentSystem": "Twine",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    },
+    {
+      "sourceId": "6cjbax7d0to42vof",
+      "title": "A Long Way to the Nearest Star",
+      "firstYear": 2022,
+      "sourcePublished": "2022-10-01",
+      "source": "https://ifdb.org/viewgame?id=6cjbax7d0to42vof",
+      "sourceAuthor": "SV Linwood",
+      "developmentSystem": "Twine",
+      "status": "candidate-not-imported",
+      "matches": [],
+      "readyForIdentityImport": false
+    }
+  ],
+  "summary": {
+    "sampled": 54,
+    "newIdentityImports": 0
+  },
+  "scope": "Small metadata sample only. For future bulk analysis use IF Archive SQL exports; do not crawl the API."
+}
