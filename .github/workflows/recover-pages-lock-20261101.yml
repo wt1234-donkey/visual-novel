@@ -34,7 +34,9 @@ jobs:
             }
             const status = result.data.status;
             core.info(JSON.stringify({ build: pages_deployment_id, status }));
-            const active = new Set(['deployment_queued', 'deployment_in_progress', 'queued', 'in_progress', 'pending', 'waiting']);
+            // The create-deployment API still names this exact obsolete SHA as the blocker,
+            // even while its status endpoint reports succeed; cancel that orphaned task.
+            const active = new Set(['deployment_queued', 'deployment_in_progress', 'queued', 'in_progress', 'pending', 'waiting', 'succeed']);
             if (active.has(status)) {
               await github.request('POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel', parameters);
               core.info('Cancelled only the obsolete deployment task; ready to retry the current main deployment.');
