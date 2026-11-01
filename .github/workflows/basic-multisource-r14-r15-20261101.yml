@@ -4,7 +4,7 @@ on:
     branches: [catalog/basic-r14-r15-multisource-20261101]
   pull_request:
     branches: [main]
-    types: [edited, synchronize]
+    types: [edited]
   workflow_dispatch:
 permissions:
   contents: write
