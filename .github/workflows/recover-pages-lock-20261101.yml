@@ -1,0 +1,43 @@
+name: Release obsolete Pages deployment lock
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize]
+    paths:
+      - '.github/workflows/recover-pages-lock-20261101.yml'
+permissions:
+  contents: read
+  pages: write
+jobs:
+  release-obsolete-lock:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'fix/pages-obsolete-lock-20261101'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Inspect and cancel only the obsolete deployment blocking PR 226
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = 'wt1234-donkey';
+            const repo = 'visual-novel';
+            const pages_deployment_id = '059f63c4f97aae3c02114093e9d619d00529de3c';
+            const parameters = { owner, repo, pages_deployment_id };
+            let result;
+            try {
+              result = await github.request('GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}', parameters);
+            } catch (error) {
+              if (error.status === 404) {
+                core.info('Obsolete deployment no longer present; no cancellation needed.');
+                return;
+              }
+              throw error;
+            }
+            const status = result.data.status;
+            core.info(JSON.stringify({ build: pages_deployment_id, status }));
+            const active = new Set(['deployment_queued', 'deployment_in_progress', 'queued', 'in_progress', 'pending', 'waiting']);
+            if (active.has(status)) {
+              await github.request('POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel', parameters);
+              core.info('Cancelled only the obsolete deployment task; ready to retry the current main deployment.');
+            } else {
+              core.info('Obsolete deployment is terminal; no cancellation performed.');
+            }
