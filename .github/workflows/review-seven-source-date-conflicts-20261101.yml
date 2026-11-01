@@ -1,0 +1,56 @@
+name: Audit seven source date conflicts and register verified VNDB identities
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths:
+      - 'scripts/review_seven_source_date_conflicts_20261101.py'
+      - '.github/workflows/review-seven-source-date-conflicts-20261101.yml'
+      - 'data/vn-seven-source-date-review-20261101.json'
+permissions:
+  contents: write
+concurrency:
+  group: seven-source-date-conflicts-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  independent-identity-review:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'catalog/review-seven-date-conflicts-20261101'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check exact seven conflicts and verify VNDB live identities before entry
+        run: |
+          python3 -m py_compile scripts/review_seven_source_date_conflicts_20261101.py
+          python3 scripts/review_seven_source_date_conflicts_20261101.py
+          python3 scripts/review_seven_source_date_conflicts_20261101.py --check
+          python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Required repository consistency, entity and regression checks
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+      - name: Commit confirmed basic identities back to PR
+        env:
+          TARGET_BRANCH: ${{ github.head_ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/vn-seven-source-date-review-20261101.json data/basic-to-full-promotion-review-20261101.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Register independently verified VNDB identities from seven held date conflicts"
+            git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          fi
