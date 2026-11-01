@@ -1,0 +1,58 @@
+name: Import and verify basic rounds 34 and 35 with queue priority
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths:
+      - 'scripts/import_basic_r34_r35_20261101.py'
+      - '.github/workflows/basic-r34-r35-20261101.yml'
+      - 'scripts/import_basic_r24_r25_20261101.py'
+      - 'tests/test_basic_r24_r25.py'
+      - 'data/vndb-kana-bulk-review-20261101-r34.json'
+permissions:
+  contents: write
+concurrency:
+  group: basic-r34-r35-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  import-and-verify:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'catalog/basic-r34-r35-20261101'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Append at most 500 identities per source and verify provenance
+        run: |
+          python3 -m py_compile scripts/import_basic_r34_r35_20261101.py
+          python3 scripts/import_basic_r34_r35_20261101.py
+          python3 scripts/import_basic_r34_r35_20261101.py --check
+          python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Required catalogue, entity, regression and page checks
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+      - name: Commit verified basic identities to this PR
+        env:
+          TARGET_BRANCH: ${{ github.head_ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/vndb-kana-bulk-review-20261101-r34.json data/nextmoe-bulk-review-20261101-r35.json data/basic-r34-r35-diversity-20261101.json data/basic-to-full-promotion-review-20261101.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Append audited basic rounds 34 and 35 with queue priority"
+            git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          fi
