@@ -10,7 +10,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: historical-interactive-fiction-1970s-\${{ github.event.pull_request.number }}
+  group: historical-interactive-fiction-1970s-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 jobs:
   verify-and-stage:
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: \${{ github.head_ref }}
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -43,7 +43,7 @@ jobs:
           python3 scripts/build_company_pages.py --check
       - name: Stage verified basic identities on this PR branch
         env:
-          TARGET_BRANCH: \${{ github.head_ref }}
+          TARGET_BRANCH: ${{ github.head_ref }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
