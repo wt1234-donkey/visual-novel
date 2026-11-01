@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "byBatch": {
+    "vndb-kana-bulk-20261101-r44": {
+      "newDistinctWorks": 500,
+      "before": 21368,
+      "after": 21868,
+      "scanned": 1007,
+      "pendingInput": 7,
+      "pendingEligible": 7,
+      "liveScanned": 1000,
+      "liveEligible": 512,
+      "selectedFromDeferred": 7,
+      "selectedFromLive": 493,
+      "remainingDeferred": 19,
+      "reused-external-identity": 398,
+      "missing-name-year-or-unreleased": 41,
+      "derivative-held": 5,
+      "name-year-conflict-held": 17,
+      "reused-title-alias": 27,
+      "cursorStart": "v15566",
+      "cursorEnd": "v16615",
+      "reuseTargets": {
+        "registered-work": 425
+      },
+      "decades": {
+        "2010s": 499,
+        "2020s": 1
+      },
+      "creatorTypes": {
+        "individual-or-amateur-signal": 377,
+        "company": 110,
+        "unknown": 13
+      },
+      "distinctDeveloperIds": 379
+    },
+    "nextmoe-galgame-bulk-20261101-r45": {
+      "newDistinctWorks": 500,
+      "before": 21868,
+      "after": 22368,
+      "scanned": 605,
+      "pendingInput": 5,
+      "pendingEligible": 5,
+      "liveScanned": 600,
+      "liveEligible": 572,
+      "selectedFromDeferred": 5,
+      "selectedFromLive": 495,
+      "remainingDeferred": 77,
+      "name-year-conflict-held": 21,
+      "derivative-held": 3,
+      "invalid-medium-or-source-id": 1,
+      "missing-name-year-or-unreleased": 3,
+      "paginationTrace": [
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNelExTVRkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNelUzTWpOOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNelUzTWpOOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNell6TlRkOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNell6TlRkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNemN4TkRGOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNemN4TkRGOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNemMwTWpoOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNemMwTWpoOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNemM0T0RKOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNemM0T0RKOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNemd5TkRoOQ",
+          "returned": 100
+        }
+      ],
+      "reuseTargets": {},
+      "decades": {
+        "2000s": 500
+      },
+      "creatorTypes": {
+        "individual-or-amateur-signal": 456,
+        "company": 41,
+        "unknown": 3
+      },
+      "distinctDeveloperIds": 229
+    }
+  },
+  "summary": {
+    "newDistinctWorks": 1000,
+    "uniqueVndbIds": 1000,
+    "selectedFromDeferred": 12,
+    "selectedFromLive": 988,
+    "distinctDeveloperIds": 605,
+    "individualOrAmateurSignalWorks": 833
+  },
+  "caveats": [
+    "Personal/amateur producer types are source signals, not proof of independent status.",
+    "Saved source metadata is reused for deferred candidates; dates still require original-region/edition review.",
+    "Developer metadata remains in audit only; no formal credits were created."
+  ]
+}
