@@ -1,0 +1,6152 @@
+{
+  "schema": 1,
+  "date": "2026-11-02",
+  "source": "https://api.nextmoe.dev/v2/catalog/works",
+  "sourceDocs": "https://api.vndb.org/kana",
+  "sourceLicense": "https://vndb.org/d17; NextMoe minimal identity metadata with source attribution",
+  "summary": {
+    "newDistinctWorks": 145,
+    "before": 27875,
+    "after": 28020,
+    "scanned": 2525,
+    "pendingInput": 25,
+    "pendingEligible": 25,
+    "liveScanned": 2500,
+    "liveEligible": 120,
+    "selectedFromDeferred": 25,
+    "selectedFromLive": 120,
+    "remainingDeferred": 0,
+    "invalid-medium-or-source-id": 2371,
+    "missing-name-year-or-unreleased": 1,
+    "name-year-conflict-held": 6,
+    "reused-title-alias": 2,
+    "paginationTrace": [
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1TURFMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1T0RFeGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1T0RFeGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TkRJemZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TkRJemZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TmpBeGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TmpBeGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TnpNNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TnpNNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14T0RjMmZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14T0RjMmZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TURBMGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TURBMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TWpZemZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TWpZemZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15T1RZMGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15T1RZMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak16T1RJd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak16T1RJd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xTXpRM2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xTXpRM2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xT1RZNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xT1RZNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT0RVeWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT0RVeWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT1RVMGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT1RVMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTURVNGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTURVNGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTVRZd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTVRZd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTWpjd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTWpjd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTXpjNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTXpjNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTkRnM2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTkRnM2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTlRrNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTlRrNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTnpBd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTnpBd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT0RBNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT0RBNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT1RFMWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT1RFMWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TURNeWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TURNeWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TVRRMWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TVRRMWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TWpVeWZR",
+        "returned": 100
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "vndb-v67179",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226765",
+      "title": "Aphelia no Seijo",
+      "aliases": [
+        "アフェリアの聖女",
+        "阿菲利亚的圣女"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226765",
+      "sourceRefs": [
+        "nextmoe:226765",
+        "vndb:v67179"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226765",
+      "vndbId": "v67179",
+      "sourceReleased": "2006-02-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2006-02-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v64666",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-60119",
+      "title": "Keiyaku Shain",
+      "aliases": [
+        "契約社員",
+        "契约社员"
+      ],
+      "firstYear": 2002,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60119",
+      "sourceRefs": [
+        "nextmoe:60119",
+        "vndb:v64666"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "60119",
+      "vndbId": "v64666",
+      "sourceReleased": "2002",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p29257",
+          "name": "RUTA",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2002-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67231",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226821",
+      "title": "Shiro no Shuudan R",
+      "aliases": [
+        "白の集団R",
+        "白之集团R"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226821",
+      "sourceRefs": [
+        "nextmoe:226821",
+        "vndb:v67231"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226821",
+      "vndbId": "v67231",
+      "sourceReleased": "2005-06-24",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2005-06-24",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v65523",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-60929",
+      "title": "calando",
+      "aliases": [],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60929",
+      "sourceRefs": [
+        "nextmoe:60929",
+        "vndb:v65523"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "60929",
+      "vndbId": "v65523",
+      "sourceReleased": "2009-12-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3971",
+          "name": "P177 Mitsuko",
+          "original": "P177ミツコ",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2009-12-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67245",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226835",
+      "title": "Nyuuin Kansha Souryuu Asuka Langley Iryou Karte",
+      "aliases": [
+        "入院姦者 惣流・ア×カ・ラングレー医凌カルテ",
+        "Soryu As*ka Langley - Medical Sex Charts"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226835",
+      "sourceRefs": [
+        "nextmoe:226835",
+        "vndb:v67245"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226835",
+      "vndbId": "v67245",
+      "sourceReleased": "2008-06-13",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p4276",
+          "name": "MoeMix.com",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2008-06-13",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v65537",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-60941",
+      "title": "Chinpu Kitan 2: Reda Ouji to Suishou no Tori",
+      "aliases": [
+        "陳腐奇譚2 レダの王子と水晶の鳥",
+        "陈腐奇谭2 勒达的王子与水晶之鸟"
+      ],
+      "firstYear": 2002,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60941",
+      "sourceRefs": [
+        "nextmoe:60941",
+        "vndb:v65537"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "60941",
+      "vndbId": "v65537",
+      "sourceReleased": "2002-03-20",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9885",
+          "name": "Ohimesama Club",
+          "original": "お姫様倶楽部",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2002-03-20",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67561",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-228605",
+      "title": "remote：OPERA EPISODE 2",
+      "aliases": [],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/228605",
+      "sourceRefs": [
+        "nextmoe:228605",
+        "vndb:v67561"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "228605",
+      "vndbId": "v67561",
+      "sourceReleased": "2008-12-29",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9965",
+          "name": "debris",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2008-12-29",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v64845",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-60285",
+      "title": "Maid Hata 3 ~Sayaka~",
+      "aliases": [
+        "メイド畑3 ～さやか～",
+        "女仆田3 ～沙耶香～"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60285",
+      "sourceRefs": [
+        "nextmoe:60285",
+        "vndb:v64845"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "60285",
+      "vndbId": "v64845",
+      "sourceReleased": "2005-02-19",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9980",
+          "name": "Katei Saien",
+          "original": "家庭菜園",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2005-02-19",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67180",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226766",
+      "title": "E.E.click! Otenbahime no Junan",
+      "aliases": [
+        "E.E.click! おてんば姫の受難",
+        "E.E.click! 淘气公主的受难"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226766",
+      "sourceRefs": [
+        "nextmoe:226766",
+        "vndb:v67180"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226766",
+      "vndbId": "v67180",
+      "sourceReleased": "2005-06-13",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2005-06-13",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v65380",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-60796",
+      "title": "Mo○nonoke Game ～ Ayakashi no Sakura ～",
+      "aliases": [
+        "モ○ノ怪ゲーム～妖しの桜～",
+        "物○怪游戏～妖异之樱～"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60796",
+      "sourceRefs": [
+        "nextmoe:60796",
+        "vndb:v65380"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "60796",
+      "vndbId": "v65380",
+      "sourceReleased": "2005-12-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p29257",
+          "name": "RUTA",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2005-12-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67236",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226826",
+      "title": "NEVADA",
+      "aliases": [],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226826",
+      "sourceRefs": [
+        "nextmoe:226826",
+        "vndb:v67236"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226826",
+      "vndbId": "v67236",
+      "sourceReleased": "2004-09-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2004-09-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v64847",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-60287",
+      "title": "Katei Saien Maid Hata 2 ~Nanao~",
+      "aliases": [
+        "家庭菜園 メイド畑2 ～奈々緒～",
+        "家庭菜园 女仆田2 ～奈奈绪～"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60287",
+      "sourceRefs": [
+        "nextmoe:60287",
+        "vndb:v64847"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "60287",
+      "vndbId": "v64847",
+      "sourceReleased": "2004-10-25",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9980",
+          "name": "Katei Saien",
+          "original": "家庭菜園",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2004-10-25",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67185",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226771",
+      "title": "E.E.click! Mou-chan Hen",
+      "aliases": [
+        "E.E.click! 蒙ちゃん編",
+        "E.E.click! 蒙酱篇"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226771",
+      "sourceRefs": [
+        "nextmoe:226771",
+        "vndb:v67185"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226771",
+      "vndbId": "v67185",
+      "sourceReleased": "2004-02-12",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2004-02-12",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67238",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226828",
+      "title": "Osanazuma Dorei Kissa",
+      "aliases": [
+        "幼妻奴隷喫茶",
+        "幼妻奴隶吃茶"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226828",
+      "sourceRefs": [
+        "nextmoe:226828",
+        "vndb:v67238"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226828",
+      "vndbId": "v67238",
+      "sourceReleased": "2004-07-23",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2004-07-23",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v64848",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-60288",
+      "title": "Katei Saien Maid Hata ~Yayoi~",
+      "aliases": [
+        "家庭菜園 メイド畑 ～夜宵～",
+        "家庭菜园 女仆田 ～夜宵～"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60288",
+      "sourceRefs": [
+        "nextmoe:60288",
+        "vndb:v64848"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "60288",
+      "vndbId": "v64848",
+      "sourceReleased": "2004-07-29",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9980",
+          "name": "Katei Saien",
+          "original": "家庭菜園",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2004-07-29",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67246",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226836",
+      "title": "Yorozu Flash #04",
+      "aliases": [
+        "ヨロヅフラッシュ ＃04",
+        "万象闪光 ＃04"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226836",
+      "sourceRefs": [
+        "nextmoe:226836",
+        "vndb:v67246"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226836",
+      "vndbId": "v67246",
+      "sourceReleased": "2003-12-16",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2003-12-16",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67240",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226830",
+      "title": "Taiken Kokuhaku Gazou Keijiban",
+      "aliases": [
+        "体験告白画像掲示板",
+        "体验告白画像揭示板"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226830",
+      "sourceRefs": [
+        "nextmoe:226830",
+        "vndb:v67240"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226830",
+      "vndbId": "v67240",
+      "sourceReleased": "2004-04-28",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2004-04-28",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67251",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226841",
+      "title": "Yorozu Flash #01",
+      "aliases": [
+        "ヨロヅフラッシュ#01",
+        "万象闪光#01"
+      ],
+      "firstYear": 2002,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226841",
+      "sourceRefs": [
+        "nextmoe:226841",
+        "vndb:v67251"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226841",
+      "vndbId": "v67251",
+      "sourceReleased": "2002-12-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2002-12-08",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67242",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226832",
+      "title": "Ayanami Gohoushi Keikaku",
+      "aliases": [
+        "綾波ご奉仕計画",
+        "绫波侍奉计划"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226832",
+      "sourceRefs": [
+        "nextmoe:226832",
+        "vndb:v67242"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226832",
+      "vndbId": "v67242",
+      "sourceReleased": "2003-06-02",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2003-06-02",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67254",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226844",
+      "title": "Yorozu Flash #02",
+      "aliases": [
+        "ヨロヅフラッシュ#02",
+        "万象闪光#02"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226844",
+      "sourceRefs": [
+        "nextmoe:226844",
+        "vndb:v67254"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226844",
+      "vndbId": "v67254",
+      "sourceReleased": "2003-03-01",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2003-03-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67247",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226837",
+      "title": "Yappari…Mou Tane Po.",
+      "aliases": [
+        "やっぱり…もう種ポ。"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226837",
+      "sourceRefs": [
+        "nextmoe:226837",
+        "vndb:v67247"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226837",
+      "vndbId": "v67247",
+      "sourceReleased": "2004-03-18",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2004-03-18",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67255",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226845",
+      "title": "Yorozu Flash #03",
+      "aliases": [
+        "ヨロヅフラッシュ#03",
+        "万象闪光#03"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226845",
+      "sourceRefs": [
+        "nextmoe:226845",
+        "vndb:v67255"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226845",
+      "vndbId": "v67255",
+      "sourceReleased": "2003-06-18",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2003-06-18",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67248",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226838",
+      "title": "Numerin DUEL!",
+      "aliases": [
+        "ぬめりんDUEL!",
+        "滑溜溜DUEL!"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226838",
+      "sourceRefs": [
+        "nextmoe:226838",
+        "vndb:v67248"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226838",
+      "vndbId": "v67248",
+      "sourceReleased": "2003-12-19",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2003-12-19",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67256",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226846",
+      "title": "Yorozu Flash #06 Heya to Onii-chan to Watashi",
+      "aliases": [
+        "ヨロヅフラッシュ#06 部屋とお兄ちゃんと私",
+        "万象闪光#06 房间和哥哥和我"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226846",
+      "sourceRefs": [
+        "nextmoe:226846",
+        "vndb:v67256"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226846",
+      "vndbId": "v67256",
+      "sourceReleased": "2003-12-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2304",
+          "name": "Urayoroduya",
+          "original": "裏万屋",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2003-12-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67249",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-226839",
+      "title": "Mou Tane Po.",
+      "aliases": [
+        "もう種ポ。"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226839",
+      "sourceRefs": [
+        "nextmoe:226839",
+        "vndb:v67249"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "226839",
+      "vndbId": "v67249",
+      "sourceReleased": "2003-07-18",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30460",
+          "name": "Senri no Hora",
+          "original": "千里ノ洞",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "deferred",
+      "priorAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+      "nextmoeSourceReleased": "2003-07-18",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68489",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229495",
+      "title": "Ningen Bokujou",
+      "aliases": [
+        "人間牧場"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229495",
+      "sourceRefs": [
+        "nextmoe:229495",
+        "vndb:v68489"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229495",
+      "vndbId": "v68489",
+      "sourceReleased": "2008-05-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p10115",
+          "name": "Mayugeya",
+          "original": "眉毛屋",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-05-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68030",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229063",
+      "title": "Todoke Kono Omoi",
+      "aliases": [
+        "届けこの想い",
+        "蜜桃小魔女之缘起"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229063",
+      "sourceRefs": [
+        "nextmoe:229063",
+        "vndb:v68030"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229063",
+      "vndbId": "v68030",
+      "sourceReleased": "2004-10-15",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p397",
+          "name": "softhouse-seal",
+          "original": null,
+          "type": "co"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-10-15",
+      "developerClassification": "company"
+    },
+    {
+      "id": "vndb-v68744",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229732",
+      "title": "Hina! Hina! Hina! Hina Matsuri 2",
+      "aliases": [
+        "ひな!ひな!ひな! 雛祭り 2"
+      ],
+      "firstYear": 2002,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229732",
+      "sourceRefs": [
+        "nextmoe:229732",
+        "vndb:v68744"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229732",
+      "vndbId": "v68744",
+      "sourceReleased": "2002",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p10118",
+          "name": "NECORO-GIRL",
+          "original": "ねころがーる",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2002-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68155",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229172",
+      "title": "Eropoli Mercy wo Sagase",
+      "aliases": [
+        "エロポリーマーシーを探せ"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229172",
+      "sourceRefs": [
+        "nextmoe:229172",
+        "vndb:v68155"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229172",
+      "vndbId": "v68155",
+      "sourceReleased": "2003-12-11",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p966",
+          "name": "Societa Daikanyama",
+          "original": "ソシエッタ代官山",
+          "type": "co"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2003-12-11",
+      "developerClassification": "company"
+    },
+    {
+      "id": "vndb-v69546",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-237117",
+      "title": "Try Witch",
+      "aliases": [
+        "Try Witch-トライ ウィッチ-"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/237117",
+      "sourceRefs": [
+        "nextmoe:237117",
+        "vndb:v69546"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "237117",
+      "vndbId": "v69546",
+      "sourceReleased": "2004-09-25",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p11336",
+          "name": "Acid-Mist",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-09-25",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68033",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229064",
+      "title": "Kiro no Kotonoha",
+      "aliases": [
+        "キロノコトノハ"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229064",
+      "sourceRefs": [
+        "nextmoe:229064",
+        "vndb:v68033"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229064",
+      "vndbId": "v68033",
+      "sourceReleased": "2004-07-02",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p397",
+          "name": "softhouse-seal",
+          "original": null,
+          "type": "co"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-07-02",
+      "developerClassification": "company"
+    },
+    {
+      "id": "vndb-v68229",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229240",
+      "title": "Dokuhebi to Hentai",
+      "aliases": [
+        "毒蛇と変態"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229240",
+      "sourceRefs": [
+        "nextmoe:229240",
+        "vndb:v68229"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229240",
+      "vndbId": "v68229",
+      "sourceReleased": "2009-04-01",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p12908",
+          "name": "Fantasielos",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-04-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68034",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229065",
+      "title": "Kyrie Eleison",
+      "aliases": [
+        "キリエ・エレイソン",
+        "垂怜经"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229065",
+      "sourceRefs": [
+        "nextmoe:229065",
+        "vndb:v68034"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229065",
+      "vndbId": "v68034",
+      "sourceReleased": "2004-08-15",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p397",
+          "name": "softhouse-seal",
+          "original": null,
+          "type": "co"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-08-15",
+      "developerClassification": "company"
+    },
+    {
+      "id": "vndb-v35405",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229465",
+      "title": "Ooinaru Fuyu",
+      "aliases": [
+        "大いなる冬",
+        "Ooinaru Fuyu -Fimbulvetr-"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229465",
+      "sourceRefs": [
+        "nextmoe:229465",
+        "vndb:v35405"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229465",
+      "vndbId": "v35405",
+      "sourceReleased": "2008-08-17",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p13979",
+          "name": "Dokudenpa Shinbunsha",
+          "original": "毒電波新聞社",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-08-17",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68606",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229603",
+      "title": "Mahou Shoujo Satsuki-chan",
+      "aliases": [
+        "魔法少女さつきちゃん",
+        "Magical Girl Satsuki-chan"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229603",
+      "sourceRefs": [
+        "nextmoe:229603",
+        "vndb:v68606"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229603",
+      "vndbId": "v68606",
+      "sourceReleased": "2005-07-24",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p14690",
+          "name": "Kyukyukyu no Q no Q",
+          "original": "キュキュキュのQのQ",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-07-24",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68591",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229588",
+      "title": "Tsundere Elfkko to Hotel Heath de Asobou!",
+      "aliases": [
+        "ツンデレエルフっ娘とホテルヘルスで遊ぼう!"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229588",
+      "sourceRefs": [
+        "nextmoe:229588",
+        "vndb:v68591"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229588",
+      "vndbId": "v68591",
+      "sourceReleased": "2008-09-28",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p14880",
+          "name": "Cool Knights",
+          "original": "クールナイツ",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-09-28",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v69990",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-235112",
+      "title": "Project Lavender",
+      "aliases": [],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/235112",
+      "sourceRefs": [
+        "nextmoe:235112",
+        "vndb:v69990"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "235112",
+      "vndbId": "v69990",
+      "sourceReleased": "2007-02-18",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p15255",
+          "name": "mahirukan",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68328",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229339",
+      "title": "DIAPER LOVER ~Omukko Daisuki~",
+      "aliases": [
+        "DIAPER LOVER～おむっ娘大好き～"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229339",
+      "sourceRefs": [
+        "nextmoe:229339",
+        "vndb:v68328"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229339",
+      "vndbId": "v68328",
+      "sourceReleased": "2004-09-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p1554",
+          "name": "YAH-YAH-DOH",
+          "original": "ヤアヤアドウ",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-09-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v69903",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-232162",
+      "title": "Seiken Gran Saber",
+      "aliases": [
+        "聖剣グランセイバー"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/232162",
+      "sourceRefs": [
+        "nextmoe:232162",
+        "vndb:v69903"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "232162",
+      "vndbId": "v69903",
+      "sourceReleased": "2005-02-06",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p16376",
+          "name": "Shiikugakari",
+          "original": "飼育係",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-01-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v69880",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-233297",
+      "title": "Gessou-tan -Mind of A Lunatic-",
+      "aliases": [
+        "月槍譚-Mind of A Lunatic-"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/233297",
+      "sourceRefs": [
+        "nextmoe:233297",
+        "vndb:v69880"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "233297",
+      "vndbId": "v69880",
+      "sourceReleased": "2009",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p18848",
+          "name": "Tsukinomizu Kikaku",
+          "original": "月の水企画",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67980",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229024",
+      "title": "Aoi Harukaze -Yukari no Soshunbu-",
+      "aliases": [
+        "あおいはるかぜ -ゆかりの早春賦-",
+        "Blue spring breeze",
+        "苍蓝春风 -缘的早春赋-"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229024",
+      "sourceRefs": [
+        "nextmoe:229024",
+        "vndb:v67980"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229024",
+      "vndbId": "v67980",
+      "sourceReleased": "2009-01-06",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p18985",
+          "name": "Constructor",
+          "original": "こんすとらくた",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-01-06",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67979",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229023",
+      "title": "Love Qyu~",
+      "aliases": [
+        "ラブQゅ～",
+        "Love Kyu~"
+      ],
+      "firstYear": 2001,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229023",
+      "sourceRefs": [
+        "nextmoe:229023",
+        "vndb:v67979"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229023",
+      "vndbId": "v67979",
+      "sourceReleased": "2001-05-13",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p20111",
+          "name": "CIRCLET",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2001-05-13",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68352",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229362",
+      "title": "Keppekishou Shoujo",
+      "aliases": [
+        "潔癖症少女"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229362",
+      "sourceRefs": [
+        "nextmoe:229362",
+        "vndb:v68352"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229362",
+      "vndbId": "v68352",
+      "sourceReleased": "2004",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2024",
+          "name": "A cherry-blossom front",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68793",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229774",
+      "title": "Shiden no Ken",
+      "aliases": [
+        "紫電の剣"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229774",
+      "sourceRefs": [
+        "nextmoe:229774",
+        "vndb:v68793"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229774",
+      "vndbId": "v68793",
+      "sourceReleased": "2009-12-31",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p21408",
+          "name": "Studio Unite",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-12-31",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68559",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229559",
+      "title": "Megumi Kumix",
+      "aliases": [
+        "めぐみくみっくす"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229559",
+      "sourceRefs": [
+        "nextmoe:229559",
+        "vndb:v68559"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229559",
+      "vndbId": "v68559",
+      "sourceReleased": "2007",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p21636",
+          "name": "Fanta",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68792",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229773",
+      "title": "Yasashii Sekai",
+      "aliases": [
+        "やさしいせかい"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229773",
+      "sourceRefs": [
+        "nextmoe:229773",
+        "vndb:v68792"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229773",
+      "vndbId": "v68792",
+      "sourceReleased": "2009-12-31",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p23596",
+          "name": "Natural Herb 12 CM ENT",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-12-31",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68440",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229445",
+      "title": "Mehyou Kanen Bijuu Fujiko",
+      "aliases": [
+        "女豹姦宴 美獣不二子"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229445",
+      "sourceRefs": [
+        "nextmoe:229445",
+        "vndb:v68440"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229445",
+      "vndbId": "v68440",
+      "sourceReleased": "2005-05-18",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2451",
+          "name": "Akiyama Production",
+          "original": "アキヤマ興業",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-05-18",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68832",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229811",
+      "title": "Tenkuu no Seidorei",
+      "aliases": [
+        "天空の性奴隷"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229811",
+      "sourceRefs": [
+        "nextmoe:229811",
+        "vndb:v68832"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229811",
+      "vndbId": "v68832",
+      "sourceReleased": "2009-09-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2748",
+          "name": "Studio Pork",
+          "original": "スタジオポーク",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-09-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68835",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229814",
+      "title": "Teikou Suru Tifa",
+      "aliases": [
+        "抵抗するティファ"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229814",
+      "sourceRefs": [
+        "nextmoe:229814",
+        "vndb:v68835"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229814",
+      "vndbId": "v68835",
+      "sourceReleased": "2009-06-10",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2903",
+          "name": "Crimson",
+          "original": "クリムゾン",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-04-27",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68850",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229829",
+      "title": "Marie-san no Sainan",
+      "aliases": [
+        "麻理絵さんの災難"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229829",
+      "sourceRefs": [
+        "nextmoe:229829",
+        "vndb:v68850"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229829",
+      "vndbId": "v68850",
+      "sourceReleased": "2004-03-31",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p29120",
+          "name": "Nekonote Shobou",
+          "original": "ねこのてしょぼう",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-03-31",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67967",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229016",
+      "title": "Rainbow Region",
+      "aliases": [],
+      "firstYear": 2002,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229016",
+      "sourceRefs": [
+        "nextmoe:229016",
+        "vndb:v67967"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229016",
+      "vndbId": "v67967",
+      "sourceReleased": "2002-03-01",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30753",
+          "name": "HEXENWORKs",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2002-03-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67972",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229018",
+      "title": "Zero Kaji",
+      "aliases": [
+        "ゼロカジ",
+        "零家务"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229018",
+      "sourceRefs": [
+        "nextmoe:229018",
+        "vndb:v67972"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229018",
+      "vndbId": "v67972",
+      "sourceReleased": "2006-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30756",
+          "name": "Grand Hotel",
+          "original": "グランドホテル",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-08-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v67983",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229026",
+      "title": "Yuki - a soul transient as if snow",
+      "aliases": [
+        "ゆき a soul transient as if snow",
+        "雪 a soul transient as if snow"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229026",
+      "sourceRefs": [
+        "nextmoe:229026",
+        "vndb:v67983"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229026",
+      "vndbId": "v67983",
+      "sourceReleased": "2006",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30758",
+          "name": "Kanzume",
+          "original": "缶ヅメ",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68040",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229069",
+      "title": "Netorare Maid",
+      "aliases": [
+        "寝取られメイド",
+        "NTR MAID",
+        "被寝取的女仆"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229069",
+      "sourceRefs": [
+        "nextmoe:229069",
+        "vndb:v68040"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229069",
+      "vndbId": "v68040",
+      "sourceReleased": "2007-03-18",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30793",
+          "name": "Denkousekka Yatai",
+          "original": "電光石火屋台",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-03-18",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68043",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229071",
+      "title": "Koko Chiyoi Kaze",
+      "aliases": [
+        "ここちよい風",
+        "惬意的风"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229071",
+      "sourceRefs": [
+        "nextmoe:229071",
+        "vndb:v68043"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229071",
+      "vndbId": "v68043",
+      "sourceReleased": "2007-06-02",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30796",
+          "name": "ALLURE",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-06-02",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68046",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229073",
+      "title": "forbidden lover",
+      "aliases": [],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229073",
+      "sourceRefs": [
+        "nextmoe:229073",
+        "vndb:v68046"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229073",
+      "vndbId": "v68046",
+      "sourceReleased": "2004-05-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30798",
+          "name": "Lies and Truth",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-05-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68047",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229074",
+      "title": "CAN YOU KEEP A SECRET?",
+      "aliases": [],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229074",
+      "sourceRefs": [
+        "nextmoe:229074",
+        "vndb:v68047"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229074",
+      "vndbId": "v68047",
+      "sourceReleased": "2005-10-23",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30799",
+          "name": "Tokage",
+          "original": "トカゲ",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-10-23",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68051",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229078",
+      "title": "NUKADAYA WEB TOWARD THE TERRA",
+      "aliases": [],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229078",
+      "sourceRefs": [
+        "nextmoe:229078",
+        "vndb:v68051"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229078",
+      "vndbId": "v68051",
+      "sourceReleased": "2007",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30800",
+          "name": "Nukata-ya Kouriten・STUDIO Takama",
+          "original": "額田屋小売店・STUDIO高天",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68052",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229079",
+      "title": "Kirakira Hikaru -Chijou no Hoshi-",
+      "aliases": [
+        "きらきらひかる -地上の星-",
+        "闪闪发光 -地上的星-"
+      ],
+      "firstYear": 2002,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229079",
+      "sourceRefs": [
+        "nextmoe:229079",
+        "vndb:v68052"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229079",
+      "vndbId": "v68052",
+      "sourceReleased": "2002",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30801",
+          "name": "HEAVEN’S CROWN",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2002-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68055",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229081",
+      "title": "Kazeoki -Kaze Maneki-",
+      "aliases": [
+        "カゼオキ -風招き-"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229081",
+      "sourceRefs": [
+        "nextmoe:229081",
+        "vndb:v68055"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229081",
+      "vndbId": "v68055",
+      "sourceReleased": "2006-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30805",
+          "name": "WRIST CUTS",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-08-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68056",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229082",
+      "title": "Oshikakete Kita Shinigami ni Kanari Kettaina Me ni Awasareru Kawaisou na Hito.",
+      "aliases": [
+        "おしかけてきたしにがみにかなりけったいな目に会わされる可哀想な人。",
+        "被突然上门的死神折腾得相当古怪的可怜人。"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229082",
+      "sourceRefs": [
+        "nextmoe:229082",
+        "vndb:v68056"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229082",
+      "vndbId": "v68056",
+      "sourceReleased": "2007-08-17",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30806",
+          "name": "Circle Mino.",
+          "original": "サークルみの。",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-08-17",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68059",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229083",
+      "title": "Hitoyono -we are living under the blue-",
+      "aliases": [
+        "ひとよの -we are living under the blue-",
+        "一夜之 -we are living under the blue-"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229083",
+      "sourceRefs": [
+        "nextmoe:229083",
+        "vndb:v68059"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229083",
+      "vndbId": "v68059",
+      "sourceReleased": "2006-12",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30808",
+          "name": "Kurage no Bon",
+          "original": "クラゲノボーン",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-12-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68063",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229084",
+      "title": "Make Angel Project",
+      "aliases": [
+        "MAP"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229084",
+      "sourceRefs": [
+        "nextmoe:229084",
+        "vndb:v68063"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229084",
+      "vndbId": "v68063",
+      "sourceReleased": "2006-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30812",
+          "name": "PLANET FACTORY",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68073",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229094",
+      "title": "Midori no Mori Douwa -Aine to Kazaguruma-",
+      "aliases": [
+        "緑の森童話ーアイネと風車ー"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229094",
+      "sourceRefs": [
+        "nextmoe:229094",
+        "vndb:v68073"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229094",
+      "vndbId": "v68073",
+      "sourceReleased": "2006-12",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30824",
+          "name": "Grunwald",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-12-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68074",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229095",
+      "title": "Aspro Mavro",
+      "aliases": [
+        "アスプロマヴロ",
+        "άσπρο μαύρο",
+        "阿斯普罗马夫罗"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229095",
+      "sourceRefs": [
+        "nextmoe:229095",
+        "vndb:v68074"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229095",
+      "vndbId": "v68074",
+      "sourceReleased": "2006-12-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30825",
+          "name": "Mori no Tsuki",
+          "original": "森ノ月",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-12-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68076",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229096",
+      "title": "Apple TRee",
+      "aliases": [],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229096",
+      "sourceRefs": [
+        "nextmoe:229096",
+        "vndb:v68076"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229096",
+      "vndbId": "v68076",
+      "sourceReleased": "2006-12",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30826",
+          "name": "Jane Doe",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-12-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68077",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229097",
+      "title": "Ame no Hashi de",
+      "aliases": [
+        "雨の端で",
+        "在雨的尽头"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229097",
+      "sourceRefs": [
+        "nextmoe:229097",
+        "vndb:v68077"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229097",
+      "vndbId": "v68077",
+      "sourceReleased": "2006-12-31",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30827",
+          "name": "Rokkakudou",
+          "original": "六角堂",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-12-31",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68244",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229258",
+      "title": "summer TRUE -Kimiko Disc for DL-",
+      "aliases": [
+        "summer TRUE - 君子ディスク for DL-"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229258",
+      "sourceRefs": [
+        "nextmoe:229258",
+        "vndb:v68244"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229258",
+      "vndbId": "v68244",
+      "sourceReleased": "2003-02-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30918",
+          "name": "lovetune",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2003-02-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68317",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229328",
+      "title": "Nagareru Kumo wo Dakishimete",
+      "aliases": [
+        "流れる雲を抱きしめて",
+        "Nagareru"
+      ],
+      "firstYear": 2000,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229328",
+      "sourceRefs": [
+        "nextmoe:229328",
+        "vndb:v68317"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229328",
+      "vndbId": "v68317",
+      "sourceReleased": "2000-06-11",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30962",
+          "name": "Kyokutou Dennou Kikaku",
+          "original": "極東電脳企画",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2000-06-11",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68338",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229349",
+      "title": "Hinata Gakuen Satsujin Jiken",
+      "aliases": [
+        "ひなた学園殺人事件"
+      ],
+      "firstYear": 2000,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229349",
+      "sourceRefs": [
+        "nextmoe:229349",
+        "vndb:v68338"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229349",
+      "vndbId": "v68338",
+      "sourceReleased": "2000-12-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30971",
+          "name": "Himetsubaki",
+          "original": "ひめ椿",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2000-12-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68342",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229353",
+      "title": "Kosen",
+      "aliases": [],
+      "firstYear": 2002,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229353",
+      "sourceRefs": [
+        "nextmoe:229353",
+        "vndb:v68342"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229353",
+      "vndbId": "v68342",
+      "sourceReleased": "2002-12-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30975",
+          "name": "Jingyuan Keji Youxian Gongsi",
+          "original": "荊院科技有限公司",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2002-12-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68384",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229391",
+      "title": "Kiseki ～wandering fate～",
+      "aliases": [
+        "キセキ ～wandering fate～"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229391",
+      "sourceRefs": [
+        "nextmoe:229391",
+        "vndb:v68384"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229391",
+      "vndbId": "v68384",
+      "sourceReleased": "2007-12-31",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30996",
+          "name": "Omochitei",
+          "original": "おもち亭",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-12-31",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68507",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229512",
+      "title": "Tettei Ryoujoku -Chitei Jusei-",
+      "aliases": [
+        "徹底凌辱 -地底受精-"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229512",
+      "sourceRefs": [
+        "nextmoe:229512",
+        "vndb:v68507"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229512",
+      "vndbId": "v68507",
+      "sourceReleased": "2008-02-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31042",
+          "name": "AC/BC",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-02-08",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68621",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229618",
+      "title": "Shojo Soushitsu!? Daisakusen",
+      "aliases": [
+        "処女喪失!? 大作戦"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229618",
+      "sourceRefs": [
+        "nextmoe:229618",
+        "vndb:v68621"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229618",
+      "vndbId": "v68621",
+      "sourceReleased": "2005-02-01",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31087",
+          "name": "Yumesomeri",
+          "original": "夢染理",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-02-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68628",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229625",
+      "title": "stray witch",
+      "aliases": [],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229625",
+      "sourceRefs": [
+        "nextmoe:229625",
+        "vndb:v68628"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229625",
+      "vndbId": "v68628",
+      "sourceReleased": "2007-12",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31088",
+          "name": "Ugeya",
+          "original": "うげ屋",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-12-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68718",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229706",
+      "title": "Jigoku Meguri",
+      "aliases": [
+        "地獄めぐり"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229706",
+      "sourceRefs": [
+        "nextmoe:229706",
+        "vndb:v68718"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229706",
+      "vndbId": "v68718",
+      "sourceReleased": "2009-03-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31133",
+          "name": "Okubyoumono Nagets",
+          "original": "臆病者なげっつ",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-03-08",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68804",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229784",
+      "title": "Hitokui Musume Yoni Habakaru",
+      "aliases": [
+        "人喰い娘 世に憚る"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229784",
+      "sourceRefs": [
+        "nextmoe:229784",
+        "vndb:v68804"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229784",
+      "vndbId": "v68804",
+      "sourceReleased": "2009-12-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31173",
+          "name": "Shamrock",
+          "original": "シャムロック",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-12-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68823",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229802",
+      "title": "Inma Gari",
+      "aliases": [
+        "淫魔狩り"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229802",
+      "sourceRefs": [
+        "nextmoe:229802",
+        "vndb:v68823"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229802",
+      "vndbId": "v68823",
+      "sourceReleased": "2008",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31186",
+          "name": "πO2",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68831",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229810",
+      "title": "Rinkan Choukyou Haramase Jiru",
+      "aliases": [
+        "輪姦調教 孕ませ汁"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229810",
+      "sourceRefs": [
+        "nextmoe:229810",
+        "vndb:v68831"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229810",
+      "vndbId": "v68831",
+      "sourceReleased": "2009-09-25",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31189",
+          "name": "Ice Kick",
+          "original": "アイスキック",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-09-25",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68836",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229815",
+      "title": "Otouto no Goshujin-sama",
+      "aliases": [
+        "弟のご主人さま"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229815",
+      "sourceRefs": [
+        "nextmoe:229815",
+        "vndb:v68836"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229815",
+      "vndbId": "v68836",
+      "sourceReleased": "2009-05-05",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31191",
+          "name": "Tatsumi Tenshindou",
+          "original": "辰巳天真堂",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-05-05",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68855",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229833",
+      "title": "Kagetsu",
+      "aliases": [
+        "禍月-かげつ-"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229833",
+      "sourceRefs": [
+        "nextmoe:229833",
+        "vndb:v68855"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229833",
+      "vndbId": "v68855",
+      "sourceReleased": "2008-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31196",
+          "name": "Yorozu Eido",
+          "original": "萬ド永ド",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-08-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68902",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229876",
+      "title": "Re:Belial",
+      "aliases": [
+        "リベリアル"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229876",
+      "sourceRefs": [
+        "nextmoe:229876",
+        "vndb:v68902"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229876",
+      "vndbId": "v68902",
+      "sourceReleased": "2005",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31216",
+          "name": "Idoushiki Jigoku",
+          "original": "移動式地獄",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v69733",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-236078",
+      "title": "Kuubaku o Hi ni Somete",
+      "aliases": [
+        "空漠を緋に染めて"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/236078",
+      "sourceRefs": [
+        "nextmoe:236078",
+        "vndb:v69733"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "236078",
+      "vndbId": "v69733",
+      "sourceReleased": "2009",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31585",
+          "name": "Ixia",
+          "original": "イシキア",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v70037",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-235487",
+      "title": "Lover's Feelings -memories-",
+      "aliases": [],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/235487",
+      "sourceRefs": [
+        "nextmoe:235487",
+        "vndb:v70037"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "235487",
+      "vndbId": "v70037",
+      "sourceReleased": "2007-11-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31719",
+          "name": "Perpetual Room",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-11-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68694",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229689",
+      "title": "Suishou Yawa",
+      "aliases": [
+        "水精夜話"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229689",
+      "sourceRefs": [
+        "nextmoe:229689",
+        "vndb:v68694"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229689",
+      "vndbId": "v68694",
+      "sourceReleased": "2009-02-15",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3252",
+          "name": "Aomidori",
+          "original": "蒼見鳥",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-02-15",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68641",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229637",
+      "title": "Injuu Ni Tai",
+      "aliases": [
+        "淫獣二体",
+        "インジュウ ニ タイ"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229637",
+      "sourceRefs": [
+        "nextmoe:229637",
+        "vndb:v68641"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229637",
+      "vndbId": "v68641",
+      "sourceReleased": "2008-05-08",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-05-08",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68844",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229823",
+      "title": "Futaba-chan Monogatari",
+      "aliases": [
+        "双葉ちゃん物語",
+        "Story of Futaba"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229823",
+      "sourceRefs": [
+        "nextmoe:229823",
+        "vndb:v68844"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229823",
+      "vndbId": "v68844",
+      "sourceReleased": "2005-10-20",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3530",
+          "name": "studio COLOR'S",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-10-20",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68098",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229117",
+      "title": "Otegaru Quiz Game Tokubetsu Hoshuu",
+      "aliases": [
+        "お手軽クイズげー 特別補習",
+        "轻松问答游戏 特别补习"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229117",
+      "sourceRefs": [
+        "nextmoe:229117",
+        "vndb:v68098"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229117",
+      "vndbId": "v68098",
+      "sourceReleased": "2008-01-13",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p4373",
+          "name": "Magumani",
+          "original": "まぐまに",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-01-13",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68505",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229510",
+      "title": "Hentai Shoujo no Scatolo na Hibi",
+      "aliases": [
+        "変態少女のスカトロな日々"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229510",
+      "sourceRefs": [
+        "nextmoe:229510",
+        "vndb:v68505"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229510",
+      "vndbId": "v68505",
+      "sourceReleased": "2008-11-07",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5115",
+          "name": "Mekakushi Musume",
+          "original": "目隠し娘",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-11-07",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68689",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229684",
+      "title": "Mama wa Kyonyuu de Dorei na Kyoushi",
+      "aliases": [
+        "ママは巨乳で奴隷な教師"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229684",
+      "sourceRefs": [
+        "nextmoe:229684",
+        "vndb:v68689"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229684",
+      "vndbId": "v68689",
+      "sourceReleased": "2006-04-06",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5317",
+          "name": "Erojishigumi",
+          "original": "エロ獅子組",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-04-06",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68727",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229715",
+      "title": "Nemurenu Yoru to Haiiro no Asa.",
+      "aliases": [
+        "眠れぬ夜と灰色の朝。"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229715",
+      "sourceRefs": [
+        "nextmoe:229715",
+        "vndb:v68727"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229715",
+      "vndbId": "v68727",
+      "sourceReleased": "2006-08-13",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p59",
+          "name": "Ebi Shuumai II",
+          "original": "えびしゅうまいII",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-08-13",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v69043",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-235533",
+      "title": "Rin to stay night",
+      "aliases": [
+        "凛とstay night"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/235533",
+      "sourceRefs": [
+        "nextmoe:235533",
+        "vndb:v69043"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "235533",
+      "vndbId": "v69043",
+      "sourceReleased": "2004-08-15",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p6832",
+          "name": "Nonono Tsuushin",
+          "original": "ののの通信",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-08-15",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68498",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229503",
+      "title": "Taimashi Inukai Chikayo",
+      "aliases": [
+        "退魔師 犬養千華代"
+      ],
+      "firstYear": 2001,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229503",
+      "sourceRefs": [
+        "nextmoe:229503",
+        "vndb:v68498"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229503",
+      "vndbId": "v68498",
+      "sourceReleased": "2001-08-12",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p8301",
+          "name": "Palette Enterprise",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2001-08-12",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68079",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229099",
+      "title": "Kutsujoku Nikki",
+      "aliases": [
+        "屈辱日記",
+        "屈辱日记"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229099",
+      "sourceRefs": [
+        "nextmoe:229099",
+        "vndb:v68079"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229099",
+      "vndbId": "v68079",
+      "sourceReleased": "2005-01-04",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9018",
+          "name": "Double Soft Cream",
+          "original": "ダブルソフトクリーム",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-01-04",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v69933",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-232089",
+      "title": "Ashita no Kimi e",
+      "aliases": [
+        "明日の君へ"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/232089",
+      "sourceRefs": [
+        "nextmoe:232089",
+        "vndb:v69933"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "232089",
+      "vndbId": "v69933",
+      "sourceReleased": "2009-03-24",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9312",
+          "name": "Lunaria Project",
+          "original": "ルナリアプロジェクト",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-03-24",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68625",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229622",
+      "title": "Hatsujou Nekomusume",
+      "aliases": [
+        "発情猫娘"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229622",
+      "sourceRefs": [
+        "nextmoe:229622",
+        "vndb:v68625"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229622",
+      "vndbId": "v68625",
+      "sourceReleased": "2008-01-18",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9506",
+          "name": "Youkai Ankake",
+          "original": "妖怪あんかけ",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-01-18",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68509",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229514",
+      "title": "Ohime-sama to Slime",
+      "aliases": [
+        "お姫様とスライム",
+        "The princess and slimes"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229514",
+      "sourceRefs": [
+        "nextmoe:229514",
+        "vndb:v68509"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229514",
+      "vndbId": "v68509",
+      "sourceReleased": "2006-05-19",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9535",
+          "name": "Si-G",
+          "original": "シグ",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-05-19",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68856",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229834",
+      "title": "Chobi CHU",
+      "aliases": [
+        "ちょびっ CHU"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229834",
+      "sourceRefs": [
+        "nextmoe:229834",
+        "vndb:v68856"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229834",
+      "vndbId": "v68856",
+      "sourceReleased": "2004-12-31",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9989",
+          "name": "SIPPO-SOFT",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-12-31",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68493",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229499",
+      "title": "Seishoku Soukou Ruingene",
+      "aliases": [
+        "生殖装甲ルインジーン"
+      ],
+      "firstYear": 2001,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229499",
+      "sourceRefs": [
+        "nextmoe:229499",
+        "vndb:v68493"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229499",
+      "vndbId": "v68493",
+      "sourceReleased": "2001-08-15",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p10115",
+          "name": "Mayugeya",
+          "original": "眉毛屋",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2001-08-15",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68441",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229446",
+      "title": "DQ Dragon Queen R",
+      "aliases": [
+        "DQドラゴンクィーン-R",
+        "Beauty goddesses strategy"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229446",
+      "sourceRefs": [
+        "nextmoe:229446",
+        "vndb:v68441"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229446",
+      "vndbId": "v68441",
+      "sourceReleased": "2007-01-21",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p2451",
+          "name": "Akiyama Production",
+          "original": "アキヤマ興業",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-01-21",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68851",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229830",
+      "title": "KoDoMo de Camping!",
+      "aliases": [
+        "KoDoMoでキャンプ!"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229830",
+      "sourceRefs": [
+        "nextmoe:229830",
+        "vndb:v68851"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229830",
+      "vndbId": "v68851",
+      "sourceReleased": "2003-08-09",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p29120",
+          "name": "Nekonote Shobou",
+          "original": "ねこのてしょぼう",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2003-08-09",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68708",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229700",
+      "title": "POT-PAD PANDORA ~Daiji na Mono wa Meou Ura~",
+      "aliases": [
+        "POT-PAD PANDORA～大事なものは目蓋の裏～"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229700",
+      "sourceRefs": [
+        "nextmoe:229700",
+        "vndb:v68708"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229700",
+      "vndbId": "v68708",
+      "sourceReleased": "2009",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30800",
+          "name": "Nukata-ya Kouriten・STUDIO Takama",
+          "original": "額田屋小売店・STUDIO高天",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68053",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229080",
+      "title": "Yume no Owari: Garasu no Tsuki",
+      "aliases": [
+        "夢の終わり 硝子の月",
+        "梦的终结 玻璃之月"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229080",
+      "sourceRefs": [
+        "nextmoe:229080",
+        "vndb:v68053"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229080",
+      "vndbId": "v68053",
+      "sourceReleased": "2007",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p30801",
+          "name": "HEAVEN’S CROWN",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68508",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229513",
+      "title": "Tettei Ryoujoku -Shokushu Kyouen-",
+      "aliases": [
+        "徹底凌辱 -触手狂宴-"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229513",
+      "sourceRefs": [
+        "nextmoe:229513",
+        "vndb:v68508"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229513",
+      "vndbId": "v68508",
+      "sourceReleased": "2008-01-11",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31042",
+          "name": "AC/BC",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-01-11",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68629",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229626",
+      "title": "Seitai Report",
+      "aliases": [
+        "性態リポート"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229626",
+      "sourceRefs": [
+        "nextmoe:229626",
+        "vndb:v68629"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229626",
+      "vndbId": "v68629",
+      "sourceReleased": "2008-12",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31088",
+          "name": "Ugeya",
+          "original": "うげ屋",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-12-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68824",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229803",
+      "title": "Level 7 Higurashi",
+      "aliases": [
+        "Level 7 ひぐらし"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229803",
+      "sourceRefs": [
+        "nextmoe:229803",
+        "vndb:v68824"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229803",
+      "vndbId": "v68824",
+      "sourceReleased": "2009-04-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31186",
+          "name": "πO2",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-04-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68695",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229690",
+      "title": "Yume no Kuni no Alice",
+      "aliases": [
+        "夢の国のアリス"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229690",
+      "sourceRefs": [
+        "nextmoe:229690",
+        "vndb:v68695"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229690",
+      "vndbId": "v68695",
+      "sourceReleased": "2009-10-31",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3252",
+          "name": "Aomidori",
+          "original": "蒼見鳥",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-10-31",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68653",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229648",
+      "title": "Haha to Ko Yuumeisakai o Koto ni Suru",
+      "aliases": [
+        "母と子 幽明界を異にする"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229648",
+      "sourceRefs": [
+        "nextmoe:229648",
+        "vndb:v68653"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229648",
+      "vndbId": "v68653",
+      "sourceReleased": "2009-11-21",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-11-21",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68845",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229824",
+      "title": "Haruhi ni Omakase!",
+      "aliases": [
+        "ハルヒにおまかせ!"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229824",
+      "sourceRefs": [
+        "nextmoe:229824",
+        "vndb:v68845"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229824",
+      "vndbId": "v68845",
+      "sourceReleased": "2005",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3530",
+          "name": "studio COLOR'S",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68540",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229542",
+      "title": "Kankin Shoujo Ryoujoku Nikki",
+      "aliases": [
+        "監禁少女陵辱日記"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229542",
+      "sourceRefs": [
+        "nextmoe:229542",
+        "vndb:v68540"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229542",
+      "vndbId": "v68540",
+      "sourceReleased": "2008-06-20",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5115",
+          "name": "Mekakushi Musume",
+          "original": "目隠し娘",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-06-20",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68690",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229685",
+      "title": "*gakusei Marmot Ninshin Shussan Jikkenshitsu",
+      "aliases": [
+        "○学生モルモット 妊娠・出産 実験室"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229685",
+      "sourceRefs": [
+        "nextmoe:229685",
+        "vndb:v68690"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229685",
+      "vndbId": "v68690",
+      "sourceReleased": "2004-07-25",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5317",
+          "name": "Erojishigumi",
+          "original": "エロ獅子組",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-07-25",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v69040",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-235536",
+      "title": "Nonono Emi",
+      "aliases": [],
+      "firstYear": 2001,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/235536",
+      "sourceRefs": [
+        "nextmoe:235536",
+        "vndb:v69040"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "235536",
+      "vndbId": "v69040",
+      "sourceReleased": "2001-08-11",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p6832",
+          "name": "Nonono Tsuushin",
+          "original": "ののの通信",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2001-08-11",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68500",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229505",
+      "title": "Taimashi Kamikura Megumi",
+      "aliases": [
+        "退魔師 神倉恵"
+      ],
+      "firstYear": 2001,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229505",
+      "sourceRefs": [
+        "nextmoe:229505",
+        "vndb:v68500"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229505",
+      "vndbId": "v68500",
+      "sourceReleased": "2001-05-13",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p8301",
+          "name": "Palette Enterprise",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2001-05-13",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68080",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229100",
+      "title": "Mizukagami no Shizukusei Inshi Imouto",
+      "aliases": [
+        "水鏡の雫性淫姉妹"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229100",
+      "sourceRefs": [
+        "nextmoe:229100",
+        "vndb:v68080"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229100",
+      "vndbId": "v68080",
+      "sourceReleased": "2006-01-29",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9018",
+          "name": "Double Soft Cream",
+          "original": "ダブルソフトクリーム",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-01-29",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68610",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229607",
+      "title": "Chris no Bouken Nikki ~Yousei Hen~",
+      "aliases": [
+        "クリスの冒険日記～妖精編～"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229607",
+      "sourceRefs": [
+        "nextmoe:229607",
+        "vndb:v68610"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229607",
+      "vndbId": "v68610",
+      "sourceReleased": "2006-06-29",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9535",
+          "name": "Si-G",
+          "original": "シグ",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-06-29",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68857",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229835",
+      "title": "Koi Kuru Shuffle ~Onna no Ko tte Mahou de Tsukurareta no!~",
+      "aliases": [
+        "こいクル しゃっふる ～女の子って魔法でつくられたの!～"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229835",
+      "sourceRefs": [
+        "nextmoe:229835",
+        "vndb:v68857"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229835",
+      "vndbId": "v68857",
+      "sourceReleased": "2006-05-28",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9989",
+          "name": "SIPPO-SOFT",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-05-28",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68680",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229675",
+      "title": "Mousou?",
+      "aliases": [
+        "モウソウ?"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229675",
+      "sourceRefs": [
+        "nextmoe:229675",
+        "vndb:v68680"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229675",
+      "vndbId": "v68680",
+      "sourceReleased": "2009-08-21",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p10115",
+          "name": "Mayugeya",
+          "original": "眉毛屋",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-08-21",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68852",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229831",
+      "title": "Kore ga Watashi no Shokushu-sama",
+      "aliases": [
+        "これが私の触手様",
+        "He is my tentacles"
+      ],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229831",
+      "sourceRefs": [
+        "nextmoe:229831",
+        "vndb:v68852"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229831",
+      "vndbId": "v68852",
+      "sourceReleased": "2005-12-25",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p29120",
+          "name": "Nekonote Shobou",
+          "original": "ねこのてしょぼう",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-12-25",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68825",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229804",
+      "title": "Kei-o...ppai",
+      "aliases": [
+        "けいお…っぱぁーい"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229804",
+      "sourceRefs": [
+        "nextmoe:229804",
+        "vndb:v68825"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229804",
+      "vndbId": "v68825",
+      "sourceReleased": "2009-11-03",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31186",
+          "name": "πO2",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-11-03",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68654",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229649",
+      "title": "phallus",
+      "aliases": [
+        "ファルス"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229649",
+      "sourceRefs": [
+        "nextmoe:229649",
+        "vndb:v68654"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229649",
+      "vndbId": "v68654",
+      "sourceReleased": "2009-01-16",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-01-16",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68846",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229825",
+      "title": "Motto Oshiete Kotona-san",
+      "aliases": [
+        "もっと お・し・え・て コトナさん",
+        "It teaches and it is Kotona"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229825",
+      "sourceRefs": [
+        "nextmoe:229825",
+        "vndb:v68846"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229825",
+      "vndbId": "v68846",
+      "sourceReleased": "2006-03-14",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3530",
+          "name": "studio COLOR'S",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-03-14",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68542",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229544",
+      "title": "Mekakushi Shoujo -Seifuku Yagai Haisetsu Hen-",
+      "aliases": [
+        "目隠し少女 -制服野外排泄編-"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229544",
+      "sourceRefs": [
+        "nextmoe:229544",
+        "vndb:v68542"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229544",
+      "vndbId": "v68542",
+      "sourceReleased": "2007-07-17",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5115",
+          "name": "Mekakushi Musume",
+          "original": "目隠し娘",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-07-17",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68692",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229687",
+      "title": "Nikuyoku Pet ~Shoujo Ryoujoku Shussan~",
+      "aliases": [
+        "肉欲ペット～少女陵辱出産～",
+        "Meat Pet ~Girl's Violation and Birthing~"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229687",
+      "sourceRefs": [
+        "nextmoe:229687",
+        "vndb:v68692"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229687",
+      "vndbId": "v68692",
+      "sourceReleased": "2007-07-06",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5317",
+          "name": "Erojishigumi",
+          "original": "エロ獅子組",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-07-06",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68081",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229101",
+      "title": "Sakunyuu Dorei",
+      "aliases": [
+        "搾乳奴隷",
+        "搾乳奴隶"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229101",
+      "sourceRefs": [
+        "nextmoe:229101",
+        "vndb:v68081"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229101",
+      "vndbId": "v68081",
+      "sourceReleased": "2007-04-22",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9018",
+          "name": "Double Soft Cream",
+          "original": "ダブルソフトクリーム",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-04-22",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68858",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229836",
+      "title": "Sakura SIRUP",
+      "aliases": [
+        "さくら SIRUP"
+      ],
+      "firstYear": 2004,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229836",
+      "sourceRefs": [
+        "nextmoe:229836",
+        "vndb:v68858"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229836",
+      "vndbId": "v68858",
+      "sourceReleased": "2004",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9989",
+          "name": "SIPPO-SOFT",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2004-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68853",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229832",
+      "title": "Imouto Control 1/2",
+      "aliases": [
+        "いもーとこんとろーる１/２",
+        "Harf Sister \"Yuzuha\""
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229832",
+      "sourceRefs": [
+        "nextmoe:229832",
+        "vndb:v68853"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229832",
+      "vndbId": "v68853",
+      "sourceReleased": "2003-10-26",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p29120",
+          "name": "Nekonote Shobou",
+          "original": "ねこのてしょぼう",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2003-10-26",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68828",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229807",
+      "title": "Imouto Idol U-15",
+      "aliases": [
+        "妹アイドル U-15",
+        "Imouto Idol Under Fifteen"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229807",
+      "sourceRefs": [
+        "nextmoe:229807",
+        "vndb:v68828"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229807",
+      "vndbId": "v68828",
+      "sourceReleased": "2009-11-03",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p31186",
+          "name": "πO2",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-11-03",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68656",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229651",
+      "title": "Sekai no Katasumi de",
+      "aliases": [
+        "世界ノカタスミデ"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229651",
+      "sourceRefs": [
+        "nextmoe:229651",
+        "vndb:v68656"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229651",
+      "vndbId": "v68656",
+      "sourceReleased": "2008-03-20",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-03-20",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68847",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229826",
+      "title": "Motto Onegai Me-kun",
+      "aliases": [
+        "もっと お・ね・が・い ミィくん",
+        "Please asking Re-Me"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229826",
+      "sourceRefs": [
+        "nextmoe:229826",
+        "vndb:v68847"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229826",
+      "vndbId": "v68847",
+      "sourceReleased": "2006-07-05",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3530",
+          "name": "studio COLOR'S",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-07-05",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68782",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229768",
+      "title": "Mekakushi Shoujo -Kichiku Shikyuu Ryoujoku Hen-",
+      "aliases": [
+        "目隠し少女-鬼畜子宮凌辱編-"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229768",
+      "sourceRefs": [
+        "nextmoe:229768",
+        "vndb:v68782"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229768",
+      "vndbId": "v68782",
+      "sourceReleased": "2007-09-22",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5115",
+          "name": "Mekakushi Musume",
+          "original": "目隠し娘",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-09-22",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68859",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229837",
+      "title": "Mahoro Putting",
+      "aliases": [
+        "まほろぷてぃんぐ"
+      ],
+      "firstYear": 2003,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229837",
+      "sourceRefs": [
+        "nextmoe:229837",
+        "vndb:v68859"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229837",
+      "vndbId": "v68859",
+      "sourceReleased": "2003",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9989",
+          "name": "SIPPO-SOFT",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2003-01-01",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68657",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229652",
+      "title": "Ningyou",
+      "aliases": [],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229652",
+      "sourceRefs": [
+        "nextmoe:229652",
+        "vndb:v68657"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229652",
+      "vndbId": "v68657",
+      "sourceReleased": "2008-02-22",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-02-22",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68848",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229827",
+      "title": "METAMORPHOSE",
+      "aliases": [
+        "メタモルフォーゼ"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229827",
+      "sourceRefs": [
+        "nextmoe:229827",
+        "vndb:v68848"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229827",
+      "vndbId": "v68848",
+      "sourceReleased": "2007-08-20",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3530",
+          "name": "studio COLOR'S",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-08-20",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68802",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229782",
+      "title": "Mekakushi Shoujo -Kousoku Anal Choukyou Hen-",
+      "aliases": [
+        "目隠し少女-拘束アナル調教編-"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229782",
+      "sourceRefs": [
+        "nextmoe:229782",
+        "vndb:v68802"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229782",
+      "vndbId": "v68802",
+      "sourceReleased": "2007-05-23",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5115",
+          "name": "Mekakushi Musume",
+          "original": "目隠し娘",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-05-23",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68863",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229841",
+      "title": "Gakuen Tengoku de Gyu!",
+      "aliases": [
+        "学園天国でGyu!"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229841",
+      "sourceRefs": [
+        "nextmoe:229841",
+        "vndb:v68863"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229841",
+      "vndbId": "v68863",
+      "sourceReleased": "2006-08-13",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9989",
+          "name": "SIPPO-SOFT",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-08-13",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68664",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229659",
+      "title": "Itsuka, o Negatte……",
+      "aliases": [
+        "いつか、を願って……"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229659",
+      "sourceRefs": [
+        "nextmoe:229659",
+        "vndb:v68664"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229659",
+      "vndbId": "v68664",
+      "sourceReleased": "2007-07-17",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-07-17",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68849",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229828",
+      "title": "Quiz Cinq Lumière Gakuen ~Quiz Nozomi to Issho!~",
+      "aliases": [
+        "Quiz サンクルミエール学園 ～クイズ のぞみといっしょ!～"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229828",
+      "sourceRefs": [
+        "nextmoe:229828",
+        "vndb:v68849"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229828",
+      "vndbId": "v68849",
+      "sourceReleased": "2008-07-25",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3530",
+          "name": "studio COLOR'S",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-07-25",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68803",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229783",
+      "title": "Rinkan Shoujo -Higyaku no Ane to Kougyaku no Imouto-",
+      "aliases": [
+        "輪姦少女 -被虐の姉と肛虐の妹-"
+      ],
+      "firstYear": 2007,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229783",
+      "sourceRefs": [
+        "nextmoe:229783",
+        "vndb:v68803"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229783",
+      "vndbId": "v68803",
+      "sourceReleased": "2007-11-24",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p5115",
+          "name": "Mekakushi Musume",
+          "original": "目隠し娘",
+          "type": "in"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2007-11-24",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68864",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229842",
+      "title": "SLAVE 5 GoGo! -Injoku! Five de Chance-",
+      "aliases": [
+        "SLAVE 5 GoGo! -淫辱!ファイブdeチャンス-"
+      ],
+      "firstYear": 2008,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229842",
+      "sourceRefs": [
+        "nextmoe:229842",
+        "vndb:v68864"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229842",
+      "vndbId": "v68864",
+      "sourceReleased": "2008-12-30",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p9989",
+          "name": "SIPPO-SOFT",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2008-12-30",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68667",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229662",
+      "title": "Okaerinasai",
+      "aliases": [
+        "おかえりなさい"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229662",
+      "sourceRefs": [
+        "nextmoe:229662",
+        "vndb:v68667"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229662",
+      "vndbId": "v68667",
+      "sourceReleased": "2006-05-21",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-05-21",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68668",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229663",
+      "title": "DEVIL FORCE",
+      "aliases": [],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229663",
+      "sourceRefs": [
+        "nextmoe:229663",
+        "vndb:v68668"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229663",
+      "vndbId": "v68668",
+      "sourceReleased": "2006-03-11",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-03-11",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68746",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229734",
+      "title": "Mitan Chiitan",
+      "aliases": [
+        "みぃたんちぃたん"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229734",
+      "sourceRefs": [
+        "nextmoe:229734",
+        "vndb:v68746"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229734",
+      "vndbId": "v68746",
+      "sourceReleased": "2009-12-24",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-12-24",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68747",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229735",
+      "title": "Seimei Aru Shoujo-tachi e",
+      "aliases": [
+        "生命ある少女たちへ"
+      ],
+      "firstYear": 2009,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229735",
+      "sourceRefs": [
+        "nextmoe:229735",
+        "vndb:v68747"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229735",
+      "vndbId": "v68747",
+      "sourceReleased": "2009-03-24",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2009-03-24",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68750",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229738",
+      "title": "Yuna",
+      "aliases": [],
+      "firstYear": 2005,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229738",
+      "sourceRefs": [
+        "nextmoe:229738",
+        "vndb:v68750"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229738",
+      "vndbId": "v68750",
+      "sourceReleased": "2005-11-03",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2005-11-03",
+      "developerClassification": "individual-or-amateur-signal"
+    },
+    {
+      "id": "vndb-v68752",
+      "indexId": "nextmoe-galgame-bulk-20261102-r57-229740",
+      "title": "Shokushu Nokanzume",
+      "aliases": [
+        "触手ノカンヅメ"
+      ],
+      "firstYear": 2006,
+      "gameplay": "视觉小说",
+      "group": "创作品牌待核",
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229740",
+      "sourceRefs": [
+        "nextmoe:229740",
+        "vndb:v68752"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源元数据；开发主体仅在独立审计中记录，不推断正式创作或发行职责。",
+      "yearBasis": "VNDB VN-level released 年份；NextMoe条目回查同一VNDB ID。首次地区/版次待核。",
+      "editorialScope": "基础身份；叙事、创作者职责、具体玩法与内容版本待核。",
+      "batch": "nextmoe-galgame-bulk-20261102-r57",
+      "sourceId": "229740",
+      "vndbId": "v68752",
+      "sourceReleased": "2006-06-09",
+      "sourceDevstatus": 0,
+      "developers": [
+        {
+          "id": "p3403",
+          "name": "Shikibu",
+          "original": "式部",
+          "type": "ng"
+        }
+      ],
+      "intakeOrigin": "live",
+      "nextmoeSourceReleased": "2006-06-09",
+      "developerClassification": "individual-or-amateur-signal"
+    }
+  ],
+  "heldForIdentityReview": [
+    {
+      "sourceId": "229259",
+      "vndbId": "v68245",
+      "title": "Ori",
+      "firstYear": 2007,
+      "matches": [
+        [
+          "vndb-v7973",
+          1998,
+          "identity-registry"
+        ]
+      ],
+      "basis": "ambiguous-name-year"
+    },
+    {
+      "sourceId": "229260",
+      "vndbId": "v68246",
+      "title": "Wana",
+      "firstYear": 2008,
+      "matches": [
+        [
+          "vndb-v14312",
+          2013,
+          "identity-registry"
+        ]
+      ],
+      "basis": "ambiguous-name-year"
+    },
+    {
+      "sourceId": "229470",
+      "vndbId": "v68463",
+      "title": "Scramble Heart",
+      "firstYear": 2001,
+      "matches": [
+        [
+          "vndb-v486",
+          2007,
+          "identity-registry"
+        ]
+      ],
+      "basis": "ambiguous-name-year"
+    },
+    {
+      "sourceId": "229650",
+      "vndbId": "v68655",
+      "title": "Limit",
+      "firstYear": 2009,
+      "matches": [
+        [
+          "vndb-v15501",
+          2014,
+          "identity-registry"
+        ]
+      ],
+      "basis": "ambiguous-name-year"
+    },
+    {
+      "sourceId": "229781",
+      "vndbId": "v68801",
+      "title": "FANTASIA",
+      "firstYear": 2007,
+      "matches": [
+        [
+          "vndb-v8211",
+          2005,
+          "identity-registry"
+        ]
+      ],
+      "basis": "ambiguous-name-year"
+    },
+    {
+      "sourceId": "235271",
+      "vndbId": "v70101",
+      "title": "3days",
+      "firstYear": 2003,
+      "matches": [
+        [
+          "vndb-v49638",
+          2008,
+          "identity-registry"
+        ]
+      ],
+      "basis": "ambiguous-name-year"
+    }
+  ],
+  "caveats": [
+    "Basic identity only: source ID, VNDB ID where available, title, aliases and source year.",
+    "No platform edition, content-version, creator credit, publisher role or narrative-quality claim is asserted.",
+    "Name/year conflicts, derivative works and uncertain identities are held or skipped, not force-merged."
+  ],
+  "priorBaseCommit": "67a90f648ed2e4fc5dd73cbdfcfa095dc500a955",
+  "inputDeferredAudit": "data/nextmoe-bulk-review-20261101-r55.json",
+  "pendingQueueReview": [
+    {
+      "sourceId": "60119",
+      "vndbId": "v64666",
+      "priorCandidateId": "vndb-v64666",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "60285",
+      "vndbId": "v64845",
+      "priorCandidateId": "vndb-v64845",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "60287",
+      "vndbId": "v64847",
+      "priorCandidateId": "vndb-v64847",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "60288",
+      "vndbId": "v64848",
+      "priorCandidateId": "vndb-v64848",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "60796",
+      "vndbId": "v65380",
+      "priorCandidateId": "vndb-v65380",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "60929",
+      "vndbId": "v65523",
+      "priorCandidateId": "vndb-v65523",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "60941",
+      "vndbId": "v65537",
+      "priorCandidateId": "vndb-v65537",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226765",
+      "vndbId": "v67179",
+      "priorCandidateId": "vndb-v67179",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226766",
+      "vndbId": "v67180",
+      "priorCandidateId": "vndb-v67180",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226771",
+      "vndbId": "v67185",
+      "priorCandidateId": "vndb-v67185",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226821",
+      "vndbId": "v67231",
+      "priorCandidateId": "vndb-v67231",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226826",
+      "vndbId": "v67236",
+      "priorCandidateId": "vndb-v67236",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226828",
+      "vndbId": "v67238",
+      "priorCandidateId": "vndb-v67238",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226830",
+      "vndbId": "v67240",
+      "priorCandidateId": "vndb-v67240",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226832",
+      "vndbId": "v67242",
+      "priorCandidateId": "vndb-v67242",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226835",
+      "vndbId": "v67245",
+      "priorCandidateId": "vndb-v67245",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226836",
+      "vndbId": "v67246",
+      "priorCandidateId": "vndb-v67246",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226837",
+      "vndbId": "v67247",
+      "priorCandidateId": "vndb-v67247",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226838",
+      "vndbId": "v67248",
+      "priorCandidateId": "vndb-v67248",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226839",
+      "vndbId": "v67249",
+      "priorCandidateId": "vndb-v67249",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226841",
+      "vndbId": "v67251",
+      "priorCandidateId": "vndb-v67251",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226844",
+      "vndbId": "v67254",
+      "priorCandidateId": "vndb-v67254",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226845",
+      "vndbId": "v67255",
+      "priorCandidateId": "vndb-v67255",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "226846",
+      "vndbId": "v67256",
+      "priorCandidateId": "vndb-v67256",
+      "status": "selected-from-deferred"
+    },
+    {
+      "sourceId": "228605",
+      "vndbId": "v67561",
+      "priorCandidateId": "vndb-v67561",
+      "status": "selected-from-deferred"
+    }
+  ],
+  "reusedExisting": [
+    {
+      "sourceId": "229660",
+      "vndbId": "v68665",
+      "title": "Nana-chan to Issho",
+      "firstYear": 2006,
+      "matches": [
+        [
+          "vndb-v5175",
+          2006,
+          "identity-registry"
+        ]
+      ],
+      "basis": "normalized-name-alias-year",
+      "targetState": "registered-work"
+    },
+    {
+      "sourceId": "229813",
+      "vndbId": "v68834",
+      "title": "Kuronagi",
+      "firstYear": 2009,
+      "matches": [
+        [
+          "vndb-v53374",
+          2009,
+          "identity-registry"
+        ]
+      ],
+      "basis": "normalized-name-alias-year",
+      "targetState": "registered-work"
+    }
+  ],
+  "deferredEligible": [],
+  "resumeStart": {
+    "windows": [
+      {
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1TURFMGZR"
+      },
+      {
+        "releasedAfter": "2010-01-01",
+        "releasedBefore": "2026-11-02",
+        "cursor": null
+      }
+    ]
+  },
+  "resumeNext": {
+    "paginationTrace": [
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1TURFMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1T0RFeGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1T0RFeGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TkRJemZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TkRJemZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TmpBeGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TmpBeGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TnpNNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14TnpNNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14T0RjMmZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak14T0RjMmZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TURBMGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TURBMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TWpZemZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15TWpZemZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15T1RZMGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak15T1RZMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak16T1RJd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak16T1RJd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xTXpRM2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xTXpRM2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xT1RZNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0xT1RZNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT0RVeWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT0RVeWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT1RVMGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0yT1RVMGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTURVNGZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTURVNGZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTVRZd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTVRZd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTWpjd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTWpjd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTXpjNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTXpjNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTkRnM2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTkRnM2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTlRrNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTlRrNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTnpBd2ZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zTnpBd2ZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT0RBNWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT0RBNWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT1RFMWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak0zT1RFMWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TURNeWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TURNeWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TVRRMWZR",
+        "returned": 100
+      },
+      {
+        "lane": "era-keyset",
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TVRRMWZR",
+        "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNak00TWpVeWZR",
+        "returned": 100
+      }
+    ],
+    "unvisitedWindows": [
+      {
+        "releasedAfter": "2000-01-01",
+        "releasedBefore": "2009-12-31",
+        "cursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakk1TURFMGZR"
+      },
+      {
+        "releasedAfter": "2010-01-01",
+        "releasedBefore": "2026-11-02",
+        "cursor": null
+      }
+    ]
+  },
+  "selection": "All eligible saved candidates before live candidates; diverse selection only within each priority tier.",
+  "resumePolicy": "Recheck deferredEligible against the current registry before using the saved source cursor.",
+  "reuseResolutionSummary": {
+    "registered-work": 2
+  }
+}
