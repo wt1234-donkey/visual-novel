@@ -24,7 +24,7 @@ def load(path):
 
 def save(path, obj):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 def digest(obj):
     raw = json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
@@ -99,7 +99,7 @@ def make_report(audit, intake):
     for r in intake.get("heldForReview", []):
         lines.append(f"- **{r['title']}**：{r['reason']}")
     lines.append("")
-    REPORT.write_text("\\n".join(lines), encoding="utf-8")
+    REPORT.write_text("\n".join(lines), encoding="utf-8")
 
 def check_existing(registry, intake):
     audit = load(AUDIT)
