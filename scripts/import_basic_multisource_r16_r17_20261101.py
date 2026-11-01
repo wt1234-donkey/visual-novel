@@ -203,14 +203,14 @@ def tag_kind(tags):
     # explicit narrative evidence. Generic RPG tags alone are too noisy:
     # they also occur on RTS, sandbox, action and multiplayer titles.
     if rpg and (rpg_subgenre or narrative) and (not action or narrative):
-        return "RPG", sorted(rpg | rpg_subgenre | set(narrative))
+        return "RPG", sorted(set(rpg) | rpg_subgenre | set(narrative))
     # VN/interactive-fiction/otome tags are strong evidence. Generic ADV/AVG
     # tags are accepted only when the record is not dominated by action genres,
     # or when the same entry has an explicit narrative/story tag.
     if explicit_vn:
-        return "ADV", sorted(adv | set(explicit_vn) | set(narrative))
+        return "ADV", sorted(set(adv) | set(explicit_vn) | set(narrative))
     if adv and (not action or narrative):
-        return "ADV", sorted(adv | set(narrative))
+        return "ADV", sorted(set(adv) | set(narrative))
     return None, []
 
 
