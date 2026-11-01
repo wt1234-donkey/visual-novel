@@ -116,7 +116,7 @@ def base_state():
     return registry, index, ids, index_ids, refs
 
 
-def append_batch(registry, additions, batch_id, source, audit_path, summary, records, held, source_docs, source_license):
+def append_batch(registry, additions, batch_id, source, audit_path, summary, records, held, source_docs, source_license, intake_date="2026-11-01"):
     if not additions:
         raise RuntimeError(batch_id + " produced zero eligible new identities; refusing empty batch")
     before = len(registry["works"])
@@ -124,7 +124,7 @@ def append_batch(registry, additions, batch_id, source, audit_path, summary, rec
     count = len(additions)
     for key in ("candidates", "accepted", "promotedBasic", "addedToMainIdentityLayer"):
         registry["summary"][key] += count
-    registry["updated"] = "2026-11-01"
+    registry["updated"] = intake_date
     registry["batches"].append({
         "id": batch_id,
         "source": source,
@@ -137,7 +137,7 @@ def append_batch(registry, additions, batch_id, source, audit_path, summary, rec
     )
     audit = {
         "schema": 1,
-        "date": "2026-11-01",
+        "date": intake_date,
         "source": source,
         "sourceDocs": source_docs,
         "sourceLicense": source_license,

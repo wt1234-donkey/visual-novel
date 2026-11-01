@@ -24,6 +24,7 @@ SEED_VNDB=source.A22
 SEED_NEXTMOE=source.A23
 EXPECTED_VNDB_START='v6280'
 CAP=500
+INTAKE_DATE='2026-11-01'
 load,save,norm=source.load,source.save,source.norm
 WINDOWS=[('1976-01-01','1999-12-31'),('2000-01-01','2009-12-31'),('2010-01-01','2026-11-01')]
 
@@ -218,7 +219,8 @@ def append(ctx,registry):
     previous.append_batch(registry,[r['work'] for r in selected],ctx['batch'],
         previous.VNDB_API if ctx['kind']=='vndb' else previous.NEXTMOE_API,
         ctx['outputPath'],stats,records,ctx['held'],'https://api.vndb.org/kana',
-        'https://vndb.org/d17; NextMoe minimal identity metadata with source attribution')
+        'https://vndb.org/d17; NextMoe minimal identity metadata with source attribution',
+        intake_date=INTAKE_DATE)
     audit=load(ctx['outputPath'])
     audit.update({'priorBaseCommit':BASE,'inputDeferredAudit':str(ctx['inputPath'].relative_to(ROOT)),
         'pendingQueueReview':ctx['queueReview'],'reusedExisting':ctx['reused'],
@@ -252,7 +254,7 @@ def finalize_report():
             'decades':dict(sorted(Counter(str(r['firstYear']//10*10)+'s' for r in records).items())),
             'creatorTypes':dict(Counter(r['developerClassification'] for r in records)),
             'distinctDeveloperIds':len({p['id'] for r in records for p in r['developers']})}
-    save(REPORT,{'schema':1,'date':'2026-11-01','byBatch':by_batch,
+    save(REPORT,{'schema':1,'date':INTAKE_DATE,'byBatch':by_batch,
         'summary':{'newDistinctWorks':len(all_records),'uniqueVndbIds':len({r['vndbId'] for r in all_records}),
             'selectedFromDeferred':sum(r['intakeOrigin']=='deferred' for r in all_records),
             'selectedFromLive':sum(r['intakeOrigin']=='live' for r in all_records),
@@ -267,6 +269,7 @@ def check():
     def base(path):return subprocess.check_output(['git','show',BASE+':'+path],cwd=ROOT)
     old=json.loads(base(str(REG.relative_to(ROOT))))
     current=load(REG)
+    assert current['updated']==INTAKE_DATE
     assert current['works'][:len(old['works'])]==old['works']
     assert current['batches'][:len(old['batches'])]==old['batches']
     for key in old:
@@ -282,6 +285,7 @@ def check():
     assert len(added)<=1000
     for batch,path in [(B24,A24),(B25,A25)]:
         audit=load(path)
+        assert audit['date']==INTAKE_DATE
         rows=[w for w in added if w['batch']==batch]
         stats=audit['summary']
         assert 1<=len(rows)<=CAP
@@ -310,6 +314,7 @@ def check():
                 refs[ref].add(w['id'])
         assert {r['status'] for r in audit['pendingQueueReview']}<={'selected-from-deferred','reused-identity','held','remaining-deferred','invalid-date-or-name'}
     summary=load(REPORT)['summary']
+    assert load(REPORT)['date']==INTAKE_DATE
     assert summary['newDistinctWorks']==summary['uniqueVndbIds']==len(added)
     assert current['summary']['accepted']==len(current['works'])
     print('BASIC_CONTINUATION_CHECK_OK',len(old['works']),'+',len(added),'=',len(current['works']),json.dumps(summary),flush=True)
