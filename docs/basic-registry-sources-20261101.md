@@ -23,10 +23,12 @@
 ## 第17批：Bangumi game directory
 
 - 使用 Bangumi 官方 v0 \`GET /v0/subjects\`，参数 \`type=4&cat=4001&sort=rank\`；每页50条。
-- 只导入带有明确 ADV/AVG/VN/视觉小说/互动小说等标签，或 RPG/JRPG/CRPG/SRPG/DRPG/ARPG/角色扮演等标签的普通游戏。
+- ADV/VN：优先要求 VN、视觉小说、Galgame、文字冒险、互动小说、乙女等明确标签；一般 ADV/AVG 标签只有在没有明显动作主导标签，或同时存在剧情、叙事、悬疑、推理等叙事标记时才纳入。
+- RPG：要求 JRPG/CRPG/SRPG/DRPG 等偏叙事子类型，或同时存在明确剧情/叙事标记；单独的泛 RPG 标签不足以入库。
+- AAVG、ARPG、ACT、FPS、RTS、平台跳跃等动作/玩法主导标签不会单独触发收录；只有同时有明确叙事证据时才可能作为基础候选。
 - 条目类型 category 4001 为普通游戏；不从软件、DLC/扩展包、桌游类别导入。
 - 名称优先采用 name_cn，保留 name 为别名；年份取 Bangumi date 的年份；标签原样保存在 sourceTags 供后续复核。
-- 仅记录目录来源，不把 Bangumi 的标签解释为已经完成“叙事为主、玩法为辅”的人工评估。RPG 作品仍需后续筛选叙事主次。
+- 仅记录目录来源与触发筛选的 matchedSourceTags，不把 Bangumi 社区标签解释为已经完成“叙事为主、玩法为辅”的人工评估。基础候选仍需后续人工筛选叙事主次；本轮的严格标签门槛用于排除明显动作/策略/沙盒误收。
 - 使用 subject ID、标题/别名、年份与全库交叉去重；重制、fan disc、合集等身份不明的条目暂缓。
 - 遵守官方 API 的 User-Agent 和合理请求间隔。
 
