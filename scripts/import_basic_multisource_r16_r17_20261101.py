@@ -31,19 +31,33 @@ BANGUMI_API = "https://api.bgm.tv/v0/subjects"
 CUTOFF = dt.date(2026, 11, 1)
 
 ADV_TAGS = {
-    "adv", "avg", "aavg", "vn", "galgame", "gal game", "visual novel",
+    "adv", "avg", "vn", "galgame", "gal game", "visual novel",
     "interactive fiction", "interactive narrative", "narrative game",
     "文字冒险", "文字冒險", "文字冒险游戏", "文字游戏", "视觉小说", "視覺小說",
     "乙女", "乙女游戏", "恋爱冒险", "戀愛冒險", "互动小说", "互動小說",
-    "互动叙事", "互動敘事", "冒险解谜", "冒險解謎",
-    "アドベンチャー", "アドベンチャーゲーム", "ビジュアルノベル",
-    "ノベルゲーム", "サウンドノベル", "ギャルゲーム", "ギャルゲー",
-    "美少女ゲーム", "エロゲ", "恋愛adv", "推理adv",
+    "互动叙事", "互動敘事", "アドベンチャー", "アドベンチャーゲーム",
+    "ビジュアルノベル", "ノベルゲーム", "サウンドノベル",
+    "ギャルゲーム", "ギャルゲー", "美少女ゲーム", "エロゲ",
+    "恋愛adv", "推理adv",
 }
 RPG_TAGS = {
     "rpg", "jrpg", "crpg", "srpg", "drpg", "arpg",
     "角色扮演", "日式rpg", "策略rpg", "战棋", "戰棋",
     "ロールプレイング", "ロールプレイングゲーム",
+}
+RPG_SUBGENRES = {"jrpg", "crpg", "srpg", "drpg"}
+EXPLICIT_NARRATIVE = {
+    "剧情", "剧情向", "剧情丰富", "剧情驱动", "叙事", "叙事向", "网状叙事",
+    "故事", "故事驱动", "推理", "悬疑", "galgame", "vn", "visual novel",
+    "视觉小说", "视覺小說", "文字冒险", "文字冒險", "文字冒险游戏",
+    "文字游戏", "互动小说", "互动叙事", "乙女", "乙女游戏",
+    "恋爱adv", "恋爱冒险", "小说", "novel game", "sound novel",
+    "サウンドノベル", "ノベルゲーム", "ビジュアルノベル",
+}
+ACTION_HEAVY = {
+    "act", "aavg", "arpg", "fps", "tps", "rts", "mug", "spg", "rac",
+    "stg", "ftg", "moba", "mmorpg", "platform", "平台跳跃", "动作",
+    "射击", "竞速", "体育", "竞技", "音乐", "音游", "格斗", "即时战略",
 }
 NON_WORK = re.compile(
     r"(?i)(?:\bdlc\b|\bdemo\b|\btrial\b|\bpatch\b|\bexpansion\b|"
@@ -175,10 +189,28 @@ def tag_kind(tags):
     folded = {x.casefold().strip() for x in tags}
     adv = sorted(folded & {x.casefold() for x in ADV_TAGS})
     rpg = sorted(folded & {x.casefold() for x in RPG_TAGS})
-    if adv:
-        return "ADV", adv
-    if rpg:
-        return "RPG", rpg
+    narrative = sorted(folded & {x.casefold() for x in EXPLICIT_NARRATIVE})
+    action = sorted(folded & {x.casefold() for x in ACTION_HEAVY})
+    explicit_vn = folded & {
+        "vn", "visual novel", "galgame", "gal game", "视觉小说", "視覺小說",
+        "文字冒险", "文字冒險", "文字冒险游戏", "文字游戏", "互动小说",
+        "互動小說", "乙女", "乙女游戏", "恋爱adv", "ノベルゲーム",
+        "サウンドノベル", "ビジュアルノベル", "エロゲ", "美少女ゲーム",
+        "ギャルゲー"
+    }
+    rpg_subgenre = folded & RPG_SUBGENRES
+    # RPG requires a story-leaning subgenre (JRPG/CRPG/SRPG/DRPG) or
+    # explicit narrative evidence. Generic RPG tags alone are too noisy:
+    # they also occur on RTS, sandbox, action and multiplayer titles.
+    if rpg and (rpg_subgenre or narrative) and (not action or narrative):
+        return "RPG", sorted(rpg | rpg_subgenre | set(narrative))
+    # VN/interactive-fiction/otome tags are strong evidence. Generic ADV/AVG
+    # tags are accepted only when the record is not dominated by action genres,
+    # or when the same entry has an explicit narrative/story tag.
+    if explicit_vn:
+        return "ADV", sorted(adv | set(explicit_vn) | set(narrative))
+    if adv and (not action or narrative):
+        return "ADV", sorted(adv | set(narrative))
     return None, []
 
 
@@ -216,8 +248,25 @@ def bangumi_names(item):
 
 def import_round17(args):
     registry = load_json(REGISTRY)
-    if existing_batch(registry, BATCH17, AUDIT17):
-        return registry
+    matches = [b for b in registry.get("batches", []) if b.get("id") == BATCH17]
+    if matches:
+        if len(matches) != 1 or not AUDIT17.exists():
+            raise RuntimeError("Round 17 existing batch has missing audit or duplicate markers")
+        previous_audit = load_json(AUDIT17)
+        if previous_audit.get("filterVersion") == 2:
+            if existing_batch(registry, BATCH17, AUDIT17):
+                return registry
+        else:
+            # Replace the first, deliberately broad tag-only pass before merge.
+            old_count = sum(w.get("batch") == BATCH17 for w in registry["works"])
+            assert old_count == matches[0]["summary"]["promoted-basic"]
+            registry["works"] = [w for w in registry["works"] if w.get("batch") != BATCH17]
+            for key in ("candidates", "accepted", "promotedBasic", "addedToMainIdentityLayer"):
+                registry["summary"][key] -= old_count
+            registry["batches"] = [b for b in registry["batches"] if b.get("id") != BATCH17]
+            assert registry["summary"]["accepted"] == len(registry["works"])
+            write_json(REGISTRY, registry)
+            print("REPLACED_PREVIOUS_ROUND17", old_count, "WITH_FILTER_VERSION_2", flush=True)
     batch16 = next((b for b in registry.get("batches", []) if b.get("id") == BATCH16), None)
     if batch16 is None:
         raise RuntimeError("Round 16 must be imported and audited before round 17")
@@ -270,7 +319,7 @@ def import_round17(args):
             tags = bangumi_tags(item)
             kind, matched_tags = tag_kind(tags)
             if kind is None:
-                counts["not-explicitly-adv-or-rpg-tagged"] += 1
+                counts["not-story-oriented-under-filter-v2"] += 1
                 continue
             collisions = set()
             for name in names:
@@ -299,7 +348,8 @@ def import_round17(args):
                 "group": "Bangumi作品目录（创作品牌待核）",
                 "source": "https://bgm.tv/subject/" + subject_id,
                 "sourceRefs": [ref],
-                "sourceTags": tags[:30],
+                "sourceTags": tags[:60],
+                "matchedSourceTags": matched_tags,
                 "sourcePlatform": item.get("platform"),
                 "mainPlacement": "promoted-basic",
                 "linkedRecordId": None,
@@ -345,6 +395,7 @@ def import_round17(args):
     assert len({w["indexId"] for w in registry["works"]}) == len(registry["works"])
     audit = {
         "schema": 1,
+        "filterVersion": 2,
         "date": "2026-11-01",
         "source": BANGUMI_API,
         "sourceDocs": "https://github.com/bangumi/server/blob/master/openapi/v0.yaml",
@@ -358,7 +409,8 @@ def import_round17(args):
             "id": w["id"], "title": w["title"], "aliases": w["aliases"],
             "firstYear": w["firstYear"], "gameplay": w["gameplay"],
             "source": w["source"], "sourceRefs": w["sourceRefs"],
-            "sourceTags": w["sourceTags"]
+            "sourceTags": w["sourceTags"],
+            "matchedSourceTags": w["matchedSourceTags"]
         } for w in additions],
         "heldForIdentityReview": held,
         "caveats": [
