@@ -1,0 +1,334 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "batch": "historical-interactive-fiction-1979-1982-20261101",
+  "intakeSha256": "5c82c30ee6a29375b88a71e990448cb97b6b4973f5b9415f45c677f1fa26c6d2",
+  "existingWorksSha256": "93b37d5b74bfa262180d7f3451b31aa890cdb999a149074fed9576ea8574d219",
+  "summary": {
+    "inputCandidates": 17,
+    "before": 10840,
+    "after": 10842,
+    "newDistinctWorks": 2,
+    "linkedExisting": 13,
+    "heldCandidates": 2,
+    "held": 7,
+    "byYear": {
+      "1981": 1,
+      "1982": 1
+    },
+    "byScope": {
+      "core-interactive-fiction": 2
+    }
+  },
+  "records": [
+    {
+      "title": "Golden Voyage",
+      "aliases": [],
+      "firstYear": 1981,
+      "gameplay": "文字冒险（两词解析器）",
+      "group": "Scott Adams / Adventure International",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "TRS-80"
+      ],
+      "source": "https://www.bbcmicro.co.uk/game.php?id=1717",
+      "supportingSources": [
+        "https://www.atarimania.com/mags/pdf/SoftSide_Vol_4_No_12.pdf",
+        "https://www.trs-80.com/sub-publications-manuals-software-1.htm",
+        "https://www.sidonsystems.co.uk/adventure-archive/heritage/scott-adams/"
+      ],
+      "sourceRefs": [
+        "historical-if:1979-1982:9"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "museum-archive-and-historical-bibliography",
+      "evidenceNote": "BBC Micro Games Archive明确说明该作品最初于1981年为TRS-80发行，并指出1981年9月杂志广告；同期SoftSide 1981年9月广告宣布Adventure #12 Golden Voyage，TRS-80软件手册目录亦将Adventure 12列为1981年。1984年BBC Micro移植不作为原作首发年份。",
+      "id": "historical-e6f0d670488ce848",
+      "registryRecord": {
+        "id": "historical-e6f0d670488ce848",
+        "indexId": "basic-historical-1979-1982-20261101-e6f0d670488ce848",
+        "title": "Golden Voyage",
+        "aliases": [],
+        "firstYear": 1981,
+        "gameplay": "ADV",
+        "gameplayNote": "文字冒险（两词解析器）",
+        "group": "Scott Adams / Adventure International",
+        "source": "https://www.bbcmicro.co.uk/game.php?id=1717",
+        "sourceRefs": [
+          "historical-if:1979-1982:9"
+        ],
+        "mainPlacement": "promoted-basic",
+        "linkedRecordId": null,
+        "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+        "yearBasis": "BBC Micro Games Archive明确说明该作品最初于1981年为TRS-80发行，并指出1981年9月杂志广告；同期SoftSide 1981年9月广告宣布Adventure #12 Golden Voyage，TRS-80软件手册目录亦将Adventure 12列为1981年。1984年BBC Micro移植不作为原作首发年份。",
+        "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+        "batch": "historical-interactive-fiction-1979-1982-20261101",
+        "historicalScope": "core-interactive-fiction",
+        "platformCandidates": [
+          "TRS-80"
+        ],
+        "sourceNote": "BBC Micro Games Archive明确说明该作品最初于1981年为TRS-80发行，并指出1981年9月杂志广告；同期SoftSide 1981年9月广告宣布Adventure #12 Golden Voyage，TRS-80软件手册目录亦将Adventure 12列为1981年。1984年BBC Micro移植不作为原作首发年份。",
+        "evidenceLevel": "A-identity-year"
+      }
+    },
+    {
+      "title": "Dungeon Adventure",
+      "aliases": [],
+      "firstYear": 1982,
+      "gameplay": "文字冒险（解析器）",
+      "group": "Level 9 Computing",
+      "historicalScope": "core-interactive-fiction",
+      "platforms": [
+        "BBC Micro",
+        "Nascom"
+      ],
+      "source": "https://bbcmicro.co.uk/game.php?id=1735",
+      "supportingSources": [
+        "https://www.computinghistory.org.uk/cgi/archive.pl?author=&order=Date&platform=BBC&publisher=Level+9+Computing&type=Games"
+      ],
+      "sourceRefs": [
+        "historical-if:1979-1982:16"
+      ],
+      "evidenceLevel": "A-identity-year",
+      "evidenceType": "museum-archive-and-historical-bibliography",
+      "evidenceNote": "BBC Micro Games Archive称原始磁带版于1982年发行，列Mike、Nick、Pete Austin；英国计算机历史中心亦列1982年BBC Micro版本。",
+      "id": "historical-70369da71715fd01",
+      "registryRecord": {
+        "id": "historical-70369da71715fd01",
+        "indexId": "basic-historical-1979-1982-20261101-70369da71715fd01",
+        "title": "Dungeon Adventure",
+        "aliases": [],
+        "firstYear": 1982,
+        "gameplay": "ADV",
+        "gameplayNote": "文字冒险（解析器）",
+        "group": "Level 9 Computing",
+        "source": "https://bbcmicro.co.uk/game.php?id=1735",
+        "sourceRefs": [
+          "historical-if:1979-1982:16"
+        ],
+        "mainPlacement": "promoted-basic",
+        "linkedRecordId": null,
+        "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+        "yearBasis": "BBC Micro Games Archive称原始磁带版于1982年发行，列Mike、Nick、Pete Austin；英国计算机历史中心亦列1982年BBC Micro版本。",
+        "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+        "batch": "historical-interactive-fiction-1979-1982-20261101",
+        "historicalScope": "core-interactive-fiction",
+        "platformCandidates": [
+          "BBC Micro",
+          "Nascom"
+        ],
+        "sourceNote": "BBC Micro Games Archive称原始磁带版于1982年发行，列Mike、Nick、Pete Austin；英国计算机历史中心亦列1982年BBC Micro版本。",
+        "evidenceLevel": "A-identity-year"
+      }
+    }
+  ],
+  "linkedExisting": [
+    {
+      "title": "Zork I: The Great Underground Empire",
+      "year": 1980,
+      "matches": [
+        {
+          "workId": "g002",
+          "year": 1980,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "Zork II: The Wizard of Frobozz",
+      "year": 1981,
+      "matches": [
+        {
+          "workId": "g062",
+          "year": 1981,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "Zork III: The Dungeon Master",
+      "year": 1982,
+      "matches": [
+        {
+          "workId": "g063",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "Deadline",
+      "year": 1982,
+      "matches": [
+        {
+          "workId": "g003",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "Starcross",
+      "year": 1982,
+      "matches": [
+        {
+          "workId": "g064",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "Ghost Town",
+      "year": 1980,
+      "matches": [
+        {
+          "workId": "ai-ghost-town",
+          "year": 1980,
+          "scope": "historical-dossier"
+        }
+      ]
+    },
+    {
+      "title": "Savage Island, Part I",
+      "year": 1980,
+      "matches": [
+        {
+          "workId": "ai-savage-island-1",
+          "year": 1980,
+          "scope": "historical-dossier"
+        }
+      ]
+    },
+    {
+      "title": "Savage Island, Part II",
+      "year": 1981,
+      "matches": [
+        {
+          "workId": "ai-savage-island-2",
+          "year": 1981,
+          "scope": "historical-dossier"
+        }
+      ]
+    },
+    {
+      "title": "Mystery House",
+      "year": 1980,
+      "matches": [
+        {
+          "workId": "g001",
+          "year": 1980,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "The Wizard and the Princess",
+      "year": 1980,
+      "matches": [
+        {
+          "workId": "g057",
+          "year": 1980,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "Cranston Manor",
+      "year": 1981,
+      "matches": [
+        {
+          "workId": "g058",
+          "year": 1981,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "Time Zone",
+      "year": 1982,
+      "matches": [
+        {
+          "workId": "g059",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ]
+    },
+    {
+      "title": "The Hobbit",
+      "year": 1982,
+      "matches": [
+        {
+          "workId": "g113",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ]
+    }
+  ],
+  "heldForReview": [
+    {
+      "title": "Colossal Adventure",
+      "reason": "馆藏资料存在1982/1983年份冲突，暂缓入库。"
+    },
+    {
+      "title": "Adventure Quest",
+      "reason": "Level 9馆藏资料列1983年，留待下一批。"
+    },
+    {
+      "title": "Other Venture系列",
+      "reason": "需要逐款核实作品身份、作者和发行年份。"
+    },
+    {
+      "title": "Ghost Town",
+      "reason": "additional alias matches a different year; same-year identity linked but conflict retained",
+      "matches": [
+        {
+          "workId": "ai-ghost-town",
+          "year": 1980,
+          "scope": "historical-dossier"
+        },
+        {
+          "workId": "microcabin-ghost",
+          "year": 1984,
+          "scope": "historical-dossier"
+        }
+      ]
+    },
+    {
+      "title": "The Wizard and the Princess",
+      "reason": "additional alias matches a different year; same-year identity linked but conflict retained",
+      "matches": [
+        {
+          "workId": "g057",
+          "year": 1980,
+          "scope": "complete"
+        },
+        {
+          "workId": "melbournehouse-wizard-princess",
+          "year": 1982,
+          "scope": "historical-dossier"
+        }
+      ]
+    },
+    {
+      "title": "Mission: Asteroid",
+      "reason": "title/alias exists with a different firstYear",
+      "candidate": true,
+      "matches": [
+        {
+          "workId": "sierra-mission-asteroid",
+          "year": 1980,
+          "scope": "historical-dossier"
+        }
+      ]
+    },
+    {
+      "title": "Ulysses and the Golden Fleece",
+      "reason": "年份来源冲突：Sierra年表列1982年，另有二手资料列1981年；未取得足以排除冲突的一手发行证据，本批暂不写入基础身份库。",
+      "candidate": true,
+      "year": 1982
+    }
+  ]
+}
