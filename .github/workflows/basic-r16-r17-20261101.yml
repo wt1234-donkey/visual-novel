@@ -80,10 +80,10 @@ jobs:
                   assert w['title']==record['title'] and w['aliases']==record['aliases'] and w['firstYear']==record['firstYear']
                   assert record['vndbId'] in [s.split(':',1)[1] for s in w.get('sourceRefs',[]) if s.startswith('vndb:')]
                   if source_kind=='vndb':
-                      assert record['sourceId']==record['vndbId'] and re.fullmatch(r'v\\d+',record['vndbId'])
+                      assert record['sourceId']==record['vndbId'] and re.fullmatch(r'v\d+',record['vndbId'])
                       assert w['id']=='vndb-'+record['vndbId']
                   else:
-                      assert str(record['sourceId']).isdecimal() and re.fullmatch(r'v\\d+',record['vndbId'])
+                      assert str(record['sourceId']).isdecimal() and re.fullmatch(r'v\d+',record['vndbId'])
                       assert w['id']=='nextmoe-'+str(record['sourceId'])
                   assert record['id'] not in new_ids
                   assert record['vndbId'] not in new_vndb_ids
