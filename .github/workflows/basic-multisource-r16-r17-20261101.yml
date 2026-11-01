@@ -1,0 +1,123 @@
+name: Basic registry rounds 16-17 — NextMoe and Bangumi
+on:
+  push:
+    branches: [catalog/basic-r16-r17-multisource-20261101]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, edited]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: basic-multisource-r16-r17-20261101
+  cancel-in-progress: true
+jobs:
+  import-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Compile importer before network access
+        run: python3 -m py_compile scripts/import_basic_multisource_r16_r17_20261101.py
+      - name: Import round 16 NextMoe alternate Bangumi ranking and round 17 Bangumi directory
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/import_basic_multisource_r16_r17_20261101.py --nextmoe-pages 100 --bangumi-pages 160 --bangumi-limit 50 --max-new 500 --delay 2.2 --bangumi-delay 1.3 2>&1 | tee /tmp/basic-r16-r17-import.log
+      - name: Refresh strict promotion review queue
+        run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Audit batch counts, source identities and append-only registry
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          def load(p):
+              return json.loads(Path(p).read_text(encoding="utf-8"))
+          r=load('data/main-adv-rpg-works-20261031.json')
+          assert r['summary']['accepted']==len(r['works'])
+          assert r['summary']['addedToMainIdentityLayer']==r['summary']['promotedBasic']+r['summary']['promotedDossier']
+          assert len({w['id'] for w in r['works']})==len(r['works'])
+          assert len({w['indexId'] for w in r['works']})==len(r['works'])
+          refs=[x for w in r['works'] for x in w.get('sourceRefs',[]) if str(x).startswith('vndb:v')]
+          assert len(set(refs))==len(refs), 'Repeated VNDB identity'
+          bangumi_refs=[x for w in r['works'] for x in w.get('sourceRefs',[]) if str(x).startswith('bangumi:')]
+          assert len(set(bangumi_refs))==len(bangumi_refs), 'Repeated Bangumi identity'
+          expected=7810
+          for n,batchid,auditpath,prefix in (
+              (16,'nextmoe-galgame-bulk-20261101-r16','data/nextmoe-bulk-review-20261101-r16.json','nextmoe-20261101-r16-'),
+              (17,'bangumi-games-bulk-20261101-r17','data/bangumi-game-bulk-review-20261101-r17.json','bangumi-20261101-r17-')):
+              a=load(auditpath)
+              b=next(b for b in r['batches'] if b['id']==batchid)
+              works=[w for w in r['works'] if w.get('batch')==batchid]
+              inc=a['summary']['newDistinctWorks']
+              assert 0<inc<=500
+              assert inc==len(works)==len(a['records'])==b['summary']['promoted-basic']
+              assert all(w['indexId'].startswith(prefix) for w in works)
+              assert b['review']==auditpath
+              assert a['summary']['before']==expected
+              expected+=inc
+              assert a['summary']['after']==expected
+              if n==17:
+                  assert a.get('filterVersion')==3, 'Bangumi narrative filter version must be 2'
+                  assert all(w['gameplay'] in {'ADV','RPG'} and w.get('sourceTags') and w.get('matchedSourceTags') for w in works)
+                  assert all(w['sourceRefs'][0].startswith('bangumi:') for w in works)
+              print('ROUND',n,'NEW',inc,'SCANNED',a['summary']['scanned'],'TOTAL',expected)
+          assert len(r['works'])==expected
+          stage=load('data/basic-to-full-promotion-review-20261101.json')
+          assert stage['summary']['registryAccepted']==expected
+          assert all(w['readyForStrictGamesJson'] is False for w in stage['records'])
+          print('ALL_CHECKS_PASSED',expected)
+          PY
+      - name: Run existing strict data, Python and website regression tests
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          node --check discovery.mjs
+      - name: Commit verified identities and per-source audits to this PR branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/nextmoe-bulk-review-20261101-r16.json data/bangumi-game-bulk-review-20261101-r17.json data/basic-to-full-promotion-review-20261101.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Append verified basic work identities, rounds 16 and 17"
+            git fetch origin catalog/basic-r16-r17-multisource-20261101
+            git rebase origin/catalog/basic-r16-r17-multisource-20261101
+            git push origin HEAD:catalog/basic-r16-r17-multisource-20261101
+          fi
+      - name: Preserve import failure details on branch for repair
+        if: failure()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, os
+          log=Path('/tmp/basic-r16-r17-import.log')
+          lines=log.read_text(encoding='utf-8',errors='replace').splitlines()[-120:] if log.exists() else []
+          target=Path('data/basic-r16-r17-last-failure.json')
+          target.write_text(json.dumps({
+              "runUrl":"https://github.com/"+os.environ.get('GITHUB_REPOSITORY','')+"/actions/runs/"+os.environ.get('GITHUB_RUN_ID',''),
+              "status":"failed","logTail":lines
+          },ensure_ascii=False,indent=2)+"\n",encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/basic-r16-r17-last-failure.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record round 16 and 17 import diagnostics"
+            git stash push --include-untracked -m "Unverified import workspace, not for PR"
+            git fetch origin catalog/basic-r16-r17-multisource-20261101
+            git rebase origin/catalog/basic-r16-r17-multisource-20261101
+            git push origin HEAD:catalog/basic-r16-r17-multisource-20261101
+          fi

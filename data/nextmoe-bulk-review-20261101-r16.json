@@ -1,0 +1,6381 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "source": "https://api.nextmoe.dev/v2/catalog/works",
+  "scope": "NextMoe medium=galgame with VNDB identity, released by 2026-11-01, exclude DLC/trials, names/aliases and original year only",
+  "request": {
+    "sort": "rating_vndb",
+    "pageCountCap": 100,
+    "pageSize": 100,
+    "limitNew": 500
+  },
+  "summary": {
+    "scanned": 3860,
+    "newDistinctWorks": 500,
+    "before": 7810,
+    "after": 8310,
+    "galgame": 3860,
+    "existing-work-matched": 509,
+    "no-vndb-identity-held": 925,
+    "edition-or-compilation-held": 21,
+    "existing-external-id": 1842,
+    "year-or-alias-conflict": 15,
+    "missing-title": 12,
+    "non-independent-pack-held": 31,
+    "missing-unreleased-or-future-year": 5
+  },
+  "records": [
+    {
+      "id": "nextmoe-51351",
+      "title": "狂詩性ブラックサンダーＲ",
+      "aliases": [
+        "狂诗性黑色雷霆R"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51351",
+      "sourceRefs": [
+        "vndb:v54956"
+      ]
+    },
+    {
+      "id": "nextmoe-52844",
+      "title": "メギド72",
+      "aliases": [
+        "梅吉德72"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52844",
+      "sourceRefs": [
+        "vndb:v56622"
+      ]
+    },
+    {
+      "id": "nextmoe-206783",
+      "title": "オンゲキ",
+      "aliases": [],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/206783",
+      "sourceRefs": [
+        "vndb:v66777"
+      ]
+    },
+    {
+      "id": "nextmoe-5633",
+      "title": "コルヌ・コピア －不思議の住む街－",
+      "aliases": [
+        "Cornu Copia -Fushigi no Sumu Machi-",
+        "丰裕之角 －不可思议之物居住的小镇－"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5633",
+      "sourceRefs": [
+        "vndb:v27892"
+      ]
+    },
+    {
+      "id": "nextmoe-22552",
+      "title": "冠を持つ神の手",
+      "aliases": [],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22552",
+      "sourceRefs": [
+        "vndb:v20567"
+      ]
+    },
+    {
+      "id": "nextmoe-25911",
+      "title": "無能宣言",
+      "aliases": [
+        "无能宣言"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25911",
+      "sourceRefs": [
+        "vndb:v25476"
+      ]
+    },
+    {
+      "id": "nextmoe-59726",
+      "title": "ネヴァジスタハニカム",
+      "aliases": [
+        "Neversista蜂巢"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/59726",
+      "sourceRefs": [
+        "vndb:v64254"
+      ]
+    },
+    {
+      "id": "nextmoe-21229",
+      "title": "風雨来記3",
+      "aliases": [
+        "风雨来记3"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21229",
+      "sourceRefs": [
+        "vndb:v18449"
+      ]
+    },
+    {
+      "id": "nextmoe-4603",
+      "title": "天に高く地に深く",
+      "aliases": [
+        "Ten ni Takaku Chi ni Fukaku",
+        "天高地深"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4603",
+      "sourceRefs": [
+        "vndb:v3407"
+      ]
+    },
+    {
+      "id": "nextmoe-51272",
+      "title": "PRECIOUS -なぜショウは神に挑んだのか-",
+      "aliases": [
+        "PRECIOUS -翔为何挑战神明-"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51272",
+      "sourceRefs": [
+        "vndb:v54874"
+      ]
+    },
+    {
+      "id": "nextmoe-14715",
+      "title": "ようこそシネマハウスへ",
+      "aliases": [
+        "欢迎来到影院之家"
+      ],
+      "firstYear": 1994,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14715",
+      "sourceRefs": [
+        "vndb:v9158"
+      ]
+    },
+    {
+      "id": "nextmoe-47736",
+      "title": "幻想郷：有罪推定~夜明け前の三色すみれ",
+      "aliases": [
+        "Gensokyo: Presumption of Guilt~Pansies Before Dawn",
+        "幻想乡：有罪推定~夜明前的三色堇"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/47736",
+      "sourceRefs": [
+        "vndb:v50905"
+      ]
+    },
+    {
+      "id": "nextmoe-7989",
+      "title": "演劇少女は古都鎌倉を雪で潰す",
+      "aliases": [
+        "Engeki Shoujo wa Koto Kamakura o Yuki de Tsubusu",
+        "演剧少女用雪压垮古都镰仓"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7989",
+      "sourceRefs": [
+        "vndb:v32282"
+      ]
+    },
+    {
+      "id": "nextmoe-50126",
+      "title": "Inverted Angel",
+      "aliases": [],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/50126",
+      "sourceRefs": [
+        "vndb:v53613"
+      ]
+    },
+    {
+      "id": "nextmoe-11171",
+      "title": "ファンタスティックフォーチュン2",
+      "aliases": [
+        "梦幻奇缘2",
+        "夢幻奇緣2"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11171",
+      "sourceRefs": [
+        "vndb:v3662"
+      ]
+    },
+    {
+      "id": "nextmoe-15710",
+      "title": "美少年夢工廠3-重生",
+      "aliases": [
+        "美少年梦工厂3-重生"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15710",
+      "sourceRefs": [
+        "vndb:v10529"
+      ]
+    },
+    {
+      "id": "nextmoe-6258",
+      "title": "春萌～はるもい～",
+      "aliases": [
+        "Harumoi",
+        "春萌～春萌～"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6258",
+      "sourceRefs": [
+        "vndb:v2805"
+      ]
+    },
+    {
+      "id": "nextmoe-47689",
+      "title": "月华辉映之刻",
+      "aliases": [],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/47689",
+      "sourceRefs": [
+        "vndb:v50851"
+      ]
+    },
+    {
+      "id": "nextmoe-26077",
+      "title": "真昼の暗黒",
+      "aliases": [
+        "白昼的暗黑"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26077",
+      "sourceRefs": [
+        "vndb:v25733"
+      ]
+    },
+    {
+      "id": "nextmoe-27882",
+      "title": "ビストロ・きゅーぴっと2",
+      "aliases": [
+        "爱神餐馆2",
+        "愛神餐館!!2"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27882",
+      "sourceRefs": [
+        "vndb:v28084"
+      ]
+    },
+    {
+      "id": "nextmoe-10149",
+      "title": "蘭島物語 レアランドストーリー ～少女の約定～",
+      "aliases": [
+        "Lair Land Story",
+        "兰岛物语：少女的约定",
+        "蘭島物語：少女的約定"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10149",
+      "sourceRefs": [
+        "vndb:v1801"
+      ]
+    },
+    {
+      "id": "nextmoe-28820",
+      "title": "Class of '09",
+      "aliases": [],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28820",
+      "sourceRefs": [
+        "vndb:v29345"
+      ]
+    },
+    {
+      "id": "nextmoe-210414",
+      "title": "姉と妹の性事情 [GAME]",
+      "aliases": [
+        "Sisters' Sexual Circumstances",
+        "姐姐与妹妹的性事情 [GAME]"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/210414",
+      "sourceRefs": [
+        "vndb:v68921"
+      ]
+    },
+    {
+      "id": "nextmoe-2084",
+      "title": "AlexiA～アレクシア～",
+      "aliases": [
+        "AlexiA ~Alexia~",
+        "AlexiA～阿莱克西亚～"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2084",
+      "sourceRefs": [
+        "vndb:v27507"
+      ]
+    },
+    {
+      "id": "nextmoe-7242",
+      "title": "フロレアール ～すきすきだいすき～",
+      "aliases": [
+        "Floreal ~Suki Suki Daisuki~"
+      ],
+      "firstYear": 1999,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7242",
+      "sourceRefs": [
+        "vndb:v2378"
+      ]
+    },
+    {
+      "id": "nextmoe-47715",
+      "title": "Sugar,sugar,sugarcoat",
+      "aliases": [],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/47715",
+      "sourceRefs": [
+        "vndb:v50883"
+      ]
+    },
+    {
+      "id": "nextmoe-602",
+      "title": "サルテ",
+      "aliases": [
+        "Sarute",
+        "Saleté"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/602",
+      "sourceRefs": [
+        "vndb:v26999"
+      ]
+    },
+    {
+      "id": "nextmoe-8920",
+      "title": "Aquas",
+      "aliases": [],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8920",
+      "sourceRefs": [
+        "vndb:v3411"
+      ]
+    },
+    {
+      "id": "nextmoe-14565",
+      "title": "ヌーク３ 最後の性戦",
+      "aliases": [
+        "努克３ 最后的性战"
+      ],
+      "firstYear": 1994,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14565",
+      "sourceRefs": [
+        "vndb:v8990"
+      ]
+    },
+    {
+      "id": "nextmoe-28760",
+      "title": "雷子 - 紺碧の章 -",
+      "aliases": [
+        "雷子 绀碧之章"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28760",
+      "sourceRefs": [
+        "vndb:v29268"
+      ]
+    },
+    {
+      "id": "nextmoe-31210",
+      "title": "スターズ★ピース 恋愛応援⇒友達獲得ケーカク",
+      "aliases": [
+        "群星★碎片 恋爱应援⇒获得朋友计划"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31210",
+      "sourceRefs": [
+        "vndb:v32385"
+      ]
+    },
+    {
+      "id": "nextmoe-13577",
+      "title": "贖罪の教室 〜The seven stories of sin〜",
+      "aliases": [
+        "赎罪的教室～The seven stories of sin～"
+      ],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13577",
+      "sourceRefs": [
+        "vndb:v7590"
+      ]
+    },
+    {
+      "id": "nextmoe-19851",
+      "title": "学園ハンサム Revolution",
+      "aliases": [
+        "学园帅哥 革命"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/19851",
+      "sourceRefs": [
+        "vndb:v16557"
+      ]
+    },
+    {
+      "id": "nextmoe-28756",
+      "title": "探し屋トーコ",
+      "aliases": [
+        "寻人屋透子"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28756",
+      "sourceRefs": [
+        "vndb:v29262"
+      ]
+    },
+    {
+      "id": "nextmoe-48556",
+      "title": "文字游戏",
+      "aliases": [
+        "Word Game",
+        "文字遊戲"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/48556",
+      "sourceRefs": [
+        "vndb:v51854"
+      ]
+    },
+    {
+      "id": "nextmoe-4386",
+      "title": "想瞬譜",
+      "aliases": [
+        "Soushunfu",
+        "想瞬譜 —そうしゅんふ—"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4386",
+      "sourceRefs": [
+        "vndb:v4690"
+      ]
+    },
+    {
+      "id": "nextmoe-22963",
+      "title": "カガミハラ／ジャスティス －子供と◯◯と◯◯の話－",
+      "aliases": [
+        "镜原／正义 －孩子与◯◯与◯◯的故事－"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22963",
+      "sourceRefs": [
+        "vndb:v21205"
+      ]
+    },
+    {
+      "id": "nextmoe-3911",
+      "title": "すいれん",
+      "aliases": [
+        "Suiren"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3911",
+      "sourceRefs": [
+        "vndb:v24361"
+      ]
+    },
+    {
+      "id": "nextmoe-11074",
+      "title": "乙女的恋革命★ラブレボ!!",
+      "aliases": [
+        "Girlish Love Revolution",
+        "少女恋爱革命★love revo!!"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11074",
+      "sourceRefs": [
+        "vndb:v3549"
+      ]
+    },
+    {
+      "id": "nextmoe-51358",
+      "title": "カマソッソの冬休み",
+      "aliases": [
+        "卡玛索索的寒假"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51358",
+      "sourceRefs": [
+        "vndb:v54963"
+      ]
+    },
+    {
+      "id": "nextmoe-8850",
+      "title": "闇を奔る刃の煌き",
+      "aliases": [
+        "Yami o Hashiru Yaiba no Kirameki"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8850",
+      "sourceRefs": [
+        "vndb:v12718"
+      ]
+    },
+    {
+      "id": "nextmoe-13454",
+      "title": "マスケティア",
+      "aliases": [
+        "火枪手"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13454",
+      "sourceRefs": [
+        "vndb:v7425"
+      ]
+    },
+    {
+      "id": "nextmoe-13949",
+      "title": "ナナシ ノ ゲエム",
+      "aliases": [
+        "The Nameless Game",
+        "七日死 怨"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13949",
+      "sourceRefs": [
+        "vndb:v8182"
+      ]
+    },
+    {
+      "id": "nextmoe-51352",
+      "title": "スパイチくんの死亡遊戯",
+      "aliases": [
+        "斯帕奇君的死亡游戏"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51352",
+      "sourceRefs": [
+        "vndb:v54957"
+      ]
+    },
+    {
+      "id": "nextmoe-11710",
+      "title": "アナタヲユルサナイ",
+      "aliases": [
+        "不可饶恕"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11710",
+      "sourceRefs": [
+        "vndb:v4585"
+      ]
+    },
+    {
+      "id": "nextmoe-27028",
+      "title": "透明な優しさ",
+      "aliases": [
+        "透明的温柔"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27028",
+      "sourceRefs": [
+        "vndb:v27016"
+      ]
+    },
+    {
+      "id": "nextmoe-1238",
+      "title": "twelve~世界から13番目の君と~",
+      "aliases": [
+        "twelve~sekai kara13 banme no kimi to~",
+        "twelve~与来自世界第13位的你~"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1238",
+      "sourceRefs": [
+        "vndb:v53235"
+      ]
+    },
+    {
+      "id": "nextmoe-57244",
+      "title": "やがて僕の訪れる公園",
+      "aliases": [
+        "终将到访我的公园"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/57244",
+      "sourceRefs": [
+        "vndb:v61510"
+      ]
+    },
+    {
+      "id": "nextmoe-11170",
+      "title": "ファンタスティックフォーチュン",
+      "aliases": [
+        "梦幻奇缘",
+        "夢幻奇緣"
+      ],
+      "firstYear": 1998,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11170",
+      "sourceRefs": [
+        "vndb:v3661"
+      ]
+    },
+    {
+      "id": "nextmoe-6879",
+      "title": "私は私のまま、誰にでも変われる",
+      "aliases": [
+        "Watashi wa Watashi no Mama, Dare ni Demo Kawareru",
+        "我依然是我，却能变成任何人"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6879",
+      "sourceRefs": [
+        "vndb:v694"
+      ]
+    },
+    {
+      "id": "nextmoe-4168",
+      "title": "嘘つきナレットの優しい暗殺者",
+      "aliases": [
+        "Usotsuki Nallet no Yasashii Ansatsusha",
+        "说谎的娜蕾特与柔情的暗杀者"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4168",
+      "sourceRefs": [
+        "vndb:v14969"
+      ]
+    },
+    {
+      "id": "nextmoe-8560",
+      "title": "My Sweet Home",
+      "aliases": [],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8560",
+      "sourceRefs": [
+        "vndb:v20000"
+      ]
+    },
+    {
+      "id": "nextmoe-31658",
+      "title": "とらぶるだいあり～・てぃーちゃー",
+      "aliases": [
+        "艾米利亚的日记"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31658",
+      "sourceRefs": [
+        "vndb:v32956"
+      ]
+    },
+    {
+      "id": "nextmoe-58322",
+      "title": "スーパーロボット大戦30",
+      "aliases": [
+        "超级机器人大战30",
+        "超級機器人大戰30"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/58322",
+      "sourceRefs": [
+        "vndb:v62706"
+      ]
+    },
+    {
+      "id": "nextmoe-25707",
+      "title": "淫妖蟲獄 久遠の姫巫女 特別篇",
+      "aliases": [
+        "淫妖虫狱 久远的公主巫女 特别篇"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25707",
+      "sourceRefs": [
+        "vndb:v25204"
+      ]
+    },
+    {
+      "id": "nextmoe-51357",
+      "title": "カマソッソの最期",
+      "aliases": [
+        "卡玛索索的终末"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51357",
+      "sourceRefs": [
+        "vndb:v54962"
+      ]
+    },
+    {
+      "id": "nextmoe-7438",
+      "title": "神事双劇カーニバル",
+      "aliases": [
+        "Shinjisougeki Carnival",
+        "神事双剧嘉年华"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7438",
+      "sourceRefs": [
+        "vndb:v1813"
+      ]
+    },
+    {
+      "id": "nextmoe-9446",
+      "title": "不確定世界の探偵紳士",
+      "aliases": [
+        "Fukakutei Sekai no Tantei Shinshi",
+        "不确定世界的侦探绅士"
+      ],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9446",
+      "sourceRefs": [
+        "vndb:v2389"
+      ]
+    },
+    {
+      "id": "nextmoe-57068",
+      "title": "蛆虫的幸福",
+      "aliases": [],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/57068",
+      "sourceRefs": [
+        "vndb:v61317"
+      ]
+    },
+    {
+      "id": "nextmoe-3828",
+      "title": "２人きりの世界を願ったら。 ―　Remember second　―",
+      "aliases": [
+        "Futarikiri no Sekai o Negattara. -Remember Second-",
+        "但愿只剩我们两人的世界。 ―　Remember second　―"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3828",
+      "sourceRefs": [
+        "vndb:v22486"
+      ]
+    },
+    {
+      "id": "nextmoe-28236",
+      "title": "優艶の花 続 淫縛の館",
+      "aliases": [
+        "优艳之花 续 银缚之馆"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28236",
+      "sourceRefs": [
+        "vndb:v28577"
+      ]
+    },
+    {
+      "id": "nextmoe-7632",
+      "title": "青い鳥～L’Oiseau Bleu～",
+      "aliases": [
+        "Aoi Tori ~L'Oiseau Bleu~",
+        "青鸟～L’Oiseau Bleu～"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7632",
+      "sourceRefs": [
+        "vndb:v9595"
+      ]
+    },
+    {
+      "id": "nextmoe-9027",
+      "title": "僕はキミだけを見つめる 外伝 サーベルタイガー編",
+      "aliases": [
+        "Boku wa Kimi dake o Mitsumeru Gaiden: Saber Tiger Hen",
+        "我只注视着你 外传 剑齿虎篇"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9027",
+      "sourceRefs": [
+        "vndb:v9737"
+      ]
+    },
+    {
+      "id": "nextmoe-20076",
+      "title": "アソコの幸福",
+      "aliases": [
+        "那里的幸福"
+      ],
+      "firstYear": 1989,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/20076",
+      "sourceRefs": [
+        "vndb:v16877"
+      ]
+    },
+    {
+      "id": "nextmoe-51367",
+      "title": "ふたりの旅のきろく",
+      "aliases": [
+        "两人旅途的记录"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51367",
+      "sourceRefs": [
+        "vndb:v54972"
+      ]
+    },
+    {
+      "id": "nextmoe-21563",
+      "title": "私は女優になりたいの",
+      "aliases": [
+        "I Want to Be an Actress",
+        "我想成为女演员"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21563",
+      "sourceRefs": [
+        "vndb:v18996"
+      ]
+    },
+    {
+      "id": "nextmoe-52368",
+      "title": "スタンドマイヒーローズ",
+      "aliases": [
+        "募恋英雄-Stand My Heroes-",
+        "募戀英雄 -Stand My Heroes-"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52368",
+      "sourceRefs": [
+        "vndb:v56079"
+      ]
+    },
+    {
+      "id": "nextmoe-30431",
+      "title": "Ewig-エーヴィヒ-",
+      "aliases": [
+        "Ewig-永恒-"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/30431",
+      "sourceRefs": [
+        "vndb:v31454"
+      ]
+    },
+    {
+      "id": "nextmoe-31880",
+      "title": "ひまわりのチャペルできみと外伝　女教師・仁時一紗香（旧姓）",
+      "aliases": [],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31880",
+      "sourceRefs": [
+        "vndb:v33222"
+      ]
+    },
+    {
+      "id": "nextmoe-16054",
+      "title": "LOVE×EVOLUTION",
+      "aliases": [],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16054",
+      "sourceRefs": [
+        "vndb:v11082"
+      ]
+    },
+    {
+      "id": "nextmoe-9445",
+      "title": "刻音色",
+      "aliases": [
+        "Tokineiro"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9445",
+      "sourceRefs": [
+        "vndb:v6107"
+      ]
+    },
+    {
+      "id": "nextmoe-18309",
+      "title": "病獣-yajyu-",
+      "aliases": [],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18309",
+      "sourceRefs": [
+        "vndb:v14372"
+      ]
+    },
+    {
+      "id": "nextmoe-229029",
+      "title": "买个可乐饼吧！",
+      "aliases": [
+        "買個可樂餅吧！"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229029",
+      "sourceRefs": [
+        "vndb:v67991"
+      ]
+    },
+    {
+      "id": "nextmoe-29075",
+      "title": "香港往事",
+      "aliases": [],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29075",
+      "sourceRefs": [
+        "vndb:v29672"
+      ]
+    },
+    {
+      "id": "nextmoe-26132",
+      "title": "叙事曲2：星空下的诺言",
+      "aliases": [],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26132",
+      "sourceRefs": [
+        "vndb:v25812"
+      ]
+    },
+    {
+      "id": "nextmoe-36778",
+      "title": "「結(ゆい)」～忘れられた少女～",
+      "aliases": [
+        "结(结衣)」～被遗忘的少女～"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/36778",
+      "sourceRefs": [
+        "vndb:v38818"
+      ]
+    },
+    {
+      "id": "nextmoe-12234",
+      "title": "無限夜行",
+      "aliases": [
+        "无限夜行"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12234",
+      "sourceRefs": [
+        "vndb:v5491"
+      ]
+    },
+    {
+      "id": "nextmoe-12911",
+      "title": "妖獣戦記２ -黎明の戦士たち-",
+      "aliases": [
+        "妖兽战记２ -黎明的战士们-"
+      ],
+      "firstYear": 1995,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12911",
+      "sourceRefs": [
+        "vndb:v6535"
+      ]
+    },
+    {
+      "id": "nextmoe-7212",
+      "title": "もろびとこぞりて ～Joy to the World! The Lord is come～",
+      "aliases": [
+        "Morobito Kozorite ~Joy to the World! The Lord Is Come~",
+        "普天同庆 ～Joy to the World! The Lord is come～"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7212",
+      "sourceRefs": [
+        "vndb:v6474"
+      ]
+    },
+    {
+      "id": "nextmoe-21740",
+      "title": "ペルソナ4 ダンシング・オールナイト",
+      "aliases": [
+        "Persona 4 Dancing All Night",
+        "女神异闻录4 通宵热舞",
+        "女神異聞錄4 通宵熱舞"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21740",
+      "sourceRefs": [
+        "vndb:v19238"
+      ]
+    },
+    {
+      "id": "nextmoe-271679",
+      "title": "スーパーロボット大戦Y",
+      "aliases": [
+        "SUPER ROBOT WARS Y",
+        "超级机器人大战Y",
+        "超級機器人大戰Y"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/271679",
+      "sourceRefs": [
+        "vndb:v69341"
+      ]
+    },
+    {
+      "id": "nextmoe-7399",
+      "title": "Endless Rain",
+      "aliases": [],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7399",
+      "sourceRefs": [
+        "vndb:v12748"
+      ]
+    },
+    {
+      "id": "nextmoe-4741",
+      "title": "鉛の棍棒",
+      "aliases": [
+        "Namari no Konbou",
+        "铅之棍棒"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4741",
+      "sourceRefs": [
+        "vndb:v46344"
+      ]
+    },
+    {
+      "id": "nextmoe-3322",
+      "title": "D ～その景色の向こう側～",
+      "aliases": [
+        "D ~Sono Keshiki no Mukougawa~",
+        "D ～那片景色的另一边～"
+      ],
+      "firstYear": 1999,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3322",
+      "sourceRefs": [
+        "vndb:v7623"
+      ]
+    },
+    {
+      "id": "nextmoe-13773",
+      "title": "フルハウスキス",
+      "aliases": [
+        "恋爱家政妇"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13773",
+      "sourceRefs": [
+        "vndb:v7920"
+      ]
+    },
+    {
+      "id": "nextmoe-16210",
+      "title": "僧正の朽ちゆく魔柩",
+      "aliases": [
+        "僧正腐朽的魔柩"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16210",
+      "sourceRefs": [
+        "vndb:v11315"
+      ]
+    },
+    {
+      "id": "nextmoe-26641",
+      "title": "ジャンのためなら世界を壊す",
+      "aliases": [],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26641",
+      "sourceRefs": [
+        "vndb:v26516"
+      ]
+    },
+    {
+      "id": "nextmoe-2151",
+      "title": "逢魔ガ刻・弐　夜闇ニ祈ル少女",
+      "aliases": [
+        "Ouma ga Toki 2 - Yoyami ni Inoru Shoujo",
+        "逢魔时刻・贰黑夜中祈祷的少女"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2151",
+      "sourceRefs": [
+        "vndb:v18693"
+      ]
+    },
+    {
+      "id": "nextmoe-8888",
+      "title": "はてなきそら",
+      "aliases": [
+        "Hatenaki Sora",
+        "无尽之空"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8888",
+      "sourceRefs": [
+        "vndb:v5141"
+      ]
+    },
+    {
+      "id": "nextmoe-18934",
+      "title": "The Fool",
+      "aliases": [
+        "图书室的Neversista「THE FOOL」"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18934",
+      "sourceRefs": [
+        "vndb:v15243"
+      ]
+    },
+    {
+      "id": "nextmoe-41135",
+      "title": "4日後に死ぬ！",
+      "aliases": [
+        "4日后将死！"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/41135",
+      "sourceRefs": [
+        "vndb:v43520"
+      ]
+    },
+    {
+      "id": "nextmoe-1161",
+      "title": "終わらない季節の真ん中で",
+      "aliases": [
+        "Owaranai Kisetsu no Mannaka de",
+        "永夏之恋",
+        "永夏之戀"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1161",
+      "sourceRefs": [
+        "vndb:v36941"
+      ]
+    },
+    {
+      "id": "nextmoe-28537",
+      "title": "Children of Belgrade Metro",
+      "aliases": [],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28537",
+      "sourceRefs": [
+        "vndb:v28981"
+      ]
+    },
+    {
+      "id": "nextmoe-10680",
+      "title": "仰せのままに★ご主人様!",
+      "aliases": [
+        "遵从您的吩咐★主人!"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10680",
+      "sourceRefs": [
+        "vndb:v2832"
+      ]
+    },
+    {
+      "id": "nextmoe-11044",
+      "title": "Apocripha/0  アレクディスク",
+      "aliases": [
+        "圣书外典：亚历克篇"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11044",
+      "sourceRefs": [
+        "vndb:v3507"
+      ]
+    },
+    {
+      "id": "nextmoe-56784",
+      "title": "東京武闘変",
+      "aliases": [
+        "東京武闘変 OVA版",
+        "东京武斗变"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/56784",
+      "sourceRefs": [
+        "vndb:v60996"
+      ]
+    },
+    {
+      "id": "nextmoe-33207",
+      "title": "暗い日曜日-fragments-",
+      "aliases": [
+        "黑色星期天-fragments-"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/33207",
+      "sourceRefs": [
+        "vndb:v34710"
+      ]
+    },
+    {
+      "id": "nextmoe-6235",
+      "title": "Worlds and World's end",
+      "aliases": [],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6235",
+      "sourceRefs": [
+        "vndb:v5667"
+      ]
+    },
+    {
+      "id": "nextmoe-2180",
+      "title": "Minstrel-壊レタ人ギョウ-",
+      "aliases": [
+        "Minstrel -Kowareta Ningyou-"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2180",
+      "sourceRefs": [
+        "vndb:v12719"
+      ]
+    },
+    {
+      "id": "nextmoe-20072",
+      "title": "竜機伝承 －ドラグーン－",
+      "aliases": [
+        "龙机传承",
+        "龍機傳承"
+      ],
+      "firstYear": 1996,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/20072",
+      "sourceRefs": [
+        "vndb:v16872"
+      ]
+    },
+    {
+      "id": "nextmoe-16477",
+      "title": "花咲くまにまに",
+      "aliases": [
+        "花渐开"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16477",
+      "sourceRefs": [
+        "vndb:v11677"
+      ]
+    },
+    {
+      "id": "nextmoe-25910",
+      "title": "インボルグの過ごし方",
+      "aliases": [],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25910",
+      "sourceRefs": [
+        "vndb:v25475"
+      ]
+    },
+    {
+      "id": "nextmoe-8968",
+      "title": "それいけ!!杉城園芸部",
+      "aliases": [
+        "Soreike!! Sugishiro Engeibu",
+        "冲吧！！杉城园艺部"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8968",
+      "sourceRefs": [
+        "vndb:v61486"
+      ]
+    },
+    {
+      "id": "nextmoe-7504",
+      "title": "ネブ＊プラス",
+      "aliases": [
+        "Navel * Plus",
+        "涅布＊普拉斯"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7504",
+      "sourceRefs": [
+        "vndb:v8664"
+      ]
+    },
+    {
+      "id": "nextmoe-4028",
+      "title": "ナチュラルアナザーワンセカンド－ベラドンナ－",
+      "aliases": [
+        "Natural Another One 2nd -Belladonna-"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4028",
+      "sourceRefs": [
+        "vndb:v5531"
+      ]
+    },
+    {
+      "id": "nextmoe-4635",
+      "title": "桜の木下で",
+      "aliases": [
+        "Sakura no Ki Shita de",
+        "于樱花树下"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4635",
+      "sourceRefs": [
+        "vndb:v20587"
+      ]
+    },
+    {
+      "id": "nextmoe-1945",
+      "title": "十次元立方体サイファー～蒼き月の水底～",
+      "aliases": [
+        "十次元立方体赛法～苍月的水底～ 特别包"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1945",
+      "sourceRefs": [
+        "vndb:v4147"
+      ]
+    },
+    {
+      "id": "nextmoe-50814",
+      "title": "S4U：都市朋克2011与爱的重拳",
+      "aliases": [
+        "S4U: CITYPUNK 2011 AND LOVE PUNCH"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/50814",
+      "sourceRefs": [
+        "vndb:v54366"
+      ]
+    },
+    {
+      "id": "nextmoe-49322",
+      "title": "椿屋敷の亡霊",
+      "aliases": [
+        "椿屋敷的亡灵"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/49322",
+      "sourceRefs": [
+        "vndb:v52699"
+      ]
+    },
+    {
+      "id": "nextmoe-57359",
+      "title": "あざなえる沈黙への供物",
+      "aliases": [
+        "献予交织沉默的供物"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/57359",
+      "sourceRefs": [
+        "vndb:v61628"
+      ]
+    },
+    {
+      "id": "nextmoe-12332",
+      "title": "獄主に捧げる降霊術",
+      "aliases": [
+        "献给狱主的降灵术"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12332",
+      "sourceRefs": [
+        "vndb:v5644"
+      ]
+    },
+    {
+      "id": "nextmoe-3771",
+      "title": "Sono Hanabira - YuriCycle",
+      "aliases": [
+        "Sono Hanabira ni Kuchizuke o: Yuririn",
+        "その花びらにくちづけを　ゆりりん",
+        "花吻在上20～亲吻那片花瓣～番外3 悠铃铃～百合式自行车瘦身计划"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3771",
+      "sourceRefs": [
+        "vndb:v18666"
+      ]
+    },
+    {
+      "id": "nextmoe-21751",
+      "title": "Merry X'mas You, for Your Closed World, and You…",
+      "aliases": [],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21751",
+      "sourceRefs": [
+        "vndb:v19255"
+      ]
+    },
+    {
+      "id": "nextmoe-226643",
+      "title": "セックスセラピスト",
+      "aliases": [
+        "Sex Therapist",
+        "性治疗师"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/226643",
+      "sourceRefs": [
+        "vndb:v67060"
+      ]
+    },
+    {
+      "id": "nextmoe-8452",
+      "title": "ひとりのクオリア",
+      "aliases": [
+        "Hitori no Qualia",
+        "一个人的感质空间"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8452",
+      "sourceRefs": [
+        "vndb:v12416"
+      ]
+    },
+    {
+      "id": "nextmoe-11466",
+      "title": "ぼくのたいせつなもの",
+      "aliases": [
+        "我的重要之物"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11466",
+      "sourceRefs": [
+        "vndb:v4191"
+      ]
+    },
+    {
+      "id": "nextmoe-10088",
+      "title": "さかしき人にみるこころ",
+      "aliases": [
+        "于贤者所见之心"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10088",
+      "sourceRefs": [
+        "vndb:v1672"
+      ]
+    },
+    {
+      "id": "nextmoe-10811",
+      "title": "Handle With Care..",
+      "aliases": [
+        "红磨坊",
+        "紅磨坊"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10811",
+      "sourceRefs": [
+        "vndb:v3140"
+      ]
+    },
+    {
+      "id": "nextmoe-5081",
+      "title": "アリアサキュズム",
+      "aliases": [
+        "Ariasakyuzumu",
+        "魅魔阿莉亚"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5081",
+      "sourceRefs": [
+        "vndb:v59206"
+      ]
+    },
+    {
+      "id": "nextmoe-227443",
+      "title": "意识流",
+      "aliases": [
+        "意识流 / Stream of Consciousness"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/227443",
+      "sourceRefs": [
+        "vndb:v24332"
+      ]
+    },
+    {
+      "id": "nextmoe-18156",
+      "title": "Lunatic Honey ～世界で一番君が好き～",
+      "aliases": [
+        "Lunatic Honey ～世界上最喜欢你～"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18156",
+      "sourceRefs": [
+        "vndb:v14171"
+      ]
+    },
+    {
+      "id": "nextmoe-29723",
+      "title": "せつなゆ魂",
+      "aliases": [
+        "刹那游魂"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29723",
+      "sourceRefs": [
+        "vndb:v30549"
+      ]
+    },
+    {
+      "id": "nextmoe-26405",
+      "title": "局外人 L'Etranger",
+      "aliases": [
+        "局外人"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26405",
+      "sourceRefs": [
+        "vndb:v26176"
+      ]
+    },
+    {
+      "id": "nextmoe-29316",
+      "title": "看不见的恋人",
+      "aliases": [],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29316",
+      "sourceRefs": [
+        "vndb:v29998"
+      ]
+    },
+    {
+      "id": "nextmoe-228379",
+      "title": "DREAM!ing",
+      "aliases": [],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/228379",
+      "sourceRefs": [
+        "vndb:v59878"
+      ]
+    },
+    {
+      "id": "nextmoe-4068",
+      "title": "ふたりのクオリア",
+      "aliases": [
+        "Futari no Qualia",
+        "两个人的感质空间"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4068",
+      "sourceRefs": [
+        "vndb:v12417"
+      ]
+    },
+    {
+      "id": "nextmoe-13576",
+      "title": "生贄の教室",
+      "aliases": [
+        "Ikenie no Kyoushitsu",
+        "生贽的教室"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13576",
+      "sourceRefs": [
+        "vndb:v7589"
+      ]
+    },
+    {
+      "id": "nextmoe-4680",
+      "title": "さよなら、うつつ。",
+      "aliases": [
+        "Sayonara, Utsutsu.",
+        "再见了，现世。"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4680",
+      "sourceRefs": [
+        "vndb:v15902"
+      ]
+    },
+    {
+      "id": "nextmoe-26895",
+      "title": "ビフォー・アライビング・アット・ザ・ターミナル",
+      "aliases": [
+        "before arriving at the terminal"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26895",
+      "sourceRefs": [
+        "vndb:v26846"
+      ]
+    },
+    {
+      "id": "nextmoe-35633",
+      "title": "ふりかけ☆スペイシー",
+      "aliases": [
+        "超级昭和电动画剧☆太空拌饭海苔碎"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/35633",
+      "sourceRefs": [
+        "vndb:v37548"
+      ]
+    },
+    {
+      "id": "nextmoe-3052",
+      "title": "カラホワ",
+      "aliases": [
+        "Color of White"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3052",
+      "sourceRefs": [
+        "vndb:v11899"
+      ]
+    },
+    {
+      "id": "nextmoe-3601",
+      "title": "あの日の旅人、ふれあう未来",
+      "aliases": [
+        "Ano Hi no Tabibito, Fureau Mirai",
+        "昔日旅人、余生相携"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3601",
+      "sourceRefs": [
+        "vndb:v28034"
+      ]
+    },
+    {
+      "id": "nextmoe-6154",
+      "title": "Toriko",
+      "aliases": [],
+      "firstYear": 1996,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6154",
+      "sourceRefs": [
+        "vndb:v14583"
+      ]
+    },
+    {
+      "id": "nextmoe-49047",
+      "title": "東京魔人學園剣風帖",
+      "aliases": [
+        "Tokyo Majin Gakuen: Kenpūchō",
+        "东京魔人学园剑风帖"
+      ],
+      "firstYear": 1998,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/49047",
+      "sourceRefs": [
+        "vndb:v52401"
+      ]
+    },
+    {
+      "id": "nextmoe-46096",
+      "title": "Chanye's Home",
+      "aliases": [
+        "真夜的居所",
+        "真夜的居所 - Chanye's Home"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/46096",
+      "sourceRefs": [
+        "vndb:v49008"
+      ]
+    },
+    {
+      "id": "nextmoe-52497",
+      "title": "犯人は僕です。～露天風呂編～",
+      "aliases": [
+        "犯人就是我。～露天温泉篇～"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52497",
+      "sourceRefs": [
+        "vndb:v56225"
+      ]
+    },
+    {
+      "id": "nextmoe-13891",
+      "title": "雅恋～MIYAKO～あわゆきのうたげ",
+      "aliases": [
+        "雅恋～MIYAKO～淡雪之宴"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13891",
+      "sourceRefs": [
+        "vndb:v8091"
+      ]
+    },
+    {
+      "id": "nextmoe-12083",
+      "title": "はなひらっ！",
+      "aliases": [],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12083",
+      "sourceRefs": [
+        "vndb:v5244"
+      ]
+    },
+    {
+      "id": "nextmoe-27573",
+      "title": "メモオフみっくす",
+      "aliases": [
+        "秋之回忆 Mix"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27573",
+      "sourceRefs": [
+        "vndb:v27682"
+      ]
+    },
+    {
+      "id": "nextmoe-13553",
+      "title": "闇夜ト星ノ冥土館～ぷにゅぷりXX～",
+      "aliases": [
+        "暗夜ト星ノ冥土館～ぷにゅぷりXX～"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13553",
+      "sourceRefs": [
+        "vndb:v7556"
+      ]
+    },
+    {
+      "id": "nextmoe-12331",
+      "title": "斬首人が連れて行く",
+      "aliases": [],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12331",
+      "sourceRefs": [
+        "vndb:v5643"
+      ]
+    },
+    {
+      "id": "nextmoe-51293",
+      "title": "去り行く運命",
+      "aliases": [
+        "离去的命运"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51293",
+      "sourceRefs": [
+        "vndb:v54896"
+      ]
+    },
+    {
+      "id": "nextmoe-51353",
+      "title": "ほんとにあった！呪いの超常現象調査社",
+      "aliases": [
+        "真的存在！诅咒超常现象调查社"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51353",
+      "sourceRefs": [
+        "vndb:v54958"
+      ]
+    },
+    {
+      "id": "nextmoe-51345",
+      "title": "大脱獄！ヘルちゃまプリズンの野望",
+      "aliases": [
+        "大脱狱！赫尔酱监狱的野望"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51345",
+      "sourceRefs": [
+        "vndb:v54950"
+      ]
+    },
+    {
+      "id": "nextmoe-48338",
+      "title": "星影のティアドロップ",
+      "aliases": [
+        "星影的泪滴"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/48338",
+      "sourceRefs": [
+        "vndb:v51623"
+      ]
+    },
+    {
+      "id": "nextmoe-57651",
+      "title": "王国の夏",
+      "aliases": [
+        "王国之夏"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/57651",
+      "sourceRefs": [
+        "vndb:v61949"
+      ]
+    },
+    {
+      "id": "nextmoe-4368",
+      "title": "その花びらにくちづけを　あまくてほしくてとろけるちゅう",
+      "aliases": [
+        "Sono Hanabira ni Kuchizuke o: Amakute Hoshikute Torokeru Chuu",
+        "花吻在上7~亲吻那片花瓣 甜蜜相思的融化之吻"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4368",
+      "sourceRefs": [
+        "vndb:v3031"
+      ]
+    },
+    {
+      "id": "nextmoe-46654",
+      "title": "名探偵コナン 蒼き宝石の輪舞曲",
+      "aliases": [
+        "名侦探柯南：苍蓝宝石的轮舞曲"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/46654",
+      "sourceRefs": [
+        "vndb:v49689"
+      ]
+    },
+    {
+      "id": "nextmoe-19638",
+      "title": "血染めの花",
+      "aliases": [
+        "血染之花"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/19638",
+      "sourceRefs": [
+        "vndb:v16225"
+      ]
+    },
+    {
+      "id": "nextmoe-57156",
+      "title": "勇者の選択肢がおかしい",
+      "aliases": [
+        "勇者的选择好奇怪"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/57156",
+      "sourceRefs": [
+        "vndb:v61415"
+      ]
+    },
+    {
+      "id": "nextmoe-23311",
+      "title": "私立ベルばら学園 ～ベルサイユのばらRe*imagination～",
+      "aliases": [
+        "私立凡尔玫瑰学园"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/23311",
+      "sourceRefs": [
+        "vndb:v21785"
+      ]
+    },
+    {
+      "id": "nextmoe-25414",
+      "title": "サイコカリエス",
+      "aliases": [
+        "精神龋蚀"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25414",
+      "sourceRefs": [
+        "vndb:v24813"
+      ]
+    },
+    {
+      "id": "nextmoe-26749",
+      "title": "叙事曲：难忘的回忆",
+      "aliases": [],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26749",
+      "sourceRefs": [
+        "vndb:v26654"
+      ]
+    },
+    {
+      "id": "nextmoe-9043",
+      "title": "ついみこ ～ツイてる巫女さんは男の子!?～",
+      "aliases": [
+        "Tsuimiko ~Tsuiteru Miko-san wa Otoko no Ko!?~"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9043",
+      "sourceRefs": [
+        "vndb:v6117"
+      ]
+    },
+    {
+      "id": "nextmoe-11376",
+      "title": "Kasumisan#-真夏のリフレイン-",
+      "aliases": [
+        "Kasumisan#-盛夏的叠句-"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11376",
+      "sourceRefs": [
+        "vndb:v4052"
+      ]
+    },
+    {
+      "id": "nextmoe-12758",
+      "title": "美しき獲物たちの学園",
+      "aliases": [
+        "美丽猎物们的学园"
+      ],
+      "firstYear": 1998,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12758",
+      "sourceRefs": [
+        "vndb:v6289"
+      ]
+    },
+    {
+      "id": "nextmoe-229348",
+      "title": "ゼーメンシュ-Aftermath-",
+      "aliases": [],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229348",
+      "sourceRefs": [
+        "vndb:v68337"
+      ]
+    },
+    {
+      "id": "nextmoe-52439",
+      "title": "無慈悲な笑顔",
+      "aliases": [
+        "无慈悲的笑颜"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52439",
+      "sourceRefs": [
+        "vndb:v56161"
+      ]
+    },
+    {
+      "id": "nextmoe-26648",
+      "title": "苍蓝眼瞳的人偶",
+      "aliases": [],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26648",
+      "sourceRefs": [
+        "vndb:v26524"
+      ]
+    },
+    {
+      "id": "nextmoe-57937",
+      "title": "シェアハウス　-今日も僕は監視する。",
+      "aliases": [
+        "我们的合租房　-今天我也在监视。"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/57937",
+      "sourceRefs": [
+        "vndb:v62256"
+      ]
+    },
+    {
+      "id": "nextmoe-59024",
+      "title": "静かに翳る",
+      "aliases": [
+        "静静黯去"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/59024",
+      "sourceRefs": [
+        "vndb:v63485"
+      ]
+    },
+    {
+      "id": "nextmoe-29297",
+      "title": "丑小鸭的天鹅湖",
+      "aliases": [],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29297",
+      "sourceRefs": [
+        "vndb:v29971"
+      ]
+    },
+    {
+      "id": "nextmoe-14079",
+      "title": "としあき",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14079",
+      "sourceRefs": [
+        "vndb:v8382"
+      ]
+    },
+    {
+      "id": "nextmoe-31544",
+      "title": "犬神家の一族",
+      "aliases": [
+        "犬神家一族"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31544",
+      "sourceRefs": [
+        "vndb:v32812"
+      ]
+    },
+    {
+      "id": "nextmoe-168",
+      "title": "Hell Guide",
+      "aliases": [
+        "Hell Guide（地狱向导） 动画追加版"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/168",
+      "sourceRefs": [
+        "vndb:v2661"
+      ]
+    },
+    {
+      "id": "nextmoe-49347",
+      "title": "大鹏 - The Roc",
+      "aliases": [],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/49347",
+      "sourceRefs": [
+        "vndb:v52733"
+      ]
+    },
+    {
+      "id": "nextmoe-3822",
+      "title": "その花びらにくちづけを　天使のあこがれ",
+      "aliases": [
+        "Sono Hanabira ni Kuchizuke o: Tenshi no Akogare",
+        "花吻在上13~亲吻那片花瓣~天使的憧憬"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3822",
+      "sourceRefs": [
+        "vndb:v12293"
+      ]
+    },
+    {
+      "id": "nextmoe-28056",
+      "title": "六阶谜题",
+      "aliases": [],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28056",
+      "sourceRefs": [
+        "vndb:v28330"
+      ]
+    },
+    {
+      "id": "nextmoe-4022",
+      "title": "sin 光臨天使エンシェル・レナ –REINCARNATION–",
+      "aliases": [
+        "Sin Kourin Tenshi En Ciel Rena ~Reincarnation~"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4022",
+      "sourceRefs": [
+        "vndb:v21381"
+      ]
+    },
+    {
+      "id": "nextmoe-14482",
+      "title": "ガラスの運命",
+      "aliases": [
+        "玻璃的命运"
+      ],
+      "firstYear": 1995,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14482",
+      "sourceRefs": [
+        "vndb:v8887"
+      ]
+    },
+    {
+      "id": "nextmoe-2019",
+      "title": "S.I.S.T.A.R.S:KISS OF TRINITY",
+      "aliases": [],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2019",
+      "sourceRefs": [
+        "vndb:v10501"
+      ]
+    },
+    {
+      "id": "nextmoe-9954",
+      "title": "冬は幻の鏡",
+      "aliases": [
+        "冬天是幻之镜"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9954",
+      "sourceRefs": [
+        "vndb:v1344"
+      ]
+    },
+    {
+      "id": "nextmoe-29018",
+      "title": "Deviant Anomalies",
+      "aliases": [
+        "极度异常"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29018",
+      "sourceRefs": [
+        "vndb:v29603"
+      ]
+    },
+    {
+      "id": "nextmoe-7239",
+      "title": "デブプラス",
+      "aliases": [
+        "DEBUPLUS"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7239",
+      "sourceRefs": [
+        "vndb:v5392"
+      ]
+    },
+    {
+      "id": "nextmoe-51558",
+      "title": "風雨来記5",
+      "aliases": [
+        "风雨来记5"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51558",
+      "sourceRefs": [
+        "vndb:v55197"
+      ]
+    },
+    {
+      "id": "nextmoe-7512",
+      "title": "マイくろ～オレガワタシデボクガアタシデ～",
+      "aliases": [
+        "Maikuro ~Ore ga Watashi de Boku ga Atashi de~",
+        "交换灵魂游戏"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7512",
+      "sourceRefs": [
+        "vndb:v2699"
+      ]
+    },
+    {
+      "id": "nextmoe-8974",
+      "title": "マリーベルは死んだとパパに伝えて",
+      "aliases": [
+        "Marrybell wa Shinda to Papa ni Tsutaete",
+        "告诉爸爸玛丽贝尔死了"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8974",
+      "sourceRefs": [
+        "vndb:v16885"
+      ]
+    },
+    {
+      "id": "nextmoe-10598",
+      "title": "Re-leaf",
+      "aliases": [],
+      "firstYear": 1998,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10598",
+      "sourceRefs": [
+        "vndb:v2695"
+      ]
+    },
+    {
+      "id": "nextmoe-19799",
+      "title": "魔女の処刑日 ～最愛なる夜明けへ～ 後編",
+      "aliases": [
+        "魔女的处刑日 ～致最爱的黎明～後篇"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/19799",
+      "sourceRefs": [
+        "vndb:v16481"
+      ]
+    },
+    {
+      "id": "nextmoe-11783",
+      "title": "DS電撃文庫ADV バッカーノ!",
+      "aliases": [
+        "DS电击文库ADV 永生之酒"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11783",
+      "sourceRefs": [
+        "vndb:v4698"
+      ]
+    },
+    {
+      "id": "nextmoe-27409",
+      "title": "千変挽歌百不思議",
+      "aliases": [
+        "千变挽歌百不思议"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27409",
+      "sourceRefs": [
+        "vndb:v27482"
+      ]
+    },
+    {
+      "id": "nextmoe-25710",
+      "title": "颠覆童话",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25710",
+      "sourceRefs": [
+        "vndb:v25207"
+      ]
+    },
+    {
+      "id": "nextmoe-979",
+      "title": "レクイエム",
+      "aliases": [
+        "Requiem",
+        "镇魂曲"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/979",
+      "sourceRefs": [
+        "vndb:v3804"
+      ]
+    },
+    {
+      "id": "nextmoe-13247",
+      "title": "浪漫珠～ろまんす～",
+      "aliases": [
+        "浪漫珠～浪漫～"
+      ],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13247",
+      "sourceRefs": [
+        "vndb:v7112"
+      ]
+    },
+    {
+      "id": "nextmoe-31695",
+      "title": "Pentagon Syndrome",
+      "aliases": [],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31695",
+      "sourceRefs": [
+        "vndb:v33003"
+      ]
+    },
+    {
+      "id": "nextmoe-3533",
+      "title": "鏖呪ノ嶼",
+      "aliases": [
+        "Ouju no Shima",
+        "鏖咒之屿",
+        "鏖咒之嶼"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3533",
+      "sourceRefs": [
+        "vndb:v48959"
+      ]
+    },
+    {
+      "id": "nextmoe-6636",
+      "title": "母性～ママクラブ～",
+      "aliases": [
+        "Bosei ~Mama Club~",
+        "母性～妈妈俱乐部～"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6636",
+      "sourceRefs": [
+        "vndb:v3115"
+      ]
+    },
+    {
+      "id": "nextmoe-27174",
+      "title": "ねこねこ",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27174",
+      "sourceRefs": [
+        "vndb:v27191"
+      ]
+    },
+    {
+      "id": "nextmoe-229601",
+      "title": "愛病世界-象牙の塔-",
+      "aliases": [
+        "爱病世界-象牙之塔"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229601",
+      "sourceRefs": [
+        "vndb:v68604"
+      ]
+    },
+    {
+      "id": "nextmoe-5926",
+      "title": "瞬旭のティルヒア ~What a Beautiful Dawn~",
+      "aliases": [
+        "Shunkyoku no Tyrhhia ~What a Beautiful Dawn~",
+        "瞬旭的泰尔西亚～何等美好的黎明～",
+        "瞬旭的泰爾西亞"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5926",
+      "sourceRefs": [
+        "vndb:v21664"
+      ]
+    },
+    {
+      "id": "nextmoe-15740",
+      "title": "雪割りの花",
+      "aliases": [
+        "雪割花"
+      ],
+      "firstYear": 1998,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15740",
+      "sourceRefs": [
+        "vndb:v10574"
+      ]
+    },
+    {
+      "id": "nextmoe-35728",
+      "title": "鸑鷟：镜花水月",
+      "aliases": [],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/35728",
+      "sourceRefs": [
+        "vndb:v37653"
+      ]
+    },
+    {
+      "id": "nextmoe-7329",
+      "title": "メルトピア",
+      "aliases": [
+        "Märtopia",
+        "熔融乌托邦"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7329",
+      "sourceRefs": [
+        "vndb:v14521"
+      ]
+    },
+    {
+      "id": "nextmoe-22069",
+      "title": "薄桜鬼 遊戯録弐　祭囃子と隊士達",
+      "aliases": [],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22069",
+      "sourceRefs": [
+        "vndb:v19756"
+      ]
+    },
+    {
+      "id": "nextmoe-10216",
+      "title": "STAMP OUT",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10216",
+      "sourceRefs": [
+        "vndb:v1938"
+      ]
+    },
+    {
+      "id": "nextmoe-11547",
+      "title": "片翼の天使",
+      "aliases": [
+        "片翼的天使"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11547",
+      "sourceRefs": [
+        "vndb:v4329"
+      ]
+    },
+    {
+      "id": "nextmoe-12321",
+      "title": "Bye",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12321",
+      "sourceRefs": [
+        "vndb:v5629"
+      ]
+    },
+    {
+      "id": "nextmoe-8683",
+      "title": "在りし日の歌",
+      "aliases": [
+        "Arishi Hi no Uta",
+        "往日之歌"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8683",
+      "sourceRefs": [
+        "vndb:v4872"
+      ]
+    },
+    {
+      "id": "nextmoe-21069",
+      "title": "フォルティッシモ",
+      "aliases": [
+        "极强音"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21069",
+      "sourceRefs": [
+        "vndb:v18212"
+      ]
+    },
+    {
+      "id": "nextmoe-8691",
+      "title": "死妹人形",
+      "aliases": [
+        "Shimai Ningyou"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8691",
+      "sourceRefs": [
+        "vndb:v5804"
+      ]
+    },
+    {
+      "id": "nextmoe-39858",
+      "title": "ダンキラ!!! - Boys, be DANCING! -",
+      "aliases": [],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/39858",
+      "sourceRefs": [
+        "vndb:v42135"
+      ]
+    },
+    {
+      "id": "nextmoe-45695",
+      "title": "金色琴弦·交错的旋律",
+      "aliases": [],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/45695",
+      "sourceRefs": [
+        "vndb:v48569"
+      ]
+    },
+    {
+      "id": "nextmoe-49213",
+      "title": "かぐや姫の末裔",
+      "aliases": [
+        "辉夜姬的后裔"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/49213",
+      "sourceRefs": [
+        "vndb:v52586"
+      ]
+    },
+    {
+      "id": "nextmoe-50012",
+      "title": "Succubus Rhapsodia",
+      "aliases": [
+        "魅魔狂想曲"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/50012",
+      "sourceRefs": [
+        "vndb:v53484"
+      ]
+    },
+    {
+      "id": "nextmoe-3080",
+      "title": "甘えむっ♪～おかあさんのかぞくけいかく～",
+      "aliases": [
+        "Amaemu♪ ~Okaa-san no Kazoku Keikaku~",
+        "尽情撒娇♪～妈妈的家族计划～"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3080",
+      "sourceRefs": [
+        "vndb:v4232"
+      ]
+    },
+    {
+      "id": "nextmoe-29097",
+      "title": "夢もすがら花嵐",
+      "aliases": [
+        "All Dream Long A Flower Storm",
+        "长梦花岚"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29097",
+      "sourceRefs": [
+        "vndb:v29699"
+      ]
+    },
+    {
+      "id": "nextmoe-33117",
+      "title": "とらぶるだいあり～・ごーるど",
+      "aliases": [
+        "麻烦日记～·黄金"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/33117",
+      "sourceRefs": [
+        "vndb:v34614"
+      ]
+    },
+    {
+      "id": "nextmoe-11800",
+      "title": "スカーレッドライダーゼクス",
+      "aliases": [
+        "红伤骑士X"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11800",
+      "sourceRefs": [
+        "vndb:v4719"
+      ]
+    },
+    {
+      "id": "nextmoe-228788",
+      "title": "桃色女将の穂乃香さん～イケない、お・も・て・な・し～",
+      "aliases": [
+        "桃色女将穗乃香～不该有的、款·待～"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/228788",
+      "sourceRefs": [
+        "vndb:v67704"
+      ]
+    },
+    {
+      "id": "nextmoe-17911",
+      "title": "LOOT",
+      "aliases": [],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/17911",
+      "sourceRefs": [
+        "vndb:v13819"
+      ]
+    },
+    {
+      "id": "nextmoe-18107",
+      "title": "非日常クアルテット",
+      "aliases": [
+        "非日常四重奏"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18107",
+      "sourceRefs": [
+        "vndb:v14113"
+      ]
+    },
+    {
+      "id": "nextmoe-20438",
+      "title": "Fall",
+      "aliases": [],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/20438",
+      "sourceRefs": [
+        "vndb:v17349"
+      ]
+    },
+    {
+      "id": "nextmoe-229517",
+      "title": "サイケデリック・ウーファー-Coloration-",
+      "aliases": [],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/229517",
+      "sourceRefs": [
+        "vndb:v68512"
+      ]
+    },
+    {
+      "id": "nextmoe-34668",
+      "title": "サディスト ～性悪女の憂さ晴らし～",
+      "aliases": [
+        "施虐狂 ～恶女的解闷～"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/34668",
+      "sourceRefs": [
+        "vndb:v36469"
+      ]
+    },
+    {
+      "id": "nextmoe-2598",
+      "title": "眠れぬ羊と孤独な狼 -A Tale of Love, and Cutthroat- 外伝",
+      "aliases": [
+        "失眠的羊与孤独的狼 -Woolly Eyes《外传》-",
+        "失眠的羊與孤獨的狼 -Woolly Eyes《外傳》-"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2598",
+      "sourceRefs": [
+        "vndb:v30835"
+      ]
+    },
+    {
+      "id": "nextmoe-1930",
+      "title": "鍵っ子少女 ～陽射しの中のおるすばん～",
+      "aliases": [
+        "Kagikko Shoujo ~Hizashi no Naka no Orusuban~",
+        "钥匙少女 阳光照耀下的看家时间"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1930",
+      "sourceRefs": [
+        "vndb:v7778"
+      ]
+    },
+    {
+      "id": "nextmoe-14241",
+      "title": "シャルム",
+      "aliases": [
+        "Charm"
+      ],
+      "firstYear": 1992,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14241",
+      "sourceRefs": [
+        "vndb:v8624"
+      ]
+    },
+    {
+      "id": "nextmoe-46952",
+      "title": "夜空をねがう少女",
+      "aliases": [
+        "祈愿夜空的少女"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/46952",
+      "sourceRefs": [
+        "vndb:v50030"
+      ]
+    },
+    {
+      "id": "nextmoe-237",
+      "title": "ムーンチャイルド",
+      "aliases": [
+        "MOON CHILDe",
+        "月之子"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/237",
+      "sourceRefs": [
+        "vndb:v1568"
+      ]
+    },
+    {
+      "id": "nextmoe-41459",
+      "title": "変態道中蛮万歳",
+      "aliases": [
+        "变态道中蛮万岁"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/41459",
+      "sourceRefs": [
+        "vndb:v43864"
+      ]
+    },
+    {
+      "id": "nextmoe-13242",
+      "title": "SinsAbell～緋昏し空の遠く～",
+      "aliases": [
+        "SinsAbell～绯红昏暗天空的远方～"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13242",
+      "sourceRefs": [
+        "vndb:v7104"
+      ]
+    },
+    {
+      "id": "nextmoe-13353",
+      "title": "闇色の童話",
+      "aliases": [
+        "暗色童话"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13353",
+      "sourceRefs": [
+        "vndb:v7265"
+      ]
+    },
+    {
+      "id": "nextmoe-12449",
+      "title": "PIZZICATO POLKA－彗星幻夜－",
+      "aliases": [],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12449",
+      "sourceRefs": [
+        "vndb:v5838"
+      ]
+    },
+    {
+      "id": "nextmoe-1941",
+      "title": "她和他和她的澎湖灣",
+      "aliases": [
+        "Ta He Ta He Ta De Penghu Wan"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1941",
+      "sourceRefs": [
+        "vndb:v19772"
+      ]
+    },
+    {
+      "id": "nextmoe-2063",
+      "title": "Hana Goyomi",
+      "aliases": [],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2063",
+      "sourceRefs": [
+        "vndb:v2726"
+      ]
+    },
+    {
+      "id": "nextmoe-3049",
+      "title": "きらめきの君 ～妖精ミラン変～",
+      "aliases": [
+        "Kirameki no Kimi -Yousei Miran Hen-",
+        "闪闪发光的你"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3049",
+      "sourceRefs": [
+        "vndb:v20338"
+      ]
+    },
+    {
+      "id": "nextmoe-5979",
+      "title": "天紡ぐ祝詞",
+      "aliases": [
+        "Ama Tsumugu Norito",
+        "纺天之祝词"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5979",
+      "sourceRefs": [
+        "vndb:v2992"
+      ]
+    },
+    {
+      "id": "nextmoe-8318",
+      "title": "ふたりぐらしの事情 ～芽衣の日常編～",
+      "aliases": [
+        "Futari Gurashi no Jijou ~Mei no Nichijou Hen~",
+        "二人同居的情况 ～芽衣的日常篇～"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8318",
+      "sourceRefs": [
+        "vndb:v16305"
+      ]
+    },
+    {
+      "id": "nextmoe-37271",
+      "title": "後妻打ちの七七日",
+      "aliases": [
+        "后妻打之七七日"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/37271",
+      "sourceRefs": [
+        "vndb:v39355"
+      ]
+    },
+    {
+      "id": "nextmoe-37862",
+      "title": "睡魔 episode1",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/37862",
+      "sourceRefs": [
+        "vndb:v40021"
+      ]
+    },
+    {
+      "id": "nextmoe-49024",
+      "title": "Profiler",
+      "aliases": [
+        "侧写师"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/49024",
+      "sourceRefs": [
+        "vndb:v52376"
+      ]
+    },
+    {
+      "id": "nextmoe-5584",
+      "title": "アズラエル",
+      "aliases": [
+        "Azrael"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5584",
+      "sourceRefs": [
+        "vndb:v1831"
+      ]
+    },
+    {
+      "id": "nextmoe-7129",
+      "title": "マージ ～MARGINAL～",
+      "aliases": [
+        "MARGINAL",
+        "边际 ～MARGINAL～"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7129",
+      "sourceRefs": [
+        "vndb:v1965"
+      ]
+    },
+    {
+      "id": "nextmoe-10122",
+      "title": "くるくるくーる",
+      "aliases": [
+        "转转酷"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10122",
+      "sourceRefs": [
+        "vndb:v1744"
+      ]
+    },
+    {
+      "id": "nextmoe-10632",
+      "title": "宵待姫～大正淫猥吸血姫譚～",
+      "aliases": [
+        "宵待姬～大正淫猥吸血姬谭～"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10632",
+      "sourceRefs": [
+        "vndb:v2756"
+      ]
+    },
+    {
+      "id": "nextmoe-45684",
+      "title": "山鬼村─愛．肉欲．金針菜─",
+      "aliases": [
+        "山鬼村─爱．肉欲．金针菜─"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/45684",
+      "sourceRefs": [
+        "vndb:v48557"
+      ]
+    },
+    {
+      "id": "nextmoe-8527",
+      "title": "藍より青し ～春夏～",
+      "aliases": [
+        "Ai Yori Aoshi ~Shunka~",
+        "青出于蓝 〜春夏〜"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8527",
+      "sourceRefs": [
+        "vndb:v49837"
+      ]
+    },
+    {
+      "id": "nextmoe-21219",
+      "title": "火焔聖母 ～The Virgin on Megiddo～",
+      "aliases": [
+        "火焔圣母 ～The Virgin on Megiddo～"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21219",
+      "sourceRefs": [
+        "vndb:v18434"
+      ]
+    },
+    {
+      "id": "nextmoe-27322",
+      "title": "クレイジー・フォー・ゆん",
+      "aliases": [],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27322",
+      "sourceRefs": [
+        "vndb:v27359"
+      ]
+    },
+    {
+      "id": "nextmoe-47881",
+      "title": "オヤジGO!",
+      "aliases": [
+        "大叔GO!"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/47881",
+      "sourceRefs": [
+        "vndb:v51101"
+      ]
+    },
+    {
+      "id": "nextmoe-49902",
+      "title": "HEREMITA",
+      "aliases": [],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/49902",
+      "sourceRefs": [
+        "vndb:v53359"
+      ]
+    },
+    {
+      "id": "nextmoe-11390",
+      "title": "ママ！つま？",
+      "aliases": [
+        "妈妈！妻子？"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11390",
+      "sourceRefs": [
+        "vndb:v4076"
+      ]
+    },
+    {
+      "id": "nextmoe-12780",
+      "title": "瑠璃色の雪 ～るりいろのゆき～",
+      "aliases": [],
+      "firstYear": 1997,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12780",
+      "sourceRefs": [
+        "vndb:v6317"
+      ]
+    },
+    {
+      "id": "nextmoe-58710",
+      "title": "魔法少女准则",
+      "aliases": [],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/58710",
+      "sourceRefs": [
+        "vndb:v63128"
+      ]
+    },
+    {
+      "id": "nextmoe-1997",
+      "title": "CITY no.109 双子編",
+      "aliases": [
+        "CITY no.109: Futago Hen",
+        "109号都市 双子篇",
+        "109號都市 雙子篇・壹"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1997",
+      "sourceRefs": [
+        "vndb:v25155"
+      ]
+    },
+    {
+      "id": "nextmoe-5022",
+      "title": "友恵の探偵物語　～のぞき魔にぴったりの職業～",
+      "aliases": [
+        "Tomoe no Tantei Monogatari ~Nozokima ni Pittari no Shokugyou~",
+        "友恵の探偵物語 ～のぞき魔な私の天職～",
+        "友惠的侦探物语 ～爱好偷窥的我的天职～"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5022",
+      "sourceRefs": [
+        "vndb:v60306"
+      ]
+    },
+    {
+      "id": "nextmoe-56223",
+      "title": "女儿国的诅咒",
+      "aliases": [],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/56223",
+      "sourceRefs": [
+        "vndb:v60377"
+      ]
+    },
+    {
+      "id": "nextmoe-2157",
+      "title": "幽明境を異にする",
+      "aliases": [
+        "Yuumei Sakai o Koto ni Suru"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2157",
+      "sourceRefs": [
+        "vndb:v7100"
+      ]
+    },
+    {
+      "id": "nextmoe-7205",
+      "title": "MARIONETTE～糸使い～",
+      "aliases": [
+        "Marionette ~Ito Tsukai~",
+        "MARIONETTE～操线师～"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7205",
+      "sourceRefs": [
+        "vndb:v2096"
+      ]
+    },
+    {
+      "id": "nextmoe-22613",
+      "title": "新訳 淫妖蟲",
+      "aliases": [
+        "Inyochu: Insects of Insemination",
+        "新译 淫妖虫"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22613",
+      "sourceRefs": [
+        "vndb:v20667"
+      ]
+    },
+    {
+      "id": "nextmoe-10513",
+      "title": "ピュティア",
+      "aliases": [
+        "乱世奇缘",
+        "亂世奇緣"
+      ],
+      "firstYear": 1999,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10513",
+      "sourceRefs": [
+        "vndb:v2534"
+      ]
+    },
+    {
+      "id": "nextmoe-12079",
+      "title": "M ～お姉ちゃんの集中恥療!～",
+      "aliases": [
+        "M ～大姐姐的集中耻疗！～"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12079",
+      "sourceRefs": [
+        "vndb:v5237"
+      ]
+    },
+    {
+      "id": "nextmoe-47743",
+      "title": "无名者",
+      "aliases": [],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/47743",
+      "sourceRefs": [
+        "vndb:v50912"
+      ]
+    },
+    {
+      "id": "nextmoe-35680",
+      "title": "ストパニもの!",
+      "aliases": [],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/35680",
+      "sourceRefs": [
+        "vndb:v37600"
+      ]
+    },
+    {
+      "id": "nextmoe-33088",
+      "title": "とらぶるだいあり～・ぴーち",
+      "aliases": [
+        "麻烦日记～·桃子"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/33088",
+      "sourceRefs": [
+        "vndb:v34584"
+      ]
+    },
+    {
+      "id": "nextmoe-5887",
+      "title": "ホレスの格闘場 Ⅲ",
+      "aliases": [
+        "Heleisih de Jyuedouchang III",
+        "赫雷斯的角斗场 Ⅲ",
+        "赫雷斯的角鬥場 III"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5887",
+      "sourceRefs": [
+        "vndb:v50824"
+      ]
+    },
+    {
+      "id": "nextmoe-9181",
+      "title": "うたかな",
+      "aliases": [
+        "Utakana"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9181",
+      "sourceRefs": [
+        "vndb:v6392"
+      ]
+    },
+    {
+      "id": "nextmoe-29336",
+      "title": "Ideal Reality",
+      "aliases": [],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29336",
+      "sourceRefs": [
+        "vndb:v30030"
+      ]
+    },
+    {
+      "id": "nextmoe-30079",
+      "title": "ギャラリーフェイク",
+      "aliases": [
+        "赝品画廊"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/30079",
+      "sourceRefs": [
+        "vndb:v30990"
+      ]
+    },
+    {
+      "id": "nextmoe-19774",
+      "title": "マジカルアイズ -Red is for anguish-",
+      "aliases": [
+        "魔法之眼 -Red is for anguish-"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/19774",
+      "sourceRefs": [
+        "vndb:v16441"
+      ]
+    },
+    {
+      "id": "nextmoe-5811",
+      "title": "お姉ちゃんの3乗（きゅーぶ）",
+      "aliases": [
+        "Onee-chan Cube",
+        "姐姐三次方"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5811",
+      "sourceRefs": [
+        "vndb:v7399"
+      ]
+    },
+    {
+      "id": "nextmoe-12782",
+      "title": "魔法少女アイ2",
+      "aliases": [
+        "魔法少女爱2"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12782",
+      "sourceRefs": [
+        "vndb:v6319"
+      ]
+    },
+    {
+      "id": "nextmoe-16433",
+      "title": "悪魔の迷宮",
+      "aliases": [
+        "恶魔的迷宫"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16433",
+      "sourceRefs": [
+        "vndb:v11618"
+      ]
+    },
+    {
+      "id": "nextmoe-21481",
+      "title": "vision",
+      "aliases": [],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21481",
+      "sourceRefs": [
+        "vndb:v18854"
+      ]
+    },
+    {
+      "id": "nextmoe-10858",
+      "title": "探偵オペラ ミルキィホームズ",
+      "aliases": [
+        "侦探歌剧：少女福尔摩斯"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10858",
+      "sourceRefs": [
+        "vndb:v3226"
+      ]
+    },
+    {
+      "id": "nextmoe-10094",
+      "title": "ブルーブラスター",
+      "aliases": [
+        "蓝色天使队2",
+        "藍色天使隊2"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10094",
+      "sourceRefs": [
+        "vndb:v1687"
+      ]
+    },
+    {
+      "id": "nextmoe-12471",
+      "title": "機械じかけのマリアン",
+      "aliases": [
+        "生化情人"
+      ],
+      "firstYear": 1994,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12471",
+      "sourceRefs": [
+        "vndb:v5874"
+      ]
+    },
+    {
+      "id": "nextmoe-22165",
+      "title": "秘封祭",
+      "aliases": [],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22165",
+      "sourceRefs": [
+        "vndb:v19906"
+      ]
+    },
+    {
+      "id": "nextmoe-7300",
+      "title": "緋の月",
+      "aliases": [
+        "Hi no Tsuki",
+        "绯之月"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7300",
+      "sourceRefs": [
+        "vndb:v2801"
+      ]
+    },
+    {
+      "id": "nextmoe-11358",
+      "title": "ラストバレット",
+      "aliases": [
+        "终结之弹"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11358",
+      "sourceRefs": [
+        "vndb:v4011"
+      ]
+    },
+    {
+      "id": "nextmoe-10283",
+      "title": "妖ノ宮",
+      "aliases": [
+        "妖之宫"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10283",
+      "sourceRefs": [
+        "vndb:v2075"
+      ]
+    },
+    {
+      "id": "nextmoe-7314",
+      "title": "マキフェス！",
+      "aliases": [
+        "Maki Fes!",
+        "真希祭！"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7314",
+      "sourceRefs": [
+        "vndb:v16484"
+      ]
+    },
+    {
+      "id": "nextmoe-56763",
+      "title": "ブラサンらへん 2025夏の陣",
+      "aliases": [
+        "黑色雷霆周边 2025夏之阵"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/56763",
+      "sourceRefs": [
+        "vndb:v60974"
+      ]
+    },
+    {
+      "id": "nextmoe-6026",
+      "title": "雨衣カノジョ",
+      "aliases": [
+        "Amaginu Kanojo",
+        "雨衣女友"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6026",
+      "sourceRefs": [
+        "vndb:v21497"
+      ]
+    },
+    {
+      "id": "nextmoe-795",
+      "title": "红楼梦：林黛玉与北静王【再續紅樓夢】",
+      "aliases": [
+        "红楼梦：林黛玉与北静王"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/795",
+      "sourceRefs": [
+        "vndb:v12256"
+      ]
+    },
+    {
+      "id": "nextmoe-6606",
+      "title": "露出系魔法女子大生クリスティア",
+      "aliases": [
+        "Roshutsu-Kei Mahou Joshi Daisei Christhea",
+        "露出系魔法女大学生克丽丝缇娅"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6606",
+      "sourceRefs": [
+        "vndb:v26593"
+      ]
+    },
+    {
+      "id": "nextmoe-4252",
+      "title": "はじめてのおいしゃさん",
+      "aliases": [
+        "Hajimete no Oisha-san",
+        "第一次当医生"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4252",
+      "sourceRefs": [
+        "vndb:v1619"
+      ]
+    },
+    {
+      "id": "nextmoe-7460",
+      "title": "超時空爆恋物語～door☆pi☆chu～",
+      "aliases": [
+        "Chou Jikuu Bakuren Monogatari ~Door☆Pi☆Chu~",
+        "超时空爆恋物语～door☆pi☆chu～"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7460",
+      "sourceRefs": [
+        "vndb:v3821"
+      ]
+    },
+    {
+      "id": "nextmoe-20520",
+      "title": "My gray hugger-mugger",
+      "aliases": [],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/20520",
+      "sourceRefs": [
+        "vndb:v17450"
+      ]
+    },
+    {
+      "id": "nextmoe-24248",
+      "title": "戦国幻想郷",
+      "aliases": [
+        "战国幻想乡"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/24248",
+      "sourceRefs": [
+        "vndb:v23220"
+      ]
+    },
+    {
+      "id": "nextmoe-30284",
+      "title": "PSYCHIC ECLIPSE-サイキックイクリプス-",
+      "aliases": [
+        "PSYCHIC ECLIPSE-超能日食-"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/30284",
+      "sourceRefs": [
+        "vndb:v31266"
+      ]
+    },
+    {
+      "id": "nextmoe-1463",
+      "title": "恶魔鉴定守则",
+      "aliases": [
+        "E'mo Jianding Shouze"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1463",
+      "sourceRefs": [
+        "vndb:v51091"
+      ]
+    },
+    {
+      "id": "nextmoe-23888",
+      "title": "アリスの精神裁判",
+      "aliases": [
+        "Alice's Spiritual Judge",
+        "愛麗絲的精神裁判"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/23888",
+      "sourceRefs": [
+        "vndb:v22699"
+      ]
+    },
+    {
+      "id": "nextmoe-22143",
+      "title": "鉄条の囹圄",
+      "aliases": [
+        "铁条之囹圄"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22143",
+      "sourceRefs": [
+        "vndb:v19879"
+      ]
+    },
+    {
+      "id": "nextmoe-36062",
+      "title": "針鼠城殺人事件・序 -幻を瞰る男の話-",
+      "aliases": [
+        "刺猬城杀人事件·序 -俯瞰幻象的男人的故事-"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/36062",
+      "sourceRefs": [
+        "vndb:v38020"
+      ]
+    },
+    {
+      "id": "nextmoe-13962",
+      "title": "メモリーズオフ ゆびきりの記憶 ふたりの風流庵",
+      "aliases": [
+        "秋之回忆7-勾指起誓的记忆"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13962",
+      "sourceRefs": [
+        "vndb:v8202"
+      ]
+    },
+    {
+      "id": "nextmoe-16148",
+      "title": "黄昏時～怪談ロマンス～",
+      "aliases": [
+        "黄昏时～怪谈罗曼史～"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16148",
+      "sourceRefs": [
+        "vndb:v11239"
+      ]
+    },
+    {
+      "id": "nextmoe-16204",
+      "title": "恋愛番長2 MidnightLesson!!!",
+      "aliases": [
+        "恋爱番长2 MidnightLesson!!!"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16204",
+      "sourceRefs": [
+        "vndb:v11309"
+      ]
+    },
+    {
+      "id": "nextmoe-13446",
+      "title": "準にゃんとイチャイチャしたい人専用。",
+      "aliases": [],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13446",
+      "sourceRefs": [
+        "vndb:v7410"
+      ]
+    },
+    {
+      "id": "nextmoe-35573",
+      "title": "フルハウスキス2 ～恋愛迷宮～",
+      "aliases": [
+        "恋爱家政妇2 ～恋爱迷宫～"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/35573",
+      "sourceRefs": [
+        "vndb:v37481"
+      ]
+    },
+    {
+      "id": "nextmoe-7287",
+      "title": "ねえちゃん、もう出ちゃうよ！ ～淫姉は俺の愛玩具～",
+      "aliases": [
+        "Nee-chan, Mou Dechau yo! ~In Ane wa Ore no Ai Gangu~",
+        "姐姐，我要射了！ ～淫姐是我的爱玩具～"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7287",
+      "sourceRefs": [
+        "vndb:v13242"
+      ]
+    },
+    {
+      "id": "nextmoe-10272",
+      "title": "タナトスの恋～淫姉弟相姦～",
+      "aliases": [
+        "塔纳托斯之恋：淫姊弟相奸"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10272",
+      "sourceRefs": [
+        "vndb:v2028"
+      ]
+    },
+    {
+      "id": "nextmoe-1358",
+      "title": "花落冬陽 Snowdreams -lost in winter-",
+      "aliases": [
+        "Hua Luo Dong Yang Snowdreams -lost in winter-",
+        "花落冬陽"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1358",
+      "sourceRefs": [
+        "vndb:v20625"
+      ]
+    },
+    {
+      "id": "nextmoe-6202",
+      "title": "変幻装姫シャインミラージュ 敗北へのカウントダウン",
+      "aliases": [
+        "Hengen Souki Shine Mirage: Haiboku e no Countdown",
+        "变幻装姬闪耀幻影 迈向败北的倒计时"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6202",
+      "sourceRefs": [
+        "vndb:v23064"
+      ]
+    },
+    {
+      "id": "nextmoe-16915",
+      "title": "御伽話は闇の中",
+      "aliases": [
+        "御伽话在黑暗中"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16915",
+      "sourceRefs": [
+        "vndb:v12357"
+      ]
+    },
+    {
+      "id": "nextmoe-22444",
+      "title": "俺とお母さんの孕ませスキンシップ",
+      "aliases": [
+        "Ore to Okaa-san no Haramase Skinship",
+        "我和妈妈的受孕亲密接触"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22444",
+      "sourceRefs": [
+        "vndb:v20387"
+      ]
+    },
+    {
+      "id": "nextmoe-47870",
+      "title": "毛绒天使疗愈人生",
+      "aliases": [],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/47870",
+      "sourceRefs": [
+        "vndb:v51089"
+      ]
+    },
+    {
+      "id": "nextmoe-10748",
+      "title": "月ノ光太陽ノ影 -Another Moon-",
+      "aliases": [
+        "月之光 太阳之影 -Another Moon-"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10748",
+      "sourceRefs": [
+        "vndb:v2990"
+      ]
+    },
+    {
+      "id": "nextmoe-12747",
+      "title": "幼なじみな彼女",
+      "aliases": [
+        "青梅竹马的她"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12747",
+      "sourceRefs": [
+        "vndb:v6278"
+      ]
+    },
+    {
+      "id": "nextmoe-33608",
+      "title": "虚白ノ夢",
+      "aliases": [
+        "虚白之梦"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/33608",
+      "sourceRefs": [
+        "vndb:v35219"
+      ]
+    },
+    {
+      "id": "nextmoe-14619",
+      "title": "うみねこのなく頃に羽",
+      "aliases": [
+        "海貓鳴泣之時羽"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14619",
+      "sourceRefs": [
+        "vndb:v9047"
+      ]
+    },
+    {
+      "id": "nextmoe-9268",
+      "title": "黒の図書館",
+      "aliases": [
+        "Kuro no Toshokan",
+        "黑之图书馆"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9268",
+      "sourceRefs": [
+        "vndb:v4286"
+      ]
+    },
+    {
+      "id": "nextmoe-6538",
+      "title": "ヴァルプルギス",
+      "aliases": [
+        "Walpurgis",
+        "瓦尔普吉斯"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6538",
+      "sourceRefs": [
+        "vndb:v3977"
+      ]
+    },
+    {
+      "id": "nextmoe-23667",
+      "title": "Replica",
+      "aliases": [
+        "指尖战争"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/23667",
+      "sourceRefs": [
+        "vndb:v22338"
+      ]
+    },
+    {
+      "id": "nextmoe-51700",
+      "title": "伊達鍵は眠らない – From AI：ソムニウムファイル",
+      "aliases": [
+        "No Sleep For Kaname Date – From AI: THE SOMNIUM FILES",
+        "无法成眠的伊达键 - From AI：梦境档案",
+        "無法成眠的伊達鍵 - From AI：夢境檔案"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51700",
+      "sourceRefs": [
+        "vndb:v55357"
+      ]
+    },
+    {
+      "id": "nextmoe-10302",
+      "title": "ちゃっく！ついてる！！",
+      "aliases": [
+        "恰克！好运上身！！"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10302",
+      "sourceRefs": [
+        "vndb:v2119"
+      ]
+    },
+    {
+      "id": "nextmoe-5961",
+      "title": "闇染Revenger －墜ちた魔王と堕ちる戦姫－",
+      "aliases": [
+        "Yamizome Revenger  -Ochita Maou to Ochiru Senki-"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5961",
+      "sourceRefs": [
+        "vndb:v22739"
+      ]
+    },
+    {
+      "id": "nextmoe-7662",
+      "title": "曇った瞳に恋してる",
+      "aliases": [
+        "Kumotta Hitomi ni Koishiteru",
+        "我爱你的朦胧双眼"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7662",
+      "sourceRefs": [
+        "vndb:v27920"
+      ]
+    },
+    {
+      "id": "nextmoe-3605",
+      "title": "等間隔の黒い透明",
+      "aliases": [
+        "Toukankaku no Kuroi Toumei",
+        "等间距的黑色透明",
+        "等間距的黑色透明"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3605",
+      "sourceRefs": [
+        "vndb:v18995"
+      ]
+    },
+    {
+      "id": "nextmoe-9398",
+      "title": "The Black Box",
+      "aliases": [],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9398",
+      "sourceRefs": [
+        "vndb:v6150"
+      ]
+    },
+    {
+      "id": "nextmoe-58712",
+      "title": "魔族令嬢とメイドさんの30日 – Demon Lily and the Noir Maid",
+      "aliases": [
+        "魔族千金与女仆的30天",
+        "魔族大小姐与女仆的30日 – Demon Lily and the Noir Maid"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/58712",
+      "sourceRefs": [
+        "vndb:v63130"
+      ]
+    },
+    {
+      "id": "nextmoe-4773",
+      "title": "没能守住妻子的子宫",
+      "aliases": [
+        "Haitoku no Kyousei Tanetsuke ~ Ai Suru Tsuma no Naka ni Sosogikomareru Hoka no Otoko no Seieki",
+        "背徳の強制種付け ～愛する妻の子宮（なか）に注ぎ込まれる他の男の精液"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4773",
+      "sourceRefs": [
+        "vndb:v43798"
+      ]
+    },
+    {
+      "id": "nextmoe-9408",
+      "title": "青空に唄う君の歌",
+      "aliases": [
+        "Aozora ni Utau Kimi no Uta",
+        "在蓝天下唱着的你的歌"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9408",
+      "sourceRefs": [
+        "vndb:v27489"
+      ]
+    },
+    {
+      "id": "nextmoe-14717",
+      "title": "闇の稜線",
+      "aliases": [
+        "暗之棱线"
+      ],
+      "firstYear": 1994,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14717",
+      "sourceRefs": [
+        "vndb:v9160"
+      ]
+    },
+    {
+      "id": "nextmoe-31401",
+      "title": "非実在都市伝説の作法 Imaginary Fakelore",
+      "aliases": [
+        "非实在都市传说的作法 Imaginary Fakelore"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31401",
+      "sourceRefs": [
+        "vndb:v32605"
+      ]
+    },
+    {
+      "id": "nextmoe-51483",
+      "title": "アクアリウムは踊らない",
+      "aliases": [
+        "The Aquarium does not dance",
+        "水族馆不会跳舞"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51483",
+      "sourceRefs": [
+        "vndb:v55113"
+      ]
+    },
+    {
+      "id": "nextmoe-61204",
+      "title": "完美的一天",
+      "aliases": [],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/61204",
+      "sourceRefs": [
+        "vndb:v65760"
+      ]
+    },
+    {
+      "id": "nextmoe-11766",
+      "title": "お菓子な島のピーターパン ～Sweet Never Land～",
+      "aliases": [
+        "糖果岛的彼得潘"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11766",
+      "sourceRefs": [
+        "vndb:v4671"
+      ]
+    },
+    {
+      "id": "nextmoe-4725",
+      "title": "ダウニャーさんと飼い主くん",
+      "aliases": [
+        "Daunya-san to Kainushi-kun",
+        "颓喵与饲主"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4725",
+      "sourceRefs": [
+        "vndb:v60462"
+      ]
+    },
+    {
+      "id": "nextmoe-1241",
+      "title": "ふたりぐらし",
+      "aliases": [
+        "Futari Gurashi",
+        "二人同居"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1241",
+      "sourceRefs": [
+        "vndb:v7635"
+      ]
+    },
+    {
+      "id": "nextmoe-6390",
+      "title": "さくらシンクロニシティ",
+      "aliases": [
+        "Sakura Synchronicity",
+        "樱花共时性"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6390",
+      "sourceRefs": [
+        "vndb:v16215"
+      ]
+    },
+    {
+      "id": "nextmoe-26324",
+      "title": "エーベルージュ2",
+      "aliases": [
+        "恋爱物语2",
+        "戀愛物語2"
+      ],
+      "firstYear": 1998,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26324",
+      "sourceRefs": [
+        "vndb:v26068"
+      ]
+    },
+    {
+      "id": "nextmoe-15704",
+      "title": "そう、あたしたちはこんなにも理不尽な世界に生きているのだらよ3 ※この世界で2の発売予定はありません。",
+      "aliases": [
+        "没错，我们就活在如此不讲理的世界里呀3 ※这个世界没有2的发售预定。"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15704",
+      "sourceRefs": [
+        "vndb:v10521"
+      ]
+    },
+    {
+      "id": "nextmoe-30947",
+      "title": "Re;quartz零度◆後日談ノベルゲーム",
+      "aliases": [
+        "Re;quartz零度◆后日谈小说游戏"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/30947",
+      "sourceRefs": [
+        "vndb:v32079"
+      ]
+    },
+    {
+      "id": "nextmoe-23105",
+      "title": "Ninja Girl and the Mysterious Army of Urban Legend Monsters! ~Hunt of the Headless Horseman~",
+      "aliases": [
+        "忍者少女与都市传说怪物的神秘军团～无头骑士的追捕～"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/23105",
+      "sourceRefs": [
+        "vndb:v21435"
+      ]
+    },
+    {
+      "id": "nextmoe-2173",
+      "title": "トレイメント～Etude～",
+      "aliases": [
+        "Traumend ~Etude~",
+        "疗程～Etude～"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2173",
+      "sourceRefs": [
+        "vndb:v26202"
+      ]
+    },
+    {
+      "id": "nextmoe-32588",
+      "title": "青少年薬物妄想殺人事件",
+      "aliases": [
+        "青少年药物妄想杀人事件"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/32588",
+      "sourceRefs": [
+        "vndb:v34017"
+      ]
+    },
+    {
+      "id": "nextmoe-16245",
+      "title": "育成日記",
+      "aliases": [
+        "My Raising Diary",
+        "育成日记"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16245",
+      "sourceRefs": [
+        "vndb:v11361"
+      ]
+    },
+    {
+      "id": "nextmoe-27798",
+      "title": "ドブ川に散りぬ初恋の",
+      "aliases": [
+        "初恋散于臭水沟"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27798",
+      "sourceRefs": [
+        "vndb:v27974"
+      ]
+    },
+    {
+      "id": "nextmoe-4891",
+      "title": "いえのかぎ",
+      "aliases": [
+        "The Key to Home",
+        "家的钥匙"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4891",
+      "sourceRefs": [
+        "vndb:v22252"
+      ]
+    },
+    {
+      "id": "nextmoe-18923",
+      "title": "マジックポーション・ストーリーズ",
+      "aliases": [
+        "魔法药水·故事集"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18923",
+      "sourceRefs": [
+        "vndb:v15227"
+      ]
+    },
+    {
+      "id": "nextmoe-51360",
+      "title": "とびだす！カマソッソの世界３Ｄ",
+      "aliases": [
+        "跳出来！卡玛索索的世界3D"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51360",
+      "sourceRefs": [
+        "vndb:v54965"
+      ]
+    },
+    {
+      "id": "nextmoe-56108",
+      "title": "마이시크릿러브2",
+      "aliases": [
+        "时光樱花册"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/56108",
+      "sourceRefs": [
+        "vndb:v60254"
+      ]
+    },
+    {
+      "id": "nextmoe-7425",
+      "title": "灰色の空に堕ちた翼",
+      "aliases": [
+        "Haiiro no Sora ni Ochita Tsubasa",
+        "坠入灰色天空的翅膀"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7425",
+      "sourceRefs": [
+        "vndb:v1655"
+      ]
+    },
+    {
+      "id": "nextmoe-8528",
+      "title": "藍より青し ～秋冬～",
+      "aliases": [
+        "Ai Yori Aoshi ~Shuutou~",
+        "青出于蓝 〜秋冬〜"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8528",
+      "sourceRefs": [
+        "vndb:v49839"
+      ]
+    },
+    {
+      "id": "nextmoe-29049",
+      "title": "秘封フラグメント",
+      "aliases": [
+        "秘封碎片"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29049",
+      "sourceRefs": [
+        "vndb:v29640"
+      ]
+    },
+    {
+      "id": "nextmoe-60387",
+      "title": "婆罗洲的红珍珠",
+      "aliases": [
+        "the red pearls of borneo"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/60387",
+      "sourceRefs": [
+        "vndb:v64955"
+      ]
+    },
+    {
+      "id": "nextmoe-5807",
+      "title": "こんぼく麻雀～こんな麻雀があったら僕はロン！～",
+      "aliases": [
+        "Konboku Mahjong ~Konna Mahjong ga Attara Boku wa Ron!~"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5807",
+      "sourceRefs": [
+        "vndb:v4265"
+      ]
+    },
+    {
+      "id": "nextmoe-10728",
+      "title": "人妻×人妻2 ～もっと！人妻ぱらだいす～",
+      "aliases": [
+        "人妻叉人妻2"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10728",
+      "sourceRefs": [
+        "vndb:v2948"
+      ]
+    },
+    {
+      "id": "nextmoe-19850",
+      "title": "学園ハンサム いとをかし",
+      "aliases": [],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/19850",
+      "sourceRefs": [
+        "vndb:v16556"
+      ]
+    },
+    {
+      "id": "nextmoe-20440",
+      "title": "真夏の青、銀色の君",
+      "aliases": [
+        "盛夏之青、银色的你"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/20440",
+      "sourceRefs": [
+        "vndb:v17351"
+      ]
+    },
+    {
+      "id": "nextmoe-32686",
+      "title": "アパシー学校であった怖い話　極",
+      "aliases": [
+        "Apathy学校发生过的恐怖故事·极"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/32686",
+      "sourceRefs": [
+        "vndb:v34143"
+      ]
+    },
+    {
+      "id": "nextmoe-39638",
+      "title": "マイナスエイヴ",
+      "aliases": [
+        "负艾芙"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/39638",
+      "sourceRefs": [
+        "vndb:v41891"
+      ]
+    },
+    {
+      "id": "nextmoe-50404",
+      "title": "夢々【努努】、忘れず",
+      "aliases": [
+        "梦梦【努努】、勿忘"
+      ],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/50404",
+      "sourceRefs": [
+        "vndb:v53913"
+      ]
+    },
+    {
+      "id": "nextmoe-51058",
+      "title": "Reclaiming the Lost",
+      "aliases": [
+        "遗失的女儿"
+      ],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51058",
+      "sourceRefs": [
+        "vndb:v54640"
+      ]
+    },
+    {
+      "id": "nextmoe-52796",
+      "title": "初遇时",
+      "aliases": [],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52796",
+      "sourceRefs": [
+        "vndb:v56560"
+      ]
+    },
+    {
+      "id": "nextmoe-22382",
+      "title": "端木斐异闻录",
+      "aliases": [
+        "The Adventures of Fei Duanmu"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22382",
+      "sourceRefs": [
+        "vndb:v20268"
+      ]
+    },
+    {
+      "id": "nextmoe-1983",
+      "title": "NOIR:NOAH",
+      "aliases": [
+        "【R-18版】NOIR:NOAH"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1983",
+      "sourceRefs": [
+        "vndb:v45911"
+      ]
+    },
+    {
+      "id": "nextmoe-3167",
+      "title": "小日向柚月と初夜したいっ！〜けもみみ神様と湯けむり恋模様〜",
+      "aliases": [
+        "Kohinata Yuzuki to Shoya Shitai! ~Kemomimi Kamisama to Yukemuri Koimoyou~"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3167",
+      "sourceRefs": [
+        "vndb:v56633"
+      ]
+    },
+    {
+      "id": "nextmoe-14368",
+      "title": "季節を抱きしめて",
+      "aliases": [
+        "拥抱季节",
+        "擁抱季節"
+      ],
+      "firstYear": 1998,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14368",
+      "sourceRefs": [
+        "vndb:v8766"
+      ]
+    },
+    {
+      "id": "nextmoe-3200",
+      "title": "不香の花 - Snow Flower",
+      "aliases": [
+        "Fukyou no Hana - Snow Flower",
+        "不香之花"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3200",
+      "sourceRefs": [
+        "vndb:v40625"
+      ]
+    },
+    {
+      "id": "nextmoe-10999",
+      "title": "24時、君のハートは盗まれる～怪盗ジェイド～",
+      "aliases": [
+        "Your Heart Will be Stolen at the 24th Hour ~ Phantom Thief Jade ~",
+        "24点、你的心将被盗走～怪盗杰德～"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10999",
+      "sourceRefs": [
+        "vndb:v3448"
+      ]
+    },
+    {
+      "id": "nextmoe-13852",
+      "title": "すいすいSweet",
+      "aliases": [],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13852",
+      "sourceRefs": [
+        "vndb:v8031"
+      ]
+    },
+    {
+      "id": "nextmoe-18657",
+      "title": "誕生日、その後",
+      "aliases": [
+        "生日，其后"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18657",
+      "sourceRefs": [
+        "vndb:v14844"
+      ]
+    },
+    {
+      "id": "nextmoe-23872",
+      "title": "パワプロクンポケット5",
+      "aliases": [
+        "实况口袋棒球5"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/23872",
+      "sourceRefs": [
+        "vndb:v22679"
+      ]
+    },
+    {
+      "id": "nextmoe-51273",
+      "title": "異説precious~まなざし~",
+      "aliases": [
+        "异说PRECIOUS~目光~"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/51273",
+      "sourceRefs": [
+        "vndb:v54875"
+      ]
+    },
+    {
+      "id": "nextmoe-52597",
+      "title": "夕凪のスノードロップ",
+      "aliases": [
+        "晚风停歇时的雪花莲"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52597",
+      "sourceRefs": [
+        "vndb:v56330"
+      ]
+    },
+    {
+      "id": "nextmoe-55315",
+      "title": "Almond",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/55315",
+      "sourceRefs": [
+        "vndb:v59372"
+      ]
+    },
+    {
+      "id": "nextmoe-37376",
+      "title": "Utopia",
+      "aliases": [],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/37376",
+      "sourceRefs": [
+        "vndb:v39464"
+      ]
+    },
+    {
+      "id": "nextmoe-56325",
+      "title": "星天へ発つ日",
+      "aliases": [
+        "启程向星天之日"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/56325",
+      "sourceRefs": [
+        "vndb:v60488"
+      ]
+    },
+    {
+      "id": "nextmoe-7736",
+      "title": "この世界の向こうで",
+      "aliases": [
+        "Kono Sekai no Mukou de",
+        "在这个世界的彼方"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7736",
+      "sourceRefs": [
+        "vndb:v10927"
+      ]
+    },
+    {
+      "id": "nextmoe-7899",
+      "title": "さよなら。",
+      "aliases": [
+        "Sayonara."
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7899",
+      "sourceRefs": [
+        "vndb:v6045"
+      ]
+    },
+    {
+      "id": "nextmoe-26087",
+      "title": "干性溺水",
+      "aliases": [
+        "Dry Drowning"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26087",
+      "sourceRefs": [
+        "vndb:v25747"
+      ]
+    },
+    {
+      "id": "nextmoe-11176",
+      "title": "愛と欲望は学園で～華麗なる夜の舞踏会～",
+      "aliases": [
+        "爱与欲望之学园"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11176",
+      "sourceRefs": [
+        "vndb:v3669"
+      ]
+    },
+    {
+      "id": "nextmoe-6987",
+      "title": "アイドルプロジェクト～プロデューサー野上裕紀の裏マニュアル～",
+      "aliases": [
+        "Idol Project ~Producer Nogami Yuuki no Ura Manual~",
+        "偶像计划～制作人野上裕纪的里手册～"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6987",
+      "sourceRefs": [
+        "vndb:v8066"
+      ]
+    },
+    {
+      "id": "nextmoe-29984",
+      "title": "名探偵コナン ファントム狂詩曲",
+      "aliases": [
+        "名侦探柯南 幻影狂诗曲"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29984",
+      "sourceRefs": [
+        "vndb:v30875"
+      ]
+    },
+    {
+      "id": "nextmoe-32224",
+      "title": "櫻庭邸の邪な幸福",
+      "aliases": [
+        "櫻庭邸的邪险幸福"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/32224",
+      "sourceRefs": [
+        "vndb:v33602"
+      ]
+    },
+    {
+      "id": "nextmoe-42978",
+      "title": "彗星战团",
+      "aliases": [],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/42978",
+      "sourceRefs": [
+        "vndb:v45517"
+      ]
+    },
+    {
+      "id": "nextmoe-8975",
+      "title": "プリンセスX ～僕の許嫁はモンスターっ娘!?～",
+      "aliases": [
+        "Princess X ~Boku no Iinazuke wa Monsterkko!?~",
+        "公主X ～我的未婚妻是怪物娘!?～"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8975",
+      "sourceRefs": [
+        "vndb:v7689"
+      ]
+    },
+    {
+      "id": "nextmoe-918",
+      "title": "牝奴隷 ～犯された放課後～",
+      "aliases": [
+        "Medorei ~Okasareta Houkago~",
+        "女奴隶 ~ 放学后被侵犯",
+        "女奴隸 ~ 放學後被侵犯"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/918",
+      "sourceRefs": [
+        "vndb:v4351"
+      ]
+    },
+    {
+      "id": "nextmoe-3981",
+      "title": "みずかべ",
+      "aliases": [
+        "Mizukabe",
+        "水月DL特典版",
+        "渁月DL特典版"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3981",
+      "sourceRefs": [
+        "vndb:v12215"
+      ]
+    },
+    {
+      "id": "nextmoe-10912",
+      "title": "デュアルソウル",
+      "aliases": [
+        "双重灵魂"
+      ],
+      "firstYear": 1995,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10912",
+      "sourceRefs": [
+        "vndb:v3310"
+      ]
+    },
+    {
+      "id": "nextmoe-10973",
+      "title": "終ノ刻印",
+      "aliases": [
+        "终之刻印"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10973",
+      "sourceRefs": [
+        "vndb:v3408"
+      ]
+    },
+    {
+      "id": "nextmoe-13325",
+      "title": "僕の声が届くなら…",
+      "aliases": [
+        "如果我的声音能传达的话…"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13325",
+      "sourceRefs": [
+        "vndb:v7222"
+      ]
+    },
+    {
+      "id": "nextmoe-16483",
+      "title": "interlude 或るファの音眼 ～喚起のうた～(F rag ment)",
+      "aliases": [
+        "interlude 某法的音眼 ～唤起之歌～(F rag ment)"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16483",
+      "sourceRefs": [
+        "vndb:v11684"
+      ]
+    },
+    {
+      "id": "nextmoe-61024",
+      "title": "英雄＊戦姫WW",
+      "aliases": [
+        "英雄战姬ＷＷ"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/61024",
+      "sourceRefs": [
+        "vndb:v65624"
+      ]
+    },
+    {
+      "id": "nextmoe-17281",
+      "title": "新世黙示録 ～Death March～",
+      "aliases": [
+        "新世默示录 ～Death March～"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/17281",
+      "sourceRefs": [
+        "vndb:v12996"
+      ]
+    },
+    {
+      "id": "nextmoe-52646",
+      "title": "MuNiCa～Cry of Pluto",
+      "aliases": [],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52646",
+      "sourceRefs": [
+        "vndb:v56392"
+      ]
+    },
+    {
+      "id": "nextmoe-7090",
+      "title": "小坂さん。",
+      "aliases": [
+        "Kosaka-san.",
+        "小坂同学。"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7090",
+      "sourceRefs": [
+        "vndb:v24634"
+      ]
+    },
+    {
+      "id": "nextmoe-8467",
+      "title": "牧島探偵事務所物語 ～深窓のマリス～",
+      "aliases": [
+        "Makishima Tantei Jimusho Monogatari ~Shinsou no Malice~",
+        "牧岛侦探事务所物语 ～深宅中的怨恨 ～"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8467",
+      "sourceRefs": [
+        "vndb:v35915"
+      ]
+    },
+    {
+      "id": "nextmoe-2748",
+      "title": "いもうと美姫ちゃんの生配信ちゃんねる！",
+      "aliases": [
+        "Imouto Miki-chan no Nama Haishin Channel!",
+        "妹妹美姬酱的直播频道！"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2748",
+      "sourceRefs": [
+        "vndb:v54618"
+      ]
+    },
+    {
+      "id": "nextmoe-1415",
+      "title": "Lover",
+      "aliases": [
+        "爱人 Lover"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1415",
+      "sourceRefs": [
+        "vndb:v30437"
+      ]
+    },
+    {
+      "id": "nextmoe-733",
+      "title": "彼女、甘い彼女",
+      "aliases": [
+        "Kanojo, Amai Kanojo",
+        "女朋友，天真的她"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/733",
+      "sourceRefs": [
+        "vndb:v18253"
+      ]
+    },
+    {
+      "id": "nextmoe-31657",
+      "title": "とらぶるだいあり～・はれんち",
+      "aliases": [
+        "麻烦日记～·破廉耻"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31657",
+      "sourceRefs": [
+        "vndb:v32955"
+      ]
+    },
+    {
+      "id": "nextmoe-1637",
+      "title": "わんにゃん☆アラモード！ ～どっちにするの？わんにゃんHなカフェ事情！～",
+      "aliases": [
+        "Wan Nyan ☆ A La Mode! ~Docchi ni Suru no? Wan Nyan H na Café Jijou!~",
+        "喵~玛奇朵咖啡  ~喵派和汪派间的选择题！"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1637",
+      "sourceRefs": [
+        "vndb:v17997"
+      ]
+    },
+    {
+      "id": "nextmoe-20758",
+      "title": "マーメイドの季節",
+      "aliases": [
+        "美人鱼的季节"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/20758",
+      "sourceRefs": [
+        "vndb:v17748"
+      ]
+    },
+    {
+      "id": "nextmoe-12714",
+      "title": "しすたぁエンジェル",
+      "aliases": [
+        "妹妹天使"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12714",
+      "sourceRefs": [
+        "vndb:v6227"
+      ]
+    },
+    {
+      "id": "nextmoe-13216",
+      "title": "魔法の守護姫アルテミナ",
+      "aliases": [
+        "魔法守护姬-阿尔特米娜-"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13216",
+      "sourceRefs": [
+        "vndb:v7041"
+      ]
+    },
+    {
+      "id": "nextmoe-6901",
+      "title": "禁忌劣情～淫らな欲望に魅せられて～",
+      "aliases": [
+        "Kinki Retsujou ~Midara na Yokubou ni Miserarete~",
+        "禁忌劣情～被淫欲所迷惑～"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6901",
+      "sourceRefs": [
+        "vndb:v21451"
+      ]
+    },
+    {
+      "id": "nextmoe-11989",
+      "title": "姉と小町♂ ～巨乳姉妹の女装っ娘いじり～",
+      "aliases": [
+        "姐姐与小町♂ ～巨乳姐妹的女装娘玩弄～"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11989",
+      "sourceRefs": [
+        "vndb:v5061"
+      ]
+    },
+    {
+      "id": "nextmoe-16751",
+      "title": "学園カウンセラー",
+      "aliases": [
+        "学园咨询师"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16751",
+      "sourceRefs": [
+        "vndb:v12094"
+      ]
+    },
+    {
+      "id": "nextmoe-23871",
+      "title": "パワプロクンポケット4",
+      "aliases": [
+        "实况口袋棒球4"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/23871",
+      "sourceRefs": [
+        "vndb:v22678"
+      ]
+    },
+    {
+      "id": "nextmoe-52293",
+      "title": "箱入り娘のてるみどぉる",
+      "aliases": [
+        "深闺千金的照美玩偶"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52293",
+      "sourceRefs": [
+        "vndb:v56001"
+      ]
+    },
+    {
+      "id": "nextmoe-1953",
+      "title": "MYTH -After the Stories-",
+      "aliases": [],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1953",
+      "sourceRefs": [
+        "vndb:v29252"
+      ]
+    },
+    {
+      "id": "nextmoe-1650",
+      "title": "いたいけな彼女",
+      "aliases": [
+        "Itaike na Kanojo",
+        "我的娇弱女友"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1650",
+      "sourceRefs": [
+        "vndb:v1417"
+      ]
+    },
+    {
+      "id": "nextmoe-6524",
+      "title": "空とキオクの彼方",
+      "aliases": [
+        "Sora to Kioku no Kanata",
+        "天空与记忆的彼方"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6524",
+      "sourceRefs": [
+        "vndb:v3926"
+      ]
+    },
+    {
+      "id": "nextmoe-11745",
+      "title": "ねがぽじ～お兄ちゃんと呼ばないでっ！！～",
+      "aliases": [
+        "负正～不要叫我哥哥！！～"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11745",
+      "sourceRefs": [
+        "vndb:v4643"
+      ]
+    },
+    {
+      "id": "nextmoe-12168",
+      "title": "F ~ファナティック~",
+      "aliases": [
+        "F～Fanatic～"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12168",
+      "sourceRefs": [
+        "vndb:v5385"
+      ]
+    },
+    {
+      "id": "nextmoe-8566",
+      "title": "朝焼けの謳",
+      "aliases": [
+        "Asayake no Uta",
+        "朝霞之歌"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8566",
+      "sourceRefs": [
+        "vndb:v26379"
+      ]
+    },
+    {
+      "id": "nextmoe-3812",
+      "title": "No! body knows　～その身体が知っている～",
+      "aliases": [
+        "No! body knows ~Sono Karada ga Shitteiru~",
+        "嘴上说不知道，身体却很诚实～"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3812",
+      "sourceRefs": [
+        "vndb:v22328"
+      ]
+    },
+    {
+      "id": "nextmoe-25460",
+      "title": "まり∽くり -R- ～Queen Save the God ♪～",
+      "aliases": [],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25460",
+      "sourceRefs": [
+        "vndb:v24875"
+      ]
+    },
+    {
+      "id": "nextmoe-6875",
+      "title": "涼宮ハル●の恍惚",
+      "aliases": [
+        "Suzumiya Haru** no Koukotsu",
+        "凉宫春●的恍惚"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6875",
+      "sourceRefs": [
+        "vndb:v11435"
+      ]
+    },
+    {
+      "id": "nextmoe-8887",
+      "title": "断罪調教シミュレーション 熟肉の地下牢 ブラック企業の高慢女社長",
+      "aliases": [
+        "Danzai Choukyou Simulation: Jukuniku no Chikarou Black Kigyou no Kouman Onna Shachou",
+        "断罪调教·熟肉地牢！黑心企业傲慢女社长恶堕"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8887",
+      "sourceRefs": [
+        "vndb:v21009"
+      ]
+    },
+    {
+      "id": "nextmoe-15703",
+      "title": "そう、あたしたちはこんなにも理不尽な世界に生きているのだらよ",
+      "aliases": [
+        "没错，我们就活在如此不讲理的世界里呀"
+      ],
+      "firstYear": 2006,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15703",
+      "sourceRefs": [
+        "vndb:v10520"
+      ]
+    },
+    {
+      "id": "nextmoe-17133",
+      "title": "Wish -Tale of the Sixteenth Night of Lunar Month-",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/17133",
+      "sourceRefs": [
+        "vndb:v12750"
+      ]
+    },
+    {
+      "id": "nextmoe-18479",
+      "title": "くのいちが如く -脱がせ！爆乳ニンジャーズ！-",
+      "aliases": [],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18479",
+      "sourceRefs": [
+        "vndb:v14597"
+      ]
+    },
+    {
+      "id": "nextmoe-29474",
+      "title": "縛り神父",
+      "aliases": [
+        "束缚神父"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29474",
+      "sourceRefs": [
+        "vndb:v30222"
+      ]
+    },
+    {
+      "id": "nextmoe-55994",
+      "title": "omiSt",
+      "aliases": [
+        "奥米斯特"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/55994",
+      "sourceRefs": [
+        "vndb:v60098"
+      ]
+    },
+    {
+      "id": "nextmoe-6344",
+      "title": "エルフィーナ～淫夜へと売られた王国で…～",
+      "aliases": [
+        "Elfeena ~Yoru e to Urareta Oukoku de...~",
+        "爱尔菲娜～在被卖向淫夜的王国…～"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6344",
+      "sourceRefs": [
+        "vndb:v6409"
+      ]
+    },
+    {
+      "id": "nextmoe-8517",
+      "title": "Kankin",
+      "aliases": [],
+      "firstYear": 1995,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8517",
+      "sourceRefs": [
+        "vndb:v8746"
+      ]
+    },
+    {
+      "id": "nextmoe-13914",
+      "title": "風と大地のページェント",
+      "aliases": [
+        "제노에이지",
+        "风与大地的盛典",
+        "夢幻武士：龍刻之章"
+      ],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13914",
+      "sourceRefs": [
+        "vndb:v8133"
+      ]
+    },
+    {
+      "id": "nextmoe-18654",
+      "title": "Nと言う名の男、Bと言う名の女",
+      "aliases": [
+        "名为N的男人、名为B的女人"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18654",
+      "sourceRefs": [
+        "vndb:v14836"
+      ]
+    },
+    {
+      "id": "nextmoe-32398",
+      "title": "隠花生物／顕花生物",
+      "aliases": [
+        "隐花生物／显花生物"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/32398",
+      "sourceRefs": [
+        "vndb:v33790"
+      ]
+    },
+    {
+      "id": "nextmoe-50430",
+      "title": "心変わり",
+      "aliases": [],
+      "firstYear": 2024,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/50430",
+      "sourceRefs": [
+        "vndb:v53940"
+      ]
+    },
+    {
+      "id": "nextmoe-730",
+      "title": "男性を癒やし抜く機械",
+      "aliases": [
+        "Dansei o Iyashi Nuku Kikai",
+        "治愈男性的机器人"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/730",
+      "sourceRefs": [
+        "vndb:v26410"
+      ]
+    },
+    {
+      "id": "nextmoe-4898",
+      "title": "誰ソ彼のシェイプシフター",
+      "aliases": [
+        "Tasogare no Shapeshifter",
+        "彼谁彼时的形变者",
+        "黃昏幻形者"
+      ],
+      "firstYear": 2026,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4898",
+      "sourceRefs": [
+        "vndb:v61178"
+      ]
+    },
+    {
+      "id": "nextmoe-5929",
+      "title": "ハチポチ -Liar＆raiL FanDisk-",
+      "aliases": [
+        "Hotch Potch"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5929",
+      "sourceRefs": [
+        "vndb:v6310"
+      ]
+    },
+    {
+      "id": "nextmoe-22342",
+      "title": "キャッスルファンタジア〜アリハト戦記〜",
+      "aliases": [
+        "城堡幻想曲 阿里哈特战记"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22342",
+      "sourceRefs": [
+        "vndb:v20205"
+      ]
+    },
+    {
+      "id": "nextmoe-33399",
+      "title": "雨月奇譚",
+      "aliases": [
+        "雨月奇谭"
+      ],
+      "firstYear": 1992,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/33399",
+      "sourceRefs": [
+        "vndb:v34976"
+      ]
+    },
+    {
+      "id": "nextmoe-41446",
+      "title": "sai愛+愛",
+      "aliases": [
+        "sai爱+爱"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/41446",
+      "sourceRefs": [
+        "vndb:v43851"
+      ]
+    },
+    {
+      "id": "nextmoe-2542",
+      "title": "ナマイキ金髪ツインテ爆乳お嬢様をメス豚扱いで孕ませ飼いする性活",
+      "aliases": [
+        "Namaiki Kinpatsu Twinte Bakunyuu Ojou-sama o Mesubuta Atsukai de Haramase Kai Suru Seikatsu",
+        "金发爆乳大小姐"
+      ],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2542",
+      "sourceRefs": [
+        "vndb:v25189"
+      ]
+    },
+    {
+      "id": "nextmoe-4892",
+      "title": "永遠に美しき冬よりも　- It will be covered with the white.",
+      "aliases": [
+        "Towa ni Umashiki Fuyu Yori mo - It Will Be Covered with the White.",
+        "比永远美丽的冬天更甚　- It will be covered with the white."
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4892",
+      "sourceRefs": [
+        "vndb:v20037"
+      ]
+    },
+    {
+      "id": "nextmoe-10553",
+      "title": "最凶魔法少女アリナ",
+      "aliases": [
+        "最凶魔法少女阿莉娜"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10553",
+      "sourceRefs": [
+        "vndb:v2619"
+      ]
+    },
+    {
+      "id": "nextmoe-25215",
+      "title": "冬のさざなみ",
+      "aliases": [
+        "冬日的涟漪"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25215",
+      "sourceRefs": [
+        "vndb:v24528"
+      ]
+    },
+    {
+      "id": "nextmoe-8548",
+      "title": "彼と彼女と彼女の忠義",
+      "aliases": [
+        "Kare to Kanojo to Kanojo no Chuugi",
+        "他与她与她的忠义"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8548",
+      "sourceRefs": [
+        "vndb:v4211"
+      ]
+    },
+    {
+      "id": "nextmoe-6259",
+      "title": "沙緒アフター ～春萌アミューズメントディスク～",
+      "aliases": [
+        "Sunao After ~Harumoi Amusement Disk~"
+      ],
+      "firstYear": 2007,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6259",
+      "sourceRefs": [
+        "vndb:v5052"
+      ]
+    },
+    {
+      "id": "nextmoe-8017",
+      "title": "May Queen",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8017",
+      "sourceRefs": [
+        "vndb:v9656"
+      ]
+    },
+    {
+      "id": "nextmoe-8890",
+      "title": "流れ落ちる調べに乗せて",
+      "aliases": [
+        "Nagareochiru Shirabe ni Nosete",
+        "乘着流泻的旋律"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8890",
+      "sourceRefs": [
+        "vndb:v12717"
+      ]
+    },
+    {
+      "id": "nextmoe-17540",
+      "title": "スプリング・メロウ",
+      "aliases": [
+        "春日·醇美"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/17540",
+      "sourceRefs": [
+        "vndb:v13349"
+      ]
+    },
+    {
+      "id": "nextmoe-19692",
+      "title": "Minority hearts7～催眠寝取られ～",
+      "aliases": [
+        "Minority hearts7～催眠寝取～"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/19692",
+      "sourceRefs": [
+        "vndb:v16311"
+      ]
+    },
+    {
+      "id": "nextmoe-22819",
+      "title": "The Beautiful World",
+      "aliases": [],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22819",
+      "sourceRefs": [
+        "vndb:v20976"
+      ]
+    },
+    {
+      "id": "nextmoe-28752",
+      "title": "CD-Manatsu",
+      "aliases": [],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28752",
+      "sourceRefs": [
+        "vndb:v29258"
+      ]
+    },
+    {
+      "id": "nextmoe-36816",
+      "title": "マキシマムデイズ",
+      "aliases": [],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/36816",
+      "sourceRefs": [
+        "vndb:v38858"
+      ]
+    },
+    {
+      "id": "nextmoe-55192",
+      "title": "999,Victory",
+      "aliases": [
+        "999,胜利",
+        "999,勝利"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/55192",
+      "sourceRefs": [
+        "vndb:v59246"
+      ]
+    },
+    {
+      "id": "nextmoe-4456",
+      "title": "私は今日ここで死にます。",
+      "aliases": [
+        "Watashi wa Kyou Koko de Shinimasu.",
+        "我今日将在此死去"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4456",
+      "sourceRefs": [
+        "vndb:v21768"
+      ]
+    },
+    {
+      "id": "nextmoe-15515",
+      "title": "コープスパーティー -THE ANTHOLOGY- サチコの恋愛遊戯♥Hysteric Birthday 2U",
+      "aliases": [
+        "Corpse Party: Sweet Sachiko's Hysteric Birthday Bash",
+        "尸体派对 文选集 幸子的恋爱游戏 竭斯底里生日2U"
+      ],
+      "firstYear": 2012,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15515",
+      "sourceRefs": [
+        "vndb:v10231"
+      ]
+    },
+    {
+      "id": "nextmoe-18826",
+      "title": "嬌烙の館",
+      "aliases": [
+        "娇烙之馆"
+      ],
+      "firstYear": 1999,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18826",
+      "sourceRefs": [
+        "vndb:v15095"
+      ]
+    },
+    {
+      "id": "nextmoe-7498",
+      "title": "娘くずし ～父と娘の狂縁～",
+      "aliases": [
+        "Musume Kuzushi ~Chichi to Musume no Kyouen~",
+        "女儿玩坏 ～父女的狂缘～"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7498",
+      "sourceRefs": [
+        "vndb:v21726"
+      ]
+    },
+    {
+      "id": "nextmoe-6262",
+      "title": "Green Strawberry",
+      "aliases": [],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6262",
+      "sourceRefs": [
+        "vndb:v3940"
+      ]
+    },
+    {
+      "id": "nextmoe-13649",
+      "title": "神曲奏界ポリフォニカ ～Farewell Song～",
+      "aliases": [
+        "神曲奏界F"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13649",
+      "sourceRefs": [
+        "vndb:v7727"
+      ]
+    },
+    {
+      "id": "nextmoe-14016",
+      "title": "人形の傷跡",
+      "aliases": [
+        "A Scar of the Doll",
+        "人偶的伤痕"
+      ],
+      "firstYear": 1999,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/14016",
+      "sourceRefs": [
+        "vndb:v8306"
+      ]
+    },
+    {
+      "id": "nextmoe-37279",
+      "title": "あやめもしらず",
+      "aliases": [
+        "文目不知"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/37279",
+      "sourceRefs": [
+        "vndb:v39363"
+      ]
+    },
+    {
+      "id": "nextmoe-4110",
+      "title": "復讐の死霊魔術師 ～望むのは死の痛み～",
+      "aliases": [
+        "Fukushuu no Necromancer ~Nozomu no wa Shi no Itami~",
+        "复仇的死灵魔术师 ～所求的是死亡之痛～"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4110",
+      "sourceRefs": [
+        "vndb:v12678"
+      ]
+    },
+    {
+      "id": "nextmoe-3978",
+      "title": "Reunion ~Again~, F&C DVDコレクション1 「同窓会again・refrain」",
+      "aliases": [
+        "Dousoukai Again",
+        "（二）同窗会again",
+        "同窗會again"
+      ],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3978",
+      "sourceRefs": [
+        "vndb:v2348"
+      ]
+    },
+    {
+      "id": "nextmoe-7802",
+      "title": "アザゼル",
+      "aliases": [
+        "Azazel",
+        "阿撒兹勒"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7802",
+      "sourceRefs": [
+        "vndb:v7658"
+      ]
+    },
+    {
+      "id": "nextmoe-11314",
+      "title": "黒ノ十三",
+      "aliases": [
+        "暗黑十三章"
+      ],
+      "firstYear": 1996,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11314",
+      "sourceRefs": [
+        "vndb:v3936"
+      ]
+    },
+    {
+      "id": "nextmoe-13495",
+      "title": "雪の華",
+      "aliases": [
+        "雪之华"
+      ],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13495",
+      "sourceRefs": [
+        "vndb:v7483"
+      ]
+    },
+    {
+      "id": "nextmoe-15255",
+      "title": "妹婚っ",
+      "aliases": [],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15255",
+      "sourceRefs": [
+        "vndb:v9849"
+      ]
+    },
+    {
+      "id": "nextmoe-16423",
+      "title": "NANA -ナナ-",
+      "aliases": [
+        "NANA -奈奈-"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16423",
+      "sourceRefs": [
+        "vndb:v11599"
+      ]
+    },
+    {
+      "id": "nextmoe-21806",
+      "title": "レコラヴ Blue Ocean",
+      "aliases": [
+        "恋爱记录 Blue Ocean"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/21806",
+      "sourceRefs": [
+        "vndb:v19338"
+      ]
+    },
+    {
+      "id": "nextmoe-27801",
+      "title": "乙女ゲームのヒロインになったのに親友が邪魔すぎて攻略ができません！",
+      "aliases": [
+        "明明成了乙女游戏的女主角却因挚友太碍事无法攻略！"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27801",
+      "sourceRefs": [
+        "vndb:v27977"
+      ]
+    },
+    {
+      "id": "nextmoe-27874",
+      "title": "西町逃亡恋譚",
+      "aliases": [
+        "西町逃亡恋谭"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/27874",
+      "sourceRefs": [
+        "vndb:v28075"
+      ]
+    },
+    {
+      "id": "nextmoe-35787",
+      "title": "生きるその先に -覚醒編-",
+      "aliases": [
+        "超越生命 -觉醒篇-"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/35787",
+      "sourceRefs": [
+        "vndb:v37719"
+      ]
+    },
+    {
+      "id": "nextmoe-39895",
+      "title": "愛を見た景色",
+      "aliases": [
+        "看见爱的景色"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/39895",
+      "sourceRefs": [
+        "vndb:v42175"
+      ]
+    },
+    {
+      "id": "nextmoe-49901",
+      "title": "Kuchen Loschen",
+      "aliases": [],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/49901",
+      "sourceRefs": [
+        "vndb:v53358"
+      ]
+    },
+    {
+      "id": "nextmoe-57711",
+      "title": "俺を捨てないでくれ!!",
+      "aliases": [
+        "不要抛下我！！"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/57711",
+      "sourceRefs": [
+        "vndb:v62014"
+      ]
+    },
+    {
+      "id": "nextmoe-1027",
+      "title": "サキュせか ～誘惑に負けないで:サキュバスに管理された世界で～ +  サキュせかTE 〜誘惑に負けないで:サキュバスに管理された世界で〜",
+      "aliases": [
+        "SuccuSeka ~Yuuwaku ni Makenaide: Succubus ni Kanri Sareta Sekai de~",
+        "サキュせか ～誘惑に負けないで:サキュバスに管理された世界で～"
+      ],
+      "firstYear": 2021,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1027",
+      "sourceRefs": [
+        "vndb:v31007"
+      ]
+    },
+    {
+      "id": "nextmoe-9420",
+      "title": "神語 ～かんがたり～",
+      "aliases": [
+        "Kangatari",
+        "神语 ～代神传谕～"
+      ],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9420",
+      "sourceRefs": [
+        "vndb:v2834"
+      ]
+    },
+    {
+      "id": "nextmoe-11081",
+      "title": "ぷり・プリ～PRINCE×PRINCE～",
+      "aliases": [
+        "王子x王子",
+        "王子×王子PRINCE×PRINCE"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11081",
+      "sourceRefs": [
+        "vndb:v3558"
+      ]
+    },
+    {
+      "id": "nextmoe-10020",
+      "title": "コードギアス 反逆のルルーシュ　LOST COLORS",
+      "aliases": [
+        "反叛的鲁路修：遗失的色彩"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10020",
+      "sourceRefs": [
+        "vndb:v1502"
+      ]
+    },
+    {
+      "id": "nextmoe-18583",
+      "title": "陵輪学園～狙われた風紀委員 七海葵～",
+      "aliases": [
+        "陵轮学园～被狙击的风纪委员 七海葵～"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/18583",
+      "sourceRefs": [
+        "vndb:v14728"
+      ]
+    },
+    {
+      "id": "nextmoe-4743",
+      "title": "音無き世界その代わり",
+      "aliases": [
+        "Oto Naki Sekai Sonokawari"
+      ],
+      "firstYear": 2016,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4743",
+      "sourceRefs": [
+        "vndb:v21204"
+      ]
+    },
+    {
+      "id": "nextmoe-1834",
+      "title": "大和撫子なお嬢様が妊活のために超都合のいい孕ませオナホ嫁として嫁いできた！",
+      "aliases": [
+        "Yamato Nadeshiko na Ojou-sama ga Ninkatsu no Tame ni Chou Tsugou no Ii Haramase Onaho Yome to Shite Totsuidekita!",
+        "大和抚子千金的抖M新妻绝伦生活"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1834",
+      "sourceRefs": [
+        "vndb:v24892"
+      ]
+    },
+    {
+      "id": "nextmoe-10036",
+      "title": "ラブミーテンダー ~今宵、Barアルバで~",
+      "aliases": [
+        "Love Me Tender～今宵，相会于Bar Alba～"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10036",
+      "sourceRefs": [
+        "vndb:v1528"
+      ]
+    },
+    {
+      "id": "nextmoe-31893",
+      "title": "枝江畔之梦",
+      "aliases": [],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/31893",
+      "sourceRefs": [
+        "vndb:v33237"
+      ]
+    },
+    {
+      "id": "nextmoe-32842",
+      "title": "虚忆定格",
+      "aliases": [],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/32842",
+      "sourceRefs": [
+        "vndb:v34310"
+      ]
+    },
+    {
+      "id": "nextmoe-1354",
+      "title": "花都之恋",
+      "aliases": [
+        "Hua Du Zhi Lian",
+        "花都之戀"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1354",
+      "sourceRefs": [
+        "vndb:v35383"
+      ]
+    },
+    {
+      "id": "nextmoe-1697",
+      "title": "蝶ノ夢",
+      "aliases": [
+        "Chou no Yume",
+        "蝶之梦~游郭绘草纸~"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/1697",
+      "sourceRefs": [
+        "vndb:v2165"
+      ]
+    },
+    {
+      "id": "nextmoe-5990",
+      "title": "アユマユ オルタネイティヴ",
+      "aliases": [
+        "Ayu Mayu Alternative",
+        "亚由真由 Aternative"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5990",
+      "sourceRefs": [
+        "vndb:v1362"
+      ]
+    },
+    {
+      "id": "nextmoe-7817",
+      "title": "コゲとリリスのナハトムジーク",
+      "aliases": [
+        "Koge to Lilith no Nachtmusik",
+        "小焦与莉莉丝的夜曲"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7817",
+      "sourceRefs": [
+        "vndb:v3703"
+      ]
+    },
+    {
+      "id": "nextmoe-12715",
+      "title": "ORATORIO～海より青い夏の彼方で～",
+      "aliases": [
+        "ORATORIO～在比海更蓝的夏日彼方～"
+      ],
+      "firstYear": 2004,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12715",
+      "sourceRefs": [
+        "vndb:v6228"
+      ]
+    },
+    {
+      "id": "nextmoe-15347",
+      "title": "AKB1/48 アイドルとグアムで恋したら・・・",
+      "aliases": [
+        "与AKB1/48在关岛恋爱的话"
+      ],
+      "firstYear": 2011,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15347",
+      "sourceRefs": [
+        "vndb:v9985"
+      ]
+    },
+    {
+      "id": "nextmoe-40953",
+      "title": "MOBIUS BAND*",
+      "aliases": [],
+      "firstYear": 2023,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/40953",
+      "sourceRefs": [
+        "vndb:v43327"
+      ]
+    },
+    {
+      "id": "nextmoe-4819",
+      "title": "幼馴染の心が読めたらどうするか?",
+      "aliases": [
+        "Osananajimi no Kokoro ga Yometara Dou Suru ka?",
+        "如果读到了青梅竹马的心会怎样？"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4819",
+      "sourceRefs": [
+        "vndb:v15976"
+      ]
+    },
+    {
+      "id": "nextmoe-29206",
+      "title": "みすずの国",
+      "aliases": [
+        "美铃之国"
+      ],
+      "firstYear": 2014,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/29206",
+      "sourceRefs": [
+        "vndb:v29837"
+      ]
+    },
+    {
+      "id": "nextmoe-4282",
+      "title": "神サマなんて呼んでない！",
+      "aliases": [
+        "Kami-sama Nante Yondenai!",
+        "才没有呼唤神明大人！"
+      ],
+      "firstYear": 2017,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/4282",
+      "sourceRefs": [
+        "vndb:v19886"
+      ]
+    },
+    {
+      "id": "nextmoe-3307",
+      "title": "デュアル・エム ―空の記憶―",
+      "aliases": [
+        "Dual M -Sora no Kioku-",
+        "双重·M ―天空的记忆―"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/3307",
+      "sourceRefs": [
+        "vndb:v3991"
+      ]
+    },
+    {
+      "id": "nextmoe-5937",
+      "title": "姫剣士エステル-孕ませ王2-",
+      "aliases": [
+        "Hime Kenshi Estel -Haramase King 2-",
+        "姬剑士艾斯特尔-受孕王2-"
+      ],
+      "firstYear": 2010,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/5937",
+      "sourceRefs": [
+        "vndb:v5032"
+      ]
+    },
+    {
+      "id": "nextmoe-22845",
+      "title": "エーベルージュ",
+      "aliases": [
+        "恋爱物语",
+        "戀愛物語"
+      ],
+      "firstYear": 1996,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/22845",
+      "sourceRefs": [
+        "vndb:v21015"
+      ]
+    },
+    {
+      "id": "nextmoe-25415",
+      "title": "Rotate180°コンバータ",
+      "aliases": [
+        "Rotate180°转换器"
+      ],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/25415",
+      "sourceRefs": [
+        "vndb:v24815"
+      ]
+    },
+    {
+      "id": "nextmoe-28017",
+      "title": "物語れ、哀れな狂人達の為に",
+      "aliases": [
+        "讲述吧，为了可怜的狂人们"
+      ],
+      "firstYear": 2020,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28017",
+      "sourceRefs": [
+        "vndb:v28276"
+      ]
+    },
+    {
+      "id": "nextmoe-50733",
+      "title": "UCOPIA",
+      "aliases": [],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/50733",
+      "sourceRefs": [
+        "vndb:v54281"
+      ]
+    },
+    {
+      "id": "nextmoe-2513",
+      "title": "ま～じゃんコネクト",
+      "aliases": [
+        "Mahjongg Connect",
+        "脱衣麻将「公主连结R」"
+      ],
+      "firstYear": 2022,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/2513",
+      "sourceRefs": [
+        "vndb:v51848"
+      ]
+    },
+    {
+      "id": "nextmoe-7727",
+      "title": "インモラル・リトルDS",
+      "aliases": [
+        "Immoral Little DS"
+      ],
+      "firstYear": 2013,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/7727",
+      "sourceRefs": [
+        "vndb:v12502"
+      ]
+    },
+    {
+      "id": "nextmoe-10171",
+      "title": "ALL ONE'S LIFE",
+      "aliases": [],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/10171",
+      "sourceRefs": [
+        "vndb:v1857"
+      ]
+    },
+    {
+      "id": "nextmoe-11556",
+      "title": "ひとかた",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/11556",
+      "sourceRefs": [
+        "vndb:v4345"
+      ]
+    },
+    {
+      "id": "nextmoe-16272",
+      "title": "いつまでも・・・～神長さん家の春夏秋冬～",
+      "aliases": [
+        "直到永远···～神长家的春夏秋冬～"
+      ],
+      "firstYear": 2000,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/16272",
+      "sourceRefs": [
+        "vndb:v11398"
+      ]
+    },
+    {
+      "id": "nextmoe-26655",
+      "title": "初开在平安夜之花",
+      "aliases": [],
+      "firstYear": 2019,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/26655",
+      "sourceRefs": [
+        "vndb:v26539"
+      ]
+    },
+    {
+      "id": "nextmoe-28528",
+      "title": "Mindcircus",
+      "aliases": [],
+      "firstYear": 2018,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/28528",
+      "sourceRefs": [
+        "vndb:v28971"
+      ]
+    },
+    {
+      "id": "nextmoe-47536",
+      "title": "破晓时分的书信-朝闻篇",
+      "aliases": [
+        "The Dawning Letters -Sunrise-"
+      ],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/47536",
+      "sourceRefs": [
+        "vndb:v50685"
+      ]
+    },
+    {
+      "id": "nextmoe-52986",
+      "title": "二分光景——COSER解体事件",
+      "aliases": [],
+      "firstYear": 2025,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/52986",
+      "sourceRefs": [
+        "vndb:v56787"
+      ]
+    },
+    {
+      "id": "nextmoe-8198",
+      "title": "ChuChuヘヴン",
+      "aliases": [
+        "Chuchu Heaven",
+        "ChuChu天堂"
+      ],
+      "firstYear": 2009,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8198",
+      "sourceRefs": [
+        "vndb:v1368"
+      ]
+    },
+    {
+      "id": "nextmoe-15151",
+      "title": "Coda－棘－",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/15151",
+      "sourceRefs": [
+        "vndb:v9718"
+      ]
+    },
+    {
+      "id": "nextmoe-6310",
+      "title": "こなゆき ふるり～柚子原町カーリング部～ 外伝 冴子の通い妻日記",
+      "aliases": [
+        "Konayuki Fururi ~Yuzuhara-chou Curling-Bu~ Gaiden: Saeko no Kayoizuma Nikki",
+        "粉雪飘飘～柚子原町冰壶部～ 外传 冴子的通勤妻日记"
+      ],
+      "firstYear": 2008,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6310",
+      "sourceRefs": [
+        "vndb:v4039"
+      ]
+    },
+    {
+      "id": "nextmoe-6973",
+      "title": "お兄ちゃん。あのね 甘えかたおしえてっ☆",
+      "aliases": [
+        "Onii-chan. Ano ne Amaekata Oshiete ☆",
+        "哥哥。那个啊 教教我怎么撒娇☆"
+      ],
+      "firstYear": 2015,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/6973",
+      "sourceRefs": [
+        "vndb:v17689"
+      ]
+    },
+    {
+      "id": "nextmoe-8394",
+      "title": "確かにキミはココにいた -You were certainly here-",
+      "aliases": [
+        "Tashika ni Kimi wa Koko ni Ita -You Were Certainly Here-"
+      ],
+      "firstYear": 2005,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/8394",
+      "sourceRefs": [
+        "vndb:v5344"
+      ]
+    },
+    {
+      "id": "nextmoe-9239",
+      "title": "美術教師・涼子",
+      "aliases": [
+        "Bijutsu Kyoushi Ryouko",
+        "美术教师·凉子"
+      ],
+      "firstYear": 2003,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/9239",
+      "sourceRefs": [
+        "vndb:v23352"
+      ]
+    },
+    {
+      "id": "nextmoe-12914",
+      "title": "お願い",
+      "aliases": [],
+      "firstYear": 2002,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/12914",
+      "sourceRefs": [
+        "vndb:v6543"
+      ]
+    },
+    {
+      "id": "nextmoe-13403",
+      "title": "初夜献上",
+      "aliases": [],
+      "firstYear": 2001,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/13403",
+      "sourceRefs": [
+        "vndb:v7345"
+      ]
+    },
+    {
+      "id": "nextmoe-20252",
+      "title": "クリスタルリナール －逢魔の迷宮－",
+      "aliases": [
+        "逢魔的迷宫"
+      ],
+      "firstYear": 1994,
+      "source": "https://api.nextmoe.dev/v2/catalog/works/20252",
+      "sourceRefs": [
+        "vndb:v17132"
+      ]
+    }
+  ],
+  "heldForIdentityReview": [
+    {
+      "sourceId": "9",
+      "title": "バルドスカイ ダイブ1 ロストメモリー",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "2400",
+      "title": "ファタモルガーナの館 -Another Episodes-",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "242",
+      "title": "Ever17",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "559",
+      "names": [
+        "ランス03 リーザス陥落",
+        "Rance 03 - Leazas Kanraku",
+        "兰斯03 利萨斯陷落"
+      ],
+      "year": 2015,
+      "matches": [
+        [
+          "alicesoft-extra-rance3",
+          1991,
+          "historical-dossier"
+        ]
+      ]
+    },
+    {
+      "sourceId": "574",
+      "names": [
+        "Tsukihime"
+      ],
+      "year": 1999,
+      "matches": [
+        [
+          "g1509",
+          2000,
+          "complete"
+        ]
+      ]
+    },
+    {
+      "sourceId": "3023",
+      "names": [
+        "赛博朋克：酒保行动",
+        "VA-11 HALL-A",
+        "VA-11 Hall-A: Cyberpunk Bartender Action"
+      ],
+      "year": 2014,
+      "matches": [
+        [
+          "g1586",
+          2016,
+          "complete"
+        ]
+      ]
+    },
+    {
+      "sourceId": "517",
+      "title": "アマカノ２＋",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "184",
+      "title": "フレラバ ～Friend to Lover～ HD Renewal Edition",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "4678",
+      "title": "うみねこのなく頃に咲",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "4218",
+      "title": "るいは智を呼ぶファンディスク ―明日のむこうに視える風―",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "9249",
+      "names": [
+        "夏のひとしずく",
+        "Natsu no Hitoshizuku",
+        "夏末涅槃"
+      ],
+      "year": 2004,
+      "matches": [
+        [
+          "nextmoe-7525",
+          2013,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "2566",
+      "title": "白色相簿2 Mini After Story",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "15385",
+      "title": "ワンド オブ フォーチュン２ FD ～君に捧げるエピローグ～",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "657",
+      "title": "D.C.5 ~Da Capo 5~ Future Link + D.C.5 Sweet Happiness",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "8",
+      "title": "まいてつ Last Run!!",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "480",
+      "title": "アマカノ+",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "652",
+      "title": "アマカノ～Second Season～+",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "557",
+      "names": [
+        "ランス01 光をもとめて",
+        "Rance 01 - Hikari o Motomete -",
+        "兰斯01 寻找小光"
+      ],
+      "year": 2013,
+      "matches": [
+        [
+          "g548",
+          1989,
+          "complete"
+        ]
+      ]
+    },
+    {
+      "sourceId": "6530",
+      "names": [
+        "巨乳ファンタジー２if デジタルノベライズ版",
+        "Kyonyuu Fantasy 2 if - Digital Novel Edition",
+        "巨乳幻想2 if"
+      ],
+      "year": 2015,
+      "matches": [
+        [
+          "nextmoe-2780",
+          2014,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "22085",
+      "title": "NOeSIS 嘘を吐いた記憶の物語",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "12459",
+      "title": "Starry☆Sky ~After Summer~",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "597",
+      "names": [
+        "同級生",
+        "Doukyuusei",
+        "同级生Remake"
+      ],
+      "year": 1999,
+      "matches": [
+        [
+          "g046",
+          1992,
+          "complete"
+        ],
+        [
+          "g046",
+          1992,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "2003",
+      "title": "ものべの -happy end-",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "664",
+      "title": "D.C.4 Sweet Harmony ~",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "630",
+      "names": [
+        "ToHeart",
+        "To Heart PSE"
+      ],
+      "year": 1999,
+      "matches": [
+        [
+          "g026",
+          1997,
+          "complete"
+        ],
+        [
+          "g037",
+          2025,
+          "complete"
+        ]
+      ]
+    },
+    {
+      "sourceId": "439",
+      "names": [
+        "アマナツ",
+        "Amanatsu",
+        "甜蜜夏日"
+      ],
+      "year": 2022,
+      "matches": [
+        [
+          "nextmoe-788",
+          2024,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "13550",
+      "title": "Starry☆Sky ~After Winter~",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "2419",
+      "title": "真・恋姫†無双～萌将伝～",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "10698",
+      "title": "輝光翼戦記 天空のユミナFD -ForeverDreams-",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "10675",
+      "names": [
+        "ひまわり",
+        "向日葵"
+      ],
+      "year": 2002,
+      "matches": [
+        [
+          "nextmoe-618",
+          2007,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "52267",
+      "names": [
+        "仅你一人",
+        "Only You",
+        "僅你一人"
+      ],
+      "year": 2026,
+      "matches": [
+        [
+          "alicesoft-extra-onlyyou",
+          1996,
+          "historical-dossier"
+        ],
+        [
+          "alicesoft-extra-onlyyou",
+          1996,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "5867",
+      "names": [
+        "Iris －イリス－",
+        "Iris",
+        "鸢尾花",
+        "鳶尾花物語"
+      ],
+      "year": 2003,
+      "matches": [
+        [
+          "nextmoe-465",
+          2018,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "2463",
+      "names": [
+        "混沌之脑：诺亚",
+        "CHAOS;HEAD NOAH"
+      ],
+      "year": 2009,
+      "matches": [
+        [
+          "g618",
+          2008,
+          "complete"
+        ]
+      ]
+    },
+    {
+      "sourceId": "533",
+      "title": "ゆびさきコネクション ミニファンディスク Vol.02 夏歩＆伊織編",
+      "reviewReason": "Potential duplicate content version, fan disc, compilation, or conflicting identity"
+    },
+    {
+      "sourceId": "5411",
+      "names": [
+        "バニーガーデン2",
+        "Bunny Garden 2",
+        "兔兔秘密花园2",
+        "兔兔秘密花園"
+      ],
+      "year": 2026,
+      "matches": [
+        [
+          "nextmoe-610",
+          2024,
+          "identity-registry"
+        ]
+      ]
+    },
+    {
+      "sourceId": "393",
+      "names": [
+        "クロスデイズ",
+        "Cross Days",
+        "日穿校园"
+      ],
+      "year": 2010,
+      "matches": [
+        [
+          "nextmoe-394",
+          2012,
+          "identity-registry"
+        ]
+      ]
+    }
+  ],
+  "caveats": [
+    "This is an API-sorted partial batch, not complete KUN resource-site harvesting.",
+    "Medium galgame plus VNDB identity is an inclusion screen, not proof of story quality or specific ADV/RPG gameplay.",
+    "No claims on ratings, quality, creator roles, content versions or translated edition chronology.",
+    "Name/alias and matching-year collisions are skipped; differing-year conflicts are held, not merged or auto-added."
+  ]
+}

@@ -1,25 +1,41 @@
-# 基础作品身份库：目录来源与分批补录规则（2026-11-01）
+# 基础作品身份库：多来源目录与分批补录规则（2026-11-01）
 
-这份文档只涉及基础身份层 `data/main-adv-rpg-works-20261031.json`，不修改 `data/games.json`、内容版本、平台发行或精选作品评价。
+本流程只追加到 \`data/main-adv-rpg-works-20261031.json\` 基础身份层。不会把目录条目直接写入 \`data/games.json\`，也不会自动认定作品质量、创作者、发行职责或内容版本。
 
-| 来源 | 用途与接入状态 | 原始标识与字段 | 限制 |
+## 已接入来源
+
+| 来源 | 批次 | 原始标识与字段 | 使用范围与限制 |
 | --- | --- | --- | --- |
-| [NextMoe v2 catalog](https://api.nextmoe.dev/v2/catalog/works) | 已接入，至第十四批 | NextMoe ID + VNDB ID，题名、别名、公开发行日期 | 必须满足 released、独立条目、明确 VNDB ID；排除版本混合与合集 |
-| [VNDB Kana API](https://api.vndb.org/kana) | 第十五批新增独立直连来源 | VNDB vID、title/alttitle/aliases/released | 仅确认 VN 层作品身份；日期可能只有年/月；遵守 [VNDB 数据许可](https://vndb.org/d17) |
-| [Bangumi API](https://bangumi.github.io/api/) | 下一阶段候选，尚未导入 | subject ID、名称、名称译名、日期、类别 | 只取游戏类型条目；需要确认每个条目是原作、移植、合集还是影视衍生 |
-| [MobyGames API](https://www.mobygames.com/info/api/) | 下一阶段待接入 | game ID、原始作品名、首发年份、平台 | 需要 API key；谨防平台发行重复计为作品 |
-| [IGDB](https://api-docs.igdb.com/) | 下一阶段待接入 | game ID、name、first_release_date、version_parent | 需要 Twitch 客户端认证；须严格区分 version/remake/DLC |
+| [NextMoe v2 catalog](https://developer.nextmoe.dev/docs/v2/listCatalogWorks) | 第14、16批 | NextMoe ID、VNDB ID、题名、别名、日期 | 仅 galgame + VNDB identity；第16批改用 rating_bangumi 排序，寻找不同目录排序下的新增记录 |
+| [VNDB Kana API](https://api.vndb.org/kana) | 第15批 | VNDB vID、title/alttitle/aliases/released | 独立来源；遵守 [VNDB 数据许可](https://vndb.org/d17) |
+| [Bangumi v0 Subjects API](https://github.com/bangumi/server/blob/master/openapi/v0.yaml) | 第17批 | Bangumi subject ID、name/name_cn、date、tags、platform | type=4、cat=4001 普通游戏；只纳入明确标注 ADV/VN/互动小说或 RPG 的作品，排除软件、扩展包、桌游类别 |
+| [MobyGames API](https://www.mobygames.com/info/api/) | 待接入 | Game ID、题名、平台、首发年份 | 需要 API key；申请并接入前不声称已采集 |
+| [IGDB API](https://api-docs.igdb.com/) | 待接入 | Game ID、name、first_release_date、version_parent | 需要 Twitch 客户端认证；须区分原作、版本、重制和 DLC |
 
-## 第十四、十五批
+## 第16批：NextMoe alternate ranking
 
-- 第十四批继续 NextMoe，并按既有源 ID、VNDB ID、NFKC 标题和别名、年份检查。
-- 第十五批从 VNDB 原生 API 获取新的作品身份，避免只依赖 NextMoe 评分排序的目录覆盖范围。
-- 每批最多 500 部，实际入库以在线导入产生的独立审计 JSON 和 GitHub Actions 校验结果为准；不能因数量不足而降低去重门槛。
-- 来源/年份冲突、DLC、体验版、合集、重制、fan disc 以及独立性不明确的项目进入待审计队列，不以新的作品 ID 强行收录。
-- 不同目录的同一 VNDB ID 必须视作同一作品身份，不能跨来源重复建档。原始目录的名称和年不代表创作者职责、剧情、游戏品质或首次发行版次已经核实。
-- `scripts/import_basic_multisource_r14_r15_20261101.py` 执行批次；`.github/workflows/basic-multisource-r14-r15-20261101.yml` 负责校验、审计和自动提交到功能分支。
-- 两个批次产生独立审计文件，合并进主库前须核对实际新增数和测试结果。
+- 使用 NextMoe 官方 v2 \`/catalog/works\` 列表接口，采用 \`sort=rating_bangumi\`，与此前的 \`rating_vndb\` 排序互补。
+- 仅接受 medium=galgame、明确 VNDB ID、已发行且有日期的条目。
+- 使用 NextMoe ID、VNDB ID、NFKC 标题/别名和年份对主库、专题、补充库及此前批次去重。
+- 每批最多新增500部；不足500时保留实际数量，不降低门槛。
+- API 按官方文档采用 page/limit，limit=100，遵守匿名请求速率和每日配额。
 
-## 下一阶段来源扩张
+## 第17批：Bangumi game directory
 
-先做 Bangumi（中文、日文别名补漏）与 MobyGames（欧美 ADV、互动叙事及早期 PC 游戏）的候选映射与跨目录去重；需要认证的目录不抓取未经许可的页面，不伪造来源字段。新增条目须来源可追溯，未核实内容不进入精选叙事作品库。
+- 使用 Bangumi 官方 v0 \`GET /v0/subjects\`，参数 \`type=4&cat=4001&sort=rank\`；每页50条。
+- ADV/VN：优先要求 VN、视觉小说、Galgame、文字冒险、互动小说、乙女等明确标签；一般 ADV/AVG 标签只有在没有明显动作主导标签，或同时存在剧情、叙事、悬疑、推理等叙事标记时才纳入。
+- RPG：要求 JRPG/CRPG/SRPG/DRPG 等偏叙事子类型，或同时存在明确剧情/叙事标记；单独的泛 RPG 标签不足以入库。
+- AAVG、ARPG、ACT、FPS、RTS、平台跳跃等动作/玩法主导标签不会单独触发收录；RTS、MOBA、体育、竞速等玩法主导类别还要求更强的叙事标签（如叙事、剧情向、悬疑、推理、VN），仅有泛化的“剧情”标签不够。
+- 条目类型 category 4001 为普通游戏；不从软件、DLC/扩展包、桌游类别导入。
+- 名称优先采用 name_cn，保留 name 为别名；年份取 Bangumi date 的年份；标签原样保存在 sourceTags 供后续复核。
+- 仅记录目录来源与触发筛选的 matchedSourceTags，不把 Bangumi 社区标签解释为已经完成“叙事为主、玩法为辅”的人工评估。基础候选仍需后续人工筛选叙事主次；本轮的严格标签门槛用于排除明显动作/策略/沙盒误收。
+- 使用 subject ID、标题/别名、年份与全库交叉去重；重制、fan disc、合集等身份不明的条目暂缓。
+- 遵守官方 API 的 User-Agent 和合理请求间隔。
+
+## 入库规则
+
+1. 每批独立审计文件保存扫描量、新增量、重复量、年份冲突和暂缓原因。
+2. 不因凑足500而降低独立作品身份、年份、别名和来源门槛。
+3. 相同外部 ID 不可跨批重复；标题/别名同年匹配视为已有身份，年份冲突进入待核队列。
+4. 基础身份记录只用于发现和检索。进入精选叙事库或严格 \`games.json\` 仍需单独核查首发、版本、平台和创作关系。
+5. 第16/17批执行脚本：\`scripts/import_basic_multisource_r16_r17_20261101.py\`；CI 工作流负责真实 API 导入、审计和回归测试。
