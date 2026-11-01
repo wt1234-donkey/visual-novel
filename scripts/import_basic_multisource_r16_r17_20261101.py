@@ -59,6 +59,18 @@ ACTION_HEAVY = {
     "stg", "ftg", "moba", "mmorpg", "platform", "平台跳跃", "动作",
     "射击", "竞速", "体育", "竞技", "音乐", "音游", "格斗", "即时战略",
 }
+HARD_NON_NARRATIVE = {
+    "rts", "moba", "spg", "rac", "ftg", "mug", "sports", "体育",
+    "竞技", "竞速", "即时战略",
+}
+STRONG_NARRATIVE = {
+    "叙事", "叙事向", "网状叙事", "故事驱动", "剧情驱动", "剧情向",
+    "剧情丰富", "推理", "悬疑", "galgame", "vn", "visual novel",
+    "视觉小说", "视覺小說", "文字冒险", "文字冒險", "文字游戏",
+    "互动小说", "互动叙事", "乙女", "乙女游戏", "恋爱adv",
+    "小说", "novel game", "sound novel", "サウンドノベル",
+    "ノベルゲーム", "ビジュアルノベル",
+}
 NON_WORK = re.compile(
     r"(?i)(?:\bdlc\b|\bdemo\b|\btrial\b|\bpatch\b|\bexpansion\b|"
     r"\bfan.?disc\b|\bfandisc\b|\bfd\b|体験版|体验版|試玩版|试玩版|"
@@ -198,6 +210,10 @@ def tag_kind(tags):
         "サウンドノベル", "ビジュアルノベル", "エロゲ", "美少女ゲーム",
         "ギャルゲー"
     }
+    strong_narrative = folded & {x.casefold() for x in STRONG_NARRATIVE}
+    hard_non_narrative = folded & {x.casefold() for x in HARD_NON_NARRATIVE}
+    if hard_non_narrative and not strong_narrative and not explicit_vn:
+        return None, []
     rpg_subgenre = folded & RPG_SUBGENRES
     # RPG requires a story-leaning subgenre (JRPG/CRPG/SRPG/DRPG) or
     # explicit narrative evidence. Generic RPG tags alone are too noisy:
@@ -253,7 +269,7 @@ def import_round17(args):
         if len(matches) != 1 or not AUDIT17.exists():
             raise RuntimeError("Round 17 existing batch has missing audit or duplicate markers")
         previous_audit = load_json(AUDIT17)
-        if previous_audit.get("filterVersion") == 2:
+        if previous_audit.get("filterVersion") == 3:
             if existing_batch(registry, BATCH17, AUDIT17):
                 return registry
         else:
@@ -266,7 +282,7 @@ def import_round17(args):
             registry["batches"] = [b for b in registry["batches"] if b.get("id") != BATCH17]
             assert registry["summary"]["accepted"] == len(registry["works"])
             write_json(REGISTRY, registry)
-            print("REPLACED_PREVIOUS_ROUND17", old_count, "WITH_FILTER_VERSION_2", flush=True)
+            print("REPLACED_PREVIOUS_ROUND17", old_count, "WITH_FILTER_VERSION_3", flush=True)
     batch16 = next((b for b in registry.get("batches", []) if b.get("id") == BATCH16), None)
     if batch16 is None:
         raise RuntimeError("Round 16 must be imported and audited before round 17")
@@ -395,7 +411,7 @@ def import_round17(args):
     assert len({w["indexId"] for w in registry["works"]}) == len(registry["works"])
     audit = {
         "schema": 1,
-        "filterVersion": 2,
+        "filterVersion": 3,
         "date": "2026-11-01",
         "source": BANGUMI_API,
         "sourceDocs": "https://github.com/bangumi/server/blob/master/openapi/v0.yaml",
