@@ -141,7 +141,7 @@ def check():
         if k not in {'works','batches','summary','updated'}:
             assert new[k]==old[k]
     audit=source.load(AUDIT)
-    added=[w for w in new['works'] if w['batch']==BATCH]
+    added=[w for w in new['works'] if w.get('batch')==BATCH]
     assert added and len(added)<=7
     assert len(added)==audit['summary']['newDistinctWorks']
     assert len({w['id'] for w in new['works']})==len(new['works'])
