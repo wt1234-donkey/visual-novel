@@ -49,6 +49,20 @@ class BatchSelectionTests(unittest.TestCase):
         self.assertEqual({r['work']['id'] for r in chosen+deferred},{str(i) for i in range(10)})
         self.assertFalse({r['work']['id'] for r in chosen}&{r['work']['id'] for r in deferred})
 
+    def test_page_ceiling_switches_to_official_era_cursor_requests(self):
+        trace=[]
+        responses=[{'object':'list','items':[],'next_cursor':'cur_server_supplied'},
+                   {'object':'list','items':[]},
+                   {'object':'list','items':[]},
+                   {'object':'list','items':[]}]
+        with patch.object(batch.common,'get_page',return_value={'items':[]}) as pages:
+            with patch.object(batch,'request_json',side_effect=responses) as requests:
+                list(batch.nextmoe_pages(trace))
+        self.assertEqual([c.args[0] for c in pages.call_args_list],list(range(93,101)))
+        self.assertIn('cursor=cur_server_supplied',requests.call_args_list[1].args[0])
+        self.assertIn('released_before=1999-12-31',requests.call_args_list[0].args[0])
+        self.assertEqual(trace[8]['nextCursor'],'cur_server_supplied')
+
 
 if __name__=='__main__':
     unittest.main()

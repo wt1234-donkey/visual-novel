@@ -76,3 +76,11 @@ Wikidata 项目 Q ID 可作为独立 source ID；外部目录 ID 必须原样保
 - IFDB接入为补充候选适配器：按1976—1989、1990—2009、2010—2026三个时间范围各做一次低频搜索，每组最多保留20条最小事实字段。本轮不直接导入IFDB作品，只记录标题、TUID、源日期、作者字段、开发系统、链接及与现有库的名称匹配。后续大规模分析应读取IF Archive SQL导出，不分页爬取API。
 - IFDB官方接口：https://ifdb.org/api/ ，搜索JSON根地址为 `https://ifdb.org/search?json&game&searchfor=...`；不是将文档地址 `/api/search` 当作数据接口。可选补充源暂时无法访问时独立报告，不影响两个已授权来源的采集与验收。
 - `data/basic-r22-cont-r23-diversity-20261101.json` 保存实际年代、开发者类型和厂商分布。所有开发者信息只在审计层记录，不增补正式署名。
+
+### NextMoe分页上限与续采方式
+
+实际采集确认 `page=101&limit=100` 返回400 `INVALID_PARAMETER`：官方页码模式要求 `page × limit ≤ 10000`。因此第23批先如实完成第93—100页，然后改用官方支持的 `sort=id` 与 `released_after` / `released_before` 年代区间筛选，原样回传服务器的 `next_cursor`，不自行拼造游标或提高页码绕过上限。区间依次1976—1999、2000—2009、2010—2026-11-01，先补足早期覆盖。最多60次额外游标请求，仍遵守每批最多500部的新增上限。
+
+每次请求的车道、区间、实际使用游标及返回游标保存到第23批审计 `summary.paginationTrace`。下一批先消化 `deferredEligible`，再从最后未耗尽区间的返回游标继续，并保留尚未遍历的后续区间；不能将 `endPage=100` 误当成整个目录已经取完。
+
+官方契约：https://developer.nextmoe.dev/docs/pagination 、https://developer.nextmoe.dev/docs/v2/listCatalogWorks 。

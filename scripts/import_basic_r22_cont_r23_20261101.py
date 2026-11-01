@@ -234,6 +234,33 @@ def round22():
     append(registry,pool,B22,A22,{'scanned':scanned,'cursorStart':'v4819','cursorEnd':cursor},counts,reused,held)
 
 
+def nextmoe_pages(trace):
+    # Official page mode has a 10,000-row ceiling. Do not request page 101.
+    for page in range(93,101):
+        payload=common.get_page(page,100)
+        trace.append({'lane':'rating-vndb-page','page':page,'returned':len(payload['items'])})
+        yield 'page-'+str(page),payload
+    windows=[('1976-01-01','1999-12-31'),('2000-01-01','2009-12-31'),('2010-01-01','2026-11-01')]
+    budget=60
+    for after,before in windows:
+        cursor=None
+        while budget>0:
+            params={'limit':100,'sort':'id','nsfw':'true','include':'titles,refs',
+                    'released_after':after,'released_before':before}
+            if cursor:
+                params['cursor']=cursor
+            url=previous.NEXTMOE_API+'?'+urllib.parse.urlencode(params)
+            payload=request_json(url)
+            assert payload.get('object')=='list' and isinstance(payload.get('items'),list)
+            trace.append({'lane':'era-keyset','releasedAfter':after,'releasedBefore':before,
+                'cursorUsed':cursor,'nextCursor':payload.get('next_cursor'),'returned':len(payload['items'])})
+            yield after+'-cursor-'+str(budget),payload
+            budget-=1
+            cursor=payload.get('next_cursor')
+            if not cursor:
+                break
+
+
 def round23():
     registry,index,refs=state()
     if already_exists(registry,B23,A23):
@@ -241,8 +268,8 @@ def round23():
     pool,reused,held=[],[],[]
     counts=Counter()
     scanned=0
-    for page in range(93,143):
-        payload=common.get_page(page,100)
+    trace=[]
+    for page,payload in nextmoe_pages(trace):
         items=payload['items']
         fresh=[]
         for item in items:
@@ -279,10 +306,11 @@ def round23():
                 row['nextmoeSourceReleased']=item.get('release_date')
                 pool.append(row)
         print('R23_POOL',page,scanned,len(pool),flush=True)
-        if len(pool)>=POOL_CAP or not items:
+        if len(pool)>=POOL_CAP:
             break
         time.sleep(2)
-    append(registry,pool,B23,A23,{'scanned':scanned,'startPage':93,'endPage':page,
+    append(registry,pool,B23,A23,{'scanned':scanned,'startPage':93,'endPage':100,
+        'paginationTrace':trace,
         'yearMethod':'VNDB released; NextMoe date is not used as original year'},counts,reused,held)
 
 
