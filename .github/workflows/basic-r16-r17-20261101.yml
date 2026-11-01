@@ -33,6 +33,8 @@ jobs:
           python3 scripts/import_basic_r20_r21_20261101.py --max-new 500 --vndb-pages 250 --nextmoe-start-page 93 --nextmoe-pages 150 --delay 1.2 2>&1 | tee /tmp/r20-r21.log
       - name: Refresh strict main-registry upgrade audit queue
         run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Audit decade and developer diversity without promoting creator credits
+        run: python3 scripts/audit_basic_r20_r21_diversity.py
       - name: Audit source IDs, VNDB IDs, names, aliases, years and cross-round uniqueness
         run: |
           python3 - <<'PY'
@@ -110,7 +112,11 @@ jobs:
           promotion = load("data/basic-to-full-promotion-review-20261101.json")
           assert promotion["summary"]["registryAccepted"] == expected
           assert all(row["readyForStrictGamesJson"] is False for row in promotion["records"])
-          print("ALL_CHECKS_PASSED", expected)
+          diversity = load("data/basic-r20-r21-diversity-audit-20261101.json")
+          assert diversity["summary"]["records"] == 1000
+          assert diversity["summary"]["uniqueVndbIds"] == 1000
+          assert sum(diversity["summary"]["decades"].values()) == 1000
+          print("ALL_CHECKS_PASSED", expected, "DEVELOPER_IDS", diversity["summary"]["uniqueDeveloperProducerIds"])
           PY
       - name: Run complete strict data, entity, Python, Node and website tests
         run: |
@@ -124,7 +130,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/main-adv-rpg-works-20261031.json data/vndb-kana-bulk-review-20261101-r20.json data/nextmoe-bulk-review-20261101-r21.json data/basic-to-full-promotion-review-20261101.json data/supplemental-game-catalogue-sources-20261101.md
+          git add data/main-adv-rpg-works-20261031.json data/vndb-kana-bulk-review-20261101-r20.json data/nextmoe-bulk-review-20261101-r21.json data/basic-to-full-promotion-review-20261101.json data/basic-r20-r21-diversity-audit-20261101.json data/supplemental-game-catalogue-sources-20261101.md
           if ! git diff --cached --quiet; then
             git commit -m "Append basic identity rounds 20 and 21"
             git fetch origin "$GITHUB_HEAD_REF"
