@@ -4,13 +4,13 @@
   "role": "Primary main catalogue work-identity registry, separate from the complete dossier-only games.json schema.",
   "reviewPolicy": "Record title / first year / dominant gameplay and directly link existing identity; do not fabricate characters, releases, original creators or narrative editorials.",
   "summary": {
-    "candidates": 10854,
-    "accepted": 10840,
+    "candidates": 10871,
+    "accepted": 10842,
     "existingComplete": 93,
     "promotedDossier": 105,
-    "promotedBasic": 10642,
+    "promotedBasic": 10644,
     "identityReview": 3,
-    "addedToMainIdentityLayer": 10747,
+    "addedToMainIdentityLayer": 10749,
     "nextBatchCandidates": 59,
     "nextBatchNewBasic": 24,
     "nextBatchLinkedExisting": 35,
@@ -226867,6 +226867,59 @@
       ],
       "sourceNote": "IF Archive保存的dogstar.bas注明来源为SoftSide 1979年5月刊；Solution Archive记载原版磁带于TRS-80平台发行，并于1979年4月刊广告、5月刊登BASIC输入清单。原程序版权页标注1979。Death Planet是后续商业发行标题/版本，不另建原作身份。",
       "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-e6f0d670488ce848",
+      "indexId": "basic-historical-1979-1982-20261101-e6f0d670488ce848",
+      "title": "Golden Voyage",
+      "aliases": [],
+      "firstYear": 1981,
+      "gameplay": "ADV",
+      "gameplayNote": "文字冒险（两词解析器）",
+      "group": "Scott Adams / Adventure International",
+      "source": "https://www.bbcmicro.co.uk/game.php?id=1717",
+      "sourceRefs": [
+        "historical-if:1979-1982:9"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "BBC Micro Games Archive明确说明该作品最初于1981年为TRS-80发行，并指出1981年9月杂志广告；同期SoftSide 1981年9月广告宣布Adventure #12 Golden Voyage，TRS-80软件手册目录亦将Adventure 12列为1981年。1984年BBC Micro移植不作为原作首发年份。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1979-1982-20261101",
+      "historicalScope": "core-interactive-fiction",
+      "platformCandidates": [
+        "TRS-80"
+      ],
+      "sourceNote": "BBC Micro Games Archive明确说明该作品最初于1981年为TRS-80发行，并指出1981年9月杂志广告；同期SoftSide 1981年9月广告宣布Adventure #12 Golden Voyage，TRS-80软件手册目录亦将Adventure 12列为1981年。1984年BBC Micro移植不作为原作首发年份。",
+      "evidenceLevel": "A-identity-year"
+    },
+    {
+      "id": "historical-70369da71715fd01",
+      "indexId": "basic-historical-1979-1982-20261101-70369da71715fd01",
+      "title": "Dungeon Adventure",
+      "aliases": [],
+      "firstYear": 1982,
+      "gameplay": "ADV",
+      "gameplayNote": "文字冒险（解析器）",
+      "group": "Level 9 Computing",
+      "source": "https://bbcmicro.co.uk/game.php?id=1735",
+      "sourceRefs": [
+        "historical-if:1979-1982:16"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "历史资料中的作者/组织仅作为来源线索；本批未建立正式开发、发行或个人署名职责关系。",
+      "yearBasis": "BBC Micro Games Archive称原始磁带版于1982年发行，列Mike、Nick、Pete Austin；英国计算机历史中心亦列1982年BBC Micro版本。",
+      "editorialScope": "基础作品身份、年粒度创作/首个实质版本年份及粗粒度玩法；剧情、角色、正式创作者职责和具体平台发行版本仍待独立核验。",
+      "batch": "historical-interactive-fiction-1979-1982-20261101",
+      "historicalScope": "core-interactive-fiction",
+      "platformCandidates": [
+        "BBC Micro",
+        "Nascom"
+      ],
+      "sourceNote": "BBC Micro Games Archive称原始磁带版于1982年发行，列Mike、Nick、Pete Austin；英国计算机历史中心亦列1982年BBC Micro版本。",
+      "evidenceLevel": "A-identity-year"
     }
   ],
   "identityReview": [
@@ -227380,6 +227433,20 @@
         "held": 6,
         "before": 10833,
         "after": 10840
+      }
+    },
+    {
+      "id": "historical-interactive-fiction-1979-1982-20261101",
+      "source": "Infocom Fact Sheet, IF Archive, national archives, computer museum collections and original product catalogues; see intake/audit",
+      "review": "data/historical-interactive-fiction-1979-1982-audit-20261101.json",
+      "summary": {
+        "candidates": 17,
+        "promoted-basic": 2,
+        "linked-existing": 13,
+        "held-candidates": 2,
+        "held": 7,
+        "before": 10840,
+        "after": 10842
       }
     }
   ],
