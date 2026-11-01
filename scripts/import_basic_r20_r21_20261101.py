@@ -376,7 +376,7 @@ def round21(max_new=500, start_page=93, pages=100, delay=1.2):
     return append_batch(
         registry, additions, R21, NEXTMOE_API, A21,
         {"scanned": scanned, "startPage": start_page, "endPage": end_page, **dict(counts)},
-        records, held, "https://ifdb.org/api/search (not used); https://api.nextmoe.dev/v2/catalog/works",
+        records, held, "https://api.nextmoe.dev/v2/catalog/works",
         "NextMoe public API metadata; no separate redistribution license asserted. Retain only minimal identity facts and source links.",
     )
 
