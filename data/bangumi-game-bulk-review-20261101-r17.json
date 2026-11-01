@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "filterVersion": 2,
+  "filterVersion": 3,
   "date": "2026-11-01",
   "source": "https://api.bgm.tv/v0/subjects",
   "sourceDocs": "https://github.com/bangumi/server/blob/master/openapi/v0.yaml",
@@ -15,11 +15,11 @@
     "limitNew": 500
   },
   "summary": {
-    "scanned": 2042,
+    "scanned": 2045,
     "newDistinctWorks": 500,
     "before": 8310,
     "after": 8810,
-    "not-story-oriented-under-filter-v2": 1114,
+    "not-story-oriented-under-filter-v2": 1117,
     "existing-work-matched": 346,
     "year-or-alias-conflict": 36,
     "missing-title": 11,
@@ -476,55 +476,6 @@
         "剧情",
         "悬疑",
         "推理"
-      ]
-    },
-    {
-      "id": "bangumi-608",
-      "title": "星际争霸",
-      "aliases": [
-        "StarCraft"
-      ],
-      "firstYear": 1998,
-      "gameplay": "RPG",
-      "source": "https://bgm.tv/subject/608",
-      "sourceRefs": [
-        "bangumi:608"
-      ],
-      "sourceTags": [
-        "RTS",
-        "blizzard",
-        "暴雪",
-        "经典",
-        "即时战略",
-        "PC",
-        "StarCraft",
-        "不可超越",
-        "平衡",
-        "SC",
-        "童年",
-        "策略",
-        "星际争霸",
-        "1998",
-        "游戏",
-        "Brood",
-        "科幻",
-        "美国",
-        "War",
-        "玻璃渣",
-        "Mac",
-        "RPG",
-        "引擎",
-        "剧情",
-        "神",
-        "单机游戏",
-        "N64",
-        "神作",
-        "战争",
-        "电子竞技"
-      ],
-      "matchedSourceTags": [
-        "rpg",
-        "剧情"
       ]
     },
     {
@@ -23097,6 +23048,43 @@
         "rpg",
         "srpg",
         "战棋"
+      ]
+    },
+    {
+      "id": "bangumi-80947",
+      "title": "家族計画 Re：紡ぐ糸",
+      "aliases": [],
+      "firstYear": 2013,
+      "gameplay": "ADV",
+      "source": "https://bgm.tv/subject/80947",
+      "sourceRefs": [
+        "bangumi:80947"
+      ],
+      "sourceTags": [
+        "Galgame",
+        "D.O.",
+        "家族计划",
+        "c+c",
+        "田中ロミオ",
+        "孤独",
+        "2013-11",
+        "剧情作",
+        "PC",
+        "さめだ小判",
+        "游戏",
+        "PSV",
+        "盘5",
+        "哲学",
+        "qwertyuio",
+        "田中罗密欧",
+        "GAL",
+        "PS",
+        "山田一",
+        "在玩",
+        "保留"
+      ],
+      "matchedSourceTags": [
+        "galgame"
       ]
     }
   ],
