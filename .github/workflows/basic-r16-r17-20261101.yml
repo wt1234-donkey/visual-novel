@@ -4,7 +4,7 @@ on:
     branches: [catalog/basic-r16-r17-nextmoe-vndb-20261101]
   pull_request:
     branches: [main]
-    types: [edited, synchronize]
+    types: [opened, reopened, edited, synchronize, ready_for_review]
   workflow_dispatch:
 permissions:
   contents: write
