@@ -1,0 +1,21 @@
+{
+  "runUrl": "https://github.com/wt1234-donkey/visual-novel/actions/runs/41258506422",
+  "status": "failed",
+  "logTail": [
+    "SKIP_EXISTING nextmoe-galgame-bulk-20261101-r16 500",
+    "REPLACED_PREVIOUS_ROUND17 500 WITH_FILTER_VERSION_2",
+    "Traceback (most recent call last):",
+    "  File \"/home/runner/work/visual-novel/visual-novel/scripts/import_basic_multisource_r16_r17_20261101.py\", line 454, in <module>",
+    "    main()",
+    "  File \"/home/runner/work/visual-novel/visual-novel/scripts/import_basic_multisource_r16_r17_20261101.py\", line 446, in main",
+    "    registry = import_round17(args)",
+    "               ^^^^^^^^^^^^^^^^^^^^",
+    "  File \"/home/runner/work/visual-novel/visual-novel/scripts/import_basic_multisource_r16_r17_20261101.py\", line 320, in import_round17",
+    "    kind, matched_tags = tag_kind(tags)",
+    "                         ^^^^^^^^^^^^^^",
+    "  File \"/home/runner/work/visual-novel/visual-novel/scripts/import_basic_multisource_r16_r17_20261101.py\", line 213, in tag_kind",
+    "    return \"ADV\", sorted(adv | set(narrative))",
+    "                         ~~~~^~~~~~~~~~~~~~~~",
+    "TypeError: unsupported operand type(s) for |: 'list' and 'set'"
+  ]
+}
