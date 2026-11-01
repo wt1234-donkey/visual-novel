@@ -1,4 +1,4 @@
-name: Basic registry rounds 18-19 — VNDB continuation and NextMoe deeper catalog
+name: Basic registry rounds 20-21 — VNDB continuation and NextMoe page 93+
 on:
   pull_request:
     branches: [main]
@@ -7,7 +7,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: basic-r18-r19-20261101
+  group: basic-r20-r21-20261101
   cancel-in-progress: true
 jobs:
   import-and-verify:
@@ -24,13 +24,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Compile import code before data changes
-        run: python3 -m py_compile scripts/import_basic_r18_r19_20261101.py
+      - name: Compile importer before data changes
+        run: python3 -m py_compile scripts/import_basic_r20_r21_20261101.py
       - name: Import VNDB continuation then NextMoe continuation
         shell: bash
         run: |
           set -o pipefail
-          python3 scripts/import_basic_r18_r19_20261101.py --max-new 500 --vndb-pages 250 --nextmoe-start-page 86 --nextmoe-pages 100 --delay 1.2 2>&1 | tee /tmp/r18-r19.log
+          python3 scripts/import_basic_r20_r21_20261101.py --max-new 500 --vndb-pages 250 --nextmoe-start-page 93 --nextmoe-pages 150 --delay 1.2 2>&1 | tee /tmp/r20-r21.log
       - name: Refresh strict main-registry upgrade audit queue
         run: python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
       - name: Audit source IDs, VNDB IDs, names, aliases, years and cross-round uniqueness
@@ -38,68 +38,79 @@ jobs:
           python3 - <<'PY'
           import json, re, unicodedata
           from pathlib import Path
-          def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
-          def norm(s):
-              return "".join(c for c in unicodedata.normalize("NFKC", str(s or "")).casefold() if c.isalnum())
-          r=load('data/main-adv-rpg-works-20261031.json')
-          assert r['summary']['accepted']==len(r['works'])
-          assert len({w['id'] for w in r['works']})==len(r['works'])
-          assert len({w['indexId'] for w in r['works']})==len(r['works'])
-          all_vndb=[s for w in r['works'] for s in w.get('sourceRefs',[]) if str(s).startswith('vndb:v')]
-          assert len(all_vndb)==len(set(all_vndb)), 'VNDB ID duplicated in registry'
-          expected=8810
-          batches=[
-            (18,'vndb-kana-bulk-20261101-r18','data/vndb-kana-bulk-review-20261101-r18.json','vndb-20261101-r18-','vndb'),
-            (19,'nextmoe-galgame-bulk-20261101-r19','data/nextmoe-bulk-review-20261101-r19.json','nextmoe-20261101-r19-','nextmoe')
+          def load(path): return json.loads(Path(path).read_text(encoding="utf-8"))
+          def norm(value):
+              return "".join(c for c in unicodedata.normalize("NFKC", str(value or "")).casefold() if c.isalnum())
+          registry = load("data/main-adv-rpg-works-20261031.json")
+          assert registry["summary"]["accepted"] == len(registry["works"])
+          assert len({w["id"] for w in registry["works"]}) == len(registry["works"])
+          assert len({w["indexId"] for w in registry["works"]}) == len(registry["works"])
+          all_vndb = [ref for w in registry["works"] for ref in w.get("sourceRefs", []) if str(ref).startswith("vndb:v")]
+          assert len(all_vndb) == len(set(all_vndb)), "VNDB ID duplicated in registry"
+          expected = 9810
+          batches = [
+              (20, "vndb-kana-bulk-20261101-r20", "data/vndb-kana-bulk-review-20261101-r20.json", "vndb-20261101-r20-", "vndb"),
+              (21, "nextmoe-galgame-bulk-20261101-r21", "data/nextmoe-bulk-review-20261101-r21.json", "nextmoe-20261101-r21-", "nextmoe"),
           ]
-          new_ids=set()
-          new_vndb_ids=set()
-          new_source_ids=set()
-          new_name_years=set()
-          prior_name_years=set()
-          for w in r['works']:
-              if w.get('batch') in {b[1] for b in batches}:
+          new_ids, new_vndb_ids, new_source_ids = set(), set(), set()
+          new_name_years, prior_name_years = set(), set()
+          target_batches = {batch[1] for batch in batches}
+          for work in registry["works"]:
+              if work.get("batch") in target_batches:
                   continue
-              year=w.get('firstYear')
-              for name in [w.get('title'),*(w.get('aliases') or [])]:
-                  key=norm(name)+'|'+str(year)
-                  if norm(name) and year: prior_name_years.add(key)
-          for n,batch,path,index_prefix,source_kind in batches:
-              a=load(path)
-              b=next(x for x in r['batches'] if x['id']==batch)
-              works=[w for w in r['works'] if w.get('batch')==batch]
-              inc=a['summary']['newDistinctWorks']
-              assert 0<inc<=500 and inc==len(works)==len(a['records'])==b['summary']['promoted-basic']
-              assert a['summary']['before']==expected and a['summary']['after']==expected+inc
-              assert b['review']==path
-              assert len({x['sourceId'] for x in a['records']})==inc
-              assert len({x['vndbId'] for x in a['records']})==inc
-              for record in a['records']:
-                  w=next(x for x in works if x['id']==record['id'])
-                  assert w['indexId'].startswith(index_prefix)
-                  assert w['title']==record['title'] and w['aliases']==record['aliases'] and w['firstYear']==record['firstYear']
-                  assert record['vndbId'] in [s.split(':',1)[1] for s in w.get('sourceRefs',[]) if s.startswith('vndb:')]
-                  if source_kind=='vndb':
-                      assert record['sourceId']==record['vndbId'] and re.fullmatch(r'v\d+',record['vndbId'])
-                      assert w['id']=='vndb-'+record['vndbId']
+              year = work.get("firstYear")
+              for name in [work.get("title"), *(work.get("aliases") or [])]:
+                  key = norm(name) + "|" + str(year)
+                  if norm(name) and year:
+                      prior_name_years.add(key)
+          for number, batch_id, path, index_prefix, source_kind in batches:
+              audit = load(path)
+              batch = next(item for item in registry["batches"] if item["id"] == batch_id)
+              works = [w for w in registry["works"] if w.get("batch") == batch_id]
+              count = audit["summary"]["newDistinctWorks"]
+              assert 0 < count <= 500
+              assert count == len(works) == len(audit["records"]) == batch["summary"]["promoted-basic"]
+              assert audit["summary"]["before"] == expected
+              assert audit["summary"]["after"] == expected + count
+              assert batch["review"] == path
+              assert len({row["sourceId"] for row in audit["records"]}) == count
+              assert len({row["vndbId"] for row in audit["records"]}) == count
+              for row in audit["records"]:
+                  work = next(item for item in works if item["id"] == row["id"])
+                  assert work["indexId"].startswith(index_prefix)
+                  assert work["title"] == row["title"]
+                  assert work["aliases"] == row["aliases"]
+                  assert work["firstYear"] == row["firstYear"]
+                  assert "vndb:" + row["vndbId"] in work.get("sourceRefs", [])
+                  if source_kind == "vndb":
+                      assert row["sourceId"] == row["vndbId"]
+                      assert re.fullmatch(r"v\d+", row["vndbId"])
+                      assert work["id"] == "vndb-" + row["vndbId"]
                   else:
-                      assert str(record['sourceId']).isdecimal() and re.fullmatch(r'v\d+',record['vndbId'])
-                      assert w['id']=='nextmoe-'+str(record['sourceId'])
-                  assert record['id'] not in new_ids
-                  assert record['vndbId'] not in new_vndb_ids
-                  new_ids.add(record['id']);new_vndb_ids.add(record['vndbId']);new_source_ids.add((source_kind,str(record['sourceId'])))
-                  keys={norm(name)+'|'+str(record['firstYear']) for name in [record['title'],*(record.get('aliases') or [])] if norm(name)}
-                  assert not (keys & prior_name_years), 'New batch duplicated existing name/alias + year'
-                  assert not (keys & new_name_years), 'Cross-round name/alias + year duplicate'
+                      assert str(row["sourceId"]).isdecimal()
+                      assert re.fullmatch(r"v\d+", row["vndbId"])
+                      assert work["id"] == "nextmoe-" + str(row["sourceId"])
+                      assert "nextmoe:" + str(row["sourceId"]) in work.get("sourceRefs", [])
+                  assert row["id"] not in new_ids
+                  assert row["vndbId"] not in new_vndb_ids
+                  assert (source_kind, str(row["sourceId"])) not in new_source_ids
+                  new_ids.add(row["id"])
+                  new_vndb_ids.add(row["vndbId"])
+                  new_source_ids.add((source_kind, str(row["sourceId"])))
+                  keys = {norm(name) + "|" + str(row["firstYear"])
+                          for name in [row["title"], *(row.get("aliases") or [])] if norm(name)}
+                  assert not (keys & prior_name_years), "New record duplicates existing title/alias + year"
+                  assert not (keys & new_name_years), "Cross-round title/alias + year duplicate"
                   new_name_years.update(keys)
-              print('ROUND',n,'NEW',inc,'SCANNED',a['summary']['scanned'],'TOTAL',expected+inc)
-              expected+=inc
-          assert len(r['works'])==expected
-          assert r['summary']['addedToMainIdentityLayer']==r['summary']['promotedBasic']+r['summary']['promotedDossier']
-          q=load('data/basic-to-full-promotion-review-20261101.json')
-          assert q['summary']['registryAccepted']==expected
-          assert all(x['readyForStrictGamesJson'] is False for x in q['records'])
-          print('ALL_CHECKS_PASSED',expected)
+              print("ROUND", number, "NEW", count, "SCANNED", audit["summary"]["scanned"], "TOTAL", expected + count)
+              expected += count
+          assert expected == len(registry["works"])
+          assert len(registry["works"]) == 10810
+          assert registry["summary"]["addedToMainIdentityLayer"] == registry["summary"]["promotedBasic"] + registry["summary"]["promotedDossier"]
+          promotion = load("data/basic-to-full-promotion-review-20261101.json")
+          assert promotion["summary"]["registryAccepted"] == expected
+          assert all(row["readyForStrictGamesJson"] is False for row in promotion["records"])
+          print("ALL_CHECKS_PASSED", expected)
           PY
       - name: Run complete strict data, entity, Python, Node and website tests
         run: |
@@ -113,9 +124,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/main-adv-rpg-works-20261031.json data/vndb-kana-bulk-review-20261101-r18.json data/nextmoe-bulk-review-20261101-r19.json data/basic-to-full-promotion-review-20261101.json
+          git add data/main-adv-rpg-works-20261031.json data/vndb-kana-bulk-review-20261101-r20.json data/nextmoe-bulk-review-20261101-r21.json data/basic-to-full-promotion-review-20261101.json data/supplemental-game-catalogue-sources-20261101.md
           if ! git diff --cached --quiet; then
-            git commit -m "Append basic identity rounds 18 and 19"
+            git commit -m "Append basic identity rounds 20 and 21"
             git fetch origin "$GITHUB_HEAD_REF"
             git rebase "origin/$GITHUB_HEAD_REF"
             git push origin "HEAD:refs/heads/$GITHUB_HEAD_REF"
