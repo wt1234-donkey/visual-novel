@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "byBatch": {
+    "vndb-kana-bulk-20261101-r36": {
+      "newDistinctWorks": 500,
+      "before": 17368,
+      "after": 17868,
+      "scanned": 1117,
+      "pendingInput": 17,
+      "pendingEligible": 17,
+      "liveScanned": 1100,
+      "liveEligible": 522,
+      "selectedFromDeferred": 17,
+      "selectedFromLive": 483,
+      "remainingDeferred": 39,
+      "reused-external-identity": 516,
+      "reused-title-alias": 25,
+      "name-year-conflict-held": 16,
+      "missing-name-year-or-unreleased": 16,
+      "derivative-held": 5,
+      "cursorStart": "v11318",
+      "cursorEnd": "v12493",
+      "reuseTargets": {
+        "registered-work": 541
+      },
+      "decades": {
+        "1990s": 1,
+        "2000s": 97,
+        "2010s": 402
+      },
+      "creatorTypes": {
+        "individual-or-amateur-signal": 311,
+        "company": 179,
+        "unknown": 10
+      },
+      "distinctDeveloperIds": 325
+    },
+    "nextmoe-galgame-bulk-20261101-r37": {
+      "newDistinctWorks": 500,
+      "before": 17868,
+      "after": 18368,
+      "scanned": 700,
+      "pendingInput": 0,
+      "pendingEligible": 0,
+      "liveScanned": 700,
+      "liveEligible": 545,
+      "selectedFromDeferred": 0,
+      "selectedFromLive": 500,
+      "remainingDeferred": 45,
+      "reused-external-identity": 123,
+      "reused-title-alias": 4,
+      "derivative-held": 3,
+      "name-year-conflict-held": 24,
+      "missing-name-year-or-unreleased": 1,
+      "paginationTrace": [
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVFkyTlRGOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVFk1TXpCOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVFk1TXpCOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGN6TnpCOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGN6TnpCOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGM0TkRSOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGM0TkRSOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd5T1RkOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd5T1RkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGcyTXpGOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGcyTXpGOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt3TnpoOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2000-01-01",
+          "releasedBefore": "2009-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt3TnpoOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGswTnpOOQ",
+          "returned": 100
+        }
+      ],
+      "reuseTargets": {
+        "registered-work": 127
+      },
+      "decades": {
+        "2000s": 500
+      },
+      "creatorTypes": {
+        "individual-or-amateur-signal": 298,
+        "company": 198,
+        "unknown": 4
+      },
+      "distinctDeveloperIds": 358
+    }
+  },
+  "summary": {
+    "newDistinctWorks": 1000,
+    "uniqueVndbIds": 1000,
+    "selectedFromDeferred": 17,
+    "selectedFromLive": 983,
+    "distinctDeveloperIds": 665,
+    "individualOrAmateurSignalWorks": 609
+  },
+  "caveats": [
+    "Personal/amateur producer types are source signals, not proof of independent status.",
+    "Saved source metadata is reused for deferred candidates; dates still require original-region/edition review.",
+    "Developer metadata remains in audit only; no formal credits were created."
+  ]
+}
