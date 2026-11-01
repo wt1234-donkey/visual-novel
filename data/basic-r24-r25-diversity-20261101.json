@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "date": "2026-11-01",
+  "byBatch": {
+    "vndb-kana-bulk-20261101-r24": {
+      "newDistinctWorks": 500,
+      "before": 12342,
+      "after": 12842,
+      "scanned": 574,
+      "pendingInput": 474,
+      "pendingEligible": 470,
+      "liveScanned": 100,
+      "liveEligible": 53,
+      "selectedFromDeferred": 470,
+      "selectedFromLive": 30,
+      "remainingDeferred": 23,
+      "reused-external-identity": 47,
+      "reused-title-alias": 2,
+      "derivative-held": 2,
+      "cursorStart": "v6280",
+      "cursorEnd": "v6382",
+      "reuseTargets": {
+        "registered-work": 49
+      },
+      "decades": {
+        "2000s": 461,
+        "2010s": 39
+      },
+      "creatorTypes": {
+        "individual-or-amateur-signal": 129,
+        "company": 371
+      },
+      "distinctDeveloperIds": 268
+    },
+    "nextmoe-galgame-bulk-20261101-r25": {
+      "newDistinctWorks": 500,
+      "before": 12842,
+      "after": 13342,
+      "scanned": 520,
+      "pendingInput": 420,
+      "pendingEligible": 420,
+      "liveScanned": 100,
+      "liveEligible": 91,
+      "selectedFromDeferred": 420,
+      "selectedFromLive": 80,
+      "remainingDeferred": 11,
+      "reused-external-identity": 1,
+      "name-year-conflict-held": 2,
+      "reused-title-alias": 6,
+      "paginationTrace": [
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "1976-01-01",
+          "releasedBefore": "1999-12-31",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVFU1T0RCOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGN3TnpOOQ",
+          "returned": 100
+        }
+      ],
+      "reuseTargets": {
+        "registered-work": 7
+      },
+      "decades": {
+        "1980s": 2,
+        "1990s": 498
+      },
+      "creatorTypes": {
+        "company": 499,
+        "unknown": 1
+      },
+      "distinctDeveloperIds": 196
+    }
+  },
+  "summary": {
+    "newDistinctWorks": 1000,
+    "uniqueVndbIds": 1000,
+    "selectedFromDeferred": 890,
+    "selectedFromLive": 110,
+    "distinctDeveloperIds": 431,
+    "individualOrAmateurSignalWorks": 129
+  },
+  "caveats": [
+    "Personal/amateur producer types are source signals, not proof of independent status.",
+    "Saved source metadata is reused for deferred candidates; dates still require original-region/edition review.",
+    "Developer metadata remains in audit only; no formal credits were created."
+  ]
+}
