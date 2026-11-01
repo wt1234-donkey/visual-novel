@@ -11,6 +11,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   import-and-verify:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'catalog/basic-r20-r21-vndb-nextmoe-20261101')
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:

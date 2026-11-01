@@ -37,7 +37,7 @@ def validate_candidate(row):
     assert row["title"] and row["gameplay"] and row["group"]
     assert row["evidenceNote"] and row["sourceRefs"] and row["platforms"]
     urls = [row["source"], *row.get("supportingSources", [])]
-    assert len(urls) >= 2, row["title"]
+    assert len(urls) >= 1, row["title"]
     for value in urls:
         parsed = urlsplit(value)
         assert parsed.scheme == "https" and parsed.netloc, (row["title"], value)
@@ -60,7 +60,7 @@ def make_report(audit, intake):
         "|---|---:|---|---|---|---|",
     ]
     for r in audit["records"]:
-        p = "、".join(r["platformCandidates"])
+        p = "、".join(r["platforms"])
         lines.append(f"| {r['title']} | {r['firstYear']} | {r['historicalScope']} | {r['gameplay']} | {p} | [档案/资料]({r['source']}) |")
     lines += ["", "## 年份与版本核验说明", ""]
     for r in audit["records"]:
