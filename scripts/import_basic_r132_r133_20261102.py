@@ -147,7 +147,7 @@ def flexible_check():
     folded = defaultdict(set)
     for ref, ids in refs.items():
         folded[ref.casefold()].update(ids)
-    registered = {w['id'] for w in current['works']}
+    registered = {w['id'] for w in mixed.e.source.all_works(current)}
     deferred_ids = {r['work']['id'] for a in audits for r in a['deferredEligible']}
     for batch, audit in zip((mixed.B60, mixed.B61), audits):
         stats = audit['summary']
