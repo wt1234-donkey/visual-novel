@@ -186,7 +186,19 @@ def diverse_order(rows):
             if decade_queues[decade]: yield decade_queues[decade].popleft()
 
 
-def choose(rows,needed,index,refs,norm,batch):
+def resume_position(review):
+    """An archive offset is valid only for the exact pinned export."""
+    if review.get('url')!=ARCHIVE_URL or review.get('sha256')!=ARCHIVE_SHA256:
+        raise ValueError('IFDB resume archive does not match the pinned export')
+    position=review.get('nextPosition')
+    if type(position) is not int or position<1:
+        raise ValueError('Invalid IFDB resume position')
+    return position
+
+
+def choose(rows,needed,index,refs,norm,batch,*,start_position=1):
+    if type(start_position) is not int or not 1<=start_position<=len(rows)+1:
+        raise ValueError('IFDB resume position is outside the candidate sequence')
     selected=[]
     reused=[]
     held=[]
@@ -195,9 +207,12 @@ def choose(rows,needed,index,refs,norm,batch):
     folded=defaultdict(set)
     for ref,ids in refs.items(): folded[ref.casefold()].update(ids)
     scanned=0
+    last_position=start_position-1
     for position,row in enumerate(diverse_order(rows),1):
+        if position<start_position: continue
         if len(selected)==needed: break
-        scanned=position
+        scanned+=1
+        last_position=position
         names=[row['title'],*row['aliases']]
         hits=set().union(*(folded.get(ref.casefold(),set()) for ref in row['sourceRefs']))
         if hits:
@@ -236,4 +251,5 @@ def choose(rows,needed,index,refs,norm,batch):
             'developers':[],'developerClassification':'unknown'})
     if len(selected)!=needed: raise RuntimeError(f'Only {len(selected)} safe IFDB identities for {needed} slots')
     return selected,{'eligibleArchiveCandidates':len(rows),'scanned':scanned,'selected':len(selected),
-        'dispositions':dict(counts),'nextPosition':scanned+1,'reusedExisting':reused,'heldForIdentityReview':held}
+        'dispositions':dict(counts),'startPosition':start_position,'nextPosition':last_position+1,
+        'reusedExisting':reused,'heldForIdentityReview':held}

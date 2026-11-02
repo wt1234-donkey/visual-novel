@@ -21,6 +21,10 @@ A60=e.ROOT/'data/vndb-kana-bulk-review-20261102-r60.json'
 A61=e.ROOT/'data/nextmoe-ifdb-bulk-review-20261102-r61.json'
 REPORT=e.ROOT/'data/basic-r60-r61-diversity-20261102.json'
 NEXT_LIMIT=300
+SEED_VNDB=e.ROOT/'data/vndb-kana-bulk-review-20261102-r58.json'
+SEED_NEXTMOE=e.ROOT/'data/nextmoe-bulk-review-20261102-r59.json'
+EXPECTED_VNDB_START='v23617'
+IFDB_START_POSITION=1
 
 
 def configure():
@@ -35,9 +39,9 @@ def configure():
     e.A24=A60
     e.A25=A61
     e.REPORT=REPORT
-    e.SEED_VNDB=e.ROOT/'data/vndb-kana-bulk-review-20261102-r58.json'
-    e.SEED_NEXTMOE=e.ROOT/'data/nextmoe-bulk-review-20261102-r59.json'
-    e.EXPECTED_VNDB_START='v23617'
+    e.SEED_VNDB=SEED_VNDB
+    e.SEED_NEXTMOE=SEED_NEXTMOE
+    e.EXPECTED_VNDB_START=EXPECTED_VNDB_START
 
 
 def select_next(ctx,registry):
@@ -52,7 +56,8 @@ def select_next(ctx,registry):
 def append_mixed(ctx,registry,index,refs,archive):
     next_rows,remaining=select_next(ctx,registry)
     candidates,rejected=ifdb.prepare(ifdb.read_archive(archive),dt.date.fromisoformat(DATE))
-    supplement,review=ifdb.choose(candidates,500-len(next_rows),index,refs,e.norm,B61)
+    supplement,review=ifdb.choose(candidates,500-len(next_rows),index,refs,e.norm,B61,
+        start_position=IFDB_START_POSITION)
     selected=next_rows+supplement
     selected_ids={r['work']['id'] for r in selected}
     for row in ctx['queueReview']:
@@ -189,6 +194,8 @@ def check():
             assert review['selected']==source_counts['ifdb']
             assert review['scanned']==review['selected']+sum(review['dispositions'].values())
             assert review['sha256']==ifdb.ARCHIVE_SHA256
+            assert review.get('startPosition',1)==IFDB_START_POSITION
+            assert review['nextPosition']==IFDB_START_POSITION+review['scanned']
     # Deferred identities also remain unique against the mixed intake and against one another.
     for path in (A60,A61):
         for row in e.load(path)['deferredEligible']:
