@@ -51,6 +51,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/main-adv-rpg-works-20261031.json data/basic-r118-r119-last20-decisions-20261102.json
           if ! git diff --cached --quiet; then
-            git commit -m "Register 18 verified standalone identities; alias Earthquake; hold Shipwreck"
+            git commit -m "Register 19 distinct identities including 1987 Shipwreck; alias Earthquake"
             git push origin "HEAD:refs/heads/$TARGET_BRANCH"
           fi
