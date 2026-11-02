@@ -16,6 +16,7 @@ import sys
 
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import import_basic_r22_cont_r23_20261101 as src
+import basic_identity_decisions as identity_decisions
 
 ROOT=src.ROOT
 REG=src.REG
@@ -247,6 +248,8 @@ def apply():
     assert len(reg['works'])==oldworks+18
     dump(OUT,audit)
     dump(REG,reg)
+    # The first catalogue read memoized decisions before this audit existed.
+    identity_decisions.decisions.cache_clear()
     check()
     print('LAST20_REVIEW_IMPORTED 18 new, 1 alias, 1 held',flush=True)
 
