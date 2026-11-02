@@ -115,7 +115,8 @@ def build(reg):
             assert target in registered
             assert registered[target]['firstYear']==1981
             assert item['intakeYear']==1982 and src_kind=='ifdb'
-            assert not refs.get(key),'Source alias must be new'
+            assert not any(key in w.get('sourceRefs',[]) for w in registered.values()),'Do not rewrite an existing physical source ref'
+            assert not refs.get(key) or refs[key]=={'ai-earthquake'},'Reviewed alias may only map to original work'
             status='reuse-existing'
             target_id=target
             year=1981
