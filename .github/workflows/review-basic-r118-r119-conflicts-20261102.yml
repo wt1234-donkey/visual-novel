@@ -14,7 +14,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: review-r118-r119-conflicts-\${{ github.event.pull_request.number }}
+  group: review-r118-r119-conflicts-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 jobs:
   evidence-and-regression:
@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: \${{ github.head_ref }}
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -48,7 +48,7 @@ jobs:
           python3 scripts/build_entity_pages.py --check
       - name: Commit source evidence report to this PR
         env:
-          TARGET_BRANCH: \${{ github.head_ref }}
+          TARGET_BRANCH: ${{ github.head_ref }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
