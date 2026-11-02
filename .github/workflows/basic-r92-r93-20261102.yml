@@ -2,7 +2,7 @@ name: Import and verify basic rounds 92 and 93 with queue priority
 on:
   pull_request:
     branches: [main]
-    types: [opened, reopened, synchronize, ready_for_review]
+    types: [opened, reopened, ready_for_review]
     paths:
       - 'scripts/import_basic_r92_r93_20261102.py'
       - '.github/workflows/basic-r92-r93-20261102.yml'
