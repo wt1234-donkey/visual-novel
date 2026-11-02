@@ -1,0 +1,5413 @@
+{
+  "schema": 1,
+  "date": "2026-11-02",
+  "baseCommit": "15de08a41d36d99fd0bd56dac86129360144e505",
+  "batchId": "r118-r119-conflict-evidence-20261102",
+  "summary": {
+    "rawRows": 67,
+    "uniqueSourceIdentities": 56,
+    "vndbIdentities": 39,
+    "ifdbIdentities": 17,
+    "nameYearIdentityConflicts": 53,
+    "suspectedEditionOrDependentContent": 3,
+    "repeatedRowsCollapsed": 11
+  },
+  "provenance": {
+    "vndbApi": "https://api.vndb.org/kana/vn",
+    "vndbRetrievedOn": "2026-11-02",
+    "ifdbArchiveUrl": "https://ifarchive.org/if-archive/info/ifdb/ifdb-archive-20260901.zip",
+    "ifdbArchiveSha256": "0f7909470d03f4235e49637e492ca1c31ad7e0558a61bdd07fced1cb128a935b",
+    "ifdbArchivePreparationDispositions": {
+      "missing-or-invalid-published-date": 534,
+      "flagged-or-invalid-identity": 1445,
+      "translation-port-remake-held": 169,
+      "edition-or-non-work-held": 50,
+      "noninteractive-or-nonexistent-held": 100,
+      "outside-original-year-window": 8
+    },
+    "registryWorkCount": 58841,
+    "inputAudits": {
+      "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+      "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+    }
+  },
+  "identities": {
+    "vndb:v60981": {
+      "sourceIdentity": "vndb:v60981",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v60981",
+      "title": "PHANTASMAGORIA",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 0,
+          "row": {
+            "sourceId": "v60981",
+            "vndbId": "v60981",
+            "title": "PHANTASMAGORIA",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "g1127",
+                1995,
+                "complete"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "A short visual novel/point and click game about a man living with this being named Toolbox. \n\nThroughout the entire game you will have to interact with Toolbox, with given choices.\n\nWho knows where those choices may lead you?\n\n[From [url=https://lobotomizedrick.itch.io/phantasmagoria]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p27429",
+            "name": "TOOLBOX STUDIOS",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v60981",
+        "relations": [],
+        "released": "2025-12-10",
+        "title": "PHANTASMAGORIA"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "g1127",
+          "year": 1995,
+          "matchSource": "complete",
+          "registryWork": {
+            "id": "g1127",
+            "title": "幽魂",
+            "firstYear": 1995,
+            "aliases": [],
+            "sourceRefs": [],
+            "mainPlacement": null,
+            "batch": null
+          },
+          "sourceSnapshots": []
+        }
+      ]
+    },
+    "vndb:v61154": {
+      "sourceIdentity": "vndb:v61154",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61154",
+      "title": "Headlights",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 1,
+          "row": {
+            "sourceId": "v61154",
+            "vndbId": "v61154",
+            "title": "Headlights",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "ifdb-5x7v9fiblus23eb6",
+                2022,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Are you happy with your life? \n\nAre you content?\n\nDon't ignore what's inside you.\n\nYou wake up after a nap... Your entire body hurts, but you know what you need to do.\n\n[From [url=https://toroyachi.itch.io/headlights]Itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p27550",
+            "name": "toroyachi",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61154",
+        "relations": [],
+        "released": "2025-12-01",
+        "title": "Headlights"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-5x7v9fiblus23eb6",
+          "year": 2022,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-5x7v9fiblus23eb6",
+            "title": "Headlights",
+            "firstYear": 2022,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:5x7v9fiblus23eb6"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r105"
+          },
+          "sourceSnapshot": {
+            "tuid": "5x7v9fiblus23eb6",
+            "title": "Headlights",
+            "author": "Jordan White and Eric Zinda",
+            "published": "2022-10-01 01:00:00",
+            "system": "Perplexity",
+            "language": "en",
+            "flags": 0,
+            "tags": "IFComp 2022,cover art,IFComp game,walkthrough,Perplexity",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "https://ifarchive.org/if-archive/games/competition2022/Games/Headlights.zip",
+              "https://perplexitygame.com/gameheadlights"
+            ],
+            "website": "https://perplexitygame.com/HeadlightsIntro"
+          }
+        }
+      ]
+    },
+    "vndb:v61188": {
+      "sourceIdentity": "vndb:v61188",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61188",
+      "title": "Mirrors",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 2,
+          "row": {
+            "sourceId": "v61188",
+            "vndbId": "v61188",
+            "title": "Mirrors",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v18091",
+                1990,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Mirrors is a horror visual novel about a group of friends trying to contact a ghost. \n\nA presence has been following Avery ever since she was a kid. When her friend finds a way to free her from it, it may be her one shot at having a normal life. But the presence doesn't like to be interfered with, and Avery and her friends are in much more danger than they realize.\n\n[From [url=https://azurekitsu.itch.io/mirrors]Itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p27572",
+            "name": "Azure Kitsu",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61188",
+        "relations": [],
+        "released": "2025-11-30",
+        "title": "Mirrors"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v18091",
+          "year": 1990,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v18091",
+            "title": "Mirrors",
+            "firstYear": 1990,
+            "aliases": [
+              "ミラーズ"
+            ],
+            "sourceRefs": [
+              "nextmoe:20983",
+              "vndb:v18091"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r27"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "ミラーズ",
+            "description": "Mirrors is a Japanese-style adventure game. It was originally released on CD for the NEC PC-88 in 1990 and was ported (and graphically revamped) in 1992 for the Fujitsu FM-Towns.\n\nThe plot puts the player in the role of a musician, the lead singer for the band \"Elleno Vision\", haunted by terrible nightmares and stalked by a mysterious murderer during the band's world tour.\n\nThe game is played in first person and is similar to a novel, allowing the player to choose from different actions from a menu. Like many Japanese adventure games of the time, Mirrors features a branching storyline and different endings based on the player's decisions.\n\n[From [url=http://www.mobygames.com/game/mirrors]MobyGames[/url]]",
+            "developers": [
+              {
+                "id": "p2552",
+                "name": "Soft Studio Wing",
+                "original": "ソフトスタジオＷＩＮＧ",
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v18091",
+            "relations": [],
+            "released": "1990-12-10",
+            "title": "Mirrors"
+          }
+        }
+      ]
+    },
+    "vndb:v61265": {
+      "sourceIdentity": "vndb:v61265",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61265",
+      "title": "The Masterpiece",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 3,
+          "row": {
+            "sourceId": "v61265",
+            "vndbId": "v61265",
+            "title": "The Masterpiece",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v30845",
+                2021,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "The vampiric threat has ended. The Deity Machine lies in ruins, and society can finally breathe.\n\nYou and your Fae friend, Isidore, attend Vorsch’s Magical Sideshow, also known as The Masterpiece. The last guests get a rare glimpse behind the curtain…\n\nBut the magic isn’t all it seems. Will you survive the night, or will the show consume you?\n\n[From [url=https://hyakuten-games.itch.io/the-masterpiece]Itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p15322",
+            "name": "Hyakuten Games",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61265",
+        "relations": [
+          {
+            "id": "v37936",
+            "relation": "set",
+            "relation_official": true,
+            "title": "Royal Duality"
+          },
+          {
+            "id": "v43643",
+            "relation": "ser",
+            "relation_official": true,
+            "title": "The Perfect Specimen"
+          },
+          {
+            "id": "v47616",
+            "relation": "ser",
+            "relation_official": true,
+            "title": "Mother"
+          },
+          {
+            "id": "v58582",
+            "relation": "ser",
+            "relation_official": true,
+            "title": "The Thinktank"
+          }
+        ],
+        "released": "2025-11-23",
+        "title": "The Masterpiece"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v30845",
+          "year": 2021,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v30845",
+            "title": "The Masterpiece",
+            "firstYear": 2021,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v30845"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r74"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "[i]Altocelarophobia[/i]. The fear of high ceilings. \n\nThe shy and introverted art student Iris has spent much of her life avoiding gymnasiums, shopping malls, and churches. Challenging herself to drop her unwanted nickname of 'Umbrella Girl' - due to always carrying an umbrella indoors - she joins best friend Audra on a school trip to a power station-turned-art gallery in the city. However, deep inside the gallery, Iris loses both Audra and her umbrella, and is left to navigate the twisting, confusing corridors on her own. Worse, a dark, old, and hungry something watches her every step, waiting for a moment of weakness...\n\n[From [URL=https://yxt0531.itch.io/the-masterpiece]itch.io[/URL]]",
+            "developers": [
+              {
+                "id": "p11759",
+                "name": "Team Umbrella",
+                "original": null,
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v30845",
+            "relations": [],
+            "released": "2021-05-08",
+            "title": "The Masterpiece"
+          }
+        }
+      ]
+    },
+    "vndb:v61313": {
+      "sourceIdentity": "vndb:v61313",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61313",
+      "title": "Wild West",
+      "intakeYear": 2022,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 4,
+          "row": {
+            "sourceId": "v61313",
+            "vndbId": "v61313",
+            "title": "Wild West",
+            "firstYear": 2022,
+            "matches": [
+              [
+                "vndb-v6052",
+                2012,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "In this wonderful game you have to plunge into the history of the wild west in which two hot lesbians are waiting for you. Page just sat and got bored, but then her best friend came and it started...\n\n[From [url=https://store.steampowered.com/app/2118610/Wild_West/]Steam[/url]]",
+        "developers": [
+          {
+            "id": "p27662",
+            "name": "Mikoko",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61313",
+        "relations": [],
+        "released": "2022-09-09",
+        "title": "Wild West"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v6052",
+          "year": 2012,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v6052",
+            "title": "Wild West",
+            "firstYear": 2012,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v6052"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r22-cont1"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": null,
+            "developers": [
+              {
+                "id": "p1830",
+                "name": "NovelExp.com",
+                "original": null,
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v6052",
+            "relations": [],
+            "released": "2012-12-05",
+            "title": "Wild West"
+          }
+        }
+      ]
+    },
+    "vndb:v61404": {
+      "sourceIdentity": "vndb:v61404",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61404",
+      "title": "Cutting Edge",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 5,
+          "row": {
+            "sourceId": "v61404",
+            "vndbId": "v61404",
+            "title": "Cutting Edge",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v53751",
+                2024,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Holly is a troubled robot, to say the least. And a complicated love-hate relationship with the sport that saved their life -- figure skating -- isn't always enough to keep the dark thoughts at bay, especially when some of the other skaters don't think too highly of mechanical beings.\n\nBut when the annual Snowflake Cup comes to their home rink, they find they may have a shot at proving their skills to those who doubt them most; including themselves. With the support of a cyborg who always seems to know what to say, can Holly overcome their self doubt and anxiety in time to sweep the judges off their feet?\n\n[From [url=https://killjoyconstruct.itch.io/cutting-edge]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p25976",
+            "name": "KilljoyConstruct",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61404",
+        "relations": [],
+        "released": "2026-04-07",
+        "title": "Cutting Edge"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v53751",
+          "year": 2024,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v53751",
+            "title": "CUTTING/EDGE",
+            "firstYear": 2024,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v53751"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r106"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "KINKY  🔪 CONSENSUAL 🔪 INDULGENT\nEDGING 🔪 KNIFE PLAY 🔪 BDSM\n\n[From [url=https://tofurocks.itch.io/cutting-edge]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p13061",
+                "name": "tofurocks",
+                "original": null,
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v53751",
+            "relations": [],
+            "released": "2024-11-30",
+            "title": "CUTTING/EDGE"
+          }
+        }
+      ]
+    },
+    "vndb:v61484": {
+      "sourceIdentity": "vndb:v61484",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61484",
+      "title": "last call",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 6,
+          "row": {
+            "sourceId": "v61484",
+            "vndbId": "v61484",
+            "title": "last call",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v21519",
+                2017,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "In the back-office of a small beer shop that is about to close, the owner's cat is napping the evening away, unaware of the tragedy around her.\n\nAnd in her dream, the essence of memory and humanity unfolds through an unexpected meeting and a radical change.\n\n[From [url=https://rinkaku.itch.io/last-call]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p16728",
+            "name": "Rinkaku",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61484",
+        "relations": [
+          {
+            "id": "v41439",
+            "relation": "ser",
+            "relation_official": true,
+            "title": "something that feels like waiting"
+          }
+        ],
+        "released": "2025-12-31",
+        "title": "last call"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v21519",
+          "year": 2017,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v21519",
+            "title": "Last Call",
+            "firstYear": 2017,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v21519"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r54"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Down on her luck after being dropped by her agency, Dawn finds herself being shaken awake at a bar back in her hometown.\n\n\"Should I call someone to come pick you up?\"\n\nThere are only two people's phone numbers she knows off by heart, and she suspects that neither of them are particularly eager to speak to her at the moment.\n\nLast Call is a visual novel about repairing broken relationships, and letting go of regrets.\n\nGuide Dawn, and help her reconcile with the people most important to her -- or have them walk out of her life permanently.\n\n[From [url=https://stardust-soda.itch.io/last-call]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p7032",
+                "name": "STARDUST★SODA",
+                "original": null,
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v21519",
+            "relations": [],
+            "released": "2017-07-19",
+            "title": "Last Call"
+          }
+        }
+      ]
+    },
+    "vndb:v61493": {
+      "sourceIdentity": "vndb:v61493",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61493",
+      "title": "A College Education",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 7,
+          "row": {
+            "sourceId": "v61493",
+            "vndbId": "v61493",
+            "title": "A College Education",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v5616",
+                2006,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [
+          "Senior Year"
+        ],
+        "alttitle": null,
+        "description": "Molly (name can be changed) is entering her senior year at college. Will she make it through the year with her current relationships in tact? Or will she veer off course?​\n\n[From F95Zone]",
+        "developers": [
+          {
+            "id": "p23357",
+            "name": "maiie",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61493",
+        "relations": [],
+        "released": "2026-06-08",
+        "title": "A College Education"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v5616",
+          "year": 2006,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v5616",
+            "title": "Senior Year",
+            "firstYear": 2006,
+            "aliases": [
+              "Senior Year: Director's Cut"
+            ],
+            "sourceRefs": [
+              "vndb:v5616"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r22-cont1"
+          },
+          "sourceSnapshot": {
+            "aliases": [
+              "Senior Year: Director's Cut"
+            ],
+            "alttitle": null,
+            "description": "Senior Year is a fully voiced, original English language visual novel. It follows a protagonist (you), as you go through your last year of college. It is a story of love, relationships, and fun. \n\n[From [url=http://lemmasoft.renai.us/forums/viewtopic.php?f=11&t=1598]Lemma Soft Forums[/url]]",
+            "developers": [
+              {
+                "id": "p1725",
+                "name": "NaweGR Games",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [
+              {
+                "url": "https://renai.us/game/syear"
+              }
+            ],
+            "id": "v5616",
+            "relations": [
+              {
+                "id": "v5613",
+                "relation": "seq",
+                "relation_official": true,
+                "title": "College Romance: Rise of the Little Brother"
+              }
+            ],
+            "released": "2006-12-27",
+            "title": "Senior Year"
+          }
+        }
+      ]
+    },
+    "vndb:v61496": {
+      "sourceIdentity": "vndb:v61496",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61496",
+      "title": "Delirium",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 8,
+          "row": {
+            "sourceId": "v61496",
+            "vndbId": "v61496",
+            "title": "Delirium",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v28248",
+                2016,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "でりりうむ",
+        "description": null,
+        "developers": [
+          {
+            "id": "p27742",
+            "name": "Wakaumi Ha/ Uminuno Ha",
+            "original": "若海 葉/海布葉",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61496",
+        "relations": [],
+        "released": "2025-10-11",
+        "title": "Delirium"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v28248",
+          "year": 2016,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v28248",
+            "title": "Delirium",
+            "firstYear": 2016,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v28248"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r68"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Eloise is sent to recover mental health on the remote island of Blackstone, but it seems she cannot escape her past...",
+            "developers": [
+              {
+                "id": "p4953",
+                "name": "Nikraria",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v28248",
+            "relations": [
+              {
+                "id": "v22650",
+                "relation": "preq",
+                "relation_official": true,
+                "title": "The Eloise Case"
+              }
+            ],
+            "released": "2016-07-07",
+            "title": "Delirium"
+          }
+        }
+      ]
+    },
+    "vndb:v61668": {
+      "sourceIdentity": "vndb:v61668",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61668",
+      "title": "summer story",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 9,
+          "row": {
+            "sourceId": "v61668",
+            "vndbId": "v61668",
+            "title": "summer story",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "nextmoe-30952",
+                2021,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 0,
+          "row": {
+            "sourceId": "57397",
+            "vndbId": "v61668",
+            "title": "summer story",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "nextmoe-30952",
+                2021,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Depending on your chosen path, the game unfolds in different ways:\n\nMale protagonist — you receive a mysterious book. Will you try to uncover its meaning, or ignore it and experience the three acts differently?\n\nFemale protagonist — you receive an enigmatic letter. Will you solve the mystery of who wrote it, or set it aside and shape the three acts in your own way?\n\n[From [url=https://store.steampowered.com/app/4208680]Steam[/url]]",
+        "developers": [
+          {
+            "id": "p27810",
+            "name": "karol_thegame",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61668",
+        "relations": [],
+        "released": "2026-03-26",
+        "title": "summer story"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "nextmoe-30952",
+          "year": 2021,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "nextmoe-30952",
+            "title": "Summer Story",
+            "firstYear": 2021,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v32084"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r19"
+          },
+          "sourceSnapshots": [
+            {
+              "aliases": [],
+              "alttitle": null,
+              "description": "This story is about a young girl and her two younger brothers, who came to live with her for the whole summer.\nWe will take on the role of the eldest brother and start making history on his behalf.\nHow the story will develop and what events will happen depends on him, well, that is, on us. Well you get the idea.​",
+              "developers": [
+                {
+                  "id": "p12337",
+                  "name": "Logo",
+                  "original": null,
+                  "type": "in"
+                }
+              ],
+              "devstatus": 1,
+              "extlinks": [],
+              "id": "v32084",
+              "relations": [],
+              "released": "2024-05-02",
+              "title": "Summer Story"
+            }
+          ]
+        },
+        {
+          "id": "nextmoe-30952",
+          "year": 2021,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "nextmoe-30952",
+            "title": "Summer Story",
+            "firstYear": 2021,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v32084"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r19"
+          },
+          "sourceSnapshots": [
+            {
+              "aliases": [],
+              "alttitle": null,
+              "description": "This story is about a young girl and her two younger brothers, who came to live with her for the whole summer.\nWe will take on the role of the eldest brother and start making history on his behalf.\nHow the story will develop and what events will happen depends on him, well, that is, on us. Well you get the idea.​",
+              "developers": [
+                {
+                  "id": "p12337",
+                  "name": "Logo",
+                  "original": null,
+                  "type": "in"
+                }
+              ],
+              "devstatus": 1,
+              "extlinks": [],
+              "id": "v32084",
+              "relations": [],
+              "released": "2024-05-02",
+              "title": "Summer Story"
+            }
+          ]
+        }
+      ]
+    },
+    "vndb:v61807": {
+      "sourceIdentity": "vndb:v61807",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61807",
+      "title": "Lunatic",
+      "intakeYear": 2002,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 10,
+          "row": {
+            "sourceId": "v61807",
+            "vndbId": "v61807",
+            "title": "Lunatic",
+            "firstYear": 2002,
+            "matches": [
+              [
+                "vndb-v17260",
+                2014,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": null,
+        "developers": [
+          {
+            "id": "p27869",
+            "name": "Musokan Kaihatsushitsu",
+            "original": "夢想館開発室",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61807",
+        "relations": [],
+        "released": "2002-08-10",
+        "title": "Lunatic"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v17260",
+          "year": 2014,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v17260",
+            "title": "Lunatic",
+            "firstYear": 2014,
+            "aliases": [
+              "ルナティック"
+            ],
+            "sourceRefs": [
+              "vndb:v17260"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r46"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "ルナティック",
+            "description": null,
+            "developers": [
+              {
+                "id": "p5190",
+                "name": "Matoko",
+                "original": "まとこ",
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v17260",
+            "relations": [],
+            "released": "2014-01-22",
+            "title": "Lunatic"
+          }
+        }
+      ]
+    },
+    "vndb:v61848": {
+      "sourceIdentity": "vndb:v61848",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61848",
+      "title": "Apprentice",
+      "intakeYear": 2011,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 11,
+          "row": {
+            "sourceId": "v61848",
+            "vndbId": "v61848",
+            "title": "Apprentice",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-sc9qfq1k945o51ak",
+                1991,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 1,
+          "row": {
+            "sourceId": "57554",
+            "vndbId": "v61848",
+            "title": "Apprentice",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-sc9qfq1k945o51ak",
+                1991,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": null,
+        "developers": [],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61848",
+        "relations": [],
+        "released": "2011-09-14",
+        "title": "Apprentice"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-sc9qfq1k945o51ak",
+          "year": 1991,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-sc9qfq1k945o51ak",
+            "title": "Apprentice",
+            "firstYear": 1991,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:sc9qfq1k945o51ak",
+              "ifid:agt-03500-0000b85c"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r63"
+          },
+          "sourceSnapshot": {
+            "tuid": "sc9qfq1k945o51ak",
+            "title": "Apprentice",
+            "author": "Bert Lee",
+            "published": "1991-01-01 00:00:00",
+            "system": "AGT",
+            "language": "en",
+            "flags": 0,
+            "tags": "Softworks AGT competition 1991,AGT source available,multiple solutions,magic,test as premise",
+            "ifids": [
+              "AGT-03500-0000B85C"
+            ],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://www.ifarchive.org/if-archive/games/agt/apprenti.zip",
+              "http://www.ifarchive.org/if-archive/games/source/agt/appr-src.zip"
+            ],
+            "website": null
+          }
+        },
+        {
+          "id": "ifdb-sc9qfq1k945o51ak",
+          "year": 1991,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-sc9qfq1k945o51ak",
+            "title": "Apprentice",
+            "firstYear": 1991,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:sc9qfq1k945o51ak",
+              "ifid:agt-03500-0000b85c"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r63"
+          },
+          "sourceSnapshot": {
+            "tuid": "sc9qfq1k945o51ak",
+            "title": "Apprentice",
+            "author": "Bert Lee",
+            "published": "1991-01-01 00:00:00",
+            "system": "AGT",
+            "language": "en",
+            "flags": 0,
+            "tags": "Softworks AGT competition 1991,AGT source available,multiple solutions,magic,test as premise",
+            "ifids": [
+              "AGT-03500-0000B85C"
+            ],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://www.ifarchive.org/if-archive/games/agt/apprenti.zip",
+              "http://www.ifarchive.org/if-archive/games/source/agt/appr-src.zip"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "vndb:v61857": {
+      "sourceIdentity": "vndb:v61857",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61857",
+      "title": "Byoushitsu no Quartet",
+      "intakeYear": 2015,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 12,
+          "row": {
+            "sourceId": "v61857",
+            "vndbId": "v61857",
+            "title": "Byoushitsu no Quartet",
+            "firstYear": 2015,
+            "matches": [
+              [
+                "vndb-v44953",
+                2005,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 2,
+          "row": {
+            "sourceId": "57563",
+            "vndbId": "v61857",
+            "title": "Byoushitsu no Quartet",
+            "firstYear": 2015,
+            "matches": [
+              [
+                "vndb-v44953",
+                2005,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "病室のカルテット",
+        "description": null,
+        "developers": [
+          {
+            "id": "p29356",
+            "name": "K.K.",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61857",
+        "relations": [],
+        "released": "2015-05-03",
+        "title": "Byoushitsu no Quartet"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v44953",
+          "year": 2005,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v44953",
+            "title": "Byoushitsu no Quartet",
+            "firstYear": 2005,
+            "aliases": [
+              "病室のカルテット",
+              "病房四重奏"
+            ],
+            "sourceRefs": [
+              "nextmoe:42471",
+              "vndb:v44953"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r47"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "病室のカルテット",
+            "description": null,
+            "developers": [
+              {
+                "id": "p18536",
+                "name": "Karukan",
+                "original": "かるかん",
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v44953",
+            "relations": [],
+            "released": "2005-07-31",
+            "title": "Byoushitsu no Quartet"
+          }
+        },
+        {
+          "id": "vndb-v44953",
+          "year": 2005,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v44953",
+            "title": "Byoushitsu no Quartet",
+            "firstYear": 2005,
+            "aliases": [
+              "病室のカルテット",
+              "病房四重奏"
+            ],
+            "sourceRefs": [
+              "nextmoe:42471",
+              "vndb:v44953"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r47"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "病室のカルテット",
+            "description": null,
+            "developers": [
+              {
+                "id": "p18536",
+                "name": "Karukan",
+                "original": "かるかん",
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v44953",
+            "relations": [],
+            "released": "2005-07-31",
+            "title": "Byoushitsu no Quartet"
+          }
+        }
+      ]
+    },
+    "vndb:v61869": {
+      "sourceIdentity": "vndb:v61869",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61869",
+      "title": "Natsu Matsuri",
+      "intakeYear": 2003,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 13,
+          "row": {
+            "sourceId": "v61869",
+            "vndbId": "v61869",
+            "title": "Natsu Matsuri",
+            "firstYear": 2003,
+            "matches": [
+              [
+                "vndb-v10170",
+                1999,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "夏まつり",
+        "description": null,
+        "developers": [
+          {
+            "id": "p27869",
+            "name": "Musokan Kaihatsushitsu",
+            "original": "夢想館開発室",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61869",
+        "relations": [],
+        "released": "2003-08-17",
+        "title": "Natsu Matsuri"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v10170",
+          "year": 1999,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v10170",
+            "title": "Natsumatsuri",
+            "firstYear": 1999,
+            "aliases": [
+              "夏祭 ～なつまつり～",
+              "Summer Festival"
+            ],
+            "sourceRefs": [
+              "nextmoe:15469",
+              "vndb:v10170"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r23"
+          },
+          "sourceSnapshot": {
+            "aliases": [
+              "夏祭 ～なつまつり～",
+              "Natsu Matsuri",
+              "Summer Festival"
+            ],
+            "alttitle": "夏祭",
+            "description": "In summer main character decides to return to his native town. A nostalgic view, a comfortable air, a faint sound of river calm his mind. At the summer festival he meets his old acquaintance, and their memories start to shine anew. \n\n[From [url=https://vndbreview.blogspot.com/2017/10/vn-of-month-october-1999.html]vndbreview[/url]]",
+            "developers": [
+              {
+                "id": "p1042",
+                "name": "Diskdream",
+                "original": null,
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v10170",
+            "relations": [],
+            "released": "1999-10-15",
+            "title": "Natsumatsuri"
+          }
+        }
+      ]
+    },
+    "vndb:v61970": {
+      "sourceIdentity": "vndb:v61970",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61970",
+      "title": "Ruins",
+      "intakeYear": 2011,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 14,
+          "row": {
+            "sourceId": "v61970",
+            "vndbId": "v61970",
+            "title": "Ruins",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-rnsj9vbk0ewwip61",
+                2001,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 3,
+          "row": {
+            "sourceId": "57669",
+            "vndbId": "v61970",
+            "title": "Ruins",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-rnsj9vbk0ewwip61",
+                2001,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [
+          "Руины"
+        ],
+        "alttitle": null,
+        "description": null,
+        "developers": [],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61970",
+        "relations": [],
+        "released": "2011-05-16",
+        "title": "Ruins"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-rnsj9vbk0ewwip61",
+          "year": 2001,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-rnsj9vbk0ewwip61",
+            "title": "Ruins",
+            "firstYear": 2001,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:rnsj9vbk0ewwip61"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r71"
+          },
+          "sourceSnapshot": {
+            "tuid": "rnsj9vbk0ewwip61",
+            "title": "Ruins",
+            "author": "Graham Nelson",
+            "published": "2001-07-01 00:00:00",
+            "system": null,
+            "language": "en",
+            "flags": 0,
+            "tags": "TADS3 source available,I6 source available,TADS3 source available,archaeology,source available,parser,mushroom",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://liveplaylearn.com/ifgames/Ruins.z5",
+              "http://www.ifarchive.org/if-archive/games/source/tads/Ruins.zip",
+              "http://www.ifarchive.org/if-archive/infocom/compilers/inform6/examples/Ruins.inf",
+              "http://www.ifarchive.org/if-archive/programming/iage/ruins.ic",
+              "https://ifarchive.org/if-archive/games/tads/swedish/ruiner.zip"
+            ],
+            "website": null
+          }
+        },
+        {
+          "id": "ifdb-rnsj9vbk0ewwip61",
+          "year": 2001,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-rnsj9vbk0ewwip61",
+            "title": "Ruins",
+            "firstYear": 2001,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:rnsj9vbk0ewwip61"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r71"
+          },
+          "sourceSnapshot": {
+            "tuid": "rnsj9vbk0ewwip61",
+            "title": "Ruins",
+            "author": "Graham Nelson",
+            "published": "2001-07-01 00:00:00",
+            "system": null,
+            "language": "en",
+            "flags": 0,
+            "tags": "TADS3 source available,I6 source available,TADS3 source available,archaeology,source available,parser,mushroom",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://liveplaylearn.com/ifgames/Ruins.z5",
+              "http://www.ifarchive.org/if-archive/games/source/tads/Ruins.zip",
+              "http://www.ifarchive.org/if-archive/infocom/compilers/inform6/examples/Ruins.inf",
+              "http://www.ifarchive.org/if-archive/programming/iage/ruins.ic",
+              "https://ifarchive.org/if-archive/games/tads/swedish/ruiner.zip"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "vndb:v61987": {
+      "sourceIdentity": "vndb:v61987",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v61987",
+      "title": "Dream Date",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 15,
+          "row": {
+            "sourceId": "v61987",
+            "vndbId": "v61987",
+            "title": "Dream Date",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v28418",
+                2020,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 4,
+          "row": {
+            "sourceId": "57686",
+            "vndbId": "v61987",
+            "title": "Dream Date",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v28418",
+                2020,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "You’re on a trip to Paris, feeling lonely when your friend cancelled last minute. In the spur of the moment, you wish upon a star for someone to spend time in the city with and to your surprise—your wish comes true!\n\nCélestin, a wishing star come to life, takes you on a whirlwind of a first date across Paris in this fully voice acted short-and-sweet game.\n\n[From [url=https://skywritestudios.itch.io/dream-date]Itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p25434",
+            "name": "Skywrite Studios",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v61987",
+        "relations": [],
+        "released": "2026-01-30",
+        "title": "Dream Date"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v28418",
+          "year": 2020,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v28418",
+            "title": "Dream Date",
+            "firstYear": 2020,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v28418"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r68"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Date, communicate, enhance feelings and record good memories with girls!\n\n[From [url=https://store.steampowered.com/app/1256610]Steam[/url]]",
+            "developers": [
+              {
+                "id": "p10507",
+                "name": "ADOG",
+                "original": null,
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v28418",
+            "relations": [],
+            "released": "2020-05-09",
+            "title": "Dream Date"
+          }
+        },
+        {
+          "id": "vndb-v28418",
+          "year": 2020,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v28418",
+            "title": "Dream Date",
+            "firstYear": 2020,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v28418"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r68"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Date, communicate, enhance feelings and record good memories with girls!\n\n[From [url=https://store.steampowered.com/app/1256610]Steam[/url]]",
+            "developers": [
+              {
+                "id": "p10507",
+                "name": "ADOG",
+                "original": null,
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v28418",
+            "relations": [],
+            "released": "2020-05-09",
+            "title": "Dream Date"
+          }
+        }
+      ]
+    },
+    "vndb:v62070": {
+      "sourceIdentity": "vndb:v62070",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62070",
+      "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―",
+      "intakeYear": null,
+      "reason": "possible-edition-or-dependent-content",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 16,
+          "row": {
+            "sourceId": "v62070",
+            "vndbId": "v62070",
+            "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 5,
+          "row": {
+            "sourceId": "57760",
+            "vndbId": "v62070",
+            "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "アクマでもオレとお前は！―友人が淫魔だった時の童貞卒業回避法―",
+        "description": null,
+        "developers": [
+          {
+            "id": "p27993",
+            "name": "Kamivukuro／Chiraura Koubou",
+            "original": "Kamivukuro／チラウラ工房",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62070",
+        "relations": [],
+        "released": "2023-08-04",
+        "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": []
+    },
+    "vndb:v62101": {
+      "sourceIdentity": "vndb:v62101",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62101",
+      "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-",
+      "intakeYear": null,
+      "reason": "possible-edition-or-dependent-content",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 17,
+          "row": {
+            "sourceId": "v62101",
+            "vndbId": "v62101",
+            "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 6,
+          "row": {
+            "sourceId": "57790",
+            "vndbId": "v62101",
+            "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "Buddy Collection Extra －胡蝶荘の奇妙な五人－",
+        "description": null,
+        "developers": [
+          {
+            "id": "p11312",
+            "name": "Narutrick",
+            "original": "なるとりっく",
+            "type": "co"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62101",
+        "relations": [
+          {
+            "id": "v22808",
+            "relation": "par",
+            "relation_official": true,
+            "title": "Buddy Collection"
+          }
+        ],
+        "released": "2021-02-04",
+        "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": []
+    },
+    "vndb:v62110": {
+      "sourceIdentity": "vndb:v62110",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62110",
+      "title": "Utakata",
+      "intakeYear": 2019,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 18,
+          "row": {
+            "sourceId": "v62110",
+            "vndbId": "v62110",
+            "title": "Utakata",
+            "firstYear": 2019,
+            "matches": [
+              [
+                "vndb-v17841",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 7,
+          "row": {
+            "sourceId": "57799",
+            "vndbId": "v62110",
+            "title": "Utakata",
+            "firstYear": 2019,
+            "matches": [
+              [
+                "vndb-v17841",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "泡沫ーうたかた",
+        "description": null,
+        "developers": [
+          {
+            "id": "p28027",
+            "name": "Paso",
+            "original": "ぱそ",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62110",
+        "relations": [],
+        "released": "2019-12-20",
+        "title": "Utakata"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v17841",
+          "year": 2003,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v17841",
+            "title": "Utakata",
+            "firstYear": 2003,
+            "aliases": [
+              "うたかた"
+            ],
+            "sourceRefs": [
+              "nextmoe:20831",
+              "vndb:v17841"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r39"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "うたかた",
+            "description": "Main character loses his sibling and memory in an accident. He drives housekeepers crazy. But this 47th housekeeper is a man who is not afraid of difficulties.\n\nThis is a bundle featuring three games ''Tegami'', ''Itsuka Wasurete'' and \"Isshou, Hanashite Nanka Yaranai\".\n\n[From [url=https://vndbreview.blogspot.com/2019/06/vn-of-month-august-2003-natsuyume-yawa.html]vndbreview[/url]]",
+            "developers": [
+              {
+                "id": "p5401",
+                "name": "TEARS.",
+                "original": null,
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v17841",
+            "relations": [],
+            "released": "2003-08-16",
+            "title": "Utakata"
+          }
+        },
+        {
+          "id": "vndb-v17841",
+          "year": 2003,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v17841",
+            "title": "Utakata",
+            "firstYear": 2003,
+            "aliases": [
+              "うたかた"
+            ],
+            "sourceRefs": [
+              "nextmoe:20831",
+              "vndb:v17841"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r39"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "うたかた",
+            "description": "Main character loses his sibling and memory in an accident. He drives housekeepers crazy. But this 47th housekeeper is a man who is not afraid of difficulties.\n\nThis is a bundle featuring three games ''Tegami'', ''Itsuka Wasurete'' and \"Isshou, Hanashite Nanka Yaranai\".\n\n[From [url=https://vndbreview.blogspot.com/2019/06/vn-of-month-august-2003-natsuyume-yawa.html]vndbreview[/url]]",
+            "developers": [
+              {
+                "id": "p5401",
+                "name": "TEARS.",
+                "original": null,
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v17841",
+            "relations": [],
+            "released": "2003-08-16",
+            "title": "Utakata"
+          }
+        }
+      ]
+    },
+    "vndb:v62145": {
+      "sourceIdentity": "vndb:v62145",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62145",
+      "title": "The House of Secrets",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 19,
+          "row": {
+            "sourceId": "v62145",
+            "vndbId": "v62145",
+            "title": "The House of Secrets",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "ifdb-0slrzbo45nb1mebi",
+                1985,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 8,
+          "row": {
+            "sourceId": "57832",
+            "vndbId": "v62145",
+            "title": "The House of Secrets",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "ifdb-0slrzbo45nb1mebi",
+                1985,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "You are Mike. Your life was normal until a series of tragic events and a web of intrigue pulled the rug out from under you. Now, you find yourself in a world of luxury and power—but it’s a world where you are no longer in control.\n\nTrapped in a high-end penthouse and bound by a mysterious deal, you must navigate a dangerous game of obsession, secrets, and betrayal. Who can you trust when everyone has an agenda?\n\n[From [url=https://www.patreon.com/virtualdategaming1]Patreon[/url]]",
+        "developers": [
+          {
+            "id": "p28038",
+            "name": "VirtualDateGaming",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62145",
+        "relations": [],
+        "released": "2026-06-01",
+        "title": "The House of Secrets"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-0slrzbo45nb1mebi",
+          "year": 1985,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-0slrzbo45nb1mebi",
+            "title": "The House of Secrets",
+            "firstYear": 1985,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:0slrzbo45nb1mebi"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r71"
+          },
+          "sourceSnapshot": {
+            "tuid": "0slrzbo45nb1mebi",
+            "title": "The House of Secrets",
+            "author": "George Gunn",
+            "published": "1985-05-01 00:00:00",
+            "system": "Eamon",
+            "language": "en",
+            "flags": 0,
+            "tags": "rpg,two-word parser,Eamon",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://www.ifarchive.org/if-archive/games/appleII/eamon/guild/dsk/dos33/edos3097.dsk.gz",
+              "http://www.ifarchive.org/if-archive/games/appleII/eamon/guild/original/dos33/EDOS3097.SDK"
+            ],
+            "website": null
+          }
+        },
+        {
+          "id": "ifdb-0slrzbo45nb1mebi",
+          "year": 1985,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-0slrzbo45nb1mebi",
+            "title": "The House of Secrets",
+            "firstYear": 1985,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:0slrzbo45nb1mebi"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r71"
+          },
+          "sourceSnapshot": {
+            "tuid": "0slrzbo45nb1mebi",
+            "title": "The House of Secrets",
+            "author": "George Gunn",
+            "published": "1985-05-01 00:00:00",
+            "system": "Eamon",
+            "language": "en",
+            "flags": 0,
+            "tags": "rpg,two-word parser,Eamon",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://www.ifarchive.org/if-archive/games/appleII/eamon/guild/dsk/dos33/edos3097.dsk.gz",
+              "http://www.ifarchive.org/if-archive/games/appleII/eamon/guild/original/dos33/EDOS3097.SDK"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "vndb:v62160": {
+      "sourceIdentity": "vndb:v62160",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62160",
+      "title": "- la femme - BRUN ~ \"Yotsuba\"",
+      "intakeYear": 2003,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 20,
+          "row": {
+            "sourceId": "v62160",
+            "vndbId": "v62160",
+            "title": "- la femme - BRUN ~ \"Yotsuba\"",
+            "firstYear": 2003,
+            "matches": [
+              [
+                "vndb-v62159",
+                2002,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [
+          "ラ・ファム"
+        ],
+        "alttitle": "- la femme - BRUN～「四葉」",
+        "description": null,
+        "developers": [
+          {
+            "id": "p28043",
+            "name": "Colt45sec",
+            "original": "コルト45秒",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62160",
+        "relations": [
+          {
+            "id": "v62159",
+            "relation": "ser",
+            "relation_official": true,
+            "title": "- la femme - BLANC ~  \"Karen\""
+          }
+        ],
+        "released": "2003-01-09",
+        "title": "- la femme - BRUN ~ \"Yotsuba\""
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v62159",
+          "year": 2002,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v62159",
+            "title": "- la femme - BLANC ~  \"Karen\"",
+            "firstYear": 2002,
+            "aliases": [
+              "- la femme - BLANC～「可憐」",
+              "ラ・ファム",
+              "- la femme - BLANC～「可怜"
+            ],
+            "sourceRefs": [
+              "nextmoe:57845",
+              "vndb:v62159"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r53"
+          },
+          "sourceSnapshot": {
+            "aliases": [
+              "ラ・ファム"
+            ],
+            "alttitle": "- la femme - BLANC～「可憐」",
+            "description": null,
+            "developers": [
+              {
+                "id": "p28043",
+                "name": "Colt45sec",
+                "original": "コルト45秒",
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v62159",
+            "relations": [
+              {
+                "id": "v4681",
+                "relation": "char",
+                "relation_official": false,
+                "title": "Sister Princess"
+              },
+              {
+                "id": "v62160",
+                "relation": "ser",
+                "relation_official": true,
+                "title": "- la femme - BRUN ~ \"Yotsuba\""
+              }
+            ],
+            "released": "2002-08-24",
+            "title": "- la femme - BLANC ~  \"Karen\""
+          }
+        }
+      ]
+    },
+    "vndb:v62179": {
+      "sourceIdentity": "vndb:v62179",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62179",
+      "title": "The Garden",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 21,
+          "row": {
+            "sourceId": "v62179",
+            "vndbId": "v62179",
+            "title": "The Garden",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v35198",
+                2022,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 9,
+          "row": {
+            "sourceId": "57865",
+            "vndbId": "v62179",
+            "title": "The Garden",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v35198",
+                2022,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "I meet the devil once, out in the Garden amongst the withering vines of Autumn. It use to be cold this time of year, but this is hell... and I'm in love.\n\n[From [url=https://willagem.itch.io/the-garden]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28048",
+            "name": "WillaGem",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62179",
+        "relations": [],
+        "released": "2025-10-30",
+        "title": "The Garden"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v35198",
+          "year": 2022,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v35198",
+            "title": "the garden of eternal smiles",
+            "firstYear": 2022,
+            "aliases": [
+              "the garden"
+            ],
+            "sourceRefs": [
+              "nextmoe:33591",
+              "vndb:v35198"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r81"
+          },
+          "sourceSnapshot": {
+            "aliases": [
+              "the garden"
+            ],
+            "alttitle": null,
+            "description": ">You wake up.\n\n>Cotton candy clouds drift across your room.\n\n>The sky is crystalline beyond your window.\n\n>It’s a beautiful day.\n\n . . . \n\n>Welcome to paradise.\n\n[From [url=https://rhinobeetl.itch.io/the-garden]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p13896",
+                "name": "rhinobeetl",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v35198",
+            "relations": [],
+            "released": "2022-04-19",
+            "title": "the garden of eternal smiles"
+          }
+        },
+        {
+          "id": "vndb-v35198",
+          "year": 2022,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v35198",
+            "title": "the garden of eternal smiles",
+            "firstYear": 2022,
+            "aliases": [
+              "the garden"
+            ],
+            "sourceRefs": [
+              "nextmoe:33591",
+              "vndb:v35198"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r81"
+          },
+          "sourceSnapshot": {
+            "aliases": [
+              "the garden"
+            ],
+            "alttitle": null,
+            "description": ">You wake up.\n\n>Cotton candy clouds drift across your room.\n\n>The sky is crystalline beyond your window.\n\n>It’s a beautiful day.\n\n . . . \n\n>Welcome to paradise.\n\n[From [url=https://rhinobeetl.itch.io/the-garden]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p13896",
+                "name": "rhinobeetl",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v35198",
+            "relations": [],
+            "released": "2022-04-19",
+            "title": "the garden of eternal smiles"
+          }
+        }
+      ]
+    },
+    "vndb:v62240": {
+      "sourceIdentity": "vndb:v62240",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62240",
+      "title": "Manin Densha",
+      "intakeYear": 2020,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 118,
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 22,
+          "row": {
+            "sourceId": "v62240",
+            "vndbId": "v62240",
+            "title": "Manin Densha",
+            "firstYear": 2020,
+            "matches": [
+              [
+                "nextmoe-5061",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 10,
+          "row": {
+            "sourceId": "57922",
+            "vndbId": "v62240",
+            "title": "Manin Densha",
+            "firstYear": 2020,
+            "matches": [
+              [
+                "nextmoe-5061",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "満淫電射",
+        "description": null,
+        "developers": [
+          {
+            "id": "p28067",
+            "name": "Naito Mea",
+            "original": "内藤芽亜",
+            "type": "in"
+          },
+          {
+            "id": "p28086",
+            "name": "Omatsupan",
+            "original": "O松パン",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62240",
+        "relations": [
+          {
+            "id": "v16225",
+            "relation": "par",
+            "relation_official": false,
+            "title": "Chizome no Hana"
+          }
+        ],
+        "released": "2020-03-01",
+        "title": "Manin Densha"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "nextmoe-5061",
+          "year": 2003,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "nextmoe-5061",
+            "title": "満淫電車",
+            "firstYear": 2003,
+            "aliases": [
+              "Man'in Densha",
+              "满淫电车"
+            ],
+            "sourceRefs": [
+              "vndb:v6095"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r19"
+          },
+          "sourceSnapshots": [
+            {
+              "aliases": [],
+              "alttitle": "満淫電車",
+              "description": "Main character uses special medicine to seduce women in trains. One day all his team gets arrested all at once. When he runs away from police, he gets to know about an information store to leak that information. He develops a revenge plan.\n\n[From [url=https://vndbreview.blogspot.com/2019/06/vn-of-month-may-2003-ashita-deatta.html]vndbreview[/url]]",
+              "developers": [
+                {
+                  "id": "p215",
+                  "name": "BISHOP",
+                  "original": null,
+                  "type": "co"
+                }
+              ],
+              "devstatus": 0,
+              "extlinks": [],
+              "id": "v6095",
+              "relations": [
+                {
+                  "id": "v6096",
+                  "relation": "seq",
+                  "relation_official": true,
+                  "title": "Man'in Densha 2"
+                }
+              ],
+              "released": "2003-05-23",
+              "title": "Man'in Densha"
+            }
+          ]
+        },
+        {
+          "id": "nextmoe-5061",
+          "year": 2003,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "nextmoe-5061",
+            "title": "満淫電車",
+            "firstYear": 2003,
+            "aliases": [
+              "Man'in Densha",
+              "满淫电车"
+            ],
+            "sourceRefs": [
+              "vndb:v6095"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r19"
+          },
+          "sourceSnapshots": [
+            {
+              "aliases": [],
+              "alttitle": "満淫電車",
+              "description": "Main character uses special medicine to seduce women in trains. One day all his team gets arrested all at once. When he runs away from police, he gets to know about an information store to leak that information. He develops a revenge plan.\n\n[From [url=https://vndbreview.blogspot.com/2019/06/vn-of-month-may-2003-ashita-deatta.html]vndbreview[/url]]",
+              "developers": [
+                {
+                  "id": "p215",
+                  "name": "BISHOP",
+                  "original": null,
+                  "type": "co"
+                }
+              ],
+              "devstatus": 0,
+              "extlinks": [],
+              "id": "v6095",
+              "relations": [
+                {
+                  "id": "v6096",
+                  "relation": "seq",
+                  "relation_official": true,
+                  "title": "Man'in Densha 2"
+                }
+              ],
+              "released": "2003-05-23",
+              "title": "Man'in Densha"
+            }
+          ]
+        }
+      ]
+    },
+    "vndb:v62319": {
+      "sourceIdentity": "vndb:v62319",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62319",
+      "title": "Between The Lines",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 11,
+          "row": {
+            "sourceId": "57997",
+            "vndbId": "v62319",
+            "title": "Between The Lines",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v19561",
+                2016,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Harper is a young journalism student with a lot of ambition. They have big dreams for their future, but for now, they’re just trying to get through their degree. Tasked with writing an article on a student of interest, Harper’s instincts hone in on an art student whose name often makes the rounds in the school’s rumour mill: Graham Woods, a tall man with a surprisingly delicate way of drawing and painting.\n\nHarper expects a scoop, a story that’ll look good on their resume: a tale of a quiet and gentle giant, whose art speaks for itself. When they finally meet, however, Harper finds themselves curious about Graham in a capacity that goes past just academic interest. \n\n[From [url=https://runeheart-games.itch.io/between-the-lines]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28121",
+            "name": "RUNEHEART GAMES",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62319",
+        "relations": [],
+        "released": "2026-06-30",
+        "title": "Between The Lines"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v19561",
+          "year": 2016,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v19561",
+            "title": "Between the Lines",
+            "firstYear": 2016,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v19561"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r50"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Bianca is living with her parents and halfheartedly studying to try to get into college. She doesn't really know what she'd want to do there, to be honest, but her parents want her to be there -- and they make it very clear that she's to start doing something about it, very soon.\nDeciding to take a break and try to focus on something else, Bianca picks up a novel (with a pretty ribbon attached to its spine) titled \"Sage of the Sea\" at a vintage bookstore. While she's reading, though, she suddenly feels a bad headache coming on, and decides to sleep through the pain...\nWhen she wakes up, she's somewhere completely different.",
+            "developers": [
+              {
+                "id": "p26381",
+                "name": "missxtake",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [
+              {
+                "url": "https://renai.us/game/between-the-lines"
+              }
+            ],
+            "id": "v19561",
+            "relations": [],
+            "released": "2016-04-10",
+            "title": "Between the Lines"
+          }
+        }
+      ]
+    },
+    "vndb:v62338": {
+      "sourceIdentity": "vndb:v62338",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62338",
+      "title": "Salvation",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 12,
+          "row": {
+            "sourceId": "58015",
+            "vndbId": "v62338",
+            "title": "Salvation",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v57784",
+                2025,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Step into the 16th century and play as Cilia, a young woman married to a promising man.\n\n[From [url=https://love-elizabeth.itch.io/salvation]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28134",
+            "name": "Elizabeth",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62338",
+        "relations": [],
+        "released": "2026-02-15",
+        "title": "Salvation"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v57784",
+          "year": 2025,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v57784",
+            "title": "Salvation",
+            "firstYear": 2025,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v57784"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r112"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Finally, my salvation has come.\n\nEvan Wilhelm was dead. I killed him.\n\nEvan Wilhelm lost his final duel against Clarissa Edelrose. The day she could defeat him was a day that he had been waiting for. To be freed, that was his salvation. Clarissa thought that by killing Evan and getting her revenge, she too, would be at peace, but she was wrong.\n\n[from [url=https://altila.itch.io/salvation]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p11749",
+                "name": "Altila",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v57784",
+            "relations": [
+              {
+                "id": "v67027",
+                "relation": "char",
+                "relation_official": true,
+                "title": "The Knights' Endroll"
+              },
+              {
+                "id": "v45973",
+                "relation": "char",
+                "relation_official": true,
+                "title": "Unsent Letter"
+              }
+            ],
+            "released": "2025-07-12",
+            "title": "Salvation"
+          }
+        }
+      ]
+    },
+    "vndb:v62344": {
+      "sourceIdentity": "vndb:v62344",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62344",
+      "title": "Bitter & Sweet",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 13,
+          "row": {
+            "sourceId": "58021",
+            "vndbId": "v62344",
+            "title": "Bitter & Sweet",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v6234",
+                2006,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Welcome to Roses! You've recently been offered a position as the closing shift barista at a niche little Mom and Mom's coffee shop right across the street from your college campus. It's not your top choice, naturally. But... you also need the money.\n\nThankfully, you've had many different jobs in your life so far. So you've survived many \"first weeks of employment.\" This one should be no different.\n\nYou're not here to make friends, after all.\n\nYou're not here to make friends.\n\nYou're not here to...\n\n[From [url=https://teamsnowcone.itch.io/bitter-sweet]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p22977",
+            "name": "Team Snowcone",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62344",
+        "relations": [
+          {
+            "id": "v54924",
+            "relation": "char",
+            "relation_official": true,
+            "title": "Coffee with Grace"
+          }
+        ],
+        "released": "2026-02-15",
+        "title": "Bitter & Sweet"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v6234",
+          "year": 2006,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v6234",
+            "title": "Bitter & Sweet",
+            "firstYear": 2006,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v6234"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r22-cont1"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "A collection of three short stories:\n\n1. Main heroine tries to give chocolate to school idol Ayano on Valentine's Day, but ends up receiving chocolate from different people\n2. Student council chairman favors kouhai and confesses to her under the cherry blossoms on the Christmas night.\n3. Main character enters Spring with fresh aspirations and has a special encounter that gives birth to new feeling.\n\n[From [url=https://vndbreview.blogspot.com/2020/02/vn-of-month-april-2006-tenshitsuki-no.html]vndbreview[/url]]",
+            "developers": [
+              {
+                "id": "p1861",
+                "name": "Soft Circle Astarte",
+                "original": "ソフトさ～くるAstarte",
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v6234",
+            "relations": [],
+            "released": "2006-04-27",
+            "title": "Bitter & Sweet"
+          }
+        }
+      ]
+    },
+    "vndb:v62373": {
+      "sourceIdentity": "vndb:v62373",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62373",
+      "title": "Cvetok",
+      "intakeYear": 2026,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 14,
+          "row": {
+            "sourceId": "58049",
+            "vndbId": "v62373",
+            "title": "Cvetok",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "ifdb-77rsl9mezn5iogto",
+                1998,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "Цветок",
+        "description": "An story about a scientist who was spoken to by his experimental plant.\n\n[From [url=https://store.steampowered.com/app/889320/]Steam[/url]]",
+        "developers": [
+          {
+            "id": "p28156",
+            "name": "Aventy's team",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62373",
+        "relations": [],
+        "released": "2026-02-15",
+        "title": "Cvetok"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-77rsl9mezn5iogto",
+          "year": 1998,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-77rsl9mezn5iogto",
+            "title": "The Plant",
+            "firstYear": 1998,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:77rsl9mezn5iogto",
+              "ifid:tads2-0604401f269363be743fe9f1c241d3bf",
+              "ifid:tads2-a94afb10d704ef53ba57e9de95b49422"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r99"
+          },
+          "sourceSnapshot": {
+            "tuid": "77rsl9mezn5iogto",
+            "title": "The Plant",
+            "author": "Michael J. Roberts",
+            "published": "1998-09-30 00:00:00",
+            "system": "TADS 2",
+            "language": "en-US",
+            "flags": 0,
+            "tags": "IF Competition 1998,Xyzzy Awards 1998,TADS2 source available,cover art,sidekick NPC,medium length,standard difficulty,parser,IFComp Game,science fiction,TADS,TADS 2,score,walkthrough,clubfloyd transcript,XYZZY response,source available,conspiracy,dog,foreign language,broken down car,XYZZY response,cutscenes,Male Protagonist,ask/tell conversation,Thriller",
+            "ifids": [
+              "TADS2-0604401F269363BE743FE9F1C241D3BF",
+              "TADS2-A94AFB10D704EF53BA57E9DE95B49422"
+            ],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "https://allthingsjacq.com/intfic_clubfloyd_20120701.html",
+              "https://ifarchive.org/if-archive/games/competition98/tads/plant/plant.gam",
+              "https://ifarchive.org/if-archive/games/competition98/tads/plant/walkthru.txt",
+              "https://ifarchive.org/if-archive/games/source/tads/plantsrc_2.zip",
+              "https://ifarchive.org/if-archive/games/tads/plant_2.zip",
+              "https://ifarchive.org/if-archive/solutions/plant.hnt"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "vndb:v62396": {
+      "sourceIdentity": "vndb:v62396",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62396",
+      "title": "Love Letter",
+      "intakeYear": 2024,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 15,
+          "row": {
+            "sourceId": "58068",
+            "vndbId": "v62396",
+            "title": "Love Letter",
+            "firstYear": 2024,
+            "matches": [
+              [
+                "nextmoe-1961",
+                2002,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Mia is a normal high school girl with a huge crush on a handsome, popular boy at her school, Mikio. After working up the courage, she decides to give him a love letter.\nHowever, in trying to get it back, Mia ends up immersing herself in Mikio's life outside of school.\n\n[From [url=https://lunariamv.tumblr.com/post/750240335473623040]the developer's blog[/url]]",
+        "developers": [
+          {
+            "id": "p28170",
+            "name": "lunariamv",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62396",
+        "relations": [],
+        "released": "2024-05-12",
+        "title": "Love Letter"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "nextmoe-1961",
+          "year": 2002,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "nextmoe-1961",
+            "title": "Love Letter",
+            "firstYear": 2002,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v4948"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r11"
+          },
+          "sourceSnapshots": [
+            {
+              "aliases": [],
+              "alttitle": null,
+              "description": "Takuya works as an assistant professor in a medical school, and with his talent, he shows promise not only in the academy, but also in the medical society.\nOne day, Takuya receives a letter from an unknown sender. Though he thinks it's suspicious, he still opens it and finds a piece of human skin inside.\nThen afterwards, the bewildered Takuya continues to receive letters written by \"The woman who loves you the most in the world\". The contents of the letters gradually continue to escalate, and finally it reaches a point where video recordings of women close to Takuya being brutally murdered are sent to him.\n\n[from [url=http://www.getchu.com/soft.phtml?id=9584]Getchu[/url]]",
+              "developers": [
+                {
+                  "id": "p690",
+                  "name": "Mu",
+                  "original": "美遊",
+                  "type": "co"
+                }
+              ],
+              "devstatus": 0,
+              "extlinks": [],
+              "id": "v4948",
+              "relations": [],
+              "released": "2002-02-01",
+              "title": "Love Letter"
+            }
+          ]
+        }
+      ]
+    },
+    "vndb:v62416": {
+      "sourceIdentity": "vndb:v62416",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62416",
+      "title": "Karen",
+      "intakeYear": 2010,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 16,
+          "row": {
+            "sourceId": "58083",
+            "vndbId": "v62416",
+            "title": "Karen",
+            "firstYear": 2010,
+            "matches": [
+              [
+                "vndb-v983",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": "夏恋",
+        "description": null,
+        "developers": [
+          {
+            "id": "p28178",
+            "name": "SwordFestival",
+            "original": null,
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62416",
+        "relations": [],
+        "released": "2010-10-16",
+        "title": "Karen"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v983",
+          "year": 2003,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v983",
+            "title": "Karen",
+            "firstYear": 2003,
+            "aliases": [
+              "夏恋　～karen～"
+            ],
+            "sourceRefs": [
+              "vndb:v983"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r15"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "夏恋　～karen～",
+            "description": "While his parents leaves on a sudden business trip the protagonist, Yousuke, goes to stay at an acquintance's house. This \"house\" is actually an old Shinto shrine which he will manage together with the three sisters living there.\n\nYousuke's struggle to revive the run-down shrine begins and so does his search for love...",
+            "developers": [
+              {
+                "id": "p132",
+                "name": "Purple software",
+                "original": "パープルソフトウェア",
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v983",
+            "relations": [],
+            "released": "2003-11-28",
+            "title": "Karen"
+          }
+        }
+      ]
+    },
+    "vndb:v62422": {
+      "sourceIdentity": "vndb:v62422",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62422",
+      "title": "mirror, mirror",
+      "intakeYear": 2021,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 17,
+          "row": {
+            "sourceId": "58089",
+            "vndbId": "v62422",
+            "title": "mirror, mirror",
+            "firstYear": 2021,
+            "matches": [
+              [
+                "ifdb-vke24gmd8usqywu4",
+                2020,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "a vase full of flowers.\n\n[From [url=https://koloquials.itch.io/mirror-mirror]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p13557",
+            "name": "koloquials",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62422",
+        "relations": [],
+        "released": "2021-04-14",
+        "title": "mirror, mirror"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-vke24gmd8usqywu4",
+          "year": 2020,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-vke24gmd8usqywu4",
+            "title": "Mirror Mirror",
+            "firstYear": 2020,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:vke24gmd8usqywu4"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r91"
+          },
+          "sourceSnapshot": {
+            "tuid": "vke24gmd8usqywu4",
+            "title": "Mirror Mirror",
+            "author": "Gareth Pitchford",
+            "published": "2020-01-01 00:00:00",
+            "system": "PAWS",
+            "language": "en",
+            "flags": 0,
+            "tags": null,
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://8bitag.com/games/mirror/mirror.tap",
+              "http://torinak.com/qaop#~128#l=https://www.connosoft.com/csscgc2020/reviews/onlineplay/012.tap"
+            ],
+            "website": "http://8bitag.com/games/mirror.html"
+          }
+        }
+      ]
+    },
+    "vndb:v62532": {
+      "sourceIdentity": "vndb:v62532",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62532",
+      "title": "Danganronpa: Hope Recreation+",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 18,
+          "row": {
+            "sourceId": "58162",
+            "vndbId": "v62532",
+            "title": "Danganronpa: Hope Recreation+",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v62531",
+                2024,
+                "candidate-pool"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [
+          "Danganronpa: Hope Recreation Plus",
+          "DRHR+"
+        ],
+        "alttitle": null,
+        "description": "Play as Makoto Kaedahara, a talentless student who somehow found himself stuck in a killing game. Embark on a thrilling journey filled with deception, funny dialogues, and unexpected twists.\n\n[From [url=https://cirnox12.itch.io/danganronpa-hr]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28208",
+            "name": "cirnoX12",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62532",
+        "relations": [
+          {
+            "id": "v62531",
+            "relation": "par",
+            "relation_official": true,
+            "title": "Danganronpa: Hope Recreation"
+          }
+        ],
+        "released": "2025-04-01",
+        "title": "Danganronpa: Hope Recreation+"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v62531",
+          "year": 2024,
+          "matchSource": "candidate-pool",
+          "registryWork": null,
+          "sourceSnapshot": {
+            "aliases": [
+              "DRHR"
+            ],
+            "alttitle": null,
+            "description": "Embark on a thrilling journey filled with deception, despair, and unexpected twists.\n\n[From [url=https://cirnox12.itch.io/danganronpa-hope-recreation]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p28208",
+                "name": "cirnoX12",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v62531",
+            "relations": [
+              {
+                "id": "v62532",
+                "relation": "side",
+                "relation_official": true,
+                "title": "Danganronpa: Hope Recreation+"
+              },
+              {
+                "id": "v7014",
+                "relation": "ser",
+                "relation_official": false,
+                "title": "Dangan Ronpa: Kibou no Gakuen to Zetsubou no Koukousei"
+              }
+            ],
+            "released": "2024-04-01",
+            "title": "Danganronpa: Hope Recreation"
+          }
+        }
+      ]
+    },
+    "vndb:v62670": {
+      "sourceIdentity": "vndb:v62670",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62670",
+      "title": "day : dream",
+      "intakeYear": 2023,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 19,
+          "row": {
+            "sourceId": "58287",
+            "vndbId": "v62670",
+            "title": "day : dream",
+            "firstYear": 2023,
+            "matches": [
+              [
+                "vndb-v9486",
+                1986,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "A linear visual novel about memories from long ago, taking place in the distant future.\n\nA Game by it's Cover 2023 entry.\n\nBased on [url=https://famicase.com/23/softs/027.html]Famicase by Samuel Cooke[/url].\n\n[From [url=https://m-9.itch.io/daydream]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28266",
+            "name": "☆M9☆",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62670",
+        "relations": [],
+        "released": "2023-08-06",
+        "title": "day : dream"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v9486",
+          "year": 1986,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v9486",
+            "title": "Day Dream",
+            "firstYear": 1986,
+            "aliases": [
+              "デイドリーム",
+              "白日梦"
+            ],
+            "sourceRefs": [
+              "nextmoe:14993",
+              "vndb:v9486"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r23"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": "デイドリーム",
+            "description": "The theme is visit of aliens. There are three scenarios to choose from: \"driver\", \"policeman\", \"pilot\".\n\n[From [url=http://vndbreview.blogspot.ru/2017/04/vn-of-year-1986.html]vndbreview[/url]]",
+            "developers": [
+              {
+                "id": "p2553",
+                "name": "Cross Media Soft",
+                "original": "クロスメディアソフト",
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v9486",
+            "relations": [],
+            "released": "1986-07",
+            "title": "Day Dream"
+          }
+        }
+      ]
+    },
+    "vndb:v62681": {
+      "sourceIdentity": "vndb:v62681",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62681",
+      "title": "INNOCENT",
+      "intakeYear": 2023,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 20,
+          "row": {
+            "sourceId": "58298",
+            "vndbId": "v62681",
+            "title": "INNOCENT",
+            "firstYear": 2023,
+            "matches": [
+              [
+                "vndb-v21810",
+                1999,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": null,
+        "developers": [
+          {
+            "id": "p28270",
+            "name": "Rokumi",
+            "original": "６美",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62681",
+        "relations": [],
+        "released": "2023-09-02",
+        "title": "INNOCENT"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v21810",
+          "year": 1999,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v21810",
+            "title": "Innocent",
+            "firstYear": 1999,
+            "aliases": [
+              "イノセント"
+            ],
+            "sourceRefs": [
+              "nextmoe:23330",
+              "vndb:v21810"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r27"
+          },
+          "sourceSnapshot": {
+            "aliases": [
+              "イノセント"
+            ],
+            "alttitle": null,
+            "description": "2078, Mega Tokyo City. \nThe Metropolitan Police Department established a secret department for investigation of special crimes consisting of five android women. Androids are instructed to use woman body to get information that's usually not accessible by police. \nMain character is a detective who has his best friend charged with serial murders crime and awaiting death penalty in a week. With the cooperation of androids hero began investigating identity of the real criminal.\n\n[From [url=https://vndbreview.blogspot.com/2017/11/vn-of-month-november-1999.html]vndbreview[/url]]",
+            "developers": [
+              {
+                "id": "p7157",
+                "name": "Draconium",
+                "original": "ドラコニウム",
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v21810",
+            "relations": [],
+            "released": "1999-11-25",
+            "title": "Innocent"
+          }
+        }
+      ]
+    },
+    "vndb:v62745": {
+      "sourceIdentity": "vndb:v62745",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62745",
+      "title": "Blind",
+      "intakeYear": 2020,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 21,
+          "row": {
+            "sourceId": "58356",
+            "vndbId": "v62745",
+            "title": "Blind",
+            "firstYear": 2020,
+            "matches": [
+              [
+                "vndb-v12138",
+                2012,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "A short visual novel for NaNoRenO 2020.\n\nSomeone wakes with no memory and can't move their body or see anything. They try to understand who they are while the trauma of their past catches up to them.\n\nInspired by PSX sound novels with very little art but instead a focus on sound effects and music to build atmosphere.\n\n[From [url=https://773tk.itch.io/blind]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28294",
+            "name": "773tk",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62745",
+        "relations": [],
+        "released": "2020-04-13",
+        "title": "Blind"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v12138",
+          "year": 2012,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v12138",
+            "title": "Blind...",
+            "firstYear": 2012,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v12138"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261101-r36"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "The garden flowers had blossomed beautifully again this year. \nThe sky was blue, and from faraway boys' voices could be heard. \n\nRikka could only dream of the world beyond his window. He yearned to join those boys. \n\nHis teacher would arrive in three minutes. \n\nRikka, who had so often sat and stared wistfully out the window, \nwas to reunited with a childhood friend named Mitsuaki. \nHe remembered the boy being shy, but Mitsuaki had become \na strict and strong-willed steward. \n\nHe was not the Mitsuaki that Rikka remembered. \nIt was a little unsettling, but Rikka dismissed the feeling. \n\nPerhaps he had truly changed, or perhaps it was a facade. \nIt was hard to see the truth.\n\n[from [url=http://www.dlsite.com/ecchi-eng/work/=/product_id/RE107082.html]DLSite English[/url]]",
+            "developers": [
+              {
+                "id": "p2881",
+                "name": "Magic House",
+                "original": "まじっくハウス",
+                "type": "ng"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v12138",
+            "relations": [],
+            "released": "2012-12-18",
+            "title": "Blind..."
+          }
+        }
+      ]
+    },
+    "vndb:v62751": {
+      "sourceIdentity": "vndb:v62751",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62751",
+      "title": "Scavenger",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 22,
+          "row": {
+            "sourceId": "58362",
+            "vndbId": "v62751",
+            "title": "Scavenger",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "ifdb-ii7j0kliujc4k8wf",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "Leroux is a supersized dystopian city where all your wildest dreams and nightmares can be made real. That being said: this story, unlike my other games, is a bit darker. Scavenger tells the tale of what happens to individuals who find themselves too deeply entrenched in the muck and mire that Leroux offers. It is sexual, it is violent, it is aggressive and grimy.\n\nScavenger is a story about excess and fulfillment, set in a bleak future where sex and violence run rampant.\n\n[From [url=https://droptineart.itch.io/scavenger]Itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28301",
+            "name": "DroptineArt",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62751",
+        "relations": [],
+        "released": "2025-01-02",
+        "title": "Scavenger"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-ii7j0kliujc4k8wf",
+          "year": 2003,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-ii7j0kliujc4k8wf",
+            "title": "Scavenger",
+            "firstYear": 2003,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:ii7j0kliujc4k8wf",
+              "ifid:tads2-80c1fc87a8ccfe38e267c733e2b38956",
+              "ifid:tads2-8b31122c76f9f8f11f00e8e841aeaa07"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r87"
+          },
+          "sourceSnapshot": {
+            "tuid": "ii7j0kliujc4k8wf",
+            "title": "Scavenger",
+            "author": "Quintin Stone",
+            "published": "2003-01-01 00:00:00",
+            "system": "TADS 2",
+            "language": "en-US",
+            "flags": 0,
+            "tags": "IF Competition 2003,Xyzzy Awards 2003,adaptive hints,built-in hints,strong profanity,violence,cover art,combat,post-apocalyptic,parser,IFComp Game,science fiction,TADS,TADS 2,clubfloyd transcript,nightfloyd transcript,score,walkthrough,XYZZY response,ClubFloyd transcript,TADS2 source available,XYZZY response",
+            "ifids": [
+              "TADS2-80C1FC87A8CCFE38E267C733E2B38956",
+              "TADS2-8B31122C76F9F8F11F00E8E841AEAA07"
+            ],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "https://allthingsjacq.com/intfic_clubfloyd_20090701.html",
+              "https://allthingsjacq.com/intfic_clubfloyd_20110902.html",
+              "https://ifarchive.org/if-archive/games/competition2003/tads2/scavenger/license.txt",
+              "https://ifarchive.org/if-archive/games/competition2003/tads2/scavenger/readme.txt",
+              "https://ifarchive.org/if-archive/games/competition2003/tads2/scavenger/scavenger.gam",
+              "https://ifarchive.org/if-archive/games/competition2003/tads2/scavenger/walkthrough.txt",
+              "https://ifarchive.org/if-archive/games/pc/scavenger.zip",
+              "https://ifarchive.org/if-archive/games/tads/scavenger.zip",
+              "https://www.rps.net/NE/Scavenger/source.zip"
+            ],
+            "website": "https://www.rps.net/NE/Scavenger/"
+          }
+        }
+      ]
+    },
+    "vndb:v62769": {
+      "sourceIdentity": "vndb:v62769",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62769",
+      "title": "ChangE",
+      "intakeYear": 2014,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 23,
+          "row": {
+            "sourceId": "58379",
+            "vndbId": "v62769",
+            "title": "ChangE",
+            "firstYear": 2014,
+            "matches": [
+              [
+                "vndb-v22340",
+                2017,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "This game tells a story about young man named Cinth, who recently moved to New York City from Maine. His only friend is a black cat, he likes reading and sitting awake at 5 am to look at sunset.\nBut he's not only one who likes to be up at this early hour. And this person may be the one who will change Cinth's world.\n\n[From [url=https://skirt-gw2.tumblr.com/post/88096972355/hello-skirt-here-i-made-another-game-haha]the developer's blog[/url]]",
+        "developers": [
+          {
+            "id": "p25131",
+            "name": "Sneakie_ups1gb",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62769",
+        "relations": [],
+        "released": "2014-06-07",
+        "title": "ChangE"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v22340",
+          "year": 2017,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v22340",
+            "title": "Change",
+            "firstYear": 2017,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v22340"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r56"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": null,
+            "developers": [
+              {
+                "id": "p7430",
+                "name": "Ryu Productions Co., Ltd",
+                "original": "龙梦文化传媒有限公司",
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v22340",
+            "relations": [
+              {
+                "id": "v24860",
+                "relation": "seq",
+                "relation_official": true,
+                "title": "Change: A Little Story"
+              }
+            ],
+            "released": "2017-12-27",
+            "title": "Change"
+          }
+        }
+      ]
+    },
+    "vndb:v62801": {
+      "sourceIdentity": "vndb:v62801",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62801",
+      "title": "Change",
+      "intakeYear": 2025,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 24,
+          "row": {
+            "sourceId": "58409",
+            "vndbId": "v62801",
+            "title": "Change",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v22340",
+                2017,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "A first-year graduate Lulu wants to disappear.\nSuch Lulu was reminded of a classmate who died in middle school.\n\n\"I'd trade my life for yours.\"\n\nThis is the story of a protagonist who is tired of life and decides to switch bodies with a deceased classmate.",
+        "developers": [
+          {
+            "id": "p28327",
+            "name": "INTERNET GIRL",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62801",
+        "relations": [],
+        "released": "2025-02-21",
+        "title": "Change"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "vndb-v22340",
+          "year": 2017,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v22340",
+            "title": "Change",
+            "firstYear": 2017,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v22340"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r56"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": null,
+            "developers": [
+              {
+                "id": "p7430",
+                "name": "Ryu Productions Co., Ltd",
+                "original": "龙梦文化传媒有限公司",
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v22340",
+            "relations": [
+              {
+                "id": "v24860",
+                "relation": "seq",
+                "relation_official": true,
+                "title": "Change: A Little Story"
+              }
+            ],
+            "released": "2017-12-27",
+            "title": "Change"
+          }
+        }
+      ]
+    },
+    "vndb:v62845": {
+      "sourceIdentity": "vndb:v62845",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62845",
+      "title": "Vampire on Trial",
+      "intakeYear": null,
+      "reason": "possible-edition-or-dependent-content",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 25,
+          "row": {
+            "sourceId": "58447",
+            "vndbId": "v62845",
+            "title": "Vampire on Trial",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "A Vampire preying on innocents is finally apprehended. \n\nWill he be found Guilty? \n\nWhat does Justice stand for?\n\nWhat will your verdict be?\n\n[From [url=https://afancyquestionmark.itch.io/vampire-on-trial]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28348",
+            "name": "AFancyQuestionMark",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62845",
+        "relations": [],
+        "released": "2026-03-02",
+        "title": "Vampire on Trial"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": []
+    },
+    "vndb:v62867": {
+      "sourceIdentity": "vndb:v62867",
+      "candidateKind": "vndb",
+      "candidateSourceId": "v62867",
+      "title": "Tower",
+      "intakeYear": 2022,
+      "reason": "ambiguous-name-year",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 26,
+          "row": {
+            "sourceId": "58463",
+            "vndbId": "v62867",
+            "title": "Tower",
+            "firstYear": 2022,
+            "matches": [
+              [
+                "ifdb-8u6m0cofv7m7pn5u",
+                2009,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "description": "a story about two (girl) friends on a grey, vertical tower.\n\n[From [url=https://tokuuu.itch.io/tower]itch.io[/url]]",
+        "developers": [
+          {
+            "id": "p28360",
+            "name": "tokuuu",
+            "original": null,
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "extlinks": [],
+        "id": "v62867",
+        "relations": [],
+        "released": "2022-07-03",
+        "title": "Tower"
+      },
+      "candidateSafeInPinnedIfdbArchive": null,
+      "matches": [
+        {
+          "id": "ifdb-8u6m0cofv7m7pn5u",
+          "year": 2009,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-8u6m0cofv7m7pn5u",
+            "title": "Tower",
+            "firstYear": 2009,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:8u6m0cofv7m7pn5u",
+              "ifid:b55918bb-056a-426e-a3f3-d60efe9f0369"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r99"
+          },
+          "sourceSnapshot": {
+            "tuid": "8u6m0cofv7m7pn5u",
+            "title": "Tower",
+            "author": "Vivienne Dunstan",
+            "published": "2009-02-28 01:00:00",
+            "system": "Inform 7",
+            "language": "en",
+            "flags": 0,
+            "tags": "walkthrough",
+            "ifids": [
+              "B55918BB-056A-426E-A3F3-D60EFE9F0369"
+            ],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://ifarchive.org/if-archive/games/mini-comps/ifmonth/IFMonth.zip",
+              "http://plover.net/~davidw/sol/t/tower09.html"
+            ],
+            "website": "http://www.instamatique.com/if/"
+          }
+        }
+      ]
+    },
+    "ifdb:jtyzvv97m8irt63s": {
+      "sourceIdentity": "ifdb:jtyzvv97m8irt63s",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "jtyzvv97m8irt63s",
+      "title": "The Alchemist",
+      "intakeYear": 2003,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 27,
+          "row": {
+            "sourceId": "jtyzvv97m8irt63s",
+            "title": "The Alchemist",
+            "published": "2003-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v29693",
+                2021,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "jtyzvv97m8irt63s",
+        "title": "The Alchemist",
+        "author": "Renata Burianova",
+        "published": "2003-01-01 00:00:00",
+        "system": "ADRIFT",
+        "language": null,
+        "flags": 0,
+        "tags": "Adrift 4,only available on the Wayback Machine",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://web.archive.org/web/20171120065923id_/http://www.delron.org.uk/games/alchemist1.zip"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "vndb-v29693",
+          "year": 2021,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v29693",
+            "title": "The Alchemist",
+            "firstYear": 2021,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v29693"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r72"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Play the role of an apprentice alchemist on the road in a merchant caravan. During the journey you will discover many things, including love?\n\n[From [url=https://azephir.itch.io/the-alchemist]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p11206",
+                "name": "Azephir",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v29693",
+            "relations": [],
+            "released": "2021-12-21",
+            "title": "The Alchemist"
+          }
+        }
+      ]
+    },
+    "ifdb:fk8xds3a66pyx208": {
+      "sourceIdentity": "ifdb:fk8xds3a66pyx208",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "fk8xds3a66pyx208",
+      "title": "Ash",
+      "intakeYear": 2016,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 28,
+          "row": {
+            "sourceId": "fk8xds3a66pyx208",
+            "title": "Ash",
+            "published": "2016-10-01 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v8565",
+                1994,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "fk8xds3a66pyx208",
+        "title": "Ash",
+        "author": "Lee Grey",
+        "published": "2016-10-01 01:00:00",
+        "system": "Ink",
+        "language": "en",
+        "flags": 0,
+        "tags": "IFComp 2016,death,grief,mourning,cyoa,cover art,IFComp Game,choice-based,choice-based",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "vndb-v8565",
+          "year": 1994,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v8565",
+            "title": "Ash.",
+            "firstYear": 1994,
+            "aliases": [
+              "アッシュ",
+              "聖戰錄"
+            ],
+            "sourceRefs": [
+              "nextmoe:14199",
+              "vndb:v8565"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r23"
+          },
+          "sourceSnapshot": {
+            "aliases": [
+              "アッシュ"
+            ],
+            "alttitle": null,
+            "description": "Hero is a warrior who enters a normal fantasy setting town and ... player choices determine the rest.\n\n[From [url=https://vndbreview.blogspot.ru/2017/07/vn-of-month-july-1994.html]vndbreview[/url]]",
+            "developers": [
+              {
+                "id": "p118",
+                "name": "Himeya Soft",
+                "original": "姫屋ソフト",
+                "type": "co"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v8565",
+            "relations": [],
+            "released": "1994-07-08",
+            "title": "Ash."
+          }
+        }
+      ]
+    },
+    "ifdb:68mdw9k76x61fuyb": {
+      "sourceIdentity": "ifdb:68mdw9k76x61fuyb",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "68mdw9k76x61fuyb",
+      "title": "Take One",
+      "intakeYear": 2005,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 29,
+          "row": {
+            "sourceId": "68mdw9k76x61fuyb",
+            "title": "Take One",
+            "published": "2005-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v54989",
+                2025,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "68mdw9k76x61fuyb",
+        "title": "Take One",
+        "author": "Robert Street",
+        "published": "2005-01-01 00:00:00",
+        "system": "ADRIFT",
+        "language": "en",
+        "flags": 0,
+        "tags": "Adrift competition 2005,Adrift 4,adrift,film,director,film shoot,parser",
+        "ifids": [
+          "ADRIFT-400-ADDE7E0D71D7144102BF5E9C6E559F0A"
+        ],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "http://www.ifarchive.org/if-archive/games/adrift/takeone.taf",
+          "https://iplayif.com/?story=https%3A%2F%2Fwww.ifarchive.org%2Fif-archive%2Fgames%2Fadrift%2Ftakeone.taf"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "vndb-v54989",
+          "year": 2025,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v54989",
+            "title": "Take One",
+            "firstYear": 2025,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v54989"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r108"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Play as Tania Rose, and experience the wonders of life! Including:\n\nGoing outside\n\nMeeting new people\n\ngirl\n\n[From [url=https://umsyt.itch.io/take-one]itch.io[/url]]",
+            "developers": [
+              {
+                "id": "p23324",
+                "name": "umsyt",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v54989",
+            "relations": [],
+            "released": "2025-02-24",
+            "title": "Take One"
+          }
+        }
+      ]
+    },
+    "ifdb:d5jcsz4mn1bdqpxr": {
+      "sourceIdentity": "ifdb:d5jcsz4mn1bdqpxr",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "d5jcsz4mn1bdqpxr",
+      "title": "Alien",
+      "intakeYear": 1988,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 30,
+          "row": {
+            "sourceId": "d5jcsz4mn1bdqpxr",
+            "title": "Alien",
+            "published": "1988-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-kp8y1zd5vc284d04",
+                1984,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "d5jcsz4mn1bdqpxr",
+        "title": "Alien",
+        "author": "DJS",
+        "published": "1988-01-01 00:00:00",
+        "system": null,
+        "language": "it",
+        "flags": 0,
+        "tags": null,
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-kp8y1zd5vc284d04",
+          "year": 1984,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-kp8y1zd5vc284d04",
+            "title": "Alien",
+            "firstYear": 1984,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:kp8y1zd5vc284d04"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r69"
+          },
+          "sourceSnapshot": {
+            "tuid": "kp8y1zd5vc284d04",
+            "title": "Alien",
+            "author": "Darryll D. Reynolds",
+            "published": "1984-01-01 00:00:00",
+            "system": null,
+            "language": "en",
+            "flags": 0,
+            "tags": null,
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://solutionarchive.com/file/id%2C1237/"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:o8iqwwgchaobbuhz": {
+      "sourceIdentity": "ifdb:o8iqwwgchaobbuhz",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "o8iqwwgchaobbuhz",
+      "title": "Assault on the Clonemaster",
+      "intakeYear": 1980,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 31,
+          "row": {
+            "sourceId": "o8iqwwgchaobbuhz",
+            "title": "Assault on the Clonemaster",
+            "published": "1980-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-d1lmwmvd4qiyb007",
+                2017,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "o8iqwwgchaobbuhz",
+        "title": "Assault on the Clonemaster",
+        "author": "Donald Brown",
+        "published": "1980-01-01 00:00:00",
+        "system": "Eamon",
+        "language": "en",
+        "flags": 0,
+        "tags": "rpg,two-word parser,Eamon,two-word parser,rpg,pc eamon museum",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "http://www.ifarchive.org/if-archive/games/appleII/eamon/guild/dsk/dos33/edos3009.dsk.gz",
+          "http://www.ifarchive.org/if-archive/games/appleII/eamon/guild/original/dos33/EDOS3009.SDK",
+          "http://www.ifarchive.org/if-archive/games/pc/eamon/clonemas.zip",
+          "https://www.eamonag.org/pages/pc_eamon_museum.htm"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-d1lmwmvd4qiyb007",
+          "year": 2017,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-d1lmwmvd4qiyb007",
+            "title": "Assault on the Clone Master",
+            "firstYear": 2017,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:d1lmwmvd4qiyb007"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r115"
+          },
+          "sourceSnapshot": {
+            "tuid": "d1lmwmvd4qiyb007",
+            "title": "Assault on the Clone Master",
+            "author": "Keith Dechant",
+            "published": "2017-01-01 00:00:00",
+            "system": "Eamon",
+            "language": "en",
+            "flags": 0,
+            "tags": "Eamon Remastered,Eamon,rpg",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [
+              {
+                "target": "o8iqwwgchaobbuhz",
+                "relation": 1
+              }
+            ],
+            "links": [
+              "https://eamon-remastered.com/"
+            ],
+            "website": "https://eamon-remastered.com/"
+          }
+        }
+      ]
+    },
+    "ifdb:ti3xxdw11e1zlbe6": {
+      "sourceIdentity": "ifdb:ti3xxdw11e1zlbe6",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "ti3xxdw11e1zlbe6",
+      "title": "Sherwood Forest",
+      "intakeYear": 1984,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 32,
+          "row": {
+            "sourceId": "ti3xxdw11e1zlbe6",
+            "title": "Sherwood Forest",
+            "published": "1984-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-v9hnvrigiz5r5nxn",
+                1982,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "ti3xxdw11e1zlbe6",
+        "title": "Sherwood Forest",
+        "author": "Fergus McNeill",
+        "published": "1984-01-01 00:00:00",
+        "system": null,
+        "language": "en",
+        "flags": 0,
+        "tags": null,
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "http://www.ifarchive.org/if-archive/games/spectrum/zenobi48k.zip"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-v9hnvrigiz5r5nxn",
+          "year": 1982,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-v9hnvrigiz5r5nxn",
+            "title": "Sherwood Forest",
+            "firstYear": 1982,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:v9hnvrigiz5r5nxn"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r67"
+          },
+          "sourceSnapshot": {
+            "tuid": "v9hnvrigiz5r5nxn",
+            "title": "Sherwood Forest",
+            "author": "Dale Johnson and Dav Holle",
+            "published": "1982-01-01 00:00:00",
+            "system": null,
+            "language": "en",
+            "flags": 0,
+            "tags": "Commercial",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "https://archive.org/details/wozaday_Sherwood_Forest"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:bnvzf6d0czmbk5ps": {
+      "sourceIdentity": "ifdb:bnvzf6d0czmbk5ps",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "bnvzf6d0czmbk5ps",
+      "title": "Dreamland",
+      "intakeYear": 2003,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 33,
+          "row": {
+            "sourceId": "bnvzf6d0czmbk5ps",
+            "title": "Dreamland",
+            "published": "2003-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "nextmoe-37228",
+                2022,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "bnvzf6d0czmbk5ps",
+        "title": "Dreamland",
+        "author": "Steingrimur Jonsson",
+        "published": "2003-01-01 00:00:00",
+        "system": "ADRIFT",
+        "language": "en",
+        "flags": 0,
+        "tags": "Adrift competition 2003,Adrift 3.9,single room,adrift",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://iplayif.com/?story=https%3A%2F%2Fwww.adrift.co%2Ffiles%2Fgames%2FDreams.taf",
+          "https://www.adrift.co/files/games/Dreams.taf"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "nextmoe-37228",
+          "year": 2022,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "nextmoe-37228",
+            "title": "Dreamland",
+            "firstYear": 2022,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v39309"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-galgame-bulk-20261101-r8"
+          },
+          "sourceSnapshots": [
+            {
+              "aliases": [],
+              "alttitle": null,
+              "description": "The long-lasting nationwide lockdown has ended, and you finally get to meet up with your best friends from university to go on your first ever college spring break. All of you decide to travel to a town called Dreamland - the capital of the wildest spring break activities. And what seems at the beginning as a fun adventure filled with hot girls, parties and sex, you uncover that Dreamland has a dark and horrifying mystery which haunts you and your friends...\n\n[From [url=https://store.steampowered.com/app/2176560/]Steam[/url]]",
+              "developers": [
+                {
+                  "id": "p15902",
+                  "name": "Dokiden",
+                  "original": null,
+                  "type": "ng"
+                }
+              ],
+              "devstatus": 1,
+              "extlinks": [],
+              "id": "v39309",
+              "relations": [],
+              "released": "2022-10-31",
+              "title": "Dreamland"
+            }
+          ]
+        }
+      ]
+    },
+    "ifdb:gaaxee2mvysvsaxd": {
+      "sourceIdentity": "ifdb:gaaxee2mvysvsaxd",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "gaaxee2mvysvsaxd",
+      "title": "Excalibur",
+      "intakeYear": 1987,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 34,
+          "row": {
+            "sourceId": "gaaxee2mvysvsaxd",
+            "title": "Excalibur",
+            "published": "1987-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-q3isw8j98nnz6gm3",
+                1990,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "gaaxee2mvysvsaxd",
+        "title": "Excalibur",
+        "author": "G. B. Aicardi",
+        "published": "1987-01-01 00:00:00",
+        "system": null,
+        "language": "it",
+        "flags": 0,
+        "tags": null,
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-q3isw8j98nnz6gm3",
+          "year": 1990,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-q3isw8j98nnz6gm3",
+            "title": "Excalibur",
+            "firstYear": 1990,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:q3isw8j98nnz6gm3"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r71"
+          },
+          "sourceSnapshot": {
+            "tuid": "q3isw8j98nnz6gm3",
+            "title": "Excalibur",
+            "author": "Jose Damian de la Flor San Vicente",
+            "published": "1990-01-01 00:00:00",
+            "system": "PAW",
+            "language": "es",
+            "flags": 0,
+            "tags": null,
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:iq9wxtd9a7vpcy2g": {
+      "sourceIdentity": "ifdb:iq9wxtd9a7vpcy2g",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "iq9wxtd9a7vpcy2g",
+      "title": "Shipwreck",
+      "intakeYear": 1987,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 35,
+          "row": {
+            "sourceId": "iq9wxtd9a7vpcy2g",
+            "title": "Shipwreck",
+            "published": "1987-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-1j9p7lpcoj2sf05i",
+                1986,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "iq9wxtd9a7vpcy2g",
+        "title": "Shipwreck",
+        "author": "Gladys Officer, Gerry Officer",
+        "published": "1987-01-01 00:00:00",
+        "system": "The Quill",
+        "language": "en",
+        "flags": 0,
+        "tags": null,
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-1j9p7lpcoj2sf05i",
+          "year": 1986,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-1j9p7lpcoj2sf05i",
+            "title": "Shipwreck",
+            "firstYear": 1986,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:1j9p7lpcoj2sf05i"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r91"
+          },
+          "sourceSnapshot": {
+            "tuid": "1j9p7lpcoj2sf05i",
+            "title": "Shipwreck",
+            "author": "Paul Davies",
+            "published": "1986-01-01 00:00:00",
+            "system": null,
+            "language": "en",
+            "flags": 0,
+            "tags": null,
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:u16mpjnk07d3l8i2": {
+      "sourceIdentity": "ifdb:u16mpjnk07d3l8i2",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "u16mpjnk07d3l8i2",
+      "title": "Tethered",
+      "intakeYear": 2018,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 36,
+          "row": {
+            "sourceId": "u16mpjnk07d3l8i2",
+            "title": "Tethered",
+            "published": "2018-10-01 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v31011",
+                2021,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "u16mpjnk07d3l8i2",
+        "title": "Tethered",
+        "author": "Linus Åkesson",
+        "published": "2018-10-01 01:00:00",
+        "system": "Dialog",
+        "language": "en",
+        "flags": 0,
+        "tags": "IFComp Game,IFComp 2018,cover art,multiple protagonists,cave,unreliable narrator,Colossal cash prize,Xyzzy Awards 2018,c64,walkthrough,dialog,mystery,survival,first effort,Parser,climbing,snow storm,male protagonist,female protagonist,hypothermia,snow,rope,changing environment,knife,clothing,built-in hints,boulder,apartment,surreal,XYZZY response",
+        "ifids": [
+          "55B22E4A-9CDE-462D-863B-B8BA0E32F698"
+        ],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://hd0.linusakesson.net/files/tethered-rel1.zblorb",
+          "https://hd0.linusakesson.net/files/tethered-rel5.zip",
+          "https://hd0.linusakesson.net/files/tethered-walkthrough.txt",
+          "https://linusakesson.net/games/tethered/rel5/play.html",
+          "https://plover.net/~davidw/sol/t/tethe18.html"
+        ],
+        "website": "https://linusakesson.net/games/tethered/"
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "vndb-v31011",
+          "year": 2021,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "vndb-v31011",
+            "title": "Tethered",
+            "firstYear": 2021,
+            "aliases": [],
+            "sourceRefs": [
+              "vndb:v31011"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "vndb-kana-bulk-20261102-r74"
+          },
+          "sourceSnapshot": {
+            "aliases": [],
+            "alttitle": null,
+            "description": "Bea is an overworked secretary whose boss keeps dragging her up to the space station for no reason. She wasn't expecting this trip on the space elevator to be more than yet another boring five days she'd spend reading trashy romance novels, she certainly wouldn't expect any fateful romantic encounters with any cute, quirky girl insisting that she try to have some fun.\n\n[From [URL=https://dllott.itch.io/tethered]itch.io[/URL]]",
+            "developers": [
+              {
+                "id": "p11871",
+                "name": "dllott",
+                "original": null,
+                "type": "in"
+              }
+            ],
+            "devstatus": 0,
+            "extlinks": [],
+            "id": "v31011",
+            "relations": [],
+            "released": "2021-04-23",
+            "title": "Tethered"
+          }
+        }
+      ]
+    },
+    "ifdb:url6d1j3aj61qmhp": {
+      "sourceIdentity": "ifdb:url6d1j3aj61qmhp",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "url6d1j3aj61qmhp",
+      "title": "Pirate Island",
+      "intakeYear": 1989,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 37,
+          "row": {
+            "sourceId": "url6d1j3aj61qmhp",
+            "title": "Pirate Island",
+            "published": "1989-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-ic3chsxtj3ff2er3",
+                1985,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "url6d1j3aj61qmhp",
+        "title": "Pirate Island",
+        "author": "John H Doolittle",
+        "published": "1989-01-01 00:00:00",
+        "system": "Turbo BASIC",
+        "language": "en",
+        "flags": 0,
+        "tags": "Apple II,Macintosh,MS-DOS,BASIC source available,source available,pirates",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://github.com/heasm66/Dooriddle_QB64/blob/main/pirate_island_qb64.bas",
+          "https://ifarchive.org/if-archive/games/pc/PIRATE.EXE",
+          "https://ifarchive.org/if-archive/games/source/basic/PIRATE.BAS"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-ic3chsxtj3ff2er3",
+          "year": 1985,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-ic3chsxtj3ff2er3",
+            "title": "Pirate Island",
+            "firstYear": 1985,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:ic3chsxtj3ff2er3"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r111"
+          },
+          "sourceSnapshot": {
+            "tuid": "ic3chsxtj3ff2er3",
+            "title": "Pirate Island",
+            "author": "David Meny",
+            "published": "1985-01-01 00:00:00",
+            "system": "BASIC",
+            "language": "en",
+            "flags": 0,
+            "tags": "two-word parser,TRS-80 MC-10,BASIC source available,Pirates",
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "https://archive.org/download/vmc-10-073-i_202405/VMC10_073I.zip",
+              "https://ifarchive.org/if-archive/games/source/basic/pirate.zip",
+              "https://ifarchive.org/if-archive/solutions/pirate.sol"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:zgauwdi6ie4u4pqc": {
+      "sourceIdentity": "ifdb:zgauwdi6ie4u4pqc",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "zgauwdi6ie4u4pqc",
+      "title": "The House",
+      "intakeYear": 2026,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 38,
+          "row": {
+            "sourceId": "zgauwdi6ie4u4pqc",
+            "title": "The House",
+            "published": "2026-04-06 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-83noiwzup8nsasob",
+                2007,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "zgauwdi6ie4u4pqc",
+        "title": "The House",
+        "author": "Miles Poehler",
+        "published": "2026-04-06 01:00:00",
+        "system": "Twine",
+        "language": "en",
+        "flags": 0,
+        "tags": "multiple protagonists,Spring Thing 2026,CYOA with location-based world model,dog,doll,Spring Thing Game,House Setting",
+        "ifids": [
+          "5FA90069-12A2-4C14-A6E6-274AF02781F9"
+        ],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://www.springthing.net/2026/play.html#TheHouse"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-83noiwzup8nsasob",
+          "year": 2007,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-83noiwzup8nsasob",
+            "title": "The House",
+            "firstYear": 2007,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:83noiwzup8nsasob",
+              "ifid:0eff4fef-e1cb-4467-879d-0f911142b6ca"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r73"
+          },
+          "sourceSnapshot": {
+            "tuid": "83noiwzup8nsasob",
+            "title": "The House",
+            "author": "Jazz Remington",
+            "published": "2007-01-01 00:00:00",
+            "system": "Inform 7",
+            "language": "en",
+            "flags": 0,
+            "tags": "walkthrough",
+            "ifids": [
+              "0EFF4FEF-E1CB-4467-879D-0F911142B6CA"
+            ],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://ifarchive.org/if-archive/games/zcode/TheHouse.zip",
+              "http://plover.net/~davidw/sol/h/house07c.html"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:x7cvej7bm7ixiz0a": {
+      "sourceIdentity": "ifdb:x7cvej7bm7ixiz0a",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "x7cvej7bm7ixiz0a",
+      "title": "Earthquake San Francisco 1906",
+      "intakeYear": 1982,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 39,
+          "row": {
+            "sourceId": "x7cvej7bm7ixiz0a",
+            "title": "Earthquake San Francisco 1906",
+            "published": "1982-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ai-earthquake",
+                1981,
+                "historical-dossier"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "x7cvej7bm7ixiz0a",
+        "title": "Earthquake San Francisco 1906",
+        "author": "Jyym Pearson and Norman Sailer",
+        "published": "1982-01-01 00:00:00",
+        "system": null,
+        "language": "en",
+        "flags": 0,
+        "tags": "two-word parser,1900s,earthquake,San Francisco",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "http://www.ifarchive.org/if-archive/games/atari-8bit/atari8gm.zip",
+          "http://www.ifarchive.org/if-archive/solutions/Sols3.zip"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ai-earthquake",
+          "year": 1981,
+          "matchSource": "historical-dossier",
+          "registryWork": {
+            "id": "ai-earthquake",
+            "title": "地震：旧金山1906",
+            "firstYear": 1981,
+            "aliases": [],
+            "sourceRefs": [],
+            "mainPlacement": null,
+            "batch": null
+          },
+          "sourceSnapshots": []
+        }
+      ]
+    },
+    "ifdb:2752o3sh6y05ob1p": {
+      "sourceIdentity": "ifdb:2752o3sh6y05ob1p",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "2752o3sh6y05ob1p",
+      "title": "Journey",
+      "intakeYear": 1989,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 40,
+          "row": {
+            "sourceId": "2752o3sh6y05ob1p",
+            "title": "Journey",
+            "published": "1989-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-xehpx39rfnerjy1f",
+                1979,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "2752o3sh6y05ob1p",
+        "title": "Journey",
+        "author": "Marc Blank",
+        "published": "1989-01-01 00:00:00",
+        "system": "ZIL",
+        "language": "en",
+        "flags": 0,
+        "tags": "Infocom,fantasy,menu-based,fantasy,infocom,cover art,Graphics,commercial,Amiga,Apple II,Published 1989,pixel art,Infocom Z6,non-parser in parser oriented system,Trivially-Challenging,z-machine v6",
+        "ifids": [
+          "ZCODE-26-890316",
+          "ZCODE-30-890322",
+          "ZCODE-46-880603",
+          "ZCODE-77-890616",
+          "ZCODE-83-890706"
+        ],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://curiousdannii.github.io/infocom-frotz/journey-r83-s890706-graphics.zblorb",
+          "https://curiousdannii.github.io/infocom-frotz/journey.html",
+          "https://eblong.com/infocom/gamefiles/journey-r83-s890706.z6",
+          "https://github.com/historicalsource/journey",
+          "https://ifarchive.org/if-archive/infocom/media/blorb/Journey.blb",
+          "https://ifdb.org/viewgame?id=2752o3sh6y05ob1p",
+          "https://infodoc.plover.net/manuals/temp/journey.pdf",
+          "https://www.ifwiki.org/Journey"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-xehpx39rfnerjy1f",
+          "year": 1979,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-xehpx39rfnerjy1f",
+            "title": "Journey",
+            "firstYear": 1979,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:xehpx39rfnerjy1f"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r61"
+          },
+          "sourceSnapshot": {
+            "tuid": "xehpx39rfnerjy1f",
+            "title": "Journey",
+            "author": "Steve Baker",
+            "published": "1979-01-01 00:00:00",
+            "system": null,
+            "language": "en",
+            "flags": 0,
+            "tags": null,
+            "ifids": [],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://mirror.ifarchive.org/if-archive/games/appleII/Journey.zip"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:awzxljw8p7cwlkd0": {
+      "sourceIdentity": "ifdb:awzxljw8p7cwlkd0",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "awzxljw8p7cwlkd0",
+      "title": "Diablo!",
+      "intakeYear": 1988,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 41,
+          "row": {
+            "sourceId": "awzxljw8p7cwlkd0",
+            "title": "Diablo!",
+            "published": "1988-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "sierra-on-line-diablo-hellfire",
+                1996,
+                "historical-dossier"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "awzxljw8p7cwlkd0",
+        "title": "Diablo!",
+        "author": "Mark Cantrell",
+        "published": "1988-01-01 00:00:00",
+        "system": "PAW",
+        "language": "en",
+        "flags": 0,
+        "tags": "graphics,aliens,space,spaceship setting,ZX Spectrum",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://ifarchive.org/if-archive/games/spectrum/zenobi128k.zip",
+          "https://ifarchive.org/if-archive/games/spectrum/zenobi48k.zip",
+          "https://ifarchive.org/if-archive/games/spectrum/zenobi_boti2.zip"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "sierra-on-line-diablo-hellfire",
+          "year": 1996,
+          "matchSource": "historical-dossier",
+          "registryWork": {
+            "id": "sierra-on-line-diablo-hellfire",
+            "title": "暗黑破坏神：地狱火关联",
+            "firstYear": 1996,
+            "aliases": [],
+            "sourceRefs": [],
+            "mainPlacement": null,
+            "batch": null
+          },
+          "sourceSnapshots": []
+        }
+      ]
+    },
+    "ifdb:7mlyo81bc9pk2txv": {
+      "sourceIdentity": "ifdb:7mlyo81bc9pk2txv",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "7mlyo81bc9pk2txv",
+      "title": "The Museum",
+      "intakeYear": 1989,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 42,
+          "row": {
+            "sourceId": "7mlyo81bc9pk2txv",
+            "title": "The Museum",
+            "published": "1989-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-sfgaszp8e63v8dtm",
+                2008,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "7mlyo81bc9pk2txv",
+        "title": "The Museum",
+        "author": "Merle K. Goodman",
+        "published": "1989-01-01 00:00:00",
+        "system": null,
+        "language": "en",
+        "flags": 0,
+        "tags": "first person,nonhuman protagonist,two-word parser,sound",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "http://www.ifarchive.org/if-archive/games/pc/battune.zip"
+        ],
+        "website": null
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "ifdb-sfgaszp8e63v8dtm",
+          "year": 2008,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "ifdb-sfgaszp8e63v8dtm",
+            "title": "The Museum",
+            "firstYear": 2008,
+            "aliases": [],
+            "sourceRefs": [
+              "ifdb:sfgaszp8e63v8dtm",
+              "ifid:b823eace-0abd-4a41-a435-efedfe3c62ed"
+            ],
+            "mainPlacement": "promoted-basic",
+            "batch": "nextmoe-ifdb-bulk-20261102-r63"
+          },
+          "sourceSnapshot": {
+            "tuid": "sfgaszp8e63v8dtm",
+            "title": "The Museum",
+            "author": "Andreas Jörgensen",
+            "published": "2008-11-28 00:00:00",
+            "system": "Inform 7",
+            "language": "en",
+            "flags": 0,
+            "tags": "music,cover art,music,H. P. Lovecraft Commonplace Book Project",
+            "ifids": [
+              "B823EACE-0ABD-4A41-A435-EFEDFE3C62ED"
+            ],
+            "redirectsTo": null,
+            "xrefs": [],
+            "links": [
+              "http://distractionware.com/hideous/Beware%20of%20the%20Mummy.mp3",
+              "http://distractionware.com/hideous/The%20Museum%20-%20Windows.rar",
+              "http://www.ifarchive.org/if-archive/games/glulx/TheMuseum.gblorb"
+            ],
+            "website": null
+          }
+        }
+      ]
+    },
+    "ifdb:9lzmypxgtirgznc7": {
+      "sourceIdentity": "ifdb:9lzmypxgtirgznc7",
+      "candidateKind": "ifdb",
+      "candidateSourceId": "9lzmypxgtirgznc7",
+      "title": ">DEVOTION",
+      "intakeYear": 2020,
+      "reason": "name-year-conflict",
+      "sourceRows": [
+        {
+          "batch": 119,
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 43,
+          "row": {
+            "sourceId": "9lzmypxgtirgznc7",
+            "title": ">DEVOTION",
+            "published": "2020-07-16 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "g1414",
+                2019,
+                "complete"
+              ],
+              [
+                "g1414",
+                2019,
+                "identity-registry"
+              ],
+              [
+                "supp26-redcandle-devotion",
+                2019,
+                "supplement"
+              ]
+            ]
+          }
+        }
+      ],
+      "candidateSnapshot": {
+        "tuid": "9lzmypxgtirgznc7",
+        "title": ">DEVOTION",
+        "author": "Mizal",
+        "published": "2020-07-16 01:00:00",
+        "system": "ChooseYourStory",
+        "language": "en",
+        "flags": 0,
+        "tags": "artificial intelligence,choice-based,ChooseYourStory,CYOA,dystopia,nonhuman protagonist,post-apocalyptic,present tense,robot,science fiction,second person,ChooseYourStory",
+        "ifids": [],
+        "redirectsTo": null,
+        "xrefs": [],
+        "links": [
+          "https://chooseyourstory.com/story/~3eDEVOTION"
+        ],
+        "website": "https://chooseyourstory.com/story/~3eDEVOTION"
+      },
+      "candidateSafeInPinnedIfdbArchive": true,
+      "matches": [
+        {
+          "id": "g1414",
+          "year": 2019,
+          "matchSource": "complete",
+          "registryWork": {
+            "id": "g1414",
+            "title": "还愿",
+            "firstYear": 2019,
+            "aliases": [],
+            "sourceRefs": [],
+            "mainPlacement": null,
+            "batch": null
+          },
+          "sourceSnapshots": []
+        },
+        {
+          "id": "g1414",
+          "year": 2019,
+          "matchSource": "identity-registry",
+          "registryWork": {
+            "id": "g1414",
+            "title": "还愿",
+            "firstYear": 2019,
+            "aliases": [],
+            "sourceRefs": [],
+            "mainPlacement": null,
+            "batch": null
+          },
+          "sourceSnapshots": []
+        },
+        {
+          "id": "supp26-redcandle-devotion",
+          "year": 2019,
+          "matchSource": "supplement",
+          "registryWork": {
+            "id": "supp26-redcandle-devotion",
+            "title": "还愿",
+            "firstYear": 2019,
+            "aliases": [],
+            "sourceRefs": [],
+            "mainPlacement": null,
+            "batch": null
+          },
+          "sourceSnapshots": []
+        }
+      ]
+    }
+  }
+}
