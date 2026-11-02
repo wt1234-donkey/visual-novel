@@ -10,6 +10,7 @@ import argparse
 from collections import Counter
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 import sys
 
@@ -183,6 +184,22 @@ def check():
     assert a['decisions']==decisions
     assert [w for w in reg['works'] if w.get('batch')==BATCH]==additions
     assert reg['summary']['accepted']==len(reg['works'])
+    prior=json.loads(subprocess.check_output(
+        ['git','show',BASE+':'+str(REG.relative_to(ROOT))],cwd=ROOT))
+    assert len(reg['works'])==len(prior['works'])+18
+    assert reg['works'][:len(prior['works'])]==prior['works']
+    assert reg['batches'][:len(prior['batches'])]==prior['batches']
+    assert reg['batches'][-1]['id']==BATCH
+    for key,val in prior['summary'].items():
+        assert reg['summary'][key]==val+(18 if key in
+          ('candidates','accepted','promotedBasic','addedToMainIdentityLayer') else 0),(key,val)
+    assert len(reg['works'])==len({w['id'] for w in reg['works']})
+    assert len(reg['works'])==len({w['indexId'] for w in reg['works']})
+    for path in src.PROTECTED:
+        assert (ROOT/path).read_bytes()==subprocess.check_output(
+           ['git','show',BASE+':'+path],cwd=ROOT),path
+    refs=src.identity_map(reg)
+    assert refs.get('ifdb:x7cvej7bm7ixiz0a')=={'ai-earthquake'}
     ids={w['id'] for w in src.all_works(reg)}
     assert len(ids)>=len(reg['works'])
     assert all(d['registryId'] not in ids for d in a['decisions'] if d['status']=='held' and d['registryId'])
