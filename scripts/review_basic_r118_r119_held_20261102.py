@@ -138,6 +138,10 @@ def evidence_for_ifdb(key,locators,refs):
 def run():
     gs=groups()
     original=load(src.REG)
+    if any(b['id']==BATCH for b in original['batches']):
+        verify()
+        print('REVIEW_ALREADY_IMPORTED',flush=True)
+        return
     before=copy.deepcopy(original)
     registered={w['id']:w for w in src.all_works(original)}
     refs=src.identity_map(original)
