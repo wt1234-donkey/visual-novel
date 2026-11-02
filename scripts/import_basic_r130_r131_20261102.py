@@ -61,7 +61,7 @@ def report_text():
     lines += [table_row(row) for row in metrics]
     first, second = audits
     selected = sum(a['summary']['selectedFromDeferred'] for a in audits)
-    assert sum(a['summary']['pendingInput'] for a in audits) == 6
+    assert sum(a['summary']['pendingInput'] for a in audits) == 56
     lines += ['', '## 56条暂存处理', '', 
         f"VNDB输入56条、NextMoe输入0条；本轮从旧暂存入选{selected}条。逐条处理状态保存在两个审计文件的pendingQueueReview中。", '',
         f"基础身份库：{first['summary']['before']:,} → {second['summary']['after']:,}。", '',
