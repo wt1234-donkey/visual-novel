@@ -15,8 +15,8 @@ class Last20ReviewTests(unittest.TestCase):
 
     def test_exact_twenty_with_evidence(self):
         self.assertEqual(self.audit['summary'],{
-            'reviewed':20,'registeredDistinct':18,
-            'reusedExisting':1,'remainingHeld':1})
+            'reviewed':20,'registeredDistinct':19,
+            'reusedExisting':1,'remainingHeld':0})
         self.assertEqual(len(self.audit['decisions']),20)
         self.assertTrue(all(d['sourceUrls'] for d in self.audit['decisions']))
 
@@ -29,9 +29,13 @@ class Last20ReviewTests(unittest.TestCase):
         self.assertEqual(refs['ifdb:x7cvej7bm7ixiz0a'],{'ai-earthquake'})
         self.assertNotIn('ifdb-x7cvej7bm7ixiz0a',{w['id'] for w in reg['works']})
 
-    def test_shipwreck_stays_isolated(self):
+    def test_shipwreck_is_distinct_from_1986_work(self):
         self.assertEqual([d['sourceIdentity'] for d in self.audit['decisions']
-          if d['status']=='held'],['ifdb:iq9wxtd9a7vpcy2g'])
+          if d['status']=='held'],[])
+        reg=json.loads(src.REG.read_text(encoding='utf-8'))
+        works={w['id']:w for w in reg['works']}
+        self.assertEqual(works['ifdb-iq9wxtd9a7vpcy2g']['firstYear'],1987)
+        self.assertEqual(works['ifdb-1j9p7lpcoj2sf05i']['firstYear'],1986)
 
     def test_distinct_spinoffs_and_dates(self):
         new={w['id']:w for w in self.audit['worksToAppend']}
@@ -39,7 +43,7 @@ class Last20ReviewTests(unittest.TestCase):
                            ('vndb-v62160',2003),('vndb-v62532',2025),
                            ('vndb-v62845',2026)]:
             self.assertEqual(new[ident]['firstYear'],year)
-        self.assertEqual(len(new),18)
+        self.assertEqual(len(new),19)
 
 if __name__=='__main__':
     unittest.main()
