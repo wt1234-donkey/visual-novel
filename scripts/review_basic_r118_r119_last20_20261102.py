@@ -124,7 +124,7 @@ def build(reg):
             status='registered-distinct'
             assert src_kind=='ifdb'
             assert first['title']=='Shipwreck'
-            assert first['authors']=='Gladys Officer, Gerry Officer'
+            assert first['author']=='Gladys Officer, Gerry Officer'
             assert first['published'].startswith('1987-')
             year=1987
             target_id='ifdb-'+sid
