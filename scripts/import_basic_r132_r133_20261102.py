@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Rounds 132–133: recheck 50 VNDB + 0 NextMoe candidates, then resume three sources."""
 import sys
+import argparse
+import datetime as dt
+import json
+import re
+import subprocess
+from collections import defaultdict
 
 import import_basic_r60_r61_20261102 as mixed
 
@@ -111,12 +117,139 @@ def report_text():
     return '\n'.join(lines) + '\n'
 
 
-if __name__ == '__main__':
+
+def flexible_check():
+    """Validate an append-only batch when the VNDB cursor reaches its current end."""
+    old = json.loads(subprocess.check_output(
+        ['git', 'show', mixed.BASE + ':' + str(mixed.e.REG.relative_to(mixed.e.ROOT))],
+        cwd=mixed.e.ROOT))
+    current = mixed.e.load(mixed.e.REG)
+    assert current['works'][:len(old['works'])] == old['works']
+    assert current['batches'][:len(old['batches'])] == old['batches']
+    assert current['updated'] == mixed.DATE
+    for key in old:
+        if key not in {'works', 'batches', 'summary', 'updated'}:
+            assert current[key] == old[key]
+    for path in mixed.e.source.PROTECTED:
+        original = subprocess.check_output(['git', 'show', mixed.BASE + ':' + path], cwd=mixed.e.ROOT)
+        assert original == (mixed.e.ROOT / path).read_bytes(), path
+    assert subprocess.check_output(['git', 'show', mixed.BASE + ':data/vn-seven-source-date-review-20261101.json'],
+        cwd=mixed.e.ROOT) == (mixed.e.ROOT / 'data/vn-seven-source-date-review-20261101.json').read_bytes()
+    added = current['works'][len(old['works']):]
+    audits = [mixed.e.load(mixed.A60), mixed.e.load(mixed.A61)]
+    sizes = [a['summary']['newDistinctWorks'] for a in audits]
+    assert all(0 < size <= 500 for size in sizes), sizes
+    assert sum(sizes) == len(added)
+    assert len(current['works']) == len({w['id'] for w in current['works']})
+    assert len(current['works']) == len({w['indexId'] for w in current['works']})
+    index = mixed.e.source.common.existing_index(old)
+    refs = mixed.e.source.identity_map(old)
+    folded = defaultdict(set)
+    for ref, ids in refs.items():
+        folded[ref.casefold()].update(ids)
+    registered = {w['id'] for w in current['works']}
+    deferred_ids = {r['work']['id'] for a in audits for r in a['deferredEligible']}
+    for batch, audit in zip((mixed.B60, mixed.B61), audits):
+        stats = audit['summary']
+        rows = [w for w in added if w.get('batch') == batch]
+        assert len(rows) == stats['newDistinctWorks'] == len(audit['records'])
+        assert stats['selectedFromDeferred'] + stats['selectedFromLive'] == len(rows)
+        assert len(audit['pendingQueueReview']) == stats['pendingInput']
+        assert stats['selectedFromDeferred'] == sum(
+            r['status'] == 'selected-from-deferred' for r in audit['pendingQueueReview'])
+        assert stats['selectedFromDeferred'] == stats['pendingEligible']
+        source_counts = stats.get('sourceCounts', {'vndb':len(rows)})
+        assert sum(source_counts.values()) == len(rows)
+        selected_next = source_counts.get('nextmoe', 0) if batch == mixed.B61 else len(rows)
+        assert stats['pendingEligible'] + stats['liveEligible'] == (
+            selected_next + len(audit['deferredEligible']))
+        for event in audit['reusedExisting']:
+            hits = set(event.get('matchedWorkIds', [])) | {
+                x[0] for x in event.get('matches', [])}
+            assert hits and hits <= registered | deferred_ids
+        evidence = {r['id']:r for r in audit['records']}
+        for work in rows:
+            assert work['id'] in evidence
+            row = evidence[work['id']]
+            assert all(work[k] == row[k] for k in work)
+            if row.get('sourceKind') == 'ifdb':
+                assert work['id'] == 'ifdb-' + row['sourceId']
+                assert re.fullmatch('[a-z0-9]{16}', row['sourceId'])
+                assert 'ifdb:' + row['sourceId'] in work['sourceRefs']
+                assert work['firstYear'] == dt.date.fromisoformat(row['ifdbPublished'][:10]).year
+                assert row['archiveSha256'] == mixed.ifdb.ARCHIVE_SHA256
+                assert not any(ref.startswith('vndb:') for ref in work['sourceRefs'])
+            else:
+                assert work['id'] == 'vndb-' + row['vndbId']
+                assert 'vndb:' + row['vndbId'] in work['sourceRefs']
+                assert work['firstYear'] == mixed.e.previous.vndb_year({
+                    'released':row['sourceReleased'],'devstatus':row['sourceDevstatus']})
+            assert not any(folded.get(ref.casefold()) for ref in work['sourceRefs'])
+            assert all(mixed.e.norm(n) and not index.get(mixed.e.norm(n)) for n in
+                [work['title'], *work['aliases']])
+            for n in [work['title'], *work['aliases']]:
+                index[mixed.e.norm(n)].add((work['id'], work['firstYear'], 'new'))
+            for ref in work['sourceRefs']:
+                folded[ref.casefold()].add(work['id'])
+        if batch == mixed.B61:
+            review = audit['ifdbArchiveReview']
+            assert review['selected'] == source_counts['ifdb']
+            assert review['sha256'] == mixed.ifdb.ARCHIVE_SHA256
+            assert review['startPosition'] == mixed.IFDB_START_POSITION
+            assert review['nextPosition'] == review['startPosition'] + review['scanned']
+            assert review['scanned'] == review['selected'] + sum(review['dispositions'].values())
+    for audit in audits:
+        for row in audit['deferredEligible']:
+            work = row['work']
+            assert all(not index.get(mixed.e.norm(n)) for n in [work['title'],*work['aliases']])
+            assert not any(folded.get(ref.casefold()) for ref in work['sourceRefs'])
+            for n in [work['title'],*work['aliases']]:
+                index[mixed.e.norm(n)].add((work['id'], work['firstYear'], 'deferred'))
+            for ref in work['sourceRefs']:
+                folded[ref.casefold()].add(work['id'])
+    summary = mixed.e.load(mixed.REPORT)['summary']
+    assert summary['newDistinctWorks'] == len(added)
+    assert summary['uniqueVndbIds'] + summary['uniqueIfdbTuids'] == len(added)
+    assert current['summary']['accepted'] == len(current['works'])
+    print('BASIC_PARTIAL_CHECK_OK',len(old['works']),'+',len(added),'=',len(current['works']),
+        json.dumps(summary),flush=True)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--check', action='store_true')
+    parser.add_argument('--archive', default='/tmp/ifdb-archive-20260901.zip')
+    args = parser.parse_args()
     configure()
-    mixed.main()
+    if not args.check:
+        registry, index, refs = mixed.e.source.state()
+        c0 = mixed.e.context('vndb', mixed.B60, mixed.SEED_VNDB, mixed.A60)
+        c1 = mixed.e.context('nextmoe', mixed.B61, mixed.SEED_NEXTMOE, mixed.A61)
+        if not mixed.e.source.already_exists(registry, mixed.B60, mixed.A60):
+            mixed.e.drain(c0, index, refs)
+            mixed.e.drain(c1, index, refs)
+            mixed.e.fetch_vndb(c0, index, refs)
+            # Strict upper bound, not a requirement to invent 500 VNDB records.
+            assert 0 < len(c0['pending']) + len(c0['fresh'])
+            mixed.e.append(c0, registry)
+        registry, index, refs = mixed.e.source.state()
+        mixed.e.reserve(mixed.e.load(mixed.A60)['deferredEligible'], index, refs)
+        if not mixed.e.source.already_exists(registry, mixed.B61, mixed.A61):
+            if 'pendingInput' not in c1:
+                mixed.e.drain(c1, index, refs)
+            else:
+                mixed.e.reserve(c1['pending'], index, refs)
+            mixed.e.fetch_nextmoe(c1, index, refs)
+            mixed.append_mixed(c1, registry, index, refs, args.archive)
+        mixed.report()
+    flexible_check()
     output = mixed.e.ROOT / 'data/basic-r132-r133-audit-summary-20261102.md'
-    result = report_text()
-    if '--check' in sys.argv:
-        assert output.read_text(encoding='utf-8') == result
+    report = report_text()
+    if args.check:
+        assert output.read_text(encoding='utf-8') == report
     else:
-        output.write_text(result, encoding='utf-8')
+        output.write_text(report, encoding='utf-8')
+
+
+if __name__ == '__main__':
+    main()
