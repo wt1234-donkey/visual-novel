@@ -6,6 +6,7 @@ from pathlib import Path
 REVIEWS = [
     Path(__file__).resolve().parents[1] / 'data/basic-r92-r93-conflict-review-20261102.json',
     Path(__file__).resolve().parents[1] / 'data/basic-r118-r119-identity-review-20261102.json',
+    Path(__file__).resolve().parents[1] / 'data/basic-r118-r119-last20-decisions-20261102.json',
 ]
 
 

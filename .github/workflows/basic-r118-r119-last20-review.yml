@@ -1,0 +1,56 @@
+name: Verify and import final twenty held identities (rounds 118-119)
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'scripts/review_basic_r118_r119_last20_20261102.py'
+      - 'scripts/basic_identity_decisions.py'
+      - 'tests/test_basic_r118_r119_last20_20261102.py'
+      - '.github/workflows/basic-r118-r119-last20-review.yml'
+permissions:
+  contents: write
+concurrency:
+  group: last20-r118-r119-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  audited-append:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'catalog/review-r118-r119-last20-20261102'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply explicit decisions and verify exact append-only delta
+        run: |
+          python3 -m py_compile scripts/review_basic_r118_r119_last20_20261102.py scripts/basic_identity_decisions.py
+          python3 scripts/review_basic_r118_r119_last20_20261102.py
+          python3 scripts/review_basic_r118_r119_last20_20261102.py --check
+      - name: Run Python and Node regressions, data integrity and page generation
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+      - name: Commit only verified identity delta and adjudication report
+        env:
+          TARGET_BRANCH: ${{ github.head_ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/basic-r118-r119-last20-decisions-20261102.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Register 19 distinct identities including 1987 Shipwreck; alias Earthquake"
+            git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          fi
