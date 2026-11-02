@@ -213,13 +213,19 @@ def check():
     assert reg['summary']['accepted']==len(reg['works'])
     prior=json.loads(subprocess.check_output(
         ['git','show',BASE+':'+str(REG.relative_to(ROOT))],cwd=ROOT))
-    assert len(reg['works'])==len(prior['works'])+19
-    assert reg['works'][:len(prior['works'])]==prior['works']
-    assert reg['batches'][:len(prior['batches'])]==prior['batches']
-    assert reg['batches'][-1]['id']==BATCH
+    # This historical audit must remain valid after later append-only batches.
+    original_count=len(prior['works'])
+    appended_after_review=len(reg['works'])-original_count-19
+    assert appended_after_review>=0
+    assert reg['works'][:original_count]==prior['works']
+    assert reg['works'][original_count:original_count+19]==additions
+    old_batch_count=len(prior['batches'])
+    assert reg['batches'][:old_batch_count]==prior['batches']
+    assert reg['batches'][old_batch_count]['id']==BATCH
     for key,val in prior['summary'].items():
-        assert reg['summary'][key]==val+(19 if key in
-          ('candidates','accepted','promotedBasic','addedToMainIdentityLayer') else 0),(key,val)
+        extra=19+appended_after_review if key in (
+          'candidates','accepted','promotedBasic','addedToMainIdentityLayer') else 0
+        assert reg['summary'][key]==val+extra,(key,val,extra)
     assert len(reg['works'])==len({w['id'] for w in reg['works']})
     assert len(reg['works'])==len({w['indexId'] for w in reg['works']})
     for path in src.PROTECTED:
