@@ -1,0 +1,296 @@
+{
+  "schema": 1,
+  "date": "2026-11-02",
+  "byBatch": {
+    "vndb-kana-bulk-20261102-r66": {
+      "newDistinctWorks": 500,
+      "before": 31785,
+      "after": 32285,
+      "scanned": 1231,
+      "pendingInput": 31,
+      "pendingEligible": 31,
+      "liveScanned": 1200,
+      "liveEligible": 506,
+      "selectedFromDeferred": 31,
+      "selectedFromLive": 469,
+      "remainingDeferred": 37,
+      "reused-title-alias": 32,
+      "name-year-conflict-held": 27,
+      "reused-external-identity": 521,
+      "missing-name-year-or-unreleased": 110,
+      "derivative-held": 4,
+      "cursorStart": "v26318",
+      "cursorEnd": "v27548",
+      "reuseTargets": {
+        "registered-work": 553
+      },
+      "decades": {
+        "1980s": 1,
+        "2000s": 3,
+        "2010s": 462,
+        "2020s": 34
+      },
+      "creatorTypes": {
+        "individual-or-amateur-signal": 411,
+        "company": 85,
+        "unknown": 4
+      },
+      "distinctSourceAuthorNames": 0,
+      "distinctDeveloperIds": 369
+    },
+    "nextmoe-ifdb-bulk-20261102-r67": {
+      "newDistinctWorks": 500,
+      "before": 32285,
+      "after": 32785,
+      "pendingInput": 0,
+      "pendingEligible": 0,
+      "liveScanned": 2500,
+      "liveEligible": 0,
+      "selectedFromDeferred": 0,
+      "selectedFromLive": 500,
+      "remainingDeferred": 0,
+      "sourceCounts": {
+        "nextmoe": 0,
+        "ifdb": 500
+      },
+      "nextmoeDispositions": {
+        "reused-external-identity": 2425,
+        "name-year-conflict-held": 50,
+        "derivative-held": 8,
+        "reused-title-alias": 7,
+        "missing-name-year-or-unreleased": 9,
+        "source-date-conflict-held": 1
+      },
+      "paginationTrace": [
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGN5TlRaOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGN6T0RsOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGN6T0RsOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGMxTURoOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGMxTURoOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGMyTWpoOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGMyTWpoOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGMzTnpGOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGMzTnpGOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGM1TUROOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGM1TUROOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd3TkRGOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd3TkRGOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd4T1RaOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd4T1RaOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd6TXpCOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGd6TXpCOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGcxTkRkOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGcxTkRkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGczTURkOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGczTURkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGc0TkRSOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGc0TkRSOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt3TXpGOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt3TXpGOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt4TnpSOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt4TnpSOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt6TlRGOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGt6TlRGOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGswTnpaOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGswTnpaOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGsyTURKOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGsyTURKOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGszTWpCOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGszTWpCOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGs0TkRkOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGs0TkRkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGs1TmpkOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNVGs1TmpkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakF4TURoOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakF4TURoOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakF5TXpKOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakF5TXpKOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakF6TkRkOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakF6TkRkOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakEwT1RsOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakEwT1RsOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakEyTnpKOQ",
+          "returned": 100
+        },
+        {
+          "lane": "era-keyset",
+          "releasedAfter": "2010-01-01",
+          "releasedBefore": "2026-11-02",
+          "cursorUsed": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakEyTnpKOQ",
+          "nextCursor": "cur_ZXlKeklqb2lhV1FpTENKcFpDSTZNakE0TXpWOQ",
+          "returned": 100
+        }
+      ],
+      "reuseTargets": {
+        "registered-work": 2437
+      },
+      "decades": {
+        "1980s": 99,
+        "1990s": 101,
+        "2000s": 99,
+        "2010s": 99,
+        "2020s": 102
+      },
+      "creatorTypes": {
+        "unknown": 500
+      },
+      "distinctSourceAuthorNames": 481,
+      "distinctDeveloperIds": 0
+    }
+  },
+  "summary": {
+    "newDistinctWorks": 1000,
+    "uniqueVndbIds": 500,
+    "uniqueIfdbTuids": 500,
+    "selectedFromDeferred": 31,
+    "selectedFromLive": 969
+  },
+  "caveats": [
+    "Minimal identity intake only; source catalogue years retain per-record provenance.",
+    "IFDB export is a fixed 2026-09-01 snapshot hosted by IF Archive; archive date is not work year.",
+    "Creator types are VNDB source signals; IFDB author strings do not prove individual/independent status.",
+    "All exact source identities and normalized names/aliases are checked across the catalogue and both candidate pools; uncertain relations remain held."
+  ]
+}
