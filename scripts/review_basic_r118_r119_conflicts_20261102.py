@@ -79,10 +79,11 @@ def vndb_query(ids):
                 raise RuntimeError("VNDB API omitted requested IDs: " + ", ".join(sorted(missing)))
             return found
         except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
             if exc.code == 429 or 500 <= exc.code < 600:
                 time.sleep(min(8 * (attempt + 1), 30))
                 continue
-            raise
+            raise RuntimeError(f"VNDB API HTTP {exc.code}: {detail}") from exc
     raise RuntimeError("VNDB API request failed after retries")
 
 
