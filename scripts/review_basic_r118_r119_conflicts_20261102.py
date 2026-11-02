@@ -53,7 +53,7 @@ def vndb_query(ids):
     payload = {
         "filters": ["or", *[["id", "=", sid] for sid in ids]],
         "fields": (
-            "title, alttitle, aliases, released, devstatus, "
+            "title, alttitle, aliases, description, released, devstatus, "
             "developers{id,name,original,type}, "
             "relations{id,title,relation,relation_official}, extlinks{url}"
         ),
@@ -152,6 +152,10 @@ def collect():
                 match_id = str(match[0])
                 if match_id.startswith("vndb-v"):
                     vndb_ids.add(match_id[len("vndb-"):])
+                matched_work = work_map.get(match_id)
+                for ref in (matched_work or {}).get("sourceRefs", []):
+                    if str(ref).startswith("vndb:"):
+                        vndb_ids.add(str(ref).split(":", 1)[1])
     vndb = vndb_query(vndb_ids)
 
     archive_path = ROOT / "tmp-ifdb-archive-20260901.zip"
@@ -184,6 +188,12 @@ def collect():
                     match_item["sourceSnapshot"] = vndb.get(match_id[len("vndb-"):])
                 elif match_id.startswith("ifdb-"):
                     match_item["sourceSnapshot"] = ifdb_snapshot(match_id[len("ifdb-"):], ifdb_data)
+                elif match_item.get("registryWork"):
+                    match_item["sourceSnapshots"] = [
+                        vndb[ref.split(":", 1)[1]]
+                        for ref in match_item["registryWork"].get("sourceRefs", [])
+                        if str(ref).startswith("vndb:") and ref.split(":", 1)[1] in vndb
+                    ]
                 matches.append(match_item)
         evidence[key] = {
             "sourceIdentity": key,
