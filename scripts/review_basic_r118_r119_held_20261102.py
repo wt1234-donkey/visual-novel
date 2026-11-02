@@ -171,7 +171,7 @@ def run():
              'reason':reason,'sourceUrls':[source_url],
              'originalRows':locators,'sourceSnapshot':snap,
              'sourceCreatorSignals':devs,
-             'currentNameMatches':sorted({tuple(m) for e in locators for m in e['row'].get('matches',[])}),
+             'currentNameMatches':sorted({(str(m[0]),int(m[1])) for e in locators for m in e['row'].get('matches',[])}),
              'sourceAuditHash':{loc['audit']:input_hashes[loc['audit']] for loc in locators}}
         decisions.append(row)
         if status!='registered-distinct': continue
