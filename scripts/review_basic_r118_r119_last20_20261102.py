@@ -248,7 +248,42 @@ def build_for_check(reg,a):
 def apply():
     reg=load(REG)
     if any(b['id']==BATCH for b in reg['batches']):
+        existing=load(OUT)
+        if existing['summary']['registeredDistinct']==19:
+            check()
+            return
+        # GitHub Actions earlier committed the 18-item conservative version to
+        # this PR before the distinct 1987 Shipwreck evidence was recovered.
+        # Upgrade only that exact reviewed append, never rewrite base objects.
+        assert existing['summary']=={'reviewed':20,'registeredDistinct':18,
+                                      'reusedExisting':1,'remainingHeld':1}
+        baseline=json.loads(subprocess.check_output([
+            'git','show',BASE+':'+str(REG.relative_to(ROOT))],cwd=ROOT))
+        assert len(reg['works'])==len(baseline['works'])+18
+        assert reg['works'][:len(baseline['works'])]==baseline['works']
+        prior_additions=[w for w in reg['works'] if w.get('batch')==BATCH]
+        assert prior_additions==existing['worksToAppend']
+        additions, decisions, stats=build(baseline)
+        assert len(additions)==19
+        new_by_id={w['id']:w for w in additions}
+        assert all(new_by_id.get(w['id'])==w for w in prior_additions)
+        assert {w['id'] for w in additions}-{w['id'] for w in prior_additions}=={
+            'ifdb-iq9wxtd9a7vpcy2g'}
+        reg['works']=baseline['works']+additions
+        for field in ('candidates','accepted','promotedBasic','addedToMainIdentityLayer'):
+            reg['summary'][field]+=1
+        reg['batches'][-1]['summary'].update({
+            'candidates':19,'promoted-basic':19,'remainingHeld':0})
+        existing['summary']={'reviewed':20,'registeredDistinct':19,
+                             'reusedExisting':1,'remainingHeld':0}
+        existing['policy']='1987 Tartan Shipwreck distinct from 1986 Magnum by creators and engine; 1982 IFDB Earthquake alias of original 1981 work; no older identities or cursors changed.'
+        existing['decisions']=decisions
+        existing['worksToAppend']=additions
+        dump(OUT,existing)
+        dump(REG,reg)
+        identity_decisions.decisions.cache_clear()
         check()
+        print('LAST20_AUDIT_UPGRADED 18 to 19 distinct, 1 alias, 0 held',flush=True)
         return
     additions, decisions, stats=build(reg)
     assert len(additions)==19
