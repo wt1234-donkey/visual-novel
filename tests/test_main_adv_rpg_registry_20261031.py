@@ -28,7 +28,15 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
         dossier_ids={w['id'] for c in read('data/company-coverage.json')['companies'] for key in ('relatedGames','dossierOnlyWorks') for w in c.get(key,[])}
         for w in self.r['works']:
             self.assertTrue(w['title'] and isinstance(w['firstYear'],int) and w['source'].startswith('https://'))
-            self.assertIn(w['gameplay'],{'ADV','RPG','ARPG','SRPG','视觉小说','互动电影ADV','ADV／策略RPG','Galgame（玩法待核）'})
+            if w['gameplay']=='互动小说（玩法待核）':
+                # IFDB is a catalogue signal, not evidence of precise controls.
+                self.assertRegex(w['id'], r'^ifdb-[a-z0-9]{16}$')
+                tuid=w['id'][5:]
+                self.assertEqual(w['source'],'https://ifdb.org/viewgame?id='+tuid)
+                self.assertIn('ifdb:'+tuid,w['sourceRefs'])
+                self.assertEqual(w['mainPlacement'],'promoted-basic')
+            else:
+                self.assertIn(w['gameplay'],{'ADV','RPG','ARPG','SRPG','视觉小说','互动电影ADV','ADV／策略RPG','Galgame（玩法待核）'})
             self.assertTrue(not set(w)&{'characters','characterDetails','contentVersions','platformReleases','writer','illustrator','composer','synopsis','creators'})
             if w['mainPlacement']=='existing-complete':
                 self.assertIn(w['id'],main_ids)
