@@ -37,7 +37,7 @@ jobs:
             python3 scripts/collect_pc98_catalogues_20261103.py
           fi
           python3 scripts/collect_pc98_catalogues_20261103.py --check
-          python3 scripts/import_basic_r134_r135_20261103.py
+          python3 scripts/import_basic_r134_r135_20261103.py --rebuild
           python3 scripts/import_basic_r134_r135_20261103.py --check
           python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
       - name: Required catalogue, entity, regression and page checks

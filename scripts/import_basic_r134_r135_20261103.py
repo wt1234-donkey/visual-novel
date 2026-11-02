@@ -259,11 +259,28 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
     parser.add_argument('--archive', default='/tmp/ifdb-archive-20260901.zip')
+    parser.add_argument('--rebuild', action='store_true', help='Rebuild only these two unmerged batches after a reviewed alias correction')
     args = parser.parse_args()
     if args.check:
         check()
         return
     registry = load(REG)
+    if args.rebuild and any(b['id'] == batch(n) for n in (134, 135) for b in registry['batches']):
+        baseline = json.loads(subprocess.check_output(
+            ['git', 'show', BASE + ':' + str(REG.relative_to(ROOT))], cwd=ROOT))
+        assert registry['works'][:len(baseline['works'])] == baseline['works']
+        assert registry['batches'][:len(baseline['batches'])] == baseline['batches']
+        extra = registry['works'][len(baseline['works']):]
+        extra_batches = registry['batches'][len(baseline['batches']):]
+        assert len(extra) == 1000 and len(extra_batches) == 2
+        assert {w['batch'] for w in extra} == {batch(134), batch(135)}
+        assert {b['id'] for b in extra_batches} == {batch(134), batch(135)}
+        # Refuse to drop any unrelated batch, identity or protected historical object.
+        for key in baseline:
+            if key not in {'works', 'batches', 'summary', 'updated'}:
+                assert registry[key] == baseline[key]
+        registry = baseline
+        save(REG, registry)
     if all(any(b['id'] == batch(n) for b in registry['batches']) for n in (134, 135)):
         check()
         return
