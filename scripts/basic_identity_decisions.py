@@ -3,14 +3,19 @@ from functools import lru_cache
 import json
 from pathlib import Path
 
-REVIEW = Path(__file__).resolve().parents[1] / 'data/basic-r92-r93-conflict-review-20261102.json'
+REVIEWS = [
+    Path(__file__).resolve().parents[1] / 'data/basic-r92-r93-conflict-review-20261102.json',
+    Path(__file__).resolve().parents[1] / 'data/basic-r118-r119-identity-review-20261102.json',
+]
 
 
 @lru_cache(maxsize=1)
 def decisions():
-    if not REVIEW.exists():
-        return []
-    return json.loads(REVIEW.read_text(encoding='utf-8'))['decisions']
+    rows = []
+    for path in REVIEWS:
+        if path.exists():
+            rows.extend(json.loads(path.read_text(encoding='utf-8'))['decisions'])
+    return rows
 
 
 def reused_source_identities(known_ids):
