@@ -67,10 +67,14 @@ APPROVED={
 'v62867':('2022 tokUUU Tower original visual novel; 2009 Vivienne Dunstan Tower is Inform 7 text adventure.',
  ['https://vndb.org/v62867','https://ifdb.org/viewgame?id=8u6m0cofv7m7pn5u'])
 }
-HELD={
+APPROVED_IFDB={
 'ifdb:iq9wxtd9a7vpcy2g':(
- '1987 Tartan Software Shipwreck by Gladys/Gerry Officer confirmed, but 1986 IFDB source identity is not yet individually verified for merger-versus-distinct classification.',
- ['https://ifdb.org/viewgame?id=iq9wxtd9a7vpcy2g','https://worldofspectrum.org/archive/software/games/shipwreck-tartan-software'])
+ '1987 Tartan Software Quill story by Gladys and Gerry Officer is a distinct title from the 1986 Magnum Computing BASIC game by Paul Davies; separate makers, implementation, and work provenance.',
+ ['https://ifdb.org/viewgame?id=iq9wxtd9a7vpcy2g',
+  'https://worldofspectrum.org/archive/software/games/shipwreck-tartan-software',
+  'https://worldofspectrum.org/archive/publishers/Magnum-Computing',
+  'https://mug-uk.co.uk/zx-spectrum-bl-adventure-games/',
+  'https://viva-games.ru/game/shipwreck'])
 }
 REUSE={
 'ifdb:x7cvej7bm7ixiz0a':(
@@ -92,7 +96,7 @@ def build(reg):
           'registeredDistinct':36,'reusedExisting':0,'stillHeld':20}
     held={r['sourceIdentity']:r for r in prev['decisions'] if r['status']=='held'}
     assert len(held)==20
-    targets={'vndb:'+v for v in APPROVED} | set(HELD) | set(REUSE)
+    targets={'vndb:'+v for v in APPROVED} | set(APPROVED_IFDB) | set(REUSE)
     assert targets==set(held),'All twenty held identities require disposition'
     registered={w['id']:w for w in src.all_works(reg)}
     refs=src.identity_map(reg)
@@ -115,11 +119,32 @@ def build(reg):
             status='reuse-existing'
             target_id=target
             year=1981
-        elif key in HELD:
-            reason,sources=HELD[key]
-            status='held'
-            target_id=None
-            year=item['intakeYear']
+        elif key in APPROVED_IFDB:
+            reason,sources=APPROVED_IFDB[key]
+            status='registered-distinct'
+            assert src_kind=='ifdb'
+            assert first['title']=='Shipwreck'
+            assert first['authors']=='Gladys Officer, Gerry Officer'
+            assert first['published'].startswith('1987-')
+            year=1987
+            target_id='ifdb-'+sid
+            assert target_id not in registered and not refs.get(key)
+            assert len(item['matches'])==1
+            match=item['matches'][0]
+            assert match['id']=='ifdb-1j9p7lpcoj2sf05i' and match['year']==1986
+            assert match.get('registryWork') and match['id'] in registered
+            assert registered[match['id']]['firstYear']==1986
+            additions.append({
+                'id':target_id,'indexId':BATCH+'-'+sid,
+                'title':'Shipwreck','aliases':[],'firstYear':1987,
+                'gameplay':'互动小说（文本指令冒险）','group':'创作品牌待核',
+                'source':'https://ifdb.org/viewgame?id='+sid,
+                'sourceRefs':[key],'mainPlacement':'promoted-basic',
+                'linkedRecordId':None,
+                'creditScope':'IFDB及World of Spectrum署名Gladys/Gerry Officer；仍待核正式制作与发行职责。',
+                'yearBasis':'IFDB和World of Spectrum均为1987；1986 Magnum Computing同名游戏由Paul Davies制作，并非该作更早版本。',
+                'editorialScope':'按独立作者、发行方及The Quill与BASIC制作方式对照，确认区别于1986年同名作品。',
+                'identityReview':str(OUT.relative_to(ROOT)),'batch':BATCH})
         else:
             reason,sources=APPROVED[sid]
             status='registered-distinct'
@@ -171,7 +196,7 @@ def build(reg):
              for m in item.get('matches',[])],
           'candidateSnapshot':first
         })
-    assert (summary['registered-distinct'],summary['reuse-existing'],summary['held'])==(18,1,1)
+    assert (summary['registered-distinct'],summary['reuse-existing'],summary['held'])==(19,1,0)
     return additions,decisions,dict(summary)
 
 def check():
@@ -181,18 +206,18 @@ def check():
     for path,digest in a['sourceInputSha256'].items():
         assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
     additions,decisions,stats=build_for_check(reg,a)
-    assert a['summary']=={'reviewed':20,'registeredDistinct':18,'reusedExisting':1,'remainingHeld':1}
+    assert a['summary']=={'reviewed':20,'registeredDistinct':19,'reusedExisting':1,'remainingHeld':0}
     assert a['decisions']==decisions
     assert [w for w in reg['works'] if w.get('batch')==BATCH]==additions
     assert reg['summary']['accepted']==len(reg['works'])
     prior=json.loads(subprocess.check_output(
         ['git','show',BASE+':'+str(REG.relative_to(ROOT))],cwd=ROOT))
-    assert len(reg['works'])==len(prior['works'])+18
+    assert len(reg['works'])==len(prior['works'])+19
     assert reg['works'][:len(prior['works'])]==prior['works']
     assert reg['batches'][:len(prior['batches'])]==prior['batches']
     assert reg['batches'][-1]['id']==BATCH
     for key,val in prior['summary'].items():
-        assert reg['summary'][key]==val+(18 if key in
+        assert reg['summary'][key]==val+(19 if key in
           ('candidates','accepted','promotedBasic','addedToMainIdentityLayer') else 0),(key,val)
     assert len(reg['works'])==len({w['id'] for w in reg['works']})
     assert len(reg['works'])==len({w['indexId'] for w in reg['works']})
@@ -204,18 +229,18 @@ def check():
     ids={w['id'] for w in src.all_works(reg)}
     assert len(ids)>=len(reg['works'])
     assert all(d['registryId'] not in ids for d in a['decisions'] if d['status']=='held' and d['registryId'])
-    print('LAST20_CHECK_OK +18 reuse 1 held 1',flush=True)
+    print('LAST20_CHECK_OK +19 reuse 1 held 0',flush=True)
 
 def build_for_check(reg,a):
     # Check exact added-work objects without consulting mutable live APIs.
     recorded=a['worksToAppend']
     seen={w['id'] for w in recorded}
-    assert len(seen)==len(recorded)==18
+    assert len(seen)==len(recorded)==19
     assert all(w['batch']==BATCH and w['identityReview']==str(OUT.relative_to(ROOT)) for w in recorded)
-    assert all(w['sourceRefs']==['vndb:'+w['id'][5:]] for w in recorded)
+    assert all(w['sourceRefs']==[('ifdb:' if w['id'].startswith('ifdb-') else 'vndb:')+w['id'].split('-',1)[1]] for w in recorded)
     assert len(a['decisions'])==20
     assert {d['sourceIdentity'] for d in a['decisions']}==(
-        {'vndb:'+k for k in APPROVED}|set(HELD)|set(REUSE))
+        {'vndb:'+k for k in APPROVED}|set(APPROVED_IFDB)|set(REUSE))
     for d in a['decisions']:
         assert d['reason'] and d['sourceUrls']
     return recorded,a['decisions'],a['summary']
@@ -226,32 +251,32 @@ def apply():
         check()
         return
     additions, decisions, stats=build(reg)
-    assert len(additions)==18
+    assert len(additions)==19
     audit={'schema':1,'date':TODAY,'baseCommit':BASE,'batchId':BATCH,
         'sourceInputSha256':{str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes()).hexdigest()
                              for path in (PRIOR,EVIDENCE)},
-        'summary':{'reviewed':20,'registeredDistinct':18,'reusedExisting':1,'remainingHeld':1},
-        'policy':'Exact source-identity comparisons only; 2026-11-02 evidence snapshot pinned. The held 1987 Shipwreck source cannot be merged or imported without its 1986 match details. Earthquake source becomes a cross-source alias; preserve old year/object. No cursor or historical audit mutated.',
+        'summary':{'reviewed':20,'registeredDistinct':19,'reusedExisting':1,'remainingHeld':0},
+        'policy':'Exact source-identity comparisons only; 2026-11-02 evidence snapshot pinned. 1987 Tartan Shipwreck differs from 1986 Magnum Computing Shipwreck by author, publisher and engine. Earthquake source becomes a cross-source alias; preserve old year/object. No cursor or historical audit mutated.',
         'decisions':decisions,'worksToAppend':additions}
     # Never rewrite historical entries. No extra source-refs added to old objects:
     # reviewed alias is resolved by basic_identity_decisions.py
     oldworks=len(reg['works'])
     reg['works'].extend(additions)
     for key in ('candidates','accepted','promotedBasic','addedToMainIdentityLayer'):
-        reg['summary'][key]+=18
+        reg['summary'][key]+=19
     reg['updated']=TODAY
     reg['batches'].append({'id':BATCH,
         'source':['https://api.vndb.org/kana/vn','https://ifdb.org/'],
         'review':str(OUT.relative_to(ROOT)),
-        'summary':{'candidates':18,'promoted-basic':18,'reviewedIdentities':20,
-                   'reusedExisting':1,'remainingHeld':1}})
-    assert len(reg['works'])==oldworks+18
+        'summary':{'candidates':19,'promoted-basic':19,'reviewedIdentities':20,
+                   'reusedExisting':1,'remainingHeld':0}})
+    assert len(reg['works'])==oldworks+19
     dump(OUT,audit)
     dump(REG,reg)
     # The first catalogue read memoized decisions before this audit existed.
     identity_decisions.decisions.cache_clear()
     check()
-    print('LAST20_REVIEW_IMPORTED 18 new, 1 alias, 1 held',flush=True)
+    print('LAST20_REVIEW_IMPORTED 19 new, 1 alias, 0 held',flush=True)
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
