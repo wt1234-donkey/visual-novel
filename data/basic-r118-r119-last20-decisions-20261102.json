@@ -9,22 +9,25 @@
   },
   "summary": {
     "reviewed": 20,
-    "registeredDistinct": 18,
+    "registeredDistinct": 19,
     "reusedExisting": 1,
-    "remainingHeld": 1
+    "remainingHeld": 0
   },
-  "policy": "Exact source-identity comparisons only; 2026-11-02 evidence snapshot pinned. The held 1987 Shipwreck source cannot be merged or imported without its 1986 match details. Earthquake source becomes a cross-source alias; preserve old year/object. No cursor or historical audit mutated.",
+  "policy": "1987 Tartan Shipwreck distinct from 1986 Magnum by creators and engine; 1982 IFDB Earthquake alias of original 1981 work; no older identities or cursors changed.",
   "decisions": [
     {
       "sourceIdentity": "ifdb:iq9wxtd9a7vpcy2g",
       "title": "Shipwreck",
       "firstYear": 1987,
-      "status": "held",
-      "registryId": null,
-      "reason": "1987 Tartan Software Shipwreck by Gladys/Gerry Officer confirmed, but 1986 IFDB source identity is not yet individually verified for merger-versus-distinct classification.",
+      "status": "registered-distinct",
+      "registryId": "ifdb-iq9wxtd9a7vpcy2g",
+      "reason": "1987 Tartan Software Quill story by Gladys and Gerry Officer is a distinct title from the 1986 Magnum Computing BASIC game by Paul Davies; separate makers, implementation, and work provenance.",
       "sourceUrls": [
         "https://ifdb.org/viewgame?id=iq9wxtd9a7vpcy2g",
-        "https://worldofspectrum.org/archive/software/games/shipwreck-tartan-software"
+        "https://worldofspectrum.org/archive/software/games/shipwreck-tartan-software",
+        "https://worldofspectrum.org/archive/publishers/Magnum-Computing",
+        "https://mug-uk.co.uk/zx-spectrum-bl-adventure-games/",
+        "https://viva-games.ru/game/shipwreck"
       ],
       "previousStatus": "held",
       "priorReview": "data/basic-r118-r119-identity-review-20261102.json",
@@ -1435,6 +1438,26 @@
     }
   ],
   "worksToAppend": [
+    {
+      "id": "ifdb-iq9wxtd9a7vpcy2g",
+      "indexId": "r118-r119-last20-identity-review-20261102-iq9wxtd9a7vpcy2g",
+      "title": "Shipwreck",
+      "aliases": [],
+      "firstYear": 1987,
+      "gameplay": "ADV",
+      "group": "创作品牌待核",
+      "source": "https://ifdb.org/viewgame?id=iq9wxtd9a7vpcy2g",
+      "sourceRefs": [
+        "ifdb:iq9wxtd9a7vpcy2g"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "IFDB及World of Spectrum署名Gladys/Gerry Officer；仍待核正式制作与发行职责。",
+      "yearBasis": "IFDB和World of Spectrum均为1987；1986 Magnum Computing同名游戏由Paul Davies制作，并非该作更早版本。",
+      "editorialScope": "按独立作者、发行方及The Quill与BASIC制作方式对照，确认区别于1986年同名作品。",
+      "identityReview": "data/basic-r118-r119-last20-decisions-20261102.json",
+      "batch": "r118-r119-last20-identity-review-20261102"
+    },
     {
       "id": "vndb-v60981",
       "indexId": "r118-r119-last20-identity-review-20261102-v60981",
