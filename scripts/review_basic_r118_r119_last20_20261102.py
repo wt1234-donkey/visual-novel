@@ -3,7 +3,7 @@
 
 Source snapshots come from the frozen preceding evidence report, never inferred
 from title matching. The 1982 IFDB Earthquake catalogue record is an alias of the
-1981 original; 1987 Shipwreck remains held without proof of its 1986 collision.
+1981 original; the 1987 Quill Shipwreck is independent of the 1986 BASIC game.
 All other approvals have explicit story/creator/context evidence.
 """
 import argparse
