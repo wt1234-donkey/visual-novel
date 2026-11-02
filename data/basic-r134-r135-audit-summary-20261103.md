@@ -28,7 +28,7 @@
 
 | 本次PC-98新增作品 | 原作年 | 证据 |
 |---|---:|---|
-| ザバス | 1988 | [来源](https://www.gamepres.org/catalog/?id=8811001892004) |
+| サバッシュ | 1988 | [来源](https://www.gamepres.org/catalog/?id=8811001892004) |
 | エメラルドドラゴン | 1989 | [来源](https://www.gamepres.org/pc88/library/bashou.html) |
 | ヴェインドリーム | 1991 | [来源](https://www.gamepres.org/catalog/?id=8811000924003) |
 | 黒の剣 | 1995 | [来源](https://www.gamepres.org/catalog/?id=8811006777009) |
