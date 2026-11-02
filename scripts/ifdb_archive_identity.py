@@ -231,6 +231,8 @@ def choose(rows,needed,index,refs,norm,batch,*,start_position=1):
             continue
         if not all(norm(n) and '\ufffd' not in n for n in names):
             counts['invalid-name-held']+=1
+            held.append({'sourceId':row['tuid'],'title':row['title'],
+                'published':row['published'],'reason':'invalid-name-held','matches':[]})
             continue
         work={'id':'ifdb-'+row['tuid'],'indexId':batch+'-ifdb-'+row['tuid'],'title':row['title'],
             'aliases':list(dict.fromkeys(row['aliases'])),'firstYear':row['firstYear'],

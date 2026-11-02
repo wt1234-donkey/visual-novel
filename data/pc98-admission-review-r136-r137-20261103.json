@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "date": "2026-11-03",
+  "inputPendingAudit": "data/pc98-catalogue-audit-20261103.json",
+  "approved": [
+    {
+      "igdbId": "363411",
+      "title": "アーリーキングダム",
+      "aliases": [
+        "Early Kingdom"
+      ],
+      "firstYear": 1992,
+      "gameplay": "RPG",
+      "group": "Kure Software Koubou",
+      "source": "https://www.gamepres.org/catalog/?id=8811007846001",
+      "sourceRefs": [
+        "gamepres:8811007846001",
+        "igdb:363411",
+        "pc9801archive:1536"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "363411"
+        ],
+        [
+          "pc9801-archive",
+          "1536"
+        ]
+      ],
+      "yearBasis": "保存协会实物目录记PC-9801VM、1992年，与两份目录作品年一致；目录中的开发品牌关联不改为正式职责。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    },
+    {
+      "igdbId": "92139",
+      "title": "THE TOWER(?) OF CABIN キャビンパニック",
+      "aliases": [
+        "塔のキャビン キャビンパニック",
+        "The Tower of Cabin: Cabin Panic",
+        "The Tower? of Cabin キャビンパニック",
+        "The Tower ? Of Cabin Cabin Panic",
+        "キャビンパニック",
+        "Cabin Panic",
+        "The Tower of Cabin Cabin Panic"
+      ],
+      "firstYear": 1992,
+      "gameplay": "ADV",
+      "group": "Microcabin",
+      "source": "https://www.gamepres.org/catalog/?id=8811001304002",
+      "sourceRefs": [
+        "gamepres:8811001304002",
+        "igdb:92139",
+        "pc9801archive:1152"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "92139"
+        ],
+        [
+          "pc9801-archive",
+          "1152"
+        ]
+      ],
+      "yearBasis": "保存协会实物目录记PC-9801VM、1992年。日文目录题名与英文标题变体共用一个作品身份。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    },
+    {
+      "igdbId": "142860",
+      "title": "卍PSY幽記",
+      "aliases": [
+        "卍 PSY勇気",
+        "Manji: PSY Yuuki",
+        "卍ＰＳＹ遊記",
+        "Manji Psy Yuuki",
+        "Manji Sai Yuki",
+        "Manji Psy Yuki"
+      ],
+      "firstYear": 1995,
+      "gameplay": "RPG",
+      "group": "创作品牌待核",
+      "source": "https://www.gamepres.org/catalog/?id=8811004729000",
+      "sourceRefs": [
+        "gamepres:8811004729000",
+        "igdb:142860",
+        "pc9801archive:860",
+        "gamepres:8811007771006"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "142860"
+        ],
+        [
+          "pc9801-archive",
+          "860"
+        ]
+      ],
+      "yearBasis": "保存协会PC-9801UX条目记1995年；另有同年PC-9801VX条目8811007771006，磁盘尺寸或机型不另建作品。幽記为原题，目录中的勇気／遊記保留为检索别名。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    },
+    {
+      "igdbId": "377952",
+      "title": "インサイダーズ",
+      "aliases": [
+        "Insiders",
+        "魔王ハルトンの罠 インサイダーズ パソコン内部への旅",
+        "インサイダーズ 魔王ハルトンの罠"
+      ],
+      "firstYear": 1988,
+      "gameplay": "RPG",
+      "group": "ASCII Corporation",
+      "source": "https://www.gamepres.org/catalog/?id=8811000779009",
+      "sourceRefs": [
+        "gamepres:8811000779009",
+        "igdb:377952",
+        "pc9801archive:1612"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "377952"
+        ],
+        [
+          "pc9801-archive",
+          "1612"
+        ]
+      ],
+      "yearBasis": "保存协会记1988年PC-9801VM《Insiders》，与已有ascii-insiders的同年作品及原题一致，复用既有身份。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    }
+  ],
+  "manualAliasReuse": [],
+  "policy": "Resume unresolved source rows only; named primary evidence decisions. Insiders is expected reuse; never admit it as a new work."
+}
