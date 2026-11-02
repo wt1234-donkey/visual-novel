@@ -1,0 +1,3491 @@
+{
+  "schema": 1,
+  "date": "2026-11-02",
+  "batchId": "r118-r119-held-identity-review-20261102",
+  "baseCommit": "15de08a41d36d99fd0bd56dac86129360144e505",
+  "sourceAudits": {
+    "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+    "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+  },
+  "apiErrors": [],
+  "policy": "Add only independently evidenced originals; existing source ID reuses stay mapped; uncertain edition, same-author and unverified relations remain held. Source creator metadata is not formal credits. No historical queues/cursors or previous rows edited.",
+  "summary": {
+    "originalHeldRows": 67,
+    "reviewedIdentities": 56,
+    "registeredDistinct": 36,
+    "reusedExisting": 0,
+    "stillHeld": 20
+  },
+  "decisions": [
+    {
+      "sourceIdentity": "vndb:v60981",
+      "title": "PHANTASMAGORIA",
+      "firstYear": 2025,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v60981"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 0,
+          "row": {
+            "sourceId": "v60981",
+            "vndbId": "v60981",
+            "title": "PHANTASMAGORIA",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "g1127",
+                1995,
+                "complete"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p27429",
+            "name": "TOOLBOX STUDIOS",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v60981",
+        "relations": [],
+        "released": "2025-12-10",
+        "title": "PHANTASMAGORIA"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27429",
+          "name": "TOOLBOX STUDIOS",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "g1127",
+          1995
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61154",
+      "title": "Headlights",
+      "firstYear": 2025,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v61154"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 1,
+          "row": {
+            "sourceId": "v61154",
+            "vndbId": "v61154",
+            "title": "Headlights",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "ifdb-5x7v9fiblus23eb6",
+                2022,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p27550",
+            "name": "toroyachi",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61154",
+        "relations": [],
+        "released": "2025-12-01",
+        "title": "Headlights"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27550",
+          "name": "toroyachi",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "ifdb-5x7v9fiblus23eb6",
+          2022
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61188",
+      "title": "Mirrors",
+      "firstYear": 2025,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61188",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61188"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 2,
+          "row": {
+            "sourceId": "v61188",
+            "vndbId": "v61188",
+            "title": "Mirrors",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v18091",
+                1990,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p27572",
+            "name": "Azure Kitsu",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61188",
+        "relations": [],
+        "released": "2025-11-30",
+        "title": "Mirrors"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27572",
+          "name": "Azure Kitsu",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v18091",
+          1990
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61265",
+      "title": "The Masterpiece",
+      "firstYear": 2025,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61265",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61265"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 3,
+          "row": {
+            "sourceId": "v61265",
+            "vndbId": "v61265",
+            "title": "The Masterpiece",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v30845",
+                2021,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p15322",
+            "name": "Hyakuten Games",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61265",
+        "relations": [
+          {
+            "id": "v37936",
+            "relation": "set"
+          },
+          {
+            "id": "v43643",
+            "relation": "ser"
+          },
+          {
+            "id": "v47616",
+            "relation": "ser"
+          },
+          {
+            "id": "v58582",
+            "relation": "ser"
+          }
+        ],
+        "released": "2025-11-23",
+        "title": "The Masterpiece"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p15322",
+          "name": "Hyakuten Games",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v30845",
+          2021
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61313",
+      "title": "Wild West",
+      "firstYear": 2022,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61313",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61313"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 4,
+          "row": {
+            "sourceId": "v61313",
+            "vndbId": "v61313",
+            "title": "Wild West",
+            "firstYear": 2022,
+            "matches": [
+              [
+                "vndb-v6052",
+                2012,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p27662",
+            "name": "Mikoko",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61313",
+        "relations": [],
+        "released": "2022-09-09",
+        "title": "Wild West"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27662",
+          "name": "Mikoko",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v6052",
+          2012
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61404",
+      "title": "Cutting Edge",
+      "firstYear": 2026,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61404",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61404"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 5,
+          "row": {
+            "sourceId": "v61404",
+            "vndbId": "v61404",
+            "title": "Cutting Edge",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v53751",
+                2024,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p25976",
+            "name": "KilljoyConstruct",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61404",
+        "relations": [],
+        "released": "2026-04-07",
+        "title": "Cutting Edge"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p25976",
+          "name": "KilljoyConstruct",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v53751",
+          2024
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61484",
+      "title": "last call",
+      "firstYear": 2025,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61484",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61484"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 6,
+          "row": {
+            "sourceId": "v61484",
+            "vndbId": "v61484",
+            "title": "last call",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v21519",
+                2017,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p16728",
+            "name": "Rinkaku",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61484",
+        "relations": [
+          {
+            "id": "v41439",
+            "relation": "ser"
+          }
+        ],
+        "released": "2025-12-31",
+        "title": "last call"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p16728",
+          "name": "Rinkaku",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v21519",
+          2017
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61493",
+      "title": "A College Education",
+      "firstYear": 2026,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61493",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61493"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 7,
+          "row": {
+            "sourceId": "v61493",
+            "vndbId": "v61493",
+            "title": "A College Education",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v5616",
+                2006,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [
+          "Senior Year"
+        ],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p23357",
+            "name": "maiie",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61493",
+        "relations": [],
+        "released": "2026-06-08",
+        "title": "A College Education"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p23357",
+          "name": "maiie",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v5616",
+          2006
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61496",
+      "title": "Delirium",
+      "firstYear": 2025,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61496",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61496"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 8,
+          "row": {
+            "sourceId": "v61496",
+            "vndbId": "v61496",
+            "title": "Delirium",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v28248",
+                2016,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "でりりうむ",
+        "developers": [
+          {
+            "id": "p27742",
+            "name": "Wakaumi Ha/ Uminuno Ha",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61496",
+        "relations": [],
+        "released": "2025-10-11",
+        "title": "Delirium"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27742",
+          "name": "Wakaumi Ha/ Uminuno Ha",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v28248",
+          2016
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61668",
+      "title": "summer story",
+      "firstYear": 2026,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v61668"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 9,
+          "row": {
+            "sourceId": "v61668",
+            "vndbId": "v61668",
+            "title": "summer story",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "nextmoe-30952",
+                2021,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 0,
+          "row": {
+            "sourceId": "57397",
+            "vndbId": "v61668",
+            "title": "summer story",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "nextmoe-30952",
+                2021,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p27810",
+            "name": "karol_thegame",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61668",
+        "relations": [],
+        "released": "2026-03-26",
+        "title": "summer story"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27810",
+          "name": "karol_thegame",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "nextmoe-30952",
+          2021
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61807",
+      "title": "Lunatic",
+      "firstYear": 2002,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61807",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61807"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 10,
+          "row": {
+            "sourceId": "v61807",
+            "vndbId": "v61807",
+            "title": "Lunatic",
+            "firstYear": 2002,
+            "matches": [
+              [
+                "vndb-v17260",
+                2014,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p27869",
+            "name": "Musokan Kaihatsushitsu",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61807",
+        "relations": [],
+        "released": "2002-08-10",
+        "title": "Lunatic"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27869",
+          "name": "Musokan Kaihatsushitsu",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v17260",
+          2014
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61848",
+      "title": "Apprentice",
+      "firstYear": 2011,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v61848"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 11,
+          "row": {
+            "sourceId": "v61848",
+            "vndbId": "v61848",
+            "title": "Apprentice",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-sc9qfq1k945o51ak",
+                1991,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 1,
+          "row": {
+            "sourceId": "57554",
+            "vndbId": "v61848",
+            "title": "Apprentice",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-sc9qfq1k945o51ak",
+                1991,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [],
+        "devstatus": 0,
+        "id": "v61848",
+        "relations": [],
+        "released": "2011-09-14",
+        "title": "Apprentice"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-sc9qfq1k945o51ak",
+          1991
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61857",
+      "title": "Byoushitsu no Quartet",
+      "firstYear": 2015,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61857",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61857"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 12,
+          "row": {
+            "sourceId": "v61857",
+            "vndbId": "v61857",
+            "title": "Byoushitsu no Quartet",
+            "firstYear": 2015,
+            "matches": [
+              [
+                "vndb-v44953",
+                2005,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 2,
+          "row": {
+            "sourceId": "57563",
+            "vndbId": "v61857",
+            "title": "Byoushitsu no Quartet",
+            "firstYear": 2015,
+            "matches": [
+              [
+                "vndb-v44953",
+                2005,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "病室のカルテット",
+        "developers": [
+          {
+            "id": "p29356",
+            "name": "K.K.",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61857",
+        "relations": [],
+        "released": "2015-05-03",
+        "title": "Byoushitsu no Quartet"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p29356",
+          "name": "K.K.",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v44953",
+          2005
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61869",
+      "title": "Natsu Matsuri",
+      "firstYear": 2003,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61869",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61869"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 13,
+          "row": {
+            "sourceId": "v61869",
+            "vndbId": "v61869",
+            "title": "Natsu Matsuri",
+            "firstYear": 2003,
+            "matches": [
+              [
+                "vndb-v10170",
+                1999,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "夏まつり",
+        "developers": [
+          {
+            "id": "p27869",
+            "name": "Musokan Kaihatsushitsu",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61869",
+        "relations": [],
+        "released": "2003-08-17",
+        "title": "Natsu Matsuri"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27869",
+          "name": "Musokan Kaihatsushitsu",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v10170",
+          1999
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61970",
+      "title": "Ruins",
+      "firstYear": 2011,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v61970"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 14,
+          "row": {
+            "sourceId": "v61970",
+            "vndbId": "v61970",
+            "title": "Ruins",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-rnsj9vbk0ewwip61",
+                2001,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 3,
+          "row": {
+            "sourceId": "57669",
+            "vndbId": "v61970",
+            "title": "Ruins",
+            "firstYear": 2011,
+            "matches": [
+              [
+                "ifdb-rnsj9vbk0ewwip61",
+                2001,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [
+          "Руины"
+        ],
+        "alttitle": null,
+        "developers": [],
+        "devstatus": 0,
+        "id": "v61970",
+        "relations": [],
+        "released": "2011-05-16",
+        "title": "Ruins"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-rnsj9vbk0ewwip61",
+          2001
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v61987",
+      "title": "Dream Date",
+      "firstYear": 2026,
+      "status": "registered-distinct",
+      "registryId": "vndb-v61987",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v61987"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 15,
+          "row": {
+            "sourceId": "v61987",
+            "vndbId": "v61987",
+            "title": "Dream Date",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v28418",
+                2020,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 4,
+          "row": {
+            "sourceId": "57686",
+            "vndbId": "v61987",
+            "title": "Dream Date",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v28418",
+                2020,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p25434",
+            "name": "Skywrite Studios",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v61987",
+        "relations": [],
+        "released": "2026-01-30",
+        "title": "Dream Date"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p25434",
+          "name": "Skywrite Studios",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v28418",
+          2020
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62070",
+      "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―",
+      "firstYear": 2023,
+      "status": "held",
+      "registryId": null,
+      "reason": "source release year unresolved or changed",
+      "sourceUrls": [
+        "https://vndb.org/v62070"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 16,
+          "row": {
+            "sourceId": "v62070",
+            "vndbId": "v62070",
+            "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 5,
+          "row": {
+            "sourceId": "57760",
+            "vndbId": "v62070",
+            "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "アクマでもオレとお前は！―友人が淫魔だった時の童貞卒業回避法―",
+        "developers": [
+          {
+            "id": "p27993",
+            "name": "Kamivukuro／Chiraura Koubou",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62070",
+        "relations": [],
+        "released": "2023-08-04",
+        "title": "Akuma demo Ore to Omae wa! ―Yuujin ga Inma Datta Toki no Dotei Sotsugyo Kaihi Ho―"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p27993",
+          "name": "Kamivukuro／Chiraura Koubou",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62101",
+      "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-",
+      "firstYear": 2021,
+      "status": "held",
+      "registryId": null,
+      "reason": "source release year unresolved or changed",
+      "sourceUrls": [
+        "https://vndb.org/v62101"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 17,
+          "row": {
+            "sourceId": "v62101",
+            "vndbId": "v62101",
+            "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 6,
+          "row": {
+            "sourceId": "57790",
+            "vndbId": "v62101",
+            "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "Buddy Collection Extra －胡蝶荘の奇妙な五人－",
+        "developers": [
+          {
+            "id": "p11312",
+            "name": "Narutrick",
+            "type": "co"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62101",
+        "relations": [
+          {
+            "id": "v22808",
+            "relation": "par"
+          }
+        ],
+        "released": "2021-02-04",
+        "title": "Buddy Collection Extra -Kochou-sou no Kimyou na Gonin-"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p11312",
+          "name": "Narutrick",
+          "original": null,
+          "type": "co"
+        }
+      ],
+      "currentNameMatches": [],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62110",
+      "title": "Utakata",
+      "firstYear": 2019,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62110",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62110"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 18,
+          "row": {
+            "sourceId": "v62110",
+            "vndbId": "v62110",
+            "title": "Utakata",
+            "firstYear": 2019,
+            "matches": [
+              [
+                "vndb-v17841",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 7,
+          "row": {
+            "sourceId": "57799",
+            "vndbId": "v62110",
+            "title": "Utakata",
+            "firstYear": 2019,
+            "matches": [
+              [
+                "vndb-v17841",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "泡沫ーうたかた",
+        "developers": [
+          {
+            "id": "p28027",
+            "name": "Paso",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62110",
+        "relations": [],
+        "released": "2019-12-20",
+        "title": "Utakata"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28027",
+          "name": "Paso",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v17841",
+          2003
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62145",
+      "title": "The House of Secrets",
+      "firstYear": 2026,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v62145"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 19,
+          "row": {
+            "sourceId": "v62145",
+            "vndbId": "v62145",
+            "title": "The House of Secrets",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "ifdb-0slrzbo45nb1mebi",
+                1985,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 8,
+          "row": {
+            "sourceId": "57832",
+            "vndbId": "v62145",
+            "title": "The House of Secrets",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "ifdb-0slrzbo45nb1mebi",
+                1985,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28038",
+            "name": "VirtualDateGaming",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62145",
+        "relations": [],
+        "released": "2026-06-01",
+        "title": "The House of Secrets"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28038",
+          "name": "VirtualDateGaming",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "ifdb-0slrzbo45nb1mebi",
+          1985
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62160",
+      "title": "- la femme - BRUN ~ \"Yotsuba\"",
+      "firstYear": 2003,
+      "status": "held",
+      "registryId": null,
+      "reason": "VNDB explicitly links source and matched work",
+      "sourceUrls": [
+        "https://vndb.org/v62160"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 20,
+          "row": {
+            "sourceId": "v62160",
+            "vndbId": "v62160",
+            "title": "- la femme - BRUN ~ \"Yotsuba\"",
+            "firstYear": 2003,
+            "matches": [
+              [
+                "vndb-v62159",
+                2002,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [
+          "ラ・ファム"
+        ],
+        "alttitle": "- la femme - BRUN～「四葉」",
+        "developers": [
+          {
+            "id": "p28043",
+            "name": "Colt45sec",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62160",
+        "relations": [
+          {
+            "id": "v62159",
+            "relation": "ser"
+          }
+        ],
+        "released": "2003-01-09",
+        "title": "- la femme - BRUN ~ \"Yotsuba\""
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28043",
+          "name": "Colt45sec",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v62159",
+          2002
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62179",
+      "title": "The Garden",
+      "firstYear": 2025,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62179",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62179"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 21,
+          "row": {
+            "sourceId": "v62179",
+            "vndbId": "v62179",
+            "title": "The Garden",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v35198",
+                2022,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 9,
+          "row": {
+            "sourceId": "57865",
+            "vndbId": "v62179",
+            "title": "The Garden",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v35198",
+                2022,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28048",
+            "name": "WillaGem",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62179",
+        "relations": [],
+        "released": "2025-10-30",
+        "title": "The Garden"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28048",
+          "name": "WillaGem",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v35198",
+          2022
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62240",
+      "title": "Manin Densha",
+      "firstYear": 2020,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v62240"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/vndb-kana-bulk-review-20261102-r118.json",
+          "index": 22,
+          "row": {
+            "sourceId": "v62240",
+            "vndbId": "v62240",
+            "title": "Manin Densha",
+            "firstYear": 2020,
+            "matches": [
+              [
+                "nextmoe-5061",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        },
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 10,
+          "row": {
+            "sourceId": "57922",
+            "vndbId": "v62240",
+            "title": "Manin Densha",
+            "firstYear": 2020,
+            "matches": [
+              [
+                "nextmoe-5061",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "満淫電射",
+        "developers": [
+          {
+            "id": "p28067",
+            "name": "Naito Mea",
+            "type": "in"
+          },
+          {
+            "id": "p28086",
+            "name": "Omatsupan",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62240",
+        "relations": [
+          {
+            "id": "v16225",
+            "relation": "par"
+          }
+        ],
+        "released": "2020-03-01",
+        "title": "Manin Densha"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28067",
+          "name": "Naito Mea",
+          "original": null,
+          "type": "in"
+        },
+        {
+          "id": "p28086",
+          "name": "Omatsupan",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "nextmoe-5061",
+          2003
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/vndb-kana-bulk-review-20261102-r118.json": "9dd635885266bf3854db0fd19e509a816e4f3bc8f90790ab0db37dda029624b4",
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62319",
+      "title": "Between The Lines",
+      "firstYear": 2026,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62319",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62319"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 11,
+          "row": {
+            "sourceId": "57997",
+            "vndbId": "v62319",
+            "title": "Between The Lines",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v19561",
+                2016,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28121",
+            "name": "RUNEHEART GAMES",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62319",
+        "relations": [],
+        "released": "2026-06-30",
+        "title": "Between The Lines"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28121",
+          "name": "RUNEHEART GAMES",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v19561",
+          2016
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62338",
+      "title": "Salvation",
+      "firstYear": 2026,
+      "status": "held",
+      "registryId": null,
+      "reason": "close release years require manual version verification",
+      "sourceUrls": [
+        "https://vndb.org/v62338"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 12,
+          "row": {
+            "sourceId": "58015",
+            "vndbId": "v62338",
+            "title": "Salvation",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v57784",
+                2025,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28134",
+            "name": "Elizabeth",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62338",
+        "relations": [],
+        "released": "2026-02-15",
+        "title": "Salvation"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28134",
+          "name": "Elizabeth",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v57784",
+          2025
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62344",
+      "title": "Bitter & Sweet",
+      "firstYear": 2026,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62344",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62344"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 13,
+          "row": {
+            "sourceId": "58021",
+            "vndbId": "v62344",
+            "title": "Bitter & Sweet",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "vndb-v6234",
+                2006,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p22977",
+            "name": "Team Snowcone",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62344",
+        "relations": [
+          {
+            "id": "v54924",
+            "relation": "char"
+          }
+        ],
+        "released": "2026-02-15",
+        "title": "Bitter & Sweet"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p22977",
+          "name": "Team Snowcone",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v6234",
+          2006
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62373",
+      "title": "Cvetok",
+      "firstYear": 2026,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v62373"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 14,
+          "row": {
+            "sourceId": "58049",
+            "vndbId": "v62373",
+            "title": "Cvetok",
+            "firstYear": 2026,
+            "matches": [
+              [
+                "ifdb-77rsl9mezn5iogto",
+                1998,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "Цветок",
+        "developers": [
+          {
+            "id": "p28156",
+            "name": "Aventy's team",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62373",
+        "relations": [],
+        "released": "2026-02-15",
+        "title": "Cvetok"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28156",
+          "name": "Aventy's team",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "ifdb-77rsl9mezn5iogto",
+          1998
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62396",
+      "title": "Love Letter",
+      "firstYear": 2024,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v62396"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 15,
+          "row": {
+            "sourceId": "58068",
+            "vndbId": "v62396",
+            "title": "Love Letter",
+            "firstYear": 2024,
+            "matches": [
+              [
+                "nextmoe-1961",
+                2002,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28170",
+            "name": "lunariamv",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62396",
+        "relations": [],
+        "released": "2024-05-12",
+        "title": "Love Letter"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28170",
+          "name": "lunariamv",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "nextmoe-1961",
+          2002
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62416",
+      "title": "Karen",
+      "firstYear": 2010,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62416",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62416"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 16,
+          "row": {
+            "sourceId": "58083",
+            "vndbId": "v62416",
+            "title": "Karen",
+            "firstYear": 2010,
+            "matches": [
+              [
+                "vndb-v983",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": "夏恋",
+        "developers": [
+          {
+            "id": "p28178",
+            "name": "SwordFestival",
+            "type": "ng"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62416",
+        "relations": [],
+        "released": "2010-10-16",
+        "title": "Karen"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28178",
+          "name": "SwordFestival",
+          "original": null,
+          "type": "ng"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v983",
+          2003
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62422",
+      "title": "mirror, mirror",
+      "firstYear": 2021,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v62422"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 17,
+          "row": {
+            "sourceId": "58089",
+            "vndbId": "v62422",
+            "title": "mirror, mirror",
+            "firstYear": 2021,
+            "matches": [
+              [
+                "ifdb-vke24gmd8usqywu4",
+                2020,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p13557",
+            "name": "koloquials",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62422",
+        "relations": [],
+        "released": "2021-04-14",
+        "title": "mirror, mirror"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p13557",
+          "name": "koloquials",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "ifdb-vke24gmd8usqywu4",
+          2020
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62532",
+      "title": "Danganronpa: Hope Recreation+",
+      "firstYear": 2025,
+      "status": "held",
+      "registryId": null,
+      "reason": "match outside current registered identity layer",
+      "sourceUrls": [
+        "https://vndb.org/v62532"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 18,
+          "row": {
+            "sourceId": "58162",
+            "vndbId": "v62532",
+            "title": "Danganronpa: Hope Recreation+",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v62531",
+                2024,
+                "candidate-pool"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [
+          "Danganronpa: Hope Recreation Plus",
+          "DRHR+"
+        ],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28208",
+            "name": "cirnoX12",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62532",
+        "relations": [
+          {
+            "id": "v62531",
+            "relation": "par"
+          }
+        ],
+        "released": "2025-04-01",
+        "title": "Danganronpa: Hope Recreation+"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28208",
+          "name": "cirnoX12",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v62531",
+          2024
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62670",
+      "title": "day : dream",
+      "firstYear": 2023,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62670",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62670"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 19,
+          "row": {
+            "sourceId": "58287",
+            "vndbId": "v62670",
+            "title": "day : dream",
+            "firstYear": 2023,
+            "matches": [
+              [
+                "vndb-v9486",
+                1986,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28266",
+            "name": "☆M9☆",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62670",
+        "relations": [],
+        "released": "2023-08-06",
+        "title": "day : dream"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28266",
+          "name": "☆M9☆",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v9486",
+          1986
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62681",
+      "title": "INNOCENT",
+      "firstYear": 2023,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62681",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62681"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 20,
+          "row": {
+            "sourceId": "58298",
+            "vndbId": "v62681",
+            "title": "INNOCENT",
+            "firstYear": 2023,
+            "matches": [
+              [
+                "vndb-v21810",
+                1999,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28270",
+            "name": "Rokumi",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62681",
+        "relations": [],
+        "released": "2023-09-02",
+        "title": "INNOCENT"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28270",
+          "name": "Rokumi",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v21810",
+          1999
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62745",
+      "title": "Blind",
+      "firstYear": 2020,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62745",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62745"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 21,
+          "row": {
+            "sourceId": "58356",
+            "vndbId": "v62745",
+            "title": "Blind",
+            "firstYear": 2020,
+            "matches": [
+              [
+                "vndb-v12138",
+                2012,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28294",
+            "name": "773tk",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62745",
+        "relations": [],
+        "released": "2020-04-13",
+        "title": "Blind"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28294",
+          "name": "773tk",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v12138",
+          2012
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62751",
+      "title": "Scavenger",
+      "firstYear": 2025,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v62751"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 22,
+          "row": {
+            "sourceId": "58362",
+            "vndbId": "v62751",
+            "title": "Scavenger",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "ifdb-ii7j0kliujc4k8wf",
+                2003,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28301",
+            "name": "DroptineArt",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62751",
+        "relations": [],
+        "released": "2025-01-02",
+        "title": "Scavenger"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28301",
+          "name": "DroptineArt",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "ifdb-ii7j0kliujc4k8wf",
+          2003
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62769",
+      "title": "ChangE",
+      "firstYear": 2014,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62769",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62769"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 23,
+          "row": {
+            "sourceId": "58379",
+            "vndbId": "v62769",
+            "title": "ChangE",
+            "firstYear": 2014,
+            "matches": [
+              [
+                "vndb-v22340",
+                2017,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p25131",
+            "name": "Sneakie_ups1gb",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62769",
+        "relations": [],
+        "released": "2014-06-07",
+        "title": "ChangE"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p25131",
+          "name": "Sneakie_ups1gb",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v22340",
+          2017
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62801",
+      "title": "Change",
+      "firstYear": 2025,
+      "status": "registered-distinct",
+      "registryId": "vndb-v62801",
+      "reason": "different VNDB developer IDs, nonoverlapping release era, no explicit VN relation",
+      "sourceUrls": [
+        "https://vndb.org/v62801"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 24,
+          "row": {
+            "sourceId": "58409",
+            "vndbId": "v62801",
+            "title": "Change",
+            "firstYear": 2025,
+            "matches": [
+              [
+                "vndb-v22340",
+                2017,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28327",
+            "name": "INTERNET GIRL",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62801",
+        "relations": [],
+        "released": "2025-02-21",
+        "title": "Change"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28327",
+          "name": "INTERNET GIRL",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "vndb-v22340",
+          2017
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62845",
+      "title": "Vampire on Trial",
+      "firstYear": 2026,
+      "status": "held",
+      "registryId": null,
+      "reason": "source release year unresolved or changed",
+      "sourceUrls": [
+        "https://vndb.org/v62845"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 25,
+          "row": {
+            "sourceId": "58447",
+            "vndbId": "v62845",
+            "title": "Vampire on Trial",
+            "reason": "possible-edition-or-dependent-content"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28348",
+            "name": "AFancyQuestionMark",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62845",
+        "relations": [],
+        "released": "2026-03-02",
+        "title": "Vampire on Trial"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28348",
+          "name": "AFancyQuestionMark",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "vndb:v62867",
+      "title": "Tower",
+      "firstYear": 2022,
+      "status": "held",
+      "registryId": null,
+      "reason": "comparable VNDB creator evidence unavailable",
+      "sourceUrls": [
+        "https://vndb.org/v62867"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 26,
+          "row": {
+            "sourceId": "58463",
+            "vndbId": "v62867",
+            "title": "Tower",
+            "firstYear": 2022,
+            "matches": [
+              [
+                "ifdb-8u6m0cofv7m7pn5u",
+                2009,
+                "identity-registry"
+              ]
+            ],
+            "basis": "ambiguous-name-year"
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "aliases": [],
+        "alttitle": null,
+        "developers": [
+          {
+            "id": "p28360",
+            "name": "tokuuu",
+            "type": "in"
+          }
+        ],
+        "devstatus": 0,
+        "id": "v62867",
+        "relations": [],
+        "released": "2022-07-03",
+        "title": "Tower"
+      },
+      "sourceCreatorSignals": [
+        {
+          "id": "p28360",
+          "name": "tokuuu",
+          "original": null,
+          "type": "in"
+        }
+      ],
+      "currentNameMatches": [
+        [
+          "ifdb-8u6m0cofv7m7pn5u",
+          2009
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:jtyzvv97m8irt63s",
+      "title": "The Alchemist",
+      "firstYear": 2003,
+      "status": "registered-distinct",
+      "registryId": "ifdb-jtyzvv97m8irt63s",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=jtyzvv97m8irt63s"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 27,
+          "row": {
+            "sourceId": "jtyzvv97m8irt63s",
+            "title": "The Alchemist",
+            "published": "2003-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v29693",
+                2021,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "The Alchemist",
+        "published": "2003-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=jtyzvv97m8irt63s"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "vndb-v29693",
+          2021
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:fk8xds3a66pyx208",
+      "title": "Ash",
+      "firstYear": 2016,
+      "status": "registered-distinct",
+      "registryId": "ifdb-fk8xds3a66pyx208",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=fk8xds3a66pyx208"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 28,
+          "row": {
+            "sourceId": "fk8xds3a66pyx208",
+            "title": "Ash",
+            "published": "2016-10-01 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v8565",
+                1994,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Ash",
+        "published": "2016-10-01 01:00:00",
+        "source": "https://ifdb.org/viewgame?id=fk8xds3a66pyx208"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "vndb-v8565",
+          1994
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:68mdw9k76x61fuyb",
+      "title": "Take One",
+      "firstYear": 2005,
+      "status": "registered-distinct",
+      "registryId": "ifdb-68mdw9k76x61fuyb",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=68mdw9k76x61fuyb"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 29,
+          "row": {
+            "sourceId": "68mdw9k76x61fuyb",
+            "title": "Take One",
+            "published": "2005-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v54989",
+                2025,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Take One",
+        "published": "2005-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=68mdw9k76x61fuyb"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "vndb-v54989",
+          2025
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:d5jcsz4mn1bdqpxr",
+      "title": "Alien",
+      "firstYear": 1988,
+      "status": "registered-distinct",
+      "registryId": "ifdb-d5jcsz4mn1bdqpxr",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=d5jcsz4mn1bdqpxr"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 30,
+          "row": {
+            "sourceId": "d5jcsz4mn1bdqpxr",
+            "title": "Alien",
+            "published": "1988-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-kp8y1zd5vc284d04",
+                1984,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Alien",
+        "published": "1988-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=d5jcsz4mn1bdqpxr"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-kp8y1zd5vc284d04",
+          1984
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:o8iqwwgchaobbuhz",
+      "title": "Assault on the Clonemaster",
+      "firstYear": 1980,
+      "status": "registered-distinct",
+      "registryId": "ifdb-o8iqwwgchaobbuhz",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=o8iqwwgchaobbuhz"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 31,
+          "row": {
+            "sourceId": "o8iqwwgchaobbuhz",
+            "title": "Assault on the Clonemaster",
+            "published": "1980-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-d1lmwmvd4qiyb007",
+                2017,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Assault on the Clonemaster",
+        "published": "1980-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=o8iqwwgchaobbuhz"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-d1lmwmvd4qiyb007",
+          2017
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:ti3xxdw11e1zlbe6",
+      "title": "Sherwood Forest",
+      "firstYear": 1984,
+      "status": "registered-distinct",
+      "registryId": "ifdb-ti3xxdw11e1zlbe6",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=ti3xxdw11e1zlbe6"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 32,
+          "row": {
+            "sourceId": "ti3xxdw11e1zlbe6",
+            "title": "Sherwood Forest",
+            "published": "1984-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-v9hnvrigiz5r5nxn",
+                1982,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Sherwood Forest",
+        "published": "1984-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=ti3xxdw11e1zlbe6"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-v9hnvrigiz5r5nxn",
+          1982
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:bnvzf6d0czmbk5ps",
+      "title": "Dreamland",
+      "firstYear": 2003,
+      "status": "registered-distinct",
+      "registryId": "ifdb-bnvzf6d0czmbk5ps",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=bnvzf6d0czmbk5ps"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 33,
+          "row": {
+            "sourceId": "bnvzf6d0czmbk5ps",
+            "title": "Dreamland",
+            "published": "2003-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "nextmoe-37228",
+                2022,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Dreamland",
+        "published": "2003-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=bnvzf6d0czmbk5ps"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "nextmoe-37228",
+          2022
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:gaaxee2mvysvsaxd",
+      "title": "Excalibur",
+      "firstYear": 1987,
+      "status": "registered-distinct",
+      "registryId": "ifdb-gaaxee2mvysvsaxd",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=gaaxee2mvysvsaxd"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 34,
+          "row": {
+            "sourceId": "gaaxee2mvysvsaxd",
+            "title": "Excalibur",
+            "published": "1987-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-q3isw8j98nnz6gm3",
+                1990,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Excalibur",
+        "published": "1987-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=gaaxee2mvysvsaxd"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-q3isw8j98nnz6gm3",
+          1990
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:iq9wxtd9a7vpcy2g",
+      "title": "Shipwreck",
+      "firstYear": 1987,
+      "status": "held",
+      "registryId": null,
+      "reason": "same-title historical edition or date relationship not resolved",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=iq9wxtd9a7vpcy2g"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 35,
+          "row": {
+            "sourceId": "iq9wxtd9a7vpcy2g",
+            "title": "Shipwreck",
+            "published": "1987-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-1j9p7lpcoj2sf05i",
+                1986,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Shipwreck",
+        "published": "1987-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=iq9wxtd9a7vpcy2g"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-1j9p7lpcoj2sf05i",
+          1986
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:u16mpjnk07d3l8i2",
+      "title": "Tethered",
+      "firstYear": 2018,
+      "status": "registered-distinct",
+      "registryId": "ifdb-u16mpjnk07d3l8i2",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=u16mpjnk07d3l8i2"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 36,
+          "row": {
+            "sourceId": "u16mpjnk07d3l8i2",
+            "title": "Tethered",
+            "published": "2018-10-01 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "vndb-v31011",
+                2021,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Tethered",
+        "published": "2018-10-01 01:00:00",
+        "source": "https://ifdb.org/viewgame?id=u16mpjnk07d3l8i2"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "vndb-v31011",
+          2021
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:url6d1j3aj61qmhp",
+      "title": "Pirate Island",
+      "firstYear": 1989,
+      "status": "registered-distinct",
+      "registryId": "ifdb-url6d1j3aj61qmhp",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=url6d1j3aj61qmhp"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 37,
+          "row": {
+            "sourceId": "url6d1j3aj61qmhp",
+            "title": "Pirate Island",
+            "published": "1989-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-ic3chsxtj3ff2er3",
+                1985,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Pirate Island",
+        "published": "1989-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=url6d1j3aj61qmhp"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-ic3chsxtj3ff2er3",
+          1985
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:zgauwdi6ie4u4pqc",
+      "title": "The House",
+      "firstYear": 2026,
+      "status": "registered-distinct",
+      "registryId": "ifdb-zgauwdi6ie4u4pqc",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=zgauwdi6ie4u4pqc"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 38,
+          "row": {
+            "sourceId": "zgauwdi6ie4u4pqc",
+            "title": "The House",
+            "published": "2026-04-06 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-83noiwzup8nsasob",
+                2007,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "The House",
+        "published": "2026-04-06 01:00:00",
+        "source": "https://ifdb.org/viewgame?id=zgauwdi6ie4u4pqc"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-83noiwzup8nsasob",
+          2007
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:x7cvej7bm7ixiz0a",
+      "title": "Earthquake San Francisco 1906",
+      "firstYear": 1982,
+      "status": "held",
+      "registryId": null,
+      "reason": "same-title historical edition or date relationship not resolved",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=x7cvej7bm7ixiz0a"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 39,
+          "row": {
+            "sourceId": "x7cvej7bm7ixiz0a",
+            "title": "Earthquake San Francisco 1906",
+            "published": "1982-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ai-earthquake",
+                1981,
+                "historical-dossier"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Earthquake San Francisco 1906",
+        "published": "1982-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=x7cvej7bm7ixiz0a"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ai-earthquake",
+          1981
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:2752o3sh6y05ob1p",
+      "title": "Journey",
+      "firstYear": 1989,
+      "status": "registered-distinct",
+      "registryId": "ifdb-2752o3sh6y05ob1p",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=2752o3sh6y05ob1p"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 40,
+          "row": {
+            "sourceId": "2752o3sh6y05ob1p",
+            "title": "Journey",
+            "published": "1989-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-xehpx39rfnerjy1f",
+                1979,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Journey",
+        "published": "1989-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=2752o3sh6y05ob1p"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-xehpx39rfnerjy1f",
+          1979
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:awzxljw8p7cwlkd0",
+      "title": "Diablo!",
+      "firstYear": 1988,
+      "status": "registered-distinct",
+      "registryId": "ifdb-awzxljw8p7cwlkd0",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=awzxljw8p7cwlkd0"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 41,
+          "row": {
+            "sourceId": "awzxljw8p7cwlkd0",
+            "title": "Diablo!",
+            "published": "1988-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "sierra-on-line-diablo-hellfire",
+                1996,
+                "historical-dossier"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "Diablo!",
+        "published": "1988-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=awzxljw8p7cwlkd0"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "sierra-on-line-diablo-hellfire",
+          1996
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:7mlyo81bc9pk2txv",
+      "title": "The Museum",
+      "firstYear": 1989,
+      "status": "registered-distinct",
+      "registryId": "ifdb-7mlyo81bc9pk2txv",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=7mlyo81bc9pk2txv"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 42,
+          "row": {
+            "sourceId": "7mlyo81bc9pk2txv",
+            "title": "The Museum",
+            "published": "1989-01-01 00:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "ifdb-sfgaszp8e63v8dtm",
+                2008,
+                "identity-registry"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": "The Museum",
+        "published": "1989-01-01 00:00:00",
+        "source": "https://ifdb.org/viewgame?id=7mlyo81bc9pk2txv"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "ifdb-sfgaszp8e63v8dtm",
+          2008
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    },
+    {
+      "sourceIdentity": "ifdb:9lzmypxgtirgznc7",
+      "title": ">DEVOTION",
+      "firstYear": 2020,
+      "status": "registered-distinct",
+      "registryId": "ifdb-9lzmypxgtirgznc7",
+      "reason": "IFDB first-party title, author, year and compared earlier distinct title identity",
+      "sourceUrls": [
+        "https://ifdb.org/viewgame?id=9lzmypxgtirgznc7"
+      ],
+      "originalRows": [
+        {
+          "audit": "data/nextmoe-ifdb-bulk-review-20261102-r119.json",
+          "index": 43,
+          "row": {
+            "sourceId": "9lzmypxgtirgznc7",
+            "title": ">DEVOTION",
+            "published": "2020-07-16 01:00:00",
+            "reason": "name-year-conflict",
+            "matches": [
+              [
+                "g1414",
+                2019,
+                "complete"
+              ],
+              [
+                "g1414",
+                2019,
+                "identity-registry"
+              ],
+              [
+                "supp26-redcandle-devotion",
+                2019,
+                "supplement"
+              ]
+            ]
+          }
+        }
+      ],
+      "sourceSnapshot": {
+        "title": ">DEVOTION",
+        "published": "2020-07-16 01:00:00",
+        "source": "https://ifdb.org/viewgame?id=9lzmypxgtirgznc7"
+      },
+      "sourceCreatorSignals": [],
+      "currentNameMatches": [
+        [
+          "g1414",
+          2019
+        ],
+        [
+          "supp26-redcandle-devotion",
+          2019
+        ]
+      ],
+      "sourceAuditHash": {
+        "data/nextmoe-ifdb-bulk-review-20261102-r119.json": "fda3f845d2bbbea606a53edaafb2d1238c8a703b7fa0770cfb2d0acc030f39ee"
+      }
+    }
+  ]
+}
