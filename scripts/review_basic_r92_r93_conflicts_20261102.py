@@ -115,15 +115,32 @@ def check():
     before = json.loads(original(str(source.REG.relative_to(ROOT))))
     current = source.load(source.REG)
     new = additions(audit)
-    assert current['works'] == before['works'] + new, 'Existing work objects must remain exact'
-    assert current['batches'][:-1] == before['batches'] and current['batches'][-1]['id'] == BATCH
+    protected = before['works'] + new
+    assert current['works'][:len(protected)] == protected, 'Existing work objects must remain exact'
+    assert [w for w in current['works'] if w.get('batch') == BATCH] == new
+    boundary = len(before['batches'])
+    assert current['batches'][:boundary] == before['batches']
+    assert current['batches'][boundary]['id'] == BATCH
+    later = current['works'][len(protected):]
+    later_batches = current['batches'][boundary + 1:]
     for key in before:
         if key not in {'works', 'batches', 'summary', 'updated'}:
             assert current[key] == before[key]
     for key, value in before['summary'].items():
         delta = len(new) if key in {'candidates', 'accepted', 'promotedBasic', 'addedToMainIdentityLayer'} else 0
+        if key == 'candidates':
+            delta += sum(b['summary']['candidates'] for b in later_batches)
+        elif key == 'accepted':
+            delta += len(later)
+        elif key == 'promotedBasic':
+            delta += sum(w['mainPlacement'] == 'promoted-basic' for w in later)
+        elif key == 'promotedDossier':
+            delta += sum(w['mainPlacement'] == 'promoted-dossier' for w in later)
+        elif key == 'addedToMainIdentityLayer':
+            delta += sum(w['mainPlacement'] in {'promoted-basic', 'promoted-dossier'} for w in later)
         assert current['summary'][key] == value + delta
-    assert len(current['works']) == len({w['id'] for w in current['works']}) == len({w['indexId'] for w in current['works']}) == 45841
+    assert len(current['works']) >= 45841
+    assert len(current['works']) == len({w['id'] for w in current['works']}) == len({w['indexId'] for w in current['works']})
     all_ids = {w['id'] for w in source.all_works(current)}
     old_refs = {r.casefold() for w in before['works'] for r in w.get('sourceRefs', [])}
     new_refs = [r.casefold() for w in new for r in w['sourceRefs']]
