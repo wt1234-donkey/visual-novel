@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -20,6 +21,21 @@ class ReviewedIdentityTests(unittest.TestCase):
 
     def test_exact_delta_and_no_historical_rewrites(self):
         review.check()
+
+    def test_later_append_is_allowed_but_protected_history_is_not(self):
+        current = source.load(source.REG)
+        appended = copy.deepcopy(current['works'][-1])
+        appended.update(id='future-test-identity', indexId='future-test-index', batch='future-test')
+        current['works'].append(appended)
+        current['batches'].append({'id': 'future-test', 'summary': {'candidates': 1}})
+        for key in ('candidates', 'accepted', 'promotedBasic', 'addedToMainIdentityLayer'):
+            current['summary'][key] += 1
+        load = source.load
+        with patch.object(source, 'load', side_effect=lambda p: current if p == source.REG else load(p)):
+            review.check()
+            current['works'][0]['firstYear'] += 1
+            with self.assertRaisesRegex(AssertionError, 'Existing work objects'):
+                review.check()
 
     def test_same_name_different_creator_is_kept_separate(self):
         work = self.new['vndb-v42823']
