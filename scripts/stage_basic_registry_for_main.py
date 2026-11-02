@@ -11,6 +11,7 @@ import re
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
+from basic_identity_decisions import reviewed_name_matches
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "data/main-adv-rpg-works-20261031.json"
@@ -57,6 +58,8 @@ def stage(offset, limit):
             continue
         seen_refs.update(refs)
         matches = {(m["id"], m["year"], m["scope"]) for key in names(item) for m in index.get(key, [])}
+        approved = reviewed_name_matches(item)
+        matches = {m for m in matches if (m[0], m[1]) not in approved}
         if matches:
             matches_list = [{"workId": x[0], "year": x[1], "scope": x[2]} for x in sorted(matches)]
             destination = linked if len({x[0] for x in matches}) == 1 and all(x[1] == item["firstYear"] for x in matches) else held

@@ -15,6 +15,7 @@ from pathlib import Path
 
 import import_basic_r20_r21_20261101 as previous
 import import_nextmoe_basic_20261101_r2 as common
+from basic_identity_decisions import reused_source_identities
 
 ROOT = Path(__file__).resolve().parents[1]
 REG = common.REGISTRY
@@ -86,11 +87,15 @@ def all_works(registry):
 
 def identity_map(registry):
     index = defaultdict(set)
-    for work in all_works(registry):
+    works = all_works(registry)
+    for work in works:
         for ref in work.get('sourceRefs',[]):
             index[str(ref)].add(str(work['id']))
         if re.fullmatch(r'vndb-v\d+',str(work.get('id',''))):
             index['vndb:'+work['id'][5:]].add(str(work['id']))
+    # Reviewed cross-catalogue aliases preserve the historical work objects/dates.
+    for ref, wid in reused_source_identities({w['id'] for w in works}).items():
+        index[ref].add(wid)
     return index
 
 
