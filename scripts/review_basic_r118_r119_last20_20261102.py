@@ -138,7 +138,7 @@ def build(reg):
             additions.append({
                 'id':target_id,'indexId':BATCH+'-'+sid,
                 'title':'Shipwreck','aliases':[],'firstYear':1987,
-                'gameplay':'互动小说（文本指令冒险）','group':'创作品牌待核',
+                'gameplay':'ADV','group':'创作品牌待核',
                 'source':'https://ifdb.org/viewgame?id='+sid,
                 'sourceRefs':[key],'mainPlacement':'promoted-basic',
                 'linkedRecordId':None,
