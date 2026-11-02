@@ -17,6 +17,7 @@ on:
       - 'tests/test_basic_source_date_review.py'
       - 'scripts/ifdb_archive_identity.py'
       - 'tests/test_ifdb_archive_identity.py'
+      - 'tests/test_main_adv_rpg_registry_20261031.py'
       - 'data/vndb-kana-bulk-review-20261102-r60.json'
 permissions:
   contents: write
@@ -27,7 +28,7 @@ jobs:
   import-and-verify:
     if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'catalog/basic-r60-r61-20261102'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
