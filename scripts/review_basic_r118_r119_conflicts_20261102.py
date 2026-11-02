@@ -51,7 +51,7 @@ def vndb_query(ids):
     if not ids:
         return {}
     payload = {
-        "filters": ["id", "=", ids],
+        "filters": ["or", *[["id", "=", sid] for sid in ids]],
         "fields": (
             "title, alttitle, aliases, released, devstatus, "
             "developers{id,name,original,type}, "
