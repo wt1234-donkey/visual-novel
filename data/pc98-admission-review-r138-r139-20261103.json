@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "date": "2026-11-03",
+  "inputPendingAudit": "data/pc98-catalogue-audit-r136-r137-20261103.json",
+  "approved": [
+    {
+      "igdbId": "370780",
+      "title": "ブラック・レインボウ",
+      "aliases": [
+        "Black Rainbow"
+      ],
+      "firstYear": 1990,
+      "gameplay": "RPG",
+      "group": "创作品牌待核",
+      "source": "https://www.gamepres.org/catalog/?id=8811006838007",
+      "sourceRefs": [
+        "gamepres:8811006838007",
+        "igdb:370780",
+        "pc9801archive:551"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "370780"
+        ],
+        [
+          "pc9801-archive",
+          "551"
+        ]
+      ],
+      "yearBasis": "保存协会实物目录记PC-9801UV、1990年；与两个PC-98目录一致。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    },
+    {
+      "igdbId": "92122",
+      "title": "魔京伝",
+      "aliases": [
+        "Makyouden",
+        "Makyoden"
+      ],
+      "firstYear": 1992,
+      "gameplay": "ADV",
+      "group": "Nihon Create",
+      "source": "https://www.gamepres.org/catalog/?id=8811006936000",
+      "sourceRefs": [
+        "gamepres:8811006936000",
+        "igdb:92122",
+        "pc9801archive:1216"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "92122"
+        ],
+        [
+          "pc9801-archive",
+          "1216"
+        ]
+      ],
+      "yearBasis": "保存协会实物目录记PC-9801VM、1992年；Makyoden与Makyouden是同一作品的罗马字写法。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    },
+    {
+      "igdbId": "37798",
+      "title": "太閤立志伝",
+      "aliases": [
+        "Taikou Risshiden",
+        "Taikou Rissiden",
+        "太閤 立志伝",
+        "Taiko Risshiden"
+      ],
+      "firstYear": 1992,
+      "gameplay": "RPG",
+      "group": "Koei",
+      "source": "https://www.gamepres.org/catalog/?id=8811000689001",
+      "sourceRefs": [
+        "gamepres:8811000689001",
+        "igdb:37798",
+        "pc9801archive:209"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "37798"
+        ],
+        [
+          "pc9801-archive",
+          "209"
+        ]
+      ],
+      "yearBasis": "保存协会实物目录记PC-9801VM、1992年；目录涉及策略／角色扮演，精细玩法待后续编目。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    },
+    {
+      "igdbId": "66325",
+      "title": "第4のユニット4 ゼロ",
+      "aliases": [
+        "The 4th Unit 4 - Zero",
+        "第４のユニット４ ＺＥＲＯ",
+        "The 4th Unit 4 Zero",
+        "ＺＥＲＯ 第４のユニット４",
+        "Zero - The 4th Unit Act.4"
+      ],
+      "firstYear": 1989,
+      "gameplay": "ADV",
+      "group": "创作品牌待核",
+      "source": "https://www.gamepres.org/catalog/?id=8811001064005",
+      "sourceRefs": [
+        "gamepres:8811001064005",
+        "igdb:66325",
+        "pc9801archive:221"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "66325"
+        ],
+        [
+          "pc9801-archive",
+          "221"
+        ]
+      ],
+      "yearBasis": "对应已有1989年作品vndb-v9115；保存协会的X68000条目为1990年发行，属于较晚平台证据，不新建作品或覆盖原作年。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    },
+    {
+      "igdbId": "4459",
+      "title": "大航海時代",
+      "aliases": [
+        "Uncharted Waters",
+        "Daikoukai Jidai",
+        "大航海时代"
+      ],
+      "firstYear": 1990,
+      "gameplay": "RPG",
+      "group": "Koei",
+      "source": "https://www.gamepres.org/catalog/?id=8811000458003",
+      "sourceRefs": [
+        "gamepres:8811000458003",
+        "igdb:4459",
+        "pc9801archive:625"
+      ],
+      "catalogueRows": [
+        [
+          "ikachi-igdb",
+          "4459"
+        ],
+        [
+          "pc9801-archive",
+          "625"
+        ]
+      ],
+      "yearBasis": "保存协会目录记PC-8801mkIISR于1990年发行，两份PC-98目录也列1990年；按作品身份跨平台去重。",
+      "evidenceLevel": "primary-supported-year-and-cross-catalogue-identity"
+    }
+  ],
+  "manualAliasReuse": [],
+  "policy": "Resume unresolved catalogue rows; independently evidenced identities only. The 4th Unit 4 is expected reuse of an existing 1989 identity."
+}

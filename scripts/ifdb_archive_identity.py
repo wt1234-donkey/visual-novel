@@ -196,7 +196,7 @@ def resume_position(review):
     return position
 
 
-def choose(rows,needed,index,refs,norm,batch,*,start_position=1):
+def choose(rows,needed,index,refs,norm,batch,*,start_position=1,allow_partial=False):
     if type(start_position) is not int or not 1<=start_position<=len(rows)+1:
         raise ValueError('IFDB resume position is outside the candidate sequence')
     selected=[]
@@ -251,7 +251,9 @@ def choose(rows,needed,index,refs,norm,batch,*,start_position=1):
             'ifdbLanguage':row['language'],'ifArchiveLinks':row['archiveLinks'],
             'archiveUrl':ARCHIVE_URL,'archiveSha256':ARCHIVE_SHA256,'archivePosition':position,
             'developers':[],'developerClassification':'unknown'})
-    if len(selected)!=needed: raise RuntimeError(f'Only {len(selected)} safe IFDB identities for {needed} slots')
+    if len(selected)!=needed and not allow_partial:
+        raise RuntimeError(f'Only {len(selected)} safe IFDB identities for {needed} slots')
     return selected,{'eligibleArchiveCandidates':len(rows),'scanned':scanned,'selected':len(selected),
         'dispositions':dict(counts),'startPosition':start_position,'nextPosition':last_position+1,
+        'archiveExhausted':last_position==len(rows),
         'reusedExisting':reused,'heldForIdentityReview':held}
