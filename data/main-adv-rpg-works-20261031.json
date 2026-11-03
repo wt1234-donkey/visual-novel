@@ -4,13 +4,13 @@
   "role": "Primary main catalogue work-identity registry, separate from the complete dossier-only games.json schema.",
   "reviewPolicy": "Record title / first year / dominant gameplay and directly link existing identity; do not fabricate characters, releases, original creators or narrative editorials.",
   "summary": {
-    "candidates": 70139,
-    "accepted": 70110,
+    "candidates": 70158,
+    "accepted": 70129,
     "existingComplete": 1141,
     "promotedDossier": 761,
-    "promotedBasic": 68208,
+    "promotedBasic": 68227,
     "identityReview": 3,
-    "addedToMainIdentityLayer": 68969,
+    "addedToMainIdentityLayer": 68988,
     "nextBatchCandidates": 59,
     "nextBatchNewBasic": 24,
     "nextBatchLinkedExisting": 35,
@@ -1457207,6 +1457207,425 @@
       "yearBasis": "Bangumi条目日期与发行日期字段年粒度一致（无字段时仅据条目日期）；基础身份暂记原作年，未独立核对每个平台首发。",
       "editorialScope": "仅补基础身份和来源；详细叙事、原始首发及内容版本仍待专门编目。",
       "batch": "public-catalogues-20261103-r143"
+    },
+    {
+      "id": "mobygames-220274",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-220274",
+      "title": "Underground",
+      "aliases": [],
+      "firstYear": 1978,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为文字输入冒险；Gary Kleppe 的 1978 年主机文字冒险；与同名 2024 年作品不同。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/220274/underground/",
+      "sourceRefs": [
+        "mobygames:220274",
+        "source-url:https://solutionarchive.com/game/id%2C6984/Underground.html"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-153246",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-153246",
+      "title": "The Atlantian Odyssey",
+      "aliases": [
+        "The Atlantean Odyssey",
+        "Atlantean Odyssey"
+      ],
+      "firstYear": 1980,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为图文文字输入冒险；TRS-80 图形冒险，以动词和名词指令探索、寻宝。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/153246/the-atlantian-odyssey/",
+      "sourceRefs": [
+        "mobygames:153246",
+        "source-url:https://solutionarchive.com/game/id%2C2409/Atlantean+Odyssey.html"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-141742",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-141742",
+      "title": "Curse of the Sasquatch",
+      "aliases": [],
+      "firstYear": 1980,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为文字输入冒险；TRS-80 文字冒险，探索阿拉斯加与地下洞穴。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/141742/curse-of-the-sasquatch/",
+      "sourceRefs": [
+        "mobygames:141742",
+        "source-url:https://solutionarchive.com/game/id%2C1970/Curse+of+the+Sasquatch.html"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-134",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-134",
+      "title": "Captain Blood",
+      "aliases": [
+        "L'Arche du Capitaine Blood"
+      ],
+      "firstYear": 1988,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为科幻冒险；1988 年多个平台发行的科幻冒险；不按平台拆分。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/134/captain-blood/",
+      "sourceRefs": [
+        "mobygames:134",
+        "wikidata:Q88828"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-687",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-687",
+      "title": "Neuromancer",
+      "aliases": [],
+      "firstYear": 1988,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为赛博朋克冒险；1988 年 C64、Apple II 冒险作品，菜单与点选交互。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/687/neuromancer/",
+      "sourceRefs": [
+        "mobygames:687",
+        "wikidata:Q1126146"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-16590",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-16590",
+      "title": "Chrono Quest",
+      "aliases": [
+        "Explora: Time Run"
+      ],
+      "firstYear": 1988,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为图形冒险；Amiga 与 Atari ST 时间旅行冒险。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/16590/chrono-quest/",
+      "sourceRefs": [
+        "mobygames:16590",
+        "wikidata:Q3062137"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-27710",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-27710",
+      "title": "Chrono Quest II",
+      "aliases": [
+        "Explora II"
+      ],
+      "firstYear": 1989,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为图形冒险；Chrono Quest 独立续作，非首作移植。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/27710/chrono-quest-ii/",
+      "sourceRefs": [
+        "mobygames:27710",
+        "wikidata:Q2640164"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-562",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-562",
+      "title": "Chamber of the Sci-Mutant Priestess",
+      "aliases": [
+        "KULT: The Temple of Flying Saucers",
+        "Kult"
+      ],
+      "firstYear": 1989,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为图形解谜冒险；原题 Kult，科幻题材解谜冒险。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/562/chamber-of-the-sci-mutant-priestess/",
+      "sourceRefs": [
+        "mobygames:562",
+        "wikidata:Q3200336"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-3838",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-3838",
+      "title": "Emmanuelle: A Game of Eroticism",
+      "aliases": [
+        "Emmanuelle"
+      ],
+      "firstYear": 1989,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为图形冒险；1989 年发行的成人向冒险作品。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/3838/emmanuelle-a-game-of-eroticism/",
+      "sourceRefs": [
+        "mobygames:3838",
+        "wikidata:Q3052927"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-2264",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-2264",
+      "title": "Cruise for a Corpse",
+      "aliases": [],
+      "firstYear": 1991,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为侦探图形冒险；1991 年 Delphine 侦探冒险，不计后续移植。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/2264/cruise-for-a-corpse/",
+      "sourceRefs": [
+        "mobygames:2264",
+        "wikidata:Q970794"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-302",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-302",
+      "title": "Dark Seed",
+      "aliases": [],
+      "firstYear": 1992,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为恐怖图形冒险；1992 年原作；限量版不单列作品。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/302/dark-seed/",
+      "sourceRefs": [
+        "mobygames:302",
+        "wikidata:Q2311536"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-3206",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-3206",
+      "title": "The Big Red Adventure",
+      "aliases": [],
+      "firstYear": 1995,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为图形冒险；1995 年 DOS 原作；Amiga 后续发行不另立身份。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/3206/the-big-red-adventure/",
+      "sourceRefs": [
+        "mobygames:3206",
+        "wikidata:Q2473870"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-2176",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-2176",
+      "title": "9: The Last Resort",
+      "aliases": [],
+      "firstYear": 1996,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为点击式图形冒险；1996 年超现实题材点击冒险。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/2176/9-the-last-resort/",
+      "sourceRefs": [
+        "mobygames:2176",
+        "wikidata:Q2818743"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-2238",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-2238",
+      "title": "Bad Mojo",
+      "aliases": [
+        "Bad Mojo: The Roach Game"
+      ],
+      "firstYear": 1996,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为叙事图形冒险；1996 年原版，后续 Redux 不单列作品。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/2238/bad-mojo/",
+      "sourceRefs": [
+        "mobygames:2238",
+        "wikidata:Q2878527"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-1374",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-1374",
+      "title": "Starship Titanic",
+      "aliases": [],
+      "firstYear": 1998,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为科幻图形冒险；1998 年 Douglas Adams 参与编剧的科幻冒险。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/1374/starship-titanic/",
+      "sourceRefs": [
+        "mobygames:1374",
+        "wikidata:Q1065955"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-4659",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-4659",
+      "title": "China: The Forbidden City",
+      "aliases": [
+        "China: Intrigue in the Forbidden City"
+      ],
+      "firstYear": 1998,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为历史图形冒险；1998 年紫禁城背景的调查冒险，兼教育属性。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/4659/china-the-forbidden-city/",
+      "sourceRefs": [
+        "mobygames:4659",
+        "wikidata:Q2963753"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-1411",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-1411",
+      "title": "Discworld Noir",
+      "aliases": [],
+      "firstYear": 1999,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为侦探图形冒险；1999 年独立黑色侦探故事，并非 Discworld 前作的版本。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/1411/discworld-noir/",
+      "sourceRefs": [
+        "mobygames:1411",
+        "wikidata:Q914128"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-1439",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-1439",
+      "title": "The Longest Journey",
+      "aliases": [],
+      "firstYear": 1999,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为剧情图形冒险；1999 年挪威首发的第三人称解谜冒险。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/1439/the-longest-journey/",
+      "sourceRefs": [
+        "mobygames:1439",
+        "wikidata:Q918194"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
+    },
+    {
+      "id": "mobygames-3973",
+      "indexId": "basic-historical-narrative-20261103-r144-mobygames-3973",
+      "title": "Amerzone: The Explorer's Legacy",
+      "aliases": [
+        "Amerzone"
+      ],
+      "firstYear": 1999,
+      "gameplay": "ADV",
+      "gameplayNote": "来源记载为第一人称图形冒险；1999 年原作；与后来的重制作品区分。",
+      "group": "创作主体待核",
+      "source": "https://www.mobygames.com/game/3973/amerzone-the-explorers-legacy/",
+      "sourceRefs": [
+        "mobygames:3973",
+        "wikidata:Q740986"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "未根据发行方或平台推定开发职责。",
+      "yearBasis": "MobyGames作品页列示的最早发行年；历史别名及跨来源年份另作逐项核对。",
+      "editorialScope": "仅补基础作品身份及来源；不按移植、合集、重制或平台拆分作品。",
+      "batch": "historical-narrative-20261103-r144"
     }
   ],
   "identityReview": [
@@ -1467369,6 +1467788,32 @@
         },
         "newSourceCounts": {
           "bangumi": 137
+        }
+      }
+    },
+    {
+      "id": "historical-narrative-20261103-r144",
+      "source": [
+        "https://www.mobygames.com/",
+        "https://solutionarchive.com/",
+        "https://www.wikidata.org/"
+      ],
+      "review": "data/basic-historical-review-20261103-r144.json",
+      "summary": {
+        "candidates": 19,
+        "promoted-basic": 19,
+        "addedToMainIdentityLayer": 19,
+        "scannedRecords": 19,
+        "newDistinctWorks": 19,
+        "before": 70110,
+        "after": 70129,
+        "dispositions": {
+          "promoted-basic": 19
+        },
+        "newByDecade": {
+          "1970": 1,
+          "1980": 8,
+          "1990": 10
         }
       }
     }

@@ -1,0 +1,412 @@
+{
+  "schema": 1,
+  "date": "2026-11-03",
+  "baseCommit": "1a826c30b36c4355364f4bc807e08426278c6903",
+  "sourceInput": "data/historical-narrative-intake-20261103.json",
+  "summary": {
+    "candidates": 19,
+    "promoted-basic": 19,
+    "addedToMainIdentityLayer": 19,
+    "scannedRecords": 19,
+    "newDistinctWorks": 19,
+    "before": 70110,
+    "after": 70129,
+    "dispositions": {
+      "promoted-basic": 19
+    },
+    "newByDecade": {
+      "1970": 1,
+      "1980": 8,
+      "1990": 10
+    }
+  },
+  "records": [
+    {
+      "mobyId": 220274,
+      "title": "Underground",
+      "aliases": [],
+      "firstYear": 1978,
+      "wikidataId": null,
+      "gameplay": "ADV",
+      "kind": "文字输入冒险",
+      "source": "https://www.mobygames.com/game/220274/underground/",
+      "additionalSource": "https://solutionarchive.com/game/id%2C6984/Underground.html",
+      "note": "Gary Kleppe 的 1978 年主机文字冒险；与同名 2024 年作品不同。",
+      "sourceRefs": [
+        "mobygames:220274",
+        "source-url:https://solutionarchive.com/game/id%2C6984/Underground.html"
+      ],
+      "matches": [
+        [
+          "vndb-v51225",
+          2024,
+          "full-catalogue"
+        ]
+      ],
+      "matchedWorkIds": [
+        "vndb-v51225"
+      ],
+      "identityDisambiguation": "与 vndb-v51225（2024）的同名冲突已核：1978 年 Gary Kleppe 主机文字冒险有独立来源和不同的年代、作者及交互形式。",
+      "status": "promoted-basic",
+      "workId": "mobygames-220274"
+    },
+    {
+      "mobyId": 153246,
+      "title": "The Atlantian Odyssey",
+      "aliases": [
+        "The Atlantean Odyssey",
+        "Atlantean Odyssey"
+      ],
+      "firstYear": 1980,
+      "wikidataId": null,
+      "gameplay": "ADV",
+      "kind": "图文文字输入冒险",
+      "source": "https://www.mobygames.com/game/153246/the-atlantian-odyssey/",
+      "additionalSource": "https://solutionarchive.com/game/id%2C2409/Atlantean+Odyssey.html",
+      "note": "TRS-80 图形冒险，以动词和名词指令探索、寻宝。",
+      "sourceRefs": [
+        "mobygames:153246",
+        "source-url:https://solutionarchive.com/game/id%2C2409/Atlantean+Odyssey.html"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-153246"
+    },
+    {
+      "mobyId": 141742,
+      "title": "Curse of the Sasquatch",
+      "aliases": [],
+      "firstYear": 1980,
+      "wikidataId": null,
+      "gameplay": "ADV",
+      "kind": "文字输入冒险",
+      "source": "https://www.mobygames.com/game/141742/curse-of-the-sasquatch/",
+      "additionalSource": "https://solutionarchive.com/game/id%2C1970/Curse+of+the+Sasquatch.html",
+      "note": "TRS-80 文字冒险，探索阿拉斯加与地下洞穴。",
+      "sourceRefs": [
+        "mobygames:141742",
+        "source-url:https://solutionarchive.com/game/id%2C1970/Curse+of+the+Sasquatch.html"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-141742"
+    },
+    {
+      "mobyId": 134,
+      "title": "Captain Blood",
+      "aliases": [
+        "L'Arche du Capitaine Blood"
+      ],
+      "firstYear": 1988,
+      "wikidataId": "Q88828",
+      "gameplay": "ADV",
+      "kind": "科幻冒险",
+      "source": "https://www.mobygames.com/game/134/captain-blood/",
+      "note": "1988 年多个平台发行的科幻冒险；不按平台拆分。",
+      "sourceRefs": [
+        "mobygames:134",
+        "wikidata:Q88828"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-134"
+    },
+    {
+      "mobyId": 687,
+      "title": "Neuromancer",
+      "aliases": [],
+      "firstYear": 1988,
+      "wikidataId": "Q1126146",
+      "gameplay": "ADV",
+      "kind": "赛博朋克冒险",
+      "source": "https://www.mobygames.com/game/687/neuromancer/",
+      "note": "1988 年 C64、Apple II 冒险作品，菜单与点选交互。",
+      "sourceRefs": [
+        "mobygames:687",
+        "wikidata:Q1126146"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-687"
+    },
+    {
+      "mobyId": 16590,
+      "title": "Chrono Quest",
+      "aliases": [
+        "Explora: Time Run"
+      ],
+      "firstYear": 1988,
+      "wikidataId": "Q3062137",
+      "gameplay": "ADV",
+      "kind": "图形冒险",
+      "source": "https://www.mobygames.com/game/16590/chrono-quest/",
+      "note": "Amiga 与 Atari ST 时间旅行冒险。",
+      "sourceRefs": [
+        "mobygames:16590",
+        "wikidata:Q3062137"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-16590"
+    },
+    {
+      "mobyId": 27710,
+      "title": "Chrono Quest II",
+      "aliases": [
+        "Explora II"
+      ],
+      "firstYear": 1989,
+      "wikidataId": "Q2640164",
+      "gameplay": "ADV",
+      "kind": "图形冒险",
+      "source": "https://www.mobygames.com/game/27710/chrono-quest-ii/",
+      "note": "Chrono Quest 独立续作，非首作移植。",
+      "sourceRefs": [
+        "mobygames:27710",
+        "wikidata:Q2640164"
+      ],
+      "matches": [
+        [
+          "mobygames-16590",
+          1988,
+          "new-or-reserved"
+        ]
+      ],
+      "matchedWorkIds": [
+        "mobygames-16590"
+      ],
+      "basis": "较长标题与已有名称存在完整前缀关系；可能为省略副标题或版本名，须人工核查，不能自动新建。",
+      "identityDisambiguation": "Chrono Quest II / Explora II 是 1989 年独立续作；与 1988 年 Chrono Quest / Explora: Time Run 的前缀相似已核。",
+      "status": "promoted-basic",
+      "workId": "mobygames-27710"
+    },
+    {
+      "mobyId": 562,
+      "title": "Chamber of the Sci-Mutant Priestess",
+      "aliases": [
+        "KULT: The Temple of Flying Saucers",
+        "Kult"
+      ],
+      "firstYear": 1989,
+      "wikidataId": "Q3200336",
+      "gameplay": "ADV",
+      "kind": "图形解谜冒险",
+      "source": "https://www.mobygames.com/game/562/chamber-of-the-sci-mutant-priestess/",
+      "note": "原题 Kult，科幻题材解谜冒险。",
+      "sourceRefs": [
+        "mobygames:562",
+        "wikidata:Q3200336"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-562"
+    },
+    {
+      "mobyId": 3838,
+      "title": "Emmanuelle: A Game of Eroticism",
+      "aliases": [
+        "Emmanuelle"
+      ],
+      "firstYear": 1989,
+      "wikidataId": "Q3052927",
+      "gameplay": "ADV",
+      "kind": "图形冒险",
+      "source": "https://www.mobygames.com/game/3838/emmanuelle-a-game-of-eroticism/",
+      "note": "1989 年发行的成人向冒险作品。",
+      "sourceRefs": [
+        "mobygames:3838",
+        "wikidata:Q3052927"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-3838"
+    },
+    {
+      "mobyId": 2264,
+      "title": "Cruise for a Corpse",
+      "aliases": [],
+      "firstYear": 1991,
+      "wikidataId": "Q970794",
+      "gameplay": "ADV",
+      "kind": "侦探图形冒险",
+      "source": "https://www.mobygames.com/game/2264/cruise-for-a-corpse/",
+      "note": "1991 年 Delphine 侦探冒险，不计后续移植。",
+      "sourceRefs": [
+        "mobygames:2264",
+        "wikidata:Q970794"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-2264"
+    },
+    {
+      "mobyId": 302,
+      "title": "Dark Seed",
+      "aliases": [],
+      "firstYear": 1992,
+      "wikidataId": "Q2311536",
+      "gameplay": "ADV",
+      "kind": "恐怖图形冒险",
+      "source": "https://www.mobygames.com/game/302/dark-seed/",
+      "note": "1992 年原作；限量版不单列作品。",
+      "sourceRefs": [
+        "mobygames:302",
+        "wikidata:Q2311536"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-302"
+    },
+    {
+      "mobyId": 3206,
+      "title": "The Big Red Adventure",
+      "aliases": [],
+      "firstYear": 1995,
+      "wikidataId": "Q2473870",
+      "gameplay": "ADV",
+      "kind": "图形冒险",
+      "source": "https://www.mobygames.com/game/3206/the-big-red-adventure/",
+      "note": "1995 年 DOS 原作；Amiga 后续发行不另立身份。",
+      "sourceRefs": [
+        "mobygames:3206",
+        "wikidata:Q2473870"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-3206"
+    },
+    {
+      "mobyId": 2176,
+      "title": "9: The Last Resort",
+      "aliases": [],
+      "firstYear": 1996,
+      "wikidataId": "Q2818743",
+      "gameplay": "ADV",
+      "kind": "点击式图形冒险",
+      "source": "https://www.mobygames.com/game/2176/9-the-last-resort/",
+      "note": "1996 年超现实题材点击冒险。",
+      "sourceRefs": [
+        "mobygames:2176",
+        "wikidata:Q2818743"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-2176"
+    },
+    {
+      "mobyId": 2238,
+      "title": "Bad Mojo",
+      "aliases": [
+        "Bad Mojo: The Roach Game"
+      ],
+      "firstYear": 1996,
+      "wikidataId": "Q2878527",
+      "gameplay": "ADV",
+      "kind": "叙事图形冒险",
+      "source": "https://www.mobygames.com/game/2238/bad-mojo/",
+      "note": "1996 年原版，后续 Redux 不单列作品。",
+      "sourceRefs": [
+        "mobygames:2238",
+        "wikidata:Q2878527"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-2238"
+    },
+    {
+      "mobyId": 1374,
+      "title": "Starship Titanic",
+      "aliases": [],
+      "firstYear": 1998,
+      "wikidataId": "Q1065955",
+      "gameplay": "ADV",
+      "kind": "科幻图形冒险",
+      "source": "https://www.mobygames.com/game/1374/starship-titanic/",
+      "note": "1998 年 Douglas Adams 参与编剧的科幻冒险。",
+      "sourceRefs": [
+        "mobygames:1374",
+        "wikidata:Q1065955"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-1374"
+    },
+    {
+      "mobyId": 4659,
+      "title": "China: The Forbidden City",
+      "aliases": [
+        "China: Intrigue in the Forbidden City"
+      ],
+      "firstYear": 1998,
+      "wikidataId": "Q2963753",
+      "gameplay": "ADV",
+      "kind": "历史图形冒险",
+      "source": "https://www.mobygames.com/game/4659/china-the-forbidden-city/",
+      "note": "1998 年紫禁城背景的调查冒险，兼教育属性。",
+      "sourceRefs": [
+        "mobygames:4659",
+        "wikidata:Q2963753"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-4659"
+    },
+    {
+      "mobyId": 1411,
+      "title": "Discworld Noir",
+      "aliases": [],
+      "firstYear": 1999,
+      "wikidataId": "Q914128",
+      "gameplay": "ADV",
+      "kind": "侦探图形冒险",
+      "source": "https://www.mobygames.com/game/1411/discworld-noir/",
+      "note": "1999 年独立黑色侦探故事，并非 Discworld 前作的版本。",
+      "sourceRefs": [
+        "mobygames:1411",
+        "wikidata:Q914128"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-1411"
+    },
+    {
+      "mobyId": 1439,
+      "title": "The Longest Journey",
+      "aliases": [],
+      "firstYear": 1999,
+      "wikidataId": "Q918194",
+      "gameplay": "ADV",
+      "kind": "剧情图形冒险",
+      "source": "https://www.mobygames.com/game/1439/the-longest-journey/",
+      "note": "1999 年挪威首发的第三人称解谜冒险。",
+      "sourceRefs": [
+        "mobygames:1439",
+        "wikidata:Q918194"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-1439"
+    },
+    {
+      "mobyId": 3973,
+      "title": "Amerzone: The Explorer's Legacy",
+      "aliases": [
+        "Amerzone"
+      ],
+      "firstYear": 1999,
+      "wikidataId": "Q740986",
+      "gameplay": "ADV",
+      "kind": "第一人称图形冒险",
+      "source": "https://www.mobygames.com/game/3973/amerzone-the-explorers-legacy/",
+      "note": "1999 年原作；与后来的重制作品区分。",
+      "sourceRefs": [
+        "mobygames:3973",
+        "wikidata:Q740986"
+      ],
+      "status": "promoted-basic",
+      "workId": "mobygames-3973"
+    }
+  ],
+  "heldForLater": [
+    {
+      "title": "Lords of Karma",
+      "reason": "CASA记1978，MobyGames首发记1981，未判定最早独立发行。"
+    },
+    {
+      "title": "Mortville Manor",
+      "reason": "前轮Wikidata候选记1987，MobyGames作品页记1986，须复核首发。"
+    },
+    {
+      "title": "The 11th Hour",
+      "reason": "来源称谜题为主体，叙事主导程度待核。"
+    },
+    {
+      "title": "Tex Murphy: Overseer",
+      "reason": "与Mean Streets的重述和内容关系待核，不自动建立独立作品。"
+    }
+  ]
+}
