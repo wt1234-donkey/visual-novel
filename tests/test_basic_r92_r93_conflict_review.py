@@ -24,7 +24,7 @@ class ReviewedIdentityTests(unittest.TestCase):
 
     def test_later_append_is_allowed_but_protected_history_is_not(self):
         current = source.load(source.REG)
-        appended = copy.deepcopy(current['works'][-1])
+        appended = copy.deepcopy(next(w for w in reversed(current['works']) if w['mainPlacement'] == 'promoted-basic'))
         appended.update(id='future-test-identity', indexId='future-test-index', batch='future-test')
         current['works'].append(appended)
         current['batches'].append({'id': 'future-test', 'summary': {'candidates': 1}})

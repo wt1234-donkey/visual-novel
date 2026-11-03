@@ -134,6 +134,8 @@ def check():
             delta += len(later)
         elif key == 'promotedBasic':
             delta += sum(w['mainPlacement'] == 'promoted-basic' for w in later)
+        elif key == 'existingComplete':
+            delta += sum(w['mainPlacement'] == 'existing-complete' for w in later)
         elif key == 'promotedDossier':
             delta += sum(w['mainPlacement'] == 'promoted-dossier' for w in later)
         elif key == 'addedToMainIdentityLayer':
