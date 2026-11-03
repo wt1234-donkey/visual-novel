@@ -3,6 +3,12 @@ const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'
 const kind={'new-basic':'待提升基础索引','main-linked':'完整主库已有','dossier-linked':'厂商专题已有','promoted-basic':'主库基础身份已纳入','promoted-dossier':'主库已关联专题','identity-review':'作品与版本身份待核','eligibility-review':'叙事与玩法主次待核','main-registry-linked':'已关联主库身份'};
 let entries=[],filtered=[],page=0;
 const size=25;
+const nameOrder=new Intl.Collator('zh-Hans-CN',{numeric:true,sensitivity:'base'});
+function compareDefaultOrder(a,b){
+    const ay=Number.isInteger(a.year)?a.year:Infinity;
+    const by=Number.isInteger(b.year)?b.year:Infinity;
+    return ay-by||nameOrder.compare(a.title,b.title)||nameOrder.compare(a.id||'',b.id||'');
+}
 function optionBox(element,values){
     const old=element.value;
     const opts=[element.options[0].outerHTML,...[...new Set(values)].sort((a,b)=>a.localeCompare(b,'zh-Hans-CN')).map(x=>'<option value="'+safe(x)+'">'+safe(x)+'</option>')];
@@ -103,6 +109,7 @@ async function start(){
        nameYears.add(nameKey);
      }
    }catch(err){console.warn('统一基础身份层完整记录暂不可用',err);}
+   entries.sort(compareDefaultOrder);
    $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
    try{const mainReg=await (await fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'})).json();$('stat-new').textContent=mainReg.summary.promotedBasic.toLocaleString('zh-CN');$('stat-linked').textContent=(mainReg.summary.promotedDossier+mainReg.summary.existingComplete).toLocaleString('zh-CN')}catch(err){console.warn('主库统计暂不可用',err)}
    if(!$('stat-linked').textContent.match(/[0-9]/))$('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
