@@ -1,0 +1,71 @@
+name: Append ErogameScape 15030 records in 16 paired batches
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/erogamescape-append-20261103.yml'
+      - 'scripts/import_egs_append_20261103.py'
+      - 'data/erogamescape-append-source-20261103.json.gz.b64'
+      - 'data/erogamescape-append-manifest-20261103.json'
+permissions:
+  contents: write
+concurrency:
+  group: erogamescape-append-20261103
+  cancel-in-progress: false
+jobs:
+  intake:
+    if: github.head_ref == 'data/egs-append-20261103' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Append paired batches, one commit per pair
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+          for pair in range(1,17):
+              subprocess.run(['python3','scripts/import_egs_append_20261103.py','--pair',str(pair)],check=True)
+              subprocess.run(['git','add','data/main-adv-rpg-works-20261031.json',*[str(p) for p in Path('data').glob('erogamescape-append-review-20261103-r*.json')]],check=True)
+              if subprocess.run(['git','diff','--cached','--quiet']).returncode:
+                  first=168+(pair-1)*2
+                  subprocess.run(['git','commit','-m',f'Append EGS batches {first}-{min(first+1,198)} without dedup'],check=True)
+          PY
+      - name: Verify full intake accounting
+        run: python3 scripts/import_egs_append_20261103.py --check
+      - name: Refresh catalogue indexes and dossiers
+        run: |
+          python3 scripts/sync_versions_csv.py
+          python3 scripts/export_content_csv.py
+          python3 scripts/export_interaction_csv.py
+          python3 scripts/build_company_pages.py
+          python3 scripts/build_entity_model.py
+          python3 scripts/build_entity_pages.py
+          python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Validate Python Node and data integrity
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+      - name: Push verified commits back to the PR branch
+        run: |
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh catalogue indexes after EGS append'
+          fi
+          git push origin HEAD:${{ github.head_ref }}
