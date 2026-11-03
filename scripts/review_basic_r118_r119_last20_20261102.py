@@ -223,8 +223,15 @@ def check():
     assert reg['batches'][:old_batch_count]==prior['batches']
     assert reg['batches'][old_batch_count]['id']==BATCH
     for key,val in prior['summary'].items():
-        extra=19+appended_after_review if key in (
-          'candidates','accepted','promotedBasic','addedToMainIdentityLayer') else 0
+        later=reg['works'][original_count+19:]
+        later_batches=reg['batches'][old_batch_count+1:]
+        extra=0
+        if key=='candidates': extra=19+sum(b['summary']['candidates'] for b in later_batches)
+        elif key=='accepted': extra=19+len(later)
+        elif key=='promotedBasic': extra=19+sum(w['mainPlacement']=='promoted-basic' for w in later)
+        elif key=='promotedDossier': extra=sum(w['mainPlacement']=='promoted-dossier' for w in later)
+        elif key=='existingComplete': extra=sum(w['mainPlacement']=='existing-complete' for w in later)
+        elif key=='addedToMainIdentityLayer': extra=19+sum(w['mainPlacement'] in {'promoted-basic','promoted-dossier'} for w in later)
         assert reg['summary'][key]==val+extra,(key,val,extra)
     assert len(reg['works'])==len({w['id'] for w in reg['works']})
     assert len(reg['works'])==len({w['indexId'] for w in reg['works']})
