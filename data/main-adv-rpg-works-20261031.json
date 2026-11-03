@@ -4,13 +4,13 @@
   "role": "Primary main catalogue work-identity registry, separate from the complete dossier-only games.json schema.",
   "reviewPolicy": "Record title / first year / dominant gameplay and directly link existing identity; do not fabricate characters, releases, original creators or narrative editorials.",
   "summary": {
-    "candidates": 68177,
-    "accepted": 68148,
+    "candidates": 68183,
+    "accepted": 68154,
     "existingComplete": 93,
     "promotedDossier": 105,
-    "promotedBasic": 67950,
+    "promotedBasic": 67956,
     "identityReview": 3,
-    "addedToMainIdentityLayer": 68055,
+    "addedToMainIdentityLayer": 68061,
     "nextBatchCandidates": 59,
     "nextBatchNewBasic": 24,
     "nextBatchLinkedExisting": 35,
@@ -1417157,6 +1417157,147 @@
       "yearBasis": "IFDB published字段所列作品年；不是档案上传年或条目创建年，原版区域及内容仍待完整编目核对。",
       "editorialScope": "基础身份层，仅作品名、别名与来源原始年份；不生成内容或平台发行记录。",
       "batch": "ifdb-pc98-bulk-20261103-r139"
+    },
+    {
+      "id": "indiedb-neofeud",
+      "indexId": "basic-indiedb-itch-pc98-20261103-r140-indiedb-neofeud",
+      "title": "Neofeud",
+      "aliases": [],
+      "firstYear": 2017,
+      "gameplay": "ADV",
+      "gameplayNote": "点击式冒险",
+      "group": "Silver Spook Games",
+      "source": "https://silverspook.itch.io/neofeud",
+      "sourceRefs": [
+        "indiedb:neofeud",
+        "itch:silverspook/neofeud",
+        "source-url:https://www.indiedb.com/games/neofeud",
+        "source-url:https://silverspook.itch.io/neofeud"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源所列名称仅为检索关联，未建立正式职责。",
+      "yearBasis": "作者 itch.io 页面列 2017 年 3 月 25 日发行；IndieDB 同列 2017。",
+      "editorialScope": "仅登记作品基础身份与原作年；不建立内容版本或平台发行。",
+      "batch": "indiedb-itch-pc98-20261103-r140"
+    },
+    {
+      "id": "indiedb-rock-n-roll-will-never-die",
+      "indexId": "basic-indiedb-itch-pc98-20261103-r140-indiedb-rock-n-roll-will-never-die",
+      "title": "Rock 'n' Roll Will Never Die!",
+      "aliases": [],
+      "firstYear": 2022,
+      "gameplay": "ADV",
+      "gameplayNote": "点击式冒险",
+      "group": "Instant Million",
+      "source": "https://bestgames.itch.io/rock-n-roll-will-never-die",
+      "sourceRefs": [
+        "indiedb:rock-n-roll-will-never-die",
+        "itch:bestgames/rock-n-roll-will-never-die",
+        "source-url:https://www.indiedb.com/games/rock-n-roll-will-never-die",
+        "source-url:https://bestgames.itch.io/rock-n-roll-will-never-die"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源所列名称仅为检索关联，未建立正式职责。",
+      "yearBasis": "作者 itch.io 页面列 2022 年 4 月 27 日发行；IndieDB 同列 2022。",
+      "editorialScope": "仅登记作品基础身份与原作年；不建立内容版本或平台发行。",
+      "batch": "indiedb-itch-pc98-20261103-r140"
+    },
+    {
+      "id": "indiedb-zniw-adventure",
+      "indexId": "basic-indiedb-itch-pc98-20261103-r140-indiedb-zniw-adventure",
+      "title": "Zniw Adventure",
+      "aliases": [],
+      "firstYear": 2020,
+      "gameplay": "ADV",
+      "gameplayNote": "点击式冒险",
+      "group": "Azure Mountain",
+      "source": "https://www.indiedb.com/games/zid-zniw-chronicles-zniw-adventure",
+      "sourceRefs": [
+        "indiedb:zid-zniw-chronicles-zniw-adventure",
+        "source-url:https://www.indiedb.com/games/zid-zniw-chronicles-zniw-adventure/presskit",
+        "source-url:https://store.steampowered.com/app/904750/"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源所列名称仅为检索关联，未建立正式职责。",
+      "yearBasis": "开发者 IndieDB presskit 记 2020 年 11 月 6 日发行；Steam 同年。",
+      "editorialScope": "仅登记作品基础身份与原作年；不建立内容版本或平台发行。",
+      "batch": "indiedb-itch-pc98-20261103-r140"
+    },
+    {
+      "id": "indiedb-indigistar",
+      "indexId": "basic-indiedb-itch-pc98-20261103-r141-indiedb-indigistar",
+      "title": "IndigiStar",
+      "aliases": [
+        "Indigi-Star"
+      ],
+      "firstYear": 2022,
+      "gameplay": "ADV",
+      "gameplayNote": "点击式冒险",
+      "group": "Silver Spook Games",
+      "source": "https://silverspook.itch.io/indigistar",
+      "sourceRefs": [
+        "indiedb:indigistar",
+        "itch:silverspook/indigistar",
+        "source-url:https://www.indiedb.com/games/indigistar",
+        "source-url:https://silverspook.itch.io/indigistar/devlog"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源所列名称仅为检索关联，未建立正式职责。",
+      "yearBasis": "作者 2022 年 8 月发布日志宣布独立游戏发行；IndieDB 同列 2022。",
+      "editorialScope": "仅登记作品基础身份与原作年；不建立内容版本或平台发行。",
+      "batch": "indiedb-itch-pc98-20261103-r141"
+    },
+    {
+      "id": "indiedb-nightmare-frames",
+      "indexId": "basic-indiedb-itch-pc98-20261103-r141-indiedb-nightmare-frames",
+      "title": "Nightmare Frames",
+      "aliases": [],
+      "firstYear": 2022,
+      "gameplay": "ADV",
+      "gameplayNote": "点击式冒险",
+      "group": "Postmodern Adventures",
+      "source": "https://postmodernadventures.itch.io/nightmare-frames",
+      "sourceRefs": [
+        "indiedb:nightmare-frames",
+        "itch:postmodernadventures/nightmare-frames",
+        "source-url:https://www.indiedb.com/company/postmodern-adventures",
+        "source-url:https://postmodernadventures.itch.io/nightmare-frames",
+        "source-url:https://store.steampowered.com/app/1650590/Nightmare_Frames/"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源所列名称仅为检索关联，未建立正式职责。",
+      "yearBasis": "IndieDB 列 2022；Steam 的首发年份为 2022，itch 页面确认同一完整游戏。",
+      "editorialScope": "仅登记作品基础身份与原作年；不建立内容版本或平台发行。",
+      "batch": "indiedb-itch-pc98-20261103-r141"
+    },
+    {
+      "id": "pc98-igdb-239611",
+      "indexId": "basic-indiedb-itch-pc98-20261103-r141-pc98-igdb-239611",
+      "title": "赤い相撲 －愛のどすこい伝説－",
+      "aliases": [
+        "Akai Sumo: Ai no Dosukoi Densetsu"
+      ],
+      "firstYear": 1991,
+      "gameplay": "ADV",
+      "gameplayNote": "指令式冒险",
+      "group": "Compile",
+      "source": "https://www.value-press.com/pressrelease/65798",
+      "sourceRefs": [
+        "igdb:239611",
+        "source-url:https://www.value-press.com/pressrelease/65798",
+        "source-url:https://www.ikachi.org/pc9801/game/239611/"
+      ],
+      "mainPlacement": "promoted-basic",
+      "linkedRecordId": null,
+      "creditScope": "来源所列名称仅为检索关联，未建立正式职责。",
+      "yearBasis": "D4 Enterprise 官方复刻新闻稿记载 1991 年 Disc Station 98 #6 原作；按作品而非重发行建身份。",
+      "editorialScope": "仅登记作品基础身份与原作年；不建立内容版本或平台发行。",
+      "batch": "indiedb-itch-pc98-20261103-r141"
     }
   ],
   "identityReview": [
@@ -1427198,6 +1427339,39 @@
         "ifdbHeld": 9,
         "remainingDeferred": 0,
         "newDistinctWorks": 176
+      }
+    },
+    {
+      "id": "indiedb-itch-pc98-20261103-r140",
+      "source": [
+        "https://www.indiedb.com/",
+        "https://itch.io/",
+        "https://www.ikachi.org/pc9801/"
+      ],
+      "review": "data/indiedb-itch-pc98-review-20261103-r140.json",
+      "summary": {
+        "candidates": 3,
+        "promoted-basic": 3,
+        "sourceCounts": {
+          "indiedb": 3
+        }
+      }
+    },
+    {
+      "id": "indiedb-itch-pc98-20261103-r141",
+      "source": [
+        "https://www.indiedb.com/",
+        "https://itch.io/",
+        "https://www.ikachi.org/pc9801/"
+      ],
+      "review": "data/indiedb-itch-pc98-review-20261103-r141.json",
+      "summary": {
+        "candidates": 3,
+        "promoted-basic": 3,
+        "sourceCounts": {
+          "indiedb": 2,
+          "pc98": 1
+        }
       }
     }
   ],
