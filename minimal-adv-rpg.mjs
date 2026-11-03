@@ -52,6 +52,9 @@ async function start(){
    if(!Array.isArray(obj.records)||!obj.summary)throw Error('档案格式无效');
    entries=obj.records;
    const registryPromise=fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('无法读取统一基础库');return r.json();});
+   // Editing requires the complete base, never a partially loaded candidate list.
+   const loadedRegistry=await registryPromise;
+   if(!Array.isArray(loadedRegistry.works)||!loadedRegistry.summary)throw Error('统一基础库格式无效，管理功能未开启');
    try{
      {
        const main=await registryPromise;
