@@ -10,10 +10,10 @@ function optionBox(element,values){
     if([...element.options].some(x=>x.value===old))element.value=old;
 }
 function filterAndDraw(){
-    const q=$('q').value.trim().normalize('NFKC').toLowerCase(),gp=$('gameplay').value,g=$('group').value,s=$('status').value;
+    const q=$('q').value.trim().normalize('NFKC').toLowerCase(),gp=$('gameplay').value,g=$('group').value,s=$('status').value,year=$('year').value;
     filtered=entries.filter(r=>{
       const hay=[r.title,...(r.aliases||[]),r.group,...(r.groups||[])].join(' ').normalize('NFKC').toLowerCase();
-      return (!q||hay.includes(q))&&(!gp||r.gameplay===gp)&&(!g||r.group===g||(r.groups||[]).includes(g))&&(!s||r.status===s);
+      return (!year||(year==='unknown'?!Number.isInteger(r.year):Number.isInteger(r.year)&&r.year===Number(year)))&&(!q||hay.includes(q))&&(!gp||r.gameplay===gp)&&(!g||r.group===g||(r.groups||[]).includes(g))&&(!s||r.status===s);
     });
     page=0;render();
 }
@@ -107,10 +107,12 @@ async function start(){
    try{const mainReg=await (await fetch('data/main-adv-rpg-works-20261031.json',{cache:'no-store'})).json();$('stat-new').textContent=mainReg.summary.promotedBasic.toLocaleString('zh-CN');$('stat-linked').textContent=(mainReg.summary.promotedDossier+mainReg.summary.existingComplete).toLocaleString('zh-CN')}catch(err){console.warn('主库统计暂不可用',err)}
    if(!$('stat-linked').textContent.match(/[0-9]/))$('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
    $('stat-groups').textContent=(new Set(entries.flatMap(x=>[x.group,...(x.groups||[])]))).size.toLocaleString('zh-CN');
+   const years=[...new Set(entries.map(r=>r.year).filter(Number.isInteger))].sort((a,b)=>a-b);
+   $('year').innerHTML='<option value="">全部年份</option><option value="unknown">年份待核</option>'+years.map(y=>'<option value="'+y+'">'+y+' 年</option>').join('');
    optionBox($('gameplay'),entries.map(r=>r.gameplay));
    optionBox($('group'),entries.flatMap(r=>[r.group,...(r.groups||[])]));
    $('q').addEventListener('input',filterAndDraw);
-   for(const id of ['gameplay','group','status'])$(id).addEventListener('change',filterAndDraw);
+   for(const id of ['year','gameplay','group','status'])$(id).addEventListener('change',filterAndDraw);
    $('prev').addEventListener('click',()=>{page--;render()});
    $('next').addEventListener('click',()=>{page++;render()});
    filterAndDraw();
