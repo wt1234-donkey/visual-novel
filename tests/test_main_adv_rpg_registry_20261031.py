@@ -27,7 +27,12 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
         main_ids.update(w['id'] for w in read('data/non-rpg-creator-supplement-20261030.json')['works'])
         dossier_ids={w['id'] for c in read('data/company-coverage.json')['companies'] for key in ('relatedGames','dossierOnlyWorks') for w in c.get(key,[])}
         for w in self.r['works']:
-            self.assertTrue(w['title'] and isinstance(w['firstYear'],int) and w['source'].startswith('https://'))
+            self.assertTrue(w['title'] and w['source'].startswith('https://'))
+            if w.get('intakePolicy') == 'append-without-deduplication':
+                self.assertTrue(w['firstYear'] is None or isinstance(w['firstYear'],int))
+                self.assertTrue(w.get('sourceSnapshot') and w.get('sourceSnapshotRow'))
+            else:
+                self.assertIsInstance(w['firstYear'],int)
             if w['gameplay']=='互动小说（玩法待核）':
                 # IFDB is a catalogue signal, not evidence of precise controls.
                 self.assertRegex(w['id'], r'^ifdb-[a-z0-9]{16}$')

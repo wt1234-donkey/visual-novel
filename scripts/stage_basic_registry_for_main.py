@@ -66,7 +66,7 @@ def stage(offset, limit):
             destination.append({"id": item["id"], "title": item["title"], "firstYear": item["firstYear"],
                                 "matched": matches_list, "reason": "existing identity" if destination is linked else "identity/year conflict"})
             continue
-        if not re.match(r"^https://", item.get("source") or "") or not 1976 <= item.get("firstYear", 0) <= 2026:
+        if not re.match(r"^https://", item.get("source") or "") or not isinstance(item.get("firstYear"), int) or not 1976 <= item["firstYear"] <= 2026:
             held.append({"id": item.get("id"), "reason": "invalid source or debut year"})
             continue
         eligible.append({

@@ -34,7 +34,7 @@ function mainBasicSection(){
   const basic=mainBasic.works.filter(w=>{
     if(w.mainPlacement==='existing-complete'||(w.linkedRecordId&&atlas.works.has(w.linkedRecordId))){excluded++;return false;}
     const labels=[w.title,...(w.aliases||[])];
-    if(labels.some(n=>fullNames.has(normalizeName(n)+'|'+w.firstYear))){excluded++;return false;}
+    if(w.intakePolicy!=='append-without-deduplication'&&labels.some(n=>fullNames.has(normalizeName(n)+'|'+w.firstYear))){excluded++;return false;}
     return true;
   });
   const q=state.q.trim().normalize('NFKC').toLowerCase();
@@ -44,9 +44,9 @@ function mainBasicSection(){
   state.basicPage=Math.max(1,Math.min(state.basicPage,pages));
   const sample=rows.slice((state.basicPage-1)*pageSize,state.basicPage*pageSize);
   return '<section class="sa-panel" aria-label="统一基础作品检索"><div class="sa-heading"><h3>主库基础作品检索 · 已批量纳入网站</h3>'+
-    status(basic.length+' 部基础身份')+'</div><p class="sa-small sa-muted">本页直接检索基础身份库的全部未形成完整档案的条目。仅展示已有名称、别名、首发年份与来源，不推断厂商、剧情、角色、原作发行或内容版本；与完整档案同名同年的记录不重复展示。</p>'+
+    status(basic.length+' 部基础身份')+'</div><p class="sa-small sa-muted">本页直接检索基础身份库的全部未形成完整档案的条目。仅展示已有名称、别名、首发年份与来源，不推断厂商、剧情、角色、原作发行或内容版本；常规批次与完整档案同名同年的记录不重复展示；指定未去重导入的条目保留。</p>'+
     '<div class="sa-table-wrap"><table><thead><tr><th>作品及别名</th><th>首发年</th><th>玩法状态</th><th>关联线索</th><th>档案与来源</th></tr></thead><tbody>'+
-    (sample.map(w=>'<tr><td>'+safe(w.title)+((w.aliases||[]).length?'<div class="sa-small sa-muted">'+safe(w.aliases.slice(0,3).join(' / '))+'</div>':'')+'</td><td>'+w.firstYear+'</td><td>'+safe(w.gameplay||'玩法待核')+'</td><td>'+safe(w.group||'来源待核')+'</td><td>'+status(w.mainPlacement==='promoted-dossier'?'原专题关联':'基础身份')+' '+textLink(w.source,'核对来源')+'</td></tr>').join('')||
+    (sample.map(w=>'<tr><td>'+safe(w.title)+((w.aliases||[]).length?'<div class="sa-small sa-muted">'+safe(w.aliases.slice(0,3).join(' / '))+'</div>':'')+'</td><td>'+safe(w.firstYear??'年份待核')+'</td><td>'+safe(w.gameplay||'玩法待核')+'</td><td>'+safe(w.group||'来源待核')+'</td><td>'+status(w.mainPlacement==='promoted-dossier'?'原专题关联':'基础身份')+' '+textLink(w.source,'核对来源')+'</td></tr>').join('')||
       '<tr><td colspan="5">没有符合当前关键词的基础记录</td></tr>')+
     '</tbody></table></div>'+pagination(rows.length,state.basicPage,'basic',pageSize)+
     '<p class="sa-small sa-muted">当前搜索匹配 '+rows.length+' 部；与完整档案按身份或同名同年排除 '+excluded+' 条。仅有基础身份不计入完整内容版本或平台发行。<a href="minimal-adv-rpg.html">完整基础索引及来源</a> · <a href="data/main-adv-rpg-works-20261031.json">基础数据 JSON</a></p></section>';
