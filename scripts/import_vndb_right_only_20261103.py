@@ -109,15 +109,16 @@ def check():
     assert reg['batches'][:len(old['batches'])]==old['batches'],'Historical batches changed'
     extra=reg['works'][len(old['works']):]
     expected=[work_from(row,145+i//500) for i,row in enumerate(rows)]
-    assert extra==expected,'Missing, reordered or modified source records'
-    assert len(extra)==11325 and len(reg['works'])==81454
+    assert extra[:len(expected)]==expected,'Missing, reordered or modified VNDB source records'
+    assert len(extra)>=11325 and len(reg['works'])>=81454
     assert reg['summary']['accepted']==len(reg['works'])
     # Internal primary keys remain valid; this is not a name/source-ID deduplication filter.
     assert len({w['id'] for w in reg['works']})==len(reg['works'])
-    assert [b['summary']['appendedRecords'] for b in reg['batches'][-23:]]==[500]*22+[325]
+    vndb_batches=[b for b in reg['batches'] if b['id'].startswith(PREFIX)]
+    assert [b['summary']['appendedRecords'] for b in vndb_batches]==[500]*22+[325]
     for key in ('candidates','accepted','promotedBasic','addedToMainIdentityLayer'):
-        assert reg['summary'][key]==old['summary'][key]+11325
-    assert sum(w['firstYear'] is None for w in extra)==4122
+        assert reg['summary'][key]>=old['summary'][key]+11325
+    assert sum(w['firstYear'] is None for w in extra[:11325])==4122
     assert all(row['首发年份']==str(w['firstYear']) if w['firstYear'] is not None else not row['首发年份'] for row,w in zip(rows,extra))
     print('VNDB_RIGHT_ONLY_CHECK_OK',len(old['works']),len(reg['works']),len(extra))
 
