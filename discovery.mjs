@@ -5,6 +5,7 @@ import {normalize} from './filter.mjs';
 import {createAtlas,filterAtlas,metadataValues,creatorCredits,creatorWorkIds,productionCredits,creditScope,sourceStatus,titleOf,CREATOR_ROLES,PENDING,MAKER_ROLES,narrativeState,narrativeCounts} from './discovery-model.mjs?v=20261030-narrative';
 const root=document.getElementById('story-atlas'),view=root.querySelector('#sa-view');
 const $=selector=>root.querySelector(selector);
+const basicNameOrder=new Intl.Collator('zh-Hans-CN',{numeric:true,sensitivity:'base'});
 const safe=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const textLink=(url,text)=>{try{const u=new URL(url,location.href);if(!['http:','https:'].includes(u.protocol))return safe(text);return `<a href="${safe(u.href)}" target="_blank" rel="noopener noreferrer">${safe(text)} ↗</a>`}catch{return safe(text)}};
 const tags=values=>'<div class="sa-tags">'+values.map(v=>'<span class="sa-tag">'+safe(v)+'</span>').join('')+'</div>';
@@ -39,7 +40,11 @@ function mainBasicSection(){
   });
   const q=state.q.trim().normalize('NFKC').toLowerCase();
   const rows=basic.filter(w=>!q||[w.title,...(w.aliases||[]),w.group,...(w.sourceRefs||[])].join(' ').normalize('NFKC').toLowerCase().includes(q))
-    .sort((a,b)=>b.firstYear-a.firstYear||a.title.localeCompare(b.title,'zh'));
+    .sort((a,b)=>{
+      const ay=Number.isInteger(a.firstYear)?a.firstYear:Infinity;
+      const by=Number.isInteger(b.firstYear)?b.firstYear:Infinity;
+      return ay-by||basicNameOrder.compare(a.title,b.title)||basicNameOrder.compare(a.id||'',b.id||'');
+    });
   const pageSize=25,pages=Math.max(1,Math.ceil(rows.length/pageSize));
   state.basicPage=Math.max(1,Math.min(state.basicPage,pages));
   const sample=rows.slice((state.basicPage-1)*pageSize,state.basicPage*pageSize);

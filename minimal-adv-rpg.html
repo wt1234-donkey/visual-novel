@@ -32,7 +32,7 @@
     .notice{margin-top:18px;color:var(--muted);font-size:14px}
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
   </style>
-  <script type="module" src="minimal-adv-rpg.mjs?v=20261103-year-filter"></script>
+  <script type="module" src="minimal-adv-rpg.mjs?v=20261103-default-sort"></script>
 </head>
 <body><div class="wrap">
   <header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav><a href="index.html">作品发现</a><a href="curated.html">精选叙事作品</a><a href="bulk-import.html">批量补录主库</a><a href="catalogue.html">高级发行检索</a><a href="organizations.html">组织与沿革</a><a href="https://github.com/wt1234-donkey/visual-novel">GitHub</a></nav></header>
@@ -54,6 +54,7 @@
       <label>收录状态<select id="status"><option value="">全部状态</option><option value="new-basic">原索引未提升</option><option value="promoted-basic">主库新增基础身份</option><option value="promoted-dossier">主库关联厂商专题</option><option value="main-linked">完整主库已有</option><option value="main-registry-linked">此前主库身份已关联</option><option value="identity-review">身份待核</option><option value="eligibility-review">叙事与玩法主次待核</option></select></label>
     </section>
     <section class="results"><p class="count" id="count" role="status">正在读取索引……</p>
+    <p class="minor">默认按来源年份由早到晚排列，同年按作品名称排序；年份待核的记录放在最后。</p>
     <table><thead><tr><th>作品名称</th><th>首发年份</th><th>主要玩法</th><th>厂商关联</th><th>编目状态</th><th>依据</th></tr></thead>
     <tbody id="rows"></tbody></table>
     <div class="buttons"><button id="prev" type="button">上一页</button><span id="pagination" aria-live="polite"></span><button id="next" type="button">下一页</button></div>
