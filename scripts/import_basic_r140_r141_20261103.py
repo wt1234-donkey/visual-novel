@@ -2,6 +2,7 @@
 """Append reviewed indie and PC-98 identities, with reproducible whole-catalogue checks."""
 import argparse
 import copy
+import hashlib
 import json
 import subprocess
 from collections import Counter, defaultdict
@@ -61,6 +62,27 @@ def build():
         reg['batches'].append({'id':batch,'source':['https://www.indiedb.com/','https://itch.io/','https://www.ikachi.org/pc9801/'],'review':str(path.relative_to(ROOT)),'summary':summary})
         audits[path]={'schema':1,'date':'2026-11-03','baseCommit':BASE,'summary':{'newDistinctWorks':len(works),'before':before,'after':len(reg['works']),'sourceCounts':dict(counts)},'records':audit_rows}
         report.append((n,len(works),counts['indiedb'],counts['pc98']))
+    # Preserve every unprocessed raw row and make this audit the next resumable queue.
+    queue=[]
+    for key,item in prior.items():
+        row=copy.deepcopy(item)
+        if key in seen_pc:
+            row.update(status='reviewed-candidate',candidateWorkId='pc98-igdb-239611')
+        elif key==('ikachi-igdb','372561'):
+            row.update(status='name-year-or-multiple-identity-held',basis='目录 1994，实物零售记录 1993；年份待核。')
+        elif key in {('ikachi-igdb','194501'),('pc9801-archive','1674')}:
+            row.update(status='possible-edition-or-dependent-content-held',basis='PC-98 16色版与 Windows 原作先后待核。')
+        queue.append(row)
+    counts=Counter(r['status'] for r in queue)
+    unresolved=sum(v for k,v in counts.items() if k.endswith('-held') or k=='needs-primary-year-and-alias-review')
+    assert len(queue)==546 and unresolved==545
+    audits[ROOT/'data/pc98-catalogue-audit-r140-r141-20261103.json']={
+        'schema':1,'date':'2026-11-03','baseCommit':BASE,'snapshotSha256':pending['snapshotSha256'],
+        'inputPendingAudit':str(PENDING.relative_to(ROOT)),
+        'inputPendingAuditSha256':hashlib.sha256(PENDING.read_bytes()).hexdigest(),
+        'summary':{'rawRecords':len(queue),'reviewedNewWorks':len(seen_pc),'dispositions':dict(counts),
+                   'snapshotRecords':pending['summary']['snapshotRecords'],'remainingUnresolvedRecords':unresolved},
+        'records':queue,'scope':'仅复核明确列出的候选；未处理原始记录原样保留。'}
     assert len({w['id'] for w in reg['works']})==len(reg['works'])
     assert len({w['indexId'] for w in reg['works']})==len(reg['works'])
     assert reg['summary']['accepted']==len(reg['works'])

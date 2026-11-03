@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/main-adv-rpg-works-20261031.json data/basic-to-full-promotion-review-20261101.json data/indiedb-itch-pc98-review-20261103-r140.json data/indiedb-itch-pc98-review-20261103-r141.json data/basic-r140-r141-audit-summary-20261103.md
+          git add data/main-adv-rpg-works-20261031.json data/basic-to-full-promotion-review-20261101.json data/indiedb-itch-pc98-review-20261103-r140.json data/indiedb-itch-pc98-review-20261103-r141.json data/basic-r140-r141-audit-summary-20261103.md data/pc98-catalogue-audit-r140-r141-20261103.json
           if ! git diff --cached --quiet; then
             git commit -m "Append reviewed indie and PC-98 basic identities"
             git push origin "HEAD:refs/heads/$TARGET_BRANCH"
