@@ -43,7 +43,7 @@ def build():
             assert not e.EDITION.search(' '.join([r['title'],*r.get('aliases',[])]))
             source_refs=list(dict.fromkeys([*r['refs'],*['source-url:'+x for x in r['evidence']]]))
             w={'id':r['id'],'indexId':'basic-'+batch+'-'+r['id'],'title':r['title'],'aliases':r.get('aliases',[]),
-                'firstYear':r['year'],'gameplay':r['gameplay'],'group':r['group'],'source':r['source'],
+                'firstYear':r['year'],'gameplay':r['gameplay'],'gameplayNote':r['gameplayNote'],'group':r['group'],'source':r['source'],
                 'sourceRefs':source_refs,'mainPlacement':'promoted-basic','linkedRecordId':None,
                 'creditScope':'来源所列名称仅为检索关联，未建立正式职责。','yearBasis':r['basis'],
                 'editorialScope':'仅登记作品基础身份与原作年；不建立内容版本或平台发行。','batch':batch}
