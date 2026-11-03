@@ -72,7 +72,7 @@ def work_from(row, batch_num):
         'title': title,
         'aliases': [],
         'firstYear': year,
-        'gameplay': '游戏类型待核',
+        'gameplay': 'Galgame（玩法待核）',
         'gameplayNote': 'EGS目录来源：' + (row.get('EGS类型') or '未提供类型') + '；叙事属性和实际玩法未经核验。',
         'group': row.get('品牌') or '创作主体待核',
         'source': source_url,
