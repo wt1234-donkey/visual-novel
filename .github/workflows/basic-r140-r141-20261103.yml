@@ -7,6 +7,10 @@ on:
       - 'scripts/import_basic_r140_r141_20261103.py'
       - 'data/indiedb-itch-pc98-reviewed-r140-r141-20261103.json'
       - '.github/workflows/basic-r140-r141-20261103.yml'
+      - 'scripts/import_basic_r142_r143_20261103.py'
+      - 'data/basic-r142-r143-source-manifest-20261103.json'
+      - 'data/public-source-r142-r143-*.b64'
+      - 'tests/test_public_catalogues_r142_r143_20261103.py'
 permissions:
   contents: write
 concurrency:
@@ -51,5 +55,47 @@ jobs:
           git add data/main-adv-rpg-works-20261031.json data/basic-to-full-promotion-review-20261101.json data/indiedb-itch-pc98-review-20261103-r140.json data/indiedb-itch-pc98-review-20261103-r141.json data/basic-r140-r141-audit-summary-20261103.md data/pc98-catalogue-audit-r140-r141-20261103.json
           if ! git diff --cached --quiet; then
             git commit -m "Append reviewed indie and PC-98 basic identities"
+            git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          fi
+
+  import-r142-r143:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'catalog/basic-r142-r143-20261103'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Import pinned public-source snapshots
+        run: |
+          python3 scripts/import_basic_r142_r143_20261103.py
+          python3 scripts/import_basic_r142_r143_20261103.py --check
+          python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Verify catalogue and all regressions
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+          git diff --check
+      - name: Commit verified batch data
+        env:
+          TARGET_BRANCH: ${{ github.head_ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/main-adv-rpg-works-20261031.json data/basic-to-full-promotion-review-20261101.json data/public-catalogues-review-20261103-r142.json data/public-catalogues-review-20261103-r143.json data/public-catalogues-pending-20261103-r143.json data/pc98-catalogue-audit-r142-r143-20261103.json data/basic-r142-r143-audit-summary-20261103.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Import verified public catalogue rounds 142 and 143"
             git push origin "HEAD:refs/heads/$TARGET_BRANCH"
           fi
