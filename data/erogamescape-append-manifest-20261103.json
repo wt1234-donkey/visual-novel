@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "date": "2026-11-03",
+  "sourceRecords": 15030,
+  "unmatchedRecords": 13366,
+  "suspectedExistingRecords": 1664,
+  "jsonSha256": "0c66505a38912a06da4a5c7e0a84b300a06fec141ac0c384119eacacef6bfccf",
+  "packedSha256": "56b2105cb64d4dc3185f18721175c1b29e011d06a9c8a7281a0a47a22e9927d2",
+  "sourceFiles": [
+    "ErogameScape_未匹配原始记录_20261103.csv",
+    "ErogameScape_疑似已有待核_20261103.csv"
+  ],
+  "policy": "append-without-deduplication",
+  "batchSize": 500,
+  "firstBatch": 168,
+  "lastBatch": 198,
+  "batchCount": 31,
+  "pairCount": 16,
+  "expectedBefore": 81454,
+  "expectedAfter": 96484,
+  "notice": "Entry count, not confirmed distinct narrative work count."
+}
