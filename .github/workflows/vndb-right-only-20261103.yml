@@ -1,0 +1,70 @@
+name: Import VNDB right-only table in paired 500-record batches
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/vndb-right-only-20261103.yml'
+      - 'scripts/import_vndb_right_only_20261103.py'
+      - 'data/vndb-right-only-source-20261103.json.gz.b64'
+permissions:
+  contents: write
+concurrency:
+  group: vndb-right-only-20261103
+  cancel-in-progress: false
+jobs:
+  intake:
+    if: github.head_ref == 'catalog/vndb-right-only-20261103' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Append each pair and record a separate commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+          for pair in range(1,13):
+              subprocess.run(['python3','scripts/import_vndb_right_only_20261103.py','--pair',str(pair)],check=True)
+              subprocess.run(['git','add','data/main-adv-rpg-works-20261031.json',*[str(p) for p in Path('data').glob('vndb-right-only-review-20261103-r*.json')]],check=True)
+              if subprocess.run(['git','diff','--cached','--quiet']).returncode:
+                  first=145+(pair-1)*2
+                  subprocess.run(['git','commit','-m',f'Import VNDB right-only batches {first}-{min(first+1,167)} without deduplication'],check=True)
+          PY
+      - name: Verify append-only preservation and source accounting
+        run: python3 scripts/import_vndb_right_only_20261103.py --check
+      - name: Regenerate unchanged catalogue indexes and dossiers
+        run: |
+          python3 scripts/sync_versions_csv.py
+          python3 scripts/export_content_csv.py
+          python3 scripts/export_interaction_csv.py
+          python3 scripts/build_company_pages.py
+          python3 scripts/build_entity_model.py
+          python3 scripts/build_entity_pages.py
+          python3 scripts/stage_basic_registry_for_main.py --offset 0 --limit 100 --write
+      - name: Required validation
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+      - name: Publish verified batch commits to the PR branch
+        run: |
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh catalogue indexes after VNDB right-only intake'
+          fi
+          git push origin HEAD:${{ github.head_ref }}

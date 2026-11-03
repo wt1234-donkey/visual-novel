@@ -91,12 +91,12 @@ async function start(){
      const nameYears=new Set(entries.map(r=>normalizeName(r.title)+'|'+r.year));
      for(const w of registry.works){
        const nameKey=normalizeName(w.title)+'|'+w.firstYear;
-       if(representedIds.has(w.id)||representedIndexIds.has(w.indexId)||nameYears.has(nameKey))continue;
+       if(representedIds.has(w.id)||representedIndexIds.has(w.indexId)||(w.intakePolicy!=='append-without-deduplication'&&nameYears.has(nameKey)))continue;
        const status=w.mainPlacement==='existing-complete'?'main-linked':w.mainPlacement;
        entries.push({
          id:w.indexId,matchedWorkId:w.id,title:w.title,aliases:w.aliases||[],
          year:w.firstYear,gameplay:w.gameplay||'玩法待核',gameplayNote:w.gameplayNote||'',
-         group:w.group||'来源关联待核',source:w.source,status
+         group:w.group||'来源关联待核',source:w.source,status,reason:w.intakePolicy==='append-without-deduplication'?('未去重导入 · 来源状态：'+w.sourceDevelopmentStatus):''
        });
        representedIds.add(w.id);
        representedIndexIds.add(w.indexId);
