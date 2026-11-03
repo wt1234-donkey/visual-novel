@@ -47,6 +47,8 @@ def rows_and_manifest():
     raw = gzip.decompress(base64.b64decode(packed))
     assert hashlib.sha256(raw).hexdigest() == manifest['jsonSha256'], 'Source JSON hash mismatch'
     rows = json.loads(raw)
+    for row_number, row in enumerate(rows, start=1):
+        row['sourceSnapshotRow'] = row_number
     assert len(rows) == EXPECTED_INPUT == manifest['sourceRecords']
     assert len({r['EGS ID'] for r in rows}) == len(rows), 'Input EGS IDs are not unique'
     assert sum(r['sourceSubset'] == 'unmatched' for r in rows) == 13366
@@ -92,6 +94,7 @@ def work_from(row, batch_num):
         'sourceSimilarityBasis': row.get('匹配依据') or '',
         'sourceVersionRisk': row.get('版本风险') or '',
         'sourceSnapshot': 'data/erogamescape-append-source-20261103.json.gz.b64',
+        'sourceSnapshotRow': row['sourceSnapshotRow'],
     }
 
 
