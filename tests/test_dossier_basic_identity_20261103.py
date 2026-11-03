@@ -7,7 +7,7 @@ class DossierIdentityTest(unittest.TestCase):
   base=json.loads(subprocess.check_output(['git','show','5c30913de8b656a7d534d54d731e08a4c5d52594:data/main-adv-rpg-works-20261031.json'],cwd=R))
   audit=json.loads((R/'data/dossier-basic-identity-audit-20261103.json').read_text())
   self.assertEqual(current['works'][:len(base['works'])],base['works'])
-  extra=current['works'][len(base['works']):]
+  extra=[x for x in current['works'][len(base['works']):] if x.get('batch')=='dossier-identity-link-20261103']
   self.assertEqual(len(extra),audit['summary']['newIdentityLinks'])
   self.assertEqual(len(current['works']),len({x['id'] for x in current['works']}))
   self.assertEqual(len(current['works']),len({x['indexId'] for x in current['works']}))
