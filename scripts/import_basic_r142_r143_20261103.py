@@ -239,7 +239,7 @@ def build():
         for key in ('candidates','accepted','promotedBasic','addedToMainIdentityLayer'):
             reg['summary'][key] += count
         batchid = PREFIX+str(n)
-        summary = {'newDistinctWorks':count,'before':before,'after':len(reg['works']),
+        summary = {'candidates':count,'promoted-basic':count,'newDistinctWorks':count,'before':before,'after':len(reg['works']),
                    'scannedRecords':len(records),'dispositions':dict(Counter(r['status'] for r in records)),
                    'sourceCounts':dict(Counter(r['sourceKind'] for r in records)),
                    'newSourceCounts':dict(Counter(r['sourceKind'] for r in records if r['status']=='promoted-basic'))}
