@@ -23,6 +23,8 @@ START = 10527
 ROUNDS = (134, 135)
 SEED_AUDIT = ROOT / 'data/nextmoe-ifdb-bulk-review-20261102-r133.json'
 PC_RESUME_AUDIT = None
+HISTORICAL_REVIEWS = ()
+ALLOW_PARTIAL_BATCHES = False
 SNAPSHOT = ROOT / 'data/pc98-catalogue-snapshot-20261103.json'
 REVIEW = ROOT / 'data/pc98-admission-review-20261103.json'
 PC_AUDIT = ROOT / 'data/pc98-catalogue-audit-20261103.json'
@@ -86,19 +88,34 @@ def unresolved_pc98_rows(rows, prior):
     return selected
 
 
-def reserve_reviewed_pc98_reuse(index, refs):
+def reserve_reviewed_pc98_reuse(index, refs, review_files=None):
     """Use sourced aliases of reused works to block cross-source duplicates too."""
     decisions = []
-    for item in load(REVIEW)['approved']:
-        names = [item['title'], *item['aliases']]
-        hits = set().union(*(index.get(norm(n), set()) for n in names))
-        if len({h[0] for h in hits}) != 1 or {h[1] for h in hits} != {item['firstYear']}:
-            continue
-        wid = next(iter(hits))[0]
-        work = {'id': wid, 'title': item['title'], 'aliases': item['aliases'],
-            'firstYear': item['firstYear'], 'source': item['source'], 'sourceRefs': item['sourceRefs']}
-        reserve(work, index, refs)
-        decisions.append({'matchedWorkId': wid, 'source': item['source'], 'aliases': names})
+    paths = (*HISTORICAL_REVIEWS, REVIEW) if review_files is None else review_files
+    for path in paths:
+        review = load(path)
+        for item in review['approved']:
+            names = [item['title'], *item['aliases']]
+            hits = set().union(*(index.get(norm(n), set()) for n in names))
+            if len({h[0] for h in hits}) != 1 or {h[1] for h in hits} != {item['firstYear']}:
+                continue
+            wid = next(iter(hits))[0]
+            work = {'id': wid, 'title': item['title'], 'aliases': item['aliases'],
+                'firstYear': item['firstYear'], 'source': item['source'], 'sourceRefs': item['sourceRefs']}
+            reserve(work, index, refs)
+            decisions.append({'matchedWorkId': wid, 'source': item['source'], 'aliases': names})
+        if review.get('manualAliasReuse'):
+            snapshot = load(SNAPSHOT)
+            for item in review['manualAliasReuse']:
+                row = next(r for r in snapshot['records'] if r['catalogue'] == 'ikachi-igdb' and r['sourceId'] == item['igdbId'])
+                years = {hit[1] for values in index.values() for hit in values if hit[0] == item['matchedWorkId']}
+                if years != {row['catalogueYear']}:
+                    continue
+                work = {'id': item['matchedWorkId'], 'title': row['title'], 'aliases': [row['latin']],
+                    'firstYear': row['catalogueYear'], 'source': row['source'], 'sourceRefs': row['sourceRefs']}
+                reserve(work, index, refs)
+                decisions.append({'matchedWorkId': work['id'], 'source': row['source'],
+                    'aliases': [work['title'], *work['aliases']]})
     return decisions
 
 
@@ -114,6 +131,8 @@ def pc98_preflight(registry):
     keyed = {(r['catalogue'], r['sourceId']): r for r in raw}
     assert len(keyed) == len(raw)
     index, refs = full_index(registry), full_refs(registry)
+    if HISTORICAL_REVIEWS:
+        reserve_reviewed_pc98_reuse(index, refs, HISTORICAL_REVIEWS)
     approved, resolution = [], {}
     for item in review['approved']:
         witnesses = [keyed[tuple(k)] for k in item['catalogueRows']]
@@ -141,6 +160,8 @@ def pc98_preflight(registry):
                 'matches': sorted(hits), 'matchedWorkIds': sorted(ref_hits)}
     # Evaluate remaining raw catalogue rows against the pre-intake catalogue only.
     index, refs = full_index(registry), full_refs(registry)
+    if HISTORICAL_REVIEWS:
+        reserve_reviewed_pc98_reuse(index, refs, HISTORICAL_REVIEWS)
     manual = {r['igdbId']: r for r in review.get('manualAliasReuse', [])}
     dispositions = []
     for row in raw:
@@ -191,13 +212,14 @@ def report_text():
     audits = [load(audit_path(n)) for n in ROUNDS]
     pc = load(PC_AUDIT)
     lines = [f'# 第{ROUNDS[0]}、{ROUNDS[1]}批：IFDB与PC-98历史目录补录', '',
-        '本轮不请求VNDB或NextMoe。PC-98先核对原始年份与别名，合格身份均分两批；余下名额由IFDB补足。', '',
+        '本轮不请求VNDB或NextMoe。PC-98先核对原始年份与别名，每批最多500部；其余名额由IFDB补充。', '',
         '| 批次 | PC-98新增 | IFDB扫描 | IFDB去重复用 | IFDB隔离 | IFDB新增 | 总新增 |',
         '|---|---:|---:|---:|---:|---:|---:|']
     for a in audits:
         s, r = a['summary'], a['ifdbArchiveReview']
         lines.append(f"| {a['round']} | {s['sourceCounts']['pc98']} | {r['scanned']} | {len(a['reusedExisting'])} | {len(a['heldForIdentityReview'])} | {s['sourceCounts']['ifdb']} | {s['newDistinctWorks']} |")
-    lines += ['', f"基础身份库：{audits[0]['summary']['before']:,} → {audits[-1]['summary']['after']:,}。两批各500，合计1000。", '',
+    sizes = [a['summary']['newDistinctWorks'] for a in audits]
+    lines += ['', f"基础身份库：{audits[0]['summary']['before']:,} → {audits[-1]['summary']['after']:,}。两批分别新增{sizes[0]}、{sizes[1]}部，合计{sum(sizes)}部。", '',
         '## PC-98目录逐条审核', '',
         (f"本轮复核上轮保留的{pc['summary']['rawRecords']}条待核原始目录记录，未重新扫描已处理的全部目录；经交叉核对、原作年证据和全库别名检查，新增{pc['summary']['reviewedNewWorks']}个作品身份。"
             if PC_RESUME_AUDIT is not None else f"两份目录共{pc['summary']['rawRecords']}条原始记录；经目录交叉核对、原作年证据和全库别名检查，新增{pc['summary']['reviewedNewWorks']}个作品身份。原始目录记录数不当作独立作品数。"), '',
@@ -212,6 +234,7 @@ def report_text():
     lines += ['', '## IFDB续采位置', '',
         f"固定档案SHA-256：`{ifdb.ARCHIVE_SHA256}`；筛选截止日期继续使用2026-11-02，排序不变。", '',
         f"起点：{START}；第{ROUNDS[0]}批后：{audits[0]['ifdbArchiveReview']['nextPosition']}；第{ROUNDS[1]}批后：{audits[1]['ifdbArchiveReview']['nextPosition']}。", '',
+        ('固定档案已到末尾；第二批按实际可核实的作品数量入库。' if audits[-1]['ifdbArchiveReview'].get('archiveExhausted') else '固定档案仍有后续位置可继续核查。'), '',
         '本轮IFDB无已合格剩余暂存；PC-98待核项目独立保留，不能用未核年份或平台移植凑数。', '',
         '## IFDB名称／年份／身份隔离清单', '',
         '| 批次 | IFDB来源ID | 标题 | 来源日期 | 匹配已有身份及年份 | 隔离原因 |', '|---|---|---|---|---|---|']
@@ -239,7 +262,7 @@ def check():
     for path in catalogue.PROTECTED + ['data/vn-seven-source-date-review-20261101.json']:
         assert original(path) == (ROOT / path).read_bytes(), path
     added = current['works'][len(old['works']):]
-    assert len(added) == 1000
+    assert (0 <= len(added) <= 1000) if ALLOW_PARTIAL_BATCHES else len(added) == 1000
     assert len({w['id'] for w in current['works']}) == len(current['works'])
     assert len({w['indexId'] for w in current['works']}) == len(current['works'])
     index, refs = full_index(old), full_refs(old)
@@ -253,8 +276,11 @@ def check():
     for n in ROUNDS:
         a = load(audit_path(n))
         works = [w for w in added if w['batch'] == batch(n)]
-        assert len(works) == len(a['records']) == a['summary']['newDistinctWorks'] == 500
-        assert sum(a['summary']['sourceCounts'].values()) == 500
+        size = len(works)
+        assert size == len(a['records']) == a['summary']['newDistinctWorks']
+        assert (0 <= size <= 500) if ALLOW_PARTIAL_BATCHES else size == 500
+        assert sum(a['summary']['sourceCounts'].values()) == size
+        assert sum(b['id'] == batch(n) for b in current['batches']) == int(size > 0)
         evidence = {r['id']: r for r in a['records']}
         for w in works:
             r = evidence[w['id']]
@@ -277,6 +303,9 @@ def check():
                 pc_ids.add(w['id'])
             reserve(w, index, folded)
         review = a['ifdbArchiveReview']
+        if size < 500:
+            assert ALLOW_PARTIAL_BATCHES and review['archiveExhausted']
+            assert review['nextPosition'] == review['eligibleArchiveCandidates'] + 1
         assert review['startPosition'] == position
         assert review['nextPosition'] == position + review['scanned']
         assert review['selected'] == a['summary']['sourceCounts']['ifdb']
@@ -298,13 +327,15 @@ def check():
         original_bytes = original(str(PC_RESUME_AUDIT.relative_to(ROOT)))
         assert original_bytes == PC_RESUME_AUDIT.read_bytes(), 'Prior source dispositions changed'
         assert original(str(SNAPSHOT.relative_to(ROOT))) == SNAPSHOT.read_bytes()
+    for path in HISTORICAL_REVIEWS:
+        assert original(str(path.relative_to(ROOT))) == path.read_bytes()
     assert len(pc['records']) == pc['summary']['rawRecords'] == sum(pc['summary']['dispositions'].values())
-    assert current['summary']['accepted'] == len(current['works']) == len(old['works']) + 1000
+    assert current['summary']['accepted'] == len(current['works']) == len(old['works']) + len(added)
     for key in ('candidates', 'accepted', 'promotedBasic', 'addedToMainIdentityLayer'):
-        assert current['summary'][key] == old['summary'][key] + 1000
-    assert current['updated'] == DATE
+        assert current['summary'][key] == old['summary'][key] + len(added)
+    assert current['updated'] == (DATE if added else old['updated'])
     assert REPORT.read_text() == report_text()
-    print('IFDB_PC98_FULL_CHECK_OK', len(old['works']), '+1000 =', len(current['works']), 'PC98', len(pc_ids), 'IFDB_NEXT', position, flush=True)
+    print('IFDB_PC98_FULL_CHECK_OK', len(old['works']), '+', len(added), '=', len(current['works']), 'PC98', len(pc_ids), 'IFDB_NEXT', position, flush=True)
 
 
 def main():
@@ -317,6 +348,7 @@ def main():
         check()
         return
     registry = load(REG)
+    did_rebuild = False
     if args.rebuild and any(b['id'] == batch(n) for n in ROUNDS for b in registry['batches']):
         baseline = json.loads(subprocess.check_output(
             ['git', 'show', BASE + ':' + str(REG.relative_to(ROOT))], cwd=ROOT))
@@ -324,16 +356,19 @@ def main():
         assert registry['batches'][:len(baseline['batches'])] == baseline['batches']
         extra = registry['works'][len(baseline['works']):]
         extra_batches = registry['batches'][len(baseline['batches']):]
-        assert len(extra) == 1000 and len(extra_batches) == 2
-        assert {w['batch'] for w in extra} == {batch(n) for n in ROUNDS}
-        assert {b['id'] for b in extra_batches} == {batch(n) for n in ROUNDS}
+        sizes = {n: load(audit_path(n))['summary']['newDistinctWorks'] for n in ROUNDS}
+        assert len(extra) == sum(sizes.values()) and len(extra_batches) == sum(v > 0 for v in sizes.values())
+        expected_batches = {batch(n) for n, size in sizes.items() if size > 0}
+        assert {w['batch'] for w in extra} == expected_batches
+        assert {b['id'] for b in extra_batches} == expected_batches
         # Refuse to drop any unrelated batch, identity or protected historical object.
         for key in baseline:
             if key not in {'works', 'batches', 'summary', 'updated'}:
                 assert registry[key] == baseline[key]
         registry = baseline
         save(REG, registry)
-    if all(any(b['id'] == batch(n) for b in registry['batches']) for n in ROUNDS):
+        did_rebuild = True
+    if not did_rebuild and all(audit_path(n).exists() for n in ROUNDS):
         check()
         return
     assert not any(b['id'] == batch(n) for n in ROUNDS for b in registry['batches']), 'Partial import requires review; never repeat a completed batch'
@@ -349,22 +384,29 @@ def main():
     position = START
     for offset, number in enumerate(ROUNDS):
         pc = copy.deepcopy(pc_rows[offset::2])
+        assert len(pc) <= 500
         for row in pc:
             row['work']['batch'] = batch(number)
-        selected, review = ifdb.choose(prepared, 500 - len(pc), index, refs, norm, batch(number), start_position=position)
+        selected, review = ifdb.choose(prepared, 500 - len(pc), index, refs, norm, batch(number),
+            start_position=position, allow_partial=ALLOW_PARTIAL_BATCHES)
         rows = pc + selected
         records = [{**r['work'], **{k: v for k, v in r.items() if k != 'work'}} for r in rows]
         held = review.pop('heldForIdentityReview')
         reused = review.pop('reusedExisting')
         stats = {'sourceCounts': {'pc98': len(pc), 'ifdb': len(selected)},
             'ifdbScanned': review['scanned'], 'ifdbReused': len(reused), 'ifdbHeld': len(held),
-            'remainingDeferred': 0, 'newDistinctWorks': 500}
-        append.append_batch(registry, [r['work'] for r in rows], batch(number),
-            [ifdb.ARCHIVE_URL, 'https://www.ikachi.org/pc9801/', 'https://pc-9801.com/'],
-            audit_path(number), stats, records, held,
-            ['https://ifdb.org/api/', 'https://www.gamepres.org/dbsearch/'],
-            'Minimal factual metadata with per-record source provenance; no descriptions or game files copied.', intake_date=DATE)
-        a = load(audit_path(number))
+            'remainingDeferred': 0, 'newDistinctWorks': len(rows)}
+        if rows:
+            append.append_batch(registry, [r['work'] for r in rows], batch(number),
+                [ifdb.ARCHIVE_URL, 'https://www.ikachi.org/pc9801/', 'https://pc-9801.com/'],
+                audit_path(number), stats, records, held,
+                ['https://ifdb.org/api/', 'https://www.gamepres.org/dbsearch/'],
+                'Minimal factual metadata with per-record source provenance; no descriptions or game files copied.', intake_date=DATE)
+            a = load(audit_path(number))
+        else:
+            assert ALLOW_PARTIAL_BATCHES and review['archiveExhausted']
+            a = {'schema': 1, 'date': DATE, 'summary': {'before':len(registry['works']),
+                'after':len(registry['works']), **stats}, 'records': [], 'heldForIdentityReview': held}
         a.update({'round': number, 'priorBaseCommit': BASE, 'reusedExisting': reused,
             'reviewedPC98ReuseAliases': reuse_aliases,
             'deferredEligible': [], 'pendingQueueReview': [],
