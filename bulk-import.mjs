@@ -1,6 +1,6 @@
 import {projectRegistry,validateStore} from './basic-catalogue-model.mjs';
 import {autoFillRecord,createBasicRecord,missingBasicFields,fetchSourceDetails,nextMoeDetailURL} from './bulk-autofill.mjs?v=20261101-autofill';
-import {applyWorkEdits} from './work-edit-model.mjs?v=20261101';
+import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
 import {WORKFLOW,validURL,validatePackage,same} from './management-model.mjs?v=20261101-bulk';
 import {REGISTRY_FILE,scanRegistry,emptyValues,prepareBulk,mergeMetadata} from './bulk-import-model.mjs?v=20261101-autofill';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
