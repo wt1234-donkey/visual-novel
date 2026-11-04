@@ -38,3 +38,12 @@ test('GitHub diagnostics never reflect the supplied credential and network failu
 test('the credential link pre-fills only the intended resource owner and content permission',()=>{
  const url=new URL(TOKEN_SETUP_URL);assert.equal(url.origin,'https://github.com');assert.equal(url.searchParams.get('target_name'),'wt1234-donkey');assert.equal(url.searchParams.get('contents'),'write');assert.equal(url.searchParams.get('administration'),null);
 });
+test('published history loads from the website without sending a token or consuming GitHub API quota',async()=>{
+ const calls=[];const client=createEditClient('github_pat_test_only',async(url,options)=>{calls.push({url,options});assert.ok(!url.startsWith('https://api.github.com'));return response(200,store);});
+ const snapshot=await client.readPublished();assert.deepEqual(snapshot,{sha:null,store});assert.equal(calls[0].url,'./data/work-edit-history.json');assert.equal(calls[0].options.headers,undefined);
+ await assert.rejects(()=>client.write(store,snapshot.sha,'test'),/已发布副本不能直接写入/);assert.equal(calls.length,1);
+});
+test('invalid or unavailable published history is rejected instead of being treated as an empty history',async()=>{
+ await assert.rejects(()=>createEditClient('',async()=>response(503)).readPublished(),/已发布修改记录.*503/);
+ await assert.rejects(()=>createEditClient('',async()=>response(200,{schemaVersion:1})).readPublished(),/历史格式/);
+});

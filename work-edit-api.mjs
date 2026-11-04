@@ -6,6 +6,7 @@ const decode=value=>JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(val
 const encode=value=>{const bytes=new TextEncoder().encode(JSON.stringify(value,null,2)+'\n');let s='';for(let i=0;i<bytes.length;i+=32766)s+=String.fromCharCode(...bytes.subarray(i,i+32766));return btoa(s);};
 export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PATH,validate=null}={}){
  let oauthScopes=null;
+ const validateRead=store=>{if(validate)validate(store);else if(!store||store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式不正确，请停止写入并核查');return store;};
  async function request(path,method='GET',body){
   const operation=method==='PUT'?'保存网站修改':path==='/user'?'校验 GitHub 账号':path===REPO?'读取目标仓库':'读取网站修改记录';
   let res;
@@ -45,7 +46,12 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
    if(/^gh[po]_/.test(token)&&oauthScopes!==null&&!oauthScopes.some(s=>s==='repo'||s==='public_repo'))throw Error('当前凭证缺少公开仓库内容写入权限。'+permissionHelp);
    return user.login;
   },
-  async read(){const file=await request(REPO+'/contents/'+historyPath+'?ref=main');const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);const store=decode(blob.content);if(validate)validate(store);else if(store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式不正确，请停止写入并核查');return {sha:file.sha,store};},
-  async write(store,sha,message){if(!token)throw Error('请先连接 GitHub 写入权限');const result=await request(REPO+'/contents/'+historyPath,'PUT',{message,branch:'main',sha,content:encode(store)});return {sha:result.content.sha,commit:result.commit.sha,url:result.commit.html_url};}
+  async readPublished(){
+   const response=await fetcher('./'+historyPath,{cache:'no-store'});
+   if(!response.ok)throw Error('读取已发布修改记录失败（HTTP '+response.status+'）');
+   return {sha:null,store:validateRead(await response.json())};
+  },
+  async read(){const file=await request(REPO+'/contents/'+historyPath+'?ref=main');const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,store:validateRead(decode(blob.content))};},
+  async write(store,sha,message){if(!token)throw Error('请先连接 GitHub 写入权限');if(!sha)throw Error('请先读取 GitHub 最新修改记录后保存；已发布副本不能直接写入');const result=await request(REPO+'/contents/'+historyPath,'PUT',{message,branch:'main',sha,content:encode(store)});return {sha:result.content.sha,commit:result.commit.sha,url:result.commit.html_url};}
  };
 }
