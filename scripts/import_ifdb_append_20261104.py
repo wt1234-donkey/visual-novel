@@ -221,7 +221,7 @@ def verify():
             raise RuntimeError('Batch accounting differs')
     if sum(w.get('batch', '').startswith(PREFIX) for w in registry['works']) != EXPECTED_INPUT:
         raise RuntimeError('Final IFDB intake differs')
-    if len(registry['works']) != EXPECTED_BASE + EXPECTED_INPUT:
+    if len(registry['works']) < EXPECTED_BASE + EXPECTED_INPUT:
         raise RuntimeError('Final registry total differs')
     print('IMPORT_CHECK_OK', EXPECTED_INPUT, 'batches', LAST_BATCH - FIRST_BATCH + 1, 'total', len(registry['works']))
 

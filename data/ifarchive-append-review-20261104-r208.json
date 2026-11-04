@@ -1,0 +1,824 @@
+{
+  "schema": 1,
+  "date": "2026-11-04",
+  "batch": 208,
+  "pair": 2,
+  "intakePolicy": "append-without-deduplication",
+  "sourceSnapshot": "data/ifarchive-append-source-20261104.json.gz.b64",
+  "sourceOffset": 1000,
+  "summary": {
+    "candidates": 89,
+    "promoted-basic": 89,
+    "appendedRecords": 89,
+    "unmatched": 0,
+    "suspectedExisting": 89,
+    "before": 100854,
+    "after": 100943,
+    "unknownYear": 12,
+    "deduplication": "not-performed"
+  },
+  "records": [
+    {
+      "IFDB_TUID": "r5jlzvx3g5iijjm",
+      "title": "The Enchanted Castle",
+      "workId": "ifarchive-table-20261104-r5jlzvx3g5iijjm",
+      "firstYear": 2019,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-vnp0h509iaxlyae6",
+      "sourceSnapshotRow": 1001
+    },
+    {
+      "IFDB_TUID": "bvpfkjeawcewjomk",
+      "title": "the eternal adventures of tits magee",
+      "workId": "ifarchive-table-20261104-bvpfkjeawcewjomk",
+      "firstYear": 2019,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v38690",
+      "sourceSnapshotRow": 1002
+    },
+    {
+      "IFDB_TUID": "pdeztll2c9m0a4uo",
+      "title": "The Storm",
+      "workId": "ifarchive-table-20261104-pdeztll2c9m0a4uo",
+      "firstYear": 2019,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v11540",
+      "sourceSnapshotRow": 1003
+    },
+    {
+      "IFDB_TUID": "v966lgn8f6p1vco1",
+      "title": "Timeless",
+      "workId": "ifarchive-table-20261104-v966lgn8f6p1vco1",
+      "firstYear": 2019,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v15008 ; vndb-table-20261103-v26626 ; vndb-table-20261103-v36722",
+      "sourceSnapshotRow": 1004
+    },
+    {
+      "IFDB_TUID": "2pdvzl4wlmq14gq7",
+      "title": "Underground",
+      "workId": "ifarchive-table-20261104-2pdvzl4wlmq14gq7",
+      "firstYear": 2019,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v51225 ; mobygames-220274",
+      "sourceSnapshotRow": 1005
+    },
+    {
+      "IFDB_TUID": "h0wfq5kjh1fzj2g",
+      "title": "Alone",
+      "workId": "ifarchive-table-20261104-h0wfq5kjh1fzj2g",
+      "firstYear": 2020,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v5043 ; vndb-table-20261103-v27169 ; vndb-table-20261103-v32629 ; vndb-table-20261103-v37222 ; vndb-table-20261103-v40703 ; vndb-table-20261103-v52555",
+      "sourceSnapshotRow": 1006
+    },
+    {
+      "IFDB_TUID": "h3p9ae9gw92w91x",
+      "title": "JELLY",
+      "workId": "ifarchive-table-20261104-h3p9ae9gw92w91x",
+      "firstYear": 2020,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v8218",
+      "sourceSnapshotRow": 1007
+    },
+    {
+      "IFDB_TUID": "ztzf8w3vmrz0xqih",
+      "title": "Lore Distance Relationship",
+      "workId": "ifarchive-table-20261104-ztzf8w3vmrz0xqih",
+      "firstYear": 2020,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v54755",
+      "sourceSnapshotRow": 1008
+    },
+    {
+      "IFDB_TUID": "u1ibyqknb2vie6xm",
+      "title": "Memoria",
+      "workId": "ifarchive-table-20261104-u1ibyqknb2vie6xm",
+      "firstYear": 2020,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "nextmoe-5031 ; vndb-table-20261103-v34628",
+      "sourceSnapshotRow": 1009
+    },
+    {
+      "IFDB_TUID": "479t3ui7ps8ghqsy",
+      "title": "Radicofani",
+      "workId": "ifarchive-table-20261104-479t3ui7ps8ghqsy",
+      "firstYear": 2020,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-kos6pjrwndtk3tba",
+      "sourceSnapshotRow": 1010
+    },
+    {
+      "IFDB_TUID": "y771zb318c2szi9",
+      "title": "The Cave",
+      "workId": "ifarchive-table-20261104-y771zb318c2szi9",
+      "firstYear": 2020,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-u94un0rox6hbn4sl ; vndb-table-20261103-v53301",
+      "sourceSnapshotRow": 1011
+    },
+    {
+      "IFDB_TUID": "lis59ao3xfqnhnon",
+      "title": "Closure",
+      "workId": "ifarchive-table-20261104-lis59ao3xfqnhnon",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v14355",
+      "sourceSnapshotRow": 1012
+    },
+    {
+      "IFDB_TUID": "4lbwojdld1g77r9l",
+      "title": "Eleanor",
+      "workId": "ifarchive-table-20261104-4lbwojdld1g77r9l",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v26227",
+      "sourceSnapshotRow": 1013
+    },
+    {
+      "IFDB_TUID": "ify2fa74spuft3kl",
+      "title": "Excalibur",
+      "workId": "ifarchive-table-20261104-ify2fa74spuft3kl",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-q3isw8j98nnz6gm3 ; ifdb-gaaxee2mvysvsaxd",
+      "sourceSnapshotRow": 1014
+    },
+    {
+      "IFDB_TUID": "n44doao8v14lddjv",
+      "title": "Heroes!",
+      "workId": "ifarchive-table-20261104-n44doao8v14lddjv",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-j1uj9pygpuw3v9pc",
+      "sourceSnapshotRow": 1015
+    },
+    {
+      "IFDB_TUID": "m9n4p428m9kaeaaf",
+      "title": "Jack",
+      "workId": "ifarchive-table-20261104-m9n4p428m9kaeaaf",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-table-20261103-v9419",
+      "sourceSnapshotRow": 1016
+    },
+    {
+      "IFDB_TUID": "9acju32vmuzbvzgx",
+      "title": "[PYG]MALION*",
+      "workId": "ifarchive-table-20261104-9acju32vmuzbvzgx",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v7394",
+      "sourceSnapshotRow": 1017
+    },
+    {
+      "IFDB_TUID": "6cpsp17x7j11zh4m",
+      "title": "Snowed In",
+      "workId": "ifarchive-table-20261104-6cpsp17x7j11zh4m",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "nextmoe-47303 ; vndb-table-20261103-v24710",
+      "sourceSnapshotRow": 1018
+    },
+    {
+      "IFDB_TUID": "9oypkqtkoecu8kzl",
+      "title": "The Best Man",
+      "workId": "ifarchive-table-20261104-9oypkqtkoecu8kzl",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-f5mkursovywoc4h1",
+      "sourceSnapshotRow": 1019
+    },
+    {
+      "IFDB_TUID": "2w92cgs5h92lcp5",
+      "title": "The Time Machine",
+      "workId": "ifarchive-table-20261104-2w92cgs5h92lcp5",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-g7h92i8ucy0sfll2",
+      "sourceSnapshotRow": 1020
+    },
+    {
+      "IFDB_TUID": "r4e3vmp4gogi1e0",
+      "title": "Those Days",
+      "workId": "ifarchive-table-20261104-r4e3vmp4gogi1e0",
+      "firstYear": 2021,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-table-20261103-v35106",
+      "sourceSnapshotRow": 1021
+    },
+    {
+      "IFDB_TUID": "76ecmby2q849qlsl",
+      "title": "A D R I F T",
+      "workId": "ifarchive-table-20261104-76ecmby2q849qlsl",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "nextmoe-14737 ; vndb-table-20261103-v55601 ; vndb-table-20261103-v68021",
+      "sourceSnapshotRow": 1022
+    },
+    {
+      "IFDB_TUID": "mvh6n0to3p3wd301",
+      "title": "Blue",
+      "workId": "ifarchive-table-20261104-mvh6n0to3p3wd301",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v538 ; vndb-table-20261103-v13350 ; vndb-table-20261103-v17063 ; vndb-table-20261103-v38290",
+      "sourceSnapshotRow": 1023
+    },
+    {
+      "IFDB_TUID": "55oxtjex7oe3y0le",
+      "title": "I, Robot 2",
+      "workId": "ifarchive-table-20261104-55oxtjex7oe3y0le",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v36202",
+      "sourceSnapshotRow": 1024
+    },
+    {
+      "IFDB_TUID": "mhm7zqdxy4kqojn2",
+      "title": "Prism",
+      "workId": "ifarchive-table-20261104-mhm7zqdxy4kqojn2",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v36727 ; vndb-table-20261103-v42014",
+      "sourceSnapshotRow": 1025
+    },
+    {
+      "IFDB_TUID": "w3o4jb8cp5ldd0hm",
+      "title": "The Alchemist",
+      "workId": "ifarchive-table-20261104-w3o4jb8cp5ldd0hm",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v29693 ; ifdb-jtyzvv97m8irt63s",
+      "sourceSnapshotRow": 1026
+    },
+    {
+      "IFDB_TUID": "rz913q1plwxce8z",
+      "title": "The Box",
+      "workId": "ifarchive-table-20261104-rz913q1plwxce8z",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-pkubqzkvhqolbcy9 ; vndb-table-20261103-v57868",
+      "sourceSnapshotRow": 1027
+    },
+    {
+      "IFDB_TUID": "xkmgrav97teqkb5",
+      "title": "The Deluge",
+      "workId": "ifarchive-table-20261104-xkmgrav97teqkb5",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v33283",
+      "sourceSnapshotRow": 1028
+    },
+    {
+      "IFDB_TUID": "nqvn4szk9ntbdq",
+      "title": "The Intruder",
+      "workId": "ifarchive-table-20261104-nqvn4szk9ntbdq",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-k4y7rnmiics5h7ej",
+      "sourceSnapshotRow": 1029
+    },
+    {
+      "IFDB_TUID": "qcs8v2izmhkyuxl",
+      "title": "The Thirty Nine Steps",
+      "workId": "ifarchive-table-20261104-qcs8v2izmhkyuxl",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-40brbwc1bghbh7cr",
+      "sourceSnapshotRow": 1030
+    },
+    {
+      "IFDB_TUID": "orlwxd8x4srbw5",
+      "title": "Towers of Hanoi",
+      "workId": "ifarchive-table-20261104-orlwxd8x4srbw5",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "erogamescape-table-20261103-32696",
+      "sourceSnapshotRow": 1031
+    },
+    {
+      "IFDB_TUID": "ja3694hxy2tdh7i",
+      "title": "Vespertines",
+      "workId": "ifarchive-table-20261104-ja3694hxy2tdh7i",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-iac336d9vtqg7c89",
+      "sourceSnapshotRow": 1032
+    },
+    {
+      "IFDB_TUID": "y7dg8fy3szi6d4us",
+      "title": "You, Me and Coffee",
+      "workId": "ifarchive-table-20261104-y7dg8fy3szi6d4us",
+      "firstYear": 2022,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v34989",
+      "sourceSnapshotRow": 1033
+    },
+    {
+      "IFDB_TUID": "utvptfkvquzo8jou",
+      "title": "Collision",
+      "workId": "ifarchive-table-20261104-utvptfkvquzo8jou",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-tq4192kwlbvvd004",
+      "sourceSnapshotRow": 1034
+    },
+    {
+      "IFDB_TUID": "1g0dyx58ijsrobe",
+      "title": "Cycle",
+      "workId": "ifarchive-table-20261104-1g0dyx58ijsrobe",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v32285 ; vndb-table-20261103-v21559 ; vndb-table-20261103-v59055",
+      "sourceSnapshotRow": 1035
+    },
+    {
+      "IFDB_TUID": "uo96k0h6uihebiel",
+      "title": "Fix Your Mother's Printer",
+      "workId": "ifarchive-table-20261104-uo96k0h6uihebiel",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v49157",
+      "sourceSnapshotRow": 1036
+    },
+    {
+      "IFDB_TUID": "oo47au8aifrgwmpd",
+      "title": "Girls' Day",
+      "workId": "ifarchive-table-20261104-oo47au8aifrgwmpd",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v46101",
+      "sourceSnapshotRow": 1037
+    },
+    {
+      "IFDB_TUID": "rkbxfdmie302zb8v",
+      "title": "Last Valentine's Day",
+      "workId": "ifarchive-table-20261104-rkbxfdmie302zb8v",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v48577",
+      "sourceSnapshotRow": 1038
+    },
+    {
+      "IFDB_TUID": "83nvqwjjz0y347t",
+      "title": "Mirror",
+      "workId": "ifarchive-table-20261104-83nvqwjjz0y347t",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-table-20261103-v5717 ; vndb-table-20261103-v8660 ; vndb-table-20261103-v15534 ; vndb-table-20261103-v16000 ; vndb-table-20261103-v59600 ; erogamescape-table-20261103-28996",
+      "sourceSnapshotRow": 1039
+    },
+    {
+      "IFDB_TUID": "1augrnmhob9xrmzd",
+      "title": "Remembrance",
+      "workId": "ifarchive-table-20261104-1augrnmhob9xrmzd",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-ojx9t0eku2h9voap ; vndb-v44155 ; vndb-table-20261103-v22004",
+      "sourceSnapshotRow": 1040
+    },
+    {
+      "IFDB_TUID": "qjdenq5271yvbmo7",
+      "title": "The Familiar",
+      "workId": "ifarchive-table-20261104-qjdenq5271yvbmo7",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-j40skyw17n3uxsrm",
+      "sourceSnapshotRow": 1041
+    },
+    {
+      "IFDB_TUID": "2n0ytsce023hx75",
+      "title": "THE NIGHT BEFORE THE BLOOD MOON",
+      "workId": "ifarchive-table-20261104-2n0ytsce023hx75",
+      "firstYear": 2023,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v46632",
+      "sourceSnapshotRow": 1042
+    },
+    {
+      "IFDB_TUID": "si39ri8ng9bqimv1",
+      "title": "A Clean Getaway",
+      "workId": "ifarchive-table-20261104-si39ri8ng9bqimv1",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-orssyc3rn54mrg97",
+      "sourceSnapshotRow": 1043
+    },
+    {
+      "IFDB_TUID": "mgefigq4n2qe5zkw",
+      "title": "An Exercise in Emotional Honesty",
+      "workId": "ifarchive-table-20261104-mgefigq4n2qe5zkw",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v50573",
+      "sourceSnapshotRow": 1044
+    },
+    {
+      "IFDB_TUID": "kmtcjmfnmnxg5vv",
+      "title": "beach",
+      "workId": "ifarchive-table-20261104-kmtcjmfnmnxg5vv",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v8432 ; vndb-table-20261103-v13537",
+      "sourceSnapshotRow": 1045
+    },
+    {
+      "IFDB_TUID": "aviocvjl3dpderh4",
+      "title": "Big Brother,",
+      "workId": "ifarchive-table-20261104-aviocvjl3dpderh4",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v16100",
+      "sourceSnapshotRow": 1046
+    },
+    {
+      "IFDB_TUID": "zwmq75rpe57av1ie",
+      "title": "Black Coffee",
+      "workId": "ifarchive-table-20261104-zwmq75rpe57av1ie",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v54168",
+      "sourceSnapshotRow": 1047
+    },
+    {
+      "IFDB_TUID": "hukf9rzectwkla8i",
+      "title": "Blood and Company",
+      "workId": "ifarchive-table-20261104-hukf9rzectwkla8i",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v49194",
+      "sourceSnapshotRow": 1048
+    },
+    {
+      "IFDB_TUID": "igchgpi2kbxrzszu",
+      "title": "Chronostasis",
+      "workId": "ifarchive-table-20261104-igchgpi2kbxrzszu",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v67828",
+      "sourceSnapshotRow": 1049
+    },
+    {
+      "IFDB_TUID": "xwxksq1qc3wspxfq",
+      "title": "Doctor Who and the Dalek Super-Brain",
+      "workId": "ifarchive-table-20261104-xwxksq1qc3wspxfq",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v52485",
+      "sourceSnapshotRow": 1050
+    },
+    {
+      "IFDB_TUID": "sg8x3ziva48axz69",
+      "title": "Dust",
+      "workId": "ifarchive-table-20261104-sg8x3ziva48axz69",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v13239",
+      "sourceSnapshotRow": 1051
+    },
+    {
+      "IFDB_TUID": "oupagfdahyj8it4m",
+      "title": "First Contact",
+      "workId": "ifarchive-table-20261104-oupagfdahyj8it4m",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v32017 ; vndb-table-20261103-v45257",
+      "sourceSnapshotRow": 1052
+    },
+    {
+      "IFDB_TUID": "kk286nqitk3ntllh",
+      "title": "Ghost Hunt",
+      "workId": "ifarchive-table-20261104-kk286nqitk3ntllh",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v65113",
+      "sourceSnapshotRow": 1053
+    },
+    {
+      "IFDB_TUID": "833nhsmt2lcw9xg",
+      "title": "House of Wolves",
+      "workId": "ifarchive-table-20261104-833nhsmt2lcw9xg",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v12304",
+      "sourceSnapshotRow": 1054
+    },
+    {
+      "IFDB_TUID": "ojkbucdaugb79lng",
+      "title": "LATEX, LEATHER, LIPSTICK, LOVE, LUST",
+      "workId": "ifarchive-table-20261104-ojkbucdaugb79lng",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v52634",
+      "sourceSnapshotRow": 1055
+    },
+    {
+      "IFDB_TUID": "9f836qld0qv7oi7",
+      "title": "Loose Ends",
+      "workId": "ifarchive-table-20261104-9f836qld0qv7oi7",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-rzaehj1la4e65hno",
+      "sourceSnapshotRow": 1056
+    },
+    {
+      "IFDB_TUID": "pi2flgnvwz44wxut",
+      "title": "Marooned",
+      "workId": "ifarchive-table-20261104-pi2flgnvwz44wxut",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-9vmsdpkz7h1nkq6q",
+      "sourceSnapshotRow": 1057
+    },
+    {
+      "IFDB_TUID": "atwgzo3q82ugw605",
+      "title": "PARANOIA",
+      "workId": "ifarchive-table-20261104-atwgzo3q82ugw605",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-42vm6hiqadzy1xn7 ; vndb-table-20261103-v46150 ; vndb-table-20261103-v58637 ; vndb-table-20261103-v59552",
+      "sourceSnapshotRow": 1058
+    },
+    {
+      "IFDB_TUID": "inpzpa660c6gdn3j",
+      "title": "Quest for the Teacup of Minor Sentimental Value",
+      "workId": "ifarchive-table-20261104-inpzpa660c6gdn3j",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v53157",
+      "sourceSnapshotRow": 1059
+    },
+    {
+      "IFDB_TUID": "vbih756fy48zw82f",
+      "title": "Seeing Stars",
+      "workId": "ifarchive-table-20261104-vbih756fy48zw82f",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v51510",
+      "sourceSnapshotRow": 1060
+    },
+    {
+      "IFDB_TUID": "mqsv2odj4bec5uk",
+      "title": "Syzygy",
+      "workId": "ifarchive-table-20261104-mqsv2odj4bec5uk",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v57932",
+      "sourceSnapshotRow": 1061
+    },
+    {
+      "IFDB_TUID": "w3ajnqzys9efmrxr",
+      "title": "Temple Of The Sun",
+      "workId": "ifarchive-table-20261104-w3ajnqzys9efmrxr",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-x2y1rugsautjiizg",
+      "sourceSnapshotRow": 1062
+    },
+    {
+      "IFDB_TUID": "fvym0ok1eczp9mq",
+      "title": "te/ra/to/ma",
+      "workId": "ifarchive-table-20261104-fvym0ok1eczp9mq",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v52873",
+      "sourceSnapshotRow": 1063
+    },
+    {
+      "IFDB_TUID": "nq3rz0luzxi8cnne",
+      "title": "The Curse",
+      "workId": "ifarchive-table-20261104-nq3rz0luzxi8cnne",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v61306",
+      "sourceSnapshotRow": 1064
+    },
+    {
+      "IFDB_TUID": "72497chuspmfd4bl",
+      "title": "You",
+      "workId": "ifarchive-table-20261104-72497chuspmfd4bl",
+      "firstYear": 2024,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v69114 ; vndb-table-20261103-v66874",
+      "sourceSnapshotRow": 1065
+    },
+    {
+      "IFDB_TUID": "u5vajjgdtnrwtb3j",
+      "title": "A Soul's Price",
+      "workId": "ifarchive-table-20261104-u5vajjgdtnrwtb3j",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v56076",
+      "sourceSnapshotRow": 1066
+    },
+    {
+      "IFDB_TUID": "l8tr8m9tlkgix1sk",
+      "title": "Detritus",
+      "workId": "ifarchive-table-20261104-l8tr8m9tlkgix1sk",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v39332",
+      "sourceSnapshotRow": 1067
+    },
+    {
+      "IFDB_TUID": "mg0as2cchcewprmu",
+      "title": "Echoes",
+      "workId": "ifarchive-table-20261104-mg0as2cchcewprmu",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v50422 ; vndb-table-20261103-v59542",
+      "sourceSnapshotRow": 1068
+    },
+    {
+      "IFDB_TUID": "hlyvjo500z2y2k1i",
+      "title": "HEAD CLEANER",
+      "workId": "ifarchive-table-20261104-hlyvjo500z2y2k1i",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v57829",
+      "sourceSnapshotRow": 1069
+    },
+    {
+      "IFDB_TUID": "4g8xsumdc0dh800r",
+      "title": "Kidnapped",
+      "workId": "ifarchive-table-20261104-4g8xsumdc0dh800r",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v23323",
+      "sourceSnapshotRow": 1070
+    },
+    {
+      "IFDB_TUID": "bkq0t14102jnc3zv",
+      "title": "Matilda",
+      "workId": "ifarchive-table-20261104-bkq0t14102jnc3zv",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v23889",
+      "sourceSnapshotRow": 1071
+    },
+    {
+      "IFDB_TUID": "riv2ic6fioxsgw6w",
+      "title": "PURE",
+      "workId": "ifarchive-table-20261104-riv2ic6fioxsgw6w",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v8818 ; vndb-table-20261103-v64084",
+      "sourceSnapshotRow": 1072
+    },
+    {
+      "IFDB_TUID": "2owjwbu11aharp0h",
+      "title": "Stowaway",
+      "workId": "ifarchive-table-20261104-2owjwbu11aharp0h",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-jwd9f2ba1om1oo4j",
+      "sourceSnapshotRow": 1073
+    },
+    {
+      "IFDB_TUID": "e22hofse48wzmwvd",
+      "title": "take me to the lakes where all the poets went to die",
+      "workId": "ifarchive-table-20261104-e22hofse48wzmwvd",
+      "firstYear": 2025,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v56027",
+      "sourceSnapshotRow": 1074
+    },
+    {
+      "IFDB_TUID": "eyfws61tbmzhgd8a",
+      "title": "Nosferatu",
+      "workId": "ifarchive-table-20261104-eyfws61tbmzhgd8a",
+      "firstYear": 2026,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-nkeowbp85afhqz9a ; vndb-table-20261103-v10063",
+      "sourceSnapshotRow": 1075
+    },
+    {
+      "IFDB_TUID": "xq7bz4nh1gsnc6eb",
+      "title": "Shift++",
+      "workId": "ifarchive-table-20261104-xq7bz4nh1gsnc6eb",
+      "firstYear": 2026,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v14718",
+      "sourceSnapshotRow": 1076
+    },
+    {
+      "IFDB_TUID": "stbt80kbjvvyy18b",
+      "title": "The Vineyard",
+      "workId": "ifarchive-table-20261104-stbt80kbjvvyy18b",
+      "firstYear": 2026,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v63428",
+      "sourceSnapshotRow": 1077
+    },
+    {
+      "IFDB_TUID": "xbaqg7w7r4yogqwm",
+      "title": "Birthday Simulator 2",
+      "workId": "ifarchive-table-20261104-xbaqg7w7r4yogqwm",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-hzyy4e5lv1spwftc",
+      "sourceSnapshotRow": 1078
+    },
+    {
+      "IFDB_TUID": "fq31acpe7tix80li",
+      "title": "First",
+      "workId": "ifarchive-table-20261104-fq31acpe7tix80li",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-ad9pg0ycxat2sqt7",
+      "sourceSnapshotRow": 1079
+    },
+    {
+      "IFDB_TUID": "7k62omoidpt1uspn",
+      "title": "Halloween",
+      "workId": "ifarchive-table-20261104-7k62omoidpt1uspn",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-a1c82gyqjqiv2ogo",
+      "sourceSnapshotRow": 1080
+    },
+    {
+      "IFDB_TUID": "bqrlh3gwl344xwfw",
+      "title": "Haunted House",
+      "workId": "ifarchive-table-20261104-bqrlh3gwl344xwfw",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-l83fkolmk4rrv1gz ; vndb-table-20261103-v29917",
+      "sourceSnapshotRow": 1081
+    },
+    {
+      "IFDB_TUID": "x1oq30cv9ufq4y6y",
+      "title": "Island",
+      "workId": "ifarchive-table-20261104-x1oq30cv9ufq4y6y",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-table-20261103-v18498 ; erogamescape-table-20261103-30476",
+      "sourceSnapshotRow": 1082
+    },
+    {
+      "IFDB_TUID": "vnfucqetv9bgiyv8",
+      "title": "Lost Island",
+      "workId": "ifarchive-table-20261104-vnfucqetv9bgiyv8",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v18059",
+      "sourceSnapshotRow": 1083
+    },
+    {
+      "IFDB_TUID": "08rjydw5e6pa12k0",
+      "title": "Pharaoh",
+      "workId": "ifarchive-table-20261104-08rjydw5e6pa12k0",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-yuxd565qq9xwi61i",
+      "sourceSnapshotRow": 1084
+    },
+    {
+      "IFDB_TUID": "f2hz6g36czrpqoc",
+      "title": "RUN!",
+      "workId": "ifarchive-table-20261104-f2hz6g36czrpqoc",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "nextmoe-12574 ; vndb-table-20261103-v37864 ; vndb-table-20261103-v38682 ; vndb-table-20261103-v39076",
+      "sourceSnapshotRow": 1085
+    },
+    {
+      "IFDB_TUID": "cz0uiohtbqszmq1a",
+      "title": "Solitary",
+      "workId": "ifarchive-table-20261104-cz0uiohtbqszmq1a",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-iw6s3e37s7suv6n9",
+      "sourceSnapshotRow": 1086
+    },
+    {
+      "IFDB_TUID": "x1ajr3kygn0si1cc",
+      "title": "The Secret Garden",
+      "workId": "ifarchive-table-20261104-x1ajr3kygn0si1cc",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v35447 ; vndb-table-20261103-v9574 ; vndb-table-20261103-v55236",
+      "sourceSnapshotRow": 1087
+    },
+    {
+      "IFDB_TUID": "ivkeoq87hwyhg0pc",
+      "title": "Time Adventure",
+      "workId": "ifarchive-table-20261104-ivkeoq87hwyhg0pc",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "ifdb-hka2g4znzvyn0jem",
+      "sourceSnapshotRow": 1088
+    },
+    {
+      "IFDB_TUID": "olh9vmqc39p9li7u",
+      "title": "World's End",
+      "workId": "ifarchive-table-20261104-olh9vmqc39p9li7u",
+      "firstYear": null,
+      "sourceSubset": "suspected-existing",
+      "possibleExistingId": "vndb-v5154",
+      "sourceSnapshotRow": 1089
+    }
+  ],
+  "notice": "追加记录数不等于经过去重或人工核实的独立作品数。"
+}
