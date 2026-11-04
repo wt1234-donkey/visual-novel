@@ -31,3 +31,15 @@ def reviewed_name_matches(work):
                 and row['sourceIdentity'] in work.get('sourceRefs', [])):
             return {(m[0], m[1]) for m in row['currentNameMatches']}
     return set()
+
+
+def reviewed_identity_targets(registry, target_ids):
+    """Keep historical reuse assertions scoped to admissions without raw overrides.
+
+    Explicit append-without-deduplication rows are unreviewed parallel records,
+    not a reversal of a historical identity decision. The full registry and
+    normal identity_map still include those rows and their external IDs.
+    """
+    raw_ids = {w['id'] for w in registry['works']
+               if w.get('intakePolicy') == 'append-without-deduplication'}
+    return set(target_ids) - raw_ids

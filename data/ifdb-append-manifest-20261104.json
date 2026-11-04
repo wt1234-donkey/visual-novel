@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "date": "2026-11-04",
+  "sourceWorkbook": "IFDB_基础身份库未匹配作品_2022条_20261104.xlsx",
+  "sourceWorkbookSha256": "b3cc6dc896edeaf70d6ad6425ddd4207bbf1be590838fac854aca4eedc889156",
+  "sourceLibraryFileId": "libfile_1319f3058e8481919470347e402af3fa",
+  "comparisonBaseCommit": "b71ea5e738e5d0441af68279b58ae87d7845c818",
+  "sourceRecords": 3370,
+  "unmatched": 2022,
+  "suspectedExisting": 1348,
+  "packedSha256": "45d8b1209a37b5ddf598760f0395cba6e50357b47e401d55b72210d4676d7e4d",
+  "jsonSha256": "d653be0117b1151c13bb5834f9dc2f3c8e57f32a836b255b9df77a0a7835a0f6",
+  "expectedBaseRecords": 96484,
+  "baseWorksCanonicalSha256": "97ee638b9c7775123b5a4389d2a423a8270092cec99e39692aa3678838953ba4",
+  "firstBatch": 199,
+  "lastBatch": 205,
+  "batchSize": 500,
+  "pairCount": 4,
+  "policy": "append-without-deduplication",
+  "order": "未匹配作品工作表原顺序，然后同名及版本待核工作表原顺序",
+  "scope": "用户指定两类IFDB候选全部追加，不按名称、年份、来源或版本去重；不等同于新增经核实独立作品。"
+}
