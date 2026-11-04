@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
+  "revision": 3,
   "additions": [],
   "records": {
     "g1028": {
@@ -38,7 +38,16 @@
         "label": "The Crack of Doom",
         "note": "相同作品",
         "source": ""
-      }
+      },
+      "values": {
+        "title": "The Crack of Doom",
+        "firstYear": 1989,
+        "group": "Philip Mitchell, Norton Truter, John Haward",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifarchive.org/if-archive/games/pc/crack.zip"
+      },
+      "aliases": []
     },
     "ifdb-table-20261104-96iqbghvbdgpjqx4": {
       "identity": {
@@ -134,6 +143,69 @@
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "0602f611-8535-450b-86e4-bf243b9233dd",
+      "at": "2026-11-04T12:08:31.801Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
+          "before": {
+            "identity": {
+              "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
+              "indexId": "basic-ifarchive-table-20261104-96iqbghvbdgpjqx4",
+              "aliases": [],
+              "title": "The Crack of Doom",
+              "firstYear": 1989,
+              "group": "Philip Mitchell, Norton Truter, John Haward",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/pc/crack.zip",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "g1028",
+            "relation": {
+              "type": "unverified",
+              "label": "The Crack of Doom",
+              "note": "相同作品",
+              "source": ""
+            }
+          },
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
+              "indexId": "basic-ifarchive-table-20261104-96iqbghvbdgpjqx4",
+              "aliases": [],
+              "title": "The Crack of Doom",
+              "firstYear": 1989,
+              "group": "Philip Mitchell, Norton Truter, John Haward",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/pc/crack.zip",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "g1028",
+            "relation": {
+              "type": "unverified",
+              "label": "The Crack of Doom",
+              "note": "相同作品",
+              "source": ""
+            },
+            "values": {
+              "title": "The Crack of Doom",
+              "firstYear": 1989,
+              "group": "Philip Mitchell, Norton Truter, John Haward",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/pc/crack.zip"
+            },
+            "aliases": []
           }
         }
       ],
