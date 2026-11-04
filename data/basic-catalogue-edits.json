@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "additions": [],
   "records": {
     "g1028": {
@@ -39,6 +39,21 @@
         "note": "相同作品",
         "source": ""
       }
+    },
+    "ifdb-table-20261104-96iqbghvbdgpjqx4": {
+      "identity": {
+        "id": "ifdb-table-20261104-96iqbghvbdgpjqx4",
+        "indexId": "basic-ifdb-table-20261104-96iqbghvbdgpjqx4",
+        "aliases": [],
+        "title": "The Crack of Doom",
+        "firstYear": 1989,
+        "group": "Philip Mitchell, Norton Truter, John Haward",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=96iqbghvbdgpjqx4",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
@@ -91,6 +106,34 @@
               "note": "相同作品",
               "source": ""
             }
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "2057a0a5-5b54-4db5-b65c-2460caaa7e80",
+      "at": "2026-11-04T12:08:06.087Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 The Crack of Doom",
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-96iqbghvbdgpjqx4",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-96iqbghvbdgpjqx4",
+              "indexId": "basic-ifdb-table-20261104-96iqbghvbdgpjqx4",
+              "aliases": [],
+              "title": "The Crack of Doom",
+              "firstYear": 1989,
+              "group": "Philip Mitchell, Norton Truter, John Haward",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=96iqbghvbdgpjqx4",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
           }
         }
       ],
