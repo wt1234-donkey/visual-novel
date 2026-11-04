@@ -1,6 +1,6 @@
 import {projectRegistry,validateStore} from './basic-catalogue-model.mjs';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261101';
-import {showLiveWorkEditor} from './live-work-editor.mjs?v=20261101';
+import {showLiveWorkEditor} from './live-work-editor.mjs?v=20261104-history-loading';
 import {createEntityIndex} from './entities.mjs';
 import {normalize} from './filter.mjs';
 import {createAtlas,filterAtlas,metadataValues,creatorCredits,creatorWorkIds,productionCredits,creditScope,sourceStatus,titleOf,CREATOR_ROLES,PENDING,MAKER_ROLES,narrativeState,narrativeCounts} from './discovery-model.mjs?v=20261030-narrative';
