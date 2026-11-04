@@ -8,8 +8,9 @@ import unicodedata
 from pathlib import Path
 from source_urls import source_url_valid
 ROOT=Path(__file__).resolve().parents[1]
-FIELDS={'title','originalTitle','chineseTitle','chineseTitleType','titleAliases','category','subcategory','genre','synopsis','characters','charactersNote','charactersSource','source','interactionModes','interactionNote','interactionBasis','interactionSources','notes'}
-ARRAYS={'titleAliases','characters','interactionModes','interactionSources'}
+CREATOR_NAMES={'writerNames','artistNames','musicianNames'}
+FIELDS={'title','originalTitle','chineseTitle','chineseTitleType','titleAliases','category','subcategory','genre','synopsis','characters','charactersNote','charactersSource','source','interactionModes','interactionNote','interactionBasis','interactionSources','notes'}|CREATOR_NAMES
+ARRAYS={'titleAliases','characters','interactionModes','interactionSources'}|CREATOR_NAMES
 
 def validate(store=None, root=ROOT):
     read=lambda n:json.loads((root/'data'/n).read_text(encoding='utf-8'))
@@ -34,8 +35,10 @@ def validate(store=None, root=ROOT):
             assert isinstance(entry['actor'],str) and entry['actor'] and isinstance(entry['reason'],str) and 5<=len(entry['reason'].strip())<=1000
             from datetime import datetime
             datetime.fromisoformat(entry['at'].replace('Z','+00:00'))
-            assert entry['sources'] and all(source_url_valid(s) for s in entry['sources'])
             patch(entry['before']);patch(entry['after'])
+            changed={k for k in FIELDS if entry['before'].get(k,[] if k in CREATOR_NAMES else None)!=entry['after'].get(k,[] if k in CREATOR_NAMES else None)}
+            assert isinstance(entry['sources'],list) and all(source_url_valid(s) for s in entry['sources'])
+            assert entry['sources'] or (changed and changed<=CREATOR_NAMES), '只有剧作、美术与音乐姓名的修改可不填来源'
             assert last is None or last==entry['before'], '修订快照不连续'
             seen.add(entry['id']);revision=entry['revision'];last=entry['after']
         assert last is None or last==row['overrides'], '当前记录与历史不一致'

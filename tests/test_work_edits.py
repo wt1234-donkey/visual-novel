@@ -22,4 +22,18 @@ class WorkEditValidationTests(unittest.TestCase):
         with self.assertRaises(AssertionError):validate(store)
         store=self.store();store['records']['g039']['recent'][0]['sources']=['javascript:alert(1)']
         with self.assertRaises(AssertionError):validate(store)
+    def test_creator_names_can_be_added_or_cleared_without_sources(self):
+        store=self.store();row=store['records']['g039'];entry=row['recent'][0]
+        entry['sources']=[];entry['after']={'writerNames':['剧作甲','剧作乙'],'artistNames':['画师甲'],'musicianNames':['音乐甲']}
+        row['overrides']=copy.deepcopy(entry['after']);self.assertEqual(validate(store),1)
+        entry['before']=copy.deepcopy(entry['after']);entry['after']={};row['overrides']={}
+        self.assertEqual(validate(store),1)
+    def test_no_source_exception_cannot_change_other_fields_or_accept_bad_names(self):
+        store=self.store();row=store['records']['g039'];entry=row['recent'][0];entry['sources']=[]
+        with self.assertRaises(AssertionError):validate(store)
+        for names in ('不是列表',['重复','重复'],[''],[1]):
+            entry['after']={'writerNames':names};row['overrides']=copy.deepcopy(entry['after'])
+            with self.assertRaises(AssertionError):validate(store)
+        entry['before']={'notes':'更正过的备注'};entry['after']={'writerNames':['剧作甲']};row['overrides']=entry['after'].copy()
+        with self.assertRaises(AssertionError):validate(store)
 if __name__=='__main__':unittest.main()

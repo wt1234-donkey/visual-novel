@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {editableValues,projectWork,applyWorkEdits,saveEdit,undoEdit,validateHistory,validateValues} from '../work-edit-model.mjs';
+import {editableValues,projectWork,applyWorkEdits,saveEdit,saveCreatorNames,undoEdit,validateHistory,validateValues} from '../work-edit-model.mjs';
 import {createEditClient,HISTORY_PATH} from '../work-edit-api.mjs';
 const read=n=>JSON.parse(readFileSync(new URL('../data/'+n+'.json',import.meta.url)));
 const base=read('games').works.find(w=>w.id==='g039'),taxonomy=read('taxonomy'),empty=()=>({schemaVersion:1,records:{}});
@@ -15,3 +15,25 @@ test('new names collide with aliases of other identities; no-op and history tamp
 test('GitHub client writes only the history file with an SHA lease and UTF-8 content',async()=>{const calls=[],store=edit(empty(),1),fetcher=async(url,options)=>{calls.push({url,options});return {ok:true,json:async()=>({content:{sha:'new-blob'},commit:{sha:'new-commit',html_url:'https://github.com/wt1234-donkey/visual-novel/commit/new'}})};};const result=await createEditClient('test-only-credential',fetcher).write(store,'known-blob','网页资料核实');assert.equal(result.sha,'new-blob');assert.equal(calls[0].url,'https://api.github.com/repos/wt1234-donkey/visual-novel/contents/'+HISTORY_PATH);const body=JSON.parse(calls[0].options.body);assert.equal(body.sha,'known-blob');assert.equal(body.branch,'main');assert.deepEqual(JSON.parse(Buffer.from(body.content,'base64').toString('utf8')),store);assert.ok(!body.content.includes('test-only-credential'));assert.equal(calls[0].options.headers.Authorization,'Bearer test-only-credential');});
 test('write conflicts and missing authorization fail without retries or misleading success',async()=>{let count=0;const client=createEditClient('test-only',async()=>{count++;return {ok:false,status:409};});await assert.rejects(()=>client.write(empty(),'old','测试'),/写入冲突/);assert.equal(count,1);await assert.rejects(()=>createEditClient('',async()=>assert.fail()).write(empty(),'old','test'),/先连接/);});
 test('large history files can be read by the returned blob SHA',async()=>{const calls=[];const fetcher=async url=>{calls.push(url);return {ok:true,json:async()=>calls.length===1?{sha:'abc',content:'',encoding:'none'}:{content:Buffer.from(JSON.stringify(empty())).toString('base64')}};};assert.deepEqual((await createEditClient('',fetcher).read()).store,empty());assert.ok(calls[1].endsWith('/git/blobs/abc'));});
+test('manual creator names save without evidence, preserve existing corrections and support reload, clearing and undo',()=>{
+ const prior=edit(empty(),1),names={writerNames:['剧作甲','剧作乙'],artistNames:['画师甲'],musicianNames:['音乐甲']};
+ let s=saveCreatorNames(prior,base,names,meta(2,1),taxonomy,[base]);s=JSON.parse(JSON.stringify(s));
+ assert.equal(projectWork(base,s).notes,projectWork(base,prior).notes);assert.deepEqual(projectWork(base,s).writerNames,names.writerNames);
+ assert.deepEqual(s.records[base.id].recent.at(-1).sources,[]);assert.ok(validateHistory(s,[base],taxonomy));
+ const cleared=saveCreatorNames(s,base,{writerNames:[],artistNames:[],musicianNames:[]},meta(3,2),taxonomy,[base]);
+ assert.deepEqual(editableValues(projectWork(base,cleared)).writerNames,[]);assert.ok(validateHistory(cleared,[base],taxonomy));
+ const restored=undoEdit(cleared,base,'test-3',3,taxonomy,[base]);assert.deepEqual(projectWork(base,restored).writerNames,names.writerNames);assert.ok(validateHistory(restored,[base],taxonomy));
+ assert.deepEqual(undoEdit(s,base,'test-2',2,taxonomy,[base]).records[base.id].overrides,prior.records[base.id].overrides);
+});
+test('the evidence exception is limited to creator names and rejects malformed lists, stale revisions and mixed changes',()=>{
+ const names={writerNames:['剧作甲'],artistNames:[],musicianNames:[]};
+ assert.throws(()=>saveCreatorNames(empty(),base,{...names,writerNames:['重复','重复']},meta(1,0),taxonomy,[base]),/文本列表/);
+ assert.throws(()=>saveCreatorNames(empty(),base,{...names,writerNames:'不合法'},meta(1,0),taxonomy,[base]),/文本列表/);
+ assert.throws(()=>saveCreatorNames(empty(),base,{...names,title:'偷改标题'},meta(1,0),taxonomy,[base]),/姓名列表/);
+ const after={...editableValues(base),...names,notes:'同时修改非创作者资料'};
+ assert.throws(()=>saveEdit(empty(),base,after,{...meta(1,0),sources:[]},taxonomy,[base]),/有效来源/);
+ const s=saveCreatorNames(empty(),base,names,meta(1,0),taxonomy,[base]);
+ assert.throws(()=>saveCreatorNames(s,base,{...names,musicianNames:['音乐甲']},meta(2,0),taxonomy,[base]),/已被修改/);
+ const tampered=structuredClone(s);tampered.records[base.id].overrides.notes='混入无来源备注';tampered.records[base.id].recent[0].after.notes='混入无来源备注';
+ assert.throws(()=>validateHistory(tampered,[base],taxonomy),/快照无效/);
+});

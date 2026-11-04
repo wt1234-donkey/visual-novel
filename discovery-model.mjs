@@ -1,5 +1,7 @@
 import {normalize,filterCatalogue} from './filter.mjs';
 export const CREATOR_ROLES={writer:'剧作者',artist:'画师',musician:'音乐创作者'};
+const creatorNameFields={writer:'writerNames',artist:'artistNames',musician:'musicianNames'};
+export function manualCreatorNames(work,role=''){return Object.entries(creatorNameFields).filter(([key])=>!role||key===role).flatMap(([,field])=>work[field]||[]);}
 export const MAKER_ROLES=new Set(['productionBrand','originalProduction','developer','coDeveloper']);
 export const PENDING='__pending__';
 export const NARRATIVE_FIELDS=['position','style','theme','structure'];
@@ -24,7 +26,7 @@ export function createAtlas(data,catalogue,editorial,creators,notes={works:{}}){
   const contents=group(data.contentVersions,'workId');
   const search=new Map();
   for(const w of data.works){
-    const names=(personal.get(w.id)||[]).flatMap(c=>{const p=people.get(c.personId);return [p?.name,p?.alias]});
+    const names=[...(personal.get(w.id)||[]).flatMap(c=>{const p=people.get(c.personId);return [p?.name,p?.alias]}),...manualCreatorNames(w)];
     const makers=(organization.get(w.id)||[]).filter(c=>MAKER_ROLES.has(c.role)).flatMap(c=>{const e=entities.get(c.entityId);return [e?.name,...(e?.aliases||[])]});
     search.set(w.id,normalize([w.title,w.chineseTitle,w.originalTitle,...(w.titleAliases||[]),w.genre,w.synopsis,w.category,w.subcategory,...w.characters,...(w.interactionModes||[]),...names,...makers,...['position','style','theme','structure'].flatMap(key=>{const value=editorial.works[w.id]?.[key];return Array.isArray(value)?value:[value||'']})].join(' ')));
   }

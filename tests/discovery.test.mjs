@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createEntityIndex} from '../entities.mjs';
 import {filterCatalogue} from '../filter.mjs';
-import {createAtlas,filterAtlas,creatorCredits,creatorWorkIds,creditScope,metadataValues,PENDING,titleOf,narrativeState,narrativeCounts} from '../discovery-model.mjs';
+import {createAtlas,filterAtlas,creatorCredits,manualCreatorNames,creatorWorkIds,creditScope,metadataValues,PENDING,titleOf,narrativeState,narrativeCounts} from '../discovery-model.mjs';
 const read=path=>JSON.parse(readFileSync(new URL('../data/'+path+'.json',import.meta.url),'utf8'));
 const data=read('games'),catalogue=read('entity-catalogue'),editorial=read('discovery-editorial'),creators=read('creator-credits');
 const atlas=createAtlas(data,catalogue,editorial,creators,read('work-notes'));
@@ -36,6 +36,15 @@ test('work, character and personal name aliases are searchable',()=>{
  assert.ok(filterAtlas(atlas,{query:'丸户史明'}).some(w=>w.id==='g039'));
  assert.ok(filterAtlas(atlas,{query:'clannad'}).some(w=>w.id==='g030'));
  assert.equal(filterAtlas(atlas,{query:'__no_such_work__'}).length,0);
+});
+test('manual names are searchable by work and role without becoming verified identities or edition evidence',()=>{
+ const d=structuredClone(data),work=d.works.find(w=>w.id==='g039');
+ work.writerNames=['手动剧作甲','手动剧作乙'];work.artistNames=['手动画师甲'];work.musicianNames=['手动音乐甲'];
+ const a=createAtlas(d,catalogue,editorial,creators),before=JSON.stringify(creators);
+ for(const name of manualCreatorNames(work))assert.ok(filterAtlas(a,{query:name}).some(w=>w.id==='g039'));
+ assert.deepEqual(manualCreatorNames(work,'writer'),work.writerNames);assert.deepEqual(manualCreatorNames(work,'artist'),work.artistNames);
+ assert.deepEqual(creatorCredits(a,work.id),creatorCredits(atlas,work.id));assert.deepEqual([...a.people.keys()],[...atlas.people.keys()]);
+ assert.equal(JSON.stringify(creators),before);assert.deepEqual(manualCreatorNames({}),[]);
 });
 test('personal music and writing roles use separate work sets',()=>{
  const {creators,atlas}=historical;

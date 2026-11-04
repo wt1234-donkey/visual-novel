@@ -1,4 +1,4 @@
-import {applyWorkEdits} from './work-edit-model.mjs?v=20261101';
+import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
 import {createEntityIndex,entityWorkCounts,summarizeCredits,displayPublisherName,BRAND_ROLES,DEVELOPER_ROLES,PUBLISHER_ROLES} from './entities.mjs?v=20261021-names';
 import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261021-entities';
 
