@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 5,
+  "revision": 6,
   "additions": [],
   "records": {
     "g1028": {
@@ -93,72 +93,24 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "ifarchive-table-20261104-oc4jf24yotpal4ve": {
+      "identity": {
+        "id": "ifarchive-table-20261104-oc4jf24yotpal4ve",
+        "indexId": "basic-ifarchive-table-20261104-oc4jf24yotpal4ve",
+        "aliases": [],
+        "title": "Schooldays",
+        "firstYear": 2001,
+        "group": "Andrew MacKinnon",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifarchive.org/if-archive/games/source/inform/schooldays.inf",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
-    {
-      "id": "0602f611-8535-450b-86e4-bf243b9233dd",
-      "at": "2026-11-04T12:08:31.801Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
-          "before": {
-            "identity": {
-              "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
-              "indexId": "basic-ifarchive-table-20261104-96iqbghvbdgpjqx4",
-              "aliases": [],
-              "title": "The Crack of Doom",
-              "firstYear": 1989,
-              "group": "Philip Mitchell, Norton Truter, John Haward",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/pc/crack.zip",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "g1028",
-            "relation": {
-              "type": "unverified",
-              "label": "The Crack of Doom",
-              "note": "相同作品",
-              "source": ""
-            }
-          },
-          "after": {
-            "identity": {
-              "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
-              "indexId": "basic-ifarchive-table-20261104-96iqbghvbdgpjqx4",
-              "aliases": [],
-              "title": "The Crack of Doom",
-              "firstYear": 1989,
-              "group": "Philip Mitchell, Norton Truter, John Haward",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/pc/crack.zip",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "g1028",
-            "relation": {
-              "type": "unverified",
-              "label": "The Crack of Doom",
-              "note": "相同作品",
-              "source": ""
-            },
-            "values": {
-              "title": "The Crack of Doom",
-              "firstYear": 1989,
-              "group": "Philip Mitchell, Norton Truter, John Haward",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/pc/crack.zip"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "bb1a7e6f-8770-40ac-bcd9-96f668d304f7",
       "at": "2026-11-04T12:09:39.990Z",
@@ -207,6 +159,34 @@
               "gameplay": "互动小说（玩法待核）",
               "plotStyles": [],
               "source": "https://ifarchive.org/if-archive/games/spectrum/zenobi48k.zip",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "fa3cbb17-09dd-4ccb-84ab-f075754198ee",
+      "at": "2026-11-04T12:11:59.784Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Schooldays",
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-oc4jf24yotpal4ve",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-oc4jf24yotpal4ve",
+              "indexId": "basic-ifarchive-table-20261104-oc4jf24yotpal4ve",
+              "aliases": [],
+              "title": "Schooldays",
+              "firstYear": 2001,
+              "group": "Andrew MacKinnon",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/source/inform/schooldays.inf",
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
