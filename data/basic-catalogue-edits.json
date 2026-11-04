@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
+  "revision": 7,
   "additions": [],
   "records": {
     "g1028": {
@@ -108,37 +108,36 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "vndb-v6770": {
+      "identity": {
+        "id": "vndb-v6770",
+        "indexId": "vndb-kana-bulk-20261101-r26-v6770",
+        "aliases": [
+          "スクール×スクール"
+        ],
+        "title": "SchoolxSchool",
+        "firstYear": 2004,
+        "group": "创作品牌待核",
+        "gameplay": "视觉小说",
+        "plotStyles": [],
+        "source": "https://vndb.org/v6770",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "SchoolxSchool",
+        "firstYear": 2004,
+        "group": "AKABEi SOFT(有葉と愉快な仲間たち)",
+        "gameplay": "视觉小说",
+        "plotStyles": [],
+        "source": "https://vndb.org/v6770"
+      },
+      "aliases": [
+        "スクール×スクール"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "bb1a7e6f-8770-40ac-bcd9-96f668d304f7",
-      "at": "2026-11-04T12:09:39.990Z",
-      "actor": "wt1234-donkey",
-      "reason": "删除作品 School",
-      "changes": [
-        {
-          "id": "ifdb-1smmigsu7nsc2jzp",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-1smmigsu7nsc2jzp",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r65-ifdb-1smmigsu7nsc2jzp",
-              "aliases": [],
-              "title": "School",
-              "firstYear": 1984,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=1smmigsu7nsc2jzp",
-              "mainPlacement": "promoted-basic"
-            },
-            "deleted": true
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "556f2e85-bca3-47e4-9dcf-f2af9da9d4d4",
       "at": "2026-11-04T12:10:17.969Z",
@@ -190,6 +189,46 @@
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "18576841-b124-4c6f-838c-3e9325af7828",
+      "at": "2026-11-04T12:14:18.026Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "vndb-v6770",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "vndb-v6770",
+              "indexId": "vndb-kana-bulk-20261101-r26-v6770",
+              "aliases": [
+                "スクール×スクール"
+              ],
+              "title": "SchoolxSchool",
+              "firstYear": 2004,
+              "group": "创作品牌待核",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "source": "https://vndb.org/v6770",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "SchoolxSchool",
+              "firstYear": 2004,
+              "group": "AKABEi SOFT(有葉と愉快な仲間たち)",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "source": "https://vndb.org/v6770"
+            },
+            "aliases": [
+              "スクール×スクール"
+            ]
           }
         }
       ],
