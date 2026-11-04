@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 4,
   "additions": [],
   "records": {
     "g1028": {
@@ -63,63 +63,24 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "ifdb-1smmigsu7nsc2jzp": {
+      "identity": {
+        "id": "ifdb-1smmigsu7nsc2jzp",
+        "indexId": "nextmoe-ifdb-bulk-20261102-r65-ifdb-1smmigsu7nsc2jzp",
+        "aliases": [],
+        "title": "School",
+        "firstYear": 1984,
+        "group": "创作品牌待核",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=1smmigsu7nsc2jzp",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
-    {
-      "id": "aeaeda90-58ef-47ca-84b3-773506ae5177",
-      "at": "2026-11-04T07:45:37.103Z",
-      "actor": "wt1234-donkey",
-      "reason": "合并 1 部作品为关联版本",
-      "changes": [
-        {
-          "id": "g1028",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "g1028",
-              "indexId": "basic-dossier-08a8cb12531bd41b",
-              "aliases": [
-                "末日裂隙"
-              ],
-              "title": "The Crack of Doom",
-              "firstYear": 1989,
-              "group": "Addison-Wesley Publishing Company / Melbourne House",
-              "gameplay": "ADV",
-              "plotStyles": [],
-              "source": "https://mocagh.org/tolkien/crackofdoom-manual.pdf",
-              "mainPlacement": "main-linked"
-            }
-          }
-        },
-        {
-          "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifarchive-table-20261104-96iqbghvbdgpjqx4",
-              "indexId": "basic-ifarchive-table-20261104-96iqbghvbdgpjqx4",
-              "aliases": [],
-              "title": "The Crack of Doom",
-              "firstYear": 1989,
-              "group": "Philip Mitchell, Norton Truter, John Haward",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/pc/crack.zip",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "g1028",
-            "relation": {
-              "type": "unverified",
-              "label": "The Crack of Doom",
-              "note": "相同作品",
-              "source": ""
-            }
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "2057a0a5-5b54-4db5-b65c-2460caaa7e80",
       "at": "2026-11-04T12:08:06.087Z",
@@ -206,6 +167,34 @@
               "source": "https://ifarchive.org/if-archive/games/pc/crack.zip"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "bb1a7e6f-8770-40ac-bcd9-96f668d304f7",
+      "at": "2026-11-04T12:09:39.990Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 School",
+      "changes": [
+        {
+          "id": "ifdb-1smmigsu7nsc2jzp",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-1smmigsu7nsc2jzp",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r65-ifdb-1smmigsu7nsc2jzp",
+              "aliases": [],
+              "title": "School",
+              "firstYear": 1984,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=1smmigsu7nsc2jzp",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
           }
         }
       ],
