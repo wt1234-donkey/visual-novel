@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "date": "2026-11-04",
+  "sourceWorkbook": "IFArchive_基础身份库未匹配作品_601条_20261104.xlsx",
+  "sourceWorkbookSha256": "3b23613acf42bac0411547522807e8297f7f53fc63752c3428421d4119e66ed4",
+  "sourceLibraryFileId": "libfile_f2febe681b24819187e6d039b661465a",
+  "comparisonBaseCommit": "b71ea5e738e5d0441af68279b58ae87d7845c818",
+  "intakeBaseCommit": "5f137377b9b74517205cd3ccc3abbd357b25247c",
+  "sourceRecords": 1089,
+  "unmatched": 601,
+  "suspectedExisting": 488,
+  "expectedBaseRecords": 99854,
+  "baseWorksCanonicalSha256": "1264739fe5e45d44fd0a7957f7d6b37819c865075a3ef61c4c4ef6e2812ab656",
+  "packedSha256": "2c828ef70eef5719b4e12e94ab3b20430e58525fa7598ad2472fe1581ebdac37",
+  "jsonSha256": "5c9d28d3855298349b0d108c81486231cc3abff360b09f727f271fb2cb10113d",
+  "firstBatch": 206,
+  "lastBatch": 208,
+  "batchSize": 500,
+  "pairCount": 2,
+  "policy": "append-without-deduplication",
+  "order": "未匹配作品工作表原顺序，然后同名及版本待核工作表原顺序",
+  "scope": "仅601条未匹配和488条疑似已有作品；保留与已有IFDB或其他来源的重叠，不做作品、年份、来源或版本去重。"
+}

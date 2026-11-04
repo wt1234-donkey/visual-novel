@@ -48,6 +48,11 @@ class IfdbAppendTests(unittest.TestCase):
                 before=db.read_bytes()
                 intake.run(pair=1)
                 self.assertEqual(db.read_bytes(),before)
+                later=json.loads(db.read_text())
+                later['works'].append({'id':'later-source-record'})
+                later['summary']['accepted']+=1
+                db.write_text(json.dumps(later))
+                intake.verify()
 
     def test_missing_previous_pair_does_not_write(self):
         old={'id':'old'}

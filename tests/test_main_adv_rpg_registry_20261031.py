@@ -36,13 +36,23 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
             if w['gameplay']=='互动小说（玩法待核）':
                 # IFDB is a catalogue signal, not evidence of precise controls.
                 if w.get('intakePolicy') == 'append-without-deduplication':
-                    self.assertRegex(w['id'], r'^ifdb-table-20261104-[a-z0-9]{1,16}$')
-                    self.assertEqual(w['sourceSnapshot'],'data/ifdb-append-source-20261104.json.gz.b64')
-                    tuid=w['id'][len('ifdb-table-20261104-'):]
+                    if w['sourceSnapshot']=='data/ifarchive-append-source-20261104.json.gz.b64':
+                        self.assertRegex(w['id'], r'^ifarchive-table-20261104-[a-z0-9]{1,16}$')
+                        tuid=w['sourceTuid']
+                        self.assertEqual(w['id'],'ifarchive-table-20261104-'+tuid)
+                        self.assertEqual(w['sourceIFDBPage'],'https://ifdb.org/viewgame?id='+tuid)
+                        self.assertIn(w['sourceIFDBPage'],w['additionalSources'])
+                        self.assertEqual(w['source'],'https://ifarchive.org/'+w['sourceArchivePaths'][0])
+                        self.assertTrue(w['sourceArchiveFileCount']>=1)
+                    else:
+                        self.assertRegex(w['id'], r'^ifdb-table-20261104-[a-z0-9]{1,16}$')
+                        self.assertEqual(w['sourceSnapshot'],'data/ifdb-append-source-20261104.json.gz.b64')
+                        tuid=w['id'][len('ifdb-table-20261104-'):]
                 else:
                     self.assertRegex(w['id'], r'^ifdb-[a-z0-9]{16}$')
                     tuid=w['id'][5:]
-                self.assertEqual(w['source'],'https://ifdb.org/viewgame?id='+tuid)
+                if w.get('sourceSnapshot')!='data/ifarchive-append-source-20261104.json.gz.b64':
+                    self.assertEqual(w['source'],'https://ifdb.org/viewgame?id='+tuid)
                 self.assertIn('ifdb:'+tuid,w['sourceRefs'])
                 self.assertEqual(w['mainPlacement'],'promoted-basic')
             else:
