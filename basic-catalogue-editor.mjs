@@ -1,4 +1,4 @@
-import {createEditClient} from './work-edit-api.mjs';
+import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
 import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,STYLE_OPTIONS} from './basic-catalogue-model.mjs';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
@@ -16,7 +16,7 @@ export function createBasicEditor(base,initial,onChange){
  function shell(title,body){
   if(busy)return;returnFocus=document.activeElement;pendingImport=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
-   <details class="be-auth" ${actor?'':'open'}><summary>写入权限 · ${actor?safe(actor):'连接 GitHub'}</summary><p class="minor">保存到网站需要本仓库的写入权限。凭证仅在当前页面内存保留，刷新后清除。请选择 wt1234-donkey/visual-novel，Contents: Read and write。</p><p><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">创建仓库专用凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">重新读取网站修改</button></div></details>
+   <details class="be-auth" ${actor?'':'open'}><summary>写入权限 · ${actor?safe(actor):'连接 GitHub'}</summary><p class="minor">凭证仅在当前页面内存保留，刷新后清除。</p><ol class="minor"><li>使用拥有仓库权限的 GitHub 账号；Resource owner 应为 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b>，再选择 <b>visual-novel</b>。Public repositories 只有读取权限。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>，然后生成凭证。</li></ol><p class="minor">连接成功表示账号和读取校验通过，GitHub 会在保存时核验凭证的实际写入权限。</p><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仓库专用凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">重新读取网站修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
   dialog.setAttribute('aria-label',title);if(!dialog.open)dialog.showModal();
  }
@@ -32,9 +32,9 @@ export function createBasicEditor(base,initial,onChange){
    const live=await client.read();if(JSON.stringify(live.store)!==JSON.stringify(snapshot.store))throw Error('基础库已在其他页面修改。请先“重新读取网站修改”，再核对并保存；当前输入仍保留');
    let result;
    try{result=await client.write(next,live.sha,'Basic catalogue: '+reason.slice(0,100));}
-   catch(error){try{const actual=await client.read();if(JSON.stringify(actual.store)!==JSON.stringify(next))throw error;result={sha:actual.sha};}catch{throw error;}}
+   catch(error){if(error.status)throw error;try{const actual=await client.read();if(JSON.stringify(actual.store)!==JSON.stringify(next))throw error;result={sha:actual.sha};}catch{throw error;}}
    snapshot={store:next,sha:result.sha};update();message('已保存到网站，当前页面已更新；其他设备在网站发布后刷新即可看到。');return true;
-  }catch(e){message(e.message,true);return false;}finally{lock(false);}
+  }catch(e){message(e.message,true);if(e.code==='PERMISSION_DENIED'||e.code==='NOT_FOUND')$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
  function edit(id=null){
@@ -78,7 +78,7 @@ export function createBasicEditor(base,initial,onChange){
   if(b.hasAttribute('data-close'))close();
   else if(b.dataset.edit)edit(b.dataset.edit);
   else if(b.id==='be-connect'){
-   const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const nextClient=clientFor(token),login=await nextClient.connect(),fresh=await nextClient.read();client=nextClient;actor=login;snapshot=fresh;update();$('summary').textContent='写入权限 · '+actor;$('.be-auth').open=false;message('已连接，并读取最新基础库修改。请核对当前输入后保存。');}catch(err){message(err.message,true);}finally{lock(false);}
+   const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const nextClient=clientFor(token),login=await nextClient.connect(),fresh=await nextClient.read();client=nextClient;actor=login;snapshot=fresh;update();$('summary').textContent='写入权限 · '+actor;$('.be-auth').open=false;message('已连接账号 '+actor+'，并读取最新基础库修改。保存时会核验当前凭证的 Contents 写入权限。');}catch(err){message(err.message,true);}finally{lock(false);}
   }else if(b.id==='be-disconnect'){client=clientFor('');actor='';update();$('summary').textContent='写入权限 · 连接 GitHub';$('.be-auth').open=true;b.disabled=true;message('已断开连接');}
   else if(b.id==='be-refresh'){try{lock(true);snapshot=await client.read();update();message('已读取最新网站修改。当前表单输入保留，请核对后保存。');}catch(err){message(err.message,true);}finally{lock(false);}}
   else if(b.dataset.delete){if(confirm('删除“'+get(b.dataset.delete)?.title+'”？可通过最近操作撤销。')){if(await commit({type:'delete',id:b.dataset.delete},'删除作品 '+get(b.dataset.delete)?.title)){close();}}}

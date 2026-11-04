@@ -1,4 +1,4 @@
-import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261103-manager';
+import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261104-permissions';
 import {workKey,validateStore} from './basic-catalogue-model.mjs';
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
