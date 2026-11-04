@@ -35,8 +35,13 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
                 self.assertIsInstance(w['firstYear'],int)
             if w['gameplay']=='互动小说（玩法待核）':
                 # IFDB is a catalogue signal, not evidence of precise controls.
-                self.assertRegex(w['id'], r'^ifdb-[a-z0-9]{16}$')
-                tuid=w['id'][5:]
+                if w.get('intakePolicy') == 'append-without-deduplication':
+                    self.assertRegex(w['id'], r'^ifdb-table-20261104-[a-z0-9]{1,16}$')
+                    self.assertEqual(w['sourceSnapshot'],'data/ifdb-append-source-20261104.json.gz.b64')
+                    tuid=w['id'][len('ifdb-table-20261104-'):]
+                else:
+                    self.assertRegex(w['id'], r'^ifdb-[a-z0-9]{16}$')
+                    tuid=w['id'][5:]
                 self.assertEqual(w['source'],'https://ifdb.org/viewgame?id='+tuid)
                 self.assertIn('ifdb:'+tuid,w['sourceRefs'])
                 self.assertEqual(w['mainPlacement'],'promoted-basic')
