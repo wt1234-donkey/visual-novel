@@ -3,10 +3,13 @@ import importlib.util
 import json
 import tempfile
 import unittest
+import sys
 from pathlib import Path
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
+import basic_identity_decisions
 spec = importlib.util.spec_from_file_location('ifdb_append', ROOT/'scripts/import_ifdb_append_20261104.py')
 intake = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(intake)
@@ -77,6 +80,14 @@ class IfdbAppendTests(unittest.TestCase):
         self.assertEqual(imported['id'],'ifdb-table-20261104-drzxv17mobammbv')
         self.assertEqual(imported['sourceRefs'][0],'ifdb:drzxv17mobammbv')
         self.assertEqual(imported['source'],r['IFDB页面'])
+
+    def test_historical_reuse_assertions_keep_reviewed_targets_and_full_lookup_keeps_appends(self):
+        registry={'works':[{'id':'original'},
+                 {'id':'raw','intakePolicy':'append-without-deduplication'},
+                 {'id':'other-reviewed'}]}
+        full_targets={'original','raw','other-reviewed'}
+        self.assertEqual(basic_identity_decisions.reviewed_identity_targets(registry,full_targets),{'original','other-reviewed'})
+        self.assertEqual(full_targets,{'original','raw','other-reviewed'})
 
 
 if __name__ == '__main__':

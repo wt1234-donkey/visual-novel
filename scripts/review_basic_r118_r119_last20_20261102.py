@@ -239,7 +239,7 @@ def check():
         assert (ROOT/path).read_bytes()==subprocess.check_output(
            ['git','show',BASE+':'+path],cwd=ROOT),path
     refs=src.identity_map(reg)
-    assert refs.get('ifdb:x7cvej7bm7ixiz0a')=={'ai-earthquake'}
+    assert identity_decisions.reviewed_identity_targets(reg,refs.get('ifdb:x7cvej7bm7ixiz0a',set()))=={'ai-earthquake'}
     ids={w['id'] for w in src.all_works(reg)}
     assert len(ids)>=len(reg['works'])
     assert all(d['registryId'] not in ids for d in a['decisions'] if d['status']=='held' and d['registryId'])

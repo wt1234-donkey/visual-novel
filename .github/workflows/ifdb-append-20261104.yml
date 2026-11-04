@@ -9,6 +9,10 @@ on:
       - 'data/ifdb-append-manifest-20261104.json'
       - 'tests/test_ifdb_append_20261104.py'
       - 'tests/test_main_adv_rpg_registry_20261031.py'
+      - 'scripts/basic_identity_decisions.py'
+      - 'scripts/review_basic_r118_r119_last20_20261102.py'
+      - 'tests/test_basic_r118_r119_last20_20261102.py'
+      - 'tests/test_basic_r92_r93_conflict_review.py'
 permissions:
   contents: read
 concurrency:

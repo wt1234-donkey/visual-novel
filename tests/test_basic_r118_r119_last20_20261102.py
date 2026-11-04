@@ -26,7 +26,7 @@ class Last20ReviewTests(unittest.TestCase):
     def test_no_false_1982_new_work(self):
         reg=json.loads(src.REG.read_text(encoding='utf-8'))
         refs=src.identity_map(reg)
-        self.assertEqual(refs['ifdb:x7cvej7bm7ixiz0a'],{'ai-earthquake'})
+        self.assertEqual(review.identity_decisions.reviewed_identity_targets(reg,refs['ifdb:x7cvej7bm7ixiz0a']),{'ai-earthquake'})
         self.assertNotIn('ifdb-x7cvej7bm7ixiz0a',{w['id'] for w in reg['works']})
 
     def test_shipwreck_is_distinct_from_1986_work(self):

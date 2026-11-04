@@ -55,8 +55,8 @@ class ReviewedIdentityTests(unittest.TestCase):
     def test_reused_ifdb_sources_route_to_old_ids(self):
         registry = source.load(source.REG)
         refs = source.identity_map(registry)
-        self.assertEqual(refs['ifdb:ug3qu521hze8bsvz'], {'g129'})
-        self.assertEqual(refs['ifdb:6dzy6mc93tf0nzfs'], {'g113'})
+        self.assertEqual(decisions.reviewed_identity_targets(registry,refs['ifdb:ug3qu521hze8bsvz']), {'g129'})
+        self.assertEqual(decisions.reviewed_identity_targets(registry,refs['ifdb:6dzy6mc93tf0nzfs']), {'g113'})
         self.assertEqual(decisions.reused_source_identities(set()), {})
 
     def test_unresolved_records_stay_out_and_all_queues_remain(self):
