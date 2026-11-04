@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
+  "revision": 5,
   "additions": [],
   "records": {
     "g1028": {
@@ -78,37 +78,24 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "ifarchive-table-20261104-nm9ta7ku78hmcp5z": {
+      "identity": {
+        "id": "ifarchive-table-20261104-nm9ta7ku78hmcp5z",
+        "indexId": "basic-ifarchive-table-20261104-nm9ta7ku78hmcp5z",
+        "aliases": [],
+        "title": "The Snow Queen",
+        "firstYear": 1985,
+        "group": "St. Bride's School.",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifarchive.org/if-archive/games/spectrum/zenobi48k.zip",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
-    {
-      "id": "2057a0a5-5b54-4db5-b65c-2460caaa7e80",
-      "at": "2026-11-04T12:08:06.087Z",
-      "actor": "wt1234-donkey",
-      "reason": "删除作品 The Crack of Doom",
-      "changes": [
-        {
-          "id": "ifdb-table-20261104-96iqbghvbdgpjqx4",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-table-20261104-96iqbghvbdgpjqx4",
-              "indexId": "basic-ifdb-table-20261104-96iqbghvbdgpjqx4",
-              "aliases": [],
-              "title": "The Crack of Doom",
-              "firstYear": 1989,
-              "group": "Philip Mitchell, Norton Truter, John Haward",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=96iqbghvbdgpjqx4",
-              "mainPlacement": "promoted-basic"
-            },
-            "deleted": true
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "0602f611-8535-450b-86e4-bf243b9233dd",
       "at": "2026-11-04T12:08:31.801Z",
@@ -192,6 +179,34 @@
               "gameplay": "互动小说（玩法待核）",
               "plotStyles": [],
               "source": "https://ifdb.org/viewgame?id=1smmigsu7nsc2jzp",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "556f2e85-bca3-47e4-9dcf-f2af9da9d4d4",
+      "at": "2026-11-04T12:10:17.969Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 The Snow Queen",
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-nm9ta7ku78hmcp5z",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-nm9ta7ku78hmcp5z",
+              "indexId": "basic-ifarchive-table-20261104-nm9ta7ku78hmcp5z",
+              "aliases": [],
+              "title": "The Snow Queen",
+              "firstYear": 1985,
+              "group": "St. Bride's School.",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/spectrum/zenobi48k.zip",
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
