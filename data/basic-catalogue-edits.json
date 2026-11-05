@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 8,
+  "revision": 9,
   "additions": [],
   "records": {
     "g1028": {
@@ -150,37 +150,42 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "nextmoe-4567": {
+      "identity": {
+        "id": "nextmoe-4567",
+        "indexId": "nextmoe-20261101-r5-4567",
+        "aliases": [
+          "Cosmos no Sora ni",
+          "秋樱之空"
+        ],
+        "title": "秋桜の空に",
+        "firstYear": 2001,
+        "group": "创作品牌待核",
+        "gameplay": "Galgame（玩法待核）",
+        "plotStyles": [],
+        "source": "https://api.nextmoe.dev/v2/catalog/works/4567",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "秋桜の空に",
+        "firstYear": 2001,
+        "group": "Marron",
+        "gameplay": "Galgame",
+        "plotStyles": [
+          "恋爱",
+          "喜剧",
+          "日常"
+        ],
+        "source": "https://api.nextmoe.dev/v2/catalog/works/4567"
+      },
+      "aliases": [
+        "Cosmos no Sora ni",
+        "秋樱之空"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "fa3cbb17-09dd-4ccb-84ab-f075754198ee",
-      "at": "2026-11-04T12:11:59.784Z",
-      "actor": "wt1234-donkey",
-      "reason": "删除作品 Schooldays",
-      "changes": [
-        {
-          "id": "ifarchive-table-20261104-oc4jf24yotpal4ve",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifarchive-table-20261104-oc4jf24yotpal4ve",
-              "indexId": "basic-ifarchive-table-20261104-oc4jf24yotpal4ve",
-              "aliases": [],
-              "title": "Schooldays",
-              "firstYear": 2001,
-              "group": "Andrew MacKinnon",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/source/inform/schooldays.inf",
-              "mainPlacement": "promoted-basic"
-            },
-            "deleted": true
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "18576841-b124-4c6f-838c-3e9325af7828",
       "at": "2026-11-04T12:14:18.026Z",
@@ -244,6 +249,52 @@
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "1d047728-7bfc-4499-94dc-257338ced4da",
+      "at": "2026-11-05T09:19:45.552Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "nextmoe-4567",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "nextmoe-4567",
+              "indexId": "nextmoe-20261101-r5-4567",
+              "aliases": [
+                "Cosmos no Sora ni",
+                "秋樱之空"
+              ],
+              "title": "秋桜の空に",
+              "firstYear": 2001,
+              "group": "创作品牌待核",
+              "gameplay": "Galgame（玩法待核）",
+              "plotStyles": [],
+              "source": "https://api.nextmoe.dev/v2/catalog/works/4567",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "秋桜の空に",
+              "firstYear": 2001,
+              "group": "Marron",
+              "gameplay": "Galgame",
+              "plotStyles": [
+                "恋爱",
+                "喜剧",
+                "日常"
+              ],
+              "source": "https://api.nextmoe.dev/v2/catalog/works/4567"
+            },
+            "aliases": [
+              "Cosmos no Sora ni",
+              "秋樱之空"
+            ]
           }
         }
       ],
