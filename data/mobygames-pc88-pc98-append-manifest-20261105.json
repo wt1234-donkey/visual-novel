@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "sourceWorkbook": "MobyGames_PC88_PC98_基础身份库未匹配作品_1118条_20261105.xlsx",
+  "sourceLibraryFileId": "libfile_f774c2737d1881919f39324aed7f58a1",
+  "sourceFileId": "file_0000000049b08209bf1b04c574b2e59f",
+  "sourceWorkbookSha256": "fed9b7417bcebb1919b06f89145e0f51606a432e93d591a24e3f82aaea8d6166",
+  "sourceRecords": 1261,
+  "sourceSubsets": {
+    "unmatched": 1118,
+    "suspected-existing": 143
+  },
+  "sourceSheets": [
+    "未匹配作品",
+    "疑似已有"
+  ],
+  "inputOrder": "未匹配作品1118条按原表顺序，随后疑似已有143条按原表顺序",
+  "jsonSha256": "c3d08435809ce5961e1d9988f23d6f4e2708d759866bdd64e7f285925b235006",
+  "packedSha256": "220a9216ef37cf75d6ed0dd6bd8348ab3742e5f5bdd9b6b4b33e414e6bf174c4",
+  "expectedBaseRecords": 100943,
+  "baseCommit": "cbd9753b82e2549a1976350b0eca92f079bff892",
+  "baseWorksCanonicalSha256": "dcd5787f21de0a71441c32ca41084e39691bf67b86ed0d954109fd804247bd94",
+  "firstBatch": 209,
+  "lastBatch": 210,
+  "batchSize": 650,
+  "pairs": [
+    {
+      "pair": 1,
+      "batches": [
+        {
+          "batch": 209,
+          "rows": 650,
+          "unmatched": 650,
+          "suspectedExisting": 0
+        },
+        {
+          "batch": 210,
+          "rows": 611,
+          "unmatched": 468,
+          "suspectedExisting": 143
+        }
+      ]
+    }
+  ],
+  "intakePolicy": "append-without-deduplication",
+  "scope": "用户指定未匹配和疑似已有两表全量补录；只追加基础身份记录，不据来源条目数量声明独立原作数量。"
+}

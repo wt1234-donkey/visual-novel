@@ -55,6 +55,12 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
                     self.assertEqual(w['source'],'https://ifdb.org/viewgame?id='+tuid)
                 self.assertIn('ifdb:'+tuid,w['sourceRefs'])
                 self.assertEqual(w['mainPlacement'],'promoted-basic')
+            elif w.get('sourceSnapshot') == 'data/mobygames-pc88-pc98-append-source-20261105.json.gz.b64':
+                # This user-authorized directory intake includes all MobyGames genres.
+                self.assertEqual(w['gameplay'],w['sourceGenre'] or '玩法待核')
+                self.assertRegex(w['id'],r'^mobygames-pc88-pc98-20261105-[0-9]+$')
+                self.assertIn('mobygames:'+str(w['sourceMobyId']),w['sourceRefs'])
+                self.assertEqual(w['sourceSubset'] in {'unmatched','suspected-existing'},True)
             else:
                 self.assertIn(w['gameplay'],{'ADV','RPG','ARPG','SRPG','视觉小说','互动电影ADV','ADV／策略RPG','Galgame（玩法待核）'})
             self.assertTrue(not set(w)&{'characters','characterDetails','contentVersions','platformReleases','writer','illustrator','composer','synopsis','creators'})
