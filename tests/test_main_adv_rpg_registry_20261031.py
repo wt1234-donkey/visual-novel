@@ -61,6 +61,10 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
                 self.assertRegex(w['id'],r'^mobygames-pc88-pc98-20261105-[0-9]+$')
                 self.assertIn('mobygames:'+str(w['sourceMobyId']),w['sourceRefs'])
                 self.assertEqual(w['sourceSubset'] in {'unmatched','suspected-existing'},True)
+            elif w.get('sourceSnapshot') == 'data/casa-lemon64-append-source-20261105.json.gz.b64':
+                self.assertIn(w['gameplay'],{'冒险（玩法待核）','纯文字冒险','图文冒险'})
+                self.assertRegex(w['id'],r'^(casa-table-20261105-[0-9]+|lemon64-table-20261105-row[0-9]+)$')
+                self.assertIn(w['sourceSubset'],{'unmatched','suspected-existing'})
             else:
                 self.assertIn(w['gameplay'],{'ADV','RPG','ARPG','SRPG','视觉小说','互动电影ADV','ADV／策略RPG','Galgame（玩法待核）'})
             self.assertTrue(not set(w)&{'characters','characterDetails','contentVersions','platformReleases','writer','illustrator','composer','synopsis','creators'})

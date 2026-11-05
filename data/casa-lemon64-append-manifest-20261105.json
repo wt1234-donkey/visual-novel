@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "sourceWorkbook": "CASA_Lemon64_基础身份库未匹配作品_2381条_20261105.xlsx",
+  "sourceLibraryFileId": "libfile_02626dc047408191a738f25a083b0c50",
+  "sourceWorkbookSha256": "3f91e1020fb0cf7268c5bf69493af067c0706272cee5eafb64ff6736fa5ba7b6",
+  "sourceRecords": 5480,
+  "sourceSubsets": {
+    "unmatched": 2381,
+    "suspected-existing": 3099
+  },
+  "sourcePlatforms": {
+    "CASA": 5028,
+    "Lemon64": 452
+  },
+  "sourceSheets": [
+    "未匹配作品",
+    "疑似已有需复核"
+  ],
+  "inputOrder": "未匹配作品2381条后接疑似已有需复核3099条，分别沿用结果表顺序",
+  "jsonSha256": "35fc47304c512fcaa07cb306deb5ed4c87854c5b5e0885a26067b8e3ed9cdeab",
+  "packedSha256": "2ea7303798a49df397eed0624b27e1ad008eb75f1a0ff8b6bb99a363ddf5525b",
+  "expectedBaseRecords": 102204,
+  "baseCommit": "71806f3df4ea7a3bc89884ef8054d49e16407f11",
+  "baseWorksCanonicalSha256": "1f529878a14bcab992c1c41be17f82338584cb3cac71139d9a8ae07d1f5d45c0",
+  "firstBatch": 211,
+  "lastBatch": 221,
+  "batchSize": 500,
+  "intakePolicy": "append-without-deduplication",
+  "scope": "用户指定CASA和Lemon64未匹配及疑似已有全部追加，不作作品、来源、标题、年份或版本去重；仅追加基础身份。"
+}
