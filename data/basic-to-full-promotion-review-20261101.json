@@ -4,11 +4,11 @@
   "destination": "data/games.json after the specified original-release evidence is reviewed",
   "reason": "strict 3-layer model cannot legitimately turn a title/year into a fictitious release",
   "summary": {
-    "registryAccepted": 102204,
-    "basicIdentities": 100302,
-    "stageableBasic": 93115,
-    "alreadyInMainOrDossier": 527,
-    "heldConflicts": 6660,
+    "registryAccepted": 107684,
+    "basicIdentities": 105782,
+    "stageableBasic": 98491,
+    "alreadyInMainOrDossier": 555,
+    "heldConflicts": 6736,
     "offset": 0,
     "limit": 100,
     "staged": 100
@@ -8780,6 +8780,370 @@
         {
           "workId": "g820",
           "year": 1991,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-616",
+      "title": "Zork II: The Wizard of Frobozz",
+      "firstYear": 1981,
+      "matched": [
+        {
+          "workId": "g062",
+          "year": 1981,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-615",
+      "title": "Zork I: The Great Underground Empire",
+      "firstYear": 1980,
+      "matched": [
+        {
+          "workId": "g002",
+          "year": 1980,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-7720",
+      "title": "Catacombs",
+      "firstYear": 1981,
+      "matched": [
+        {
+          "workId": "melbournehouse-catacombs",
+          "year": 1981,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-119",
+      "title": "Cyborg",
+      "firstYear": 1981,
+      "matched": [
+        {
+          "workId": "broderbund-cyborg",
+          "year": 1981,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-134",
+      "title": "Deadline",
+      "firstYear": 1982,
+      "matched": [
+        {
+          "workId": "g003",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-1990",
+      "title": "Spook House",
+      "firstYear": 1982,
+      "matched": [
+        {
+          "workId": "ai-spook-house",
+          "year": 1982,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-617",
+      "title": "Zork III: The Dungeon Master",
+      "firstYear": 1982,
+      "matched": [
+        {
+          "workId": "g063",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "lemon64-table-20261105-row22",
+      "title": "Starcross",
+      "firstYear": 1982,
+      "matched": [
+        {
+          "workId": "g064",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-177",
+      "title": "Enchanter",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g042",
+          "year": 1983,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "lemon64-table-20261105-row59",
+      "title": "Suspended",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g041",
+          "year": 1983,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-15",
+      "title": "Amazon",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g1594",
+          "year": 1984,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-2735",
+      "title": "Dragon World",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g1595",
+          "year": 1984,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-156",
+      "title": "Dragonworld",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g1595",
+          "year": 1984,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-485",
+      "title": "Sherlock",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g129",
+          "year": 1984,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-3439",
+      "title": "Sorcerer",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g067",
+          "year": 1984,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "lemon64-table-20261105-row76",
+      "title": "Amazon",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g1594",
+          "year": 1984,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-188",
+      "title": "Essex",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "broderbund-essex",
+          "year": 1985,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-469",
+      "title": "Seas of Blood",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "ai-seas-blood",
+          "year": 1985,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-58",
+      "title": "Breakers",
+      "firstYear": 1986,
+      "matched": [
+        {
+          "workId": "broderbund-breakers",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-363",
+      "title": "Moonmist",
+      "firstYear": 1986,
+      "matched": [
+        {
+          "workId": "infocom-moonmist",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-558",
+      "title": "Trinity",
+      "firstYear": 1986,
+      "matched": [
+        {
+          "workId": "infocom-trinity",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "lemon64-table-20261105-row224",
+      "title": "Ballyhoo",
+      "firstYear": 1986,
+      "matched": [
+        {
+          "workId": "infocom-ballyhoo",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-55",
+      "title": "Border Zone",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "infocom-border-zone",
+          "year": 1987,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-518",
+      "title": "Stationfall",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "infocom-stationfall",
+          "year": 1987,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "lemon64-table-20261105-row347",
+      "title": "Stationfall",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "infocom-stationfall",
+          "year": 1987,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-5238",
+      "title": "Gold Rush!",
+      "firstYear": 1988,
+      "matched": [
+        {
+          "workId": "sierra-on-line-goldrush",
+          "year": 1988,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-1355",
+      "title": "Timequest",
+      "firstYear": 1991,
+      "matched": [
+        {
+          "workId": "legend-entertainment-timequest",
+          "year": 1991,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "casa-table-20261105-722",
+      "title": "Lost in Time",
+      "firstYear": 1993,
+      "matched": [
+        {
+          "workId": "g1119",
+          "year": 1993,
           "scope": "complete"
         }
       ],
@@ -40154,6 +40518,803 @@
         }
       ],
       "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row67",
+      "title": "Zork II: The Wizard of Frobozz",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g062",
+          "year": 1981,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row537",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row539",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row541",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row542",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row543",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row544",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row546",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row548",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row549",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row550",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row553",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row554",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row556",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row558",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "casa-table-20261105-224",
+      "title": "Ghost Town",
+      "firstYear": 1980,
+      "matched": [
+        {
+          "workId": "ai-ghost-town",
+          "year": 1980,
+          "scope": "dossier"
+        },
+        {
+          "workId": "microcabin-ghost",
+          "year": 1984,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-654",
+      "title": "Mystery Fun House",
+      "firstYear": 1980,
+      "matched": [
+        {
+          "workId": "ai-mystery-fun-house",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-420",
+      "title": "Pyramid of Doom",
+      "firstYear": 1980,
+      "matched": [
+        {
+          "workId": "ai-pyramid-doom",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-523",
+      "title": "Strange Odyssey",
+      "firstYear": 1980,
+      "matched": [
+        {
+          "workId": "ai-strange-odyssey",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-5362",
+      "title": "TimeQuest",
+      "firstYear": 1980,
+      "matched": [
+        {
+          "workId": "legend-entertainment-timequest",
+          "year": 1991,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-7354",
+      "title": "Treasure Island",
+      "firstYear": 1980,
+      "matched": [
+        {
+          "workId": "g1603",
+          "year": 1985,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-7283",
+      "title": "Dragon's Lair",
+      "firstYear": 1981,
+      "matched": [
+        {
+          "workId": "g010",
+          "year": 1983,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-5102",
+      "title": "Treasure Island",
+      "firstYear": 1981,
+      "matched": [
+        {
+          "workId": "g1603",
+          "year": 1985,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row11",
+      "title": "Cyborg",
+      "firstYear": 1982,
+      "matched": [
+        {
+          "workId": "broderbund-cyborg",
+          "year": 1981,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-1512",
+      "title": "Alice in Wonderland",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g1602",
+          "year": 1985,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-4921",
+      "title": "Cranston Manor",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g058",
+          "year": 1981,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-2851",
+      "title": "Ghost Town",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "ai-ghost-town",
+          "year": 1980,
+          "scope": "dossier"
+        },
+        {
+          "workId": "microcabin-ghost",
+          "year": 1984,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-4800",
+      "title": "Mission Asteroid",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "sierra-mission-asteroid",
+          "year": 1980,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-4920",
+      "title": "Mystery House",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g001",
+          "year": 1980,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row39",
+      "title": "Ghost Town",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "ai-ghost-town",
+          "year": 1980,
+          "scope": "dossier"
+        },
+        {
+          "workId": "microcabin-ghost",
+          "year": 1984,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row49",
+      "title": "Mystery Fun House",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "ai-mystery-fun-house",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row51",
+      "title": "Pyramid of Doom",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "ai-pyramid-doom",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row57",
+      "title": "Strange Odyssey",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "ai-strange-odyssey",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row66",
+      "title": "Zork I: The Great Underground Empire",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g002",
+          "year": 1980,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row68",
+      "title": "Zork III: The Dungeon Master",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "g063",
+          "year": 1982,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-3992",
+      "title": "Catacombs",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "melbournehouse-catacombs",
+          "year": 1981,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-358",
+      "title": "Mindwheel",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "broderbund-mindwheel",
+          "year": 1985,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-6009",
+      "title": "Pyramid of Doom",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "ai-pyramid-doom",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-4653",
+      "title": "Strange Odyssey",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "ai-strange-odyssey",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-1898",
+      "title": "Time Quest",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "legend-entertainment-timequest",
+          "year": 1991,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-10645",
+      "title": "Treasure Island",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g1603",
+          "year": 1985,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-4655",
+      "title": "Voodoo Castle",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "ai-voodoo-castle",
+          "year": 1979,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row70",
+      "title": "Adventure B: Inca Curse",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "sinclair-inca-curse",
+          "year": 1981,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row71",
+      "title": "Adventure D: Espionage Island",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "sinclair-espionage-island",
+          "year": 1982,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-31",
+      "title": "Ballyhoo",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "infocom-ballyhoo",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-5448",
+      "title": "Ghost Town",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "ai-ghost-town",
+          "year": 1980,
+          "scope": "dossier"
+        },
+        {
+          "workId": "microcabin-ghost",
+          "year": 1984,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-7788",
+      "title": "Island",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "g1346",
+          "year": 2016,
+          "scope": "complete"
+        },
+        {
+          "workId": "supp26-fw-island",
+          "year": 2016,
+          "scope": "supplement"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-3939",
+      "title": "Nightshade",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "g1029",
+          "year": 1992,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-3535",
+      "title": "Time Quest",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "legend-entertainment-timequest",
+          "year": 1991,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-2151",
+      "title": "Dragonworld",
+      "firstYear": 1986,
+      "matched": [
+        {
+          "workId": "g1595",
+          "year": 1984,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-5264",
+      "title": "Survive!",
+      "firstYear": 1986,
+      "matched": [
+        {
+          "workId": "konami-survive",
+          "year": 2018,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row274",
+      "title": "Survive!",
+      "firstYear": 1986,
+      "matched": [
+        {
+          "workId": "konami-survive",
+          "year": 2018,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-5181",
+      "title": "Erika",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "jast-erika",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-1024",
+      "title": "Phantasmagoria",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "g1127",
+          "year": 1995,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-5688",
+      "title": "Star Trap",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "jast-star-trap",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-1288",
+      "title": "Treasure Island",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "g1603",
+          "year": 1985,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-2703",
+      "title": "Diablo!",
+      "firstYear": 1988,
+      "matched": [
+        {
+          "workId": "sierra-on-line-diablo-hellfire",
+          "year": 1996,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-8397",
+      "title": "Dragon's Lair",
+      "firstYear": 1988,
+      "matched": [
+        {
+          "workId": "g010",
+          "year": 1983,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-3617",
+      "title": "Virus",
+      "firstYear": 1988,
+      "matched": [
+        {
+          "workId": "g1165",
+          "year": 1997,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-5240",
+      "title": "Conquests of Camelot: The Search for the Grail",
+      "firstYear": 1989,
+      "matched": [
+        {
+          "workId": "sierra-on-line-camelot",
+          "year": 1990,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-1858",
+      "title": "Adventureland",
+      "firstYear": 1991,
+      "matched": [
+        {
+          "workId": "g091",
+          "year": 1978,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-1349",
+      "title": "Eric the Unready",
+      "firstYear": 1991,
+      "matched": [
+        {
+          "workId": "legend-entertainment-eric-the-unready",
+          "year": 1993,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-6309",
+      "title": "Survive",
+      "firstYear": 1991,
+      "matched": [
+        {
+          "workId": "konami-survive",
+          "year": 2018,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-2175",
+      "title": "Cyborg",
+      "firstYear": 1992,
+      "matched": [
+        {
+          "workId": "broderbund-cyborg",
+          "year": 1981,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row439",
+      "title": "Phantasmagoria",
+      "firstYear": 1993,
+      "matched": [
+        {
+          "workId": "g1127",
+          "year": 1995,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "casa-table-20261105-7826",
+      "title": "Trinity",
+      "firstYear": 1996,
+      "matched": [
+        {
+          "workId": "infocom-trinity",
+          "year": 1986,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "lemon64-table-20261105-row536",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row538",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row540",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row545",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row547",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row551",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row552",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row555",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row557",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "lemon64-table-20261105-row559",
+      "reason": "invalid source or debut year"
     }
   ]
 }
