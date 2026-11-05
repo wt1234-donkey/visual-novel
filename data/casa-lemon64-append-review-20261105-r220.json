@@ -1,0 +1,4025 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "batch": 220,
+  "batchSizeLimit": 500,
+  "intakePolicy": "append-without-deduplication",
+  "sourceSnapshot": "data/casa-lemon64-append-source-20261105.json.gz.b64",
+  "sourceOffset": 4500,
+  "summary": {
+    "candidates": 500,
+    "promoted-basic": 500,
+    "appendedRecords": 500,
+    "unmatched": 0,
+    "suspectedExisting": 500,
+    "CASA": 482,
+    "Lemon64": 18,
+    "unknownYear": 0,
+    "before": 106704,
+    "after": 107204,
+    "deduplication": "not-performed"
+  },
+  "records": [
+    {
+      "workId": "casa-table-20261105-2101",
+      "title": "Inca Treasure, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4501,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2939",
+      "title": "Infiltrator, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4502,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5265",
+      "title": "Island Adventure",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4503,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-287",
+      "title": "Island of Lost Hope",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4504,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2169",
+      "title": "Jabato",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4505,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2971",
+      "title": "Johny Vayna",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4506,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1338",
+      "title": "Journey",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4507,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1976",
+      "title": "Jungle",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4508,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3013",
+      "title": "Larry",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4509,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-318",
+      "title": "Last Inca, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4510,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3022",
+      "title": "Leitin",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4511,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3029",
+      "title": "Libro Negro, El",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4512,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5049",
+      "title": "Lifeboat",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4513,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1218",
+      "title": "Lightmare",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4514,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1579",
+      "title": "Los Angeles",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4515,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3046",
+      "title": "Lost City, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4516,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1592",
+      "title": "Lost Temple of Inca",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4517,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8389",
+      "title": "Magic Realms: The Sword of Kasza",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4518,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3080",
+      "title": "Manhattan 2005 (Demo)",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4519,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9347",
+      "title": "Maquina del Tiempo, La",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4520,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3100",
+      "title": "Mesto Robotu",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4521,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3104",
+      "title": "Metsys",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4522,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3108",
+      "title": "Midnight",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4523,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1008",
+      "title": "Moon Magic",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4524,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1180",
+      "title": "Moonquake",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4525,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-368",
+      "title": "Murder Hunt",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4526,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6040",
+      "title": "Murder Mansion",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4527,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5464",
+      "title": "Museum, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4528,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9044",
+      "title": "Mystery Mansion",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4529,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-375",
+      "title": "Myth",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4530,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3172",
+      "title": "Nightmare",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4531,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6329",
+      "title": "Nightmare",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4532,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3176",
+      "title": "Nightwing",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4533,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6750",
+      "title": "Nomon",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4534,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5534",
+      "title": "Omeyad",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4535,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1274",
+      "title": "Orifice From Outer Space, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4536,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3211",
+      "title": "Overdog",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4537,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3216",
+      "title": "Palace Hotel",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4538,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4805",
+      "title": "Palace of the Necromancer, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4539,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-745",
+      "title": "Pawns of War, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4540,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3243",
+      "title": "Pirámide",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4541,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3251",
+      "title": "Pirx II",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4542,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-804",
+      "title": "Plagues of Egypt, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4543,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1027",
+      "title": "Polearn",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4544,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1192",
+      "title": "Protect and Survive",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4545,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3293",
+      "title": "Puerta, La",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4546,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6798",
+      "title": "Punktum",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4547,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3295",
+      "title": "Puzzled!",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4548,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3296",
+      "title": "Pyramid, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4549,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1468",
+      "title": "Quest for the Pendragon",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4550,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-428",
+      "title": "Quest of Kron, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4551,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8193",
+      "title": "Rainbow Land",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4552,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3321",
+      "title": "Recovery",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4553,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4855",
+      "title": "Red Planet",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4554,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3327",
+      "title": "Rescate",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4555,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7937",
+      "title": "Rescue",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4556,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3343",
+      "title": "Rings of Saturn, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4557,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1539",
+      "title": "Robin Hood",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4558,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5295",
+      "title": "Runaway",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4559,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4857",
+      "title": "Sanctuary",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4560,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-462",
+      "title": "Scapeghost",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4561,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1305",
+      "title": "Secrets of Ur, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4562,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1053",
+      "title": "Set Up!",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4563,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3406",
+      "title": "Shellshock",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4564,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3407",
+      "title": "Sheriff",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4565,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-631",
+      "title": "Shogun",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4566,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3422",
+      "title": "Sir Sigfrid",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4567,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3424",
+      "title": "Skladacka",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4568,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2292",
+      "title": "Skull Island",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4569,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1886",
+      "title": "Space Trouble II",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4570,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3472",
+      "title": "Stavka",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4571,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5033",
+      "title": "Stowaway",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4572,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3496",
+      "title": "Survivor",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4573,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3522",
+      "title": "Thief",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4574,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1286",
+      "title": "Thor",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4575,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3528",
+      "title": "Tiempos de Magia",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4576,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4856",
+      "title": "Time Traveller",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4577,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8729",
+      "title": "Tomb of Death",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4578,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9274",
+      "title": "Tower of Light",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4579,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3577",
+      "title": "Trudnaya Doroga",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4580,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3589",
+      "title": "Umbral, El",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4581,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9606",
+      "title": "Unknown Treasure, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4582,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10930",
+      "title": "Vault III, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4583,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1080",
+      "title": "View to a Chip, A",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4584,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3620",
+      "title": "Volk",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4585,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1290",
+      "title": "Wakemare",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4586,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3630",
+      "title": "Wergild",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4587,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3631",
+      "title": "What Was That?",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4588,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3640",
+      "title": "Winter Term",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4589,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3806",
+      "title": "Witch's Brew",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4590,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5420",
+      "title": "Withered Toad, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4591,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3644",
+      "title": "Wiz Lair",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4592,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6739",
+      "title": "WUZ",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4593,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1412",
+      "title": "Zipi y Zape",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4594,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "lemon64-table-20261105-row395",
+      "title": "Aventura Original, La (Spanish)",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4595,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row401",
+      "title": "Lancelot",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4596,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row402",
+      "title": "Scapeghost (Disk version)",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4597,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row403",
+      "title": "Scapeghost (Tape version)",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4598,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row404",
+      "title": "Vampyre Hunter",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 4599,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "casa-table-20261105-1211",
+      "title": "Adult 2",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4600,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4660",
+      "title": "Adventure",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4601,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2467",
+      "title": "Al Ladron",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4602,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9299",
+      "title": "Alchemist's Quest",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4603,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2474",
+      "title": "Alien Planet",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4604,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5213",
+      "title": "Alvilág Ura, Az",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4605,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1638",
+      "title": "Amulet, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4606,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9172",
+      "title": "Amusement Park",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4607,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2482",
+      "title": "Anillo, El",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4608,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2487",
+      "title": "Apache",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4609,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-779",
+      "title": "Appleton, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4610,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2490",
+      "title": "Arana, La",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4611,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-21",
+      "title": "Arnold the Adventurer",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4612,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8728",
+      "title": "Assassin",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4613,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2514",
+      "title": "Aventura Inesperada, Una",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4614,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-913",
+      "title": "Ball, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4615,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-818",
+      "title": "Behold Atlantis",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4616,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4686",
+      "title": "Billion",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4617,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9361",
+      "title": "Blue Raider",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4618,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6816",
+      "title": "Blutrausch",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4619,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10527",
+      "title": "Boardwalk",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4620,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-876",
+      "title": "Bog of Brit",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4621,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1236",
+      "title": "Boyd File, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4622,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7181",
+      "title": "Breakdown",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4623,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8133",
+      "title": "Castle Darkholm",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4624,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10306",
+      "title": "Cave of Doom",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4625,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8657",
+      "title": "Chicago",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4626,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2640",
+      "title": "Corrupt",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4627,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3951",
+      "title": "Cosmy Hero",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4628,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2249",
+      "title": "Crime Time",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4629,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6813",
+      "title": "Crime Time",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4630,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4861",
+      "title": "Crypt",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4631,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2672",
+      "title": "Daemon",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4632,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6768",
+      "title": "Daemon Quest III : The Road To The High Tsani",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4633,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6989",
+      "title": "Dark Arts",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4634,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-133",
+      "title": "Dead End",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4635,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2687",
+      "title": "Deek's Deeds",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4636,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4826",
+      "title": "Deena of Kolini",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4637,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6990",
+      "title": "Demon's Keep",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4638,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3707",
+      "title": "Dr. Death's House of Horrors",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4639,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1456",
+      "title": "Dreamscape",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4640,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9912",
+      "title": "Dreamtime",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4641,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1373",
+      "title": "Dungeon Adventure",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4642,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2372",
+      "title": "Easy Adventure",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4643,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-679",
+      "title": "Eclipse",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4644,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-170",
+      "title": "Elvira, Mistress of the Dark",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4645,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9324",
+      "title": "Entity, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4646,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2373",
+      "title": "Escape From Castle Dracula",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4647,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6212",
+      "title": "Escape From the ELI",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4648,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2795",
+      "title": "Excessus",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4649,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9631",
+      "title": "Faust",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4650,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2818",
+      "title": "Flight 191",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4651,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9909",
+      "title": "Flying Saucer",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4652,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2819",
+      "title": "Forastero, El",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4653,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2837",
+      "title": "Fuga, La",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4654,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3706",
+      "title": "Ghost Riders of El Diablo",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4655,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5337",
+      "title": "Goblin Adventure",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4656,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3969",
+      "title": "Gold Mine and the Princess, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4657,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2868",
+      "title": "Gordello's Demise",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4658,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7732",
+      "title": "Grimoire, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4659,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-241",
+      "title": "Grue-Knapped!",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4660,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-248",
+      "title": "Harboro",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4661,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2904",
+      "title": "Heresville",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4662,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6773",
+      "title": "Hippy's Quest",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4663,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9904",
+      "title": "House of Dr Strange, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4664,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5556",
+      "title": "Humbug",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4665,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9033",
+      "title": "Indiana Jones II",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4666,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10934",
+      "title": "Insel, Die",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4667,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2943",
+      "title": "Interrogacion",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4668,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10007",
+      "title": "Janitor Jim",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4669,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2965",
+      "title": "Jesus Gil, Heroe Nacional",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4670,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4938",
+      "title": "Kathedrale, Die",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4671,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2986",
+      "title": "Keops, el Misterio",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4672,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3007",
+      "title": "Kucna Gerila",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4673,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3008",
+      "title": "Labarinth",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4674,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3677",
+      "title": "Last Half of Darkness, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4675,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-717",
+      "title": "Legacy, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4676,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3019",
+      "title": "Legend",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4677,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1219",
+      "title": "Logan",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4678,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5123",
+      "title": "Lost Island, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4679,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8974",
+      "title": "Lost Shadow",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4680,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10090",
+      "title": "Lost Soul",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4681,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-723",
+      "title": "Lost Temple, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4682,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-724",
+      "title": "Lost Twilight, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4683,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8161",
+      "title": "Macabre Laboratory",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4684,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-322",
+      "title": "Magic Isle, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4685,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3085",
+      "title": "Mantis 1",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4686,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3086",
+      "title": "Mantis 2",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4687,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9855",
+      "title": "Master of the Labyrinth",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4688,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9118",
+      "title": "Maths Dragons",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4689,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6744",
+      "title": "Melita Adventure I",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4690,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6745",
+      "title": "Melita Adventure II",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4691,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-730",
+      "title": "Menagerie, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4692,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-731",
+      "title": "Merlin",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4693,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1004",
+      "title": "Methyhel",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4694,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7735",
+      "title": "Midnight Thief",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4695,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3116",
+      "title": "Miser, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4696,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1803",
+      "title": "Missing",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4697,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3121",
+      "title": "Missing: 007",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4698,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3144",
+      "title": "Mouse Man",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4699,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3167",
+      "title": "Nemesis II",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4700,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8919",
+      "title": "New Castle, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4701,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3190",
+      "title": "Odisea",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4702,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-741",
+      "title": "Oppressed Land, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4703,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3203",
+      "title": "Oraculo, El",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4704,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10471",
+      "title": "Party Adventure",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4705,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1828",
+      "title": "People",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4706,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3271",
+      "title": "Prehistoria, La",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4707,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8340",
+      "title": "Pyramid, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4708,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9073",
+      "title": "Race, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4709,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-749",
+      "title": "Rainbow's End",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4710,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3705",
+      "title": "Rings for Bony Fingers",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4711,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3347",
+      "title": "Roco",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4712,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7426",
+      "title": "Secte Noire, La",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4713,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3408",
+      "title": "Sherlock Holmes: The Lamberley Mystery",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4714,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10959",
+      "title": "Silent Death, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4715,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1585",
+      "title": "Ski Adventure",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4716,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1375",
+      "title": "Spaced-Out",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4717,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-892",
+      "title": "Spectre of Castle Coris, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4718,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3463",
+      "title": "Stalker",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4719,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8975",
+      "title": "Storm Mountain",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4720,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8345",
+      "title": "Storms",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4721,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8986",
+      "title": "Temple, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4722,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3883",
+      "title": "Terminal",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4723,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3517",
+      "title": "Test, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4724,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3544",
+      "title": "Tom Jones",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4725,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8837",
+      "title": "Ula Tor",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4726,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1289",
+      "title": "Unknown Planet",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4727,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10530",
+      "title": "Uptown",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4728,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4576",
+      "title": "Village, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4729,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1915",
+      "title": "Vision, Die",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4730,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4589",
+      "title": "Voyage of the Beano, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4731,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7697",
+      "title": "Weird Tales",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4732,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7736",
+      "title": "Witchcraft",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4733,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-647",
+      "title": "Wonderland",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4734,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1088",
+      "title": "Yawn",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4735,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2202",
+      "title": "Yawn, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4736,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1656",
+      "title": "Zeitmaschine III, Die - Die Ausserirdischen",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4737,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "lemon64-table-20261105-row407",
+      "title": "Adventure (Swedish)",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4738,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row409",
+      "title": "Aventura Espacial, La (Spanish)",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 4739,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "casa-table-20261105-1858",
+      "title": "Adventureland",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4740,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2464",
+      "title": "Akbarr",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4741,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4815",
+      "title": "Apprentice",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4742,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-910",
+      "title": "Arlene",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4743,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-22",
+      "title": "Arnold the Adventurer II",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4744,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2502",
+      "title": "Aunt Velma Is Coming to Tea",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4745,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2504",
+      "title": "Aureon",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4746,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7876",
+      "title": "Awe Chasm",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4747,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2538",
+      "title": "Beerland",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4748,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-796",
+      "title": "Bermuda Triangle, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4749,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-51",
+      "title": "Blood of Bogmole, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4750,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2560",
+      "title": "Booze Up",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4751,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9234",
+      "title": "Brecon Street",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4752,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1663",
+      "title": "Bright Eyes",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4753,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1425",
+      "title": "Burglar",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4754,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7586",
+      "title": "Camelot",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4755,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1229",
+      "title": "Caves of Darkness",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4756,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6815",
+      "title": "Dachkammer, Die",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4757,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-126",
+      "title": "Darkest Road, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4758,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4579",
+      "title": "Dead or Alive...?",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4759,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5911",
+      "title": "Demon's Eye, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4760,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2695",
+      "title": "Desmond and Gertrude",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4761,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9917",
+      "title": "Destination: Unknown",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4762,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7551",
+      "title": "Devil's Island",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4763,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2311",
+      "title": "Dirty",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4764,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6227",
+      "title": "DMz äventyr",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4765,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-932",
+      "title": "Dogboy, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4766,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2724",
+      "title": "Doomsday",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4767,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9914",
+      "title": "Dream Escape",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4768,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2741",
+      "title": "Dreamare",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4769,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10709",
+      "title": "Duck Tales",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4770,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1726",
+      "title": "Emgeton Story",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4771,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1727",
+      "title": "Emgeton Story II",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4772,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2761",
+      "title": "Emperor",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4773,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1349",
+      "title": "Eric the Unready",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4774,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1731",
+      "title": "Escape From Gross",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4775,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1128",
+      "title": "Escape From Prison Planet",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4776,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2783",
+      "title": "Estacion, La",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4777,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7704",
+      "title": "Evilution",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4778,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2814",
+      "title": "Final Frog",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4779,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-754",
+      "title": "Fisher King, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4780,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-762",
+      "title": "Golden Pyramid, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4781,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2874",
+      "title": "Green Sonja",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4782,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2899",
+      "title": "Haunting, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4783,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2902",
+      "title": "Help!!!",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4784,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1172",
+      "title": "Hob's Hoard",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4785,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5620",
+      "title": "Holiday, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4786,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-979",
+      "title": "Hotel Hell",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4787,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4874",
+      "title": "Hotel Notell",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4788,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1159",
+      "title": "Hounds of Hell",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4789,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5155",
+      "title": "House II",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4790,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2924",
+      "title": "House, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4791,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1266",
+      "title": "Ice Guardian, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4792,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2930",
+      "title": "Idiliar",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4793,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9902",
+      "title": "In Quest of Chaos",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4794,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2380",
+      "title": "Inca Treasure",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4795,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4777",
+      "title": "Indiana Jones II - Chrám Zkázy 2.0",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4796,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10886",
+      "title": "Insane Story Adventure",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4797,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2288",
+      "title": "Insel, Die",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4798,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2946",
+      "title": "Invasion Luna",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4799,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1772",
+      "title": "Inza 2",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4800,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2948",
+      "title": "Isla del Tesoro, La",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4801,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-992",
+      "title": "King",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4802,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3017",
+      "title": "Last Warrior, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4803,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8329",
+      "title": "Library",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4804,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3780",
+      "title": "Lonely Mission, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4805,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-999",
+      "title": "Lost Dragon, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4806,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8331",
+      "title": "Lost Stone Mansion, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4807,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9686",
+      "title": "M-Text",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4808,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8249",
+      "title": "Magic Potion, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4809,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3081",
+      "title": "Manic Badger",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4810,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3083",
+      "title": "Mansion, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4811,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5090",
+      "title": "Mega-Adventure",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4812,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-416",
+      "title": "Micro Mutant, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4813,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3132",
+      "title": "Molesworth",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4814,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3150",
+      "title": "Mundo Magico, El",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4815,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2038",
+      "title": "My House",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4816,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10865",
+      "title": "Mystic Zone",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4817,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7118",
+      "title": "New Arrival",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4818,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3169",
+      "title": "Nick Tracy",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4819,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1815",
+      "title": "Night Mare",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4820,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1816",
+      "title": "Night Mare 2",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4821,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1019",
+      "title": "Orb Quest",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4822,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3217",
+      "title": "Papa Noel",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4823,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-657",
+      "title": "Phoenix",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4824,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3253",
+      "title": "Pitufos, Los",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4825,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1377",
+      "title": "Prison Blues",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4826,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9863",
+      "title": "Private Eye",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4827,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3299",
+      "title": "Queen of the Mirror",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4828,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1033",
+      "title": "Radiomania",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4829,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1469",
+      "title": "Realms of Madness",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4830,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-750",
+      "title": "Red Alert",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4831,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1378",
+      "title": "Rouge Midget",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4832,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6820",
+      "title": "Sanctuary",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4833,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9873",
+      "title": "Search for the Lost Treasure",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4834,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6311",
+      "title": "Secret of Sarans Castle, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4835,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4577",
+      "title": "Seventh Heaven",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4836,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1872",
+      "title": "Sherlock Holmes",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4837,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9872",
+      "title": "Silence Syndrome, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4838,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3417",
+      "title": "Silverwolf",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4839,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2198",
+      "title": "Slippery, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4840,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3431",
+      "title": "Snow Joke!",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4841,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1285",
+      "title": "Spiro Legacy, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4842,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6992",
+      "title": "Spore",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4843,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3469",
+      "title": "Star Wash",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4844,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3479",
+      "title": "Strange Tale",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4845,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6309",
+      "title": "Survive",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4846,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8419",
+      "title": "T-Zero",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4847,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3506",
+      "title": "Talisman",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4848,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2322",
+      "title": "Test of the Turnip",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4849,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-893",
+      "title": "Thief's Tale, A",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4850,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3523",
+      "title": "Things!",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4851,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2215",
+      "title": "Thrallbound",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4852,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1355",
+      "title": "Timequest",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4853,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8828",
+      "title": "Timewarp",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4854,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1859",
+      "title": "Tulipe Noire, La",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4855,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3584",
+      "title": "Twin Cops",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4856,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1076",
+      "title": "Urban",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4857,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2315",
+      "title": "Village of Secrets",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4858,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1235",
+      "title": "Well, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4859,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-690",
+      "title": "White Feather Cloak, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4860,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10164",
+      "title": "XTrek",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4861,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7478",
+      "title": "Zork I",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4862,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9455",
+      "title": "Zurk II: The World Below",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4863,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9458",
+      "title": "Zurk V: The Dungeon Master",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4864,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "lemon64-table-20261105-row414",
+      "title": "Adventure Without a Name",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4865,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row417",
+      "title": "Haunted House",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4866,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row419",
+      "title": "Projekt Prometheus (German)",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4867,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row420",
+      "title": "Street Life",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4868,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row421",
+      "title": "Templos Sagrados, Los (Spanish)",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 4869,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "casa-table-20261105-2463",
+      "title": "Agent Toast",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4870,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2469",
+      "title": "Alhambra, La",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4871,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2489",
+      "title": "April 7th",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4872,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8738",
+      "title": "Black Dawn",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4873,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-50",
+      "title": "Blob Quest",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4874,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8234",
+      "title": "Brubaker",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4875,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1672",
+      "title": "Castle of Horror",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4876,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2602",
+      "title": "Chichen Itza",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4877,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-920",
+      "title": "City of Shadows, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4878,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5576",
+      "title": "Cliff Diver 2: Purchase Sight Unseen",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4879,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2623",
+      "title": "Colon 1492",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4880,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-925",
+      "title": "Curse of Calutha",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4881,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1693",
+      "title": "Curse, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4882,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2175",
+      "title": "Cyborg",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4883,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1380",
+      "title": "Dances with Bunny Rabbits",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4884,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-130",
+      "title": "Dark Tower, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4885,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7705",
+      "title": "Dave Dangerous",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4886,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8258",
+      "title": "Dawn Patrol",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4887,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4609",
+      "title": "Day Dream",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4888,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4608",
+      "title": "Days of Sorcery",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4889,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2688",
+      "title": "Deep Probe",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4890,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2709",
+      "title": "Disappearance!",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4891,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7412",
+      "title": "Dungeon",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4892,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-162",
+      "title": "Dunnet",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4893,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10713",
+      "title": "Escape from Desert Island",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4894,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10106",
+      "title": "Escape From Jail",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4895,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2776",
+      "title": "Escaping Habit, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4896,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2779",
+      "title": "Espia, El",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4897,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9049",
+      "title": "Everyday, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4898,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2797",
+      "title": "Exiled",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4899,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2812",
+      "title": "Federico Jones",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4900,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-953",
+      "title": "First Past the Post",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4901,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4907",
+      "title": "Flight From Danger",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4902,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5085",
+      "title": "Forest, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4903,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-759",
+      "title": "Four Symbols, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4904,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2208",
+      "title": "Frustration",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4905,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9264",
+      "title": "Future Quest",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4906,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-222",
+      "title": "Gerbil Riot of '67, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4907,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2888",
+      "title": "Hades",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4908,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2905",
+      "title": "Heroes '92",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4909,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9127",
+      "title": "Heroine",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4910,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2907",
+      "title": "Hideous, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4911,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2910",
+      "title": "Hired to Kill",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4912,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1594",
+      "title": "I Dare You",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4913,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-774",
+      "title": "Impact!",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4914,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-10206",
+      "title": "Insanity I: The Triangle",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4915,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1774",
+      "title": "Island, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4916,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6117",
+      "title": "Island, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4917,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2960",
+      "title": "Jason",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4918,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8475",
+      "title": "Jubilee Road",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4919,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7413",
+      "title": "Jungle",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4920,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7708",
+      "title": "Justice",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4921,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7980",
+      "title": "Key to Time, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4922,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3679",
+      "title": "Kingsley's Mansion",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4923,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-894",
+      "title": "L.A. Adventure",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4924,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4817",
+      "title": "Lady in Green, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4925,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9123",
+      "title": "Life After Death",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4926,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3035",
+      "title": "Lobos",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4927,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8330",
+      "title": "Lost Gold",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4928,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3087",
+      "title": "Mapper, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4929,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-728",
+      "title": "Marooned",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4930,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8333",
+      "title": "Mission's End",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4931,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1252",
+      "title": "Murder Hunt II",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4932,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4690",
+      "title": "Mysterious Land",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4933,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6485",
+      "title": "Negra Noche",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4934,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2262",
+      "title": "Night at the Top, A",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4935,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5067",
+      "title": "Night Life",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4936,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3175",
+      "title": "Nightmare!",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4937,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1022",
+      "title": "Parole",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4938,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8827",
+      "title": "Passing Darkness",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4939,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2295",
+      "title": "Paul's First Journey",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4940,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1023",
+      "title": "Peneless",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4941,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-803",
+      "title": "Personal Computer Whirled!",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4942,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3246",
+      "title": "Piratas",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4943,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1028",
+      "title": "Pre-history",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4944,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3303",
+      "title": "Quest for the Holy Something",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4945,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3322",
+      "title": "Re-Evolucion",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4946,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8482",
+      "title": "Reruns Again",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4947,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-456",
+      "title": "Run, Bronwynn, Run!",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4948,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8417",
+      "title": "Runcibal Quest",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4949,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6216",
+      "title": "Sea Quest, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4950,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1054",
+      "title": "Seven Lost Gnomes",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4951,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3436",
+      "title": "Solvaldol-X",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4952,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6814",
+      "title": "Soul Crystal",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4953,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2378",
+      "title": "Space Detective",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4954,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7677",
+      "title": "SpamCo Adventure",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4955,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9674",
+      "title": "Stalker",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4956,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1061",
+      "title": "Star Flaws",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4957,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9675",
+      "title": "Stodman",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4958,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3476",
+      "title": "Stranded",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4959,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7109",
+      "title": "Survivor",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4960,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1067",
+      "title": "Tax Returns",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4961,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8488",
+      "title": "Tempest, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4962,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3530",
+      "title": "Tijeras",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4963,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6735",
+      "title": "Tomb of the Ancient Pharaohs, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4964,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3550",
+      "title": "Total War",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4965,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3553",
+      "title": "Tourist Trouble",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4966,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-5937",
+      "title": "Tut's Tomb",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4967,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-566",
+      "title": "Unborn One, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4968,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4785",
+      "title": "Undercover",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4969,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-8351",
+      "title": "What? No Alcohol-Free Mineral Water!",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4970,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-3637",
+      "title": "Whitman Day",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4971,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1292",
+      "title": "Wizard Quest",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4972,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2396",
+      "title": "Wizards Skull, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4973,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "lemon64-table-20261105-row424",
+      "title": "Arnold the Adventurer",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4974,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row427",
+      "title": "Famous Five, The: Five on a Treasure Island",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4975,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row428",
+      "title": "Inner Lakes, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4976,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row429",
+      "title": "Jhothamia 6",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4977,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row430",
+      "title": "LA Adventure, The",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4978,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "lemon64-table-20261105-row431",
+      "title": "Theseus and the Minotaur",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 4979,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon64"
+    },
+    {
+      "workId": "casa-table-20261105-9052",
+      "title": "A Tó Rejtélye",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4980,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4963",
+      "title": "Adventure",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4981,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4981",
+      "title": "After the Party",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4982,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-9077",
+      "title": "Aircraft",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4983,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-909",
+      "title": "Apprentice, The",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4984,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1652",
+      "title": "Atlantis Adventure, The",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4985,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2534",
+      "title": "Battleforce",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4986,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4991",
+      "title": "Black Mass, The",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4987,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2001",
+      "title": "Black Pearl, The",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4988,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-797",
+      "title": "Black Tower, The",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4989,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2206",
+      "title": "Box",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4990,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7979",
+      "title": "Busted!",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4991,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-820",
+      "title": "By Jove",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4992,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2228",
+      "title": "Cairo Connection, The",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4993,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6250",
+      "title": "Captured",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4994,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-6833",
+      "title": "Castle Adventure Simulator",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4995,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1673",
+      "title": "Cave, The",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4996,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-4818",
+      "title": "CERCLA",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4997,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-2608",
+      "title": "Cimmerjan",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4998,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-7312",
+      "title": "Curses",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 4999,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    },
+    {
+      "workId": "casa-table-20261105-1124",
+      "title": "Dark Convergence",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 5000,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "CASA"
+    }
+  ],
+  "notice": "追加来源记录数，不代表去重后的独立作品数。"
+}
