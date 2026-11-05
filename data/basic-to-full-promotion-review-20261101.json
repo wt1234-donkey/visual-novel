@@ -4,11 +4,11 @@
   "destination": "data/games.json after the specified original-release evidence is reviewed",
   "reason": "strict 3-layer model cannot legitimately turn a title/year into a fictitious release",
   "summary": {
-    "registryAccepted": 100943,
-    "basicIdentities": 99041,
-    "stageableBasic": 91863,
-    "alreadyInMainOrDossier": 522,
-    "heldConflicts": 6656,
+    "registryAccepted": 102204,
+    "basicIdentities": 100302,
+    "stageableBasic": 93115,
+    "alreadyInMainOrDossier": 527,
+    "heldConflicts": 6660,
     "offset": 0,
     "limit": 100,
     "staged": 100
@@ -8715,6 +8715,71 @@
         {
           "workId": "g1410",
           "year": 2025,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-47328",
+      "title": "DE・JA II",
+      "firstYear": 1992,
+      "matched": [
+        {
+          "workId": "g688",
+          "year": 1992,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-130",
+      "title": "King's Quest V: Absence Makes the Heart Go Yonder!",
+      "firstYear": 1990,
+      "matched": [
+        {
+          "workId": "g1101",
+          "year": 1990,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-46186",
+      "title": "Mugen Hōyō",
+      "firstYear": 1995,
+      "matched": [
+        {
+          "workId": "g560",
+          "year": 1995,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-51204",
+      "title": "Will: The Death Trap II",
+      "firstYear": 1985,
+      "matched": [
+        {
+          "workId": "g081",
+          "year": 1985,
+          "scope": "complete"
+        }
+      ],
+      "reason": "existing identity"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-11646",
+      "title": "Princess Maker",
+      "firstYear": 1991,
+      "matched": [
+        {
+          "workId": "g820",
+          "year": 1991,
           "scope": "complete"
         }
       ],
@@ -40046,6 +40111,49 @@
     {
       "id": "ifarchive-table-20261104-olh9vmqc39p9li7u",
       "reason": "duplicate external identity within basic registry"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-243485",
+      "reason": "invalid source or debut year"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-59025",
+      "title": "AIR",
+      "firstYear": 1987,
+      "matched": [
+        {
+          "workId": "g029",
+          "year": 2000,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-161042",
+      "title": "Alice in Wonderland",
+      "firstYear": 1984,
+      "matched": [
+        {
+          "workId": "g1602",
+          "year": 1985,
+          "scope": "complete"
+        }
+      ],
+      "reason": "identity/year conflict"
+    },
+    {
+      "id": "mobygames-pc88-pc98-20261105-58942",
+      "title": "Seiken Densetsu",
+      "firstYear": 1983,
+      "matched": [
+        {
+          "workId": "square-seiken",
+          "year": 1991,
+          "scope": "dossier"
+        }
+      ],
+      "reason": "identity/year conflict"
     }
   ]
 }
