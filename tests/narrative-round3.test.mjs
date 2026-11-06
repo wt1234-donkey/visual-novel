@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
+import * as basicFilters from '../basic-catalogue-filters.mjs';
 import {workKey,validateStore,projectEntries} from '../basic-catalogue-model.mjs';
 
 test('basic catalogue loads round three with canonical identities, aliases and deferred decisions', async()=>{
@@ -14,7 +15,7 @@ test('basic catalogue loads round three with canonical identities, aliases and d
     });
     return elements.get(id);
   }
-  const context=vm.createContext({document:{getElementById:element},console,workKey,validateStore,createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
+  const context=vm.createContext({...basicFilters,document:{getElementById:element},console,workKey,validateStore,createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
     fetch:async path=>({ok:true,json:async()=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'))})});
   await vm.runInContext((await readFile(new URL('../minimal-adv-rpg.mjs',import.meta.url),'utf8')).replace(/^import .*;$/gm,''),context);
   const entries=JSON.parse(vm.runInContext('JSON.stringify(entries)',context));

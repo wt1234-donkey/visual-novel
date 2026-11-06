@@ -2,7 +2,16 @@
 export const emptyStore=()=>({schemaVersion:1,revision:0,additions:[],records:{},recent:[]});
 export const workKey=w=>w.matchedWorkId||w.registryId||w.id;
 export const nameKey=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
-export const STYLE_OPTIONS=['恋爱','日常','喜剧','悬疑','推理','惊悚','恐怖','悲剧','治愈','热血','冒险','史诗','黑暗','荒诞','讽刺','哲思','群像','其他'];
+export const STYLE_GROUPS={
+ '情感与关系':['恋爱','纯爱','日常','青春','成长','亲情','友情','百合','耽美','群像','三角关系','病娇'],
+ '氛围与情绪':['喜剧','轻松','温情','治愈','催泪','感伤','致郁','悲剧','黑暗','热血','燃系','唯美'],
+ '悬疑与冲突':['悬疑','推理','惊悚','恐怖','猎奇','心理','犯罪','复仇','生存','战争'],
+ '幻想与冒险':['冒险','史诗','奇幻','科幻','魔幻现实','超自然','历史','武侠','末世','赛博朋克'],
+ '表达与思考':['荒诞','讽刺','黑色幽默','哲思','意识流','实验性','元叙事'],
+ '成人与禁忌题材':['成人向','色情','背德','禁忌关系','NTR','乱伦'],
+ '其他':['其他']
+};
+export const STYLE_OPTIONS=Object.values(STYLE_GROUPS).flat();
 const clone=x=>structuredClone(x);
 const own=(obj,k)=>Object.hasOwn(obj,k);
 const fields=['title','firstYear','group','gameplay','plotStyles','source'];

@@ -32,7 +32,7 @@
     .notice{margin-top:18px;color:var(--muted);font-size:14px}
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
   </style>
-  <link rel="stylesheet" href="basic-catalogue.css?v=20261103-manager">
+  <link rel="stylesheet" href="basic-catalogue.css?v=20261106-filters">
   <script type="module" src="minimal-adv-rpg.mjs?v=20261104-permissions"></script>
 </head>
 <body><div class="wrap">
@@ -45,7 +45,7 @@
       <div><strong id="stat-total">—</strong><small>基础索引可查询记录（含待核）</small></div>
       <div><strong id="stat-new">—</strong><small>已提升主库新身份</small></div>
       <div><strong id="stat-linked">—</strong><small>候选匹配已有作品</small></div>
-      <div><strong id="stat-groups">—</strong><small>本轮覆盖厂商关联组</small></div>
+      <div><strong id="stat-groups">—</strong><small>合并大小写后的厂商关联组</small></div>
     </section>
     <section class="basic-toolbar" aria-label="基础库管理">
       <button type="button" id="basic-add" disabled>＋ 添加作品</button>
@@ -62,14 +62,30 @@
       <label>原作首发年份<select id="year"><option value="">全部年份</option><option value="unknown">年份待核</option></select></label>
       <label>玩法<select id="gameplay"><option value="">全部玩法</option></select></label>
       <label>剧情风格<select id="style"><option value="">全部风格</option></select></label>
-      <label>厂商关联组<select id="group"><option value="">全部厂商</option></select></label>
       <label>收录状态<select id="status"><option value="">全部状态</option><option value="manual-basic">网页直接添加</option><option value="new-basic">原索引未提升</option><option value="promoted-basic">主库新增基础身份</option><option value="promoted-dossier">主库关联厂商专题</option><option value="main-linked">完整主库已有</option><option value="main-registry-linked">此前主库身份已关联</option><option value="identity-review">身份待核</option><option value="eligibility-review">叙事与玩法主次待核</option></select></label>
+      <div class="manufacturer-filters">
+        <label>厂商地区<select id="group-region"><option value="">全部地区</option><option id="group-region-japan" value="japan">日本厂商</option><option id="group-region-other" value="other">非日本厂商</option><option id="group-region-unknown" value="unknown">地区待核</option></select></label>
+        <label>厂商名称搜索<input id="group-query" type="search" placeholder="输入厂商名，不区分大小写" aria-describedby="group-count"></label>
+        <label>厂商关联组<select id="group"><option value="">全部匹配厂商</option></select></label>
+        <p id="group-count" class="minor" role="status">正在整理厂商选项…</p>
+      </div>
+      <p class="filter-note" id="filter-note">厂商地区未登记的保留为“地区待核”。玩法合并中英文近义写法；多玩法作品可分别命中，原始资料保持可追溯。风格数量为0表示尚未填写。</p>
+      <button type="button" id="filter-reset">清除全部筛选</button>
     </section>
     <section class="results"><p class="count" id="count" role="status">正在读取索引……</p>
     <p class="minor">点击作品名称可修改或删除；勾选多部作品可指定主作品并合并版本。默认按年份从早到晚排序，未知年份置后。</p>
+    <nav class="buttons basic-pagination" aria-label="上方分页">
+      <button id="prev" type="button" disabled>上一页</button><span id="pagination" aria-live="polite"></span><button id="next" type="button" disabled>下一页</button>
+      <form id="page-jump" class="page-jump"><label for="page-number">跳至页码</label><input id="page-number" type="number" inputmode="numeric" min="1" step="1" required disabled aria-describedby="page-error"><button id="page-go" type="submit" disabled>跳转</button></form>
+      <p id="page-error" class="page-error" role="status"></p>
+    </nav>
     <table><thead><tr><th><span class="minor">选择</span></th><th>作品名称</th><th>首发年份</th><th>主要玩法</th><th>剧情风格</th><th>厂商关联</th><th>编目状态</th><th>依据</th></tr></thead>
     <tbody id="rows"></tbody></table>
-    <div class="buttons"><button id="prev" type="button">上一页</button><span id="pagination" aria-live="polite"></span><button id="next" type="button">下一页</button></div>
+    <nav class="buttons basic-pagination" aria-label="下方分页">
+      <button id="prev-bottom" type="button" disabled>上一页</button><span id="pagination-bottom" aria-live="polite"></span><button id="next-bottom" type="button" disabled>下一页</button>
+      <form id="page-jump-bottom" class="page-jump"><label for="page-number-bottom">跳至页码</label><input id="page-number-bottom" type="number" inputmode="numeric" min="1" step="1" required disabled aria-describedby="page-error-bottom"><button id="page-go-bottom" type="submit" disabled>跳转</button></form>
+      <p id="page-error-bottom" class="page-error" role="status"></p>
+    </nav>
     </section>
     <div class="notice"><strong>收录说明：</strong>统一基础身份层的记录已完整纳入本页搜索，不再只显示早期候选清单；旧 games.json 仍专用于完整角色、发行与版本档案。不同类型记录复用已有身份，不重复制造完整作品或发行版本。厂商分组表示编目关联，不自动断言开发／发行职责；部分早期作品的首发机种与具体日期仍需复核。<p><a href="data/main-adv-rpg-works-20261031.json">查看原始基础身份 JSON</a> · <a href="data/basic-catalogue-edits.json">查看网页修改记录</a> · <a href="data/adv-rpg-minimal-candidates-20261031.json">查看原始候选来源清单</a></p></div>
   </main>
