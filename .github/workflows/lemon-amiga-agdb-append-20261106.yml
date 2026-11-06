@@ -1,0 +1,67 @@
+name: Append Lemon Amiga and AGDB batch 222
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/lemon-amiga-agdb-append-20261106.yml'
+      - 'scripts/import_lemon_amiga_agdb_20261106.py'
+      - 'data/lemon-amiga-agdb-append-source-20261106.json.gz.b64'
+      - 'data/lemon-amiga-agdb-append-manifest-20261106.json'
+      - 'tests/test_lemon_amiga_agdb_append_20261106.py'
+      - 'tests/test_main_adv_rpg_registry_20261031.py'
+permissions:
+  contents: read
+concurrency:
+  group: lemon-amiga-agdb-append-20261106
+  cancel-in-progress: false
+jobs:
+  intake:
+    if: github.head_ref == 'catalog/lemon-amiga-agdb-append-20261106' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Append all 489 selected workbook rows
+        run: python3 scripts/import_lemon_amiga_agdb_20261106.py --all
+      - name: Verify source rows and unchanged original records
+        run: |
+          python3 scripts/import_lemon_amiga_agdb_20261106.py --check
+          python3 scripts/import_casa_lemon64_20261105.py --check
+      - name: Refresh indexes and dossiers
+        run: |
+          python3 scripts/sync_versions_csv.py
+          python3 scripts/export_content_csv.py
+          python3 scripts/export_interaction_csv.py
+          python3 scripts/build_entity_model.py
+          python3 scripts/build_entity_pages.py
+          python3 scripts/build_company_pages.py
+      - name: Validate Python Node and data integrity
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+          python3 scripts/build_entity_model.py --check
+          python3 scripts/build_entity_pages.py --check
+      - name: Commit and push verified paired intake
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/main-adv-rpg-works-20261031.json data/lemon-amiga-agdb-append-review-20261106-r*.json
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m 'Append Lemon Amiga/AGDB: 489 rows without deduplication'
+            git push origin HEAD:${{ github.head_ref }}
+          fi
