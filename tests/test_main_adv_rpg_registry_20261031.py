@@ -65,6 +65,11 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
                 self.assertIn(w['gameplay'],{'冒险（玩法待核）','纯文字冒险','图文冒险'})
                 self.assertRegex(w['id'],r'^(casa-table-20261105-[0-9]+|lemon64-table-20261105-row[0-9]+)$')
                 self.assertIn(w['sourceSubset'],{'unmatched','suspected-existing'})
+            elif w.get('sourceSnapshot') == 'data/lemon-amiga-agdb-append-source-20261106.json.gz.b64':
+                self.assertTrue(w['gameplay'])
+                self.assertRegex(w['id'],r'^lemon-amiga-agdb-20261106-[0-9]{4}$')
+                self.assertIn(w['sourceSubset'],{'unmatched','suspected-existing'})
+                self.assertIn(w['sourceScope'],{'叙事主表','混合玩法候选'})
             else:
                 self.assertIn(w['gameplay'],{'ADV','RPG','ARPG','SRPG','视觉小说','互动电影ADV','ADV／策略RPG','Galgame（玩法待核）'})
             self.assertTrue(not set(w)&{'characters','characterDetails','contentVersions','platformReleases','writer','illustrator','composer','synopsis','creators'})

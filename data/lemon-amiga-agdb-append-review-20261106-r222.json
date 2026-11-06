@@ -1,0 +1,3937 @@
+{
+  "schema": 1,
+  "date": "2026-11-06",
+  "batch": 222,
+  "batchSizeLimit": 500,
+  "intakePolicy": "append-without-deduplication",
+  "sourceSnapshot": "data/lemon-amiga-agdb-append-source-20261106.json.gz.b64",
+  "sourceOffset": 0,
+  "summary": {
+    "candidates": 489,
+    "promoted-basic": 489,
+    "appendedRecords": 489,
+    "unmatched": 308,
+    "suspectedExisting": 181,
+    "narrativeMain": 400,
+    "mixedGameplayCandidates": 89,
+    "unknownYear": 3,
+    "before": 107684,
+    "after": 108173,
+    "deduplication": "not-performed"
+  },
+  "records": [
+    {
+      "workId": "lemon-amiga-agdb-20261106-0001",
+      "title": "Adventure in Serenia",
+      "directoryYear": 1980,
+      "sourceSnapshotRow": 1,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0002",
+      "title": "Deathmaze 5000",
+      "directoryYear": 1980,
+      "sourceSnapshotRow": 2,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0003",
+      "title": "The Desecration",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 3,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0004",
+      "title": "Aztec Tomb Adventure",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 4,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0005",
+      "title": "Gwendolyn",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 5,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0006",
+      "title": "Journey to Mt. Doom",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 6,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0007",
+      "title": "Murder on the Zinderneuf",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 7,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0008",
+      "title": "Mystic Mansion",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 8,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0009",
+      "title": "The Ebony Castle",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 9,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0010",
+      "title": "Below the Root",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 10,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0011",
+      "title": "Castle Ragoona",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 11,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0012",
+      "title": "Graphic Mars",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 12,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0013",
+      "title": "Graphic Pyramid",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 13,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0014",
+      "title": "Robot Odyssey",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 14,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0015",
+      "title": "Sam Sleuth: Private Investigator",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 15,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0016",
+      "title": "The Elysian Fields",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 16,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0017",
+      "title": "The Search for King Solomon's Mines: Part 1",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 17,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0018",
+      "title": "Upper Gumtree and Professor Blowitovitz",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 18,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0019",
+      "title": "A View to a Kill: The Computer Game",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 19,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0020",
+      "title": "Cylu",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 20,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0021",
+      "title": "Doctor Who and the Mines of Terror",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 21,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0022",
+      "title": "Futuria",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 22,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0023",
+      "title": "Marsport",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 23,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0024",
+      "title": "Maui Vice",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 24,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0025",
+      "title": "Mission of Vengeance",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 25,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0026",
+      "title": "Pyramid 3000",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 26,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0027",
+      "title": "Saga: The Sorcerer's Curse",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 27,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0028",
+      "title": "Starship Falcon",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 28,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0029",
+      "title": "The Andrea Coco",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 29,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0030",
+      "title": "The Interbank Incident",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 30,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0031",
+      "title": "The Young Ones",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 31,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0032",
+      "title": "Transylvania 2: The Crimson Crown",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 32,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0033",
+      "title": "Wilderness: A Survival Adventure",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 33,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0034",
+      "title": "Doctor What!",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 34,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0035",
+      "title": "Indiana Jim",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 35,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0036",
+      "title": "Jewels of Darkness",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 36,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga\nAGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0037",
+      "title": "Killed Until Dead",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 37,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0038",
+      "title": "Knight Tyme",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 38,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0039",
+      "title": "Magic Rings",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 39,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0040",
+      "title": "Murder on the Atlantic",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 40,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0041",
+      "title": "Pluton Quest",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 41,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0042",
+      "title": "Queen Quest",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 42,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0043",
+      "title": "Radical Castle",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 43,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0044",
+      "title": "Spy's Adventures in Europe. The",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 44,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0045",
+      "title": "The Adventures of Bond... Basildon Bond",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 45,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0046",
+      "title": "The Boggit: Bored Too",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 46,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0047",
+      "title": "The CoCo Zone",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 47,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0048",
+      "title": "The Dragons Castle",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 48,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0049",
+      "title": "The Golden Path",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 49,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB\nLemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0050",
+      "title": "The King of Chicaco",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 50,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0051",
+      "title": "The Magic of Zanth",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 51,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0052",
+      "title": "The Spy's Adventures in North America",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 52,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0053",
+      "title": "The Trap Door",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 53,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0054",
+      "title": "Ultima III: Exodus",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 54,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0055",
+      "title": "Wizard's Warehouse",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 55,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0056",
+      "title": "Zoony",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 56,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0057",
+      "title": "3rd Floor",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 57,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0058",
+      "title": "Bermuda Project",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 58,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB\nLemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0059",
+      "title": "Brataccas",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 59,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0060",
+      "title": "Bug Hunt",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 60,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0061",
+      "title": "Declic, Le",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 61,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0062",
+      "title": "Deep Angst",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 62,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0063",
+      "title": "Eidisi",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 63,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0064",
+      "title": "Find the Heart",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 64,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0065",
+      "title": "Fred Rogers: Terrorist",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 65,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0066",
+      "title": "How to be a Complete Bastard",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 66,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0067",
+      "title": "King of Chicago, The",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 67,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0068",
+      "title": "Les Lutins du Mont Rigaud",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 68,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0069",
+      "title": "Little Pythagoras",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 69,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0070",
+      "title": "Mountain of Mayhem",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 70,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0071",
+      "title": "Nuke the Love Boat!",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 71,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0072",
+      "title": "Periapt",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 72,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0073",
+      "title": "Psychotic: The Escape",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 73,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0074",
+      "title": "Quest for the T-Rex",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 74,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0075",
+      "title": "Sands of Time",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 75,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0076",
+      "title": "Sword of Siegfried",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 76,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0077",
+      "title": "The Hotel Caper",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 77,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0078",
+      "title": "The Lansford Manor Adventure",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 78,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0079",
+      "title": "The Spy's Adventures in South America",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 79,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0080",
+      "title": "Through the Trap Door",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 80,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0081",
+      "title": "Wizard Warz",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 81,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0082",
+      "title": "ZikTuria",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 82,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0083",
+      "title": "20,000 Leagues Under the Sea",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 83,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0084",
+      "title": "Alien Fires 2199 A.D.",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 84,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0085",
+      "title": "Alternate Reality: The City",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 85,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0086",
+      "title": "Auto Duel",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 86,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0087",
+      "title": "Bozuma",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 87,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0088",
+      "title": "Caladuril 2: Weatherstone's End",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 88,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0089",
+      "title": "Castle of Ert",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 89,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0090",
+      "title": "Dash Hansen and the Search for the Black Orchid",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 90,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0091",
+      "title": "Deep Angst II: The Nightmare Ends",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 91,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0092",
+      "title": "Federation of Free Traders",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 92,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0093",
+      "title": "Fright Night",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 93,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0094",
+      "title": "Galdregon's Domain (European version)",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 94,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0095",
+      "title": "Gold of the Realm",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 95,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB\nLemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0096",
+      "title": "GrailQuest: Adventure in the Age of King Arthur",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 96,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0097",
+      "title": "Indian Mission",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 97,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga\nAGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0098",
+      "title": "Inigo Goes To Hell",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 98,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0099",
+      "title": "L.A. Crackdown",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 99,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0100",
+      "title": "Mewilo",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 100,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0101",
+      "title": "Mormonoids from the Deep",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 101,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0102",
+      "title": "Mr. Corey",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 102,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0103",
+      "title": "Mystery of the Mummy",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 103,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0104",
+      "title": "Questron II",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 104,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0105",
+      "title": "Return of the Dinosaurs",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 105,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0106",
+      "title": "Romantic Encounters at the Dome",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 106,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0107",
+      "title": "Schmoozer",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 107,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0108",
+      "title": "Slaygon",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 108,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0109",
+      "title": "Spear of Destiny",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 109,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0110",
+      "title": "Strange Disappearance",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 110,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0111",
+      "title": "Swamp Witch",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 111,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0112",
+      "title": "The Controllers",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 112,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0113",
+      "title": "The Jetsons: George Jetson and the Legend of Robotopia",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 113,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0114",
+      "title": "The President is Missing",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 114,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0115",
+      "title": "Time and Magik: The Trilogy",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 115,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0116",
+      "title": "Tomb of T'ien",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 116,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0117",
+      "title": "Where in Europe is Carmen Sandiego?",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 117,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0118",
+      "title": "Who Framed Roger Rabbit",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 118,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0119",
+      "title": "Willow",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 119,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0120",
+      "title": "20000 Leagues under the Sea",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 120,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0121",
+      "title": "Adventures Through Time",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 121,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0122",
+      "title": "Antepenult",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 122,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0123",
+      "title": "Asterix: Operation Getafix",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 123,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0124",
+      "title": "Berlin 1948",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 124,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga\nAGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0125",
+      "title": "Beyond Dark Castle",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 125,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0126",
+      "title": "Bride of the Robot",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 126,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0127",
+      "title": "Caper in the Castro",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 127,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0128",
+      "title": "Cosmic Osmo",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 128,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0129",
+      "title": "DragonQuest II - The Return of the King",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 129,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0130",
+      "title": "Fetiche Maya, Le",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 130,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0131",
+      "title": "Final Command",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 131,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga\nAGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0132",
+      "title": "Grail, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 132,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0133",
+      "title": "Jetsons, The: George Jetson and the Legend of Robotopia",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 133,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0134",
+      "title": "Karth of the Jungle I & II",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 134,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0135",
+      "title": "Keef the Thief: A Boy and His Lockpick",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 135,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0136",
+      "title": "Kristal, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 136,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0137",
+      "title": "L'Affaire...",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 137,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0138",
+      "title": "Legend of Djel",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 138,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga\nAGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0139",
+      "title": "Mike's House",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 139,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0140",
+      "title": "Minitorian",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 140,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0141",
+      "title": "Moria: Moria 3 - Demon's Winter",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 141,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0142",
+      "title": "Murders in Venice",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 142,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga\nAGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0143",
+      "title": "Omnicron Conspiracy",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 143,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0144",
+      "title": "Planet of Lust",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 144,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0145",
+      "title": "Portes du Temps, Les",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 145,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0146",
+      "title": "Quest for the Time-Bird, The",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 146,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga\nAGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0147",
+      "title": "Questmaster I - The Prism of Hekeulotal",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 147,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0148",
+      "title": "Revenge of the Germs",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 148,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0149",
+      "title": "Robot Planet",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 149,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0150",
+      "title": "sMythWorld",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 150,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0151",
+      "title": "The Case of the Cautious Condor",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 151,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0152",
+      "title": "Universe 3",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 152,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0153",
+      "title": "Weird Dreams",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 153,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0154",
+      "title": "Where in Europe is Carmen Sandiego?",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 154,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0155",
+      "title": "Where in North Dakota is Carmen Sandiego?",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 155,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0156",
+      "title": "Windwalker",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 156,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0157",
+      "title": "Zerg 1.0",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 157,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0158",
+      "title": "Astate: La Malédiction des Templiers",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 158,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0159",
+      "title": "Bleed",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 159,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0160",
+      "title": "Explora III: Sous Le Signe Du Serpent",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 160,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0161",
+      "title": "Fatal Heritage",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 161,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0162",
+      "title": "Gravity",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 162,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0163",
+      "title": "Grimblood",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 163,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0164",
+      "title": "Herewith the Clues",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 164,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0165",
+      "title": "Inspektor Griffu: Ein Toter hat Heimweh",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 165,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0166",
+      "title": "James Bond: The Stealth Affair",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 166,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0167",
+      "title": "Keys to Maramon, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 167,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0168",
+      "title": "King's Quest 1: Quest for the Crown (Enhanced)",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 168,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0169",
+      "title": "Maupiti Island",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 169,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0170",
+      "title": "Murders in Space",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 170,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0171",
+      "title": "Night Breed: The Interactive Movie",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 171,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0172",
+      "title": "Olympus",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 172,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0173",
+      "title": "Omnicron Conspiracy",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 173,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0174",
+      "title": "Operation Stealth",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 174,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0175",
+      "title": "Quest for Glory II: Trial by Fire",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 175,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0176",
+      "title": "Stadt der Löwen, Die",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 176,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0177",
+      "title": "Universe 3",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 177,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0178",
+      "title": "Xenomorph",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 178,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0179",
+      "title": "Zombi",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 179,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0180",
+      "title": "Adventures of Maddog Williams, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 180,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0181",
+      "title": "Alien Drug Lords: The Chyropian Connection",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 181,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0182",
+      "title": "Baba Yaga",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 182,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0183",
+      "title": "Bill & Ted's Excellent Adventure",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 183,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0184",
+      "title": "BIT in the Magic Castle",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 184,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0185",
+      "title": "Brad Stallion in Sex Olympics",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 185,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0186",
+      "title": "Case of the Cautious Condor, The",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 186,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0187",
+      "title": "Conan the Cimmerian",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 187,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0188",
+      "title": "Einmal Kanzler sein",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 188,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0189",
+      "title": "Fascination",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 189,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0190",
+      "title": "Hard Nova",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 190,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0191",
+      "title": "Obitus",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 191,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0192",
+      "title": "Theme Park Mystery: Variations on a Theme",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 192,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0193",
+      "title": "Vengeance of Excalibur",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 193,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0194",
+      "title": "Wreckers",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 194,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0195",
+      "title": "Abandoned Places: A Time for Heroes",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 195,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0196",
+      "title": "Amberstar",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 196,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0197",
+      "title": "B.A.T. II",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 197,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0198",
+      "title": "Bargon Attack",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 198,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0199",
+      "title": "Crime City",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 199,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0200",
+      "title": "Curse of Enchantia",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 200,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0201",
+      "title": "Dead Breath",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 201,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0202",
+      "title": "Endurance",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 202,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0203",
+      "title": "Hook",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 203,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0204",
+      "title": "Jetsons: The Computer Game",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 204,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0205",
+      "title": "KGB",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 205,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0206",
+      "title": "Lure of the Temptress",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 206,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0207",
+      "title": "Nippon Safes Inc.",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 207,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0208",
+      "title": "North Polar Expedition",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 208,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0209",
+      "title": "Plan 9 from Outer Space",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 209,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0210",
+      "title": "Pussy Quest 1: A Weekend in the Bush",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 210,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0211",
+      "title": "Relics of Deldroneye: Book One - Falcon and the Medivians",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 211,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0212",
+      "title": "Schwarze Auge, Das: Die Schicksalsklinge",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 212,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0213",
+      "title": "Unlikely Adventures of Edd Schiester, The: #1: Escape from a Large Cave",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 213,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0214",
+      "title": "Vision: The 5 Dimension Utopia",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 214,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0215",
+      "title": "Abandoned Places 2",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 215,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0216",
+      "title": "Ambermoon",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 216,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0217",
+      "title": "Bi-Fi: SnackZone",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 217,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0218",
+      "title": "Crystal Skull",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 218,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0219",
+      "title": "Diabolik 10: All'Ultimo Sangue",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 219,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0220",
+      "title": "Dylan Dog: Through the Looking Glass",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 220,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0221",
+      "title": "Flies: Attack on Earth",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 221,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0222",
+      "title": "Guy Spy and the Crystals of Armageddon",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 222,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0223",
+      "title": "Indiana Jones and the Fate of Atlantis",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 223,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0224",
+      "title": "Světák Bob",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 224,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0225",
+      "title": "Telekommando Kehrt Zurück, Das",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 225,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0226",
+      "title": "VL: Das Spiel",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 226,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0227",
+      "title": "War Wizard",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 227,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0228",
+      "title": "Whale's Voyage",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 228,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0229",
+      "title": "7 dní a 7 nocí",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 229,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0230",
+      "title": "Beneath A Steel Sky",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 230,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0231",
+      "title": "Bi-Fi: Action in Hollywood",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 231,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0232",
+      "title": "Black Sect",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 232,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0233",
+      "title": "BloodNet: A Cyberpunk Gothic",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 233,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0234",
+      "title": "Cesta Tmou",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 234,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0235",
+      "title": "Clou!, Der",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 235,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0236",
+      "title": "Clue!, The",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 236,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0237",
+      "title": "DreamWeb",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 237,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0238",
+      "title": "Gladiators of Dagania, The",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 238,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0239",
+      "title": "In the Dead of Night",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 239,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0240",
+      "title": "Innocent Until Caught",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 240,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0241",
+      "title": "Jimmy Willburne: A La Recherche Du Peigne Perdu",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 241,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0242",
+      "title": "Mentor",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 242,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0243",
+      "title": "Mobsters City",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 243,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0244",
+      "title": "Prey: An Alien Encounter",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 244,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0245",
+      "title": "Robinson's Requiem",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 245,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0246",
+      "title": "Valhalla and the Lord of Infinity",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 246,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0247",
+      "title": "Züri",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 247,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0248",
+      "title": "Eire Raising Adventures of Seamus O'Mally, The",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 248,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0249",
+      "title": "Eksperyment Delfin",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 249,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0250",
+      "title": "Emotional Conflict",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 250,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0251",
+      "title": "Epsilon 9: The Revenge of the Stingons",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 251,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0252",
+      "title": "Erben der Erde: Die große Suche",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 252,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0253",
+      "title": "Flight of the Amazon Queen",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 253,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0254",
+      "title": "Jaktar: Der Elfenstein",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 254,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0255",
+      "title": "Kajko i Kokosz",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 255,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0256",
+      "title": "Kwatermaster",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 256,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0257",
+      "title": "Lethal Formula",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 257,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0258",
+      "title": "Magic Island: The Secret of Stones",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 258,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0259",
+      "title": "Mrtvá Cesta",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 259,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0260",
+      "title": "Pechowy Prezent",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 260,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0261",
+      "title": "Relics of Deldroneye 1.5: Return to Zantis",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 261,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0262",
+      "title": "Skarb Templariuszy",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 262,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0263",
+      "title": "Teresa: House Guest",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 263,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0264",
+      "title": "Alfabet Śmierci",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 264,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0265",
+      "title": "Caribbean Disaster",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 265,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0266",
+      "title": "Date Girls Club: Vida X",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 266,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0267",
+      "title": "Kargon",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 267,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0268",
+      "title": "Lost on Parrot Island",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 268,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0269",
+      "title": "Relics of Deldroneye 2: Island of Debreen",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 269,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0270",
+      "title": "Rogue Amiga 1.1",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 270,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0271",
+      "title": "Tajemnica Bursztynowej Komnaty",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 271,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0272",
+      "title": "Valhalla & die Festung von Eve",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 272,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0273",
+      "title": "Valhalla & the Fortress of Eve",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 273,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0274",
+      "title": "Ciemna Strona",
+      "directoryYear": 1997,
+      "sourceSnapshotRow": 274,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0275",
+      "title": "Final Odyssey: Theseus verses the Minotaur",
+      "directoryYear": 1997,
+      "sourceSnapshotRow": 275,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0276",
+      "title": "Realm of Sendai",
+      "directoryYear": 1997,
+      "sourceSnapshotRow": 276,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0277",
+      "title": "W Potrzasku",
+      "directoryYear": 1997,
+      "sourceSnapshotRow": 277,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0278",
+      "title": "World of Magic, The",
+      "directoryYear": 1997,
+      "sourceSnapshotRow": 278,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0279",
+      "title": "Olaf Longhair Goes East: A Viking Saga if ever there was one",
+      "directoryYear": 1998,
+      "sourceSnapshotRow": 279,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0280",
+      "title": "Lord of Alcandria: Chapter II",
+      "directoryYear": 1999,
+      "sourceSnapshotRow": 280,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0281",
+      "title": "Lord of Alcandria: Chapter III",
+      "directoryYear": 1999,
+      "sourceSnapshotRow": 281,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0282",
+      "title": "Wasted Dreams",
+      "directoryYear": 1999,
+      "sourceSnapshotRow": 282,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0283",
+      "title": "World of Magic II, The: Ghelae and the Death-Sword",
+      "directoryYear": 1999,
+      "sourceSnapshotRow": 283,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0284",
+      "title": "Muscarine or Erica's Trip",
+      "directoryYear": 2000,
+      "sourceSnapshotRow": 284,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0285",
+      "title": "Nightlong: Union City Conspiracy",
+      "directoryYear": 2000,
+      "sourceSnapshotRow": 285,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0286",
+      "title": "Geo's Quest",
+      "directoryYear": 2001,
+      "sourceSnapshotRow": 286,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0287",
+      "title": "Feeble files, The",
+      "directoryYear": 2002,
+      "sourceSnapshotRow": 287,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0288",
+      "title": "Amiga Christmas Story, An",
+      "directoryYear": 2010,
+      "sourceSnapshotRow": 288,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0289",
+      "title": "Retro Wars: Episodio IV 1/4",
+      "directoryYear": 2016,
+      "sourceSnapshotRow": 289,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0290",
+      "title": "Retro Wars: Episode IV 1/4",
+      "directoryYear": 2017,
+      "sourceSnapshotRow": 290,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0291",
+      "title": "Ultima VII (Exult)",
+      "directoryYear": 2019,
+      "sourceSnapshotRow": 291,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0292",
+      "title": "Furtum Sacrum Adventure",
+      "directoryYear": 2020,
+      "sourceSnapshotRow": 292,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0293",
+      "title": "1987 Rescue in Berlin",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 293,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0294",
+      "title": "1987 Útěk z Berlína",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 294,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0295",
+      "title": "1987: Rescate en Berlin",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 295,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0296",
+      "title": "Geo's Quest 2: In search of Queen Lorraine",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 296,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0297",
+      "title": "Geo's Quest 3: Gateway to Nowhere",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 297,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0298",
+      "title": "Quest Chapter 1 - Demo",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 298,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0299",
+      "title": "Riamel: Black Prophecy",
+      "directoryYear": 2022,
+      "sourceSnapshotRow": 299,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0300",
+      "title": "Wrong Way Back",
+      "directoryYear": 2022,
+      "sourceSnapshotRow": 300,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0301",
+      "title": "Ambermoon Advanced",
+      "directoryYear": 2023,
+      "sourceSnapshotRow": 301,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0302",
+      "title": "ASM: Das Computer-Spiel (Director's Cut)",
+      "directoryYear": 2023,
+      "sourceSnapshotRow": 302,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0303",
+      "title": "Commodore 64: The Mysterious Cassette",
+      "directoryYear": 2023,
+      "sourceSnapshotRow": 303,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0304",
+      "title": "Hack and Slay",
+      "directoryYear": 2024,
+      "sourceSnapshotRow": 304,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0305",
+      "title": "Morning Panic",
+      "directoryYear": 2024,
+      "sourceSnapshotRow": 305,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0306",
+      "title": "Geo's Quest 3 Part 2: There Be Cows",
+      "directoryYear": 2025,
+      "sourceSnapshotRow": 306,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0307",
+      "title": "Ecliptic",
+      "directoryYear": 2026,
+      "sourceSnapshotRow": 307,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0308",
+      "title": "Bleed II",
+      "directoryYear": null,
+      "sourceSnapshotRow": 308,
+      "sourceSubset": "unmatched",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0309",
+      "title": "Deadline",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 309,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0310",
+      "title": "Hitchhiker's Guide to the Galaxy, The",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 310,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0311",
+      "title": "Infidel",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 311,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0312",
+      "title": "Suspect",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 312,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0313",
+      "title": "Transylvania",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 313,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0314",
+      "title": "Witness, The",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 314,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0315",
+      "title": "Zork I: The Great Underground Empire",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 315,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0316",
+      "title": "Zork II: The Wizard of Frobozz",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 316,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0317",
+      "title": "Zork III: The Dungeon Master",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 317,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0318",
+      "title": "Beyond Zork: The Coconut of Quendor",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 318,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0319",
+      "title": "Passengers on the Wind II (English, French)",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 319,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0320",
+      "title": "Space Quest: The Sarien Encounter",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 320,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0321",
+      "title": "Uninvited",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 321,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0322",
+      "title": "Blueberry (German)",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 322,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0323",
+      "title": "Explora II (French)",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 323,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0324",
+      "title": "James Clavell's Shōgun",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 324,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0325",
+      "title": "Jinxter",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 325,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0326",
+      "title": "Leisure Suit Larry 2: Larry goes Looking for Love (In Several Wrong Places)",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 326,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0327",
+      "title": "Manoir de Mortvielle, Le (French)",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 327,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0328",
+      "title": "Planetfall",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 328,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0329",
+      "title": "Deja Vu II: Lost in Las Vegas",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 329,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0330",
+      "title": "Future Wars: Time Travellers",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 330,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0331",
+      "title": "Ooze: Creepy Nights",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 331,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0332",
+      "title": "Time (Multilingual)",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 332,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0333",
+      "title": "Where in the USA is Carmen Sandiego?",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 333,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0334",
+      "title": "Where in the World is Carmen Sandiego?",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 334,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0335",
+      "title": "Code Name: Iceman",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 335,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0336",
+      "title": "Final Battle, The",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 336,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0337",
+      "title": "Leisure Suit Larry 3: Passionate Patti in Pursuit of the Pulsating Pectorals!",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 337,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0338",
+      "title": "Where in Time is Carmen Sandiego?",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 338,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0339",
+      "title": "Famous Five, The: Five on a Treasure Island",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 339,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0340",
+      "title": "Leisure Suit Larry in the Land of the Lounge Lizards (Enhanced)",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 340,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0341",
+      "title": "Mixed-Up Mother Goose (Enhanced)",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 341,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0342",
+      "title": "Wonderland",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 342,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0343",
+      "title": "Catacomb",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 343,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0344",
+      "title": "Legend of Robin Hood, The: Conquests of the Longbow",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 344,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0345",
+      "title": "Goblins 3",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 345,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0346",
+      "title": "Heroes (French)",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 346,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0347",
+      "title": "Lost Prince, The",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 347,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0348",
+      "title": "Universe (Multilingual)",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 348,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0349",
+      "title": "Madhouse: Indian Spirit",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 349,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0350",
+      "title": "Valhalla: Before the War",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 350,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0351",
+      "title": "Experiment, The",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 351,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0352",
+      "title": "Abduction",
+      "directoryYear": 1998,
+      "sourceSnapshotRow": 352,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0353",
+      "title": "Aqua",
+      "directoryYear": 2001,
+      "sourceSnapshotRow": 353,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0354",
+      "title": "Entity",
+      "directoryYear": 2001,
+      "sourceSnapshotRow": 354,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0355",
+      "title": "Star Wars: Escape from Mos Eisley",
+      "directoryYear": 2015,
+      "sourceSnapshotRow": 355,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0356",
+      "title": "Queen's Footsteps, The",
+      "directoryYear": 2019,
+      "sourceSnapshotRow": 356,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0357",
+      "title": "Athanor 2: The Legend of the Birdmen (English, French)",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 357,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0358",
+      "title": "Holiday",
+      "directoryYear": 2023,
+      "sourceSnapshotRow": 358,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0359",
+      "title": "Ring Around the World",
+      "directoryYear": 2023,
+      "sourceSnapshotRow": 359,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0360",
+      "title": "Castle",
+      "directoryYear": null,
+      "sourceSnapshotRow": 360,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0361",
+      "title": "Kelly's Rescue",
+      "directoryYear": null,
+      "sourceSnapshotRow": 361,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0362",
+      "title": "Savage Island",
+      "directoryYear": 1980,
+      "sourceSnapshotRow": 362,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0363",
+      "title": "Goblins",
+      "directoryYear": 1981,
+      "sourceSnapshotRow": 363,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0364",
+      "title": "Kabul Spy",
+      "directoryYear": 1981,
+      "sourceSnapshotRow": 364,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0365",
+      "title": "Adventureland (SAGA #1)",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 365,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0366",
+      "title": "Arrow of Death Part II",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 366,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0367",
+      "title": "Asylum",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 367,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0368",
+      "title": "Escape",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 368,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0369",
+      "title": "Feasibility Experiment",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 369,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0370",
+      "title": "Pirate Adventure (SAGA #2)",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 370,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0371",
+      "title": "Prisoner 2",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 371,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0372",
+      "title": "Secret Mission (SAGA #3)",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 372,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0373",
+      "title": "Strange Odyssey (SAGA #6)",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 373,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0374",
+      "title": "The Count (SAGA #5)",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 374,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0375",
+      "title": "The Haunted Palace",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 375,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0376",
+      "title": "Voodoo Castle (SAGA #4)",
+      "directoryYear": 1982,
+      "sourceSnapshotRow": 376,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0377",
+      "title": "Calixto Island",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 377,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0378",
+      "title": "Sea Quest",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 378,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0379",
+      "title": "The Alpine Encounter",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 379,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0380",
+      "title": "The Black Sanctum",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 380,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0381",
+      "title": "The Time Machine",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 381,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0382",
+      "title": "Troll's Tale",
+      "directoryYear": 1983,
+      "sourceSnapshotRow": 382,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0383",
+      "title": "Crypt of Medusa",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 383,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0384",
+      "title": "King's Quest I: Quest for the Crown",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 384,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0385",
+      "title": "Questprobe 1 - The Incredible Hulk",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 385,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0386",
+      "title": "Questprobe 2 - Spider-Man",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 386,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0387",
+      "title": "Sam Diamond, P.I.: Case of the Switch Blade Slasher",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 387,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0388",
+      "title": "The Adventures of Buckaroo Banzai: Across the Eighth Dimension",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 388,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0389",
+      "title": "The Treasure Hunt",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 389,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0390",
+      "title": "The Trip",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 390,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0391",
+      "title": "The Witch's Cauldron",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 391,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0392",
+      "title": "Thermo Nuclear War Games",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 392,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0393",
+      "title": "Ulysses and the Golden Fleece",
+      "directoryYear": 1984,
+      "sourceSnapshotRow": 393,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0394",
+      "title": "Alice in Wonderland",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 394,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0395",
+      "title": "Castle of Terror",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 395,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0396",
+      "title": "Deja Vu 1: A Nightmare Comes True",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 396,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0397",
+      "title": "Frankie Goes to Hollywood",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 397,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0398",
+      "title": "Gremlins: The Adventure",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 398,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0399",
+      "title": "Invaders of the Lost Tomb",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 399,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0400",
+      "title": "Questprobe 3 - The Human Torch and the Thing",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 400,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0401",
+      "title": "Super Gran: The Adventure",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 401,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0402",
+      "title": "The Cave of Time",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 402,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0403",
+      "title": "The Dark Tower",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 403,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0404",
+      "title": "The Inheritance: Panic in Las Vegas",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 404,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0405",
+      "title": "The Mis-Adventures of Eddie",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 405,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0406",
+      "title": "The Tracer Sanction",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 406,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0407",
+      "title": "Utopia",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 407,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0408",
+      "title": "War of the Worlds: Chapter One - The Landing",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 408,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0409",
+      "title": "War of the Worlds: Chapter Three - The Last Hope",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 409,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0410",
+      "title": "War of the Worlds: Chapter Two - The Quest",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 410,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0411",
+      "title": "Where in the World Is Carmen Sandiego?",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 411,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0412",
+      "title": "Wild West",
+      "directoryYear": 1985,
+      "sourceSnapshotRow": 412,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0413",
+      "title": "221B Baker St.",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 413,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0414",
+      "title": "Escape from School",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 414,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0415",
+      "title": "Hacker",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 415,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0416",
+      "title": "Inferno",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 416,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0417",
+      "title": "Intrigue!",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 417,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0418",
+      "title": "Island Adventure",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 418,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0419",
+      "title": "Kayleth",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 419,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0420",
+      "title": "Midnight Snack",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 420,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0421",
+      "title": "Silicon Dreams",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 421,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0422",
+      "title": "Space Quest: Chapter I - The Sarien Encounter",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 422,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0423",
+      "title": "Star Trek",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 423,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0424",
+      "title": "The Detective",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 424,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0425",
+      "title": "The Fellowship of the Ring",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 425,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0426",
+      "title": "The Inheritance: Chaos in Scotland",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 426,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0427",
+      "title": "The Sydney Affair",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 427,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0428",
+      "title": "The Wild West",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 428,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0429",
+      "title": "Time Bomb",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 429,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0430",
+      "title": "Where in the U.S.A. Is Carmen Sandiego?",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 430,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0431",
+      "title": "Beyond Zork: The Coconut of Quendor",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 431,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0432",
+      "title": "Knightmare",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 432,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0433",
+      "title": "Passengers on the Wind II",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 433,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0434",
+      "title": "Terror of the Deep",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 434,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0435",
+      "title": "The Village",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 435,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0436",
+      "title": "Venom",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 436,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0437",
+      "title": "Wishing Well",
+      "directoryYear": 1987,
+      "sourceSnapshotRow": 437,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0438",
+      "title": "Deja Vu 2: Lost in Las Vegas",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 438,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0439",
+      "title": "DragonSword",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 439,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0440",
+      "title": "Drak",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 440,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0441",
+      "title": "Everyman 1",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 441,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0442",
+      "title": "K'Kai Adventure",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 442,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0443",
+      "title": "Maniac Mansion",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 443,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0444",
+      "title": "Mortville Manor",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 444,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0445",
+      "title": "NO: Never Outside!",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 445,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0446",
+      "title": "Psycho",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 446,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0447",
+      "title": "Skegpool Rock: Operation Annihilation",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 447,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0448",
+      "title": "Star Trek: First Contact",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 448,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0449",
+      "title": "The Manhole",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 449,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0450",
+      "title": "The Phoenix",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 450,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0451",
+      "title": "The Shadows of Mordor",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 451,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0452",
+      "title": "ZorkQuest: The Crystal of Doom",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 452,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0453",
+      "title": "...A Personal Nightmare",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 453,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0454",
+      "title": "A Diamond in the Rough",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 454,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0455",
+      "title": "Adventures Through Time: The Scavenger Hunt",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 455,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0456",
+      "title": "Code-Name: Iceman",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 456,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0457",
+      "title": "In Quest of the Star Lord",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 457,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0458",
+      "title": "Journey: The Quest Begins",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 458,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0459",
+      "title": "Last Half of Darkness",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 459,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0460",
+      "title": "Leisure Suit Larry 2: Looking for Love (In Several Wrong Places)",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 460,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0461",
+      "title": "Leisure Suit Larry 3: Passionate Patti In Pursuit of the Pulsating Pectorals",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 461,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0462",
+      "title": "Lost Princess",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 462,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0463",
+      "title": "Neuromancer",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 463,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0464",
+      "title": "Quest for Glory I",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 464,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0465",
+      "title": "Tex Murphy: Mean Streets",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 465,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0466",
+      "title": "The Colonel's Bequest: A Laura Bow Mystery",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 466,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0467",
+      "title": "The Scoop",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 467,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0468",
+      "title": "Time",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 468,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "AGDB"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0469",
+      "title": "Faery Tale Adventure, The",
+      "directoryYear": 1986,
+      "sourceSnapshotRow": 469,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0470",
+      "title": "Atlantis (German)",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 470,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0471",
+      "title": "Freedom: Rebels in the Darkness",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 471,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0472",
+      "title": "Pandora",
+      "directoryYear": 1988,
+      "sourceSnapshotRow": 472,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0473",
+      "title": "Paladin",
+      "directoryYear": 1989,
+      "sourceSnapshotRow": 473,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0474",
+      "title": "B.A.T.",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 474,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0475",
+      "title": "Captive",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 475,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0476",
+      "title": "Geisha",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 476,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0477",
+      "title": "Wings",
+      "directoryYear": 1990,
+      "sourceSnapshotRow": 477,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0478",
+      "title": "King's Bounty",
+      "directoryYear": 1991,
+      "sourceSnapshotRow": 478,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0479",
+      "title": "Floor 13",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 479,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0480",
+      "title": "Paladin 2 (Multilingual)",
+      "directoryYear": 1992,
+      "sourceSnapshotRow": 480,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0481",
+      "title": "Perihelion: The Prophecy",
+      "directoryYear": 1993,
+      "sourceSnapshotRow": 481,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0482",
+      "title": "Backstage (German)",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 482,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0483",
+      "title": "Labyrinth of Time, The",
+      "directoryYear": 1994,
+      "sourceSnapshotRow": 483,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0484",
+      "title": "Parasite",
+      "directoryYear": 1995,
+      "sourceSnapshotRow": 484,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0485",
+      "title": "Parasite II",
+      "directoryYear": 1996,
+      "sourceSnapshotRow": 485,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0486",
+      "title": "Another World: The Lost Level",
+      "directoryYear": 2016,
+      "sourceSnapshotRow": 486,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0487",
+      "title": "Road Avenger",
+      "directoryYear": 2018,
+      "sourceSnapshotRow": 487,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0488",
+      "title": "Metal Gear (Multilanguage)",
+      "directoryYear": 2021,
+      "sourceSnapshotRow": 488,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    },
+    {
+      "workId": "lemon-amiga-agdb-20261106-0489",
+      "title": "NetHack",
+      "directoryYear": 2023,
+      "sourceSnapshotRow": 489,
+      "sourceSubset": "suspected-existing",
+      "sourcePlatform": "Lemon Amiga"
+    }
+  ],
+  "notice": "追加来源记录数，不代表去重后的独立作品数。"
+}

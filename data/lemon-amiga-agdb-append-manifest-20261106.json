@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "date": "2026-11-06",
+  "sourceRecords": 489,
+  "unmatched": 308,
+  "suspectedExisting": 181,
+  "batchSize": 500,
+  "firstBatch": 222,
+  "lastBatch": 222,
+  "policy": "append-without-deduplication",
+  "baseRegistryRecords": 107684,
+  "baseWorksCanonicalSha256": "a0c7de03c34ad3278b48e21f13ffd124d7f8fcf0e70e6909adcd2a812e6d316e",
+  "packedSha256": "321c831dc2327ba213c06974b73e5861bef7fca8fa03b91cf8a4749b9ff14aef",
+  "jsonSha256": "9bac88ec0c2c5c4035b995f06cf5e2d748dd63fbf7e68e840f851376d8f4662d",
+  "sourceWorkbook": "LemonAmiga_AGDB_基础身份库未匹配作品_20261106.xlsx",
+  "sourceWorkbookLibraryId": "libfile_aa5e2c039d3081919d49ac944efd5496",
+  "sourceWorkbookSha256": "9a251ba5e554f3637fe009506f1d5cdfa6efe62e0944b5fe03369767027b5437",
+  "selectedSheets": [
+    "未匹配作品",
+    "疑似已有待复核"
+  ],
+  "excludedSheets": [
+    "比对汇总",
+    "全部比对明细"
+  ],
+  "notice": "按结果表行追加489条；不再对名称、年份、版本或来源查重。结果表此前合并的同名同年行不拆回原始来源行。"
+}
