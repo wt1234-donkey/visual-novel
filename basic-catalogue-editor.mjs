@@ -1,5 +1,6 @@
+import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261106-filters';
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,STYLE_OPTIONS} from './basic-catalogue-model.mjs';
+import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,STYLE_OPTIONS} from './basic-catalogue-model.mjs?v=20261106-filters';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
@@ -43,9 +44,9 @@ export function createBasicEditor(base,initial,onChange){
   shell(w?'修改作品 · '+w.title:'直接添加作品',`<form id="be-edit" data-id="${safe(id||'')}"><div class="be-grid">
    ${input('title','作品名称',v.title,'required maxlength="500"')}
    <label>首发年份（未知可留空）<input name="firstYear" type="number" min="1970" max="${new Date().getFullYear()+10}" step="1" list="be-years" value="${v.firstYear??''}"><datalist id="be-years">${Array.from({length:new Date().getFullYear()+11-1970},(_,i)=>`<option value="${1970+i}"></option>`).join('')}</datalist></label>
-   ${input('group','厂商／创作主体',v.group,'required list="be-groups" maxlength="500"')}<datalist id="be-groups">${[...new Set(base.map(x=>x.group))].filter(Boolean).map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist>
-   ${input('gameplay','主要玩法',v.gameplay,'required list="be-gameplay" maxlength="500"')}<datalist id="be-gameplay">${[...new Set(base.map(x=>x.gameplay))].filter(Boolean).map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist></div>
-   <fieldset><legend>剧情风格 · 最多3个</legend><div class="be-grid be-styles">${[0,1,2].map(i=>input('style'+i,'风格 '+(i+1),v.plotStyles[i]||'','list="be-styles" maxlength="30"')).join('')}</div><datalist id="be-styles">${STYLE_OPTIONS.map(s=>`<option value="${s}"></option>`).join('')}</datalist><p class="minor">可从建议中选择，也可输入自定义风格；未核实可留空。</p></fieldset>
+   ${input('group','厂商／创作主体',v.group,'required list="be-groups" maxlength="500"')}<datalist id="be-groups">${[...new Map(base.filter(x=>x.group).map(x=>[manufacturerKey(x.group),x.group])).values()].map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist>
+   ${input('gameplay','主要玩法',v.gameplay,'required list="be-gameplay" maxlength="500"')}<datalist id="be-gameplay">${GAMEPLAY_OPTIONS.map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist></div>
+   <fieldset><legend>剧情风格 · 最多3个</legend><div class="be-grid be-styles">${[0,1,2].map(i=>input('style'+i,'风格 '+(i+1),v.plotStyles[i]||'','list="be-styles" maxlength="30"')).join('')}</div><datalist id="be-styles">${[...new Set([...STYLE_OPTIONS,...all().flatMap(w=>w.plotStyles||[])])].map(s=>`<option value="${safe(s)}"></option>`).join('')}</datalist><p class="minor">可从建议中选择，也可输入自定义风格；未核实可留空。</p></fieldset>
    ${input('source','资料来源（可选）',v.source,'type="url"')}
    ${input('reason','修改说明',w?'更正基础作品资料':'直接添加基础作品','required maxlength="300"')}
    <div class="be-actions"><button class="primary" type="submit">${w?'保存修改':'添加到基础库'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}</div></form>

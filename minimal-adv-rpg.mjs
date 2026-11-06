@@ -1,10 +1,11 @@
-import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261104-permissions';
-import {workKey,validateStore} from './basic-catalogue-model.mjs';
+import {normalizeFilterText,manufacturerKey,manufacturerNames,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayKeys,gameplayOptions,gameplayDisplay,styleName,styleOptions,MISSING_STYLE,pageIndex} from './basic-catalogue-filters.mjs?v=20261106-filters';
+import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261106-filters';
+import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261106-filters';
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const kind={'manual-basic':'网页新增基础身份','new-basic':'待提升基础索引','main-linked':'完整主库已有','dossier-linked':'厂商专题已有','promoted-basic':'主库基础身份已纳入','promoted-dossier':'主库已关联专题','identity-review':'作品与版本身份待核','eligibility-review':'叙事与玩法主次待核','main-registry-linked':'已关联主库身份'};
 let entries=[],baseEntries=[],allEntries=[],filtered=[],page=0,editor;
-let childrenByMain=new Map();
+let childrenByMain=new Map(),manufacturerIndex=[],filterCache=null,regionMetadata={entries:[]};
 const selection=new Set();
 const size=25;
 const nameOrder=new Intl.Collator('zh-Hans-CN',{numeric:true,sensitivity:'base'});
@@ -13,21 +14,33 @@ function compareDefaultOrder(a,b){
     const by=Number.isInteger(b.year)?b.year:Infinity;
     return ay-by||nameOrder.compare(a.title,b.title)||nameOrder.compare(a.id||'',b.id||'');
 }
-function optionBox(element,values){
-    const old=element.value;
-    const opts=[element.options[0].outerHTML,...[...new Set(values)].sort((a,b)=>a.localeCompare(b,'zh-Hans-CN')).map(x=>'<option value="'+safe(x)+'">'+safe(x)+'</option>')];
-    element.innerHTML=opts.join('');
-    if([...element.options].some(x=>x.value===old))element.value=old;
+function drawManufacturers(){
+ const selected=$('group').value,{total,visible}=manufacturerOptions(manufacturerIndex,{region:$('group-region').value,query:$('group-query').value},selected);
+ $('group').innerHTML='<option value="">全部匹配厂商</option>'+Object.entries(REGION_LABELS).map(([region,label])=>{const rows=visible.filter(item=>item.region===region);return rows.length?'<optgroup label="'+label+'">'+rows.map(item=>'<option value="'+safe(item.key)+'">'+safe(item.label)+'（'+item.count+'）</option>').join('')+'</optgroup>':'';}).join('');
+ $('group').value=visible.some(item=>item.key===selected)?selected:'';
+ $('group-count').textContent='匹配 '+total.toLocaleString('zh-CN')+' 个厂商'+(total>visible.length?'；列出其中 '+visible.length+' 个，请输入名称缩小范围':'')+'。大小写重复项已合并。';
+}
+function rebuildFilters(){
+ manufacturerIndex=createManufacturerIndex(entries,regionMetadata);
+ filterCache=new Map(entries.map(r=>[r,{search:normalizeFilterText([r.title,...(r.aliases||[]),...manufacturerNames(r),...(r.plotStyles||[]),...(childrenByMain.get(r._key)||[]).flatMap(c=>[c.title,...(c.aliases||[])])].join(' ')),manufacturers:[...new Set(manufacturerNames(r).map(manufacturerKey))],gameplay:gameplayKeys(r.gameplay),styles:(r.plotStyles||[]).map(styleName)}]));
+ const gameplay=$('gameplay').value,styles=$('style').value;
+ $('gameplay').innerHTML='<option value="">全部玩法</option>'+gameplayOptions(entries).map(item=>'<option value="'+safe(item.key)+'">'+safe(item.label)+'（'+item.count+'）</option>').join('');
+ if([...$('gameplay').options].some(o=>o.value===gameplay))$('gameplay').value=gameplay;
+ const missing=entries.filter(r=>!(r.plotStyles||[]).length).length;
+ $('style').innerHTML='<option value="">全部风格</option><option value="'+MISSING_STYLE+'">待补充（'+missing+'）</option>'+styleOptions(entries).map(group=>'<optgroup label="'+safe(group.label)+'">'+group.options.map(item=>'<option value="'+safe(item.key)+'">'+safe(item.label)+'（'+item.count+'）</option>').join('')+'</optgroup>').join('');
+ if([...$('style').options].some(o=>o.value===styles))$('style').value=styles;
+ $('stat-groups').textContent=manufacturerIndex.length.toLocaleString('zh-CN');
+ for(const [key,label] of Object.entries(REGION_LABELS))$('group-region-'+key).textContent=label+'（'+manufacturerIndex.filter(item=>item.region===key).length+'）';
+ drawManufacturers();
 }
 function filterAndDraw(){
-    const q=$('q').value.trim().normalize('NFKC').toLowerCase(),gp=$('gameplay').value,g=$('group').value,s=$('status').value,year=$('year').value,style=$('style').value;
-    filtered=entries.filter(r=>{
-      const children=(childrenByMain.get(r._key)||[]);
-      const hay=[r.title,...(r.aliases||[]),r.group,...(r.groups||[]),...(r.plotStyles||[]),...children.flatMap(c=>[c.title,...(c.aliases||[])])].join(' ').normalize('NFKC').toLowerCase();
-      return (!style||(r.plotStyles||[]).includes(style))&&(!year||(year==='unknown'?!Number.isInteger(r.year):Number.isInteger(r.year)&&r.year===Number(year)))&&(!q||hay.includes(q))&&(!gp||r.gameplay===gp)&&(!g||r.group===g||(r.groups||[]).includes(g))&&(!s||r.status===s);
-    });
-    page=0;render();
+ if(!filterCache)return;
+ const q=normalizeFilterText($('q').value),gp=$('gameplay').value,g=$('group').value,s=$('status').value,year=$('year').value,style=$('style').value;
+ const region=$('group-region').value,query=$('group-query').value.trim(),allowed=region||query?new Set(matchingManufacturers(manufacturerIndex,{region,query}).map(item=>item.key)):null;
+ filtered=entries.filter(r=>{const cached=filterCache.get(r);return (!style||(style===MISSING_STYLE?!cached.styles.length:cached.styles.includes(style)))&&(!year||(year==='unknown'?!Number.isInteger(r.year):Number.isInteger(r.year)&&r.year===Number(year)))&&(!q||cached.search.includes(q))&&(!gp||cached.gameplay.includes(gp))&&(!(g||allowed)||cached.manufacturers.some(key=>(!g||key===g)&&(!allowed||allowed.has(key))))&&(!s||r.status===s);});
+ page=0;render();
 }
+function jumpToPage(value){try{page=pageIndex(value,Math.max(1,Math.ceil(filtered.length/size)));render();$('count').scrollIntoView?.({behavior:'smooth',block:'start'});}catch(error){for(const suffix of ['','-bottom'])$('page-error'+suffix).textContent=error.message;}}
 function render(){
     const total=filtered.length,n=Math.max(1,Math.ceil(total/size));page=Math.min(Math.max(page,0),n-1);
     const rows=filtered.slice(page*size,(page+1)*size);
@@ -37,15 +50,19 @@ function render(){
       const label=kind[r.status]||'专题已有';
       const link=/^https?:\/\//.test(r.source||'')?'<a href="'+safe(r.source)+'" target="_blank" rel="noopener noreferrer">资料</a>':'待核';
       const children=(childrenByMain.get(r._key)||[]);
-      return '<tr><td class="select-cell"><input type="checkbox" data-select="'+safe(r._key)+'" aria-label="选择 '+safe(r.title)+'" '+(selection.has(r._key)?'checked':'')+'></td><td class="title-cell"><button type="button" class="work-title" data-edit="'+safe(r._key)+'">'+safe(r.title)+'</button>'+alias+(children.length?'<div class="minor">含 '+children.length+' 个关联版本</div>':'')+'</td><td data-label="首发年份">'+year+'</td><td data-label="主要玩法">'+safe(r.gameplay)+(r.gameplayNote?'<div class="minor">'+safe(r.gameplayNote)+'</div>':'')+'</td><td data-label="剧情风格">'+((r.plotStyles||[]).map(t=>'<span class="pill">'+safe(t)+'</span>').join(' ')||'<span class="minor">待补充</span>')+'</td><td data-label="厂商关联">'+safe(r.group)+'</td><td data-label="编目状态"><span class="pill">'+safe(label)+'</span>'+(r.reason?'<div class="minor">'+safe(r.reason)+'</div>':'')+(r.matchedWorkId?'<div class="minor">'+safe(r.matchedWorkId)+'</div>':'')+'</td><td data-label="依据">'+link+'</td></tr>';
+      return '<tr><td class="select-cell"><input type="checkbox" data-select="'+safe(r._key)+'" aria-label="选择 '+safe(r.title)+'" '+(selection.has(r._key)?'checked':'')+'></td><td class="title-cell"><button type="button" class="work-title" data-edit="'+safe(r._key)+'">'+safe(r.title)+'</button>'+alias+(children.length?'<div class="minor">含 '+children.length+' 个关联版本</div>':'')+'</td><td data-label="首发年份">'+year+'</td><td data-label="主要玩法">'+safe(gameplayDisplay(r.gameplay))+(/待核|候选/.test(r.gameplay)?'<div class="minor">玩法细节待核</div>':'')+(/仅专题|关联/.test(r.gameplay)?'<div class="minor">'+safe(r.gameplay)+'</div>':'')+(r.gameplayNote?'<div class="minor">'+safe(r.gameplayNote)+'</div>':'')+'</td><td data-label="剧情风格">'+((r.plotStyles||[]).map(t=>'<span class="pill">'+safe(t)+'</span>').join(' ')||'<span class="minor">待补充</span>')+'</td><td data-label="厂商关联">'+safe(r.group)+'</td><td data-label="编目状态"><span class="pill">'+safe(label)+'</span>'+(r.reason?'<div class="minor">'+safe(r.reason)+'</div>':'')+(r.matchedWorkId?'<div class="minor">'+safe(r.matchedWorkId)+'</div>':'')+'</td><td data-label="依据">'+link+'</td></tr>';
     }).join('')||'<tr><td colspan="8">未找到符合筛选条件的作品</td></tr>';
     $('count').textContent='找到 '+total+' 条记录，显示第 '+(total? page*size+1:0)+'—'+Math.min((page+1)*size,total)+' 条';
-    $('pagination').textContent='第 '+(page+1)+' / '+n+' 页';
-    $('prev').disabled=page===0;
-    $('next').disabled=page>=n-1;
+    for(const suffix of ['','-bottom']){
+      $('pagination'+suffix).textContent='第 '+(page+1)+' / '+n+' 页';
+      $('prev'+suffix).disabled=page===0;$('next'+suffix).disabled=page>=n-1;
+      $('page-number'+suffix).max=n;$('page-number'+suffix).value=page+1;$('page-number'+suffix).disabled=!total;$('page-go'+suffix).disabled=!total;
+      $('page-error'+suffix).textContent='';
+    }
 }
 async function start(){
  try{
+   const regions=fetch('data/basic-manufacturer-regions.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('地区索引不可用');return r.json();}).then(data=>{if(data.schemaVersion!==1||!Array.isArray(data.entries))throw Error('地区索引格式无效');return data;}).catch(error=>{console.warn('厂商地区索引暂不可用',error);$('filter-note').textContent='厂商地区索引暂不可用，厂商暂归地区待核；仍可按名称筛选。';return {entries:[]};});
    const response=await fetch('data/adv-rpg-minimal-index-20261031.json',{cache:'no-store'});
    if(!response.ok)throw Error('HTTP '+response.status);
    const obj=await response.json();
@@ -109,7 +126,7 @@ async function start(){
        entries.push({
          id:w.indexId,matchedWorkId:w.id,title:w.title,aliases:w.aliases||[],
          year:w.firstYear,gameplay:w.gameplay||'玩法待核',gameplayNote:w.gameplayNote||'',
-         group:w.group||'来源关联待核',source:w.source,status,reason:w.intakePolicy==='append-without-deduplication'?('未去重导入 · 来源状态：'+(w.sourceDevelopmentStatus||'未提供')):''
+         group:w.group||'来源关联待核',plotStyles:w.plotStyles||[],source:w.source,status,reason:w.intakePolicy==='append-without-deduplication'?('未去重导入 · 来源状态：'+(w.sourceDevelopmentStatus||'未提供')):''
        });
        representedIds.add(w.id);
        representedIndexIds.add(w.indexId);
@@ -120,15 +137,16 @@ async function start(){
    $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
    try{const mainReg=await registryPromise;$('stat-new').textContent=mainReg.summary.promotedBasic.toLocaleString('zh-CN');$('stat-linked').textContent=(mainReg.summary.promotedDossier+mainReg.summary.existingComplete).toLocaleString('zh-CN')}catch(err){console.warn('主库统计暂不可用',err)}
    if(!$('stat-linked').textContent.match(/[0-9]/))$('stat-linked').textContent=(obj.summary.alreadyMain+obj.summary.alreadyDossier+obj.summary.identityReview).toLocaleString('zh-CN');
-   $('stat-groups').textContent=(new Set(entries.flatMap(x=>[x.group,...(x.groups||[])]))).size.toLocaleString('zh-CN');
-   const years=[...new Set(entries.map(r=>r.year).filter(Number.isInteger))].sort((a,b)=>a-b);
-   $('year').innerHTML='<option value="">全部年份</option><option value="unknown">年份待核</option>'+years.map(y=>'<option value="'+y+'">'+y+' 年</option>').join('');
-   optionBox($('gameplay'),entries.map(r=>r.gameplay));
-   optionBox($('group'),entries.flatMap(r=>[r.group,...(r.groups||[])]));
+   regionMetadata=await regions;
    $('q').addEventListener('input',filterAndDraw);
    for(const id of ['year','gameplay','group','status','style'])$(id).addEventListener('change',filterAndDraw);
-   $('prev').addEventListener('click',()=>{page--;render()});
-   $('next').addEventListener('click',()=>{page++;render()});
+   $('group-query').addEventListener('input',()=>{drawManufacturers();filterAndDraw();});
+   $('group-region').addEventListener('change',()=>{drawManufacturers();filterAndDraw();});
+   $('filter-reset').addEventListener('click',()=>{for(const id of ['q','year','gameplay','group','status','style','group-query','group-region'])$(id).value='';drawManufacturers();filterAndDraw();});
+   for(const suffix of ['','-bottom']){
+    $('prev'+suffix).addEventListener('click',()=>{page--;render();});$('next'+suffix).addEventListener('click',()=>{page++;render();});
+    $('page-jump'+suffix).addEventListener('submit',event=>{event.preventDefault();jumpToPage($('page-number'+suffix).value);});
+   }
    baseEntries=entries;
    try{
      const res=await fetch('data/basic-catalogue-edits.json',{cache:'no-store'});if(!res.ok)throw Error('修改记录 HTTP '+res.status);
@@ -154,10 +172,9 @@ function refreshManaged(main,all,store){
  childrenByMain=new Map();for(const w of all)if(w.parentId){if(!childrenByMain.has(w.parentId))childrenByMain.set(w.parentId,[]);childrenByMain.get(w.parentId).push(w);}
  const ids=new Set(entries.map(workKey));for(const id of selection)if(!ids.has(id))selection.delete(id);
  $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
- $('stat-groups').textContent=new Set(entries.map(w=>w.group)).size.toLocaleString('zh-CN');
  const oldYear=$('year').value,years=[...new Set(entries.map(w=>w.year).filter(Number.isInteger))].sort((a,b)=>a-b);
  $('year').innerHTML='<option value="">全部年份</option><option value="unknown">年份待核</option>'+years.map(y=>'<option value="'+y+'">'+y+' 年</option>').join('');$('year').value=years.includes(Number(oldYear))||oldYear==='unknown'?oldYear:'';
- optionBox($('gameplay'),entries.map(r=>r.gameplay));optionBox($('group'),entries.flatMap(r=>[r.group,...(r.groups||[])]));optionBox($('style'),entries.flatMap(r=>r.plotStyles||[]));
+ rebuildFilters();
  refreshSelection();filterAndDraw();
 }
 start();
