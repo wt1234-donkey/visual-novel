@@ -2,7 +2,7 @@ import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
 import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport} from './basic-catalogue-model.mjs?v=20261109-style-tags';
 import {styleName,styleState} from './basic-style-tags.mjs';
-import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs';
+import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs?v=20261109-style-templates';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');

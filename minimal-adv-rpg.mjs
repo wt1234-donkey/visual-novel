@@ -1,5 +1,5 @@
 import {normalizeFilterText,manufacturerKey,manufacturerNames,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayKeys,gameplayOptions,gameplayDisplay,styleName,styleState,styleDimension,STYLE_DIMENSIONS,styleOptions,LEGACY_STYLE_PREFIX,MISSING_STYLE,pageIndex} from './basic-catalogue-filters.mjs?v=20261109-style-tags';
-import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261109-style-tags';
+import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261109-style-templates';
 import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261109-style-tags';
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

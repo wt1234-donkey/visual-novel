@@ -73,8 +73,10 @@ export function createStyleWorkbench({dialog,shell,all,revision,commit,message,l
   scope=ids;
   open('CSV 更新已有作品标签',`<form id="bs-csv">
    <p>使用作品 ID 匹配，作品名可留空。维度留空时保留现值，填「清空」移除标签，填写词表内的标签时写入或替换。每批最多500部。</p>
-   <div class="be-actions"><a href="templates/basic-style-update.csv" download>下载空白模板</a>
+   <div class="be-actions"><a href="templates/basic-style-update.csv" download>下载 CSV 空白模板</a>
+   <a href="templates/basic-style-update-example.csv" download>下载 CSV 填写示例</a>
    <button type="button" id="bs-csv-export" ${ids.length&&ids.length<=MAX_STYLE_BATCH?'':'disabled'}>导出所选作品的更新模板</button></div>
+   <p class="minor">填写示例用一行演示保留、清空和写入三种操作。正式更新前，请换成要修改的作品 ID 和标签。</p>
    ${fileInput('bs-csv-file','.csv,text/csv','导入 UTF-8 CSV')}
    <label>或粘贴 CSV 内容<textarea id="bs-csv-text" rows="7" spellcheck="false"></textarea></label>
    ${previewControls}</form>`);
@@ -99,7 +101,8 @@ export function createStyleWorkbench({dialog,shell,all,revision,commit,message,l
   scope=ids;
   open('AI 标签候选审核',`<form id="bs-review">
    <p>先勾选作品并导出识别请求，在本机运行 Ollama 生成候选 JSON，再导入此处。只为有简介和来源的作品生成请求。候选按维度勾选后预览，通过写入的标签附上简介摘录和来源。</p>
-   <div class="be-actions"><button type="button" id="bs-ai-export" ${ids.length&&ids.length<=MAX_STYLE_BATCH?'':'disabled'}>导出所选作品的识别请求</button><a href="data/basic-catalogue-guide.md#ai-标签候选" target="_blank" rel="noopener">查看运行命令</a></div>
+   <div class="be-actions"><a href="templates/basic-style-candidates-example.json" download>下载候选 JSON 模板（含示例）</a><button type="button" id="bs-ai-export" ${ids.length&&ids.length<=MAX_STYLE_BATCH?'':'disabled'}>导出所选作品的识别请求</button><a href="data/basic-catalogue-guide.md#ai-标签候选" target="_blank" rel="noopener">查看运行命令</a></div>
+   <p class="minor">如需手动整理候选，可从识别请求复制作品 ID、名称、简介和来源，按模板填写模型名及各维度的候选。摘录须出现在现有简介中。</p>
    ${fileInput('bs-ai-file','.json,application/json','导入候选 JSON（待审队列保存在本浏览器）')}
    <button type="button" id="bs-select-review">勾选全部可补充的候选</button>
    <div id="bs-queue" class="be-preview"></div>${previewControls}

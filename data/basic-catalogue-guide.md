@@ -38,7 +38,7 @@ JSON 为作品数组，每条含 `title`、`firstYear`、`group`、`gameplay`、
 
 ## CSV 更新已有作品
 
-打开“CSV 更新标签”可下载空白模板或导出所选作品的更新模板。CSV 用 UTF-8 编码，每批 1 至 500 部，表头保持如下顺序。
+打开“CSV 更新标签”可下载 [CSV 空白模板](../templates/basic-style-update.csv) 或 [CSV 填写示例](../templates/basic-style-update-example.csv)，也可导出所选作品的更新模板。正式更新前请替换示例行。CSV 用 UTF-8 编码，每批 1 至 500 部，表头保持如下顺序。
 
 `作品ID,作品名称,剧情基调,情绪体验,叙事表达,人物关系,故事题材,内容提示`
 
@@ -53,7 +53,7 @@ JSON 为作品数组，每条含 `title`、`firstYear`、`group`、`gameplay`、
    node scripts/suggest_basic_styles.mjs basic-style-request.json basic-style-candidates.json qwen2.5-vl
    ```
 
-3. 导入生成的 `basic-style-candidates.json`。页面校验候选维度、词表、简介摘录及现有来源。勾选候选可逐项或整批预览，确认后只补充空白维度，并随标签记录模型、摘录和来源。审核前可退回候选，待审队列保存在当前浏览器。
+3. 导入生成的 `basic-style-candidates.json`。手动整理时，可下载 [候选 JSON 模板（含示例）](../templates/basic-style-candidates-example.json)，从识别请求复制作品 ID、名称、简介和来源。将 `model` 填为实际使用的模型名称，在 `candidates` 中填写维度代码、标签、原文摘录和来源；没有待补资料时保留 `issues: []`。页面校验候选维度、词表、简介摘录及现有来源。勾选候选可逐项或整批预览，确认后只补充空白维度，并随标签记录模型、摘录和来源。审核前可退回候选，待审队列保存在当前浏览器。
 
 ## 主作品与关联版本
 
