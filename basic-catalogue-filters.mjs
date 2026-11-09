@@ -1,4 +1,5 @@
-import {STYLE_GROUPS,STYLE_OPTIONS} from './basic-catalogue-model.mjs?v=20261106-filters';
+import {STYLE_GROUPS,styleName,styleState} from './basic-style-tags.mjs';
+export {styleName,styleState,STYLE_DIMENSIONS,styleDimension} from './basic-style-tags.mjs';
 
 export const normalizeFilterText=value=>String(value??'').normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase();
 export const manufacturerKey=normalizeFilterText;
@@ -85,9 +86,17 @@ export function gameplayOptions(works){const counts=new Map(),customLabels=new M
 export function gameplayDisplay(raw){const keys=gameplayKeys(raw);return keys.map(key=>key.startsWith('custom:')?String(raw).split(/[,，;；\n]+/).find(x=>'custom:'+normalizeFilterText(x)===key)?.trim()||gameplayLabel(key):gameplayLabel(key)).join(' / ');}
 
 export const MISSING_STYLE='__missing__';
-const styleAliases=new Map([['疗愈','治愈'],['治癒','治愈'],['暗黑','黑暗'],['寝取られ','NTR']].map(([a,b])=>[normalizeFilterText(a),b]));
-for(const style of STYLE_OPTIONS)styleAliases.set(normalizeFilterText(style),style);
-export const styleName=value=>styleAliases.get(normalizeFilterText(value))||String(value).trim();
-export function styleOptions(works){const counts=new Map();for(const work of works)for(const value of new Set((work.plotStyles||[]).map(styleName)))counts.set(value,(counts.get(value)||0)+1);const groups=Object.entries(STYLE_GROUPS).map(([label,styles])=>({label,options:styles.map(style=>({label:style,key:style,count:counts.get(style)||0}))}));const custom=[...counts].filter(([style])=>!STYLE_OPTIONS.includes(style)).sort((a,b)=>order.compare(a[0],b[0]));if(custom.length)groups.push({label:'自定义风格',options:custom.map(([label,count])=>({label,key:label,count}))});return groups;}
+export const LEGACY_STYLE_PREFIX='legacy:';
+export function styleOptions(works){
+ const counts=new Map(),legacyCounts=new Map();
+ for(const work of works){
+  const {tags,legacy}=styleState(work);
+  for(const tag of Object.values(tags))counts.set(tag,(counts.get(tag)||0)+1);
+  for(const tag of new Set(legacy.map(styleName)))legacyCounts.set(tag,(legacyCounts.get(tag)||0)+1);
+ }
+ const groups=Object.entries(STYLE_GROUPS).map(([label,styles])=>({label,options:styles.map(tag=>({label:tag,key:tag,count:counts.get(tag)||0}))}));
+ if(legacyCounts.size)groups.push({label:'旧标签待整理',options:[...legacyCounts].sort((a,b)=>order.compare(a[0],b[0])).map(([label,count])=>({label,key:LEGACY_STYLE_PREFIX+label,count}))});
+ return groups;
+}
 
 export function pageIndex(value,pageCount){const text=String(value).trim();if(!/^\d+$/.test(text)||!Number.isSafeInteger(Number(text))||Number(text)<1||Number(text)>pageCount)throw Error('请输入 1—'+pageCount+' 范围内的整数页码');return Number(text)-1;}

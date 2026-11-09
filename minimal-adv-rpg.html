@@ -32,8 +32,8 @@
     .notice{margin-top:18px;color:var(--muted);font-size:14px}
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
   </style>
-  <link rel="stylesheet" href="basic-catalogue.css?v=20261106-filters">
-  <script type="module" src="minimal-adv-rpg.mjs?v=20261104-permissions"></script>
+  <link rel="stylesheet" href="basic-catalogue.css?v=20261109-style-tags">
+  <script type="module" src="minimal-adv-rpg.mjs?v=20261109-style-tags"></script>
 </head>
 <body><div class="wrap">
   <header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav><a href="index.html">作品发现</a><a href="curated.html">精选叙事作品</a><a href="bulk-import.html">批量补录主库</a><a href="catalogue.html">高级发行检索</a><a href="organizations.html">组织与沿革</a><a href="https://github.com/wt1234-donkey/visual-novel">GitHub</a></nav></header>
@@ -50,6 +50,11 @@
     <section class="basic-toolbar" aria-label="基础库管理">
       <button type="button" id="basic-add" disabled>＋ 添加作品</button>
       <button type="button" id="basic-import" disabled>导入作品信息</button>
+      <button type="button" id="basic-style-bulk" disabled>批量编辑标签</button>
+      <button type="button" id="basic-style-csv" disabled>CSV 更新标签</button>
+      <button type="button" id="basic-style-review" disabled>AI 标签候选审核</button>
+      <button type="button" id="basic-select-page" disabled>勾选当前页</button>
+      <button type="button" id="basic-select-filtered" disabled title="筛选结果为 1–500 部时可勾选">勾选全部筛选结果</button>
       <button type="button" id="basic-merge" disabled>合并所选作品</button>
       <button type="button" id="basic-clear" disabled>清空选择</button>
       <button type="button" id="basic-connection" disabled>连接写入权限</button>

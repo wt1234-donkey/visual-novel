@@ -10,3 +10,8 @@
 @media(max-width:700px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.manufacturer-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.manufacturer-filters>label:last-of-type{grid-column:1/-1}.page-jump{justify-content:center;flex-basis:100%}.page-jump input{font-size:16px}.basic-pagination{margin:16px 0}.basic-pagination>button{min-height:44px}.filter-note{line-height:1.7}}
 
 .manufacturer-filters>label:first-child{grid-column:auto}
+
+.be-preview{max-height:360px;overflow:auto;overflow-wrap:anywhere}
+.be-preview li{margin-block:8px}
+#basic-editor .be-candidate{display:flex;align-items:flex-start;gap:8px}
+#basic-editor .be-candidate input{width:18px;height:18px;flex:none;margin:2px 0 0;accent-color:#ae88e9}
