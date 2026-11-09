@@ -65,8 +65,8 @@ export function createStyleWorkbench({dialog,shell,all,revision,commit,message,l
    open('批量编辑标签','<p>请先勾选1至500部作品。</p>');return;
   }
   open('批量编辑标签',`<form id="bs-bulk">
-   <p>已选择 ${ids.length} 部。仅处理下方选中的维度，留空表示跳过该维度。</p>
-   <label>操作<select name="mode"><option value="fill">补充空白维度</option><option value="set">写入或替换选中的标签</option><option value="remove">删除匹配的标签</option></select></label>
+   <p>已选择 ${ids.length} 部。留空时跳过对应维度；选择“清空全部六维标签”时将清除六个维度的现值。</p>
+   <label>操作<select name="mode"><option value="fill">补充空白维度</option><option value="set">写入或替换选中的标签</option><option value="remove">删除匹配的标签</option><option value="clear">清空全部六维标签</option></select></label>
    ${styleInputs()}${previewControls}</form>`);
  }
  function csv(ids){
@@ -186,9 +186,10 @@ export function createStyleWorkbench({dialog,shell,all,revision,commit,message,l
   try{
    if(form.id==='bs-csv')showPreview(parseStyleUpdates($('#bs-csv-text').value),'CSV 更新标签');
    else if(form.id==='bs-bulk'){
-    const data=new FormData(form),tags=readStyleInputs(data);
+    const data=new FormData(form),mode=data.get('mode'),clear=mode==='clear';
+    const tags=clear?Object.fromEntries(STYLE_KEYS.map(key=>[key,null])):readStyleInputs(data);
     if(!Object.keys(tags).length)throw Error('请选择至少一个维度的标签');
-    showPreview(chosen(scope).map(w=>({id:w._key,mode:data.get('mode'),tags})),'批量编辑标签');
+    showPreview(chosen(scope).map(w=>({id:w._key,mode:clear?'set':mode,tags})),clear?'批量清空标签':'批量编辑标签');
    }else{
     const selected=reviewSelections();
     showPreview(styleReviewRows(queue.items,selected),'审核 AI 标签',selected);
