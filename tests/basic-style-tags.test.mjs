@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {applyChange,emptyStore,parseStyleUpdates,planStyleUpdates,projectEntries,undoLast,STYLE_UPDATE_HEADERS} from '../basic-catalogue-model.mjs';
+import {readFileSync} from 'node:fs';
+import {applyChange,emptyStore,parseCSV,parseStyleUpdates,planStyleUpdates,projectEntries,undoLast,STYLE_UPDATE_HEADERS} from '../basic-catalogue-model.mjs';
 import {STYLE_DIMENSIONS,styleState,validateStyleTags} from '../basic-style-tags.mjs';
 import {buildStyleRequest,parseStyleReview,styleReviewRows,validateCandidates} from '../basic-style-review.mjs';
 
@@ -57,4 +58,15 @@ test('AI request uses linked existing synopsis, skips placeholders and approval 
  assert.equal(planStyleUpdates(projectEntries(base,updated),rows).unchanged.length,1);
  const replaced=apply(updated,{type:'style-update',rows:[{id:'first',mode:'set',tags:{theme:'战争'}}]});
  assert.deepEqual(replaced.records.first.style.plotTagEvidence,{});
+});
+
+
+test('downloadable style templates match the CSV and AI review import formats',()=>{
+ const template=name=>readFileSync(new URL('../templates/'+name,import.meta.url),'utf8');
+ assert.deepEqual(parseCSV(template('basic-style-update.csv')),[STYLE_UPDATE_HEADERS]);
+ const [update]=parseStyleUpdates(template('basic-style-update-example.csv'));
+ assert.deepEqual(update.tags,{emotion:null,theme:'科幻'});
+ const example=parseStyleReview(template('basic-style-candidates-example.json'));
+ assert.equal(example.items.length,1);
+ assert.equal(example.items[0].candidates[0].dimension,'theme');
 });
