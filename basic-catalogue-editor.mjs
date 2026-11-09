@@ -1,23 +1,39 @@
 import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261109-style-tags';
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport} from './basic-catalogue-model.mjs?v=20261109-style-tags';
+import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261109-style-tags';
 import {styleName,styleState} from './basic-style-tags.mjs';
-import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs?v=20261109-style-templates';
+import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs?v=20261109-index';
+import {withBasicDetails} from './basic-catalogue-index.mjs';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
-export function createBasicEditor(base,initial,onChange){
- let snapshot={store:validateStore(initial),sha:null},actor='',busy=false,pendingImport=null,returnFocus=null;
+export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map()){
+ let snapshot={store:validateStore(initial),sha:null},actor='',busy=false,pendingImport=null,returnFocus=null,entries=[];
  const clientFor=token=>createEditClient(token,fetch,{historyPath:HISTORY,validate:validateStore});let client=clientFor('');
  const dialog=document.createElement('dialog');dialog.id='basic-editor';document.body.append(dialog);
  const $=s=>dialog.querySelector(s);
- const all=()=>projectEntries(base,snapshot.store,{includeChildren:true});
- const get=id=>all().find(w=>w._key===id);
- function update(){onChange(projectEntries(base,snapshot.store),all(),snapshot.store);document.getElementById('basic-connection').textContent=actor?'已连接 '+actor:'连接写入权限';}
+ const all=()=>entries;
+ const get=id=>entries.find(w=>w._key===id);
+ async function hydrate(rows){
+  const details=await loadDetails(rows);
+  return rows.map(row=>withBasicDetails(row,details.get(row.slot),snapshot.store));
+ }
+ async function prepareBase(action){
+  if(action.type==='add')return base;
+  const ids=new Set(action.rows?.map(row=>row.id)||action.ids||[action.id]);
+  if(action.mainId)ids.add(action.mainId);
+  if(action.type==='merge')for(const row of entries)if(action.ids.includes(row.parentId))ids.add(row._key);
+  const targets=base.filter(row=>ids.has(workKey(row)));
+  const details=await loadDetails(targets);
+  return base.map(row=>details.has(row.slot)?{...row,...details.get(row.slot)}:row);
+ }
+ function update(){
+  entries=projectEntries(base,snapshot.store,{includeChildren:true});
+  onChange(entries.filter(w=>!w.parentId),entries,snapshot.store);document.getElementById('basic-connection').textContent=actor?'已连接 '+actor:'连接写入权限';}
  function message(s,error=false){$('#be-message').textContent=s;$('#be-message').className='be-message'+(error?' error':'');}
  function close(){if(!busy){dialog.close();returnFocus?.focus();}}
  function shell(title,body){
-  if(busy)return;returnFocus=document.activeElement;pendingImport=null;
+  if(busy)return;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
    <details class="be-auth" ${actor?'':'open'}><summary>写入权限 · ${actor?safe(actor):'连接 GitHub'}</summary><p class="minor">凭证仅在当前页面内存保留，刷新后清除。</p><ol class="minor"><li>使用拥有仓库权限的 GitHub 账号；Resource owner 应为 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b>，再选择 <b>visual-novel</b>。Public repositories 只有读取权限。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>，然后生成凭证。</li></ol><p class="minor">连接成功表示账号和读取校验通过，GitHub 会在保存时核验凭证的实际写入权限。</p><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仓库专用凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">重新读取网站修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
@@ -30,8 +46,8 @@ export function createBasicEditor(base,initial,onChange){
   try{
    if(!actor)throw Error('请先在上方连接 GitHub 写入权限');
    const meta={id:randomId(),at:new Date().toISOString(),actor,reason,expectedRevision:snapshot.store.revision};
-   const next=undo?undoLast(snapshot.store,snapshot.store.revision):applyChange(snapshot.store,base,action,meta);
    lock(true);message('正在检查最新记录并保存…');
+   const next=undo?undoLast(snapshot.store,snapshot.store.revision):applyChange(snapshot.store,await prepareBase(action),action,meta);
    const live=await client.read();if(JSON.stringify(live.store)!==JSON.stringify(snapshot.store))throw Error('基础库已在其他页面修改。请先“重新读取网站修改”，再核对并保存；当前输入仍保留');
    let result;
    try{result=await client.write(next,live.sha,'Basic catalogue: '+reason.slice(0,100));}
@@ -40,8 +56,17 @@ export function createBasicEditor(base,initial,onChange){
   }catch(e){message(e.message,true);if(e.code==='PERMISSION_DENIED'||e.code==='NOT_FOUND')$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
- function edit(id=null){
-  const w=id?get(id):null;if(id&&!w)return;const v=w?valuesOf(w):{title:'',firstYear:null,group:'',gameplay:'',plotStyles:[],source:''};
+ async function edit(id=null){
+  let w=id?get(id):null;
+  if(id&&!w)return;
+  if(w&&Number.isInteger(w.slot)){
+   shell('读取作品详情', '<p>正在读取该作品的资料…</p>');
+   lock(true);
+   try{[w]=await hydrate([w]);}
+   catch(error){message(error.message,true);return;}
+   finally{lock(false);}
+  }
+  const v=w?valuesOf(w):{title:'',firstYear:null,group:'',gameplay:'',plotStyles:[],source:''};
   const {tags,legacy}=styleState(v);
   const children=w?all().filter(x=>x.parentId===id):[];
   shell(w?'修改作品 · '+w.title:'直接添加作品',`<form id="be-edit" data-id="${safe(id||'')}"><div class="be-grid">
@@ -72,7 +97,14 @@ export function createBasicEditor(base,initial,onChange){
   const form=e.target;if(!['be-edit','be-merge'].includes(form.id))return;
   e.preventDefault();if(busy)return;const f=new FormData(form);
   if(form.id==='be-edit'){
-   const id=form.dataset.id,previous=id?get(id):null,plotTags=readStyleInputs(f);
+   const id=form.dataset.id,plotTags=readStyleInputs(f);
+   let previous=id?get(id):null;
+   if(previous&&Number.isInteger(previous.slot)){
+    lock(true);
+    try{[previous]=await hydrate([previous]);}
+    catch(error){message(error.message,true);return;}
+    finally{lock(false);}
+   }
    const {legacy}=styleState(previous||{});
    const plotStyles=f.has('removeLegacy')?[]:legacy.filter(tag=>!Object.values(plotTags).includes(styleName(tag)));
    const plotTagEvidence=Object.fromEntries(Object.entries(previous?.plotTagEvidence||{}).filter(([key])=>plotTags[key]===previous.plotTags[key]));
@@ -100,6 +132,6 @@ export function createBasicEditor(base,initial,onChange){
    try{pendingImport=null;$('#be-import-confirm').disabled=true;const rows=parseImport($('#be-import-text').value,$('#be-format').value);pendingImport=rows.map(v=>({id:'manual-'+randomId(),...v}));applyChange(snapshot.store,base,{type:'add',works:pendingImport},{actor:'preview',reason:'预览导入',expectedRevision:snapshot.store.revision});$('#be-import-preview').innerHTML='<p>校验通过，将添加 '+rows.length+' 部。预览前20部：</p><ul>'+rows.slice(0,20).map(w=>'<li>'+safe(w.title)+' · '+(w.firstYear??'年份待核')+' · '+safe(w.group)+' · '+safe(w.gameplay)+' · '+safe([...Object.values(styleState(w).tags),...styleState(w).legacy].join('、'))+'</li>').join('')+'</ul>';$('#be-import-confirm').disabled=false;message('请核对预览，再确认导入');}catch(err){pendingImport=null;$('#be-import-preview').textContent='';message(err.message,true);}
   }else if(b.id==='be-import-confirm'&&pendingImport){if(await commit({type:'add',works:pendingImport},'模板导入 '+pendingImport.length+' 部作品')){pendingImport=null;b.disabled=true;}}
  });
- const styles=createStyleWorkbench({dialog,shell,all,revision:()=>snapshot.store.revision,commit,message,lock,isBusy:()=>busy});
+ const styles=createStyleWorkbench({dialog,shell,all,hydrate,revision:()=>snapshot.store.revision,commit,message,lock,isBusy:()=>busy});
  update();return {styles,edit,add:()=>edit(),importWindow,merge,connection,getChildren:id=>all().filter(w=>w.parentId===id)};
 }

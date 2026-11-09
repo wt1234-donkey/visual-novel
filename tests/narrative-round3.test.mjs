@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import * as basicFilters from '../basic-catalogue-filters.mjs';
+import {compareBasicOrder,withBasicDetails} from '../basic-catalogue-index.mjs';
+import {assembleBasicRows} from '../scripts/build_basic_web_index.mjs';
 import {workKey,validateStore,projectEntries} from '../basic-catalogue-model.mjs';
 
 test('basic catalogue loads round three with canonical identities, aliases and deferred decisions', async()=>{
@@ -15,11 +17,19 @@ test('basic catalogue loads round three with canonical identities, aliases and d
     });
     return elements.get(id);
   }
-  const context=vm.createContext({...basicFilters,document:{getElementById:element},console,workKey,validateStore,createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
-    fetch:async path=>({ok:true,json:async()=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'))})});
+  const read=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
+  const [registry,initial,batch2,review]=await Promise.all([
+    'main-adv-rpg-works-20261031.json','adv-rpg-minimal-index-20261031.json',
+    'adv-rpg-next-studio-review-20261031.json','adv-rpg-round3-review-20261031.json'
+  ].map(path=>read('data/'+path)));
+  const rows=assembleBasicRows(registry,initial.records,[['batch2',batch2.records],['batch3',review.records]]);
+  const source={meta:async()=>({basic:registry.summary}),basicRows:async()=>rows,details:async()=>new Map()};
+  const context=vm.createContext({...basicFilters,document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
+    createBasicWebIndex:()=>source,createCatalogueWorker:()=>null,
+    createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
+    fetch:async path=>({ok:true,json:async()=>read(path)})});
   await vm.runInContext((await readFile(new URL('../minimal-adv-rpg.mjs',import.meta.url),'utf8')).replace(/^import .*;$/gm,''),context);
   const entries=JSON.parse(vm.runInContext('JSON.stringify(entries)',context));
-  const review=JSON.parse(await readFile(new URL('../data/adv-rpg-round3-review-20261031.json',import.meta.url),'utf8'));
   for(const row of review.records){
     if(row.registryId){
       const matches=entries.filter(e=>e.matchedWorkId===row.registryId);

@@ -33,7 +33,7 @@
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
   </style>
   <link rel="stylesheet" href="basic-catalogue.css?v=20261109-style-tags">
-  <script type="module" src="minimal-adv-rpg.mjs?v=20261109-style-templates"></script>
+  <script type="module" src="minimal-adv-rpg.mjs?v=20261109-index"></script>
 </head>
 <body><div class="wrap">
   <header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav><a href="index.html">作品发现</a><a href="curated.html">精选叙事作品</a><a href="bulk-import.html">批量补录主库</a><a href="catalogue.html">高级发行检索</a><a href="organizations.html">组织与沿革</a><a href="https://github.com/wt1234-donkey/visual-novel">GitHub</a></nav></header>
@@ -78,6 +78,7 @@
       <button type="button" id="filter-reset">清除全部筛选</button>
     </section>
     <section class="results"><p class="count" id="count" role="status">正在读取索引……</p>
+    <p class="minor" id="basic-detail-status" role="status"></p>
     <p class="minor">点击作品名称可修改或删除；勾选多部作品可指定主作品并合并版本。默认按年份从早到晚排序，未知年份置后。</p>
     <nav class="buttons basic-pagination" aria-label="上方分页">
       <button id="prev" type="button" disabled>上一页</button><span id="pagination" aria-live="polite"></span><button id="next" type="button" disabled>下一页</button>

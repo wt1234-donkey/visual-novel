@@ -88,6 +88,7 @@ class MainWorkIdentityRegistryTests(unittest.TestCase):
         self.assertIn('id="sa-basic-works"',js)
         self.assertIn('主库基础作品',js)
         old=(ROOT/'minimal-adv-rpg.mjs').read_text(encoding='utf-8')
-        self.assertIn('main-adv-rpg-works-20261031.json',old)
+        self.assertIn('webIndex.basicRows()',old)
+        self.assertNotIn('main-adv-rpg-works-20261031.json',old)
         self.assertIn('identity-review',old)
 if __name__=='__main__':unittest.main()

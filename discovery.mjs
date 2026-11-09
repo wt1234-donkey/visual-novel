@@ -1,4 +1,4 @@
-import {projectRegistry,validateStore} from './basic-catalogue-model.mjs';
+import {createBasicWebIndex,createHomeSearch,normalizeBasicQuery,slotPage} from './basic-catalogue-index.mjs';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
 import {showLiveWorkEditor} from './live-work-editor.mjs?v=20261104-creators';
 import {createEntityIndex} from './entities.mjs';
@@ -6,7 +6,8 @@ import {normalize} from './filter.mjs';
 import {createAtlas,filterAtlas,metadataValues,creatorCredits,manualCreatorNames,creatorWorkIds,productionCredits,creditScope,sourceStatus,titleOf,CREATOR_ROLES,PENDING,MAKER_ROLES,narrativeState,narrativeCounts} from './discovery-model.mjs?v=20261104-creators';
 const root=document.getElementById('story-atlas'),view=root.querySelector('#sa-view');
 const $=selector=>root.querySelector(selector);
-const basicNameOrder=new Intl.Collator('zh-Hans-CN',{numeric:true,sensitivity:'base'});
+const basicIndex=createBasicWebIndex(),findBasicPage=createHomeSearch(basicIndex);
+let basicRenderVersion=0;
 const safe=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const textLink=(url,text)=>{try{const u=new URL(url,location.href);if(!['http:','https:'].includes(u.protocol))return safe(text);return `<a href="${safe(u.href)}" target="_blank" rel="noopener noreferrer">${safe(text)} ↗</a>`}catch{return safe(text)}};
 const tags=values=>'<div class="sa-tags">'+values.map(v=>'<span class="sa-tag">'+safe(v)+'</span>').join('')+'</div>';
@@ -17,7 +18,6 @@ const fields=[['position','叙事定位'],['style','剧情风格'],['theme','故
 const state={page:'discover',q:'',facets:Object.fromEntries(fields.map(([k])=>[k,''])),legacy:{},sort:'default',cataloguing:'',listPage:1,basicPage:1,detail:null,detailTab:'profile',creditWork:'g030',creditQuery:'',creatorType:'all',creatorQ:'',creatorPage:1,selected:null,researchTab:'topics',topicQ:'',topicKind:'',evidenceStatus:'all',evidencePage:1,evidenceQ:'',releaseQ:'',releasePage:1,evidence:null};
 const PAGE_SIZE=12;
 let atlas,entityIndex,editSourceData;
-let mainBasic={works:[],summary:{accepted:0,addedToMainIdentityLayer:0,existingComplete:0}};
 function heading(en,title,desc){return `<div class="sa-eyebrow">${en}</div><h1>${title}</h1><p class="sa-lead">${desc}</p>`;}
 function search(value,placeholder,kind){return `<div class="sa-search"><span class="sa-search-icon" aria-hidden="true">⌕</span><input type="search" data-search="${kind}" aria-label="${safe(placeholder)}" placeholder="${safe(placeholder)}" value="${safe(value)}"></div>`;}
 function book(w){const index=atlas.data.works.indexOf(w)%4;return `<div class="sa-book b${index}"><span class="sa-book-word">${safe(atlas.editorial.works[w.id]?.cover||w.originalTitle)}</span><span class="sa-book-no">${w.firstYear}</span></div>`;}
@@ -27,37 +27,35 @@ function pagination(total,page,kind,size=PAGE_SIZE){const max=Math.max(1,Math.ce
 function matches(){return filterAtlas(atlas,{query:state.q,facets:state.facets,sort:state.sort,cataloguing:state.cataloguing,legacy:state.legacy},entityIndex);}
 function discoverResults(){const list=matches();state.listPage=Math.min(state.listPage,Math.max(1,Math.ceil(list.length/PAGE_SIZE)));return `<div class="sa-toolbar"><p class="sa-count" aria-live="polite">${list.length} / ${atlas.data.works.length} 部作品</p><label class="sa-small sa-muted">排序 <select data-sort aria-label="作品排序">${[['default','档案顺序（示例在前）'],['oldest','首发：由早到晚'],['newest','首发：由近到远'],['title','名称排序']].map(([v,l])=>option(v,l,state.sort)).join('')}</select></label></div>${cards(list.slice((state.listPage-1)*PAGE_SIZE,state.listPage*PAGE_SIZE))}${pagination(list.length,state.listPage,'works')}`;}
 function mainBasicSection(){
-  // Keep title/year-only source identities searchable on the main discovery page.
-  // Do not turn them into fictitious games.json editions or creator credits.
-  const normalizeName=t=>String(t||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
-  const fullNames=new Set(atlas.data.works.flatMap(w=>[w.title,w.originalTitle,w.chineseTitle,...(w.titleAliases||[])]
-    .filter(Boolean).map(n=>normalizeName(n)+'|'+w.firstYear)));
-  let excluded=0;
-  const basic=mainBasic.works.filter(w=>{
-    if(w.mainPlacement==='existing-complete'||(w.linkedRecordId&&atlas.works.has(w.linkedRecordId))){excluded++;return false;}
-    const labels=[w.title,...(w.aliases||[])];
-    if(w.intakePolicy!=='append-without-deduplication'&&labels.some(n=>fullNames.has(normalizeName(n)+'|'+w.firstYear))){excluded++;return false;}
-    return true;
-  });
-  const q=state.q.trim().normalize('NFKC').toLowerCase();
-  const rows=basic.filter(w=>!q||[w.title,...(w.aliases||[]),w.group,...(w.sourceRefs||[])].join(' ').normalize('NFKC').toLowerCase().includes(q))
-    .sort((a,b)=>{
-      const ay=Number.isInteger(a.firstYear)?a.firstYear:Infinity;
-      const by=Number.isInteger(b.firstYear)?b.firstYear:Infinity;
-      return ay-by||basicNameOrder.compare(a.title,b.title)||basicNameOrder.compare(a.id||'',b.id||'');
-    });
-  const pageSize=25,pages=Math.max(1,Math.ceil(rows.length/pageSize));
-  state.basicPage=Math.max(1,Math.min(state.basicPage,pages));
-  const sample=rows.slice((state.basicPage-1)*pageSize,state.basicPage*pageSize);
-  return '<section class="sa-panel" aria-label="统一基础作品检索"><div class="sa-heading"><h3>主库基础作品检索 · 已批量纳入网站</h3>'+
-    status(basic.length+' 部基础身份')+'</div><p class="sa-small sa-muted">本页直接检索基础身份库的全部未形成完整档案的条目。仅展示已有名称、别名、首发年份与来源，不推断厂商、剧情、角色、原作发行或内容版本；常规批次与完整档案同名同年的记录不重复展示；指定未去重导入的条目保留。</p>'+
-    '<div class="sa-table-wrap"><table><thead><tr><th>作品及别名</th><th>首发年</th><th>玩法状态</th><th>关联线索</th><th>档案与来源</th></tr></thead><tbody>'+
-    (sample.map(w=>'<tr><td>'+safe(w.title)+((w.aliases||[]).length?'<div class="sa-small sa-muted">'+safe(w.aliases.slice(0,3).join(' / '))+'</div>':'')+'</td><td>'+safe(w.firstYear??'年份待核')+'</td><td>'+safe(w.gameplay||'玩法待核')+'</td><td>'+safe(w.group||'来源待核')+'</td><td>'+status(w.mainPlacement==='promoted-dossier'?'原专题关联':'基础身份')+' '+textLink(w.source,'核对来源')+'</td></tr>').join('')||
-      '<tr><td colspan="5">没有符合当前关键词的基础记录</td></tr>')+
-    '</tbody></table></div>'+pagination(rows.length,state.basicPage,'basic',pageSize)+
-    '<p class="sa-small sa-muted">当前搜索匹配 '+rows.length+' 部；与完整档案按身份或同名同年排除 '+excluded+' 条。仅有基础身份不计入完整内容版本或平台发行。<a href="minimal-adv-rpg.html">完整基础索引及来源</a> · <a href="data/main-adv-rpg-works-20261031.json">基础数据 JSON</a></p></section>';
+ return '<section class="sa-panel" aria-label="统一基础作品检索"><h3>主库基础作品检索</h3><p role="status">正在读取基础作品索引…</p></section>';
 }
-function renderDiscover(){if(state.detail){renderDetail();return}const active=Object.entries(state.legacy).filter(([,v])=>v);view.innerHTML=heading('DISCOVER / 作品发现','下一段故事，从这里开始。','按叙事体验寻找作品，查看主要角色、创作人员与版本差异。')+'<section class="sa-panel" aria-label="双层作品库入口"><div class="sa-heading"><h3>双层作品库：广泛收录与精选叙事</h3></div><p class="sa-small sa-muted">基础作品库优先保留独立作品名、原作年和来源；精选叙事库依据题材、结构与推荐理由逐步审核。完整档案不自动等于推荐，未精选也不表示作品质量不足。</p><div class="sa-legend"><a href="minimal-adv-rpg.html">浏览完整基础作品索引 →</a><a href="curated.html">查看精选叙事初选 →</a></div></section>'+search(state.q,'搜索作品、角色、题材或创作者…','works')+(active.length?`<div class="sa-active-filter">${status('已应用旧链接中的参与／发行筛选')}<button type="button" class="sa-link-button" data-reset>清除所有条件</button></div>`:'')+`<div class="sa-discover"><aside class="sa-filters"><div class="sa-filter-title"><strong>内容筛选</strong><button type="button" class="sa-link-button" data-reset>清除</button></div>${fields.map(([key,label])=>{const values=[...new Set(atlas.data.works.flatMap(w=>metadataValues(atlas,w,key)))].sort((a,b)=>a.localeCompare(b,'zh'));return `<label class="sa-field">${label}<select data-filter="${key}">${option('','全部',state.facets[key])}${values.map(v=>option(v,v,state.facets[key])).join('')}${key!=='gameplay'?option(PENDING,'待编目',state.facets[key]):''}</select></label>`}).join('')}<label class="sa-field">编目进度<select data-cataloguing>${[['','全部进度'],['complete','四项已编目'],['partial','已有部分编目'],['missing','尚未编目']].map(([v,l])=>option(v,l,state.cataloguing)).join('')}</select></label><p class="sa-filter-note">按作品统计：四项已编目 ${narrativeCounts(atlas).complete} / ${atlas.data.works.length} 部，部分 ${narrativeCounts(atlas).partial} 部，尚未编目 ${narrativeCounts(atlas).missing} 部。标签为编辑归纳，具体依据与仍待补证的问题见作品档案。<br><a href="data/narrative-cataloguing-20261030.md" target="_blank" rel="noopener">本轮审核与缺口清单 ↗</a></p></aside><section id="sa-work-results">${discoverResults()}</section></div><div id="sa-basic-works">${mainBasicSection()}</div>`;}
+async function updateBasicSection(scroll=false){
+ const host=$('#sa-basic-works'),version=++basicRenderVersion;
+ if(!host)return;
+ const query=normalizeBasicQuery(state.q),page=state.basicPage,size=25;
+ host.setAttribute('aria-busy','true');
+ try{
+  const {home}=await basicIndex.meta();
+  const result=query?await findBasicPage(query,page,size):slotPage(home.total,page,size);
+  if(version!==basicRenderVersion||host!==$('#sa-basic-works'))return;
+  const details=await basicIndex.details('home',result.slots);
+  if(version!==basicRenderVersion||host!==$('#sa-basic-works'))return;
+  state.basicPage=result.page;
+  const sample=result.slots.map(slot=>details.get(slot));
+  host.innerHTML='<section class="sa-panel" aria-label="统一基础作品检索"><div class="sa-heading"><h3>主库基础作品检索 · 已批量纳入网站</h3>'+
+   status(home.total+' 部基础身份')+'</div><p class="sa-small sa-muted">本页直接检索基础身份库中尚未形成完整档案的条目。常规批次与完整档案同名同年的记录不重复展示，指定未去重导入的条目保留。</p>'+
+   '<div class="sa-table-wrap"><table><thead><tr><th>作品及别名</th><th>首发年</th><th>玩法状态</th><th>关联线索</th><th>档案与来源</th></tr></thead><tbody>'+
+   (sample.map(w=>'<tr><td>'+safe(w.title)+((w.aliases||[]).length?'<div class="sa-small sa-muted">'+safe(w.aliases.slice(0,3).join(' / '))+'</div>':'')+'</td><td>'+safe(w.firstYear??'年份待核')+'</td><td>'+safe(w.gameplay||'玩法待核')+'</td><td>'+safe(w.group||'来源待核')+'</td><td>'+status(w.mainPlacement==='promoted-dossier'?'原专题关联':'基础身份')+' '+textLink(w.source,'核对来源')+'</td></tr>').join('')||
+    '<tr><td colspan="5">没有符合当前关键词的基础记录</td></tr>')+
+   '</tbody></table></div>'+pagination(result.total,result.page,'basic',size)+
+   '<p class="sa-small sa-muted">当前搜索匹配 '+result.total+' 部；与完整档案按身份或同名同年排除 '+home.excluded+' 条。<a href="minimal-adv-rpg.html">完整基础索引及来源</a> · <a href="data/main-adv-rpg-works-20261031.json">原始基础数据 JSON</a></p></section>';
+  if(scroll)host.scrollIntoView({block:'start'});
+ }catch(error){
+  if(version!==basicRenderVersion||host!==$('#sa-basic-works'))return;
+  host.innerHTML='<section class="sa-panel"><h3>基础作品索引暂不可用</h3><p role="alert">'+safe(error.message)+'</p>'+button('重试加载基础索引','data-retry-basic')+' <a href="minimal-adv-rpg.html">打开基础身份库</a></section>';
+ }finally{if(version===basicRenderVersion)host.setAttribute('aria-busy','false');}
+}
+function renderDiscover(){if(state.detail){renderDetail();return}const active=Object.entries(state.legacy).filter(([,v])=>v);view.innerHTML=heading('DISCOVER / 作品发现','下一段故事，从这里开始。','按叙事体验寻找作品，查看主要角色、创作人员与版本差异。')+'<section class="sa-panel" aria-label="双层作品库入口"><div class="sa-heading"><h3>双层作品库：广泛收录与精选叙事</h3></div><p class="sa-small sa-muted">基础作品库优先保留独立作品名、原作年和来源；精选叙事库依据题材、结构与推荐理由逐步审核。完整档案不自动等于推荐，未精选也不表示作品质量不足。</p><div class="sa-legend"><a href="minimal-adv-rpg.html">浏览完整基础作品索引 →</a><a href="curated.html">查看精选叙事初选 →</a></div></section>'+search(state.q,'搜索作品、角色、题材或创作者…','works')+(active.length?`<div class="sa-active-filter">${status('已应用旧链接中的参与／发行筛选')}<button type="button" class="sa-link-button" data-reset>清除所有条件</button></div>`:'')+`<div class="sa-discover"><aside class="sa-filters"><div class="sa-filter-title"><strong>内容筛选</strong><button type="button" class="sa-link-button" data-reset>清除</button></div>${fields.map(([key,label])=>{const values=[...new Set(atlas.data.works.flatMap(w=>metadataValues(atlas,w,key)))].sort((a,b)=>a.localeCompare(b,'zh'));return `<label class="sa-field">${label}<select data-filter="${key}">${option('','全部',state.facets[key])}${values.map(v=>option(v,v,state.facets[key])).join('')}${key!=='gameplay'?option(PENDING,'待编目',state.facets[key]):''}</select></label>`}).join('')}<label class="sa-field">编目进度<select data-cataloguing>${[['','全部进度'],['complete','四项已编目'],['partial','已有部分编目'],['missing','尚未编目']].map(([v,l])=>option(v,l,state.cataloguing)).join('')}</select></label><p class="sa-filter-note">按作品统计：四项已编目 ${narrativeCounts(atlas).complete} / ${atlas.data.works.length} 部，部分 ${narrativeCounts(atlas).partial} 部，尚未编目 ${narrativeCounts(atlas).missing} 部。标签为编辑归纳，具体依据与仍待补证的问题见作品档案。<br><a href="data/narrative-cataloguing-20261030.md" target="_blank" rel="noopener">本轮审核与缺口清单 ↗</a></p></aside><section id="sa-work-results">${discoverResults()}</section></div><div id="sa-basic-works">${mainBasicSection()}</div>`;updateBasicSection();}
 function detailTabs(){return '<nav class="sa-tabs" aria-label="作品档案栏目">'+[['profile','作品档案'],['versions','内容与版本'],['sources','证据与来源']].map(([id,title])=>`<button type="button" data-detail-tab="${id}" aria-pressed="${state.detailTab===id}">${title}</button>`).join('')+'</nav>';}
 function renderDetail(){const w=atlas.works.get(state.detail);if(!w){state.detail=null;renderDiscover();return}view.innerHTML=`<button type="button" data-back class="sa-link-button">← 返回作品发现</button><div class="sa-detail-top"><div class="sa-detail-hero">${book(w)}<div><div class="sa-eyebrow">WORK DOSSIER / ${safe(w.id)}</div><h1>${safe(titleOf(w))}</h1><p class="sa-small sa-muted">${safe(w.originalTitle)}${w.chineseTitleType==='站内编辑译名'?' · 中文名为站内编辑译名':''}</p><p class="sa-lead">${w.firstYear} · ${safe(brandLabel(w))}</p></div></div></div><div class="sa-lineup">${button('添加剧作／美术／音乐',`data-add-creators="${w.id}"`)}${button('编辑作品／回撤最近3次修改',`data-edit-work="${w.id}"`)}</div>${detailTabs()}${state.detailTab==='profile'?profile(w):state.detailTab==='versions'?versions(w):sources(w)}`;}
 function narrativeEvidence(w){
@@ -99,7 +97,7 @@ function saveURL(push=false){const url=new URL(location.href);url.hash=currentHa
 function navigate(){saveURL(true);render();$('#catalogue').scrollIntoView({block:'start'});}
 function showWork(id,tab='profile'){state.page='discover';state.detail=id;state.detailTab=tab;state.evidence=null;navigate();}
 function route(){const params=new URLSearchParams(location.search);state.q=params.get('query')||'';for(const [k] of fields)state.facets[k]=params.get(k)||'';state.sort=params.get('sort')||'default';state.cataloguing=['complete','partial','missing'].includes(params.get('cataloguing'))?params.get('cataloguing'):'';state.legacy=Object.fromEntries(['brand','developer','publisher','participant','participantRole','dossier','dossierRelation'].map(k=>[k,params.get(k)||'']));state.legacy.includeAffiliates=params.get('includeAffiliates')==='true';state.detail=null;const raw=decodeURIComponent(location.hash.slice(1));const [name,id,tab]=raw.split('/');if(['interaction-guide','method'].includes(name)){location.replace('catalogue.html#'+name);return}if(name==='work'&&atlas.works.has(id)){state.page='discover';state.detail=id;state.detailTab=['profile','versions','sources'].includes(tab)?tab:'profile'}else if(atlas.works.has(raw)){state.page='discover';state.detail=raw;state.detailTab='profile'}else if(name==='credits'){state.page='credits';if(atlas.works.has(id))state.creditWork=id}else if(name==='creators'||name==='creator'){state.page='creators';state.selected=name==='creator'?id:null}else if(name==='research'){state.page='research';state.researchTab=['topics','organizations','releases','evidence'].includes(id)?id:'topics'}else if(name==='company-dossiers'){state.page='research';state.researchTab='topics'}else{state.page='discover'}render();}
-root.addEventListener('click',event=>{const b=event.target.closest('button');if(!b||!root.contains(b))return;if(b.hasAttribute('data-retry')){load();return}if(!atlas)return;
+root.addEventListener('click',event=>{const b=event.target.closest('button');if(!b||!root.contains(b))return;if(b.hasAttribute('data-retry')){load();return}if(b.hasAttribute('data-retry-basic')){updateBasicSection();return}if(!atlas)return;
 if(b.dataset.editWork){showLiveWorkEditor(b.dataset.editWork);return;}
 if(b.dataset.addCreators){showLiveWorkEditor(b.dataset.addCreators,{creatorsOnly:true});return;}
 if(b.dataset.creatorName){state.page='discover';state.detail=null;state.q=b.dataset.creatorName;state.facets=Object.fromEntries(fields.map(([k])=>[k,'']));state.legacy={};state.cataloguing='';state.listPage=1;navigate();return;}
@@ -118,12 +116,12 @@ else if(b.dataset.selectCreator){state.selected=b.dataset.selectCreator;state.se
 else if(b.hasAttribute('data-close-creator')){state.selected=null;saveURL();$('#sa-selected-creator').innerHTML=''}
 else if(b.dataset.researchTab){state.researchTab=b.dataset.researchTab;navigate()}
 else if(b.hasAttribute('data-dossier-kind')){state.topicKind=b.dataset.dossierKind;applyTopicFilters()}
-else if(b.hasAttribute('data-reset')){state.q='';Object.keys(state.facets).forEach(k=>state.facets[k]='');state.legacy={};state.sort='default';state.cataloguing='';state.listPage=1;saveURL();render()}
+else if(b.hasAttribute('data-reset')){state.q='';Object.keys(state.facets).forEach(k=>state.facets[k]='');state.legacy={};state.sort='default';state.cataloguing='';state.listPage=1;state.basicPage=1;saveURL();render()}
 else if(b.hasAttribute('data-open-advanced')){location.href='catalogue.html'+location.search}
-else if(b.dataset.pager){const map={works:'listPage',creators:'creatorPage',selected:'selectedPage',basic:'basicPage',releases:'releasePage',evidence:'evidencePage'};state[map[b.dataset.pager]]+=Number(b.dataset.step);if(b.dataset.pager==='basic'){$('#sa-basic-works').innerHTML=mainBasicSection();$('#sa-basic-works').scrollIntoView({block:'start'})}else if(b.dataset.pager==='works'){$('#sa-work-results').innerHTML=discoverResults();$('#sa-work-results').scrollIntoView({block:'start'})}else if(b.dataset.pager==='creators'){$('#sa-creator-results').innerHTML=creatorCards();$('#sa-creator-results').scrollIntoView({block:'start'})}else if(b.dataset.pager==='selected'){$('#sa-selected-creator').innerHTML=selectedCreator();$('#sa-selected-creator').scrollIntoView({block:'start'})}else if(b.dataset.pager==='releases'){$('#sa-release-results').innerHTML=releaseResults();$('#sa-release-results').scrollIntoView({block:'start'})}else{$('#sa-evidence-results').innerHTML=evidenceResults();$('#sa-evidence-results').scrollIntoView({block:'start'})}}
+else if(b.dataset.pager){const map={works:'listPage',creators:'creatorPage',selected:'selectedPage',basic:'basicPage',releases:'releasePage',evidence:'evidencePage'};state[map[b.dataset.pager]]+=Number(b.dataset.step);if(b.dataset.pager==='basic'){updateBasicSection(true)}else if(b.dataset.pager==='works'){$('#sa-work-results').innerHTML=discoverResults();$('#sa-work-results').scrollIntoView({block:'start'})}else if(b.dataset.pager==='creators'){$('#sa-creator-results').innerHTML=creatorCards();$('#sa-creator-results').scrollIntoView({block:'start'})}else if(b.dataset.pager==='selected'){$('#sa-selected-creator').innerHTML=selectedCreator();$('#sa-selected-creator').scrollIntoView({block:'start'})}else if(b.dataset.pager==='releases'){$('#sa-release-results').innerHTML=releaseResults();$('#sa-release-results').scrollIntoView({block:'start'})}else{$('#sa-evidence-results').innerHTML=evidenceResults();$('#sa-evidence-results').scrollIntoView({block:'start'})}}
 });
 root.addEventListener('input',event=>{const t=event.target,type=t.dataset.search;if(!atlas)return;
-if(type==='works'){state.q=t.value;state.listPage=1;state.basicPage=1;saveURL();$('#sa-work-results').innerHTML=discoverResults();$('#sa-basic-works').innerHTML=mainBasicSection()}
+if(type==='works'){state.q=t.value;state.listPage=1;state.basicPage=1;saveURL();$('#sa-work-results').innerHTML=discoverResults();updateBasicSection()}
 else if(type==='credit-work'){state.creditQuery=t.value;$('[data-credit-work]').innerHTML=creditWorkOptions()}
 else if(type==='creators'){state.creatorQ=t.value;state.creatorPage=1;state.selected=null;$('#sa-creator-results').innerHTML=creatorCards();$('#sa-selected-creator').innerHTML=''}
 else if(type==='topics'){state.topicQ=t.value;applyTopicFilters()}
@@ -133,7 +131,33 @@ else if(type==='evidence'){state.evidenceQ=t.value;state.evidencePage=1;$('#sa-e
 root.addEventListener('change',event=>{const t=event.target;if(!atlas)return;if(t.hasAttribute('data-cataloguing')){state.cataloguing=t.value;state.listPage=1;saveURL();$('#sa-work-results').innerHTML=discoverResults()}else if(t.dataset.filter){state.facets[t.dataset.filter]=t.value;state.listPage=1;saveURL();$('#sa-work-results').innerHTML=discoverResults()}else if(t.hasAttribute('data-sort')){state.sort=t.value;state.listPage=1;saveURL();$('#sa-work-results').innerHTML=discoverResults()}else if(t.hasAttribute('data-credit-work')){state.creditWork=t.value;state.evidence=null;saveURL();renderCredits()}else if(t.hasAttribute('data-status')){state.evidenceStatus=t.value;state.evidencePage=1;$('#sa-evidence-results').innerHTML=evidenceResults()}});
 window.addEventListener('popstate',()=>atlas&&route());
 window.addEventListener('hashchange',()=>atlas&&route());
-async function load(){view.setAttribute('aria-busy','true');try{const [data,catalogue,editorial,creators,notes]=await Promise.all(['games.json','entity-catalogue.json','discovery-editorial.json','creator-credits.json','work-notes.json'].map(async path=>{const response=await fetch('./data/'+path+'?v=20261030-narrative');if(!response.ok)throw new Error(path+' HTTP '+response.status);return response.json()}));const extraResponse=await fetch('./data/non-rpg-creator-supplement-20261030.json?v=20261030');if(!extraResponse.ok)throw new Error('补录数据 HTTP '+extraResponse.status);const extra=await extraResponse.json();const known=new Set(data.works.map(w=>w.id));for(const work of extra.works){if(!known.has(work.id)){data.works.push(work);known.add(work.id)}}const releaseKnown=new Set(data.platformReleases.map(v=>v.id));for(const version of extra.platformReleases){if(!releaseKnown.has(version.id)){data.platformReleases.push(version);releaseKnown.add(version.id)}}const contentKnown=new Set(data.contentVersions.map(v=>v.id));for(const content of extra.contentVersions){if(!contentKnown.has(content.id)){data.contentVersions.push(content);contentKnown.add(content.id)}}try{const res=await fetch('./data/main-adv-rpg-works-20261031.json?v=20261031-main-registry');if(res.ok){const basicChanges=await fetch('./data/basic-catalogue-edits.json',{cache:'no-store'});if(!basicChanges.ok)throw Error('基础库修改记录读取失败');mainBasic=projectRegistry(await res.json(),validateStore(await basicChanges.json()));}else console.warn('基础主库作品索引不可用',res.status)}catch(error){console.warn('基础主库索引暂无法加载',error)}const editResponse=await fetch('./data/work-edit-history.json',{cache:'no-store'});if(!editResponse.ok)throw Error('作品修改记录读取失败');editSourceData=structuredClone(data);applyWorkEdits(data,await editResponse.json());atlas=createAtlas(data,catalogue,editorial,creators,notes);entityIndex=createEntityIndex(data,catalogue.model,catalogue);$('#sa-total-note').textContent=`${data.works.length} 部作品 · ${data.contentVersions.length} 个内容版本 · ${catalogue.model.dossiers.length} 个历史专题`;route();const editId=new URLSearchParams(location.search).get('edit');if(editId&&atlas.works.has(editId))showLiveWorkEditor(editId)}catch(error){view.setAttribute('aria-busy','false');view.innerHTML='<div class="sa-empty" role="alert"><h2>作品档案加载失败</h2><p>请刷新重试，或使用高级检索与历史专题。</p><p class="sa-small">'+safe(error.message)+'</p>'+button('重试加载','data-retry')+' <a href="catalogue.html">高级检索</a></div>';console.error(error)}}
+async function load(){
+ view.setAttribute('aria-busy','true');
+ try{
+  const paths=['games.json','entity-catalogue.json','discovery-editorial.json','creator-credits.json','work-notes.json','non-rpg-creator-supplement-20261030.json','work-edit-history.json'];
+  const [data,catalogue,editorial,creators,notes,extra,edits]=await Promise.all(paths.map(async path=>{
+   const response=await fetch('./data/'+path,path==='work-edit-history.json'?{cache:'no-store'}:undefined);
+   if(!response.ok)throw Error(path+' HTTP '+response.status);
+   return response.json();
+  }));
+  for(const key of ['works','platformReleases','contentVersions']){
+   const known=new Set(data[key].map(row=>row.id));
+   for(const row of extra[key])if(!known.has(row.id)){data[key].push(row);known.add(row.id);}
+  }
+  editSourceData=data;
+  const edited=applyWorkEdits({...data},edits);
+  atlas=createAtlas(edited,catalogue,editorial,creators,notes);
+  entityIndex=createEntityIndex(edited,catalogue.model,catalogue);
+  $('#sa-total-note').textContent=`${edited.works.length} 部作品 · ${edited.contentVersions.length} 个内容版本 · ${catalogue.model.dossiers.length} 个历史专题`;
+  route();
+  const editId=new URLSearchParams(location.search).get('edit');
+  if(editId&&atlas.works.has(editId))showLiveWorkEditor(editId);
+ }catch(error){
+  view.setAttribute('aria-busy','false');
+  view.innerHTML='<div class="sa-empty" role="alert"><h2>作品档案加载失败</h2><p>请刷新重试，或使用高级检索与历史专题。</p><p class="sa-small">'+safe(error.message)+'</p>'+button('重试加载','data-retry')+' <a href="catalogue.html">高级检索</a></div>';
+  console.error(error);
+ }
+}
 load();
 
-window.addEventListener('catalogue-work-edit',event=>{if(!atlas||!editSourceData)return;const data=applyWorkEdits(structuredClone(editSourceData),event.detail);atlas=createAtlas(data,atlas.catalogue,atlas.editorial,atlas.creators,atlas.notes);entityIndex=createEntityIndex(data,atlas.catalogue.model,atlas.catalogue);evidenceCache=null;render();});
+window.addEventListener('catalogue-work-edit',event=>{if(!atlas||!editSourceData)return;const data=applyWorkEdits({...editSourceData},event.detail);atlas=createAtlas(data,atlas.catalogue,atlas.editorial,atlas.creators,atlas.notes);entityIndex=createEntityIndex(data,atlas.catalogue.model,atlas.catalogue);evidenceCache=null;render();});
