@@ -1,0 +1,76 @@
+name: 编目审核台发布
+run-name: 编目发布 ${{ fromJSON(inputs.batch).id }}
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: 审核台已批准的编目批次
+        required: true
+        type: string
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: editorial-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate and stage approved changes
+        id: apply
+        env:
+          EDITORIAL_BATCH: ${{ inputs.batch }}
+        run: |
+          printf '%s' "$EDITORIAL_BATCH" > "$RUNNER_TEMP/editorial-batch.json"
+          node scripts/apply_editorial_batch.mjs "$RUNNER_TEMP/editorial-batch.json"
+      - name: Rebuild affected indexes
+        if: steps.apply.outputs.management == 'true'
+        run: |
+          python3 scripts/sync_versions_csv.py
+          python3 scripts/export_content_csv.py
+          python3 scripts/export_interaction_csv.py
+          python3 scripts/build_entity_model.py
+          python3 scripts/build_entity_pages.py
+          python3 scripts/build_company_pages.py
+          python3 scripts/audit_narrative_pending_20261030.py
+      - name: Verify current data and regressions
+        if: steps.apply.outputs.already != 'true'
+        run: |
+          python3 scripts/manage_catalogue.py --check
+          python3 scripts/validate_narrative_editorial.py
+          python3 scripts/validate_work_edits.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/run_python_tests.py
+          node --test tests/*.test.mjs
+          python3 scripts/build_company_pages.py --check
+      - name: Commit approved catalogue changes
+        if: steps.apply.outputs.already != 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data '*.html'
+          git commit -m 'Publish approved catalogue proposals'
+          git push origin HEAD:main
+      - name: Build and publish the updated site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run_id=$(gh api -X POST -H 'X-GitHub-Api-Version: 2026-03-10' \
+            "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/dispatches" \
+            -f ref=main -F return_run_details=true --jq .workflow_run_id)
+          test -n "$run_id"
+          gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status

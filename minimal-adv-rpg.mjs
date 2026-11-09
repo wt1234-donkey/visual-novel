@@ -1,5 +1,5 @@
 import {normalizeFilterText,manufacturerKey,manufacturerNames,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayKeys,gameplayOptions,gameplayDisplay,styleState,styleDimension,STYLE_DIMENSIONS,styleOptions,MISSING_STYLE,pageIndex,basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs?v=20261109-index';
-import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261109-index';
+import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261109-editorial';
 import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261109-style-tags';
 import {compareBasicOrder,createBasicWebIndex,createCatalogueWorker,withBasicDetails} from './basic-catalogue-index.mjs';
 const webIndex=createBasicWebIndex(),queryIndex=createCatalogueWorker();
