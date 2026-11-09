@@ -1,6 +1,8 @@
-import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261106-filters';
+import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261109-style-tags';
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,STYLE_OPTIONS} from './basic-catalogue-model.mjs?v=20261106-filters';
+import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport} from './basic-catalogue-model.mjs?v=20261109-style-tags';
+import {styleName,styleState} from './basic-style-tags.mjs';
+import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
@@ -40,13 +42,17 @@ export function createBasicEditor(base,initial,onChange){
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
  function edit(id=null){
   const w=id?get(id):null;if(id&&!w)return;const v=w?valuesOf(w):{title:'',firstYear:null,group:'',gameplay:'',plotStyles:[],source:''};
+  const {tags,legacy}=styleState(v);
   const children=w?all().filter(x=>x.parentId===id):[];
   shell(w?'修改作品 · '+w.title:'直接添加作品',`<form id="be-edit" data-id="${safe(id||'')}"><div class="be-grid">
    ${input('title','作品名称',v.title,'required maxlength="500"')}
    <label>首发年份（未知可留空）<input name="firstYear" type="number" min="1970" max="${new Date().getFullYear()+10}" step="1" list="be-years" value="${v.firstYear??''}"><datalist id="be-years">${Array.from({length:new Date().getFullYear()+11-1970},(_,i)=>`<option value="${1970+i}"></option>`).join('')}</datalist></label>
    ${input('group','厂商／创作主体',v.group,'required list="be-groups" maxlength="500"')}<datalist id="be-groups">${[...new Map(base.filter(x=>x.group).map(x=>[manufacturerKey(x.group),x.group])).values()].map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist>
    ${input('gameplay','主要玩法',v.gameplay,'required list="be-gameplay" maxlength="500"')}<datalist id="be-gameplay">${GAMEPLAY_OPTIONS.map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist></div>
-   <fieldset><legend>剧情风格 · 最多3个</legend><div class="be-grid be-styles">${[0,1,2].map(i=>input('style'+i,'风格 '+(i+1),v.plotStyles[i]||'','list="be-styles" maxlength="30"')).join('')}</div><datalist id="be-styles">${[...new Set([...STYLE_OPTIONS,...all().flatMap(w=>w.plotStyles||[])])].map(s=>`<option value="${safe(s)}"></option>`).join('')}</datalist><p class="minor">可从建议中选择，也可输入自定义风格；未核实可留空。</p></fieldset>
+   <fieldset><legend>剧情风格标签 · 六个维度各选一项</legend>${styleInputs(tags)}
+   <p class="minor">资料不足的维度可留空。</p>
+   ${Object.entries(v.plotTagEvidence||{}).map(([key,{quote,source,model}])=>'<p class="minor">'+safe(tags[key])+' · '+safe(quote)+' · '+safe(model)+' <a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">资料来源 ↗</a></p>').join('')}
+   ${legacy.length?'<p class="minor">旧标签待整理：'+safe(legacy.join('、'))+'</p><label class="be-candidate"><input type="checkbox" name="removeLegacy">移除这些待整理旧标签</label>':''}</fieldset>
    ${input('source','资料来源（可选）',v.source,'type="url"')}
    ${input('reason','修改说明',w?'更正基础作品资料':'直接添加基础作品','required maxlength="300"')}
    <div class="be-actions"><button class="primary" type="submit">${w?'保存修改':'添加到基础库'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}</div></form>
@@ -63,10 +69,15 @@ export function createBasicEditor(base,initial,onChange){
  dialog.addEventListener('input',e=>{if(['be-import-text','be-format'].includes(e.target.id)){pendingImport=null;$('#be-import-confirm').disabled=true;}});
  dialog.addEventListener('change',async e=>{if(e.target.id==='be-file'){try{const file=e.target.files[0];if(!file)return;if(file.size>5e6)throw Error('文件超过5MB，请分批导入');$('#be-import-text').value=await file.text();$('#be-format').value=file.name.toLowerCase().endsWith('.json')?'json':'csv';pendingImport=null;$('#be-import-confirm').disabled=true;message('文件已读取，请校验并预览');}catch(err){message(err.message,true);}}});
  dialog.addEventListener('submit',async e=>{
-  e.preventDefault();if(busy)return;const form=e.target,f=new FormData(form);
+  const form=e.target;if(!['be-edit','be-merge'].includes(form.id))return;
+  e.preventDefault();if(busy)return;const f=new FormData(form);
   if(form.id==='be-edit'){
-   const v={title:String(f.get('title')).trim(),firstYear:f.get('firstYear')?Number(f.get('firstYear')):null,group:String(f.get('group')).trim(),gameplay:String(f.get('gameplay')).trim(),plotStyles:[0,1,2].map(i=>String(f.get('style'+i)||'').trim()).filter(Boolean),source:String(f.get('source')||'').trim()};
-   const id=form.dataset.id;const saved=await commit(id?{type:'edit',id,values:v}:{type:'add',works:[{id:'manual-'+randomId(),...v}]},String(f.get('reason')));
+   const id=form.dataset.id,previous=id?get(id):null,plotTags=readStyleInputs(f);
+   const {legacy}=styleState(previous||{});
+   const plotStyles=f.has('removeLegacy')?[]:legacy.filter(tag=>!Object.values(plotTags).includes(styleName(tag)));
+   const plotTagEvidence=Object.fromEntries(Object.entries(previous?.plotTagEvidence||{}).filter(([key])=>plotTags[key]===previous.plotTags[key]));
+   const v={title:String(f.get('title')).trim(),firstYear:f.get('firstYear')?Number(f.get('firstYear')):null,group:String(f.get('group')).trim(),gameplay:String(f.get('gameplay')).trim(),plotStyles,plotTags,plotTagEvidence,source:String(f.get('source')||'').trim()};
+   const saved=await commit(id?{type:'edit',id,values:v}:{type:'add',works:[{id:'manual-'+randomId(),...v}]},String(f.get('reason')));
    if(saved&&!id&&getLastAdded(v.title)){form.dataset.id=getLastAdded(v.title)._key;form.querySelector('button[type=submit]').textContent='保存修改';}
   }else if(form.id==='be-merge'){
    const mainId=String(f.get('mainId')),ids=JSON.parse(f.get('ids')).filter(id=>id!==mainId);
@@ -86,8 +97,9 @@ export function createBasicEditor(base,initial,onChange){
   else if(b.dataset.detach){if(await commit({type:'detach',id:b.dataset.detach},'解除版本合并'))edit(b.dataset.detach);}
   else if(b.id==='be-undo'){if(confirm('撤销最近一次“'+snapshot.store.recent.at(-1)?.reason+'”？'))if(await commit(null,'撤销最近操作',true))connection();}
   else if(b.id==='be-validate'){
-   try{pendingImport=null;$('#be-import-confirm').disabled=true;const rows=parseImport($('#be-import-text').value,$('#be-format').value);pendingImport=rows.map(v=>({id:'manual-'+randomId(),...v}));applyChange(snapshot.store,base,{type:'add',works:pendingImport},{actor:'preview',reason:'预览导入',expectedRevision:snapshot.store.revision});$('#be-import-preview').innerHTML='<p>校验通过，将添加 '+rows.length+' 部。预览前20部：</p><ul>'+rows.slice(0,20).map(w=>'<li>'+safe(w.title)+' · '+(w.firstYear??'年份待核')+' · '+safe(w.group)+' · '+safe(w.gameplay)+' · '+safe(w.plotStyles.join('、'))+'</li>').join('')+'</ul>';$('#be-import-confirm').disabled=false;message('请核对预览，再确认导入');}catch(err){pendingImport=null;$('#be-import-preview').textContent='';message(err.message,true);}
+   try{pendingImport=null;$('#be-import-confirm').disabled=true;const rows=parseImport($('#be-import-text').value,$('#be-format').value);pendingImport=rows.map(v=>({id:'manual-'+randomId(),...v}));applyChange(snapshot.store,base,{type:'add',works:pendingImport},{actor:'preview',reason:'预览导入',expectedRevision:snapshot.store.revision});$('#be-import-preview').innerHTML='<p>校验通过，将添加 '+rows.length+' 部。预览前20部：</p><ul>'+rows.slice(0,20).map(w=>'<li>'+safe(w.title)+' · '+(w.firstYear??'年份待核')+' · '+safe(w.group)+' · '+safe(w.gameplay)+' · '+safe([...Object.values(styleState(w).tags),...styleState(w).legacy].join('、'))+'</li>').join('')+'</ul>';$('#be-import-confirm').disabled=false;message('请核对预览，再确认导入');}catch(err){pendingImport=null;$('#be-import-preview').textContent='';message(err.message,true);}
   }else if(b.id==='be-import-confirm'&&pendingImport){if(await commit({type:'add',works:pendingImport},'模板导入 '+pendingImport.length+' 部作品')){pendingImport=null;b.disabled=true;}}
  });
- update();return {edit,add:()=>edit(),importWindow,merge,connection,getChildren:id=>all().filter(w=>w.parentId===id)};
+ const styles=createStyleWorkbench({dialog,shell,all,revision:()=>snapshot.store.revision,commit,message,lock,isBusy:()=>busy});
+ update();return {styles,edit,add:()=>edit(),importWindow,merge,connection,getChildren:id=>all().filter(w=>w.parentId===id)};
 }

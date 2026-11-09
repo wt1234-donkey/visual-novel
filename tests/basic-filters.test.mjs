@@ -33,12 +33,12 @@ test('gameplay browsing combines equivalent labels and matches all parts of mixe
  assert.equal(options.find(row=>row.key==='rpg').count,2);assert.equal(options.find(row=>row.key==='custom:自定义玩法').label,'自定义玩法');assert.deepEqual(works,before);
  assert.equal(gameplayDisplay('自定义玩法'),'自定义玩法');assert.match(gameplayDisplay('ARPG'),/RPG.*动作/);
 });
-test('expanded style suggestions coexist with custom styles and preserve the three-style limit',()=>{
+test('style suggestions use six dimensions and preserve legacy custom styles',()=>{
  assert.equal(STYLE_OPTIONS.length,new Set(STYLE_OPTIONS).size);assert.ok(STYLE_OPTIONS.length>=50);
  for(const style of ['纯爱','致郁','科幻','成人向','NTR','乱伦'])assert.ok(STYLE_OPTIONS.includes(style));
  const options=styleOptions([{plotStyles:['治愈','疗愈','地方悬疑']},{plotStyles:['ntr']}]);
  assert.equal(options.flatMap(row=>row.options).find(row=>row.key==='治愈').count,1);assert.equal(styleName('ntr'),'NTR');
- assert.ok(options.find(row=>row.label==='自定义风格').options.some(row=>row.key==='地方悬疑'));assert.ok(options.flatMap(row=>row.options).some(row=>row.key==='史诗'&&row.count===0));
+ assert.ok(options.find(row=>row.label==='旧标签待整理').options.some(row=>row.key==='legacy:地方悬疑'));assert.ok(options.flatMap(row=>row.options).some(row=>row.key==='史诗'&&row.count===0));
  assert.throws(()=>validateValues({...valuesOf({title:'Example',group:'Studio',gameplay:'ADV'}),plotStyles:['a','b','c','d']}),/最多3个/);
 });
 test('page jumps accept valid first, last and intermediate pages and reject invalid requests',()=>{
