@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+const read=path=>readFileSync(new URL(path,import.meta.url),'utf8');
+const protocol=read('./editorial-proposal.mjs').replace(/^export /gm,'');
+const worker=read('./worker.mjs').replace(/^import .*editorial-proposal\.mjs';\n/m,'');
+const client=read('./client.js').replaceAll('</script','<\\/script');
+const html=read('./index.html').replace('/*EDITORIAL_CLIENT*/',()=>client);
+mkdirSync(new URL('./dist/server/',import.meta.url),{recursive:true});
+mkdirSync(new URL('./dist/.openai/',import.meta.url),{recursive:true});
+writeFileSync(new URL('./dist/server/index.js',import.meta.url),protocol+'\nconst editorialPage='+JSON.stringify(html)+';\n'+worker);
+writeFileSync(new URL('./dist/.openai/hosting.json',import.meta.url),read('./.openai/hosting.json'));

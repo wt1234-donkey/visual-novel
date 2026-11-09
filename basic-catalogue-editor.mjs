@@ -4,6 +4,7 @@ import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,w
 import {styleName,styleState} from './basic-style-tags.mjs';
 import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs?v=20261109-index';
 import {withBasicDetails} from './basic-catalogue-index.mjs';
+import {makeProposal,offerEditorialProposal,basicProposalPreview,EDITORIAL_URL} from './editorial-proposal.mjs';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
@@ -35,7 +36,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  function shell(title,body){
   if(busy)return;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
-   <details class="be-auth" ${actor?'':'open'}><summary>写入权限 · ${actor?safe(actor):'连接 GitHub'}</summary><p class="minor">凭证仅在当前页面内存保留，刷新后清除。</p><ol class="minor"><li>使用拥有仓库权限的 GitHub 账号；Resource owner 应为 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b>，再选择 <b>visual-novel</b>。Public repositories 只有读取权限。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>，然后生成凭证。</li></ol><p class="minor">连接成功表示账号和读取校验通过，GitHub 会在保存时核验凭证的实际写入权限。</p><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仓库专用凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">重新读取网站修改</button></div></details>
+   <details class="be-auth"><summary>管理员直连 · ${actor?safe(actor):'GitHub 备用入口'}</summary><p class="minor">凭证仅在当前页面内存保留，刷新后清除。</p><ol class="minor"><li>使用拥有仓库权限的 GitHub 账号；Resource owner 应为 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b>，再选择 <b>visual-novel</b>。Public repositories 只有读取权限。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>，然后生成凭证。</li></ol><p class="minor">连接成功表示账号和读取校验通过，GitHub 会在保存时核验凭证的实际写入权限。</p><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仓库专用凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">重新读取网站修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
   dialog.setAttribute('aria-label',title);if(!dialog.open)dialog.showModal();
  }
@@ -44,10 +45,18 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  async function commit(action,reason,undo=false){
   if(busy)return false;
   try{
-   if(!actor)throw Error('请先在上方连接 GitHub 写入权限');
-   const meta={id:randomId(),at:new Date().toISOString(),actor,reason,expectedRevision:snapshot.store.revision};
+   const meta={id:randomId(),at:new Date().toISOString(),actor:actor||'送审预览',reason,expectedRevision:snapshot.store.revision};
    lock(true);message('正在检查最新记录并保存…');
    const next=undo?undoLast(snapshot.store,snapshot.store.revision):applyChange(snapshot.store,await prepareBase(action),action,meta);
+   if(!actor){
+    const change=undo?{type:'undo'}:action;
+    const sources=[change.values?.source,change.relation?.source,...(change.works||[]).map(w=>w.source),
+     ...(change.rows||[]).flatMap(row=>Object.values(row.evidence||{}).map(item=>item.source))];
+    const proposal=makeProposal('basic',reason,{expectedRevision:meta.expectedRevision,action:change},
+     basicProposalPreview(snapshot.store,next,change),sources);
+    message('');offerEditorialProposal($('#be-message'),proposal);
+    return false;
+   }
    const live=await client.read();if(JSON.stringify(live.store)!==JSON.stringify(snapshot.store))throw Error('基础库已在其他页面修改。请先“重新读取网站修改”，再核对并保存；当前输入仍保留');
    let result;
    try{result=await client.write(next,live.sha,'Basic catalogue: '+reason.slice(0,100));}
@@ -80,7 +89,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    ${legacy.length?'<p class="minor">旧标签待整理：'+safe(legacy.join('、'))+'</p><label class="be-candidate"><input type="checkbox" name="removeLegacy">移除这些待整理旧标签</label>':''}</fieldset>
    ${input('source','资料来源（可选）',v.source,'type="url"')}
    ${input('reason','修改说明',w?'更正基础作品资料':'直接添加基础作品','required maxlength="300"')}
-   <div class="be-actions"><button class="primary" type="submit">${w?'保存修改':'添加到基础库'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}</div></form>
+   <div class="be-actions"><button class="primary" type="submit">${actor?(w?'保存修改':'添加到基础库'):'预览并送审'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}</div></form>
    ${w?.parentId?`<p class="minor">所属主作品：${safe(get(w.parentId)?.title||w.parentId)} · ${safe(w.relation?.label)} · ${safe(w.relation?.note||'内容关系待核')}</p>`:''}
    ${children.length?'<h3>关联版本（'+children.length+'）</h3><ul class="be-version-list">'+children.map(c=>`<li><button type="button" data-edit="${safe(c._key)}">${safe(c.title)}</button> <span class="minor">${c.year??'年份待核'} · ${safe(c.relation?.label)} · ${safe(({unverified:'内容关系待核',same:'同内容版本',added:'新增内容版本'})[c.relation?.type])}</span>${c.relation?.note?'<p>'+safe(c.relation.note)+'</p>':''}</li>`).join('')+'</ul>':''}`);
  }
@@ -89,7 +98,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   const selected=all().filter(w=>ids.includes(w._key)&&!w.parentId);if(selected.length<2){shell('合并作品','<p>请先勾选至少两部作品，再选择主作品。</p>');return;}
   shell('合并为主作品的不同版本',`<form id="be-merge"><p>选择保留在列表中的主作品，其他作品归入它的关联版本。各版本名称、年份和来源保留，可以解除合并。</p><label>主作品<select name="mainId">${selected.map(w=>`<option value="${safe(w._key)}">${safe(w.title)} · ${w.year??'年份待核'}</option>`).join('')}</select></label><input type="hidden" name="ids" value="${safe(JSON.stringify(selected.map(w=>w._key)))}"><p class="minor">本次共选择 ${selected.length} 部作品。若被合并作品已有版本，这些版本也会归入所选主作品。</p><label>版本内容关系<select name="relation"><option value="unverified">待核实（暂不认定新增内容）</option><option value="same">已核实：相同内容／普通移植或再版</option><option value="added">已核实：新增内容</option></select></label><label>具体差异或合并依据<textarea name="note" rows="3"></textarea></label>${input('source','支持版本关系的来源（已核实关系必填）','','type="url"')}<p class="minor">每个版本沿用其原作品名。新增剧情、路线、人物、素材等须写清具体差异；普通移植不自动视为新增内容。</p><button type="submit" class="primary">确认合并所选作品</button></form>`);
  }
- function connection(){shell('写入连接与最近操作',`<p>连接后可保存增删改、导入和版本合并。所有改动保存到当前基础库，保留最近3次操作供撤销。</p><div id="be-history">${[...snapshot.store.recent].reverse().map(r=>`<p>${safe(r.reason)}<br><span class="minor">${safe(r.at)} · ${safe(r.actor)}</span></p>`).join('')||'<p class="minor">还没有网页修改记录。</p>'}</div><button type="button" id="be-undo" ${snapshot.store.recent.length?'':'disabled'}>撤销最近一次操作</button>`);}
+ function connection(){shell('写入连接与最近操作',`<p>编辑后可预览并送审。管理员可在上方使用原有直连入口。</p><p><a href="${EDITORIAL_URL}" target="_blank" rel="noopener noreferrer">查看编目审核队列 ↗</a></p><div id="be-history">${[...snapshot.store.recent].reverse().map(r=>`<p>${safe(r.reason)}<br><span class="minor">${safe(r.at)} · ${safe(r.actor)}</span></p>`).join('')||'<p class="minor">还没有网页修改记录。</p>'}</div><button type="button" id="be-undo" ${snapshot.store.recent.length?'':'disabled'}>撤销最近一次操作</button>`);}
  dialog.addEventListener('cancel',e=>{e.preventDefault();close();});
  dialog.addEventListener('input',e=>{if(['be-import-text','be-format'].includes(e.target.id)){pendingImport=null;$('#be-import-confirm').disabled=true;}});
  dialog.addEventListener('change',async e=>{if(e.target.id==='be-file'){try{const file=e.target.files[0];if(!file)return;if(file.size>5e6)throw Error('文件超过5MB，请分批导入');$('#be-import-text').value=await file.text();$('#be-format').value=file.name.toLowerCase().endsWith('.json')?'json':'csv';pendingImport=null;$('#be-import-confirm').disabled=true;message('文件已读取，请校验并预览');}catch(err){message(err.message,true);}}});

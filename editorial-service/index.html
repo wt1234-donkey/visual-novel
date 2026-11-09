@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>编目审核台 · 叙事游戏年鉴</title>
+<style>
+:root{color-scheme:dark;--bg:#171423;--panel:#241e34;--line:#4c4262;--accent:#dbbfff;--muted:#bdb2cb;font:16px system-ui,sans-serif;color:#f3eefa;background:var(--bg)}
+body{margin:0}main,header{max-width:70rem;margin:auto;padding:1.2rem}header{display:flex;justify-content:space-between;gap:1rem;align-items:center}main{padding-top:.3rem}h1{font-size:clamp(2rem,7vw,3rem);margin:.3rem 0}h2{font-size:1.25rem;margin-top:0}a{color:var(--accent)}section,article{background:var(--panel);border:1px solid var(--line);border-radius:.9rem;padding:1rem;margin:1rem 0}article{background:var(--bg)}p,li{line-height:1.55}small,.muted{color:var(--muted)}button,input,select,textarea{font:inherit;border:1px solid var(--line);border-radius:.45rem;color:inherit;background:var(--bg);padding:.55rem;box-sizing:border-box}button{cursor:pointer}button.primary{background:#694da3;border-color:#b18ee8}button:disabled{opacity:.5;cursor:default}textarea{width:100%;min-height:6rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#12101a;padding:.65rem;border-radius:.5rem;max-height:18rem;overflow:auto}.row{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}.diff{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}.diff pre{margin-top:.25rem}.badge{font-size:.82rem;padding:.2rem .5rem;border:1px solid var(--line);border-radius:1rem}.error{color:#ffbbcb}summary{cursor:pointer}label{display:block;margin:.45rem 0}[hidden]{display:none!important}
+@media(max-width:620px){.diff{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><a href="https://wt1234-donkey.github.io/visual-novel/index.html">叙事游戏年鉴</a><span id="role" class="badge">正在读取权限</span></header>
+<main>
+<p class="muted">资料管理</p><h1>编目审核台</h1><p>在基础身份库或正式作品页录入修改。核对差异和资料来源后送审，通过审核的提案可由发布者批量提交。</p>
+<p id="notice" role="status" aria-live="polite"></p>
+<p id="signin" hidden><a href="/signin-with-chatgpt?returnTo=%2F" target="_top">登录审核台</a></p>
+<section id="draft"><h2>提案预览</h2><div id="draft-preview"></div><div class="row"><button id="submit" type="button" class="primary" disabled>确认提交审核</button><button id="clear" type="button" disabled>关闭预览</button></div>
+<details><summary>恢复已复制的提案</summary><label for="restore-data">粘贴从编辑页复制的提案</label><textarea id="restore-data"></textarea><button id="restore" type="button">恢复预览</button></details></section>
+<section id="queue" hidden><h2>提案队列</h2><div class="row"><label>状态 <select id="state"><option value="pending">待审核</option><option value="approved">已审核</option><option value="publishing">发布中</option><option value="published">已发布</option><option value="rejected">已退回</option><option value="failed">发布失败／冲突</option></select></label><button id="reload" type="button">刷新队列</button></div>
+<div id="review-controls" hidden><label for="note">证据核实说明或退回原因</label><textarea id="note" maxlength="2000"></textarea><div class="row"><button id="approve" type="button" class="primary">批准所选</button><button id="reject" type="button">退回所选</button></div></div>
+<div id="publish-controls" hidden><button id="publish" type="button" class="primary">发布所选</button><p id="bridge-note" class="muted"></p></div>
+<div id="rows"></div><div class="row"><button id="previous" type="button" disabled>上一页</button><button id="next" type="button" disabled>下一页</button></div></section>
+<section id="members" hidden><h2>编辑权限</h2><p class="muted">为已获网站访问权限的成员设置角色。编辑者只能查看自己的提案，审核者核实证据，发布者发布已批准的批次。</p><form id="member-form" class="row"><label>成员登录邮箱 <input name="email" type="email" required maxlength="254"></label><label>角色 <select name="role"><option value="editor">编辑者</option><option value="reviewer">审核者</option><option value="publisher">发布者</option></select></label><button type="submit">保存角色</button></form></section>
+</main>
+<script>
+/*EDITORIAL_CLIENT*/
+</script>
+</body></html>

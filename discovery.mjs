@@ -1,6 +1,6 @@
 import {createBasicWebIndex,createHomeSearch,normalizeBasicQuery,slotPage} from './basic-catalogue-index.mjs';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
-import {showLiveWorkEditor} from './live-work-editor.mjs?v=20261104-creators';
+import {showLiveWorkEditor} from './live-work-editor.mjs?v=20261109-editorial';
 import {createEntityIndex} from './entities.mjs';
 import {normalize} from './filter.mjs';
 import {createAtlas,filterAtlas,metadataValues,creatorCredits,manualCreatorNames,creatorWorkIds,productionCredits,creditScope,sourceStatus,titleOf,CREATOR_ROLES,PENDING,MAKER_ROLES,narrativeState,narrativeCounts} from './discovery-model.mjs?v=20261104-creators';
