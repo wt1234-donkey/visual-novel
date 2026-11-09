@@ -31,7 +31,7 @@ function download(filename,text,type){
 const previewControls='<div class="be-actions"><button type="submit">校验并预览</button><button type="button" id="bs-save" class="primary" disabled>确认写入</button></div><div id="bs-preview" class="be-preview"></div>';
 const fileInput=(id,ext,label)=>'<label>'+label+'<input type="file" id="'+id+'" accept="'+ext+'"></label>';
 
-export function createStyleWorkbench({dialog,shell,all,revision,commit,message,lock,isBusy}){
+export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,message,lock,isBusy}){
  const $=selector=>dialog.querySelector(selector);
  let pending=null,scope=[],queue={items:[],issues:[]};
  let queueError='';
@@ -163,7 +163,7 @@ export function createStyleWorkbench({dialog,shell,all,revision,commit,message,l
   const data=parseStyleReview(await file.text());
   const sourceIds=new Set(data.items.map(item=>item.id));
   if(sourceIds.size){
-   const current=await loadEvidence(chosen(sourceIds));
+   const current=await loadEvidence(await hydrate(chosen(sourceIds)));
    const byId=new Map(current.items.map(item=>[item.id,item]));
    for(const item of data.items){
     const source=byId.get(item.id);
@@ -241,7 +241,7 @@ export function createStyleWorkbench({dialog,shell,all,revision,commit,message,l
     download('basic-style-update.csv','\uFEFF'+cells.map(row=>row.map(cell=>'"'+cell.replaceAll('"','""')+'"').join(',')).join('\r\n')+'\r\n','text/csv;charset=utf-8');
    }else if(id==='bs-ai-export'){
     lock(true);
-    const request=await loadEvidence(chosen(scope));
+    const request=await loadEvidence(await hydrate(chosen(scope)));
     download('basic-style-request.json',JSON.stringify(request,null,2)+'\n','application/json');
     message('导出 '+request.items.length+' 部可识别作品，另有 '+request.issues.length+' 部暂未生成识别请求。');
    }else if(id==='bs-select-review'){

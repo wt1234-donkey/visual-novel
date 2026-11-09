@@ -33,9 +33,12 @@ def build(root,output,revision=None):
         target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(root/name,target)
     (output/'.nojekyll').touch()
+    revision=revision or subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
+    if 'scripts/build_basic_web_index.mjs' in paths:
+        subprocess.run(['node',str(root/'scripts/build_basic_web_index.mjs'),str(root),str(output),revision],check=True)
     manifest={
         'schema':1,
-        'revision':revision or subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),
+        'revision':revision,
         'registry':REGISTRY,
         'registrySha256':hashlib.sha256(registry_bytes).hexdigest(),
         'basicWorkCount':len(works),

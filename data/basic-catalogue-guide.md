@@ -67,3 +67,9 @@ JSON 为作品数组，每条含 `title`、`firstYear`、`group`、`gameplay`、
 目标仓库是 `wt1234-donkey/visual-novel`。先使用有该仓库权限的账号登录 GitHub，再创建 Fine-grained personal access token：Resource owner 为 `wt1234-donkey`；Repository access 为 `Only select repositories` 并勾选 `visual-novel`；Repository permissions 中 `Contents` 为 `Read and write`。选择 `Public repositories` 仅包含公开仓库读取权限，不足以合并或修改作品。页面的创建凭证链接会预填资源所有者与所需权限，生成前仍须核对仓库选择。
 
 公开仓库的读取成功不能证明凭证有写入权限。页面会分别提示账号无写权限、凭证无效、内容写入被拒、请求频率限制、文件读取失败、并发冲突或分支规则拒绝；保留当前合并选择和说明。更正凭证后在同一窗口重新连接并保存。不要把凭证发到聊天。
+
+## 网页加载与本地预览
+
+发布时生成轻量检索索引和按默认年份顺序分片的详情文件。首页默认读取统计和当前页分片，输入关键词时再读取基础作品检索索引。基础身份库读取轻量筛选索引，翻页后按需读取该页分片。编辑、标签写入及 AI 候选资料读取按所选作品加载。大范围检索可在浏览器后台线程执行。页面中的原始 JSON 链接供查阅和离线核对。
+
+本地预览使用与 GitHub Pages 一致的构建流程。在仓库根目录运行 `python3 scripts/build_pages_artifact.py --output _site`，再从 `_site` 启动静态服务。构建需要 Node.js 20 或更新版本。

@@ -31,7 +31,8 @@ class MinimalADVRPGAudit(unittest.TestCase):
     def test_site_wires_live_index(self):
         h=(ROOT/'minimal-adv-rpg.html').read_text()
         js=(ROOT/'minimal-adv-rpg.mjs').read_text()
-        self.assertIn('data/adv-rpg-minimal-index-20261031.json',js)
+        self.assertIn('webIndex.basicRows()',js)
+        self.assertIn('adv-rpg-minimal-index-20261031.json',(ROOT/'scripts/build_basic_web_index.mjs').read_text())
         self.assertIn('id="q"',h)
         self.assertIn('id="gameplay"',h)
         self.assertIn('id="group"',h)

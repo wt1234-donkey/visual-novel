@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import * as basicFilters from '../basic-catalogue-filters.mjs';
+import {compareBasicOrder,withBasicDetails} from '../basic-catalogue-index.mjs';
+import {assembleBasicRows} from '../scripts/build_basic_web_index.mjs';
 import {workKey,validateStore,projectEntries,emptyStore} from '../basic-catalogue-model.mjs';
 
 test('basic catalogue year filter combines with search and resets pagination', async () => {
@@ -19,8 +21,11 @@ test('basic catalogue year filter combines with search and resets pagination', a
   works.push({id:'other',indexId:'other',title:'Other',aliases:['Hidden alias'],firstYear:2001,gameplay:'RPG',group:'Group',mainPlacement:'promoted-basic'});
   works.push({id:'unknown',indexId:'unknown',title:'Unknown',aliases:[],firstYear:null,gameplay:'ADV',group:'Group',mainPlacement:'promoted-basic'});
   const registry={works,identityReview:[],summary:{promotedBasic:32,existingComplete:0,promotedDossier:0}};
-  const index={records:[],summary:{alreadyMain:0,alreadyDossier:0,identityReview:0}};
-  const context=vm.createContext({...basicFilters,document:{getElementById:element},console,workKey,validateStore,createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},fetch:async path=>({ok:true,json:async()=>path.includes('main-adv-rpg-works')?registry:path.includes('minimal-index')?index:path.includes('basic-catalogue-edits')?emptyStore():path.includes('manufacturer-regions')?{schemaVersion:1,entries:[]}:{records:[]}})});
+  const source={meta:async()=>({basic:registry.summary}),basicRows:async()=>assembleBasicRows(registry,[],[]),details:async()=>new Map()};
+  const context=vm.createContext({...basicFilters,document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
+    createBasicWebIndex:()=>source,createCatalogueWorker:()=>null,
+    createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
+    fetch:async path=>({ok:true,json:async()=>path.includes('basic-catalogue-edits')?emptyStore():{schemaVersion:1,entries:[]}})});
   await vm.runInContext((await readFile(new URL('../minimal-adv-rpg.mjs',import.meta.url),'utf8')).replace(/^import .*;$/gm,''),context);
   assert.match(element('year').innerHTML,/value="1990"/);
   assert.match(element('year').innerHTML,/value="2001"/);

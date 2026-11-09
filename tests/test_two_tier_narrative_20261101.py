@@ -46,7 +46,7 @@ class TwoTierNarrativeLibraryTests(unittest.TestCase):
         self.assertIn('href="curated.html"',(ROOT/"index.html").read_text(encoding="utf-8"))
         self.assertIn('href="curated.html"',(ROOT/"minimal-adv-rpg.html").read_text(encoding="utf-8"))
         self.assertIn('curated-narrative-works.json',(ROOT/"curated.mjs").read_text(encoding="utf-8"))
-        self.assertIn('registry.works',(ROOT/"minimal-adv-rpg.mjs").read_text(encoding="utf-8"))
+        self.assertIn('webIndex.basicRows()',(ROOT/"minimal-adv-rpg.mjs").read_text(encoding="utf-8"))
         self.assertIn("查看精选叙事初选",(ROOT/"discovery.mjs").read_text(encoding="utf-8"))
 
 if __name__ == "__main__":

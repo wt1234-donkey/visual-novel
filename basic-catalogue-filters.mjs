@@ -100,3 +100,29 @@ export function styleOptions(works){
 }
 
 export function pageIndex(value,pageCount){const text=String(value).trim();if(!/^\d+$/.test(text)||!Number.isSafeInteger(Number(text))||Number(text)<1||Number(text)>pageCount)throw Error('请输入 1—'+pageCount+' 范围内的整数页码');return Number(text)-1;}
+
+export function basicFilterRows(entries,childrenByMain){
+ return entries.map(row=>{
+  const {tags,legacy}=styleState(row),styles=Object.values(tags);
+  const names=manufacturerNames(row);
+  const childNames=(childrenByMain.get(row._key)||[]).flatMap(child=>[child.title,...(child.aliases||[])]);
+  return {
+   search:normalizeFilterText([row.title,...(row.aliases||[]),...names,...styles,...legacy,...childNames].join(' ')),
+   manufacturers:[...new Set(names.map(manufacturerKey))],gameplay:gameplayKeys(row.gameplay),
+   styles,legacy:legacy.map(styleName),year:row.year,status:row.status
+  };
+ });
+}
+export function matchingBasicPositions(rows,{q,gameplay,group,status,year,style,allowed}){
+ const matching=[];
+ for(let i=0;i<rows.length;i++){
+  const row=rows[i];
+  if(style&&(style===MISSING_STYLE?row.styles.length:
+   style.startsWith(LEGACY_STYLE_PREFIX)?!row.legacy.includes(style.slice(LEGACY_STYLE_PREFIX.length)):!row.styles.includes(style)))continue;
+  if(year&&(year==='unknown'?Number.isInteger(row.year):row.year!==Number(year)))continue;
+  if(q&&!row.search.includes(q)||gameplay&&!row.gameplay.includes(gameplay)||status&&row.status!==status)continue;
+  if((group||allowed)&&!row.manufacturers.some(key=>(!group||key===group)&&(!allowed||allowed.has(key))))continue;
+  matching.push(i);
+ }
+ return matching;
+}
