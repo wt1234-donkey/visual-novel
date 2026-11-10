@@ -1,5 +1,5 @@
 import {normalizeFilterText,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayOptions,gameplayDisplay,styleState,styleLabels,styleDimension,STYLE_DIMENSIONS,styleOptions,MISSING_STYLE,pageIndex,basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs?v=20261110-version-groups';
-import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261110-direct-save';
+import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261110-save-reconcile';
 import {createEditClient} from './work-edit-api.mjs?v=20261110-direct-save';
 import {readLatestBasicStore} from './basic-catalogue-live.mjs?v=20261110-direct-save';
 import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261110-version-groups';
@@ -144,7 +144,7 @@ async function start(){
      $('basic-connection').addEventListener('click',()=>editor.connection());
      $('rows').addEventListener('click',e=>{const button=e.target.closest('[data-edit]');if(button)editor.edit(button.dataset.edit);});
      $('rows').addEventListener('change',e=>{const id=e.target.dataset.select;if(id){if(e.target.checked)selection.add(id);else selection.delete(id);refreshSelection();}});
-     $('basic-management-status').textContent='点击作品即可编辑并直接保存；勾选多部作品可合并。批量编辑、CSV 更新与 AI 标签候选本机确认均保留，无需发布审核。'+(latest.source==='pages'?'（GitHub 实时读取失败，暂使用站点副本；保存前须连接并同步最新数据。）':'');
+     $('basic-management-status').textContent='修改记录 r'+latest.store.revision+' · '+(latest.source==='github'?'已从 GitHub 实时读取':'GitHub 实时读取失败，现显示已发布站点副本')+'。点击作品即可编辑；数据提交成功不等于 Pages 部署成功，请在 GitHub Actions 确认站点发布。'+(latest.source==='pages'?' 保存前必须连接并同步 GitHub 最新记录。':'');
    }catch(err){$('basic-management-status').textContent='基础库修改记录读取失败：'+err.message+'。请刷新重试；为避免显示过期数据，管理功能已停用。';throw err;}
    filterAndDraw();
  }catch(err){$('count').textContent='无法读取基础作品数据：'+err.message;}
@@ -161,6 +161,7 @@ function refreshManaged(main,all,store){
  childrenByMain=new Map();for(const w of all)if(w.parentId){if(!childrenByMain.has(w.parentId))childrenByMain.set(w.parentId,[]);childrenByMain.get(w.parentId).push(w);}
  const ids=new Set(entries.map(workKey));for(const id of selection)if(!ids.has(id))selection.delete(id);
  $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
+ $('basic-management-status').textContent='当前已载入修改记录 r'+store.revision+'；作品资料按本页最新记录显示。修改提交后请在 GitHub Actions 核对 Pages 是否部署成功。';
  const oldYear=$('year').value,years=[...new Set(all.map(w=>w.year).filter(Number.isInteger))].sort((a,b)=>a-b);
  $('year').innerHTML='<option value="">全部年份</option><option value="unknown">年份待核</option>'+years.map(y=>'<option value="'+y+'">'+y+' 年</option>').join('');$('year').value=years.includes(Number(oldYear))||oldYear==='unknown'?oldYear:'';
  rebuildFilters();
