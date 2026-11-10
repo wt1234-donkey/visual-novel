@@ -8,6 +8,8 @@ on:
       - 'basic-catalogue.css'
       - 'tests/basic-catalogue*.test.mjs'
       - 'tests/basic-filters.test.mjs'
+      - 'tests/basic-catalogue-direct-save.test.mjs'
+      - 'basic-catalogue-live.mjs'
       - '.github/workflows/basic-catalogue-validation.yml'
   push:
     branches: [main]
@@ -18,6 +20,8 @@ on:
       - 'basic-catalogue.css'
       - 'tests/basic-catalogue*.test.mjs'
       - 'tests/basic-filters.test.mjs'
+      - 'tests/basic-catalogue-direct-save.test.mjs'
+      - 'basic-catalogue-live.mjs'
 permissions:
   contents: read
 jobs:
@@ -38,4 +42,4 @@ jobs:
           node --check basic-catalogue-search-worker.mjs
           node --check minimal-adv-rpg.mjs
       - name: Run catalogue model and filtering regressions
-        run: node --test tests/basic-catalogue.test.mjs tests/basic-catalogue-index.test.mjs tests/basic-filters.test.mjs tests/basic-year-filter.test.mjs
+        run: node --test tests/basic-catalogue.test.mjs tests/basic-catalogue-index.test.mjs tests/basic-catalogue-direct-save.test.mjs tests/basic-filters.test.mjs tests/basic-year-filter.test.mjs

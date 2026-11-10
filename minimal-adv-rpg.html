@@ -32,8 +32,8 @@
     .notice{margin-top:18px;color:var(--muted);font-size:14px}
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
   </style>
-  <link rel="stylesheet" href="basic-catalogue.css?v=20261110-version-groups">
-  <script type="module" src="minimal-adv-rpg.mjs?v=20261110-version-groups"></script>
+  <link rel="stylesheet" href="basic-catalogue.css?v=20261110-direct-save">
+  <script type="module" src="minimal-adv-rpg.mjs?v=20261110-direct-save"></script>
 </head>
 <body><div class="wrap">
   <header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav><a href="index.html">作品发现</a><a href="curated.html">精选叙事作品</a><a href="bulk-import.html">批量补录主库</a><a href="catalogue.html">高级发行检索</a><a href="organizations.html">组织与沿革</a><a href="https://github.com/wt1234-donkey/visual-novel">GitHub</a></nav></header>
@@ -57,7 +57,7 @@
       <button type="button" id="basic-select-filtered" disabled title="筛选结果为 1–500 部时可勾选">勾选全部筛选结果</button>
       <button type="button" id="basic-merge" disabled>合并所选作品</button>
       <button type="button" id="basic-clear" disabled>清空选择</button>
-      <button type="button" id="basic-connection" disabled>连接写入权限</button>
+      <button type="button" id="basic-connection" disabled>连接 GitHub 直接保存</button>
       <span id="basic-selected" class="minor" aria-live="polite">已选择0部</span>
       <a href="templates/basic-works-import.csv" download>下载新增作品模板</a>
     </section>
@@ -87,7 +87,7 @@
     </section>
     <section class="results"><p class="count" id="count" role="status">正在读取索引……</p>
     <p class="minor" id="basic-detail-status" role="status"></p>
-    <p class="minor">点击作品名称可修改或删除；勾选多部作品可指定主作品并合并版本。默认按年份从早到晚排序，未知年份置后。</p>
+    <p class="minor">点击作品名称直接修改信息、查看关联版本或删除；勾选多部作品可指定主作品并合并版本。保存操作直接写入 GitHub，无须人工送审；首次写入需连接一次 GitHub 权限。默认按年份从早到晚排序，未知年份置后。</p>
     <nav class="buttons basic-pagination" aria-label="上方分页">
       <button id="prev" type="button" disabled>上一页</button><span id="pagination" aria-live="polite"></span><button id="next" type="button" disabled>下一页</button>
       <form id="page-jump" class="page-jump"><label for="page-number">跳至页码</label><input id="page-number" type="number" inputmode="numeric" min="1" step="1" required disabled aria-describedby="page-error"><button id="page-go" type="submit" disabled>跳转</button></form>

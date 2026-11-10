@@ -1,5 +1,7 @@
 import {normalizeFilterText,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayOptions,gameplayDisplay,styleState,styleLabels,styleDimension,STYLE_DIMENSIONS,styleOptions,MISSING_STYLE,pageIndex,basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs?v=20261110-version-groups';
-import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261110-version-groups';
+import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261110-direct-save';
+import {createEditClient} from './work-edit-api.mjs?v=20261110-direct-save';
+import {readLatestBasicStore} from './basic-catalogue-live.mjs?v=20261110-direct-save';
 import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261110-version-groups';
 import {compareBasicOrder,createBasicWebIndex,createCatalogueWorker,withBasicDetails} from './basic-catalogue-index.mjs?v=20261110-version-groups';
 import {setupCombinedControls} from './basic-combined-controls.mjs?v=20261110-flex-tags';
@@ -82,7 +84,7 @@ function render(){
       const {tags}=styleState(r);
       const stylePills=styleLabels(tags).map(tag=>'<span class="pill" title="'+safe(STYLE_DIMENSIONS[styleDimension(tag)].label)+'">'+safe(tag)+'</span>').join(' ');
       const styleDetail=stylePills||'<span class="minor">待补充</span>';
-      return '<tr><td class="select-cell"><input type="checkbox" data-select="'+safe(r._key)+'" aria-label="选择 '+safe(r.title)+'" '+(selection.has(r._key)?'checked':'')+'></td><td class="title-cell"><button type="button" class="work-title" data-view="'+safe(r._key)+'">'+safe(r.title)+'</button>'+alias+(children.length?'<div class="minor">含 '+children.length+' 个关联版本</div>':'')+'</td><td data-label="首发年份">'+year+'</td><td data-label="主要玩法">'+safe(gameplayDisplay(r.gameplay,r.gameplayTags))+(/待核|候选/.test(r.gameplay)?'<div class="minor">玩法细节待核</div>':'')+(/仅专题|关联/.test(r.gameplay)?'<div class="minor">'+safe(r.gameplay)+'</div>':'')+(r.gameplayNote?'<div class="minor">'+safe(r.gameplayNote)+'</div>':'')+'</td><td data-label="作品特征">'+styleDetail+'</td><td data-label="厂商关联">'+safe(r.group)+'</td><td data-label="编目状态"><span class="pill">'+safe(label)+'</span>'+(r.reason?'<div class="minor">'+safe(r.reason)+'</div>':'')+(r.matchedWorkId?'<div class="minor">'+safe(r.matchedWorkId)+'</div>':'')+'</td><td data-label="依据">'+link+'</td></tr>';
+      return '<tr><td class="select-cell"><input type="checkbox" data-select="'+safe(r._key)+'" aria-label="选择 '+safe(r.title)+'" '+(selection.has(r._key)?'checked':'')+'></td><td class="title-cell"><button type="button" class="work-title" data-edit="'+safe(r._key)+'">'+safe(r.title)+'</button>'+alias+(children.length?'<div class="minor">含 '+children.length+' 个关联版本</div>':'')+'</td><td data-label="首发年份">'+year+'</td><td data-label="主要玩法">'+safe(gameplayDisplay(r.gameplay,r.gameplayTags))+(/待核|候选/.test(r.gameplay)?'<div class="minor">玩法细节待核</div>':'')+(/仅专题|关联/.test(r.gameplay)?'<div class="minor">'+safe(r.gameplay)+'</div>':'')+(r.gameplayNote?'<div class="minor">'+safe(r.gameplayNote)+'</div>':'')+'</td><td data-label="作品特征">'+styleDetail+'</td><td data-label="厂商关联">'+safe(r.group)+'</td><td data-label="编目状态"><span class="pill">'+safe(label)+'</span>'+(r.reason?'<div class="minor">'+safe(r.reason)+'</div>':'')+(r.matchedWorkId?'<div class="minor">'+safe(r.matchedWorkId)+'</div>':'')+'</td><td data-label="依据">'+link+'</td></tr>';
     }).join('')||'<tr><td colspan="8">未找到符合筛选条件的作品</td></tr>';};
     drawRows();
     $('basic-detail-status').textContent='';
@@ -124,8 +126,11 @@ async function start(){
     $('page-jump'+suffix).addEventListener('submit',event=>{event.preventDefault();jumpToPage($('page-number'+suffix).value);});
    }
    try{
-     const res=await fetch('data/basic-catalogue-edits.json',{cache:'no-store'});if(!res.ok)throw Error('修改记录 HTTP '+res.status);
-     editor=createBasicEditor(baseEntries,validateStore(await res.json()),refreshManaged,loadDetails);
+     const latest=await readLatestBasicStore(
+      async()=> (await createEditClient('',fetch,{historyPath:'data/basic-catalogue-edits.json',validate:validateStore}).read()).store,
+      async()=>{const res=await fetch('data/basic-catalogue-edits.json',{cache:'no-store'});if(!res.ok)throw Error('修改记录 HTTP '+res.status);return validateStore(await res.json());}
+     );
+     editor=createBasicEditor(baseEntries,latest.store,refreshManaged,loadDetails);
      for(const id of ['basic-add','basic-import','basic-clear','basic-connection','basic-style-csv','basic-style-review'])$(id).disabled=false;
      $('basic-add').addEventListener('click',()=>editor.add());
      $('basic-import').addEventListener('click',()=>editor.importWindow());
@@ -137,9 +142,9 @@ async function start(){
      $('basic-merge').addEventListener('click',()=>editor.merge([...selection]));
      $('basic-clear').addEventListener('click',()=>{selection.clear();refreshSelection();render();});
      $('basic-connection').addEventListener('click',()=>editor.connection());
-     $('rows').addEventListener('click',e=>{const button=e.target.closest('[data-view]');if(button)editor.view(button.dataset.view);});
+     $('rows').addEventListener('click',e=>{const button=e.target.closest('[data-edit]');if(button)editor.edit(button.dataset.edit);});
      $('rows').addEventListener('change',e=>{const id=e.target.dataset.select;if(id){if(e.target.checked)selection.add(id);else selection.delete(id);refreshSelection();}});
-     $('basic-management-status').textContent='支持跨维度多选标签、批量编辑和 CSV 更新。AI 标签需审核后写入，可撤销最近3次操作。';
+     $('basic-management-status').textContent='点击作品即可编辑并直接保存；勾选多部作品可合并。批量编辑、CSV 更新与 AI 标签候选本机确认均保留，无需发布审核。'+(latest.source==='pages'?'（GitHub 实时读取失败，暂使用站点副本；保存前须连接并同步最新数据。）':'');
    }catch(err){$('basic-management-status').textContent='基础库修改记录读取失败：'+err.message+'。请刷新重试；为避免显示过期数据，管理功能已停用。';throw err;}
    filterAndDraw();
  }catch(err){$('count').textContent='无法读取基础作品数据：'+err.message;}

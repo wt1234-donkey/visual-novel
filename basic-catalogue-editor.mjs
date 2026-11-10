@@ -4,7 +4,6 @@ import {validateStore,valuesOf,applyChange,undoLast,projectEntries,versionGroup,
 import {styleName,styleState,styleLabels,styleEvidenceEntries,packStyleEvidence} from './basic-style-tags.mjs?v=20261110-flex-tags';
 import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} from './basic-style-workbench.mjs?v=20261110-flex-tags';
 import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
-import {makeProposal,offerEditorialProposal,basicProposalPreview,EDITORIAL_URL} from './editorial-proposal.mjs';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
@@ -30,13 +29,13 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  }
  function update(){
   entries=projectEntries(base,snapshot.store,{includeChildren:true});
-  onChange(entries.filter(w=>!w.parentId),entries,snapshot.store);document.getElementById('basic-connection').textContent=actor?'已连接 '+actor:'连接写入权限';}
+  onChange(entries.filter(w=>!w.parentId),entries,snapshot.store);document.getElementById('basic-connection').textContent=actor?'直接保存已连接 · '+actor:'连接 GitHub 直接保存';}
  function message(s,error=false){$('#be-message').textContent=s;$('#be-message').className='be-message'+(error?' error':'');}
  function close(){if(!busy){dialog.close();returnFocus?.focus();}}
  function shell(title,body){
   if(busy)return;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
-   <details class="be-auth"><summary>管理员直连 · ${actor?safe(actor):'GitHub 备用入口'}</summary><p class="minor">凭证仅在当前页面内存保留，刷新后清除。</p><ol class="minor"><li>使用拥有仓库权限的 GitHub 账号；Resource owner 应为 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b>，再选择 <b>visual-novel</b>。Public repositories 只有读取权限。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>，然后生成凭证。</li></ol><p class="minor">连接成功表示账号和读取校验通过，GitHub 会在保存时核验凭证的实际写入权限。</p><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仓库专用凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">重新读取网站修改</button></div></details>
+   <details class="be-auth"><summary>${actor?'已连接 GitHub · '+safe(actor):'首次保存前：连接 GitHub 写入权限'}</summary><p class="minor">基础身份库取消人工送审。连接后，作品修改、合并与标签操作直接写入仓库，无须另外审核。为保护仓库，公开页面不能匿名写入；凭证只保存在当前页面内存，刷新即清除。</p><ol class="minor"><li>使用有写入权限的 GitHub 账号，Resource owner 选择 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b> → <b>visual-novel</b>。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>。</li></ol><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仅限本仓库的写入凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接并启用直接保存</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">同步 GitHub 最新修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
   for(const picker of dialog.querySelectorAll('.be-style-picker'))refreshStylePicker(picker);
   dialog.setAttribute('aria-label',title);if(!dialog.open)dialog.showModal();
@@ -46,24 +45,21 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  async function commit(action,reason,undo=false){
   if(busy)return false;
   try{
-   const meta={id:randomId(),at:new Date().toISOString(),actor:actor||'送审预览',reason,expectedRevision:snapshot.store.revision};
-   lock(true);message('正在检查最新记录并保存…');
-   const next=undo?undoLast(snapshot.store,snapshot.store.revision):applyChange(snapshot.store,await prepareBase(action),action,meta);
    if(!actor){
-    const change=undo?{type:'undo'}:action;
-    const sources=[change.values?.source,change.relation?.source,...(change.works||[]).map(w=>w.source),
-     ...(change.rows||[]).flatMap(row=>Object.values(row.evidence||{}).map(item=>item.source))];
-    const proposal=makeProposal('basic',reason,{expectedRevision:meta.expectedRevision,action:change},
-     basicProposalPreview(snapshot.store,next,change),sources);
-    message('');offerEditorialProposal($('#be-message'),proposal);
+    message('尚未连接 GitHub 写入权限。请展开上方授权区连接账号，再点击原来的保存按钮即可直接写入；当前表单不会清空。',true);
+    $('.be-auth').open=true;
+    $('#be-token')?.focus();
     return false;
    }
+   const meta={id:randomId(),at:new Date().toISOString(),actor,reason,expectedRevision:snapshot.store.revision};
+   lock(true);message('正在核验并直接保存到 GitHub…');
+   const next=undo?undoLast(snapshot.store,snapshot.store.revision):applyChange(snapshot.store,await prepareBase(action),action,meta);
    const live=await client.read();if(JSON.stringify(live.store)!==JSON.stringify(snapshot.store))throw Error('基础库已在其他页面修改。请先“重新读取网站修改”，再核对并保存；当前输入仍保留');
    let result;
    try{result=await client.write(next,live.sha,'Basic catalogue: '+reason.slice(0,100));}
    catch(error){if(error.status)throw error;try{const actual=await client.read();if(JSON.stringify(actual.store)!==JSON.stringify(next))throw error;result={sha:actual.sha};}catch{throw error;}}
-   snapshot={store:next,sha:result.sha};update();message('已保存到网站，当前页面已更新；其他设备在网站发布后刷新即可看到。');return true;
-  }catch(e){message(e.message,true);if(e.code==='PERMISSION_DENIED'||e.code==='NOT_FOUND')$('.be-auth').open=true;return false;}finally{lock(false);}
+   snapshot={store:next,sha:result.sha};update();message('已直接提交至 GitHub，当前页面已更新；其他设备刷新基础库时将读取最新修改。无需人工审核。');return true;
+  }catch(e){message(e.message,true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
  async function edit(id=null){
@@ -92,7 +88,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    ${legacy.length?'<p class="minor">历史标签参考：'+safe(legacy.join('、'))+'</p><label class="be-candidate"><input type="checkbox" name="removeLegacy">移除这些待整理旧标签</label>':''}</fieldset>
    ${input('source','资料来源（可选）',v.source,'type="url"')}
    ${input('reason','修改说明',w?'更正基础作品资料':'直接添加基础作品','required maxlength="300"')}
-   <div class="be-actions"><button class="primary" type="submit">${actor?(w?'保存修改':'添加到基础库'):'预览并送审'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}${w&&((w.parentId)||children.length)?'<button type="button" data-view="'+safe(w.parentId||id)+'">查看版本与来源详情</button>':''}</div></form>
+   <div class="be-actions"><button class="primary" type="submit">${w?'直接保存修改':'直接添加到基础库'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}${w&&((w.parentId)||children.length)?'<button type="button" data-view="'+safe(w.parentId||id)+'">查看版本与来源详情</button>':''}</div></form>
    ${w?.parentId?`<p class="minor">所属主作品：${safe(get(w.parentId)?.title||w.parentId)} · ${safe(w.relation?.label)} · ${safe(w.relation?.note||'内容关系待核')}</p>`:''}
    ${children.length?'<h3>关联版本（'+children.length+'）</h3><ul class="be-version-list">'+children.map(c=>`<li><button type="button" data-edit="${safe(c._key)}">${safe(c.title)}</button> <span class="minor">${c.year??'年份待核'} · ${safe(c.relation?.label)} · ${safe(({unverified:'内容关系待核',same:'同内容版本',added:'新增内容版本'})[c.relation?.type])}</span>${c.relation?.note?'<p>'+safe(c.relation.note)+'</p>':''}</li>`).join('')+'</ul>':''}`);
  }
@@ -138,7 +134,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   const selected=all().filter(w=>ids.includes(w._key)&&!w.parentId);if(selected.length<2){shell('合并作品','<p>请先勾选至少两部作品，再选择主作品。</p>');return;}
   shell('合并为主作品的不同版本',`<form id="be-merge"><p>选择保留在列表中的主作品，其他作品归入它的关联版本。各版本名称、年份和来源保留，可以解除合并。</p><label>主作品<select name="mainId">${selected.map(w=>`<option value="${safe(w._key)}">${safe(w.title)} · ${w.year??'年份待核'}</option>`).join('')}</select></label><input type="hidden" name="ids" value="${safe(JSON.stringify(selected.map(w=>w._key)))}"><p class="minor">本次共选择 ${selected.length} 部作品。若被合并作品已有版本，这些版本也会归入所选主作品。</p><label>版本内容关系<select name="relation"><option value="unverified">待核实（暂不认定新增内容）</option><option value="same">已核实：相同内容／普通移植或再版</option><option value="added">已核实：新增内容</option></select></label><label>具体差异或合并依据<textarea name="note" rows="3"></textarea></label>${input('source','支持版本关系的来源（已核实关系必填）','','type="url"')}<p class="minor">每个版本沿用其原作品名。新增剧情、路线、人物、素材等须写清具体差异；普通移植不自动视为新增内容。</p><button type="submit" class="primary">确认合并所选作品</button></form>`);
  }
- function connection(){shell('写入连接与最近操作',`<p>编辑后可预览并送审。管理员可在上方使用原有直连入口。</p><p><a href="${EDITORIAL_URL}" target="_blank" rel="noopener noreferrer">查看编目审核队列 ↗</a></p><div id="be-history">${[...snapshot.store.recent].reverse().map(r=>`<p>${safe(r.reason)}<br><span class="minor">${safe(r.at)} · ${safe(r.actor)}</span></p>`).join('')||'<p class="minor">还没有网页修改记录。</p>'}</div><button type="button" id="be-undo" ${snapshot.store.recent.length?'':'disabled'}>撤销最近一次操作</button>`);}
+ function connection(){shell('GitHub 直接保存与最近操作',`<p>基础身份库的作品修改、合并、添加与标签更新均直接保存到仓库，不再生成送审提案。AI 标签候选仍由你在本机逐项勾选确认。</p><div id="be-history">${[...snapshot.store.recent].reverse().map(r=>`<p>${safe(r.reason)}<br><span class="minor">${safe(r.at)} · ${safe(r.actor)}</span></p>`).join('')||'<p class="minor">还没有网页修改记录。</p>'}</div><button type="button" id="be-undo" ${snapshot.store.recent.length?'':'disabled'}>撤销最近一次操作</button>`);}
  dialog.addEventListener('cancel',e=>{e.preventDefault();close();});
  dialog.addEventListener('input',e=>{const picker=e.target.closest('.be-style-picker');if(picker)refreshStylePicker(picker);if(['be-import-text','be-format'].includes(e.target.id)){pendingImport=null;$('#be-import-confirm').disabled=true;}});
  dialog.addEventListener('change',async e=>{if(e.target.id==='be-file'){try{const file=e.target.files[0];if(!file)return;if(file.size>5e6)throw Error('文件超过5MB，请分批导入');$('#be-import-text').value=await file.text();$('#be-format').value=file.name.toLowerCase().endsWith('.json')?'json':'csv';pendingImport=null;$('#be-import-confirm').disabled=true;message('文件已读取，请校验并预览');}catch(err){message(err.message,true);}}});
@@ -172,9 +168,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   else if(b.dataset.view)await view(b.dataset.view);
   else if(b.dataset.edit)edit(b.dataset.edit);
   else if(b.id==='be-connect'){
-   const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const nextClient=clientFor(token),login=await nextClient.connect(),fresh=await nextClient.read();client=nextClient;actor=login;snapshot=fresh;update();$('summary').textContent='写入权限 · '+actor;$('.be-auth').open=false;message('已连接账号 '+actor+'，并读取最新基础库修改。保存时会核验当前凭证的 Contents 写入权限。');}catch(err){message(err.message,true);}finally{lock(false);}
-  }else if(b.id==='be-disconnect'){client=clientFor('');actor='';update();$('summary').textContent='写入权限 · 连接 GitHub';$('.be-auth').open=true;b.disabled=true;message('已断开连接');}
-  else if(b.id==='be-refresh'){try{lock(true);snapshot=await client.read();update();message('已读取最新网站修改。当前表单输入保留，请核对后保存。');}catch(err){message(err.message,true);}finally{lock(false);}}
+   const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const nextClient=clientFor(token),login=await nextClient.connect(),fresh=await nextClient.read();client=nextClient;actor=login;snapshot=fresh;update();$('.be-auth summary').textContent='已连接 GitHub · '+actor;$('.be-auth').open=false;message('已连接 '+actor+' 并同步 GitHub 最新数据。现在可以点击保存直接写入，无须送审。');}catch(err){message(err.message,true);}finally{lock(false);}
+  }else if(b.id==='be-disconnect'){client=clientFor('');actor='';update();$('.be-auth summary').textContent='首次保存前：连接 GitHub 写入权限';$('.be-auth').open=true;b.disabled=true;message('已断开写入权限；当前资料仍可查看、编辑，重新授权后可保存。');}
+  else if(b.id==='be-refresh'){try{lock(true);snapshot=await client.read();update();message('已同步 GitHub 最新修改。当前表单输入已保留，核对后可直接保存。');}catch(err){message(err.message,true);}finally{lock(false);}}
   else if(b.dataset.delete){if(confirm('删除“'+get(b.dataset.delete)?.title+'”？可通过最近操作撤销。')){if(await commit({type:'delete',id:b.dataset.delete},'删除作品 '+get(b.dataset.delete)?.title)){close();}}}
   else if(b.dataset.detach){if(await commit({type:'detach',id:b.dataset.detach},'解除版本合并'))edit(b.dataset.detach);}
   else if(b.id==='be-undo'){if(confirm('撤销最近一次“'+snapshot.store.recent.at(-1)?.reason+'”？'))if(await commit(null,'撤销最近操作',true))connection();}
