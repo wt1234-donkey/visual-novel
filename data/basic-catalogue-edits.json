@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 19,
+  "revision": 20,
   "additions": [],
   "records": {
     "g1028": {
@@ -468,49 +468,39 @@
       "aliases": [
         "冒险乐园"
       ]
+    },
+    "microcabin-diamond": {
+      "identity": {
+        "id": "microcabin-diamond",
+        "indexId": "dossier-microcabin-diamond",
+        "aliases": [
+          "ダイヤモンドアドベンチャー",
+          "钻石冒险"
+        ],
+        "title": "钻石冒险",
+        "firstYear": 1982,
+        "group": "既有厂商专题",
+        "gameplay": "文字冒险",
+        "plotStyles": [],
+        "source": "https://www.microcabin.co.jp/works/games/",
+        "mainPlacement": "dossier-linked"
+      },
+      "values": {
+        "title": "钻石冒险",
+        "firstYear": 1982,
+        "group": "Micro Cabin",
+        "gameplay": "文字冒险",
+        "plotStyles": [],
+        "plotTags": {},
+        "plotTagEvidence": {},
+        "source": "https://www.microcabin.co.jp/works/games/"
+      },
+      "aliases": [
+        "ダイヤモンドアドベンチャー"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "b45d6f39-5939-4d83-a13b-8be44a6c0efe",
-      "at": "2026-11-10T02:40:26.960Z",
-      "actor": "编目审核台",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-3ccmbybidr9nn1kh",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-3ccmbybidr9nn1kh",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-3ccmbybidr9nn1kh",
-              "aliases": [],
-              "title": "Hammurabi",
-              "firstYear": 1978,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Hammurabi",
-              "firstYear": 1978,
-              "group": "David H. Ahl ,Rick Merrill",
-              "gameplay": "模拟／养成／经营",
-              "plotStyles": [],
-              "plotTags": {
-                "theme": "奇幻"
-              },
-              "plotTagEvidence": {},
-              "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "0005bef1-eee7-4a01-a3f4-6585bd966714",
       "at": "2026-11-10T04:25:24.784Z",
@@ -603,6 +593,49 @@
             },
             "aliases": [
               "冒险乐园"
+            ]
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "aa721dd6-a85d-49df-b0e0-a12b8831d822",
+      "at": "2026-11-10T06:55:13.880Z",
+      "actor": "编目审核台",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "microcabin-diamond",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "microcabin-diamond",
+              "indexId": "dossier-microcabin-diamond",
+              "aliases": [
+                "ダイヤモンドアドベンチャー",
+                "钻石冒险"
+              ],
+              "title": "钻石冒险",
+              "firstYear": 1982,
+              "group": "既有厂商专题",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "source": "https://www.microcabin.co.jp/works/games/",
+              "mainPlacement": "dossier-linked"
+            },
+            "values": {
+              "title": "钻石冒险",
+              "firstYear": 1982,
+              "group": "Micro Cabin",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "plotTags": {},
+              "plotTagEvidence": {},
+              "source": "https://www.microcabin.co.jp/works/games/"
+            },
+            "aliases": [
+              "ダイヤモンドアドベンチャー"
             ]
           }
         }
