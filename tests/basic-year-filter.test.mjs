@@ -7,6 +7,7 @@ import {compileCombinedSearch,needsAdvancedIndex} from '../basic-combined-search
 import {compareBasicOrder,withBasicDetails} from '../basic-catalogue-index.mjs';
 import {assembleBasicRows} from '../scripts/build_basic_web_index.mjs';
 import {workKey,validateStore,projectEntries,emptyStore} from '../basic-catalogue-model.mjs';
+import {readLatestBasicStore} from '../basic-catalogue-live.mjs';
 
 test('basic catalogue year filter combines with search and resets pagination', async () => {
   const elements = new Map();
@@ -31,6 +32,7 @@ test('basic catalogue year filter combines with search and resets pagination', a
   };
   const context=vm.createContext({...basicFilters,setupCombinedControls,compileCombinedSearch,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>null,
+    readLatestBasicStore,createEditClient:()=>({read:async()=>({store:emptyStore()})}),
     createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
     fetch:async path=>({ok:true,json:async()=>path.includes('basic-catalogue-edits')?emptyStore():{schemaVersion:1,entries:[]}})});
   await vm.runInContext((await readFile(new URL('../minimal-adv-rpg.mjs',import.meta.url),'utf8')).replace(/^import .*;$/gm,''),context);
