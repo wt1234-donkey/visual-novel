@@ -98,13 +98,18 @@ export function pageIndex(value,pageCount){const text=String(value).trim();if(!/
 
 export function basicFilterRows(entries,childrenByMain){
  return entries.map(row=>{
-  const {tags}=styleState(row),styles=styleLabels(tags);
-  const names=manufacturerNames(row);
-  const childNames=(childrenByMain.get(row._key)||[]).flatMap(child=>[child.title,...(child.aliases||[])]);
+  const family=[row,...(childrenByMain.get(row._key)||[])];
+  const names=[...new Set(family.flatMap(manufacturerNames))];
+  const styles=[...new Set(family.flatMap(w=>styleLabels(styleState(w).tags)))];
+  const themes=[...new Set(family.flatMap(w=>styleList(styleState(w).tags.theme).map(normalizeFilterText)))];
+  const memberNames=family.flatMap(w=>[w.title,...(w.aliases||[])]);
   return {
-   search:normalizeFilterText([row.title,...(row.aliases||[]),...names,...styles,...childNames].join(' ')),
-   manufacturers:[...new Set(names.map(manufacturerKey))],gameplay:catalogueGameplay(row),
-   pureRpg:plainRpgLabels.has(normalizeFilterText(row.gameplay))&&!row.gameplayTags?.some(key=>key!=='rpg'),styles,themes:styleList(tags.theme).map(normalizeFilterText),year:row.year,status:row.status,slot:row.slot
+   search:normalizeFilterText([...memberNames,...names,...styles].join(' ')),
+   manufacturers:[...new Set(names.map(manufacturerKey))],
+   gameplay:[...new Set(family.flatMap(catalogueGameplay))],
+   pureRpg:plainRpgLabels.has(normalizeFilterText(row.gameplay))&&!row.gameplayTags?.some(key=>key!=='rpg'),
+   styles,themes,years:[...new Set(family.map(w=>w.year))],
+   statuses:[...new Set(family.map(w=>w.status))],year:row.year,status:row.status,slot:row.slot
   };
  });
 }
@@ -113,8 +118,8 @@ export function matchingBasicPositions(rows,{q,gameplay,group,status,year,style,
  for(let i=0;i<rows.length;i++){
   const row=rows[i];
   if(style&&(style===MISSING_STYLE?row.styles.length:!row.styles.includes(style)))continue;
-  if(year&&(year==='unknown'?Number.isInteger(row.year):row.year!==Number(year)))continue;
-  if(q&&!row.search.includes(q)||gameplay&&!row.gameplay.includes(gameplay)||status&&row.status!==status)continue;
+  if(year&&(year==='unknown'?(row.years||[row.year]).every(Number.isInteger):!(row.years||[row.year]).includes(Number(year))))continue;
+  if(q&&!row.search.includes(q)||gameplay&&!row.gameplay.includes(gameplay)||status&&!(row.statuses||[row.status]).includes(status))continue;
   if((group||allowed)&&!row.manufacturers.some(key=>(!group||key===group)&&(!allowed||allowed.has(key))))continue;
   if(test&&!test(row,advanced?.[row.slot]))continue;
   matching.push(i);

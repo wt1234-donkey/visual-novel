@@ -43,16 +43,48 @@ export function validateStore(s){
  }
  return s;
 }
+// A source ID may occur more than once in the generated index. Render each stable
+// identity once, and recover stored identity snapshots when the base index changes.
 export function projectEntries(base,store,{includeChildren=false,includeDeleted=false}={}){
  validateStore(store);
- const all=[...base,...store.additions.map(w=>({...w,matchedWorkId:w.id,year:w.firstYear,status:'manual-basic'}))];
- return all.map(w=>{const key=workKey(w),r=own(store.records,key)?store.records[key]:{};const v=r.values||valuesOf(w);return {...w,...v,...r.style,aliases:[...new Set([...(w.aliases||[]),...(r.aliases||[])])],year:v.firstYear,_key:key,_deleted:!!r.deleted,parentId:r.parentId||null,relation:r.relation||null};}).filter(w=>(includeDeleted||!w._deleted)&&(includeChildren||!w.parentId));
+ const known=new Set([...base,...store.additions].map(workKey));
+ const snapshots=Object.entries(store.records)
+  .filter(([id,r])=>!known.has(id)&&r.identity)
+  .map(([id,r])=>({...r.identity,matchedWorkId:id,year:r.identity.firstYear??null,status:r.identity.mainPlacement||'identity-review'}));
+ const all=[...base,...store.additions.map(w=>({...w,matchedWorkId:w.id,year:w.firstYear,status:'manual-basic'})),...snapshots];
+ const identities=new Map();
+ for(const w of all){
+  const key=workKey(w),r=own(store.records,key)?store.records[key]:{},v=r.values||valuesOf(w);
+  const row={...w,...v,...r.style,aliases:[...new Set([...(w.aliases||[]),...(r.aliases||[])])],year:v.firstYear,
+   _key:key,_deleted:!!r.deleted,parentId:r.parentId||null,relation:r.relation||null};
+  if(identities.has(key)){
+   const original=identities.get(key);
+   original.aliases=[...new Set([...(original.aliases||[]),w.title,...(w.aliases||[])])].filter(name=>name!==original.title);
+   continue;
+  }
+  identities.set(key,row);
+ }
+ return [...identities.values()].filter(w=>(includeDeleted||!w._deleted)&&(includeChildren||!w.parentId));
+}
+
+// The first row is the canonical work. Every other row is an independent
+// source/version identity, displayed only after opening the work.
+export function versionGroup(entries,mainId){
+ const main=entries.find(w=>w._key===mainId&&!w.parentId&&!w._deleted);
+ if(!main)return [];
+ const children=entries.filter(w=>w.parentId===mainId&&!w._deleted)
+  .sort((a,b)=>(Number.isInteger(a.year)?a.year:Infinity)-(Number.isInteger(b.year)?b.year:Infinity)||
+   String(a.title).localeCompare(String(b.title),'zh-Hans-CN'));
+ return [main,...children];
 }
 export function projectRegistry(registry,store){
- const known=new Set([...registry.works,...store.additions].map(workKey));const missing=Object.entries(store.records).filter(([id,r])=>!known.has(id)&&r.identity).map(([,r])=>r.identity);
- const all=projectEntries([...registry.works,...missing],store,{includeChildren:true}),children=new Map();for(const w of all)if(w.parentId){if(!children.has(w.parentId))children.set(w.parentId,[]);children.get(w.parentId).push(w);}
+ const all=projectEntries(registry.works,store,{includeChildren:true}),children=new Map();
+ for(const w of all)if(w.parentId){if(!children.has(w.parentId))children.set(w.parentId,[]);children.get(w.parentId).push(w);}
  const projected=all.filter(w=>!w.parentId);
- return {...registry,summary:{...registry.summary,accepted:projected.length},works:projected.map(w=>({...w,aliases:[...new Set([...(w.aliases||[]),...(children.get(w._key)||[]).flatMap(c=>[c.title,...(c.aliases||[])])])],indexId:w.indexId||w.id,firstYear:w.year,mainPlacement:w.mainPlacement||'promoted-basic'}))};
+ return {...registry,summary:{...registry.summary,accepted:projected.length},works:projected.map(w=>{
+  const aliases=[...new Set([...(w.aliases||[]),...(children.get(w._key)||[]).flatMap(c=>[c.title,...(c.aliases||[])])])].filter(name=>name!==w.title);
+  return {...w,aliases,indexId:w.indexId||w.id,firstYear:w.year,mainPlacement:w.mainPlacement||'promoted-basic'};
+ })};
 }
 export function applyChange(store,base,action,meta){
  validateStore(store);
@@ -72,10 +104,23 @@ export function applyChange(store,base,action,meta){
  }else if(action.type==='delete'){
   if(all.some(w=>w.parentId===action.id))throw Error('主作品仍有关联版本，请先解除版本合并');record(action.id).deleted=true;
  }else if(action.type==='merge'){
-  const main=byId.get(action.mainId);if(!main||main.parentId)throw Error('请选择未合并的主作品');record(action.mainId);
-  const children=[...new Set(action.ids)];if(!children.length||children.includes(action.mainId))throw Error('请选择主作品以外的版本');
-  for(const id of children){const r=record(id);r.parentId=action.mainId;r.relation={...clone(action.relation),label:byId.get(id).title};for(const w of all)if(w.parentId===id){const child=record(w._key);child.parentId=action.mainId;}}
- }else if(action.type==='detach'){const r=record(action.id);r.parentId=null;delete r.relation;}
+  const main=byId.get(action.mainId);
+  if(!main||main.parentId||main._deleted)throw Error('请选择未合并的主作品');
+  if(!Array.isArray(action.ids))throw Error('关联版本列表无效');
+  const children=[...new Set(action.ids)];
+  if(!children.length||children.includes(action.mainId))throw Error('请选择主作品以外的版本');
+  for(const id of children){
+   const candidate=byId.get(id);
+   if(!candidate||candidate._deleted||candidate.parentId)throw Error('只可合并尚未归属其他主作品的有效记录：'+id);
+  }
+  record(action.mainId);
+  for(const id of children){
+   const r=record(id);r.parentId=action.mainId;r.relation={...clone(action.relation),label:byId.get(id).title};
+   for(const w of all)if(w.parentId===id){const child=record(w._key);child.parentId=action.mainId;}
+  }
+ }else if(action.type==='detach'){
+  if(!byId.get(action.id)?.parentId)throw Error('该作品没有可解除的合并关系');
+  const r=record(action.id);r.parentId=null;delete r.relation;}
  else throw Error('不支持的操作');
  const changes=[...touched].map(id=>({id,before:own(store.records,id)?clone(store.records[id]):null,after:clone(next.records[id])}));
  if(!added.length&&changes.every(c=>JSON.stringify(c.before)===JSON.stringify(c.after)))throw Error('没有实际修改');
