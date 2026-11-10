@@ -22,6 +22,25 @@ export function validateValues(v){
  return v;
 }
 export function valuesOf(w){return {title:w.title,firstYear:w.firstYear??w.year??null,group:w.group||'厂商待核',gameplay:w.gameplay||'玩法待核',plotStyles:[...(w.plotStyles||[])],...(w.plotTags?{plotTags:clone(w.plotTags)}:{}),...(w.plotTagEvidence?{plotTagEvidence:clone(w.plotTagEvidence)}:{}),source:w.source||''};}
+// Reconcile a form opened before another GitHub edit: preserve fields the user
+// did not touch, but never silently overwrite a concurrent edit to the same field.
+export function reconcileBasicEdit(opened,submitted,latest){
+ const same=(a,b)=>JSON.stringify(a??null)===JSON.stringify(b??null);
+ const result=clone(submitted),conflicts=[];
+ const labels={title:'作品名称',firstYear:'首发年份',group:'厂商／创作主体',gameplay:'主要玩法',source:'资料来源'};
+ const keepLatest=key=>{if(own(latest,key))result[key]=clone(latest[key]);else delete result[key];};
+ for(const key of ['title','firstYear','group','gameplay','source']){
+  if(same(submitted[key],opened[key]))keepLatest(key);
+  else if(!same(latest[key],opened[key])&&!same(latest[key],submitted[key]))conflicts.push(labels[key]);
+ }
+ const styleFields=['plotStyles','plotTags','plotTagEvidence'];
+ const userChangedStyles=styleFields.some(key=>!same(opened[key],submitted[key]));
+ const liveChangedStyles=styleFields.some(key=>!same(opened[key],latest[key]));
+ if(!userChangedStyles)for(const key of styleFields)keepLatest(key);
+ else if(liveChangedStyles&&styleFields.some(key=>!same(submitted[key],latest[key])))conflicts.push('作品特征标签');
+ if(conflicts.length)throw Error('该作品已在其他页面更新，字段冲突：'+conflicts.join('、')+'。本次未写入；当前表单内容已保留，请核对后重新打开作品。');
+ return validateValues(result);
+}
 export function validateStore(s){
  if(!s||s.schemaVersion!==1||!Number.isSafeInteger(s.revision)||s.revision<0||!Array.isArray(s.additions)||!s.records||typeof s.records!=='object'||Array.isArray(s.records)||!Array.isArray(s.recent)||s.recent.length>3)throw Error('基础库修改记录格式无效');
  const ids=new Set();for(const w of s.additions){if(!/^manual-[a-zA-Z0-9-]+$/.test(w.id)||ids.has(w.id))throw Error('新增作品ID无效或重复');ids.add(w.id);validateValues(valuesOf(w));}
