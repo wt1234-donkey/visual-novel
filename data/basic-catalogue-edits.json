@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 18,
+  "revision": 19,
   "additions": [],
   "records": {
     "g1028": {
@@ -430,51 +430,47 @@
         "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
       },
       "aliases": []
+    },
+    "g091": {
+      "identity": {
+        "id": "g091",
+        "indexId": "basic-dossier-8abb34ee0752f065",
+        "aliases": [
+          "冒险乐园"
+        ],
+        "title": "Adventureland",
+        "firstYear": 1978,
+        "group": "Adventure International",
+        "gameplay": "ADV",
+        "plotStyles": [],
+        "source": "https://www.museumofplay.org/blog/scott-adams-adventure-international-collection-documents-early-commercial-computer-gaming/",
+        "mainPlacement": "main-linked"
+      },
+      "values": {
+        "title": "Adventureland",
+        "firstYear": 1978,
+        "group": "Adventure International",
+        "gameplay": "文字冒险",
+        "plotStyles": [],
+        "plotTags": {
+          "tone": "轻松",
+          "emotion": "紧张",
+          "theme": [
+            "生存",
+            "冒险"
+          ],
+          "perspective": "第一人称",
+          "setting": "架空世界"
+        },
+        "plotTagEvidence": {},
+        "source": "https://www.museumofplay.org/blog/scott-adams-adventure-international-collection-documents-early-commercial-computer-gaming/"
+      },
+      "aliases": [
+        "冒险乐园"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "7c91b519-ef0e-40b8-a76d-30720ec07c66",
-      "at": "2026-11-10T02:26:58.550Z",
-      "actor": "编目审核台",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "casa-table-20261105-4004",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "casa-table-20261105-4004",
-              "indexId": "basic-casa-table-20261105-4004",
-              "aliases": [],
-              "title": "Crystal Cave",
-              "firstYear": 1977,
-              "group": "厂商待核",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Crystal Cave",
-              "firstYear": 1977,
-              "group": "dave, Strident",
-              "gameplay": "文字输入",
-              "plotStyles": [],
-              "plotTags": {
-                "emotion": "惊悚",
-                "expression": "实验性",
-                "theme": "冒险"
-              },
-              "plotTagEvidence": {},
-              "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "b45d6f39-5939-4d83-a13b-8be44a6c0efe",
       "at": "2026-11-10T02:40:26.960Z",
@@ -557,6 +553,57 @@
               "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "f9035182-064e-4fc2-8306-144317dad33f",
+      "at": "2026-11-10T05:13:11.676Z",
+      "actor": "编目审核台",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "g091",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "g091",
+              "indexId": "basic-dossier-8abb34ee0752f065",
+              "aliases": [
+                "冒险乐园"
+              ],
+              "title": "Adventureland",
+              "firstYear": 1978,
+              "group": "Adventure International",
+              "gameplay": "ADV",
+              "plotStyles": [],
+              "source": "https://www.museumofplay.org/blog/scott-adams-adventure-international-collection-documents-early-commercial-computer-gaming/",
+              "mainPlacement": "main-linked"
+            },
+            "values": {
+              "title": "Adventureland",
+              "firstYear": 1978,
+              "group": "Adventure International",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": "轻松",
+                "emotion": "紧张",
+                "theme": [
+                  "生存",
+                  "冒险"
+                ],
+                "perspective": "第一人称",
+                "setting": "架空世界"
+              },
+              "plotTagEvidence": {},
+              "source": "https://www.museumofplay.org/blog/scott-adams-adventure-international-collection-documents-early-commercial-computer-gaming/"
+            },
+            "aliases": [
+              "冒险乐园"
+            ]
           }
         }
       ],
