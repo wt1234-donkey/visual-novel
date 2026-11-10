@@ -1,5 +1,5 @@
-import {STYLE_GROUPS,styleState} from './basic-style-tags.mjs';
-export {styleName,styleState,STYLE_DIMENSIONS,styleDimension} from './basic-style-tags.mjs';
+import {STYLE_GROUPS,styleState,styleLabels,styleList} from './basic-style-tags.mjs?v=20261110-flex-tags';
+export {styleName,styleState,STYLE_DIMENSIONS,styleDimension,styleLabels} from './basic-style-tags.mjs?v=20261110-flex-tags';
 
 export const normalizeFilterText=value=>String(value??'').normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase();
 export const manufacturerKey=normalizeFilterText;
@@ -90,7 +90,7 @@ export function gameplayDisplay(raw,gameplayTags){const keys=catalogueGameplay({
 export const MISSING_STYLE='__missing__';
 export function styleOptions(works){
  const counts=new Map();
- for(const work of works)for(const tag of Object.values(styleState(work).tags))counts.set(tag,(counts.get(tag)||0)+1);
+ for(const work of works)for(const tag of styleLabels(styleState(work).tags))counts.set(tag,(counts.get(tag)||0)+1);
  return Object.entries(STYLE_GROUPS).map(([label,styles])=>({label,options:styles.map(tag=>({label:tag,key:tag,count:counts.get(tag)||0}))}));
 }
 
@@ -98,13 +98,13 @@ export function pageIndex(value,pageCount){const text=String(value).trim();if(!/
 
 export function basicFilterRows(entries,childrenByMain){
  return entries.map(row=>{
-  const {tags}=styleState(row),styles=Object.values(tags);
+  const {tags}=styleState(row),styles=styleLabels(tags);
   const names=manufacturerNames(row);
   const childNames=(childrenByMain.get(row._key)||[]).flatMap(child=>[child.title,...(child.aliases||[])]);
   return {
    search:normalizeFilterText([row.title,...(row.aliases||[]),...names,...styles,...childNames].join(' ')),
    manufacturers:[...new Set(names.map(manufacturerKey))],gameplay:catalogueGameplay(row),
-   pureRpg:plainRpgLabels.has(normalizeFilterText(row.gameplay))&&!row.gameplayTags?.some(key=>key!=='rpg'),styles,themes:tags.theme?[normalizeFilterText(tags.theme)]:[],year:row.year,status:row.status,slot:row.slot
+   pureRpg:plainRpgLabels.has(normalizeFilterText(row.gameplay))&&!row.gameplayTags?.some(key=>key!=='rpg'),styles,themes:styleList(tags.theme).map(normalizeFilterText),year:row.year,status:row.status,slot:row.slot
   };
  });
 }

@@ -1,9 +1,9 @@
-import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261110-combined';
+import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261110-flex-tags';
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261110-combined';
-import {styleName,styleState} from './basic-style-tags.mjs';
-import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs?v=20261109-index';
-import {withBasicDetails} from './basic-catalogue-index.mjs';
+import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261110-flex-tags';
+import {styleName,styleState,styleLabels,styleEvidenceEntries,packStyleEvidence} from './basic-style-tags.mjs?v=20261110-flex-tags';
+import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} from './basic-style-workbench.mjs?v=20261110-flex-tags';
+import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
 import {makeProposal,offerEditorialProposal,basicProposalPreview,EDITORIAL_URL} from './editorial-proposal.mjs';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HISTORY='data/basic-catalogue-edits.json';
@@ -38,6 +38,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
    <details class="be-auth"><summary>管理员直连 · ${actor?safe(actor):'GitHub 备用入口'}</summary><p class="minor">凭证仅在当前页面内存保留，刷新后清除。</p><ol class="minor"><li>使用拥有仓库权限的 GitHub 账号；Resource owner 应为 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b>，再选择 <b>visual-novel</b>。Public repositories 只有读取权限。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>，然后生成凭证。</li></ol><p class="minor">连接成功表示账号和读取校验通过，GitHub 会在保存时核验凭证的实际写入权限。</p><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仓库专用凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">重新读取网站修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
+  for(const picker of dialog.querySelectorAll('.be-style-picker'))refreshStylePicker(picker);
   dialog.setAttribute('aria-label',title);if(!dialog.open)dialog.showModal();
  }
  const disabledBefore=new Map();
@@ -84,9 +85,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    <label>首发年份（未知可留空）<input name="firstYear" type="number" min="1970" max="${new Date().getFullYear()+10}" step="1" list="be-years" value="${v.firstYear??''}"><datalist id="be-years">${Array.from({length:new Date().getFullYear()+11-1970},(_,i)=>`<option value="${1970+i}"></option>`).join('')}</datalist></label>
    ${input('group','厂商／创作主体',v.group,'required list="be-groups" maxlength="500"')}<datalist id="be-groups">${[...new Map(base.filter(x=>x.group).map(x=>[manufacturerKey(x.group),x.group])).values()].map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist>
    ${input('gameplay','主要玩法',v.gameplay,'required list="be-gameplay" maxlength="500"')}<datalist id="be-gameplay">${GAMEPLAY_OPTIONS.map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist></div>
-   <fieldset><legend>剧情风格标签 · 六个维度各选一项</legend>${styleInputs(tags)}
-   <p class="minor">资料不足的维度可留空。</p>
-   ${Object.entries(v.plotTagEvidence||{}).map(([key,{quote,source,model}])=>'<p class="minor">'+safe(tags[key])+' · '+safe(quote)+' · '+safe(model)+' <a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">资料来源 ↗</a></p>').join('')}
+   <fieldset><legend>作品特征标签 · 跨维度最多六个</legend>${styleInputs(tags)}
+   <p class="minor">同一维度可选多个标签，资料不足时可少选。叙事视角指故事由谁讲述。</p>
+   ${styleEvidenceEntries(tags,v.plotTagEvidence).map(([tag,{quote,source,model}])=>'<p class="minor">'+safe(tag)+' · '+safe(quote)+' · '+safe(model)+' <a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">资料来源 ↗</a></p>').join('')}
    ${archived?.length?'<p class="minor">历史标签参考（同维度冲突）：'+safe(archived.join('、'))+'</p>':''}
    ${legacy.length?'<p class="minor">历史标签参考：'+safe(legacy.join('、'))+'</p><label class="be-candidate"><input type="checkbox" name="removeLegacy">移除这些待整理旧标签</label>':''}</fieldset>
    ${input('source','资料来源（可选）',v.source,'type="url"')}
@@ -102,7 +103,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  }
  function connection(){shell('写入连接与最近操作',`<p>编辑后可预览并送审。管理员可在上方使用原有直连入口。</p><p><a href="${EDITORIAL_URL}" target="_blank" rel="noopener noreferrer">查看编目审核队列 ↗</a></p><div id="be-history">${[...snapshot.store.recent].reverse().map(r=>`<p>${safe(r.reason)}<br><span class="minor">${safe(r.at)} · ${safe(r.actor)}</span></p>`).join('')||'<p class="minor">还没有网页修改记录。</p>'}</div><button type="button" id="be-undo" ${snapshot.store.recent.length?'':'disabled'}>撤销最近一次操作</button>`);}
  dialog.addEventListener('cancel',e=>{e.preventDefault();close();});
- dialog.addEventListener('input',e=>{if(['be-import-text','be-format'].includes(e.target.id)){pendingImport=null;$('#be-import-confirm').disabled=true;}});
+ dialog.addEventListener('input',e=>{const picker=e.target.closest('.be-style-picker');if(picker)refreshStylePicker(picker);if(['be-import-text','be-format'].includes(e.target.id)){pendingImport=null;$('#be-import-confirm').disabled=true;}});
  dialog.addEventListener('change',async e=>{if(e.target.id==='be-file'){try{const file=e.target.files[0];if(!file)return;if(file.size>5e6)throw Error('文件超过5MB，请分批导入');$('#be-import-text').value=await file.text();$('#be-format').value=file.name.toLowerCase().endsWith('.json')?'json':'csv';pendingImport=null;$('#be-import-confirm').disabled=true;message('文件已读取，请校验并预览');}catch(err){message(err.message,true);}}});
  dialog.addEventListener('submit',async e=>{
   const form=e.target;if(!['be-edit','be-merge'].includes(form.id))return;
@@ -116,9 +117,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
     catch(error){message(error.message,true);return;}
     finally{lock(false);}
    }
-   const {legacy}=styleState(previous||{});
-   const plotStyles=f.has('removeLegacy')?[]:legacy.filter(tag=>!Object.values(plotTags).includes(styleName(tag)));
-   const plotTagEvidence=Object.fromEntries(Object.entries(previous?.plotTagEvidence||{}).filter(([key])=>plotTags[key]===previous.plotTags[key]));
+   const {legacy,tags:previousTags}=styleState(previous||{});
+   const plotStyles=f.has('removeLegacy')?[]:legacy.filter(tag=>!styleLabels(plotTags).includes(styleName(tag)));
+   const plotTagEvidence=packStyleEvidence(plotTags,new Map(styleEvidenceEntries(previousTags,previous?.plotTagEvidence)));
    const v={title:String(f.get('title')).trim(),firstYear:f.get('firstYear')?Number(f.get('firstYear')):null,group:String(f.get('group')).trim(),gameplay:String(f.get('gameplay')).trim(),plotStyles,plotTags,plotTagEvidence,source:String(f.get('source')||'').trim()};
    const saved=await commit(id?{type:'edit',id,values:v}:{type:'add',works:[{id:'manual-'+randomId(),...v}]},String(f.get('reason')));
    if(saved&&!id&&getLastAdded(v.title)){form.dataset.id=getLastAdded(v.title)._key;form.querySelector('button[type=submit]').textContent='保存修改';}
@@ -140,7 +141,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   else if(b.dataset.detach){if(await commit({type:'detach',id:b.dataset.detach},'解除版本合并'))edit(b.dataset.detach);}
   else if(b.id==='be-undo'){if(confirm('撤销最近一次“'+snapshot.store.recent.at(-1)?.reason+'”？'))if(await commit(null,'撤销最近操作',true))connection();}
   else if(b.id==='be-validate'){
-   try{pendingImport=null;$('#be-import-confirm').disabled=true;const rows=parseImport($('#be-import-text').value,$('#be-format').value);pendingImport=rows.map(v=>({id:'manual-'+randomId(),...v}));applyChange(snapshot.store,base,{type:'add',works:pendingImport},{actor:'preview',reason:'预览导入',expectedRevision:snapshot.store.revision});$('#be-import-preview').innerHTML='<p>校验通过，将添加 '+rows.length+' 部。预览前20部：</p><ul>'+rows.slice(0,20).map(w=>'<li>'+safe(w.title)+' · '+(w.firstYear??'年份待核')+' · '+safe(w.group)+' · '+safe(w.gameplay)+' · '+safe([...Object.values(styleState(w).tags),...styleState(w).legacy].join('、'))+'</li>').join('')+'</ul>';$('#be-import-confirm').disabled=false;message('请核对预览，再确认导入');}catch(err){pendingImport=null;$('#be-import-preview').textContent='';message(err.message,true);}
+   try{pendingImport=null;$('#be-import-confirm').disabled=true;const rows=parseImport($('#be-import-text').value,$('#be-format').value);pendingImport=rows.map(v=>({id:'manual-'+randomId(),...v}));applyChange(snapshot.store,base,{type:'add',works:pendingImport},{actor:'preview',reason:'预览导入',expectedRevision:snapshot.store.revision});$('#be-import-preview').innerHTML='<p>校验通过，将添加 '+rows.length+' 部。预览前20部：</p><ul>'+rows.slice(0,20).map(w=>'<li>'+safe(w.title)+' · '+(w.firstYear??'年份待核')+' · '+safe(w.group)+' · '+safe(w.gameplay)+' · '+safe([...styleLabels(styleState(w).tags),...styleState(w).legacy].join('、'))+'</li>').join('')+'</ul>';$('#be-import-confirm').disabled=false;message('请核对预览，再确认导入');}catch(err){pendingImport=null;$('#be-import-preview').textContent='';message(err.message,true);}
   }else if(b.id==='be-import-confirm'&&pendingImport){if(await commit({type:'add',works:pendingImport},'模板导入 '+pendingImport.length+' 部作品')){pendingImport=null;b.disabled=true;}}
  });
  const styles=createStyleWorkbench({dialog,shell,all,hydrate,revision:()=>snapshot.store.revision,commit,message,lock,isBusy:()=>busy});

@@ -1,10 +1,10 @@
-import {STYLE_DIMENSIONS,STYLE_KEYS,styleState,validateStyleTags,isSourceURL} from './basic-style-tags.mjs';
+import {STYLE_DIMENSIONS,STYLE_KEYS,MAX_WORK_TAGS,styleState,styleLabels,styleList,styleValue,validateStyleTags,isSourceURL} from './basic-style-tags.mjs?v=20261110-flex-tags';
 
 export const STYLE_QUEUE_KEY='visual-novel-basic-style-review-v1';
 export const MAX_STYLE_BATCH=500;
 const missingSynopsis=/^(?:简介|剧情|故事|内容|作品剧情简介|官方剧情简介)?[：:\s]*(?:未录入|暂无|待核|待补充|待整理|待依据|待补|暂缺|资料不足)|尚未(?:整理|录入|核实)|尚待(?:补充|核实)/;
 
-export function buildStyleRequest(works,fullWorks,editorial){
+export function buildStyleRequest(works,fullWorks,editorial,{includeFull=false}={}){
  const byId=new Map(fullWorks.map(work=>[work.id,work]));
  const items=[],issues=[];
  for(const work of works){
@@ -12,10 +12,11 @@ export function buildStyleRequest(works,fullWorks,editorial){
   const synopsis=(archive?.synopsis||'').replace(/\s+/g,' ').trim().slice(0,4500);
   const sources=[...new Set([archive?.source,...(editorial[archive?.id]?.sources||[]),work.source].filter(s=>typeof s==='string'&&s.length<=2048&&isSourceURL(s)))].slice(0,8);
   const identity={id:work._key,title:work.title};
-  const dimensions=STYLE_KEYS.filter(key=>!Object.hasOwn(styleState(work).tags,key));
-  if(!dimensions.length)issues.push({...identity,reason:'六个维度均已有标签'});
+  const existingTags=styleState(work).tags;
+  const maxTags=MAX_WORK_TAGS-styleLabels(existingTags).length;
+  if(!maxTags&&!includeFull)issues.push({...identity,reason:'作品已有六个标签'});
   else if(synopsis.length<10||missingSynopsis.test(synopsis)||!sources.length)issues.push({...identity,reason:'缺少可用于识别的剧情简介或资料来源'});
-  else items.push({...identity,synopsis,sources,dimensions});
+  else items.push({...identity,synopsis,sources,dimensions:STYLE_KEYS,maxTags,existingTags});
  }
  return {schemaVersion:1,items,issues};
 }
@@ -44,23 +45,28 @@ export function validateStyleRequest(data){
  validateBatch(data);
  for(const item of data.items){
   validateEvidenceInput(item);
+  if(item.maxTags!==undefined&&(!Number.isInteger(item.maxTags)||item.maxTags<1||item.maxTags>MAX_WORK_TAGS))throw Error('候选上限无效：'+item.id);
+  if(item.existingTags!==undefined){
+   validateStyleTags(item.existingTags);
+   if(item.maxTags!==undefined&&item.maxTags+styleLabels(item.existingTags).length>MAX_WORK_TAGS)throw Error('候选超过剩余标签额度：'+item.id);
+  }
   if(!Array.isArray(item.dimensions)||!item.dimensions.length||new Set(item.dimensions).size!==item.dimensions.length||
    item.dimensions.some(key=>!STYLE_KEYS.includes(key)))throw Error('待识别维度无效：'+item.id);
  }
  return data;
 }
 
-export function validateCandidates(item,candidates,allowed=STYLE_KEYS){
- if(!Array.isArray(candidates)||candidates.length>allowed.length)throw Error('候选格式无效');
+export function validateCandidates(item,candidates,allowed=STYLE_KEYS,maxTags=MAX_WORK_TAGS){
+ if(!Array.isArray(candidates)||candidates.length>maxTags)throw Error('候选格式无效');
  const seen=new Set();
  for(const candidate of candidates){
   const {dimension,tag,quote,source}=candidate||{};
-  if(!allowed.includes(dimension)||seen.has(dimension))throw Error('候选维度重复或超出范围：'+item.id);
+  if(!allowed.includes(dimension)||seen.has(tag)||styleList(item.existingTags?.[dimension]).includes(tag))throw Error('候选标签重复、已有或超出范围：'+item.id);
   if(typeof quote!=='string'||quote.trim().length<4||quote.length>500||!item.synopsis.includes(quote))
    throw Error('候选摘录与已有简介不符：'+item.id);
   if(!item.sources.includes(source))throw Error('候选来源与已有资料不符：'+item.id);
   validateStyleTags({[dimension]:tag});
-  seen.add(dimension);
+  seen.add(tag);
  }
  return candidates;
 }
@@ -78,19 +84,18 @@ export function parseStyleReview(text){
 
 export function styleReviewRows(items,selected){
  return items.flatMap(item=>{
-  const approved=item.candidates.filter(candidate=>selected.get(item.id)?.has(candidate.dimension));
+  const approved=item.candidates.filter(candidate=>selected.get(item.id)?.has(candidate.tag));
   if(!approved.length)return [];
-  return [{
-   id:item.id,title:item.title,mode:'fill',
-   tags:Object.fromEntries(approved.map(({dimension,tag})=>[dimension,tag])),
-   evidence:Object.fromEntries(approved.map(({dimension,quote,source})=>[dimension,{quote,source,model:item.model}]))
-  }];
+  const tags={};
+  for(const {dimension,tag} of approved)tags[dimension]=styleValue([...styleList(tags[dimension]),tag]);
+  return [{id:item.id,title:item.title,mode:'append',tags,
+   evidence:Object.fromEntries(approved.map(({tag,quote,source})=>[tag,{quote,source,model:item.model}]))}];
  });
 }
 
-export function styleCandidateFormat(dimensions){
+export function styleCandidateFormat(dimensions,maxTags=MAX_WORK_TAGS){
  return {type:'object',required:['candidates'],additionalProperties:false,properties:{candidates:{
-  type:'array',maxItems:dimensions.length,items:{oneOf:dimensions.map(key=>({
+  type:'array',maxItems:maxTags,items:{oneOf:dimensions.map(key=>({
    type:'object',required:['dimension','tag','quote'],additionalProperties:false,properties:{
     dimension:{type:'string',enum:[key]},tag:{type:'string',enum:STYLE_DIMENSIONS[key].tags},quote:{type:'string'}
    }

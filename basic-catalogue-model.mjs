@@ -2,8 +2,8 @@
 export const emptyStore=()=>({schemaVersion:1,revision:0,additions:[],records:{},recent:[]});
 export const workKey=w=>w.matchedWorkId||w.registryId||w.id;
 export const nameKey=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
-import {STYLE_KEYS,STYLE_DIMENSIONS,styleName,styleState,validateStyleTags,validateStyleEvidence} from './basic-style-tags.mjs';
-export {STYLE_GROUPS,STYLE_OPTIONS} from './basic-style-tags.mjs';
+import {STYLE_KEYS,STYLE_DIMENSIONS,styleName,styleState,styleList,styleValue,styleLabels,styleEvidenceEntries,packStyleEvidence,validateStyleTags,validateStyleEvidence} from './basic-style-tags.mjs?v=20261110-flex-tags';
+export {STYLE_GROUPS,STYLE_OPTIONS} from './basic-style-tags.mjs?v=20261110-flex-tags';
 const clone=x=>structuredClone(x);
 const own=(obj,k)=>Object.hasOwn(obj,k);
 const fields=['title','firstYear','group','gameplay','plotStyles','plotTags','plotTagEvidence','source'];
@@ -95,23 +95,28 @@ export function planStyleUpdates(works,rows){
   const work=byId.get(row.id);
   if(!work||work._deleted)throw Error('作品不存在或已删除：'+row.id);
   if(row.title&&row.title!==work.title)throw Error('作品名称与当前ID不符：'+row.id+' · '+work.title);
-  if(!['fill','set','remove'].includes(row.mode))throw Error('无效的标签操作');
+  if(!['fill','append','set','remove'].includes(row.mode))throw Error('无效的标签操作');
   validateStyleTags(row.tags,{allowClear:row.mode==='set'});
   if(row.evidence)validateStyleEvidence(row.evidence,row.tags);
   const {tags:before,legacy}=styleState(work),after={...before};
-  const evidence={...work.plotTagEvidence};
-  for(const [key,tag] of Object.entries(row.tags)){
-   if(row.mode==='fill'&&own(before,key))continue;
-   if(row.mode==='remove'&&before[key]!==tag)continue;
-   const value=row.mode==='remove'?null:tag;
-   if((before[key]||null)===value)continue;
-   if(value===null)delete after[key];
-   else after[key]=value;
-   delete evidence[key];
-   if(row.evidence?.[key])evidence[key]=row.evidence[key];
+  const evidence=new Map(styleEvidenceEntries(before,work.plotTagEvidence));
+  const incoming=new Map(styleEvidenceEntries(row.tags,row.evidence));
+  let changed=false;
+  for(const [key,value] of Object.entries(row.tags)){
+   const old=styleList(before[key]),wanted=styleList(value);
+   if(row.mode==='fill'&&old.length)continue;
+   const next=row.mode==='remove'?old.filter(tag=>!wanted.includes(tag)):
+    row.mode==='append'?[...new Set([...old,...wanted])]:wanted;
+   if(old.length===next.length&&old.every(tag=>next.includes(tag)))continue;
+   changed=true;
+   if(next.length)after[key]=styleValue(next);
+   else delete after[key];
+   for(const tag of next)if(!old.includes(tag)&&incoming.has(tag))evidence.set(tag,incoming.get(tag));
   }
-  if(STYLE_KEYS.every(key=>before[key]===after[key])){unchanged.push({id:row.id,title:work.title});continue;}
-  const style={plotStyles:legacy.filter(tag=>!Object.values(after).includes(styleName(tag))),plotTags:after,plotTagEvidence:evidence};
+  if(!changed){unchanged.push({id:row.id,title:work.title});continue;}
+  try{validateStyleTags(after);}catch(error){throw Error(work.title+'：'+error.message);}
+  const selected=styleLabels(after);
+  const style={plotStyles:legacy.filter(tag=>!selected.includes(styleName(tag))),plotTags:after,plotTagEvidence:packStyleEvidence(after,evidence)};
   validateStyles(style);
   updates.push({id:row.id,title:work.title,before,after,style});
  }
@@ -120,22 +125,28 @@ export function planStyleUpdates(works,rows){
 
 export const LEGACY_CSV_HEADERS=['名称','年份','厂商','主要玩法','剧情风格1','剧情风格2','剧情风格3','来源'];
 const dimensionHeaders=STYLE_KEYS.map(key=>STYLE_DIMENSIONS[key].label);
+const legacyDimensionHeaders=dimensionHeaders.slice(0,6);
 export const CSV_HEADERS=['名称','年份','厂商','主要玩法',...dimensionHeaders,'来源'];
+const SIX_DIMENSION_CSV_HEADERS=['名称','年份','厂商','主要玩法',...legacyDimensionHeaders,'来源'];
 export const STYLE_UPDATE_HEADERS=['作品ID','作品名称',...dimensionHeaders];
+const SIX_DIMENSION_UPDATE_HEADERS=['作品ID','作品名称',...legacyDimensionHeaders];
 function dimensionValues(cells,{allowClear=false}={}){
- const tags=Object.fromEntries(STYLE_KEYS.flatMap((key,i)=>{
-  const tag=cells[i].trim();
-  return tag?[[key,allowClear&&tag==='清空'?null:styleName(tag)]]:[];
+ const tags=Object.fromEntries(cells.flatMap((cell,i)=>{
+  const text=cell.trim();
+  if(!text)return [];
+  const list=text.split(/[、|；;]+/).map(styleName).filter(Boolean);
+  return [[STYLE_KEYS[i],allowClear&&text==='清空'?null:styleValue(list)]];
  }));
  return validateStyleTags(tags,{allowClear});
 }
 export function parseStyleUpdates(text){
  const [header,...rows]=parseCSV(text);
- if(JSON.stringify(header)!==JSON.stringify(STYLE_UPDATE_HEADERS))throw Error('CSV表头须与标签更新模板一致');
+ if(![STYLE_UPDATE_HEADERS,SIX_DIMENSION_UPDATE_HEADERS].some(valid=>JSON.stringify(header)===JSON.stringify(valid)))
+  throw Error('CSV表头须与标签更新模板一致');
  if(!rows.length||rows.length>500)throw Error('每次更新1至500部作品');
  return rows.map((row,i)=>{
   try{
-   if(row.length!==STYLE_UPDATE_HEADERS.length)throw Error('列数须为'+STYLE_UPDATE_HEADERS.length);
+   if(row.length!==header.length)throw Error('列数须为'+header.length);
    const tags=dimensionValues(row.slice(2),{allowClear:true});
    return {id:row[0].trim(),title:row[1].trim(),mode:'set',tags};
   }catch(error){throw Error('第'+(i+2)+'行：'+error.message);}
@@ -152,7 +163,7 @@ export function parseImport(text,format){
  else{
   const [header,...rows]=parseCSV(text);
   const legacy=JSON.stringify(header)===JSON.stringify(LEGACY_CSV_HEADERS);
-  if(!legacy&&JSON.stringify(header)!==JSON.stringify(CSV_HEADERS))throw Error('CSV表头须与下载模板完全一致');
+  if(!legacy&&![CSV_HEADERS,SIX_DIMENSION_CSV_HEADERS].some(valid=>JSON.stringify(header)===JSON.stringify(valid)))throw Error('CSV表头须与下载模板完全一致');
   input=rows.map((r,i)=>{
    if(r.length!==header.length)throw Error('第'+(i+2)+'行列数须为'+header.length);
    return {title:r[0].trim(),firstYear:r[1].trim()?Number(r[1]):null,group:r[2].trim(),gameplay:r[3].trim(),

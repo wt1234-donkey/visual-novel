@@ -128,7 +128,7 @@ export function createCatalogueWorker(){
  const pending=new Map();
  function workerSearch(payload){
   if(!worker){
-   worker=new Worker(new URL('./basic-catalogue-search-worker.mjs?v=20261110-combined',import.meta.url),{type:'module'});
+   worker=new Worker(new URL('./basic-catalogue-search-worker.mjs?v=20261110-flex-tags',import.meta.url),{type:'module'});
    worker.onmessage=({data})=>{
     const request=pending.get(data.id);
     if(!request)return;
