@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 25,
+  "revision": 26,
   "additions": [],
   "records": {
     "g1028": {
@@ -617,62 +617,42 @@
         "source": "https://ifdb.org/viewgame?id=8unhxca377cpdugk"
       },
       "aliases": []
+    },
+    "nextmoe-32056": {
+      "identity": {
+        "id": "nextmoe-32056",
+        "indexId": "nextmoe-20261101-r2-32056",
+        "aliases": [],
+        "title": "!Ω Factorial Omega: My Dystopian Robot Girlfriend",
+        "firstYear": 2026,
+        "group": "创作品牌待核",
+        "gameplay": "Galgame（玩法待核）",
+        "plotStyles": [],
+        "source": "https://api.nextmoe.dev/v2/catalog/works/32056",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "!Ω Factorial Omega: My Dystopian Robot Girlfriend",
+        "firstYear": 2026,
+        "group": "Hmni",
+        "gameplay": "模拟／养成／经营",
+        "plotStyles": [],
+        "plotTags": {
+          "content": "色情",
+          "perspective": "第三人称",
+          "structure": "非线性叙事",
+          "setting": [
+            "近未来",
+            "反乌托邦"
+          ]
+        },
+        "plotTagEvidence": {},
+        "source": "https://api.nextmoe.dev/v2/catalog/works/32056"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "ae1507be-1ba6-4114-94ef-512d0c31b91f",
-      "at": "2026-11-10T07:47:34.616Z",
-      "actor": "wt1234-donkey",
-      "reason": "批量编辑标签 1 部",
-      "changes": [
-        {
-          "id": "casa-table-20261105-310",
-          "before": {
-            "identity": {
-              "id": "casa-table-20261105-310",
-              "indexId": "basic-casa-table-20261105-310",
-              "aliases": [],
-              "title": "King Tut's Tomb",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
-              "mainPlacement": "promoted-basic"
-            }
-          },
-          "after": {
-            "identity": {
-              "id": "casa-table-20261105-310",
-              "indexId": "basic-casa-table-20261105-310",
-              "aliases": [],
-              "title": "King Tut's Tomb",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "style": {
-              "plotStyles": [],
-              "plotTags": {
-                "theme": [
-                  "历史",
-                  "推理",
-                  "生存",
-                  "冒险"
-                ],
-                "perspective": "第一人称"
-              },
-              "plotTagEvidence": {}
-            }
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "42232efb-c184-48b6-9ae6-82e57c496296",
       "at": "2026-11-10T08:13:09.140Z",
@@ -783,6 +763,52 @@
               },
               "plotTagEvidence": {},
               "source": "https://ifdb.org/viewgame?id=8unhxca377cpdugk"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "ef064fdb-e734-4ab8-bee7-d0f925f93820",
+      "at": "2026-11-10T08:38:18.707Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "nextmoe-32056",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "nextmoe-32056",
+              "indexId": "nextmoe-20261101-r2-32056",
+              "aliases": [],
+              "title": "!Ω Factorial Omega: My Dystopian Robot Girlfriend",
+              "firstYear": 2026,
+              "group": "创作品牌待核",
+              "gameplay": "Galgame（玩法待核）",
+              "plotStyles": [],
+              "source": "https://api.nextmoe.dev/v2/catalog/works/32056",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "!Ω Factorial Omega: My Dystopian Robot Girlfriend",
+              "firstYear": 2026,
+              "group": "Hmni",
+              "gameplay": "模拟／养成／经营",
+              "plotStyles": [],
+              "plotTags": {
+                "content": "色情",
+                "perspective": "第三人称",
+                "structure": "非线性叙事",
+                "setting": [
+                  "近未来",
+                  "反乌托邦"
+                ]
+              },
+              "plotTagEvidence": {},
+              "source": "https://api.nextmoe.dev/v2/catalog/works/32056"
             },
             "aliases": []
           }
