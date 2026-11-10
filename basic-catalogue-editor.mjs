@@ -1,6 +1,6 @@
 import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261110-flex-tags';
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,versionGroup,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261110-version-groups';
+import {validateStore,valuesOf,applyChange,undoLast,projectEntries,versionGroup,parseImport,workKey,reconcileBasicEdit} from './basic-catalogue-model.mjs?v=20261110-version-groups';
 import {styleName,styleState,styleLabels,styleEvidenceEntries,packStyleEvidence} from './basic-style-tags.mjs?v=20261110-flex-tags';
 import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} from './basic-style-workbench.mjs?v=20261110-flex-tags';
 import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
@@ -8,7 +8,7 @@ const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'
 const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
 export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map()){
- let snapshot={store:validateStore(initial),sha:null},actor='',busy=false,pendingImport=null,returnFocus=null,entries=[];
+ let snapshot={store:validateStore(initial),sha:null},actor='',busy=false,pendingImport=null,returnFocus=null,entries=[],editBaseline=null;
  const clientFor=token=>createEditClient(token,fetch,{historyPath:HISTORY,validate:validateStore});let client=clientFor('');
  const dialog=document.createElement('dialog');dialog.id='basic-editor';document.body.append(dialog);
  const $=s=>dialog.querySelector(s);
@@ -33,7 +33,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  function message(s,error=false){$('#be-message').textContent=s;$('#be-message').className='be-message'+(error?' error':'');}
  function close(){if(!busy){dialog.close();returnFocus?.focus();}}
  function shell(title,body){
-  if(busy)return;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;
+  if(busy)return;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;editBaseline=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
    <details class="be-auth"><summary>${actor?'已连接 GitHub · '+safe(actor):'首次保存前：连接 GitHub 写入权限'}</summary><p class="minor">基础身份库取消人工送审。连接后，作品修改、合并与标签操作直接写入仓库，无须另外审核。为保护仓库，公开页面不能匿名写入；凭证只保存在当前页面内存，刷新即清除。</p><ol class="minor"><li>使用有写入权限的 GitHub 账号，Resource owner 选择 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b> → <b>visual-novel</b>。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>。</li></ol><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仅限本仓库的写入凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接并启用直接保存</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">同步 GitHub 最新修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
@@ -58,7 +58,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    let result;
    try{result=await client.write(next,live.sha,'Basic catalogue: '+reason.slice(0,100));}
    catch(error){if(error.status)throw error;try{const actual=await client.read();if(JSON.stringify(actual.store)!==JSON.stringify(next))throw error;result={sha:actual.sha};}catch{throw error;}}
-   snapshot={store:next,sha:result.sha};update();message('已直接提交至 GitHub，当前页面已更新；其他设备刷新基础库时将读取最新修改。无需人工审核。');return true;
+   snapshot={store:next,sha:result.sha};update();message('已提交 GitHub 主分支，当前页面数据已更新。Pages 公开网站须在 Actions 构建和部署成功后才更新；请核对发布状态。');return true;
   }catch(e){message(e.message,true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
@@ -91,6 +91,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    <div class="be-actions"><button class="primary" type="submit">${w?'直接保存修改':'直接添加到基础库'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}${w&&((w.parentId)||children.length)?'<button type="button" data-view="'+safe(w.parentId||id)+'">查看版本与来源详情</button>':''}</div></form>
    ${w?.parentId?`<p class="minor">所属主作品：${safe(get(w.parentId)?.title||w.parentId)} · ${safe(w.relation?.label)} · ${safe(w.relation?.note||'内容关系待核')}</p>`:''}
    ${children.length?'<h3>关联版本（'+children.length+'）</h3><ul class="be-version-list">'+children.map(c=>`<li><button type="button" data-edit="${safe(c._key)}">${safe(c.title)}</button> <span class="minor">${c.year??'年份待核'} · ${safe(c.relation?.label)} · ${safe(({unverified:'内容关系待核',same:'同内容版本',added:'新增内容版本'})[c.relation?.type])}</span>${c.relation?.note?'<p>'+safe(c.relation.note)+'</p>':''}</li>`).join('')+'</ul>':''}`);
+  editBaseline={id:id||'',revision:snapshot.store.revision,values:structuredClone(v)};
  }
 
  const versionRelationLabels={unverified:'内容关系待核',same:'已核实：相同内容',added:'已核实：新增内容'};
@@ -153,9 +154,19 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    const {legacy,tags:previousTags}=styleState(previous||{});
    const plotStyles=f.has('removeLegacy')?[]:legacy.filter(tag=>!styleLabels(plotTags).includes(styleName(tag)));
    const plotTagEvidence=packStyleEvidence(plotTags,new Map(styleEvidenceEntries(previousTags,previous?.plotTagEvidence)));
-   const v={title:String(f.get('title')).trim(),firstYear:f.get('firstYear')?Number(f.get('firstYear')):null,group:String(f.get('group')).trim(),gameplay:String(f.get('gameplay')).trim(),plotStyles,plotTags,plotTagEvidence,source:String(f.get('source')||'').trim()};
+   let v={title:String(f.get('title')).trim(),firstYear:f.get('firstYear')?Number(f.get('firstYear')):null,group:String(f.get('group')).trim(),gameplay:String(f.get('gameplay')).trim(),plotStyles,plotTags,plotTagEvidence,source:String(f.get('source')||'').trim()};
+   if(id&&editBaseline?.id===id&&editBaseline.revision!==snapshot.store.revision){
+    try{v=reconcileBasicEdit(editBaseline.values,v,valuesOf(previous));}
+    catch(error){message(error.message,true);return;}
+   }
    const saved=await commit(id?{type:'edit',id,values:v}:{type:'add',works:[{id:'manual-'+randomId(),...v}]},String(f.get('reason')));
-   if(saved&&!id&&getLastAdded(v.title)){form.dataset.id=getLastAdded(v.title)._key;form.querySelector('button[type=submit]').textContent='保存修改';}
+   if(saved&&id){
+    await edit(id);
+    message('最新作品资料已显示。已提交 GitHub；Pages 发布状态仍须在 Actions 中确认。');
+   }else if(saved&&!id&&getLastAdded(v.title)){
+    await edit(getLastAdded(v.title)._key);
+    message('新作品已保存并显示；Pages 发布状态仍须在 Actions 中确认。');
+   }
   }else if(form.id==='be-merge'){
    const mainId=String(f.get('mainId')),ids=JSON.parse(f.get('ids')).filter(id=>id!==mainId);
    if(await commit({type:'merge',mainId,ids,relation:{type:f.get('relation'),label:'关联版本',note:String(f.get('note')||'').trim(),source:String(f.get('source')||'').trim()}},'合并 '+ids.length+' 部作品为关联版本'))form.querySelector('button[type=submit]').disabled=true;
@@ -168,9 +179,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   else if(b.dataset.view)await view(b.dataset.view);
   else if(b.dataset.edit)edit(b.dataset.edit);
   else if(b.id==='be-connect'){
-   const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const nextClient=clientFor(token),login=await nextClient.connect(),fresh=await nextClient.read();client=nextClient;actor=login;snapshot=fresh;update();$('.be-auth summary').textContent='已连接 GitHub · '+actor;$('.be-auth').open=false;message('已连接 '+actor+' 并同步 GitHub 最新数据。现在可以点击保存直接写入，无须送审。');}catch(err){message(err.message,true);}finally{lock(false);}
+   const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const nextClient=clientFor(token),login=await nextClient.connect(),fresh=await nextClient.read();client=nextClient;actor=login;snapshot=fresh;update();$('.be-auth summary').textContent='已连接 GitHub · '+actor;$('.be-auth').open=false;message('已连接 '+actor+'，同步至修改记录 r'+snapshot.store.revision+'。'+(editBaseline&&editBaseline.revision!==snapshot.store.revision?'当前编辑表单来源于旧版本，保存时将检查字段冲突并保留其他字段的最新修改。':'可以直接保存，无须人工送审。'));}catch(err){message(err.message,true);}finally{lock(false);}
   }else if(b.id==='be-disconnect'){client=clientFor('');actor='';update();$('.be-auth summary').textContent='首次保存前：连接 GitHub 写入权限';$('.be-auth').open=true;b.disabled=true;message('已断开写入权限；当前资料仍可查看、编辑，重新授权后可保存。');}
-  else if(b.id==='be-refresh'){try{lock(true);snapshot=await client.read();update();message('已同步 GitHub 最新修改。当前表单输入已保留，核对后可直接保存。');}catch(err){message(err.message,true);}finally{lock(false);}}
+  else if(b.id==='be-refresh'){try{lock(true);snapshot=await client.read();update();message('已同步 GitHub 修改记录 r'+snapshot.store.revision+'。当前表单输入保留；'+(editBaseline&&editBaseline.revision!==snapshot.store.revision?'保存时将检查字段冲突，不会静默覆盖其他页面的新修改。':'核对后可直接保存。'));}catch(err){message(err.message,true);}finally{lock(false);}}
   else if(b.dataset.delete){if(confirm('删除“'+get(b.dataset.delete)?.title+'”？可通过最近操作撤销。')){if(await commit({type:'delete',id:b.dataset.delete},'删除作品 '+get(b.dataset.delete)?.title)){close();}}}
   else if(b.dataset.detach){if(await commit({type:'detach',id:b.dataset.detach},'解除版本合并'))edit(b.dataset.detach);}
   else if(b.id==='be-undo'){if(confirm('撤销最近一次“'+snapshot.store.recent.at(-1)?.reason+'”？'))if(await commit(null,'撤销最近操作',true))connection();}
