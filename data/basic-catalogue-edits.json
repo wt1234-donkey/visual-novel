@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 20,
+  "revision": 21,
   "additions": [],
   "records": {
     "g1028": {
@@ -498,56 +498,42 @@
       "aliases": [
         "ダイヤモンドアドベンチャー"
       ]
+    },
+    "ifdb-mcxu2tvxxhpvtyxp": {
+      "identity": {
+        "id": "ifdb-mcxu2tvxxhpvtyxp",
+        "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-mcxu2tvxxhpvtyxp",
+        "aliases": [],
+        "title": "Mystery Mansion",
+        "firstYear": 1978,
+        "group": "创作品牌待核",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=mcxu2tvxxhpvtyxp",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "Mystery Mansion",
+        "firstYear": 1978,
+        "group": "Bill Wolpert",
+        "gameplay": "文字输入",
+        "plotStyles": [],
+        "plotTags": {
+          "tone": "严肃",
+          "emotion": "紧张",
+          "theme": [
+            "犯罪",
+            "推理"
+          ],
+          "perspective": "第三人称"
+        },
+        "plotTagEvidence": {},
+        "source": "https://ifdb.org/viewgame?id=mcxu2tvxxhpvtyxp"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "0005bef1-eee7-4a01-a3f4-6585bd966714",
-      "at": "2026-11-10T04:25:24.784Z",
-      "actor": "编目审核台",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "casa-table-20261105-295",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "casa-table-20261105-295",
-              "indexId": "basic-casa-table-20261105-295",
-              "aliases": [],
-              "title": "Journey to the Center of Earth",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Journey to the Center of Earth",
-              "firstYear": 1978,
-              "group": "Greg Hassett",
-              "gameplay": "文字输入",
-              "plotStyles": [],
-              "plotTags": {
-                "tone": "荒凉",
-                "emotion": "恐怖",
-                "theme": [
-                  "科幻",
-                  "生存",
-                  "冒险"
-                ],
-                "setting": "封闭空间"
-              },
-              "plotTagEvidence": {},
-              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "f9035182-064e-4fc2-8306-144317dad33f",
       "at": "2026-11-10T05:13:11.676Z",
@@ -637,6 +623,52 @@
             "aliases": [
               "ダイヤモンドアドベンチャー"
             ]
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "301e17f6-f2ba-4404-b62b-c0f2d2602b8b",
+      "at": "2026-11-10T07:05:53.089Z",
+      "actor": "编目审核台",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifdb-mcxu2tvxxhpvtyxp",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-mcxu2tvxxhpvtyxp",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-mcxu2tvxxhpvtyxp",
+              "aliases": [],
+              "title": "Mystery Mansion",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=mcxu2tvxxhpvtyxp",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Mystery Mansion",
+              "firstYear": 1978,
+              "group": "Bill Wolpert",
+              "gameplay": "文字输入",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": "严肃",
+                "emotion": "紧张",
+                "theme": [
+                  "犯罪",
+                  "推理"
+                ],
+                "perspective": "第三人称"
+              },
+              "plotTagEvidence": {},
+              "source": "https://ifdb.org/viewgame?id=mcxu2tvxxhpvtyxp"
+            },
+            "aliases": []
           }
         }
       ],
