@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 28,
+  "revision": 29,
   "additions": [],
   "records": {
     "g1028": {
@@ -681,7 +681,8 @@
           ],
           "relationship": "恋爱",
           "theme": "冒险",
-          "content": "成人向"
+          "content": "色情",
+          "perspective": "第一人称"
         },
         "plotTagEvidence": {},
         "source": "https://api.nextmoe.dev/v2/catalog/works/57845"
@@ -725,52 +726,6 @@
     }
   },
   "recent": [
-    {
-      "id": "ef064fdb-e734-4ab8-bee7-d0f925f93820",
-      "at": "2026-11-10T08:38:18.707Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "nextmoe-32056",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "nextmoe-32056",
-              "indexId": "nextmoe-20261101-r2-32056",
-              "aliases": [],
-              "title": "!Ω Factorial Omega: My Dystopian Robot Girlfriend",
-              "firstYear": 2026,
-              "group": "创作品牌待核",
-              "gameplay": "Galgame（玩法待核）",
-              "plotStyles": [],
-              "source": "https://api.nextmoe.dev/v2/catalog/works/32056",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "!Ω Factorial Omega: My Dystopian Robot Girlfriend",
-              "firstYear": 2026,
-              "group": "Hmni",
-              "gameplay": "模拟／养成／经营",
-              "plotStyles": [],
-              "plotTags": {
-                "content": "色情",
-                "perspective": "第三人称",
-                "structure": "非线性叙事",
-                "setting": [
-                  "近未来",
-                  "反乌托邦"
-                ]
-              },
-              "plotTagEvidence": {},
-              "source": "https://api.nextmoe.dev/v2/catalog/works/32056"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "42582189-b360-4039-88dd-911ed20d7d79",
       "at": "2026-11-10T11:51:21.916Z",
@@ -864,6 +819,101 @@
               "source": "https://ifdb.org/viewgame?id=x8s5x1459ou15ow2"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "5a214a4d-07c8-45f9-a6a9-f49d7eb98082",
+      "at": "2026-11-10T11:57:21.903Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "vndb-v62159",
+          "before": {
+            "identity": {
+              "id": "vndb-v62159",
+              "indexId": "nextmoe-galgame-bulk-20261101-r53-57845",
+              "aliases": [
+                "- la femme - BLANC～「可憐」",
+                "ラ・ファム",
+                "- la femme - BLANC～「可怜"
+              ],
+              "title": "- la femme - BLANC ~  \"Karen\"",
+              "firstYear": 2002,
+              "group": "创作品牌待核",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "source": "https://api.nextmoe.dev/v2/catalog/works/57845",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "- la femme - BLANC ~  \"Karen\"",
+              "firstYear": 2002,
+              "group": "Colt45sec",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": [
+                  "喜剧",
+                  "轻松"
+                ],
+                "relationship": "恋爱",
+                "theme": "冒险",
+                "content": "成人向"
+              },
+              "plotTagEvidence": {},
+              "source": "https://api.nextmoe.dev/v2/catalog/works/57845"
+            },
+            "aliases": [
+              "- la femme - BLANC～「可憐」",
+              "ラ・ファム",
+              "- la femme - BLANC～「可怜"
+            ]
+          },
+          "after": {
+            "identity": {
+              "id": "vndb-v62159",
+              "indexId": "nextmoe-galgame-bulk-20261101-r53-57845",
+              "aliases": [
+                "- la femme - BLANC～「可憐」",
+                "ラ・ファム",
+                "- la femme - BLANC～「可怜"
+              ],
+              "title": "- la femme - BLANC ~  \"Karen\"",
+              "firstYear": 2002,
+              "group": "创作品牌待核",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "source": "https://api.nextmoe.dev/v2/catalog/works/57845",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "- la femme - BLANC ~  \"Karen\"",
+              "firstYear": 2002,
+              "group": "Colt45sec",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": [
+                  "喜剧",
+                  "轻松"
+                ],
+                "relationship": "恋爱",
+                "theme": "冒险",
+                "content": "色情",
+                "perspective": "第一人称"
+              },
+              "plotTagEvidence": {},
+              "source": "https://api.nextmoe.dev/v2/catalog/works/57845"
+            },
+            "aliases": [
+              "- la femme - BLANC～「可憐」",
+              "ラ・ファム",
+              "- la femme - BLANC～「可怜"
+            ]
           }
         }
       ],
