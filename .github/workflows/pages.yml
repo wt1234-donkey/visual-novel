@@ -22,15 +22,16 @@ jobs:
       contents: read
       pages: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '24'
+          package-manager-cache: false
       - name: Validate catalogue and existing regressions
         run: |
           python3 scripts/validate_data.py
@@ -44,9 +45,9 @@ jobs:
         run: python3 scripts/build_pages_artifact.py --output _site
       - name: Configure Pages
         if: github.ref == 'refs/heads/main'
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Upload verified Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
   deploy:
@@ -64,4 +65,4 @@ jobs:
     steps:
       - name: Publish verified main artifact
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
