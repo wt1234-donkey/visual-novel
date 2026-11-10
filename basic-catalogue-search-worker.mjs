@@ -1,6 +1,7 @@
-import {createBasicWebIndex,searchHomeSlots,slotPage,compareBasicOrder} from './basic-catalogue-index.mjs';
+import {createBasicWebIndex,searchHomeSlots,slotPage,compareBasicOrder} from './basic-catalogue-index.mjs?v=20261110-combined';
 import {projectEntries} from './basic-catalogue-model.mjs';
-import {basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs';
+import {basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs?v=20261110-combined';
+import {compileCombinedSearch,needsAdvancedIndex} from './basic-combined-search.mjs';
 
 const index=createBasicWebIndex();
 let homeRows,homeQuery,homeSlots,baseRows,basicGeneration,filteredRows;
@@ -13,7 +14,7 @@ async function homePage({query,page,size,revision}){
  }
  return slotPage(homeSlots.length,page,size,homeSlots);
 }
-async function basicPositions({revision,store,generation,filters}){
+async function basicPositions({revision,store,generation,filters,groups=[]}){
  if(basicGeneration!==generation){
   baseRows??=index.basicRows(revision).catch(error=>{baseRows=null;throw error;});
   const all=projectEntries(await baseRows,store,{includeChildren:true});
@@ -25,7 +26,9 @@ async function basicPositions({revision,store,generation,filters}){
   filteredRows=basicFilterRows(all.filter(row=>!row.parentId).sort(compareBasicOrder),children);
   basicGeneration=generation;
  }
- return Uint32Array.from(matchingBasicPositions(filteredRows,filters));
+ const rows=filteredRows;
+ const advanced=needsAdvancedIndex(groups)?await index.advancedRows(revision):null;
+ return Uint32Array.from(matchingBasicPositions(rows,filters,groups.length?compileCombinedSearch(groups):null,advanced));
 }
 self.onmessage=async({data})=>{
  const {id,kind}=data;

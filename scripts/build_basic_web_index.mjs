@@ -6,6 +6,7 @@ import {gzipSync} from 'node:zlib';
 import {nameKey,projectRegistry,validateStore} from '../basic-catalogue-model.mjs';
 import {compareBasicOrder,normalizeBasicQuery} from '../basic-catalogue-index.mjs';
 import {applyWorkEdits} from '../work-edit-model.mjs';
+import {buildAdvancedRows} from './build_basic_advanced_index.mjs';
 
 const registryPath='main-adv-rpg-works-20261031.json';
 export function assembleBasicRows(registry,initial,batches){
@@ -58,7 +59,7 @@ export function assembleBasicRows(registry,initial,batches){
  return rows.sort(compareBasicOrder);
 }
 
-function packBasicRows(works){
+function packBasicRows(works,gameplayBySlot){
  const groups=[],gameplay=[],statuses=[];
  const intern=values=>{
   const keys=new Map();
@@ -68,9 +69,9 @@ function packBasicRows(works){
   };
  };
  const groupKey=intern(groups),gameplayKey=intern(gameplay),statusKey=intern(statuses);
- const rows=works.map(w=>{
+ const rows=works.map((w,slot)=>{
   const row=[w.id,w.matchedWorkId||null,w.title,w.year,groupKey(w.group),gameplayKey(w.gameplay),statusKey(w.status)];
-  const optional=[w.aliases?.length?w.aliases:null,w.groups?.length?w.groups.map(groupKey):null,w.plotStyles?.length?w.plotStyles:null,w.plotTags||null];
+  const optional=[w.aliases?.length?w.aliases:null,w.groups?.length?w.groups.map(groupKey):null,w.plotStyles?.length?w.plotStyles:null,w.plotTags||null,gameplayBySlot.get(slot)?.length?gameplayBySlot.get(slot):null];
   while(optional.length&&!optional.at(-1))optional.pop();
   return row.concat(optional);
  });
@@ -97,8 +98,9 @@ export function buildBasicWebIndex(root,output,revision){
  const index=read('adv-rpg-minimal-index-20261031.json');
  const batches=[['batch2','adv-rpg-next-studio-review-20261031.json'],['batch3','adv-rpg-round3-review-20261031.json']];
  const basic=assembleBasicRows(registry,index.records,batches.map(([id,path])=>[id,read(path).records]));
- const full=new Map([...read('non-rpg-creator-supplement-20261030.json').works,...read('games.json').works].map(w=>[w.id,w]));
- const {works}=applyWorkEdits({works:[...full.values()]},read('work-edit-history.json'));
+ const main=read('games.json'),supplement=read('non-rpg-creator-supplement-20261030.json'),history=read('work-edit-history.json');
+ const full=new Map([...supplement.works,...main.works].map(w=>[w.id,w]));
+ const {works}=applyWorkEdits({works:[...full.values()]},history);
  const home=assembleHomeRows(registry,validateStore(read('basic-catalogue-edits.json')),works);
  const dir=join(output,'data','basic-web'),version=join(dir,revision),shardSize=250;
  mkdirSync(version,{recursive:true});
@@ -111,12 +113,19 @@ export function buildBasicWebIndex(root,output,revision){
   for(let slot=0;slot<rows.length;slot+=shardSize)
    save(join(version,kind+'-'+slot/shardSize+'.json'),rows.slice(slot,slot+shardSize).map(project));
  };
- save(join(version,'basic-index.json'),packBasicRows(basic),true);
+ const {indexed,gameplayBySlot}=buildAdvancedRows(root,basic,registry,main,supplement,history);
+ save(join(version,'basic-index.json'),packBasicRows(basic,gameplayBySlot),true);
+ save(join(version,'basic-advanced.json'),indexed,true);
+ const advancedCoverage={series:0,language:0,duration:0,releaseRegion:0};
+ for(const item of Object.values(indexed)){
+  for(const field of ['series','language','duration'])if(item[field])advancedCoverage[field]++;
+  if(item.releases?.some(release=>release.releaseRegion))advancedCoverage.releaseRegion++;
+ }
  shards('basic',basic,({source,gameplayNote,reason,linkedRecordId,plotTagEvidence})=>({source:source||'',gameplayNote,reason,linkedRecordId,plotTagEvidence}));
  save(join(version,'home-search.json'),home.rows.map(w=>normalizeBasicQuery([w.title,...(w.aliases||[]),w.group,...(w.sourceRefs||[])].join(' '))),true);
  shards('home',home.rows,({title,aliases,firstYear,gameplay,group,source,mainPlacement})=>({title,aliases,firstYear,gameplay,group,source,mainPlacement}));
  const {promotedBasic,promotedDossier,existingComplete}=registry.summary;
- save(join(dir,'manifest.json'),{schema:1,revision,shardSize,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete},
+ save(join(dir,'manifest.json'),{schema:1,revision,shardSize,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
   home:{total:home.rows.length,excluded:home.excluded}});
 }
 

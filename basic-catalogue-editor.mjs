@@ -1,6 +1,6 @@
-import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261109-style-tags';
+import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261110-combined';
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261109-style-tags';
+import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261110-combined';
 import {styleName,styleState} from './basic-style-tags.mjs';
 import {createStyleWorkbench,styleInputs,readStyleInputs} from './basic-style-workbench.mjs?v=20261109-index';
 import {withBasicDetails} from './basic-catalogue-index.mjs';
@@ -77,6 +77,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   }
   const v=w?valuesOf(w):{title:'',firstYear:null,group:'',gameplay:'',plotStyles:[],source:''};
   const {tags,legacy}=styleState(v);
+  const archived=id?snapshot.store.records[id]?.legacyPlotStyles:undefined;
   const children=w?all().filter(x=>x.parentId===id):[];
   shell(w?'修改作品 · '+w.title:'直接添加作品',`<form id="be-edit" data-id="${safe(id||'')}"><div class="be-grid">
    ${input('title','作品名称',v.title,'required maxlength="500"')}
@@ -86,7 +87,8 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    <fieldset><legend>剧情风格标签 · 六个维度各选一项</legend>${styleInputs(tags)}
    <p class="minor">资料不足的维度可留空。</p>
    ${Object.entries(v.plotTagEvidence||{}).map(([key,{quote,source,model}])=>'<p class="minor">'+safe(tags[key])+' · '+safe(quote)+' · '+safe(model)+' <a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">资料来源 ↗</a></p>').join('')}
-   ${legacy.length?'<p class="minor">旧标签待整理：'+safe(legacy.join('、'))+'</p><label class="be-candidate"><input type="checkbox" name="removeLegacy">移除这些待整理旧标签</label>':''}</fieldset>
+   ${archived?.length?'<p class="minor">历史标签参考（同维度冲突）：'+safe(archived.join('、'))+'</p>':''}
+   ${legacy.length?'<p class="minor">历史标签参考：'+safe(legacy.join('、'))+'</p><label class="be-candidate"><input type="checkbox" name="removeLegacy">移除这些待整理旧标签</label>':''}</fieldset>
    ${input('source','资料来源（可选）',v.source,'type="url"')}
    ${input('reason','修改说明',w?'更正基础作品资料':'直接添加基础作品','required maxlength="300"')}
    <div class="be-actions"><button class="primary" type="submit">${actor?(w?'保存修改':'添加到基础库'):'预览并送审'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}</div></form>

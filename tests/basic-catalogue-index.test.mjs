@@ -50,3 +50,20 @@ test('basic filtering works from index values and edited source survives detail 
  assert.equal(withBasicDetails({...entries[0],source:''},detail,{records:{a:{values:{}}}}).source,'');
  await assert.rejects(index.basicRows('b'.repeat(40)),/索引版本已更新/);
 });
+
+
+test('advanced metadata is fetched on demand and remains bound to the same release revision',async()=>{
+ const requests=[];
+ const index=createBasicWebIndex(async path=>{
+  requests.push(path.split('/').at(-1));
+  const data={'manifest.json':manifest,'basic-index.json':packed,'basic-advanced.json':{1:{series:['series']}}}[requests.at(-1)];
+  return {ok:data!==undefined,json:async()=>data};
+ });
+ await index.basicRows(revision);
+ assert.ok(requests.includes('basic-index.json'));
+ assert.ok(requests.every(path=>!path.startsWith('basic-advanced.json')));
+ assert.deepEqual(await index.advancedRows(revision),{1:{series:['series']}});
+ await index.advancedRows(revision);
+ assert.equal(requests.filter(path=>path==='basic-advanced.json').length,1);
+ await assert.rejects(index.advancedRows('b'.repeat(40)),/索引版本已更新/);
+});
