@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 24,
+  "revision": 25,
   "additions": [],
   "records": {
     "g1028": {
@@ -585,61 +585,41 @@
         "note": "Enter King Tut's tomb, steal all his valuables, and make it back out alive!\n进入图坦卡蒙的陵墓，偷走他所有贵重物品，然后活着出来！最初由 Mad Hatter Software 为 TRS-80 发布;1979 年目录显示，它还支持 16K Apple II 和 Exidy Sorcerer 版本。",
         "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html"
       }
+    },
+    "ifdb-8unhxca377cpdugk": {
+      "identity": {
+        "id": "ifdb-8unhxca377cpdugk",
+        "indexId": "nextmoe-ifdb-bulk-20261102-r69-ifdb-8unhxca377cpdugk",
+        "aliases": [],
+        "title": "The Magic Kingdom",
+        "firstYear": 1980,
+        "group": "创作品牌待核",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=8unhxca377cpdugk",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "The Magic Kingdom",
+        "firstYear": 1980,
+        "group": "David Cook",
+        "gameplay": "文字冒险／互动小说",
+        "plotStyles": [],
+        "plotTags": {
+          "theme": [
+            "奇幻",
+            "生存",
+            "冒险"
+          ],
+          "perspective": "第一人称"
+        },
+        "plotTagEvidence": {},
+        "source": "https://ifdb.org/viewgame?id=8unhxca377cpdugk"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "66c8510a-32d6-4336-a51b-c0fb6743884e",
-      "at": "2026-11-10T07:28:57.200Z",
-      "actor": "wt1234-donkey",
-      "reason": "合并 1 部作品为关联版本",
-      "changes": [
-        {
-          "id": "casa-table-20261105-310",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "casa-table-20261105-310",
-              "indexId": "basic-casa-table-20261105-310",
-              "aliases": [],
-              "title": "King Tut's Tomb",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
-              "mainPlacement": "promoted-basic"
-            }
-          }
-        },
-        {
-          "id": "ifdb-16dfu06zzfijcsdn",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-16dfu06zzfijcsdn",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-16dfu06zzfijcsdn",
-              "aliases": [],
-              "title": "King Tut's Tomb",
-              "firstYear": 1979,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=16dfu06zzfijcsdn",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "casa-table-20261105-310",
-            "relation": {
-              "type": "unverified",
-              "label": "King Tut's Tomb",
-              "note": "Enter King Tut's tomb, steal all his valuables, and make it back out alive!\n进入图坦卡蒙的陵墓，偷走他所有贵重物品，然后活着出来！最初由 Mad Hatter Software 为 TRS-80 发布;1979 年目录显示，它还支持 16K Apple II 和 Exidy Sorcerer 版本。",
-              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html"
-            }
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "ae1507be-1ba6-4114-94ef-512d0c31b91f",
       "at": "2026-11-10T07:47:34.616Z",
@@ -758,6 +738,51 @@
               },
               "plotTagEvidence": {},
               "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "f8dd5682-f40a-4662-b610-73aaa4ecb631",
+      "at": "2026-11-10T08:14:55.119Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifdb-8unhxca377cpdugk",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-8unhxca377cpdugk",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r69-ifdb-8unhxca377cpdugk",
+              "aliases": [],
+              "title": "The Magic Kingdom",
+              "firstYear": 1980,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=8unhxca377cpdugk",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "The Magic Kingdom",
+              "firstYear": 1980,
+              "group": "David Cook",
+              "gameplay": "文字冒险／互动小说",
+              "plotStyles": [],
+              "plotTags": {
+                "theme": [
+                  "奇幻",
+                  "生存",
+                  "冒险"
+                ],
+                "perspective": "第一人称"
+              },
+              "plotTagEvidence": {},
+              "source": "https://ifdb.org/viewgame?id=8unhxca377cpdugk"
             },
             "aliases": []
           }
