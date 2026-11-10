@@ -18,7 +18,10 @@ class OrganizationTests(unittest.TestCase):
         new = (ROOT / 'catalogue.html').read_text().replace('<title>高级发行检索 · ', '<title>', 1)
         # The direct editor updates the app asset cache key; retained catalogue markup stays identical.
         retained = new.replace('app.mjs?v=20261101-direct-edit', 'app.mjs?v=20261021-names')
-        self.assertEqual(retained.replace('<a href="organizations.html">组织与沿革</a>', '', 1), build_dossier_navigation(old))
+        combined_link = '<a href="minimal-adv-rpg.html#query-advanced">基础库组合检索</a>'
+        self.assertEqual(retained.count(combined_link), 1)
+        retained = retained.replace(combined_link, '', 1).replace('<a href="organizations.html">组织与沿革</a>', '', 1)
+        self.assertEqual(retained, build_dossier_navigation(old))
         self.assertEqual(new.count('href="organizations.html"'), 1)
 
     def test_catalogue_work_links_preserve_dossier_anchors(self):
