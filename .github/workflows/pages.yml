@@ -8,6 +8,14 @@ on:
       - '.github/workflows/pages.yml'
       - 'scripts/build_pages_artifact.py'
       - 'tests/test_pages_artifact.py'
+      - 'basic-catalogue-*.mjs'
+      - 'minimal-adv-rpg.mjs'
+      - 'minimal-adv-rpg.html'
+      - 'work-edit-api.mjs'
+      - 'data/basic-catalogue-edits.json'
+      - 'tests/basic-catalogue*.test.mjs'
+      - 'tests/basic-year-filter.test.mjs'
+      - 'tests/narrative-round3.test.mjs'
   workflow_dispatch:
 permissions:
   contents: read
