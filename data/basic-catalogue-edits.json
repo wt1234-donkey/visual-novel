@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 16,
+  "revision": 17,
   "additions": [],
   "records": {
     "g1028": {
@@ -369,55 +369,36 @@
         "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html"
       },
       "aliases": []
+    },
+    "ifdb-3ccmbybidr9nn1kh": {
+      "identity": {
+        "id": "ifdb-3ccmbybidr9nn1kh",
+        "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-3ccmbybidr9nn1kh",
+        "aliases": [],
+        "title": "Hammurabi",
+        "firstYear": 1978,
+        "group": "创作品牌待核",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "Hammurabi",
+        "firstYear": 1978,
+        "group": "David H. Ahl ,Rick Merrill",
+        "gameplay": "模拟／养成／经营",
+        "plotStyles": [],
+        "plotTags": {
+          "theme": "奇幻"
+        },
+        "plotTagEvidence": {},
+        "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "42dfe311-0321-461c-8f01-763a708dc781",
-      "at": "2026-11-10T01:26:00.267Z",
-      "actor": "编目审核台",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "vndb-v3577",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "vndb-v3577",
-              "indexId": "vndb-20261101-r20-v3577",
-              "aliases": [
-                "天狗の八衢"
-              ],
-              "title": "Tengu no Yachimata",
-              "firstYear": 2005,
-              "group": "创作品牌待核",
-              "gameplay": "视觉小说",
-              "plotStyles": [],
-              "source": "https://vndb.org/v3577",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Tengu no Yachimata",
-              "firstYear": 2005,
-              "group": "sum",
-              "gameplay": "Galgame／成人向",
-              "plotStyles": [],
-              "plotTags": {
-                "relationship": "耽美",
-                "theme": "历史",
-                "content": "成人向"
-              },
-              "plotTagEvidence": {},
-              "source": "https://vndb.org/v3577"
-            },
-            "aliases": [
-              "天狗の八衢"
-            ]
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "8e44d54e-5a2c-4a3b-b17a-13c67be1425d",
       "at": "2026-11-10T02:13:37.322Z",
@@ -494,6 +475,46 @@
               },
               "plotTagEvidence": {},
               "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "b45d6f39-5939-4d83-a13b-8be44a6c0efe",
+      "at": "2026-11-10T02:40:26.960Z",
+      "actor": "编目审核台",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifdb-3ccmbybidr9nn1kh",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-3ccmbybidr9nn1kh",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-3ccmbybidr9nn1kh",
+              "aliases": [],
+              "title": "Hammurabi",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Hammurabi",
+              "firstYear": 1978,
+              "group": "David H. Ahl ,Rick Merrill",
+              "gameplay": "模拟／养成／经营",
+              "plotStyles": [],
+              "plotTags": {
+                "theme": "奇幻"
+              },
+              "plotTagEvidence": {},
+              "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh"
             },
             "aliases": []
           }
