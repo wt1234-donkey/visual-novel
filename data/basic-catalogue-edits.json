@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 26,
+  "revision": 27,
   "additions": [],
   "records": {
     "g1028": {
@@ -650,81 +650,50 @@
         "source": "https://api.nextmoe.dev/v2/catalog/works/32056"
       },
       "aliases": []
+    },
+    "vndb-v62159": {
+      "identity": {
+        "id": "vndb-v62159",
+        "indexId": "nextmoe-galgame-bulk-20261101-r53-57845",
+        "aliases": [
+          "- la femme - BLANC～「可憐」",
+          "ラ・ファム",
+          "- la femme - BLANC～「可怜"
+        ],
+        "title": "- la femme - BLANC ~  \"Karen\"",
+        "firstYear": 2002,
+        "group": "创作品牌待核",
+        "gameplay": "视觉小说",
+        "plotStyles": [],
+        "source": "https://api.nextmoe.dev/v2/catalog/works/57845",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "- la femme - BLANC ~  \"Karen\"",
+        "firstYear": 2002,
+        "group": "Colt45sec",
+        "gameplay": "视觉小说",
+        "plotStyles": [],
+        "plotTags": {
+          "tone": [
+            "喜剧",
+            "轻松"
+          ],
+          "relationship": "恋爱",
+          "theme": "冒险",
+          "content": "成人向"
+        },
+        "plotTagEvidence": {},
+        "source": "https://api.nextmoe.dev/v2/catalog/works/57845"
+      },
+      "aliases": [
+        "- la femme - BLANC～「可憐」",
+        "ラ・ファム",
+        "- la femme - BLANC～「可怜"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "42232efb-c184-48b6-9ae6-82e57c496296",
-      "at": "2026-11-10T08:13:09.140Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "casa-table-20261105-310",
-          "before": {
-            "identity": {
-              "id": "casa-table-20261105-310",
-              "indexId": "basic-casa-table-20261105-310",
-              "aliases": [],
-              "title": "King Tut's Tomb",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "style": {
-              "plotStyles": [],
-              "plotTags": {
-                "theme": [
-                  "历史",
-                  "推理",
-                  "生存",
-                  "冒险"
-                ],
-                "perspective": "第一人称"
-              },
-              "plotTagEvidence": {}
-            }
-          },
-          "after": {
-            "identity": {
-              "id": "casa-table-20261105-310",
-              "indexId": "basic-casa-table-20261105-310",
-              "aliases": [],
-              "title": "King Tut's Tomb",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "King Tut's Tomb",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "文字冒险／互动小说",
-              "plotStyles": [],
-              "plotTags": {
-                "theme": [
-                  "历史",
-                  "推理",
-                  "生存",
-                  "冒险"
-                ],
-                "perspective": "第一人称"
-              },
-              "plotTagEvidence": {},
-              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "f8dd5682-f40a-4662-b610-73aaa4ecb631",
       "at": "2026-11-10T08:14:55.119Z",
@@ -811,6 +780,60 @@
               "source": "https://api.nextmoe.dev/v2/catalog/works/32056"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "42582189-b360-4039-88dd-911ed20d7d79",
+      "at": "2026-11-10T11:51:21.916Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "vndb-v62159",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "vndb-v62159",
+              "indexId": "nextmoe-galgame-bulk-20261101-r53-57845",
+              "aliases": [
+                "- la femme - BLANC～「可憐」",
+                "ラ・ファム",
+                "- la femme - BLANC～「可怜"
+              ],
+              "title": "- la femme - BLANC ~  \"Karen\"",
+              "firstYear": 2002,
+              "group": "创作品牌待核",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "source": "https://api.nextmoe.dev/v2/catalog/works/57845",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "- la femme - BLANC ~  \"Karen\"",
+              "firstYear": 2002,
+              "group": "Colt45sec",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": [
+                  "喜剧",
+                  "轻松"
+                ],
+                "relationship": "恋爱",
+                "theme": "冒险",
+                "content": "成人向"
+              },
+              "plotTagEvidence": {},
+              "source": "https://api.nextmoe.dev/v2/catalog/works/57845"
+            },
+            "aliases": [
+              "- la femme - BLANC～「可憐」",
+              "ラ・ファム",
+              "- la femme - BLANC～「可怜"
+            ]
           }
         }
       ],
