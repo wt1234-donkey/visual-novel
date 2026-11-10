@@ -32,8 +32,8 @@
     .notice{margin-top:18px;color:var(--muted);font-size:14px}
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
   </style>
-  <link rel="stylesheet" href="basic-catalogue.css?v=20261110-combined">
-  <script type="module" src="minimal-adv-rpg.mjs?v=20261110-combined"></script>
+  <link rel="stylesheet" href="basic-catalogue.css?v=20261110-flex-tags">
+  <script type="module" src="minimal-adv-rpg.mjs?v=20261110-flex-tags"></script>
 </head>
 <body><div class="wrap">
   <header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav><a href="index.html">作品发现</a><a href="curated.html">精选叙事作品</a><a href="bulk-import.html">批量补录主库</a><a href="catalogue.html">高级发行检索</a><a href="organizations.html">组织与沿革</a><a href="https://github.com/wt1234-donkey/visual-novel">GitHub</a></nav></header>
@@ -66,7 +66,7 @@
       <label>作品名／别名搜索<input id="q" type="search" placeholder="输入中、英、日文作品名"></label>
       <label>原作首发年份<select id="year"><option value="">全部年份</option><option value="unknown">年份待核</option></select></label>
       <details id="gameplay" class="query-facet" data-label="主要玩法"><summary>主要玩法</summary><label>匹配方式<select id="gameplay-mode"><option value="any">任一项 ANY</option><option value="all">全部项 ALL</option><option value="none">排除 NOT</option></select></label><div class="query-choices"></div></details>
-      <details id="style" class="query-facet" data-label="剧情风格"><summary>剧情风格</summary><label>匹配方式<select id="style-mode"><option value="any">任一项 ANY</option><option value="all">全部项 ALL</option><option value="none">排除 NOT</option></select></label><div class="query-choices"></div></details>
+      <details id="style" class="query-facet" data-label="作品特征"><summary>作品特征</summary><label>匹配方式<select id="style-mode"><option value="any">任一项 ANY</option><option value="all">全部项 ALL</option><option value="none">排除 NOT</option></select></label><div class="query-choices"></div></details>
       <label>收录状态<select id="status"><option value="">全部状态</option><option value="manual-basic">网页直接添加</option><option value="new-basic">原索引未提升</option><option value="promoted-basic">主库新增基础身份</option><option value="promoted-dossier">主库关联厂商专题</option><option value="main-linked">完整主库已有</option><option value="main-registry-linked">此前主库身份已关联</option><option value="identity-review">身份待核</option><option value="eligibility-review">叙事与玩法主次待核</option></select></label>
       <div class="query-years"><label>首发起始年<input id="year-from" type="number" step="1" inputmode="numeric" placeholder="例如 1980"></label><label>首发结束年<input id="year-to" type="number" step="1" inputmode="numeric" placeholder="例如 1999"></label></div>
       <div class="manufacturer-filters">
@@ -93,7 +93,7 @@
       <form id="page-jump" class="page-jump"><label for="page-number">跳至页码</label><input id="page-number" type="number" inputmode="numeric" min="1" step="1" required disabled aria-describedby="page-error"><button id="page-go" type="submit" disabled>跳转</button></form>
       <p id="page-error" class="page-error" role="status"></p>
     </nav>
-    <table><thead><tr><th><span class="minor">选择</span></th><th>作品名称</th><th>首发年份</th><th>主要玩法</th><th>剧情风格</th><th>厂商关联</th><th>编目状态</th><th>依据</th></tr></thead>
+    <table><thead><tr><th><span class="minor">选择</span></th><th>作品名称</th><th>首发年份</th><th>主要玩法</th><th>作品特征</th><th>厂商关联</th><th>编目状态</th><th>依据</th></tr></thead>
     <tbody id="rows"></tbody></table>
     <nav class="buttons basic-pagination" aria-label="下方分页">
       <button id="prev-bottom" type="button" disabled>上一页</button><span id="pagination-bottom" aria-live="polite"></span><button id="next-bottom" type="button" disabled>下一页</button>

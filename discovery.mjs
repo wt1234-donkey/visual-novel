@@ -1,4 +1,4 @@
-import {createBasicWebIndex,createHomeSearch,normalizeBasicQuery,slotPage} from './basic-catalogue-index.mjs';
+import {createBasicWebIndex,createHomeSearch,normalizeBasicQuery,slotPage} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
 import {showLiveWorkEditor} from './live-work-editor.mjs?v=20261109-editorial';
 import {createEntityIndex} from './entities.mjs';

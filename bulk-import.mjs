@@ -1,5 +1,5 @@
 import {managementProposal,offerEditorialProposal} from './editorial-proposal.mjs';
-import {projectRegistry,validateStore} from './basic-catalogue-model.mjs';
+import {projectRegistry,validateStore} from './basic-catalogue-model.mjs?v=20261110-flex-tags';
 import {autoFillRecord,createBasicRecord,missingBasicFields,fetchSourceDetails,nextMoeDetailURL} from './bulk-autofill.mjs?v=20261101-autofill';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
 import {WORKFLOW,validURL,validatePackage,same} from './management-model.mjs?v=20261101-bulk';

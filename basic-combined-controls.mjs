@@ -1,4 +1,4 @@
-import {SEARCH_FIELDS,searchValues} from './basic-combined-search.mjs';
+import {SEARCH_FIELDS,searchValues} from './basic-combined-search.mjs?v=20261110-flex-tags';
 
 const $=id=>document.getElementById(id);
 const create=(tag,text,attributes={})=>{

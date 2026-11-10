@@ -1,25 +1,34 @@
-import {STYLE_KEYS,STYLE_DIMENSIONS,styleState} from './basic-style-tags.mjs';
-import {STYLE_UPDATE_HEADERS,parseStyleUpdates,planStyleUpdates} from './basic-catalogue-model.mjs';
-import {STYLE_QUEUE_KEY,MAX_STYLE_BATCH,buildStyleRequest,parseStyleReview,styleReviewRows} from './basic-style-review.mjs';
+import {STYLE_KEYS,STYLE_DIMENSIONS,MAX_WORK_TAGS,styleState,styleList,styleValue,styleLabels} from './basic-style-tags.mjs?v=20261110-flex-tags';
+import {STYLE_UPDATE_HEADERS,parseStyleUpdates,planStyleUpdates} from './basic-catalogue-model.mjs?v=20261110-flex-tags';
+import {STYLE_QUEUE_KEY,MAX_STYLE_BATCH,buildStyleRequest,parseStyleReview,styleReviewRows} from './basic-style-review.mjs?v=20261110-flex-tags';
 import {applyWorkEdits} from './work-edit-model.mjs';
 
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const labels=Object.fromEntries(STYLE_KEYS.map(key=>[key,STYLE_DIMENSIONS[key].label]));
-const tagList=tags=>STYLE_KEYS.filter(key=>tags[key]).map(key=>labels[key]+' · '+tags[key]).join('；')||'空白';
+const tagList=tags=>STYLE_KEYS.filter(key=>tags[key]).map(key=>labels[key]+' · '+styleList(tags[key]).join('、')).join('；')||'空白';
 
 export function styleInputs(tags={}){
- return '<div class="be-grid be-styles">'+STYLE_KEYS.map(key=>{
-  const {label,tags:allowed}=STYLE_DIMENSIONS[key];
-  return '<label>'+label+'<select name="style-'+key+'"><option value="">留空</option>'+
-   allowed.map(tag=>'<option'+(tag===tags[key]?' selected':'')+'>'+safe(tag)+'</option>').join('')+'</select></label>';
- }).join('')+'</div>';
+ const selected=styleLabels(tags);
+ return '<div class="be-style-picker"><p class="minor" data-style-count role="status">已选 '+selected.length+' / '+MAX_WORK_TAGS+' 个</p><div class="be-grid be-styles">'+STYLE_KEYS.map(key=>{
+  const {label,tags:allowed}=STYLE_DIMENSIONS[key],current=styleList(tags[key]);
+  return '<details class="be-style-group"'+(current.length?' open':'')+'><summary>'+label+' <span class="minor" data-dimension-count>（'+current.length+'）</span></summary><div class="be-style-choices">'+
+   allowed.map(tag=>'<label class="be-candidate"><input type="checkbox" name="style-'+key+'" value="'+safe(tag)+'"'+(current.includes(tag)?' checked':selected.length>=MAX_WORK_TAGS?' disabled':'')+'>'+safe(tag)+'</label>').join('')+'</div></details>';
+ }).join('')+'</div></div>';
 }
 
 export function readStyleInputs(formData){
  return Object.fromEntries(STYLE_KEYS.flatMap(key=>{
-  const value=formData.get('style-'+key);
-  return value?[[key,value]]:[];
+  const values=formData.getAll('style-'+key);
+  return values.length?[[key,styleValue(values)]]:[];
  }));
+}
+
+export function refreshStylePicker(picker){
+ const inputs=[...picker.querySelectorAll('input[type=checkbox]')];
+ const count=inputs.filter(input=>input.checked).length;
+ picker.querySelector('[data-style-count]').textContent='已选 '+count+' / '+MAX_WORK_TAGS+' 个'+(count===MAX_WORK_TAGS?' · 取消一项后可继续选择':'');
+ for(const input of inputs)input.disabled=!input.checked&&count>=MAX_WORK_TAGS;
+ for(const group of picker.querySelectorAll('.be-style-group'))group.querySelector('[data-dimension-count]').textContent='（'+group.querySelectorAll('input:checked').length+'）';
 }
 
 function download(filename,text,type){
@@ -65,14 +74,14 @@ export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,m
    open('批量编辑标签','<p>请先勾选1至500部作品。</p>');return;
   }
   open('批量编辑标签',`<form id="bs-bulk">
-   <p>已选择 ${ids.length} 部。留空时跳过对应维度；选择“清空全部六维标签”时将清除六个维度的现值。</p>
-   <label>操作<select name="mode"><option value="fill">补充空白维度</option><option value="set">写入或替换选中的标签</option><option value="remove">删除匹配的标签</option><option value="clear">清空全部六维标签</option></select></label>
+   <p>已选择 ${ids.length} 部。可跨维度选择，最终每部最多六个。留空时跳过该维度。</p>
+   <label>操作<select name="mode"><option value="append">追加标签（保留原标签）</option><option value="fill">仅补充空白维度</option><option value="set">替换所选维度的标签</option><option value="remove">删除所选标签</option><option value="clear">清空全部特征标签</option></select></label>
    ${styleInputs()}${previewControls}</form>`);
  }
  function csv(ids){
   scope=ids;
   open('CSV 更新已有作品标签',`<form id="bs-csv">
-   <p>使用作品 ID 匹配，作品名可留空。维度留空时保留现值，填「清空」移除标签，填写词表内的标签时写入或替换。每批最多500部。</p>
+   <p>使用作品 ID 匹配，作品名可留空。维度留空时保留现值，填「清空」移除该维度全部标签。填写多个标签时用顿号「、」分隔，替换该维度现值。每部最多六个，每批最多500部。</p>
    <div class="be-actions"><a href="templates/basic-style-update.csv" download>下载 CSV 空白模板</a>
    <a href="templates/basic-style-update-example.csv" download>下载 CSV 填写示例</a>
    <button type="button" id="bs-csv-export" ${ids.length&&ids.length<=MAX_STYLE_BATCH?'':'disabled'}>导出所选作品的更新模板</button></div>
@@ -100,7 +109,7 @@ export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,m
  function review(ids){
   scope=ids;
   open('AI 标签候选审核',`<form id="bs-review">
-   <p>先勾选作品并导出识别请求，在本机运行 Ollama 生成候选 JSON，再导入此处。只为有简介和来源的作品生成请求。候选按维度勾选后预览，通过写入的标签附上简介摘录和来源。</p>
+   <p>先勾选作品并导出识别请求，在本机运行 Ollama 生成候选 JSON，再导入此处。只为有简介和来源的作品生成请求。候选逐个标签勾选后预览，通过写入的标签附上简介摘录和来源。</p>
    <div class="be-actions"><a href="templates/basic-style-candidates-example.json" download>下载候选 JSON 模板（含示例）</a><button type="button" id="bs-ai-export" ${ids.length&&ids.length<=MAX_STYLE_BATCH?'':'disabled'}>导出所选作品的识别请求</button><a href="data/basic-catalogue-guide.md#ai-标签候选" target="_blank" rel="noopener">查看运行命令</a></div>
    <p class="minor">如需手动整理候选，可从识别请求复制作品 ID、名称、简介和来源，按模板填写模型名及各维度的候选。摘录须出现在现有简介中。</p>
    ${fileInput('bs-ai-file','.json,application/json','导入候选 JSON（待审队列保存在本浏览器）')}
@@ -117,12 +126,13 @@ export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,m
   $('#bs-queue').innerHTML='<p>待审候选 '+queue.items.length+' 部 · 未生成候选 '+queue.issues.length+' 部</p>'+
    queue.items.map(item=>{
     const work=works.get(item.id),tags=work?styleState(work).tags:{};
-    return '<fieldset><legend>'+safe(item.title)+' · '+safe(item.id)+'</legend><p class="minor">模型 '+safe(item.model)+'</p>'+
+    const selected=styleLabels(tags),remaining=MAX_WORK_TAGS-selected.length;
+    return '<fieldset data-remaining="'+remaining+'"><legend>'+safe(item.title)+' · '+safe(item.id)+'</legend><p class="minor">模型 '+safe(item.model)+'</p>'+
      item.candidates.map(candidate=>{
       const {dimension,tag,source,quote}=candidate;
-      const occupied=tags[dimension];
-      const note=!work?' · 作品已删除':work.title!==item.title?' · 作品名称已变化':occupied?' · 当前已有 '+occupied:'';
-      return '<label class="be-candidate"><input type="checkbox" data-work="'+safe(item.id)+'" data-dimension="'+safe(dimension)+'"'+(note?'':' data-eligible')+'>'+
+      const occupied=selected.includes(tag);
+      const note=!work?' · 作品已删除':work.title!==item.title?' · 作品名称已变化':occupied?' · 当前已有此标签':remaining<=0?' · 已有六个标签':'';
+      return '<label class="be-candidate"><input type="checkbox" data-work="'+safe(item.id)+'" data-tag="'+safe(tag)+'"'+(note?'':' data-eligible')+'>'+
        '<span>'+safe(labels[dimension]+' · '+tag+note)+'<br><span class="minor">'+safe(quote)+'</span></span></label>'+
        '<a class="minor" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">查看资料来源 ↗</a>';
      }).join('')+'</fieldset>';
@@ -136,19 +146,19 @@ export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,m
   const selected=new Map();
   for(const box of dialog.querySelectorAll('#bs-queue input:checked')){
    if(!selected.has(box.dataset.work))selected.set(box.dataset.work,new Set());
-   selected.get(box.dataset.work).add(box.dataset.dimension);
+   selected.get(box.dataset.work).add(box.dataset.tag);
   }
   if(!selected.size)throw Error('请先勾选要处理的候选');
   return selected;
  }
  function removeCandidates(selected){
   persistQueue({...queue,items:queue.items.flatMap(item=>{
-   const candidates=item.candidates.filter(candidate=>!selected.get(item.id)?.has(candidate.dimension));
+   const candidates=item.candidates.filter(candidate=>!selected.get(item.id)?.has(candidate.tag));
    return candidates.length?[{...item,candidates}]:[];
   })});
   drawQueue();
  }
- async function loadEvidence(works){
+ async function loadEvidence(works,options){
   const paths=['games.json','non-rpg-creator-supplement-20261030.json','discovery-editorial.json','work-edit-history.json'];
   const [main,supplement,editorial,edits]=await Promise.all(paths.map(async path=>{
    const response=await fetch('data/'+path,{cache:'no-store'});
@@ -157,13 +167,13 @@ export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,m
   }));
   const merged=new Map([...supplement.works,...main.works].map(work=>[work.id,work]));
   const {works:archive}=applyWorkEdits({works:[...merged.values()]},edits);
-  return buildStyleRequest(works,archive,editorial.works);
+  return buildStyleRequest(works,archive,editorial.works,options);
  }
  async function importReview(file){
   const data=parseStyleReview(await file.text());
   const sourceIds=new Set(data.items.map(item=>item.id));
   if(sourceIds.size){
-   const current=await loadEvidence(await hydrate(chosen(sourceIds)));
+   const current=await loadEvidence(await hydrate(chosen(sourceIds)),{includeFull:true});
    const byId=new Map(current.items.map(item=>[item.id,item]));
    for(const item of data.items){
     const source=byId.get(item.id);
@@ -245,7 +255,13 @@ export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,m
     download('basic-style-request.json',JSON.stringify(request,null,2)+'\n','application/json');
     message('导出 '+request.items.length+' 部可识别作品，另有 '+request.issues.length+' 部暂未生成识别请求。');
    }else if(id==='bs-select-review'){
-    for(const input of dialog.querySelectorAll('#bs-queue input[data-work]'))input.checked=input.hasAttribute('data-eligible');
+    for(const work of dialog.querySelectorAll('#bs-queue [data-remaining]')){
+     let remaining=Number(work.dataset.remaining);
+     for(const input of work.querySelectorAll('input[data-work]')){
+      input.checked=input.hasAttribute('data-eligible')&&remaining>0;
+      if(input.checked)remaining--;
+     }
+    }
     invalidate();
    }else if(id==='bs-reject'){
     removeCandidates(reviewSelections());invalidate();message('已从本机审核队列移除所选候选。');

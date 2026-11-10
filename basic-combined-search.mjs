@@ -1,8 +1,8 @@
-import {gameplayKeys,normalizeFilterText,MISSING_STYLE} from './basic-catalogue-filters.mjs?v=20261110-combined';
-import {styleName,styleDimension} from './basic-style-tags.mjs';
+import {gameplayKeys,normalizeFilterText,MISSING_STYLE} from './basic-catalogue-filters.mjs?v=20261110-flex-tags';
+import {styleName,styleDimension} from './basic-style-tags.mjs?v=20261110-flex-tags';
 
 export const SEARCH_FIELDS={
- gameplay:{label:'主要玩法',kind:'gameplay'}, style:{label:'六维剧情风格',kind:'style'},
+ gameplay:{label:'主要玩法',kind:'gameplay'}, style:{label:'作品特征标签',kind:'style'},
  theme:{label:'故事题材',kind:'theme'}, year:{label:'原作首发年份',kind:'range'},
  manufacturer:{label:'关联厂商',kind:'text'}, productionRegion:{label:'制作地区',kind:'region'},
  creator:{label:'创作者',kind:'text'}, character:{label:'角色',kind:'text'}, series:{label:'系列',kind:'text'},
@@ -46,7 +46,7 @@ function valueMatcher(rule,value){
   if(norm===MISSING_STYLE)return list=>list.length===0;
   const tag=styleName(value);
   const dimension=styleDimension(tag);
-  if(!dimension)throw Error('六维剧情风格须填写词表中的标签');
+  if(!dimension)throw Error('作品特征标签须填写词表中的标签');
   const theme=dimension==='theme'?normalizeFilterText(tag):null;
   return (list,row,meta)=>list.includes(tag)||!!(theme&&meta?.theme?.includes(theme));
  }
