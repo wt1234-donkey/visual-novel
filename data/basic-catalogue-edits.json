@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 17,
+  "revision": 18,
   "additions": [],
   "records": {
     "g1028": {
@@ -396,50 +396,43 @@
         "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh"
       },
       "aliases": []
+    },
+    "casa-table-20261105-295": {
+      "identity": {
+        "id": "casa-table-20261105-295",
+        "indexId": "basic-casa-table-20261105-295",
+        "aliases": [],
+        "title": "Journey to the Center of Earth",
+        "firstYear": 1978,
+        "group": "Mad Hatter Software",
+        "gameplay": "冒险（玩法待核）",
+        "plotStyles": [],
+        "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "Journey to the Center of Earth",
+        "firstYear": 1978,
+        "group": "Greg Hassett",
+        "gameplay": "文字输入",
+        "plotStyles": [],
+        "plotTags": {
+          "tone": "荒凉",
+          "emotion": "恐怖",
+          "theme": [
+            "科幻",
+            "生存",
+            "冒险"
+          ],
+          "setting": "封闭空间"
+        },
+        "plotTagEvidence": {},
+        "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "8e44d54e-5a2c-4a3b-b17a-13c67be1425d",
-      "at": "2026-11-10T02:13:37.322Z",
-      "actor": "编目审核台",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-zkm76k3v4pbdt0om",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-zkm76k3v4pbdt0om",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-zkm76k3v4pbdt0om",
-              "aliases": [],
-              "title": "Aldebaran III",
-              "firstYear": 1977,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=zkm76k3v4pbdt0om",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Aldebaran III",
-              "firstYear": 1977,
-              "group": "Peter Langston",
-              "gameplay": "文字冒险／互动小说",
-              "plotStyles": [],
-              "plotTags": {
-                "expression": "实验性",
-                "theme": "科幻"
-              },
-              "plotTagEvidence": {},
-              "source": "https://ifdb.org/viewgame?id=zkm76k3v4pbdt0om"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "7c91b519-ef0e-40b8-a76d-30720ec07c66",
       "at": "2026-11-10T02:26:58.550Z",
@@ -515,6 +508,53 @@
               },
               "plotTagEvidence": {},
               "source": "https://ifdb.org/viewgame?id=3ccmbybidr9nn1kh"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "0005bef1-eee7-4a01-a3f4-6585bd966714",
+      "at": "2026-11-10T04:25:24.784Z",
+      "actor": "编目审核台",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "casa-table-20261105-295",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "casa-table-20261105-295",
+              "indexId": "basic-casa-table-20261105-295",
+              "aliases": [],
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Mad Hatter Software",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Greg Hassett",
+              "gameplay": "文字输入",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": "荒凉",
+                "emotion": "恐怖",
+                "theme": [
+                  "科幻",
+                  "生存",
+                  "冒险"
+                ],
+                "setting": "封闭空间"
+              },
+              "plotTagEvidence": {},
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
             },
             "aliases": []
           }
