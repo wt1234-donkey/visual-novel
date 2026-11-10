@@ -8,6 +8,7 @@ on:
       - 'basic-catalogue.css'
       - 'tests/basic-catalogue*.test.mjs'
       - 'tests/basic-filters.test.mjs'
+      - 'tests/basic-year-filter.test.mjs'
       - 'tests/basic-catalogue-direct-save.test.mjs'
       - 'basic-catalogue-live.mjs'
       - '.github/workflows/basic-catalogue-validation.yml'
@@ -20,6 +21,7 @@ on:
       - 'basic-catalogue.css'
       - 'tests/basic-catalogue*.test.mjs'
       - 'tests/basic-filters.test.mjs'
+      - 'tests/basic-year-filter.test.mjs'
       - 'tests/basic-catalogue-direct-save.test.mjs'
       - 'basic-catalogue-live.mjs'
 permissions:
@@ -38,6 +40,7 @@ jobs:
           node --check basic-catalogue-model.mjs
           node --check basic-catalogue-filters.mjs
           node --check basic-catalogue-editor.mjs
+          node --check basic-catalogue-live.mjs
           node --check basic-catalogue-index.mjs
           node --check basic-catalogue-search-worker.mjs
           node --check minimal-adv-rpg.mjs
