@@ -1,6 +1,6 @@
 import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261110-flex-tags';
 import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261110-flex-tags';
+import {validateStore,valuesOf,applyChange,undoLast,projectEntries,versionGroup,parseImport,workKey} from './basic-catalogue-model.mjs?v=20261110-version-groups';
 import {styleName,styleState,styleLabels,styleEvidenceEntries,packStyleEvidence} from './basic-style-tags.mjs?v=20261110-flex-tags';
 import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} from './basic-style-workbench.mjs?v=20261110-flex-tags';
 import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
@@ -92,9 +92,46 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    ${legacy.length?'<p class="minor">历史标签参考：'+safe(legacy.join('、'))+'</p><label class="be-candidate"><input type="checkbox" name="removeLegacy">移除这些待整理旧标签</label>':''}</fieldset>
    ${input('source','资料来源（可选）',v.source,'type="url"')}
    ${input('reason','修改说明',w?'更正基础作品资料':'直接添加基础作品','required maxlength="300"')}
-   <div class="be-actions"><button class="primary" type="submit">${actor?(w?'保存修改':'添加到基础库'):'预览并送审'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}</div></form>
+   <div class="be-actions"><button class="primary" type="submit">${actor?(w?'保存修改':'添加到基础库'):'预览并送审'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}${w&&((w.parentId)||children.length)?'<button type="button" data-view="'+safe(w.parentId||id)+'">查看版本与来源详情</button>':''}</div></form>
    ${w?.parentId?`<p class="minor">所属主作品：${safe(get(w.parentId)?.title||w.parentId)} · ${safe(w.relation?.label)} · ${safe(w.relation?.note||'内容关系待核')}</p>`:''}
    ${children.length?'<h3>关联版本（'+children.length+'）</h3><ul class="be-version-list">'+children.map(c=>`<li><button type="button" data-edit="${safe(c._key)}">${safe(c.title)}</button> <span class="minor">${c.year??'年份待核'} · ${safe(c.relation?.label)} · ${safe(({unverified:'内容关系待核',same:'同内容版本',added:'新增内容版本'})[c.relation?.type])}</span>${c.relation?.note?'<p>'+safe(c.relation.note)+'</p>':''}</li>`).join('')+'</ul>':''}`);
+ }
+
+ const versionRelationLabels={unverified:'内容关系待核',same:'已核实：相同内容',added:'已核实：新增内容'};
+ const sourceLink=(url,label)=>/^https?:\/\//i.test(url||'')?
+  '<a href="'+safe(url)+'" target="_blank" rel="noopener noreferrer">'+safe(label)+'</a>':'待核';
+ function versionCard(w,isMain){
+  const styles=[...styleLabels(styleState(w).tags),...(styleState(w).legacy||[])];
+  const relation=w.relation||{};
+  const source=sourceLink(w.source,'打开资料来源 ↗');
+  const heading='<div class="be-version-heading"><strong>'+safe(w.title)+'</strong><span class="pill">'+
+   (isMain?'主作品资料':safe(versionRelationLabels[relation.type]||'关联版本'))+'</span></div>';
+  const meta='<p class="minor">'+safe(w.year??'年份待核')+' · '+safe(w.group||'创作主体待核')+
+   ' · '+safe(w.gameplay||'玩法待核')+'</p>';
+  const tags=styles.length?'<p class="minor">作品特征：'+safe([...new Set(styles)].join('、'))+'</p>':'';
+  const aliases=w.aliases?.length?'<p class="minor">别名：'+safe(w.aliases.join(' / '))+'</p>':'';
+  const evidence=isMain?'':'<p>版本内容关系：'+safe(versionRelationLabels[relation.type]||'内容关系待核')+'</p>'+
+   (relation.note?'<p class="be-version-note">'+safe(relation.note)+'</p>':'')+
+   '<p class="minor">关系依据：'+sourceLink(relation.source,'查看关系依据 ↗')+'</p>';
+  return '<article class="be-version-card">'+heading+meta+aliases+tags+
+   '<p class="minor">本条来源：'+source+'</p>'+evidence+
+   '<div class="be-actions"><button type="button" data-edit="'+safe(w._key)+'">'+
+   (isMain?'编辑主作品':'编辑此版本')+'</button></div></article>';
+ }
+ async function view(id){
+  const root=get(id);
+  if(!root||root.parentId||busy)return;
+  const group=versionGroup(all(),id);
+  shell('作品详情 · '+root.title,'<p class="minor">正在读取主作品与版本的资料…</p>');
+  lock(true);
+  let details=group,error='';
+  try{details=await hydrate(group);}
+  catch(e){error=e.message;}
+  finally{lock(false);}
+  const intro='<p class="minor">基础库列表仅显示一个主作品。这里保留各来源／版本独立的名称、年份、玩法、厂商及依据；“内容关系待核”的记录不自动认定为新增内容版本。</p>';
+  shell('作品详情 · '+root.title,intro+
+   (error?'<p class="be-message error">部分详情读取失败：'+safe(error)+'；下方为已缓存的信息。</p>':'')+
+   '<h3>版本与来源记录（'+details.length+'）</h3>'+details.map((w,i)=>versionCard(w,i===0)).join(''));
  }
  function importWindow(){shell('导入作品信息',`<p class="minor">使用固定模板，CSV为UTF-8编码；每次最多500部。先校验并预览，再确认写入。相同名称和年份的记录会提示冲突。</p><div class="be-actions"><a href="templates/basic-works-import.csv" download>下载 CSV 模板</a><a href="templates/basic-works-import.json" download>下载 JSON 模板</a><a href="data/basic-catalogue-guide.md" target="_blank">填写说明</a></div><label>选择文件<input type="file" id="be-file" accept=".csv,.json,text/csv,application/json"></label><label>或粘贴模板格式的内容<textarea id="be-import-text" rows="7"></textarea></label><label>格式<select id="be-format"><option value="csv">CSV</option><option value="json">JSON</option></select></label><div class="be-actions"><button id="be-validate" type="button">校验并预览</button><button id="be-import-confirm" class="primary" type="button" disabled>确认导入</button></div><div id="be-import-preview"></div>`);}
  function merge(ids){
@@ -132,6 +169,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  dialog.addEventListener('click',async e=>{
   const b=e.target.closest('button');if(!b||busy)return;
   if(b.hasAttribute('data-close'))close();
+  else if(b.dataset.view)await view(b.dataset.view);
   else if(b.dataset.edit)edit(b.dataset.edit);
   else if(b.id==='be-connect'){
    const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const nextClient=clientFor(token),login=await nextClient.connect(),fresh=await nextClient.read();client=nextClient;actor=login;snapshot=fresh;update();$('summary').textContent='写入权限 · '+actor;$('.be-auth').open=false;message('已连接账号 '+actor+'，并读取最新基础库修改。保存时会核验当前凭证的 Contents 写入权限。');}catch(err){message(err.message,true);}finally{lock(false);}
@@ -145,5 +183,5 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   }else if(b.id==='be-import-confirm'&&pendingImport){if(await commit({type:'add',works:pendingImport},'模板导入 '+pendingImport.length+' 部作品')){pendingImport=null;b.disabled=true;}}
  });
  const styles=createStyleWorkbench({dialog,shell,all,hydrate,revision:()=>snapshot.store.revision,commit,message,lock,isBusy:()=>busy});
- update();return {styles,edit,add:()=>edit(),importWindow,merge,connection,getChildren:id=>all().filter(w=>w.parentId===id)};
+ update();return {styles,edit,view,add:()=>edit(),importWindow,merge,connection,getChildren:id=>all().filter(w=>w.parentId===id)};
 }
