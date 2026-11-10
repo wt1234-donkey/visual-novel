@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 22,
+  "revision": 23,
   "additions": [],
   "records": {
     "g1028": {
@@ -544,6 +544,19 @@
         "plotStyles": [],
         "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
         "mainPlacement": "promoted-basic"
+      },
+      "style": {
+        "plotStyles": [],
+        "plotTags": {
+          "theme": [
+            "历史",
+            "推理",
+            "生存",
+            "冒险"
+          ],
+          "perspective": "第一人称"
+        },
+        "plotTagEvidence": {}
       }
     },
     "ifdb-16dfu06zzfijcsdn": {
@@ -569,49 +582,6 @@
     }
   },
   "recent": [
-    {
-      "id": "aa721dd6-a85d-49df-b0e0-a12b8831d822",
-      "at": "2026-11-10T06:55:13.880Z",
-      "actor": "编目审核台",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "microcabin-diamond",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "microcabin-diamond",
-              "indexId": "dossier-microcabin-diamond",
-              "aliases": [
-                "ダイヤモンドアドベンチャー",
-                "钻石冒险"
-              ],
-              "title": "钻石冒险",
-              "firstYear": 1982,
-              "group": "既有厂商专题",
-              "gameplay": "文字冒险",
-              "plotStyles": [],
-              "source": "https://www.microcabin.co.jp/works/games/",
-              "mainPlacement": "dossier-linked"
-            },
-            "values": {
-              "title": "钻石冒险",
-              "firstYear": 1982,
-              "group": "Micro Cabin",
-              "gameplay": "文字冒险",
-              "plotStyles": [],
-              "plotTags": {},
-              "plotTagEvidence": {},
-              "source": "https://www.microcabin.co.jp/works/games/"
-            },
-            "aliases": [
-              "ダイヤモンドアドベンチャー"
-            ]
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "301e17f6-f2ba-4404-b62b-c0f2d2602b8b",
       "at": "2026-11-10T07:05:53.089Z",
@@ -704,6 +674,59 @@
               "label": "King Tut's Tomb",
               "note": "Enter King Tut's tomb, steal all his valuables, and make it back out alive!\n进入图坦卡蒙的陵墓，偷走他所有贵重物品，然后活着出来！最初由 Mad Hatter Software 为 TRS-80 发布;1979 年目录显示，它还支持 16K Apple II 和 Exidy Sorcerer 版本。",
               "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html"
+            }
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "ae1507be-1ba6-4114-94ef-512d0c31b91f",
+      "at": "2026-11-10T07:47:34.616Z",
+      "actor": "wt1234-donkey",
+      "reason": "批量编辑标签 1 部",
+      "changes": [
+        {
+          "id": "casa-table-20261105-310",
+          "before": {
+            "identity": {
+              "id": "casa-table-20261105-310",
+              "indexId": "basic-casa-table-20261105-310",
+              "aliases": [],
+              "title": "King Tut's Tomb",
+              "firstYear": 1978,
+              "group": "Mad Hatter Software",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
+              "mainPlacement": "promoted-basic"
+            }
+          },
+          "after": {
+            "identity": {
+              "id": "casa-table-20261105-310",
+              "indexId": "basic-casa-table-20261105-310",
+              "aliases": [],
+              "title": "King Tut's Tomb",
+              "firstYear": 1978,
+              "group": "Mad Hatter Software",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C310/King+Tut%27s+Tomb.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "style": {
+              "plotStyles": [],
+              "plotTags": {
+                "theme": [
+                  "历史",
+                  "推理",
+                  "生存",
+                  "冒险"
+                ],
+                "perspective": "第一人称"
+              },
+              "plotTagEvidence": {}
             }
           }
         }
