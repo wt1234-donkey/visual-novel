@@ -32,3 +32,11 @@
 .be-style-group summary{cursor:pointer;color:var(--accent)}
 .be-style-choices{max-height:13rem;overflow:auto;padding-top:4px}
 #basic-editor .be-style-choices .be-candidate{flex-direction:row;margin:3px 0;padding:3px 0;overflow-wrap:anywhere}
+
+/* A merged work has one list row; its individual source/version records live in the detail dialog. */
+.be-version-card{margin:12px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:#191624;overflow-wrap:anywhere}
+.be-version-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.be-version-heading strong{font-size:16px;overflow-wrap:anywhere}
+.be-version-card p{margin:8px 0}
+.be-version-note{white-space:pre-wrap;overflow-wrap:anywhere}
+.be-version-card .be-actions{margin-bottom:0}

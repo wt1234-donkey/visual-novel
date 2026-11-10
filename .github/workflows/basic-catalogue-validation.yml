@@ -1,0 +1,41 @@
+name: Basic catalogue merged-version regressions
+on:
+  pull_request:
+    paths:
+      - 'basic-catalogue-*.mjs'
+      - 'minimal-adv-rpg.mjs'
+      - 'minimal-adv-rpg.html'
+      - 'basic-catalogue.css'
+      - 'tests/basic-catalogue*.test.mjs'
+      - 'tests/basic-filters.test.mjs'
+      - '.github/workflows/basic-catalogue-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'basic-catalogue-*.mjs'
+      - 'minimal-adv-rpg.mjs'
+      - 'minimal-adv-rpg.html'
+      - 'basic-catalogue.css'
+      - 'tests/basic-catalogue*.test.mjs'
+      - 'tests/basic-filters.test.mjs'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Check module syntax
+        run: |
+          node --check basic-catalogue-model.mjs
+          node --check basic-catalogue-filters.mjs
+          node --check basic-catalogue-editor.mjs
+          node --check basic-catalogue-index.mjs
+          node --check basic-catalogue-search-worker.mjs
+          node --check minimal-adv-rpg.mjs
+      - name: Run catalogue model and filtering regressions
+        run: node --test tests/basic-catalogue.test.mjs tests/basic-catalogue-index.test.mjs tests/basic-filters.test.mjs tests/basic-year-filter.test.mjs

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {emptyStore,applyChange,projectEntries,projectRegistry,valuesOf,validateValues,validateStore,undoLast,parseImport,parseCSV} from '../basic-catalogue-model.mjs';
+import {emptyStore,applyChange,projectEntries,projectRegistry,versionGroup,valuesOf,validateValues,validateStore,undoLast,parseImport,parseCSV} from '../basic-catalogue-model.mjs';
 import {createEditClient} from '../work-edit-api.mjs';
 const base=[{id:'a',title:'Original',year:1990,group:'Studio',gameplay:'ADV',source:'https://example.com/a',aliases:['原作']},{id:'b',title:'Remake',year:2000,group:'Studio',gameplay:'ADV',source:'https://example.com/b'},{id:'c',title:'Expanded',year:2005,group:'Other',gameplay:'RPG',source:'https://example.com/c'}];
 const change=(s,action)=>applyChange(s,base,action,{id:'r'+s.revision,actor:'test',at:'2026-11-03',reason:'test change',expectedRevision:s.revision});
@@ -21,6 +21,28 @@ test('merge reparents existing children, rejects cycles and requires evidence fo
  assert.throws(()=>merge(s,'a',['c']),/主作品/);
  assert.throws(()=>change(emptyStore(),{type:'merge',mainId:'a',ids:['b'],relation:{type:'added',label:'Remake'}}),/依据与来源/);
  const malformed=emptyStore();malformed.records={a:{parentId:'b',relation:{type:'unverified',label:'a'}},b:{parentId:'a',relation:{type:'unverified',label:'b'}}};assert.throws(()=>validateStore(malformed),/循环/);
+});
+test('merged identities render as one canonical work while preserving separately editable version data',()=>{
+ const s=merge(emptyStore(),'a',['b','c']);
+ const main=projectEntries(base,s),all=projectEntries(base,s,{includeChildren:true});
+ assert.equal(main.length,1);
+ assert.deepEqual(versionGroup(all,'a').map(w=>w._key),['a','b','c']);
+ assert.deepEqual(versionGroup(all,'b'),[]);
+ assert.deepEqual(versionGroup(all,'a').map(w=>w.source),base.map(w=>w.source));
+ assert.deepEqual(versionGroup(all,'a').map(w=>w.year),[1990,2000,2005]);
+ const registry=projectRegistry({works:base,summary:{}},s);
+ assert.equal(registry.works.length,1);
+ assert.equal(registry.summary.accepted,1);
+ assert.ok(registry.works[0].aliases.includes('Remake'));
+ const restored=projectEntries(base.slice(1),s,{includeChildren:true});
+ assert.equal(restored.length,3,'a canonical identity snapshot remains accessible if an index omits it');
+ assert.equal(versionGroup(restored,'a').length,3);
+});
+test('duplicate index rows for the same source identity do not create multiple catalogue works',()=>{
+ const duplicated=[...base,{...base[0],id:'index-duplicate',matchedWorkId:'a',title:'Original alias'}];
+ const all=projectEntries(duplicated,emptyStore());
+ assert.equal(all.length,3);
+ assert.ok(all.find(w=>w._key==='a').aliases.includes('Original alias'));
 });
 test('batch add, delete and merge survive JSON reload and undo atomically over three operations',()=>{
  const original=emptyStore();let s=change(original,{type:'add',works:[{id:'manual-test',...valuesOf(base[0]),title:'New',firstYear:null}]});s=merge(s,'a',['b']);s=change(s,{type:'delete',id:'c'});s=JSON.parse(JSON.stringify(s));assert.equal(projectEntries(base,s).length,2);

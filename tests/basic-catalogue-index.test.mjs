@@ -52,6 +52,15 @@ test('basic filtering works from index values and edited source survives detail 
 });
 
 
+test('merged version metadata remains searchable without creating a separate row',()=>{
+ const main={id:'a',_key:'a',title:'King Tut',year:1978,group:'Mad Hatter',gameplay:'ADV',status:'promoted-basic',aliases:[]};
+ const version={id:'b',_key:'b',parentId:'a',title:'King Tut - Apple II',year:1979,group:'Another Studio',gameplay:'RPG',status:'identity-review',aliases:['古墓版']};
+ const rows=basicFilterRows([main],new Map([['a',[version]]]));
+ assert.equal(rows.length,1);
+ assert.deepEqual(matchingBasicPositions(rows,{q:'古墓版',year:'1979',group:'another studio',gameplay:'rpg'}),[0]);
+ assert.deepEqual(matchingBasicPositions(rows,{q:'apple ii',year:'1979',status:'identity-review'}),[0]);
+ assert.deepEqual(matchingBasicPositions(rows,{year:'1977'}),[]);
+});
 test('advanced metadata is fetched on demand and remains bound to the same release revision',async()=>{
  const requests=[];
  const index=createBasicWebIndex(async path=>{

@@ -1,6 +1,6 @@
 import {createBasicWebIndex,searchHomeSlots,slotPage,compareBasicOrder} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
-import {projectEntries} from './basic-catalogue-model.mjs?v=20261110-flex-tags';
-import {basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs?v=20261110-flex-tags';
+import {projectEntries} from './basic-catalogue-model.mjs?v=20261110-version-groups';
+import {basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs?v=20261110-version-groups';
 import {compileCombinedSearch,needsAdvancedIndex} from './basic-combined-search.mjs?v=20261110-flex-tags';
 
 const index=createBasicWebIndex();
