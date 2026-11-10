@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {emptyStore,applyChange,projectEntries,projectRegistry,versionGroup,valuesOf,validateValues,validateStore,undoLast,parseImport,parseCSV} from '../basic-catalogue-model.mjs';
+import {emptyStore,applyChange,projectEntries,projectRegistry,versionGroup,valuesOf,reconcileBasicEdit,validateValues,validateStore,undoLast,parseImport,parseCSV} from '../basic-catalogue-model.mjs';
 import {createEditClient} from '../work-edit-api.mjs';
 const base=[{id:'a',title:'Original',year:1990,group:'Studio',gameplay:'ADV',source:'https://example.com/a',aliases:['原作']},{id:'b',title:'Remake',year:2000,group:'Studio',gameplay:'ADV',source:'https://example.com/b'},{id:'c',title:'Expanded',year:2005,group:'Other',gameplay:'RPG',source:'https://example.com/c'}];
 const change=(s,action)=>applyChange(s,base,action,{id:'r'+s.revision,actor:'test',at:'2026-11-03',reason:'test change',expectedRevision:s.revision});
@@ -71,4 +71,18 @@ test('candidate identities absent from raw registry remain visible when edited o
  assert.ok(result.works.some(w=>w.id==='candidate'&&w.aliases.includes('Original')));
  assert.ok(!result.works.some(w=>w.id==='a'));
  const actual=JSON.parse(readFileSync(new URL('../data/basic-catalogue-edits.json',import.meta.url),'utf8'));assert.ok(validateStore(actual));
+});
+
+test('stale edit form preserves independent concurrent changes and blocks same-field conflicts',()=>{
+ const opened=valuesOf(base[0]);
+ const latest={...opened,group:'Updated studio',gameplay:'新版玩法',plotTags:{tone:'轻松'}};
+ const user={...opened,title:'Corrected title'};
+ const merged=reconcileBasicEdit(opened,user,latest);
+ assert.equal(merged.title,'Corrected title');
+ assert.equal(merged.group,'Updated studio');
+ assert.equal(merged.gameplay,'新版玩法');
+ assert.deepEqual(merged.plotTags,{tone:'轻松'});
+ assert.throws(()=>reconcileBasicEdit(opened,{...user,group:'User studio'},latest),/字段冲突.*厂商/);
+ assert.throws(()=>reconcileBasicEdit(opened,{...user,plotTags:{tone:'严肃'}},latest),/字段冲突.*作品特征标签/);
+ assert.equal(reconcileBasicEdit(opened,opened,latest).group,'Updated studio');
 });
