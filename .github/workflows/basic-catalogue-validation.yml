@@ -24,6 +24,7 @@ on:
       - 'tests/basic-year-filter.test.mjs'
       - 'tests/basic-catalogue-direct-save.test.mjs'
       - 'basic-catalogue-live.mjs'
+      - '.github/workflows/basic-catalogue-validation.yml'
 permissions:
   contents: read
 jobs:
