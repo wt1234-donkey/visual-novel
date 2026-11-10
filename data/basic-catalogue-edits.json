@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 13,
+  "revision": 14,
   "additions": [],
   "records": {
     "g1028": {
@@ -172,12 +172,13 @@
         "firstYear": 2001,
         "group": "Marron",
         "gameplay": "Galgame",
-        "plotStyles": [
-          "恋爱",
-          "喜剧",
-          "日常"
-        ],
-        "source": "https://api.nextmoe.dev/v2/catalog/works/4567"
+        "plotStyles": [],
+        "source": "https://api.nextmoe.dev/v2/catalog/works/4567",
+        "plotTags": {
+          "tone": "喜剧",
+          "relationship": "恋爱",
+          "theme": "日常"
+        }
       },
       "aliases": [
         "Cosmos no Sora ni",
@@ -204,15 +205,17 @@
         "firstYear": 2003,
         "group": "DISCOVERY",
         "gameplay": "拔作",
-        "plotStyles": [
-          "色情",
-          "NTR",
-          "乱伦"
-        ],
-        "source": "https://api.nextmoe.dev/v2/catalog/works/10729"
+        "plotStyles": [],
+        "source": "https://api.nextmoe.dev/v2/catalog/works/10729",
+        "plotTags": {}
       },
       "aliases": [
         "人妻叉人妻3～这里是人妻市场！～"
+      ],
+      "legacyPlotStyles": [
+        "色情",
+        "NTR",
+        "乱伦"
       ]
     },
     "vndb-v2947": {
@@ -236,11 +239,12 @@
         "firstYear": 2002,
         "group": "DISCOVERY",
         "gameplay": "拔作",
-        "plotStyles": [
-          "色情",
-          "纯爱"
-        ],
-        "source": "https://vndb.org/v2947"
+        "plotStyles": [],
+        "source": "https://vndb.org/v2947",
+        "plotTags": {
+          "relationship": "纯爱",
+          "content": "色情"
+        }
       },
       "aliases": [
         "人妻×人妻1.5～ここは新妻ぱらだいす！～",

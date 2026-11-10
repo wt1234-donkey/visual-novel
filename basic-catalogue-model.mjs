@@ -28,6 +28,7 @@ export function validateStore(s){
  for(const [id,r] of Object.entries(s.records)){
   if(!id||!r||typeof r!=='object'||Array.isArray(r)||['__proto__','constructor','prototype'].includes(id))throw Error('修改记录无效');
   if(r.values)validateValues(r.values);
+  if(own(r,'legacyPlotStyles'))validateStyles({plotStyles:r.legacyPlotStyles});
   if(own(r,'style')){
    if(!r.style||Object.keys(r.style).some(k=>!['plotStyles','plotTags','plotTagEvidence'].includes(k))||!own(r.style,'plotTags'))throw Error('标签修改记录无效');
    validateStyles(r.style);

@@ -1,4 +1,4 @@
-import {STYLE_GROUPS,styleName,styleState} from './basic-style-tags.mjs';
+import {STYLE_GROUPS,styleState} from './basic-style-tags.mjs';
 export {styleName,styleState,STYLE_DIMENSIONS,styleDimension} from './basic-style-tags.mjs';
 
 export const normalizeFilterText=value=>String(value??'').normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase();
@@ -21,14 +21,14 @@ export function manufacturerOptions(index,filters={},selected='',limit=MANUFACTU
 export const GAMEPLAY_TYPES=[
  ['visual-novel','视觉小说',['视觉小说','Visual Novel','VN']],
  ['adventure','冒险（ADV）',['ADV','Adventure','冒险','冒险游戏','冒险（玩法待核）','其他冒险候选']],
- ['interactive-fiction','文字冒险／互动小说',['互动小说','互动小说（玩法待核）','纯文字冒险','文字冒险','Interactive Fiction','Text Adventure']],
- ['graphic-adventure','图文冒险',['图文冒险','动画图文冒险','Graphic Adventure']],
+ ['interactive-fiction','文字冒险／互动小说',['互动小说','互动小说（玩法待核）','纯文字冒险','文字冒险','文本冒险','Interactive Fiction','Text Adventure','Text-based Adventure']],
+ ['graphic-adventure','图文／图形冒险',['图文冒险','图形冒险','动画图文冒险','Graphic Adventure','Graphical Adventure']],
  ['text-input','文字输入',['文字输入','Parser']],
  ['point-click','点击调查',['点击调查','点击调查冒险','Point-and-click','Point & Click']],
  ['choices','选项分支',['选项分支','选项式冒险','选择式冒险']],
  ['menu','菜单指令',['菜单指令','Menu-Driven','Menu Driven']],
  ['movie','互动电影／动画',['互动电影ADV','互动电影','互动动画','FMV']],
- ['rpg','角色扮演（RPG）',['RPG','Role-playing (RPG)','角色扮演','二维RPG候选','三维RPG候选']],
+ ['rpg','角色扮演（RPG）',['RPG','Role-playing (RPG)','角色扮演','纯RPG','纯角色扮演','二维RPG候选','三维RPG候选']],
  ['action','动作／直接操控',['Action','动作','直接操控','直接移动','直接操控冒险候选']],
  ['strategy','策略／战术',['Strategy / tactics','Strategy','策略','战术策略']],
  ['simulation','模拟／养成／经营',['Simulation','模拟','养成','日程养成','资源经营']],
@@ -46,7 +46,7 @@ export const GAMEPLAY_TYPES=[
 ];
 export const GAMEPLAY_OPTIONS=GAMEPLAY_TYPES.map(([,label])=>label);
 const gameplayAliases=new Map();
-for(const [key,label,aliases] of GAMEPLAY_TYPES)for(const alias of [label,...aliases])gameplayAliases.set(normalizeFilterText(alias),[key]);
+for(const [key,label,aliases] of GAMEPLAY_TYPES)for(const alias of [key,label,...aliases])gameplayAliases.set(normalizeFilterText(alias),[key]);
 for(const [alias,keys] of [['ARPG',['rpg','action']],['动作RPG',['rpg','action']],['SRPG',['rpg','strategy']],['策略RPG',['rpg','strategy']],['ADV／策略RPG',['adventure','rpg','strategy']]])gameplayAliases.set(normalizeFilterText(alias),keys);
 const historicalGameplayGroups=[
  [['rpg'],['RPG／叙事关联','角色扮演／剧情关联','剧情RPG','剧情 RPG','迷宫角色扮演','迷宫RPG','故事型RPG','事件探索RPG','手机 RPG','程序生成迷宫RPG','纯文本RPG','探索RPG','选择与战斗RPG','成人向迷宫RPG','剧情探索RPG','分章故事RPG','声音小说型RPG','无文字共生探索RPG','在线RPG','角色扮演游戏','在线 RPG','魔法学园 RPG']],
@@ -81,47 +81,42 @@ export function gameplayKeys(raw){
  const direct=gameplayAliases.get(normalizeFilterText(value));if(direct)return [...direct];
  return [...new Set(value.split(/[,，;；\n]+/).map(x=>x.trim()).filter(Boolean).flatMap(part=>gameplayAliases.get(normalizeFilterText(part))||['custom:'+normalizeFilterText(part)]))];
 }
+const plainRpgLabels=new Set(['RPG','Role-playing (RPG)','角色扮演（RPG）','角色扮演','角色扮演游戏','纯RPG','纯角色扮演'].map(normalizeFilterText));
 export function gameplayLabel(key){return GAMEPLAY_TYPES.find(([id])=>id===key)?.[1]||key.replace(/^custom:/,'');}
-export function gameplayOptions(works){const counts=new Map(),customLabels=new Map();for(const work of works){for(const key of gameplayKeys(work.gameplay)){counts.set(key,(counts.get(key)||0)+1);if(key.startsWith('custom:'))for(const part of String(work.gameplay||'').split(/[,，;；\n]+/))if('custom:'+normalizeFilterText(part)===key&&!customLabels.has(key))customLabels.set(key,part.trim());}}return [...GAMEPLAY_TYPES.filter(([key])=>counts.has(key)).map(([key,label])=>({key,label,count:counts.get(key)})),...[...customLabels].sort((a,b)=>order.compare(a[1],b[1])).map(([key,label])=>({key,label,count:counts.get(key)}))];}
-export function gameplayDisplay(raw){const keys=gameplayKeys(raw);return keys.map(key=>key.startsWith('custom:')?String(raw).split(/[,，;；\n]+/).find(x=>'custom:'+normalizeFilterText(x)===key)?.trim()||gameplayLabel(key):gameplayLabel(key)).join(' / ');}
+const catalogueGameplay=work=>[...new Set([...gameplayKeys(work.gameplay),...(work.gameplayTags||[])])];
+export function gameplayOptions(works){const counts=new Map(),customLabels=new Map();for(const work of works){for(const key of catalogueGameplay(work)){counts.set(key,(counts.get(key)||0)+1);if(key.startsWith('custom:'))for(const part of String(work.gameplay||'').split(/[,，;；\n]+/))if('custom:'+normalizeFilterText(part)===key&&!customLabels.has(key))customLabels.set(key,part.trim());}}return [...GAMEPLAY_TYPES.filter(([key])=>counts.has(key)).map(([key,label])=>({key,label,count:counts.get(key)})),...[...customLabels].sort((a,b)=>order.compare(a[1],b[1])).map(([key,label])=>({key,label,count:counts.get(key)}))];}
+export function gameplayDisplay(raw,gameplayTags){const keys=catalogueGameplay({gameplay:raw,gameplayTags});return keys.map(key=>key.startsWith('custom:')?String(raw).split(/[,，;；\n]+/).find(x=>'custom:'+normalizeFilterText(x)===key)?.trim()||gameplayLabel(key):gameplayLabel(key)).join(' / ');}
 
 export const MISSING_STYLE='__missing__';
-export const LEGACY_STYLE_PREFIX='legacy:';
 export function styleOptions(works){
- const counts=new Map(),legacyCounts=new Map();
- for(const work of works){
-  const {tags,legacy}=styleState(work);
-  for(const tag of Object.values(tags))counts.set(tag,(counts.get(tag)||0)+1);
-  for(const tag of new Set(legacy.map(styleName)))legacyCounts.set(tag,(legacyCounts.get(tag)||0)+1);
- }
- const groups=Object.entries(STYLE_GROUPS).map(([label,styles])=>({label,options:styles.map(tag=>({label:tag,key:tag,count:counts.get(tag)||0}))}));
- if(legacyCounts.size)groups.push({label:'旧标签待整理',options:[...legacyCounts].sort((a,b)=>order.compare(a[0],b[0])).map(([label,count])=>({label,key:LEGACY_STYLE_PREFIX+label,count}))});
- return groups;
+ const counts=new Map();
+ for(const work of works)for(const tag of Object.values(styleState(work).tags))counts.set(tag,(counts.get(tag)||0)+1);
+ return Object.entries(STYLE_GROUPS).map(([label,styles])=>({label,options:styles.map(tag=>({label:tag,key:tag,count:counts.get(tag)||0}))}));
 }
 
 export function pageIndex(value,pageCount){const text=String(value).trim();if(!/^\d+$/.test(text)||!Number.isSafeInteger(Number(text))||Number(text)<1||Number(text)>pageCount)throw Error('请输入 1—'+pageCount+' 范围内的整数页码');return Number(text)-1;}
 
 export function basicFilterRows(entries,childrenByMain){
  return entries.map(row=>{
-  const {tags,legacy}=styleState(row),styles=Object.values(tags);
+  const {tags}=styleState(row),styles=Object.values(tags);
   const names=manufacturerNames(row);
   const childNames=(childrenByMain.get(row._key)||[]).flatMap(child=>[child.title,...(child.aliases||[])]);
   return {
-   search:normalizeFilterText([row.title,...(row.aliases||[]),...names,...styles,...legacy,...childNames].join(' ')),
-   manufacturers:[...new Set(names.map(manufacturerKey))],gameplay:gameplayKeys(row.gameplay),
-   styles,legacy:legacy.map(styleName),year:row.year,status:row.status
+   search:normalizeFilterText([row.title,...(row.aliases||[]),...names,...styles,...childNames].join(' ')),
+   manufacturers:[...new Set(names.map(manufacturerKey))],gameplay:catalogueGameplay(row),
+   pureRpg:plainRpgLabels.has(normalizeFilterText(row.gameplay))&&!row.gameplayTags?.some(key=>key!=='rpg'),styles,themes:tags.theme?[normalizeFilterText(tags.theme)]:[],year:row.year,status:row.status,slot:row.slot
   };
  });
 }
-export function matchingBasicPositions(rows,{q,gameplay,group,status,year,style,allowed}){
+export function matchingBasicPositions(rows,{q,gameplay,group,status,year,style,allowed},test=null,advanced=null){
  const matching=[];
  for(let i=0;i<rows.length;i++){
   const row=rows[i];
-  if(style&&(style===MISSING_STYLE?row.styles.length:
-   style.startsWith(LEGACY_STYLE_PREFIX)?!row.legacy.includes(style.slice(LEGACY_STYLE_PREFIX.length)):!row.styles.includes(style)))continue;
+  if(style&&(style===MISSING_STYLE?row.styles.length:!row.styles.includes(style)))continue;
   if(year&&(year==='unknown'?Number.isInteger(row.year):row.year!==Number(year)))continue;
   if(q&&!row.search.includes(q)||gameplay&&!row.gameplay.includes(gameplay)||status&&row.status!==status)continue;
   if((group||allowed)&&!row.manufacturers.some(key=>(!group||key===group)&&(!allowed||allowed.has(key))))continue;
+  if(test&&!test(row,advanced?.[row.slot]))continue;
   matching.push(i);
  }
  return matching;

@@ -9,10 +9,10 @@ const nameOrder=new Intl.Collator('zh-Hans-CN',{numeric:true,sensitivity:'base'}
 export const normalizeBasicQuery=text=>String(text??'').trim().normalize('NFKC').toLowerCase();
 
 export function unpackBasicIndex({rows,groups,gameplay,statuses}){
- return rows.map(([id,matchedWorkId,title,year,group,play,status,aliases,otherGroups,plotStyles,plotTags],slot)=>({
+ return rows.map(([id,matchedWorkId,title,year,group,play,status,aliases,otherGroups,plotStyles,plotTags,gameplayTags],slot)=>({
   id,matchedWorkId,title,year,group:groups[group],gameplay:gameplay[play],status:statuses[status],
   ...(aliases?{aliases}:{}),...(otherGroups?{groups:otherGroups.map(i=>groups[i])}:{}),
-  ...(plotStyles?{plotStyles}:{}),...(plotTags?{plotTags}:{}),slot
+  ...(plotStyles?{plotStyles}:{}),...(plotTags?{plotTags}:{}),...(gameplayTags?{gameplayTags}:{}),slot
  }));
 }
 
@@ -24,7 +24,7 @@ export function withBasicDetails(work,detail,store){
 }
 
 export function createBasicWebIndex(fetcher=fetch){
- let manifest;
+ let manifest,advanced;
  const cache=new Map(),pending=new Map();
  async function json(path,options){
   const response=await fetcher(directory+path,options);
@@ -94,6 +94,14 @@ export function createBasicWebIndex(fetcher=fetch){
    if(rows.length!==basic.total)throw Error('基础索引记录数不一致');
    return rows;
   },
+  async advancedRows(revision){
+   if(revision&&(await meta()).revision!==revision)throw Error('索引版本已更新，请刷新页面');
+   advanced??=asset('basic-advanced.json',true,revision).then(value=>{
+    if(!value||typeof value!=='object'||Array.isArray(value))throw Error('高级检索索引格式无效');
+    return value;
+   }).catch(error=>{advanced=null;throw error;});
+   return advanced;
+  },
   async homeSearch(revision){
    const {home}=await meta(),rows=await asset('home-search.json',true,revision);
    if(!Array.isArray(rows)||rows.length!==home.total)throw Error('首页索引记录数不一致');
@@ -120,7 +128,7 @@ export function createCatalogueWorker(){
  const pending=new Map();
  function workerSearch(payload){
   if(!worker){
-   worker=new Worker(new URL('./basic-catalogue-search-worker.mjs',import.meta.url),{type:'module'});
+   worker=new Worker(new URL('./basic-catalogue-search-worker.mjs?v=20261110-combined',import.meta.url),{type:'module'});
    worker.onmessage=({data})=>{
     const request=pending.get(data.id);
     if(!request)return;

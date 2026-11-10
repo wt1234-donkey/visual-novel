@@ -32,8 +32,8 @@
     .notice{margin-top:18px;color:var(--muted);font-size:14px}
     @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1 / -1}}
   </style>
-  <link rel="stylesheet" href="basic-catalogue.css?v=20261109-style-tags">
-  <script type="module" src="minimal-adv-rpg.mjs?v=20261109-editorial"></script>
+  <link rel="stylesheet" href="basic-catalogue.css?v=20261110-combined">
+  <script type="module" src="minimal-adv-rpg.mjs?v=20261110-combined"></script>
 </head>
 <body><div class="wrap">
   <header><a class="brand" href="index.html">N. 叙事游戏年鉴</a><nav><a href="index.html">作品发现</a><a href="curated.html">精选叙事作品</a><a href="bulk-import.html">批量补录主库</a><a href="catalogue.html">高级发行检索</a><a href="organizations.html">组织与沿革</a><a href="https://github.com/wt1234-donkey/visual-novel">GitHub</a></nav></header>
@@ -65,16 +65,24 @@
     <section class="filters" aria-label="筛选作品">
       <label>作品名／别名搜索<input id="q" type="search" placeholder="输入中、英、日文作品名"></label>
       <label>原作首发年份<select id="year"><option value="">全部年份</option><option value="unknown">年份待核</option></select></label>
-      <label>玩法<select id="gameplay"><option value="">全部玩法</option></select></label>
-      <label>剧情风格<select id="style"><option value="">全部风格</option></select></label>
+      <details id="gameplay" class="query-facet" data-label="主要玩法"><summary>主要玩法</summary><label>匹配方式<select id="gameplay-mode"><option value="any">任一项 ANY</option><option value="all">全部项 ALL</option><option value="none">排除 NOT</option></select></label><div class="query-choices"></div></details>
+      <details id="style" class="query-facet" data-label="剧情风格"><summary>剧情风格</summary><label>匹配方式<select id="style-mode"><option value="any">任一项 ANY</option><option value="all">全部项 ALL</option><option value="none">排除 NOT</option></select></label><div class="query-choices"></div></details>
       <label>收录状态<select id="status"><option value="">全部状态</option><option value="manual-basic">网页直接添加</option><option value="new-basic">原索引未提升</option><option value="promoted-basic">主库新增基础身份</option><option value="promoted-dossier">主库关联厂商专题</option><option value="main-linked">完整主库已有</option><option value="main-registry-linked">此前主库身份已关联</option><option value="identity-review">身份待核</option><option value="eligibility-review">叙事与玩法主次待核</option></select></label>
+      <div class="query-years"><label>首发起始年<input id="year-from" type="number" step="1" inputmode="numeric" placeholder="例如 1980"></label><label>首发结束年<input id="year-to" type="number" step="1" inputmode="numeric" placeholder="例如 1999"></label></div>
       <div class="manufacturer-filters">
         <label>厂商地区<select id="group-region"><option value="">全部地区</option><option id="group-region-japan" value="japan">日本厂商</option><option id="group-region-other" value="other">非日本厂商</option><option id="group-region-unknown" value="unknown">地区待核</option></select></label>
         <label>厂商名称搜索<input id="group-query" type="search" placeholder="输入厂商名，不区分大小写" aria-describedby="group-count"></label>
         <label>厂商关联组<select id="group"><option value="">全部匹配厂商</option></select></label>
         <p id="group-count" class="minor" role="status">正在整理厂商选项…</p>
       </div>
-      <p class="filter-note" id="filter-note">厂商地区未登记的保留为“地区待核”。玩法合并中英文近义写法；多玩法作品可分别命中，原始资料保持可追溯。风格数量为0表示尚未填写。</p>
+      <p class="filter-note" id="filter-note">快速筛选之间同时满足。厂商地区指关联厂商；“制作地区”和“发行地区”可在下方分别查询。</p>
+      <details class="query-advanced" id="query-advanced"><summary>组合与高级检索</summary>
+        <p class="minor">同组条件须同时满足，组与组之间满足任一组即可。多个值用顿号或逗号分隔。发行条件在同一条发行记录上组合；排除会检查该作品所有已登记发行。</p>
+        <form id="query-form"><div id="query-groups"></div><div class="query-actions"><button id="query-add-group" type="button">＋ 添加 OR 条件组</button><button id="query-example" type="button">载入 1980—1999 年示例</button><button type="submit" class="query-apply">应用组合检索</button></div></form>
+        <p id="query-coverage" class="minor"></p>
+        <p class="minor">高级字段仅覆盖有资料的记录。语言、时长与部分系列来自来源目录。排除只剔除有明确匹配的作品，资料缺失仍可能保留。“纯RPG”只匹配标为普通 RPG 的记录，叙事 RPG 和混合玩法单独保留。</p>
+      </details>
+      <p id="query-status" class="filter-note" role="status"></p>
       <button type="button" id="filter-reset">清除全部筛选</button>
     </section>
     <section class="results"><p class="count" id="count" role="status">正在读取索引……</p>
