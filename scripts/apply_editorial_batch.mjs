@@ -2,6 +2,7 @@ import {readFileSync,writeFileSync, mkdtempSync,rmSync} from 'node:fs';
 import {join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync} from 'node:child_process';
+import {isDeepStrictEqual} from 'node:util';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {EDITORIAL_LIMIT,EDITORIAL_BATCH_LIMIT,editorialId,validateProposal} from '../editorial-proposal.mjs';
 import {applyChange,undoLast,validateStore} from '../basic-catalogue-model.mjs';
@@ -14,12 +15,45 @@ const save=(dir,file,data)=>writeFileSync(join(dir,'data',file),JSON.stringify(d
 const fail=message=>{throw Error(message);};
 const baseFile='basic-catalogue-edits.json',workFile='work-edit-history.json',ledgerFile='editorial-publications.json';
 
+const baseInputs=['main-adv-rpg-works-20261031.json','adv-rpg-minimal-index-20261031.json',
+ 'adv-rpg-next-studio-review-20261031.json','adv-rpg-round3-review-20261031.json'];
 function catalogueRows(dir){
- const registry=read(dir,'main-adv-rpg-works-20261031.json');
- const index=read(dir,'adv-rpg-minimal-index-20261031.json');
- const batches=[['batch2','adv-rpg-next-studio-review-20261031.json'],['batch3','adv-rpg-round3-review-20261031.json']];
- return assembleBasicRows(registry,index.records,batches.map(([id,name])=>[id,read(dir,name).records]));
+ const [registry,index,second,third]=baseInputs.map(file=>read(dir,file));
+ return assembleBasicRows(registry,index.records,[['batch2',second.records],['batch3',third.records]]);
 }
+
+function checkStaleBasicEdit(dir,proposal,action,current,history){
+ const {expectedRevision}=proposal.change;
+ const suffix=' 请重新核对后送审。提案 '+proposal.id+'（送审版本 '+expectedRevision+'，当前版本 '+current.revision+'）';
+ if(expectedRevision>=current.revision||!['edit','style-update'].includes(action.type))
+  fail('基础身份库版本已变化，无法自动校验此操作。'+suffix);
+ if(!history.has(expectedRevision)){
+  const git=args=>execFileSync('git',args,{cwd:dir,encoding:'utf8',stdio:['ignore','pipe','pipe']});
+  const file='data/'+baseFile;
+  let original;
+  // Use the committed baseline even when the proposal supplies a client-side preview.
+  try{
+   const commits=git(['log','--first-parent','-n','64','--format=%H','HEAD','--',file]).trim().split(/\s+/).filter(Boolean);
+   for(const commit of commits){
+    const snapshot=JSON.parse(git(['show',commit+':'+file]));
+    if(snapshot.revision!==expectedRevision)continue;
+    git(['diff','--quiet',commit,'--',...baseInputs.map(name=>'data/'+name)]);
+    original=validateStore(snapshot);
+    break;
+   }
+  }catch{/* Missing history or changed source data requires a fresh review. */}
+  history.set(expectedRevision,original);
+ }
+ const original=history.get(expectedRevision);
+ if(!original)fail('基础身份库原始版本无法核对，或基础资料已更新。'+suffix);
+ const targets=action.type==='edit'?[action.id]:action.rows.map(row=>row.id);
+ for(const id of targets){
+  if(!isDeepStrictEqual(original.records[id],current.records[id])||
+     !isDeepStrictEqual(original.additions.find(w=>w.id===id),current.additions.find(w=>w.id===id)))
+   fail('目标基础作品已变化（'+id+'）。'+suffix);
+ }
+}
+
 function fullWorks(dir){
  const games=read(dir,'games.json').works;
  const supplement=read(dir,'non-rpg-creator-supplement-20261030.json').works;
@@ -52,11 +86,11 @@ export function applyEditorialBatch(batch,dir=root){
  let basicResult,workResult;
  if(basic.length){
   basicResult=validateStore(read(dir,baseFile));
-  const revision=basicResult.revision;
-  const base=catalogueRows(dir),touched=new Set();
+  const current=basicResult,revision=current.revision;
+  const base=catalogueRows(dir),touched=new Set(),history=new Map();
   for(const p of basic){
-   if(p.change.expectedRevision!==revision)fail('基础身份库已变化，请重新核对后送审。提案 '+p.id);
    const action=strictBasic(p.change.action);
+   if(p.change.expectedRevision!==revision)checkStaleBasicEdit(dir,p,action,current,history);
    if(action.type==='undo'){
     if(basic.length>1)fail('基础库回撤须单独发布');
     basicResult=undoLast(basicResult,revision);continue;
