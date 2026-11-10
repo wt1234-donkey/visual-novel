@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 15,
+  "revision": 16,
   "additions": [],
   "records": {
     "g1028": {
@@ -340,51 +340,38 @@
         "source": "https://ifdb.org/viewgame?id=zkm76k3v4pbdt0om"
       },
       "aliases": []
+    },
+    "casa-table-20261105-4004": {
+      "identity": {
+        "id": "casa-table-20261105-4004",
+        "indexId": "basic-casa-table-20261105-4004",
+        "aliases": [],
+        "title": "Crystal Cave",
+        "firstYear": 1977,
+        "group": "厂商待核",
+        "gameplay": "冒险（玩法待核）",
+        "plotStyles": [],
+        "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html",
+        "mainPlacement": "promoted-basic"
+      },
+      "values": {
+        "title": "Crystal Cave",
+        "firstYear": 1977,
+        "group": "dave, Strident",
+        "gameplay": "文字输入",
+        "plotStyles": [],
+        "plotTags": {
+          "emotion": "惊悚",
+          "expression": "实验性",
+          "theme": "冒险"
+        },
+        "plotTagEvidence": {},
+        "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "41686866-bf40-449c-9453-e3fb93063235",
-      "at": "2026-11-06T07:53:02.217Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "vndb-v4152",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "vndb-v4152",
-              "indexId": "vndb-20261101-r22-v4152",
-              "aliases": [
-                "誕生日～通い妻（自称）日記～",
-                "Birthday ~Diary of (Self-Proclaimed) Wife~"
-              ],
-              "title": "Tanjoubi ~Kayoizuma (Jishou) Nikki~",
-              "firstYear": 2002,
-              "group": "创作品牌待核",
-              "gameplay": "视觉小说",
-              "plotStyles": [],
-              "source": "https://vndb.org/v4152",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Tanjoubi ~Kayoizuma (Jishou) Nikki~",
-              "firstYear": 2002,
-              "group": "JANIS",
-              "gameplay": "视觉小说",
-              "plotStyles": [],
-              "source": "https://vndb.org/v4152"
-            },
-            "aliases": [
-              "誕生日～通い妻（自称）日記～",
-              "Birthday ~Diary of (Self-Proclaimed) Wife~"
-            ]
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "42dfe311-0321-461c-8f01-763a708dc781",
       "at": "2026-11-10T01:26:00.267Z",
@@ -465,6 +452,48 @@
               },
               "plotTagEvidence": {},
               "source": "https://ifdb.org/viewgame?id=zkm76k3v4pbdt0om"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
+    },
+    {
+      "id": "7c91b519-ef0e-40b8-a76d-30720ec07c66",
+      "at": "2026-11-10T02:26:58.550Z",
+      "actor": "编目审核台",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "casa-table-20261105-4004",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "casa-table-20261105-4004",
+              "indexId": "basic-casa-table-20261105-4004",
+              "aliases": [],
+              "title": "Crystal Cave",
+              "firstYear": 1977,
+              "group": "厂商待核",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Crystal Cave",
+              "firstYear": 1977,
+              "group": "dave, Strident",
+              "gameplay": "文字输入",
+              "plotStyles": [],
+              "plotTags": {
+                "emotion": "惊悚",
+                "expression": "实验性",
+                "theme": "冒险"
+              },
+              "plotTagEvidence": {},
+              "source": "https://solutionarchive.com/game/id%2C4004/Crystal+Cave.html"
             },
             "aliases": []
           }
