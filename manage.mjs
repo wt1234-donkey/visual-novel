@@ -75,4 +75,3 @@ $('#new-work').addEventListener('click',()=>{stashForm();selected='__new__';tab=
 $('#panel').addEventListener('input',e=>{if(tab!=='new'||!['title','originalTitle'].includes(e.target.name))return;const v=formValues(),matches=duplicateWorks(reservedWorks(),{id:v['work-id'],title:v.title,originalTitle:v.originalTitle});$('#duplicate-hint').textContent=matches.length?'可能已收录：'+matches.slice(0,5).map(w=>title(w)+' · '+w.id).join('；'):'尚未发现同名作品；请同时检查别名和历史版本。';});
 $('#panel').addEventListener('change',e=>{if(tab==='new'&&e.target.name==='category'){$('[name=subcategory]').innerHTML=options(data.taxonomy.subcategories[e.target.value].filter(x=>!['纯文本指令','图文指令'].includes(x)).map(x=>[x,x]),'');stashForm();saveDraft();}});
 $('#panel').addEventListener('click',e=>{if(e.target.closest('[data-cancel-new]')){stashForm();selected='';tab='profile';saveDraft();render();}});
-
