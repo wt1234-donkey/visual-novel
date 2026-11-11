@@ -35,7 +35,13 @@ export function createCatalogueService({base,initial,repository,prepareBase,load
    // or appending an audit entry to the active snapshot.
    return applyChange(catalogueState(snapshot.store),base,action,{actor:'preview',reason:'预览',expectedRevision:snapshot.store.revision});
   },
-  history(options){return journalHistory(snapshot.store,options);},
+  async history(options){
+   if(snapshot.store.schemaVersion===3){
+    if(typeof repository.history!=='function')throw Error('当前仓储无法读取分片历史');
+    return repository.history(snapshot,options);
+   }
+   return journalHistory(snapshot.store,options);
+  },
   async execute(action,reason,{undo=false}={}){return exclusive(async()=>{
    if(!actor)throw Object.assign(Error('请先连接 GitHub 写入权限；当前填写保留'),{code:'NOT_CONNECTED'});
    const signature=journalKey({action,reason,undo,actor});

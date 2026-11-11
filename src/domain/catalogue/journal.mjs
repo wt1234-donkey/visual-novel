@@ -10,12 +10,12 @@ export const catalogueState = store => clone({schemaVersion:1,revision:store.rev
 // State and its logical journal share one atomic file until a multi-file
 // repository transaction is introduced. The checkpoint marks exact coverage.
 export function withJournal(store) {
- if (store.schemaVersion === 2) return clone(store);
+ if (store.schemaVersion === 2 || store.schemaVersion === 3) return clone(store);
  return {...clone(store),schemaVersion:2,journal:{schemaVersion:1,baseline:catalogueState(store),events:[]}};
 }
 
 export function appendJournal(before, after, meta, commandType, intent) {
- if (before.schemaVersion !== 2) return after;
+ if (![2,3].includes(before.schemaVersion)) return after;
  const regular = commandType !== 'undo', entry = regular ? after.recent.at(-1) : before.recent.at(-1);
  const changes = regular ? entry.changes : entry.changes.map(change => ({id:change.id,before:clone(change.after),after:clone(change.before)}));
  const ids = new Set(entry.added);
@@ -26,7 +26,10 @@ export function appendJournal(before, after, meta, commandType, intent) {
   removed:regular?[]:before.additions.filter(work=>ids.has(work.id)).map(clone),
   ...(regular?{}:{undoOf:entry.id})
  };
- after.journal.events.push(event);
+ if(before.schemaVersion===3){
+  after.transaction=after.transaction||{baseline:catalogueState(before),events:[]};
+  after.transaction.events.push(event);
+ }else after.journal.events.push(event);
  return after;
 }
 
@@ -85,6 +88,7 @@ export function validateJournal(store, validateState) {
 }
 
 export function journalHistory(store, {before = Infinity, limit = 20, workId = null} = {}) {
+ if(store.schemaVersion===3)throw Error('分片历史须由仓储按需读取');
  if (!Number.isSafeInteger(limit) || limit < 1 || limit > 100) throw Error('每页历史须为1至100条');
  const events = (store.journal?.events || []).filter(event=>event.revision < before && (!workId ||
   event.changes.some(change=>change.id===workId) || [...event.added,...event.removed].some(work=>work.id===workId)));

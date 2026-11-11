@@ -22,7 +22,7 @@ test('service owns authorization, previews, immutable snapshots and one projecte
  await assert.rejects(f.service.execute(edit('a',{title:'Saved'}),'修改名称'),/连接/);
  await f.service.connect(f.repository);
  await f.service.execute(edit('a',{title:'Saved'}),'修改名称');
- assert.equal(f.service.view.byId.get('a').title,'Saved');assert.equal(f.service.history({}).events.length,1);
+ assert.equal(f.service.view.byId.get('a').title,'Saved');assert.equal((await f.service.history({})).events.length,1);
  f.service.disconnect(f.repository);assert.equal(f.service.actor,'');
  assert.equal(f.service.view.byId.get('a').title,'Saved');
 });

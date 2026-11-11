@@ -1,14 +1,16 @@
-const API='https://api.github.com',REPO='/repos/wt1234-donkey/visual-novel';
+export const EDIT_REPOSITORY='/repos/wt1234-donkey/visual-novel';
+const API='https://api.github.com',REPO=EDIT_REPOSITORY;
 export const HISTORY_PATH='data/work-edit-history.json';
 export const TOKEN_SETUP_URL='https://github.com/settings/personal-access-tokens/new?name=visual-novel-editor&target_name=wt1234-donkey&contents=write';
 const permissionHelp='请用有权限的 GitHub 账号，确认 Resource owner 为 wt1234-donkey，Repository access 选择 Only select repositories → visual-novel，Repository permissions → Contents 为 Read and write。Public repositories 仅包含公开仓库读取权限。';
-const decode=value=>JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(value.replace(/\s/g,'')),c=>c.charCodeAt(0))));
+export const decodeContentText=value=>new TextDecoder().decode(Uint8Array.from(atob(value.replace(/\s/g,'')),c=>c.charCodeAt(0)));
+const decode=value=>JSON.parse(decodeContentText(value));
 const encode=value=>{const bytes=new TextEncoder().encode(JSON.stringify(value,null,2)+'\n');let s='';for(let i=0;i<bytes.length;i+=32766)s+=String.fromCharCode(...bytes.subarray(i,i+32766));return btoa(s);};
 export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PATH,validate=null}={}){
  let oauthScopes=null;
  const validateRead=store=>{if(validate)validate(store);else if(!store||store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式不正确，请停止写入并核查');return store;};
  async function request(path,method='GET',body){
-  const operation=method==='PUT'?'保存网站修改':path==='/user'?'校验 GitHub 账号':path===REPO?'读取目标仓库':'读取网站修改记录';
+  const operation=method!=='GET'?'保存网站修改':path==='/user'?'校验 GitHub 账号':path===REPO?'读取目标仓库':'读取网站修改记录';
   let res;
   try{res=await fetcher(API+path,{method,cache:'no-store',headers:{Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28',...(token?{Authorization:'Bearer '+token}:{}),...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});}
   catch{throw Error(operation+'失败：无法连接 GitHub API，请检查网络后重试；当前填写保留。');}
@@ -24,10 +26,10 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
    }else if(res.status===401){
     code='INVALID_TOKEN';message='连接凭证无效、已过期或已撤销，请重新连接。';
    }else if(res.status===403){
-    code='PERMISSION_DENIED';message='GitHub 拒绝'+(method==='PUT'?'写入':'读取')+' wt1234-donkey/visual-novel。'+permissionHelp+' 读取成功不代表已获得写入权限；当前填写保留。';
+    code='PERMISSION_DENIED';message='GitHub 拒绝'+(method!=='GET'?'写入':'读取')+' wt1234-donkey/visual-novel。'+permissionHelp+' 读取成功不代表已获得写入权限；当前填写保留。';
    }else if(res.status===404){
-    code='NOT_FOUND';message=(path===REPO?'目标仓库不可访问。':method==='PUT'?'GitHub 无法访问本次写入的目标文件。':'无法读取修改记录 '+historyPath+'。')+permissionHelp+' 如果权限正确，请核对目标文件是否存在；当前填写保留。';
-   }else if(res.status===409||res.status===422&&/sha|already exists|does not match/i.test(raw)){
+    code='NOT_FOUND';message=(path===REPO?'目标仓库不可访问。':method!=='GET'?'GitHub 无法访问本次写入的目标文件。':'无法读取修改记录 '+historyPath+'。')+permissionHelp+' 如果权限正确，请核对目标文件是否存在；当前填写保留。';
+   }else if(res.status===409||res.status===422&&/sha|already exists|does not match|not a fast forward|non.fast.forward|reference update failed/i.test(raw)){
     code='CONFLICT';message='数据库已变化或写入冲突，请重新读取后核对；没有覆盖其他修改。';
    }else if(res.status===422){
     code='VALIDATION';message='GitHub 拒绝本次提交的内容，请核对下方具体原因；当前填写保留。';
@@ -38,7 +40,9 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
   if(scopes!==undefined&&scopes!==null)oauthScopes=scopes.split(',').map(x=>x.trim()).filter(Boolean);
   return res.json();
  }
+ async function readFile(path=historyPath,ref='main'){const file=await request(REPO+'/contents/'+path+'?ref='+encodeURIComponent(ref));const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,text:decodeContentText(blob.content)};}
  return {
+  gitRequest:request,readFile,
   async connect(){
    if(!token)throw Error('请填写仅授权本仓库的 GitHub 凭证');
    const [user,repo]=await Promise.all([request('/user'),request(REPO)]);
@@ -51,7 +55,7 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
    if(!response.ok)throw Error('读取已发布修改记录失败（HTTP '+response.status+'）');
    return {sha:null,store:validateRead(await response.json())};
   },
-  async read(){const file=await request(REPO+'/contents/'+historyPath+'?ref=main');const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,store:validateRead(decode(blob.content))};},
+  async read(){const file=await readFile();return {sha:file.sha,store:validateRead(JSON.parse(file.text))};},
   async write(store,sha,message){if(!token)throw Error('请先连接 GitHub 写入权限');if(!sha)throw Error('请先读取 GitHub 最新修改记录后保存；已发布副本不能直接写入');const result=await request(REPO+'/contents/'+historyPath,'PUT',{message,branch:'main',sha,content:encode(store)});return {sha:result.content.sha,commit:result.commit.sha,url:result.commit.html_url};}
  };
 }

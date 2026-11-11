@@ -30,7 +30,7 @@ test('basic catalogue loads round three with canonical identities, aliases and d
   const setupCombinedControls=()=>({options(){},groups:()=>[]});
   const context=vm.createContext({...basicFilters,queryCatalogueRows,setupCombinedControls,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>async()=>null,
-    readLatestBasicStore,createEditClient:()=>({read:async()=>({store:emptyStore()})}),
+    readLatestBasicStore,createBasicRepository:()=>({read:async()=>({store:emptyStore()})}),
     createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
     fetch:async path=>({ok:true,json:async()=>read(path)})});
   await vm.runInContext((await readFile(new URL('../minimal-adv-rpg.mjs',import.meta.url),'utf8')).replace(/^import .*;$/gm,''),context);

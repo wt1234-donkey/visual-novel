@@ -1,3 +1,4 @@
+import {journalSummary} from '../../domain/catalogue/journal-index.mjs';
 import {emptyStore} from '../../domain/catalogue/model.mjs';
 import {workKey,nameKey} from '../../domain/catalogue/identity.mjs';
 import {compareBasicOrder} from '../../domain/catalogue/order.mjs';
@@ -84,7 +85,7 @@ export function buildCatalogueSnapshot({registry, initial = [], batches = [], st
    aliases:[...new Set([...(row.aliases || []), ...(view.childrenByMain.get(row._key) || []).flatMap(child => [child.title, ...(child.aliases || [])])])]
   }));
  return {schemaVersion:1, revision:store.revision, sourceRows, ...view, identities, formalById, formalIdByWorkId, identityCandidates,
-  journal:{baselineRevision:store.journal?.baseline.revision??store.revision,eventCount:store.journal?.events.length??0},
+  journal:journalSummary(store),
   home:{rows:homeRows, excluded:view.entries.length - homeRows.length}};
 }
 

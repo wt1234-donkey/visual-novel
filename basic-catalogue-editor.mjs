@@ -8,7 +8,7 @@ import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261111-architect
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
 export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map()){
- let actor='',busy=false,pendingImport=null,returnFocus=null,entries=[],catalogueView,editBaseline=null,historyCursor=null;
+ let actor='',busy=false,pendingImport=null,returnFocus=null,entries=[],catalogueView,editBaseline=null,historyCursor=null,historyRequest=0;
  const clientFor=token=>createBasicRepository(token);
  const service=createCatalogueService({base,initial,repository:clientFor(''),loadDetails,makeMeta:()=>({id:randomId(),at:new Date().toISOString()})});
  const dialog=document.createElement('dialog');dialog.id='basic-editor';document.body.append(dialog);
@@ -24,9 +24,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   entries=catalogueView.all;
   onChange(catalogueView.entries,entries,service.snapshot.store,catalogueView);document.getElementById('basic-connection').textContent=actor?'直接保存已连接 · '+actor:'连接 GitHub 直接保存';}
  function message(s,error=false){$('#be-message').textContent=s;$('#be-message').className='be-message'+(error?' error':'');}
- function close(){if(!busy){dialog.close();returnFocus?.focus();}}
+ function close(){if(!busy){historyRequest++;dialog.close();returnFocus?.focus();}}
  function shell(title,body){
-  if(busy)return;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;editBaseline=null;
+  if(busy)return;historyRequest++;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;editBaseline=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
    <details class="be-auth"><summary>${actor?'已连接 GitHub · '+safe(actor):'首次保存前：连接 GitHub 写入权限'}</summary><p class="minor">基础身份库取消人工送审。连接后，作品修改、合并与标签操作直接写入仓库，无须另外审核。为保护仓库，公开页面不能匿名写入；凭证只保存在当前页面内存，刷新即清除。</p><ol class="minor"><li>使用有写入权限的 GitHub 账号，Resource owner 选择 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b> → <b>visual-novel</b>。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>。</li></ol><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仅限本仓库的写入凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接并启用直接保存</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">同步 GitHub 最新修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
@@ -124,17 +124,23 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   const selected=all().filter(w=>ids.includes(w._key)&&!w.parentId);if(selected.length<2){shell('合并作品','<p>请先勾选至少两部作品，再选择主作品。</p>');return;}
   shell('合并为主作品的不同版本',`<form id="be-merge"><p>选择保留在列表中的主作品，其他作品归入它的关联版本。各版本名称、年份和来源保留，可以解除合并。</p><label>主作品<select name="mainId">${selected.map(w=>`<option value="${safe(w._key)}">${safe(w.title)} · ${w.year??'年份待核'}</option>`).join('')}</select></label><input type="hidden" name="ids" value="${safe(JSON.stringify(selected.map(w=>w._key)))}"><p class="minor">本次共选择 ${selected.length} 部作品。若被合并作品已有版本，这些版本也会归入所选主作品。</p><label>版本内容关系<select name="relation"><option value="unverified">待核实（暂不认定新增内容）</option><option value="same">已核实：相同内容／普通移植或再版</option><option value="added">已核实：新增内容</option></select></label><label>具体差异或合并依据<textarea name="note" rows="3"></textarea></label>${input('source','支持版本关系的来源（已核实关系必填）','','type="url"')}<p class="minor">每个版本沿用其原作品名。新增剧情、路线、人物、素材等须写清具体差异；普通移植不自动视为新增内容。</p><button type="submit" class="primary">确认合并所选作品</button></form>`);
  }
- function historyRows(before=Infinity,append=false){
-  const page=service.history({before,limit:20});historyCursor=page.nextBefore;
+ async function historyRows(before=Infinity,append=false){
+  const request=++historyRequest;$('#be-history-more').disabled=true;$('#be-history-retry').hidden=true;
+  if(!append)$('#be-history').textContent='正在读取操作历史…';
+  try{
+  const page=await service.history({before,limit:20});
+  if(request!==historyRequest||!$('#be-history'))return;
+  historyCursor=page.nextBefore;
   const events=page.events;
   const markup=events.map(event=>'<article class="be-history-item"><strong>r'+event.revision+' · '+safe(event.reason)+'</strong><p class="minor">'+safe(event.at)+' · '+safe(event.actor)+' · '+(event.changes.length+event.added.length+event.removed.length)+' 条记录'+(event.undoOf?' · 撤销操作':'')+'</p><details><summary>查看字段变化</summary><pre>'+safe(JSON.stringify({changes:event.changes,added:event.added,removed:event.removed},null,2))+'</pre></details></article>').join('');
   if(append)$('#be-history').insertAdjacentHTML('beforeend',markup);
   else $('#be-history').innerHTML=markup||'<p class="minor">尚无迁移后的操作。迁移前的快捷记录：</p>'+[...service.snapshot.store.recent].reverse().map(event=>'<p>'+safe(event.reason)+'<br><span class="minor">'+safe(event.at)+' · '+safe(event.actor)+'</span></p>').join('');
   $('#be-history-coverage').textContent='完整变更记录从 r'+page.baselineRevision+' 起保留；此前记录可通过 GitHub 提交历史追溯。';
   $('#be-history-more').disabled=historyCursor===null;
+  }catch(error){if(request===historyRequest&&$('#be-history')){message('历史暂未读取：'+error.message,true);$('#be-history-retry').hidden=false;}}
  }
  function connection(){
-  shell('GitHub 直接保存与操作历史',`<p>作品修改、合并、添加与标签更新直接保存到仓库。最近三次操作可快捷撤销；完整记录保留修改前后值，撤销也会留下独立记录。</p><p id="be-history-coverage" class="minor"></p><div id="be-history"></div><button type="button" id="be-history-more">查看更早记录</button><button type="button" id="be-undo" ${service.snapshot.store.recent.length?'':'disabled'}>撤销最近一次操作</button>`);
+  shell('GitHub 直接保存与操作历史',`<p>作品修改、合并、添加与标签更新直接保存到仓库。最近三次操作可快捷撤销；完整记录保留修改前后值，撤销也会留下独立记录。</p><p id="be-history-coverage" class="minor"></p><div id="be-history"></div><button type="button" id="be-history-retry" hidden>重试读取历史</button><button type="button" id="be-history-more">查看更早记录</button><button type="button" id="be-undo" ${service.snapshot.store.recent.length?'':'disabled'}>撤销最近一次操作</button>`);
   historyRows();
  }
  dialog.addEventListener('cancel',e=>{e.preventDefault();close();});
@@ -180,6 +186,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   else if(b.id==='be-connect'){
    const token=$('#be-token').value.trim();$('#be-token').value='';try{lock(true);const login=await service.connect(clientFor(token));update();$('.be-auth summary').textContent='已连接 GitHub · '+actor;$('.be-auth').open=false;message('已连接 '+actor+'，同步至修改记录 r'+service.snapshot.store.revision+'。'+(editBaseline&&editBaseline.revision!==service.snapshot.store.revision?'当前编辑表单来源于旧版本，保存时将检查字段冲突并保留其他字段的最新修改。':'可以直接保存，无须人工送审。'));}catch(err){message(err.message,true);}finally{lock(false);}
   }else if(b.id==='be-disconnect'){service.disconnect(clientFor(''));update();$('.be-auth summary').textContent='首次保存前：连接 GitHub 写入权限';$('.be-auth').open=true;b.disabled=true;message('已断开写入权限；当前资料仍可查看、编辑，重新授权后可保存。');}
+  else if(b.id==='be-history-retry')historyRows();
   else if(b.id==='be-history-more'&&historyCursor!==null)historyRows(historyCursor,true);
   else if(b.id==='be-refresh'){try{lock(true);await service.sync();update();message('已同步 GitHub 修改记录 r'+service.snapshot.store.revision+'。当前表单输入保留；'+(editBaseline&&editBaseline.revision!==service.snapshot.store.revision?'保存时将检查字段冲突，不会静默覆盖其他页面的新修改。':'核对后可直接保存。'));}catch(err){message(err.message,true);}finally{lock(false);}}
   else if(b.dataset.delete){if(confirm('删除“'+get(b.dataset.delete)?.title+'”？可通过最近操作撤销。')){if(await commit({type:'delete',id:b.dataset.delete},'删除作品 '+get(b.dataset.delete)?.title)){close();}}}

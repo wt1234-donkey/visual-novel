@@ -11,6 +11,9 @@ on:
       - 'scripts/version_browser_modules.py'
       - 'tests/test_browser_module_versions.py'
       - 'scripts/migrate_basic_journal.mjs'
+      - 'scripts/migrate_basic_storage.mjs'
+      - 'data/basic-catalogue-journal/**'
+      - 'tests/helpers/catalogue-git-fixture.mjs'
       - 'src/**'
       - 'scripts/build_basic*index.mjs'
       - 'basic-combined-search.mjs'
@@ -52,7 +55,7 @@ jobs:
           python3 scripts/validate_data.py
           python3 scripts/validate_entity_model.py
           python3 scripts/run_python_tests.py
-          node scripts/migrate_basic_journal.mjs --check
+          node scripts/migrate_basic_storage.mjs --check
           node --test tests/*.test.mjs
           python3 scripts/build_company_pages.py --check
           python3 scripts/build_entity_model.py --check

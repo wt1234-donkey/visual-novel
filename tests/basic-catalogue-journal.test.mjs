@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {emptyStore,upgradeStore,validateStore,applyChange,undoLast,valuesOf} from '../basic-catalogue-model.mjs';
 import {catalogueState,replayJournal,journalHistory,journalKey} from '../src/domain/catalogue/journal.mjs';
-import {readFileSync} from 'node:fs';
+import {readBasicJournalSync} from '../src/infrastructure/filesystem/basic-store.mjs';
+import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 
 const base=[{id:'a',title:'Alpha',year:1990,group:'A',gameplay:'ADV'},{id:'b',title:'Beta',year:2000,group:'B',gameplay:'ADV'}];
@@ -72,11 +73,11 @@ test('corruption, revision gaps, duplicate operation IDs and mismatched snapshot
   s=>delete s.journal
  ]){const bad=structuredClone(store);corrupt(bad);assert.throws(()=>validateStore(bad));}
  assert.throws(()=>applyChange(store,base,edit('b',{title:'Other'}),meta(store,{id:store.journal.events[0].id})),/日志/);
- assert.throws(()=>validateStore({...store,schemaVersion:3}),/格式/);
+ assert.throws(()=>validateStore({...store,schemaVersion:4}),/格式/);
 });
 
 test('committed migration retains every existing correction and identity from the phase one checkpoint',()=>{
- const current=JSON.parse(readFileSync(new URL('../data/basic-catalogue-edits.json',import.meta.url)));
+ const current=readBasicJournalSync(fileURLToPath(new URL('../',import.meta.url)));
  validateStore(current);assert.equal(current.schemaVersion,2);
  // SHA-256 of the canonical schema-1 state at bc123909, independently
  // checked during migration; no Git-history dependency in shallow CI jobs.
