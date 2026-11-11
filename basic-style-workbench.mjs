@@ -1,3 +1,4 @@
+import {readReleaseJson} from './src/infrastructure/storage/release-reader.mjs';
 import {STYLE_KEYS,STYLE_DIMENSIONS,MAX_WORK_TAGS,styleState,styleList,styleValue,styleLabels} from './basic-style-tags.mjs?v=20261110-flex-tags';
 import {STYLE_UPDATE_HEADERS,parseStyleUpdates,planStyleUpdates} from './basic-catalogue-model.mjs?v=20261110-flex-tags';
 import {STYLE_QUEUE_KEY,MAX_STYLE_BATCH,buildStyleRequest,parseStyleReview,styleReviewRows} from './basic-style-review.mjs?v=20261110-flex-tags';
@@ -160,11 +161,7 @@ export function createStyleWorkbench({dialog,shell,all,hydrate,revision,commit,m
  }
  async function loadEvidence(works,options){
   const paths=['games.json','non-rpg-creator-supplement-20261030.json','discovery-editorial.json','work-edit-history.json'];
-  const [main,supplement,editorial,edits]=await Promise.all(paths.map(async path=>{
-   const response=await fetch('data/'+path,{cache:'no-store'});
-   if(!response.ok)throw Error('资料读取失败：'+path+'（HTTP '+response.status+'）');
-   return response.json();
-  }));
+  const [main,supplement,editorial,edits]=await Promise.all(paths.map(path=>readReleaseJson('data/'+path)));
   const merged=new Map([...supplement.works,...main.works].map(work=>[work.id,work]));
   const {works:archive}=applyWorkEdits({works:[...merged.values()]},edits);
   return buildStyleRequest(works,archive,editorial.works,options);

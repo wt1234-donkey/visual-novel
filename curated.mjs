@@ -1,3 +1,6 @@
+import {registerPageRecovery,restoreReleaseState} from './src/features/release-recovery.mjs';
+import './release-runtime.mjs';
+import {readReleaseJson} from './src/infrastructure/storage/release-reader.mjs';
 const $ = (id) => document.getElementById(id);
 const safe = (text) => String(text ?? '').replace(/[&<>"']/g, c => ({
   '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -5,6 +8,7 @@ const safe = (text) => String(text ?? '').replace(/[&<>"']/g, c => ({
 const statuses = {'editorial-seed':'编辑精选初选','reviewed':'叙事复核通过','watchlist':'精选待评'};
 const normalize = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase('zh-CN');
 let all = [];
+registerPageRecovery({capture:()=>Object.fromEntries(['query','theme','sort'].map(id=>[id,$(id).value])),restore:async saved=>{for(const id of ['query','theme','sort'])if(typeof saved[id]==='string')$(id).value=saved[id];draw();}});
 function draw() {
   const query = normalize($('query').value.trim());
   const theme = $('theme').value, sort = $('sort').value;
@@ -28,15 +32,13 @@ function draw() {
 }
 async function start() {
   try{
-    const response=await fetch('./data/curated-narrative-works.json?v=20261101',{cache:'no-cache'});
-    if(!response.ok)throw new Error('HTTP '+response.status);
-    const data=await response.json();
+    const data=await readReleaseJson('data/curated-narrative-works.json');
     if(!Array.isArray(data.entries))throw new Error('精选目录格式无效');
     all=data.entries.filter(row=>statuses[row.status] && row.workId && row.title && row.source?.startsWith('https://'));
     const themes=[...new Set(all.flatMap(item=>item.themes||[]))].sort((a,b)=>a.localeCompare(b,'zh'));
     $('theme').insertAdjacentHTML('beforeend',themes.map(t=>'<option value="'+safe(t)+'">'+safe(t)+'</option>').join(''));
     for(const id of ['query','theme','sort'])$(id).addEventListener(id==='query'?'input':'change',draw);
-    draw();
+    draw();await restoreReleaseState();
   }catch(error){
     $('count').textContent='读取精选目录失败：'+error.message;
     $('cards').innerHTML='<p class="empty">请打开基础作品库或稍后刷新页面。</p>';

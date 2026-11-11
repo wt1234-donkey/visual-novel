@@ -1,3 +1,5 @@
+import {readReleaseManifest,readReleaseText,releaseFailure,releaseChanged} from './src/infrastructure/storage/release-reader.mjs';
+import {blobDigest} from './src/infrastructure/storage/digests.mjs';
 // Browser index format. The release ID in each path binds details to their index.
 import {catalogueState} from './src/domain/catalogue/journal.mjs';
 const directory='data/basic-web/';
@@ -18,7 +20,7 @@ export function withBasicDetails(work,detail,store){
   plotTagEvidence:record?.style||record?.values?work.plotTagEvidence:detail.plotTagEvidence};
 }
 
-export function createBasicWebIndex(fetcher=fetch){
+export function createBasicWebIndex(fetcher=fetch,{release:providedRelease}={}){
  let manifest,advanced;
  const cache=new Map(),pending=new Map();
  async function json(path,options){
@@ -27,7 +29,10 @@ export function createBasicWebIndex(fetcher=fetch){
   return response.json();
  }
  function meta(){
-  manifest??=json('manifest.json',{cache:'no-cache'}).then(value=>{
+  manifest??=(async()=>{
+   const release=providedRelease===null?null:providedRelease||await readReleaseManifest(fetcher);
+   return release?.basic?JSON.parse(await readReleaseText(release.basic,release,fetcher)):json('manifest.json',{cache:'no-cache'});
+  })().then(value=>{
    if(value.schema!==1||!/^[a-f0-9]{40,64}$/.test(value.revision)||!Number.isSafeInteger(value.shardSize)||value.shardSize<=0||
     !Number.isSafeInteger(value.home?.total)||!Number.isSafeInteger(value.basic?.total))throw Error('基础索引格式无效');
    return value;
@@ -35,21 +40,28 @@ export function createBasicWebIndex(fetcher=fetch){
   return manifest;
  }
  async function asset(path,compressed=false,expectedRevision){
-  const {revision}=await meta();
-  if(expectedRevision&&revision!==expectedRevision)throw Error('索引版本已更新，请刷新页面');
-  const url=revision+'/'+path;
-  if(compressed&&typeof DecompressionStream!=='undefined'){
-   try{
-    const response=await fetcher(directory+url+'.gz');
+  const metadata=await meta(),{revision}=metadata;
+  if(expectedRevision&&revision!==expectedRevision)throw releaseChanged(expectedRevision,revision);
+  const verify=async text=>{
+   if(metadata.assets&&(!metadata.assets[path]||await blobDigest(text)!==metadata.assets[path].sha))throw Error('索引资源摘要不匹配');
+   return JSON.parse(text);
+  };
+  try{
+   if(compressed&&typeof DecompressionStream!=='undefined'){
+    const response=await fetcher(directory+revision+'/'+path+'.gz');
     if(response.ok&&response.body){
      const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
-     return await new Response(stream).json();
+     return await verify(await new Response(stream).text());
     }
-   }catch{
-    // Older hosting setups can serve the uncompressed index.
    }
+   const response=await fetcher(directory+revision+'/'+path);
+   if(!response.ok)throw Error('索引读取失败（HTTP '+response.status+'）');
+   if(metadata.assets)return verify(await response.text());
+   return response.json();
+  }catch(error){
+   if(providedRelease===null)throw error;
+   return releaseFailure(error,revision,fetcher);
   }
-  return json(url);
  }
  async function shard(kind,n){
   const key=kind+'-'+n;

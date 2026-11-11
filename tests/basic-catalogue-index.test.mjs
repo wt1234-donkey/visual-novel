@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createBasicWebIndex,createHomeSearch,slotPage,withBasicDetails} from '../basic-catalogue-index.mjs';
 import {basicFilterRows,matchingBasicPositions} from '../basic-catalogue-filters.mjs';
 
+const legacyIndex=fetcher=>createBasicWebIndex(fetcher,{release:null});
 const revision='a'.repeat(40);
 const manifest={schema:1,revision,shardSize:2,basic:{total:3},home:{total:3}};
 const home=[{title:'甲'},{title:'乙'},{title:'丙'}];
@@ -12,7 +13,7 @@ const packed={groups:['甲社','乙社'],gameplay:['ADV'],statuses:['promoted-ba
 
 test('opening and paging the homepage downloads only the needed detail shards',async()=>{
  const requests=[];
- const index=createBasicWebIndex(async path=>{
+ const index=legacyIndex(async path=>{
   requests.push(path);
   const key=path.split('/').at(-1),data={
    'manifest.json':manifest,'home-0.json':home.slice(0,2),'home-1.json':home.slice(2),
@@ -33,7 +34,7 @@ test('opening and paging the homepage downloads only the needed detail shards',a
 
 test('basic filtering works from index values and edited source survives detail hydration',async()=>{
  const requests=[];
- const index=createBasicWebIndex(async path=>{
+ const index=legacyIndex(async path=>{
   requests.push(path);
   const key=path.split('/').at(-1),data={'manifest.json':manifest,'basic-index.json':packed,
    'basic-0.json':[{source:'https://example.org/a'},{}]}[key];
@@ -63,7 +64,7 @@ test('merged version metadata remains searchable without creating a separate row
 });
 test('advanced metadata is fetched on demand and remains bound to the same release revision',async()=>{
  const requests=[];
- const index=createBasicWebIndex(async path=>{
+ const index=legacyIndex(async path=>{
   requests.push(path.split('/').at(-1));
   const data={'manifest.json':manifest,'basic-index.json':packed,'basic-advanced.json':{1:{series:['series']}}}[requests.at(-1)];
   return {ok:data!==undefined,json:async()=>data};

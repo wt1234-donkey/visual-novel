@@ -1,3 +1,4 @@
+import {readReleaseJson} from '../storage/release-reader.mjs';
 import {createSourceGuard} from './source-lease.mjs';
 import {blobDigest} from '../storage/digests.mjs';
 export const EDIT_REPOSITORY='/repos/wt1234-donkey/visual-novel';
@@ -55,6 +56,7 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
    return user.login;
   },
   async readPublished(){
+   if(sourceLease)return {sha:null,store:validateRead(await readReleaseJson(historyPath,fetcher))};
    const response=await fetcher('./'+historyPath,{cache:'no-store'});
    if(!response.ok)throw Error('读取已发布修改记录失败（HTTP '+response.status+'）');
    return {sha:null,store:validateRead(await response.json())};
@@ -62,7 +64,7 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
   async read(){
    const head=sourceLease?(await request(REPO+'/git/ref/heads/main')).object.sha:'main';
    await guard(head,dependencies());const file=await readFile(historyPath,head);
-   return {sha:file.sha,store:validateRead(JSON.parse(file.text))};
+   return {head,sha:file.sha,store:validateRead(JSON.parse(file.text))};
   },
   async write(store,sha,message){
    if(!token)throw Error('请先连接 GitHub 写入权限');if(!sha)throw Error('请先读取 GitHub 最新修改记录后保存；已发布副本不能直接写入');

@@ -22,7 +22,7 @@ async function harness({raw,resources,saved,loadError,hash='#g800'}={}){
   return nodes.get(selector);
  };
  const files=Object.fromEntries(Object.entries({editorial:'discovery-editorial.json',creators:'creator-credits.json',notes:'work-notes.json',catalogue:'entity-catalogue.json',baseline:'narrative-editorial-baseline-20261029.json'}).map(([key,file])=>['./data/'+file,resources[key]]));
- const context=vm.createContext({...model,buildManagementView,displayTitle,structuredClone,console,
+ const context=vm.createContext({registerPageRecovery:()=>{},restoreReleaseState:async()=>{},readReleaseJson:async path=>structuredClone(files['./'+path]),...model,buildManagementView,displayTitle,structuredClone,console,
   document:{querySelector:element},location:{hash},history:{replaceState(){}},window:{addEventListener(){}},
   localStorage:{getItem:key=>storage.get(key)??null,setItem:(key,value)=>storage.set(key,value)},
   fetch:async url=>{calls.push(url);if(!(url in files))throw Error('Unexpected fetch '+url);return {ok:true,json:async()=>structuredClone(files[url])};},

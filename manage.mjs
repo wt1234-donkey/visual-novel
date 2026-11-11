@@ -1,3 +1,6 @@
+import {registerPageRecovery,restoreReleaseState} from './src/features/release-recovery.mjs';
+import './release-runtime.mjs';
+import {readReleaseJson} from './src/infrastructure/storage/release-reader.mjs';
 import {loadEffectiveCatalogue,readPublishedSource} from './src/infrastructure/storage/effective-reader.mjs';
 import {buildManagementView} from './src/application/management/view.mjs';
 import {displayTitle} from './src/domain/catalogue/effective.mjs';
@@ -9,6 +12,7 @@ let projectionInputs,view;
 let data,working,selected='',tab='profile',limit=50,formCache={},reason='',busy=false,storageOK=true;
 const now=()=>new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Shanghai'});
 const title=w=>displayTitle(view?.byId.get(w.id)||w);
+registerPageRecovery({capture:()=>{stashForm();saveDraft();return {draft:{schemaVersion:1,package:getPackage(),formCache,selected,tab},selected,tab,query:$('#search').value,missing:$('#missing-only').checked,limit};},restore:async saved=>{if(saved.draft){loadDraft(saved.draft);for(const values of Object.values(formCache))if(Object.hasOwn(values,'confirmed'))values.confirmed=false;}if(saved.selected==='__new__'||working.games.works.some(work=>work.id===saved.selected))selected=saved.selected;if(['new','profile','editorial','credits','versions','notes','review'].includes(saved.tab))tab=saved.tab;$('#search').value=String(saved.query||'');$('#missing-only').checked=!!saved.missing;limit=Number.isSafeInteger(saved.limit)?saved.limit:50;render();}});
 const yearLabel=w=>w.firstYear===null?'年份未知':String(w.firstYear)+({unverified:'（待核）',planned:'（计划）'}[w.yearStatus]||'');
 const input=(name,label,value='',hint='',type='text')=>`<label class="field"><span>${label}</span><input name="${name}" type="${type}" value="${escape(value)}">${hint?`<small>${hint}</small>`:''}</label>`;
 const area=(name,label,value='',hint='',rows=3)=>`<label class="field"><span>${label}</span><textarea name="${name}" rows="${rows}">${escape(value)}</textarea>${hint?`<small>${hint}</small>`:''}</label>`;
@@ -60,12 +64,12 @@ $('#copy-package').addEventListener('click',async()=>{const box=$('#submission-j
 window.addEventListener('beforeunload',e=>{if(!storageOK){e.preventDefault();e.returnValue='';}});
 async function load(){try{
  const names={editorial:'discovery-editorial.json',creators:'creator-credits.json',notes:'work-notes.json',catalogue:'entity-catalogue.json',baseline:'narrative-editorial-baseline-20261029.json'};
- const [effective,entries]=await Promise.all([loadEffectiveCatalogue(),Promise.all(Object.entries(names).map(async([key,file])=>{const r=await fetch('./data/'+file,{cache:'no-cache'});if(!r.ok)throw Error(file+' HTTP '+r.status);return [key,await r.json()];}))]);
+ const [effective,entries]=await Promise.all([loadEffectiveCatalogue(),Promise.all(Object.entries(names).map(async([key,file])=>[key,await readReleaseJson('data/'+file)]))]);
  const [taxonomy,coverage]=await Promise.all(['data/taxonomy.json','data/company-coverage.json'].map(path=>readPublishedSource(path,effective.sourceLease)));
  projectionInputs=effective.raw;
  data={...Object.fromEntries(entries),games:clone(effective.raw.main),supplement:clone(effective.raw.supplement),taxonomy,coverage};
  working=clone(data);
- try{$('#backup-draft').hidden=!localStorage.getItem(KEY+'-conflict-backup');const saved=localStorage.getItem(KEY);if(saved)loadDraft(JSON.parse(saved));}catch(e){notice(e.message+'。原草稿仍保留；可点击导出草稿备份后再重新编辑。',true);$('#export-draft').disabled=false;try{const raw=localStorage.getItem(KEY);if(raw){localStorage.setItem(KEY+'-conflict-backup',raw);$('#backup-draft').hidden=false;}}catch{storageOK=false;}}const hash=decodeURIComponent(location.hash.slice(1));if(data.games.works.some(w=>w.id===hash))selected=hash;$('#new-work').disabled=false;$('#search').disabled=false;$('#export-draft').disabled=false;$('#save-status').textContent='数据库已读取 · 草稿仅保存在当前浏览器';render();}catch(e){notice('加载数据库失败：'+e.message+'。请刷新页面重试。',true);$('#save-status').textContent='读取失败';}}
+ try{$('#backup-draft').hidden=!localStorage.getItem(KEY+'-conflict-backup');const saved=localStorage.getItem(KEY);if(saved)loadDraft(JSON.parse(saved));}catch(e){notice(e.message+'。原草稿仍保留；可点击导出草稿备份后再重新编辑。',true);$('#export-draft').disabled=false;try{const raw=localStorage.getItem(KEY);if(raw){localStorage.setItem(KEY+'-conflict-backup',raw);$('#backup-draft').hidden=false;}}catch{storageOK=false;}}const hash=decodeURIComponent(location.hash.slice(1));if(data.games.works.some(w=>w.id===hash))selected=hash;$('#new-work').disabled=false;$('#search').disabled=false;$('#export-draft').disabled=false;$('#save-status').textContent='数据库已读取 · 草稿仅保存在当前浏览器';render();await restoreReleaseState();}catch(e){notice('加载数据库失败：'+e.message+'。请刷新页面重试。',true);$('#save-status').textContent='读取失败';}}
 load();
 
 function reservedWorks(){return [...working.games.works,...data.coverage.companies.flatMap(c=>[...(c.relatedGames||[]),...(c.dossierOnlyWorks||[])]),...data.supplement.works];}

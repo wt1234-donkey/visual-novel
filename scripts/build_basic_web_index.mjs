@@ -3,6 +3,7 @@ import {writeFileSync,mkdirSync} from 'node:fs';
 import {join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {gzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
 import {loadCatalogueSnapshot} from '../src/infrastructure/filesystem/catalogue-snapshot.mjs';
 export {assembleBasicRows,assembleHomeRows} from '../src/application/catalogue/snapshot.mjs';
 import {normalizeBasicQuery} from '../basic-catalogue-index.mjs';
@@ -33,11 +34,12 @@ export function buildBasicWebIndex(root,output,revision){
  const {snapshot,inputs,sourceLease}=loadCatalogueSnapshot(root);
  const {registry,main,supplement,history}=inputs;
  const {sourceRows:basic,home}=snapshot;
- const dir=join(output,'data','basic-web'),version=join(dir,revision),shardSize=250;
+ const dir=join(output,'data','basic-web'),version=join(dir,revision),shardSize=250,assets={};
  mkdirSync(version,{recursive:true});
  const save=(path,data,compressed=false)=>{
   const json=JSON.stringify(data)+'\n';
   writeFileSync(path,json);
+  if(path.startsWith(version+'/'))assets[path.slice(version.length+1)]={sha:createHash('sha1').update('blob '+Buffer.byteLength(json)+'\0').update(json).digest('hex')};
   if(compressed)writeFileSync(path+'.gz',gzipSync(json,{level:9}));
  };
  const shards=(kind,rows,project)=>{
@@ -56,10 +58,10 @@ export function buildBasicWebIndex(root,output,revision){
  save(join(version,'home-search.json'),home.rows.map(w=>normalizeBasicQuery([w.title,...(w.aliases||[]),w.group,...(w.sourceRefs||[])].join(' '))),true);
  shards('home',home.rows,({title,aliases,firstYear,gameplay,group,source,mainPlacement})=>({title,aliases,firstYear,gameplay,group,source,mainPlacement}));
  const {promotedBasic,promotedDossier,existingComplete}=registry.summary;
- save(join(dir,'manifest.json'),{schema:1,revision,shardSize,sourceLease,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
+ save(join(version,'identity-review.json'),{candidates:snapshot.identityCandidates,issues:snapshot.issues});
+ save(join(dir,'manifest.json'),{schema:1,revision,shardSize,sourceLease,assets,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
   home:{total:home.rows.length,excluded:home.excluded},
   catalogue:{schemaVersion:snapshot.schemaVersion,dataRevision:snapshot.revision,identityCandidates:snapshot.identityCandidates.length,journal:snapshot.journal}});
- save(join(version,'identity-review.json'),{candidates:snapshot.identityCandidates,issues:snapshot.issues});
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){

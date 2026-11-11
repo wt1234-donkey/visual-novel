@@ -74,6 +74,14 @@ export function setupCombinedControls(onSearch){
  });
  addGroup();
  return {
+  snapshot(){return {applied,draft:Array.from(groupHost.children,group=>Array.from(group.querySelectorAll('.query-rule'),row=>({field:row.children[0].value,mode:row.children[1].value,value:row.children[2].value}))),quick:Object.fromEntries(['gameplay','style'].map(id=>[id,checkedValues($(id))])),values:Object.fromEntries(['gameplay-mode','style-mode','year-from','year-to'].map(id=>[id,$(id).value]))};},
+  restore(saved={}){
+   if(!Array.isArray(saved.draft)||saved.draft.length>8||saved.draft.some(group=>!Array.isArray(group)||group.length>12||group.some(rule=>!SEARCH_FIELDS[rule.field]||!['any','all','none'].includes(rule.mode)||typeof rule.value!=='string'||rule.value.length>300)))throw Error('恢复的检索条件无效');
+   groupHost.replaceChildren();for(const group of saved.draft)addGroup(group);if(!saved.draft.length)addGroup();
+   applied=Array.isArray(saved.applied)?saved.applied.filter(group=>Array.isArray(group)&&group.every(rule=>SEARCH_FIELDS[rule.field]&&['any','all','none'].includes(rule.mode)&&Array.isArray(rule.values)&&rule.values.every(value=>typeof value==='string'))):[];
+   for(const id of ['gameplay','style']){for(const input of $(id).querySelectorAll('input'))input.checked=(saved.quick?.[id]||[]).includes(input.value);updateCount(id);}
+   for(const id of ['gameplay-mode','style-mode','year-from','year-to'])if(typeof saved.values?.[id]==='string')$(id).value=saved.values[id];
+  },
   groups(){const quick=quickRules();return applied.length?applied.map(group=>[...quick,...group]):quick.length?[quick]:[];},
   reset(){
    for(const id of ['gameplay','style']){for(const box of $(id).querySelectorAll('input:checked'))box.checked=false;updateCount(id);}
