@@ -4,7 +4,7 @@ import {compareBasicOrder} from '../../domain/catalogue/order.mjs';
 
 // Shared by editing, the browser, the search worker and build-time snapshots.
 // Deleted identities stay available to relationship validation, never to search.
-export function createCatalogueView(base, store, {strict = false} = {}) {
+export function createCatalogueView(base, store, {strict = false, includeIdentities = false} = {}) {
  const projected = projectEntries(base, store, {includeChildren:true, includeDeleted:true});
  const known = new Map(projected.map(row => [row._key, row]));
  const all = projected.filter(row => !row._deleted), byId = new Map(all.map(row => [row._key, row]));
@@ -23,5 +23,6 @@ export function createCatalogueView(base, store, {strict = false} = {}) {
  const invalid = new Set(issues.filter(issue => issue.type === 'invalid-parent').map(issue => issue.id));
  // An unresolved parent must not make a source record disappear from browsing.
  const entries = all.filter(row => !row.parentId || invalid.has(row._key)).sort(compareBasicOrder);
- return {entries, all, byId, childrenByMain, issues, identities:buildIdentityMap([...base,...store.additions,...projected])};
+ return {entries, all, byId, childrenByMain, issues,
+  ...(includeIdentities?{identities:buildIdentityMap([...base,...store.additions,...projected])}:{})};
 }

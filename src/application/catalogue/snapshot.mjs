@@ -62,7 +62,7 @@ export function assembleBasicRows(registry,initial,batches){
 // One pure input-to-snapshot boundary. I/O and index compression are adapters.
 export function buildCatalogueSnapshot({registry, initial = [], batches = [], store = emptyStore(), main = {works:[]}, supplement = {works:[]}, history = {records:{}}}, {strict = true} = {}) {
  const sourceRows = assembleBasicRows(registry, initial, batches);
- const view = createCatalogueView(sourceRows, store, {strict});
+ const view = createCatalogueView(sourceRows, store, {strict, includeIdentities:true});
  const identities = view.identities;
  const formalById = new Map([...supplement.works, ...main.works].map(work => [work.id, projectWork(work, history)]));
  const formalIdByWorkId = new Map();
