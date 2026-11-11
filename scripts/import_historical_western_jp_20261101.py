@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append audited historical identities; never overwrite or infer platform editions."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 from collections import Counter
 import copy
@@ -18,10 +19,12 @@ REPORT = ROOT / 'docs/historical-western-jp-20261101.md'
 BATCH = 'historical-western-jp-20261101'
 
 def load(path):
-    return json.loads(path.read_text(encoding='utf-8'))
+    return read_registry_json(path)
 
 def save(path, obj):
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, obj)
+    write_registry_text(path, json.dumps(obj, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 
 def digest(obj):
     return hashlib.sha256(json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
@@ -74,7 +77,7 @@ def report(audit):
     lines += ['', '## 审核与上线', '',
         '记录了逐条证据说明、别名匹配及批次前已有作品对象哈希。导入脚本可重复执行而不新增第二份。代码/数据验证通过后提交PR，审核合并main，由GitHub Pages发布；实际状态以PR与Pages工作流为准。', '',
         '此前的1970—1980年代草稿PR #221独立保留，本轮不将其未核来源和未生成身份一并合入。', '']
-    REPORT.write_text('\n'.join(lines), encoding='utf-8')
+    write_registry_text(REPORT, '\n'.join(lines), encoding='utf-8')
 
 def main():
     parser=argparse.ArgumentParser()

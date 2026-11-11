@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Collect source evidence for the 67 isolated rows / 56 identities from rounds 118–119."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 from collections import defaultdict
 import datetime as dt
@@ -23,7 +24,7 @@ DATE = "2026-11-02"
 
 
 def load(path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    return read_registry_json(path)
 
 
 def held_identities():
@@ -320,8 +321,8 @@ def markdown(report):
 
 def write():
     report = collect()
-    OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    MD.write_text(markdown(report), encoding="utf-8")
+    write_registry_text(OUT, json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_registry_text(MD, markdown(report), encoding="utf-8")
     print("CONFLICT_EVIDENCE_OK", json.dumps(report["summary"], ensure_ascii=False), flush=True)
 
 

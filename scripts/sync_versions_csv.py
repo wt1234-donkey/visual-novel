@@ -1,3 +1,4 @@
+from effective_catalogue import load_effective, effective_title
 """Regenerate the spreadsheet friendly version index from games.json."""
 
 import csv
@@ -5,7 +6,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
+data = load_effective(ROOT)['main']
 works = {work['id']: work for work in data['works']}
 
 fields = ['作品ID', '发行ID', '作品名称', '中文名称', '原文名称', '主分类', '细分类', '游戏类型',
@@ -16,7 +17,7 @@ with (ROOT / 'data/versions.csv').open('w', encoding='utf-8-sig', newline='') as
     for version in data['platformReleases']:
         work = works[version['workId']]
         writer.writerow(dict(zip(fields, [
-            work['id'], version['id'], work['title'], work.get('chineseTitle', ''), work['originalTitle'],
+            work['id'], version['id'], effective_title(work), work.get('chineseTitle', ''), work['originalTitle'],
             work['category'], work['subcategory'], work['genre'], '、'.join(work['characters']),
             version['year'], version['platform'], version['publisher'],
             '、'.join(version['publisherCompanies']) or '非商业／未署商业厂商',

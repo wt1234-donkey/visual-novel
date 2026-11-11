@@ -1,9 +1,10 @@
+import {readJsonFileSync} from '../src/infrastructure/filesystem/registry.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createBasicRecord,autoFillRecord,prefillBasicValues,missingBasicFields,normalizeNextMoeDetails,fetchSourceDetails,nextMoeDetailURL,legacyDefaults} from '../bulk-autofill.mjs';
 import {mergeMetadata,scanRegistry,makeBasicBundle} from '../bulk-import-model.mjs';
-const registry=JSON.parse(readFileSync(new URL('../data/main-adv-rpg-works-20261031.json',import.meta.url)));
+const registry=readJsonFileSync(new URL('../data/main-adv-rpg-works-20261031.json',import.meta.url));
 const work=registry.works.find(w=>w.id==='nextmoe-1310');
 const payload={object:'work',id:'1310',olang:'ja',release_date:'2009-08-15',localized:{ja:{value:'うみねこのなく頃に散',is_machine:false}},titles:[{lang:'ja',title:'うみねこのなく頃に散',title_kind:'official',is_machine:false},{lang:'en',title:'Umineko When They Cry - Answer Arcs',title_kind:'official',is_machine:false}],refs:[{source:'vndb',external_id:'v2153'}]};
 test('all saved basic metadata is reused without fabricating publisher, category or original release',()=>{const r=createBasicRecord(work);assert.equal(r.values.title,work.title);assert.equal(r.values.genre,work.gameplay);assert.equal(r.values.year,String(work.firstYear));assert.match(r.values.notes,/关联品牌/);assert.match(r.values.notes,/原作年份依据/);assert.match(r.values['interaction-note'],/具体互动操作尚待核实/);assert.deepEqual(r.values.modes,['待核实']);for(const field of ['publisher','platforms','category','subcategory','content-evidence'])assert.equal(r.values[field],'');assert.equal(r.confirmed,false);assert.ok(missingBasicFields(r.values).includes('剧情简介'));});

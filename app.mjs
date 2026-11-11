@@ -1,3 +1,5 @@
+import {loadEffectiveCatalogue} from './src/infrastructure/storage/effective-reader.mjs';
+import {mergeFormalDatasets,displayTitle as effectiveTitle} from './src/domain/catalogue/effective.mjs';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
 import {createEntityIndex,entityWorkCounts,summarizeCredits,displayPublisherName,BRAND_ROLES,DEVELOPER_ROLES,PUBLISHER_ROLES} from './entities.mjs?v=20261021-names';
 import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from './filter.mjs?v=20261021-entities';
@@ -14,7 +16,7 @@ function renderCard({work,platformReleases:versions,contentVersions}){
   card.id=work.id;
   const top=label('div','card-top','');
   top.append(label('span','year',String(work.firstYear)),label('span','category category-'+work.category,work.category));
-  const displayTitle=work.chineseTitle||work.title;
+  const displayTitle=effectiveTitle(work);
   const title=label('h3','',displayTitle);
   const original=label('p','original',displayTitle===work.originalTitle?'':`原名 · ${work.originalTitle}`);
   if(work.chineseTitleType==='站内编辑译名') original.append(label('span','editorial-translation',' · 中文名为站内编辑译名'));
@@ -93,11 +95,8 @@ function readFilters(){return {...Object.fromEntries(Object.entries(fields).map(
 
 async function main(){
   try {
-    const responses=await Promise.all(['games.json','taxonomy.json','entity-catalogue.json','work-notes.json'].map(path=>fetch('./data/'+path+'?v=20261027-leland')));
-    if(responses.some(r=>!r.ok))throw Error('HTTP '+responses.find(r=>!r.ok).status);
-    const [data,taxonomy,catalogue,notes]=await Promise.all(responses.map(r=>r.json()));
-    const supplementalResponse=await fetch('./data/non-rpg-creator-supplement-20261030.json?v=20261030');if(!supplementalResponse.ok)throw Error('non-RPG supplement HTTP '+supplementalResponse.status);const supplemental=await supplementalResponse.json();const existingWorkIds=new Set(data.works.map(w=>w.id));for(const w of supplemental.works)if(!existingWorkIds.has(w.id))data.works.push(w);const existingReleaseIds=new Set(data.platformReleases.map(v=>v.id));for(const v of supplemental.platformReleases)if(!existingReleaseIds.has(v.id))data.platformReleases.push(v);const existingContentIds=new Set(data.contentVersions.map(v=>v.id));for(const v of supplemental.contentVersions)if(!existingContentIds.has(v.id))data.contentVersions.push(v);
-    const editResponse=await fetch('./data/work-edit-history.json',{cache:'no-store'});if(!editResponse.ok)throw Error('作品修改记录读取失败');applyWorkEdits(data,await editResponse.json());workNotes=notes.works;
+    const [effective,taxonomy,catalogue,notes]=await Promise.all([loadEffectiveCatalogue(),...['taxonomy.json','entity-catalogue.json','work-notes.json'].map(async path=>{const response=await fetch('./data/'+path);if(!response.ok)throw Error(path+' HTTP '+response.status);return response.json();})]);
+    const data=mergeFormalDatasets(effective);workNotes=notes.works;
     entityIndex=createEntityIndex(data,catalogue.model,catalogue);
     const typeCounts=new Map();for(const e of catalogue.model.entities)typeCounts.set(e.type,(typeCounts.get(e.type)||0)+1);
     $('entity-stat-status').textContent=`${typeCounts.get('company')||0}个公司／组织 · ${typeCounts.get('brand')||0}个品牌 · ${catalogue.model.dossiers.length}个专题；其他团队、刊物和待核身份见主体档案。`;

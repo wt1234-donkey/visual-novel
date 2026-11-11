@@ -4,14 +4,17 @@ import {journalHistory} from '../../domain/catalogue/journal.mjs';
 import {MAX_SHARD_EVENTS,MAX_SHARD_BYTES,validateShard} from '../../domain/catalogue/journal-index.mjs';
 import {planCatalogueFiles,finishCatalogueFiles,jsonText,utf8Bytes,assertTransactionBase} from '../storage/catalogue-files.mjs';
 import {blobDigest,stateDigest,verifySnapshot} from '../storage/digests.mjs';
+import {createSourceGuard} from './source-lease.mjs';
 export {TOKEN_SETUP_URL} from './contents-repository.mjs';
 
 const PATH='data/basic-catalogue-edits.json',REPO=EDIT_REPOSITORY;
 const conflict=()=>Object.assign(Error('数据库已变化或写入冲突；本次没有覆盖其他修改'),{code:'CONFLICT',status:409});
-export function createBasicRepository(token = '', fetcher = fetch) {
+export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=null}={}) {
  const client=createEditClient(token,fetcher,{historyPath:PATH,validate:validateStore});
  const request=client.gitRequest,cache=new Map();
+ const guard=createSourceGuard(request,REPO);
  async function snapshotAt(head){
+  await guard(head,sourceLease);
   const file=await client.readFile(PATH,head);
   if(await blobDigest(file.text)!==file.sha)throw Error('基础库文件摘要校验失败');
   return {head,sha:file.sha,store:await verifySnapshot(validateStore(JSON.parse(file.text)))};

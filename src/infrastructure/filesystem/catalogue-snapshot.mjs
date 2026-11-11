@@ -1,10 +1,12 @@
+import {sourceLeaseSync} from './effective-catalogue.mjs';
+import {readJsonFileSync} from './registry.mjs';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {readBasicStoreSync} from './basic-store.mjs';
 import {buildCatalogueSnapshot} from '../../application/catalogue/snapshot.mjs';
 
 export function loadCatalogueSnapshot(root) {
- const read = name => JSON.parse(readFileSync(join(root, 'data', name), 'utf8'));
+ const read = name => readJsonFileSync(join(root, 'data', name));
  const inputs = {
   registry:read('main-adv-rpg-works-20261031.json'),
   initial:read('adv-rpg-minimal-index-20261031.json').records,
@@ -12,5 +14,5 @@ export function loadCatalogueSnapshot(root) {
   store:readBasicStoreSync(root), main:read('games.json'),
   supplement:read('non-rpg-creator-supplement-20261030.json'), history:read('work-edit-history.json')
  };
- return {inputs, snapshot:buildCatalogueSnapshot(inputs)};
+ return {inputs, sourceLease:sourceLeaseSync(root), snapshot:buildCatalogueSnapshot(inputs)};
 }

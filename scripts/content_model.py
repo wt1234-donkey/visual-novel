@@ -1,3 +1,4 @@
+from date_contract import is_published_year
 """Shared validation for content identities and their platform releases."""
 import json
 from pathlib import Path
@@ -15,7 +16,7 @@ def validate_collection(works, contents, releases, legacy_ids=()):
     for c in contents:
         assert c['workId'] in work_map and c['label'] and source_url_valid(c['source'])
         assert c['basis'] in {'original', 'added'}
-        assert isinstance(c['firstYear'], int) and work_map[c['workId']]['firstYear'] <= c['firstYear'] <= 2026
+        assert is_published_year(c['firstYear']) and work_map[c['workId']]['firstYear'] <= c['firstYear']
         assert c['evidence'] and c['evidenceReleaseIds'], '内容版本必须有证据与首次发行依据'
         assert all(rid in release_map and release_map[rid]['workId'] == c['workId']
                    and release_map[rid]['contentVersionId'] == c['id'] for rid in c['evidenceReleaseIds']), '内容证据指向其他作品或版本'

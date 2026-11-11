@@ -5,6 +5,7 @@ The user selected all unmatched and suspected-existing rows. Title, source,
 year and edition similarity do not suppress their admission. Stable internal
 keys and complete-group guards only prevent accidental repeated execution.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import base64
 import gzip
@@ -25,14 +26,16 @@ EXPECTED_INPUT, EXPECTED_BASE = 1261, 100943
 
 
 def read_json(path):
-    return json.loads(path.read_text(encoding='utf-8'))
+    return read_registry_json(path)
 
 
 def save_json(path, value, compact=False):
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, value)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + '.tmp')
     options = {'separators': (',', ':')} if compact else {'indent': 2}
-    temporary.write_text(json.dumps(value, ensure_ascii=False, **options) + '\n', encoding='utf-8')
+    write_registry_text(temporary, json.dumps(value, ensure_ascii=False, **options) + '\n', encoding='utf-8')
     temporary.replace(path)
 
 

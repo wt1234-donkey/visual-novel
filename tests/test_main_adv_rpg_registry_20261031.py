@@ -1,10 +1,14 @@
 """Test promoted main work identity layer without requiring invented complete dossiers."""
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[1] / 'scripts'))
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json
 from pathlib import Path
 from collections import Counter
 import unittest
 ROOT=Path(__file__).resolve().parents[1]
-def read(path):return json.loads((ROOT/path).read_text(encoding='utf-8'))
+def read(path):return read_registry_json(ROOT/path)
 class MainWorkIdentityRegistryTests(unittest.TestCase):
     def setUp(self):
         self.r=read('data/main-adv-rpg-works-20261031.json')

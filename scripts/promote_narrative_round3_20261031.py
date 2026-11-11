@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append a reviewed project batch without rebuilding or truncating earlier identities."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import hashlib
 import json
@@ -17,7 +18,7 @@ REPORT = 'data/adv-rpg-round3-review-20261031.md'
 
 
 def read(path):
-    return json.loads((ROOT / path).read_text(encoding='utf-8'))
+    return read_registry_json(ROOT / path)
 
 
 def norm(text):
@@ -158,7 +159,7 @@ def main():
         if args.check:
             assert (ROOT / path).read_text(encoding='utf-8') == rendered, f'Stale generated file: {path}'
         else:
-            (ROOT / path).write_text(rendered, encoding='utf-8')
+            write_registry_text(ROOT / path, rendered, encoding='utf-8')
     print('Third narrative batch verified' if args.check else 'Third narrative batch appended')
 
 

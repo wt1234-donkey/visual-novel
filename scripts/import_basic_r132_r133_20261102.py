@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Rounds 132–133: recheck 50 VNDB + 0 NextMoe candidates, then resume three sources."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import sys
 import argparse
 import datetime as dt
@@ -248,7 +249,7 @@ def main():
     if args.check:
         assert output.read_text(encoding='utf-8') == report
     else:
-        output.write_text(report, encoding='utf-8')
+        write_registry_text(output, report, encoding='utf-8')
 
 
 if __name__ == '__main__':

@@ -27,6 +27,7 @@ export function gitFixture(initial=upgradeStore(emptyStore())){
  const store=()=>JSON.parse(blobs.get(currentTree().get(STORE)));
  const api={calls,blobs,
   get head(){return head;},get store(){return store();},
+  lease(paths){return {schemaVersion:1,files:Object.fromEntries(paths.map(path=>[path,currentTree().get(path)]))};},
   file(path){return blobs.get(currentTree().get(path));},
   paths(){return [...currentTree().keys()].sort();},
   fail(stage){failAt=stage;},
@@ -55,6 +56,7 @@ export function gitFixture(initial=upgradeStore(emptyStore())){
     return text!==undefined?response({sha:id,content:Buffer.from(text).toString('base64')}):response({message:'Not found'},404);
    }
    if(method==='GET'&&path.startsWith('/git/commits/'))return response(commits.get(path.split('/').at(-1)));
+   if(method==='GET'&&path.startsWith('/git/trees/')){const tree=trees.get(path.split('/').at(-1));return response({truncated:false,tree:[...tree].map(([path,sha])=>({path,sha,type:'blob'}))});}
    const stage=path==='/git/blobs'?'blob':path==='/git/trees'?'tree':path==='/git/commits'?'commit':method==='PATCH'?'ref':null;
    if(stage&&stage===failAt)return response({message:'Injected transaction failure'},500);
    if(method==='POST'&&path==='/git/blobs')return response({sha:putBlob(body.content)},201);

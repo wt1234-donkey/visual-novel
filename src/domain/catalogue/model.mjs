@@ -1,3 +1,5 @@
+import {isRecordedYear,recordedDate} from './dates.mjs';
+import {resolveBasicTitle} from './effective.mjs';
 import {withJournal,appendJournal,validateJournal} from './journal.mjs';
 import {validateJournalIndex} from './journal-index.mjs';
 // Shared, additive basic-catalogue edits. Original source records remain auditable.
@@ -8,7 +10,7 @@ import {STYLE_KEYS,STYLE_DIMENSIONS,styleName,styleState,styleList,styleValue,st
 export {STYLE_GROUPS,STYLE_OPTIONS} from '../taxonomy/style-tags.mjs';
 const clone=x=>structuredClone(x);
 const own=(obj,k)=>Object.hasOwn(obj,k);
-const fields=['title','firstYear','group','gameplay','plotStyles','plotTags','plotTagEvidence','source'];
+const fields=['title','firstYear','yearStatus','group','gameplay','plotStyles','plotTags','plotTagEvidence','source'];
 function validateStyles(v){
  if(!Array.isArray(v.plotStyles)||v.plotStyles.length>3||new Set(v.plotStyles).size!==v.plotStyles.length||v.plotStyles.some(s=>typeof s!=='string'||!s.trim()||s.length>30))throw Error('剧情风格最多3个，每个不超过30字且不重复');
  if(own(v,'plotTags'))validateStyleTags(v.plotTags);
@@ -17,21 +19,22 @@ function validateStyles(v){
 export function validateValues(v){
  if(!v||typeof v!=='object'||Object.keys(v).some(k=>!fields.includes(k)))throw Error('作品字段无效');
  for(const k of ['title','group','gameplay'])if(typeof v[k]!=='string'||!v[k].trim()||v[k].length>500)throw Error('名称、厂商和主要玩法不能为空，且须少于500字');
- if(v.firstYear!==null&&(!Number.isInteger(v.firstYear)||v.firstYear<1970||v.firstYear>new Date().getFullYear()+10))throw Error('年份须为1970年至未来10年内的整数，未知请留空');
+ if(!isRecordedYear(v.firstYear))throw Error('年份须为1900至2200年的整数，未知请留空；未来年份不代表已发行');
+ if(own(v,'yearStatus'))recordedDate(v.firstYear,v.yearStatus);
  validateStyles(v);
  if(typeof v.source!=='string')throw Error('来源格式无效');
  if(v.source){try{if(!['https:','http:'].includes(new URL(v.source).protocol))throw Error();}catch{throw Error('来源须为 http 或 https 网址');}}
  return v;
 }
-export function valuesOf(w){return {title:w.title,firstYear:w.firstYear??w.year??null,group:w.group||'厂商待核',gameplay:w.gameplay||'玩法待核',plotStyles:[...(w.plotStyles||[])],...(w.plotTags?{plotTags:clone(w.plotTags)}:{}),...(w.plotTagEvidence?{plotTagEvidence:clone(w.plotTagEvidence)}:{}),source:w.source||''};}
+export function valuesOf(w){return {title:w.title,firstYear:w.firstYear??w.year??null,...(w.yearStatus?{yearStatus:w.yearStatus}:{}),group:w.group||'厂商待核',gameplay:w.gameplay||'玩法待核',plotStyles:[...(w.plotStyles||[])],...(w.plotTags?{plotTags:clone(w.plotTags)}:{}),...(w.plotTagEvidence?{plotTagEvidence:clone(w.plotTagEvidence)}:{}),source:w.source||''};}
 // Reconcile a form opened before another GitHub edit: preserve fields the user
 // did not touch, but never silently overwrite a concurrent edit to the same field.
 export function reconcileBasicEdit(opened,submitted,latest){
  const same=(a,b)=>JSON.stringify(a??null)===JSON.stringify(b??null);
  const result=clone(submitted),conflicts=[];
- const labels={title:'作品名称',firstYear:'首发年份',group:'厂商／创作主体',gameplay:'主要玩法',source:'资料来源'};
+ const labels={title:'作品名称',firstYear:'首发年份',yearStatus:'年份状态',group:'厂商／创作主体',gameplay:'主要玩法',source:'资料来源'};
  const keepLatest=key=>{if(own(latest,key))result[key]=clone(latest[key]);else delete result[key];};
- for(const key of ['title','firstYear','group','gameplay','source']){
+ for(const key of ['title','firstYear','yearStatus','group','gameplay','source']){
   if(same(submitted[key],opened[key]))keepLatest(key);
   else if(!same(latest[key],opened[key])&&!same(latest[key],submitted[key]))conflicts.push(labels[key]);
  }
@@ -48,6 +51,7 @@ export function validateStore(s){
  const ids=new Set();for(const w of s.additions){if(!/^manual-[a-zA-Z0-9-]+$/.test(w.id)||ids.has(w.id))throw Error('新增作品ID无效或重复');ids.add(w.id);validateValues(valuesOf(w));}
  for(const [id,r] of Object.entries(s.records)){
   if(!id||!r||typeof r!=='object'||Array.isArray(r)||['__proto__','constructor','prototype'].includes(id))throw Error('修改记录无效');
+  if(r.fieldMeta&&(typeof r.fieldMeta!=='object'||Array.isArray(r.fieldMeta)||Object.entries(r.fieldMeta).some(([field,value])=>!fields.includes(field)||!value?.id||!Number.isFinite(Date.parse(value.at)))))throw Error('字段更正身份或时间无效');
   if(r.values)validateValues(r.values);
   if(own(r,'legacyPlotStyles'))validateStyles({plotStyles:r.legacyPlotStyles});
   if(own(r,'style')){
@@ -79,7 +83,15 @@ export function projectEntries(base,store,{includeChildren=false,includeDeleted=
  const all=[...base,...store.additions.map(w=>({...w,matchedWorkId:w.id,year:w.firstYear,status:'manual-basic'})),...snapshots];
  const identities=new Map();
  for(const w of all){
-  const key=workKey(w),r=own(store.records,key)?store.records[key]:{},v=r.values||valuesOf(w);
+  const key=workKey(w),r=own(store.records,key)?store.records[key]:{};
+  const v=r.values?{...valuesOf(w),...r.values}:valuesOf(w);
+  if(r.values&&r.identity){
+   const original=valuesOf(r.identity),current=valuesOf(w);
+   for(const field of fields)if(JSON.stringify(r.values[field])===JSON.stringify(original[field])){
+    if(own(current,field))v[field]=current[field];else delete v[field];
+   }
+  }
+  if(w.formalTitle)v.title=resolveBasicTitle(r,w.formalTitle,w.formalOverride,w.formalAt,v.title);
   const row={...w,...v,...r.style,aliases:[...new Set([...(w.aliases||[]),...(r.aliases||[])])],year:v.firstYear,
    _key:key,_deleted:!!r.deleted,parentId:r.parentId||null,relation:r.relation||null};
   if(identities.has(key)){
@@ -118,7 +130,7 @@ export function applyChange(store,base,action,meta){
  const next=clone(store),all=projectEntries(base,store,{includeChildren:true}),byId=new Map(all.map(w=>[w._key,w]));
  const touched=new Set(),added=[];
  const record=id=>{if(!byId.has(id))throw Error('作品不存在或已删除');touched.add(id);if(!own(next.records,id))Object.defineProperty(next.records,id,{value:{},enumerable:true,writable:true,configurable:true});const r=next.records[id];if(!r.identity){const old=byId.get(id);r.identity={id,indexId:old.indexId||old.id,aliases:old.aliases||[],...valuesOf(old),mainPlacement:old.status==='new-basic'?'identity-review':old.mainPlacement||old.status||'identity-review'};}return r;};
- if(action.type==='edit'){validateValues(action.values);const old=byId.get(action.id);if(!old)throw Error('作品不存在');const v=clone(action.values);const aliases=[...new Set([...(old.aliases||[]),...(next.records[action.id]?.aliases||[]),old.title])].filter(t=>t!==v.title);const r=record(action.id);Object.assign(r,{values:v,aliases});delete r.style;}
+ if(action.type==='edit'){validateValues(action.values);const old=byId.get(action.id);if(!old)throw Error('作品不存在');const v=clone(action.values);const aliases=[...new Set([...(old.aliases||[]),...(next.records[action.id]?.aliases||[]),old.title])].filter(t=>t!==v.title);const r=record(action.id);const oldValues=valuesOf(old);for(const field of fields)if(meta.id&&Number.isFinite(Date.parse(meta.at))&&JSON.stringify(oldValues[field])!==JSON.stringify(v[field])){r.fieldMeta||={};r.fieldMeta[field]={id:meta.id,at:meta.at};}Object.assign(r,{values:v,aliases});delete r.style;}
  else if(action.type==='style-update'){
   const {updates}=planStyleUpdates(all,action.rows);
   for(const update of updates)record(update.id).style=update.style;

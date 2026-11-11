@@ -1,4 +1,8 @@
 """Two independent catalog layers: broad basic identities and evidence-linked curation."""
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[1] / 'scripts'))
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json
 import unittest
 from pathlib import Path
@@ -6,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 def load(path):
-    return json.loads((ROOT / path).read_text(encoding="utf-8"))
+    return read_registry_json(ROOT / path)
 
 class TwoTierNarrativeLibraryTests(unittest.TestCase):
     @classmethod

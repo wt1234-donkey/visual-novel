@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Two 500-work batches from IFDB and reviewed PC-98 catalogues; no VNDB/NextMoe requests."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 from collections import Counter, defaultdict
 import copy
@@ -418,7 +419,7 @@ def main():
                 'PC-98 catalogue rows are not independent works. Only the named primary-supported review is admitted; platform ports, compilations and unresolved dates remain held.']})
         save(audit_path(number), a)
         position = review['nextPosition']
-    REPORT.write_text(report_text())
+    write_registry_text(REPORT, report_text())
     check()
 
 

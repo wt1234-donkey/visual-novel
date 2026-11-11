@@ -4,9 +4,9 @@ const directory='data/basic-web/';
 export {compareBasicOrder,normalizeBasicQuery} from './src/domain/catalogue/order.mjs';
 
 export function unpackBasicIndex({rows,groups,gameplay,statuses}){
- return rows.map(([id,matchedWorkId,title,year,group,play,status,aliases,otherGroups,plotStyles,plotTags,gameplayTags],slot)=>({
+ return rows.map(([id,matchedWorkId,title,year,group,play,status,aliases,otherGroups,plotStyles,plotTags,gameplayTags,formal],slot)=>({
   id,matchedWorkId,title,year,group:groups[group],gameplay:gameplay[play],status:statuses[status],
-  ...(aliases?{aliases}:{}),...(otherGroups?{groups:otherGroups.map(i=>groups[i])}:{}),
+  ...(formal?{formalTitle:formal.title,formalOverride:formal.override,formalAt:formal.at}:{}),...(aliases?{aliases}:{}),...(otherGroups?{groups:otherGroups.map(i=>groups[i])}:{}),
   ...(plotStyles?{plotStyles}:{}),...(plotTags?{plotTags}:{}),...(gameplayTags?{gameplayTags}:{}),slot
  }));
 }

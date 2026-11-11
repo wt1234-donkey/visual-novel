@@ -3,7 +3,7 @@ import {emptyStore} from '../../domain/catalogue/model.mjs';
 import {workKey,nameKey} from '../../domain/catalogue/identity.mjs';
 import {compareBasicOrder} from '../../domain/catalogue/order.mjs';
 import {createCatalogueView} from './view.mjs';
-import {projectWork} from '../../../work-edit-model.mjs';
+import {buildEffectiveCatalogue,projectBasicSources} from '../../domain/catalogue/effective.mjs';
 
 export function assembleBasicRows(registry,initial,batches){
  const byIndex=new Map();
@@ -62,10 +62,13 @@ export function assembleBasicRows(registry,initial,batches){
 
 // One pure input-to-snapshot boundary. I/O and index compression are adapters.
 export function buildCatalogueSnapshot({registry, initial = [], batches = [], store = emptyStore(), main = {works:[]}, supplement = {works:[]}, history = {records:{}}}, {strict = true} = {}) {
- const sourceRows = assembleBasicRows(registry, initial, batches);
+ const formalLinks=Object.fromEntries(registry.works.filter(w=>w.linkedRecordId).map(w=>[w.id,w.linkedRecordId]));
+ const effective=buildEffectiveCatalogue({main,supplement,history,basicStore:store,formalLinks});
+ const formalById=new Map([...effective.supplement.works,...effective.main.works].map(w=>[w.id,w]));
+ const formalSource=buildEffectiveCatalogue({main,supplement,history});
+ const sourceRows = projectBasicSources(assembleBasicRows(registry, initial, batches),new Map([...formalSource.supplement.works,...formalSource.main.works].map(w=>[w.id,w])),formalLinks);
  const view = createCatalogueView(sourceRows, store, {strict, includeIdentities:true});
  const identities = view.identities;
- const formalById = new Map([...supplement.works, ...main.works].map(work => [work.id, projectWork(work, history)]));
  const formalIdByWorkId = new Map();
  for (const row of view.all) {
   const formalId = row.linkedRecordId || (formalById.has(row._key) ? row._key : null);

@@ -1,4 +1,8 @@
 """Regression checks for second review of last 20 isolated identities."""
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[1] / 'scripts'))
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json
 from pathlib import Path
 import sys
@@ -11,7 +15,7 @@ import import_basic_r22_cont_r23_20261101 as src
 class Last20ReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.audit=json.loads(review.OUT.read_text(encoding='utf-8'))
+        cls.audit=read_registry_json(review.OUT)
 
     def test_exact_twenty_with_evidence(self):
         self.assertEqual(self.audit['summary'],{
@@ -24,7 +28,7 @@ class Last20ReviewTests(unittest.TestCase):
         review.check()
 
     def test_no_false_1982_new_work(self):
-        reg=json.loads(src.REG.read_text(encoding='utf-8'))
+        reg=read_registry_json(src.REG)
         refs=src.identity_map(reg)
         self.assertEqual(review.identity_decisions.reviewed_identity_targets(reg,refs['ifdb:x7cvej7bm7ixiz0a']),{'ai-earthquake'})
         self.assertNotIn('ifdb-x7cvej7bm7ixiz0a',{w['id'] for w in reg['works']})
@@ -32,7 +36,7 @@ class Last20ReviewTests(unittest.TestCase):
     def test_shipwreck_is_distinct_from_1986_work(self):
         self.assertEqual([d['sourceIdentity'] for d in self.audit['decisions']
           if d['status']=='held'],[])
-        reg=json.loads(src.REG.read_text(encoding='utf-8'))
+        reg=read_registry_json(src.REG)
         works={w['id']:w for w in reg['works']}
         self.assertEqual(works['ifdb-iq9wxtd9a7vpcy2g']['firstYear'],1987)
         self.assertEqual(works['ifdb-1j9p7lpcoj2sf05i']['firstYear'],1986)

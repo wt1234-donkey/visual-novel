@@ -33,7 +33,7 @@ export function createCatalogueService({base,initial,repository,prepareBase,load
   preview(action){
    // A preview validates against current data without creating a real operation
    // or appending an audit entry to the active snapshot.
-   return applyChange(catalogueState(snapshot.store),base,action,{actor:'preview',reason:'预览',expectedRevision:snapshot.store.revision});
+   return applyChange(catalogueState(snapshot.store),base,action,{id:'preview',at:new Date().toISOString(),actor:'preview',reason:'预览',expectedRevision:snapshot.store.revision});
   },
   async history(options){
    if(snapshot.store.schemaVersion===3){

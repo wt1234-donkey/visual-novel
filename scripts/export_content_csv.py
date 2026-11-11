@@ -1,3 +1,4 @@
+from effective_catalogue import load_effective, effective_title
 """Export one row per content identity, never one row per platform."""
 import csv
 import json
@@ -11,7 +12,7 @@ def content_rows(data):
     for content in data['contentVersions']:
         yield {
             '作品ID': content['workId'], '内容版本ID': content['id'],
-            '作品名称': works[content['workId']].get('chineseTitle') or works[content['workId']]['title'],
+            '作品名称': effective_title(works[content['workId']]),
             '互动方式（作品概览）': '、'.join(works[content['workId']]['interactionModes']),
             '内容名称': content['label'], '内容首次年份': content['firstYear'],
             '收录依据': '原作／首批内容' if content['basis'] == 'original' else '新增内容',
@@ -34,9 +35,9 @@ def csv_text(rows):
 
 
 if __name__ == '__main__':
-    data = json.loads((ROOT / 'data/games.json').read_text())
+    data = load_effective(ROOT)['main']
     (ROOT / 'data/content-versions.csv').write_text(csv_text(content_rows(data)), encoding='utf-8-sig')
-    coverage = json.loads((ROOT / 'data/company-coverage.json').read_text())
+    coverage = load_effective(ROOT)['coverage']
     review = []
     for scope, releases in [('主库', data['platformReleases']), *[(company['id'], [r for work in company.get('relatedGames', []) for r in work['platformReleases']]) for company in coverage['companies']]]:
         for r in releases:

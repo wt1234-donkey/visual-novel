@@ -128,10 +128,10 @@ async function start(){
    }
    try{
      const latest=await readLatestBasicStore(
-      async()=> (await createBasicRepository().read()).store,
+      async()=> (await createBasicRepository('',fetch,{sourceLease:manifest.sourceLease}).read()).store,
       async()=> (await createBasicRepository().readPublished()).store
      );
-     editor=createBasicEditor(baseEntries,latest.store,refreshManaged,loadDetails);
+     editor=createBasicEditor(baseEntries,latest.store,refreshManaged,loadDetails,{sourceLease:manifest.sourceLease});
      for(const id of ['basic-add','basic-import','basic-clear','basic-connection','basic-style-csv','basic-style-review'])$(id).disabled=false;
      $('basic-add').addEventListener('click',()=>editor.add());
      $('basic-import').addEventListener('click',()=>editor.importWindow());

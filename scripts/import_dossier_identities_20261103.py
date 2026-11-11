@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Register identities explicitly present in dossier work lists; hold uncertain matches."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json,re,unicodedata,hashlib,collections,datetime
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
-def load(n):return json.loads((R/n).read_text(encoding='utf8'))
+def load(n):return read_registry_json(R/n)
 def norm(s):return ''.join(c for c in unicodedata.normalize('NFKC',str(s or '')).casefold() if c.isalnum())
 def names(w):
  vals=[w.get('title'),w.get('originalTitle'),w.get('chineseTitle'),*(w.get('titleAliases') or []),*(w.get('aliases') or [])];out=[]
@@ -64,5 +65,5 @@ reg['summary']['candidates']+=len(added);reg['summary']['accepted']+=len(added);
 reg['batches'].append({'id':'dossier-identity-link-20261103','source':'data/company-coverage.json, data/games.json','review':'data/dossier-basic-identity-audit-20261103.json','summary':{'candidates':len(added),'sourceWorkIds':len(objs),'existing-complete':nmain,'promoted-dossier':ndoc,'name-or-id-hits':len(existing),'held':len(held)}})
 assert len({w['id'] for w in reg['works']})==len(reg['works']);assert len({w['indexId'] for w in reg['works']})==len(reg['works']);assert reg['summary']['accepted']==len(reg['works'])
 audit={'schema':1,'baseCommit':'5c30913de8b656a7d534d54d731e08a4c5d52594','source':'data/company-coverage.json + data/games.json','scope':'专题明确作品列表；entries目录项目未自动视作作品。名称命中为待核候选，未自动合并。','rawReferences':dict(raw),'summary':{'uniqueDossierIds':len(objs),'before':before,'newIdentityLinks':len(added),'existingComplete':nmain,'promotedDossier':ndoc,'nameOrIdHits':len(existing),'held':len(held),'after':len(reg['works'])},'added':[{'id':x['id'],'title':x['title'],'year':x['firstYear'],'source':x['source'],'placement':x['mainPlacement']} for x in added],'matchedOrHeld':existing+held}
-for path,obj in [('data/main-adv-rpg-works-20261031.json',reg),('data/dossier-basic-identity-audit-20261103.json',audit)]: (R/path).write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+for path,obj in [('data/main-adv-rpg-works-20261031.json',reg),('data/dossier-basic-identity-audit-20261103.json',audit)]: write_registry_text(R/path, json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps(audit['summary'],ensure_ascii=False));print(collections.Counter(x['status'] for x in held))
