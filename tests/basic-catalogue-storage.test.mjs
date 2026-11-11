@@ -28,6 +28,8 @@ test('split migration preserves the reviewed checkpoint, current state and short
  assert.equal(migrateBasicStorage(root,{write:true}).changed,false);
  const restored=saveBasicStoreSync(root,undoLast(current,current.revision,meta(current)));
  assert.deepEqual(restored.records,{});assert.equal(readBasicJournalSync(root).journal.events.length,2);
+ const legacy=fixture(t,emptyStore());assert.equal(migrateBasicStorage(legacy).schemaVersion,1);
+ assert.equal(migrateBasicStorage(legacy,{write:true}).schemaVersion,3);
 });
 
 test('many operations are bounded by event count and preserve a complete replay',t=>{
