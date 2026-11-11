@@ -65,6 +65,11 @@ test('unsaved actual edit form restores only changed fields and excludes credent
   assert.equal(await page.locator('#be-edit [name=title]').inputValue(),'Recovered title');assert.equal(await page.locator('#be-token').inputValue(),'');
   assert.equal(await page.locator('#be-edit [name=source]').inputValue(),'https://example.org/b/w0');
   assert.equal(await page.getByLabel('我已核对当前来源与恢复的输入').isChecked(),false);assert.equal(f.api.calls.filter(call=>call.method==='POST').length,0);
+  const submitReachesForm=()=>page.locator('#be-edit').evaluate(form=>{let reached=false;form.addEventListener('submit',()=>{reached=true;},{once:true});form.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}));return reached;});
+  assert.equal(await submitReachesForm(),false,'unreviewed recovered input cannot be submitted');
+  await page.getByRole('button',{name:'关闭窗口'}).click();await page.locator('[data-edit="w0"]').click();
+  assert.equal(await submitReachesForm(),true,'closing the recovered form removes its review gate');
+  assert.equal(f.api.calls.filter(call=>call.method==='POST').length,0);
  }finally{await f.close();}
 });
 test('storage failure leaves the original edit input in place and stops navigation',async()=>{

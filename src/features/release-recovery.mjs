@@ -81,7 +81,7 @@ export async function restoreReleaseState(){
    const review=document.createElement('fieldset'),legend=document.createElement('legend'),pre=document.createElement('pre'),label=document.createElement('label'),check=document.createElement('input');
    legend.textContent='恢复草稿：核对当前值与原输入';pre.textContent=JSON.stringify(changes,null,2);pre.style.cssText='white-space:pre-wrap;max-height:180px;overflow:auto';check.type='checkbox';check.required=true;
    label.append(check,document.createTextNode('我已核对当前来源与恢复的输入'));review.append(legend,pre,label);form.prepend(review);
-   container.addEventListener('submit',event=>{if(!check.checked){event.preventDefault();event.stopImmediatePropagation();check.reportValidity();}},{capture:true});
+   container.addEventListener('submit',event=>{if(container.contains(review)&&!check.checked){event.preventDefault();event.stopImmediatePropagation();check.reportValidity();}},{capture:true});
   }
   sessionStorage.removeItem(KEY);banner('已恢复到新发布，查询与选择已保留。'+(payload.drafts?.length?'恢复的编辑草稿需核对后保存。':''));
  }catch(error){banner('恢复草稿仍保留：'+error.message+'。请导出核对，当前输入不会自动提交。');const button=document.createElement('button');button.textContent='导出恢复草稿';button.addEventListener('click',()=>exportRecovery(payload));document.getElementById('catalogue-recovery').append(button);}
