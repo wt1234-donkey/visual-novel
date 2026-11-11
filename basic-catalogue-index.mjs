@@ -1,4 +1,5 @@
 // Browser index format. The release ID in each path binds details to their index.
+import {catalogueState} from './src/domain/catalogue/journal.mjs';
 const directory='data/basic-web/';
 export {compareBasicOrder,normalizeBasicQuery} from './src/domain/catalogue/order.mjs';
 
@@ -144,7 +145,7 @@ export function createCatalogueWorker(){
  }
  return async payload=>{
   if(failed||typeof Worker==='undefined')return null;
-  try{return await workerSearch(payload);}
+  try{return await workerSearch(payload.kind==='basic'?{...payload,store:catalogueState(payload.store)}:payload);}
   catch{failed=true;return null;}
  };
 }

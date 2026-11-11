@@ -7,6 +7,7 @@ import shutil
 import subprocess
 from collections import Counter
 from pathlib import Path
+from version_browser_modules import version_modules
 
 ROOT=Path(__file__).resolve().parents[1]
 REGISTRY='data/main-adv-rpg-works-20261031.json'
@@ -36,6 +37,7 @@ def build(root,output,revision=None):
     revision=revision or subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
     if 'scripts/build_basic_web_index.mjs' in paths:
         subprocess.run(['node',str(root/'scripts/build_basic_web_index.mjs'),str(root),str(output),revision],check=True)
+    versioned_modules=version_modules(output,revision)
     manifest={
         'schema':1,
         'revision':revision,
@@ -44,6 +46,7 @@ def build(root,output,revision=None):
         'basicWorkCount':len(works),
         'batchCounts':dict(sorted(Counter(w.get('batch','historical') for w in works).items())),
         'trackedFileCount':len(paths),
+        'versionedBrowserFiles':versioned_modules,
     }
     (output/'deployment.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     if (output/REGISTRY).read_bytes()!=registry_bytes or not (output/'index.html').is_file():

@@ -1,4 +1,5 @@
-import {applyChange, undoLast, projectEntries, valuesOf, reconcileBasicEdit, validateStore} from '../../domain/catalogue/model.mjs';
+import {applyChange, undoLast, projectEntries, valuesOf, reconcileBasicEdit, validateStore, upgradeStore} from '../../domain/catalogue/model.mjs';
+import {journalKey} from '../../domain/catalogue/journal.mjs';
 import {createCatalogueView} from './view.mjs';
 
 const same = (a, b) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
@@ -28,25 +29,36 @@ export function rebaseBasicCommand(base, opened, latest, action, undo = false) {
 export async function commitBasicCommand({repository, snapshot, base, action, meta, undo = false}) {
  const opened = structuredClone(validateStore(snapshot.store));
  const original = structuredClone(action), operation = structuredClone(meta);
+ const intent = undo ? {type:'undo',targetId:opened.recent.at(-1)?.id} : original;
+ const applied = store => {
+  const event=store.journal?.events.find(event=>event.id===operation.id);
+  if(!event)return false;
+  if(event.actor!==operation.actor||event.reason!==operation.reason||journalKey(event.intent)!==journalKey(intent))throw conflict('操作ID已用于其他修改');
+  return true;
+ };
  // At most one CAS retry, always planned from the original form and baseline.
  // A transport error is verified remotely, never blindly sent twice.
  for (let attempt = 0; attempt < 2; attempt++) {
   const live = await repository.read();
   validateStore(live.store);
   if (!live.sha) throw Error('请先读取最新修改记录后保存');
+  if(applied(live.store))return {...live,result:{sha:live.sha,alreadyApplied:true}};
   const command = rebaseBasicCommand(base, opened, live.store, original, undo);
-  const next = undo ? undoLast(live.store, live.store.revision) : applyChange(live.store, base, command, {...operation, expectedRevision:live.store.revision});
+  const current=upgradeStore(live.store), metadata={...operation,intent,expectedRevision:current.revision};
+  const next = undo ? undoLast(current, current.revision, metadata) : applyChange(current, base, command, metadata);
   createCatalogueView(base, next, {strict:true});
   let result;
   try {
    result = await repository.write(next, live.sha, 'Basic catalogue: ' + operation.reason.slice(0, 100));
   } catch (error) {
    if (error.code === 'CONFLICT' && attempt === 0) continue;
-   if (error.status) throw error;
+   if (error.status && error.status < 500) throw error;
    try {
     const actual = await repository.read();
-    if (!same(actual.store, next)) throw error;
+    validateStore(actual.store);
+    if (!applied(actual.store)) throw error;
     result = {sha:actual.sha, verifiedAfterError:true};
+    return {...actual,result};
    } catch { throw error; }
   }
   return {store:next, sha:result.sha, result};

@@ -93,7 +93,7 @@ export function applyEditorialBatch(batch,dir=root){
    if(p.change.expectedRevision!==revision)checkStaleBasicEdit(dir,p,action,current,history);
    if(action.type==='undo'){
     if(basic.length>1)fail('基础库回撤须单独发布');
-    basicResult=undoLast(basicResult,revision);continue;
+    basicResult=undoLast(basicResult,revision,{id:p.id,at:time,actor:'编目审核台',reason:p.reason});continue;
    }
    const next=applyChange(basicResult,base,action,{expectedRevision:basicResult.revision,id:p.id,at:time,actor:'编目审核台',reason:p.reason});
    const event=next.recent.at(-1);
