@@ -33,7 +33,7 @@ test('basic catalogue year filter combines with search and resets pagination', a
   };
   const context=vm.createContext({...basicFilters,queryCatalogueRows,setupCombinedControls,compileCombinedSearch,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>null,
-    readLatestBasicStore,createEditClient:()=>({read:async()=>({store:emptyStore()})}),
+    readLatestBasicStore,createBasicRepository:()=>({read:async()=>({store:emptyStore()})}),
     createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
     fetch:async path=>({ok:true,json:async()=>path.includes('basic-catalogue-edits')?emptyStore():{schemaVersion:1,entries:[]}})});
   await vm.runInContext((await readFile(new URL('../minimal-adv-rpg.mjs',import.meta.url),'utf8')).replace(/^import .*;$/gm,''),context);

@@ -7,6 +7,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {EDITORIAL_LIMIT,EDITORIAL_BATCH_LIMIT,editorialId,validateProposal} from '../editorial-proposal.mjs';
 import {applyChange,undoLast,validateStore} from '../basic-catalogue-model.mjs';
 import {saveEdit,undoEdit,projectWork,validateHistory} from '../work-edit-model.mjs';
+import {readBasicStoreSync,saveBasicStoreSync} from '../src/infrastructure/filesystem/basic-store.mjs';
 import {assembleBasicRows} from './build_basic_web_index.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
@@ -85,7 +86,7 @@ export function applyEditorialBatch(batch,dir=root){
  const basic=proposals.filter(p=>p.kind==='basic'),formal=proposals.filter(p=>p.kind==='work');
  let basicResult,workResult;
  if(basic.length){
-  basicResult=validateStore(read(dir,baseFile));
+  basicResult=readBasicStoreSync(dir);
   const current=basicResult,revision=current.revision;
   const base=catalogueRows(dir),touched=new Set(),history=new Map();
   for(const p of basic){
@@ -127,7 +128,7 @@ export function applyEditorialBatch(batch,dir=root){
    }
   }finally{rmSync(scratch,{recursive:true,force:true});}
  }
- if(basicResult)save(dir,baseFile,basicResult);
+ if(basicResult)saveBasicStoreSync(dir,basicResult);
  if(workResult)save(dir,workFile,workResult);
  ledger.batches.push({id:batch.id,proposals:ids,at:time});
  save(dir,ledgerFile,ledger);

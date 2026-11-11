@@ -1,6 +1,6 @@
 import {normalizeFilterText,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayOptions,gameplayDisplay,styleState,styleLabels,styleDimension,STYLE_DIMENSIONS,styleOptions,MISSING_STYLE,pageIndex,basicFilterRows} from './basic-catalogue-filters.mjs?v=20261111-architecture';
 import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261111-architecture';
-import {createEditClient} from './work-edit-api.mjs?v=20261110-direct-save';
+import {createBasicRepository} from './src/infrastructure/github/basic-repository.mjs';
 import {readLatestBasicStore} from './basic-catalogue-live.mjs?v=20261110-direct-save';
 import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261111-architecture';
 import {compareBasicOrder,createBasicWebIndex,createCatalogueWorker,withBasicDetails} from './basic-catalogue-index.mjs?v=20261111-architecture';
@@ -128,8 +128,8 @@ async function start(){
    }
    try{
      const latest=await readLatestBasicStore(
-      async()=> (await createEditClient('',fetch,{historyPath:'data/basic-catalogue-edits.json',validate:validateStore}).read()).store,
-      async()=>{const res=await fetch('data/basic-catalogue-edits.json',{cache:'no-store'});if(!res.ok)throw Error('修改记录 HTTP '+res.status);return validateStore(await res.json());}
+      async()=> (await createBasicRepository().read()).store,
+      async()=> (await createBasicRepository().readPublished()).store
      );
      editor=createBasicEditor(baseEntries,latest.store,refreshManaged,loadDetails);
      for(const id of ['basic-add','basic-import','basic-clear','basic-connection','basic-style-csv','basic-style-review'])$(id).disabled=false;

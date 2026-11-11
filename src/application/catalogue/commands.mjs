@@ -30,8 +30,10 @@ export async function commitBasicCommand({repository, snapshot, base, action, me
  const opened = structuredClone(validateStore(snapshot.store));
  const original = structuredClone(action), operation = structuredClone(meta);
  const intent = undo ? {type:'undo',targetId:opened.recent.at(-1)?.id} : original;
- const applied = store => {
-  const event=store.journal?.events.find(event=>event.id===operation.id);
+ const applied = async snapshot => {
+  const store=snapshot.store;
+  if(store.schemaVersion===3&&typeof repository.findOperation!=='function')throw Error('事务仓储不支持操作核验');
+  const event=store.schemaVersion===3?await repository.findOperation(snapshot,operation.id):store.journal?.events.find(event=>event.id===operation.id);
   if(!event)return false;
   if(event.actor!==operation.actor||event.reason!==operation.reason||journalKey(event.intent)!==journalKey(intent))throw conflict('操作ID已用于其他修改');
   return true;
@@ -42,7 +44,7 @@ export async function commitBasicCommand({repository, snapshot, base, action, me
   const live = await repository.read();
   validateStore(live.store);
   if (!live.sha) throw Error('请先读取最新修改记录后保存');
-  if(applied(live.store))return {...live,result:{sha:live.sha,alreadyApplied:true}};
+  if(await applied(live))return {...live,result:{sha:live.sha,alreadyApplied:true}};
   const command = rebaseBasicCommand(base, opened, live.store, original, undo);
   const current=upgradeStore(live.store), metadata={...operation,intent,expectedRevision:current.revision};
   const next = undo ? undoLast(current, current.revision, metadata) : applyChange(current, base, command, metadata);
@@ -56,11 +58,12 @@ export async function commitBasicCommand({repository, snapshot, base, action, me
    try {
     const actual = await repository.read();
     validateStore(actual.store);
-    if (!applied(actual.store)) throw error;
+    if (!await applied(actual)) throw error;
     result = {sha:actual.sha, verifiedAfterError:true};
     return {...actual,result};
    } catch { throw error; }
   }
-  return {store:next, sha:result.sha, result};
+  const {store:written,...receipt}=result;
+  return {store:written||next, sha:receipt.sha, result:receipt};
  }
 }
