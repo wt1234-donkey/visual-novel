@@ -1,19 +1,20 @@
-import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261110-flex-tags';
-import {createEditClient,TOKEN_SETUP_URL} from './work-edit-api.mjs?v=20261104-permissions';
-import {validateStore,valuesOf,applyChange,undoLast,projectEntries,versionGroup,parseImport,workKey,reconcileBasicEdit} from './basic-catalogue-model.mjs?v=20261110-version-groups';
-import {styleName,styleState,styleLabels,styleEvidenceEntries,packStyleEvidence} from './basic-style-tags.mjs?v=20261110-flex-tags';
-import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} from './basic-style-workbench.mjs?v=20261110-flex-tags';
-import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
+import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261111-architecture';
+import {createBasicRepository,TOKEN_SETUP_URL} from './src/infrastructure/github/basic-repository.mjs';
+import {commitBasicCommand} from './src/application/catalogue/commands.mjs';
+import {createCatalogueView} from './src/application/catalogue/view.mjs';
+import {validateStore,valuesOf,applyChange,versionGroup,parseImport,workKey,reconcileBasicEdit} from './basic-catalogue-model.mjs?v=20261111-architecture';
+import {styleName,styleState,styleLabels,styleEvidenceEntries,packStyleEvidence} from './basic-style-tags.mjs?v=20261111-architecture';
+import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} from './basic-style-workbench.mjs?v=20261111-architecture';
+import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261111-architecture';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const HISTORY='data/basic-catalogue-edits.json';
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
 export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map()){
- let snapshot={store:validateStore(initial),sha:null},actor='',busy=false,pendingImport=null,returnFocus=null,entries=[],editBaseline=null;
- const clientFor=token=>createEditClient(token,fetch,{historyPath:HISTORY,validate:validateStore});let client=clientFor('');
+ let snapshot={store:validateStore(initial),sha:null},actor='',busy=false,pendingImport=null,returnFocus=null,entries=[],catalogueView,editBaseline=null;
+ const clientFor=token=>createBasicRepository(token);let client=clientFor('');
  const dialog=document.createElement('dialog');dialog.id='basic-editor';document.body.append(dialog);
  const $=s=>dialog.querySelector(s);
  const all=()=>entries;
- const get=id=>entries.find(w=>w._key===id);
+ const get=id=>catalogueView.byId.get(id);
  async function hydrate(rows){
   const details=await loadDetails(rows);
   return rows.map(row=>withBasicDetails(row,details.get(row.slot),snapshot.store));
@@ -28,8 +29,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   return base.map(row=>details.has(row.slot)?{...row,...details.get(row.slot)}:row);
  }
  function update(){
-  entries=projectEntries(base,snapshot.store,{includeChildren:true});
-  onChange(entries.filter(w=>!w.parentId),entries,snapshot.store);document.getElementById('basic-connection').textContent=actor?'直接保存已连接 · '+actor:'连接 GitHub 直接保存';}
+  catalogueView=createCatalogueView(base,snapshot.store);
+  entries=catalogueView.all;
+  onChange(catalogueView.entries,entries,snapshot.store,catalogueView);document.getElementById('basic-connection').textContent=actor?'直接保存已连接 · '+actor:'连接 GitHub 直接保存';}
  function message(s,error=false){$('#be-message').textContent=s;$('#be-message').className='be-message'+(error?' error':'');}
  function close(){if(!busy){dialog.close();returnFocus?.focus();}}
  function shell(title,body){
@@ -53,23 +55,19 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    }
    const meta={id:randomId(),at:new Date().toISOString(),actor,reason,expectedRevision:snapshot.store.revision};
    lock(true);message('正在核验并直接保存到 GitHub…');
-   const next=undo?undoLast(snapshot.store,snapshot.store.revision):applyChange(snapshot.store,await prepareBase(action),action,meta);
-   const live=await client.read();if(JSON.stringify(live.store)!==JSON.stringify(snapshot.store))throw Error('基础库已在其他页面修改。请先“重新读取网站修改”，再核对并保存；当前输入仍保留');
-   let result;
-   try{result=await client.write(next,live.sha,'Basic catalogue: '+reason.slice(0,100));}
-   catch(error){if(error.status)throw error;try{const actual=await client.read();if(JSON.stringify(actual.store)!==JSON.stringify(next))throw error;result={sha:actual.sha};}catch{throw error;}}
-   snapshot={store:next,sha:result.sha};update();message('已提交 GitHub 主分支，当前页面数据已更新。Pages 公开网站须在 Actions 构建和部署成功后才更新；请核对发布状态。');return true;
+   snapshot=await commitBasicCommand({repository:client,snapshot,base:undo?base:await prepareBase(action),action,meta,undo});
+   update();message('已提交 GitHub 主分支，当前页面数据已更新。Pages 公开网站须在 Actions 构建和部署成功后才更新；请核对发布状态。');return true;
   }catch(e){message(e.message,true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
  async function edit(id=null){
   let w=id?get(id):null;
-  if(id&&!w)return;
+  if(id&&!w)return false;
   if(w&&Number.isInteger(w.slot)){
    shell('读取作品详情', '<p>正在读取该作品的资料…</p>');
    lock(true);
    try{[w]=await hydrate([w]);}
-   catch(error){message(error.message,true);return;}
+   catch(error){message('作品详情读取失败：'+error.message,true);return false;}
    finally{lock(false);}
   }
   const v=w?valuesOf(w):{title:'',firstYear:null,group:'',gameplay:'',plotStyles:[],source:''};
@@ -92,6 +90,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    ${w?.parentId?`<p class="minor">所属主作品：${safe(get(w.parentId)?.title||w.parentId)} · ${safe(w.relation?.label)} · ${safe(w.relation?.note||'内容关系待核')}</p>`:''}
    ${children.length?'<h3>关联版本（'+children.length+'）</h3><ul class="be-version-list">'+children.map(c=>`<li><button type="button" data-edit="${safe(c._key)}">${safe(c.title)}</button> <span class="minor">${c.year??'年份待核'} · ${safe(c.relation?.label)} · ${safe(({unverified:'内容关系待核',same:'同内容版本',added:'新增内容版本'})[c.relation?.type])}</span>${c.relation?.note?'<p>'+safe(c.relation.note)+'</p>':''}</li>`).join('')+'</ul>':''}`);
   editBaseline={id:id||'',revision:snapshot.store.revision,values:structuredClone(v)};
+  return true;
  }
 
  const versionRelationLabels={unverified:'内容关系待核',same:'已核实：相同内容',added:'已核实：新增内容'};
@@ -161,11 +160,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    }
    const saved=await commit(id?{type:'edit',id,values:v}:{type:'add',works:[{id:'manual-'+randomId(),...v}]},String(f.get('reason')));
    if(saved&&id){
-    await edit(id);
-    message('最新作品资料已显示。已提交 GitHub；Pages 发布状态仍须在 Actions 中确认。');
+    if(await edit(id))message('最新作品资料已显示。已提交 GitHub；Pages 发布状态仍须在 Actions 中确认。');
    }else if(saved&&!id&&getLastAdded(v.title)){
-    await edit(getLastAdded(v.title)._key);
-    message('新作品已保存并显示；Pages 发布状态仍须在 Actions 中确认。');
+    if(await edit(getLastAdded(v.title)._key))message('新作品已保存并显示；Pages 发布状态仍须在 Actions 中确认。');
    }
   }else if(form.id==='be-merge'){
    const mainId=String(f.get('mainId')),ids=JSON.parse(f.get('ids')).filter(id=>id!==mainId);

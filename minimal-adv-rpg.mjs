@@ -1,11 +1,12 @@
-import {normalizeFilterText,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayOptions,gameplayDisplay,styleState,styleLabels,styleDimension,STYLE_DIMENSIONS,styleOptions,MISSING_STYLE,pageIndex,basicFilterRows,matchingBasicPositions} from './basic-catalogue-filters.mjs?v=20261110-version-groups';
-import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261110-save-reconcile';
+import {normalizeFilterText,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayOptions,gameplayDisplay,styleState,styleLabels,styleDimension,STYLE_DIMENSIONS,styleOptions,MISSING_STYLE,pageIndex,basicFilterRows} from './basic-catalogue-filters.mjs?v=20261111-architecture';
+import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261111-architecture';
 import {createEditClient} from './work-edit-api.mjs?v=20261110-direct-save';
 import {readLatestBasicStore} from './basic-catalogue-live.mjs?v=20261110-direct-save';
-import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261110-version-groups';
-import {compareBasicOrder,createBasicWebIndex,createCatalogueWorker,withBasicDetails} from './basic-catalogue-index.mjs?v=20261110-version-groups';
-import {setupCombinedControls} from './basic-combined-controls.mjs?v=20261110-flex-tags';
-import {compileCombinedSearch,needsAdvancedIndex} from './basic-combined-search.mjs?v=20261110-flex-tags';
+import {workKey,validateStore} from './basic-catalogue-model.mjs?v=20261111-architecture';
+import {compareBasicOrder,createBasicWebIndex,createCatalogueWorker,withBasicDetails} from './basic-catalogue-index.mjs?v=20261111-architecture';
+import {setupCombinedControls} from './basic-combined-controls.mjs?v=20261111-architecture';
+import {needsAdvancedIndex} from './basic-combined-search.mjs?v=20261111-architecture';
+import {queryCatalogueRows} from './src/application/catalogue/query.mjs';
 const webIndex=createBasicWebIndex(),queryIndex=createCatalogueWorker();
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -44,7 +45,7 @@ async function filterAndDraw(){
  const allowed=region||query?new Set(matchingManufacturers(manufacturerIndex,{region,query}).map(item=>item.key)):null;
  const filters={q:normalizeFilterText($('q').value),group:$('group').value,status:$('status').value,year:$('year').value,allowed};
  try{
-  const groups=controls.groups(),test=groups.length?compileCombinedSearch(groups):null;
+  const groups=controls.groups();
   $('query-status').textContent=groups.length?'已应用 '+groups.length+' 组条件。':'';
   if(!groups.length&&!Object.values(filters).some(Boolean)){filtering=false;filtered=entries;page=0;render();return;}
   filtering=true;
@@ -57,7 +58,7 @@ async function filterAndDraw(){
    const advanced=needsAdvancedIndex(groups)?await webIndex.advancedRows(indexRevision):null;
    if(version!==filterVersion)return;
    filterCache??=basicFilterRows(entries,childrenByMain);
-   positions=matchingBasicPositions(filterCache,filters,test,advanced);
+   positions=queryCatalogueRows(filterCache,filters,groups,advanced);
   }
   filtering=false;
   filtered=Array.from(positions,index=>entries[index]);
@@ -156,9 +157,9 @@ function selectWorks(works){
 function refreshSelection(){
  $('basic-selected').textContent='已选择'+selection.size+'部';$('basic-merge').disabled=selection.size<2;$('basic-style-bulk').disabled=!selection.size||selection.size>500;
 }
-function refreshManaged(main,all,store){
+function refreshManaged(main,all,store,view){
  entries=main.sort(compareBasicOrder);currentStore=store;indexGeneration++;
- childrenByMain=new Map();for(const w of all)if(w.parentId){if(!childrenByMain.has(w.parentId))childrenByMain.set(w.parentId,[]);childrenByMain.get(w.parentId).push(w);}
+ childrenByMain=view?.childrenByMain||new Map();if(!view)for(const w of all)if(w.parentId){if(!childrenByMain.has(w.parentId))childrenByMain.set(w.parentId,[]);childrenByMain.get(w.parentId).push(w);}
  const ids=new Set(entries.map(workKey));for(const id of selection)if(!ids.has(id))selection.delete(id);
  $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
  $('basic-management-status').textContent='当前已载入修改记录 r'+store.revision+'；作品资料按本页最新记录显示。修改提交后请在 GitHub Actions 核对 Pages 是否部署成功。';

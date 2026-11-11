@@ -1,3 +1,4 @@
+import {queryCatalogueRows} from '../src/application/catalogue/query.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -30,7 +31,7 @@ test('basic catalogue year filter combines with search and resets pagination', a
       return gameplay.value?[[{field:'gameplay',mode:'any',values:[gameplay.value]}]]:[];
     }};
   };
-  const context=vm.createContext({...basicFilters,setupCombinedControls,compileCombinedSearch,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
+  const context=vm.createContext({...basicFilters,queryCatalogueRows,setupCombinedControls,compileCombinedSearch,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>null,
     readLatestBasicStore,createEditClient:()=>({read:async()=>({store:emptyStore()})}),
     createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
