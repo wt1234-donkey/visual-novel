@@ -1,3 +1,6 @@
+import {registerPageRecovery,restoreReleaseState} from './src/features/release-recovery.mjs';
+import './release-runtime.mjs';
+import {readReleaseJson} from './src/infrastructure/storage/release-reader.mjs';
 import {loadEffectiveCatalogue} from './src/infrastructure/storage/effective-reader.mjs';
 import {mergeFormalDatasets,displayTitle as effectiveTitle} from './src/domain/catalogue/effective.mjs';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
@@ -95,7 +98,7 @@ function readFilters(){return {...Object.fromEntries(Object.entries(fields).map(
 
 async function main(){
   try {
-    const [effective,taxonomy,catalogue,notes]=await Promise.all([loadEffectiveCatalogue(),...['taxonomy.json','entity-catalogue.json','work-notes.json'].map(async path=>{const response=await fetch('./data/'+path);if(!response.ok)throw Error(path+' HTTP '+response.status);return response.json();})]);
+    const [effective,taxonomy,catalogue,notes]=await Promise.all([loadEffectiveCatalogue(),...['taxonomy.json','entity-catalogue.json','work-notes.json'].map(path=>readReleaseJson('data/'+path))]);
     const data=mergeFormalDatasets(effective);workNotes=notes.works;
     entityIndex=createEntityIndex(data,catalogue.model,catalogue);
     const typeCounts=new Map();for(const e of catalogue.model.entities)typeCounts.set(e.type,(typeCounts.get(e.type)||0)+1);
@@ -175,7 +178,8 @@ async function main(){
       });
     }
     $('clear').addEventListener('click',()=>{for(const [key,node] of Object.entries(fields))node.value=key==='sort'?'oldest':'';$('include-affiliates').checked=false;fillSubcategories();render();fields.query.focus()});
-    render();
+    registerPageRecovery({capture:readFilters,restore:async saved=>{for(const [key,node] of Object.entries(fields))if(typeof saved[key]==='string')node.value=saved[key];$('include-affiliates').checked=!!saved.includeAffiliates;fillSubcategories();render();}});
+    render();await restoreReleaseState();
     if(/^#g\d+$/.test(location.hash))document.getElementById(location.hash.slice(1))?.scrollIntoView();
   }catch(error){$('result-count').textContent='数据加载失败';$('empty').hidden=false;$('empty').querySelector('span').textContent='请从 GitHub Pages 或本地 HTTP 服务访问；'+error.message}
 }

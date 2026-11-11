@@ -29,7 +29,7 @@ test('basic catalogue loads round three with canonical identities, aliases and d
   const rows=assembleBasicRows(registry,initial.records,[['batch2',batch2.records],['batch3',review.records]]);
   const source={meta:async()=>({basic:registry.summary}),basicRows:async()=>rows,details:async()=>new Map()};
   const setupCombinedControls=()=>({options(){},groups:()=>[]});
-  const context=vm.createContext({...basicFilters,queryCatalogueRows,setupCombinedControls,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
+  const context=vm.createContext({registerPageRecovery:()=>{},restoreReleaseState:async()=>{},readReleaseJson:async path=>(await context.fetch(path)).json(),...basicFilters,queryCatalogueRows,setupCombinedControls,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>async()=>null,
     readLatestBasicStore,createBasicRepository:()=>({read:async()=>({store:emptyStore()})}),
     createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},

@@ -1,0 +1,80 @@
+name: Deploy verified catalogue release
+run-name: ${{ github.event_name == 'workflow_dispatch' && '回退演练或发布' || '发布' }} ${{ github.event.workflow_run.head_sha || inputs.run_id }}
+on:
+  workflow_run:
+    workflows: [Publish verified static website]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful main build run ID to restore
+        required: true
+        type: string
+      dry_run:
+        description: Validate rollback without changing the live site
+        type: boolean
+        default: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: github-pages-deployment
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event != 'pull_request' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      VERIFIED_RUN: ${{ github.event.workflow_run.id || inputs.run_id }}
+      GH_TOKEN: ${{ github.token }}
+      IS_ROLLBACK: ${{ github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate trusted build and select latest release
+        id: selection
+        run: |
+          args=()
+          if [ "$IS_ROLLBACK" = true ]; then args+=(--rollback); fi
+          python3 scripts/prepare_pages_release.py --run-id "$VERIFIED_RUN" "${args[@]}"
+      - uses: actions/download-artifact@v5
+        if: steps.selection.outputs.publish == 'true'
+        with:
+          name: github-pages
+          run-id: ${{ env.VERIFIED_RUN }}
+          github-token: ${{ github.token }}
+          path: _verified
+      - name: Verify and unpack the selected artifact
+        id: verified
+        if: steps.selection.outputs.publish == 'true'
+        run: |
+          args=()
+          if [ "$IS_ROLLBACK" = true ]; then args+=(--rollback); fi
+          python3 scripts/prepare_pages_release.py --run-id "$VERIFIED_RUN" --archive _verified/artifact.tar --output _site "${args[@]}"
+      - name: Configure Pages
+        if: steps.verified.outputs.publish == 'true' && (github.event_name != 'workflow_dispatch' || !inputs.dry_run)
+        uses: actions/configure-pages@v6
+      - name: Upload selected verified artifact
+        if: steps.verified.outputs.publish == 'true' && (github.event_name != 'workflow_dispatch' || !inputs.dry_run)
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - name: Publish selected verified release
+        id: deployment
+        if: steps.verified.outputs.publish == 'true' && (github.event_name != 'workflow_dispatch' || !inputs.dry_run)
+        uses: actions/deploy-pages@v5

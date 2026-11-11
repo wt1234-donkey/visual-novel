@@ -31,7 +31,7 @@ test('basic catalogue year filter combines with search and resets pagination', a
       return gameplay.value?[[{field:'gameplay',mode:'any',values:[gameplay.value]}]]:[];
     }};
   };
-  const context=vm.createContext({...basicFilters,queryCatalogueRows,setupCombinedControls,compileCombinedSearch,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
+  const context=vm.createContext({registerPageRecovery:()=>{},restoreReleaseState:async()=>{},readReleaseJson:async path=>(await context.fetch(path)).json(),...basicFilters,queryCatalogueRows,setupCombinedControls,compileCombinedSearch,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>null,
     readLatestBasicStore,createBasicRepository:()=>({read:async()=>({store:emptyStore()})}),
     createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},

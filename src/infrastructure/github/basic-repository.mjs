@@ -10,7 +10,7 @@ export {TOKEN_SETUP_URL} from './contents-repository.mjs';
 const PATH='data/basic-catalogue-edits.json',REPO=EDIT_REPOSITORY;
 const conflict=()=>Object.assign(Error('数据库已变化或写入冲突；本次没有覆盖其他修改'),{code:'CONFLICT',status:409});
 export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=null}={}) {
- const client=createEditClient(token,fetcher,{historyPath:PATH,validate:validateStore});
+ const client=createEditClient(token,fetcher,{historyPath:PATH,validate:validateStore,sourceLease});
  const request=client.gitRequest,cache=new Map();
  const guard=createSourceGuard(request,REPO);
  async function snapshotAt(head){

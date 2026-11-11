@@ -1,3 +1,6 @@
+import {registerPageRecovery,restoreReleaseState} from './src/features/release-recovery.mjs';
+import './release-runtime.mjs';
+import {readReleaseJson} from './src/infrastructure/storage/release-reader.mjs';
 import {loadEffectiveCatalogue} from './src/infrastructure/storage/effective-reader.mjs';
 import {buildEffectiveCatalogue,mergeFormalDatasets} from './src/domain/catalogue/effective.mjs';
 import {createBasicWebIndex,createHomeSearch,normalizeBasicQuery,slotPage} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
@@ -20,6 +23,7 @@ const fields=[['position','叙事定位'],['style','剧情风格'],['theme','故
 const state={page:'discover',q:'',facets:Object.fromEntries(fields.map(([k])=>[k,''])),legacy:{},sort:'default',cataloguing:'',listPage:1,basicPage:1,detail:null,detailTab:'profile',creditWork:'g030',creditQuery:'',creatorType:'all',creatorQ:'',creatorPage:1,selected:null,researchTab:'topics',topicQ:'',topicKind:'',evidenceStatus:'all',evidencePage:1,evidenceQ:'',releaseQ:'',releasePage:1,evidence:null};
 const PAGE_SIZE=12;
 let atlas,entityIndex,editSourceData;
+registerPageRecovery({capture:()=>structuredClone(state),restore:async saved=>{for(const key of Object.keys(state))if(Object.hasOwn(saved,key))state[key]=saved[key];render();}});
 function heading(en,title,desc){return `<div class="sa-eyebrow">${en}</div><h1>${title}</h1><p class="sa-lead">${desc}</p>`;}
 function search(value,placeholder,kind){return `<div class="sa-search"><span class="sa-search-icon" aria-hidden="true">⌕</span><input type="search" data-search="${kind}" aria-label="${safe(placeholder)}" placeholder="${safe(placeholder)}" value="${safe(value)}"></div>`;}
 function book(w){const index=atlas.data.works.indexOf(w)%4;return `<div class="sa-book b${index}"><span class="sa-book-word">${safe(atlas.editorial.works[w.id]?.cover||w.originalTitle)}</span><span class="sa-book-no">${w.firstYear}</span></div>`;}
@@ -137,13 +141,13 @@ async function load(){
  view.setAttribute('aria-busy','true');
  try{
   const paths=['entity-catalogue.json','discovery-editorial.json','creator-credits.json','work-notes.json'];
-  const [effective,catalogue,editorial,creators,notes]=await Promise.all([loadEffectiveCatalogue(),...paths.map(async path=>{const response=await fetch('./data/'+path);if(!response.ok)throw Error(path+' HTTP '+response.status);return response.json();})]);
+  const [effective,catalogue,editorial,creators,notes]=await Promise.all([loadEffectiveCatalogue(),...paths.map(path=>readReleaseJson('data/'+path))]);
   editSourceData=effective.raw;
   const edited=mergeFormalDatasets(effective);
   atlas=createAtlas(edited,catalogue,editorial,creators,notes);
   entityIndex=createEntityIndex(edited,catalogue.model,catalogue);
   $('#sa-total-note').textContent=`${edited.works.length} 部作品 · ${edited.contentVersions.length} 个内容版本 · ${catalogue.model.dossiers.length} 个历史专题`;
-  route();
+  route();await restoreReleaseState();
   const editId=new URLSearchParams(location.search).get('edit');
   if(editId&&atlas.works.has(editId))showLiveWorkEditor(editId);
  }catch(error){

@@ -44,9 +44,19 @@ def build(root,output,revision=None):
         subprocess.run(['node',str(root/'scripts/build_basic_web_index.mjs'),str(root),str(output),revision],check=True)
     if 'scripts/build_effective_catalogue.mjs' in paths:
         subprocess.run(['node', str(root/'scripts/build_effective_catalogue.mjs'), str(root), str(output), revision], check=True)
+    if (output/'release-runtime.mjs').is_file():
+        for page in output.glob('*.html'):
+            text=page.read_text(encoding='utf-8')
+            script='<script type="module" src="./release-runtime.mjs"></script>'
+            if '</body>' in text:
+                page.write_text(text.replace('</body>',script+'</body>'),encoding='utf-8')
+    ancestors=[]
+    if len(revision)==40:
+        ancestors=subprocess.check_output(['git','rev-list',revision],cwd=root,text=True).splitlines()
     versioned_modules=version_modules(output,revision)
     manifest={
         'schema':1,
+        'ancestors':ancestors,
         'revision':revision,
         'registry':REGISTRY,
         'registrySha256':hashlib.sha256(registry_bytes).hexdigest(),

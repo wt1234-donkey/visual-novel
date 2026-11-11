@@ -8,8 +8,8 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: github-pages-${{ github.ref }}
-  cancel-in-progress: false
+  group: verified-pages-build-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,28 +40,18 @@ jobs:
           python3 scripts/build_company_pages.py --check
           python3 scripts/build_entity_model.py --check
           python3 scripts/build_entity_pages.py --check
+      - name: Install isolated browser regression dependency
+        run: |
+          npm install --prefix /tmp/catalogue-browser --no-package-lock --no-audit --no-fund playwright@1.56.1
+          /tmp/catalogue-browser/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify cross-release recovery in Chromium
+        env:
+          PLAYWRIGHT_MODULE: /tmp/catalogue-browser/node_modules/playwright
+        run: node --test tests/browser/*.test.mjs
       - name: Build static artifact and provenance manifest
         run: python3 scripts/build_pages_artifact.py --output _site
-      - name: Configure Pages
-        if: github.ref == 'refs/heads/main'
-        uses: actions/configure-pages@v6
       - name: Upload verified Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: _site
-  deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Publish verified main artifact
-        id: deployment
-        uses: actions/deploy-pages@v5
+          retention-days: 14

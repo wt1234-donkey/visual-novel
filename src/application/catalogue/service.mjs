@@ -49,7 +49,7 @@ export function createCatalogueService({base,initial,repository,prepareBase,load
    const operation=pending;
    const result=await commitBasicCommand({repository,snapshot:operation.snapshot,
     base:undo?base:await (prepareBase?prepareBase(operation.action):hydrateCommandBase(base,view,operation.action,loadDetails)),action:operation.action,meta:operation.meta,undo:operation.undo});
-   update(result);pending=null;return {revision:snapshot.store.revision,...result.result};
+   update(result);pending=null;return {revision:snapshot.store.revision,...result.result,operationId:operation.meta.id};
   });}
  };
 }

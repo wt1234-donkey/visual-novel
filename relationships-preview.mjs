@@ -1,3 +1,6 @@
+import './release-runtime.mjs';
+import {registerPageRecovery,restoreReleaseState} from './src/features/release-recovery.mjs';
+import {readReleaseJson} from './src/infrastructure/storage/release-reader.mjs';
 import {initUnfinished} from './organization-unfinished.mjs?v=20261027-unfinished';
 const TYPES={company:'公司',brand:'品牌',team:'团队',unknown:'身份待核',publication:'刊物',individual:'个人'};
 const STATUS={sourceReviewed:'来源已核',existingDossier:'沿用档案',previewReviewed:'预览补充',pending:'关系待核',unresolved:'身份待核'};
@@ -76,7 +79,7 @@ export function searchFamilies(data,query){
 async function init(){
   const $=id=>document.getElementById(id),workspace=$('workspace');
   let data;
-  try{const response=await fetch(document.body.dataset.source||'data/relationships-preview.json');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();}
+  try{data=await readReleaseJson(document.body.dataset.source||'data/relationships-preview.json');}
   catch(error){console.error('组织目录读取失败',error);workspace.setAttribute('aria-busy','false');$('graph-stage').innerHTML='<p class="error-message">关系资料暂时无法读取。请刷新重试，或先查看<a href="entities.html">主体档案</a>。</p>';$('family-nav').innerHTML='<p class="no-results">暂时无法读取家族列表。</p>';if($('creator-grid')){$('creator-grid').innerHTML='<p class="error-message">作品目录读取失败，请刷新重试或查看主体档案。</p>';$('creator-work-list').textContent='作品职责暂时无法读取。';}return;}
   initUnfinished(data);
   const nodes=new Map(data.nodes.map(n=>[n.id,n]));
@@ -206,6 +209,22 @@ async function init(){
     $('work-groups').addEventListener('click',e=>{const button=e.target.closest('[data-work-group]');if(button){workGroup=button.dataset.workGroup;renderWorks();setURL();}});
     $('creator-grid').addEventListener('click',e=>{const button=e.target.closest('[data-creator]');if(!button)return;const f=data.families.find(f=>[f.root,...f.entityIds].includes(button.dataset.creator));if(!f)return;family=f;selected=button.dataset.creator;collapsed=new Set();zoom=1;workGroup='creation';$('work-search').value='';render();centerGraph();$('creator-works').scrollIntoView({block:'start'});});
   }
-  render();centerGraph();workspace.setAttribute('aria-busy','false');
+  const recoverFields=['family-search','show-pending','creator-search','creator-kind','work-placement','work-search','verification-status','verification-category','verification-changed'];
+  registerPageRecovery({
+    capture:()=>({family:family.id,selected,view,zoom,collapsed:[...collapsed],workGroup,verificationStatus,verificationCategory,verificationChangedOnly,
+      fields:Object.fromEntries(recoverFields.filter(id=>$(id)).map(id=>[id,$(id).type==='checkbox'?$(id).checked:$(id).value])),
+      scroll:{left:$('graph-scroll').scrollLeft,top:$('graph-scroll').scrollTop}}),
+    restore:async saved=>{
+      family=data.families.find(f=>f.id===saved.family)||family;
+      selected=[family.root,...family.entityIds].includes(saved.selected)?saved.selected:family.focus;
+      view=saved.view==='list'?'list':'tree';zoom=Math.max(.7,Math.min(1.4,Number(saved.zoom)||1));
+      collapsed=new Set((Array.isArray(saved.collapsed)?saved.collapsed:[]).filter(id=>nodes.has(id)));
+      if(Object.hasOwn(GROUPS,saved.workGroup))workGroup=saved.workGroup;
+      verificationStatus=saved.verificationStatus||'';verificationCategory=saved.verificationCategory||'';verificationChangedOnly=!!saved.verificationChangedOnly;
+      for(const id of recoverFields){const field=$(id),value=saved.fields?.[id];if(!field||value===undefined)continue;if(field.type==='checkbox')field.checked=!!value;else field.value=String(value);}
+      showPending=$('show-pending').checked;render();$('graph-scroll').scrollTo(saved.scroll||{left:0,top:0});
+    }
+  });
+  render();centerGraph();workspace.setAttribute('aria-busy','false');await restoreReleaseState();
 }
 if(typeof document!=='undefined')init();

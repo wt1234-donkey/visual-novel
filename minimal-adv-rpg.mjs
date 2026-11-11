@@ -1,3 +1,6 @@
+import {registerPageRecovery,restoreReleaseState} from './src/features/release-recovery.mjs';
+import './release-runtime.mjs';
+import {readReleaseJson} from './src/infrastructure/storage/release-reader.mjs';
 import {normalizeFilterText,createManufacturerIndex,matchingManufacturers,manufacturerOptions,REGION_LABELS,gameplayOptions,gameplayDisplay,styleState,styleLabels,styleDimension,STYLE_DIMENSIONS,styleOptions,MISSING_STYLE,pageIndex,basicFilterRows} from './basic-catalogue-filters.mjs?v=20261111-architecture';
 import {createBasicEditor} from './basic-catalogue-editor.mjs?v=20261111-architecture';
 import {createBasicRepository} from './src/infrastructure/github/basic-repository.mjs';
@@ -17,6 +20,17 @@ const selection=new Set();
 const size=25;
 const controls=setupCombinedControls(filterAndDraw);
 if(location.hash==='#query-advanced')$('query-advanced').open=true;
+registerPageRecovery({
+ capture:()=>({page,selection:[...selection],combined:controls.snapshot(),values:Object.fromEntries(['q','year','group','status','group-query','group-region'].map(id=>[id,$(id).value]))}),
+ restore:async saved=>{
+  for(const id of ['q','year','group','status','group-query','group-region'])if(typeof saved.values?.[id]==='string')$(id).value=saved.values[id];
+  drawManufacturers();if(saved.combined)controls.restore(saved.combined);
+  await filterAndDraw();page=Number.isSafeInteger(saved.page)?saved.page:0;
+  for(const id of saved.selection||[])if(entries.some(row=>row._key===id))selection.add(id);
+  refreshSelection();render();
+ }
+});
+
 const loadDetails=rows=>webIndex.details('basic',rows.filter(w=>Number.isInteger(w.slot)).map(w=>w.slot));
 function drawManufacturers(){
  const selected=$('group').value,{total,visible}=manufacturerOptions(manufacturerIndex,{region:$('group-region').value,query:$('group-query').value},selected);
@@ -106,7 +120,7 @@ function render(){
 }
 async function start(){
  try{
-   const regions=fetch('data/basic-manufacturer-regions.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('地区索引不可用');return r.json();}).then(data=>{if(data.schemaVersion!==1||!Array.isArray(data.entries))throw Error('地区索引格式无效');return data;}).catch(error=>{console.warn('厂商地区索引暂不可用',error);$('filter-note').textContent='厂商地区索引暂不可用，厂商暂归地区待核；仍可按名称筛选。';return {entries:[]};});
+   const regions=readReleaseJson('data/basic-manufacturer-regions.json').then(data=>{if(data.schemaVersion!==1||!Array.isArray(data.entries))throw Error('地区索引格式无效');return data;}).catch(error=>{console.warn('厂商地区索引暂不可用',error);$('filter-note').textContent='厂商地区索引暂不可用，厂商暂归地区待核；仍可按名称筛选。';return {entries:[]};});
    const [manifest,baseEntries,regionData]=await Promise.all([webIndex.meta(),webIndex.basicRows(),regions]);
    indexRevision=manifest.revision;
    const {promotedBasic,promotedDossier,existingComplete,advancedCoverage}=manifest.basic;
@@ -129,7 +143,7 @@ async function start(){
    try{
      const latest=await readLatestBasicStore(
       async()=> (await createBasicRepository('',fetch,{sourceLease:manifest.sourceLease}).read()).store,
-      async()=> (await createBasicRepository().readPublished()).store
+      async()=> (await createBasicRepository('',fetch,{sourceLease:manifest.sourceLease}).readPublished()).store
      );
      editor=createBasicEditor(baseEntries,latest.store,refreshManaged,loadDetails,{sourceLease:manifest.sourceLease});
      for(const id of ['basic-add','basic-import','basic-clear','basic-connection','basic-style-csv','basic-style-review'])$(id).disabled=false;
@@ -145,9 +159,9 @@ async function start(){
      $('basic-connection').addEventListener('click',()=>editor.connection());
      $('rows').addEventListener('click',e=>{const button=e.target.closest('[data-edit]');if(button)editor.edit(button.dataset.edit);});
      $('rows').addEventListener('change',e=>{const id=e.target.dataset.select;if(id){if(e.target.checked)selection.add(id);else selection.delete(id);refreshSelection();}});
-     $('basic-management-status').textContent='修改记录 r'+latest.store.revision+' · '+(latest.source==='github'?'已从 GitHub 实时读取':'GitHub 实时读取失败，现显示已发布站点副本')+'。点击作品即可编辑；数据提交成功不等于 Pages 部署成功，请在 GitHub Actions 确认站点发布。'+(latest.source==='pages'?' 保存前必须连接并同步 GitHub 最新记录。':'');
+     $('basic-management-status').textContent='修改记录 r'+latest.store.revision+' · '+(latest.source==='github'?'已从 GitHub 实时读取':'GitHub 实时读取失败，现显示已发布站点副本')+'。点击作品即可编辑；数据提交成功不等于 Pages 部署成功，页面的“保存与发布状态”可追踪上线进度。'+(latest.source==='pages'?' 保存前必须连接并同步 GitHub 最新记录。':'');
    }catch(err){$('basic-management-status').textContent='基础库修改记录读取失败：'+err.message+'。请刷新重试；为避免显示过期数据，管理功能已停用。';throw err;}
-   filterAndDraw();
+   await filterAndDraw();await restoreReleaseState();
  }catch(err){$('count').textContent='无法读取基础作品数据：'+err.message;}
 }
 function selectWorks(works){
@@ -162,7 +176,7 @@ function refreshManaged(main,all,store,view){
  childrenByMain=view?.childrenByMain||new Map();if(!view)for(const w of all)if(w.parentId){if(!childrenByMain.has(w.parentId))childrenByMain.set(w.parentId,[]);childrenByMain.get(w.parentId).push(w);}
  const ids=new Set(entries.map(workKey));for(const id of selection)if(!ids.has(id))selection.delete(id);
  $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
- $('basic-management-status').textContent='当前已载入修改记录 r'+store.revision+'；作品资料按本页最新记录显示。修改提交后请在 GitHub Actions 核对 Pages 是否部署成功。';
+ $('basic-management-status').textContent='当前已载入修改记录 r'+store.revision+'；作品资料按本页最新记录显示。修改提交后的上线进度见页面“保存与发布状态”。';
  const oldYear=$('year').value,years=[...new Set(all.map(w=>w.year).filter(Number.isInteger))].sort((a,b)=>a-b);
  $('year').innerHTML='<option value="">全部年份</option><option value="unknown">年份待核</option>'+years.map(y=>'<option value="'+y+'">'+y+' 年</option>').join('');$('year').value=years.includes(Number(oldYear))||oldYear==='unknown'?oldYear:'';
  rebuildFilters();

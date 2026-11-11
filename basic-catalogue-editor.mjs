@@ -1,3 +1,6 @@
+import {readReleaseManifest} from './src/infrastructure/storage/release-reader.mjs';
+import {recordSavedOperation} from './src/features/publication-status.mjs';
+import {registerDraftEditor} from './src/features/release-recovery.mjs';
 import {GAMEPLAY_OPTIONS,manufacturerKey} from './basic-catalogue-filters.mjs?v=20261111-architecture';
 import {createBasicRepository,TOKEN_SETUP_URL} from './src/infrastructure/github/basic-repository.mjs';
 import {createCatalogueService} from './src/application/catalogue/service.mjs';
@@ -27,7 +30,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  function message(s,error=false){$('#be-message').textContent=s;$('#be-message').className='be-message'+(error?' error':'');}
  function close(){if(!busy){historyRequest++;dialog.close();returnFocus?.focus();}}
  function shell(title,body){
-  if(busy)return;historyRequest++;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;editBaseline=null;
+  if(busy)return;dialog.dataset.recoveryMode='other';dialog.dataset.recoveryWorkId='';historyRequest++;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;editBaseline=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
    <details class="be-auth"><summary>${actor?'已连接 GitHub · '+safe(actor):'首次保存前：连接 GitHub 写入权限'}</summary><p class="minor">基础身份库取消人工送审。连接后，作品修改、合并与标签操作直接写入仓库，无须另外审核。为保护仓库，公开页面不能匿名写入；凭证只保存在当前页面内存，刷新即清除。</p><ol class="minor"><li>使用有写入权限的 GitHub 账号，Resource owner 选择 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b> → <b>visual-novel</b>。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>。</li></ol><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仅限本仓库的写入凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接并启用直接保存</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">同步 GitHub 最新修改</button></div></details>
    <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
@@ -46,9 +49,10 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
     return false;
    }
    lock(true);message('正在核验并直接保存到 GitHub…');
-   await service.execute(action,reason,{undo});
-   update();message('已提交 GitHub 主分支，当前页面数据已更新。Pages 公开网站须在 Actions 构建和部署成功后才更新；请核对发布状态。');return true;
-  }catch(e){message(e.message,true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
+   const receipt=await service.execute(action,reason,{undo});
+   recordSavedOperation({operationId:receipt.operationId,kind:'basic',revision:receipt.revision,commit:receipt.commit});
+   update();message('已提交 GitHub 主分支，当前页面数据已更新。页面的“保存与发布状态”会追踪本次操作是否已上线。');return true;
+  }catch(e){if(e.code==='SOURCE_CHANGED')readReleaseManifest(fetch,{refresh:true}).catch(()=>{});message(e.message,true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
  async function edit(id=null){
@@ -81,6 +85,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    <div class="be-actions"><button class="primary" type="submit">${w?'直接保存修改':'直接添加到基础库'}</button>${w?'<button type="button" class="danger" data-delete="'+safe(id)+'">删除作品</button>':''}${w?.parentId?'<button type="button" data-detach="'+safe(id)+'">解除与主作品的合并</button>':''}${w&&((w.parentId)||children.length)?'<button type="button" data-view="'+safe(w.parentId||id)+'">查看版本与来源详情</button>':''}</div></form>
    ${w?.parentId?`<p class="minor">所属主作品：${safe(get(w.parentId)?.title||w.parentId)} · ${safe(w.relation?.label)} · ${safe(w.relation?.note||'内容关系待核')}</p>`:''}
    ${children.length?'<h3>关联版本（'+children.length+'）</h3><ul class="be-version-list">'+children.map(c=>`<li><button type="button" data-edit="${safe(c._key)}">${safe(c.title)}</button> <span class="minor">${c.year??'年份待核'} · ${safe(c.relation?.label)} · ${safe(({unverified:'内容关系待核',same:'同内容版本',added:'新增内容版本'})[c.relation?.type])}</span>${c.relation?.note?'<p>'+safe(c.relation.note)+'</p>':''}</li>`).join('')+'</ul>':''}`);
+  dialog.dataset.recoveryWorkId=id||'';dialog.dataset.recoveryMode='edit';
   editBaseline={id:id||'',revision:service.snapshot.store.revision,values:structuredClone(v)};
   return true;
  }
@@ -170,9 +175,9 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    }
    const saved=await commit(id?{type:'edit',id,values:v}:{type:'add',works:[{id:'manual-'+randomId(),...v}]},String(f.get('reason')));
    if(saved&&id){
-    if(await edit(id))message('最新作品资料已显示。已提交 GitHub；Pages 发布状态仍须在 Actions 中确认。');
+    if(await edit(id))message('最新作品资料已显示。已提交 GitHub；可在页面“保存与发布状态”查看上线进度。');
    }else if(saved&&!id&&getLastAdded(v.title)){
-    if(await edit(getLastAdded(v.title)._key))message('新作品已保存并显示；Pages 发布状态仍须在 Actions 中确认。');
+    if(await edit(getLastAdded(v.title)._key))message('新作品已保存并显示；可在页面“保存与发布状态”查看上线进度。');
    }
   }else if(form.id==='be-merge'){
    const mainId=String(f.get('mainId')),ids=JSON.parse(f.get('ids')).filter(id=>id!==mainId);
@@ -199,5 +204,6 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   }else if(b.id==='be-import-confirm'&&pendingImport){if(await commit({type:'add',works:pendingImport},'模板导入 '+pendingImport.length+' 部作品')){pendingImport=null;b.disabled=true;}}
  });
  const styles=createStyleWorkbench({dialog,shell,all,hydrate,revision:()=>service.snapshot.store.revision,commit,message,lock,isBusy:()=>busy});
+ registerDraftEditor('basic-editor',{canRestore:mode=>mode==='edit',open:id=>edit(id||null)});
  update();return {styles,edit,view,add:()=>edit(),importWindow,merge,connection,getChildren:id=>all().filter(w=>w.parentId===id)};
 }

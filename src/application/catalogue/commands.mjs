@@ -44,7 +44,7 @@ export async function commitBasicCommand({repository, snapshot, base, action, me
   const live = await repository.read();
   validateStore(live.store);
   if (!live.sha) throw Error('请先读取最新修改记录后保存');
-  if(await applied(live))return {...live,result:{sha:live.sha,alreadyApplied:true}};
+  if(await applied(live))return {...live,result:{sha:live.sha,commit:live.head,alreadyApplied:true}};
   const command = rebaseBasicCommand(base, opened, live.store, original, undo);
   const current=upgradeStore(live.store), metadata={...operation,intent,expectedRevision:current.revision};
   const next = undo ? undoLast(current, current.revision, metadata) : applyChange(current, base, command, metadata);
@@ -59,7 +59,7 @@ export async function commitBasicCommand({repository, snapshot, base, action, me
     const actual = await repository.read();
     validateStore(actual.store);
     if (!await applied(actual)) throw error;
-    result = {sha:actual.sha, verifiedAfterError:true};
+    result = {sha:actual.sha,commit:actual.head,verifiedAfterError:true};
     return {...actual,result};
    } catch { throw error; }
   }
