@@ -1,3 +1,4 @@
+import {queryCatalogueRows} from '../src/application/catalogue/query.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -27,7 +28,7 @@ test('basic catalogue loads round three with canonical identities, aliases and d
   const rows=assembleBasicRows(registry,initial.records,[['batch2',batch2.records],['batch3',review.records]]);
   const source={meta:async()=>({basic:registry.summary}),basicRows:async()=>rows,details:async()=>new Map()};
   const setupCombinedControls=()=>({options(){},groups:()=>[]});
-  const context=vm.createContext({...basicFilters,setupCombinedControls,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
+  const context=vm.createContext({...basicFilters,queryCatalogueRows,setupCombinedControls,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>async()=>null,
     readLatestBasicStore,createEditClient:()=>({read:async()=>({store:emptyStore()})}),
     createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},

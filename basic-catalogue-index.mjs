@@ -1,12 +1,6 @@
 // Browser index format. The release ID in each path binds details to their index.
 const directory='data/basic-web/';
-export const compareBasicOrder=(a,b)=>{
- const ay=Number.isInteger(a.year)?a.year:Infinity;
- const by=Number.isInteger(b.year)?b.year:Infinity;
- return ay-by||nameOrder.compare(a.title,b.title)||nameOrder.compare(a.id||'',b.id||'');
-};
-const nameOrder=new Intl.Collator('zh-Hans-CN',{numeric:true,sensitivity:'base'});
-export const normalizeBasicQuery=text=>String(text??'').trim().normalize('NFKC').toLowerCase();
+export {compareBasicOrder,normalizeBasicQuery} from './src/domain/catalogue/order.mjs';
 
 export function unpackBasicIndex({rows,groups,gameplay,statuses}){
  return rows.map(([id,matchedWorkId,title,year,group,play,status,aliases,otherGroups,plotStyles,plotTags,gameplayTags],slot)=>({
@@ -128,7 +122,7 @@ export function createCatalogueWorker(){
  const pending=new Map();
  function workerSearch(payload){
   if(!worker){
-   worker=new Worker(new URL('./basic-catalogue-search-worker.mjs?v=20261110-version-groups',import.meta.url),{type:'module'});
+   worker=new Worker(new URL('./basic-catalogue-search-worker.mjs?v=20261111-architecture',import.meta.url),{type:'module'});
    worker.onmessage=({data})=>{
     const request=pending.get(data.id);
     if(!request)return;

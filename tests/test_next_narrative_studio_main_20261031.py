@@ -38,5 +38,7 @@ class NextNarrativeStudioTests(unittest.TestCase):
         self.assertIn('main-adv-rpg-works-20261031.json',discovery)
         self.assertIn('mainBasicSection()',discovery)
         page=(ROOT/'scripts/build_basic_web_index.mjs').read_text(encoding='utf8')
-        self.assertIn('adv-rpg-next-studio-review-20261031.json',page)
+        self.assertIn('loadCatalogueSnapshot(root)',page)
+        adapter=(ROOT/'src/infrastructure/filesystem/catalogue-snapshot.mjs').read_text(encoding='utf8')
+        self.assertIn('adv-rpg-next-studio-review-20261031.json',adapter)
 if __name__=='__main__':unittest.main()

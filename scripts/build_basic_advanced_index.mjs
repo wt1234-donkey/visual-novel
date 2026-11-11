@@ -33,12 +33,13 @@ function documentedGameplay(work){
  return [...new Set(presentation?[presentation,...modes]:modes)];
 }
 
-export function buildAdvancedRows(root,rows,registry,main,supplement,history){
+export function buildAdvancedRows(root,rows,registry,main,supplement,history,catalogueSnapshot=null){
  const read=name=>JSON.parse(readFileSync(join(root,'data',name),'utf8'));
  const snapshot=name=>JSON.parse(gunzipSync(Buffer.from(readFileSync(join(root,'data',name),'utf8'),'base64')));
  const companies=read('company-coverage.json').companies;
  const dossierWorks=companies.flatMap(c=>[...(c.relatedGames||[]),...(c.dossierOnlyWorks||[])]);
- const catalogue=new Map([...dossierWorks,...supplement.works,...main.works].map(w=>[w.id,projectWork(w,history)]));
+ const formal=catalogueSnapshot?.formalById||new Map([...supplement.works,...main.works].map(w=>[w.id,projectWork(w,history)]));
+ const catalogue=new Map([...dossierWorks.map(w=>[w.id,projectWork(w,history)]),...formal]);
  const entities=read('entity-catalogue.json'),entityById=new Map(entities.model.entities.map(e=>[e.id,e]));
  const organization=group(entities.credits,'workId');
  const namesFor=credit=>{const e=entityById.get(credit.entityId);return [e?.name,...(e?.aliases||[]),credit.rawCredit];};

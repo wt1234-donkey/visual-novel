@@ -2,6 +2,10 @@ name: Basic catalogue merged-version regressions
 on:
   pull_request:
     paths:
+      - 'src/**'
+      - 'scripts/build_basic*index.mjs'
+      - 'basic-combined-search.mjs'
+      - 'basic-style-tags.mjs'
       - 'basic-catalogue-*.mjs'
       - 'minimal-adv-rpg.mjs'
       - 'minimal-adv-rpg.html'
@@ -15,6 +19,10 @@ on:
   push:
     branches: [main]
     paths:
+      - 'src/**'
+      - 'scripts/build_basic*index.mjs'
+      - 'basic-combined-search.mjs'
+      - 'basic-style-tags.mjs'
       - 'basic-catalogue-*.mjs'
       - 'minimal-adv-rpg.mjs'
       - 'minimal-adv-rpg.html'
@@ -45,5 +53,6 @@ jobs:
           node --check basic-catalogue-index.mjs
           node --check basic-catalogue-search-worker.mjs
           node --check minimal-adv-rpg.mjs
+          find src -name '*.mjs' -exec node --check {} \;
       - name: Run catalogue model and filtering regressions
-        run: node --test tests/basic-catalogue.test.mjs tests/basic-catalogue-index.test.mjs tests/basic-catalogue-direct-save.test.mjs tests/basic-filters.test.mjs tests/basic-year-filter.test.mjs
+        run: node --test tests/basic-catalogue*.test.mjs tests/basic-filters.test.mjs tests/basic-year-filter.test.mjs
