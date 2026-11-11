@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append a source-audited 1970s interactive-fiction batch to the basic identity registry."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import copy
 import hashlib
@@ -20,11 +21,13 @@ REPORT = ROOT / "docs/historical-interactive-fiction-1970s-20261101.md"
 BATCH = "historical-interactive-fiction-1970s-20261101"
 
 def load(path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    return read_registry_json(path)
 
 def save(path, obj):
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, obj)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_registry_text(path, json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 def digest(obj):
     raw = json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
@@ -99,7 +102,7 @@ def make_report(audit, intake):
     for r in intake.get("heldForReview", []):
         lines.append(f"- **{r['title']}**：{r['reason']}")
     lines.append("")
-    REPORT.write_text("\n".join(lines), encoding="utf-8")
+    write_registry_text(REPORT, "\n".join(lines), encoding="utf-8")
 
 def check_existing(registry, intake):
     audit = load(AUDIT)

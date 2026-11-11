@@ -4,11 +4,12 @@
 Keep the strict detailed historical database unchanged. This script is idempotent; both
 previous master IDs and previously promoted basic IDs remain the canonical identities.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import hashlib,json,re,unicodedata
 from collections import Counter
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(path): return json.loads((ROOT/path).read_text(encoding='utf-8'))
+def load(path): return read_registry_json(ROOT/path)
 def norm(v): return ''.join(c for c in unicodedata.normalize('NFKC',str(v or '')).casefold() if c.isalnum())
 def names(w): return [w.get('title'),w.get('originalTitle'),w.get('chineseTitle'),*(w.get('titleAliases') or []),*(w.get('aliases') or [])]
 registry_path=ROOT/'data/main-adv-rpg-works-20261031.json'
@@ -137,10 +138,10 @@ if registry.get('batches'):
         accepted=len(registry['works']), existingComplete=all_statuses['existing-complete'],
         promotedDossier=all_statuses['promoted-dossier'],promotedBasic=all_statuses['promoted-basic'],
         addedToMainIdentityLayer=all_statuses['promoted-dossier']+all_statuses['promoted-basic'])
-registry_path.write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+write_registry_text(registry_path, json.dumps(registry,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 review={'schema':1,'reviewedAt':'2026-10-31','summary':dict(status),'records':decisions,
         'policy':'Role claims require specific credits; no full narrative or edition creation. Source URLs for some catalogue-level entries do not independently prove a particular release platform.'}
-(ROOT/'data/adv-rpg-next-studio-review-20261031.json').write_text(json.dumps(review,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+write_registry_text(ROOT/'data/adv-rpg-next-studio-review-20261031.json', json.dumps(review,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 report=[
 '# 下一批叙事驱动 ADV／RPG 作品：11组厂商59部候选审核（2026-10-31）',
 '',
@@ -163,5 +164,5 @@ report+=['','## 身份与版次风险记录','','- 互动电影游戏以最早�
 '- Telltale《The Expanse》列入 Deck Nine 的制作关联，厂商页可能还有Telltale发行关联，需逐游戏核对正式署名。',
 '- DON’T NOD 的《Banishers》和《Vampyr》属于故事和角色抉择占重要地位的RPG，但有动作战斗；本次保留其玩法性质而不将其误写成纯选项式ADV。',
 '- 所有缺少具体发行平台、版次、作者署名或角色资料的候选，仍仅为作品基础记录，不填造完整档案。','','## 验证入口','','`python3 scripts/promote_next_narrative_studios_20261031.py` 重新构建统一身份层与59条审计；`python3 -m unittest discover -s tests -p "test_next_narrative_studio_main_20261031.py"` 检查去重完整性。']
-(ROOT/'data/adv-rpg-next-studio-review-20261031.md').write_text('\n'.join(report)+'\n',encoding='utf-8')
+write_registry_text(ROOT/'data/adv-rpg-next-studio-review-20261031.md', '\n'.join(report)+'\n',encoding='utf-8')
 print('Screened next batch:',json.dumps(dict(status),ensure_ascii=False),'total primary works',len(registry['works']))

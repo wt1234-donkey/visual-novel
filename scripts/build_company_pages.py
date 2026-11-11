@@ -1,3 +1,4 @@
+from effective_catalogue import load_effective, effective_title
 """Build static, source-linked company dossiers from the shared catalogue."""
 import argparse
 import html
@@ -11,8 +12,8 @@ from round28_corrections import corrected_coverage
 from work_notes import validate_work_notes
 
 ROOT = Path(__file__).resolve().parents[1]
-data = json.loads((ROOT / 'data/games.json').read_text(encoding='utf-8'))
-coverage = corrected_coverage(json.loads((ROOT / 'data/company-coverage.json').read_text(encoding='utf-8')))
+data = load_effective(ROOT)['main']
+coverage = corrected_coverage(load_effective(ROOT)['coverage'])
 works = {work['id']: work for work in data['works']}
 work_notes = json.loads((ROOT / 'data/work-notes.json').read_text(encoding='utf-8'))
 validate_work_notes(work_notes, works, {c['id'] for c in coverage['companies']})
@@ -89,7 +90,7 @@ def card(work, versions=None, anchors=(), version_label='个平台版本', conte
     if pending:
         content_rows.append(f'''<details class="release-panel pending-releases"><summary>内容关系待核实：{len(pending)} 条历史发行（不计内容版本）</summary>
 <p class="changes">保留旧发行证据；未确认新增内容，也不推定与原作完全相同。</p>{''.join(release_row(v) for v in pending)}</details>''')
-    display_title = work.get('chineseTitle') or work['title']
+    display_title = effective_title(work)
     original_line = f'<p class="original">原名 · {escape(work["originalTitle"])}</p>' if display_title != work['originalTitle'] else ''
     if work.get('chineseTitleType') == '站内编辑译名':
         original_line = original_line.replace('</p>', ' · 中文名为站内编辑译名</p>')
@@ -137,7 +138,7 @@ def gameplay_appendix(company):
         for item in group['rows']:
             if 'workId' in item:
                 w = local[item['workId']]
-                name = w.get('chineseTitle') or w['title']
+                name = effective_title(w)
                 title = f'<a href="#{escape(w["id"], quote=True)}">{escape(name)}</a>'
                 if name != w['originalTitle']:
                     title += f'<br><span class="original">{escape(w["originalTitle"])}</span>'
@@ -191,13 +192,13 @@ def build(company):
         legacy_anchors.setdefault(wid, []).append(anchor)
     count_versions = sum(v['workId'] in company['workIds'] for v in data['platformReleases']) + sum(len(g['platformReleases']) for g in related)
     count_contents = sum(c['workId'] in company['workIds'] for c in data['contentVersions']) + sum(len(g['contentVersions']) for g in related)
-    toc = ''.join(f'<a href="#{w["id"]}"><span>{w["firstYear"]}</span>{escape(w.get("chineseTitle") or w["title"])}</a>'
+    toc = ''.join(f'<a href="#{w["id"]}"><span>{w["firstYear"]}</span>{escape(effective_title(w))}</a>'
                   for w in sorted(selected + related + dossier_only, key=lambda w: (w['firstYear'], w['id'])))
     related_by_id = {game['id']: game for game in related}
     dossier_by_id = {game['id']: game for game in dossier_only}
     audit_rows = []
     for item in company['entries']:
-        references = ' / '.join([*(f'<a href="#{wid}">{escape(works[wid].get("chineseTitle") or works[wid]["title"])}</a>' for wid in item['workIds']),
+        references = ' / '.join([*(f'<a href="#{wid}">{escape(effective_title(works[wid]))}</a>' for wid in item['workIds']),
                                 *(f'<a href="#{rid}">{escape(related_by_id[rid]["title"])}</a>' for rid in item.get('relatedIds', [])),
                                 *(f'<a href="#{did}">{escape(dossier_by_id[did]["title"])}</a>' for did in item.get('dossierIds', []))])
         audit_rows.append(f'<tr><th scope="row">{escape(item["title"])}</th><td>{escape(item["status"])}</td><td>{escape(item["reason"])}<div>{references}</div></td><td>{link(item["source"], "来源")}</td></tr>')
@@ -256,7 +257,7 @@ def build(company):
     if legacy_groups:
         legacy_navigation = '<details class="legacy-groups"><summary>原目录分期与范围说明</summary>' + ''.join(
             f'<div id="{escape(group["id"])}"><h4>{escape(group["title"])}</h4><p>{escape(group["description"])}</p>'
-            + ' / '.join(f'<a href="#{escape(wid)}">{escape(by_id[wid].get("chineseTitle") or by_id[wid]["title"])}</a>' for wid in group['workIds']) + '</div>'
+            + ' / '.join(f'<a href="#{escape(wid)}">{escape(effective_title(by_id[wid]))}</a>' for wid in group['workIds']) + '</div>'
             for group in legacy_groups) + '</details>'
     old_card_labels = {wid:g.get('cardLabel','') for g in legacy_groups for wid in g['workIds']}
     legacy_navigation += ''.join(f'<p class="scope-note">{escape(company.get(key, ""))}</p>' for key in ['relatedSectionTitle','relatedIntro'])

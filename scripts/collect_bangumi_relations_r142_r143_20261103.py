@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Inspect edition relations only for potential new narrative identities."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import concurrent.futures
 import json
 import sys
@@ -18,7 +19,7 @@ refs=defaultdict(set)
 for k,v in m.e.full_refs(registry).items():refs[k.casefold()].update(v)
 candidates=[]
 for page in sorted(cache.glob('bangumi-*.json')):
-    for row in json.loads(page.read_text())['data']:
+    for row in read_registry_json(page)['data']:
         c,reason=m.bangumi_candidate(row)
         if reason is None and m.decide(c,index,refs) is None:candidates.append(row['id'])
 if '--reverse' in sys.argv:
@@ -26,7 +27,7 @@ if '--reverse' in sys.argv:
 
 def run(sid):
     path=cache/f'relations-{sid}.json'
-    if path.exists():return str(sid),json.loads(path.read_text())
+    if path.exists():return str(sid),read_registry_json(path)
     try:
         rows=fetch(f'https://api.bgm.tv/v0/subjects/{sid}/subjects')
         assert isinstance(rows,list)
@@ -45,5 +46,5 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=6 if '--reverse' in sys.a
     for i,(sid,rows) in enumerate(pool.map(run,candidates)):
         records[sid]=rows
         if i%20==0:print('RELATION_PROGRESS',i+1,len(candidates),flush=True)
-out.write_text(json.dumps({'schema':1,'date':'2026-11-03','sourcePattern':'https://api.bgm.tv/v0/subjects/{id}/subjects','records':records},ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+write_registry_text(out, json.dumps({'schema':1,'date':'2026-11-03','sourcePattern':'https://api.bgm.tv/v0/subjects/{id}/subjects','records':records},ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
 print('RELATIONS_SAVED',len(records),flush=True)

@@ -1,3 +1,4 @@
+from effective_catalogue import load_effective, effective_title
 """Export one row per work, including company-only related games."""
 import csv
 import io
@@ -14,15 +15,15 @@ def interaction_csv(data, coverage):
     writer = csv.DictWriter(output, fieldnames=fields, lineterminator='\n')
     writer.writeheader()
     for scope, w in iter_interaction_works(data, coverage):
-        writer.writerow(dict(zip(fields, [scope, w['id'], w.get('chineseTitle') or w['title'],
+        writer.writerow(dict(zip(fields, [scope, w['id'], effective_title(w),
             w['originalTitle'], w['firstYear'], '、'.join(w['interactionModes']), w['interactionBasis'],
             w['interactionNote'], ' | '.join(w['interactionSources'])])))
     return output.getvalue()
 
 
 if __name__ == '__main__':
-    data = json.loads((ROOT/'data/games.json').read_text())
-    coverage = json.loads((ROOT/'data/company-coverage.json').read_text())
+    data = load_effective(ROOT)['main']
+    coverage = load_effective(ROOT)['coverage']
     validate_interactions(data, coverage, json.loads((ROOT/'data/taxonomy.json').read_text()))
     (ROOT/'data/interaction-modes.csv').write_text(interaction_csv(data, coverage), encoding='utf-8-sig')
     print('已导出主目录及专题附录的全部互动方式标签')

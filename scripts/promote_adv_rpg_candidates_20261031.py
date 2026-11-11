@@ -5,11 +5,12 @@ The historical games.json is a strict *fully documented* record store; do not ma
 characters, publisher/platform releases, variant records or creator credits to satisfy it.
 The main registry is an additive primary work identity layer consumed by Works Discovery.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def load(path):
-    return json.loads((ROOT/path).read_text(encoding="utf-8"))
+    return read_registry_json(ROOT/path)
 index=load("data/adv-rpg-minimal-index-20261031.json")
 summary=index["summary"]
 assert summary["candidates"]==208
@@ -79,11 +80,11 @@ out={
 }
 dest=ROOT/"data/main-adv-rpg-works-20261031.json"
 if dest.exists():
-    current=json.loads(dest.read_text(encoding='utf-8'))
+    current=read_registry_json(dest)
     if current.get('nextBatch') or current.get('batches'):
         assert current['works'][:207]==accepted, 'First-batch identities changed; review before rebuilding later batches.'
         assert current['identityReview'][:1]==review
         print('First 208 candidates verified; later reviewed batches preserved.')
         raise SystemExit(0)
-dest.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+write_registry_text(dest, json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print(json.dumps(out["summary"],ensure_ascii=False))

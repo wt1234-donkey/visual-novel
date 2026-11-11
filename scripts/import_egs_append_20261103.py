@@ -7,6 +7,7 @@ containing the 13,366 unpaired and 1,664 suspected-existing entries as supplied.
 A source entry is NOT proof of a distinct narrative work. All additions are marked
 with unverified editorial scope. Only internal primary key uniqueness is enforced.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import base64
 import datetime
@@ -30,13 +31,15 @@ EXPECTED_BASE = 81454
 
 
 def read_json(path):
-    return json.loads(path.read_text(encoding='utf-8'))
+    return read_registry_json(path)
 
 
 def save_json(path, value):
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, value)
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(path.suffix + '.tmp')
-    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    write_registry_text(temp, json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     temp.replace(path)
 
 

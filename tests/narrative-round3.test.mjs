@@ -1,3 +1,4 @@
+import {readJsonFileSync} from '../src/infrastructure/filesystem/registry.mjs';
 import {queryCatalogueRows} from '../src/application/catalogue/query.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -20,7 +21,7 @@ test('basic catalogue loads round three with canonical identities, aliases and d
     });
     return elements.get(id);
   }
-  const read=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
+  const read=async path=>readJsonFileSync(new URL('../'+path,import.meta.url));
   const [registry,initial,batch2,review]=await Promise.all([
     'main-adv-rpg-works-20261031.json','adv-rpg-minimal-index-20261031.json',
     'adv-rpg-next-studio-review-20261031.json','adv-rpg-round3-review-20261031.json'

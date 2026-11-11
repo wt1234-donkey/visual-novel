@@ -1,11 +1,15 @@
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[1] / 'scripts'))
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json, subprocess, unittest
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 class DossierIdentityTest(unittest.TestCase):
  def test_append_preserves_registry_and_links_dossier(self):
-  current=json.loads((R/'data/main-adv-rpg-works-20261031.json').read_text())
+  current=read_registry_json(R/'data/main-adv-rpg-works-20261031.json')
   base=json.loads(subprocess.check_output(['git','show','5c30913de8b656a7d534d54d731e08a4c5d52594:data/main-adv-rpg-works-20261031.json'],cwd=R))
-  audit=json.loads((R/'data/dossier-basic-identity-audit-20261103.json').read_text())
+  audit=read_registry_json(R/'data/dossier-basic-identity-audit-20261103.json')
   self.assertEqual(current['works'][:len(base['works'])],base['works'])
   extra=[x for x in current['works'][len(base['works']):] if x.get('batch')=='dossier-identity-link-20261103']
   self.assertEqual(len(extra),audit['summary']['newIdentityLinks'])

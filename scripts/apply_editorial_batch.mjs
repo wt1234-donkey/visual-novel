@@ -1,3 +1,4 @@
+import {readJsonFileSync} from '../src/infrastructure/filesystem/registry.mjs';
 import {readFileSync,writeFileSync, mkdtempSync,rmSync} from 'node:fs';
 import {join} from 'node:path';
 import {tmpdir} from 'node:os';
@@ -11,7 +12,7 @@ import {readBasicStoreSync,saveBasicStoreSync} from '../src/infrastructure/files
 import {assembleBasicRows} from './build_basic_web_index.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
-const read=(dir,file)=>JSON.parse(readFileSync(join(dir,'data',file),'utf8'));
+const read=(dir,file)=>readJsonFileSync(join(dir,'data',file));
 const save=(dir,file,data)=>writeFileSync(join(dir,'data',file),JSON.stringify(data,null,2)+'\n');
 const fail=message=>{throw Error(message);};
 const baseFile='basic-catalogue-edits.json',workFile='work-edit-history.json',ledgerFile='editorial-publications.json';

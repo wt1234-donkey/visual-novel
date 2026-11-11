@@ -1,3 +1,5 @@
+import {loadEffectiveCatalogue} from './src/infrastructure/storage/effective-reader.mjs';
+import {buildEffectiveCatalogue,mergeFormalDatasets} from './src/domain/catalogue/effective.mjs';
 import {createBasicWebIndex,createHomeSearch,normalizeBasicQuery,slotPage} from './basic-catalogue-index.mjs?v=20261110-flex-tags';
 import {applyWorkEdits} from './work-edit-model.mjs?v=20261104-creators';
 import {showLiveWorkEditor} from './live-work-editor.mjs?v=20261109-editorial';
@@ -134,18 +136,10 @@ window.addEventListener('hashchange',()=>atlas&&route());
 async function load(){
  view.setAttribute('aria-busy','true');
  try{
-  const paths=['games.json','entity-catalogue.json','discovery-editorial.json','creator-credits.json','work-notes.json','non-rpg-creator-supplement-20261030.json','work-edit-history.json'];
-  const [data,catalogue,editorial,creators,notes,extra,edits]=await Promise.all(paths.map(async path=>{
-   const response=await fetch('./data/'+path,path==='work-edit-history.json'?{cache:'no-store'}:undefined);
-   if(!response.ok)throw Error(path+' HTTP '+response.status);
-   return response.json();
-  }));
-  for(const key of ['works','platformReleases','contentVersions']){
-   const known=new Set(data[key].map(row=>row.id));
-   for(const row of extra[key])if(!known.has(row.id)){data[key].push(row);known.add(row.id);}
-  }
-  editSourceData=data;
-  const edited=applyWorkEdits({...data},edits);
+  const paths=['entity-catalogue.json','discovery-editorial.json','creator-credits.json','work-notes.json'];
+  const [effective,catalogue,editorial,creators,notes]=await Promise.all([loadEffectiveCatalogue(),...paths.map(async path=>{const response=await fetch('./data/'+path);if(!response.ok)throw Error(path+' HTTP '+response.status);return response.json();})]);
+  editSourceData=effective.raw;
+  const edited=mergeFormalDatasets(effective);
   atlas=createAtlas(edited,catalogue,editorial,creators,notes);
   entityIndex=createEntityIndex(edited,catalogue.model,catalogue);
   $('#sa-total-note').textContent=`${edited.works.length} 部作品 · ${edited.contentVersions.length} 个内容版本 · ${catalogue.model.dossiers.length} 个历史专题`;
@@ -160,4 +154,4 @@ async function load(){
 }
 load();
 
-window.addEventListener('catalogue-work-edit',event=>{if(!atlas||!editSourceData)return;const data=applyWorkEdits({...editSourceData},event.detail);atlas=createAtlas(data,atlas.catalogue,atlas.editorial,atlas.creators,atlas.notes);entityIndex=createEntityIndex(data,atlas.catalogue.model,atlas.catalogue);evidenceCache=null;render();});
+window.addEventListener('catalogue-work-edit',event=>{if(!atlas||!editSourceData)return;const data=mergeFormalDatasets(buildEffectiveCatalogue({...editSourceData,history:event.detail}));atlas=createAtlas(data,atlas.catalogue,atlas.editorial,atlas.creators,atlas.notes);entityIndex=createEntityIndex(data,atlas.catalogue.model,atlas.catalogue);evidenceCache=null;render();});

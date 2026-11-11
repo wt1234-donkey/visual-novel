@@ -1,9 +1,13 @@
 """Audit all 59 next-batch studio narratives in unified main identity layer."""
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[1] / 'scripts'))
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json, unittest
 from pathlib import Path
 from collections import Counter
 ROOT=Path(__file__).resolve().parents[1]
-def read(p): return json.loads((ROOT/p).read_text(encoding='utf8'))
+def read(p): return read_registry_json(ROOT/p)
 class NextNarrativeStudioTests(unittest.TestCase):
     def test_review_has_all_candidates_once(self):
         seed=read('data/adv-rpg-next-studio-candidates-20261031.json')['records']

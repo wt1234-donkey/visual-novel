@@ -1,3 +1,5 @@
+import {createSourceGuard} from './source-lease.mjs';
+import {blobDigest} from '../storage/digests.mjs';
 export const EDIT_REPOSITORY='/repos/wt1234-donkey/visual-novel';
 const API='https://api.github.com',REPO=EDIT_REPOSITORY;
 export const HISTORY_PATH='data/work-edit-history.json';
@@ -6,7 +8,7 @@ const permissionHelp='请用有权限的 GitHub 账号，确认 Resource owner �
 export const decodeContentText=value=>new TextDecoder().decode(Uint8Array.from(atob(value.replace(/\s/g,'')),c=>c.charCodeAt(0)));
 const decode=value=>JSON.parse(decodeContentText(value));
 const encode=value=>{const bytes=new TextEncoder().encode(JSON.stringify(value,null,2)+'\n');let s='';for(let i=0;i<bytes.length;i+=32766)s+=String.fromCharCode(...bytes.subarray(i,i+32766));return btoa(s);};
-export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PATH,validate=null}={}){
+export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PATH,validate=null,sourceLease=null}={}){
  let oauthScopes=null;
  const validateRead=store=>{if(validate)validate(store);else if(!store||store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式不正确，请停止写入并核查');return store;};
  async function request(path,method='GET',body){
@@ -41,8 +43,10 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
   return res.json();
  }
  async function readFile(path=historyPath,ref='main'){const file=await request(REPO+'/contents/'+path+'?ref='+encodeURIComponent(ref));const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,text:decodeContentText(blob.content)};}
+ const guard=createSourceGuard(request,REPO);
+ const dependencies=()=>sourceLease?{...sourceLease,files:Object.fromEntries(Object.entries(sourceLease.files).filter(([path])=>path!==historyPath))}:null;
  return {
-  gitRequest:request,readFile,
+  gitRequest:request,readFile,setSourceLease:lease=>{sourceLease=lease;},
   async connect(){
    if(!token)throw Error('请填写仅授权本仓库的 GitHub 凭证');
    const [user,repo]=await Promise.all([request('/user'),request(REPO)]);
@@ -55,7 +59,24 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
    if(!response.ok)throw Error('读取已发布修改记录失败（HTTP '+response.status+'）');
    return {sha:null,store:validateRead(await response.json())};
   },
-  async read(){const file=await readFile();return {sha:file.sha,store:validateRead(JSON.parse(file.text))};},
-  async write(store,sha,message){if(!token)throw Error('请先连接 GitHub 写入权限');if(!sha)throw Error('请先读取 GitHub 最新修改记录后保存；已发布副本不能直接写入');const result=await request(REPO+'/contents/'+historyPath,'PUT',{message,branch:'main',sha,content:encode(store)});return {sha:result.content.sha,commit:result.commit.sha,url:result.commit.html_url};}
+  async read(){
+   const head=sourceLease?(await request(REPO+'/git/ref/heads/main')).object.sha:'main';
+   await guard(head,dependencies());const file=await readFile(historyPath,head);
+   return {sha:file.sha,store:validateRead(JSON.parse(file.text))};
+  },
+  async write(store,sha,message){
+   if(!token)throw Error('请先连接 GitHub 写入权限');if(!sha)throw Error('请先读取 GitHub 最新修改记录后保存；已发布副本不能直接写入');
+   validateRead(store);
+   if(!sourceLease){const result=await request(REPO+'/contents/'+historyPath,'PUT',{message,branch:'main',sha,content:encode(store)});return {sha:result.content.sha,commit:result.commit.sha,url:result.commit.html_url};}
+   const head=(await request(REPO+'/git/ref/heads/main')).object.sha,parent=await guard(head,dependencies());
+   const current=await readFile(historyPath,head);
+   if(current.sha!==sha)throw Object.assign(Error('作品修改记录已变化，请重新读取后核对'),{code:'CONFLICT',status:409});
+   const content=JSON.stringify(store,null,2)+'\n',blob=await request(REPO+'/git/blobs','POST',{content,encoding:'utf-8'});
+   if(blob.sha!==await blobDigest(content))throw Error('保存对象摘要不一致');
+   const tree=await request(REPO+'/git/trees','POST',{base_tree:parent.tree.sha,tree:[{path:historyPath,mode:'100644',type:'blob',sha:blob.sha}]});
+   const commit=await request(REPO+'/git/commits','POST',{message,tree:tree.sha,parents:[head]});
+   await request(REPO+'/git/refs/heads/main','PATCH',{sha:commit.sha,force:false});
+   return {sha:blob.sha,commit:commit.sha,url:'https://github.com/wt1234-donkey/visual-novel/commit/'+commit.sha};
+  }
  };
 }

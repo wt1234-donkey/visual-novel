@@ -1,12 +1,12 @@
+import {projectFormalWork,formalFieldMeta,CREATOR_NAME_FIELDS,EDIT_FIELDS} from './src/domain/catalogue/effective.mjs';
+export {CREATOR_NAME_FIELDS,EDIT_FIELDS} from './src/domain/catalogue/effective.mjs';
 import {same,nameKey,validURL} from './management-model.mjs';
-export const CREATOR_NAME_FIELDS={writerNames:'剧作',artistNames:'美术',musicianNames:'音乐'};
-export const EDIT_FIELDS=['title','originalTitle','chineseTitle','chineseTitleType','titleAliases','category','subcategory','genre','synopsis','characters','charactersNote','charactersSource','source','interactionModes','interactionNote','interactionBasis','interactionSources','notes',...Object.keys(CREATOR_NAME_FIELDS)];
 const arrays=new Set(['titleAliases','characters','interactionModes','interactionSources',...Object.keys(CREATOR_NAME_FIELDS)]);
 const copy=x=>structuredClone(x);
 function creatorNamesOnly(before,after){const fields=EDIT_FIELDS.filter(k=>!same(before[k]??(k in CREATOR_NAME_FIELDS?[]:undefined),after[k]??(k in CREATOR_NAME_FIELDS?[]:undefined)));return fields.length>0&&fields.every(k=>k in CREATOR_NAME_FIELDS);}
 function validEvidence(sources,before,after){return Array.isArray(sources)&&sources.every(validURL)&&(sources.length>0||creatorNamesOnly(before,after));}
 export function editableValues(work){return Object.fromEntries(EDIT_FIELDS.map(k=>[k,copy(work[k]??(arrays.has(k)?[]:k==='chineseTitleType'?'通行译名':''))]));}
-export function projectWork(work,store){const patch=store?.records?.[work.id]?.overrides||{};return {...work,...Object.fromEntries(EDIT_FIELDS.filter(k=>Object.hasOwn(patch,k)).map(k=>[k,copy(patch[k])]))};}
+export const projectWork=projectFormalWork;
 export function applyWorkEdits(data,store){data.works=data.works.map(w=>projectWork(w,store));return data;}
 export function validateValues(values,taxonomy,base,allWorks=[]){
  if(!values||!same(Object.keys(values).sort(),[...EDIT_FIELDS].sort()))throw Error('作品字段不完整或包含不可编辑的身份／发行字段');
@@ -24,13 +24,18 @@ export function validateValues(values,taxonomy,base,allWorks=[]){
 export function saveEdit(store,base,after,meta,taxonomy,allWorks=[]){
  const result=copy(store),row=result.records[base.id]||{revision:0,overrides:{},recent:[]};
  if(row.revision!==meta.expectedRevision)throw Error('作品已被修改，请重新读取后核对');
- const current=editableValues(projectWork(base,store));validateValues(after,taxonomy,current,allWorks);
+ const current=editableValues(projectWork(base,store));validateValues(after,taxonomy,{...current,id:base.id},allWorks);
  if(same(current,after))throw Error('没有实际修改');
  if(typeof meta.reason!=='string'||meta.reason.trim().length<5||meta.reason.length>1000||!validEvidence(meta.sources,current,after))throw Error('请填写至少5字修改说明和有效来源；仅添加剧作、美术、音乐姓名时无需来源');
  const raw=editableValues(base),patch=Object.fromEntries(EDIT_FIELDS.filter(k=>!same(raw[k],after[k])).map(k=>[k,copy(after[k])]));
- const entry={id:meta.id,revision:row.revision+1,at:meta.at,actor:meta.actor,reason:meta.reason.trim(),sources:copy(meta.sources),before:copy(row.overrides),after:copy(patch)};
- if(!entry.id||!entry.at||!entry.actor)throw Error('缺少修改身份或时间');
- result.records[base.id]={revision:entry.revision,overrides:patch,recent:[...row.recent,entry].slice(-3)};
+ const beforeFieldMeta=formalFieldMeta(row),fieldMeta=copy(beforeFieldMeta);
+ for(const field of EDIT_FIELDS){
+  if(!Object.hasOwn(patch,field))delete fieldMeta[field];
+  else if(!same(current[field],after[field]))fieldMeta[field]={id:meta.id,at:meta.at};
+ }
+ const entry={id:meta.id,revision:row.revision+1,at:meta.at,actor:meta.actor,reason:meta.reason.trim(),sources:copy(meta.sources),before:copy(row.overrides),after:copy(patch),beforeFieldMeta};
+ if(!entry.id||!Number.isFinite(Date.parse(entry.at))||!entry.actor)throw Error('缺少修改身份或时间');
+ result.records[base.id]={revision:entry.revision,overrides:patch,fieldMeta,recent:[...row.recent,entry].slice(-3)};
  return result;
 }
 export function saveCreatorNames(store,base,names,meta,taxonomy,allWorks=[]){
@@ -42,8 +47,9 @@ export function undoEdit(store,base,targetId,expectedRevision,taxonomy,allWorks=
  const row=store.records[base.id];if(!row||row.revision!==expectedRevision)throw Error('作品已变化，请重新读取');
  const index=row.recent.findIndex(e=>e.id===targetId);if(index<0)throw Error('只能回撤本作品最近3次修改');
  const overrides=copy(row.recent[index].before),restored={...editableValues(base),...overrides};
- validateValues(restored,taxonomy,editableValues(projectWork(base,store)),allWorks);
- const result=copy(store);result.records[base.id]={revision:row.revision+1,overrides,recent:row.recent.slice(0,index)};return result;
+ validateValues(restored,taxonomy,{...editableValues(projectWork(base,store)),id:base.id},allWorks);
+ const recent=row.recent.slice(0,index),fieldMeta=copy(row.recent[index].beforeFieldMeta||formalFieldMeta({overrides,recent}));
+ const result=copy(store);result.records[base.id]={revision:row.revision+1,overrides,fieldMeta,recent};return result;
 }
 export function changedFields(before,after){return EDIT_FIELDS.filter(k=>!same(before[k],after[k]));}
 export function validateHistory(store,works,taxonomy){
@@ -53,10 +59,12 @@ export function validateHistory(store,works,taxonomy){
   if(!base.has(id)||!Number.isInteger(row.revision)||row.revision<1||!row.overrides||!Array.isArray(row.recent)||row.recent.length>3)throw Error('作品修订结构无效：'+id);
   const patchOK=patch=>patch&&typeof patch==='object'&&!Array.isArray(patch)&&Object.entries(patch).every(([k,v])=>EDIT_FIELDS.includes(k)&&(arrays.has(k)?Array.isArray(v)&&v.length<=100&&v.every(x=>typeof x==='string'&&x.trim()&&x.length<=500)&&new Set(v).size===v.length:typeof v==='string'&&v.length<=20000));
   if(!patchOK(row.overrides))throw Error('修订包含受保护字段');
+  const metadataOK=(metadata,patch)=>metadata===undefined||metadata&&typeof metadata==='object'&&!Array.isArray(metadata)&&Object.entries(metadata).every(([key,value])=>Object.hasOwn(patch,key)&&value&&typeof value.id==='string'&&value.id&&Number.isFinite(Date.parse(value.at)));
+  if(!metadataOK(row.fieldMeta,row.overrides)||row.recent.some(event=>!metadataOK(event.beforeFieldMeta,event.before)))throw Error('字段更正身份或时间无效');
   const ids=new Set();let prior=null,rev=0;
   for(const e of row.recent){if(!patchOK(e.before)||!patchOK(e.after)||!e.id||ids.has(e.id)||!Number.isInteger(e.revision)||e.revision<=rev||e.revision>row.revision||!Number.isFinite(Date.parse(e.at))||!e.actor||!e.reason||e.reason.trim().length<5||!validEvidence(e.sources,e.before,e.after))throw Error('历史快照无效');if(prior&&!same(prior,e.before))throw Error('历史快照不连续');ids.add(e.id);rev=e.revision;prior=e.after;}
   if(prior&&!same(prior,row.overrides))throw Error('现行更正与最近修改不一致');
-  validateValues(editableValues(projectWork(base.get(id),store)),taxonomy,editableValues(base.get(id)),works.map(w=>projectWork(w,store)));
+  validateValues(editableValues(projectWork(base.get(id),store)),taxonomy,{...editableValues(base.get(id)),id},works.map(w=>projectWork(w,store)));
  }
  return true;
 }

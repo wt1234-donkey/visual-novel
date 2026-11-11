@@ -1,3 +1,5 @@
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
+from date_contract import is_published_year
 """Apply reviewed management packages to an isolated Git branch, with optimistic locking.
 
 No file paths, executable code or Git commands are accepted in a package.
@@ -22,7 +24,7 @@ ID = re.compile(r'[a-z0-9][a-z0-9_-]{1,119}\Z')
 
 
 def read(name, root=ROOT):
-    return json.loads((root / 'data' / name).read_text(encoding='utf-8'))
+    return read_registry_json(root / 'data' / name)
 
 
 def load(root=ROOT):
@@ -203,7 +205,7 @@ def validate_new_work(bundle, key, games):
         assert not {str(r).lower() for r in w.get('sourceRefs', [])} & {str(r).lower() for r in old.get('sourceRefs', [])}, '外部来源身份重复'
         oldnames = {name_key(old.get(f,'')) for f in ('title','chineseTitle','originalTitle')} | {name_key(a) for a in old.get('titleAliases',[])}
         assert not names & (oldnames - {''}), f"名称与已有作品 {old['id']} 重复，请复用其身份或先核查同名作品"
-    assert type(w['firstYear']) is int and 1976 <= w['firstYear'] <= dt.date.today().year
+    assert is_published_year(w['firstYear'])
     taxonomy = read('taxonomy.json')
     assert w['category'] in taxonomy['subcategories'] and w['subcategory'] in taxonomy['subcategories'][w['category']]
     assert w['subcategory'] not in {'纯文本指令','图文指令'}, '此类输入式书目须通过具名专题准入审查'
@@ -297,7 +299,7 @@ def apply_file(path, root=ROOT):
     report['counts'] = counts
     outputs['narrative-cataloguing-20261030.json'] = report
     for name, content in outputs.items():
-        (root / 'data' / name).write_text(json.dumps(content, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        write_registry_text(root / 'data' / name, json.dumps(content, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(f"Applied {len(package['operations'])} reviewed changes; complete repository checks are still required.")
 
 

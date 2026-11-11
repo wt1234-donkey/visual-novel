@@ -1,4 +1,8 @@
 """Check published bytes, identity accounting and artifact isolation."""
+import sys as _registry_sys
+from pathlib import Path as _RegistryPath
+_registry_sys.path.insert(0, str(_RegistryPath(__file__).resolve().parents[1] / 'scripts'))
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import hashlib
 import json
 import subprocess
@@ -16,13 +20,13 @@ class PagesArtifactTests(unittest.TestCase):
         root=base/'repo'
         root.mkdir()
         (root/'data').mkdir()
-        (root/REGISTRY).write_text(json.dumps({'summary':{'accepted':1},'works':[{'id':'one','batch':'test'}]}))
-        (root/'index.html').write_text('<h1>Catalogue</h1>')
+        write_registry_text(root/REGISTRY, json.dumps({'summary':{'accepted':1},'works':[{'id':'one','batch':'test'}]}))
+        write_registry_text(root/'index.html', '<h1>Catalogue</h1>')
         (root/'.github').mkdir()
-        (root/'.github'/'not-a-site-file.yml').write_text('workflow')
+        write_registry_text(root/'.github'/'not-a-site-file.yml', 'workflow')
         subprocess.run(['git','init','-q',str(root)],check=True)
         subprocess.run(['git','-C',str(root),'add','.'],check=True)
-        (root/'untracked.txt').write_text('not part of this release')
+        write_registry_text(root/'untracked.txt', 'not part of this release')
         return root
 
     def test_artifact_keeps_exact_bytes_and_excludes_git_and_untracked_files(self):
@@ -41,14 +45,14 @@ class PagesArtifactTests(unittest.TestCase):
     def test_existing_output_is_not_overwritten(self):
         with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);root=self.fixture(base);out=base/'site';out.mkdir()
-            (out/'keep.txt').write_text('keep')
+            write_registry_text(out/'keep.txt', 'keep')
             with self.assertRaises(ValueError):build(root,out,'test')
             self.assertEqual((out/'keep.txt').read_text(),'keep')
 
     def test_duplicate_identities_fail_before_publication(self):
         with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);root=self.fixture(base)
-            (root/REGISTRY).write_text(json.dumps({'summary':{'accepted':2},'works':[{'id':'one'},{'id':'one'}]}))
+            write_registry_text(root/REGISTRY, json.dumps({'summary':{'accepted':2},'works':[{'id':'one'},{'id':'one'}]}))
             with self.assertRaises(ValueError):build(root,base/'site','test')
             self.assertFalse((base/'site').exists())
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Package tracked static content and attach verifiable catalogue provenance."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import hashlib
 import json
@@ -18,7 +19,7 @@ def build(root,output,revision=None):
     if output==root or (output.exists() and any(output.iterdir())):
         raise ValueError('Use a separate empty output directory; existing files are never removed')
     registry_bytes=(root/REGISTRY).read_bytes()
-    registry=json.loads(registry_bytes)
+    registry=read_registry_json(root/REGISTRY)
     works=registry['works']
     if len({w['id'] for w in works})!=len(works) or registry['summary']['accepted']!=len(works):
         raise ValueError('Basic registry has duplicate identities or incorrect accounting')
@@ -35,8 +36,14 @@ def build(root,output,revision=None):
         shutil.copyfile(root/name,target)
     (output/'.nojekyll').touch()
     revision=revision or subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
+    # Published HTML and CSV always include current corrections. Never require a
+    # browser data edit to commit regenerated derived views back to source Git.
+    if 'scripts/generate_effective_views.py' in paths:
+        subprocess.run(['python3',str(output/'scripts/generate_effective_views.py')],check=True)
     if 'scripts/build_basic_web_index.mjs' in paths:
         subprocess.run(['node',str(root/'scripts/build_basic_web_index.mjs'),str(root),str(output),revision],check=True)
+    if 'scripts/build_effective_catalogue.mjs' in paths:
+        subprocess.run(['node', str(root/'scripts/build_effective_catalogue.mjs'), str(root), str(output), revision], check=True)
     versioned_modules=version_modules(output,revision)
     manifest={
         'schema':1,
@@ -48,7 +55,7 @@ def build(root,output,revision=None):
         'trackedFileCount':len(paths),
         'versionedBrowserFiles':versioned_modules,
     }
-    (output/'deployment.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+    write_registry_text(output/'deployment.json', json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     if (output/REGISTRY).read_bytes()!=registry_bytes or not (output/'index.html').is_file():
         raise ValueError('Published entry point or registry differs from the checkout')
     if (output/'.git').exists() or (output/'.github').exists():

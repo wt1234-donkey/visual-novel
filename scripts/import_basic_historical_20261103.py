@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append a small, source-reviewed 1970–1999 narrative-game batch."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import copy
 import json
@@ -169,7 +170,7 @@ def main():
         assert prior.e.load(REG) in (original, expected), 'Registry changed; refusing overwrite'
         prior.e.save(REG, expected)
         prior.e.save(AUDIT, audit)
-        REPORT.write_text(report, encoding='utf-8')
+        write_registry_text(REPORT, report, encoding='utf-8')
         print('HISTORICAL_BASIC_WRITTEN', len(original['works']), len(expected['works']))
 
 

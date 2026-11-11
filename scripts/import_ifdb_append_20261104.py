@@ -4,6 +4,7 @@
 No title, year, external-ID or edition deduplication is performed. Internal keys
 and completed-batch guards prevent corrupt IDs or accidental reruns only.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import base64
 import gzip
@@ -27,14 +28,16 @@ BATCH_SIZE = 500
 
 
 def read_json(path):
-    return json.loads(path.read_text(encoding='utf-8'))
+    return read_registry_json(path)
 
 
 def save_json(path, value, compact=False):
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, value)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + '.tmp')
     options = {'separators': (',', ':')} if compact else {'indent': 2}
-    temporary.write_text(json.dumps(value, ensure_ascii=False, **options) + '\n', encoding='utf-8')
+    write_registry_text(temporary, json.dumps(value, ensure_ascii=False, **options) + '\n', encoding='utf-8')
     temporary.replace(path)
 
 

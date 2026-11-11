@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append reviewed indie and PC-98 identities, with reproducible whole-catalogue checks."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import copy
 import hashlib
@@ -106,7 +107,7 @@ def main():
         assert current in (old,expected),'Unexpected registry state; refusing to overwrite'
         e.save(e.REG,expected)
         for path,value in audits.items():e.save(path,value)
-        REPORT.write_text(report,encoding='utf-8')
+        write_registry_text(REPORT, report,encoding='utf-8')
         print('BASIC_R140_R141_WRITTEN',len(old['works']),len(expected['works']))
 
 if __name__=='__main__':main()

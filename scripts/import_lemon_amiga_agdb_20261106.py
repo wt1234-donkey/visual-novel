@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append all selected Lemon Amiga/AGDB rows without bibliographic deduplication."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import base64
 import gzip
@@ -18,7 +19,7 @@ EXPECTED_BASE, EXPECTED_INPUT = 107684, 489
 
 
 def read(path):
-    return json.loads(path.read_text(encoding='utf-8'))
+    return read_registry_json(path)
 
 
 def canonical_hash(value):
@@ -26,11 +27,13 @@ def canonical_hash(value):
 
 
 def save(path, value, compact=False):
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, value)
     text = json.dumps(value, ensure_ascii=False, **({'separators': (',', ':')} if compact else {'indent': 2})) + '\n'
     if path == DB and len(text.encode()) >= 100 * 1024 * 1024:
         raise RuntimeError('Registry exceeds GitHub 100 MiB limit; no changes written')
     temp = path.with_suffix(path.suffix + '.tmp')
-    temp.write_text(text, encoding='utf-8')
+    write_registry_text(temp, text, encoding='utf-8')
     temp.replace(path)
 
 

@@ -5,6 +5,7 @@ The basic registry is immediately searchable on the website. Strict games.json
 requires an evidenced original content debut and a publisher/platform release.
 Never invent those facts merely to inflate the complete-profile counter.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import json
 import re
@@ -18,7 +19,7 @@ REGISTRY = ROOT / "data/main-adv-rpg-works-20261031.json"
 OUTPUT = ROOT / "data/basic-to-full-promotion-review-20261101.json"
 
 def load(path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    return read_registry_json(path)
 
 def norm(value):
     return "".join(ch for ch in unicodedata.normalize("NFKC", str(value or "")).casefold() if ch.isalnum())
@@ -115,5 +116,5 @@ if __name__ == "__main__":
     assert args.offset >= 0 and 1 <= args.limit <= 500
     result = stage(args.offset, args.limit)
     if args.write:
-        OUTPUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        write_registry_text(OUTPUT, json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result["summary"], ensure_ascii=False, indent=2))

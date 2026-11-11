@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append-only rounds 16-17. R16 resumes VNDB after v1296; R17 resumes NextMoe after page 79."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import json,re,time,argparse,datetime as dt
 from collections import Counter
 from pathlib import Path
@@ -11,8 +12,8 @@ CUTOFF=dt.date(2026,11,1)
 R16="vndb-kana-bulk-20261101-r16"; A16=ROOT/"data/vndb-kana-bulk-review-20261101-r16.json"
 R17="nextmoe-galgame-bulk-20261101-r17"; A17=ROOT/"data/nextmoe-bulk-review-20261101-r17.json"
 
-def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
-def save(p,x): Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+def load(p): return read_registry_json(Path(p))
+def save(p,x): write_registry_text(Path(p), json.dumps(x,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 def norm(s): return common.norm(s)
 def vndb_names(x):
     out=[]

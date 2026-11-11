@@ -1,3 +1,5 @@
+from date_contract import is_published_year
+from effective_catalogue import load_effective, effective_title
 """Validate catalogue relationships and the exported CSV."""
 
 import csv
@@ -31,7 +33,7 @@ works, versions = data['works'], data['platformReleases']
 def validate_edition_credits(work):
     credits = work.get('editionCredits', [])
     assert len(credits) == len({(x['year'], x['platform'], x['publisher']) for x in credits}), '发行关系重复'
-    assert all(work['firstYear'] <= x['year'] <= 2026 and x['platform'] and x['publisher']
+    assert all(work['firstYear'] <= x['year'] and is_published_year(x['year']) and x['platform'] and x['publisher']
                and x['reason'] and source_url_valid(x['source']) for x in credits), '发行关系字段不完整或早于原作'
 
 work_ids = {work['id'] for work in works}
@@ -47,7 +49,7 @@ assert all(work['subcategory'] not in {'纯文本指令', '图文指令'}
            for work in works if int(work['id'][1:]) >= 152 and work['id'] not in command_work_ids), '新增指令冒险须有具名授权或已授权完整目录范围'
 assert all(any(work['subcategory'] == value for work in works) for category in taxonomy['subcategories']
            for value in taxonomy['subcategories'][category]), '存在空的细分类'
-assert all(1976 <= version['year'] <= 2026 and version['workId'] in work_ids for version in versions)
+assert all(is_published_year(version['year']) and version['workId'] in work_ids for version in versions)
 assert all(version['publisher'] and version['platform'] and source_url_valid(version['source'])
            and version['voice'] in {'有', '无', '未核实', '有（部分）', '有（主角部分）'} for version in versions)
 for version in versions:
@@ -81,13 +83,14 @@ with (ROOT / 'data/versions.csv').open(encoding='utf-8-sig', newline='') as file
     rows = list(csv.DictReader(file))
 assert len(rows) == len(versions), 'CSV 与 JSON 条数不一致'
 assert len({row['发行ID'] for row in rows}) == len(rows), 'CSV 中版本 ID 重复'
+effective_works={work['id']: work for work in load_effective(ROOT)['main']['works']}
 for version, row in zip(versions, rows):
     assert row['内容版本ID'] == (version['contentVersionId'] or '')
     assert row['内容关系'] == version['contentRelation']
     assert row['内容核对说明'] == version['contentNote']
-    work = next(work for work in works if work['id'] == version['workId'])
+    work = effective_works[version['workId']]
     assert row['作品ID'] == work['id'] and row['发行ID'] == version['id']
-    assert row['作品名称'] == work['title'] and row['主分类'] == work['category']
+    assert row['作品名称'] == effective_title(work) and row['主分类'] == work['category']
     assert row['中文名称'] == work.get('chineseTitle', '')
     assert row['细分类'] == work['subcategory']
     assert row['互动方式（作品概览）'] == '、'.join(work['interactionModes'])
@@ -142,7 +145,7 @@ for company in coverage['companies']:
     assert len(dossier_ids) == len(dossier_only) and not dossier_ids & (work_ids | related_ids), '仅专题作品ID冲突'
     for w in dossier_only:
         assert source_url_valid(w['source']) and w['synopsis'] and w['characters'] and w['genre']
-        assert isinstance(w['firstYear'], int) and 1976 <= w['firstYear'] <= 2026
+        assert is_published_year(w['firstYear'])
         assert all(name and '待核实' not in name for name in w['characters'])
         assert '文字输入' in w['interactionModes'], '仅专题输入式冒险必须标明文字输入'
         assert not any(k in w for k in ['versions', 'platformReleases', 'contentVersions']), '仅专题书目不制造主库内容与发行记录'

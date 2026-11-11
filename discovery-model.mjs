@@ -14,7 +14,7 @@ export function narrativeCounts(atlas){
  for(const work of atlas.data.works)counts[narrativeState(atlas,work)]++;
  return counts;
 }
-export const titleOf=work=>work.chineseTitle||work.title;
+export const titleOf=work=>work.displayTitle||work.chineseTitle||work.title;
 const group=(rows,key)=>{const map=new Map();for(const row of rows){const k=row[key];if(!map.has(k))map.set(k,[]);map.get(k).push(row)}return map};
 export function createAtlas(data,catalogue,editorial,creators,notes={works:{}}){
   const works=new Map(data.works.map(w=>[w.id,w]));

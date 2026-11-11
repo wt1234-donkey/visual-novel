@@ -7,9 +7,10 @@ import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} fro
 import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261111-architecture';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
-export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map()){
+export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map(),{sourceLease=null}={}){
+ if(!sourceLease)throw Error('索引缺少来源版本，请刷新页面后重试');
  let actor='',busy=false,pendingImport=null,returnFocus=null,entries=[],catalogueView,editBaseline=null,historyCursor=null,historyRequest=0;
- const clientFor=token=>createBasicRepository(token);
+ const clientFor=token=>createBasicRepository(token,fetch,{sourceLease});
  const service=createCatalogueService({base,initial,repository:clientFor(''),loadDetails,makeMeta:()=>({id:randomId(),at:new Date().toISOString()})});
  const dialog=document.createElement('dialog');dialog.id='basic-editor';document.body.append(dialog);
  const $=s=>dialog.querySelector(s);
@@ -66,7 +67,8 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   const children=w?all().filter(x=>x.parentId===id):[];
   shell(w?'修改作品 · '+w.title:'直接添加作品',`<form id="be-edit" data-id="${safe(id||'')}"><div class="be-grid">
    ${input('title','作品名称',v.title,'required maxlength="500"')}
-   <label>首发年份（未知可留空）<input name="firstYear" type="number" min="1970" max="${new Date().getFullYear()+10}" step="1" list="be-years" value="${v.firstYear??''}"><datalist id="be-years">${Array.from({length:new Date().getFullYear()+11-1970},(_,i)=>`<option value="${1970+i}"></option>`).join('')}</datalist></label>
+   <label>首发年份（未知可留空）<input name="firstYear" type="number" min="1900" max="2200" step="1" list="be-years" value="${v.firstYear??''}"><datalist id="be-years">${Array.from({length:new Date().getFullYear()+11-1900},(_,i)=>`<option value="${1900+i}"></option>`).join('')}</datalist></label>
+   <label>年份状态<select name="yearStatus">${[['unverified','待核实'],['published','已发行'],['planned','计划发行']].map(([value,label])=>`<option value="${value}" ${v.yearStatus===value||!v.yearStatus&&value==='unverified'?'selected':''}>${label}</option>`).join('')}</select><span class="minor">年份留空表示未知；未来年份不会自动视为已发行。</span></label>
    ${input('group','厂商／创作主体',v.group,'required list="be-groups" maxlength="500"')}<datalist id="be-groups">${[...new Map(base.filter(x=>x.group).map(x=>[manufacturerKey(x.group),x.group])).values()].map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist>
    ${input('gameplay','主要玩法',v.gameplay,'required list="be-gameplay" maxlength="500"')}<datalist id="be-gameplay">${GAMEPLAY_OPTIONS.map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist></div>
    <fieldset><legend>作品特征标签 · 跨维度最多六个</legend>${styleInputs(tags)}
@@ -161,7 +163,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
    const {legacy,tags:previousTags}=styleState(previous||{});
    const plotStyles=f.has('removeLegacy')?[]:legacy.filter(tag=>!styleLabels(plotTags).includes(styleName(tag)));
    const plotTagEvidence=packStyleEvidence(plotTags,new Map(styleEvidenceEntries(previousTags,previous?.plotTagEvidence)));
-   let v={title:String(f.get('title')).trim(),firstYear:f.get('firstYear')?Number(f.get('firstYear')):null,group:String(f.get('group')).trim(),gameplay:String(f.get('gameplay')).trim(),plotStyles,plotTags,plotTagEvidence,source:String(f.get('source')||'').trim()};
+   let v={title:String(f.get('title')).trim(),firstYear:f.get('firstYear')?Number(f.get('firstYear')):null,yearStatus:f.get('firstYear')?String(f.get('yearStatus')||'unverified'):'unknown',group:String(f.get('group')).trim(),gameplay:String(f.get('gameplay')).trim(),plotStyles,plotTags,plotTagEvidence,source:String(f.get('source')||'').trim()};
    if(id&&editBaseline?.id===id&&editBaseline.revision!==service.snapshot.store.revision){
     try{v=reconcileBasicEdit(editBaseline.values,v,valuesOf(previous));}
     catch(error){message(error.message,true);return;}

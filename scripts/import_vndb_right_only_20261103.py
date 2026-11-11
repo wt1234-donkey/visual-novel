@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Append the requested right-only table in 500-record batches, without work deduplication."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import base64
 import csv
@@ -20,10 +21,12 @@ POLICY = 'append-without-deduplication'
 BASE = 'ea1fe133731527123e8f2e7de9115dc0940fa583'
 
 def save(path, value):
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n',encoding='utf-8')
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, value)
+    write_registry_text(path, json.dumps(value, ensure_ascii=False, indent=2)+'\n',encoding='utf-8')
 
 def source_rows():
-    manifest=json.loads(MANIFEST.read_text())
+    manifest=read_registry_json(MANIFEST)
     raw=gzip.decompress(base64.b64decode(SOURCE.read_bytes()))
     assert hashlib.sha256(raw).hexdigest()==manifest['sourceSha256']
     rows=json.loads(raw)
@@ -61,7 +64,7 @@ def work_from(row, number):
 def append_pair(pair):
     assert 1<=pair<=12
     rows=source_rows()
-    registry=json.loads(REG.read_text())
+    registry=read_registry_json(REG)
     first=145+(pair-1)*2
     batches=[n for n in (first,first+1) if n<=167]
     completed={b['id'] for b in registry['batches']}
@@ -103,7 +106,7 @@ def append_pair(pair):
     print('PAIR_IMPORTED',pair,'BATCHES',batches,'ADDED',len(registry['works'])-before_pair,'TOTAL',len(registry['works']))
 
 def check():
-    rows=source_rows();reg=json.loads(REG.read_text())
+    rows=source_rows();reg=read_registry_json(REG)
     old=json.loads(subprocess.check_output(['git','show',BASE+':data/main-adv-rpg-works-20261031.json'],cwd=ROOT))
     assert reg['works'][:len(old['works'])]==old['works'],'Historical objects changed'
     assert reg['batches'][:len(old['batches'])]==old['batches'],'Historical batches changed'

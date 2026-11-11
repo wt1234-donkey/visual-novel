@@ -21,7 +21,7 @@ function packBasicRows(works,gameplayBySlot){
  const groupKey=intern(groups),gameplayKey=intern(gameplay),statusKey=intern(statuses);
  const rows=works.map((w,slot)=>{
   const row=[w.id,w.matchedWorkId||null,w.title,w.year,groupKey(w.group),gameplayKey(w.gameplay),statusKey(w.status)];
-  const optional=[w.aliases?.length?w.aliases:null,w.groups?.length?w.groups.map(groupKey):null,w.plotStyles?.length?w.plotStyles:null,w.plotTags||null,gameplayBySlot.get(slot)?.length?gameplayBySlot.get(slot):null];
+  const optional=[w.aliases?.length?w.aliases:null,w.groups?.length?w.groups.map(groupKey):null,w.plotStyles?.length?w.plotStyles:null,w.plotTags||null,gameplayBySlot.get(slot)?.length?gameplayBySlot.get(slot):null,w.formalTitle?{title:w.formalTitle,override:w.formalOverride,at:w.formalAt}:null];
   while(optional.length&&!optional.at(-1))optional.pop();
   return row.concat(optional);
  });
@@ -30,7 +30,7 @@ function packBasicRows(works,gameplayBySlot){
 
 
 export function buildBasicWebIndex(root,output,revision){
- const {snapshot,inputs}=loadCatalogueSnapshot(root);
+ const {snapshot,inputs,sourceLease}=loadCatalogueSnapshot(root);
  const {registry,main,supplement,history}=inputs;
  const {sourceRows:basic,home}=snapshot;
  const dir=join(output,'data','basic-web'),version=join(dir,revision),shardSize=250;
@@ -56,7 +56,7 @@ export function buildBasicWebIndex(root,output,revision){
  save(join(version,'home-search.json'),home.rows.map(w=>normalizeBasicQuery([w.title,...(w.aliases||[]),w.group,...(w.sourceRefs||[])].join(' '))),true);
  shards('home',home.rows,({title,aliases,firstYear,gameplay,group,source,mainPlacement})=>({title,aliases,firstYear,gameplay,group,source,mainPlacement}));
  const {promotedBasic,promotedDossier,existingComplete}=registry.summary;
- save(join(dir,'manifest.json'),{schema:1,revision,shardSize,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
+ save(join(dir,'manifest.json'),{schema:1,revision,shardSize,sourceLease,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
   home:{total:home.rows.length,excluded:home.excluded},
   catalogue:{schemaVersion:snapshot.schemaVersion,dataRevision:snapshot.revision,identityCandidates:snapshot.identityCandidates.length,journal:snapshot.journal}});
  save(join(version,'identity-review.json'),{candidates:snapshot.identityCandidates,issues:snapshot.issues});

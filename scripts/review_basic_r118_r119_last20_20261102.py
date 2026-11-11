@@ -6,6 +6,7 @@ from title matching. The 1982 IFDB Earthquake catalogue record is an alias of th
 1981 original; the 1987 Quill Shipwreck is independent of the 1986 BASIC game.
 All other approvals have explicit story/creator/context evidence.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 from collections import Counter
 import hashlib
@@ -84,10 +85,10 @@ REUSE={
 }
 
 def load(path):
-    return json.loads(Path(path).read_text(encoding='utf-8'))
+    return read_registry_json(Path(path))
 
 def dump(path, data):
-    path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    write_registry_text(path, json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 def build(reg):
     prev=load(PRIOR)

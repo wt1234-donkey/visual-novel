@@ -1,3 +1,4 @@
+import {isPublishedYear} from './src/domain/catalogue/dates.mjs';
 import {prefillBasicValues} from './bulk-autofill.mjs?v=20261101-autofill';
 import {nameKey, validURL, makeNewWork, validateNewBundle, nextWorkId, same} from './management-model.mjs';
 
@@ -15,7 +16,7 @@ export function scanRegistry(registry,reserved){
   if(matches.length){status=matches.length===1&&matches[0].firstYear===w.firstYear?'existing':'conflict';reason=status==='existing'?'已有作品身份，跳过新增':'名称、别名或外部身份碰撞／年份冲突';}
   else if(w.mainPlacement!=='promoted-basic'){status='conflict';reason='已关联专题或其他身份，需复用原档案';}
   else if([...names(w).flatMap(n=>basicNames.get(n)||[]),...refs(w).flatMap(r=>basicRefs.get(r)||[])].some(r=>r.indexId!==w.indexId)){status='conflict';reason='基础库内部名称／外部身份重复，需核对';}
-  else if(!w.indexId||!validURL(w.source)||!Number.isInteger(w.firstYear)||w.firstYear<1976||w.firstYear>new Date().getFullYear()){status='conflict';reason='基础身份缺少有效来源或年份';}
+  else if(!w.indexId||!validURL(w.source)||!isPublishedYear(w.firstYear)){status='conflict';reason='基础身份缺少有效来源或年份';}
   return {work:w,status,reason,matches};
  });
 }

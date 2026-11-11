@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Reproducible append-only intake from a pinned public-source snapshot."""
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import base64
 import copy
@@ -294,7 +295,7 @@ def main():
         assert e.load(e.REG) in (original,expected), 'Registry changed; refusing overwrite'
         e.save(e.REG,expected)
         for path,value in audits.items():e.save(path,value)
-        REPORT.write_text(report,encoding='utf-8')
+        write_registry_text(REPORT, report,encoding='utf-8')
         print('BASIC_R142_R143_WRITTEN',len(original['works']),len(expected['works']))
 
 if __name__=='__main__':main()

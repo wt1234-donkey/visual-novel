@@ -5,6 +5,7 @@ Uses the publicly documented anonymous list API, not resource/download counts.
 Does not touch games.json, content versions, editions or creator credits.
 The script is intentionally conservative: uncertain aliases and years go to audit.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import datetime as dt
 import json
@@ -32,7 +33,7 @@ HELD_EDITION_IDS = {
 CUTOFF = dt.date(2026, 10, 31)
 
 def load(name):
-    return json.loads((ROOT / name).read_text(encoding="utf-8"))
+    return read_registry_json(ROOT / name)
 
 def norm(value):
     return "".join(c for c in unicodedata.normalize("NFKC", str(value or "")).casefold() if c.isalnum())
@@ -292,8 +293,8 @@ def run(args):
     if args.dry_run:
         print(json.dumps(audit["summary"], ensure_ascii=False, indent=2))
         return
-    REGISTRY.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    AUDIT.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_registry_text(REGISTRY, json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_registry_text(AUDIT, json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"ADDED={inc} FROM={before} TO={len(registry['works'])} AUDIT={AUDIT}", flush=True)
 
 def main():

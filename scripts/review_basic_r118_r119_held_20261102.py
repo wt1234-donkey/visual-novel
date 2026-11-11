@@ -6,6 +6,7 @@ The 2026-11-02 IFDB decisions were checked against the named IFDB work pages;
 VNDB decisions also compare live producers and VN-to-VN relations.
 All historic queues, audits and cursors remain unchanged.
 """
+from registry_store import read_json as read_registry_json, write_json as write_registry_json, write_text as write_registry_text
 import argparse
 import copy
 import datetime as dt
@@ -38,10 +39,12 @@ IFDB_UNCERTAIN={'iq9wxtd9a7vpcy2g','x7cvej7bm7ixiz0a'}
 IFDB_ALL=IFDB_DISTINCT | IFDB_UNCERTAIN
 
 def load(path):
-    return json.loads(Path(path).read_text(encoding='utf-8'))
+    return read_registry_json(Path(path))
 
 def save(path,value):
-    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    if Path(path).name == 'main-adv-rpg-works-20261031.json':
+        return write_registry_json(path, value)
+    write_registry_text(path, json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 def groups():
     audits=[load(ROOT/R118),load(ROOT/R119)]
