@@ -1,3 +1,4 @@
+import {withJournal,appendJournal,validateJournal} from './journal.mjs';
 // Shared, additive basic-catalogue edits. Original source records remain auditable.
 export const emptyStore=()=>({schemaVersion:1,revision:0,additions:[],records:{},recent:[]});
 import {workKey,nameKey} from './identity.mjs';
@@ -42,7 +43,7 @@ export function reconcileBasicEdit(opened,submitted,latest){
  return validateValues(result);
 }
 export function validateStore(s){
- if(!s||s.schemaVersion!==1||!Number.isSafeInteger(s.revision)||s.revision<0||!Array.isArray(s.additions)||!s.records||typeof s.records!=='object'||Array.isArray(s.records)||!Array.isArray(s.recent)||s.recent.length>3)throw Error('基础库修改记录格式无效');
+ if(!s||![1,2].includes(s.schemaVersion)||!Number.isSafeInteger(s.revision)||s.revision<0||!Array.isArray(s.additions)||!s.records||typeof s.records!=='object'||Array.isArray(s.records)||!Array.isArray(s.recent)||s.recent.length>3)throw Error('基础库修改记录格式无效');
  const ids=new Set();for(const w of s.additions){if(!/^manual-[a-zA-Z0-9-]+$/.test(w.id)||ids.has(w.id))throw Error('新增作品ID无效或重复');ids.add(w.id);validateValues(valuesOf(w));}
  for(const [id,r] of Object.entries(s.records)){
   if(!id||!r||typeof r!=='object'||Array.isArray(r)||['__proto__','constructor','prototype'].includes(id))throw Error('修改记录无效');
@@ -60,8 +61,11 @@ export function validateStore(s){
    const seen=new Set([id]);let p=r.parentId;while(p){if(seen.has(p))throw Error('作品合并关系存在循环');seen.add(p);p=s.records[p]?.parentId;}
   }
  }
+ if(s.schemaVersion===2)validateJournal(s,validateStore);
+ else if(own(s,'journal'))throw Error('旧版基础库不能携带新版变更日志');
  return s;
 }
+export function upgradeStore(store){validateStore(store);return withJournal(store);}
 // A source ID may occur more than once in the generated index. Render each stable
 // identity once, and recover stored identity snapshots when the base index changes.
 export function projectEntries(base,store,{includeChildren=false,includeDeleted=false}={}){
@@ -144,11 +148,17 @@ export function applyChange(store,base,action,meta){
  const changes=[...touched].map(id=>({id,before:own(store.records,id)?clone(store.records[id]):null,after:clone(next.records[id])}));
  if(!added.length&&changes.every(c=>JSON.stringify(c.before)===JSON.stringify(c.after)))throw Error('没有实际修改');
  next.revision++;next.recent.push({id:meta.id,at:meta.at,actor:meta.actor,reason:meta.reason,changes,added});next.recent=next.recent.slice(-3);
+ appendJournal(store,next,meta,action.type,meta.intent||action);
  validateStore(next);return next;
 }
-export function undoLast(store,revision){
+export function undoLast(store,revision,meta){
  validateStore(store);if(revision!==store.revision)throw Error('基础库已变化，请重新读取');if(!store.recent.length)throw Error('没有可撤销的操作');
- const next=clone(store),last=next.recent.pop();for(const c of last.changes){if(c.before===null)delete next.records[c.id];else next.records[c.id]=clone(c.before);}next.additions=next.additions.filter(w=>!last.added.includes(w.id));next.revision++;validateStore(next);return next;
+ const next=clone(store),last=next.recent.pop();for(const c of last.changes){if(c.before===null)delete next.records[c.id];else next.records[c.id]=clone(c.before);}next.additions=next.additions.filter(w=>!last.added.includes(w.id));next.revision++;
+ if(store.schemaVersion===2){
+  if(!meta)throw Error('撤销缺少操作身份');
+  appendJournal(store,next,meta,'undo',{type:'undo',targetId:last.id});
+ }
+ validateStore(next);return next;
 }
 export function planStyleUpdates(works,rows){
  if(!Array.isArray(rows)||!rows.length||rows.length>500)throw Error('每批须选择1至500部作品');

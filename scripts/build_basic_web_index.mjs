@@ -58,7 +58,7 @@ export function buildBasicWebIndex(root,output,revision){
  const {promotedBasic,promotedDossier,existingComplete}=registry.summary;
  save(join(dir,'manifest.json'),{schema:1,revision,shardSize,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
   home:{total:home.rows.length,excluded:home.excluded},
-  catalogue:{schemaVersion:snapshot.schemaVersion,dataRevision:snapshot.revision,identityCandidates:snapshot.identityCandidates.length}});
+  catalogue:{schemaVersion:snapshot.schemaVersion,dataRevision:snapshot.revision,identityCandidates:snapshot.identityCandidates.length,journal:snapshot.journal}});
  save(join(version,'identity-review.json'),{candidates:snapshot.identityCandidates,issues:snapshot.issues});
 }
 

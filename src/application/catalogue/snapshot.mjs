@@ -84,6 +84,7 @@ export function buildCatalogueSnapshot({registry, initial = [], batches = [], st
    aliases:[...new Set([...(row.aliases || []), ...(view.childrenByMain.get(row._key) || []).flatMap(child => [child.title, ...(child.aliases || [])])])]
   }));
  return {schemaVersion:1, revision:store.revision, sourceRows, ...view, identities, formalById, formalIdByWorkId, identityCandidates,
+  journal:{baselineRevision:store.journal?.baseline.revision??store.revision,eventCount:store.journal?.events.length??0},
   home:{rows:homeRows, excluded:view.entries.length - homeRows.length}};
 }
 
