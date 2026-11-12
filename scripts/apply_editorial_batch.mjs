@@ -10,6 +10,11 @@ import {applyChange,undoLast,validateStore} from '../basic-catalogue-model.mjs';
 import {saveEdit,undoEdit,projectWork,validateHistory} from '../work-edit-model.mjs';
 import {readBasicStoreSync,saveBasicStoreSync} from '../src/infrastructure/filesystem/basic-store.mjs';
 import {assembleBasicRows} from './build_basic_web_index.mjs';
+import {createHash} from 'node:crypto';
+import {validateBasicAction} from '../src/application/commands/envelope.mjs';
+import {assertCommandSource} from '../src/application/commands/execute.mjs';
+import {sourceLeaseSync} from '../src/infrastructure/filesystem/effective-catalogue.mjs';
+import {journalKey} from '../src/domain/catalogue/journal.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=(dir,file)=>readJsonFileSync(join(dir,'data',file));
@@ -64,6 +69,7 @@ function fullWorks(dir){
  return {full,reserved:[...full,...dossiers]};
 }
 function strictBasic(action){
+ validateBasicAction(action.type==='undo'?{...action,targetId:action.targetId||'legacy-reviewed-undo'}:action);
  const validKey=id=>typeof id==='string'&&/^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,199}$/.test(id)&&!['constructor','prototype'].includes(id);
  if(action.type==='add'){
   const allowed=new Set(['id','title','firstYear','group','gameplay','plotStyles','plotTags','plotTagEvidence','source']);
@@ -81,9 +87,18 @@ export function applyEditorialBatch(batch,dir=root){
  const proposals=batch.proposals.map(validateProposal),ids=proposals.map(p=>p.id);
  if(new Set(ids).size!==ids.length)fail('发布批次含重复提案');
  const ledger=read(dir,ledgerFile);
- if(ledger.batches.some(row=>row.id===batch.id&&JSON.stringify(row.proposals)===JSON.stringify(ids)))return {already:true,management:false};
+ const fingerprints=Object.fromEntries(proposals.map(p=>[p.id,createHash('sha256').update(journalKey(p)).digest('hex')]));
+ const sameBatch=ledger.batches.find(row=>row.id===batch.id);
+ if(sameBatch){
+  if(journalKey(sameBatch.proposals)!==journalKey(ids)||journalKey(sameBatch.fingerprints)!==journalKey(fingerprints))fail('批次ID已用于其他内容，或旧批次缺少可核对摘要；已保存资料保留');
+  return {already:true,management:false};
+ }
  if(ledger.batches.some(row=>row.id===batch.id||row.proposals.some(id=>ids.includes(id))))fail('该提案已经入库，请同步状态');
  const time=new Date().toISOString();
+ const policy=(()=>{try{return read(dir,'trusted-save-policy.json').mode;}catch{return 'legacy';}})();
+ for(const p of proposals.filter(p=>['basic','work'].includes(p.kind))){
+  if(p.change.sourceLease||policy==='trusted')assertCommandSource(p.change.sourceLease,sourceLeaseSync(dir),p.kind==='work'?'formal':'basic');
+ }
  const basic=proposals.filter(p=>p.kind==='basic'),formal=proposals.filter(p=>p.kind==='work');
  let basicResult,workResult;
  if(basic.length){
@@ -131,7 +146,7 @@ export function applyEditorialBatch(batch,dir=root){
  }
  if(basicResult)saveBasicStoreSync(dir,basicResult);
  if(workResult)save(dir,workFile,workResult);
- ledger.batches.push({id:batch.id,proposals:ids,at:time});
+ ledger.batches.push({id:batch.id,proposals:ids,fingerprints,at:time});
  save(dir,ledgerFile,ledger);
  return {already:false,management:!!management.length};
 }

@@ -5,15 +5,17 @@ import {COMMAND_LIMIT,validateCommand} from '../src/application/commands/envelop
 import {gitBlobHash} from '../src/infrastructure/filesystem/basic-store.mjs';
 import {executeCommand} from '../src/infrastructure/filesystem/command-executor.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
-export function dispatchReference(event){
+export function dispatchReference(event,{rehearsal=false}={}){
  const ref=event.client_payload;
- if(event.repository?.full_name!=='wt1234-donkey/visual-novel'||event.action!=='catalogue-command-v1'||!event.sender?.login||!ref||Object.keys(ref).some(key=>!['schemaVersion','operationId','commandSha'].includes(key))||ref.schemaVersion!==1||typeof ref.operationId!=='string'||!ref.operationId||ref.operationId.length>500||!/^[a-f0-9]{40}$/.test(ref.commandSha))throw Error('命令派发身份或对象引用无效');
+ if(event.repository?.full_name!=='wt1234-donkey/visual-novel'||event.action!==(rehearsal?'catalogue-command-probe-v1':'catalogue-command-v1')||!event.sender?.login||!ref||Object.keys(ref).some(key=>!['schemaVersion','operationId','commandSha'].includes(key))||ref.schemaVersion!==1||typeof ref.operationId!=='string'||!ref.operationId||ref.operationId.length>500||!/^[a-f0-9]{40}$/.test(ref.commandSha))throw Error('命令派发身份或对象引用无效');
  return {...ref,actor:event.sender.login};
 }
 async function main(){
  const policy=JSON.parse(readFileSync(join(root,'data/trusted-save-policy.json'),'utf8'));
- if(policy.mode!=='trusted')throw Error('可信保存尚未切换；请先完成规则与直存联调，不接受生产命令');
- const event=JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH,'utf8')),reference=dispatchReference(event);
+ const rehearsal=process.argv.includes('--rehearsal');
+ if(rehearsal&&process.env.GITHUB_EVENT_NAME!=='repository_dispatch')throw Error('隔离验证只能通过独立派发事件执行');
+ if(!rehearsal&&policy.mode!=='trusted')throw Error('可信保存尚未切换；请先完成规则与直存联调，不接受生产命令');
+ const event=JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH,'utf8')),reference=dispatchReference(event,{rehearsal});
  const response=await fetch('https://api.github.com/repos/wt1234-donkey/visual-novel/git/blobs/'+reference.commandSha,{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}});
  if(!response.ok)throw Error('无法读取命令对象');
  const blob=await response.json();if(blob.size>COMMAND_LIMIT||blob.encoding!=='base64')throw Error('命令对象超过大小限制或编码无效');

@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
   actions: write
+  statuses: write
 concurrency:
   group: editorial-publish
   cancel-in-progress: false
@@ -60,12 +61,14 @@ jobs:
           python3 scripts/build_company_pages.py --check
       - name: Commit approved catalogue changes
         if: steps.apply.outputs.already != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- data '*.html'
           git commit -m 'Publish approved catalogue proposals'
-          git push origin HEAD:main
+          python3 scripts/attest_editorial_commit.py
       - name: Build and publish the updated site
         env:
           GH_TOKEN: ${{ github.token }}
@@ -75,3 +78,4 @@ jobs:
             -f ref=main -F return_run_details=true --jq .workflow_run_id)
           test -n "$run_id"
           gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status
+          python3 scripts/wait_catalogue_publication.py "$(git rev-parse HEAD)"

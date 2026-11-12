@@ -1,0 +1,60 @@
+name: Catalogue command gate rehearsal
+run-name: ${{ github.event_name == 'workflow_dispatch' && '派发隔离保存验证' || '隔离保存验证' }} ${{ github.event.client_payload.operationId }}
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [catalogue-command-probe-v1]
+permissions:
+  contents: read
+jobs:
+  dispatch:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/dispatch_catalogue_probe.mjs
+  verify:
+    if: github.event_name == 'repository_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      statuses: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate actual dispatched command in isolated checkout
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/execute_catalogue_command.mjs --rehearsal
+          python3 scripts/generate_effective_views.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          node scripts/migrate_basic_storage.mjs --check
+          node --test tests/trusted-command.test.mjs
+      - name: Prove protected-ref rejection and accepted attestation without updating main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/promote_catalogue_command.py --rehearsal

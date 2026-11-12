@@ -18,7 +18,7 @@ export function validateBasicAction(action){
  if(action.type==='edit')validateValues(action.values);
  if(action.type==='add'){
   if(!Array.isArray(action.works)||!action.works.length||action.works.length>500)fail('每批新增1至500部');
-  for(const work of action.works){exact(work,['id','title','firstYear','yearStatus','group','gameplay','plotStyles','plotTags','plotTagEvidence','source']);const {id:identity,...values}=work;if(!id(identity))fail('新增身份无效');validateValues(values);}
+  for(const work of action.works){exact(work,['id','title','firstYear','yearStatus','group','gameplay','plotStyles','plotTags','plotTagEvidence','source']);const {id:identity,...values}=work;if(!id(identity))fail('新增身份无效');validateValues({...values,plotStyles:values.plotStyles||[]});}
  }
  if(action.type==='style-update'){
   if(!Array.isArray(action.rows)||!action.rows.length||action.rows.length>500||new Set(action.rows.map(row=>row.id)).size!==action.rows.length)fail('每批标签更新1至500部不同作品');
