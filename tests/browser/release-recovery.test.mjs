@@ -98,7 +98,7 @@ test('trusted mode saves an actual form through dispatch with the existing Conte
   const {page}=f;await page.locator('[data-edit="w0"]').click();await page.locator('.be-auth summary').click();await page.locator('#be-token').fill('test-only-credential');
   await page.locator('#be-connect').click();await page.locator('#be-message').filter({hasText:'已连接'}).waitFor();
   await page.locator('#be-edit [name=title]').fill('Trusted title');await page.getByRole('button',{name:'直接保存修改',exact:true}).click();
-  await page.locator('#be-message').filter({hasText:'已提交 GitHub 主分支'}).waitFor();
+  await page.locator('#be-message').filter({hasText:'最新作品资料已显示。已提交 GitHub'}).waitFor();
   assert.equal(f.api.store.records.w0.values.title,'Trusted title');assert.equal(f.api.calls.filter(call=>call.path==='/dispatches').length,1);
   assert.equal(f.api.calls.filter(call=>call.method==='PATCH'||call.path==='/git/commits').length,0,'browser never advances main or creates data commits in trusted mode');
  }catch(error){error.message+='\nSave UI: '+await f.page.locator('#be-message').textContent()+'\nRequests: '+JSON.stringify(f.api.calls.slice(-12).map(call=>({method:call.method,path:call.path})));throw error;}

@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,writeFileSync,mkdirSync,mkdtempSync,rmSync} from 'node:fs';
+import {join,dirname} from 'node:path';
+import {tmpdir} from 'node:os';
 import {validateCommand,validateBasicAction,commandText} from '../src/application/commands/envelope.mjs';
 import {planCommand} from '../src/application/commands/execute.mjs';
 import {submitCommand} from '../src/infrastructure/github/command-transport.mjs';
@@ -8,7 +10,9 @@ import {dispatchReference} from '../scripts/execute_catalogue_command.mjs';
 import {emptyStore,upgradeStore,valuesOf} from '../src/domain/catalogue/model.mjs';
 import {editableValues} from '../work-edit-model.mjs';
 import {gitFixture} from './helpers/catalogue-git-fixture.mjs';
-import {receiptPath} from '../src/infrastructure/filesystem/command-executor.mjs';
+import {receiptPath,executeCommand} from '../src/infrastructure/filesystem/command-executor.mjs';
+import {sourceLeaseSync} from '../src/infrastructure/filesystem/effective-catalogue.mjs';
+import {readBasicStoreSync} from '../src/infrastructure/filesystem/basic-store.mjs';
 import {saveMode} from '../src/application/commands/policy.mjs';
 import {parseStyleUpdates,STYLE_UPDATE_HEADERS} from '../src/application/catalogue/imports.mjs';
 import {styleReviewRows} from '../basic-style-review.mjs';
@@ -90,4 +94,24 @@ test('accepted dispatch without a verified receipt remains unknown rather than r
   const result=await api.fetch('https://api.github.com'+path,{method,body:body?JSON.stringify(body):undefined});if(!result.ok)throw Object.assign(Error('not found'),{status:result.status});return result.json();
  };
  await assert.rejects(()=>submitCommand(request,basic(),{timeout:0}),error=>error.code==='COMMAND_PENDING');
+});
+test('script executor persists a replayable journal and receipt; duplicate retry preserves later edits',()=>{
+ const root=mkdtempSync(join(tmpdir(),'trusted-command-'));
+ try{
+  const save=(path,value)=>{mkdirSync(dirname(join(root,path)),{recursive:true});writeFileSync(join(root,path),typeof value==='string'?value:JSON.stringify(value));};
+  const api=gitFixture();for(const path of api.paths().filter(path=>path.startsWith('data/')))save(path,api.file(path));
+  save('data/main-adv-rpg-works-20261031.json',{works:[{...row,id:'w1',indexId:'i1',mainPlacement:'promoted-basic'}],summary:{accepted:1,promotedBasic:1,promotedDossier:0,existingComplete:0}});
+  for(const file of ['adv-rpg-minimal-index-20261031.json','adv-rpg-next-studio-review-20261031.json','adv-rpg-round3-review-20261031.json'])save('data/'+file,{records:[]});
+  save('data/games.json',{works:[work]});save('data/non-rpg-creator-supplement-20261030.json',{works:[]});save('data/work-edit-history.json',{schemaVersion:1,records:{}});save('data/company-coverage.json',{companies:[]});save('data/taxonomy.json',taxonomy);
+  const command={...basic(),sourceLease:sourceLeaseSync(root)};
+  assert.equal(executeCommand(root,command,'tester').receipt.revision,1);
+  const next={...command,operationId:'later',expectedRevision:1,action:{...command.action,values:{...command.action.values,title:'Later edit'}}};
+  executeCommand(root,next,'tester');
+  const before=readFileSync(join(root,'data/basic-catalogue-edits.json'),'utf8');
+  assert.equal(executeCommand(root,command,'tester').alreadyApplied,true);
+  assert.equal(readFileSync(join(root,'data/basic-catalogue-edits.json'),'utf8'),before);
+  assert.equal(readBasicStoreSync(root).revision,2);
+  assert.throws(()=>executeCommand(root,{...next,operationId:'invalid',expectedRevision:0},'tester'));
+  assert.equal(readFileSync(join(root,'data/basic-catalogue-edits.json'),'utf8'),before);
+ }finally{rmSync(root,{recursive:true,force:true});}
 });
