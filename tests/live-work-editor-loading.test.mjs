@@ -10,8 +10,8 @@ const read=name=>JSON.parse(readFileSync(new URL('../data/'+name+'.json',import.
 const base=read('games').works.find(w=>w.id==='g039'),taxonomy=read('taxonomy');
 const empty=()=>({schemaVersion:1,records:{}});
 function saved(){const after=editableValues(base);after.notes='已保存的网页更正记录';return saveEdit(empty(),base,after,{id:'test-edit',actor:'test-user',at:'2026-11-04T08:00:00Z',reason:'已核对的网页更正',sources:[base.source],expectedRevision:0},taxonomy,[base]);}
-async function harness({published=saved(),publishedStatus=200,latest=published}={}){
- const elements=new Map(),calls=[],handlers={},formValues={},events=[];
+async function harness({published=saved(),publishedStatus=200,latest=published,extraWorks=[],detailErrorIds=[]}={}){
+ const elements=new Map(),details=[],calls=[],handlers={},formValues={},events=[];
  const element=selector=>{if(!elements.has(selector))elements.set(selector,{selector,innerHTML:'',textContent:'',className:'',value:'',open:true,focus(){},querySelector:element,disabled:false});return elements.get(selector);};
  const dialog={dataset:{},innerHTML:'',open:false,setAttribute(){},addEventListener(type,fn){handlers[type]=fn;},showModal(){this.open=true;},close(){this.open=false;},querySelector:element,querySelectorAll:()=>[]};
  const document={createElement:tag=>tag==='dialog'?dialog:{},head:{append(){}},body:{append(){}}};
@@ -26,10 +26,10 @@ async function harness({published=saved(),publishedStatus=200,latest=published}=
   const data=url.includes('work-edit-history')?published:url.includes('games.json')?{works:[base]}:url.includes('supplement')?{works:[]}:url.includes('taxonomy')?taxonomy:{companies:[]};
   return {ok:url.includes('work-edit-history')?publishedStatus===200:true,status:url.includes('work-edit-history')?publishedStatus:200,json:async()=>structuredClone(data)};
  };
- const context=vm.createContext({requestScope,createOnDemandReader:()=>({directory:async()=>({raw:{main:{works:[base]},supplement:{works:[]},history:publishedStatus===200?structuredClone(published):{invalid:true}},coverage:{companies:[]},sourceLease:null}),formal:async()=>({source:base}),optional:async()=>[base],release:async()=>({saveMode:'legacy'})}),readReleaseJson:async path=>(await fetcher('./'+path)).json(),registerDraftEditor:()=>{},recordSavedOperation:()=>{},readPublishedSource:async path=>(await fetcher('./'+path)).json(),loadEffectiveCatalogue:async()=>({raw:{main:{works:[base]},supplement:{works:[]},history:publishedStatus===200?structuredClone(published):{invalid:true}},sourceLease:null}),document,fetch:fetcher,console,structuredClone,crypto:globalThis.crypto,confirm:()=>true,same,lines,validURL,editableValues,projectWork,saveEdit,saveCreatorNames,undoEdit,changedFields,validateHistory,CREATOR_NAME_FIELDS,window:{dispatchEvent:e=>events.push(e)},CustomEvent:class {constructor(type,{detail}){this.type=type;this.detail=detail;}},FormData:class {constructor(form){const current=vm.runInContext('editableValues(projectWork(base,snapshot.store))',context);this.values=formValues[form.selector]||Object.fromEntries(Object.entries(current).map(([k,v])=>[k,Array.isArray(v)&&k!=='interactionModes'?v.join('\n'):v]));}get(k){return this.values[k]??null;}getAll(k){return this.values[k]||[];}has(k){return Boolean(this.values[k]);}},TOKEN_SETUP_URL,createEditClient:token=>createEditClient(token,fetcher)});
+ const context=vm.createContext({requestScope,createOnDemandReader:()=>({directory:async()=>({raw:{main:{works:[base,...extraWorks.map(w=>({id:w.id,title:w.title,originalTitle:w.originalTitle,firstYear:w.firstYear}))]},supplement:{works:[]},history:publishedStatus===200?structuredClone(published):{invalid:true}},coverage:{companies:[]},sourceLease:null}),formal:async id=>{details.push(id);if(detailErrorIds.includes(id))throw Error('原始详情暂不可用');return {source:[base,...extraWorks].find(w=>w.id===id)};},optional:async()=>[base],release:async()=>({saveMode:'legacy'})}),readReleaseJson:async path=>(await fetcher('./'+path)).json(),registerDraftEditor:()=>{},recordSavedOperation:()=>{},readPublishedSource:async path=>(await fetcher('./'+path)).json(),loadEffectiveCatalogue:async()=>({raw:{main:{works:[base]},supplement:{works:[]},history:publishedStatus===200?structuredClone(published):{invalid:true}},sourceLease:null}),document,fetch:fetcher,console,structuredClone,crypto:globalThis.crypto,confirm:()=>true,same,lines,validURL,editableValues,projectWork,saveEdit,saveCreatorNames,undoEdit,changedFields,validateHistory,CREATOR_NAME_FIELDS,window:{dispatchEvent:e=>events.push(e)},CustomEvent:class {constructor(type,{detail}){this.type=type;this.detail=detail;}},FormData:class {constructor(form){const current=vm.runInContext('editableValues(projectWork(base,snapshot.store))',context);this.values=formValues[form.selector]||Object.fromEntries(Object.entries(current).map(([k,v])=>[k,Array.isArray(v)&&k!=='interactionModes'?v.join('\n'):v]));}get(k){return this.values[k]??null;}getAll(k){return this.values[k]||[];}has(k){return Boolean(this.values[k]);}},TOKEN_SETUP_URL,createEditClient:token=>createEditClient(token,fetcher)});
  const source=readFileSync(new URL('../live-work-editor.mjs',import.meta.url),'utf8').replace(/^import .*;$/gm,'').replace('export async function showLiveWorkEditor','async function showLiveWorkEditor');
  vm.runInContext(source,context);await vm.runInContext('showLiveWorkEditor("g039")',context);
- return {context,dialog,elements,calls,handlers,element,formValues,events,connect:async()=>{element('#le-token').value='github_pat_test_only';await handlers.click({target:{closest:()=>({id:'le-connect',hasAttribute:()=>false,dataset:{}})}});}};
+ return {context,dialog,elements,details,calls,handlers,element,formValues,events,connect:async()=>{element('#le-token').value='github_pat_test_only';await handlers.click({target:{closest:()=>({id:'le-connect',hasAttribute:()=>false,dataset:{}})}});}};
 }
 test('an anonymous API 403 does not block opening the editor, viewing published edits or reaching the connection controls',async()=>{
  const {dialog,calls}=await harness();assert.equal(dialog.open,true);assert.ok(dialog.innerHTML.includes('id="le-form"'));assert.ok(dialog.innerHTML.includes('id="le-connect"'));assert.ok(dialog.innerHTML.includes('已保存的网页更正记录'));assert.ok(!dialog.innerHTML.includes('暂时无法编辑'));assert.ok(!calls.some(c=>c.url.startsWith('https://api.github.com')));
@@ -64,4 +64,19 @@ test('quick save preserves an unrelated full-form draft instead of silently drop
  h.formValues['#le-form']={...editableValues(base),title:base.title+' 编辑草稿'};
  h.formValues['#le-creators-form']={writerNames:'测试剧作',artistNames:'',musicianNames:''};
  await vm.runInContext('saveNames()',h.context);assert.ok(!h.calls.some(c=>c.options.method==='PUT'));assert.match(h.element('#le-status').textContent,/也有未保存修改/);
+});
+
+
+test('authenticated history ahead of publication hydrates just the newly referenced original before validation',async()=>{
+ const other=read('games').works.find(w=>w.id==='g001'),after=editableValues(other);after.notes+=' 已核对网页新增说明';
+ const latest=saveEdit(empty(),other,after,{id:'newer-other-work',actor:'test-user',at:'2026-11-12T09:00:00Z',reason:'核对另一作品记录',sources:[other.source],expectedRevision:0},taxonomy,[base,other]);
+ const h=await harness({published:empty(),latest,extraWorks:[other]});assert.deepEqual(h.details,['g039']);await h.connect();
+ assert.deepEqual(h.details,['g039','g001']);assert.equal(vm.runInContext('historyReady',h.context),true);assert.equal(vm.runInContext('snapshot.store.records.g001.revision',h.context),1);assert.equal(vm.runInContext("reservedWorks.find(w=>w.id==='g001').source",h.context),other.source);
+});
+
+test('failure loading a newly referenced history source preserves the current snapshot and does not write',async()=>{
+ const other=read('games').works.find(w=>w.id==='g001'),after=editableValues(other);after.notes+=' 已核对网页新增说明';
+ const latest=saveEdit(empty(),other,after,{id:'newer-unavailable',actor:'test-user',at:'2026-11-12T09:00:00Z',reason:'核对另一作品记录',sources:[other.source],expectedRevision:0},taxonomy,[base,other]);
+ const h=await harness({published:empty(),latest,extraWorks:[other],detailErrorIds:['g001']});await h.connect();
+ assert.match(h.element('#le-status').textContent,/原始详情暂不可用/);assert.equal(vm.runInContext('snapshot.store.records.g001',h.context),undefined);assert.ok(!h.calls.some(c=>c.options.method==='PUT'));
 });
