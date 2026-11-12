@@ -1,3 +1,4 @@
+import {withDeadline,interrupted} from './async-read.mjs';
 import {blobDigest} from './digests.mjs';
 
 const sessions=new WeakMap();
@@ -14,9 +15,7 @@ export function releaseChanged(previous,next,cause){
 export async function readReleaseManifest(fetcher=fetch,{refresh=false,checkCode=true}={}){
  if(refresh)sessions.delete(fetcher);
  if(!sessions.has(fetcher))sessions.set(fetcher,(async()=>{
-  const response=await fetcher('./data/catalogue-release.json',{cache:'no-store'});
-  if(!response.ok)throw Error('发布清单不可读取');
-  const value=await response.json();
+  const value=await withDeadline(async signal=>{const response=await fetcher('./data/catalogue-release.json',{cache:'no-store',signal});if(!response.ok)throw Error('发布清单不可读取');return response.json();});
   if(value.schemaVersion!==1||!revision.test(value.revision))throw Error('发布清单格式无效');
   return value;
  })().catch(error=>{sessions.delete(fetcher);throw error;}));
@@ -25,18 +24,17 @@ export async function readReleaseManifest(fetcher=fetch,{refresh=false,checkCode
  return manifest;
 }
 export async function releaseFailure(error,previous,fetcher=fetch){
+ if(interrupted(error))throw error;
  try{
   const next=await readReleaseManifest(fetcher,{refresh:true,checkCode:false});
   if(next.revision!==previous)throw releaseChanged(previous,next.revision,error);
  }catch(nextError){if(nextError.code==='RELEASE_CHANGED')throw nextError;}
  throw error;
 }
-export async function readReleaseText(ref,manifest,fetcher=fetch){
+export async function readReleaseText(ref,manifest,fetcher=fetch,options={}){
  if(!ref||typeof ref.path!=='string'||!ref.path.startsWith('catalogue-web/'+manifest.revision+'/')||ref.path.includes('..')||!/^[a-f0-9]{40}$/.test(ref.sha))throw Error('发布资源引用无效');
  try{
-  const response=await fetcher('./data/'+ref.path,{cache:'no-cache'});
-  if(!response.ok)throw Error('发布资源读取失败（HTTP '+response.status+'）');
-  const text=await response.text();
+  const text=await withDeadline(async signal=>{if(ref.gzip===ref.path+'.gz'&&typeof DecompressionStream!=='undefined'){const zipped=await fetcher('./data/'+ref.gzip,{signal});if(zipped.ok&&zipped.body)return new Response(zipped.body.pipeThrough(new DecompressionStream('gzip'))).text();}const response=await fetcher('./data/'+ref.path,{cache:'no-cache',signal});if(!response.ok)throw Error('发布资源读取失败（HTTP '+response.status+'）');return response.text();},options);
   if(await blobDigest(text)!==ref.sha)throw Error('发布资源摘要不匹配');
   return text;
  }catch(error){return releaseFailure(error,manifest.revision,fetcher);}

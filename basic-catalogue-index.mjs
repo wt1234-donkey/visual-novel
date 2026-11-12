@@ -1,3 +1,4 @@
+import {withDeadline} from './src/infrastructure/storage/async-read.mjs';
 import {readReleaseManifest,readReleaseText,releaseFailure,releaseChanged} from './src/infrastructure/storage/release-reader.mjs';
 import {blobDigest} from './src/infrastructure/storage/digests.mjs';
 // Browser index format. The release ID in each path binds details to their index.
@@ -23,10 +24,10 @@ export function withBasicDetails(work,detail,store){
 export function createBasicWebIndex(fetcher=fetch,{release:providedRelease}={}){
  let manifest,advanced;
  const cache=new Map(),pending=new Map();
- async function json(path,options){
-  const response=await fetcher(directory+path,options);
+ async function json(path,options){return withDeadline(async signal=>{
+  const response=await fetcher(directory+path,{...options,signal});
   if(!response.ok)throw Error('索引读取失败（HTTP '+response.status+'）');
-  return response.json();
+  return response.json();});
  }
  function meta(){
   manifest??=(async()=>{
@@ -46,19 +47,19 @@ export function createBasicWebIndex(fetcher=fetch,{release:providedRelease}={}){
    if(metadata.assets&&(!metadata.assets[path]||await blobDigest(text)!==metadata.assets[path].sha))throw Error('索引资源摘要不匹配');
    return JSON.parse(text);
   };
-  try{
+  try{return await withDeadline(async signal=>{
    if(compressed&&typeof DecompressionStream!=='undefined'){
-    const response=await fetcher(directory+revision+'/'+path+'.gz');
+    const response=await fetcher(directory+revision+'/'+path+'.gz',{signal});
     if(response.ok&&response.body){
      const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
      return await verify(await new Response(stream).text());
     }
    }
-   const response=await fetcher(directory+revision+'/'+path);
+   const response=await fetcher(directory+revision+'/'+path,{signal});
    if(!response.ok)throw Error('索引读取失败（HTTP '+response.status+'）');
    if(metadata.assets)return verify(await response.text());
    return response.json();
-  }catch(error){
+  });}catch(error){
    if(providedRelease===null)throw error;
    return releaseFailure(error,revision,fetcher);
   }
@@ -78,7 +79,7 @@ export function createBasicWebIndex(fetcher=fetch,{release:providedRelease}={}){
   }).finally(()=>pending.delete(key)));
   return pending.get(key);
  }
- async function details(kind,slots){
+ async function details(kind,slots,{signal}={}){return withDeadline(async()=>{
   const {shardSize,[kind]:{total}}=await meta();
   if(slots.some(slot=>!Number.isSafeInteger(slot)||slot<0||slot>=total))throw Error('作品索引已变化，请刷新页面');
   const groups=[...new Set(slots.map(slot=>Math.floor(slot/shardSize)))];
@@ -92,7 +93,7 @@ export function createBasicWebIndex(fetcher=fetch,{release:providedRelease}={}){
    if(!row)throw Error('作品详情缺失，请刷新页面');
    return [slot,row];
   }));
- }
+ },{signal});}
  return {
   meta,
   async basicRows(revision){
@@ -130,47 +131,39 @@ export function slotPage(total,page,size,slots){
  return {total,page:current,slots:slots?slots.slice(first,end):Array.from({length:end-first},(_,i)=>first+i)};
 }
 
-export function createCatalogueWorker(){
+export function createCatalogueWorker({timeout=4000,WorkerClass=globalThis.Worker}={}){
  let worker,failed=false,serial=0;
  const pending=new Map();
- function workerSearch(payload){
-  if(!worker){
-   worker=new Worker(new URL('./basic-catalogue-search-worker.mjs?v=20261111-architecture',import.meta.url),{type:'module'});
-   worker.onmessage=({data})=>{
-    const request=pending.get(data.id);
-    if(!request)return;
-    pending.delete(data.id);
-    if(data.error)request.reject(Error(data.error));
-    else request.resolve(data.result);
-   };
-   worker.onerror=()=>{
-    for(const request of pending.values())request.reject(Error('搜索线程不可用'));
-    pending.clear();
-    worker.terminate();worker=null;
-   };
-  }
-  return new Promise((resolve,reject)=>{
-   const id=++serial;
-   pending.set(id,{resolve,reject});
-   worker.postMessage({id,...payload});
-  });
- }
- return async payload=>{
-  if(failed||typeof Worker==='undefined')return null;
-  try{return await workerSearch(payload.kind==='basic'?{...payload,store:catalogueState(payload.store)}:payload);}
-  catch{failed=true;return null;}
+ function stop(error){failed=true;worker?.terminate();worker=null;for(const request of [...pending.values()])request.reject(error);pending.clear();}
+ return async (payload,{signal}={})=>{
+  if(signal?.aborted)throw signal.reason||new DOMException('查询已取消','AbortError');
+  if(failed||!WorkerClass)return null;
+  try{
+   worker??=new WorkerClass(new URL('./basic-catalogue-search-worker.mjs?v=20261111-architecture',import.meta.url),{type:'module'});
+   worker.onmessage=({data})=>{const request=pending.get(data.id);if(request){if(data.error)request.reject(Error(data.error));else request.resolve(data.result);}};
+   worker.onerror=()=>stop(Error('搜索线程不可用'));
+   return await new Promise((resolve,reject)=>{
+    const id=++serial;
+    const finish=(fn,value)=>{clearTimeout(timer);signal?.removeEventListener('abort',abort);pending.delete(id);fn(value);};
+    const abort=()=>finish(reject,signal.reason||new DOMException('查询已取消','AbortError'));
+    const timer=setTimeout(()=>stop(new DOMException('搜索线程超时，切换本地检索','TimeoutError')),timeout);
+    pending.set(id,{resolve:value=>finish(resolve,value),reject:error=>finish(reject,error)});
+    signal?.addEventListener('abort',abort,{once:true});
+    worker.postMessage({id,...(payload.kind==='basic'?{...payload,store:catalogueState(payload.store)}:payload)});
+   });
+  }catch(error){if(error.name==='AbortError')throw error;stop(error);return null;}
  };
 }
 
 export function createHomeSearch(index){
  let searchRows;
  const search=createCatalogueWorker();
- return async(query,page,size)=>{
+ return async(query,page,size,options={})=>{
   const {revision}=await index.meta();
-  const result=await search({kind:'home',query,page,size,revision});
+  const result=await search({kind:'home',query,page,size,revision},options);
   if(result)return result;
   searchRows??=index.homeSearch(revision).catch(error=>{searchRows=null;throw error;});
-  const slots=searchHomeSlots(await searchRows,query);
+  const slots=searchHomeSlots(await withDeadline(()=>searchRows,options),query);
   return slotPage(slots.length,page,size,slots);
  };
 }

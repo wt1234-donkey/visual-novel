@@ -1,3 +1,4 @@
+import {withDeadline} from './src/infrastructure/storage/async-read.mjs';
 import {same,validURL,lines} from './management-model.mjs';
 const unique=rows=>[...new Set(rows.filter(x=>typeof x==='string'&&x.trim()).map(x=>x.trim()))];
 const text=x=>typeof x==='string'?x.trim():'';
@@ -41,4 +42,4 @@ export function normalizeNextMoeDetails(w,payload){
  const aliases=unique([(payload.display_name),...(payload.titles||[]).filter(t=>!t.is_machine).map(t=>t.title),...Object.values(payload.localized||{}).filter(t=>typeof t==='string'||!t.is_machine).map(t=>typeof t==='string'?t:t.value)]);
  return {source:url,sourceId:id,originalTitle,aliases,releaseDate:release,originalLanguage:text(payload.olang),sourceRefs:vndb,readAt:new Date().toISOString()};
 }
-export async function fetchSourceDetails(work,fetcher=fetch){const url=nextMoeDetailURL(work);if(!url)throw Error('此来源暂无自动详情接口，基础库已保存的资料仍可自动导入');const response=await fetcher(url,{headers:{Accept:'application/json'},signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('来源 HTTP '+response.status+'，未改动现有资料');return normalizeNextMoeDetails(work,await response.json());}
+export async function fetchSourceDetails(work,fetcher=fetch,{signal}={}){const url=nextMoeDetailURL(work);if(!url)throw Error('此来源暂无自动详情接口，基础库已保存的资料仍可自动导入');return withDeadline(async signal=>{const response=await fetcher(url,{headers:{Accept:'application/json'},signal});if(!response.ok)throw Error('来源 HTTP '+response.status+'，未改动现有资料');return normalizeNextMoeDetails(work,await response.json());},{signal,timeout:15000});}
