@@ -3,6 +3,7 @@ import {join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {loadEffectiveInputsSync,sourceLeaseSync} from '../src/infrastructure/filesystem/effective-catalogue.mjs';
 import {blobDigest} from '../src/infrastructure/storage/digests.mjs';
+import {saveMode as policyMode} from '../src/application/commands/policy.mjs';
 
 export async function buildEffectiveRelease(root,output,revision){
  const {coverage,...inputs}=loadEffectiveInputsSync(root),sourceLease=sourceLeaseSync(root);
@@ -25,7 +26,8 @@ export async function buildEffectiveRelease(root,output,revision){
   const content=readFileSync(basicPath,'utf8');basic={path:'catalogue-web/'+revision+'/basic-manifest.json',sha:await blobDigest(content)};
   writeFileSync(join(output,'data',basic.path),content);
  }
- writeFileSync(join(output,'data/catalogue-release.json'),JSON.stringify({schemaVersion:1,revision,inputs:{path,sha:await blobDigest(text)},resources,basic,sourceLease})+'\n');
+ const policy=join(root,'data/trusted-save-policy.json'),saveMode=policyMode(existsSync(policy)?JSON.parse(readFileSync(policy,'utf8')):undefined);
+ writeFileSync(join(output,'data/catalogue-release.json'),JSON.stringify({schemaVersion:1,revision,saveMode,inputs:{path,sha:await blobDigest(text)},resources,basic,sourceLease})+'\n');
  return {sourceLease};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)await buildEffectiveRelease(...process.argv.slice(2));

@@ -1,4 +1,5 @@
 import {readReleaseJson} from '../storage/release-reader.mjs';
+import {submitCommand} from './command-transport.mjs';
 import {createSourceGuard} from './source-lease.mjs';
 import {blobDigest} from '../storage/digests.mjs';
 export const EDIT_REPOSITORY='/repos/wt1234-donkey/visual-novel';
@@ -9,7 +10,7 @@ const permissionHelp='请用有权限的 GitHub 账号，确认 Resource owner �
 export const decodeContentText=value=>new TextDecoder().decode(Uint8Array.from(atob(value.replace(/\s/g,'')),c=>c.charCodeAt(0)));
 const decode=value=>JSON.parse(decodeContentText(value));
 const encode=value=>{const bytes=new TextEncoder().encode(JSON.stringify(value,null,2)+'\n');let s='';for(let i=0;i<bytes.length;i+=32766)s+=String.fromCharCode(...bytes.subarray(i,i+32766));return btoa(s);};
-export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PATH,validate=null,sourceLease=null}={}){
+export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PATH,validate=null,sourceLease=null,commandMode='legacy'}={}){
  let oauthScopes=null;
  const validateRead=store=>{if(validate)validate(store);else if(!store||store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式不正确，请停止写入并核查');return store;};
  async function request(path,method='GET',body){
@@ -41,13 +42,20 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
   }
   const scopes=res.headers?.get('x-oauth-scopes');
   if(scopes!==undefined&&scopes!==null)oauthScopes=scopes.split(',').map(x=>x.trim()).filter(Boolean);
-  return res.json();
+  return res.status===204?{}:res.json();
  }
  async function readFile(path=historyPath,ref='main'){const file=await request(REPO+'/contents/'+path+'?ref='+encodeURIComponent(ref));const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,text:decodeContentText(blob.content)};}
  const guard=createSourceGuard(request,REPO);
  const dependencies=()=>sourceLease?{...sourceLease,files:Object.fromEntries(Object.entries(sourceLease.files).filter(([path])=>path!==historyPath))}:null;
  return {
   gitRequest:request,readFile,setSourceLease:lease=>{sourceLease=lease;},
+  get commandMode(){return commandMode;},setCommandMode:mode=>{commandMode=mode;},
+  async executeCommand(command){
+   if(commandMode!=='trusted'||!sourceLease||historyPath!==HISTORY_PATH)throw Error('可信正式保存尚未启用');
+   const result=await submitCommand(request,{...command,sourceLease});
+   const head=(await request(REPO+'/git/ref/heads/main')).object.sha,file=await readFile(historyPath,head);
+   return {...result,sha:file.sha,store:validateRead(JSON.parse(file.text))};
+  },
   async connect(){
    if(!token)throw Error('请填写仅授权本仓库的 GitHub 凭证');
    const [user,repo]=await Promise.all([request('/user'),request(REPO)]);

@@ -47,6 +47,11 @@ export function createCatalogueService({base,initial,repository,prepareBase,load
    const signature=journalKey({action,reason,undo,actor});
    if(!pending||pending.signature!==signature)pending={signature,action:structuredClone(action),undo,snapshot:{store:structuredClone(snapshot.store),sha:snapshot.sha},meta:{...makeMeta(),actor,reason}};
    const operation=pending;
+   if(typeof repository.executeCommand==='function'){
+    const action=operation.undo?{type:'undo',targetId:operation.snapshot.store.recent.at(-1)?.id}:operation.action;
+    const result=await repository.executeCommand({schemaVersion:1,operationId:operation.meta.id,kind:'basic',actor,at:operation.meta.at,reason:operation.meta.reason,sources:[],expectedRevision:operation.snapshot.store.revision,action});
+    update(result);pending=null;return {...result.result,revision:snapshot.store.revision,operationId:operation.meta.id};
+   }
    const result=await commitBasicCommand({repository,snapshot:operation.snapshot,
     base:undo?base:await (prepareBase?prepareBase(operation.action):hydrateCommandBase(base,view,operation.action,loadDetails)),action:operation.action,meta:operation.meta,undo:operation.undo});
    update(result);pending=null;return {revision:snapshot.store.revision,...result.result,operationId:operation.meta.id};
