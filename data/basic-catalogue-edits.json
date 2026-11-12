@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 30,
+  "revision": 31,
   "additions": [],
   "records": {
     "g1028": {
@@ -714,53 +714,40 @@
         "source": "https://ifdb.org/viewgame?id=x8s5x1459ou15ow2"
       },
       "aliases": []
+    },
+    "ifdb-table-20261104-7hvroh852tho7xay": {
+      "identity": {
+        "id": "ifdb-table-20261104-7hvroh852tho7xay",
+        "indexId": "basic-ifdb-table-20261104-7hvroh852tho7xay",
+        "aliases": [],
+        "title": "The Sumerian Game",
+        "firstYear": 1965,
+        "group": "Mabel Addis and William McKay",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=7hvroh852tho7xay",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "title": {
+          "id": "gate-probe-43160321211",
+          "at": "2026-11-12T05:17:15.857Z"
+        }
+      },
+      "values": {
+        "firstYear": 1965,
+        "gameplay": "互动小说（玩法待核）",
+        "group": "Mabel Addis and William McKay",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=7hvroh852tho7xay",
+        "title": "The Sumerian Game [isolated gate probe]"
+      },
+      "aliases": [
+        "The Sumerian Game"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "fa21748e-7bc3-4992-a8d7-1e52bbf31c43",
-      "at": "2026-11-10T11:55:35.124Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-x8s5x1459ou15ow2",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-x8s5x1459ou15ow2",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r109-ifdb-x8s5x1459ou15ow2",
-              "aliases": [],
-              "title": "...from the Files of Sigmund Praxis, Guerrilla Therapist",
-              "firstYear": 2002,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=x8s5x1459ou15ow2",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "...from the Files of Sigmund Praxis, Guerrilla Therapist",
-              "firstYear": 2002,
-              "group": "Mark Silcox",
-              "gameplay": "文字冒险",
-              "plotStyles": [],
-              "plotTags": {
-                "tone": "严肃",
-                "emotion": "紧张",
-                "perspective": "第一人称",
-                "structure": "线性叙事",
-                "setting": "架空世界"
-              },
-              "plotTagEvidence": {},
-              "source": "https://ifdb.org/viewgame?id=x8s5x1459ou15ow2"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "5a214a4d-07c8-45f9-a6a9-f49d7eb98082",
       "at": "2026-11-10T11:57:21.903Z",
@@ -942,6 +929,50 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "gate-probe-43160321211",
+      "at": "2026-11-12T05:17:15.857Z",
+      "actor": "github-actions[bot]",
+      "reason": "隔离验证可信保存通道",
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-7hvroh852tho7xay",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-7hvroh852tho7xay",
+              "indexId": "basic-ifdb-table-20261104-7hvroh852tho7xay",
+              "aliases": [],
+              "title": "The Sumerian Game",
+              "firstYear": 1965,
+              "group": "Mabel Addis and William McKay",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=7hvroh852tho7xay",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "title": {
+                "id": "gate-probe-43160321211",
+                "at": "2026-11-12T05:17:15.857Z"
+              }
+            },
+            "values": {
+              "firstYear": 1965,
+              "gameplay": "互动小说（玩法待核）",
+              "group": "Mabel Addis and William McKay",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=7hvroh852tho7xay",
+              "title": "The Sumerian Game [isolated gate probe]"
+            },
+            "aliases": [
+              "The Sumerian Game"
+            ]
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -951,8 +982,19 @@
       "sha": "65dcc403ae029a908fc6cb61d687a645f719ac6f",
       "revision": 30
     },
-    "shards": [],
-    "eventCount": 0,
-    "stateHash": "91c1446f7266c5e04ce7ef46c1c9f60b7d226021d9ca2ddc48c8fed7dacc43c2"
+    "shards": [
+      {
+        "path": "data/basic-catalogue-journal/events/r31-r31.json",
+        "sha": "637bacc3b7beba4cf332b82e540f3c367c6f8374",
+        "startRevision": 31,
+        "endRevision": 31,
+        "operationIds": [
+          "gate-probe-43160321211"
+        ],
+        "bytes": 2163
+      }
+    ],
+    "eventCount": 1,
+    "stateHash": "eb5da9d9be3c84c9b6dbec3bcc2fd3d5be94f724441c6559f1ff433f97f3f36f"
   }
 }

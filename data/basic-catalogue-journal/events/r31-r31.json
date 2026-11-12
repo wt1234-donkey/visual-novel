@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "startRevision": 31,
+  "endRevision": 31,
+  "events": [
+    {
+      "schemaVersion": 1,
+      "id": "gate-probe-43160321211",
+      "at": "2026-11-12T05:17:15.857Z",
+      "actor": "github-actions[bot]",
+      "reason": "隔离验证可信保存通道",
+      "previousRevision": 30,
+      "revision": 31,
+      "commandType": "edit",
+      "intent": {
+        "id": "ifdb-table-20261104-7hvroh852tho7xay",
+        "type": "edit",
+        "values": {
+          "firstYear": 1965,
+          "gameplay": "互动小说（玩法待核）",
+          "group": "Mabel Addis and William McKay",
+          "plotStyles": [],
+          "source": "https://ifdb.org/viewgame?id=7hvroh852tho7xay",
+          "title": "The Sumerian Game [isolated gate probe]"
+        }
+      },
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-7hvroh852tho7xay",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-7hvroh852tho7xay",
+              "indexId": "basic-ifdb-table-20261104-7hvroh852tho7xay",
+              "aliases": [],
+              "title": "The Sumerian Game",
+              "firstYear": 1965,
+              "group": "Mabel Addis and William McKay",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=7hvroh852tho7xay",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "title": {
+                "id": "gate-probe-43160321211",
+                "at": "2026-11-12T05:17:15.857Z"
+              }
+            },
+            "values": {
+              "firstYear": 1965,
+              "gameplay": "互动小说（玩法待核）",
+              "group": "Mabel Addis and William McKay",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=7hvroh852tho7xay",
+              "title": "The Sumerian Game [isolated gate probe]"
+            },
+            "aliases": [
+              "The Sumerian Game"
+            ]
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    }
+  ]
+}
