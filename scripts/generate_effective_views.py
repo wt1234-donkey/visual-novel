@@ -6,7 +6,7 @@ from pathlib import Path
 
 def generate(root):
     root = Path(root).resolve()
-    for name in ('sync_versions_csv.py', 'export_content_csv.py', 'export_interaction_csv.py', 'build_company_pages.py'):
+    for name in ('sync_versions_csv.py', 'export_content_csv.py', 'export_interaction_csv.py', 'build_company_pages.py', 'build_source_downloads.py'):
         subprocess.run([sys.executable, str(root/'scripts'/name)], cwd=root, check=True)
 
 

@@ -11,6 +11,7 @@ from collections import Counter
 from pathlib import Path
 from version_browser_modules import version_modules
 from release_policy import read_policy, public_paths, verify_public
+from wire_format import compact_generated
 
 ROOT=Path(__file__).resolve().parents[1]
 REGISTRY='data/main-adv-rpg-works-20261031.json'
@@ -80,6 +81,7 @@ def _build(root,output,revision,stage,paths,policy,registry_bytes,works):
     if len(revision)==40:
         ancestors=subprocess.check_output(['git','rev-list',revision],cwd=root,text=True).splitlines()
     versioned_modules=version_modules(output,revision)
+    compression=compact_generated(output)
     manifest={
         'schema':1,
         'ancestors':ancestors,
@@ -91,6 +93,7 @@ def _build(root,output,revision,stage,paths,policy,registry_bytes,works):
         'trackedFileCount':len(paths),
         'releasePolicySha256':hashlib.sha256(json.dumps(policy,sort_keys=True).encode()).hexdigest(),
         'versionedBrowserFiles':versioned_modules,
+        **compression,
     }
     write_registry_text(output/'deployment.json', json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     if (output/REGISTRY).read_bytes()!=registry_bytes or not (output/'index.html').is_file():

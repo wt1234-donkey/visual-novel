@@ -9,6 +9,21 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def check_scripts(root):
+    root=Path(root)
+    policy=json.loads((root/'config/script-policy.json').read_text())
+    items=policy['scripts']
+    actual={p.relative_to(root).as_posix() for p in (root/'scripts').iterdir() if p.suffix in {'.py','.mjs'}}
+    if policy.get('schemaVersion')!=1 or len({s['path'] for s in items})!=len(items) or {s['path'] for s in items}!=actual:
+        raise ValueError('Script inventory differs from registered policy')
+    for item in items:
+        if item['role'] not in {'active','historical','tool'}:
+            raise ValueError('Unknown script role')
+        if item['role']=='historical' and hashlib.sha256((root/item['path']).read_bytes()).hexdigest()!=item['sha256']:
+            raise ValueError('Frozen historical script changed: '+item['path'])
+    return {role:sum(s['role']==role for s in items) for role in ('active','historical','tool')}
+
+
 def registry(root=ROOT):
     value = json.loads((Path(root) / 'config/historical-tasks.json').read_text())
     if value.get('schemaVersion') != 1:
@@ -36,7 +51,14 @@ def check(root=ROOT):
         expected.add(archived.name)
     if expected != {p.name for p in (root / 'archive/workflows').glob('*.yml')}:
         raise ValueError('Unregistered archived workflow')
-    return {'frozenTasks': len(tasks), 'activeWorkflows': len(active)}
+    scripts=check_scripts(root)
+    vendors=json.loads((root/'config/runtime-vendors.json').read_text())
+    if vendors.get('schemaVersion')!=1:
+        raise ValueError('Invalid runtime vendor registry')
+    for vendor in vendors['vendors']:
+        if hashlib.sha256((root/vendor['path']).read_bytes()).hexdigest()!=vendor['sha256']:
+            raise ValueError('Runtime vendor changed without provenance update')
+    return {'frozenTasks': len(tasks), 'activeWorkflows': len(active),'scripts':scripts}
 
 
 def replay(task_id, output, execute=False, root=ROOT):

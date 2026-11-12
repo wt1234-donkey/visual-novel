@@ -51,6 +51,11 @@ try{
  // Silent Worker: real 4s production deadline, then the ordinary main-thread path.
  const worker=await page.evaluate(async()=>{const {createCatalogueWorker}=await import('./basic-catalogue-index.mjs');let terminated=0;class Silent{postMessage(){}terminate(){terminated++;}}const search=createCatalogueWorker({WorkerClass:Silent});const start=performance.now(),result=await search({kind:'home'});return {ms:performance.now()-start,result,terminated};});assert.equal(worker.result,null);assert.equal(worker.terminated,1);assert.ok(worker.ms<5000);faults.push(`Worker无响应 ${Math.round(worker.ms)}ms 终止并返回回退信号`);
  await ctx.close();
+ const fallbackContext=await context(),fallbackPage=await fallbackContext.newPage(),fallbackErrors=[];
+ fallbackPage.on('pageerror',error=>fallbackErrors.push(error.message));
+ await fallbackPage.addInitScript(()=>{globalThis.DecompressionStream=undefined;});
+ for(const target of pages){await fallbackPage.goto(`${origin}/after/${target.file}`);await fallbackPage.locator(target.ready).first().waitFor();}
+ assert.deepEqual(fallbackErrors,[]);await fallbackContext.close();faults.push('无原生DecompressionStream时三页真实目录均可读取，解压回退无JS错误');
  for(const r of results.filter(r=>r.kind==='after')){assert.equal(r.timeout,false,`${r.page} unavailable`);assert.equal(r.allSourceShardRequests,0,`${r.page} read original source shards`);assert.deepEqual(r.errors,[]);}
  const median=values=>[...values].sort((a,b)=>a-b)[Math.floor(values.length/2)];
  for(const target of pages){const rows=results.filter(r=>r.page===target.name&&r.kind==='after');assert.ok(median(rows.map(r=>r.usableMs))<=5000,`${target.name} exceeds 5s budget`);assert.ok(median(rows.map(r=>r.initialBytes))<=2*1048576,`${target.name} exceeds 2MiB emitted-payload budget`);}

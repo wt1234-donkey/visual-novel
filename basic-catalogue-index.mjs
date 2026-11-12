@@ -1,6 +1,7 @@
 import {withDeadline} from './src/infrastructure/storage/async-read.mjs';
 import {readReleaseManifest,readReleaseText,releaseFailure,releaseChanged} from './src/infrastructure/storage/release-reader.mjs';
 import {blobDigest} from './src/infrastructure/storage/digests.mjs';
+import {decodePublishedText} from './src/infrastructure/storage/wire-format.mjs';
 // Browser index format. The release ID in each path binds details to their index.
 import {catalogueState} from './src/domain/catalogue/journal.mjs';
 const directory='data/basic-web/';
@@ -44,6 +45,7 @@ export function createBasicWebIndex(fetcher=fetch,{release:providedRelease}={}){
   const metadata=await meta(),{revision}=metadata;
   if(expectedRevision&&revision!==expectedRevision)throw releaseChanged(expectedRevision,revision);
   const verify=async text=>{
+   text=await decodePublishedText(text);
    if(metadata.assets&&(!metadata.assets[path]||await blobDigest(text)!==metadata.assets[path].sha))throw Error('索引资源摘要不匹配');
    return JSON.parse(text);
   };

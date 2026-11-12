@@ -8,6 +8,7 @@ import re
 import tarfile
 import urllib.request
 from release_policy import verify_public
+from wire_format import decode_wire
 
 REPO = 'wt1234-donkey/visual-novel'
 
@@ -49,7 +50,7 @@ def unpack_verified(archive, output, revision):
         path = ref['path']
         if not path.startswith('catalogue-web/'+revision+'/') or '..' in Path(path).parts:
             raise ValueError('Invalid published resource path')
-        raw = (output/'data'/path).read_bytes()
+        raw = decode_wire((output/'data'/path).read_bytes())
         digest = hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
         if digest != ref['sha']:
             raise ValueError('Published resource checksum mismatch')
