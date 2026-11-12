@@ -25,7 +25,8 @@ export async function buildEffectiveRelease(root,output,revision){
   const content=readFileSync(basicPath,'utf8');basic={path:'catalogue-web/'+revision+'/basic-manifest.json',sha:await blobDigest(content)};
   writeFileSync(join(output,'data',basic.path),content);
  }
- writeFileSync(join(output,'data/catalogue-release.json'),JSON.stringify({schemaVersion:1,revision,inputs:{path,sha:await blobDigest(text)},resources,basic,sourceLease})+'\n');
+ const policy=join(root,'data/trusted-save-policy.json'),saveMode=existsSync(policy)?JSON.parse(readFileSync(policy,'utf8')).mode:'legacy';
+ writeFileSync(join(output,'data/catalogue-release.json'),JSON.stringify({schemaVersion:1,revision,saveMode,inputs:{path,sha:await blobDigest(text)},resources,basic,sourceLease})+'\n');
  return {sourceLease};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)await buildEffectiveRelease(...process.argv.slice(2));

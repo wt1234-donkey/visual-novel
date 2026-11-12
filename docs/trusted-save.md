@@ -1,0 +1,39 @@
+# 第2批：可信保存与强制校验边界
+
+## 当前状态
+
+实现准备已完成，**整批尚未验收关闭**。`data/trusted-save-policy.json` 保持 `mode: legacy`；现有直接保存继续使用原通道。新的命令入口在该模式下拒绝生产派发，避免把尚未联调的通道误当成已启用门禁。
+
+当前 GitHub 连接读取 main 分支保护返回 403 `Resource not accessible by integration`，未具备管理规则的能力。仓库规则集列表为空。`config/main-ruleset.proposed.json` 是禁用状态的配置草案，提交该文件本身不会启用 GitHub 规则。
+
+## 执行方案与权限决策
+
+沿用 GitHub Actions 作为执行端，不增加外部服务、不在站点存放用户凭据。浏览器仍使用本仓库的 Contents 写入凭据：先上传不可变的命令 blob，再通过 `repository_dispatch` 派发其 SHA；无需把用户 token 交给执行端，也不要求浏览器凭据增加 Actions 或 Administration 权限。
+
+新工作流仅使用作业期 `GITHUB_TOKEN` 的 Contents 写入和 Statuses 写入权限。它从 main 检出规则、从 GitHub 事件取得操作人、核对 blob 摘要、来源及规则凭据、目标修订、字段和业务限制。用户不能指定执行代码、仓库、分支或文件路径。命令只允许基础更正/标签/合并/撤销及正式更正/创作者/撤销；不接受浏览器提供的最终数据库快照。创作者姓名仍可无证据保存。
+
+执行通过后，在隔离工作区形成数据修改；数据和日志回放检查通过后，只将允许的更正快照、追加事件及命令回执组成同一 Git 提交。执行端先为该提交发布 `build` 成功状态，再以非强制引用更新写入 main。main 已变化则拒绝更新，保留原操作 ID 重试。脚本型编辑可复用 `executeCommand(root, command, authenticatedActor)`，不能直接修改覆盖快照来绕过领域验证。
+
+操作 ID 按 SHA-256 定位回执。重复操作在核对实际认证人和完整原始命令后返回已有结果，即使其后已有新修订也不会再次应用；同一 ID 搭配不同命令拒绝。前端只有读取并验证 main 中的回执才提示已保存，派发成功本身不算保存成功。派发响应丢失时核对同一操作；超时保留输入并显示结果待确认。
+
+GITHUB_TOKEN 写 main 不会自动触发 push 构建，因此显式发送独立的 `catalogue-release-request`，随后复用第1批累计构建及串行部署。重复派发只核对回执并补发构建请求，不重复改数据。
+
+## 强制规则草案及待完成验收
+
+建议 main 要求 GitHub Actions（App ID 15368）提供 `build` 成功检查，禁止删除和强推，不配置常规绕过者。这样代码 PR 继续经过现有全套检查，数据命令由受信执行端在落库前校验。所有者仍能主动修改仓库规则；此权限属于仓库所有权，不由网页撤销。规则草案不把 main 设为只能走人工审核 PR，以保留个人保存能力。
+
+**切换前必须一起完成，不能只打开规则：**
+
+1. 获得仓库管理规则的操作能力，核对实际规则及状态来源；在隔离分支确认失败检查被拒、合法数据提交可通过。
+2. 对管理台 PR 通道、旧审核发布及仍需使用的脚本/导入流程逐项登记和迁移。`editorial-publish.yml` 等旧直接 push 流程尚不能视为已通过新门禁；其历史权限不作为绕过清单。
+3. 联调实际 GitHub 派发、回执和自动 Pages 请求。测试使用隔离库，不能向生产目录写测试作品。
+4. 在同一次受控切换中启用规则及 `mode: trusted`，核对单作品、批量标签、CSV、AI候选确认和正式姓名保存。失败则保持原通道并保留输入；不得让前端静默退回直接写入以绕过已启用门禁。
+
+只有这些验收全部通过，才可宣告第2批完成。当前自动化覆盖命令与领域校验、旧来源/旧修订/伪造身份、重复操作与冲突、失去响应、数据提交白名单及非强制更新顺序；真实浏览器通过隔离 Git 服务联调新保存路径，不等于实际仓库规则已启用。
+
+## 官方接口依据
+
+- [repository_dispatch：Contents 写入权限](https://docs.github.com/en/rest/repos/repos#create-a-repository-dispatch-event)
+- [GITHUB_TOKEN 的触发例外](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow)
+- [必需检查与预期来源](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets)
+- [检查与同名状态的行为](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks)

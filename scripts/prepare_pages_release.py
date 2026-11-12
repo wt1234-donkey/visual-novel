@@ -16,7 +16,7 @@ def validate_run(run, repository_id):
             run.get('repository', {}).get('id') != repository_id or
             run.get('head_repository', {}).get('full_name') != REPO or
             run.get('path') != '.github/workflows/pages.yml' or
-            run.get('event') not in ('push', 'workflow_dispatch') or
+            run.get('event') not in ('push', 'workflow_dispatch', 'repository_dispatch') or
             run.get('head_branch') != 'main' or run.get('conclusion') != 'success' or
             not re.fullmatch(r'[a-f0-9]{40}', run.get('head_sha', ''))):
         raise ValueError('Only a successful trusted main Pages build may be published')

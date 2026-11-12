@@ -1,4 +1,5 @@
 import {createEditClient,EDIT_REPOSITORY,decodeContentText} from './contents-repository.mjs';
+import {submitCommand} from './command-transport.mjs';
 import {validateStore} from '../../domain/catalogue/model.mjs';
 import {journalHistory} from '../../domain/catalogue/journal.mjs';
 import {MAX_SHARD_EVENTS,MAX_SHARD_BYTES,validateShard} from '../../domain/catalogue/journal-index.mjs';
@@ -9,7 +10,7 @@ export {TOKEN_SETUP_URL} from './contents-repository.mjs';
 
 const PATH='data/basic-catalogue-edits.json',REPO=EDIT_REPOSITORY;
 const conflict=()=>Object.assign(Error('数据库已变化或写入冲突；本次没有覆盖其他修改'),{code:'CONFLICT',status:409});
-export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=null}={}) {
+export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=null,commandMode='legacy'}={}) {
  const client=createEditClient(token,fetcher,{historyPath:PATH,validate:validateStore,sourceLease});
  const request=client.gitRequest,cache=new Map();
  const guard=createSourceGuard(request,REPO);
@@ -37,6 +38,7 @@ export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=
  }
  const shard=async ref=>validateShard(ref,await reference(ref));
  return {
+  executeCommand:commandMode==='trusted'?async command=>{const result=await submitCommand(request,{...command,sourceLease});const snapshot=await snapshotAt((await request(REPO+'/git/ref/heads/main')).object.sha);return {...snapshot,result};}:undefined,
   connect:()=>client.connect(),
   async read(){const head=(await request(REPO+'/git/ref/heads/main')).object.sha;return snapshotAt(head);},
   async readPublished(){const value=await client.readPublished();await verifySnapshot(value.store);return {...value,source:'pages'};},

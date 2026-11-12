@@ -1,0 +1,57 @@
+name: Trusted catalogue command
+run-name: 保存 ${{ github.event.client_payload.operationId }}
+on:
+  repository_dispatch:
+    types: [catalogue-command-v1]
+permissions:
+  contents: read
+concurrency:
+  group: catalogue-trusted-writer
+  cancel-in-progress: false
+jobs:
+  execute:
+    if: github.repository == 'wt1234-donkey/visual-novel' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      statuses: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate command against trusted main rules and stage data
+        id: command
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/execute_catalogue_command.mjs
+      - name: Validate changed data before any main update
+        if: steps.command.outputs.already != 'true'
+        run: |
+          python3 scripts/generate_effective_views.py
+          python3 scripts/validate_data.py
+          python3 scripts/validate_entity_model.py
+          python3 scripts/validate_work_edits.py
+          node scripts/migrate_basic_storage.mjs --check
+          python3 scripts/registry_store.py --check
+          node --test tests/trusted-command.test.mjs tests/work-edit.test.mjs tests/basic-catalogue.test.mjs
+      - name: Seal validated data commit and advance main without force
+        if: steps.command.outputs.already != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/promote_catalogue_command.py
+      - name: Request cumulative Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST repos/wt1234-donkey/visual-novel/dispatches -f event_type=catalogue-release-request
