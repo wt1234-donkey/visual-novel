@@ -1,0 +1,36 @@
+name: Isolated frozen historical audit
+on:
+  workflow_dispatch:
+    inputs:
+      task_id:
+        description: Frozen ID from config/historical-tasks.json
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  replay:
+    if: github.repository == 'wt1234-donkey/visual-novel' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Recover fixed snapshot and execute registered verifiers in isolation
+        env:
+          HISTORICAL_TASK: ${{ inputs.task_id }}
+        run: python3 scripts/workflow_governance.py --task "$HISTORICAL_TASK" --output "$RUNNER_TEMP/historical-snapshot" --execute-checks --report "$RUNNER_TEMP/historical-replay.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-replay
+          path: ${{ runner.temp }}/historical-replay.json

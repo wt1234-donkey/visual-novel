@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "vendors": [
+    {
+      "path": "src/infrastructure/storage/gzip-fallback.mjs",
+      "package": "fflate",
+      "version": "0.8.2",
+      "license": "MIT",
+      "source": "https://github.com/101arrowz/fflate",
+      "sha256": "988599b6c8be6ab9d9ac43320f7dde2c5dcc05ae4d9b5757731087e475dd2e47",
+      "build": "esbuild@0.25.0 --bundle --format=esm --platform=browser --minify; gunzipSync only; full MIT notice embedded"
+    }
+  ]
+}

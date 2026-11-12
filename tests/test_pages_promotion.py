@@ -105,6 +105,21 @@ class PagesPromotionTests(unittest.TestCase):
             with self.assertRaises(ValueError):unpack_verified(self.archive(root, unsafe=True), root/'out', SHA)
             self.assertFalse((root.parent/'outside').exists())
 
+    def test_allowlisted_release_is_checked_again_before_deployment(self):
+        import hashlib
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);raw=b'{}';ref='catalogue-web/'+SHA+'/inputs.json'
+            digest=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+            values={'deployment.json':json.dumps({'revision':SHA,'releasePolicySha256':'policy'}).encode(),
+                    'data/catalogue-release.json':json.dumps({'revision':SHA,'inputs':{'path':ref,'sha':digest}}).encode(),
+                    'data/'+ref:raw,'scripts/leaked.py':b'print("not runtime")'}
+            archive=root/'leaked.tar'
+            with tarfile.open(archive,'w') as stream:
+                for path,value in values.items():
+                    member=tarfile.TarInfo(path);member.size=len(value);stream.addfile(member,io.BytesIO(value))
+            with self.assertRaisesRegex(ValueError,'Non-runtime file'):
+                unpack_verified(archive,root/'published',SHA)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -31,17 +31,7 @@ jobs:
           node-version: '24'
           package-manager-cache: false
       - name: Validate catalogue and existing regressions
-        run: |
-          python3 scripts/generate_effective_views.py
-          python3 scripts/validate_data.py
-          python3 scripts/validate_entity_model.py
-          python3 scripts/run_python_tests.py
-          node scripts/migrate_basic_storage.mjs --check
-          python3 scripts/registry_store.py --check
-          node --test tests/*.test.mjs
-          python3 scripts/build_company_pages.py --check
-          python3 scripts/build_entity_model.py --check
-          python3 scripts/build_entity_pages.py --check
+        run: python3 scripts/validate_catalogue.py
       - name: Install isolated browser regression dependency
         run: |
           npm install --prefix /tmp/catalogue-browser --no-package-lock --no-audit --no-fund playwright@1.56.1
@@ -51,7 +41,7 @@ jobs:
           PLAYWRIGHT_MODULE: /tmp/catalogue-browser/node_modules/playwright
         run: node --test tests/browser/*.test.mjs
       - name: Build static artifact and provenance manifest
-        run: python3 scripts/build_pages_artifact.py --output _site
+        run: python3 scripts/build_pages_artifact.py --workspace "$RUNNER_TEMP/catalogue-build" --output _site
       - name: Upload verified Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:

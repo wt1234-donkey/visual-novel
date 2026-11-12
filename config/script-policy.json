@@ -1,0 +1,1177 @@
+{
+  "schemaVersion": 1,
+  "scripts": [
+    {
+      "path": "scripts/add_seven_dossiers_20261028.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e17913cc708bb80955fdc6bbc72fea7ee7953b4698d451fabf929cb6d2716bfe"
+    },
+    {
+      "path": "scripts/apply_editorial_batch.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/apply_non_rpg_intake_20261030.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "6f567e2b71362d2dd4b0424f8c37286555b8ae99f1b62f6fb94cdf9f8084ac41"
+    },
+    {
+      "path": "scripts/apply_recommended_narratives_20261030.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "750c4293e3d6e24a6bd87cb1dd8590b59f7e91f2dfb273aa338089fa9b276f78"
+    },
+    {
+      "path": "scripts/apply_six_studios_expansion_20261030.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "8bfaed2c9b0c1d8da3a98e431e16f9ecb3840fd13b685ac8bfefcd59b3228006"
+    },
+    {
+      "path": "scripts/attest_editorial_commit.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/audit_basic_r20_r21_diversity.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "58c34a967e360bdfbaa0689e8bb2bb5d7694ebe35c5750e1978a0cb676607dd3"
+    },
+    {
+      "path": "scripts/audit_narrative_pending_20261030.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/backfill_project_title_years_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "0c63c164270a96d3d2798160e8693e2451789d1b3f96c37e234f2678ebd80af4"
+    },
+    {
+      "path": "scripts/basic_identity_decisions.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/basic_source_date_review.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/build_adv_rpg_minimal_index_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "cb144b1348bb95dea7957223d58a890f0f80fd8a01522da1b22e3ae11b6e1295"
+    },
+    {
+      "path": "scripts/build_basic_advanced_index.mjs",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/build_basic_web_index.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_company_pages.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_effective_catalogue.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_entity_model.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_entity_pages.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_entity_role_batch_20261027.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "673395a18ca50a34f88e731a2b07a150893a44213ef05f2062d2b96987a7c4db"
+    },
+    {
+      "path": "scripts/build_entity_role_batch_adventure_alice_20261027.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "f776a6549c4359595c944fb49336d54dc3db088408bb1c6f60c8e5fb9658081b"
+    },
+    {
+      "path": "scripts/build_entity_verification_audit.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/build_entity_verification_plan.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/build_on_demand_catalogues.mjs",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/build_organizations.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_pages_artifact.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_relationships_preview.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/build_source_downloads.py",
+      "role": "active",
+      "basis": "active generator"
+    },
+    {
+      "path": "scripts/catalogue_intake.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/collect_bangumi_relations_r142_r143_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "3bd3eb57e25b3595b479b6f1db76f9c23fc20772108954a5149a3dce48f1de12"
+    },
+    {
+      "path": "scripts/collect_basic_r142_r143_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "f0f801e2df5582211df0e382dae45804f54107dbde21d356dbd39355ec27e834"
+    },
+    {
+      "path": "scripts/collect_pc98_catalogues_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "32db28f7d88e315ecc1a3fcd6ce36820e124862faf84a40f56fa4b7c3aa697ba"
+    },
+    {
+      "path": "scripts/complete_narrative_22_r9_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "47246346f1c6ea616293f75816e5f50cbbfba0e1ead98177dc147c769364e619"
+    },
+    {
+      "path": "scripts/complete_narrative_fields_20261030.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "2dedc59d86d13ca6be7d175b462f6b5c409b15c07843bc14eb03d67dfd1aa197"
+    },
+    {
+      "path": "scripts/complete_narrative_fields_giga_light_circus_r5_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "ba782288cd6209368dbf0b679a79c61b92a2d5be62df5609a6a47ed6147cf5b0"
+    },
+    {
+      "path": "scripts/complete_narrative_fields_rebased_r6_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "352800440b58a84a52ff8c18da6c5cbd21454aca068e030ca9c0330d16cb85c3"
+    },
+    {
+      "path": "scripts/complete_narrative_fields_round2_20261030.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "93f2a8f846ec03bdd1573be1147290d2618b4127c29ae67325f63b4d64b2cd8f"
+    },
+    {
+      "path": "scripts/complete_narrative_fields_round3_20261030.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e07cd6c89c5a55fabff9d668e28799af2683ef4f9592aa144937dc58ba69cc77"
+    },
+    {
+      "path": "scripts/complete_narrative_fields_round3_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "4f1026e87bb18c3a2631db11e8c321ba1596bafb62cf172ed81799226ca4686f"
+    },
+    {
+      "path": "scripts/complete_narrative_fields_six_studios_r4_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "f39d1b54384371750695687094c4e5915fe63e257091cc38c551413b1621b656"
+    },
+    {
+      "path": "scripts/complete_narrative_legacy15_r10_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e6d930d80432d86f5069d8f8a92102102de74c2ff24151a3c546e0600f063f1d"
+    },
+    {
+      "path": "scripts/complete_narrative_seven_r7_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "48893d910216843bd0cfe76e43393b0b5bfdca19222d6387f2329e81de7dfe1d"
+    },
+    {
+      "path": "scripts/complete_six_final_narrative_r8_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "35b1e94072093316f4c22cad9fed93b338b80d7b79d324ea4c8eb3dc4686721d"
+    },
+    {
+      "path": "scripts/content_model.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/coverage_corrections.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/date_contract.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/dispatch_catalogue_probe.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/effective_catalogue.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/entity_model.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/entity_names.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/execute_catalogue_command.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/export_basic_registry.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/export_content_csv.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/export_interaction_csv.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/freeze_public_sources_r142_r143_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e99048edce9ec1a47bd319b7611845abecf8d0582415c3424ffe825f08945e38"
+    },
+    {
+      "path": "scripts/generate_effective_views.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/ifdb_archive_identity.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/import_basic_historical_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "ed21a509083cbe5eeb563e628f081964c2e998a2201efd6205fba3de29a22d64"
+    },
+    {
+      "path": "scripts/import_basic_multisource_r14_r15_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "71f77c19afff76cd99f1022ff59b88b85679b06dc7bebfa56c7e5694ac7b5092"
+    },
+    {
+      "path": "scripts/import_basic_r100_r101_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "ca48f1356a52ed30a30a4b4f9d6c6f2980ceef86f83737a57350e8a063b75498"
+    },
+    {
+      "path": "scripts/import_basic_r102_r103_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "5d36b9bfb207a7b20da32acc9110a2982c11f41cefb5eb763f084107b19a7761"
+    },
+    {
+      "path": "scripts/import_basic_r104_r105_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "52c6c99163bc6912b9635a6b856eaa22b8e503bb6e7d36587becf118109287b0"
+    },
+    {
+      "path": "scripts/import_basic_r106_r107_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "de1db0e23271074225f3d71a8b63a8304170e1cf1fc4b226f6a3f6d9948fb979"
+    },
+    {
+      "path": "scripts/import_basic_r108_r109_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "aaf88c157251ef617b6287ddcbe84855a5a0eb3d41d8fcca733b8560db74f9d2"
+    },
+    {
+      "path": "scripts/import_basic_r110_r111_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "1fc5db19e5c53d73151474411a94127b8fb13ddc1effbc247c952af46fa681db"
+    },
+    {
+      "path": "scripts/import_basic_r112_r113_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "226280f86a33f595c1db40e2d2ecdf727fd05bc6f09194b757ddc6e22d1007f5"
+    },
+    {
+      "path": "scripts/import_basic_r114_r115_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "da4c236b6ad307abab9ec3016d8f8d7d91ee8e1f43217dc880f92a0bf5bf478c"
+    },
+    {
+      "path": "scripts/import_basic_r116_r117_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "605c3ed74ff22504adc7f64fb88b2f0873fafa7b093faf09591e75ef6d108d51"
+    },
+    {
+      "path": "scripts/import_basic_r118_r119_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "f6c2d3910ab33de21192a0af75be8d9070a3486689c16b7b659c259fd3979ef4"
+    },
+    {
+      "path": "scripts/import_basic_r120_r121_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "1c7eb59959e02a192ced1bae0700b2b10fec4a9cbe8bee9aeedf2a435d4626d5"
+    },
+    {
+      "path": "scripts/import_basic_r122_r123_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "da38564dcb13d5e0044108d68922ee3492e2399e6defce84f62dd66e651e950b"
+    },
+    {
+      "path": "scripts/import_basic_r124_r125_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "1d90eea8e6c16640322d70839ec8ffa8d0c59e34873bb15389fb794623354b44"
+    },
+    {
+      "path": "scripts/import_basic_r126_r127_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "f0cde4583f6ece3cddce7e070c88aed62b83d3a2a139560ec98b446b88229191"
+    },
+    {
+      "path": "scripts/import_basic_r128_r129_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "345f4776df8572ca99fd94a6cea9e6472ca84c285c95e133890ed208b9b1064c"
+    },
+    {
+      "path": "scripts/import_basic_r130_r131_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e7d019935443cbe2923a71af65897b6b6b64d2760aa5eb9666c9fed748336522"
+    },
+    {
+      "path": "scripts/import_basic_r132_r133_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "130610d7a879bbf80caf02d372cda62d758c01c5f8605200a4c31013a9b63900"
+    },
+    {
+      "path": "scripts/import_basic_r134_r135_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "cacbf53708cc86537ce9960401c98c4ba57dcdd7daf99c365a88cb6f7bdb3124"
+    },
+    {
+      "path": "scripts/import_basic_r136_r137_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "8a9131256e587c552003027f56fa5c30839d8c786f89d21fbd7b36f5e2a1022f"
+    },
+    {
+      "path": "scripts/import_basic_r138_r139_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "9f576861a1e211207be1c2b85cad2cb3d8835bf075a4e530c52170ce3afdc829"
+    },
+    {
+      "path": "scripts/import_basic_r140_r141_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "a7e94a6f8d844f86d9d6e5f78abb0b23fe7f35d6950c55af287fb256d9e6b301"
+    },
+    {
+      "path": "scripts/import_basic_r142_r143_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "97dd0536a275e9771a07710316b6c5cb1f2b5ed2199568531c49c54a9bc49a11"
+    },
+    {
+      "path": "scripts/import_basic_r16_r17_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "d6b14e160a14be7905d8d030c672750c12db119af6926c382a5f302f6b3b828a"
+    },
+    {
+      "path": "scripts/import_basic_r18_r19_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "a1647dc95cc24c4b3048d790046c7c1caf5021c66ec29482b0f2d2198c06fdb9"
+    },
+    {
+      "path": "scripts/import_basic_r20_r21_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "fea5b61af181c4e0b3b6a6c877fe71094dc48e32b1fe5c9d2ff1b28e2d07d1d6"
+    },
+    {
+      "path": "scripts/import_basic_r22_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "d6b8155b4a4697113829634ffbde2e9c96da88897e74c19da187722bfe8d5bca"
+    },
+    {
+      "path": "scripts/import_basic_r22_cont_r23_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "29ea2434b92884ebeaa4b08499bebc8dafca63e4915a7475b55c3188a462d7a9"
+    },
+    {
+      "path": "scripts/import_basic_r24_r25_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "6adf0006ab31a3462ed2a425876a57d4eb99349aae80108e69b1b6d0b83e159a"
+    },
+    {
+      "path": "scripts/import_basic_r26_r27_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "40ce381afad3382785ec53a5c87fbd706b79f2a8f4c3f06f94d48a11ae2c9467"
+    },
+    {
+      "path": "scripts/import_basic_r28_r29_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "4b50c6df742dfe854e24a34d841fcfbcb81421ce19178bf234da12f517abe09f"
+    },
+    {
+      "path": "scripts/import_basic_r30_r31_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "48e38cf7c8a3be3cdd3a7a628d5eb2b7d1f4e64684bb424265657df782c9c483"
+    },
+    {
+      "path": "scripts/import_basic_r32_r33_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "426624fab21b0523056eb981d00c03ad4553289e313fa41b8e80088d5fdb2514"
+    },
+    {
+      "path": "scripts/import_basic_r34_r35_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "24b1f624f053dc72ecfe9acf873ef05cf68b4021130d33ee89dbf4183f7fd40b"
+    },
+    {
+      "path": "scripts/import_basic_r36_r37_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "684a4c76747c2bde84bb5c4eab58740a2db98967c7e34ae63ff04cf296cbf5d4"
+    },
+    {
+      "path": "scripts/import_basic_r38_r39_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "cbf6205309c20cfa3f937bf1d89c7517daccee9a22cc6908d0da3b983d7cb46d"
+    },
+    {
+      "path": "scripts/import_basic_r40_r41_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "8bbb612b334179dfa235fff0c3b328d72393b46b35745d80614aeca9646643fa"
+    },
+    {
+      "path": "scripts/import_basic_r42_r43_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "91e537e729f0058a46adea3498f181b3415990e5f5352280bd3b60fc2d13cbd8"
+    },
+    {
+      "path": "scripts/import_basic_r44_r45_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "a37d7dda807a14add7c0325fd5eeac5d7a5288004b532f0a31aba6fdd1ccfd16"
+    },
+    {
+      "path": "scripts/import_basic_r46_r47_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "4a766863d13493750e24e4a5dd5badf94c1a2ba3107c478869ff02079a327e57"
+    },
+    {
+      "path": "scripts/import_basic_r48_r49_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "6ae9035daf2a9d0290150a18af41bb5769500f84ce0bd8c5bca2a202f8828365"
+    },
+    {
+      "path": "scripts/import_basic_r50_r51_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "591dfc90a2614cb88eb7bde6a4a284ca8d53a47085e96d4502948e2987b2ffa1"
+    },
+    {
+      "path": "scripts/import_basic_r52_r53_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "eb06de681734efd3c78dbcb33d2c34d243ef874524534d389f348fc2b87da89e"
+    },
+    {
+      "path": "scripts/import_basic_r54_r55_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "a44859ae73caafc82e31eff28d72ff7adf49d728b33a457e5ad0a9e227420256"
+    },
+    {
+      "path": "scripts/import_basic_r56_r57_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "13269f8dff03ba5fa64261ab45addff1bb947a123916cacd90e70ff4fec76148"
+    },
+    {
+      "path": "scripts/import_basic_r58_r59_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "0017a25cbd8c4377d1dad42bffa6c5b1c0d785cd020565350112bf5b68ca01a2"
+    },
+    {
+      "path": "scripts/import_basic_r60_r61_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "c53c74139a576f0321fb4e18f5b903bc08cad83f08bb5c9ea6322d2f0511af2c"
+    },
+    {
+      "path": "scripts/import_basic_r62_r63_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "755596ae91a5a5e74035177eabd472e98cba81b63f63e7cf01c29b1eaebb8c58"
+    },
+    {
+      "path": "scripts/import_basic_r64_r65_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e044b8030af3e782ca0befc1d644d7c5775aaf43000014c39e2a92481c586ea5"
+    },
+    {
+      "path": "scripts/import_basic_r66_r67_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "9b817f23c281de671ae6fdab84145326777fc8990e7dcc527348308bd116eccd"
+    },
+    {
+      "path": "scripts/import_basic_r68_r69_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "75d2ae3cf52640450f0c083d5b3f09e3038fa9fa83cfc5a983b4e0afe091008c"
+    },
+    {
+      "path": "scripts/import_basic_r70_r71_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "7409e20a674597b369f1e7d48be99d9b309202f0146660ec2ab9d96635c6d04a"
+    },
+    {
+      "path": "scripts/import_basic_r72_r73_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "a35a4ebd92b673fa64870ac21501a38c1ab92c0ff7483d6315ecfaccac90d555"
+    },
+    {
+      "path": "scripts/import_basic_r74_r75_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "0626322aad15ff13c45a752d4a0b94dde05d6728571a7e16b74681689f2ddb6b"
+    },
+    {
+      "path": "scripts/import_basic_r76_r77_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e86cb578b83af6d82dc869971ebb7de93dd23fbfb24f4b8ac595644bf1ec38b9"
+    },
+    {
+      "path": "scripts/import_basic_r78_r79_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "30f11575e5ebfc9a4c45cda48523ef174a32dc7ccaed2e60e768ce00449fe800"
+    },
+    {
+      "path": "scripts/import_basic_r80_r81_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "1544f5f5d65118f2d268e4c4ece3e3a14374f8c3b0a5e94e7b7e844134bb67fa"
+    },
+    {
+      "path": "scripts/import_basic_r82_r83_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "4ba62c7b9e92f47f0208f78d205112d40ea524f07e2ae5a83bcc113cffdc8aa0"
+    },
+    {
+      "path": "scripts/import_basic_r84_r85_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "8096409f03091fe4a9b4000e4d3576fccc3de867cecfb5b91acad50d8b4d7939"
+    },
+    {
+      "path": "scripts/import_basic_r86_r87_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "d12c96cc97e871dfcb969d8eb2efa03f2278f9f00c723b7285469cedcdb70b67"
+    },
+    {
+      "path": "scripts/import_basic_r88_r89_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "aaa84d7add80cfe6f03fa4d367b8a41d534e14493236cacc9524c975570c835d"
+    },
+    {
+      "path": "scripts/import_basic_r90_r91_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "7ad836319d424ac18f47a24d09dc740782fcf16ae0c94e79a65b692f64d28d6d"
+    },
+    {
+      "path": "scripts/import_basic_r92_r93_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "b3435b8fe09ae80fec63ec13e59d210f12b1611b7b9c7a2f8c8c5818dcc1713b"
+    },
+    {
+      "path": "scripts/import_basic_r94_r95_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "6aa4184cd9940addff5de7008fda82fc380937dae036b43da3e5534279a67014"
+    },
+    {
+      "path": "scripts/import_basic_r96_r97_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "af0779c46c29655b37922b6bfd08920ed35122931288cd3a105d2064d88c1a61"
+    },
+    {
+      "path": "scripts/import_basic_r98_r99_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "5af381abde0d7928e30cf9eb41195ff5e3d24b43a8561f4ea4cfad7f10935c16"
+    },
+    {
+      "path": "scripts/import_casa_lemon64_20261105.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "d9a6c9bd128f5e8fc554cd0c73e095e18f0597fba92e47ea15607db211b2a19f"
+    },
+    {
+      "path": "scripts/import_dossier_identities_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "59f19cd0cfea14a6d0dd566cf83330dd3667d34bdb9d3050eb9248eecb412f4a"
+    },
+    {
+      "path": "scripts/import_egs_append_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "422d40db05ce468497ebd67506e110931dc288d523150a8be4cef8215a26aa2d"
+    },
+    {
+      "path": "scripts/import_historical_interactive_fiction_1979_1982_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "f2ffa66622858966d49b93cb018784c6efddbd2926cf65544544d4c2cc9110e9"
+    },
+    {
+      "path": "scripts/import_historical_interactive_fiction_a_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "600b6b45b63d08eb4334e664a27fe0bd6ea1da4a2f04f962167b0cdafc517869"
+    },
+    {
+      "path": "scripts/import_historical_western_jp_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "1e9037fa5a41d53f30eb58df78b52ebbb5970f795d01912f86aecdf0811a1092"
+    },
+    {
+      "path": "scripts/import_ifarchive_append_20261104.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "a294200bb70eccddcb4c71ac2eb9991a89a799c5872ecc3257c5ee3e1b36c8d3"
+    },
+    {
+      "path": "scripts/import_ifdb_append_20261104.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "e129b6478d8c01899b0ee6692e0fcd912fef066f76d44658a130a7c1129e7c82"
+    },
+    {
+      "path": "scripts/import_lemon_amiga_agdb_20261106.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "01c91757b994d68e06c9201c3d4ef9ec5822ee7055a05712cf6af3eea7b08201"
+    },
+    {
+      "path": "scripts/import_mobygames_pc88_pc98_20261105.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "529dd607e301a9a57bca7325ea8ddcd6d87e0fc5352d9483a32dc1fb0e97792d"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "a599b86722c5b2b372c594eeed908a87f8461eefec4457535bab714197eeab6a"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261101_r10_r11.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "941fa3a6d1a88a0d97a73f4cda3d2d43c0d3d60eae046f3211c7bfb1d2edf07c"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261101_r12_r13.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "b51bac2c96857aead7e87c2189adae92e161bf4ac0aaeaab59dc2fe331247f94"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261101_r2.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "ccc5712dfd9c4da99d4af8376ac69d3aa2b14ab9076318ee76dd1e4707ca7536"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261101_r3.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "80b7143aeab79561619679909d63a20c170c8ec4ac45ecb3dd59f70465f37254"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261101_r4_r5.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "7cc1cf1f500efb4e983a9c6cf373bac2ee6b6d0ca715024a40aa3fea7f5df15c"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261101_r6_r7.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "4fa23834b2b78010b0511c7e853c1cd8af1309e963a67950911c0b2fcd375359"
+    },
+    {
+      "path": "scripts/import_nextmoe_basic_20261101_r8_r9.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "382168d58775e3dcb9e7c727d45003d980a67cb3d27f7efb9a6d7f0b582677fc"
+    },
+    {
+      "path": "scripts/import_vndb_right_only_20261103.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "f6f4828ffdd9f29faf67af9827ea56666225cd54389f9506e3bb5fd8276bcd41"
+    },
+    {
+      "path": "scripts/interaction_model.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/jhv_content_review.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/manage_catalogue.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/measure_mobile_pages.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/migrate_basic_journal.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/migrate_basic_storage.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/migrate_content_model.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/organization_unfinished.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/organization_verification.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/prepare_pages_release.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/preserve_historical_entity_evidence.py",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/promote_adv_rpg_candidates_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "9bf05db2609f57f85c33be3bffbca8b8ca1daf8622de0278c915bba44d52ba37"
+    },
+    {
+      "path": "scripts/promote_catalogue_command.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/promote_narrative_round3_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "9bbdafc71683d4bee90c375c7a1e60565cd910475fe97996aabfc25c6a8e242d"
+    },
+    {
+      "path": "scripts/promote_next_narrative_studios_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "ac27e5063bcffb90e497adc8646995783a8e142032c013ed6eade604df5332f2"
+    },
+    {
+      "path": "scripts/read_effective_catalogue.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/refresh_narrative_1339_report_r10_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "b01d05a41516c586bba7614a3d4702b614e7c44f02fdf0034192078d5e9eec4f"
+    },
+    {
+      "path": "scripts/refresh_narrative_1339_report_r9_20261031.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "ed5808ece6eadbec2f567afde2f6979e3536e03728ddc11f61a8b3ab48300a1a"
+    },
+    {
+      "path": "scripts/registry_store.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/release_policy.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/request_pages_deployment.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/review_basic_r118_r119_conflicts_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "b8e833f7064cc0120ae1eac07e3e09b16882429d965d340c3dd703605cd766dd"
+    },
+    {
+      "path": "scripts/review_basic_r118_r119_held_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "7ccca9bfe394719f28067fb8a5b6421a0e852f95d6927fb1f3bb0d474a43d3aa"
+    },
+    {
+      "path": "scripts/review_basic_r118_r119_last20_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "86c9f64596d9abc909b6e8f5604d2b95a9aee7ba30981f64832324bb103f1451"
+    },
+    {
+      "path": "scripts/review_basic_r92_r93_conflicts_20261102.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "bf244412697bc499bd746c8c75ab74c5f4511d064c42cb7fe82d43778a723134"
+    },
+    {
+      "path": "scripts/review_seven_source_date_conflicts_20261101.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "4ff3ecd6e1a7d740061f836e1bb163305e60280ff25d487c162ff395a439ea9f"
+    },
+    {
+      "path": "scripts/round28_corrections.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/run_python_tests.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/source_urls.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/stage_basic_registry_for_main.py",
+      "role": "historical",
+      "basis": "frozen dated task",
+      "snapshot": "ea8da32997c0a3c7090b70da30024fd7693fd5bf",
+      "sha256": "ed59f98b9c9886e423a997432aea50f03869198a695efaad4397cb693d41fe1d"
+    },
+    {
+      "path": "scripts/suggest_basic_styles.mjs",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/sync_versions_csv.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/validate_catalogue.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/validate_data.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/validate_entity_model.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/validate_narrative_editorial.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/validate_work_edits.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/verify_catalogue_probe.mjs",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/verify_on_demand_artifact.mjs",
+      "role": "tool",
+      "basis": "manual utility"
+    },
+    {
+      "path": "scripts/version_browser_modules.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/wait_catalogue_publication.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/wire_format.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/work_notes.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/workflow_governance.py",
+      "role": "active",
+      "basis": "active workflow/dependency"
+    }
+  ]
+}

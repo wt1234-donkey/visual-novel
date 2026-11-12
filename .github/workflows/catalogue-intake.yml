@@ -1,0 +1,82 @@
+name: Parameterized catalogue intake
+on:
+  workflow_dispatch:
+    inputs:
+      plan:
+        description: Committed config/intake-plans/*.json file
+        required: true
+        type: string
+      prepare_candidate:
+        description: Prepare a validated candidate branch (never writes main)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: catalogue-intake
+  cancel-in-progress: false
+jobs:
+  preview:
+    if: github.repository == 'wt1234-donkey/visual-novel' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    outputs:
+      revision: ${{ steps.source.outputs.revision }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - id: source
+        run: echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Preview immutable source, baseline, deduplication and quarantine
+        env:
+          INTAKE_PLAN: ${{ inputs.plan }}
+        run: python3 scripts/catalogue_intake.py --plan "$INTAKE_PLAN" --report "$RUNNER_TEMP/intake-preview.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: intake-preview
+          path: ${{ runner.temp }}/intake-preview.json
+  prepare:
+    needs: preview
+    if: inputs.prepare_candidate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ needs.preview.outputs.revision }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Apply one parameterized batch to this detached candidate
+        env:
+          INTAKE_PLAN: ${{ inputs.plan }}
+        run: python3 scripts/catalogue_intake.py --plan "$INTAKE_PLAN" --apply --report "$RUNNER_TEMP/intake-applied.json"
+      - name: Validate with the same release checks
+        run: python3 scripts/validate_catalogue.py
+      - name: Push only a new catalogue candidate
+        env:
+          RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m 'Prepare parameterized catalogue intake'
+            git push origin "HEAD:catalog/intake-$RUN_ID"
+            echo "Candidate: https://github.com/wt1234-donkey/visual-novel/compare/main...catalog/intake-$RUN_ID?expand=1" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: intake-applied
+          path: ${{ runner.temp }}/intake-applied.json

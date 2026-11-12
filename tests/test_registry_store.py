@@ -47,9 +47,11 @@ class RegistryStorageTests(unittest.TestCase):
         for year in (True,'1965',1965.5,1899,2201):self.assertFalse(is_recorded_year(year))
         self.assertTrue(is_published_year(1965,2026));self.assertFalse(is_published_year(2050,2026))
         workflow=(ROOT/'.github/workflows/pages.yml').read_text()
+        self.assertIn('python3 scripts/validate_catalogue.py',workflow)
         pr=workflow.split('  pull_request:',1)[1].split('  workflow_dispatch:',1)[0]
         self.assertNotIn('paths:',pr);self.assertNotIn('paths-ignore:',pr)
-        self.assertIn('registry_store.py --check',workflow)
+        from validate_catalogue import CHECKS
+        self.assertIn(['python3','scripts/registry_store.py','--check'],CHECKS)
 
 
 if __name__ == '__main__':unittest.main()
