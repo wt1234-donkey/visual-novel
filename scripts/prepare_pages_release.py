@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import tarfile
 import urllib.request
+from release_policy import verify_public
 
 REPO = 'wt1234-donkey/visual-novel'
 
@@ -54,6 +55,8 @@ def unpack_verified(archive, output, revision):
             raise ValueError('Published resource checksum mismatch')
     if (output/'.git').exists() or (output/'.github').exists():
         raise ValueError('Repository metadata must not be published')
+    if deployment.get('releasePolicySha256'):
+        verify_public(output)
     return deployment
 
 
