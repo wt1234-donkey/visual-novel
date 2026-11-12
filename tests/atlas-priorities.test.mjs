@@ -34,8 +34,9 @@ test('formal and basic display projections agree without changing source facts o
 
 test('published raw inputs support consistent undo, checksum verification and browser projection',async t=>{
  const root=mkdtempSync(join(tmpdir(),'effective-release-'));t.after(()=>rmSync(root,{recursive:true,force:true}));mkdirSync(join(root,'data'));
- const files={'games.json':baseInputs.main,'work-edit-history.json':{schemaVersion:1,records:{formal:{overrides:{title:'Corrected'}}}},'main-adv-rpg-works-20261031.json':baseInputs.registry};
+ const files={'games.json':baseInputs.main,'basic-catalogue-edits.json':emptyStore(),'work-edit-history.json':{schemaVersion:1,records:{formal:{overrides:{title:'Corrected'}}}},'main-adv-rpg-works-20261031.json':baseInputs.registry};
  for(const [name,value] of Object.entries(files))writeFileSync(join(root,'data',name),JSON.stringify(value));
+ for(const [file,value] of Object.entries({'entity-catalogue.json':{model:{entities:[]},credits:[]},'discovery-editorial.json':{works:{}},'creator-credits.json':{people:[],credits:[],collaborations:[]},'work-notes.json':{works:{}},'narrative-editorial-baseline-20261029.json':{works:{}}}))writeFileSync(join(root,'data',file),JSON.stringify(value));
  const out=join(root,'site');await buildEffectiveRelease(root,out,'a'.repeat(40));let corrupt=false;
  const fetch=async path=>{const text=readFileSync(join(out,path.replace('./','')),'utf8');return {ok:true,json:async()=>JSON.parse(text),text:async()=>text+(corrupt?' ':'')};};
  const loaded=await loadEffectiveCatalogue(fetch);assert.equal(mergeFormalDatasets(loaded).works[0].displayTitle,'Corrected');

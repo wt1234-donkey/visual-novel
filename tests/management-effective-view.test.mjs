@@ -1,3 +1,4 @@
+import {requestScope} from '../src/infrastructure/storage/async-read.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
@@ -22,7 +23,7 @@ async function harness({raw,resources,saved,loadError,hash='#g800'}={}){
   return nodes.get(selector);
  };
  const files=Object.fromEntries(Object.entries({editorial:'discovery-editorial.json',creators:'creator-credits.json',notes:'work-notes.json',catalogue:'entity-catalogue.json',baseline:'narrative-editorial-baseline-20261029.json'}).map(([key,file])=>['./data/'+file,resources[key]]));
- const context=vm.createContext({registerPageRecovery:()=>{},restoreReleaseState:async()=>{},readReleaseJson:async path=>structuredClone(files['./'+path]),...model,buildManagementView,displayTitle,structuredClone,console,
+ const context=vm.createContext({requestScope,createOnDemandReader:()=>({directory:async()=>{if(loadError)throw loadError;return {raw:structuredClone(raw),editorial:structuredClone(resources.editorial),catalogue:resources.catalogue,coverage:resources.coverage};},formal:async(id,family)=>family==='formal'?{source:raw.main.works.find(w=>w.id===id),contentVersions:raw.main.contentVersions.filter(w=>w.workId===id),platformReleases:raw.main.platformReleases.filter(w=>w.workId===id)}:resources[family].works[id]??null,optional:async name=>structuredClone(resources[name])}),registerPageRecovery:()=>{},restoreReleaseState:async()=>{},readReleaseJson:async path=>structuredClone(path.includes('taxonomy')?resources.taxonomy:files['./'+path]),...model,buildManagementView,displayTitle,structuredClone,console,
   document:{querySelector:element},location:{hash},history:{replaceState(){}},window:{addEventListener(){}},
   localStorage:{getItem:key=>storage.get(key)??null,setItem:(key,value)=>storage.set(key,value)},
   fetch:async url=>{calls.push(url);if(!(url in files))throw Error('Unexpected fetch '+url);return {ok:true,json:async()=>structuredClone(files[url])};},
@@ -30,7 +31,7 @@ async function harness({raw,resources,saved,loadError,hash='#g800'}={}){
   readPublishedSource:async path=>structuredClone(path.includes('taxonomy')?resources.taxonomy:resources.coverage),
   managementProposal:()=>{},offerEditorialProposal:()=>{}});
  const source=readFileSync(new URL('../manage.mjs',import.meta.url),'utf8').replace(/^import .*;$/gm,'').replace('\nload();','\nglobalThis.managementLoaded=load();');
- vm.runInContext(source,context);await context.managementLoaded;
+ vm.runInContext(source,context);await context.managementLoaded;await new Promise(setImmediate);
  return {context,element,storage,calls,run:source=>vm.runInContext(source,context),plain:source=>JSON.parse(JSON.stringify(vm.runInContext(source,context)))};
 }
 
