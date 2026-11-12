@@ -57,3 +57,21 @@ jobs:
         with:
           path: _site
           retention-days: 14
+  request-deployment:
+    needs: build
+    if: github.event_name == 'repository_dispatch' && github.event.action == 'catalogue-release-request' && github.repository == 'wt1234-donkey/visual-novel' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Request separate serialized deployment of this verified build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/request_pages_deployment.py
