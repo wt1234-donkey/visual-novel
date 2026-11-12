@@ -2,9 +2,11 @@
 
 ## 当前状态
 
-PR #329 的实现准备已合并并上线。管理员会话现已建立；隔离规则 `Catalogue save gate rehearsal`（ID 27081428）已启用，仅匹配 `validation/trusted-save-gate-*`，要求 GitHub Actions 的 build 检查，禁止强推和删除，绕过清单为空。
+PR #329、#330 已合并并上线。隔离规则 `Catalogue save gate rehearsal`（ID 27081428）已启用，仅匹配 `validation/trusted-save-gate-*`，要求 GitHub Actions 的 build 检查，禁止强推和删除，绕过清单为空。
 
-`data/trusted-save-policy.json` 暂保持 `mode: legacy`，main 的强制规则尚未切换，整批仍待真实联调验收。GitHub 代码连接没有 Administration 权限，规则管理通过已登录的管理员界面完成，无需扩大浏览器保存凭据的权限。
+真实 GitHub 派发验证 [43131680398](https://github.com/wt1234-donkey/visual-novel/actions/runs/43131680398) 已通过：认证事件、不可变命令、来源/修订校验和日志回放均通过；隔离提交 `8efa2b4a7b5366773afafff6d95ccea7d54bd0e3` 在缺少或失败 build 检查时均被 GitHub 拒绝，在成功检查后获准写入，main 未改变。
+
+`data/trusted-save-policy.json` 现切换为 `mode: trusted`。本次发布后完成真实回执、自动 Pages 请求及主分支规则验收。规则管理通过管理员界面完成，无需扩大浏览器保存凭据的权限；最终状态以实际启用的 main 规则和线上发布版本为准。
 
 旧写入入口已核对：历史导入的 Git push 都指向 PR 分支，管理台也生成 PR，合并后统一受 main 的必需检查约束。唯一旧直接 main 发布入口为 `editorial-publish.yml`，现补上经过全量验证的数据提交证明和非强制更新；不允许它携带代码变更。该入口对基础修改复用共同动作验证器，可信模式下基础/正式旧提案必须携带来源凭据，批次 ID 重试核对完整命令摘要。发布任务必须核对实际线上部署祖先才报告完成。
 
@@ -43,5 +45,7 @@ GITHUB_TOKEN 写 main 不会自动触发 push 构建，因此显式发送独立�
 ## 隔离验证入口
 
 在 Actions 运行 **Catalogue command gate rehearsal**（main）。第一轮只上传标准命令 blob 并派发专用 repository_dispatch；第二轮用相同业务执行器验证，原子提交到唯一的 `validation/trusted-save-gate-<run_id>` 分支。它依次断言缺少检查和明确失败检查均被拒绝，再由 GitHub Actions 给出成功证明并验证更新获准，最后确认 main 未改变。该验证与生产命令使用相同对象摘要、认证事件、来源/修订及回执规则；专用事件和命令行标记共同限制隔离路径，不能通过生产 payload 切换目标分支。
+
+随后通过网页的同一 `submitCommand` 回执验证器读取真实隔离分支，核对 Git blob 摘要、完整原始命令、身份和修订；该步骤只允许 GET。最后发送与生产相同的 `catalogue-release-request`，由 Pages 工作流构建 main，因此测试作品不会被发布。首次验收遇到未完成的基线 build 时，GitHub 拒绝了隔离分支创建；基线检查通过后重跑成功，没有放宽规则。
 
 仓库所有者仍可主动修改规则，这是所有权边界；常规网页保存、脚本和 PR 不配置绕过者。测试数据仅出现在隔离验证分支，不进入生产目录。

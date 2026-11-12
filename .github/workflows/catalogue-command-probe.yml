@@ -58,3 +58,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/promote_catalogue_command.py --rehearsal
+      - name: Verify real isolated receipt through the browser transport
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/verify_catalogue_probe.mjs
+      - name: Exercise the automatic cumulative Pages request without publishing test data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST repos/wt1234-donkey/visual-novel/dispatches -f event_type=catalogue-release-request
