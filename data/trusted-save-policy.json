@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "mode": "legacy",
+  "mode": "trusted",
   "eventType": "catalogue-command-v1",
   "requiredCheck": "build",
-  "reason": "Enable only after trusted dispatch, legacy writer migration and main rules have been verified together."
+  "reason": "Trusted blob dispatch and protected-ref checks passed in isolated run 43131680398; activate the matching main rule after this release is deployed."
 }
