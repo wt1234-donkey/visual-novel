@@ -1,0 +1,44 @@
+name: Mobile catalogue performance
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mobile-catalogue-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  mobile-performance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Build fixed pre-optimization baseline and candidate
+        run: |
+          git worktree add --detach /tmp/catalogue-baseline 20e91b3b16da43cb6274d154e20d38916545a51f
+          python3 /tmp/catalogue-baseline/scripts/build_pages_artifact.py --output /tmp/baseline-site
+          python3 scripts/build_pages_artifact.py --output /tmp/candidate-site
+      - name: Install isolated Chromium test runtime
+        run: |
+          npm install --prefix /tmp/catalogue-browser --no-package-lock --no-audit --no-fund playwright@1.56.1
+          /tmp/catalogue-browser/node_modules/.bin/playwright install --with-deps chromium
+      - name: Measure mobile scenarios and optional-resource failures
+        env:
+          PLAYWRIGHT_MODULE: /tmp/catalogue-browser/node_modules/playwright
+        run: node scripts/measure_mobile_pages.mjs /tmp/baseline-site /tmp/candidate-site /tmp/mobile-report
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mobile-performance
+          path: /tmp/mobile-report
+          retention-days: 14
