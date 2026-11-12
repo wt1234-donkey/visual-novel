@@ -7,6 +7,7 @@ import test from 'node:test';
 import {emptyStore,valuesOf} from '../basic-catalogue-model.mjs';
 import {makeProposal} from '../editorial-proposal.mjs';
 import {applyEditorialBatch} from '../scripts/apply_editorial_batch.mjs';
+import {sourceLeaseSync} from '../src/infrastructure/filesystem/effective-catalogue.mjs';
 
 const storeFile='basic-catalogue-edits.json';
 const alpha={id:'a',title:'Alpha',year:1980,group:'Studio',gameplay:'ADV',status:'new-basic'};
@@ -29,7 +30,7 @@ function fixture(t){
  const publish=(...proposals)=>applyEditorialBatch({id:crypto.randomUUID(),proposals},dir);
  const proposal=(action,expectedRevision=0)=>makeProposal('basic','核对作品资料',{expectedRevision,action},[{id:action.id||'batch'}]);
  const edit=(work,title)=>proposal({type:'edit',id:work.id,values:{...valuesOf(work),title}});
- return {publish,proposal,edit,write,read,commit};
+ return {dir,publish,proposal,edit,write,read,commit};
 }
 
 test('approved edits and style updates can publish across unrelated revisions',t=>{
@@ -64,4 +65,18 @@ test('a changed underlying catalogue or a stale destructive action requires fres
  f.commit();
  assert.throws(()=>f.publish(f.edit(alpha,'Alpha revised')),/基础资料已更新/);
  assert.equal(f.read(storeFile).revision,1);
+});
+test('reviewed batch idempotency compares the complete payload and preserves later edits',t=>{
+ const f=fixture(t),p=f.edit(alpha,'Alpha revised'),batch={id:crypto.randomUUID(),proposals:[p]};
+ applyEditorialBatch(batch,f.dir);f.commit();f.publish(f.proposal({type:'edit',id:'b',values:{...valuesOf(beta),title:'Beta later'}},1));
+ const before=f.read(storeFile);assert.equal(applyEditorialBatch(batch,f.dir).already,true);assert.deepEqual(f.read(storeFile),before);
+ assert.throws(()=>applyEditorialBatch({...batch,proposals:[{...p,reason:'changed content'}]},f.dir),/批次ID已用于其他内容/);
+ assert.deepEqual(f.read(storeFile),before);
+});
+test('trusted mode rejects legacy proposals with missing or changed source credentials',t=>{
+ const f=fixture(t);f.write('trusted-save-policy.json',{schemaVersion:1,mode:'trusted'});
+ const p=f.edit(alpha,'Alpha revised');assert.throws(()=>f.publish(p),error=>error.code==='SOURCE_CHANGED');
+ p.change.sourceLease=sourceLeaseSync(f.dir);
+ f.write('adv-rpg-minimal-index-20261031.json',{records:[{...alpha,year:1981},beta]});
+ assert.throws(()=>f.publish(p),error=>error.code==='SOURCE_CHANGED');assert.equal(f.read(storeFile).revision,0);
 });

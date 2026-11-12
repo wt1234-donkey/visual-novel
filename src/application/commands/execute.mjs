@@ -3,14 +3,17 @@ import {applyChange,undoLast} from '../../domain/catalogue/model.mjs';
 import {createCatalogueView} from '../catalogue/view.mjs';
 import {saveEdit,saveCreatorNames,undoEdit,projectWork,validateHistory} from '../../../work-edit-model.mjs';
 const reject=(message,code)=>{throw Object.assign(Error(message),{code});};
+export function assertCommandSource(lease,current,kind){
+ const required=Object.entries(current.files).filter(([path])=>!(kind==='formal'&&path==='data/work-edit-history.json'));
+ if(lease?.schemaVersion!==1||!required.length||required.some(([path,sha])=>lease?.files?.[path]!==sha))reject('来源或规则已变化，请保留输入并重新核对','SOURCE_CHANGED');
+}
 // Context is loaded by the executor from its trusted checkout, never from a browser snapshot.
 export function planCommand(command,context,identity){
  validateCommand(command);
  if(!identity||identity!==command.actor)reject('操作人须与已认证派发人一致','ACTOR_MISMATCH');
  const previous=context.receipt;
  if(previous){if(previous.command!==commandText(command))reject('操作ID已经用于不同内容','OPERATION_CONFLICT');return {alreadyApplied:true,receipt:previous};}
- const required=Object.entries(context.sourceLease.files).filter(([path])=>!(command.kind==='formal'&&path==='data/work-edit-history.json'));
- if(!required.length||required.some(([path,sha])=>command.sourceLease.files[path]!==sha))reject('来源或规则已变化，请保留输入并重新核对','SOURCE_CHANGED');
+ assertCommandSource(command.sourceLease,context.sourceLease,command.kind);
  const meta={id:command.operationId,at:command.at,actor:identity,reason:command.reason,sources:command.sources,expectedRevision:command.expectedRevision};
  let store,revision;
  if(command.kind==='basic'){

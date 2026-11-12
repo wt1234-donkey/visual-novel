@@ -2,9 +2,11 @@
 
 ## 当前状态
 
-实现准备已完成，**整批尚未验收关闭**。`data/trusted-save-policy.json` 保持 `mode: legacy`；现有直接保存继续使用原通道。新的命令入口在该模式下拒绝生产派发，避免把尚未联调的通道误当成已启用门禁。
+PR #329 的实现准备已合并并上线。管理员会话现已建立；隔离规则 `Catalogue save gate rehearsal`（ID 27081428）已启用，仅匹配 `validation/trusted-save-gate-*`，要求 GitHub Actions 的 build 检查，禁止强推和删除，绕过清单为空。
 
-当前 GitHub 连接读取 main 分支保护返回 403 `Resource not accessible by integration`，未具备管理规则的能力。仓库规则集列表为空。`config/main-ruleset.proposed.json` 是禁用状态的配置草案，提交该文件本身不会启用 GitHub 规则。
+`data/trusted-save-policy.json` 暂保持 `mode: legacy`，main 的强制规则尚未切换，整批仍待真实联调验收。GitHub 代码连接没有 Administration 权限，规则管理通过已登录的管理员界面完成，无需扩大浏览器保存凭据的权限。
+
+旧写入入口已核对：历史导入的 Git push 都指向 PR 分支，管理台也生成 PR，合并后统一受 main 的必需检查约束。唯一旧直接 main 发布入口为 `editorial-publish.yml`，现补上经过全量验证的数据提交证明和非强制更新；不允许它携带代码变更。该入口对基础修改复用共同动作验证器，可信模式下基础/正式旧提案必须携带来源凭据，批次 ID 重试核对完整命令摘要。发布任务必须核对实际线上部署祖先才报告完成。
 
 ## 执行方案与权限决策
 
@@ -25,7 +27,7 @@ GITHUB_TOKEN 写 main 不会自动触发 push 构建，因此显式发送独立�
 **切换前必须一起完成，不能只打开规则：**
 
 1. 获得仓库管理规则的操作能力，核对实际规则及状态来源；在隔离分支确认失败检查被拒、合法数据提交可通过。
-2. 对管理台 PR 通道、旧审核发布及仍需使用的脚本/导入流程逐项登记和迁移。`editorial-publish.yml` 等旧直接 push 流程尚不能视为已通过新门禁；其历史权限不作为绕过清单。
+2. 对管理台 PR 通道、旧审核发布及仍需使用的脚本/导入流程逐项登记和迁移。旧直接发布已接入提交证明；历史 PR 写入边界由自动检查固定，任何通道都不加入绕过清单。
 3. 联调实际 GitHub 派发、回执和自动 Pages 请求。测试使用隔离库，不能向生产目录写测试作品。
 4. 先切换 `mode: trusted` 并核对单作品、批量标签、CSV、AI候选确认和正式姓名保存，再启用必需检查规则；顺序不能倒置。通道验证失败则在启用规则前保持原通道并保留输入；不得让前端静默退回直接写入以绕过已启用门禁。
 
@@ -37,3 +39,9 @@ GITHUB_TOKEN 写 main 不会自动触发 push 构建，因此显式发送独立�
 - [GITHUB_TOKEN 的触发例外](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow)
 - [必需检查与预期来源](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets)
 - [检查与同名状态的行为](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks)
+
+## 隔离验证入口
+
+在 Actions 运行 **Catalogue command gate rehearsal**（main）。第一轮只上传标准命令 blob 并派发专用 repository_dispatch；第二轮用相同业务执行器验证，原子提交到唯一的 `validation/trusted-save-gate-<run_id>` 分支。它依次断言缺少检查和明确失败检查均被拒绝，再由 GitHub Actions 给出成功证明并验证更新获准，最后确认 main 未改变。该验证与生产命令使用相同对象摘要、认证事件、来源/修订及回执规则；专用事件和命令行标记共同限制隔离路径，不能通过生产 payload 切换目标分支。
+
+仓库所有者仍可主动修改规则，这是所有权边界；常规网页保存、脚本和 PR 不配置绕过者。测试数据仅出现在隔离验证分支，不进入生产目录。

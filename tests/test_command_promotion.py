@@ -3,6 +3,8 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+import io
+import urllib.error
 
 spec=importlib.util.spec_from_file_location('promotion',Path(__file__).resolve().parents[1]/'scripts/promote_catalogue_command.py')
 promotion=importlib.util.module_from_spec(spec);spec.loader.exec_module(promotion)
@@ -43,5 +45,25 @@ class CommandPromotionTests(unittest.TestCase):
     def test_stale_main_or_failed_attestation_never_advances_main(self):
         for options in ({'stale':True},{'fail_status':True}):
             self.assertFalse(any(row[1]=='PATCH' for row in self.run_promotion(**options)))
+
+    def test_isolated_rehearsal_proves_missing_failed_and_successful_checks_without_touching_main(self):
+        head='a'*40;sha='c'*40;state={};updates=[]
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);(root/'data/command-receipts').mkdir(parents=True);(root/'data/command-receipts/one.json').write_text('{}')
+            def git(*args):return head if args[0]=='rev-parse' else 'data/command-receipts/one.json'
+            def api(path,method='GET',value=None):
+                if path=='/git/ref/heads/main':return {'object':{'sha':head}}
+                if path=='/git/refs' and method=='POST':state['ref']=head;return {}
+                if path.startswith('/git/ref/heads/validation/'):return {'object':{'sha':state['ref']}}
+                if path.startswith('/git/commits/') and method=='GET':return {'tree':{'sha':'tree'}}
+                if path.startswith('/statuses/'):state['check']=value['state'];return {}
+                if method=='PATCH':
+                    updates.append((path,value))
+                    if state.get('check')!='success':raise urllib.error.HTTPError(path,422,'rule violation',{},io.BytesIO(b'Required status check "build" is expected'))
+                    state['ref']=value['sha'];return {}
+                return {'sha':sha}
+            with patch.dict('os.environ',{'GITHUB_RUN_ID':'123'}),patch.object(promotion,'ROOT',root),patch.object(promotion,'git',git),patch.object(promotion,'api',api):promotion.main(rehearsal=True)
+        self.assertEqual(state['ref'],sha);self.assertEqual(len(updates),3)
+        self.assertTrue(all('/heads/validation/trusted-save-gate-123' in row[0] and row[1]['force'] is False for row in updates))
 
 if __name__=='__main__':unittest.main()
