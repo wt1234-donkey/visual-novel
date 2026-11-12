@@ -9,6 +9,9 @@ import {emptyStore,upgradeStore,valuesOf} from '../src/domain/catalogue/model.mj
 import {editableValues} from '../work-edit-model.mjs';
 import {gitFixture} from './helpers/catalogue-git-fixture.mjs';
 import {receiptPath} from '../src/infrastructure/filesystem/command-executor.mjs';
+import {saveMode} from '../src/application/commands/policy.mjs';
+import {parseStyleUpdates,STYLE_UPDATE_HEADERS} from '../src/application/catalogue/imports.mjs';
+import {styleReviewRows} from '../basic-style-review.mjs';
 const read=name=>JSON.parse(readFileSync(new URL('../data/'+name,import.meta.url)));
 const work=read('games.json').works.find(work=>work.id==='g039'),taxonomy=read('taxonomy.json');
 const row={id:'i1',matchedWorkId:'w1',title:'One',firstYear:1965,year:1965,group:'Maker',gameplay:'ADV',plotStyles:[],source:'https://example.org/one'};
@@ -39,6 +42,18 @@ test('bulk, CSV and AI-confirmed tags share the same controlled tag validation',
  assert.throws(()=>validateBasicAction({type:'style-update',rows:[{id:'w1',mode:'set',tags,evidence:{},extra:'x'}]}));
  assert.throws(()=>validateBasicAction({type:'style-update',rows:[{id:'w1',mode:'set',tags},{id:'w1',mode:'append',tags}]}));
 });
+test('actual CSV parsing and AI-selected rows pass the common command without changing their formats',()=>{
+ const cells=STYLE_UPDATE_HEADERS.map((_,index)=>index===0?'w1':index===1?'One':index===2?'轻松':'');
+ const csv=STYLE_UPDATE_HEADERS.join(',')+'\n'+cells.join(',');
+ assert.equal(planCommand(basic({type:'style-update',rows:parseStyleUpdates(csv)}),context(),'tester').receipt.revision,1);
+ const item={id:'w1',title:'One',model:'manual-confirmed',candidates:[{dimension:'tone',tag:'轻松',quote:'轻松叙事',source:row.source}]};
+ const rows=styleReviewRows([item],new Map([['w1',new Set(['轻松'])]]));
+ assert.equal(planCommand(basic({type:'style-update',rows}),context(),'tester').receipt.revision,1);
+});
+test('only an explicit valid policy switches the writer; malformed policies never silently select legacy',()=>{
+ assert.equal(saveMode(undefined),'legacy');assert.equal(saveMode({schemaVersion:1,mode:'trusted'}),'trusted');
+ for(const policy of [null,{schemaVersion:2,mode:'trusted'},{schemaVersion:1,mode:'trussted'}])assert.throws(()=>saveMode(policy));
+});
 test('formal creator names still need no evidence; protected fields and mixed unproved changes fail',()=>{
  const names={writerNames:['作者甲'],artistNames:[],musicianNames:[]};
  const result=planCommand(formal({type:'creators',workId:work.id,names}),context(),'tester');
@@ -61,7 +76,7 @@ test('dispatch identity and blob references cannot redirect the executor to anot
 test('transport reconciles a lost dispatch response, then repeated submission never dispatches twice',async()=>{
  const api=gitFixture(),command=basic();let dispatched=0;
  const request=async(path,method='GET',body)=>{
-  if(path.endsWith('/dispatches')){dispatched++;api.changeFile(receiptPath(command.operationId),JSON.stringify({revision:1,command:commandText(command)}));throw Error('response lost');}
+  if(path.endsWith('/dispatches')){dispatched++;api.changeFile(receiptPath(command.operationId),JSON.stringify({schemaVersion:1,operationId:command.operationId,kind:command.kind,actor:command.actor,revision:1,command:commandText(command)}));throw Error('response lost');}
   const result=await api.fetch('https://api.github.com'+path,{method,body:body?JSON.stringify(body):undefined});
   if(!result.ok)throw Object.assign(Error('not found'),{status:result.status});return result.json();
  };

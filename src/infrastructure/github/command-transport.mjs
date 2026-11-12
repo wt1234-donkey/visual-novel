@@ -10,6 +10,7 @@ export async function submitCommand(request,command,{timeout=240000,interval=200
   const raw=new TextDecoder().decode(Uint8Array.from(atob(blob.content.replace(/\s/g,'')),c=>c.charCodeAt(0)));
   if(await blobDigest(raw)!==file.sha)throw Error('命令回执摘要不符');
   const receipt=JSON.parse(raw);if(receipt.command!==text)throw Object.assign(Error('操作ID已用于不同内容'),{code:'OPERATION_CONFLICT'});
+  if(receipt.schemaVersion!==1||receipt.operationId!==command.operationId||receipt.kind!==command.kind||receipt.actor!==command.actor||!Number.isSafeInteger(receipt.revision)||receipt.revision<1)throw Error('命令回执身份或修订无效');
   return {operationId:command.operationId,revision:receipt.revision,commit:head};
  };
  const existing=await read();if(existing)return existing;

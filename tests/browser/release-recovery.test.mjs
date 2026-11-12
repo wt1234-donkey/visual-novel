@@ -101,5 +101,6 @@ test('trusted mode saves an actual form through dispatch with the existing Conte
   await page.locator('#be-message').filter({hasText:'已提交 GitHub 主分支'}).waitFor();
   assert.equal(f.api.store.records.w0.values.title,'Trusted title');assert.equal(f.api.calls.filter(call=>call.path==='/dispatches').length,1);
   assert.equal(f.api.calls.filter(call=>call.method==='PATCH'||call.path==='/git/commits').length,0,'browser never advances main or creates data commits in trusted mode');
- }finally{await f.close();}
+ }catch(error){error.message+='\nSave UI: '+await f.page.locator('#be-message').textContent()+'\nRequests: '+JSON.stringify(f.api.calls.slice(-12).map(call=>({method:call.method,path:call.path})));throw error;}
+ finally{await f.close();}
 });

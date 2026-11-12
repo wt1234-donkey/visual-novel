@@ -8,6 +8,7 @@ import {loadCatalogueSnapshot} from '../src/infrastructure/filesystem/catalogue-
 export {assembleBasicRows,assembleHomeRows} from '../src/application/catalogue/snapshot.mjs';
 import {normalizeBasicQuery} from '../basic-catalogue-index.mjs';
 import {buildAdvancedRows} from './build_basic_advanced_index.mjs';
+import {saveMode as policyMode} from '../src/application/commands/policy.mjs';
 
 
 function packBasicRows(works,gameplayBySlot){
@@ -59,7 +60,7 @@ export function buildBasicWebIndex(root,output,revision){
  shards('home',home.rows,({title,aliases,firstYear,gameplay,group,source,mainPlacement})=>({title,aliases,firstYear,gameplay,group,source,mainPlacement}));
  const {promotedBasic,promotedDossier,existingComplete}=registry.summary;
  save(join(version,'identity-review.json'),{candidates:snapshot.identityCandidates,issues:snapshot.issues});
- const policy=join(root,'data/trusted-save-policy.json'),saveMode=existsSync(policy)?JSON.parse(readFileSync(policy,'utf8')).mode:'legacy';
+ const policy=join(root,'data/trusted-save-policy.json'),saveMode=policyMode(existsSync(policy)?JSON.parse(readFileSync(policy,'utf8')):undefined);
  save(join(dir,'manifest.json'),{schema:1,revision,shardSize,sourceLease,saveMode,assets,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
   home:{total:home.rows.length,excluded:home.excluded},
   catalogue:{schemaVersion:snapshot.schemaVersion,dataRevision:snapshot.revision,identityCandidates:snapshot.identityCandidates.length,journal:snapshot.journal}});
