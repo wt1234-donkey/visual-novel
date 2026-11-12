@@ -64,5 +64,14 @@ class ReleaseGovernanceTests(unittest.TestCase):
         self.assertNotIn('contents: write',replay)
         self.assertIn('persist-credentials: false',replay)
 
+    def test_undeclared_root_asset_or_unused_module_cannot_enter_runtime(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'index.html').write_text('<h1>Catalogue</h1>')
+            for name in ('unlisted.mjs','src/application/unused.mjs','data/catalogue-web/extra.mjs'):
+                path=root/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text('export const unused=1;')
+                with self.assertRaisesRegex(ValueError,'not in public allowlist'):
+                    verify_public(root)
+                path.unlink()
+
 
 if __name__ == '__main__':unittest.main()

@@ -53,7 +53,7 @@ def public_paths(stage, tracked, policy):
     # extension is implicitly admitted by the data rule.
     selected.update(p for p in tracked if p.startswith('data/') and Path(p).suffix in policy['dataSuffixes'])
     for directory in policy['generatedDataDirectories']:
-        selected.update(p.relative_to(stage).as_posix() for p in (stage / directory).rglob('*') if p.is_file())
+        selected.update(p.relative_to(stage).as_posix() for p in (stage / directory).rglob('*') if p.is_file() and p.suffix in {'.json','.gz'})
     selected.update(p for p in policy['generatedFiles'] if (stage / p).is_file())
     pending = [p for p in selected if p.endswith('.mjs')]
     while pending:
@@ -98,6 +98,9 @@ def verify_public(root, policy=None):
             target = local_target(name, url)
             if target and target not in paths:
                 raise ValueError(f'Broken public dependency: {name} -> {target}')
+    unexpected = paths - set(public_paths(root, paths, policy))
+    if unexpected:
+        raise ValueError('File is not in public allowlist: ' + ', '.join(sorted(unexpected)))
     release = root / 'data/catalogue-release.json'
     if release.exists():
         def check(value):
