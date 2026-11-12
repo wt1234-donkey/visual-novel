@@ -7,11 +7,11 @@ const names=w=>[w.title,w.originalTitle,w.chineseTitle,...(w.aliases||[]),...(w.
 const refs=w=>(w.sourceRefs||[]).map(x=>String(x).toLowerCase());
 const add=(map,key,w)=>{if(!map.has(key))map.set(key,[]);map.get(key).push(w);};
 export function scanRegistry(registry,reserved){
- const byName=new Map(),byRef=new Map(),basicNames=new Map(),basicRefs=new Map();
- for(const w of reserved){for(const n of names(w))add(byName,n,w);for(const r of refs(w))add(byRef,r,w);}
+ const byName=new Map(),byRef=new Map(),basicNames=new Map(),basicRefs=new Map(),byRegistry=new Map(),byId=new Map();
+ for(const w of reserved){add(byId,w.id,w);if(w.basicRegistryId)add(byRegistry,w.basicRegistryId,w);for(const n of names(w))add(byName,n,w);for(const r of refs(w))add(byRef,r,w);}
  for(const w of registry.works.filter(w=>w.mainPlacement==='promoted-basic')){for(const n of names(w))add(basicNames,n,w);for(const r of refs(w))add(basicRefs,r,w);}
  return registry.works.map(w=>{
-  const matches=[...new Map([...reserved.filter(r=>r.basicRegistryId===w.indexId||r.id===w.linkedRecordId),...names(w).flatMap(n=>byName.get(n)||[]),...refs(w).flatMap(r=>byRef.get(r)||[])].map(r=>[r.id,r])).values()];
+  const matches=[...new Map([...[...new Set([...(byRegistry.get(w.indexId)||[]),...(byId.get(w.linkedRecordId)||[])].filter(Boolean))].sort((a,b)=>reserved.indexOf(a)-reserved.indexOf(b)),...names(w).flatMap(n=>byName.get(n)||[]),...refs(w).flatMap(r=>byRef.get(r)||[])].map(r=>[r.id,r])).values()];
   let status='available',reason='身份可补录，需补齐原作及首发证据';
   if(matches.length){status=matches.length===1&&matches[0].firstYear===w.firstYear?'existing':'conflict';reason=status==='existing'?'已有作品身份，跳过新增':'名称、别名或外部身份碰撞／年份冲突';}
   else if(w.mainPlacement!=='promoted-basic'){status='conflict';reason='已关联专题或其他身份，需复用原档案';}

@@ -28,7 +28,7 @@ export function createAtlas(data,catalogue,editorial,creators,notes={works:{}}){
   for(const w of data.works){
     const names=[...(personal.get(w.id)||[]).flatMap(c=>{const p=people.get(c.personId);return [p?.name,p?.alias]}),...manualCreatorNames(w)];
     const makers=(organization.get(w.id)||[]).filter(c=>MAKER_ROLES.has(c.role)).flatMap(c=>{const e=entities.get(c.entityId);return [e?.name,...(e?.aliases||[])]});
-    search.set(w.id,normalize([w.title,w.chineseTitle,w.originalTitle,...(w.titleAliases||[]),w.genre,w.synopsis,w.category,w.subcategory,...w.characters,...(w.interactionModes||[]),...names,...makers,...['position','style','theme','structure'].flatMap(key=>{const value=editorial.works[w.id]?.[key];return Array.isArray(value)?value:[value||'']})].join(' ')));
+    search.set(w.id,data.searchById?.[w.id]||normalize([w.title,w.chineseTitle,w.originalTitle,...(w.titleAliases||[]),w.genre,w.synopsis,w.category,w.subcategory,...(w.characters||[]),...(w.interactionModes||[]),...names,...makers,...['position','style','theme','structure'].flatMap(key=>{const value=editorial.works[w.id]?.[key];return Array.isArray(value)?value:[value||'']})].join(' ')));
   }
   return {data,catalogue,editorial,creators,notes,works,entities,people,personal,organization,releases,contents,search};
 }
