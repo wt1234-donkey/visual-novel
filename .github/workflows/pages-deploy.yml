@@ -1,6 +1,8 @@
 name: Deploy verified catalogue release
-run-name: ${{ github.event_name == 'workflow_dispatch' && '回退演练或发布' || '发布' }} ${{ github.event.workflow_run.head_sha || inputs.run_id }}
+run-name: ${{ github.event_name == 'workflow_dispatch' && '回退演练或发布' || '发布' }} ${{ github.event.workflow_run.head_sha || github.event.client_payload.run_id || inputs.run_id }}
 on:
+  repository_dispatch:
+    types: [catalogue-deploy-request]
   workflow_run:
     workflows: [Publish verified static website]
     types: [completed]
@@ -23,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event != 'pull_request' && github.event.workflow_run.head_repository.full_name == github.repository)
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'repository_dispatch' && github.event.action == 'catalogue-deploy-request' && github.repository == 'wt1234-donkey/visual-novel' && github.ref == 'refs/heads/main') || (github.event.workflow_run.conclusion == 'success' && (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'workflow_dispatch') && github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -35,7 +37,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      VERIFIED_RUN: ${{ github.event.workflow_run.id || inputs.run_id }}
+      VERIFIED_RUN: ${{ github.event.workflow_run.id || github.event.client_payload.run_id || inputs.run_id }}
       GH_TOKEN: ${{ github.token }}
       IS_ROLLBACK: ${{ github.event_name == 'workflow_dispatch' }}
     steps:
