@@ -61,11 +61,11 @@ export function undoEdit(store,base,targetId,expectedRevision,taxonomy,allWorks=
  return appendFormalEvent(store,result,base.id,meta,'undo',intent,{before:editableValues(projectWork(base,store)),after:restored});
 }
 export function changedFields(before,after){return EDIT_FIELDS.filter(k=>!same(before[k],after[k]));}
-export function validateHistory(store,works,taxonomy){
+export function validateHistory(store,works,taxonomy,{historical=false}={}){
  if(store?.schemaVersion===2){
   if(!same(Object.keys(store).sort(),['journal','records','schemaVersion']))throw Error('正式修改历史含未知字段');
   validateHistory({schemaVersion:1,records:store.records},works,taxonomy);
-  validateFormalJournal(store,state=>validateHistory(state,works,taxonomy));return true;
+  validateFormalJournal(store,state=>validateHistory(state,works,taxonomy,{historical:true}));return true;
  }
  if(!store||store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式无效');
  const base=new Map(works.map(w=>[w.id,w]));
@@ -78,7 +78,9 @@ export function validateHistory(store,works,taxonomy){
   const ids=new Set();let prior=null,rev=0;
   for(const e of row.recent){if(!patchOK(e.before)||!patchOK(e.after)||!e.id||ids.has(e.id)||!Number.isInteger(e.revision)||e.revision<=rev||e.revision>row.revision||!Number.isFinite(Date.parse(e.at))||!e.actor||!e.reason||e.reason.trim().length<5||!validEvidence(e.sources,e.before,e.after))throw Error('历史快照无效');if(prior&&!same(prior,e.before))throw Error('历史快照不连续');ids.add(e.id);rev=e.revision;prior=e.after;}
   if(prior&&!same(prior,row.overrides))throw Error('现行更正与最近修改不一致');
-  validateValues(editableValues(projectWork(base.get(id),store)),taxonomy,{...editableValues(base.get(id)),id},works.map(w=>projectWork(w,store)));
+  // Historical states retain the rules and identities of their own time. New
+  // catalogue names must not retroactively invalidate a valid older event.
+  if(!historical)validateValues(editableValues(projectWork(base.get(id),store)),taxonomy,{...editableValues(base.get(id)),id},works.map(w=>projectWork(w,store)));
  }
  return true;
 }

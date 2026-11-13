@@ -69,12 +69,12 @@ def replay_formal(store, validate_state=lambda state:None):
     assert state=={'schemaVersion':1,'records':store['records']}, '正式日志回放与当前状态不一致'
     return state
 
-def validate(store=None, root=ROOT):
+def validate(store=None, root=ROOT, historical=False):
     read=lambda n:json.loads((root/'data'/n).read_text(encoding='utf-8'))
     actual_file=store is None
     store=read('work-edit-history.json') if store is None else store
     if store.get('schemaVersion')==2:
-        replay_formal(store,lambda state:validate(state,root))
+        replay_formal(store,lambda state:validate(state,root,historical=True))
         if actual_file:
             expected=json.loads((root/'config/formal-audit-checkpoint.json').read_text())
             canonical=json.dumps(store['journal']['baseline'],ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
@@ -116,6 +116,7 @@ def validate(store=None, root=ROOT):
                 datetime.fromisoformat(item['at'].replace('Z','+00:00'))
         metadata(row.get('fieldMeta',{}),row['overrides'])
         for entry in row['recent']:metadata(entry.get('beforeFieldMeta',{}),entry['before'])
+        if historical:continue
         w=works[wid]|row['overrides']
         assert all(isinstance(w.get(k),str) and w[k].strip() for k in ('title','originalTitle','genre','synopsis','interactionNote','interactionBasis'))
         assert w['category'] in taxonomy['subcategories'] and w['subcategory'] in taxonomy['subcategories'][w['category']]
@@ -125,6 +126,7 @@ def validate(store=None, root=ROOT):
         assert w.get('chineseTitleType','通行译名') in {'通行译名','站内编辑译名'} and (w.get('chineseTitleType')!='站内编辑译名' or w.get('chineseTitle'))
         assert w['interactionModes'] and set(w['interactionModes'])<=set(taxonomy['interactionModes'])
         assert '待核实' not in w['interactionModes'] or w['interactionModes']==['待核实']
+    if historical:return len(store['records'])
     coverage=read('company-coverage.json')
     others=[*works.values(),*[w for c in coverage['companies'] for f in ('relatedGames','dossierOnlyWorks') for w in c.get(f,[])]]
     norm=lambda x: ''.join(c for c in unicodedata.normalize('NFKC',x).casefold() if c.isalnum())

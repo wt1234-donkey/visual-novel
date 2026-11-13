@@ -131,3 +131,14 @@ test('pending operations survive a page reload without credentials and retain th
  assert.deepEqual(result,original);assert.equal(items.size,0);assert.ok(!JSON.stringify([...items]).includes('credential'));
  await assert.rejects(()=>recovered.execute({...original,token:'must-never-persist'},async()=>assert.fail()),/未允许字段/);
 });
+
+test('later catalogue additions cannot retroactively invalidate an audited temporary title',()=>{
+ const values=editableValues(base),temporary={...values,title:'Temporary audited title'};
+ const first=saveEdit(empty(),base,temporary,meta('temporary-name',0),taxonomy,[base]);
+ const restored=saveEdit(first,base,values,meta('restore-name',1),taxonomy,[base]);
+ const future={...other,id:'future-work',title:'Temporary audited title',originalTitle:'Independent future original',chineseTitle:'未来作品独立检索名',titleAliases:[]};
+ assert.ok(validateHistory(restored,[base,future],taxonomy));
+ assert.deepEqual(replayFormalJournal(restored.journal),formalState(restored));
+ const conflict=structuredClone(restored);conflict.records[base.id]=structuredClone(first.records[base.id]);
+ assert.throws(()=>validateHistory(conflict,[base,future],taxonomy),/冲突/,'current name collisions remain rejected');
+});
