@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 42,
+  "endRevision": 43,
   "events": [
     {
       "schemaVersion": 1,
@@ -1102,6 +1102,97 @@
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+      "at": "2026-11-13T11:41:41.940Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 42,
+      "revision": 43,
+      "commandType": "edit",
+      "intent": {
+        "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
+        "type": "edit",
+        "values": {
+          "firstYear": 1978,
+          "gameplay": "文字冒险",
+          "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "setting": "封闭空间",
+            "theme": [
+              "奇幻",
+              "冒险",
+              "神话传说"
+            ]
+          },
+          "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
+          "title": "Stuga",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
+              "indexId": "basic-ifdb-table-20261104-ocrx4yc2l5znoqfs",
+              "aliases": [],
+              "title": "Stuga",
+              "firstYear": 1978,
+              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              },
+              "gameplay": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              },
+              "plotTags": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              },
+              "plotTagEvidence": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "setting": "封闭空间",
+                "theme": [
+                  "奇幻",
+                  "冒险",
+                  "神话传说"
+                ]
+              },
+              "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
+              "title": "Stuga",
+              "yearStatus": "published"
+            },
+            "aliases": []
           }
         }
       ],

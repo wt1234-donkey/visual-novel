@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 42,
+  "revision": 43,
   "additions": [],
   "records": {
     "g1028": {
@@ -1247,37 +1247,60 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "ifdb-table-20261104-ocrx4yc2l5znoqfs": {
+      "identity": {
+        "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
+        "indexId": "basic-ifdb-table-20261104-ocrx4yc2l5znoqfs",
+        "aliases": [],
+        "title": "Stuga",
+        "firstYear": 1978,
+        "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+          "at": "2026-11-13T11:41:41.940Z"
+        },
+        "gameplay": {
+          "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+          "at": "2026-11-13T11:41:41.940Z"
+        },
+        "plotTags": {
+          "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+          "at": "2026-11-13T11:41:41.940Z"
+        },
+        "plotTagEvidence": {
+          "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+          "at": "2026-11-13T11:41:41.940Z"
+        }
+      },
+      "values": {
+        "firstYear": 1978,
+        "gameplay": "文字冒险",
+        "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "setting": "封闭空间",
+          "theme": [
+            "奇幻",
+            "冒险",
+            "神话传说"
+          ]
+        },
+        "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
+        "title": "Stuga",
+        "yearStatus": "published"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "a992f79e-d369-4905-870b-6d9f1ec05c3c",
-      "at": "2026-11-13T11:25:42.130Z",
-      "actor": "wt1234-donkey",
-      "reason": "删除作品 Quest",
-      "changes": [
-        {
-          "id": "casa-table-20261105-5078",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "casa-table-20261105-5078",
-              "indexId": "basic-casa-table-20261105-5078",
-              "aliases": [],
-              "title": "Quest",
-              "firstYear": 1978,
-              "group": "Peninsula School Computing Project",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C5078/Quest.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "deleted": true
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
       "at": "2026-11-13T11:33:29.721Z",
@@ -1333,6 +1356,70 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+      "at": "2026-11-13T11:41:41.940Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
+              "indexId": "basic-ifdb-table-20261104-ocrx4yc2l5znoqfs",
+              "aliases": [],
+              "title": "Stuga",
+              "firstYear": 1978,
+              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              },
+              "gameplay": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              },
+              "plotTags": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              },
+              "plotTagEvidence": {
+                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+                "at": "2026-11-13T11:41:41.940Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "setting": "封闭空间",
+                "theme": [
+                  "奇幻",
+                  "冒险",
+                  "神话传说"
+                ]
+              },
+              "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
+              "title": "Stuga",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1344,10 +1431,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r42.json",
-        "sha": "7c5b3c25e181feb2f8b164ccc6d980d34cf53b1f",
+        "path": "data/basic-catalogue-journal/events/r31-r43.json",
+        "sha": "767899035c0e1a6c703853e4ae082b6fc0980042",
         "startRevision": 31,
-        "endRevision": 42,
+        "endRevision": 43,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1360,12 +1447,13 @@
           "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
           "a992f79e-d369-4905-870b-6d9f1ec05c3c",
           "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
-          "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293"
+          "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
+          "03ceb15c-ef09-4884-961b-ef7ca36c4ae2"
         ],
-        "bytes": 35546
+        "bytes": 38572
       }
     ],
-    "eventCount": 12,
-    "stateHash": "cf29d3ca586820625c1810fa55f1ad228b0214c02340361945bcdd6f8a10985c"
+    "eventCount": 13,
+    "stateHash": "abba6ec4a9797223d3ae2fc9a6f2cb11e5670595bff582d239db526cb07892d5"
   }
 }
