@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 33,
+  "revision": 34,
   "additions": [],
   "records": {
     "g1028": {
@@ -896,86 +896,66 @@
         "yearStatus": "published"
       },
       "aliases": []
+    },
+    "ifdb-4b3jwtbohg8cqhs2": {
+      "identity": {
+        "id": "ifdb-4b3jwtbohg8cqhs2",
+        "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4b3jwtbohg8cqhs2",
+        "aliases": [],
+        "title": "The Devil's Dungeon",
+        "firstYear": 1978,
+        "group": "创作品牌待核",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+          "at": "2026-11-13T08:18:58.105Z"
+        },
+        "group": {
+          "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+          "at": "2026-11-13T08:18:58.105Z"
+        },
+        "gameplay": {
+          "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+          "at": "2026-11-13T08:18:58.105Z"
+        },
+        "plotTags": {
+          "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+          "at": "2026-11-13T08:18:58.105Z"
+        },
+        "plotTagEvidence": {
+          "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+          "at": "2026-11-13T08:18:58.105Z"
+        }
+      },
+      "values": {
+        "firstYear": 1978,
+        "gameplay": "文字冒险",
+        "group": "C. William Engel",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "emotion": "热血",
+          "setting": "异世界",
+          "structure": "线性叙事",
+          "theme": [
+            "奇幻",
+            "冒险"
+          ],
+          "tone": "黑暗"
+        },
+        "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
+        "title": "The Devil's Dungeon",
+        "yearStatus": "published"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
-      "at": "2026-11-13T00:53:27.014Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ai-pyramid-doom",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ai-pyramid-doom",
-              "indexId": "dossier-ai-pyramid-doom",
-              "aliases": [
-                "Pyramid of Doom",
-                "末日金字塔"
-              ],
-              "title": "末日金字塔",
-              "firstYear": 1979,
-              "group": "既有厂商专题",
-              "gameplay": "文字冒险",
-              "plotStyles": [],
-              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams8",
-              "mainPlacement": "dossier-linked"
-            },
-            "fieldMeta": {
-              "firstYear": {
-                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
-                "at": "2026-11-13T00:53:27.014Z"
-              },
-              "yearStatus": {
-                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
-                "at": "2026-11-13T00:53:27.014Z"
-              },
-              "group": {
-                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
-                "at": "2026-11-13T00:53:27.014Z"
-              },
-              "plotTags": {
-                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
-                "at": "2026-11-13T00:53:27.014Z"
-              },
-              "plotTagEvidence": {
-                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
-                "at": "2026-11-13T00:53:27.014Z"
-              }
-            },
-            "values": {
-              "firstYear": 1981,
-              "gameplay": "文字冒险",
-              "group": "Adventure International",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": [
-                  "惊悚",
-                  "恐怖"
-                ],
-                "setting": "异世界",
-                "theme": [
-                  "奇幻",
-                  "冒险"
-                ],
-                "tone": "黑暗"
-              },
-              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams8",
-              "title": "末日金字塔",
-              "yearStatus": "published"
-            },
-            "aliases": [
-              "Pyramid of Doom"
-            ]
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "66a0d513-b4c5-4146-9846-d2d5225b1157",
       "at": "2026-11-13T00:56:17.584Z",
@@ -1119,6 +1099,76 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+      "at": "2026-11-13T08:18:58.105Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifdb-4b3jwtbohg8cqhs2",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-4b3jwtbohg8cqhs2",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4b3jwtbohg8cqhs2",
+              "aliases": [],
+              "title": "The Devil's Dungeon",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "group": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "gameplay": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "plotTags": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "plotTagEvidence": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "C. William Engel",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "热血",
+                "setting": "异世界",
+                "structure": "线性叙事",
+                "theme": [
+                  "奇幻",
+                  "冒险"
+                ],
+                "tone": "黑暗"
+              },
+              "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
+              "title": "The Devil's Dungeon",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1130,19 +1180,20 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r33.json",
-        "sha": "7103f8ccae072e4090dcbaa32e8da77054f7cef8",
+        "path": "data/basic-catalogue-journal/events/r31-r34.json",
+        "sha": "078a23cfda263409b6e92ef809d05c36108994b3",
         "startRevision": 31,
-        "endRevision": 33,
+        "endRevision": 34,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
-          "61d7587d-7e36-4caa-839d-4f83adc512ad"
+          "61d7587d-7e36-4caa-839d-4f83adc512ad",
+          "d06863b5-aebc-459d-b959-187cf5d4bce0"
         ],
-        "bytes": 10039
+        "bytes": 13281
       }
     ],
-    "eventCount": 3,
-    "stateHash": "32651849c677496cea3715aa95861e003390b9630c7949679806e1a9afb65bba"
+    "eventCount": 4,
+    "stateHash": "ae747a614d011663dafa51bc1349abaeb20f9775bdc9c950abb043f68911361f"
   }
 }

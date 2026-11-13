@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 33,
+  "endRevision": 34,
   "events": [
     {
       "schemaVersion": 1,
@@ -308,6 +308,105 @@
               },
               "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
               "title": "Quest",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+      "at": "2026-11-13T08:18:58.105Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 33,
+      "revision": 34,
+      "commandType": "edit",
+      "intent": {
+        "id": "ifdb-4b3jwtbohg8cqhs2",
+        "type": "edit",
+        "values": {
+          "firstYear": 1978,
+          "gameplay": "文字冒险",
+          "group": "C. William Engel",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "emotion": "热血",
+            "setting": "异世界",
+            "structure": "线性叙事",
+            "theme": [
+              "奇幻",
+              "冒险"
+            ],
+            "tone": "黑暗"
+          },
+          "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
+          "title": "The Devil's Dungeon",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ifdb-4b3jwtbohg8cqhs2",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-4b3jwtbohg8cqhs2",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4b3jwtbohg8cqhs2",
+              "aliases": [],
+              "title": "The Devil's Dungeon",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "group": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "gameplay": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "plotTags": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              },
+              "plotTagEvidence": {
+                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
+                "at": "2026-11-13T08:18:58.105Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "C. William Engel",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "热血",
+                "setting": "异世界",
+                "structure": "线性叙事",
+                "theme": [
+                  "奇幻",
+                  "冒险"
+                ],
+                "tone": "黑暗"
+              },
+              "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
+              "title": "The Devil's Dungeon",
               "yearStatus": "published"
             },
             "aliases": []
