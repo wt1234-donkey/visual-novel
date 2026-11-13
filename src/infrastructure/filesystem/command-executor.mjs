@@ -13,14 +13,14 @@ export function executeCommand(root,command,identity){
  if(!receipt){
   const {snapshot,inputs,sourceLease}=loadCatalogueSnapshot(root),coverage=JSON.parse(readFileSync(join(root,'data/company-coverage.json'),'utf8'));
   const formalWorks=[...new Map([...inputs.supplement.works,...inputs.main.works].map(work=>[work.id,work])).values()];
-  context={sourceLease,basicRows:snapshot.sourceRows,basicStore:inputs.store,formalStore:inputs.history,formalWorks,
+  context={sourceLease,basicRows:snapshot.sourceRows,basicStore:inputs.store,formalStore:inputs.history,identityStore:inputs.identityStore,sourceIdentity:snapshot.sourceIdentity,formalWorks,
    reservedWorks:[...formalWorks,...coverage.companies.flatMap(company=>[...(company.relatedGames||[]),...(company.dossierOnlyWorks||[])])],taxonomy:JSON.parse(readFileSync(join(root,'data/taxonomy.json'),'utf8'))};
  }
  const result=planCommand(command,context,identity);
  if(result.alreadyApplied)return {...result,paths:[path]};
  if(command.kind==='basic')saveBasicStoreSync(root,result.store);
- else writeFileSync(join(root,'data/work-edit-history.json'),JSON.stringify(result.store,null,2)+'\n');
+ else writeFileSync(join(root,command.kind==='identity'?'data/source-identity-decisions.json':'data/work-edit-history.json'),JSON.stringify(result.store,null,2)+'\n');
  mkdirSync(dirname(receiptFile),{recursive:true});writeFileSync(receiptFile,JSON.stringify(result.receipt,null,2)+'\n');
  if(command.kind==='basic')readBasicStoreSync(root);
- return {...result,paths:command.kind==='basic'?['data/basic-catalogue-edits.json','data/basic-catalogue-journal',path]:['data/work-edit-history.json',path]};
+ return {...result,paths:command.kind==='basic'?['data/basic-catalogue-edits.json','data/basic-catalogue-journal',path]:[command.kind==='identity'?'data/source-identity-decisions.json':'data/work-edit-history.json',path]};
 }

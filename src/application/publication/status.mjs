@@ -1,7 +1,7 @@
 export const PUBLICATION_LABELS={saved:'已保存',waiting:'等待发布',publishing:'发布中',published:'已生效',failed:'发布失败',unknown:'暂无法确认',rollback:'已保存，线上已回退'};
-export function operationReceipt({operationId,kind,revision,commit,workId=null,at=new Date().toISOString()}){
- if(typeof operationId!=='string'||!operationId||operationId.length>500||!['basic','formal'].includes(kind)||!Number.isSafeInteger(revision)||revision<0||!Number.isFinite(Date.parse(at))||commit&&!/^[a-f0-9]{40}$/.test(commit))throw Error('保存回执格式无效');
- return {schemaVersion:1,operationId,kind,revision,commit:commit||null,workId,at};
+export function operationReceipt({operationId,kind,revision,commit,workId=null,caseId=null,at=new Date().toISOString()}){
+ if(typeof operationId!=='string'||!operationId||operationId.length>500||!['basic','formal','identity'].includes(kind)||!Number.isSafeInteger(revision)||revision<0||!Number.isFinite(Date.parse(at))||commit&&!/^[a-f0-9]{40}$/.test(commit))throw Error('保存回执格式无效');
+ return {schemaVersion:1,operationId,kind,revision,commit:commit||null,workId,at,...(kind==='identity'?{caseId}:{})};
 }
 export function publicationState(receipt,deployment,runs=[],{available=true}={}){
  if(deployment&&(deployment.revision===receipt.commit||deployment.ancestors?.includes(receipt.commit)||deployment.operationIds?.[receipt.kind]?.includes(receipt.operationId)))return {state:'published',revision:deployment.revision};

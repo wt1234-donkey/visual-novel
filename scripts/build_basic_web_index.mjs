@@ -61,7 +61,7 @@ export function buildBasicWebIndex(root,output,revision){
  const {promotedBasic,promotedDossier,existingComplete}=registry.summary;
  save(join(version,'identity-review.json'),{candidates:snapshot.identityCandidates,issues:snapshot.issues});
  const policy=join(root,'data/trusted-save-policy.json'),saveMode=policyMode(existsSync(policy)?JSON.parse(readFileSync(policy,'utf8')):undefined);
- save(join(dir,'manifest.json'),{schema:1,revision,shardSize,sourceLease,saveMode,assets,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage},
+ save(join(dir,'manifest.json'),{schema:1,revision,shardSize,sourceLease,saveMode,assets,basic:{total:basic.length,promotedBasic,promotedDossier,existingComplete,advancedCoverage,identityStats:snapshot.sourceIdentity.stats},
   home:{total:home.rows.length,excluded:home.excluded},
   catalogue:{schemaVersion:snapshot.schemaVersion,dataRevision:snapshot.revision,identityCandidates:snapshot.identityCandidates.length,journal:snapshot.journal}});
 }

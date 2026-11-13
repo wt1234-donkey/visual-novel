@@ -155,6 +155,11 @@
       "basis": "active generator"
     },
     {
+      "path": "scripts/build_source_identity_index.mjs",
+      "role": "active",
+      "basis": "source and work identity catalogue, explicit review, and migration checks"
+    },
+    {
       "path": "scripts/catalogue_intake.py",
       "role": "active",
       "basis": "active workflow/dependency"
@@ -970,6 +975,11 @@
       "path": "scripts/migrate_formal_history.mjs",
       "role": "active",
       "basis": "formal audit checkpoint migration and full replay check"
+    },
+    {
+      "path": "scripts/migrate_source_identities.mjs",
+      "role": "active",
+      "basis": "source and work identity catalogue, explicit review, and migration checks"
     },
     {
       "path": "scripts/organization_unfinished.py",

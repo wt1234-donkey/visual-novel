@@ -11,6 +11,7 @@ import json
 import os
 import re
 import unicodedata
+import subprocess
 from pathlib import Path
 
 from source_urls import source_url_valid
@@ -182,16 +183,24 @@ def validate_new_work(bundle, key, games):
     required = {'id','title','originalTitle','firstYear','category','subcategory','genre','characters','charactersNote','synopsis','notes','source','interactionModes','interactionNote','interactionBasis','interactionSources'}
     optional = {'basicRegistryId', 'titleAliases', 'sourceRefs'}
     assert isinstance(w, dict) and required <= set(w) <= required | optional, '新作品字段不完整或含未知字段'
+    distinct_from=set()
     if set(w) & optional:
         assert optional <= set(w), '基础库补录须保留完整身份与别名'
         basic = next((r for r in read('main-adv-rpg-works-20261031.json')['works'] if r['indexId'] == w['basicRegistryId']), None)
         assert basic and basic['mainPlacement'] == 'promoted-basic', '基础身份不存在或已关联其他档案'
+        try:identity_state=read('source-identity-decisions.json')
+        except (FileNotFoundError,KeyError):identity_state={'links':{}}
+        decision=identity_state.get('links',{}).get(basic['id'])
+        if decision and decision.get('status')=='confirmed':
+            assert decision['workId']==basic['id'], '此来源已有明确目标作品，应复用该身份而非新增'
+            distinct_from=set(decision.get('distinctFrom',[]))
         assert w['titleAliases'] == basic.get('aliases', []) and w['sourceRefs'] == basic.get('sourceRefs', []), '基础库别名或来源身份已变化，请重新读取'
         assert w['firstYear'] == basic['firstYear'], '年份与基础身份不一致'
         basic_names = {name_key(n) for n in [basic['title'], *basic.get('aliases', [])]}
         assert any(name_key(w.get(f, '')) in basic_names for f in ('title', 'originalTitle')), '名称与基础身份不一致'
         peers = [r for r in read('main-adv-rpg-works-20261031.json')['works'] if r['indexId'] != basic['indexId'] and r['mainPlacement'] == 'promoted-basic']
         for peer in peers:
+            if peer['id'] in distinct_from:continue
             assert not basic_names & {name_key(n) for n in [peer['title'], *peer.get('aliases', [])]}, '基础库内部名称重复，请先核对身份'
             assert not {str(r).lower() for r in w['sourceRefs']} & {str(r).lower() for r in peer.get('sourceRefs', [])}, '基础库内部来源身份重复'
 
@@ -202,6 +211,7 @@ def validate_new_work(bundle, key, games):
     assert len(names) and all(text(w[f], maximum=300) for f in ('title','originalTitle'))
     for old in records:
         assert not w.get('basicRegistryId') or old.get('basicRegistryId') != w['basicRegistryId'], '基础身份已补录，请重新读取'
+        if old['id'] in distinct_from:continue
         assert not {str(r).lower() for r in w.get('sourceRefs', [])} & {str(r).lower() for r in old.get('sourceRefs', [])}, '外部来源身份重复'
         oldnames = {name_key(old.get(f,'')) for f in ('title','chineseTitle','originalTitle')} | {name_key(a) for a in old.get('titleAliases',[])}
         assert not names & (oldnames - {''}), f"名称与已有作品 {old['id']} 重复，请复用其身份或先核查同名作品"
@@ -272,6 +282,8 @@ def apply_package(package, current, games, baseline, dossiers):
 
 
 def apply_file(path, root=ROOT):
+    if (Path(root) / 'config/source-identity-baseline.json').exists():
+        subprocess.run(['node', 'scripts/migrate_source_identities.mjs', '--check'], cwd=root, check=True)
     raw = Path(path).read_text(encoding='utf-8')
     assert len(raw) <= 60000, '更新包超过60000字符，请分批'
     package = json.loads(raw)

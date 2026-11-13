@@ -92,16 +92,16 @@ def prepare(plan_path, root=ROOT, apply=False):
             held.append({'row': number, 'record': w, 'reason': 'identity/version or year conflict requires separate resolution'})
             continue
         if source_years:
-            duplicate.append({'row': number, 'record': w, 'reason': 'same explicit source identity and registered year'})
+            duplicate.append({'row': number, 'record': w, 'reason': 'same explicit source identity and registered year; duplicate source observation, not a work-identity merge'})
             continue
         if previous:
-            held.append({'row': number, 'record': w, 'reason': 'name or alias overlaps; independent identity requires separate resolution'})
+            held.append({'row': number, 'record': w, 'requiresIdentityReview': True, 'reason': 'name or alias overlaps; candidate only, no automatic work-identity link'})
             continue
         for name in [w['title'], *w.get('aliases', [])]:
             names.setdefault(title_key(name), set()).add(year)
         if w.get('sourceIdentity'):
             sources.setdefault(w['sourceIdentity'], set()).add(year)
-        w.update({'batch': plan['batchId'], 'sourceSnapshot': plan['sourceSnapshot'], 'sourceSnapshotRow': number, 'mainPlacement': 'promoted-basic', 'linkedRecordId': None})
+        w.update({'batch': plan['batchId'], 'sourceSnapshot': plan['sourceSnapshot'], 'sourceSnapshotRow': number, 'mainPlacement': 'promoted-basic', 'linkedRecordId': None, 'identityStatus': 'unreviewed'})
         w.setdefault('aliases', [])
         accepted.append(w)
     result = deepcopy(store)

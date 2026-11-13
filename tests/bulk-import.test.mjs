@@ -5,12 +5,13 @@ import {scanRegistry,emptyValues,makeBasicBundle,prepareBulk,mergeMetadata} from
 const taxonomy=JSON.parse(readFileSync(new URL('../data/taxonomy.json',import.meta.url)));
 const identity=(n=1)=>({id:'basic-'+n,indexId:'basic-index-'+n,title:'Unique Bulk Story '+n,aliases:['独立测试故事'+n],firstYear:2026,source:'https://example.org/story/'+n,sourceRefs:['vndb:v'+(900000+n)],mainPlacement:'promoted-basic'});
 const complete=w=>({identity:w,confirmed:true,values:{...emptyValues(w),category:'视觉小说',subcategory:'单线视觉小说',genre:'测试叙事',synopsis:'独立叙事的隔离测试资料。',characters:'主人公',modes:['阅读推进'],'interaction-note':'通过阅读推进故事。','content-evidence':'原作内容及首次发行的独立测试证据。','content-source':w.source,platforms:'Windows\nLinux',publisher:'Key','release-evidence':'此两平台属于首次发行批次。','release-source':w.source}});
-test('NFKC aliases, external IDs, years and dossier identities are deduplicated',()=>{
+test('names and external IDs form candidates; only explicit identity links confirm a match',()=>{
  const w=identity();
- assert.equal(scanRegistry({works:[w]},[{id:'g900',title:'Ｕｎｉｑｕｅ Bulk Story 1',firstYear:2026}])[0].status,'existing');
- assert.equal(scanRegistry({works:[w]},[{id:'g900',title:'Other name',firstYear:2026,sourceRefs:w.sourceRefs}])[0].status,'existing');
+ assert.equal(scanRegistry({works:[w]},[{id:'g900',title:'Ｕｎｉｑｕｅ Bulk Story 1',firstYear:2026}])[0].status,'conflict');
+ assert.equal(scanRegistry({works:[w]},[{id:'g900',title:'Other name',firstYear:2026,sourceRefs:w.sourceRefs}])[0].status,'conflict');
  assert.equal(scanRegistry({works:[w]},[{id:'g900',title:w.aliases[0],firstYear:2025}])[0].status,'conflict');
  assert.equal(scanRegistry({works:[{...w,mainPlacement:'promoted-dossier'}]},[])[0].status,'conflict');
+ assert.equal(scanRegistry({works:[{...w,linkedRecordId:'g900'}]},[{id:'g900',title:'Different name',firstYear:2025}])[0].status,'existing');
  const other={...identity(2),sourceRefs:w.sourceRefs};assert.ok(scanRegistry({works:[w,other]},[]).every(r=>r.status==='conflict'));
 });
 test('title/year alone cannot be submitted; ready bundles preserve provenance and one original content',()=>{
