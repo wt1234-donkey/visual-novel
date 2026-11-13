@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 36,
+  "endRevision": 37,
   "events": [
     {
       "schemaVersion": 1,
@@ -621,6 +621,107 @@
             "aliases": [
               "Secret Mission / Mission Impossible"
             ]
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+      "at": "2026-11-13T11:09:35.728Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 36,
+      "revision": 37,
+      "commandType": "edit",
+      "intent": {
+        "id": "mobygames-220274",
+        "type": "edit",
+        "values": {
+          "firstYear": 1978,
+          "gameplay": "文字冒险",
+          "group": "Gary Kleppe",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "setting": "封闭空间",
+            "theme": [
+              "科幻",
+              "奇幻",
+              "生存",
+              "冒险"
+            ]
+          },
+          "source": "https://solutionarchive.com/game/id,6984/Underground.html?utm_source=chatgpt.com",
+          "title": "Underground",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "mobygames-220274",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "mobygames-220274",
+              "indexId": "basic-historical-narrative-20261103-r144-mobygames-220274",
+              "aliases": [],
+              "title": "Underground",
+              "firstYear": 1978,
+              "group": "创作主体待核",
+              "gameplay": "ADV",
+              "plotStyles": [],
+              "source": "https://www.mobygames.com/game/220274/underground/",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "group": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "gameplay": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "plotTags": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "plotTagEvidence": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "source": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Gary Kleppe",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "setting": "封闭空间",
+                "theme": [
+                  "科幻",
+                  "奇幻",
+                  "生存",
+                  "冒险"
+                ]
+              },
+              "source": "https://solutionarchive.com/game/id,6984/Underground.html?utm_source=chatgpt.com",
+              "title": "Underground",
+              "yearStatus": "published"
+            },
+            "aliases": []
           }
         }
       ],

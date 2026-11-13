@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 36,
+  "revision": 37,
   "additions": [],
   "records": {
     "g1028": {
@@ -1076,79 +1076,69 @@
       "aliases": [
         "Secret Mission / Mission Impossible"
       ]
+    },
+    "mobygames-220274": {
+      "identity": {
+        "id": "mobygames-220274",
+        "indexId": "basic-historical-narrative-20261103-r144-mobygames-220274",
+        "aliases": [],
+        "title": "Underground",
+        "firstYear": 1978,
+        "group": "创作主体待核",
+        "gameplay": "ADV",
+        "plotStyles": [],
+        "source": "https://www.mobygames.com/game/220274/underground/",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+          "at": "2026-11-13T11:09:35.728Z"
+        },
+        "group": {
+          "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+          "at": "2026-11-13T11:09:35.728Z"
+        },
+        "gameplay": {
+          "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+          "at": "2026-11-13T11:09:35.728Z"
+        },
+        "plotTags": {
+          "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+          "at": "2026-11-13T11:09:35.728Z"
+        },
+        "plotTagEvidence": {
+          "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+          "at": "2026-11-13T11:09:35.728Z"
+        },
+        "source": {
+          "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+          "at": "2026-11-13T11:09:35.728Z"
+        }
+      },
+      "values": {
+        "firstYear": 1978,
+        "gameplay": "文字冒险",
+        "group": "Gary Kleppe",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "setting": "封闭空间",
+          "theme": [
+            "科幻",
+            "奇幻",
+            "生存",
+            "冒险"
+          ]
+        },
+        "source": "https://solutionarchive.com/game/id,6984/Underground.html?utm_source=chatgpt.com",
+        "title": "Underground",
+        "yearStatus": "published"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
-      "at": "2026-11-13T08:18:58.105Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-4b3jwtbohg8cqhs2",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-4b3jwtbohg8cqhs2",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4b3jwtbohg8cqhs2",
-              "aliases": [],
-              "title": "The Devil's Dungeon",
-              "firstYear": 1978,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
-                "at": "2026-11-13T08:18:58.105Z"
-              },
-              "group": {
-                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
-                "at": "2026-11-13T08:18:58.105Z"
-              },
-              "gameplay": {
-                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
-                "at": "2026-11-13T08:18:58.105Z"
-              },
-              "plotTags": {
-                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
-                "at": "2026-11-13T08:18:58.105Z"
-              },
-              "plotTagEvidence": {
-                "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
-                "at": "2026-11-13T08:18:58.105Z"
-              }
-            },
-            "values": {
-              "firstYear": 1978,
-              "gameplay": "文字冒险",
-              "group": "C. William Engel",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": "热血",
-                "setting": "异世界",
-                "structure": "线性叙事",
-                "theme": [
-                  "奇幻",
-                  "冒险"
-                ],
-                "tone": "黑暗"
-              },
-              "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
-              "title": "The Devil's Dungeon",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
       "at": "2026-11-13T08:23:44.035Z",
@@ -1297,6 +1287,79 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+      "at": "2026-11-13T11:09:35.728Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "mobygames-220274",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "mobygames-220274",
+              "indexId": "basic-historical-narrative-20261103-r144-mobygames-220274",
+              "aliases": [],
+              "title": "Underground",
+              "firstYear": 1978,
+              "group": "创作主体待核",
+              "gameplay": "ADV",
+              "plotStyles": [],
+              "source": "https://www.mobygames.com/game/220274/underground/",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "group": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "gameplay": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "plotTags": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "plotTagEvidence": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              },
+              "source": {
+                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+                "at": "2026-11-13T11:09:35.728Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Gary Kleppe",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "setting": "封闭空间",
+                "theme": [
+                  "科幻",
+                  "奇幻",
+                  "生存",
+                  "冒险"
+                ]
+              },
+              "source": "https://solutionarchive.com/game/id,6984/Underground.html?utm_source=chatgpt.com",
+              "title": "Underground",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1308,22 +1371,23 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r36.json",
-        "sha": "20f33682485bc7f59d0c0e3e0995a7df033aafe2",
+        "path": "data/basic-catalogue-journal/events/r31-r37.json",
+        "sha": "91a7e5c0302bae951ee98a842b220c4edc8b46de",
         "startRevision": 31,
-        "endRevision": 36,
+        "endRevision": 37,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
           "61d7587d-7e36-4caa-839d-4f83adc512ad",
           "d06863b5-aebc-459d-b959-187cf5d4bce0",
           "b76344d8-36aa-4f12-9716-0f3a1d961e47",
-          "496153a2-fb00-4572-9fb0-4185ff934269"
+          "496153a2-fb00-4572-9fb0-4185ff934269",
+          "cbc90fa1-513e-4a45-8efc-91c778bb7cce"
         ],
-        "bytes": 19952
+        "bytes": 23242
       }
     ],
-    "eventCount": 6,
-    "stateHash": "16d9ab31babd165ef2cbb234ed365ef6a7d58e370a94c71e925b9ee5d71cc92a"
+    "eventCount": 7,
+    "stateHash": "b84660855815ac925067051af31d8be23df97ace54f6e25478a7acd1ecbe9635"
   }
 }
