@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 45,
+  "endRevision": 46,
   "events": [
     {
       "schemaVersion": 1,
@@ -1320,6 +1320,79 @@
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "59fe3116-0d3b-4f96-97c8-ecd823abf854",
+      "at": "2026-11-13T12:12:56.981Z",
+      "actor": "wt1234-donkey",
+      "reason": "合并 1 部作品为关联版本",
+      "previousRevision": 45,
+      "revision": 46,
+      "commandType": "merge",
+      "intent": {
+        "ids": [
+          "ifdb-table-20261104-wlbdh7n1ca7wy8oz"
+        ],
+        "mainId": "historical-947d3a3c0fa90530",
+        "relation": {
+          "label": "关联版本",
+          "note": "无",
+          "source": "https://foldoc.org/wumpus",
+          "type": "same"
+        },
+        "type": "merge"
+      },
+      "changes": [
+        {
+          "id": "historical-947d3a3c0fa90530",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "historical-947d3a3c0fa90530",
+              "indexId": "basic-historical-1970s-20261101-947d3a3c0fa90530",
+              "aliases": [
+                "Wumpus",
+                "Hunt The Wumpus"
+              ],
+              "title": "Hunt the Wumpus",
+              "firstYear": 1973,
+              "group": "Gregory Yob / People's Computing Company（来源关联）",
+              "gameplay": "ADV",
+              "plotStyles": [],
+              "source": "https://foldoc.org/wumpus",
+              "mainPlacement": "promoted-basic"
+            }
+          }
+        },
+        {
+          "id": "ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+              "indexId": "basic-ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+              "aliases": [],
+              "title": "Hunt the Wumpus",
+              "firstYear": 1972,
+              "group": "Gregory Yob, Magnus Olsson, and David Ahl",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=wlbdh7n1ca7wy8oz",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "historical-947d3a3c0fa90530",
+            "relation": {
+              "label": "Hunt the Wumpus",
+              "note": "无",
+              "source": "https://foldoc.org/wumpus",
+              "type": "same"
+            }
           }
         }
       ],

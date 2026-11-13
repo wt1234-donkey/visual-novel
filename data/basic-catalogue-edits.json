@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 45,
+  "revision": 46,
   "additions": [],
   "records": {
     "g1028": {
@@ -1314,73 +1314,47 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "historical-947d3a3c0fa90530": {
+      "identity": {
+        "id": "historical-947d3a3c0fa90530",
+        "indexId": "basic-historical-1970s-20261101-947d3a3c0fa90530",
+        "aliases": [
+          "Wumpus",
+          "Hunt The Wumpus"
+        ],
+        "title": "Hunt the Wumpus",
+        "firstYear": 1973,
+        "group": "Gregory Yob / People's Computing Company（来源关联）",
+        "gameplay": "ADV",
+        "plotStyles": [],
+        "source": "https://foldoc.org/wumpus",
+        "mainPlacement": "promoted-basic"
+      }
+    },
+    "ifdb-table-20261104-wlbdh7n1ca7wy8oz": {
+      "identity": {
+        "id": "ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+        "indexId": "basic-ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+        "aliases": [],
+        "title": "Hunt the Wumpus",
+        "firstYear": 1972,
+        "group": "Gregory Yob, Magnus Olsson, and David Ahl",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=wlbdh7n1ca7wy8oz",
+        "mainPlacement": "promoted-basic"
+      },
+      "parentId": "historical-947d3a3c0fa90530",
+      "relation": {
+        "label": "Hunt the Wumpus",
+        "note": "无",
+        "source": "https://foldoc.org/wumpus",
+        "type": "same"
+      }
     }
   },
   "recent": [
-    {
-      "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
-      "at": "2026-11-13T11:41:41.940Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-table-20261104-ocrx4yc2l5znoqfs",
-              "indexId": "basic-ifdb-table-20261104-ocrx4yc2l5znoqfs",
-              "aliases": [],
-              "title": "Stuga",
-              "firstYear": 1978,
-              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
-                "at": "2026-11-13T11:41:41.940Z"
-              },
-              "gameplay": {
-                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
-                "at": "2026-11-13T11:41:41.940Z"
-              },
-              "plotTags": {
-                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
-                "at": "2026-11-13T11:41:41.940Z"
-              },
-              "plotTagEvidence": {
-                "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
-                "at": "2026-11-13T11:41:41.940Z"
-              }
-            },
-            "values": {
-              "firstYear": 1978,
-              "gameplay": "文字冒险",
-              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "setting": "封闭空间",
-                "theme": [
-                  "奇幻",
-                  "冒险",
-                  "神话传说"
-                ]
-              },
-              "source": "https://ifdb.org/viewgame?id=ocrx4yc2l5znoqfs",
-              "title": "Stuga",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "cf245d48-4380-4c06-882a-4738d4996fbe",
       "at": "2026-11-13T11:51:54.579Z",
@@ -1489,6 +1463,61 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "59fe3116-0d3b-4f96-97c8-ecd823abf854",
+      "at": "2026-11-13T12:12:56.981Z",
+      "actor": "wt1234-donkey",
+      "reason": "合并 1 部作品为关联版本",
+      "changes": [
+        {
+          "id": "historical-947d3a3c0fa90530",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "historical-947d3a3c0fa90530",
+              "indexId": "basic-historical-1970s-20261101-947d3a3c0fa90530",
+              "aliases": [
+                "Wumpus",
+                "Hunt The Wumpus"
+              ],
+              "title": "Hunt the Wumpus",
+              "firstYear": 1973,
+              "group": "Gregory Yob / People's Computing Company（来源关联）",
+              "gameplay": "ADV",
+              "plotStyles": [],
+              "source": "https://foldoc.org/wumpus",
+              "mainPlacement": "promoted-basic"
+            }
+          }
+        },
+        {
+          "id": "ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+              "indexId": "basic-ifdb-table-20261104-wlbdh7n1ca7wy8oz",
+              "aliases": [],
+              "title": "Hunt the Wumpus",
+              "firstYear": 1972,
+              "group": "Gregory Yob, Magnus Olsson, and David Ahl",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=wlbdh7n1ca7wy8oz",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "historical-947d3a3c0fa90530",
+            "relation": {
+              "label": "Hunt the Wumpus",
+              "note": "无",
+              "source": "https://foldoc.org/wumpus",
+              "type": "same"
+            }
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1500,10 +1529,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r45.json",
-        "sha": "236a09f10faafcb0fe1647176ffc97826fd74e7f",
+        "path": "data/basic-catalogue-journal/events/r31-r46.json",
+        "sha": "476cc0c23f393dad75a342e83eb2b337df0cec89",
         "startRevision": 31,
-        "endRevision": 45,
+        "endRevision": 46,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1519,12 +1548,13 @@
           "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
           "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
           "cf245d48-4380-4c06-882a-4738d4996fbe",
-          "e0097c40-cfdc-4897-9924-091b928c6e39"
+          "e0097c40-cfdc-4897-9924-091b928c6e39",
+          "59fe3116-0d3b-4f96-97c8-ecd823abf854"
         ],
-        "bytes": 42924
+        "bytes": 45298
       }
     ],
-    "eventCount": 15,
-    "stateHash": "77b7c39b7ea5331dc75eb665949f8da7cd3cd7df041b56d9cc1f99a0d4fec966"
+    "eventCount": 16,
+    "stateHash": "cacd5e36d9566b4584f73c94ff6f9112a7c8406ffd273b7cc64d9065281c9687"
   }
 }
