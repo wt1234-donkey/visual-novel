@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 35,
+  "endRevision": 36,
   "events": [
     {
       "schemaVersion": 1,
@@ -517,6 +517,110 @@
               "yearStatus": "published"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+      "at": "2026-11-13T10:53:03.921Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 35,
+      "revision": 36,
+      "commandType": "edit",
+      "intent": {
+        "id": "ai-secret-mission",
+        "type": "edit",
+        "values": {
+          "firstYear": 1981,
+          "gameplay": "文字冒险",
+          "group": "Adventure International",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "emotion": "紧张",
+            "setting": "近未来",
+            "theme": [
+              "奇幻",
+              "生存",
+              "冒险"
+            ],
+            "tone": "荒凉"
+          },
+          "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
+          "title": "秘密任务",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ai-secret-mission",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ai-secret-mission",
+              "indexId": "dossier-ai-secret-mission",
+              "aliases": [
+                "Secret Mission / Mission Impossible",
+                "秘密任务"
+              ],
+              "title": "秘密任务",
+              "firstYear": 1979,
+              "group": "既有厂商专题",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
+              "mainPlacement": "dossier-linked"
+            },
+            "fieldMeta": {
+              "firstYear": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "yearStatus": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "group": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "plotTags": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "plotTagEvidence": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              }
+            },
+            "values": {
+              "firstYear": 1981,
+              "gameplay": "文字冒险",
+              "group": "Adventure International",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "紧张",
+                "setting": "近未来",
+                "theme": [
+                  "奇幻",
+                  "生存",
+                  "冒险"
+                ],
+                "tone": "荒凉"
+              },
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
+              "title": "秘密任务",
+              "yearStatus": "published"
+            },
+            "aliases": [
+              "Secret Mission / Mission Impossible"
+            ]
           }
         }
       ],

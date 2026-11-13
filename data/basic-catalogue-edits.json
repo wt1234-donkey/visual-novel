@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 35,
+  "revision": 36,
   "additions": [],
   "records": {
     "g1028": {
@@ -1014,81 +1014,71 @@
         "yearStatus": "published"
       },
       "aliases": []
+    },
+    "ai-secret-mission": {
+      "identity": {
+        "id": "ai-secret-mission",
+        "indexId": "dossier-ai-secret-mission",
+        "aliases": [
+          "Secret Mission / Mission Impossible",
+          "秘密任务"
+        ],
+        "title": "秘密任务",
+        "firstYear": 1979,
+        "group": "既有厂商专题",
+        "gameplay": "文字冒险",
+        "plotStyles": [],
+        "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
+        "mainPlacement": "dossier-linked"
+      },
+      "fieldMeta": {
+        "firstYear": {
+          "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+          "at": "2026-11-13T10:53:03.921Z"
+        },
+        "yearStatus": {
+          "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+          "at": "2026-11-13T10:53:03.921Z"
+        },
+        "group": {
+          "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+          "at": "2026-11-13T10:53:03.921Z"
+        },
+        "plotTags": {
+          "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+          "at": "2026-11-13T10:53:03.921Z"
+        },
+        "plotTagEvidence": {
+          "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+          "at": "2026-11-13T10:53:03.921Z"
+        }
+      },
+      "values": {
+        "firstYear": 1981,
+        "gameplay": "文字冒险",
+        "group": "Adventure International",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "emotion": "紧张",
+          "setting": "近未来",
+          "theme": [
+            "奇幻",
+            "生存",
+            "冒险"
+          ],
+          "tone": "荒凉"
+        },
+        "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
+        "title": "秘密任务",
+        "yearStatus": "published"
+      },
+      "aliases": [
+        "Secret Mission / Mission Impossible"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-      "at": "2026-11-13T08:13:10.387Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-4s6xy0r9wbztg7y2",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-4s6xy0r9wbztg7y2",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
-              "aliases": [],
-              "title": "Quest",
-              "firstYear": 1978,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "group": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "gameplay": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "plotTags": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "plotTagEvidence": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              }
-            },
-            "values": {
-              "firstYear": 1978,
-              "gameplay": "文字冒险",
-              "group": "Roger Chaffee",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": [
-                  "紧张",
-                  "沉浸感"
-                ],
-                "perspective": "第一人称",
-                "setting": "架空世界",
-                "theme": [
-                  "推理",
-                  "冒险"
-                ]
-              },
-              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
-              "title": "Quest",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "d06863b5-aebc-459d-b959-187cf5d4bce0",
       "at": "2026-11-13T08:18:58.105Z",
@@ -1232,6 +1222,81 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+      "at": "2026-11-13T10:53:03.921Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ai-secret-mission",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ai-secret-mission",
+              "indexId": "dossier-ai-secret-mission",
+              "aliases": [
+                "Secret Mission / Mission Impossible",
+                "秘密任务"
+              ],
+              "title": "秘密任务",
+              "firstYear": 1979,
+              "group": "既有厂商专题",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
+              "mainPlacement": "dossier-linked"
+            },
+            "fieldMeta": {
+              "firstYear": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "yearStatus": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "group": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "plotTags": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              },
+              "plotTagEvidence": {
+                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
+                "at": "2026-11-13T10:53:03.921Z"
+              }
+            },
+            "values": {
+              "firstYear": 1981,
+              "gameplay": "文字冒险",
+              "group": "Adventure International",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "紧张",
+                "setting": "近未来",
+                "theme": [
+                  "奇幻",
+                  "生存",
+                  "冒险"
+                ],
+                "tone": "荒凉"
+              },
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
+              "title": "秘密任务",
+              "yearStatus": "published"
+            },
+            "aliases": [
+              "Secret Mission / Mission Impossible"
+            ]
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1243,21 +1308,22 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r35.json",
-        "sha": "f269ef7382dee38c97c98be3b78fab7beb780a7c",
+        "path": "data/basic-catalogue-journal/events/r31-r36.json",
+        "sha": "20f33682485bc7f59d0c0e3e0995a7df033aafe2",
         "startRevision": 31,
-        "endRevision": 35,
+        "endRevision": 36,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
           "61d7587d-7e36-4caa-839d-4f83adc512ad",
           "d06863b5-aebc-459d-b959-187cf5d4bce0",
-          "b76344d8-36aa-4f12-9716-0f3a1d961e47"
+          "b76344d8-36aa-4f12-9716-0f3a1d961e47",
+          "496153a2-fb00-4572-9fb0-4185ff934269"
         ],
-        "bytes": 16611
+        "bytes": 19952
       }
     ],
-    "eventCount": 5,
-    "stateHash": "8a263a1aeb7c7ed8c267019c8177630c85da710eb8d9e66511b83f26d9a23a3f"
+    "eventCount": 6,
+    "stateHash": "16d9ab31babd165ef2cbb234ed365ef6a7d58e370a94c71e925b9ee5d71cc92a"
   }
 }
