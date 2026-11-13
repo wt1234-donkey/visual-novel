@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 31,
+  "endRevision": 32,
   "events": [
     {
       "schemaVersion": 1,
@@ -105,6 +105,109 @@
             "aliases": [
               "Pyramid of Doom"
             ]
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "66a0d513-b4c5-4146-9846-d2d5225b1157",
+      "at": "2026-11-13T00:56:17.584Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 31,
+      "revision": 32,
+      "commandType": "edit",
+      "intent": {
+        "id": "ifdb-oiazjb4r7n49thmu",
+        "type": "edit",
+        "values": {
+          "firstYear": 1978,
+          "gameplay": "文字冒险",
+          "group": "Greg Hassett",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "emotion": "紧张",
+            "setting": [
+              "近未来",
+              "封闭空间"
+            ],
+            "theme": [
+              "科幻",
+              "生存",
+              "冒险"
+            ]
+          },
+          "source": "https://ifdb.org/viewgame?id=oiazjb4r7n49thmu",
+          "title": "Journey to the Center of the Earth",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ifdb-oiazjb4r7n49thmu",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-oiazjb4r7n49thmu",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-oiazjb4r7n49thmu",
+              "aliases": [],
+              "title": "Journey to the Center of the Earth",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=oiazjb4r7n49thmu",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "66a0d513-b4c5-4146-9846-d2d5225b1157",
+                "at": "2026-11-13T00:56:17.584Z"
+              },
+              "group": {
+                "id": "66a0d513-b4c5-4146-9846-d2d5225b1157",
+                "at": "2026-11-13T00:56:17.584Z"
+              },
+              "gameplay": {
+                "id": "66a0d513-b4c5-4146-9846-d2d5225b1157",
+                "at": "2026-11-13T00:56:17.584Z"
+              },
+              "plotTags": {
+                "id": "66a0d513-b4c5-4146-9846-d2d5225b1157",
+                "at": "2026-11-13T00:56:17.584Z"
+              },
+              "plotTagEvidence": {
+                "id": "66a0d513-b4c5-4146-9846-d2d5225b1157",
+                "at": "2026-11-13T00:56:17.584Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Greg Hassett",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "紧张",
+                "setting": [
+                  "近未来",
+                  "封闭空间"
+                ],
+                "theme": [
+                  "科幻",
+                  "生存",
+                  "冒险"
+                ]
+              },
+              "source": "https://ifdb.org/viewgame?id=oiazjb4r7n49thmu",
+              "title": "Journey to the Center of the Earth",
+              "yearStatus": "published"
+            },
+            "aliases": []
           }
         }
       ],
