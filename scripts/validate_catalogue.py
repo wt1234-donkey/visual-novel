@@ -12,6 +12,7 @@ CHECKS = [
     ['node', 'scripts/migrate_basic_storage.mjs', '--check'],
     ['node', 'scripts/migrate_formal_history.mjs', '--check'],
     ['node', 'scripts/migrate_source_identities.mjs', '--check'],
+    ['node', 'scripts/build_field_evidence.mjs', '--check'],
     ['python3', 'scripts/registry_store.py', '--check'],
     ['python3', 'scripts/workflow_governance.py', '--check'],
     ['node', '--test'],

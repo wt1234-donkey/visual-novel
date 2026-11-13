@@ -1,3 +1,4 @@
+import {chosenFields} from '../../domain/catalogue/field-evidence.mjs';
 import {journalSummary} from '../../domain/catalogue/journal-index.mjs';
 import {emptyStore} from '../../domain/catalogue/model.mjs';
 import {workKey,nameKey} from '../../domain/catalogue/identity.mjs';
@@ -61,12 +62,12 @@ export function assembleBasicRows(registry,initial,batches){
 }
 
 // One pure input-to-snapshot boundary. I/O and index compression are adapters.
-export function buildCatalogueSnapshot({registry, initial = [], batches = [], store = emptyStore(), main = {works:[]}, supplement = {works:[]}, history = {records:{}}, identityLinks={}}, {strict = true} = {}) {
+export function buildCatalogueSnapshot({registry, initial = [], batches = [], store = emptyStore(), main = {works:[]}, supplement = {works:[]}, history = {records:{}}, identityLinks={},fieldEvidence={}}, {strict = true} = {}) {
  const formalLinks={...Object.fromEntries(registry.works.filter(w=>w.linkedRecordId).map(w=>[w.id,w.linkedRecordId])),...identityLinks};
- const effective=buildEffectiveCatalogue({main,supplement,history,basicStore:store,formalLinks});
+ const effective=buildEffectiveCatalogue({main,supplement,history,basicStore:store,formalLinks,fieldEvidence});
  const formalById=new Map([...effective.supplement.works,...effective.main.works].map(w=>[w.id,w]));
  const formalSource=buildEffectiveCatalogue({main,supplement,history});
- const sourceRows = projectBasicSources(assembleBasicRows(registry, initial, batches),new Map([...formalSource.supplement.works,...formalSource.main.works].map(w=>[w.id,w])),formalLinks);
+ const sourceRows = projectBasicSources(assembleBasicRows(registry, initial, batches),new Map([...formalSource.supplement.works,...formalSource.main.works].map(w=>[w.id,w])),formalLinks).map(row=>{const fields=chosenFields(fieldEvidence,'work',workKey(row));return Object.keys(fields).length?{...row,fieldEvidence:fields}:row;});
  const view = createCatalogueView(sourceRows, store, {strict, includeIdentities:true});
  const identities = view.identities;
  const formalIdByWorkId = new Map();

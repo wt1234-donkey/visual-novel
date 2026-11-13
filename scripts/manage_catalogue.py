@@ -197,6 +197,17 @@ def validate_new_work(bundle, key, games):
         if decision and decision.get('status')=='confirmed':
             assert decision['workId']==basic['id'], '此来源已有明确目标作品，应复用该身份而非新增'
             distinct_from=set(decision.get('distinctFrom',[]))
+        # Adopt only the explicitly selected field value. The source row stays immutable.
+        try:field_state=read('field-evidence.json')
+        except (FileNotFoundError,KeyError):field_state={'assertions':{},'choices':{}}
+        canonical=decision.get('workId') if decision else basic.get('linkedRecordId') or basic['id']
+        basic=copy.deepcopy(basic)
+        for choice in field_state.get('choices',{}).values():
+            assertion=field_state['assertions'][choice['assertionId']]
+            if assertion['scope']=={'type':'work','workId':canonical,'id':canonical} and assertion['field'] in {'title','firstYear','group'}:
+                if assertion['field']=='title':basic['aliases']=list(dict.fromkeys([*basic.get('aliases',[]),basic['title']]))
+                basic[assertion['field']]=assertion['value']
+                if assertion['field']=='title':basic['aliases']=[a for a in basic['aliases'] if a!=assertion['value']]
         assert w['titleAliases'] == basic.get('aliases', []) and w['sourceRefs'] == basic.get('sourceRefs', []), '基础库别名或来源身份已变化，请重新读取'
         assert w['firstYear'] == basic['firstYear'], '年份与基础身份不一致'
         basic_names = {name_key(n) for n in [basic['title'], *basic.get('aliases', [])]}

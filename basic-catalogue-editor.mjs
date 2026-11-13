@@ -67,13 +67,14 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   }
   const v=w?valuesOf(w):{title:'',firstYear:null,group:'',gameplay:'',plotStyles:[],source:''};
   const {tags,legacy}=styleState(v);
+  const locked=key=>w?.fieldEvidence?.[key]?'readonly':'';
   const archived=id?service.snapshot.store.records[id]?.legacyPlotStyles:undefined;
   const children=w?all().filter(x=>x.parentId===id):[];
-  shell(w?'修改作品 · '+w.title:'直接添加作品',`<form id="be-edit" data-id="${safe(id||'')}"><div class="be-grid">
-   ${input('title','作品名称',v.title,'required maxlength="500"')}
-   <label>首发年份（未知可留空）<input name="firstYear" type="number" min="1900" max="2200" step="1" list="be-years" value="${v.firstYear??''}"><datalist id="be-years">${Array.from({length:new Date().getFullYear()+11-1900},(_,i)=>`<option value="${1900+i}"></option>`).join('')}</datalist></label>
-   <label>年份状态<select name="yearStatus">${[['unverified','待核实'],['published','已发行'],['planned','计划发行']].map(([value,label])=>`<option value="${value}" ${v.yearStatus===value||!v.yearStatus&&value==='unverified'?'selected':''}>${label}</option>`).join('')}</select><span class="minor">年份留空表示未知；未来年份不会自动视为已发行。</span></label>
-   ${input('group','厂商／创作主体',v.group,'required list="be-groups" maxlength="500"')}<datalist id="be-groups">${[...new Map(base.filter(x=>x.group).map(x=>[manufacturerKey(x.group),x.group])).values()].map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist>
+  shell(w?'修改作品 · '+w.title:'直接添加作品',`${w?'<p><a href="field-evidence.html#'+encodeURIComponent(w._key)+'">管理此作品的字段证据、冲突与选用理由 ↗</a></p>':''}${w?.fieldEvidence?'<p class="minor">名称、年份或厂商已有显式选用时保持只读；请在字段证据页更换结论。</p>':''}<form id="be-edit" data-id="${safe(id||'')}"><div class="be-grid">
+   ${input('title','作品名称',v.title,'required maxlength="500" '+locked('title'))}
+   <label>首发年份（未知可留空）<input name="firstYear" ${locked('firstYear')} type="number" min="1900" max="2200" step="1" list="be-years" value="${v.firstYear??''}"><datalist id="be-years">${Array.from({length:new Date().getFullYear()+11-1900},(_,i)=>`<option value="${1900+i}"></option>`).join('')}</datalist></label>
+   <label>年份状态<select name="yearStatus" ${locked('firstYear')?'disabled':''}>${[['unverified','待核实'],['published','已发行'],['planned','计划发行']].map(([value,label])=>`<option value="${value}" ${v.yearStatus===value||!v.yearStatus&&value==='unverified'?'selected':''}>${label}</option>`).join('')}</select><span class="minor">年份留空表示未知；未来年份不会自动视为已发行。</span></label>
+   ${input('group','厂商／创作主体',v.group,'required list="be-groups" maxlength="500" '+locked('group'))}<datalist id="be-groups">${[...new Map(base.filter(x=>x.group).map(x=>[manufacturerKey(x.group),x.group])).values()].map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist>
    ${input('gameplay','主要玩法',v.gameplay,'required list="be-gameplay" maxlength="500"')}<datalist id="be-gameplay">${GAMEPLAY_OPTIONS.map(x=>`<option value="${safe(x)}"></option>`).join('')}</datalist></div>
    <fieldset><legend>作品特征标签 · 跨维度最多六个</legend>${styleInputs(tags)}
    <p class="minor">同一维度可选多个标签，资料不足时可少选。叙事视角指故事由谁讲述。</p>

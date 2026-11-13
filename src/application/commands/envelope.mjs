@@ -1,3 +1,4 @@
+import {validateAssertion,validateFieldScope} from '../../domain/catalogue/field-evidence.mjs';
 import {validateValues} from '../../domain/catalogue/model.mjs';
 import {validateStyleTags,validateStyleEvidence} from '../../domain/taxonomy/style-tags.mjs';
 import {journalKey} from '../../domain/catalogue/journal.mjs';
@@ -33,9 +34,13 @@ export function validateBasicAction(action){
 }
 export function validateCommand(command){
  clean(command);exact(command,['schemaVersion','operationId','kind','actor','at','reason','sources','expectedRevision','sourceLease','action']);
- if(command.schemaVersion!==1||!id(command.operationId)||!['basic','formal','identity'].includes(command.kind)||!id(command.actor)||!Number.isFinite(Date.parse(command.at))||!Number.isSafeInteger(command.expectedRevision)||command.expectedRevision<0||typeof command.reason!=='string'||command.reason.length>1000||!Array.isArray(command.sources)||command.sources.length>100||command.sources.some(url=>typeof url!=='string'||!/^https?:\/\//.test(url)))fail('命令身份、修订或依据无效');
+ if(command.schemaVersion!==1||!id(command.operationId)||!['basic','formal','identity','field'].includes(command.kind)||!id(command.actor)||!Number.isFinite(Date.parse(command.at))||!Number.isSafeInteger(command.expectedRevision)||command.expectedRevision<0||typeof command.reason!=='string'||command.reason.length>1000||!Array.isArray(command.sources)||command.sources.length>100||command.sources.some(url=>typeof url!=='string'||!/^https?:\/\//.test(url)))fail('命令身份、修订或依据无效');
  const lease=command.sourceLease;exact(lease,['schemaVersion','files']);if(lease.schemaVersion!==1||!object(lease.files)||Object.entries(lease.files).some(([key,value])=>!key||!/^([a-f0-9]{40})$/.test(value)))fail('来源凭据无效');
  if(command.kind==='basic')validateBasicAction(command.action);
+ else if(command.kind==='field'){
+  const a=command.action,fields={assert:['type','assertion'],select:['type','assertionId'],clear:['type','scope','field'],undo:['type','targetId']};if(!fields[a?.type])fail('字段证据命令类型无效');exact(a,fields[a.type]);
+  if(a.type==='assert')validateAssertion(a.assertion);else if(a.type==='select'&&!id(a.assertionId)||a.type==='undo'&&!id(a.targetId))fail('断言或撤销ID无效');else if(a.type==='clear')validateFieldScope(a.scope,a.field);
+ }
  else if(command.kind==='identity'){
   const action=command.action;
   if(action?.type==='undo'){exact(action,['type','targetId']);if(!id(action.targetId))fail('身份撤销目标无效');}

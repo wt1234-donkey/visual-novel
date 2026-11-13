@@ -1,3 +1,4 @@
+import {loadFieldCatalogue} from './field-evidence.mjs';
 import {sourceLeaseSync} from './effective-catalogue.mjs';
 import {readJsonFileSync} from './registry.mjs';
 import {readFileSync,existsSync} from 'node:fs';
@@ -22,7 +23,8 @@ export function loadCatalogueSnapshot(root,{allowMissingLegacy=false}={}) {
  sourceIdentity.stats.bulkVisibleGroups=projectRegistry(inputs.registry,inputs.store).works.length;
  sourceIdentity.stats.legacySourceRowCount=legacy.sourceRows.length;
  inputs.identityLinks=identityFormalLinks(sourceIdentity);
- const snapshot=buildCatalogueSnapshot(inputs);
+ const fieldCatalogue=loadFieldCatalogue(root,inputs,{...legacy,sourceIdentity},coverage);inputs.fieldEvidence=fieldCatalogue.projection;
+ const snapshot=buildCatalogueSnapshot(inputs);snapshot.fieldCatalogue=fieldCatalogue;
  sourceIdentity.stats.basicVisibleGroups=snapshot.entries.length;
  sourceIdentity.stats.discoveryBasicGroups=snapshot.home.rows.length;
  snapshot.sourceIdentity=sourceIdentity;

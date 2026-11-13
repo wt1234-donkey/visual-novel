@@ -1,3 +1,4 @@
+import {loadEffectiveCatalogueSync} from '../src/infrastructure/filesystem/effective-catalogue.mjs';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {gunzipSync} from 'node:zlib';
@@ -36,7 +37,7 @@ function documentedGameplay(work){
 export function buildAdvancedRows(root,rows,registry,main,supplement,history,catalogueSnapshot=null){
  const read=name=>JSON.parse(readFileSync(join(root,'data',name),'utf8'));
  const snapshot=name=>JSON.parse(gunzipSync(Buffer.from(readFileSync(join(root,'data',name),'utf8'),'base64')));
- const companies=read('company-coverage.json').companies;
+ const effective=loadEffectiveCatalogueSync(root),companies=effective.coverage.companies;
  const dossierWorks=companies.flatMap(c=>[...(c.relatedGames||[]),...(c.dossierOnlyWorks||[])]);
  const formal=catalogueSnapshot?.formalById||new Map([...supplement.works,...main.works].map(w=>[w.id,projectWork(w,history)]));
  const catalogue=new Map([...dossierWorks.map(w=>[w.id,projectWork(w,history)]),...formal]);
@@ -44,8 +45,8 @@ export function buildAdvancedRows(root,rows,registry,main,supplement,history,cat
  const organization=group(entities.credits,'workId');
  const namesFor=credit=>{const e=entityById.get(credit.entityId);return [e?.name,...(e?.aliases||[]),credit.rawCredit];};
  const personData=read('creator-credits.json'),personById=new Map(personData.people.map(p=>[p.id,p])),credits=group(personData.credits,'workId');
- const releases=group([...supplement.platformReleases,...main.platformReleases],'workId');
- const contents=group([...supplement.contentVersions,...main.contentVersions],'workId');
+ const releases=group([...(effective.supplement.platformReleases||[]),...(effective.main.platformReleases||[])],'workId');
+ const contents=group([...(effective.supplement.contentVersions||[]),...(effective.main.contentVersions||[])],'workId');
  const editorial=read('discovery-editorial.json').works;
  const releaseRegions=read('basic-release-regions.json');
  const regions=new Map();

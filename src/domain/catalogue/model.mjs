@@ -1,3 +1,4 @@
+import {projectChosenBasicRow} from './field-evidence.mjs';
 import {isRecordedYear,recordedDate} from './dates.mjs';
 import {resolveBasicTitle} from './effective.mjs';
 import {withJournal,appendJournal,validateJournal} from './journal.mjs';
@@ -115,7 +116,7 @@ export function versionGroup(entries,mainId){
  return [main,...children];
 }
 export function projectRegistry(registry,store){
- const all=projectEntries(registry.works,store,{includeChildren:true}),children=new Map();
+ const all=projectEntries(registry.works,store,{includeChildren:true}).map(projectChosenBasicRow),children=new Map();
  for(const w of all)if(w.parentId){if(!children.has(w.parentId))children.set(w.parentId,[]);children.get(w.parentId).push(w);}
  const projected=all.filter(w=>!w.parentId);
  return {...registry,summary:{...registry.summary,accepted:projected.length},works:projected.map(w=>{

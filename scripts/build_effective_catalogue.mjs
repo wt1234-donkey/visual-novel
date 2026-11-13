@@ -12,7 +12,7 @@ export async function buildEffectiveRelease(root,output,revision){
  mkdirSync(join(output,'data','catalogue-web',revision),{recursive:true});
  writeFileSync(join(output,'data',path),text);
  const resources={};
- const names=['taxonomy.json','date-contract.json','entity-catalogue.json','discovery-editorial.json','creator-credits.json','work-notes.json','company-coverage.json','narrative-editorial-baseline-20261029.json','basic-manufacturer-regions.json','curated-narrative-works.json','relationships-preview.json','games.json','non-rpg-creator-supplement-20261030.json','work-edit-history.json','basic-catalogue-edits.json','source-identity-decisions.json','main-adv-rpg-works-20261031.json'];
+ const names=['taxonomy.json','date-contract.json','entity-catalogue.json','discovery-editorial.json','creator-credits.json','work-notes.json','company-coverage.json','narrative-editorial-baseline-20261029.json','basic-manufacturer-regions.json','curated-narrative-works.json','relationships-preview.json','games.json','non-rpg-creator-supplement-20261030.json','work-edit-history.json','basic-catalogue-edits.json','source-identity-decisions.json','field-evidence.json','main-adv-rpg-works-20261031.json'];
  const header=inputs.formalLinks&&existsSync(join(root,'data/main-adv-rpg-works-20261031.json'))?JSON.parse(readFileSync(join(root,'data/main-adv-rpg-works-20261031.json'),'utf8')):{};
  names.push(...(header.storage?.shards||[]).map(ref=>ref.path));
  names.push(...[inputs.basicStore?.journal?.baseline,...(inputs.basicStore?.journal?.shards||[])].filter(Boolean).map(ref=>ref.path.replace(/^data\//,'')));

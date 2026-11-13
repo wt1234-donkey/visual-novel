@@ -1,3 +1,4 @@
+import {chosenFields,applyFieldValues} from './field-evidence.mjs';
 // A display projection, never a rewrite of source facts, releases or scoped credits.
 export const CREATOR_NAME_FIELDS={writerNames:'剧作',artistNames:'美术',musicianNames:'音乐'};
 export const EDIT_FIELDS=['title','originalTitle','chineseTitle','chineseTitleType','titleAliases','category','subcategory','genre','synopsis','characters','charactersNote','charactersSource','source','interactionModes','interactionNote','interactionBasis','interactionSources','notes',...Object.keys(CREATOR_NAME_FIELDS)];
@@ -27,7 +28,7 @@ export function mergeFormalDatasets({main,supplement}){
  return merged;
 }
 
-export function buildEffectiveCatalogue({main={works:[]},supplement={works:[]},coverage={companies:[]},history={records:{}},basicStore={records:{}},formalLinks={}}={}){
+export function buildEffectiveCatalogue({main={works:[]},supplement={works:[]},coverage={companies:[]},history={records:{}},basicStore={records:{}},formalLinks={},fieldEvidence={}}={}){
  const patches=new Map();
  for(const [id,record] of Object.entries(basicStore.records||{})){
   if(!record.values)continue;
@@ -44,16 +45,18 @@ export function buildEffectiveCatalogue({main={works:[]},supplement={works:[]},c
   const titleMeta=formalFieldMeta(formalRecord);
   const formalAt=Math.max(0,...['title','chineseTitle'].map(key=>Date.parse(titleMeta[key]?.at)||0));
   const title=resolveBasicTitle(record,formalTitle,formalOverride,formalAt);
-  return {...current,sourceTitle:work.title,sourceFirstYear:work.firstYear,displayTitle:title,
+  return applyFieldValues({...current,sourceTitle:work.title,sourceFirstYear:work.firstYear,displayTitle:title,
    formalTitle,formalOverride,formalAt,
    ...(basic?.yearStatus?{yearStatus:basic.yearStatus}:{}),
    ...(basic&&Object.hasOwn(basic,'firstYear')?{firstYear:basic.firstYear}:{}),
-   titleAliases:unique([...(current.titleAliases||[]),work.title,work.chineseTitle,work.originalTitle,...(work.titleAliases||[])])};
+   titleAliases:unique([...(current.titleAliases||[]),work.title,work.chineseTitle,work.originalTitle,...(work.titleAliases||[])])},chosenFields(fieldEvidence,'work',work.id));
  };
- const projectData=data=>({...data,works:(data.works||[]).map(effective)});
+ const scoped=(row,type,workId=row.workId)=>applyFieldValues(row,chosenFields(fieldEvidence,type,workId,row.id));
+ const workWithScopes=work=>({...effective(work),...(work.contentVersions?{contentVersions:work.contentVersions.map(r=>scoped(r,'content',work.id))}:{}),...(work.platformReleases?{platformReleases:work.platformReleases.map(r=>scoped(r,'release',work.id))}:{})});
+ const projectData=data=>({...data,works:(data.works||[]).map(workWithScopes),...(data.contentVersions?{contentVersions:data.contentVersions.map(r=>scoped(r,'content'))}:{}),...(data.platformReleases?{platformReleases:data.platformReleases.map(r=>scoped(r,'release'))}:{})});
  const projectedCoverage={...coverage,companies:(coverage.companies||[]).map(company=>({...company,
-  ...(company.relatedGames?{relatedGames:company.relatedGames.map(effective)}:{}),
-  ...(company.dossierOnlyWorks?{dossierOnlyWorks:company.dossierOnlyWorks.map(effective)}:{})}))};
+  ...(company.relatedGames?{relatedGames:company.relatedGames.map(workWithScopes)}:{}),
+  ...(company.dossierOnlyWorks?{dossierOnlyWorks:company.dossierOnlyWorks.map(workWithScopes)}:{})}))};
  return {schemaVersion:1,main:projectData(main),supplement:projectData(supplement),coverage:projectedCoverage};
 }
 
