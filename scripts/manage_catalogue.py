@@ -184,9 +184,12 @@ def validate_new_work(bundle, key, games):
     optional = {'basicRegistryId', 'titleAliases', 'sourceRefs'}
     assert isinstance(w, dict) and required <= set(w) <= required | optional, '新作品字段不完整或含未知字段'
     distinct_from=set()
+    identity_state={'links':{}}
+    registry_rows=[]
     if set(w) & optional:
         assert optional <= set(w), '基础库补录须保留完整身份与别名'
-        basic = next((r for r in read('main-adv-rpg-works-20261031.json')['works'] if r['indexId'] == w['basicRegistryId']), None)
+        registry_rows=read('main-adv-rpg-works-20261031.json')['works']
+        basic = next((r for r in registry_rows if r['indexId'] == w['basicRegistryId']), None)
         assert basic and basic['mainPlacement'] == 'promoted-basic', '基础身份不存在或已关联其他档案'
         try:identity_state=read('source-identity-decisions.json')
         except (FileNotFoundError,KeyError):identity_state={'links':{}}
@@ -211,7 +214,9 @@ def validate_new_work(bundle, key, games):
     assert len(names) and all(text(w[f], maximum=300) for f in ('title','originalTitle'))
     for old in records:
         assert not w.get('basicRegistryId') or old.get('basicRegistryId') != w['basicRegistryId'], '基础身份已补录，请重新读取'
-        if old['id'] in distinct_from:continue
+        old_source=next((r for r in registry_rows if old.get('basicRegistryId') and r.get('indexId')==old['basicRegistryId']),None)
+        old_identity=identity_state.get('links',{}).get(old_source['id'],{}).get('workId',old_source.get('linkedRecordId') or old_source['id']) if old_source else old['id']
+        if old_identity in distinct_from:continue
         assert not {str(r).lower() for r in w.get('sourceRefs', [])} & {str(r).lower() for r in old.get('sourceRefs', [])}, '外部来源身份重复'
         oldnames = {name_key(old.get(f,'')) for f in ('title','chineseTitle','originalTitle')} | {name_key(a) for a in old.get('titleAliases',[])}
         assert not names & (oldnames - {''}), f"名称与已有作品 {old['id']} 重复，请复用其身份或先核查同名作品"

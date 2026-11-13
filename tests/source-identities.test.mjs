@@ -154,3 +154,12 @@ test('a promoted profile cannot manufacture an otherwise unknown target from a f
  const bad=apply(emptyIdentityStore(),resolve,'first');for(const link of Object.values(bad.links))link.workId='unknown-work';for(const link of bad.events[0].intent.links)link.workId='unknown-work';for(const change of bad.events[0].changes)if(change.table==='links')change.after.workId='unknown-work';
  validateIdentityStore(bad);assert.throws(()=>catalogue(bad,records(),[...formal,{id:'g900',basicRegistryId:'index-s-a',title:'Twin',firstYear:1990}]),/未知作品/);
 });
+
+
+test('bulk admission uses canonical work IDs when a known formal profile has a different retained ID',()=>{
+ const independent=apply(emptyIdentityStore(),{type:'resolve',caseId:twinCase,outcome:'distinct',links:[{sourceId:'s-a',workId:'s-a'},{sourceId:'s-b',workId:'s-b'}]},'distinct');
+ const linkedRows=records().slice(0,2).map(w=>({...w,identityLink:catalogue(independent).links.get(w.id)}));
+ const profile={id:'g900',identityWorkId:'s-a',basicRegistryId:'index-s-a',title:'Twin',firstYear:1990};
+ const distinct=scanRegistry(registry(linkedRows),[profile]);assert.equal(distinct[0].status,'existing');assert.equal(distinct[1].status,'available');
+ linkedRows[1].identityLink={workId:'s-a',status:'confirmed'};assert.equal(scanRegistry(registry(linkedRows),[profile])[1].status,'existing');
+});

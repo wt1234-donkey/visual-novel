@@ -11,7 +11,7 @@ import {createAtlas} from '../discovery-model.mjs';
 import {blobDigest} from '../src/infrastructure/storage/digests.mjs';
 import {buildSourceIdentityIndex} from './build_source_identity_index.mjs';
 const pick=(v,keys)=>Object.fromEntries(keys.filter(k=>v[k]!==undefined).map(k=>[k,v[k]]));
-const identity=w=>pick(w,['id','indexId','title','displayTitle','originalTitle','chineseTitle','aliases','titleAliases','firstYear','yearStatus','sourceRefs','basicRegistryId','linkedRecordId','mainPlacement','source']);
+const identity=w=>pick(w,['id','indexId','title','displayTitle','originalTitle','chineseTitle','aliases','titleAliases','firstYear','yearStatus','sourceRefs','identityWorkId','basicRegistryId','linkedRecordId','mainPlacement','source']);
 const summary=w=>({...pick(w,['id','title','displayTitle','sourceTitle','originalTitle','chineseTitle','chineseTitleType','titleAliases','firstYear','yearStatus','datePrecision','category','subcategory','genre','interactionModes','writerNames','artistNames','musicianNames','formalTitle','formalOverride','formalAt']),characters:w.characters||[],synopsis:(w.synopsis||'').slice(0,140)});
 export async function buildOnDemandCatalogues(root,output,revision){
  const read=name=>JSON.parse(readFileSync(join(root,'data',name),'utf8'));
@@ -43,7 +43,7 @@ export async function buildOnDemandCatalogues(root,output,revision){
  const byId=new Map([...formalSource.main.works,...formalSource.supplement.works].map(w=>[w.id,w]));
  const sourceRows=projectBasicSources(inputs.registry.works.map(w=>({...w,year:w.firstYear})),byId,formalLinks).map(w=>({...w,firstYear:w.year,identityLink:sourceIdentity.links.get(w.id)}));
  const registry=projectRegistry({...inputs.registry,works:sourceRows},validateStore(inputs.store));
- const reserved=[...effective.main.works,...effective.supplement.works,...effective.coverage.companies.flatMap(c=>[...(c.relatedGames||[]),...(c.dossierOnlyWorks||[])])];
+ const reserved=[...effective.main.works,...effective.supplement.works,...effective.coverage.companies.flatMap(c=>[...(c.relatedGames||[]),...(c.dossierOnlyWorks||[])])].map(w=>({...w,identityWorkId:sourceIdentity.profileWorkIds.get(w.id)||w.id}));
  const scan=scanRegistry(registry,reserved),bulkSize=100,shards={},buckets={},lookup=Array.from({length:64},()=>({})),lookupRefs={};
  const bucket=(key,slot)=>{(buckets[key]??=[]).push(slot);};
  for(let slot=0;slot<scan.length;slot++){

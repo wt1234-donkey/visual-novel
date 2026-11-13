@@ -8,7 +8,7 @@ const refs=w=>(w.sourceRefs||[]).map(x=>String(x).toLowerCase());
 const add=(map,key,w)=>{if(!map.has(key))map.set(key,[]);map.get(key).push(w);};
 export function scanRegistry(registry,reserved){
  const byName=new Map(),byRef=new Map(),basicNames=new Map(),basicRefs=new Map(),byRegistry=new Map(),byId=new Map();
- for(const w of reserved){add(byId,w.id,w);if(w.basicRegistryId)add(byRegistry,w.basicRegistryId,w);for(const n of names(w))add(byName,n,w);for(const r of refs(w))add(byRef,r,w);}
+ for(const w of reserved){add(byId,w.id,w);if(w.identityWorkId&&w.identityWorkId!==w.id)add(byId,w.identityWorkId,w);if(w.basicRegistryId)add(byRegistry,w.basicRegistryId,w);for(const n of names(w))add(byName,n,w);for(const r of refs(w))add(byRef,r,w);}
  for(const w of registry.works.filter(w=>w.mainPlacement==='promoted-basic')){for(const n of names(w))add(basicNames,n,w);for(const r of refs(w))add(basicRefs,r,w);}
  return registry.works.map(w=>{
   const explicit=[...new Map([...(byRegistry.get(w.indexId)||[]),...(byId.get(w.linkedRecordId)||[]),...(['legacy-explicit','confirmed'].includes(w.identityLink?.status)?byId.get(w.identityLink.workId)||[]:[])].map(r=>[r.id,r])).values()];
@@ -18,9 +18,9 @@ export function scanRegistry(registry,reserved){
   const independent=w.identityLink?.status==='confirmed'&&w.identityLink.workId===w.id;
   if(explicit.length){status=explicit.length===1?'existing':'conflict';reason=status==='existing'?'已有明示ID链接，复用对应作品；不按名称猜配':'已有明示身份链接互相冲突，须核对';}
   else if(w.identityLink?.status==='confirmed'&&w.identityLink.workId!==w.id){status='conflict';reason='已明确对应基础作品 '+w.identityLink.workId+'，请从目标身份补齐档案';}
-  else if(candidates.some(r=>!independent||!w.identityLink.distinctFrom?.includes(r.id))){status='conflict';reason='名称、年份或外部引用仅形成身份候选，须先在来源与身份页核对；不自动合并';}
+  else if(candidates.some(r=>!independent||!w.identityLink.distinctFrom?.includes(r.identityWorkId||r.id))){status='conflict';reason='名称、年份或外部引用仅形成身份候选，须先在来源与身份页核对；不自动合并';}
   else if(w.mainPlacement!=='promoted-basic'){status='conflict';reason='已关联专题或其他身份，需复用原档案';}
-  else if([...names(w).flatMap(n=>basicNames.get(n)||[]),...refs(w).flatMap(r=>basicRefs.get(r)||[])].some(r=>r.indexId!==w.indexId&&(!independent||!w.identityLink.distinctFrom?.includes(r.id)))){status='conflict';reason='基础来源名称或外部引用存在候选，须显式核对身份';}
+  else if([...names(w).flatMap(n=>basicNames.get(n)||[]),...refs(w).flatMap(r=>basicRefs.get(r)||[])].some(r=>r.indexId!==w.indexId&&(!independent||!w.identityLink.distinctFrom?.includes(r.identityWorkId||r.id)))){status='conflict';reason='基础来源名称或外部引用存在候选，须显式核对身份';}
   else if(!w.indexId||!validURL(w.source)||!isPublishedYear(w.firstYear)){status='conflict';reason='基础来源缺少有效来源或年份';}
   return {work:w,status,reason,matches};
  });
@@ -45,7 +45,7 @@ export function prepareBulk(records,scan,reserved,taxonomy,reason,date){
   const current=lookup.get(id);if(!current||current.status!=='available')throw Error(current?.reason||'基础身份已不存在');
   if(!same(current.work,row.identity))throw Error('基础身份已变化，请移除后重新选择');
   const b=makeBasicBundle(row,nextWorkId(all),taxonomy);
-  const hit=all.find(w=>(names(w).some(n=>names(b.work).includes(n))||refs(w).some(r=>refs(b.work).includes(r)))&&!row.identity.identityLink?.distinctFrom?.includes(w.id));
+  const hit=all.find(w=>(names(w).some(n=>names(b.work).includes(n))||refs(w).some(r=>refs(b.work).includes(r)))&&!row.identity.identityLink?.distinctFrom?.includes(w.identityWorkId||w.id));
   if(hit)throw Error('与作品 '+hit.id+' 存在身份候选，请先核对明示链接');
   all.push(b.work);ready.push({resource:'newWork',key:b.work.id,before:null,after:b});
  }catch(e){errors.push({id:row.identity?.indexId,title:row.identity?.title,message:e.message});}}
