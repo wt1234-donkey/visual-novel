@@ -6,9 +6,9 @@ import {commitBasicCommand} from './commands.mjs';
 // One session owner for the source rows, active snapshot, repository and actor.
 // UI code owns presentation; repository code owns transport and credentials.
 const freeze=value=>{if(value&&typeof value==='object'&&!Object.isFrozen(value)){Object.freeze(value);for(const child of Object.values(value))freeze(child);}return value;};
-export function createCatalogueService({base,initial,repository,prepareBase,loadDetails=async()=>new Map(),makeMeta}) {
+export function createCatalogueService({base,initial,initialSnapshot={},repository,prepareBase,loadDetails=async()=>new Map(),makeMeta}) {
  if(typeof makeMeta!=='function')throw Error('目录服务缺少操作身份生成器');
- let snapshot={store:structuredClone(validateStore(initial)),sha:null},actor='',view,pending,busy=false;
+ let snapshot={store:structuredClone(validateStore(initial)),sha:initialSnapshot.sha||null,...(initialSnapshot.head?{head:initialSnapshot.head}:{})},actor='',view,pending,busy=false;
  function update(next) {
   const accepted={...next,store:structuredClone(validateStore(next.store))};
   const projected=createCatalogueView(base,accepted.store);

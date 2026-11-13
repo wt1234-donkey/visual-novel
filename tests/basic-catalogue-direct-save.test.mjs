@@ -18,6 +18,10 @@ test('published snapshot is read-only fallback when live GET is unavailable',asy
  assert.deepEqual(result,{store:{revision:8},source:'pages'});
  await assert.rejects(readLatestBasicStore(async()=>{throw Error('network');},async()=>{throw Error('offline');}),/不可读取/);
 });
+test('live bootstrap retains the exact Git head and source blob for bound archive queries',async()=>{
+ const source={store:{revision:35},head:'a'.repeat(40),sha:'b'.repeat(40)};
+ assert.deepEqual(await readLatestBasicStore(async()=>source,async()=>{throw Error('not used');}),{...source,source:'github'});
+});
 test('basic editor does not generate editorial proposals and requires write authorization',()=>{
  assert.doesNotMatch(editor,/makeProposal|offerEditorialProposal|basicProposalPreview|EDITORIAL_URL|送审预览|预览并送审/);
  assert.match(editor,/if\(!actor\)\{[\s\S]*?连接 GitHub 写入权限/);
