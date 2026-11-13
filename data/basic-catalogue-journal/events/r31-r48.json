@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 47,
+  "endRevision": 48,
   "events": [
     {
       "schemaVersion": 1,
@@ -1461,6 +1461,76 @@
               "label": "Castle",
               "note": "无",
               "source": "https://ifdb.org/viewgame?id=7ncaptb2qlx4j17a",
+              "type": "same"
+            }
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "c2a6b398-23cf-4e1e-b315-389972421b47",
+      "at": "2026-11-13T12:18:13.168Z",
+      "actor": "wt1234-donkey",
+      "reason": "合并 1 部作品为关联版本",
+      "previousRevision": 47,
+      "revision": 48,
+      "commandType": "merge",
+      "intent": {
+        "ids": [
+          "ifarchive-table-20261104-fft6pu91j85y4acv"
+        ],
+        "mainId": "ifdb-table-20261104-fft6pu91j85y4acv",
+        "relation": {
+          "label": "关联版本",
+          "note": "无",
+          "source": "https://ifdb.org/viewgame?id=fft6pu91j85y4acv",
+          "type": "same"
+        },
+        "type": "merge"
+      },
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-fft6pu91j85y4acv",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-fft6pu91j85y4acv",
+              "indexId": "basic-ifdb-table-20261104-fft6pu91j85y4acv",
+              "aliases": [],
+              "title": "Colossal Cave Adventure",
+              "firstYear": 1976,
+              "group": "William Crowther and Donald Woods",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=fft6pu91j85y4acv",
+              "mainPlacement": "promoted-basic"
+            }
+          }
+        },
+        {
+          "id": "ifarchive-table-20261104-fft6pu91j85y4acv",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-fft6pu91j85y4acv",
+              "indexId": "basic-ifarchive-table-20261104-fft6pu91j85y4acv",
+              "aliases": [],
+              "title": "Colossal Cave Adventure",
+              "firstYear": 1976,
+              "group": "William Crowther and Donald Woods",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/articles/Adventure_CVG_Nov81.pdf",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "ifdb-table-20261104-fft6pu91j85y4acv",
+            "relation": {
+              "label": "Colossal Cave Adventure",
+              "note": "无",
+              "source": "https://ifdb.org/viewgame?id=fft6pu91j85y4acv",
               "type": "same"
             }
           }
