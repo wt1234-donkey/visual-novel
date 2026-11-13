@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 46,
+  "revision": 47,
   "additions": [],
   "records": {
     "g1028": {
@@ -1352,90 +1352,44 @@
         "source": "https://foldoc.org/wumpus",
         "type": "same"
       }
+    },
+    "ifdb-table-20261104-7ncaptb2qlx4j17a": {
+      "identity": {
+        "id": "ifdb-table-20261104-7ncaptb2qlx4j17a",
+        "indexId": "basic-ifdb-table-20261104-7ncaptb2qlx4j17a",
+        "aliases": [],
+        "title": "Castle",
+        "firstYear": 1974,
+        "group": "Peter Langston",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=7ncaptb2qlx4j17a",
+        "mainPlacement": "promoted-basic"
+      }
+    },
+    "ifarchive-table-20261104-7ncaptb2qlx4j17a": {
+      "identity": {
+        "id": "ifarchive-table-20261104-7ncaptb2qlx4j17a",
+        "indexId": "basic-ifarchive-table-20261104-7ncaptb2qlx4j17a",
+        "aliases": [],
+        "title": "Castle",
+        "firstYear": 1974,
+        "group": "Peter Langston",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifarchive.org/if-archive/games/source/wander.zip",
+        "mainPlacement": "promoted-basic"
+      },
+      "parentId": "ifdb-table-20261104-7ncaptb2qlx4j17a",
+      "relation": {
+        "label": "Castle",
+        "note": "无",
+        "source": "https://ifdb.org/viewgame?id=7ncaptb2qlx4j17a",
+        "type": "same"
+      }
     }
   },
   "recent": [
-    {
-      "id": "cf245d48-4380-4c06-882a-4738d4996fbe",
-      "at": "2026-11-13T11:51:54.579Z",
-      "actor": "wt1234-donkey",
-      "reason": "删除作品 Journey to the Center of Earth",
-      "changes": [
-        {
-          "id": "casa-table-20261105-295",
-          "before": {
-            "identity": {
-              "id": "casa-table-20261105-295",
-              "indexId": "basic-casa-table-20261105-295",
-              "aliases": [],
-              "title": "Journey to the Center of Earth",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Journey to the Center of Earth",
-              "firstYear": 1978,
-              "group": "Greg Hassett",
-              "gameplay": "文字输入",
-              "plotStyles": [],
-              "plotTags": {
-                "tone": "荒凉",
-                "emotion": "恐怖",
-                "theme": [
-                  "科幻",
-                  "生存",
-                  "冒险"
-                ],
-                "setting": "封闭空间"
-              },
-              "plotTagEvidence": {},
-              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
-            },
-            "aliases": []
-          },
-          "after": {
-            "identity": {
-              "id": "casa-table-20261105-295",
-              "indexId": "basic-casa-table-20261105-295",
-              "aliases": [],
-              "title": "Journey to the Center of Earth",
-              "firstYear": 1978,
-              "group": "Mad Hatter Software",
-              "gameplay": "冒险（玩法待核）",
-              "plotStyles": [],
-              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "Journey to the Center of Earth",
-              "firstYear": 1978,
-              "group": "Greg Hassett",
-              "gameplay": "文字输入",
-              "plotStyles": [],
-              "plotTags": {
-                "tone": "荒凉",
-                "emotion": "恐怖",
-                "theme": [
-                  "科幻",
-                  "生存",
-                  "冒险"
-                ],
-                "setting": "封闭空间"
-              },
-              "plotTagEvidence": {},
-              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
-            },
-            "aliases": [],
-            "deleted": true
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "e0097c40-cfdc-4897-9924-091b928c6e39",
       "at": "2026-11-13T11:56:27.085Z",
@@ -1518,6 +1472,58 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "5af20091-2a49-496c-a608-5f66dc942f44",
+      "at": "2026-11-13T12:15:39.731Z",
+      "actor": "wt1234-donkey",
+      "reason": "合并 1 部作品为关联版本",
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-7ncaptb2qlx4j17a",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-7ncaptb2qlx4j17a",
+              "indexId": "basic-ifdb-table-20261104-7ncaptb2qlx4j17a",
+              "aliases": [],
+              "title": "Castle",
+              "firstYear": 1974,
+              "group": "Peter Langston",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=7ncaptb2qlx4j17a",
+              "mainPlacement": "promoted-basic"
+            }
+          }
+        },
+        {
+          "id": "ifarchive-table-20261104-7ncaptb2qlx4j17a",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-7ncaptb2qlx4j17a",
+              "indexId": "basic-ifarchive-table-20261104-7ncaptb2qlx4j17a",
+              "aliases": [],
+              "title": "Castle",
+              "firstYear": 1974,
+              "group": "Peter Langston",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/source/wander.zip",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "ifdb-table-20261104-7ncaptb2qlx4j17a",
+            "relation": {
+              "label": "Castle",
+              "note": "无",
+              "source": "https://ifdb.org/viewgame?id=7ncaptb2qlx4j17a",
+              "type": "same"
+            }
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1529,10 +1535,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r46.json",
-        "sha": "476cc0c23f393dad75a342e83eb2b337df0cec89",
+        "path": "data/basic-catalogue-journal/events/r31-r47.json",
+        "sha": "a64a8b23507549012a474e55efc92e4502b1f95a",
         "startRevision": 31,
-        "endRevision": 46,
+        "endRevision": 47,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1549,12 +1555,13 @@
           "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
           "cf245d48-4380-4c06-882a-4738d4996fbe",
           "e0097c40-cfdc-4897-9924-091b928c6e39",
-          "59fe3116-0d3b-4f96-97c8-ecd823abf854"
+          "59fe3116-0d3b-4f96-97c8-ecd823abf854",
+          "5af20091-2a49-496c-a608-5f66dc942f44"
         ],
-        "bytes": 45298
+        "bytes": 47647
       }
     ],
-    "eventCount": 16,
-    "stateHash": "cacd5e36d9566b4584f73c94ff6f9112a7c8406ffd273b7cc64d9065281c9687"
+    "eventCount": 17,
+    "stateHash": "3c7fc6a9a87b83d0f52c59d1b96787a59d0b4c7539664d777b89bbcf147856c5"
   }
 }
