@@ -29,3 +29,15 @@ test('reviewed formal writes use the same command receipt and seal it before the
  applyEditorialBatch(batch,root);const receipt=JSON.parse(readFileSync(join(root,receiptPath(p.id))));assert.equal(receipt.kind,'formal');assert.ok(receipt.auditRoot);await verifyCatalogueWrite(root);
  const snapshot=readFileSync(join(root,'data/work-edit-history.json'));assert.equal(applyEditorialBatch(batch,root).already,true);assert.deepEqual(readFileSync(join(root,'data/work-edit-history.json')),snapshot);
 });
+test('identity review and field assertion/selection receipts bind their exact commands to the same archive protocol',async t=>{
+ const {root}=fixture(t),rows=['sa','sb'].map((id,i)=>({id,indexId:'index-'+id,title:'Twin',firstYear:1990,group:'Maker',gameplay:'ADV',source:'https://example.org/'+id,mainPlacement:'promoted-basic'}));
+ writeFileSync(join(root,'data/main-adv-rpg-works-20261031.json'),JSON.stringify({works:rows,identityReview:[]}));
+ const make=(kind,id,expectedRevision,action)=>({schemaVersion:1,operationId:id,kind,actor:'tester',at:'2026-11-14T00:00:00Z',reason:'逐项核对来源身份及字段证据',sources:['https://example.org/review'],expectedRevision,sourceLease:sourceLeaseSync(root),action});
+ const commands=[
+  ()=>make('identity','identity-distinct',0,{type:'resolve',caseId:'name-year:twin|1990',outcome:'distinct',links:rows.map(r=>({sourceId:r.id,workId:r.id}))}),
+  ()=>make('field','field-assert',0,{type:'assert',assertion:{id:'claim',scope:{type:'work',workId:'sa',id:'sa'},field:'group',value:'Reviewed Maker',sources:['https://example.org/claim'],sourceIds:['sa'],status:'supported',subjects:[]}}),
+  ()=>make('field','field-select',1,{type:'select',assertionId:'claim'})
+ ];
+ for(const build of commands){const command=build();executeCommand(root,command,'tester');await sealCatalogueWrite(root,{operationId:command.operationId,command});}
+ await verifyCatalogueWrite(root);const field=JSON.parse(readFileSync(join(root,'data/field-evidence.json')));assert.equal(field.revision,2);assert.equal(Object.keys(field.choices).length,1);
+});
