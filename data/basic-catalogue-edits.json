@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 38,
+  "revision": 39,
   "additions": [],
   "records": {
     "g1028": {
@@ -871,6 +871,10 @@
         "plotTagEvidence": {
           "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
           "at": "2026-11-13T08:13:10.387Z"
+        },
+        "source": {
+          "id": "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
+          "at": "2026-11-13T11:23:15.905Z"
         }
       },
       "values": {
@@ -891,7 +895,7 @@
             "冒险"
           ]
         },
-        "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+        "source": "https://solutionarchive.com/game/id,5078/Quest.html",
         "title": "Quest",
         "yearStatus": "published"
       },
@@ -1202,81 +1206,6 @@
   },
   "recent": [
     {
-      "id": "496153a2-fb00-4572-9fb0-4185ff934269",
-      "at": "2026-11-13T10:53:03.921Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ai-secret-mission",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ai-secret-mission",
-              "indexId": "dossier-ai-secret-mission",
-              "aliases": [
-                "Secret Mission / Mission Impossible",
-                "秘密任务"
-              ],
-              "title": "秘密任务",
-              "firstYear": 1979,
-              "group": "既有厂商专题",
-              "gameplay": "文字冒险",
-              "plotStyles": [],
-              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
-              "mainPlacement": "dossier-linked"
-            },
-            "fieldMeta": {
-              "firstYear": {
-                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
-                "at": "2026-11-13T10:53:03.921Z"
-              },
-              "yearStatus": {
-                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
-                "at": "2026-11-13T10:53:03.921Z"
-              },
-              "group": {
-                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
-                "at": "2026-11-13T10:53:03.921Z"
-              },
-              "plotTags": {
-                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
-                "at": "2026-11-13T10:53:03.921Z"
-              },
-              "plotTagEvidence": {
-                "id": "496153a2-fb00-4572-9fb0-4185ff934269",
-                "at": "2026-11-13T10:53:03.921Z"
-              }
-            },
-            "values": {
-              "firstYear": 1981,
-              "gameplay": "文字冒险",
-              "group": "Adventure International",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": "紧张",
-                "setting": "近未来",
-                "theme": [
-                  "奇幻",
-                  "生存",
-                  "冒险"
-                ],
-                "tone": "荒凉"
-              },
-              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams3",
-              "title": "秘密任务",
-              "yearStatus": "published"
-            },
-            "aliases": [
-              "Secret Mission / Mission Impossible"
-            ]
-          }
-        }
-      ],
-      "added": []
-    },
-    {
       "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
       "at": "2026-11-13T11:09:35.728Z",
       "actor": "wt1234-donkey",
@@ -1423,6 +1352,140 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
+      "at": "2026-11-13T11:23:15.905Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifdb-4s6xy0r9wbztg7y2",
+          "before": {
+            "identity": {
+              "id": "ifdb-4s6xy0r9wbztg7y2",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
+              "aliases": [],
+              "title": "Quest",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "group": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "gameplay": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTags": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTagEvidence": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Roger Chaffee",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": [
+                  "紧张",
+                  "沉浸感"
+                ],
+                "perspective": "第一人称",
+                "setting": "架空世界",
+                "theme": [
+                  "推理",
+                  "冒险"
+                ]
+              },
+              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+              "title": "Quest",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          },
+          "after": {
+            "identity": {
+              "id": "ifdb-4s6xy0r9wbztg7y2",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
+              "aliases": [],
+              "title": "Quest",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "group": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "gameplay": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTags": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTagEvidence": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "source": {
+                "id": "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
+                "at": "2026-11-13T11:23:15.905Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Roger Chaffee",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": [
+                  "紧张",
+                  "沉浸感"
+                ],
+                "perspective": "第一人称",
+                "setting": "架空世界",
+                "theme": [
+                  "推理",
+                  "冒险"
+                ]
+              },
+              "source": "https://solutionarchive.com/game/id,5078/Quest.html",
+              "title": "Quest",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1434,10 +1497,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r38.json",
-        "sha": "a9c950e829adcb7674d58e51fab385453a715ed6",
+        "path": "data/basic-catalogue-journal/events/r31-r39.json",
+        "sha": "b84a9c347b51d54b6ee4009a8ffd92322f2ac6ea",
         "startRevision": 31,
-        "endRevision": 38,
+        "endRevision": 39,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1446,12 +1509,13 @@
           "b76344d8-36aa-4f12-9716-0f3a1d961e47",
           "496153a2-fb00-4572-9fb0-4185ff934269",
           "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-          "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c"
+          "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+          "5c338418-23cb-4c00-b4d8-46665ca0d1fb"
         ],
-        "bytes": 26565
+        "bytes": 32087
       }
     ],
-    "eventCount": 8,
-    "stateHash": "4e1e10287692e772beb6f5d0b81163d273065c5633fcff82337311c99bee5bc5"
+    "eventCount": 9,
+    "stateHash": "1239d785ea590dddc03d5788f88816d6da2eb2b5f75f29c0a0f6facbf8383385"
   }
 }
