@@ -57,7 +57,7 @@ async function fixture({initial=checkpoint(),loseReceipt=false}={}){
  await page.locator('#le-form').waitFor();
  return {page,api,errors,get store(){return store;},get dispatches(){return dispatches;},
   later(){store=amend(store,'later');api.changeFile('data/work-edit-history.json',JSON.stringify(store));blocked=false;},
-  async connect(){await page.locator('#le-auth summary').click();await page.locator('#le-token').fill('test-only-credential');await page.locator('#le-connect').click();await page.locator('#le-status').filter({hasText:'已连接账号'}).waitFor();},
+  async connect(){await page.locator('#le-auth summary').click();await page.locator('#le-token').fill('test-only-credential');await page.locator('#le-connect').click();try{await page.locator('#le-status').filter({hasText:/^已连接/}).waitFor();}catch(error){error.message+='\nConnection UI: '+await page.locator('#le-status').textContent()+'\nPage errors: '+JSON.stringify(errors);throw error;}},
   close:async()=>{await browser.close();await new Promise(resolve=>server.close(resolve));}};
 }
 
