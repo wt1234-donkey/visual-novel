@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 48,
+  "revision": 49,
   "additions": [],
   "records": {
     "g1028": {
@@ -1422,64 +1422,44 @@
         "source": "https://ifdb.org/viewgame?id=fft6pu91j85y4acv",
         "type": "same"
       }
+    },
+    "ifdb-table-20261104-7so4c67b82qmnjqg": {
+      "identity": {
+        "id": "ifdb-table-20261104-7so4c67b82qmnjqg",
+        "indexId": "basic-ifdb-table-20261104-7so4c67b82qmnjqg",
+        "aliases": [],
+        "title": "Zork 285",
+        "firstYear": 1977,
+        "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+        "mainPlacement": "promoted-basic"
+      }
+    },
+    "ifarchive-table-20261104-7so4c67b82qmnjqg": {
+      "identity": {
+        "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+        "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
+        "aliases": [],
+        "title": "Zork 285",
+        "firstYear": 1977,
+        "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+        "mainPlacement": "promoted-basic"
+      },
+      "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
+      "relation": {
+        "label": "Zork 285",
+        "note": "无",
+        "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+        "type": "unverified"
+      }
     }
   },
   "recent": [
-    {
-      "id": "59fe3116-0d3b-4f96-97c8-ecd823abf854",
-      "at": "2026-11-13T12:12:56.981Z",
-      "actor": "wt1234-donkey",
-      "reason": "合并 1 部作品为关联版本",
-      "changes": [
-        {
-          "id": "historical-947d3a3c0fa90530",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "historical-947d3a3c0fa90530",
-              "indexId": "basic-historical-1970s-20261101-947d3a3c0fa90530",
-              "aliases": [
-                "Wumpus",
-                "Hunt The Wumpus"
-              ],
-              "title": "Hunt the Wumpus",
-              "firstYear": 1973,
-              "group": "Gregory Yob / People's Computing Company（来源关联）",
-              "gameplay": "ADV",
-              "plotStyles": [],
-              "source": "https://foldoc.org/wumpus",
-              "mainPlacement": "promoted-basic"
-            }
-          }
-        },
-        {
-          "id": "ifdb-table-20261104-wlbdh7n1ca7wy8oz",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-table-20261104-wlbdh7n1ca7wy8oz",
-              "indexId": "basic-ifdb-table-20261104-wlbdh7n1ca7wy8oz",
-              "aliases": [],
-              "title": "Hunt the Wumpus",
-              "firstYear": 1972,
-              "group": "Gregory Yob, Magnus Olsson, and David Ahl",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=wlbdh7n1ca7wy8oz",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "historical-947d3a3c0fa90530",
-            "relation": {
-              "label": "Hunt the Wumpus",
-              "note": "无",
-              "source": "https://foldoc.org/wumpus",
-              "type": "same"
-            }
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "5af20091-2a49-496c-a608-5f66dc942f44",
       "at": "2026-11-13T12:15:39.731Z",
@@ -1583,6 +1563,58 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "67366783-d9b7-4ab9-b01c-10889f28be3f",
+      "at": "2026-11-13T12:22:57.052Z",
+      "actor": "wt1234-donkey",
+      "reason": "合并 1 部作品为关联版本",
+      "changes": [
+        {
+          "id": "ifdb-table-20261104-7so4c67b82qmnjqg",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-table-20261104-7so4c67b82qmnjqg",
+              "indexId": "basic-ifdb-table-20261104-7so4c67b82qmnjqg",
+              "aliases": [],
+              "title": "Zork 285",
+              "firstYear": 1977,
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+              "mainPlacement": "promoted-basic"
+            }
+          }
+        },
+        {
+          "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "aliases": [],
+              "title": "Zork 285",
+              "firstYear": 1977,
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
+            "relation": {
+              "label": "Zork 285",
+              "note": "无",
+              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+              "type": "unverified"
+            }
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1594,10 +1626,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r48.json",
-        "sha": "05d2d7bc49d3abc8193cef226ad10eff8de08742",
+        "path": "data/basic-catalogue-journal/events/r31-r49.json",
+        "sha": "dbe35f9a9aa516c0a8e8fbf92c4964b88ea6af12",
         "startRevision": 31,
-        "endRevision": 48,
+        "endRevision": 49,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1616,12 +1648,13 @@
           "e0097c40-cfdc-4897-9924-091b928c6e39",
           "59fe3116-0d3b-4f96-97c8-ecd823abf854",
           "5af20091-2a49-496c-a608-5f66dc942f44",
-          "c2a6b398-23cf-4e1e-b315-389972421b47"
+          "c2a6b398-23cf-4e1e-b315-389972421b47",
+          "67366783-d9b7-4ab9-b01c-10889f28be3f"
         ],
-        "bytes": 50094
+        "bytes": 52547
       }
     ],
-    "eventCount": 18,
-    "stateHash": "80b1f1681fc2c07bc0625e201eb04f4f48fd770a77620b8ef932a23f10cb6633"
+    "eventCount": 19,
+    "stateHash": "86ffdefe1e757d14dbcb3a0fc01a50254584edadbb082065e164e1cc976202e1"
   }
 }
