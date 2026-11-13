@@ -116,3 +116,9 @@ test('ambiguous save results retain the immutable field command across reloads',
 test('an undone assertion ID cannot be reused for a different claim or invalidate an older admission reference',()=>{
  let s=apply(emptyFieldStore(),{type:'assert',assertion:assertion('permanent-id',1990)},'first');s=apply(s,{type:'undo',targetId:'first'},'undo-first');assert.throws(()=>apply(s,{type:'assert',assertion:assertion('permanent-id',1992)},'reuse'),/不能覆盖/);
 });
+
+test('clearing a work-level maker or manual-name choice retains the underlying basic maker and empty name list in the target directory',async()=>{
+ const f=fixture();try{let s=apply(emptyFieldStore(),{type:'assert',assertion:assertion('maker-pin','Selected Maker',{field:'group'})},'add-maker');s=apply(s,{type:'select',assertionId:'maker-pin'},'pick-maker');s=apply(s,{type:'assert',assertion:assertion('writer-pin',['Manual Writer'],{field:'writerNames',sources:[],sourceIds:[],status:'manual'})},'add-writer');s=apply(s,{type:'select',assertionId:'writer-pin'},'pick-writer');f.put('data/field-evidence.json',s);
+ const loaded=loadCatalogueSnapshot(f.root),effective=buildEffectiveCatalogue(loadEffectiveInputsSync(f.root)),parts=new Map(),save=async(name,value)=>{parts.set(name,value);return {path:'catalogue-web/'+('a'.repeat(40))+'/'+name+'.json',sha:'a'.repeat(40)};};await buildFieldEvidenceDirectory('','a'.repeat(40),loaded,effective,save);const targets=[...parts].find(([name,value])=>name.startsWith('field-targets-')&&value.g001)[1].g001,base=targets.find(t=>t.scope.type==='work');assert.equal(base.values.group,'Same Studio');assert.deepEqual(base.values.writerNames,[]);
+ }finally{rmSync(f.root,{recursive:true,force:true});}
+});
