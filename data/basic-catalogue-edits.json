@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 43,
+  "revision": 44,
   "additions": [],
   "records": {
     "g1028": {
@@ -429,7 +429,8 @@
         "plotTagEvidence": {},
         "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
       },
-      "aliases": []
+      "aliases": [],
+      "deleted": true
     },
     "g091": {
       "identity": {
@@ -1302,34 +1303,6 @@
   },
   "recent": [
     {
-      "id": "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
-      "at": "2026-11-13T11:33:29.721Z",
-      "actor": "wt1234-donkey",
-      "reason": "删除作品 Stuga",
-      "changes": [
-        {
-          "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
-              "indexId": "basic-ifarchive-table-20261104-ocrx4yc2l5znoqfs",
-              "aliases": [],
-              "title": "Stuga",
-              "firstYear": 1978,
-              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/source/inform/swedish/Stuga_Src.zip",
-              "mainPlacement": "promoted-basic"
-            },
-            "deleted": true
-          }
-        }
-      ],
-      "added": []
-    },
-    {
       "id": "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
       "at": "2026-11-13T11:35:43.120Z",
       "actor": "wt1234-donkey",
@@ -1420,6 +1393,87 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "cf245d48-4380-4c06-882a-4738d4996fbe",
+      "at": "2026-11-13T11:51:54.579Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Journey to the Center of Earth",
+      "changes": [
+        {
+          "id": "casa-table-20261105-295",
+          "before": {
+            "identity": {
+              "id": "casa-table-20261105-295",
+              "indexId": "basic-casa-table-20261105-295",
+              "aliases": [],
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Mad Hatter Software",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Greg Hassett",
+              "gameplay": "文字输入",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": "荒凉",
+                "emotion": "恐怖",
+                "theme": [
+                  "科幻",
+                  "生存",
+                  "冒险"
+                ],
+                "setting": "封闭空间"
+              },
+              "plotTagEvidence": {},
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
+            },
+            "aliases": []
+          },
+          "after": {
+            "identity": {
+              "id": "casa-table-20261105-295",
+              "indexId": "basic-casa-table-20261105-295",
+              "aliases": [],
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Mad Hatter Software",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Greg Hassett",
+              "gameplay": "文字输入",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": "荒凉",
+                "emotion": "恐怖",
+                "theme": [
+                  "科幻",
+                  "生存",
+                  "冒险"
+                ],
+                "setting": "封闭空间"
+              },
+              "plotTagEvidence": {},
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
+            },
+            "aliases": [],
+            "deleted": true
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1431,10 +1485,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r43.json",
-        "sha": "767899035c0e1a6c703853e4ae082b6fc0980042",
+        "path": "data/basic-catalogue-journal/events/r31-r44.json",
+        "sha": "abcd3db053c1a345a85e585231d544af44d39567",
         "startRevision": 31,
-        "endRevision": 43,
+        "endRevision": 44,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1448,12 +1502,13 @@
           "a992f79e-d369-4905-870b-6d9f1ec05c3c",
           "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
           "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
-          "03ceb15c-ef09-4884-961b-ef7ca36c4ae2"
+          "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
+          "cf245d48-4380-4c06-882a-4738d4996fbe"
         ],
-        "bytes": 38572
+        "bytes": 41693
       }
     ],
-    "eventCount": 13,
-    "stateHash": "abba6ec4a9797223d3ae2fc9a6f2cb11e5670595bff582d239db526cb07892d5"
+    "eventCount": 14,
+    "stateHash": "fd8391d0cffd2f05988780f1c5fb1b59228bd5f768afda92eef59f8359f97a4e"
   }
 }

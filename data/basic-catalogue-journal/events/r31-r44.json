@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 43,
+  "endRevision": 44,
   "events": [
     {
       "schemaVersion": 1,
@@ -1193,6 +1193,96 @@
               "yearStatus": "published"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cf245d48-4380-4c06-882a-4738d4996fbe",
+      "at": "2026-11-13T11:51:54.579Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Journey to the Center of Earth",
+      "previousRevision": 43,
+      "revision": 44,
+      "commandType": "delete",
+      "intent": {
+        "id": "casa-table-20261105-295",
+        "type": "delete"
+      },
+      "changes": [
+        {
+          "id": "casa-table-20261105-295",
+          "before": {
+            "identity": {
+              "id": "casa-table-20261105-295",
+              "indexId": "basic-casa-table-20261105-295",
+              "aliases": [],
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Mad Hatter Software",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Greg Hassett",
+              "gameplay": "文字输入",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": "荒凉",
+                "emotion": "恐怖",
+                "theme": [
+                  "科幻",
+                  "生存",
+                  "冒险"
+                ],
+                "setting": "封闭空间"
+              },
+              "plotTagEvidence": {},
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
+            },
+            "aliases": []
+          },
+          "after": {
+            "identity": {
+              "id": "casa-table-20261105-295",
+              "indexId": "basic-casa-table-20261105-295",
+              "aliases": [],
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Mad Hatter Software",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "values": {
+              "title": "Journey to the Center of Earth",
+              "firstYear": 1978,
+              "group": "Greg Hassett",
+              "gameplay": "文字输入",
+              "plotStyles": [],
+              "plotTags": {
+                "tone": "荒凉",
+                "emotion": "恐怖",
+                "theme": [
+                  "科幻",
+                  "生存",
+                  "冒险"
+                ],
+                "setting": "封闭空间"
+              },
+              "plotTagEvidence": {},
+              "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
+            },
+            "aliases": [],
+            "deleted": true
           }
         }
       ],
