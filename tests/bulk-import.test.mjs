@@ -31,3 +31,9 @@ test('metadata backfill validates atomically and preserves unrelated drafts',()=
  assert.throws(()=>mergeMetadata(before,{schemaVersion:1,records:[complete(b),complete(b)]},scan),/重复/);assert.equal(before.length,1);
  assert.throws(()=>mergeMetadata(before,{schemaVersion:1,records:[{...complete(b),identity:{...b,firstYear:2025}}]},scan),/已变化/);
 });
+
+
+test('formal backfill retains the explicit field selection operation IDs used at admission',()=>{
+ const w={...identity(),fieldEvidence:{firstYear:{selection:{operationId:'selected-year'}},group:{selection:{operationId:'selected-maker'}}}};
+ const bundle=makeBasicBundle(complete(w),'g900',taxonomy);assert.deepEqual(bundle.work.fieldSelectionOperations,{firstYear:'selected-year',group:'selected-maker'});assert.deepEqual(bundle.work.sourceRefs,w.sourceRefs);assert.deepEqual(bundle.work.titleAliases,w.aliases);
+});

@@ -177,12 +177,13 @@ def name_key(s):
     return ''.join(c for c in unicodedata.normalize('NFKC', s).casefold() if c.isalnum())
 
 
-def validate_new_work(bundle, key, games):
+def validate_new_work(bundle, key, games, *, historical=False):
     assert isinstance(bundle, dict) and set(bundle) == {'work', 'contentVersions', 'platformReleases'}, '新作须包含作品、原作内容和首次发行'
     w = bundle['work']
     required = {'id','title','originalTitle','firstYear','category','subcategory','genre','characters','charactersNote','synopsis','notes','source','interactionModes','interactionNote','interactionBasis','interactionSources'}
     optional = {'basicRegistryId', 'titleAliases', 'sourceRefs'}
-    assert isinstance(w, dict) and required <= set(w) <= required | optional, '新作品字段不完整或含未知字段'
+    assert isinstance(w, dict) and required <= set(w) <= required | optional | {'fieldSelectionOperations'}, '新作品字段不完整或含未知字段'
+    assert 'fieldSelectionOperations' not in w or optional<=set(w), '字段选用依据必须绑定原基础身份'
     distinct_from=set()
     identity_state={'links':{}}
     registry_rows=[]
@@ -197,6 +198,27 @@ def validate_new_work(bundle, key, games):
         if decision and decision.get('status')=='confirmed':
             assert decision['workId']==basic['id'], '此来源已有明确目标作品，应复用该身份而非新增'
             distinct_from=set(decision.get('distinctFrom',[]))
+        # Bind admission to its explicit selection IDs, not to future choices.
+        try:field_state=read('field-evidence.json')
+        except (FileNotFoundError,KeyError):field_state={'assertions':{},'choices':{},'events':[]}
+        canonical=basic.get('linkedRecordId') or basic['id']
+        proof=w.get('fieldSelectionOperations',{})
+        assert isinstance(proof,dict) and set(proof)<={'title','firstYear','group'} and all(isinstance(v,str) and v for v in proof.values()), '字段选用依据格式无效'
+        current={}
+        for choice in field_state.get('choices',{}).values():
+            claim=field_state['assertions'][choice['assertionId']]
+            if claim['scope']=={'type':'work','workId':canonical,'id':canonical} and claim['field'] in {'title','firstYear','group'}:current[claim['field']]=choice['operationId']
+        if not historical:assert proof==current, '字段选用已变化，请重新导出补档资料'
+        basic=copy.deepcopy(basic)
+        for field,operation_id in proof.items():
+            event=next((e for e in field_state.get('events',[]) if e['id']==operation_id and e['type']=='select'),None)
+            assert event, '字段选用依据的历史事件不存在'
+            assertion_id=event['intent']['assertionId']
+            claim=field_state['assertions'].get(assertion_id) or next((e['intent']['assertion'] for e in field_state['events'] if e['type']=='assert' and e['intent']['assertion']['id']==assertion_id),None)
+            assert claim and claim['scope']=={'type':'work','workId':canonical,'id':canonical} and claim['field']==field, '字段选用依据的作品范围不一致'
+            if field=='title':basic['aliases']=list(dict.fromkeys([*basic.get('aliases',[]),basic['title']]))
+            basic[field]=claim['value']
+            if field=='title':basic['aliases']=[a for a in basic['aliases'] if a!=claim['value']]
         assert w['titleAliases'] == basic.get('aliases', []) and w['sourceRefs'] == basic.get('sourceRefs', []), '基础库别名或来源身份已变化，请重新读取'
         assert w['firstYear'] == basic['firstYear'], '年份与基础身份不一致'
         basic_names = {name_key(n) for n in [basic['title'], *basic.get('aliases', [])]}
@@ -251,7 +273,7 @@ def validate_new_work(bundle, key, games):
     validate_collection([w], contents, releases)
 
 
-def apply_package(package, current, games, baseline, dossiers):
+def apply_package(package, current, games, baseline, dossiers, *, historical=False):
     assert isinstance(package, dict) and set(package) == {'schemaVersion', 'createdAt', 'reason', 'operations'}, '更新包结构无效'
     assert package['schemaVersion'] == 1 and text(package['reason'], maximum=2000), '需要修改说明'
     dt.date.fromisoformat(package['createdAt'])
@@ -269,7 +291,7 @@ def apply_package(package, current, games, baseline, dossiers):
         assert value(current, resource, key) == op['before'], f'{resource}/{key}: 数据库已变化，请重新载入并核对'
         if resource == 'newWork':
             assert op['before'] is None, '不能通过新作入口覆盖已有作品'
-            validate_new_work(op['after'], key, result['games'])
+            validate_new_work(op['after'], key, result['games'], historical=historical)
         elif resource == 'editorial':
             assert key not in baseline['works'], '最初八部编目须走独立审查，请添加补充说明'
         elif resource == 'credits':
@@ -330,7 +352,7 @@ def validate_history(root=ROOT):
     dossiers = {d['id'] for d in read('entity-catalogue.json', root)['model']['dossiers']}
     for batch in history['batches']:
         assert text(batch['actor'])
-        restored = apply_package({k: v for k, v in batch.items() if k != 'actor'}, restored, games, baseline, dossiers)
+        restored = apply_package({k: v for k, v in batch.items() if k != 'actor'}, restored, games, baseline, dossiers, historical=True)
     for resource in PATHS:
         keys = {op['key'] for b in history['batches'] for op in b['operations'] if op['resource'] == resource}
         for key in keys:

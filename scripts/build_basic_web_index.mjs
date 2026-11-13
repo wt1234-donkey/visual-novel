@@ -23,7 +23,7 @@ function packBasicRows(works,gameplayBySlot){
  const groupKey=intern(groups),gameplayKey=intern(gameplay),statusKey=intern(statuses);
  const rows=works.map((w,slot)=>{
   const row=[w.id,w.matchedWorkId||null,w.title,w.year,groupKey(w.group),gameplayKey(w.gameplay),statusKey(w.status)];
-  const optional=[w.aliases?.length?w.aliases:null,w.groups?.length?w.groups.map(groupKey):null,w.plotStyles?.length?w.plotStyles:null,w.plotTags||null,gameplayBySlot.get(slot)?.length?gameplayBySlot.get(slot):null,w.formalTitle?{title:w.formalTitle,override:w.formalOverride,at:w.formalAt}:null];
+  const optional=[w.aliases?.length?w.aliases:null,w.groups?.length?w.groups.map(groupKey):null,w.plotStyles?.length?w.plotStyles:null,w.plotTags||null,gameplayBySlot.get(slot)?.length?gameplayBySlot.get(slot):null,w.formalTitle?{title:w.formalTitle,override:w.formalOverride,at:w.formalAt}:null,w.fieldEvidence||null];
   while(optional.length&&!optional.at(-1))optional.pop();
   return row.concat(optional);
  });

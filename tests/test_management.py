@@ -91,6 +91,29 @@ class ManagementTests(unittest.TestCase):
         before=copy.deepcopy(self.data)
         with patch('manage_catalogue.read',side_effect=reader),self.assertRaisesRegex(AssertionError,'来源身份重复'): self.apply(p)
         self.assertEqual(self.data,before)
+    def test_selected_field_admission_is_bound_to_original_operation_after_later_choices(self):
+        p,basic,reader=self.basic_package();w=p['operations'][0]['after']['work']
+        scoped={'type':'work','workId':basic['id'],'id':basic['id']}
+        claims={'a1':dict(id='a1',scope=scoped,field='firstYear',value=2025),'a2':dict(id='a2',scope=scoped,field='firstYear',value=2024)}
+        state={'assertions':claims,'choices':{'year':dict(assertionId='a1',operationId='pick1')},'events':[dict(id='pick1',type='select',intent=dict(assertionId='a1')),dict(id='pick2',type='select',intent=dict(assertionId='a2'))]}
+        w['firstYear']=2025;w['fieldSelectionOperations']={'firstYear':'pick1'}
+        p['operations'][0]['after']['contentVersions'][0]['firstYear']=2025
+        p['operations'][0]['after']['platformReleases'][0]['year']=2025
+        wrapped=lambda name,*args,**kwargs:state if name=='field-evidence.json' else reader(name,*args,**kwargs)
+        with patch('manage_catalogue.read',side_effect=wrapped):self.apply(p)
+        state['choices']['year']=dict(assertionId='a2',operationId='pick2')
+        with patch('manage_catalogue.read',side_effect=wrapped):
+            with self.assertRaisesRegex(AssertionError,'字段选用已变化'):self.apply(p)
+            result=apply_package(p,self.data,self.games,self.baseline,self.dossiers,historical=True)
+        self.assertEqual(result['games']['works'][-1]['firstYear'],2025)
+        self.assertEqual(result['games']['works'][-1]['fieldSelectionOperations']['firstYear'],'pick1')
+    def test_older_admission_without_field_selection_is_not_revalidated_against_a_later_choice(self):
+        p,basic,reader=self.basic_package();state={'assertions':{'new':dict(scope={'type':'work','workId':basic['id'],'id':basic['id']},field='firstYear',value=2024)},'choices':{'year':dict(assertionId='new',operationId='later')},'events':[]}
+        wrapped=lambda name,*args,**kwargs:state if name=='field-evidence.json' else reader(name,*args,**kwargs)
+        with patch('manage_catalogue.read',side_effect=wrapped):
+            with self.assertRaisesRegex(AssertionError,'字段选用已变化'):self.apply(p)
+            result=apply_package(p,self.data,self.games,self.baseline,self.dossiers,historical=True)
+        self.assertEqual(result['games']['works'][-1]['firstYear'],2026)
     def test_current_history(self):
         validate_history()
 if __name__=='__main__':unittest.main()

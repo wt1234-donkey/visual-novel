@@ -1,3 +1,4 @@
+import {projectChosenBasicRow} from '../../domain/catalogue/field-evidence.mjs';
 import {projectEntries} from '../../domain/catalogue/model.mjs';
 import {buildIdentityMap} from '../../domain/catalogue/identity.mjs';
 import {compareBasicOrder} from '../../domain/catalogue/order.mjs';
@@ -5,7 +6,7 @@ import {compareBasicOrder} from '../../domain/catalogue/order.mjs';
 // Shared by editing, the browser, the search worker and build-time snapshots.
 // Deleted identities stay available to relationship validation, never to search.
 export function createCatalogueView(base, store, {strict = false, includeIdentities = false} = {}) {
- const projected = projectEntries(base, store, {includeChildren:true, includeDeleted:true});
+ const projected = projectEntries(base, store, {includeChildren:true, includeDeleted:true}).map(projectChosenBasicRow);
  const known = new Map(projected.map(row => [row._key, row]));
  const all = projected.filter(row => !row._deleted), byId = new Map(all.map(row => [row._key, row]));
  const childrenByMain = new Map(), issues = [];

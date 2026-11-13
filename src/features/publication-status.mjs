@@ -38,7 +38,7 @@ export function installPublicationStatus(){
   if(!host){host=document.createElement('details');host.id='publication-status';host.style.cssText='margin:12px;padding:12px;border:1px solid #d8d1e3;border-radius:8px;background:#faf8ff;color:#393043;font:13px/1.6 system-ui';(document.querySelector('main')||document.body).prepend(host);}
   host.replaceChildren();const title=document.createElement('summary');title.textContent='保存与发布状态 · '+PUBLICATION_LABELS[rows[0]?.state||'saved'];host.append(title);
   for(const row of rows.slice(0,5)){
-   const p=document.createElement('p');p.textContent=({basic:'基础库',formal:'正式作品',identity:'身份核对'}[row.receipt.kind])+' r'+row.receipt.revision+' · '+PUBLICATION_LABELS[row.state]+' · '+row.receipt.at;
+   const p=document.createElement('p');p.textContent=({basic:'基础库',formal:'正式作品',identity:'身份核对',field:'字段证据'}[row.receipt.kind])+' r'+row.receipt.revision+' · '+PUBLICATION_LABELS[row.state]+' · '+row.receipt.at;
    if(row.url&&/^https:\/\/github\.com\/wt1234-donkey\/visual-novel\//.test(row.url)){const a=document.createElement('a');a.href=row.url;a.textContent=' 查看发布记录';a.target='_blank';a.rel='noopener noreferrer';p.append(a);}
    host.append(p);
   }

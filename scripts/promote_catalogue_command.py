@@ -12,7 +12,7 @@ import urllib.request
 ROOT=Path(__file__).resolve().parents[1]
 REPO='wt1234-donkey/visual-novel'
 def allowed_path(path):
-    return path in ('data/basic-catalogue-edits.json','data/work-edit-history.json','data/source-identity-decisions.json') or (
+    return path in ('data/basic-catalogue-edits.json','data/work-edit-history.json','data/source-identity-decisions.json','data/field-evidence.json') or (
         path.startswith(('data/basic-catalogue-journal/events/','data/command-receipts/')) and
         path.endswith('.json') and '..' not in Path(path).parts)
 def git(*args):
