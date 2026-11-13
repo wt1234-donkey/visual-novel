@@ -11,9 +11,10 @@ export async function submitCommand(request,command,{timeout=240000,interval=200
   if(await blobDigest(raw)!==file.sha)throw Error('命令回执摘要不符');
   const receipt=JSON.parse(raw);if(receipt.command!==text)throw Object.assign(Error('操作ID已用于不同内容'),{code:'OPERATION_CONFLICT'});
   if(receipt.schemaVersion!==1||receipt.operationId!==command.operationId||receipt.kind!==command.kind||receipt.actor!==command.actor||!Number.isSafeInteger(receipt.revision)||receipt.revision<1)throw Error('命令回执身份或修订无效');
-  return {operationId:command.operationId,revision:receipt.revision,commit:head};
+  return {operationId:command.operationId,kind:receipt.kind,actor:receipt.actor,at:receipt.at||command.at,
+   revision:receipt.revision,commit:head,...(command.kind==='formal'?{workId:command.action.workId}:{})};
  };
- const existing=await read();if(existing)return existing;
+ const existing=await read();if(existing)return {...existing,alreadyApplied:true};
  const blob=await request(repo+'/git/blobs','POST',{content:text,encoding:'utf-8'});if(blob.sha!==digest)throw Error('命令对象摘要不符');
  // A lost dispatch response can mean acceptance. Reconcile the same immutable operation, never invent a replacement ID.
  let dispatchError;

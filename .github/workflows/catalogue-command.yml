@@ -42,8 +42,9 @@ jobs:
           python3 scripts/validate_entity_model.py
           python3 scripts/validate_work_edits.py
           node scripts/migrate_basic_storage.mjs --check
+          node scripts/migrate_formal_history.mjs --check
           python3 scripts/registry_store.py --check
-          node --test tests/trusted-command.test.mjs tests/work-edit.test.mjs tests/basic-catalogue.test.mjs
+          node --test tests/trusted-command.test.mjs tests/work-edit.test.mjs tests/formal-audit.test.mjs tests/basic-catalogue.test.mjs
       - name: Seal validated data commit and advance main without force
         if: steps.command.outputs.already != 'true'
         env:

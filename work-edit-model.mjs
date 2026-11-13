@@ -1,6 +1,7 @@
 import {projectFormalWork,formalFieldMeta,CREATOR_NAME_FIELDS,EDIT_FIELDS} from './src/domain/catalogue/effective.mjs';
 export {CREATOR_NAME_FIELDS,EDIT_FIELDS} from './src/domain/catalogue/effective.mjs';
 import {same,nameKey,validURL} from './management-model.mjs';
+import {upgradeFormalHistory,appendFormalEvent,confirmFormalOperation,validateFormalJournal} from './src/domain/catalogue/formal-journal.mjs';
 const arrays=new Set(['titleAliases','characters','interactionModes','interactionSources',...Object.keys(CREATOR_NAME_FIELDS)]);
 const copy=x=>structuredClone(x);
 function creatorNamesOnly(before,after){const fields=EDIT_FIELDS.filter(k=>!same(before[k]??(k in CREATOR_NAME_FIELDS?[]:undefined),after[k]??(k in CREATOR_NAME_FIELDS?[]:undefined)));return fields.length>0&&fields.every(k=>k in CREATOR_NAME_FIELDS);}
@@ -22,6 +23,9 @@ export function validateValues(values,taxonomy,base,allWorks=[]){
  if(JSON.stringify(values).length>40000)throw Error('本部资料过长，请精简后保存');
 }
 export function saveEdit(store,base,after,meta,taxonomy,allWorks=[]){
+ store=upgradeFormalHistory(store,{at:meta.at});
+ const type=meta.commandType||'edit',intent=meta.intent||{type:'edit',values:copy(after)};
+ if(confirmFormalOperation(store,base.id,meta,type,intent))return copy(store);
  const result=copy(store),row=result.records[base.id]||{revision:0,overrides:{},recent:[]};
  if(row.revision!==meta.expectedRevision)throw Error('作品已被修改，请重新读取后核对');
  const current=editableValues(projectWork(base,store));validateValues(after,taxonomy,{...current,id:base.id},allWorks);
@@ -36,23 +40,33 @@ export function saveEdit(store,base,after,meta,taxonomy,allWorks=[]){
  const entry={id:meta.id,revision:row.revision+1,at:meta.at,actor:meta.actor,reason:meta.reason.trim(),sources:copy(meta.sources),before:copy(row.overrides),after:copy(patch),beforeFieldMeta};
  if(!entry.id||!Number.isFinite(Date.parse(entry.at))||!entry.actor)throw Error('缺少修改身份或时间');
  result.records[base.id]={revision:entry.revision,overrides:patch,fieldMeta,recent:[...row.recent,entry].slice(-3)};
- return result;
+ return appendFormalEvent(store,result,base.id,meta,type,intent,{before:current,after});
 }
 export function saveCreatorNames(store,base,names,meta,taxonomy,allWorks=[]){
  if(!names||!same(Object.keys(names).sort(),Object.keys(CREATOR_NAME_FIELDS).sort()))throw Error('请填写剧作、美术和音乐的姓名列表');
  const after={...editableValues(projectWork(base,store)),...copy(names)};
- return saveEdit(store,base,after,{...meta,reason:'添加或调整剧作、美术与音乐',sources:[]},taxonomy,allWorks);
+ return saveEdit(store,base,after,{...meta,reason:'添加或调整剧作、美术与音乐',sources:[],commandType:'creators',intent:{type:'creators',names:copy(names)}},taxonomy,allWorks);
 }
-export function undoEdit(store,base,targetId,expectedRevision,taxonomy,allWorks=[]){
+export function undoEdit(store,base,targetId,expectedRevision,taxonomy,allWorks=[],meta){
+ if(!meta)throw Error('撤销需要独立操作ID、操作人、时间和说明');
+ meta={...meta,expectedRevision};store=upgradeFormalHistory(store,{at:meta.at});
+ const intent={type:'undo',targetId};
+ if(confirmFormalOperation(store,base.id,meta,'undo',intent))return copy(store);
  const row=store.records[base.id];if(!row||row.revision!==expectedRevision)throw Error('作品已变化，请重新读取');
  const index=row.recent.findIndex(e=>e.id===targetId);if(index<0)throw Error('只能回撤本作品最近3次修改');
  const overrides=copy(row.recent[index].before),restored={...editableValues(base),...overrides};
  validateValues(restored,taxonomy,{...editableValues(projectWork(base,store)),id:base.id},allWorks);
  const recent=row.recent.slice(0,index),fieldMeta=copy(row.recent[index].beforeFieldMeta||formalFieldMeta({overrides,recent}));
- const result=copy(store);result.records[base.id]={revision:row.revision+1,overrides,fieldMeta,recent};return result;
+ const result=copy(store);result.records[base.id]={revision:row.revision+1,overrides,fieldMeta,recent};
+ return appendFormalEvent(store,result,base.id,meta,'undo',intent,{before:editableValues(projectWork(base,store)),after:restored});
 }
 export function changedFields(before,after){return EDIT_FIELDS.filter(k=>!same(before[k],after[k]));}
 export function validateHistory(store,works,taxonomy){
+ if(store?.schemaVersion===2){
+  if(!same(Object.keys(store).sort(),['journal','records','schemaVersion']))throw Error('正式修改历史含未知字段');
+  validateHistory({schemaVersion:1,records:store.records},works,taxonomy);
+  validateFormalJournal(store,state=>validateHistory(state,works,taxonomy));return true;
+ }
  if(!store||store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式无效');
  const base=new Map(works.map(w=>[w.id,w]));
  for(const [id,row]of Object.entries(store.records)){

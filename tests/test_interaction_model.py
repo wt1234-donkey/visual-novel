@@ -7,6 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from interaction_model import validate_interactions, iter_interaction_works
 from export_interaction_csv import interaction_csv
+from effective_catalogue import load_effective
 D=json.loads((ROOT/'data/games.json').read_text())
 C=json.loads((ROOT/'data/company-coverage.json').read_text())
 T=json.loads((ROOT/'data/taxonomy.json').read_text())
@@ -22,9 +23,10 @@ class InteractionTests(unittest.TestCase):
         data=copy.deepcopy(D);data['works'][0]['interactionSources']=[]
         with self.assertRaises(AssertionError):validate_interactions(data,C,T)
     def test_csv_and_every_static_card_include_labels(self):
-        self.assertEqual((ROOT/'data/interaction-modes.csv').read_text(encoding='utf-8-sig'),interaction_csv(D,C))
-        works={w['id']:w for w in D['works']}
-        for company in C['companies']:
+        effective=load_effective(ROOT)
+        self.assertEqual((ROOT/'data/interaction-modes.csv').read_text(encoding='utf-8-sig'),interaction_csv(effective['main'],effective['coverage']))
+        works={w['id']:w for w in effective['main']['works']}
+        for company in effective['coverage']['companies']:
             page=(ROOT/(company['id']+'.html')).read_text()
             for w in [*(works[wid] for wid in company['workIds']),*company.get('relatedGames',[]),*company.get('dossierOnlyWorks',[])]:
                 card=page.split(f'<article class="card" id="{w["id"]}">')[1].split('</article>')[0]

@@ -7,7 +7,8 @@ import {REGISTRY_PATH} from './registry.mjs';
 
 export const SOURCE_FILES=[REGISTRY_PATH,'data/adv-rpg-minimal-index-20261031.json','data/adv-rpg-next-studio-review-20261031.json','data/adv-rpg-round3-review-20261031.json','data/games.json','data/non-rpg-creator-supplement-20261030.json','data/work-edit-history.json','data/company-coverage.json','data/taxonomy.json','data/date-contract.json',
  'src/domain/catalogue/model.mjs','src/domain/catalogue/effective.mjs','src/domain/catalogue/dates.mjs','src/domain/catalogue/journal.mjs','src/domain/catalogue/journal-index.mjs','src/domain/catalogue/identity.mjs','src/domain/catalogue/order.mjs','src/domain/taxonomy/style-tags.mjs','src/application/catalogue/commands.mjs','work-edit-model.mjs','management-model.mjs',
- 'data/trusted-save-policy.json','src/application/commands/envelope.mjs','src/application/commands/execute.mjs','src/application/commands/policy.mjs'];
+ 'data/trusted-save-policy.json','src/domain/catalogue/formal-journal.mjs','src/application/catalogue/formal-commands.mjs',
+ 'src/application/commands/envelope.mjs','src/application/commands/execute.mjs','src/application/commands/policy.mjs'];
 export function sourceLeaseSync(root){
  const files={};
  const header=JSON.parse(readFileSync(join(root,REGISTRY_PATH),'utf8'));

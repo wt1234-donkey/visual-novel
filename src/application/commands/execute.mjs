@@ -1,7 +1,8 @@
 import {validateCommand,commandText} from './envelope.mjs';
 import {applyChange,undoLast} from '../../domain/catalogue/model.mjs';
 import {createCatalogueView} from '../catalogue/view.mjs';
-import {saveEdit,saveCreatorNames,undoEdit,projectWork,validateHistory} from '../../../work-edit-model.mjs';
+import {projectWork,validateHistory} from '../../../work-edit-model.mjs';
+import {applyFormalCommand} from '../catalogue/formal-commands.mjs';
 const reject=(message,code)=>{throw Object.assign(Error(message),{code});};
 export function assertCommandSource(lease,current,kind){
  const required=Object.entries(current.files).filter(([path])=>!(kind==='formal'&&path==='data/work-edit-history.json'));
@@ -23,8 +24,7 @@ export function planCommand(command,context,identity){
  }else{
   const base=context.formalWorks.find(work=>work.id===command.action.workId);if(!base)reject('正式作品不存在','TARGET_NOT_FOUND');
   const projected=context.reservedWorks.map(work=>projectWork(work,context.formalStore));
-  const {action}=command;
-  store=action.type==='undo'?undoEdit(context.formalStore,base,action.targetId,command.expectedRevision,context.taxonomy,projected):action.type==='creators'?saveCreatorNames(context.formalStore,base,action.names,meta,context.taxonomy,projected):saveEdit(context.formalStore,base,action.values,meta,context.taxonomy,projected);
+  store=applyFormalCommand(context.formalStore,base,command,context.taxonomy,projected);
   validateHistory(store,context.reservedWorks,context.taxonomy);revision=store.records[base.id].revision;
  }
  return {alreadyApplied:false,store,receipt:{schemaVersion:1,operationId:command.operationId,kind:command.kind,revision,actor:identity,at:command.at,command:commandText(command)}};

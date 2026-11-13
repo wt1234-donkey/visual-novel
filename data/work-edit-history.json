@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "records": {
     "g1028": {
       "revision": 1,
@@ -37,5 +37,55 @@
         }
       ]
     }
+  },
+  "journal": {
+    "schemaVersion": 1,
+    "checkpoint": {
+      "at": "2026-11-13T01:04:48.100Z",
+      "sourceCommit": "65aeddb3f90f9cda9454861dbc5098e751b4545a",
+      "coverage": "checkpoint-forward"
+    },
+    "baseline": {
+      "schemaVersion": 1,
+      "records": {
+        "g1028": {
+          "revision": 1,
+          "overrides": {
+            "writerNames": [
+              "Philip Mitchell"
+            ],
+            "artistNames": [
+              "Norton Truter"
+            ],
+            "musicianNames": [
+              "John Haward"
+            ]
+          },
+          "recent": [
+            {
+              "id": "fd48abd5-d18b-4eb5-81cc-96fbed5efe04",
+              "revision": 1,
+              "at": "2026-11-04T12:03:28.466Z",
+              "actor": "wt1234-donkey",
+              "reason": "添加或调整剧作、美术与音乐",
+              "sources": [],
+              "before": {},
+              "after": {
+                "writerNames": [
+                  "Philip Mitchell"
+                ],
+                "artistNames": [
+                  "Norton Truter"
+                ],
+                "musicianNames": [
+                  "John Haward"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "events": []
   }
 }
