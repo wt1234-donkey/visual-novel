@@ -111,3 +111,8 @@ test('ambiguous save results retain the immutable field command across reloads',
  const map=new Map(),storage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)},command={schemaVersion:1,kind:'field',operationId:'same-id',actor:'tester',at:meta('x',0).at,reason:meta('x',0).reason,sources:[],expectedRevision:0,sourceLease:{schemaVersion:1,files:{'data/source.json':'a'.repeat(40)}},action:{type:'assert',assertion:assertion('candidate')}};
  await assert.rejects(()=>createCommandSession({kind:'field',storage}).execute(command,async()=>{throw Error('lost response');}));const recovered=createCommandSession({kind:'field',storage});const r=await recovered.execute({...command,operationId:'replacement'},async original=>original);assert.equal(r.operationId,'same-id');assert.equal(map.size,0);
 });
+
+
+test('an undone assertion ID cannot be reused for a different claim or invalidate an older admission reference',()=>{
+ let s=apply(emptyFieldStore(),{type:'assert',assertion:assertion('permanent-id',1990)},'first');s=apply(s,{type:'undo',targetId:'first'},'undo-first');assert.throws(()=>apply(s,{type:'assert',assertion:assertion('permanent-id',1992)},'reuse'),/不能覆盖/);
+});

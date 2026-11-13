@@ -26,7 +26,7 @@ export function validateAssertion(a){
 function expectedChanges(store,action,meta,events){
  exact(action,{assert:['type','assertion'],select:['type','assertionId'],clear:['type','scope','field'],undo:['type','targetId']}[action?.type]||[]);
  const change=(table,key,after)=>({table,id:key,before:copy(store[table][key]??null),after:copy(after)});
- if(action.type==='assert'){validateAssertion(action.assertion);if(Object.hasOwn(store.assertions,action.assertion.id))fail('断言ID已存在；原始断言不能覆盖');return [change('assertions',action.assertion.id,action.assertion)];}
+ if(action.type==='assert'){validateAssertion(action.assertion);if(Object.hasOwn(store.assertions,action.assertion.id)||events.some(e=>e.type==='assert'&&e.intent.assertion.id===action.assertion.id))fail('断言ID已存在；原始断言不能覆盖');return [change('assertions',action.assertion.id,action.assertion)];}
  if(action.type==='select'){
   const a=store.assertions[action.assertionId];if(!a)fail('待选断言不存在');if(a.status==='disputed')fail('争议断言须先补充新的核对依据，不能直接采用');
   return [change('choices',fieldKey(a.scope,a.field),{assertionId:a.id,operationId:meta.id,actor:meta.actor,at:meta.at,reason:meta.reason})];

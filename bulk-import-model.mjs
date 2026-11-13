@@ -35,6 +35,7 @@ export function makeBasicBundle(record,id,taxonomy){
  if(!Array.isArray(v.modes)||!v.modes.every(m=>m in taxonomy.interactionModes))throw Error('玩法标签无效');
  if(typeof v.characters!=='string'||v.characters.includes('待核实'))throw Error('主要角色需要实际资料');
  const b=makeNewWork({...v,'work-id':id},taxonomy);
+ const selections=Object.fromEntries(['title','firstYear','group'].filter(f=>w.fieldEvidence?.[f]).map(f=>[f,w.fieldEvidence[f].selection.operationId]));if(Object.keys(selections).length)b.work.fieldSelectionOperations=selections;
  b.work.basicRegistryId=w.indexId;b.work.titleAliases=[...(w.aliases||[])];b.work.sourceRefs=[...(w.sourceRefs||[])];
  validateNewBundle(b);return b;
 }
