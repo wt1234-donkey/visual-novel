@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 44,
+  "endRevision": 45,
   "events": [
     {
       "schemaVersion": 1,
@@ -1282,6 +1282,43 @@
               "source": "https://solutionarchive.com/game/id%2C295/Journey+to+the+Center+of+Earth.html"
             },
             "aliases": [],
+            "deleted": true
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "e0097c40-cfdc-4897-9924-091b928c6e39",
+      "at": "2026-11-13T11:56:27.085Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Hunt the Wumpus",
+      "previousRevision": 44,
+      "revision": 45,
+      "commandType": "delete",
+      "intent": {
+        "id": "ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+        "type": "delete"
+      },
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+              "indexId": "basic-ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+              "aliases": [],
+              "title": "Hunt the Wumpus",
+              "firstYear": 1972,
+              "group": "Gregory Yob, Magnus Olsson, and David Ahl",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/source/IOCCC-1994-dodsond2.zip",
+              "mainPlacement": "promoted-basic"
+            },
             "deleted": true
           }
         }

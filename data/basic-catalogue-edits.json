@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 44,
+  "revision": 45,
   "additions": [],
   "records": {
     "g1028": {
@@ -1299,37 +1299,24 @@
         "yearStatus": "published"
       },
       "aliases": []
+    },
+    "ifarchive-table-20261104-wlbdh7n1ca7wy8oz": {
+      "identity": {
+        "id": "ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+        "indexId": "basic-ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+        "aliases": [],
+        "title": "Hunt the Wumpus",
+        "firstYear": 1972,
+        "group": "Gregory Yob, Magnus Olsson, and David Ahl",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifarchive.org/if-archive/games/source/IOCCC-1994-dodsond2.zip",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
-    {
-      "id": "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
-      "at": "2026-11-13T11:35:43.120Z",
-      "actor": "wt1234-donkey",
-      "reason": "删除作品 Stuga",
-      "changes": [
-        {
-          "id": "historical-653e32e13b8472d1",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "historical-653e32e13b8472d1",
-              "indexId": "basic-historical-1970s-20261101-653e32e13b8472d1",
-              "aliases": [],
-              "title": "Stuga",
-              "firstYear": 1978,
-              "group": "QZ / Oden mainframe（历史关联）",
-              "gameplay": "ADV",
-              "plotStyles": [],
-              "source": "https://microheaven.com/svenska/stuga_historik.shtml",
-              "mainPlacement": "promoted-basic"
-            },
-            "deleted": true
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
       "at": "2026-11-13T11:41:41.940Z",
@@ -1474,6 +1461,34 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "e0097c40-cfdc-4897-9924-091b928c6e39",
+      "at": "2026-11-13T11:56:27.085Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Hunt the Wumpus",
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+              "indexId": "basic-ifarchive-table-20261104-wlbdh7n1ca7wy8oz",
+              "aliases": [],
+              "title": "Hunt the Wumpus",
+              "firstYear": 1972,
+              "group": "Gregory Yob, Magnus Olsson, and David Ahl",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/source/IOCCC-1994-dodsond2.zip",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1485,10 +1500,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r44.json",
-        "sha": "abcd3db053c1a345a85e585231d544af44d39567",
+        "path": "data/basic-catalogue-journal/events/r31-r45.json",
+        "sha": "236a09f10faafcb0fe1647176ffc97826fd74e7f",
         "startRevision": 31,
-        "endRevision": 44,
+        "endRevision": 45,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1503,12 +1518,13 @@
           "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
           "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
           "03ceb15c-ef09-4884-961b-ef7ca36c4ae2",
-          "cf245d48-4380-4c06-882a-4738d4996fbe"
+          "cf245d48-4380-4c06-882a-4738d4996fbe",
+          "e0097c40-cfdc-4897-9924-091b928c6e39"
         ],
-        "bytes": 41693
+        "bytes": 42924
       }
     ],
-    "eventCount": 14,
-    "stateHash": "fd8391d0cffd2f05988780f1c5fb1b59228bd5f768afda92eef59f8359f97a4e"
+    "eventCount": 15,
+    "stateHash": "77b7c39b7ea5331dc75eb665949f8da7cd3cd7df041b56d9cc1f99a0d4fec966"
   }
 }
