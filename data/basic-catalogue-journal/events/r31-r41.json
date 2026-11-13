@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 40,
+  "endRevision": 41,
   "events": [
     {
       "schemaVersion": 1,
@@ -1025,6 +1025,43 @@
               "gameplay": "冒险（玩法待核）",
               "plotStyles": [],
               "source": "https://solutionarchive.com/game/id%2C5078/Quest.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
+      "at": "2026-11-13T11:33:29.721Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Stuga",
+      "previousRevision": 40,
+      "revision": 41,
+      "commandType": "delete",
+      "intent": {
+        "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+        "type": "delete"
+      },
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+              "indexId": "basic-ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+              "aliases": [],
+              "title": "Stuga",
+              "firstYear": 1978,
+              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/source/inform/swedish/Stuga_Src.zip",
               "mainPlacement": "promoted-basic"
             },
             "deleted": true

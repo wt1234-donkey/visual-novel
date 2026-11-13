@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 40,
+  "revision": 41,
   "additions": [],
   "records": {
     "g1028": {
@@ -1217,84 +1217,24 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "ifarchive-table-20261104-ocrx4yc2l5znoqfs": {
+      "identity": {
+        "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+        "indexId": "basic-ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+        "aliases": [],
+        "title": "Stuga",
+        "firstYear": 1978,
+        "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifarchive.org/if-archive/games/source/inform/swedish/Stuga_Src.zip",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
-    {
-      "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
-      "at": "2026-11-13T11:16:47.898Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ai-strange-odyssey",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ai-strange-odyssey",
-              "indexId": "dossier-ai-strange-odyssey",
-              "aliases": [
-                "Strange Odyssey",
-                "奇异奥德赛"
-              ],
-              "title": "奇异奥德赛",
-              "firstYear": 1979,
-              "group": "既有厂商专题",
-              "gameplay": "文字冒险",
-              "plotStyles": [],
-              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
-              "mainPlacement": "dossier-linked"
-            },
-            "fieldMeta": {
-              "firstYear": {
-                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
-                "at": "2026-11-13T11:16:47.898Z"
-              },
-              "yearStatus": {
-                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
-                "at": "2026-11-13T11:16:47.898Z"
-              },
-              "group": {
-                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
-                "at": "2026-11-13T11:16:47.898Z"
-              },
-              "plotTags": {
-                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
-                "at": "2026-11-13T11:16:47.898Z"
-              },
-              "plotTagEvidence": {
-                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
-                "at": "2026-11-13T11:16:47.898Z"
-              }
-            },
-            "values": {
-              "firstYear": 1981,
-              "gameplay": "文字冒险",
-              "group": "Adventure International",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": "紧张",
-                "setting": "架空世界",
-                "theme": [
-                  "科幻",
-                  "奇幻",
-                  "冒险"
-                ],
-                "tone": "荒凉"
-              },
-              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
-              "title": "奇异奥德赛",
-              "yearStatus": "published"
-            },
-            "aliases": [
-              "Strange Odyssey"
-            ]
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
       "at": "2026-11-13T11:23:15.905Z",
@@ -1456,6 +1396,34 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
+      "at": "2026-11-13T11:33:29.721Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Stuga",
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+              "indexId": "basic-ifarchive-table-20261104-ocrx4yc2l5znoqfs",
+              "aliases": [],
+              "title": "Stuga",
+              "firstYear": 1978,
+              "group": "Viggo Eriksson, Kimmo Eriksson, Olle E Johansson",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/source/inform/swedish/Stuga_Src.zip",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1467,10 +1435,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r40.json",
-        "sha": "40532cc8da80a9d4cf0742ad5a49cd06a7e11795",
+        "path": "data/basic-catalogue-journal/events/r31-r41.json",
+        "sha": "0dabff6955c69409745406b340031519b4adfb7d",
         "startRevision": 31,
-        "endRevision": 40,
+        "endRevision": 41,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1481,12 +1449,13 @@
           "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
           "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
           "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
-          "a992f79e-d369-4905-870b-6d9f1ec05c3c"
+          "a992f79e-d369-4905-870b-6d9f1ec05c3c",
+          "8ca4a152-21ce-412f-a53f-87c3d3f2a72c"
         ],
-        "bytes": 33201
+        "bytes": 34424
       }
     ],
-    "eventCount": 10,
-    "stateHash": "b11c366d77c70dd04cf7de73ffe02be99f694b82ca05d72814d47cbbe61cf165"
+    "eventCount": 11,
+    "stateHash": "a4e7dda7093d154c85529fa4909aae8b9fd90f55201704b328395409a402aaf0"
   }
 }
