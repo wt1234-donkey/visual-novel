@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 39,
+  "endRevision": 40,
   "events": [
     {
       "schemaVersion": 1,
@@ -991,6 +991,43 @@
               "yearStatus": "published"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "a992f79e-d369-4905-870b-6d9f1ec05c3c",
+      "at": "2026-11-13T11:25:42.130Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Quest",
+      "previousRevision": 39,
+      "revision": 40,
+      "commandType": "delete",
+      "intent": {
+        "id": "casa-table-20261105-5078",
+        "type": "delete"
+      },
+      "changes": [
+        {
+          "id": "casa-table-20261105-5078",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "casa-table-20261105-5078",
+              "indexId": "basic-casa-table-20261105-5078",
+              "aliases": [],
+              "title": "Quest",
+              "firstYear": 1978,
+              "group": "Peninsula School Computing Project",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C5078/Quest.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
           }
         }
       ],

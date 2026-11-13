@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 39,
+  "revision": 40,
   "additions": [],
   "records": {
     "g1028": {
@@ -1202,82 +1202,24 @@
       "aliases": [
         "Strange Odyssey"
       ]
+    },
+    "casa-table-20261105-5078": {
+      "identity": {
+        "id": "casa-table-20261105-5078",
+        "indexId": "basic-casa-table-20261105-5078",
+        "aliases": [],
+        "title": "Quest",
+        "firstYear": 1978,
+        "group": "Peninsula School Computing Project",
+        "gameplay": "冒险（玩法待核）",
+        "plotStyles": [],
+        "source": "https://solutionarchive.com/game/id%2C5078/Quest.html",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
-    {
-      "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-      "at": "2026-11-13T11:09:35.728Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "mobygames-220274",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "mobygames-220274",
-              "indexId": "basic-historical-narrative-20261103-r144-mobygames-220274",
-              "aliases": [],
-              "title": "Underground",
-              "firstYear": 1978,
-              "group": "创作主体待核",
-              "gameplay": "ADV",
-              "plotStyles": [],
-              "source": "https://www.mobygames.com/game/220274/underground/",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-                "at": "2026-11-13T11:09:35.728Z"
-              },
-              "group": {
-                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-                "at": "2026-11-13T11:09:35.728Z"
-              },
-              "gameplay": {
-                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-                "at": "2026-11-13T11:09:35.728Z"
-              },
-              "plotTags": {
-                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-                "at": "2026-11-13T11:09:35.728Z"
-              },
-              "plotTagEvidence": {
-                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-                "at": "2026-11-13T11:09:35.728Z"
-              },
-              "source": {
-                "id": "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
-                "at": "2026-11-13T11:09:35.728Z"
-              }
-            },
-            "values": {
-              "firstYear": 1978,
-              "gameplay": "文字冒险",
-              "group": "Gary Kleppe",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "setting": "封闭空间",
-                "theme": [
-                  "科幻",
-                  "奇幻",
-                  "生存",
-                  "冒险"
-                ]
-              },
-              "source": "https://solutionarchive.com/game/id,6984/Underground.html?utm_source=chatgpt.com",
-              "title": "Underground",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
       "at": "2026-11-13T11:16:47.898Z",
@@ -1486,6 +1428,34 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "a992f79e-d369-4905-870b-6d9f1ec05c3c",
+      "at": "2026-11-13T11:25:42.130Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Quest",
+      "changes": [
+        {
+          "id": "casa-table-20261105-5078",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "casa-table-20261105-5078",
+              "indexId": "basic-casa-table-20261105-5078",
+              "aliases": [],
+              "title": "Quest",
+              "firstYear": 1978,
+              "group": "Peninsula School Computing Project",
+              "gameplay": "冒险（玩法待核）",
+              "plotStyles": [],
+              "source": "https://solutionarchive.com/game/id%2C5078/Quest.html",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1497,10 +1467,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r39.json",
-        "sha": "b84a9c347b51d54b6ee4009a8ffd92322f2ac6ea",
+        "path": "data/basic-catalogue-journal/events/r31-r40.json",
+        "sha": "40532cc8da80a9d4cf0742ad5a49cd06a7e11795",
         "startRevision": 31,
-        "endRevision": 39,
+        "endRevision": 40,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1510,12 +1480,13 @@
           "496153a2-fb00-4572-9fb0-4185ff934269",
           "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
           "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
-          "5c338418-23cb-4c00-b4d8-46665ca0d1fb"
+          "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
+          "a992f79e-d369-4905-870b-6d9f1ec05c3c"
         ],
-        "bytes": 32087
+        "bytes": 33201
       }
     ],
-    "eventCount": 9,
-    "stateHash": "1239d785ea590dddc03d5788f88816d6da2eb2b5f75f29c0a0f6facbf8383385"
+    "eventCount": 10,
+    "stateHash": "b11c366d77c70dd04cf7de73ffe02be99f694b82ca05d72814d47cbbe61cf165"
   }
 }
