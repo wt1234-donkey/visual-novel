@@ -31,10 +31,11 @@ test('basic catalogue year filter combines with search and resets pagination', a
       return gameplay.value?[[{field:'gameplay',mode:'any',values:[gameplay.value]}]]:[];
     }};
   };
+  let refresh;
   const context=vm.createContext({registerPageRecovery:()=>{},restoreReleaseState:async()=>{},readReleaseJson:async path=>(await context.fetch(path)).json(),...basicFilters,queryCatalogueRows,setupCombinedControls,compileCombinedSearch,needsAdvancedIndex,location:{hash:''},document:{getElementById:element},console,workKey,validateStore,compareBasicOrder,withBasicDetails,
     createBasicWebIndex:()=>source,createCatalogueWorker:()=>null,
     readLatestBasicStore,createBasicRepository:()=>({read:async()=>({store:emptyStore()})}),
-    createBasicEditor:(base,store,onChange)=>{onChange(projectEntries(base,store),projectEntries(base,store,{includeChildren:true}),store);return {};},
+    createBasicEditor:(base,store,onChange)=>{refresh=(rows=base)=>onChange(projectEntries(rows,store),projectEntries(rows,store,{includeChildren:true}),store);refresh();return {};},
     fetch:async path=>({ok:true,json:async()=>path.includes('basic-catalogue-edits')?emptyStore():{schemaVersion:1,entries:[]}})});
   await vm.runInContext((await readFile(new URL('../minimal-adv-rpg.mjs',import.meta.url),'utf8')).replace(/^import .*;$/gm,''),context);
   assert.match(element('year').innerHTML,/value="1990"/);
@@ -42,6 +43,8 @@ test('basic catalogue year filter combines with search and resets pagination', a
   assert.doesNotMatch(element('year').innerHTML,/value="null"/);
   element('next').handlers.click();
   assert.match(element('pagination').textContent,/第 2/);
+  refresh();
+  assert.match(element('pagination').textContent,/第 2/,'saving or syncing data preserves the current unfiltered page');
   element('page-number').value='1';element('page-jump').handlers.submit({preventDefault(){}});
   assert.match(element('pagination').textContent,/第 1/);
   element('page-number-bottom').value='2';element('page-jump-bottom').handlers.submit({preventDefault(){}});
@@ -71,4 +74,11 @@ test('basic catalogue year filter combines with search and resets pagination', a
   element('filter-reset').handlers.click();assert.match(element('count').textContent,/找到 32 条/);assert.equal(element('gameplay').value,'');
   element('group-region').value='japan';element('group-region').handlers.change();assert.match(element('count').textContent,/找到 0 条/);
   element('filter-reset').handlers.click();assert.match(element('count').textContent,/找到 32 条/);
+  element('group-query').value='Group';element('group-query').handlers.input();element('next').handlers.click();
+  refresh();assert.match(element('pagination').textContent,/第 2/,'data refresh preserves the filtered page');
+  refresh(works.slice(0,25));assert.match(element('pagination').textContent,/第 1 \/ 1 页/,'a removed final page clamps to the last remaining page');
+  element('year').value='1990';element('group').value='group';
+  refresh([{...works[0],firstYear:2001,group:'Other Maker'}]);
+  assert.equal(element('year').value,'1990');assert.equal(element('group').value,'group');
+  assert.match(element('count').textContent,/找到 0 条/,'changing the last matching record retains empty filters instead of broadening the search');
 });

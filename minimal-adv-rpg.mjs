@@ -34,8 +34,10 @@ registerPageRecovery({
 const loadDetails=rows=>webIndex.details('basic',rows.filter(w=>Number.isInteger(w.slot)).map(w=>w.slot));
 function drawManufacturers(){
  const selected=$('group').value,{total,visible}=manufacturerOptions(manufacturerIndex,{region:$('group-region').value,query:$('group-query').value},selected);
- $('group').innerHTML='<option value="">全部匹配厂商</option>'+Object.entries(REGION_LABELS).map(([region,label])=>{const rows=visible.filter(item=>item.region===region);return rows.length?'<optgroup label="'+label+'">'+rows.map(item=>'<option value="'+safe(item.key)+'">'+safe(item.label)+'（'+item.count+'）</option>').join('')+'</optgroup>':'';}).join('');
- $('group').value=visible.some(item=>item.key===selected)?selected:'';
+ const missing=selected&&!visible.some(item=>item.key===selected);
+ const selectedLabel=$('group').selectedOptions?.[0]?.textContent.replace(/（[^（）]*）$/,'')||selected;
+ $('group').innerHTML='<option value="">全部匹配厂商</option>'+Object.entries(REGION_LABELS).map(([region,label])=>{const rows=visible.filter(item=>item.region===region);return rows.length?'<optgroup label="'+label+'">'+rows.map(item=>'<option value="'+safe(item.key)+'">'+safe(item.label)+'（'+item.count+'）</option>').join('')+'</optgroup>':'';}).join('')+(missing?'<option value="'+safe(selected)+'">'+safe(selectedLabel)+'（0）</option>':'');
+ $('group').value=selected;
  $('group-count').textContent='匹配 '+total.toLocaleString('zh-CN')+' 个厂商'+(total>visible.length?'；列出其中 '+visible.length+' 个，请输入名称缩小范围':'')+'。大小写重复项已合并。';
 }
 function rebuildFilters(){
@@ -52,8 +54,9 @@ function rebuildFilters(){
  for(const [key,label] of Object.entries(REGION_LABELS))$('group-region-'+key).textContent=label+'（'+manufacturerIndex.filter(item=>item.region===key).length+'）';
  drawManufacturers();
 }
-async function filterAndDraw(){
+async function filterAndDraw({keepPage=false}={}){
  if(!currentStore)return;
+ const requestedPage=keepPage?page:0;
  const version=++filterVersion;
  const region=$('group-region').value,query=$('group-query').value.trim();
  const allowed=region||query?new Set(matchingManufacturers(manufacturerIndex,{region,query}).map(item=>item.key)):null;
@@ -61,7 +64,7 @@ async function filterAndDraw(){
  try{
   const groups=controls.groups();
   $('query-status').textContent=groups.length?'已应用 '+groups.length+' 组条件。':'';
-  if(!groups.length&&!Object.values(filters).some(Boolean)){filtering=false;filtered=entries;page=0;render();return;}
+  if(!groups.length&&!Object.values(filters).some(Boolean)){filtering=false;filtered=entries;page=requestedPage;render();return;}
   filtering=true;
   $('basic-select-page').disabled=$('basic-select-filtered').disabled=true;
   $('count').textContent='正在筛选基础作品…';
@@ -76,7 +79,7 @@ async function filterAndDraw(){
   }
   filtering=false;
   filtered=Array.from(positions,index=>entries[index]);
-  page=0;render();
+  page=requestedPage;render();
  }catch(error){
   if(version!==filterVersion)return;
   filtering=false;
@@ -135,6 +138,7 @@ async function start(){
    $('q').addEventListener('input',filterAndDraw);
    for(const id of ['year','group','status'])$(id).addEventListener('change',filterAndDraw);
    $('group-query').addEventListener('input',()=>{drawManufacturers();filterAndDraw();});
+   $('manufacturer-search-form').addEventListener('submit',event=>{event.preventDefault();drawManufacturers();filterAndDraw();});
    $('group-region').addEventListener('change',()=>{drawManufacturers();filterAndDraw();});
    $('filter-reset').addEventListener('click',()=>{for(const id of ['q','year','group','status','group-query','group-region'])$(id).value='';controls.reset();drawManufacturers();filterAndDraw();});
    for(const suffix of ['','-bottom']){
@@ -179,8 +183,10 @@ function refreshManaged(main,all,store,view){
  $('stat-total').textContent=entries.length.toLocaleString('zh-CN');
  $('basic-management-status').textContent='当前已载入修改记录 r'+store.revision+'；作品资料按本页最新记录显示。修改提交后的上线进度见页面“保存与发布状态”。';
  const oldYear=$('year').value,years=[...new Set(all.map(w=>w.year).filter(Number.isInteger))].sort((a,b)=>a-b);
- $('year').innerHTML='<option value="">全部年份</option><option value="unknown">年份待核</option>'+years.map(y=>'<option value="'+y+'">'+y+' 年</option>').join('');$('year').value=years.includes(Number(oldYear))||oldYear==='unknown'?oldYear:'';
+ if(oldYear&&oldYear!=='unknown'&&Number.isInteger(Number(oldYear))&&!years.includes(Number(oldYear)))years.push(Number(oldYear));
+ years.sort((a,b)=>a-b);
+ $('year').innerHTML='<option value="">全部年份</option><option value="unknown">年份待核</option>'+years.map(y=>'<option value="'+y+'">'+y+' 年</option>').join('');$('year').value=oldYear;
  rebuildFilters();
- refreshSelection();if(editor)filterAndDraw();
+ refreshSelection();if(editor)filterAndDraw({keepPage:true});
 }
 start();
