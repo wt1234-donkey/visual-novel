@@ -11,13 +11,14 @@ from entity_model import MODEL,CREDITS,CLASSIFICATION,ENTITIES,DOSSIERS,POSITION
 from html import escape as e
 from build_relationships_preview import build as build_relationships_preview
 from build_organizations import build as build_organizations
+from effective_catalogue import load_effective, effective_title
 ROOT=Path(__file__).resolve().parents[1]
 
 def shell(title,body):
  return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{e(title)} · 叙事游戏年鉴</title><link rel="stylesheet" href="styles.css?v=20261021-entities"><link rel="stylesheet" href="company.css?v=20261021-entities"><script type="module" src="entity-directory.mjs?v=20261021-entities"></script></head><body><div class="app-shell"><header class="masthead"><a class="brand" href="index.html">叙事游戏年鉴</a><nav><a href="index.html#catalogue">主库</a><a href="index.html#company-dossiers">公司与品牌专题</a><a href="entities.html">主体档案</a><a href="classification.html">作品分类审核</a></nav></header><main>{body}</main><footer>资料按已知证据整理；身份与具体参与职责分别核对。</footer></div></body></html>'''
 
 def build():
- data=json.loads((ROOT/'data/games.json').read_text());coverage=json.loads((ROOT/'data/company-coverage.json').read_text())
+ effective=load_effective(ROOT);data=effective['main'];coverage=effective['coverage']
  allworks={w['id']:w for w in data['works']}
  for c in coverage['companies']:
   for field in ['relatedGames','dossierOnlyWorks']:
@@ -47,7 +48,7 @@ def build():
  body=f'<section class="company-hero"><h1>作品位置与分类审核</h1><p class="lead">作品位置、叙事主次、互动方式与厂商关系分开记录。本轮保留既有主库、关联和书目位置；未因ADV、RPG、问答或文字输入标签自动增删作品。</p><p>主库{main_count:,}部 · 关联记录{related_count}条 · 仅专题书目{bibliography_count}条。后两项为原有专题记录数，未经身份核对不能相加作为独立作品总数。</p><p><a href="data/work-classification.json">下载逐作审核记录</a> · <a href="data/entity-model.md">查看分类规则</a></p></section>'
  body+='<div class="directory-controls"><label>查找作品<input type="search" id="directory-search" placeholder="作品名称或互动方式"></label><label>当前收录位置<select id="directory-kind"><option value="">全部位置</option>'+''.join(f'<option value="{k}">{v}</option>' for k,v in POSITION.items())+'</select></label></div><p id="directory-count" aria-live="polite"></p><div class="audit-scroll"><table><thead><tr><th>作品</th><th>当前位置</th><th>互动方式</th><th>本轮处理与依据</th></tr></thead><tbody>'
  for p in sorted(CLASSIFICATION['placements'],key=lambda p:(allworks[p['workId']]['firstYear'],p['workId'])):
-  w=allworks[p['workId']];name=w.get('chineseTitle') or w['title'];dossiers=member[w['id']];url=f'{dossiers[0]}.html#{w["id"]}' if dossiers else 'index.html#catalogue'
+  w=allworks[p['workId']];name=effective_title(w);dossiers=member[w['id']];url=f'{dossiers[0]}.html#{w["id"]}' if dossiers else 'index.html#catalogue'
   text=f'{name} {w["originalTitle"]} '+ ' '.join(w['interactionModes'])
   body+=f'<tr class="classification-row" data-directory-kind="{p["placement"]}" data-search="{e(text,quote=True)}"><th scope="row"><a href="{url}">{e(name)}</a><small>{w["firstYear"]} · {e(w["originalTitle"])}</small></th><td>{POSITION[p["placement"]]}</td><td>{e("、".join(w["interactionModes"]))}</td><td>{e(p["reason"])}<a class="source-link" href="{e(p["source"],quote=True)}" target="_blank" rel="noopener noreferrer">现有作品依据 ↗</a></td></tr>'
  body+='</tbody></table></div>';out['classification.html']=shell('作品分类审核',body)

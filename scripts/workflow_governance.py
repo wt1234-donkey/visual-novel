@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 
@@ -52,6 +53,14 @@ def check(root=ROOT):
     if expected != {p.name for p in (root / 'archive/workflows').glob('*.yml')}:
         raise ValueError('Unregistered archived workflow')
     scripts=check_scripts(root)
+    writes=json.loads((root/'config/write-entrypoints.json').read_text())
+    declared=set(writes['writers'])|set(writes['dispatchOnly'])
+    actual_writers={name for name in actual if re.search(r'\bcontents:\s*write\b',(root/'.github/workflows'/name).read_text())}
+    if writes.get('schemaVersion')!=1 or actual_writers!=declared:
+        raise ValueError('Repository write entrypoints differ from registered protocol')
+    for workflow,entry in writes['writers'].items():
+        if writes['validator'] not in (root/'.github/workflows'/workflow).read_text() or entry['protocol'] not in (root/entry['script']).read_text():
+            raise ValueError('Active writer omits shared validation or sealing: '+workflow)
     vendors=json.loads((root/'config/runtime-vendors.json').read_text())
     if vendors.get('schemaVersion')!=1:
         raise ValueError('Invalid runtime vendor registry')

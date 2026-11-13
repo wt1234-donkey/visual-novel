@@ -49,7 +49,8 @@ export function createCatalogueService({base,initial,initialSnapshot={},reposito
    const operation=pending;
    if(typeof repository.executeCommand==='function'){
     const action=operation.undo?{type:'undo',targetId:operation.snapshot.store.recent.at(-1)?.id}:operation.action;
-    const result=await repository.executeCommand({schemaVersion:1,operationId:operation.meta.id,kind:'basic',actor,at:operation.meta.at,reason:operation.meta.reason,sources:[],expectedRevision:operation.snapshot.store.revision,action});
+    let result;try{result=await repository.executeCommand({schemaVersion:1,operationId:operation.meta.id,kind:'basic',actor,at:operation.meta.at,reason:operation.meta.reason,sources:[],expectedRevision:operation.snapshot.store.revision,action});}
+    catch(error){if(error.commandNotApplied)pending=null;throw error;}
     update(result);pending=null;return {...result.result,revision:snapshot.store.revision,operationId:operation.meta.id};
    }
    const result=await commitBasicCommand({repository,snapshot:operation.snapshot,

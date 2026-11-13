@@ -1,10 +1,11 @@
 import {readFileSync,existsSync,mkdirSync,writeFileSync} from 'node:fs';
 import {join,dirname} from 'node:path';
-import {createHash} from 'node:crypto';
+import {upgradeStore} from '../../domain/catalogue/model.mjs';
 import {loadCatalogueSnapshot} from './catalogue-snapshot.mjs';
 import {readBasicStoreSync,saveBasicStoreSync} from './basic-store.mjs';
 import {planCommand} from '../../application/commands/execute.mjs';
-export const receiptPath=operationId=>'data/command-receipts/'+createHash('sha256').update(operationId).digest('hex')+'.json';
+export {commandReceiptPath as receiptPath} from './write-boundary.mjs';
+import {commandReceiptPath as receiptPath} from './write-boundary.mjs';
 export function executeCommand(root,command,identity){
  const path=receiptPath(command.operationId),receiptFile=join(root,path);
  const receipt=existsSync(receiptFile)?JSON.parse(readFileSync(receiptFile,'utf8')):null;
@@ -13,7 +14,7 @@ export function executeCommand(root,command,identity){
  if(!receipt){
   const {snapshot,inputs,sourceLease}=loadCatalogueSnapshot(root),coverage=JSON.parse(readFileSync(join(root,'data/company-coverage.json'),'utf8'));
   const formalWorks=[...new Map([...inputs.supplement.works,...inputs.main.works].map(work=>[work.id,work])).values()];
-  context={sourceLease,basicRows:snapshot.sourceRows,basicStore:inputs.store,formalStore:inputs.history,identityStore:inputs.identityStore,sourceIdentity:snapshot.sourceIdentity,fieldStore:snapshot.fieldCatalogue.store,fieldContext:snapshot.fieldCatalogue.context,fieldEvidence:inputs.fieldEvidence,formalWorks,
+  context={sourceLease,basicRows:snapshot.sourceRows,basicStore:upgradeStore(inputs.store),formalStore:inputs.history,identityStore:inputs.identityStore,sourceIdentity:snapshot.sourceIdentity,fieldStore:snapshot.fieldCatalogue.store,fieldContext:snapshot.fieldCatalogue.context,fieldEvidence:inputs.fieldEvidence,formalWorks,
    reservedWorks:[...formalWorks,...coverage.companies.flatMap(company=>[...(company.relatedGames||[]),...(company.dossierOnlyWorks||[])])],taxonomy:JSON.parse(readFileSync(join(root,'data/taxonomy.json'),'utf8'))};
  }
  const result=planCommand(command,context,identity);

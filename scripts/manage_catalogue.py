@@ -12,9 +12,11 @@ import os
 import re
 import unicodedata
 import subprocess
+import hashlib
 from pathlib import Path
 
 from source_urls import source_url_valid
+from write_boundary import seal_write
 
 ROOT = Path(__file__).resolve().parents[1]
 PATHS = {'editorial': 'discovery-editorial.json', 'notes': 'work-notes.json',
@@ -309,11 +311,19 @@ def apply_package(package, current, games, baseline, dossiers, *, historical=Fal
 
 
 def apply_file(path, root=ROOT):
-    if (Path(root) / 'config/source-identity-baseline.json').exists():
-        subprocess.run(['node', 'scripts/migrate_source_identities.mjs', '--check'], cwd=root, check=True)
     raw = Path(path).read_text(encoding='utf-8')
     assert len(raw) <= 60000, '更新包超过60000字符，请分批'
     package = json.loads(raw)
+    fingerprint=hashlib.sha256(json.dumps(package,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    operation_id='management:'+fingerprint
+    receipt_file=Path(root)/'data/command-receipts'/(hashlib.sha256(operation_id.encode()).hexdigest()+'.json')
+    if receipt_file.exists():
+        receipt=json.loads(receipt_file.read_text())
+        assert receipt['operationId']==operation_id and json.loads(receipt['command'])==package, '操作ID已用于不同管理包'
+        print('Management package already applied; later changes are preserved.')
+        return
+    if (Path(root) / 'config/source-identity-baseline.json').exists():
+        subprocess.run(['node', 'scripts/migrate_source_identities.mjs', '--check'], cwd=root, check=True)
     current = load(root)
     games = read('games.json', root)
     baseline = read('narrative-editorial-baseline-20261029.json', root)
@@ -339,6 +349,9 @@ def apply_file(path, root=ROOT):
     outputs['narrative-cataloguing-20261030.json'] = report
     for name, content in outputs.items():
         write_registry_text(root / 'data' / name, json.dumps(content, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    seal_write(root, {'operationId':operation_id,'kind':'management',
+        'actor':os.environ.get('GITHUB_ACTOR','local-review'),'at':dt.datetime.now(dt.timezone.utc).isoformat(),
+        'revision':len(history['batches']),'command':package})
     print(f"Applied {len(package['operations'])} reviewed changes; complete repository checks are still required.")
 
 

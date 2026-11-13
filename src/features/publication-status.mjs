@@ -1,4 +1,5 @@
 import {operationReceipt,publicationState,PUBLICATION_LABELS} from '../application/publication/status.mjs';
+import {withDeadline} from '../infrastructure/storage/async-read.mjs';
 const ancestryCaches=new WeakMap();
 const KEY='catalogue-operation-receipts-v1',REPO='https://api.github.com/repos/wt1234-donkey/visual-novel';
 export function recordSavedOperation(values){
@@ -7,16 +8,16 @@ export function recordSavedOperation(values){
  if(typeof window!=='undefined')window.dispatchEvent(new CustomEvent('catalogue-operation-saved',{detail:receipt}));
  return receipt;
 }
-export async function checkPublication(receipts,fetcher=fetch){
+export async function checkPublication(receipts,fetcher=fetch,{signal,timeout=12000,requestTimeout=8000}={}){
  receipts=receipts.slice(0,5);
  let deployment=null,runs=[],available=true;
- try{const response=await fetcher('./deployment.json',{cache:'no-store'});if(response.ok)deployment=await response.json();}catch{}
+ const check=async scope=>{
+ const json=url=>withDeadline(async s=>{const response=await fetcher(url,{cache:'no-store',signal:s});if(!response.ok)throw Error('发布状态暂不可读取');return response.json();},{signal:scope,timeout:requestTimeout});
+ try{deployment=await json('./deployment.json');}catch{}
  // Offline publication evidence is sufficient, including a later descendant release.
  if(receipts.every(receipt=>publicationState(receipt,deployment).state==='published'))return receipts.map(receipt=>({receipt,...publicationState(receipt,deployment)}));
  try{
-  const response=await fetcher(REPO+'/actions/runs?branch=main&per_page=20',{cache:'no-store'});
-  if(!response.ok)throw Error('发布状态暂不可读取');
-  const data=await response.json();runs=(data.workflow_runs||[]).filter(run=>['.github/workflows/pages.yml','.github/workflows/pages-deploy.yml'].includes(run.path)&&run.event!=='pull_request'&&/^[a-f0-9]{40}$/.test(run.head_sha)).slice(0,2);
+  const data=await json(REPO+'/actions/runs?branch=main&per_page=20');runs=(data.workflow_runs||[]).filter(run=>['.github/workflows/pages.yml','.github/workflows/pages-deploy.yml'].includes(run.path)&&run.event!=='pull_request'&&/^[a-f0-9]{40}$/.test(run.head_sha)).slice(0,2);
   if(!ancestryCaches.has(fetcher))ancestryCaches.set(fetcher,new Map());
   const comparisons=ancestryCaches.get(fetcher);
   if(comparisons.size>100)comparisons.clear();
@@ -24,11 +25,13 @@ export async function checkPublication(receipts,fetcher=fetch){
    if(!receipt.commit)continue;
    if(run.head_sha===receipt.commit){run.contains??=new Set();run.contains.add(receipt.operationId);continue;}
    const key=receipt.commit+'...'+run.head_sha;
-   if(!comparisons.has(key))comparisons.set(key,(async()=>{const response=await fetcher(REPO+'/compare/'+key);if(!response.ok)throw Error('提交关系暂不可确认');const value=await response.json();return ['identical','ahead'].includes(value.status);})());
+   if(!comparisons.has(key))comparisons.set(key,json(REPO+'/compare/'+key).then(value=>['identical','ahead'].includes(value.status)).catch(error=>{comparisons.delete(key);throw error;}));
    if(await comparisons.get(key)){run.contains??=new Set();run.contains.add(receipt.operationId);}
   }
  }catch{available=false;}
  return receipts.map(receipt=>({receipt,...publicationState(receipt,deployment,runs.map(run=>({...run,containsOperation:run.contains?.has(receipt.operationId)})),{available})}));
+ };
+ try{return await withDeadline(check,{signal,timeout});}catch{return receipts.map(receipt=>({receipt,...publicationState(receipt,deployment,[],{available:false})}));}
 }
 export function installPublicationStatus(){
  let receipts=[];try{receipts=JSON.parse(localStorage.getItem(KEY)||'[]').map(operationReceipt);}catch{}

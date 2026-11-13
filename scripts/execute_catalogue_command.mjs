@@ -4,7 +4,7 @@ import {join} from 'node:path';
 import {COMMAND_LIMIT,validateCommand} from '../src/application/commands/envelope.mjs';
 import {gitBlobHash} from '../src/infrastructure/filesystem/basic-store.mjs';
 import {executeCommand} from '../src/infrastructure/filesystem/command-executor.mjs';
-import {buildAuditLedger} from '../src/infrastructure/filesystem/audit-ledger.mjs';
+import {sealCatalogueWrite} from '../src/infrastructure/filesystem/write-boundary.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 export function dispatchReference(event,{rehearsal=false}={}){
  const ref=event.client_payload;
@@ -23,7 +23,7 @@ async function main(){
  const bytes=Buffer.from(blob.content.replace(/\s/g,''),'base64');if(bytes.length>COMMAND_LIMIT||gitBlobHash(bytes)!==reference.commandSha)throw Error('命令对象摘要不符');
  const command=validateCommand(JSON.parse(bytes.toString('utf8')));if(command.operationId!==reference.operationId)throw Error('派发操作ID不一致');
  const result=executeCommand(root,command,reference.actor);
- if(!result.alreadyApplied)await buildAuditLedger(root);
+ if(!result.alreadyApplied)await sealCatalogueWrite(root,{operationId:command.operationId,command});
  if(process.env.GITHUB_OUTPUT)writeFileSync(process.env.GITHUB_OUTPUT,'already='+result.alreadyApplied+'\nkind='+command.kind+'\n',{flag:'a'});
  console.log(JSON.stringify({operationId:command.operationId,revision:result.receipt.revision,alreadyApplied:result.alreadyApplied}));
 }

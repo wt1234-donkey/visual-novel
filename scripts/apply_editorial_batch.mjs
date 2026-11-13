@@ -1,20 +1,25 @@
 import {readJsonFileSync} from '../src/infrastructure/filesystem/registry.mjs';
-import {readFileSync,writeFileSync, mkdtempSync,rmSync} from 'node:fs';
-import {join} from 'node:path';
+import {readFileSync,writeFileSync, mkdirSync,existsSync,mkdtempSync,rmSync} from 'node:fs';
+import {join,dirname} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync} from 'node:child_process';
 import {isDeepStrictEqual} from 'node:util';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {EDITORIAL_LIMIT,EDITORIAL_BATCH_LIMIT,editorialId,validateProposal} from '../editorial-proposal.mjs';
-import {applyChange,undoLast,validateStore} from '../basic-catalogue-model.mjs';
-import {saveEdit,undoEdit,projectWork,validateHistory} from '../work-edit-model.mjs';
+import {upgradeStore,validateStore} from '../basic-catalogue-model.mjs';
+import {validateHistory} from '../work-edit-model.mjs';
 import {readBasicStoreSync,saveBasicStoreSync} from '../src/infrastructure/filesystem/basic-store.mjs';
 import {assembleBasicRows} from './build_basic_web_index.mjs';
 import {createHash} from 'node:crypto';
 import {validateBasicAction} from '../src/application/commands/envelope.mjs';
 import {assertCommandSource} from '../src/application/commands/execute.mjs';
-import {sourceLeaseSync} from '../src/infrastructure/filesystem/effective-catalogue.mjs';
+import {sourceLeaseSync,loadEffectiveInputsSync} from '../src/infrastructure/filesystem/effective-catalogue.mjs';
 import {journalKey} from '../src/domain/catalogue/journal.mjs';
+import {planCommand} from '../src/application/commands/execute.mjs';
+import {commandReceiptPath} from '../src/infrastructure/filesystem/write-boundary.mjs';
+import {chosenFields} from '../src/domain/catalogue/field-evidence.mjs';
+import {workKey} from '../src/domain/catalogue/identity.mjs';
+import {buildEffectiveCatalogue,projectBasicSources} from '../src/domain/catalogue/effective.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=(dir,file)=>readJsonFileSync(join(dir,'data',file));
@@ -94,25 +99,31 @@ export function applyEditorialBatch(batch,dir=root){
   return {already:true,management:false};
  }
  if(ledger.batches.some(row=>row.id===batch.id||row.proposals.some(id=>ids.includes(id))))fail('该提案已经入库，请同步状态');
+ if(ids.some(id=>existsSync(join(dir,commandReceiptPath(id)))))fail('提案操作ID已用于其他写入，请重新核对');
  const time=new Date().toISOString();
  const policy=(()=>{try{return read(dir,'trusted-save-policy.json').mode;}catch{return 'legacy';}})();
  for(const p of proposals.filter(p=>['basic','work'].includes(p.kind))){
   if(p.change.sourceLease||policy==='trusted')assertCommandSource(p.change.sourceLease,sourceLeaseSync(dir),p.kind==='work'?'formal':'basic');
  }
  const basic=proposals.filter(p=>p.kind==='basic'),formal=proposals.filter(p=>p.kind==='work');
+ const receipts=[],lease=sourceLeaseSync(dir),effectiveInputs=loadEffectiveInputsSync(dir),fieldEvidence=effectiveInputs.fieldEvidence;
+ const commandFor=(p,kind,action,expectedRevision)=>({schemaVersion:1,operationId:p.id,kind,actor:'编目审核台',at:time,reason:p.reason,sources:p.sources,expectedRevision,sourceLease:p.change.sourceLease||lease,action});
  let basicResult,workResult;
  if(basic.length){
-  basicResult=readBasicStoreSync(dir);
+  basicResult=upgradeStore(readBasicStoreSync(dir));
   const current=basicResult,revision=current.revision;
-  const base=catalogueRows(dir),touched=new Set(),history=new Map();
+  const sourceFormal=buildEffectiveCatalogue({...effectiveInputs,basicStore:{records:{}},fieldEvidence:{}}),formalById=new Map([...sourceFormal.supplement.works,...sourceFormal.main.works].map(w=>[w.id,w]));
+  const base=projectBasicSources(catalogueRows(dir),formalById,effectiveInputs.formalLinks).map(row=>({...row,fieldEvidence:chosenFields(fieldEvidence,'work',workKey(row))})),touched=new Set(),history=new Map();
   for(const p of basic){
-   const action=strictBasic(p.change.action);
+   let action=strictBasic(p.change.action);
    if(p.change.expectedRevision!==revision)checkStaleBasicEdit(dir,p,action,current,history);
    if(action.type==='undo'){
     if(basic.length>1)fail('基础库回撤须单独发布');
-    basicResult=undoLast(basicResult,revision,{id:p.id,at:time,actor:'编目审核台',reason:p.reason});continue;
+    action={type:'undo',targetId:action.targetId||basicResult.recent.at(-1)?.id};
    }
-   const next=applyChange(basicResult,base,action,{expectedRevision:basicResult.revision,id:p.id,at:time,actor:'编目审核台',reason:p.reason});
+   const result=planCommand(commandFor(p,'basic',action,basicResult.revision),{sourceLease:lease,basicRows:base,basicStore:basicResult,fieldEvidence},'编目审核台'),next=result.store;
+   receipts.push(result.receipt);
+   if(action.type==='undo'){basicResult=next;continue;}
    const event=next.recent.at(-1);
    for(const key of [...event.added,...event.changes.map(row=>row.id)]){
     if(touched.has(key))fail('所选提案修改了相同基础作品，请拆分并核对 '+key);
@@ -127,9 +138,9 @@ export function applyEditorialBatch(batch,dir=root){
   for(const p of formal){
    const c=p.change,base=full.find(w=>w.id===c.workId);
    if(!base)fail('正式作品已变化，请重新读取 '+c.workId);
-   const projected=reserved.map(w=>projectWork(w,workResult));
-   workResult=c.undo?undoEdit(workResult,base,c.undo,c.expectedRevision,taxonomy,projected,{id:p.id,at:time,actor:'编目审核台',reason:p.reason,sources:p.sources}):
-    saveEdit(workResult,base,c.after,{id:p.id,at:time,actor:'编目审核台',expectedRevision:c.expectedRevision,reason:p.reason,sources:p.sources},taxonomy,projected);
+   const action=c.undo?{type:'undo',workId:c.workId,targetId:c.undo}:{type:'edit',workId:c.workId,values:c.after};
+   const result=planCommand(commandFor(p,'formal',action,c.expectedRevision),{sourceLease:lease,formalWorks:full,reservedWorks:reserved,formalStore:workResult,taxonomy,fieldEvidence},'编目审核台');
+   workResult=result.store;receipts.push(result.receipt);
   }
   validateHistory(workResult,reserved,taxonomy);
  }
@@ -148,6 +159,8 @@ export function applyEditorialBatch(batch,dir=root){
  if(workResult)save(dir,workFile,workResult);
  ledger.batches.push({id:batch.id,proposals:ids,fingerprints,at:time});
  save(dir,ledgerFile,ledger);
+ for(const receipt of receipts){const path=join(dir,commandReceiptPath(receipt.operationId));if(existsSync(path)&&JSON.parse(readFileSync(path,'utf8')).command!==receipt.command)fail('操作ID已用于不同写入');mkdirSync(dirname(path),{recursive:true});writeFileSync(path,JSON.stringify(receipt,null,2)+'\n');}
+ execFileSync('node',[fileURLToPath(new URL('./seal_catalogue_write.mjs',import.meta.url)),dir],{input:JSON.stringify({operationId:'editorial-batch:'+batch.id,kind:'editorial-batch',actor:'编目审核台',at:time,revision:ledger.batches.length,command:batch,childOperationIds:receipts.map(r=>r.operationId)}),stdio:['pipe','pipe','pipe']});
  return {already:false,management:!!management.length};
 }
 

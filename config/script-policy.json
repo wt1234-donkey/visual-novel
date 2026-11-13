@@ -1120,6 +1120,11 @@
       "basis": "active workflow/dependency"
     },
     {
+      "path": "scripts/seal_catalogue_write.mjs",
+      "role": "active",
+      "basis": "shared receipt and archive sealing for every active writer"
+    },
+    {
       "path": "scripts/source_urls.py",
       "role": "active",
       "basis": "active workflow/dependency"
@@ -1205,6 +1210,11 @@
       "path": "scripts/workflow_governance.py",
       "role": "active",
       "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/write_boundary.py",
+      "role": "active",
+      "basis": "Python bridge to the shared write protocol"
     }
   ]
 }

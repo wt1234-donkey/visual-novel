@@ -45,9 +45,14 @@ jobs:
       - name: Verify cross-release recovery in Chromium
         env:
           PLAYWRIGHT_MODULE: /tmp/catalogue-browser/node_modules/playwright
-        run: node --test tests/browser/*.test.mjs
+        run: node --test tests/browser/field-evidence.test.mjs tests/browser/formal-audit.test.mjs tests/browser/release-recovery.test.mjs tests/browser/source-identities.test.mjs
       - name: Build static artifact and provenance manifest
         run: python3 scripts/build_pages_artifact.py --workspace "$RUNNER_TEMP/catalogue-build" --output _site
+      - name: Verify published entrypoints against the actual artifact
+        env:
+          PLAYWRIGHT_MODULE: /tmp/catalogue-browser/node_modules/playwright
+          ATLAS_SITE_DIRECTORY: _site
+        run: node --test tests/browser/published-pages.test.mjs
       - name: Upload verified Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:

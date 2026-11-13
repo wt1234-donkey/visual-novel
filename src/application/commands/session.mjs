@@ -23,7 +23,7 @@ export function createCommandSession({kind,storage=defaultStorage()}={}){
    catch(error){
     // These pre-write conflicts are definite. Ambiguous transport failures keep
     // their command for subsequent clicks, reconnects and explicit retries.
-    if(error.formalWriteNotAttempted){pending.delete(signature);persist();}
+    if(error.formalWriteNotAttempted||error.commandNotApplied){pending.delete(signature);persist();}
     throw error;
    }finally{active=false;}
   }
