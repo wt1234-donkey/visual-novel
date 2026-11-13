@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 32,
+  "endRevision": 33,
   "events": [
     {
       "schemaVersion": 1,
@@ -205,6 +205,109 @@
               },
               "source": "https://ifdb.org/viewgame?id=oiazjb4r7n49thmu",
               "title": "Journey to the Center of the Earth",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+      "at": "2026-11-13T08:13:10.387Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 32,
+      "revision": 33,
+      "commandType": "edit",
+      "intent": {
+        "id": "ifdb-4s6xy0r9wbztg7y2",
+        "type": "edit",
+        "values": {
+          "firstYear": 1978,
+          "gameplay": "文字冒险",
+          "group": "Roger Chaffee",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "emotion": [
+              "紧张",
+              "沉浸感"
+            ],
+            "perspective": "第一人称",
+            "setting": "架空世界",
+            "theme": [
+              "推理",
+              "冒险"
+            ]
+          },
+          "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+          "title": "Quest",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ifdb-4s6xy0r9wbztg7y2",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-4s6xy0r9wbztg7y2",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
+              "aliases": [],
+              "title": "Quest",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "group": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "gameplay": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTags": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTagEvidence": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Roger Chaffee",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": [
+                  "紧张",
+                  "沉浸感"
+                ],
+                "perspective": "第一人称",
+                "setting": "架空世界",
+                "theme": [
+                  "推理",
+                  "冒险"
+                ]
+              },
+              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+              "title": "Quest",
               "yearStatus": "published"
             },
             "aliases": []

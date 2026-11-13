@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 32,
+  "revision": 33,
   "additions": [],
   "records": {
     "g1028": {
@@ -837,96 +837,68 @@
         "yearStatus": "published"
       },
       "aliases": []
+    },
+    "ifdb-4s6xy0r9wbztg7y2": {
+      "identity": {
+        "id": "ifdb-4s6xy0r9wbztg7y2",
+        "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
+        "aliases": [],
+        "title": "Quest",
+        "firstYear": 1978,
+        "group": "创作品牌待核",
+        "gameplay": "互动小说（玩法待核）",
+        "plotStyles": [],
+        "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+          "at": "2026-11-13T08:13:10.387Z"
+        },
+        "group": {
+          "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+          "at": "2026-11-13T08:13:10.387Z"
+        },
+        "gameplay": {
+          "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+          "at": "2026-11-13T08:13:10.387Z"
+        },
+        "plotTags": {
+          "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+          "at": "2026-11-13T08:13:10.387Z"
+        },
+        "plotTagEvidence": {
+          "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+          "at": "2026-11-13T08:13:10.387Z"
+        }
+      },
+      "values": {
+        "firstYear": 1978,
+        "gameplay": "文字冒险",
+        "group": "Roger Chaffee",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "emotion": [
+            "紧张",
+            "沉浸感"
+          ],
+          "perspective": "第一人称",
+          "setting": "架空世界",
+          "theme": [
+            "推理",
+            "冒险"
+          ]
+        },
+        "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+        "title": "Quest",
+        "yearStatus": "published"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "1f65edb5-4d08-45e2-96da-db9d3a44c056",
-      "at": "2026-11-10T12:33:06.684Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "vndb-v62159",
-          "before": {
-            "identity": {
-              "id": "vndb-v62159",
-              "indexId": "nextmoe-galgame-bulk-20261101-r53-57845",
-              "aliases": [
-                "- la femme - BLANC～「可憐」",
-                "ラ・ファム",
-                "- la femme - BLANC～「可怜"
-              ],
-              "title": "- la femme - BLANC ~  \"Karen\"",
-              "firstYear": 2002,
-              "group": "创作品牌待核",
-              "gameplay": "视觉小说",
-              "plotStyles": [],
-              "source": "https://api.nextmoe.dev/v2/catalog/works/57845",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "- la femme - BLANC ~  \"Karen\"",
-              "firstYear": 2002,
-              "group": "Colt45sec",
-              "gameplay": "视觉小说",
-              "plotStyles": [],
-              "plotTags": {
-                "tone": [
-                  "喜剧",
-                  "轻松"
-                ],
-                "relationship": "恋爱",
-                "theme": "冒险",
-                "content": "色情",
-                "perspective": "第一人称"
-              },
-              "plotTagEvidence": {},
-              "source": "https://api.nextmoe.dev/v2/catalog/works/57845"
-            },
-            "aliases": [
-              "- la femme - BLANC～「可憐」",
-              "ラ・ファム",
-              "- la femme - BLANC～「可怜"
-            ]
-          },
-          "after": {
-            "identity": {
-              "id": "vndb-v62159",
-              "indexId": "nextmoe-galgame-bulk-20261101-r53-57845",
-              "aliases": [
-                "- la femme - BLANC～「可憐」",
-                "ラ・ファム",
-                "- la femme - BLANC～「可怜"
-              ],
-              "title": "- la femme - BLANC ~  \"Karen\"",
-              "firstYear": 2002,
-              "group": "创作品牌待核",
-              "gameplay": "视觉小说",
-              "plotStyles": [],
-              "source": "https://api.nextmoe.dev/v2/catalog/works/57845",
-              "mainPlacement": "promoted-basic"
-            },
-            "values": {
-              "title": "- la femme - BLANC ~  \"Karen\"",
-              "firstYear": 2002,
-              "group": "Colt45sec",
-              "gameplay": "视觉小说",
-              "plotStyles": [],
-              "plotTags": {},
-              "plotTagEvidence": {},
-              "source": "https://api.nextmoe.dev/v2/catalog/works/57845"
-            },
-            "aliases": [
-              "- la femme - BLANC～「可憐」",
-              "ラ・ファム",
-              "- la femme - BLANC～「可怜"
-            ]
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
       "at": "2026-11-13T00:53:27.014Z",
@@ -1075,6 +1047,78 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+      "at": "2026-11-13T08:13:10.387Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifdb-4s6xy0r9wbztg7y2",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-4s6xy0r9wbztg7y2",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
+              "aliases": [],
+              "title": "Quest",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "group": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "gameplay": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTags": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              },
+              "plotTagEvidence": {
+                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
+                "at": "2026-11-13T08:13:10.387Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Roger Chaffee",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": [
+                  "紧张",
+                  "沉浸感"
+                ],
+                "perspective": "第一人称",
+                "setting": "架空世界",
+                "theme": [
+                  "推理",
+                  "冒险"
+                ]
+              },
+              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
+              "title": "Quest",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1086,18 +1130,19 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r32.json",
-        "sha": "c46c395af126d56a26aff13e0ca6080b2d9854fa",
+        "path": "data/basic-catalogue-journal/events/r31-r33.json",
+        "sha": "7103f8ccae072e4090dcbaa32e8da77054f7cef8",
         "startRevision": 31,
-        "endRevision": 32,
+        "endRevision": 33,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
-          "66a0d513-b4c5-4146-9846-d2d5225b1157"
+          "66a0d513-b4c5-4146-9846-d2d5225b1157",
+          "61d7587d-7e36-4caa-839d-4f83adc512ad"
         ],
-        "bytes": 6773
+        "bytes": 10039
       }
     ],
-    "eventCount": 2,
-    "stateHash": "bef144bdd8f4f3eb90a091cd1585c3be16934856761d1fbabaaec0a18e6c2f37"
+    "eventCount": 3,
+    "stateHash": "32651849c677496cea3715aa95861e003390b9630c7949679806e1a9afb65bba"
   }
 }
