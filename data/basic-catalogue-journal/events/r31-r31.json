@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "startRevision": 31,
+  "endRevision": 31,
+  "events": [
+    {
+      "schemaVersion": 1,
+      "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
+      "at": "2026-11-13T00:53:27.014Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 30,
+      "revision": 31,
+      "commandType": "edit",
+      "intent": {
+        "id": "ai-pyramid-doom",
+        "type": "edit",
+        "values": {
+          "firstYear": 1981,
+          "gameplay": "文字冒险",
+          "group": "Adventure International",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "emotion": [
+              "惊悚",
+              "恐怖"
+            ],
+            "setting": "异世界",
+            "theme": [
+              "奇幻",
+              "冒险"
+            ],
+            "tone": "黑暗"
+          },
+          "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams8",
+          "title": "末日金字塔",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ai-pyramid-doom",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ai-pyramid-doom",
+              "indexId": "dossier-ai-pyramid-doom",
+              "aliases": [
+                "Pyramid of Doom",
+                "末日金字塔"
+              ],
+              "title": "末日金字塔",
+              "firstYear": 1979,
+              "group": "既有厂商专题",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams8",
+              "mainPlacement": "dossier-linked"
+            },
+            "fieldMeta": {
+              "firstYear": {
+                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
+                "at": "2026-11-13T00:53:27.014Z"
+              },
+              "yearStatus": {
+                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
+                "at": "2026-11-13T00:53:27.014Z"
+              },
+              "group": {
+                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
+                "at": "2026-11-13T00:53:27.014Z"
+              },
+              "plotTags": {
+                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
+                "at": "2026-11-13T00:53:27.014Z"
+              },
+              "plotTagEvidence": {
+                "id": "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
+                "at": "2026-11-13T00:53:27.014Z"
+              }
+            },
+            "values": {
+              "firstYear": 1981,
+              "gameplay": "文字冒险",
+              "group": "Adventure International",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": [
+                  "惊悚",
+                  "恐怖"
+                ],
+                "setting": "异世界",
+                "theme": [
+                  "奇幻",
+                  "冒险"
+                ],
+                "tone": "黑暗"
+              },
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams8",
+              "title": "末日金字塔",
+              "yearStatus": "published"
+            },
+            "aliases": [
+              "Pyramid of Doom"
+            ]
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    }
+  ]
+}
