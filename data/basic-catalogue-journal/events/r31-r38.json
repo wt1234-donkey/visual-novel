@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 37,
+  "endRevision": 38,
   "events": [
     {
       "schemaVersion": 1,
@@ -722,6 +722,110 @@
               "yearStatus": "published"
             },
             "aliases": []
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+      "at": "2026-11-13T11:16:47.898Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 37,
+      "revision": 38,
+      "commandType": "edit",
+      "intent": {
+        "id": "ai-strange-odyssey",
+        "type": "edit",
+        "values": {
+          "firstYear": 1981,
+          "gameplay": "文字冒险",
+          "group": "Adventure International",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "emotion": "紧张",
+            "setting": "架空世界",
+            "theme": [
+              "科幻",
+              "奇幻",
+              "冒险"
+            ],
+            "tone": "荒凉"
+          },
+          "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
+          "title": "奇异奥德赛",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ai-strange-odyssey",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ai-strange-odyssey",
+              "indexId": "dossier-ai-strange-odyssey",
+              "aliases": [
+                "Strange Odyssey",
+                "奇异奥德赛"
+              ],
+              "title": "奇异奥德赛",
+              "firstYear": 1979,
+              "group": "既有厂商专题",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
+              "mainPlacement": "dossier-linked"
+            },
+            "fieldMeta": {
+              "firstYear": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "yearStatus": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "group": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "plotTags": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "plotTagEvidence": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              }
+            },
+            "values": {
+              "firstYear": 1981,
+              "gameplay": "文字冒险",
+              "group": "Adventure International",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "紧张",
+                "setting": "架空世界",
+                "theme": [
+                  "科幻",
+                  "奇幻",
+                  "冒险"
+                ],
+                "tone": "荒凉"
+              },
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
+              "title": "奇异奥德赛",
+              "yearStatus": "published"
+            },
+            "aliases": [
+              "Strange Odyssey"
+            ]
           }
         }
       ],

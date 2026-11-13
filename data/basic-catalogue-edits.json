@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 37,
+  "revision": 38,
   "additions": [],
   "records": {
     "g1028": {
@@ -1136,83 +1136,71 @@
         "yearStatus": "published"
       },
       "aliases": []
+    },
+    "ai-strange-odyssey": {
+      "identity": {
+        "id": "ai-strange-odyssey",
+        "indexId": "dossier-ai-strange-odyssey",
+        "aliases": [
+          "Strange Odyssey",
+          "奇异奥德赛"
+        ],
+        "title": "奇异奥德赛",
+        "firstYear": 1979,
+        "group": "既有厂商专题",
+        "gameplay": "文字冒险",
+        "plotStyles": [],
+        "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
+        "mainPlacement": "dossier-linked"
+      },
+      "fieldMeta": {
+        "firstYear": {
+          "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+          "at": "2026-11-13T11:16:47.898Z"
+        },
+        "yearStatus": {
+          "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+          "at": "2026-11-13T11:16:47.898Z"
+        },
+        "group": {
+          "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+          "at": "2026-11-13T11:16:47.898Z"
+        },
+        "plotTags": {
+          "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+          "at": "2026-11-13T11:16:47.898Z"
+        },
+        "plotTagEvidence": {
+          "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+          "at": "2026-11-13T11:16:47.898Z"
+        }
+      },
+      "values": {
+        "firstYear": 1981,
+        "gameplay": "文字冒险",
+        "group": "Adventure International",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "emotion": "紧张",
+          "setting": "架空世界",
+          "theme": [
+            "科幻",
+            "奇幻",
+            "冒险"
+          ],
+          "tone": "荒凉"
+        },
+        "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
+        "title": "奇异奥德赛",
+        "yearStatus": "published"
+      },
+      "aliases": [
+        "Strange Odyssey"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
-      "at": "2026-11-13T08:23:44.035Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-j600tz4vee328efb",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-j600tz4vee328efb",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-j600tz4vee328efb",
-              "aliases": [],
-              "title": "The House of Seven Gables",
-              "firstYear": 1978,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=j600tz4vee328efb",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
-                "at": "2026-11-13T08:23:44.035Z"
-              },
-              "group": {
-                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
-                "at": "2026-11-13T08:23:44.035Z"
-              },
-              "gameplay": {
-                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
-                "at": "2026-11-13T08:23:44.035Z"
-              },
-              "plotTags": {
-                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
-                "at": "2026-11-13T08:23:44.035Z"
-              },
-              "plotTagEvidence": {
-                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
-                "at": "2026-11-13T08:23:44.035Z"
-              }
-            },
-            "values": {
-              "firstYear": 1978,
-              "gameplay": "文字冒险",
-              "group": "Greg Hassett",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": [
-                  "压抑",
-                  "恐怖"
-                ],
-                "theme": [
-                  "奇幻",
-                  "冒险"
-                ],
-                "tone": [
-                  "黑暗",
-                  "冷峻"
-                ]
-              },
-              "source": "https://ifdb.org/viewgame?id=j600tz4vee328efb",
-              "title": "The House of Seven Gables",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "496153a2-fb00-4572-9fb0-4185ff934269",
       "at": "2026-11-13T10:53:03.921Z",
@@ -1360,6 +1348,81 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+      "at": "2026-11-13T11:16:47.898Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ai-strange-odyssey",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ai-strange-odyssey",
+              "indexId": "dossier-ai-strange-odyssey",
+              "aliases": [
+                "Strange Odyssey",
+                "奇异奥德赛"
+              ],
+              "title": "奇异奥德赛",
+              "firstYear": 1979,
+              "group": "既有厂商专题",
+              "gameplay": "文字冒险",
+              "plotStyles": [],
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
+              "mainPlacement": "dossier-linked"
+            },
+            "fieldMeta": {
+              "firstYear": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "yearStatus": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "group": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "plotTags": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              },
+              "plotTagEvidence": {
+                "id": "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
+                "at": "2026-11-13T11:16:47.898Z"
+              }
+            },
+            "values": {
+              "firstYear": 1981,
+              "gameplay": "文字冒险",
+              "group": "Adventure International",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "紧张",
+                "setting": "架空世界",
+                "theme": [
+                  "科幻",
+                  "奇幻",
+                  "冒险"
+                ],
+                "tone": "荒凉"
+              },
+              "source": "https://www.mocagh.org/loadpage.php?getgame=scottadams6",
+              "title": "奇异奥德赛",
+              "yearStatus": "published"
+            },
+            "aliases": [
+              "Strange Odyssey"
+            ]
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1371,10 +1434,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r37.json",
-        "sha": "91a7e5c0302bae951ee98a842b220c4edc8b46de",
+        "path": "data/basic-catalogue-journal/events/r31-r38.json",
+        "sha": "a9c950e829adcb7674d58e51fab385453a715ed6",
         "startRevision": 31,
-        "endRevision": 37,
+        "endRevision": 38,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1382,12 +1445,13 @@
           "d06863b5-aebc-459d-b959-187cf5d4bce0",
           "b76344d8-36aa-4f12-9716-0f3a1d961e47",
           "496153a2-fb00-4572-9fb0-4185ff934269",
-          "cbc90fa1-513e-4a45-8efc-91c778bb7cce"
+          "cbc90fa1-513e-4a45-8efc-91c778bb7cce",
+          "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c"
         ],
-        "bytes": 23242
+        "bytes": 26565
       }
     ],
-    "eventCount": 7,
-    "stateHash": "b84660855815ac925067051af31d8be23df97ace54f6e25478a7acd1ecbe9635"
+    "eventCount": 8,
+    "stateHash": "4e1e10287692e772beb6f5d0b81163d273065c5633fcff82337311c99bee5bc5"
   }
 }
