@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 41,
+  "revision": 42,
   "additions": [],
   "records": {
     "g1028": {
@@ -1232,143 +1232,24 @@
         "mainPlacement": "promoted-basic"
       },
       "deleted": true
+    },
+    "historical-653e32e13b8472d1": {
+      "identity": {
+        "id": "historical-653e32e13b8472d1",
+        "indexId": "basic-historical-1970s-20261101-653e32e13b8472d1",
+        "aliases": [],
+        "title": "Stuga",
+        "firstYear": 1978,
+        "group": "QZ / Oden mainframe（历史关联）",
+        "gameplay": "ADV",
+        "plotStyles": [],
+        "source": "https://microheaven.com/svenska/stuga_historik.shtml",
+        "mainPlacement": "promoted-basic"
+      },
+      "deleted": true
     }
   },
   "recent": [
-    {
-      "id": "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
-      "at": "2026-11-13T11:23:15.905Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifdb-4s6xy0r9wbztg7y2",
-          "before": {
-            "identity": {
-              "id": "ifdb-4s6xy0r9wbztg7y2",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
-              "aliases": [],
-              "title": "Quest",
-              "firstYear": 1978,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "group": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "gameplay": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "plotTags": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "plotTagEvidence": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              }
-            },
-            "values": {
-              "firstYear": 1978,
-              "gameplay": "文字冒险",
-              "group": "Roger Chaffee",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": [
-                  "紧张",
-                  "沉浸感"
-                ],
-                "perspective": "第一人称",
-                "setting": "架空世界",
-                "theme": [
-                  "推理",
-                  "冒险"
-                ]
-              },
-              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
-              "title": "Quest",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          },
-          "after": {
-            "identity": {
-              "id": "ifdb-4s6xy0r9wbztg7y2",
-              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-4s6xy0r9wbztg7y2",
-              "aliases": [],
-              "title": "Quest",
-              "firstYear": 1978,
-              "group": "创作品牌待核",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=4s6xy0r9wbztg7y2",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "group": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "gameplay": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "plotTags": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "plotTagEvidence": {
-                "id": "61d7587d-7e36-4caa-839d-4f83adc512ad",
-                "at": "2026-11-13T08:13:10.387Z"
-              },
-              "source": {
-                "id": "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
-                "at": "2026-11-13T11:23:15.905Z"
-              }
-            },
-            "values": {
-              "firstYear": 1978,
-              "gameplay": "文字冒险",
-              "group": "Roger Chaffee",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": [
-                  "紧张",
-                  "沉浸感"
-                ],
-                "perspective": "第一人称",
-                "setting": "架空世界",
-                "theme": [
-                  "推理",
-                  "冒险"
-                ]
-              },
-              "source": "https://solutionarchive.com/game/id,5078/Quest.html",
-              "title": "Quest",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "a992f79e-d369-4905-870b-6d9f1ec05c3c",
       "at": "2026-11-13T11:25:42.130Z",
@@ -1424,6 +1305,34 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
+      "at": "2026-11-13T11:35:43.120Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Stuga",
+      "changes": [
+        {
+          "id": "historical-653e32e13b8472d1",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "historical-653e32e13b8472d1",
+              "indexId": "basic-historical-1970s-20261101-653e32e13b8472d1",
+              "aliases": [],
+              "title": "Stuga",
+              "firstYear": 1978,
+              "group": "QZ / Oden mainframe（历史关联）",
+              "gameplay": "ADV",
+              "plotStyles": [],
+              "source": "https://microheaven.com/svenska/stuga_historik.shtml",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1435,10 +1344,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r41.json",
-        "sha": "0dabff6955c69409745406b340031519b4adfb7d",
+        "path": "data/basic-catalogue-journal/events/r31-r42.json",
+        "sha": "7c5b3c25e181feb2f8b164ccc6d980d34cf53b1f",
         "startRevision": 31,
-        "endRevision": 41,
+        "endRevision": 42,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1450,12 +1359,13 @@
           "0acb90f3-5eb3-44e5-b05c-95a3e4aaf61c",
           "5c338418-23cb-4c00-b4d8-46665ca0d1fb",
           "a992f79e-d369-4905-870b-6d9f1ec05c3c",
-          "8ca4a152-21ce-412f-a53f-87c3d3f2a72c"
+          "8ca4a152-21ce-412f-a53f-87c3d3f2a72c",
+          "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293"
         ],
-        "bytes": 34424
+        "bytes": 35546
       }
     ],
-    "eventCount": 11,
-    "stateHash": "a4e7dda7093d154c85529fa4909aae8b9fd90f55201704b328395409a402aaf0"
+    "eventCount": 12,
+    "stateHash": "cf29d3ca586820625c1810fa55f1ad228b0214c02340361945bcdd6f8a10985c"
   }
 }

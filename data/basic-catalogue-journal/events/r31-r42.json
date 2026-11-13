@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 41,
+  "endRevision": 42,
   "events": [
     {
       "schemaVersion": 1,
@@ -1062,6 +1062,43 @@
               "gameplay": "互动小说（玩法待核）",
               "plotStyles": [],
               "source": "https://ifarchive.org/if-archive/games/source/inform/swedish/Stuga_Src.zip",
+              "mainPlacement": "promoted-basic"
+            },
+            "deleted": true
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "6a10eb81-0f1e-4d17-ae5a-53c4e7cfa293",
+      "at": "2026-11-13T11:35:43.120Z",
+      "actor": "wt1234-donkey",
+      "reason": "删除作品 Stuga",
+      "previousRevision": 41,
+      "revision": 42,
+      "commandType": "delete",
+      "intent": {
+        "id": "historical-653e32e13b8472d1",
+        "type": "delete"
+      },
+      "changes": [
+        {
+          "id": "historical-653e32e13b8472d1",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "historical-653e32e13b8472d1",
+              "indexId": "basic-historical-1970s-20261101-653e32e13b8472d1",
+              "aliases": [],
+              "title": "Stuga",
+              "firstYear": 1978,
+              "group": "QZ / Oden mainframe（历史关联）",
+              "gameplay": "ADV",
+              "plotStyles": [],
+              "source": "https://microheaven.com/svenska/stuga_historik.shtml",
               "mainPlacement": "promoted-basic"
             },
             "deleted": true
