@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 34,
+  "endRevision": 35,
   "events": [
     {
       "schemaVersion": 1,
@@ -407,6 +407,113 @@
               },
               "source": "https://ifdb.org/viewgame?id=4b3jwtbohg8cqhs2",
               "title": "The Devil's Dungeon",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
+      "at": "2026-11-13T08:23:44.035Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 34,
+      "revision": 35,
+      "commandType": "edit",
+      "intent": {
+        "id": "ifdb-j600tz4vee328efb",
+        "type": "edit",
+        "values": {
+          "firstYear": 1978,
+          "gameplay": "文字冒险",
+          "group": "Greg Hassett",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {
+            "emotion": [
+              "压抑",
+              "恐怖"
+            ],
+            "theme": [
+              "奇幻",
+              "冒险"
+            ],
+            "tone": [
+              "黑暗",
+              "冷峻"
+            ]
+          },
+          "source": "https://ifdb.org/viewgame?id=j600tz4vee328efb",
+          "title": "The House of Seven Gables",
+          "yearStatus": "published"
+        }
+      },
+      "changes": [
+        {
+          "id": "ifdb-j600tz4vee328efb",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "ifdb-j600tz4vee328efb",
+              "indexId": "nextmoe-ifdb-bulk-20261102-r61-ifdb-j600tz4vee328efb",
+              "aliases": [],
+              "title": "The House of Seven Gables",
+              "firstYear": 1978,
+              "group": "创作品牌待核",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifdb.org/viewgame?id=j600tz4vee328efb",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
+                "at": "2026-11-13T08:23:44.035Z"
+              },
+              "group": {
+                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
+                "at": "2026-11-13T08:23:44.035Z"
+              },
+              "gameplay": {
+                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
+                "at": "2026-11-13T08:23:44.035Z"
+              },
+              "plotTags": {
+                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
+                "at": "2026-11-13T08:23:44.035Z"
+              },
+              "plotTagEvidence": {
+                "id": "b76344d8-36aa-4f12-9716-0f3a1d961e47",
+                "at": "2026-11-13T08:23:44.035Z"
+              }
+            },
+            "values": {
+              "firstYear": 1978,
+              "gameplay": "文字冒险",
+              "group": "Greg Hassett",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": [
+                  "压抑",
+                  "恐怖"
+                ],
+                "theme": [
+                  "奇幻",
+                  "冒险"
+                ],
+                "tone": [
+                  "黑暗",
+                  "冷峻"
+                ]
+              },
+              "source": "https://ifdb.org/viewgame?id=j600tz4vee328efb",
+              "title": "The House of Seven Gables",
               "yearStatus": "published"
             },
             "aliases": []
