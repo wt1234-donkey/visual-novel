@@ -32,8 +32,8 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  function shell(title,body){
   if(busy)return;dialog.dataset.recoveryMode='other';dialog.dataset.recoveryWorkId='';historyRequest++;if(!dialog.open)returnFocus=document.activeElement;pendingImport=null;editBaseline=null;
   dialog.innerHTML=`<div class="be-head"><h2>${safe(title)}</h2><button type="button" data-close aria-label="关闭窗口">×</button></div>
-   <details class="be-auth"><summary>${actor?'已连接 GitHub · '+safe(actor):'首次保存前：连接 GitHub 写入权限'}</summary><p class="minor">基础身份库取消人工送审。连接后，作品修改、合并与标签操作直接写入仓库，无须另外审核。为保护仓库，公开页面不能匿名写入；凭证只保存在当前页面内存，刷新即清除。</p><ol class="minor"><li>使用有写入权限的 GitHub 账号，Resource owner 选择 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b> → <b>visual-novel</b>。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>。</li></ol><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仅限本仓库的写入凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" type="password" autocomplete="off" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接并启用直接保存</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">同步 GitHub 最新修改</button></div></details>
-   <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}`;
+   <details class="be-auth"><summary>${actor?'已连接 GitHub · '+safe(actor):'首次保存前：连接 GitHub 写入权限'}</summary><p class="minor">基础身份库取消人工送审。连接后，作品修改、合并与标签操作直接写入仓库，无须另外审核。为保护仓库，公开页面不能匿名写入；凭证只保存在当前页面内存，刷新即清除。</p><ol class="minor"><li>使用有写入权限的 GitHub 账号，Resource owner 选择 <b>wt1234-donkey</b>。</li><li>Repository access 选择 <b>Only select repositories</b> → <b>visual-novel</b>。</li><li>Repository permissions 中将 <b>Contents</b> 设为 <b>Read and write</b>。</li></ol><p><a href="${TOKEN_SETUP_URL}" target="_blank" rel="noopener noreferrer">创建仅限本仓库的写入凭证 ↗</a></p><label>GitHub 写入凭证<input id="be-token" form="be-credentials" name="github-write-token" type="password" autocomplete="new-password" spellcheck="false"></label><div class="be-actions"><button id="be-connect" type="button">连接并启用直接保存</button><button id="be-disconnect" type="button" ${actor?'':'disabled'}>断开</button><button id="be-refresh" type="button">同步 GitHub 最新修改</button></div></details>
+   <div id="be-message" class="be-message" role="status" aria-live="polite"></div>${body}<form id="be-credentials" autocomplete="off" hidden></form>`;
   for(const picker of dialog.querySelectorAll('.be-style-picker'))refreshStylePicker(picker);
   dialog.setAttribute('aria-label',title);if(!dialog.open)dialog.showModal();
  }
@@ -155,6 +155,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
  dialog.addEventListener('input',e=>{const picker=e.target.closest('.be-style-picker');if(picker)refreshStylePicker(picker);if(['be-import-text','be-format'].includes(e.target.id)){pendingImport=null;$('#be-import-confirm').disabled=true;}});
  dialog.addEventListener('change',async e=>{if(e.target.id==='be-file'){try{const file=e.target.files[0];if(!file)return;if(file.size>5e6)throw Error('文件超过5MB，请分批导入');$('#be-import-text').value=await file.text();$('#be-format').value=file.name.toLowerCase().endsWith('.json')?'json':'csv';pendingImport=null;$('#be-import-confirm').disabled=true;message('文件已读取，请校验并预览');}catch(err){message(err.message,true);}}});
  dialog.addEventListener('submit',async e=>{
+  if(e.target.id==='be-credentials'){e.preventDefault();if(!busy)$('#be-connect').click();return;}
   const form=e.target;if(!['be-edit','be-merge'].includes(form.id))return;
   e.preventDefault();if(busy)return;const f=new FormData(form);
   if(form.id==='be-edit'){

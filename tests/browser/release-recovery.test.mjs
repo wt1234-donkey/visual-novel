@@ -104,3 +104,59 @@ test('trusted mode saves an actual form through dispatch with the existing Conte
  }catch(error){error.message+='\nSave UI: '+await f.page.locator('#be-message').textContent()+'\nRequests: '+JSON.stringify(f.api.calls.slice(-12).map(call=>({method:call.method,path:call.path})));throw error;}
  finally{await f.close();}
 });
+
+test('unfiltered catalogue keeps its page through connection, repeated saves, sync and undo',async()=>{
+ const f=await fixture('trusted');try{
+  const {page}=f;
+  await page.locator('#next').click();await page.locator('#next').click();
+  const id=await page.locator('#rows [data-edit]').first().getAttribute('data-edit');
+  await page.locator('#rows [data-edit="'+id+'"]').click();
+  await page.locator('.be-auth summary').click();await page.locator('#be-token').fill('test-only-credential');
+  await page.locator('#be-connect').click();await page.locator('#be-message').filter({hasText:'已连接'}).waitFor();
+  assert.match(await page.locator('#pagination').textContent(),/第 3 \/ 3 页/);
+  for(const title of ['Test updated once','Test updated twice']){
+   await page.locator('#be-edit [name=title]').fill(title);await page.getByRole('button',{name:'直接保存修改',exact:true}).click();
+   await page.locator('#be-message').filter({hasText:'最新作品资料已显示。已提交 GitHub'}).waitFor();
+   assert.equal(f.api.store.records[id].values.title,title);
+   assert.match(await page.locator('#pagination').textContent(),/第 3 \/ 3 页/);
+  }
+  await page.locator('.be-auth summary').click();await page.locator('#be-refresh').click();
+  await page.locator('#be-message').filter({hasText:'已同步 GitHub'}).waitFor();
+  assert.match(await page.locator('#pagination-bottom').textContent(),/第 3 \/ 3 页/);
+  await page.getByRole('button',{name:'关闭窗口'}).click();await page.locator('#basic-connection').click();
+  page.once('dialog',dialog=>dialog.accept());await page.locator('#be-undo').click();
+  await page.locator('#be-history').filter({hasText:'撤销最近操作'}).waitFor();
+  assert.match(await page.locator('#pagination').textContent(),/第 3 \/ 3 页/);
+  assert.equal(f.api.store.records[id].values.title,'Test updated once');
+ }finally{await f.close();}
+});
+
+test('manufacturer search stays separate from credentials and filtered saves retain the page',async()=>{
+ const f=await fixture('trusted');try{
+  const {page}=f,url=page.url();
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('#q').fill('Test');await page.locator('#group-query').fill('mAkEr');
+  await page.locator('#group-region').selectOption('unknown');await page.locator('#group').selectOption('maker');
+  await page.locator('#next').click();await page.locator('#next-bottom').click();
+  const id=await page.locator('#rows [data-edit]').first().getAttribute('data-edit');
+  await page.locator('#rows [data-edit="'+id+'"]').click();await page.locator('.be-auth summary').click();
+  await page.locator('#be-token').fill('test-only-credential');await page.locator('#be-token').press('Enter');
+  await page.locator('#be-message').filter({hasText:'已连接'}).waitFor();
+  await page.locator('#be-edit [name=title]').fill('Test filtered edit');await page.getByRole('button',{name:'直接保存修改',exact:true}).click();
+  await page.locator('#be-message').filter({hasText:'最新作品资料已显示。已提交 GitHub'}).waitFor();
+  assert.match(await page.locator('#pagination').textContent(),/第 3 \/ 3 页/);
+  assert.equal(await page.locator('#q').inputValue(),'Test');assert.equal(await page.locator('#group-query').inputValue(),'mAkEr');
+  assert.equal(await page.locator('#group-region').inputValue(),'unknown');assert.equal(await page.locator('#group').inputValue(),'maker');
+  assert.equal(await page.locator('#group-query').getAttribute('autocomplete'),'off');
+  assert.equal(await page.locator('#be-token').getAttribute('autocomplete'),'new-password');
+  assert.equal(await page.locator('#group-query').evaluate(el=>el.form.id),'manufacturer-search-form');
+  assert.equal(await page.locator('#be-token').evaluate(el=>el.form.id),'be-credentials');
+  await page.getByRole('button',{name:'关闭窗口'}).click();
+  await page.locator('#group-query').fill('king');await page.locator('#group-query').press('Enter');
+  assert.equal(page.url(),url);assert.equal(await page.locator('#group-query').inputValue(),'king');
+  assert.match(await page.locator('#count').textContent(),/找到 0 条/);
+  await page.locator('#group-query').fill('Maker');await page.locator('#group-query').press('Enter');
+  assert.equal(page.url(),url);assert.match(await page.locator('#count').textContent(),/找到 60 条/);
+  assert.match(await page.locator('#pagination').textContent(),/第 1 \/ 3 页/,'a user changing filters still starts at page one');
+ }finally{await f.close();}
+});
