@@ -51,7 +51,8 @@ def public_paths(stage, tracked, policy):
     selected.update(p for p in policy.get('publicDownloads', []) if (stage / p).is_file())
     # Downloadable source snapshots and CSVs remain complete. No executable
     # extension is implicitly admitted by the data rule.
-    selected.update(p for p in tracked if p.startswith('data/') and Path(p).suffix in policy['dataSuffixes'])
+    selected.update(p for p in tracked if p.startswith('data/') and Path(p).suffix in policy['dataSuffixes']
+                    and not (p.startswith('data/audit-ledger/objects/') and not (stage/p).is_file()))
     for directory in policy['generatedDataDirectories']:
         selected.update(p.relative_to(stage).as_posix() for p in (stage / directory).rglob('*') if p.is_file() and p.suffix in {'.json','.gz'})
     selected.update(p for p in policy['generatedFiles'] if (stage / p).is_file())

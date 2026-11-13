@@ -14,6 +14,8 @@ def render(root):
         if not path.is_file() or path.suffix not in groups or {'basic-web','catalogue-web'}&set(path.relative_to(root).parts):
             continue
         name=path.relative_to(root).as_posix()
+        if name.startswith('data/audit-ledger/objects/'):
+            continue  # Internal immutable index objects are reached through the archive manifest.
         groups[path.suffix][1].append(f'<li><a href="{quote(name,safe="/")}" download>{escape(name)}</a><span>{path.stat().st_size:,} B</span></li>')
     count=sum(len(rows) for _,rows in groups.values())
     body=''.join(f'<details{(" open" if suffix==".csv" else "")}><summary>{label} · {len(rows)}项</summary><ul>{"".join(rows)}</ul></details>' for suffix,(label,rows) in groups.items())

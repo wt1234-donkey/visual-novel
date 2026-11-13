@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+# Machine-readable validation reports are CI artifacts, never runtime content.
+/test-results/

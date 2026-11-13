@@ -3,6 +3,7 @@ import json
 import subprocess
 import unittest
 from pathlib import Path
+from history_contracts import contracts
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -22,10 +23,7 @@ class EntityVerificationPlanTests(unittest.TestCase):
         self.assertEqual(sum(p['pendingRoleClaims'] for p in queue['phases']), 601)
         self.assertEqual(set(work_ids), {wid for p in queue['phases'] for wid in p['affectedWorkIds']})
         self.assertEqual({c['claimId'] for c in roles},
-                         {f"role:{m['dossierId']}:{m['workId']}" for m in
-                          json.loads(subprocess.check_output(['git', 'show',
-                              queue['baselineTree'] + ':data/credits.json'], cwd=ROOT))['dossierMemberships']
-                          if m['status'] == 'pendingRole'})
+                         set(contracts()['pendingRoleClaims']['claims']))
 
     def test_leads_are_not_evidence_and_release_scope_stays_explicit(self):
         queue = json.loads((ROOT / 'data/entity-verification-evidence-index-20261026.json').read_text())

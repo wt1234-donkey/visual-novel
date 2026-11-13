@@ -7,6 +7,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from validate_entity_model import validate,read
 from build_entity_model import build,render_json
 from build_entity_pages import build as build_pages
+from history_contracts import contracts
 
 class EntityMigrationTests(unittest.TestCase):
  def test_preserves_historical_data_and_all_scoped_relationships(self):self.assertEqual(validate()['dossiers'],len(read('data/company-coverage.json')['companies']))
@@ -18,8 +19,9 @@ class EntityMigrationTests(unittest.TestCase):
   historical=set(read('data/entity-migration-baseline.json')['originalDossiers'])
   for company in read('data/company-coverage.json')['companies']:
    path=company['id']+'.html';after=(ROOT/path).read_text()
-   before=subprocess.check_output(['git','show',baseline+':'+path],cwd=ROOT,text=True) if company['id'] in historical else ''
-   old=set(re.findall(r'\bid="([^"]+)"',before));new=re.findall(r'\bid="([^"]+)"',after)
+   fixture=contracts()['dossierAnchors'].get(path)
+   if company['id'] in historical:self.assertEqual(fixture['source']['commit'],baseline)
+   old=set(fixture['anchors']) if fixture else set();new=re.findall(r'\bid="([^"]+)"',after)
    self.assertFalse(old-set(new),(path,old-set(new)));self.assertEqual(len(new),len(set(new)),path)
    ids=[*company['workIds'],*[w['id'] for w in company.get('relatedGames',[])],*[w['id'] for w in company.get('dossierOnlyWorks',[])]]
    self.assertEqual(after.count('<article class="card"'),len(ids),path)

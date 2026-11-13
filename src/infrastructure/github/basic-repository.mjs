@@ -6,6 +6,7 @@ import {MAX_SHARD_EVENTS,MAX_SHARD_BYTES,validateShard} from '../../domain/catal
 import {planCatalogueFiles,finishCatalogueFiles,jsonText,utf8Bytes,assertTransactionBase} from '../storage/catalogue-files.mjs';
 import {blobDigest,stateDigest,verifySnapshot} from '../storage/digests.mjs';
 import {createSourceGuard} from './source-lease.mjs';
+import {assertSmallLegacyHistory} from '../storage/audit-access.mjs';
 export {TOKEN_SETUP_URL} from './contents-repository.mjs';
 
 const PATH='data/basic-catalogue-edits.json',REPO=EDIT_REPOSITORY;
@@ -43,11 +44,15 @@ export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=
   async read(){const head=(await request(REPO+'/git/ref/heads/main')).object.sha;return snapshotAt(head);},
   async readPublished(){const value=await client.readPublished();await verifySnapshot(value.store);return {...value,source:'pages'};},
   async findOperation(snapshot,id){
+   const indexed=await client.audit('basic',snapshot);if(indexed)return indexed.findOperation(id);
+   assertSmallLegacyHistory('basic',snapshot.store);
    const ref=snapshot.store.journal.shards.find(shard=>shard.operationIds.includes(id));
    return ref?(await shard(ref)).events.find(event=>event.id===id):null;
   },
   async history(snapshot,{before=Infinity,limit=20,workId=null}={}){
    const store=snapshot.store;
+   const indexed=await client.audit('basic',snapshot);if(indexed)return indexed.history({before,limit,workId});
+   assertSmallLegacyHistory('basic',store);
    if(store.schemaVersion!==3)return journalHistory(store,{before,limit,workId});
    if(!Number.isSafeInteger(limit)||limit<1||limit>100)throw Error('每页历史须为1至100条');
    const found=[];

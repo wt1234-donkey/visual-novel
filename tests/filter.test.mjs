@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
-import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {filterCatalogue,publisherWorkCounts,visibleVoiceNote} from '../filter.mjs';
 
 const data=JSON.parse(readFileSync(new URL('../data/games.json',import.meta.url),'utf8'));
@@ -38,18 +38,20 @@ test('Banpresto brand continuation is visible without rewriting the actual publi
 });
 
 test('Banpresto narrative scope preserves RPG evidence in a separate linked archive',()=>{
-  const co=JSON.parse(execFileSync('git',['show','42d02604a6648be5d512b607d902292c4ac587e4:data/company-coverage.json'],{cwd:new URL('..',import.meta.url),encoding:'utf8',maxBuffer:64*1024*1024})).companies.find(c=>c.id==='banpresto');
+  const bytes=readFileSync(new URL('fixtures/history-contracts.json',import.meta.url));
+  const policy=JSON.parse(readFileSync(new URL('../config/test-capabilities.json',import.meta.url)));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),policy.fixtures[0].sha256);
+  const fixture=JSON.parse(bytes).banpresto,co=fixture.company;
   const archive=JSON.parse(readFileSync(new URL('../'+co.historicalArchive.path,import.meta.url),'utf8'));
-  const page=execFileSync('git',['show','42d02604a6648be5d512b607d902292c4ac587e4:banpresto.html'],{cwd:new URL('..',import.meta.url),encoding:'utf8',maxBuffer:64*1024*1024});
   assert.equal(co.relatedGames.length,0);
-  assert.ok(page.includes(`href="${co.historicalArchive.path}"`));
+  assert.ok(fixture.hrefs.includes(co.historicalArchive.path));
   for(const w of archive.relatedGames){
     assert.ok(w.contentVersions.length&&w.platformReleases.length&&w.interactionSources.length);
     assert.ok(!co.workIds.includes(w.id));
-    assert.ok(!page.includes(`<article class="card" id="${w.id}">`));
-    assert.ok(page.includes(`<li id="${w.id}">`));
+    assert.ok(!fixture.articleIds.includes(w.id));
+    assert.ok(fixture.listIds.includes(w.id));
   }
-  assert.equal((page.match(/<article class="card"/g)||[]).length,co.workIds.length);
+  assert.equal(fixture.articleIds.length,co.workIds.length);
 });
 
 test('Oreimo bundle discs and Kokoro DLC keep independent content identities',()=>{
@@ -1029,7 +1031,10 @@ test('Hudson reuses originals, separates independent afterstories and credits co
 
 
 test('Enix seven specified additions preserve command scope, action subtype and actual Riven publisher',()=>{
-  const data=JSON.parse(execFileSync('git',['show','2c1e3874d369da741c42ef909bfcc5e24a6570c2:data/games.json'],{cwd:new URL('..',import.meta.url),encoding:'utf8',maxBuffer:64*1024*1024}));
+  const bytes=readFileSync(new URL('fixtures/history-contracts.json',import.meta.url));
+  const policy=JSON.parse(readFileSync(new URL('../config/test-capabilities.json',import.meta.url)));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),policy.fixtures[0].sha256);
+  const data=JSON.parse(bytes).enix.data;
   const dossier=JSON.parse(readFileSync(new URL('../data/company-coverage.json',import.meta.url),'utf8')).companies.find(c=>c.id==='enix');
   const ids=['g996','g997','g998','g999','g1000','g1001','g1002'];
   assert.equal(dossier.workIds.length,29);

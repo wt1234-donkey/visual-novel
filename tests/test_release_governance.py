@@ -9,7 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
 from build_pages_artifact import build, REGISTRY
-from release_policy import verify_public
+from release_policy import verify_public,public_paths,read_policy
 from workflow_governance import check, registry
 
 
@@ -55,7 +55,7 @@ class ReleaseGovernanceTests(unittest.TestCase):
     def test_archived_workflows_are_exact_and_cannot_trigger_in_actions(self):
         counts=check(ROOT)
         self.assertEqual(counts['frozenTasks'],106)
-        self.assertEqual(counts['activeWorkflows'],11)
+        self.assertEqual(counts['activeWorkflows'],12)
         for task in registry(ROOT).values():
             self.assertEqual(hashlib.sha256((ROOT/task['archivedWorkflow']).read_bytes()).hexdigest(),task['workflowSha256'])
             self.assertFalse((ROOT/task['originalWorkflow']).exists())
@@ -72,6 +72,18 @@ class ReleaseGovernanceTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError,'not in public allowlist'):
                     verify_public(root)
                 path.unlink()
+
+    def test_old_runtime_index_generations_can_be_pruned_without_hiding_source_downloads(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'index.html').write_text('<h1>OK</h1>')
+            objects=root/'data/audit-ledger/objects';objects.mkdir(parents=True)
+            current='data/audit-ledger/objects/'+'1'*64+'.json'
+            archived='data/audit-ledger/objects/'+'0'*64+'.json'
+            (root/current).write_text('{}')
+            paths=public_paths(root,['index.html',archived,'data/original-source.json'],read_policy(root))
+            self.assertIn(current,paths)
+            self.assertNotIn(archived,paths)
+            self.assertIn('data/original-source.json',paths,'ordinary source files are never silently pruned')
 
 
 if __name__ == '__main__':unittest.main()

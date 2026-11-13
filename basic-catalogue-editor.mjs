@@ -10,11 +10,11 @@ import {createStyleWorkbench,styleInputs,readStyleInputs,refreshStylePicker} fro
 import {withBasicDetails} from './basic-catalogue-index.mjs?v=20261111-architecture';
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const randomId=()=>crypto.randomUUID?.()||Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
-export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map(),{sourceLease=null,commandMode='legacy'}={}){
+export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new Map(),{sourceLease=null,commandMode='legacy',initialSnapshot={}}={}){
  if(!sourceLease)throw Error('索引缺少来源版本，请刷新页面后重试');
  let actor='',busy=false,pendingImport=null,returnFocus=null,entries=[],catalogueView,editBaseline=null,historyCursor=null,historyRequest=0;
  const clientFor=token=>createBasicRepository(token,fetch,{sourceLease,commandMode});
- const service=createCatalogueService({base,initial,repository:clientFor(''),loadDetails,makeMeta:()=>({id:randomId(),at:new Date().toISOString()})});
+ const service=createCatalogueService({base,initial,initialSnapshot,repository:clientFor(''),loadDetails,makeMeta:()=>({id:randomId(),at:new Date().toISOString()})});
  const dialog=document.createElement('dialog');dialog.id='basic-editor';document.body.append(dialog);
  const $=s=>dialog.querySelector(s);
  const all=()=>entries;

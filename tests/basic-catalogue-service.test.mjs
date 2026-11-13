@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {emptyStore,applyChange,valuesOf} from '../basic-catalogue-model.mjs';
 import {createCatalogueService} from '../src/application/catalogue/service.mjs';
+import {upgradeStore} from '../basic-catalogue-model.mjs';
+import {split} from './helpers/catalogue-git-fixture.mjs';
 
 const base=[{id:'a',title:'Alpha',year:1990,group:'A',gameplay:'ADV'},{id:'b',title:'Beta',year:2000,group:'B',gameplay:'ADV'}];
 const edit=(id,patch)=>({type:'edit',id,values:{...valuesOf(base.find(work=>work.id===id)),...patch}});
@@ -13,6 +15,13 @@ function fixture(){
  const service=createCatalogueService({base,initial:store,repository,makeMeta:()=>({id:'operation-'+(++serial),at:iso})});
  return {service,repository,writes,get store(){return structuredClone(store);},replace(next){store=structuredClone(next);sha++;}};
 }
+
+test('initial history lookup is pinned to its live bootstrap head before connecting credentials',async()=>{
+ const initial=split(upgradeStore(emptyStore())).store,head='a'.repeat(40),sha='b'.repeat(40);
+ const repository={async history(snapshot){assert.equal(snapshot.head,head);assert.equal(snapshot.sha,sha);return {events:[],indexed:true};}};
+ const service=createCatalogueService({base,initial,initialSnapshot:{head,sha},repository,makeMeta:()=>({id:'unused',at:iso})});
+ assert.equal((await service.history({})).indexed,true);
+});
 
 test('service owns authorization, previews, immutable snapshots and one projected view',async()=>{
  const f=fixture(),before=f.service.snapshot;
