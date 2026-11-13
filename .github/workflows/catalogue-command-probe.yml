@@ -49,11 +49,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           node scripts/execute_catalogue_command.mjs --rehearsal
-          python3 scripts/generate_effective_views.py
-          python3 scripts/validate_data.py
-          python3 scripts/validate_entity_model.py
-          node scripts/migrate_basic_storage.mjs --check
-          node --test tests/trusted-command.test.mjs
+          python3 scripts/validate_catalogue.py
       - name: Prove protected-ref rejection and accepted attestation without updating main
         env:
           GH_TOKEN: ${{ github.token }}

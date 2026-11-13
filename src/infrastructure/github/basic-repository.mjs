@@ -12,7 +12,7 @@ export {TOKEN_SETUP_URL} from './contents-repository.mjs';
 const PATH='data/basic-catalogue-edits.json',REPO=EDIT_REPOSITORY;
 const conflict=()=>Object.assign(Error('数据库已变化或写入冲突；本次没有覆盖其他修改'),{code:'CONFLICT',status:409});
 export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=null,commandMode='legacy'}={}) {
- const client=createEditClient(token,fetcher,{historyPath:PATH,validate:validateStore,sourceLease});
+ const client=createEditClient(token,fetcher,{historyPath:PATH,validate:validateStore,sourceLease,commandMode});
  const request=client.gitRequest,cache=new Map();
  const guard=createSourceGuard(request,REPO);
  async function snapshotAt(head){
@@ -70,6 +70,7 @@ export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=
     baselineRevision:store.journal.baseline.revision,total:workId?null:Math.max(0,Math.min(store.revision,before-1)-store.journal.baseline.revision)};
   },
   async write(next,expectedSha,message){
+   if(commandMode==='trusted')throw Error('可信模式须通过命令、回执与归档保存；请重新同步后提交');
    if(!token)throw Error('请先连接 GitHub 写入权限');
    if(!expectedSha)throw Error('请先读取 GitHub 最新修改记录后保存');
    validateStore(next);

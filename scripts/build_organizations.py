@@ -8,6 +8,7 @@ from build_relationships_preview import build as preview_build
 from organization_verification import attach_verification
 from organization_unfinished import attach_unfinished
 from round28_corrections import corrected_coverage
+from effective_catalogue import load_effective, effective_title
 ROOT = Path(__file__).resolve().parents[1]
 CREATION_ROLES = {'originalProduction', 'developer', 'coDeveloper', 'productionBrand'}
 UNRESOLVED = {'pendingRole', 'unresolved', 'pending'}
@@ -15,8 +16,9 @@ UNRESOLVED = {'pendingRole', 'unresolved', 'pending'}
 
 def build():
     read = lambda name: json.loads((ROOT / f'data/{name}.json').read_text())
-    model, credits, games, coverage = [read(n) for n in ['entities', 'credits', 'games', 'company-coverage']]
-    coverage = corrected_coverage(coverage)
+    model, credits = [read(n) for n in ['entities', 'credits']]
+    effective = load_effective(ROOT)
+    games, coverage = effective['main'], corrected_coverage(effective['coverage'])
     result = preview_build()
     reviews = [read(name) for name in ['entity-creator-a-review-20261022', 'entity-creator-a2-review-20261022', 'entity-creator-a3-review-20261022', 'entity-creator-a4-review-20261023', 'entity-creator-a5-review-20261023', 'entity-creator-a6-review-20261023', 'entity-creator-b1-review-20261023', 'entity-creator-b2-review-20261023', 'entity-creator-b3-review-20261023', 'entity-creator-c1-review-20261023', 'entity-creator-c2-review-20261023', 'entity-creator-c3-review-20261023', 'entity-creator-c4-review-20261023', 'entity-creator-d1-review-20261023', 'entity-creator-d2-review-20261023', 'entity-creator-d3-review-20261023', 'entity-creator-e1-review-20261023', 'entity-creator-e2-review-20261024', 'entity-creator-e3-review-20261024', 'entity-creator-f1-review-20261024', 'entity-creator-f2-review-20261024', 'entity-creator-g1-review-20261024', 'entity-creator-g2-review-20261024', 'entity-creator-g3-review-20261024', 'entity-creator-h1-review-20261024', 'entity-creator-h2-review-20261024', 'entity-creator-h3-review-20261024', 'entity-creator-i1-review-20261024', 'entity-creator-i2-review-20261024', 'entity-creator-i3-review-20261024', 'entity-creator-i4-review-20261024', 'entity-creator-j1-review-20261024', 'entity-creator-k1-review-20261024', 'entity-creator-k2-review-20261024', 'entity-creator-k3-review-20261025', 'entity-creator-l1-review-20261025', 'entity-creator-l2-review-20261025', 'entity-creator-l3-review-20261025', 'entity-creator-m1-review-20261025', 'entity-creator-m2-review-20261025', 'entity-creator-m3-review-20261025', 'entity-creator-m4-review-20261025', 'entity-creator-m5-review-20261025', 'entity-creator-m6-review-20261025', 'entity-creator-n1-review-20261025', 'entity-creator-n2-review-20261025', 'entity-creator-n3-review-20261025', 'entity-creator-n4-review-20261025', 'entity-creator-n5-review-20261025', 'entity-creator-o1-review-20261025', 'entity-creator-p1-review-20261025', 'entity-creator-p2-review-20261025', 'entity-creator-p3-review-20261025', 'entity-creator-q1-review-20261025', 'entity-creator-r1-review-20261025', 'entity-creator-r2-review-20261025', 'entity-creator-s1-review-20261025', 'entity-creator-s2-review-20261025', 'entity-creator-s3-review-20261026', 'entity-creator-s4-review-20261026', 'entity-creator-s5-review-20261026', 'entity-creator-s6-review-20261026', 'entity-creator-s7-review-20261026', 'entity-creator-s8-review-20261026', 'entity-creator-s9-review-20261026', 'entity-creator-s10-review-20261026', 'entity-creator-s11-review-20261026', 'entity-creator-t1-review-20261026', 'entity-creator-t2-review-20261026', 'entity-creator-t3-review-20261026', 'entity-creator-t4-review-20261026', 'entity-creator-t5-review-20261026', 'entity-creator-u1-review-20261026', 'entity-creator-v1-review-20261026', 'entity-creator-w1-review-20261026', 'entity-creator-x1-review-20261026', 'entity-creator-y1-review-20261026', 'entity-creator-cf-catchup-review-20261026']]
     reviews.append(read('entity-creator-numeric-review-20261026'))
@@ -54,7 +56,7 @@ def build():
                                  'audit': five_phase['audit']}
     works = {}
     for w in games['works']:
-        works[w['id']] = (w, 'main', 'index.html?query=' + quote(w.get('chineseTitle') or w['title']) + '#catalogue')
+        works[w['id']] = (w, 'main', 'index.html?query=' + quote(effective_title(w)) + '#catalogue')
     for company in coverage['companies']:
         for field, placement in [('relatedGames', 'related'), ('dossierOnlyWorks', 'bibliography')]:
             for w in company.get(field, []):
@@ -91,7 +93,7 @@ def build():
                       'stats': {p: sum(works[wid][1] == p for wid in workids) for p in ['main', 'related', 'bibliography']},
                       'productionCount': sum(works[r['workId']][1] == 'main' for r in grouped['creation']),
                       'dossiers': [{'id': d['id'], 'name': d['name']} for d in model['dossiers'] if eid in d['entityIds']],
-                      'works': [{'id': w['id'], 'title': w.get('chineseTitle') or w['title'], 'year': w['firstYear']} for w in featured]})
+                      'works': [{'id': w['id'], 'title': effective_title(w), 'year': w['firstYear']} for w in featured]})
     nodes += [n for n in result['nodes'] if n.get('previewOnly')]
     ids = {n['id'] for n in nodes}
     edges = []
@@ -130,7 +132,7 @@ def build():
     result.update({'mode': 'organizationCatalogue', 'nodes': nodes, 'edges': edges,
                    'roleLabels': model['roleLabels'], 'creationRoles': sorted(CREATION_ROLES),
                    'credits': {c['id']: {k: c[k] for k in ['entityId', 'workId', 'role', 'targetType', 'targetId', 'rawCredit', 'status', 'source', 'note']} for c in credits['credits']},
-                   'works': {wid: {'id': wid, 'title': w.get('chineseTitle') or w['title'], 'originalTitle': w.get('originalTitle', ''),
+                   'works': {wid: {'id': wid, 'title': effective_title(w), 'originalTitle': w.get('originalTitle', ''),
                                    'year': w['firstYear'], 'placement': placement, 'href': href, 'category': w.get('category', '')}
                              for wid, (w, placement, href) in works.items()}})
     result = attach_verification(result)

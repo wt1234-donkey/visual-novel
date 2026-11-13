@@ -3,14 +3,15 @@ import argparse
 import json
 from collections import defaultdict
 from pathlib import Path
+from effective_catalogue import load_effective, effective_title
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def build():
     model = json.loads((ROOT / 'data/entities.json').read_text())
     credits = json.loads((ROOT / 'data/credits.json').read_text())
-    games = json.loads((ROOT / 'data/games.json').read_text())
-    coverage = json.loads((ROOT / 'data/company-coverage.json').read_text())
+    effective = load_effective(ROOT)
+    games, coverage = effective['main'], effective['coverage']
     config = json.loads((ROOT / 'data/relationships-preview-config.json').read_text())
     entities = {e['id']: e for e in model['entities']}
     works = {w['id']: w for w in games['works']}
@@ -41,7 +42,7 @@ def build():
                       'productionCount': sum(placements[wid] == 'main' for wid in production),
                       'dossiers': [{'id': d['id'], 'name': d['name']} for d in model['dossiers']
                                    if eid in d['entityIds']],
-                      'works': [{'id': w['id'], 'title': w.get('chineseTitle') or w['title'],
+                      'works': [{'id': w['id'], 'title': effective_title(w),
                                  'year': w['firstYear']} for w in featured]})
     nodes += config['previewNodes']
     edges = []

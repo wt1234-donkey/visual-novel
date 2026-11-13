@@ -794,8 +794,8 @@
     {
       "id": "chromium-browser",
       "required": true,
-      "command": "node --test tests/browser/*.test.mjs",
-      "condition": "CI安装独立Chromium；不可因本地缺少浏览器而称已通过。"
+      "command": "ATLAS_SITE_DIRECTORY=_site node --test tests/browser/*.test.mjs",
+      "condition": "CI安装独立Chromium，先构建真实发布产物，再以ATLAS_SITE_DIRECTORY执行全部浏览器用例；缺少依赖或产物不能称已通过。"
     },
     {
       "id": "android-real-device",

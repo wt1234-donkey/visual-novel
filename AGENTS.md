@@ -1,5 +1,7 @@
 # Repository and editorial rules
 
+- Active write entrypoints are registered in `config/write-entrypoints.json`. Personal commands, reviewed batches, management packages and parameterized intake must seal new receipts and audit roots through `src/infrastructure/filesystem/write-boundary.mjs`, then run `scripts/validate_catalogue.py` before promotion. The shared validator checks the committed archive before any derived regeneration. Preserve ambiguous-operation IDs, distinguish confirmed rejection from uncertain response, and never rewrite a sealed receipt on retry. See `docs/write-entrypoints.md`.
+
 - All `visual-novel` changes, additions, pull requests, merges and Pages releases target **wt1234-donkey/visual-novel**. Do not write to `wwangtao833-dev/visual-novel` or synchronize changes back there.
 - Read `data/content-model.md` before editing catalogue data. Schema v2 separates `works`, `contentVersions` and `platformReleases`. The old `versions` array must not be reintroduced, including inside related games.
 - Preserve work identity, historical platform credits and source evidence. Existing historical releases with unknown content relationships stay `unverified`, with `contentVersionId: null`; do not equate unknown with identical or newly added content.

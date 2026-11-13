@@ -33,9 +33,16 @@ class ParameterizedIntakeTests(unittest.TestCase):
             self.assertEqual(report['summary'],{'candidates':3,'accepted':1,'duplicates':1,'quarantined':1,'before':1,'after':2})
             prepare(p,root,True)
             after=(root/REGISTRY).read_bytes()
+            receipts=list((root/'data/command-receipts').glob('*.json'))
+            self.assertEqual(len(receipts),1)
+            receipt=json.loads(receipts[0].read_text())
+            self.assertEqual(receipt['kind'],'intake');self.assertIn('auditRoot',receipt)
+            self.assertEqual(json.loads(receipt['command'])['plan']['batchId'],'test-batch')
+            receipt_bytes=receipts[0].read_bytes()
             self.assertEqual(len(read_json(root/REGISTRY)['works']),2)
             self.assertTrue(prepare(p,root,True)['alreadyApplied'])
             self.assertEqual((root/REGISTRY).read_bytes(),after)
+            self.assertEqual(receipts[0].read_bytes(),receipt_bytes)
 
     def test_changed_source_and_moved_baseline_are_rejected_without_writes(self):
         with tempfile.TemporaryDirectory() as directory:

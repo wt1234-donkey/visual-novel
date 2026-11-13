@@ -19,3 +19,5 @@
 `scripts/validate_catalogue.py` 将当前功能放入无历史目录验证。正式Pages打包仍保留Git祖先信息用于发布与保存状态追溯；这是发布溯源用途，不能误写成“整个发布流程完全不需要Git”。
 
 CI保留 `python-capabilities.json`、`current-checkout-proof.json` 和 `audit-capacity.json`。报告区分执行、失败、条件跳过、另行运行的历史用例及替代覆盖；历史能力未执行、原始快照不可恢复或真机未测，均不计为已验证。
+
+浏览器回归先构建实际发布目录，再设置 `ATLAS_SITE_DIRECTORY` 指向该目录，执行 `node --test tests/browser/*.test.mjs`。CI同时提供隔离的 `PLAYWRIGHT_MODULE`。公开页面初始化与编辑恢复都使用同一个测试入口；缺少实际产物时公开页面回归明确失败，不以跳过替代。

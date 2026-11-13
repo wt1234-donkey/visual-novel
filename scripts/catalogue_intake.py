@@ -10,6 +10,7 @@ from datetime import date
 from date_contract import is_recorded_year
 from registry_store import read_json, write_json, logical_digest
 from source_urls import source_url_valid
+from write_boundary import seal_write
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = 'data/main-adv-rpg-works-20261031.json'
@@ -118,6 +119,9 @@ def prepare(plan_path, root=ROOT, apply=False):
         # Both paths are staged in one candidate Git commit by the workflow.
         write_json(root / review, audit)
         write_json(root / REGISTRY, result)
+        seal_write(root, {'operationId':'intake:'+plan['batchId'],'kind':'intake','actor':'catalogue-intake',
+            'at':plan['date']+'T00:00:00Z','revision':len(result['batches']),
+            'command':{'plan':plan,'planSha256':audit['planSha256'],'sourceSha256':audit['sourceSha256']}})
     return audit
 
 

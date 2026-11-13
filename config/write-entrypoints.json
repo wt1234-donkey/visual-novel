@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "writers": {
+    "catalogue-command.yml": {"script":"scripts/execute_catalogue_command.mjs","protocol":"sealCatalogueWrite","target":"validated personal command"},
+    "catalogue-command-probe.yml": {"script":"scripts/execute_catalogue_command.mjs","protocol":"sealCatalogueWrite","target":"isolated rehearsal branch"},
+    "editorial-publish.yml": {"script":"scripts/apply_editorial_batch.mjs","protocol":"seal_catalogue_write.mjs","target":"validated reviewed batch"},
+    "management-submit.yml": {"script":"scripts/manage_catalogue.py","protocol":"seal_write","target":"candidate branch"},
+    "catalogue-intake.yml": {"script":"scripts/catalogue_intake.py","protocol":"seal_write","target":"candidate branch"}
+  },
+  "dispatchOnly": ["pages.yml"],
+  "validator": "python3 scripts/validate_catalogue.py"
+}
