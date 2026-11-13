@@ -967,6 +967,11 @@
       "basis": "manual utility"
     },
     {
+      "path": "scripts/migrate_formal_history.mjs",
+      "role": "active",
+      "basis": "formal audit checkpoint migration and full replay check"
+    },
+    {
       "path": "scripts/organization_unfinished.py",
       "role": "active",
       "basis": "active workflow/dependency"

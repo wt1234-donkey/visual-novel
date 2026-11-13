@@ -12,7 +12,7 @@ const decode=value=>JSON.parse(decodeContentText(value));
 const encode=value=>{const bytes=new TextEncoder().encode(JSON.stringify(value,null,2)+'\n');let s='';for(let i=0;i<bytes.length;i+=32766)s+=String.fromCharCode(...bytes.subarray(i,i+32766));return btoa(s);};
 export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PATH,validate=null,sourceLease=null,commandMode='legacy'}={}){
  let oauthScopes=null;
- const validateRead=store=>{if(validate)validate(store);else if(!store||store.schemaVersion!==1||!store.records||Array.isArray(store.records))throw Error('修改历史格式不正确，请停止写入并核查');return store;};
+ const validateRead=store=>{if(validate)validate(store);else if(!store||![1,2].includes(store.schemaVersion)||!store.records||Array.isArray(store.records))throw Error('修改历史格式不正确，请停止写入并核查');return store;};
  async function request(path,method='GET',body){
   const operation=method!=='GET'?'保存网站修改':path==='/user'?'校验 GitHub 账号':path===REPO?'读取目标仓库':'读取网站修改记录';
   let res;
@@ -52,7 +52,7 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
   get commandMode(){return commandMode;},setCommandMode:mode=>{commandMode=mode;},
   async executeCommand(command){
    if(commandMode!=='trusted'||!sourceLease||historyPath!==HISTORY_PATH)throw Error('可信正式保存尚未启用');
-   const result=await submitCommand(request,{...command,sourceLease});
+   const result=await submitCommand(request,{...command,sourceLease:command.sourceLease||sourceLease});
    const head=(await request(REPO+'/git/ref/heads/main')).object.sha,file=await readFile(historyPath,head);
    return {...result,sha:file.sha,store:validateRead(JSON.parse(file.text))};
   },
@@ -69,9 +69,9 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
    if(!response.ok)throw Error('读取已发布修改记录失败（HTTP '+response.status+'）');
    return {sha:null,store:validateRead(await response.json())};
   },
-  async read(){
+  async read({verifySource=true}={}){
    const head=sourceLease?(await request(REPO+'/git/ref/heads/main')).object.sha:'main';
-   await guard(head,dependencies());const file=await readFile(historyPath,head);
+   if(verifySource)await guard(head,dependencies());const file=await readFile(historyPath,head);
    return {head,sha:file.sha,store:validateRead(JSON.parse(file.text))};
   },
   async write(store,sha,message){

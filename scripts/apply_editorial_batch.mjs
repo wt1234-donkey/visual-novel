@@ -128,7 +128,7 @@ export function applyEditorialBatch(batch,dir=root){
    const c=p.change,base=full.find(w=>w.id===c.workId);
    if(!base)fail('正式作品已变化，请重新读取 '+c.workId);
    const projected=reserved.map(w=>projectWork(w,workResult));
-   workResult=c.undo?undoEdit(workResult,base,c.undo,c.expectedRevision,taxonomy,projected):
+   workResult=c.undo?undoEdit(workResult,base,c.undo,c.expectedRevision,taxonomy,projected,{id:p.id,at:time,actor:'编目审核台',reason:p.reason,sources:p.sources}):
     saveEdit(workResult,base,c.after,{id:p.id,at:time,actor:'编目审核台',expectedRevision:c.expectedRevision,reason:p.reason,sources:p.sources},taxonomy,projected);
   }
   validateHistory(workResult,reserved,taxonomy);
