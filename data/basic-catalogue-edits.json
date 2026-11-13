@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 49,
+  "revision": 50,
   "additions": [],
   "records": {
     "g1028": {
@@ -1456,62 +1456,36 @@
         "note": "无",
         "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
         "type": "unverified"
-      }
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+          "at": "2026-11-13T12:33:13.082Z"
+        },
+        "plotTags": {
+          "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+          "at": "2026-11-13T12:33:13.082Z"
+        },
+        "plotTagEvidence": {
+          "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+          "at": "2026-11-13T12:33:13.082Z"
+        }
+      },
+      "values": {
+        "firstYear": 1977,
+        "gameplay": "互动小说（玩法待核）",
+        "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {},
+        "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+        "title": "Zork 285",
+        "yearStatus": "unverified"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "5af20091-2a49-496c-a608-5f66dc942f44",
-      "at": "2026-11-13T12:15:39.731Z",
-      "actor": "wt1234-donkey",
-      "reason": "合并 1 部作品为关联版本",
-      "changes": [
-        {
-          "id": "ifdb-table-20261104-7ncaptb2qlx4j17a",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-table-20261104-7ncaptb2qlx4j17a",
-              "indexId": "basic-ifdb-table-20261104-7ncaptb2qlx4j17a",
-              "aliases": [],
-              "title": "Castle",
-              "firstYear": 1974,
-              "group": "Peter Langston",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=7ncaptb2qlx4j17a",
-              "mainPlacement": "promoted-basic"
-            }
-          }
-        },
-        {
-          "id": "ifarchive-table-20261104-7ncaptb2qlx4j17a",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifarchive-table-20261104-7ncaptb2qlx4j17a",
-              "indexId": "basic-ifarchive-table-20261104-7ncaptb2qlx4j17a",
-              "aliases": [],
-              "title": "Castle",
-              "firstYear": 1974,
-              "group": "Peter Langston",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/source/wander.zip",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "ifdb-table-20261104-7ncaptb2qlx4j17a",
-            "relation": {
-              "label": "Castle",
-              "note": "无",
-              "source": "https://ifdb.org/viewgame?id=7ncaptb2qlx4j17a",
-              "type": "same"
-            }
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "c2a6b398-23cf-4e1e-b315-389972421b47",
       "at": "2026-11-13T12:18:13.168Z",
@@ -1615,6 +1589,86 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+      "at": "2026-11-13T12:33:13.082Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+          "before": {
+            "identity": {
+              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "aliases": [],
+              "title": "Zork 285",
+              "firstYear": 1977,
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
+            "relation": {
+              "label": "Zork 285",
+              "note": "无",
+              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+              "type": "unverified"
+            }
+          },
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "aliases": [],
+              "title": "Zork 285",
+              "firstYear": 1977,
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
+            "relation": {
+              "label": "Zork 285",
+              "note": "无",
+              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+              "type": "unverified"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+                "at": "2026-11-13T12:33:13.082Z"
+              },
+              "plotTags": {
+                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+                "at": "2026-11-13T12:33:13.082Z"
+              },
+              "plotTagEvidence": {
+                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+                "at": "2026-11-13T12:33:13.082Z"
+              }
+            },
+            "values": {
+              "firstYear": 1977,
+              "gameplay": "互动小说（玩法待核）",
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {},
+              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+              "title": "Zork 285",
+              "yearStatus": "unverified"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1626,10 +1680,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r49.json",
-        "sha": "dbe35f9a9aa516c0a8e8fbf92c4964b88ea6af12",
+        "path": "data/basic-catalogue-journal/events/r31-r50.json",
+        "sha": "1796fb25ea9b6eaaab925d1615675dc13091760e",
         "startRevision": 31,
-        "endRevision": 49,
+        "endRevision": 50,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1649,12 +1703,13 @@
           "59fe3116-0d3b-4f96-97c8-ecd823abf854",
           "5af20091-2a49-496c-a608-5f66dc942f44",
           "c2a6b398-23cf-4e1e-b315-389972421b47",
-          "67366783-d9b7-4ab9-b01c-10889f28be3f"
+          "67366783-d9b7-4ab9-b01c-10889f28be3f",
+          "4db05386-9bbe-4617-abe3-486d8b5aaf00"
         ],
-        "bytes": 52547
+        "bytes": 56337
       }
     ],
-    "eventCount": 19,
-    "stateHash": "86ffdefe1e757d14dbcb3a0fc01a50254584edadbb082065e164e1cc976202e1"
+    "eventCount": 20,
+    "stateHash": "91f6ce09f07ba436e942c0f68d0a6c7306d50d9c57e83a71bd357d8da0c6dd4b"
   }
 }

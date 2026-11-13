@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "startRevision": 31,
-  "endRevision": 49,
+  "endRevision": 50,
   "events": [
     {
       "schemaVersion": 1,
@@ -1603,6 +1603,106 @@
               "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
               "type": "unverified"
             }
+          }
+        }
+      ],
+      "added": [],
+      "removed": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+      "at": "2026-11-13T12:33:13.082Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "previousRevision": 49,
+      "revision": 50,
+      "commandType": "edit",
+      "intent": {
+        "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+        "type": "edit",
+        "values": {
+          "firstYear": 1977,
+          "gameplay": "互动小说（玩法待核）",
+          "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+          "plotStyles": [],
+          "plotTagEvidence": {},
+          "plotTags": {},
+          "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+          "title": "Zork 285",
+          "yearStatus": "unverified"
+        }
+      },
+      "changes": [
+        {
+          "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+          "before": {
+            "identity": {
+              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "aliases": [],
+              "title": "Zork 285",
+              "firstYear": 1977,
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
+            "relation": {
+              "label": "Zork 285",
+              "note": "无",
+              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+              "type": "unverified"
+            }
+          },
+          "after": {
+            "identity": {
+              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
+              "aliases": [],
+              "title": "Zork 285",
+              "firstYear": 1977,
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "gameplay": "互动小说（玩法待核）",
+              "plotStyles": [],
+              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+              "mainPlacement": "promoted-basic"
+            },
+            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
+            "relation": {
+              "label": "Zork 285",
+              "note": "无",
+              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
+              "type": "unverified"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+                "at": "2026-11-13T12:33:13.082Z"
+              },
+              "plotTags": {
+                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+                "at": "2026-11-13T12:33:13.082Z"
+              },
+              "plotTagEvidence": {
+                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
+                "at": "2026-11-13T12:33:13.082Z"
+              }
+            },
+            "values": {
+              "firstYear": 1977,
+              "gameplay": "互动小说（玩法待核）",
+              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {},
+              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
+              "title": "Zork 285",
+              "yearStatus": "unverified"
+            },
+            "aliases": []
           }
         }
       ],
