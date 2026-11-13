@@ -40,7 +40,7 @@ export async function readReleaseText(ref,manifest,fetcher=fetch,options={}){
   return text;
  }catch(error){return releaseFailure(error,manifest.revision,fetcher);}
 }
-export async function readReleaseJson(path,fetcher=fetch,manifest){
+export async function readReleaseJson(path,fetcher=fetch,manifest,options={}){
  const release=manifest||await readReleaseManifest(fetcher);
  const key=path.replace(/^\.\//,'').split('?')[0];
  const ref=release.resources?.[key];
@@ -50,5 +50,5 @@ export async function readReleaseJson(path,fetcher=fetch,manifest){
   const response=await fetcher('./'+key,{cache:'no-cache'});if(!response.ok)throw Error('来源资料不可读取：'+key);
   return response.json();
  }
- return JSON.parse(await readReleaseText(ref,release,fetcher));
+ return JSON.parse(await readReleaseText(ref,release,fetcher,options));
 }

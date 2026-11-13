@@ -123,7 +123,8 @@ async function start(){
    const regions=readReleaseJson('data/basic-manufacturer-regions.json').then(data=>{if(data.schemaVersion!==1||!Array.isArray(data.entries))throw Error('地区索引格式无效');return data;}).catch(error=>{console.warn('厂商地区索引暂不可用',error);$('filter-note').textContent='厂商地区索引暂不可用，厂商暂归地区待核；仍可按名称筛选。';return {entries:[]};});
    const [manifest,baseEntries,regionData]=await Promise.all([webIndex.meta(),webIndex.basicRows(),regions]);
    indexRevision=manifest.revision;
-   const {promotedBasic,promotedDossier,existingComplete,advancedCoverage}=manifest.basic;
+   const {promotedBasic,promotedDossier,existingComplete,advancedCoverage,identityStats}=manifest.basic;
+   if(identityStats){const node=$('source-identity-summary');if(node)node.textContent='权威来源 '+identityStats.sourceRecordCount.toLocaleString('zh-CN')+' 条 · 身份对应已明确 '+identityStats.resolvedWorkCount.toLocaleString('zh-CN')+' 个（含继承明示关联） · 本轮显式核对 '+identityStats.reviewedWorkCount+' 个。未核基础身份不计为已核独立作品。';}
    if(advancedCoverage){
     const labels={series:'系列',language:'语言',duration:'时长',releaseRegion:'发行地区'};
     $('query-coverage').textContent='索引有资料的记录 · '+Object.entries(labels).map(([field,label])=>label+' '+advancedCoverage[field].toLocaleString('zh-CN')).join(' · ');

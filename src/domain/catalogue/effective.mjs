@@ -59,7 +59,7 @@ export function buildEffectiveCatalogue({main={works:[]},supplement={works:[]},c
 
 export function projectBasicSources(rows,formalById,formalLinks={}){
  return rows.map(row=>{
-  const id=row.linkedRecordId||formalLinks[row.matchedWorkId||row.registryId||row.id]||row.matchedWorkId||row.id;
+  const id=formalLinks[row.matchedWorkId||row.registryId||row.id]||row.linkedRecordId||row.matchedWorkId||row.id;
   const formal=formalById.get(id);
   if(!formal)return row;
   return {...row,sourceTitle:row.title,sourceYear:row.year,title:displayTitle(formal),year:formal.firstYear,firstYear:formal.firstYear,

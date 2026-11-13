@@ -61,8 +61,8 @@ export function assembleBasicRows(registry,initial,batches){
 }
 
 // One pure input-to-snapshot boundary. I/O and index compression are adapters.
-export function buildCatalogueSnapshot({registry, initial = [], batches = [], store = emptyStore(), main = {works:[]}, supplement = {works:[]}, history = {records:{}}}, {strict = true} = {}) {
- const formalLinks=Object.fromEntries(registry.works.filter(w=>w.linkedRecordId).map(w=>[w.id,w.linkedRecordId]));
+export function buildCatalogueSnapshot({registry, initial = [], batches = [], store = emptyStore(), main = {works:[]}, supplement = {works:[]}, history = {records:{}}, identityLinks={}}, {strict = true} = {}) {
+ const formalLinks={...Object.fromEntries(registry.works.filter(w=>w.linkedRecordId).map(w=>[w.id,w.linkedRecordId])),...identityLinks};
  const effective=buildEffectiveCatalogue({main,supplement,history,basicStore:store,formalLinks});
  const formalById=new Map([...effective.supplement.works,...effective.main.works].map(w=>[w.id,w]));
  const formalSource=buildEffectiveCatalogue({main,supplement,history});
@@ -71,7 +71,7 @@ export function buildCatalogueSnapshot({registry, initial = [], batches = [], st
  const identities = view.identities;
  const formalIdByWorkId = new Map();
  for (const row of view.all) {
-  const formalId = row.linkedRecordId || (formalById.has(row._key) ? row._key : null);
+  const formalId = formalLinks[row._key] || row.linkedRecordId || (formalById.has(row._key) ? row._key : null);
   if (formalId && formalById.has(formalId)) formalIdByWorkId.set(row._key, formalId);
  }
  const names = new Map();
