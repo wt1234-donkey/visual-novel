@@ -1,0 +1,31 @@
+name: Historical exact-delta validation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Verify current contracts and registered historical capabilities
+        run: |
+          python3 scripts/generate_effective_views.py
+          python3 scripts/run_python_tests.py --historical
+          node --test tests/*.test.mjs
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: historical-capabilities
+          path: test-results/python-capabilities.json

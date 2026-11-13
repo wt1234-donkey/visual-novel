@@ -1,0 +1,862 @@
+{
+  "schemaVersion": 1,
+  "historicalModules": [
+    {
+      "module": "test_banpresto_completion_20261029",
+      "tests": 6,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_banpresto_expansion",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_broderbund_completion_20261029",
+      "tests": 6,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_broderbund_dossier",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_chunsoft_completion_20261029",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_chunsoft_dossier",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_a2_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_a3_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_a4_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_a5_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_a6_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_a_recheck1_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_a_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_b1_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_b2_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_b3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_c1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_c2_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_c3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_c4_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_cf_catchup_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_d1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_d2_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_d3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_e1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_e2_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_e3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_f1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_f2_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_g1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_g2_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_g3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_h1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_h2_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_h3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_i1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_i2_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_i3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_i4_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_j1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_k1_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_k2_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_k3_review",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_l1_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_l2_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_l3_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_m1_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_m2_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_m3_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_m4_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_m5_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_m6_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_n1_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_n2_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_n3_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_n4_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_n5_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_numeric_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_o1_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_p1_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_p2_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_p3_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_q1_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_r1_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_r2_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s10_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s11_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s1_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s2_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s3_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s4_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s5_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s6_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s7_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s8_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_s9_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_t1_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_t2_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_t3_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_t4_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_t5_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_u1_review",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_v1_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_w1_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_x1_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_creator_y1_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_dossier_basic_identity_20261103",
+      "tests": 1,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_entity_role_adventure_alice_batch",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_entity_role_nitroplus_batch",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_entity_verification_five_phase",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_followup_entity_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_fourth_entity_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_intermedia_dossier",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_jhv_completion_20261029",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_jhv_expansion",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_leland_dossier",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_manufacturers_20261029",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_narrative_round3_20261031",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_organization_round16",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_organization_round20",
+      "tests": 2,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_organization_unfinished",
+      "tests": 1,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_organization_verification",
+      "tests": 1,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_priority_entity_review",
+      "tests": 3,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_sega_completion",
+      "tests": 6,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_sega_expansion",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_takeru_completion",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_takeru_dossier",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_third_entity_review",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_tokuma_completion",
+      "tests": 4,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_ultra_completion_20261029",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    },
+    {
+      "module": "test_ultra_games_dossier",
+      "tests": 5,
+      "capability": "historical-exact-delta"
+    }
+  ],
+  "conditionalSkips": [
+    {
+      "module": "test_creator_a6_review",
+      "ref": "2ec0da35f46aa7b5c842743f2214e14d30d68bf7",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_b1_review",
+      "ref": "7bfa81c0569f5793b3b0725117c71320877f7b65",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_b2_review",
+      "ref": "983232fd634dfeb4ca7a213d821b1a3007e72b3d",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_b3_review",
+      "ref": "057e68083f0bbbed4e58d74a064bb3bd33b13023",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_c1_review",
+      "ref": "f1e8d845c5731fe1740763ab194f9bd014a3a435",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_c2_review",
+      "ref": "6dd8261",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_c3_review",
+      "ref": "4a321fa",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_c4_review",
+      "ref": "ec95229",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_d1_review",
+      "ref": "e1a432f",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_d2_review",
+      "ref": "c6c136c",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_d3_review",
+      "ref": "46f5c48",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_f1_review",
+      "ref": "ebff3e6",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_f2_review",
+      "ref": "448276d",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_g1_review",
+      "ref": "3d78a32",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_g2_review",
+      "ref": "3458c01",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_g3_review",
+      "ref": "4dfab7f",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_h1_review",
+      "ref": "f61b8d9",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_h2_review",
+      "ref": "6bccaa7",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    },
+    {
+      "module": "test_creator_h3_review",
+      "ref": "1b17dbd",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/history-contracts.json",
+      "sha256": "c5dc746ae7acc679815fe02c00fccca1459d1de6d8ed38f9fb4639c5fa117ed5",
+      "rebuild": "python3 scripts/build_history_fixtures.py",
+      "purpose": "专题锚点、既有检索页、Banpresto归档边界与待核职责队列的最小历史投影；各项保留原提交和原文件摘要。"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "current-contracts",
+      "required": true,
+      "command": "python3 scripts/run_python_tests.py",
+      "history": "不自动下载Git历史；当前功能、持久化、来源保全和上述精简夹具均须通过。"
+    },
+    {
+      "id": "historical-exact-delta",
+      "required": false,
+      "command": "python3 scripts/run_python_tests.py --historical",
+      "condition": "具备冻结历史对象；缺失时仅可显式 --fetch-history 补取。独立手动工作流可重跑。",
+      "alternative": [
+        "tests/test_entity_model.py",
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_verification_plan.py"
+      ],
+      "limitation": "替代项验证当前保全及契约，不宣称证明全部历史批次的精确增量。"
+    },
+    {
+      "id": "unavailable-exact-snapshot",
+      "required": false,
+      "condition": "只允许conditionalSkips登记模块和对应ref产生有说明的跳过；其他跳过使检查失败。",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py"
+      ],
+      "limitation": "未公开或损坏的原始树仍无法复原，不计为通过。"
+    },
+    {
+      "id": "audit-capacity",
+      "required": true,
+      "command": "node --test tests/audit-capacity.test.mjs",
+      "history": "合成万条有效事件，按读数预算校验，归档回放与语义校验不能跳过。"
+    },
+    {
+      "id": "chromium-browser",
+      "required": true,
+      "command": "node --test tests/browser/*.test.mjs",
+      "condition": "CI安装独立Chromium；不可因本地缺少浏览器而称已通过。"
+    },
+    {
+      "id": "android-real-device",
+      "required": false,
+      "condition": "需要真实设备和网络测量；尚未提供。",
+      "alternative": [
+        ".github/workflows/mobile-performance.yml"
+      ],
+      "limitation": "Chromium手机条件模拟和故障测试不等同Android真机测量。"
+    }
+  ],
+  "historicalTests": [
+    {
+      "testId": "test_basic_r118_r119_last20_20261102.Last20ReviewTests.test_regression_and_original_rows_preserved",
+      "capability": "historical-exact-delta",
+      "alternative": [
+        "tests/source-identities.test.mjs",
+        "tests/basic-catalogue-storage.test.mjs",
+        "scripts/registry_store.py --check"
+      ],
+      "limitation": "替代项核对当前来源前缀、原ID、日期契约和变更回放；不证明当批精确增量。"
+    },
+    {
+      "testId": "test_basic_r92_r93_conflict_review.ReviewedIdentityTests.test_exact_delta_and_no_historical_rewrites",
+      "capability": "historical-exact-delta",
+      "alternative": [
+        "tests/source-identities.test.mjs",
+        "tests/basic-catalogue-storage.test.mjs",
+        "scripts/registry_store.py --check"
+      ],
+      "limitation": "替代项核对当前来源前缀、原ID、日期契约和变更回放；不证明当批精确增量。"
+    },
+    {
+      "testId": "test_basic_r92_r93_conflict_review.ReviewedIdentityTests.test_later_append_is_allowed_but_protected_history_is_not",
+      "capability": "historical-exact-delta",
+      "alternative": [
+        "tests/source-identities.test.mjs",
+        "tests/basic-catalogue-storage.test.mjs",
+        "scripts/registry_store.py --check"
+      ],
+      "limitation": "替代项核对当前来源前缀、原ID、日期契约和变更回放；不证明当批精确增量。"
+    },
+    {
+      "testId": "test_public_catalogues_r142_r143_20261103.PublicIntakeTest.test_actual_batches_preserve_base_and_caps",
+      "capability": "historical-exact-delta",
+      "alternative": [
+        "tests/source-identities.test.mjs",
+        "tests/basic-catalogue-storage.test.mjs",
+        "scripts/registry_store.py --check"
+      ],
+      "limitation": "替代项核对当前来源前缀、原ID、日期契约和变更回放；不证明当批精确增量。"
+    },
+    {
+      "testId": "test_vndb_right_only_20261103.VndbRightOnlyIntakeTests.test_source_records_dates_counts_and_historical_objects_are_preserved",
+      "capability": "historical-exact-delta",
+      "alternative": [
+        "tests/source-identities.test.mjs",
+        "tests/basic-catalogue-storage.test.mjs",
+        "scripts/registry_store.py --check"
+      ],
+      "limitation": "替代项核对当前来源前缀、原ID、日期契约和变更回放；不证明当批精确增量。"
+    }
+  ]
+}

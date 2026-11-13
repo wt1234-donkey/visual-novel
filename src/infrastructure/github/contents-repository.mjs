@@ -2,6 +2,7 @@ import {readReleaseJson} from '../storage/release-reader.mjs';
 import {submitCommand} from './command-transport.mjs';
 import {createSourceGuard} from './source-lease.mjs';
 import {blobDigest} from '../storage/digests.mjs';
+import {createGitAuditAccess} from '../storage/audit-access.mjs';
 export const EDIT_REPOSITORY='/repos/wt1234-donkey/visual-novel';
 const API='https://api.github.com',REPO=EDIT_REPOSITORY;
 export const HISTORY_PATH='data/work-edit-history.json';
@@ -47,14 +48,16 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
  async function readFile(path=historyPath,ref='main'){const file=await request(REPO+'/contents/'+path+'?ref='+encodeURIComponent(ref));const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,text:decodeContentText(blob.content)};}
  const guard=createSourceGuard(request,REPO);
  const dependencies=()=>sourceLease?{...sourceLease,files:Object.fromEntries(Object.entries(sourceLease.files).filter(([path])=>path!==historyPath))}:null;
+ const audit=createGitAuditAccess({readFile,gitRequest:request},fetcher);
  return {
+  audit:(kind,snapshot)=>audit.open(kind,snapshot),
   gitRequest:request,readFile,setSourceLease:lease=>{sourceLease=lease;},
   get commandMode(){return commandMode;},setCommandMode:mode=>{commandMode=mode;},
   async executeCommand(command){
    if(commandMode!=='trusted'||!sourceLease||historyPath!==HISTORY_PATH)throw Error('可信正式保存尚未启用');
    const result=await submitCommand(request,{...command,sourceLease:command.sourceLease||sourceLease});
    const head=(await request(REPO+'/git/ref/heads/main')).object.sha,file=await readFile(historyPath,head);
-   return {...result,sha:file.sha,store:validateRead(JSON.parse(file.text))};
+   return {...result,head,sha:file.sha,store:validateRead(JSON.parse(file.text))};
   },
   async connect(){
    if(!token)throw Error('请填写仅授权本仓库的 GitHub 凭证');

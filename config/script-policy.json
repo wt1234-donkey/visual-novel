@@ -76,6 +76,10 @@
       "sha256": "cb144b1348bb95dea7957223d58a890f0f80fd8a01522da1b22e3ae11b6e1295"
     },
     {
+      "path": "scripts/build_audit_ledger.mjs",
+      "role": "active"
+    },
+    {
       "path": "scripts/build_basic_advanced_index.mjs",
       "role": "tool",
       "basis": "manual utility"
@@ -133,6 +137,10 @@
       "path": "scripts/build_field_evidence.mjs",
       "role": "active",
       "basis": "field evidence directory, CSV and replay validation"
+    },
+    {
+      "path": "scripts/build_history_fixtures.py",
+      "role": "tool"
     },
     {
       "path": "scripts/build_on_demand_catalogues.mjs",
@@ -1162,6 +1170,11 @@
       "path": "scripts/verify_catalogue_probe.mjs",
       "role": "active",
       "basis": "active workflow/dependency"
+    },
+    {
+      "path": "scripts/verify_current_contracts.py",
+      "role": "active",
+      "basis": "required current Python and Node contracts without repository history"
     },
     {
       "path": "scripts/verify_on_demand_artifact.mjs",

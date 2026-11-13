@@ -5,7 +5,7 @@ export const IDENTITY_PATH='data/source-identity-decisions.json';
 export function createIdentityRepository(token='',fetcher=fetch,{sourceLease=null}={}){
  const client=createEditClient(token,fetcher,{historyPath:IDENTITY_PATH,sourceLease,validate:validateIdentityStore});
  return {
-  connect:()=>client.connect(),read:()=>client.read(),readPublished:()=>client.readPublished(),
+  connect:()=>client.connect(),read:()=>client.read(),readPublished:()=>client.readPublished(),audit:snapshot=>client.audit('identity',snapshot),
   async executeCommand(command){
    if(command.kind!=='identity')throw Error('身份核对命令类型无效');
    const receipt=await submitCommand(client.gitRequest,{...command,sourceLease:command.sourceLease||sourceLease});

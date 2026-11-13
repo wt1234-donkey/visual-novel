@@ -32,6 +32,12 @@ jobs:
           package-manager-cache: false
       - name: Validate catalogue and existing regressions
         run: python3 scripts/validate_catalogue.py
+      - name: Retain capability and conditional coverage report
+        uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: current-test-capabilities
+          path: test-results/*.json
       - name: Install isolated browser regression dependency
         run: |
           npm install --prefix /tmp/catalogue-browser --no-package-lock --no-audit --no-fund playwright@1.56.1

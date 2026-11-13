@@ -12,6 +12,8 @@ import urllib.request
 ROOT=Path(__file__).resolve().parents[1]
 REPO='wt1234-donkey/visual-novel'
 def allowed_path(path):
+    if re.fullmatch(r'data/audit-ledger/(manifest|objects/[a-f0-9]{64})\.json', path):
+        return True
     return path in ('data/basic-catalogue-edits.json','data/work-edit-history.json','data/source-identity-decisions.json','data/field-evidence.json') or (
         path.startswith(('data/basic-catalogue-journal/events/','data/command-receipts/')) and
         path.endswith('.json') and '..' not in Path(path).parts)
@@ -45,6 +47,8 @@ def main(rehearsal=False):
     tree=[]
     for path in paths:
         file=ROOT/path
+        if path.startswith('data/audit-ledger/') and not file.exists():
+            raise ValueError('Audit archive objects cannot be deleted by a save command')
         if not file.exists():tree.append({'path':path,'mode':'100644','type':'blob','sha':None});continue
         blob=api('/git/blobs','POST',{'content':base64.b64encode(file.read_bytes()).decode(),'encoding':'base64'})
         tree.append({'path':path,'mode':'100644','type':'blob','sha':blob['sha']})
