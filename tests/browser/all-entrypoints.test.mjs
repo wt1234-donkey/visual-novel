@@ -76,7 +76,7 @@ async function ready(page, entry) {
     );
 }
 test(
-  "all 106 shipped HTML entries reach their registered startup signal using actual published resources",
+  "all registered shipped HTML entries reach their registered startup signal using actual published resources",
   { timeout: 240000 },
   async () => {
     const f = await harness(),

@@ -1,5 +1,6 @@
 """F1 verifies two brand identities and keeps later-edition credits in scope."""
 from audit_baselines import requires_baseline
+from historical_baseline_recovery import baseline_ref
 import json
 import subprocess
 import unittest
@@ -8,7 +9,8 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = 'ebff3e6'
+ORIGINAL_BASE = 'ebff3e6'
+BASE = baseline_ref(ROOT, ORIGINAL_BASE)
 
 
 def read(path):

@@ -1,5 +1,6 @@
 """C3 updates three company identities without creating inferred game credits."""
 from audit_baselines import requires_baseline
+from historical_baseline_recovery import baseline_ref
 import json
 import subprocess
 import unittest
@@ -8,7 +9,8 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '4a321fa'
+ORIGINAL_BASE = '4a321fa'
+BASE = baseline_ref(ROOT, ORIGINAL_BASE)
 
 
 def read(path):

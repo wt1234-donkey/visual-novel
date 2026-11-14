@@ -391,6 +391,20 @@
       "basicManifest": false
     },
     {
+      "path": "device-check.html",
+      "modules": [
+        "device-check.mjs"
+      ],
+      "resources": [],
+      "ready": {
+        "selector": "#device-status[data-ready=\"true\"]",
+        "text": ""
+      },
+      "recovery": "explicit-stop-and-retry",
+      "catalogues": [],
+      "basicManifest": false
+    },
+    {
       "path": "dreamworks_interactive.html",
       "modules": [
         "dossiers.mjs"

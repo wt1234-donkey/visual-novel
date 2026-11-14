@@ -1,5 +1,6 @@
 """D2 identity corrections preserve the historical release and creation records."""
 from audit_baselines import requires_baseline
+from historical_baseline_recovery import baseline_ref
 import json
 import subprocess
 import unittest
@@ -8,7 +9,8 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = 'c6c136c'
+ORIGINAL_BASE = 'c6c136c'
+BASE = baseline_ref(ROOT, ORIGINAL_BASE)
 
 
 def read(path):

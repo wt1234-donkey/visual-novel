@@ -557,198 +557,7 @@
       "capability": "historical-exact-delta"
     }
   ],
-  "conditionalSkips": [
-    {
-      "module": "test_creator_a6_review",
-      "ref": "2ec0da35f46aa7b5c842743f2214e14d30d68bf7",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_b1_review",
-      "ref": "7bfa81c0569f5793b3b0725117c71320877f7b65",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_b2_review",
-      "ref": "983232fd634dfeb4ca7a213d821b1a3007e72b3d",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_b3_review",
-      "ref": "057e68083f0bbbed4e58d74a064bb3bd33b13023",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_c1_review",
-      "ref": "f1e8d845c5731fe1740763ab194f9bd014a3a435",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_c2_review",
-      "ref": "6dd8261",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_c3_review",
-      "ref": "4a321fa",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_c4_review",
-      "ref": "ec95229",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_d1_review",
-      "ref": "e1a432f",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_d2_review",
-      "ref": "c6c136c",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_d3_review",
-      "ref": "46f5c48",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_f1_review",
-      "ref": "ebff3e6",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_f2_review",
-      "ref": "448276d",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_g1_review",
-      "ref": "3d78a32",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_g2_review",
-      "ref": "3458c01",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_g3_review",
-      "ref": "4dfab7f",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_h1_review",
-      "ref": "f61b8d9",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_h2_review",
-      "ref": "6bccaa7",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    },
-    {
-      "module": "test_creator_h3_review",
-      "ref": "1b17dbd",
-      "capability": "unavailable-exact-snapshot",
-      "alternative": [
-        "tests/test_archived_creator_manifests.py",
-        "tests/test_entity_model.py"
-      ],
-      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。"
-    }
-  ],
+  "conditionalSkips": [],
   "fixtures": [
     {
       "path": "tests/fixtures/history-contracts.json",
@@ -779,7 +588,7 @@
     {
       "id": "unavailable-exact-snapshot",
       "required": false,
-      "condition": "只允许conditionalSkips登记模块和对应ref产生有说明的跳过；其他跳过使检查失败。",
+      "condition": "原42项验证使用固定实际发布父提交或同一原提交的冻结生成器重建，原断言全部执行；坏Git对象保留，重建不宣称还原原始坏字节。再次缺对象或摘要不符必须失败。",
       "alternative": [
         "tests/test_archived_creator_manifests.py"
       ],
@@ -805,7 +614,8 @@
         ".github/workflows/mobile-performance.yml"
       ],
       "limitation": "Chromium手机条件模拟和故障测试不等同Android真机测量。",
-      "command": "node scripts/measure_android_device.mjs --serial DEVICE --physical-device --report test-results/android-real-device.json"
+      "command": "node scripts/measure_android_device.mjs --serial DEVICE --physical-device --report test-results/android-real-device.json",
+      "browserSelfMeasurement": "device-check.html；真实设备上操作后回传9次采样，设备类型由用户确认；网页不能独立认证物理硬件，收集不自动记为核验通过。"
     },
     {
       "id": "audit-growth-and-startup",
@@ -883,5 +693,217 @@
       ],
       "limitation": "替代项核对当前来源前缀、原ID、日期契约和变更回放；不证明当批精确增量。"
     }
-  ]
+  ],
+  "resolvedConditionalSkips": [
+    {
+      "module": "test_creator_a6_review",
+      "ref": "2ec0da35f46aa7b5c842743f2214e14d30d68bf7",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "frozen-generator-replay"
+    },
+    {
+      "module": "test_creator_b1_review",
+      "ref": "7bfa81c0569f5793b3b0725117c71320877f7b65",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "frozen-generator-replay"
+    },
+    {
+      "module": "test_creator_b2_review",
+      "ref": "983232fd634dfeb4ca7a213d821b1a3007e72b3d",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "frozen-generator-replay"
+    },
+    {
+      "module": "test_creator_b3_review",
+      "ref": "057e68083f0bbbed4e58d74a064bb3bd33b13023",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "frozen-generator-replay"
+    },
+    {
+      "module": "test_creator_c1_review",
+      "ref": "f1e8d845c5731fe1740763ab194f9bd014a3a435",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "frozen-generator-replay"
+    },
+    {
+      "module": "test_creator_c2_review",
+      "ref": "6dd8261",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_c3_review",
+      "ref": "4a321fa",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_c4_review",
+      "ref": "ec95229",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_d1_review",
+      "ref": "e1a432f",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_d2_review",
+      "ref": "c6c136c",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_d3_review",
+      "ref": "46f5c48",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_f1_review",
+      "ref": "ebff3e6",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_f2_review",
+      "ref": "448276d",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_g1_review",
+      "ref": "3d78a32",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_g2_review",
+      "ref": "3458c01",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_g3_review",
+      "ref": "4dfab7f",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_h1_review",
+      "ref": "f61b8d9",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_h2_review",
+      "ref": "6bccaa7",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    },
+    {
+      "module": "test_creator_h3_review",
+      "ref": "1b17dbd",
+      "capability": "unavailable-exact-snapshot",
+      "alternative": [
+        "tests/test_archived_creator_manifests.py",
+        "tests/test_entity_model.py"
+      ],
+      "limitation": "当前断言存续与索引契约不等价于遗失快照的逐字节或精确增量证明。",
+      "resolution": "published-parent"
+    }
+  ],
+  "historicalRecoveryRegistry": "config/historical-baseline-recovery.json"
 }
