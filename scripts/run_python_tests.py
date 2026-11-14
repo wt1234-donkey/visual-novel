@@ -72,6 +72,9 @@ def main(argv=None):
         'separateHistoricalCases': [] if args.historical else sorted(historical_cases),
         'separateHistoricalTests': 0 if args.historical else sum(row['tests'] for row in historical.values())+len(historical_cases),
         'capabilities': policy['capabilities']}
+    if args.historical:
+        from historical_baseline_recovery import recovery_report
+        report['baselineRecoveries'] = recovery_report()
     target = ROOT/args.report;target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
     print(json.dumps({key: report[key] for key in ['mode', 'testsRun', 'failures', 'errors', 'separateHistoricalTests']}, ensure_ascii=False))
