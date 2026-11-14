@@ -1,7 +1,1007 @@
 {
   "schemaVersion": 1,
-  "revision": 0,
-  "assertions": {},
-  "choices": {},
-  "events": []
+  "revision": 17,
+  "assertions": {
+    "r07-evidence-001-clannad-original-year": {
+      "id": "r07-evidence-001-clannad-original-year",
+      "scope": {
+        "type": "work",
+        "workId": "g030",
+        "id": "g030"
+      },
+      "field": "firstYear",
+      "value": 2004,
+      "sources": [
+        "https://key.visualarts.co.jp/product/clannad/"
+      ],
+      "sourceIds": [
+        "vndb-table-20261103-v4"
+      ],
+      "status": "supported",
+      "subjects": []
+    },
+    "r07-evidence-001-fate-original-year": {
+      "id": "r07-evidence-001-fate-original-year",
+      "scope": {
+        "type": "work",
+        "workId": "g031",
+        "id": "g031"
+      },
+      "field": "firstYear",
+      "value": 2004,
+      "sources": [
+        "https://typemoon.com/contents/9ncnes/fate-stay-night"
+      ],
+      "sourceIds": [
+        "vndb-table-20261103-v11"
+      ],
+      "status": "supported",
+      "subjects": []
+    },
+    "r07-evidence-001-ever17-original-year": {
+      "id": "r07-evidence-001-ever17-original-year",
+      "scope": {
+        "type": "work",
+        "workId": "g050",
+        "id": "g050"
+      },
+      "field": "firstYear",
+      "value": 2002,
+      "sources": [
+        "https://game.mages.co.jp/infinity/ever17/"
+      ],
+      "sourceIds": [
+        "vndb-table-20261103-v17"
+      ],
+      "status": "supported",
+      "subjects": []
+    },
+    "r07-evidence-001-steinsgate-original-year": {
+      "id": "r07-evidence-001-steinsgate-original-year",
+      "scope": {
+        "type": "work",
+        "workId": "g054",
+        "id": "g054"
+      },
+      "field": "firstYear",
+      "value": 2009,
+      "sources": [
+        "https://steinsgate.jp/15th/"
+      ],
+      "sourceIds": [
+        "g054",
+        "ifdb-table-20261104-qjw034cv6w2cjwgt"
+      ],
+      "status": "supported",
+      "subjects": []
+    },
+    "r07-evidence-001-moon-rpg-original-year": {
+      "id": "r07-evidence-001-moon-rpg-original-year",
+      "scope": {
+        "type": "work",
+        "workId": "ascii-moon",
+        "id": "ascii-moon"
+      },
+      "field": "firstYear",
+      "value": 1997,
+      "sources": [
+        "https://www.nintendo.com/jp/topics/article/1b902173-e01b-11e9-b641-063b7ac45a6d"
+      ],
+      "sourceIds": [
+        "ascii-moon"
+      ],
+      "status": "supported",
+      "subjects": []
+    },
+    "r07-evidence-001-moon-tactics-original-year": {
+      "id": "r07-evidence-001-moon-tactics-original-year",
+      "scope": {
+        "type": "work",
+        "workId": "vndb-table-20261103-v15",
+        "id": "vndb-table-20261103-v15"
+      },
+      "field": "firstYear",
+      "value": 1997,
+      "sources": [
+        "https://nexton-net.jp/~nexton/product.htm"
+      ],
+      "sourceIds": [
+        "vndb-table-20261103-v15"
+      ],
+      "status": "supported",
+      "subjects": []
+    },
+    "r07-evidence-001-moon-tactics-title": {
+      "id": "r07-evidence-001-moon-tactics-title",
+      "scope": {
+        "type": "work",
+        "workId": "vndb-table-20261103-v15",
+        "id": "vndb-table-20261103-v15"
+      },
+      "field": "title",
+      "value": "MOON.",
+      "sources": [
+        "https://nexton-net.jp/~nexton/product.htm"
+      ],
+      "sourceIds": [
+        "vndb-table-20261103-v15"
+      ],
+      "status": "supported",
+      "subjects": []
+    },
+    "r07-evidence-001-mono-imported-year": {
+      "id": "r07-evidence-001-mono-imported-year",
+      "scope": {
+        "type": "work",
+        "workId": "erogamescape-table-20261103-38699",
+        "id": "erogamescape-table-20261103-38699"
+      },
+      "field": "firstYear",
+      "value": 2050,
+      "sources": [],
+      "sourceIds": [
+        "erogamescape-table-20261103-38699"
+      ],
+      "status": "disputed",
+      "subjects": []
+    },
+    "r07-evidence-001-mono-announced-year": {
+      "id": "r07-evidence-001-mono-announced-year",
+      "scope": {
+        "type": "work",
+        "workId": "erogamescape-table-20261103-38699",
+        "id": "erogamescape-table-20261103-38699"
+      },
+      "field": "firstYear",
+      "value": 2027,
+      "sources": [
+        "https://laplacian.jp/games/mono/",
+        "https://laplacian.jp/"
+      ],
+      "sourceIds": [
+        "erogamescape-table-20261103-38699"
+      ],
+      "status": "supported",
+      "subjects": []
+    }
+  },
+  "choices": {
+    "[\"work\",\"g030\",\"g030\",\"firstYear\"]": {
+      "assertionId": "r07-evidence-001-clannad-original-year",
+      "operationId": "r07-evidence-001-select-clannad-original-year",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:07.000Z",
+      "reason": "Key产品页区分原作初回版2004-04-28、通常版2004-08-06、全语音版2008及英文版2015；作品登记年采用原作2004，未把其他版本的日期覆盖为2004。"
+    },
+    "[\"work\",\"g031\",\"g031\",\"firstYear\"]": {
+      "assertionId": "r07-evidence-001-fate-original-year",
+      "operationId": "r07-evidence-001-select-fate-original-year",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:09.000Z",
+      "reason": "TYPE-MOON产品页分别列出2004-01-30 CD原版和2006-03-29 DVD；本结论限定作品登记年2004，不改写具体发行记录。"
+    },
+    "[\"work\",\"g050\",\"g050\",\"firstYear\"]": {
+      "assertionId": "r07-evidence-001-ever17-original-year",
+      "operationId": "r07-evidence-001-select-ever17-original-year",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:11.000Z",
+      "reason": "MAGES官方明确原作为2002年KID作品，同时区分2011重制和2025重制基础上的新版；本次只确认原作年份到年精度，不新造月日或内容对应。"
+    },
+    "[\"work\",\"g054\",\"g054\",\"firstYear\"]": {
+      "assertionId": "r07-evidence-001-steinsgate-original-year",
+      "operationId": "r07-evidence-001-select-steinsgate-original-year",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:13.000Z",
+      "reason": "官方15周年资料明确Xbox 360原作发售日为2009-10-15；作品登记年取2009，不改变后续ELITE或RE:BOOT的发行年份。"
+    },
+    "[\"work\",\"ascii-moon\",\"ascii-moon\",\"firstYear\"]": {
+      "assertionId": "r07-evidence-001-moon-rpg-original-year",
+      "operationId": "r07-evidence-001-select-moon-rpg-original-year",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:15.000Z",
+      "reason": "任天堂2019移植介绍明确原作为1997年作品，故作品登记年保持1997；Onion的2019/2020日期属于移植发行，不能替换原作年份。"
+    },
+    "[\"work\",\"vndb-table-20261103-v15\",\"vndb-table-20261103-v15\",\"firstYear\"]": {
+      "assertionId": "r07-evidence-001-moon-tactics-original-year",
+      "operationId": "r07-evidence-001-select-moon-tactics-original-year",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:17.000Z",
+      "reason": "NEXTON官方历史目录将MOON.列在Tactics品牌下，原版为1997-11-21，RENEWAL为1998、DVD和CD版为2002；本次只选原作登记年1997。"
+    },
+    "[\"work\",\"vndb-table-20261103-v15\",\"vndb-table-20261103-v15\",\"title\"]": {
+      "assertionId": "r07-evidence-001-moon-tactics-title",
+      "operationId": "r07-evidence-001-select-moon-tactics-title",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:19.000Z",
+      "reason": "采用NEXTON官方Tactics产品目录的原作标题MOON.，保留句点及大小写；该名称选用不引发与ASCII反RPG moon的身份归并。"
+    },
+    "[\"work\",\"erogamescape-table-20261103-38699\",\"erogamescape-table-20261103-38699\",\"firstYear\"]": {
+      "assertionId": "r07-evidence-001-mono-announced-year",
+      "operationId": "r07-evidence-001-select-mono-announced-year",
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:22.000Z",
+      "reason": "Laplacian产品页明确2027年发售预定，官网2026-09-02说明从2026延期到2027；用2027作为计划登记年覆盖显示2050。仍为未核实实际发行的未来年份，非已发售，不绑定已核平台或内容版本。"
+    }
+  },
+  "events": [
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-clannad-original-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-clannad-original-year",
+          "scope": {
+            "type": "work",
+            "workId": "g030",
+            "id": "g030"
+          },
+          "field": "firstYear",
+          "value": 2004,
+          "sources": [
+            "https://key.visualarts.co.jp/product/clannad/"
+          ],
+          "sourceIds": [
+            "vndb-table-20261103-v4"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:06.000Z",
+      "reason": "Key产品页区分原作初回版2004-04-28、通常版2004-08-06、全语音版2008及英文版2015；作品登记年采用原作2004，未把其他版本的日期覆盖为2004。",
+      "sources": [
+        "https://key.visualarts.co.jp/product/clannad/"
+      ],
+      "previousRevision": 0,
+      "revision": 1,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-clannad-original-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-clannad-original-year",
+            "scope": {
+              "type": "work",
+              "workId": "g030",
+              "id": "g030"
+            },
+            "field": "firstYear",
+            "value": 2004,
+            "sources": [
+              "https://key.visualarts.co.jp/product/clannad/"
+            ],
+            "sourceIds": [
+              "vndb-table-20261103-v4"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-clannad-original-year",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-clannad-original-year"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:07.000Z",
+      "reason": "Key产品页区分原作初回版2004-04-28、通常版2004-08-06、全语音版2008及英文版2015；作品登记年采用原作2004，未把其他版本的日期覆盖为2004。",
+      "sources": [
+        "https://key.visualarts.co.jp/product/clannad/"
+      ],
+      "previousRevision": 1,
+      "revision": 2,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"g030\",\"g030\",\"firstYear\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-clannad-original-year",
+            "operationId": "r07-evidence-001-select-clannad-original-year",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:07.000Z",
+            "reason": "Key产品页区分原作初回版2004-04-28、通常版2004-08-06、全语音版2008及英文版2015；作品登记年采用原作2004，未把其他版本的日期覆盖为2004。"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-fate-original-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-fate-original-year",
+          "scope": {
+            "type": "work",
+            "workId": "g031",
+            "id": "g031"
+          },
+          "field": "firstYear",
+          "value": 2004,
+          "sources": [
+            "https://typemoon.com/contents/9ncnes/fate-stay-night"
+          ],
+          "sourceIds": [
+            "vndb-table-20261103-v11"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:08.000Z",
+      "reason": "TYPE-MOON产品页分别列出2004-01-30 CD原版和2006-03-29 DVD；本结论限定作品登记年2004，不改写具体发行记录。",
+      "sources": [
+        "https://typemoon.com/contents/9ncnes/fate-stay-night"
+      ],
+      "previousRevision": 2,
+      "revision": 3,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-fate-original-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-fate-original-year",
+            "scope": {
+              "type": "work",
+              "workId": "g031",
+              "id": "g031"
+            },
+            "field": "firstYear",
+            "value": 2004,
+            "sources": [
+              "https://typemoon.com/contents/9ncnes/fate-stay-night"
+            ],
+            "sourceIds": [
+              "vndb-table-20261103-v11"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-fate-original-year",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-fate-original-year"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:09.000Z",
+      "reason": "TYPE-MOON产品页分别列出2004-01-30 CD原版和2006-03-29 DVD；本结论限定作品登记年2004，不改写具体发行记录。",
+      "sources": [
+        "https://typemoon.com/contents/9ncnes/fate-stay-night"
+      ],
+      "previousRevision": 3,
+      "revision": 4,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"g031\",\"g031\",\"firstYear\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-fate-original-year",
+            "operationId": "r07-evidence-001-select-fate-original-year",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:09.000Z",
+            "reason": "TYPE-MOON产品页分别列出2004-01-30 CD原版和2006-03-29 DVD；本结论限定作品登记年2004，不改写具体发行记录。"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-ever17-original-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-ever17-original-year",
+          "scope": {
+            "type": "work",
+            "workId": "g050",
+            "id": "g050"
+          },
+          "field": "firstYear",
+          "value": 2002,
+          "sources": [
+            "https://game.mages.co.jp/infinity/ever17/"
+          ],
+          "sourceIds": [
+            "vndb-table-20261103-v17"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:10.000Z",
+      "reason": "MAGES官方明确原作为2002年KID作品，同时区分2011重制和2025重制基础上的新版；本次只确认原作年份到年精度，不新造月日或内容对应。",
+      "sources": [
+        "https://game.mages.co.jp/infinity/ever17/"
+      ],
+      "previousRevision": 4,
+      "revision": 5,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-ever17-original-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-ever17-original-year",
+            "scope": {
+              "type": "work",
+              "workId": "g050",
+              "id": "g050"
+            },
+            "field": "firstYear",
+            "value": 2002,
+            "sources": [
+              "https://game.mages.co.jp/infinity/ever17/"
+            ],
+            "sourceIds": [
+              "vndb-table-20261103-v17"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-ever17-original-year",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-ever17-original-year"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:11.000Z",
+      "reason": "MAGES官方明确原作为2002年KID作品，同时区分2011重制和2025重制基础上的新版；本次只确认原作年份到年精度，不新造月日或内容对应。",
+      "sources": [
+        "https://game.mages.co.jp/infinity/ever17/"
+      ],
+      "previousRevision": 5,
+      "revision": 6,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"g050\",\"g050\",\"firstYear\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-ever17-original-year",
+            "operationId": "r07-evidence-001-select-ever17-original-year",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:11.000Z",
+            "reason": "MAGES官方明确原作为2002年KID作品，同时区分2011重制和2025重制基础上的新版；本次只确认原作年份到年精度，不新造月日或内容对应。"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-steinsgate-original-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-steinsgate-original-year",
+          "scope": {
+            "type": "work",
+            "workId": "g054",
+            "id": "g054"
+          },
+          "field": "firstYear",
+          "value": 2009,
+          "sources": [
+            "https://steinsgate.jp/15th/"
+          ],
+          "sourceIds": [
+            "g054",
+            "ifdb-table-20261104-qjw034cv6w2cjwgt"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:12.000Z",
+      "reason": "官方15周年资料明确Xbox 360原作发售日为2009-10-15；作品登记年取2009，不改变后续ELITE或RE:BOOT的发行年份。",
+      "sources": [
+        "https://steinsgate.jp/15th/"
+      ],
+      "previousRevision": 6,
+      "revision": 7,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-steinsgate-original-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-steinsgate-original-year",
+            "scope": {
+              "type": "work",
+              "workId": "g054",
+              "id": "g054"
+            },
+            "field": "firstYear",
+            "value": 2009,
+            "sources": [
+              "https://steinsgate.jp/15th/"
+            ],
+            "sourceIds": [
+              "g054",
+              "ifdb-table-20261104-qjw034cv6w2cjwgt"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-steinsgate-original-year",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-steinsgate-original-year"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:13.000Z",
+      "reason": "官方15周年资料明确Xbox 360原作发售日为2009-10-15；作品登记年取2009，不改变后续ELITE或RE:BOOT的发行年份。",
+      "sources": [
+        "https://steinsgate.jp/15th/"
+      ],
+      "previousRevision": 7,
+      "revision": 8,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"g054\",\"g054\",\"firstYear\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-steinsgate-original-year",
+            "operationId": "r07-evidence-001-select-steinsgate-original-year",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:13.000Z",
+            "reason": "官方15周年资料明确Xbox 360原作发售日为2009-10-15；作品登记年取2009，不改变后续ELITE或RE:BOOT的发行年份。"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-moon-rpg-original-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-moon-rpg-original-year",
+          "scope": {
+            "type": "work",
+            "workId": "ascii-moon",
+            "id": "ascii-moon"
+          },
+          "field": "firstYear",
+          "value": 1997,
+          "sources": [
+            "https://www.nintendo.com/jp/topics/article/1b902173-e01b-11e9-b641-063b7ac45a6d"
+          ],
+          "sourceIds": [
+            "ascii-moon"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:14.000Z",
+      "reason": "任天堂2019移植介绍明确原作为1997年作品，故作品登记年保持1997；Onion的2019/2020日期属于移植发行，不能替换原作年份。",
+      "sources": [
+        "https://www.nintendo.com/jp/topics/article/1b902173-e01b-11e9-b641-063b7ac45a6d"
+      ],
+      "previousRevision": 8,
+      "revision": 9,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-moon-rpg-original-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-moon-rpg-original-year",
+            "scope": {
+              "type": "work",
+              "workId": "ascii-moon",
+              "id": "ascii-moon"
+            },
+            "field": "firstYear",
+            "value": 1997,
+            "sources": [
+              "https://www.nintendo.com/jp/topics/article/1b902173-e01b-11e9-b641-063b7ac45a6d"
+            ],
+            "sourceIds": [
+              "ascii-moon"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-moon-rpg-original-year",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-moon-rpg-original-year"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:15.000Z",
+      "reason": "任天堂2019移植介绍明确原作为1997年作品，故作品登记年保持1997；Onion的2019/2020日期属于移植发行，不能替换原作年份。",
+      "sources": [
+        "https://www.nintendo.com/jp/topics/article/1b902173-e01b-11e9-b641-063b7ac45a6d"
+      ],
+      "previousRevision": 9,
+      "revision": 10,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"ascii-moon\",\"ascii-moon\",\"firstYear\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-moon-rpg-original-year",
+            "operationId": "r07-evidence-001-select-moon-rpg-original-year",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:15.000Z",
+            "reason": "任天堂2019移植介绍明确原作为1997年作品，故作品登记年保持1997；Onion的2019/2020日期属于移植发行，不能替换原作年份。"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-moon-tactics-original-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-moon-tactics-original-year",
+          "scope": {
+            "type": "work",
+            "workId": "vndb-table-20261103-v15",
+            "id": "vndb-table-20261103-v15"
+          },
+          "field": "firstYear",
+          "value": 1997,
+          "sources": [
+            "https://nexton-net.jp/~nexton/product.htm"
+          ],
+          "sourceIds": [
+            "vndb-table-20261103-v15"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:16.000Z",
+      "reason": "NEXTON官方历史目录将MOON.列在Tactics品牌下，原版为1997-11-21，RENEWAL为1998、DVD和CD版为2002；本次只选原作登记年1997。",
+      "sources": [
+        "https://nexton-net.jp/~nexton/product.htm"
+      ],
+      "previousRevision": 10,
+      "revision": 11,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-moon-tactics-original-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-moon-tactics-original-year",
+            "scope": {
+              "type": "work",
+              "workId": "vndb-table-20261103-v15",
+              "id": "vndb-table-20261103-v15"
+            },
+            "field": "firstYear",
+            "value": 1997,
+            "sources": [
+              "https://nexton-net.jp/~nexton/product.htm"
+            ],
+            "sourceIds": [
+              "vndb-table-20261103-v15"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-moon-tactics-original-year",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-moon-tactics-original-year"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:17.000Z",
+      "reason": "NEXTON官方历史目录将MOON.列在Tactics品牌下，原版为1997-11-21，RENEWAL为1998、DVD和CD版为2002；本次只选原作登记年1997。",
+      "sources": [
+        "https://nexton-net.jp/~nexton/product.htm"
+      ],
+      "previousRevision": 11,
+      "revision": 12,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"vndb-table-20261103-v15\",\"vndb-table-20261103-v15\",\"firstYear\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-moon-tactics-original-year",
+            "operationId": "r07-evidence-001-select-moon-tactics-original-year",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:17.000Z",
+            "reason": "NEXTON官方历史目录将MOON.列在Tactics品牌下，原版为1997-11-21，RENEWAL为1998、DVD和CD版为2002；本次只选原作登记年1997。"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-moon-tactics-title",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-moon-tactics-title",
+          "scope": {
+            "type": "work",
+            "workId": "vndb-table-20261103-v15",
+            "id": "vndb-table-20261103-v15"
+          },
+          "field": "title",
+          "value": "MOON.",
+          "sources": [
+            "https://nexton-net.jp/~nexton/product.htm"
+          ],
+          "sourceIds": [
+            "vndb-table-20261103-v15"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:18.000Z",
+      "reason": "采用NEXTON官方Tactics产品目录的原作标题MOON.，保留句点及大小写；该名称选用不引发与ASCII反RPG moon的身份归并。",
+      "sources": [
+        "https://nexton-net.jp/~nexton/product.htm"
+      ],
+      "previousRevision": 12,
+      "revision": 13,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-moon-tactics-title",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-moon-tactics-title",
+            "scope": {
+              "type": "work",
+              "workId": "vndb-table-20261103-v15",
+              "id": "vndb-table-20261103-v15"
+            },
+            "field": "title",
+            "value": "MOON.",
+            "sources": [
+              "https://nexton-net.jp/~nexton/product.htm"
+            ],
+            "sourceIds": [
+              "vndb-table-20261103-v15"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-moon-tactics-title",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-moon-tactics-title"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:19.000Z",
+      "reason": "采用NEXTON官方Tactics产品目录的原作标题MOON.，保留句点及大小写；该名称选用不引发与ASCII反RPG moon的身份归并。",
+      "sources": [
+        "https://nexton-net.jp/~nexton/product.htm"
+      ],
+      "previousRevision": 13,
+      "revision": 14,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"vndb-table-20261103-v15\",\"vndb-table-20261103-v15\",\"title\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-moon-tactics-title",
+            "operationId": "r07-evidence-001-select-moon-tactics-title",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:19.000Z",
+            "reason": "采用NEXTON官方Tactics产品目录的原作标题MOON.，保留句点及大小写；该名称选用不引发与ASCII反RPG moon的身份归并。"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-mono-imported-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-mono-imported-year",
+          "scope": {
+            "type": "work",
+            "workId": "erogamescape-table-20261103-38699",
+            "id": "erogamescape-table-20261103-38699"
+          },
+          "field": "firstYear",
+          "value": 2050,
+          "sources": [],
+          "sourceIds": [
+            "erogamescape-table-20261103-38699"
+          ],
+          "status": "disputed",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:20.000Z",
+      "reason": "保留原始EGS 38699导入快照中的2050-01-01作为旧来源说法；与2026-09-02官方公布的2027计划年不一致，不据此认定2050为真实发行年，也不把其他作品的2050统一替换。",
+      "sources": [],
+      "previousRevision": 14,
+      "revision": 15,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-mono-imported-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-mono-imported-year",
+            "scope": {
+              "type": "work",
+              "workId": "erogamescape-table-20261103-38699",
+              "id": "erogamescape-table-20261103-38699"
+            },
+            "field": "firstYear",
+            "value": 2050,
+            "sources": [],
+            "sourceIds": [
+              "erogamescape-table-20261103-38699"
+            ],
+            "status": "disputed",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-assert-mono-announced-year",
+      "type": "assert",
+      "intent": {
+        "type": "assert",
+        "assertion": {
+          "id": "r07-evidence-001-mono-announced-year",
+          "scope": {
+            "type": "work",
+            "workId": "erogamescape-table-20261103-38699",
+            "id": "erogamescape-table-20261103-38699"
+          },
+          "field": "firstYear",
+          "value": 2027,
+          "sources": [
+            "https://laplacian.jp/games/mono/",
+            "https://laplacian.jp/"
+          ],
+          "sourceIds": [
+            "erogamescape-table-20261103-38699"
+          ],
+          "status": "supported",
+          "subjects": []
+        }
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:21.000Z",
+      "reason": "Laplacian产品页明确2027年发售预定，官网2026-09-02说明从2026延期到2027；用2027作为计划登记年覆盖显示2050。仍为未核实实际发行的未来年份，非已发售，不绑定已核平台或内容版本。",
+      "sources": [
+        "https://laplacian.jp/games/mono/",
+        "https://laplacian.jp/"
+      ],
+      "previousRevision": 15,
+      "revision": 16,
+      "changes": [
+        {
+          "table": "assertions",
+          "id": "r07-evidence-001-mono-announced-year",
+          "before": null,
+          "after": {
+            "id": "r07-evidence-001-mono-announced-year",
+            "scope": {
+              "type": "work",
+              "workId": "erogamescape-table-20261103-38699",
+              "id": "erogamescape-table-20261103-38699"
+            },
+            "field": "firstYear",
+            "value": 2027,
+            "sources": [
+              "https://laplacian.jp/games/mono/",
+              "https://laplacian.jp/"
+            ],
+            "sourceIds": [
+              "erogamescape-table-20261103-38699"
+            ],
+            "status": "supported",
+            "subjects": []
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "r07-evidence-001-select-mono-announced-year",
+      "type": "select",
+      "intent": {
+        "type": "select",
+        "assertionId": "r07-evidence-001-mono-announced-year"
+      },
+      "actor": "wt1234-donkey",
+      "at": "2026-11-14T08:00:22.000Z",
+      "reason": "Laplacian产品页明确2027年发售预定，官网2026-09-02说明从2026延期到2027；用2027作为计划登记年覆盖显示2050。仍为未核实实际发行的未来年份，非已发售，不绑定已核平台或内容版本。",
+      "sources": [
+        "https://laplacian.jp/games/mono/",
+        "https://laplacian.jp/"
+      ],
+      "previousRevision": 16,
+      "revision": 17,
+      "changes": [
+        {
+          "table": "choices",
+          "id": "[\"work\",\"erogamescape-table-20261103-38699\",\"erogamescape-table-20261103-38699\",\"firstYear\"]",
+          "before": null,
+          "after": {
+            "assertionId": "r07-evidence-001-mono-announced-year",
+            "operationId": "r07-evidence-001-select-mono-announced-year",
+            "actor": "wt1234-donkey",
+            "at": "2026-11-14T08:00:22.000Z",
+            "reason": "Laplacian产品页明确2027年发售预定，官网2026-09-02说明从2026延期到2027；用2027作为计划登记年覆盖显示2050。仍为未核实实际发行的未来年份，非已发售，不绑定已核平台或内容版本。"
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "batchId": "r07-evidence-001",
+  "baseCommit": "dfa32dbf02ca926f7b658fdb6d1af53d9d1a37d2",
+  "reviewedAt": "2026-11-14",
+  "method": "Assistant researched first-party material under repository-owner authorization. Explicit bibliographic judgments; not automatic matching or a claim of human review. Original imported records remain immutable.",
+  "identityReviews": [
+    {
+      "caseId": "name-year:clannad|2004",
+      "outcome": "same-work",
+      "links": [{"sourceId": "vndb-table-20261103-v4", "workId": "g030"}],
+      "sources": ["https://key.visualarts.co.jp/product/clannad/", "https://key.visualarts.gr.jp/key20th/history.html"],
+      "reason": "核对已保存的VNDB v4明确来源ID、Key署名、原作日期2004-04-28与正式档案g030的Key官方来源，确认为同一作品。仅建立作品身份链接；2008全语音版、2015英文版及各平台的内容关系不据此确认为相同。"
+    },
+    {
+      "caseId": "name-year:fatestaynight|2004",
+      "outcome": "same-work",
+      "links": [{"sourceId": "vndb-table-20261103-v11", "workId": "g031"}],
+      "sources": ["https://typemoon.com/contents/9ncnes/fate-stay-night", "https://www.typemoon.com/products/fate/data/index.html"],
+      "reason": "核对已保存的VNDB v11明确来源ID、TYPE-MOON署名及2004-01-30原版日期，与g031引用的官方原作产品资料一致，显式链接同一作品。2006 DVD发行、Realta Nua及REMASTERED内容不在本次判定范围。"
+    },
+    {
+      "caseId": "name-year:ever17theoutofinfinity|2002",
+      "outcome": "same-work",
+      "links": [{"sourceId": "vndb-table-20261103-v17", "workId": "g050"}],
+      "sources": ["https://game.mages.co.jp/infinity/ever17/"],
+      "reason": "核对已保存的VNDB v17来源、KID关联和g050的原文标题及海底设施LeMU故事资料；MAGES官方明确回溯2002年KID原作，显式链接作品身份。官方同时说明2011重制增加内容、2025版采用调整情节，本次不把这些发行或内容版本合并为原作内容。"
+    },
+    {
+      "caseId": "name-year:steinsgate|2009",
+      "outcome": "same-work",
+      "links": [{"sourceId": "g054", "workId": "g054"}, {"sourceId": "ifdb-table-20261104-qjw034cv6w2cjwgt", "workId": "g054"}],
+      "sources": ["https://steinsgate.jp/15th/", "https://steinsgate.jp/"],
+      "reason": "核对已保存的IFDB qjw034cv6w2cjwgt明确来源ID及2009-10-15日期，与g054的官方STEINS;GATE原作档案及15周年说明一致；将两条来源显式对应到g054。IFDB作者原文不转为已核厂商职责，ELITE与RE:BOOT内容关系仍待独立核查。"
+    },
+    {
+      "caseId": "name-year:moon|1997",
+      "outcome": "distinct",
+      "links": [{"sourceId": "ascii-moon", "workId": "ascii-moon"}, {"sourceId": "vndb-table-20261103-v15", "workId": "vndb-table-20261103-v15"}],
+      "sources": ["https://www.nintendo.com/jp/topics/article/1b902173-e01b-11e9-b641-063b7ac45a6d", "https://oniongames.jp/press/sheet.php?p=moon", "https://nexton-net.jp/~nexton/product.htm"],
+      "reason": "任天堂和Onion资料中的moon为少年进入Moon World、收集Love的反RPG；NEXTON的Tactics目录中MOON.为天沢郁未进入FARGO宗团的作品。故事、品牌和产品脉络明确不同，即使同名同年也保持两个独立身份，不合并主体。"
+    },
+    {
+      "caseId": "name-year:tothemoon|2011",
+      "outcome": "defer",
+      "links": [],
+      "sources": ["https://freebirdgames.com/games/to-the-moon/"],
+      "reason": "Freebird官方资料可确认作品及2011-11-01日期，但当前g1402与supp26-freebird均为独立正式档案，须先核对两档的内容、发行、专题和历史引用再决定保留身份。此轮暂缓，不用单条来源链接来假装已经合并两份正式档案。"
+    }
+  ],
+  "fields": [
+    {"id": "clannad-original-year", "workId": "g030", "sourceIds": ["vndb-table-20261103-v4"], "field": "firstYear", "value": 2004, "status": "supported", "select": true, "sources": ["https://key.visualarts.co.jp/product/clannad/"], "reason": "Key产品页区分原作初回版2004-04-28、通常版2004-08-06、全语音版2008及英文版2015；作品登记年采用原作2004，未把其他版本的日期覆盖为2004。"},
+    {"id": "fate-original-year", "workId": "g031", "sourceIds": ["vndb-table-20261103-v11"], "field": "firstYear", "value": 2004, "status": "supported", "select": true, "sources": ["https://typemoon.com/contents/9ncnes/fate-stay-night"], "reason": "TYPE-MOON产品页分别列出2004-01-30 CD原版和2006-03-29 DVD；本结论限定作品登记年2004，不改写具体发行记录。"},
+    {"id": "ever17-original-year", "workId": "g050", "sourceIds": ["vndb-table-20261103-v17"], "field": "firstYear", "value": 2002, "status": "supported", "select": true, "sources": ["https://game.mages.co.jp/infinity/ever17/"], "reason": "MAGES官方明确原作为2002年KID作品，同时区分2011重制和2025重制基础上的新版；本次只确认原作年份到年精度，不新造月日或内容对应。"},
+    {"id": "steinsgate-original-year", "workId": "g054", "sourceIds": ["g054", "ifdb-table-20261104-qjw034cv6w2cjwgt"], "field": "firstYear", "value": 2009, "status": "supported", "select": true, "sources": ["https://steinsgate.jp/15th/"], "reason": "官方15周年资料明确Xbox 360原作发售日为2009-10-15；作品登记年取2009，不改变后续ELITE或RE:BOOT的发行年份。"},
+    {"id": "moon-rpg-original-year", "workId": "ascii-moon", "sourceIds": ["ascii-moon"], "field": "firstYear", "value": 1997, "status": "supported", "select": true, "sources": ["https://www.nintendo.com/jp/topics/article/1b902173-e01b-11e9-b641-063b7ac45a6d"], "reason": "任天堂2019移植介绍明确原作为1997年作品，故作品登记年保持1997；Onion的2019/2020日期属于移植发行，不能替换原作年份。"},
+    {"id": "moon-tactics-original-year", "workId": "vndb-table-20261103-v15", "sourceIds": ["vndb-table-20261103-v15"], "field": "firstYear", "value": 1997, "status": "supported", "select": true, "sources": ["https://nexton-net.jp/~nexton/product.htm"], "reason": "NEXTON官方历史目录将MOON.列在Tactics品牌下，原版为1997-11-21，RENEWAL为1998、DVD和CD版为2002；本次只选原作登记年1997。"},
+    {"id": "moon-tactics-title", "workId": "vndb-table-20261103-v15", "sourceIds": ["vndb-table-20261103-v15"], "field": "title", "value": "MOON.", "status": "supported", "select": true, "sources": ["https://nexton-net.jp/~nexton/product.htm"], "reason": "采用NEXTON官方Tactics产品目录的原作标题MOON.，保留句点及大小写；该名称选用不引发与ASCII反RPG moon的身份归并。"},
+    {"id": "mono-imported-year", "workId": "erogamescape-table-20261103-38699", "sourceIds": ["erogamescape-table-20261103-38699"], "field": "firstYear", "value": 2050, "status": "disputed", "select": false, "sources": [], "reason": "保留原始EGS 38699导入快照中的2050-01-01作为旧来源说法；与2026-09-02官方公布的2027计划年不一致，不据此认定2050为真实发行年，也不把其他作品的2050统一替换。"},
+    {"id": "mono-announced-year", "workId": "erogamescape-table-20261103-38699", "sourceIds": ["erogamescape-table-20261103-38699"], "field": "firstYear", "value": 2027, "status": "supported", "select": true, "sources": ["https://laplacian.jp/games/mono/", "https://laplacian.jp/"], "reason": "Laplacian产品页明确2027年发售预定，官网2026-09-02说明从2026延期到2027；用2027作为计划登记年覆盖显示2050。仍为未核实实际发行的未来年份，非已发售，不绑定已核平台或内容版本。"}
+  ],
+  "remaining": [
+    "MONOCHROME SERENADE的EGS与VNDB记录尚未建立身份链接；此次只更正EGS记录的计划年。",
+    "其余2050记录、缺失年份及历史未去重导入继续逐项核查；不得用通用替换或名称归一化自动结案。",
+    "原始来源库108173条、109源分片、原ID、证据和既有正式内容/发行关系保持原样。"
+  ]
+}
