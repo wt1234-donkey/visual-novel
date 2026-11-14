@@ -1,5 +1,6 @@
 import {digestText,blobDigest} from './digests.mjs';
 import {auditOrder,auditWorkIds} from '../../domain/audit/events.mjs';
+import {readAuditCurrent} from './current-state-reader.mjs';
 const validRef=ref=>ref&&/^data\/audit-ledger\/objects\/[a-f0-9]{64}\.json$/.test(ref.path)&&/^[a-f0-9]{40}$/.test(ref.sha)&&/^[a-f0-9]{64}$/.test(ref.sha256)&&Number.isSafeInteger(ref.bytes)&&ref.bytes>0;
 export function createAuditReader(loadText,{cacheSize=48}={}){
  const cache=new Map();
@@ -46,6 +47,7 @@ export function createAuditReader(loadText,{cacheSize=48}={}){
    if(manifest.schemaVersion!==1||!descriptor||sourceSha&&descriptor.source.sha!==sourceSha)throw Object.assign(Error('审计索引与当前资料版本不一致，请同步后重试'),{code:'AUDIT_STALE'});
    return {
     descriptor,
+    current:opts=>readAuditCurrent({read,lookup},descriptor,{kind,...opts}),
     async findOperation(id,opts={}){const posting=await lookup(descriptor.operations,id,opts);if(posting&&posting.id!==id)throw Error('操作索引身份不一致');return posting?event(kind,posting,opts):null;},
     async history({workId=null,before=Infinity,limit=20,...opts}={}){
      if(!Number.isSafeInteger(limit)||limit<1||limit>100||!(before===Infinity||Number.isSafeInteger(before)&&before>0))throw Error('审计分页范围无效');

@@ -1,5 +1,7 @@
 # Repository and editorial rules
 
+- Audit growth: keep previously referenced event segments/postings stable. Version-2 audit indexes use copy-on-write paths and a frozen prefix digest; independent full semantic/index/current-view verification remains mandatory before promotion. Browser current-state projections are read-only and SHA/head bound, never authoritative journal stores. Run the incremental 100-save and three-kind 10,000-event startup contracts; retain their JSON measurements. See `docs/audit-capacity.md`.
+
 - Active write entrypoints are registered in `config/write-entrypoints.json`. Personal commands, reviewed batches, management packages and parameterized intake must seal new receipts and audit roots through `src/infrastructure/filesystem/write-boundary.mjs`, then run `scripts/validate_catalogue.py` before promotion. The shared validator checks the committed archive before any derived regeneration. Preserve ambiguous-operation IDs, distinguish confirmed rejection from uncertain response, and never rewrite a sealed receipt on retry. See `docs/write-entrypoints.md`.
 
 - All `visual-novel` changes, additions, pull requests, merges and Pages releases target **wt1234-donkey/visual-novel**. Do not write to `wwangtao833-dev/visual-novel` or synchronize changes back there.

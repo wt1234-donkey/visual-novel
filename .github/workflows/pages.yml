@@ -49,6 +49,12 @@ jobs:
           PLAYWRIGHT_MODULE: /tmp/catalogue-browser/node_modules/playwright
           ATLAS_SITE_DIRECTORY: _site
         run: node --test tests/browser/*.test.mjs
+      - name: Retain mobile archive-startup measurements
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: audit-startup-mobile
+          path: test-results/audit-startup-mobile.json
       - name: Upload verified Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:

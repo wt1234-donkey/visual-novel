@@ -24,6 +24,6 @@ export function createSourceIdentityReader(fetcher=fetch){
    return {rows,page:0,pages:1,total:direct.length||ids.length,truncated:ids.length>500};
   },
   async original(source,options){const raw=await readReleaseJson('data/'+source.recordRef.path,fetcher,undefined,options);const row=Array.isArray(raw)?raw[source.recordRef.slot]:raw.works[source.recordRef.slot];if(row?.id!==source.id)throw Error('来源原文身份不匹配');return row;},
-  async decisions(){return readReleaseJson('data/source-identity-decisions.json',fetcher);}
+  async decisions(options){return reader.current('identity',options);}
  };
 }

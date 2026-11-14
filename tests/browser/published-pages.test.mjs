@@ -6,11 +6,15 @@ import {readFile} from 'node:fs/promises';
 import {readFileSync,readdirSync} from 'node:fs';
 import {resolve,extname} from 'node:path';
 import {loadEffectiveCatalogueSync} from '../../src/infrastructure/filesystem/effective-catalogue.mjs';
+import {decodePublishedText} from '../../src/infrastructure/storage/wire-format.mjs';
 const {chromium}=createRequire(import.meta.url)(process.env.PLAYWRIGHT_MODULE||'playwright');
 const site=process.env.ATLAS_SITE_DIRECTORY&&resolve(process.env.ATLAS_SITE_DIRECTORY);
 test('published organization and classification pages initialize against their actual frozen release', {timeout:60000},async()=>{
  assert.ok(site,'Build the static artifact and set ATLAS_SITE_DIRECTORY before browser regressions');
  const release=JSON.parse(readFileSync(resolve(site,'data/catalogue-release.json'))),expected=loadEffectiveCatalogueSync(resolve(import.meta.dirname,'../..'));
+ const directory=JSON.parse(await decodePublishedText(readFileSync(resolve(site,'data',release.catalogues.formal.path),'utf8')));
+ assert.equal(directory.currentStateVersion,1);assert.equal(directory.raw.history.journal,undefined);
+ assert.ok(Object.values(directory.raw.history.records).every(row=>row.recent.length===0),'directory contains current values, not undo snapshots or full event journals');
  // This checks entry declarations, not merely the raw download returning 200.
  for(const file of readdirSync(site).filter(n=>n.endsWith('.html'))){const body=readFileSync(resolve(site,file),'utf8').match(/<body\b[^>]*>/)?.[0],source=body?.match(/data-source="([^"]+)"/)?.[1];if(source?.startsWith('data/'))assert.ok(release.resources[source.split('?')[0]],file+' runtime resource is frozen');}
  const server=createServer(async(req,res)=>{try{const path=resolve(site,'.'+new URL(req.url,'http://localhost').pathname);if(!path.startsWith(site+'/'))throw Error('invalid path');res.setHeader('content-type',({'.mjs':'text/javascript','.css':'text/css','.html':'text/html','.json':'application/json'})[extname(path)]||'application/octet-stream');res.end(await readFile(path));}catch{res.writeHead(404);res.end();}});

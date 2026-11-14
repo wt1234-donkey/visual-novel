@@ -805,6 +805,12 @@
         ".github/workflows/mobile-performance.yml"
       ],
       "limitation": "Chromium手机条件模拟和故障测试不等同Android真机测量。"
+    },
+    {
+      "id": "audit-growth-and-startup",
+      "required": true,
+      "command": "node --test tests/audit-incremental.test.mjs tests/audit-current.test.mjs",
+      "history": "万条基线后连续100次追加，保持旧正文位置；三类万条非空日志的当前状态与历史分别读取；浏览器容量验证由 tests/browser/audit-startup.test.mjs 执行。"
     }
   ],
   "historicalTests": [

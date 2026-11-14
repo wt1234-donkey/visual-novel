@@ -19,7 +19,7 @@ export async function buildOnDemandCatalogues(root,output,revision){
  const read=name=>JSON.parse(readFileSync(join(root,'data',name),'utf8'));
  const raw=loadEffectiveInputsSync(root),inputs={main:raw.main,supplement:raw.supplement,history:raw.history,store:raw.basicStore,registry:readJsonFileSync(join(root,'data/main-adv-rpg-works-20261031.json'))},sourceLease=sourceLeaseSync(root),coverage=raw.coverage;
  const sourceIdentity=buildSourceIdentityIndex(root,output,revision),formalLinks=raw.formalLinks;
- const effective=buildEffectiveCatalogue({main:inputs.main,supplement:inputs.supplement,history:inputs.history,basicStore:inputs.store,formalLinks,coverage,fieldEvidence:raw.fieldEvidence});
+ const effective=buildEffectiveCatalogue({main:inputs.main,supplement:inputs.supplement,history:{schemaVersion:1,records:Object.fromEntries(Object.entries(inputs.history.records||{}).map(([id,row])=>[id,{revision:row.revision,overrides:row.overrides,fieldMeta:row.fieldMeta,recent:[]}]))},basicStore:inputs.store,formalLinks,coverage,fieldEvidence:raw.fieldEvidence});
  const full=mergeFormalDatasets(effective),catalogue=read('entity-catalogue.json'),editorial=read('discovery-editorial.json'),creators=read('creator-credits.json'),notes=read('work-notes.json');
  const atlas=createAtlas(full,catalogue,editorial,creators,notes),refs={};
  async function save(name,value){const path=`catalogue-web/${revision}/on-demand/${name}.json`,text=JSON.stringify(value)+'\n';mkdirSync(join(output,'data',path,'..'),{recursive:true});writeFileSync(join(output,'data',path),text);writeFileSync(join(output,'data',path+'.gz'),gzipSync(text));return {path,gzip:path+'.gz',sha:await blobDigest(text)};}
@@ -34,9 +34,9 @@ export async function buildOnDemandCatalogues(root,output,revision){
   }
  }
  const lightEditorial={...editorial,works:Object.fromEntries(Object.entries(editorial.works).map(([id,w])=>[id,pick(w,['position','style','theme','structure','cover','openQuestions'])]))};
- const directory={schemaVersion:1,revision,ids,shardSize:size,families,identityStats:sourceIdentity.stats,
+ const directory={schemaVersion:1,currentStateVersion:1,revision,ids,shardSize:size,families,identityStats:sourceIdentity.stats,
   data:{...full,works:full.works.map(summary),contentVersions:full.contentVersions.map(c=>pick(c,['id','workId','label','firstYear','basis'])),platformReleases:full.platformReleases.map(r=>pick(r,['id','workId','year','platform','publisher','publisherCompanies','kind','voice','contentVersionId','contentRelation','releaseRole'])),searchById:Object.fromEntries(atlas.search)},
-  raw:{main:{...inputs.main,works:inputs.main.works.map(summary),contentVersions:[],platformReleases:[]},supplement:{...inputs.supplement,works:inputs.supplement.works.map(summary),contentVersions:[],platformReleases:[]},history:inputs.history,basicStore:inputs.store,formalLinks,fieldEvidence:raw.fieldEvidence},
+  raw:{main:{...inputs.main,works:inputs.main.works.map(summary),contentVersions:[],platformReleases:[]},supplement:{...inputs.supplement,works:inputs.supplement.works.map(summary),contentVersions:[],platformReleases:[]},history:{schemaVersion:1,records:Object.fromEntries(Object.entries(inputs.history.records||{}).map(([id,row])=>[id,{revision:row.revision,overrides:row.overrides,fieldMeta:row.fieldMeta,recent:[]}]))},basicStore:inputs.store,formalLinks,fieldEvidence:raw.fieldEvidence},
   editorial:lightEditorial,catalogue:{...catalogue,credits:catalogue.credits.map(c=>pick(c,['id','workId','entityId','role','targetType','targetId','status']))},
   coverage:{...coverage,companies:coverage.companies.map(c=>({...pick(c,['id','name']),relatedGames:(c.relatedGames||[]).map(identity),dossierOnlyWorks:(c.dossierOnlyWorks||[]).map(identity)}))},sourceLease};
  refs.formal=await save('formal-directory',directory);

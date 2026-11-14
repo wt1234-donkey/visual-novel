@@ -6,7 +6,7 @@ const published=createPublishedAuditAccess();
 export async function auditHistory(kind,store,options={},access=null){
  const indexed=access?await access():await published.open(kind,{store});
  if(indexed){const page=await indexed.history(options);
-  if(kind==='formal'){page.baselineRevision=store.journal?.baseline.records[options.workId]?.revision||0;page.legacyRecent=structuredClone((store.journal?.baseline||store).records[options.workId]?.recent||[]);}
+  if(kind==='formal'){const baseline=store.projectionVersion?store.baselineRecords:store.journal?.baseline.records||store.records;page.baselineRevision=baseline?.[options.workId]?.revision||0;page.legacyRecent=structuredClone(baseline?.[options.workId]?.recent||[]);}
   return page;
  }
  assertSmallLegacyHistory(kind,store);

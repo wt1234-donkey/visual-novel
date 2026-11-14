@@ -21,3 +21,7 @@
 CI保留 `python-capabilities.json`、`current-checkout-proof.json` 和 `audit-capacity.json`。报告区分执行、失败、条件跳过、另行运行的历史用例及替代覆盖；历史能力未执行、原始快照不可恢复或真机未测，均不计为已验证。
 
 浏览器回归先构建实际发布目录，再设置 `ATLAS_SITE_DIRECTORY` 指向该目录，执行 `node --test tests/browser/*.test.mjs`。CI同时提供隔离的 `PLAYWRIGHT_MODULE`。公开页面初始化与编辑恢复都使用同一个测试入口；缺少实际产物时公开页面回归明确失败，不以跳过替代。
+
+## 复评增长与启动门禁
+
+`audit-growth-and-startup` 为必测能力：万条基线后的100次连续追加与批次追加；正式、身份、字段三类非空万条日志的当前值和20项历史；真实页面／编辑器的手机条件启动与撤销证据。产物为 `audit-incremental.json`、`audit-current.json`、`audit-startup-mobile.json`。浏览器每类一次预算回归不宣称真机、中位数或端到端发布耗时。

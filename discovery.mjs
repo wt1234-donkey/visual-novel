@@ -197,4 +197,4 @@ async function load(){
 }
 load();
 
-window.addEventListener('catalogue-work-edit',event=>{if(!atlas||!editSourceData)return;const data=mergeFormalDatasets(buildEffectiveCatalogue({...editSourceData,history:event.detail}));atlas=createAtlas(data,atlas.catalogue,atlas.editorial,atlas.creators,atlas.notes);entityIndex=createEntityIndex(data,atlas.catalogue.model,atlas.catalogue);evidenceCache=null;render();});
+window.addEventListener('catalogue-work-edit',event=>{if(!atlas||!editSourceData)return;const data=mergeFormalDatasets(buildEffectiveCatalogue({...editSourceData,history:{schemaVersion:1,records:{...editSourceData.history.records,...event.detail.records}}}));atlas=createAtlas(data,atlas.catalogue,atlas.editorial,atlas.creators,atlas.notes);entityIndex=createEntityIndex(data,atlas.catalogue.model,atlas.catalogue);evidenceCache=null;render();});
