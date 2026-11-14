@@ -39,5 +39,7 @@ test('rehashing forged operation indexes or current projections cannot bypass in
  await assert.rejects(restoreAuditKind(root,forgedIndex,'field'),/操作索引与事件全集不一致/);
  const meta=await reader.read(descriptor.current),current=writer.put({...meta,revision:meta.revision+1}),forgedCurrent=writer.put({...original,kinds:{field:{...descriptor,current}}});
  await assert.rejects(restoreAuditKind(root,forgedCurrent,'field'),/当前状态投影与资料版本不一致/);
+ const forgedBounds=writer.put({...original,kinds:{field:{...descriptor,history:{...descriptor.history,min:999}}}});
+ await assert.rejects(restoreAuditKind(root,forgedBounds,'field'),/分页索引边界不一致/);
  assert.equal(journalKey(await restoreAuditKind(root,built.pointer.root,'field')),journalKey(store));
 });

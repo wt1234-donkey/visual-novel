@@ -38,7 +38,7 @@ export function createAuditReader(loadText,{cacheSize=48}={}){
  }
  async function event(kind,posting,options){
   const segment=await read(posting.segment,options),value=segment.events?.[posting.offset];
-  if(segment.type!=='events'||value?.id!==posting.id||auditOrder(kind,value)!==posting.order||await digestText(JSON.stringify(value))!==posting.eventHash||await digestText(JSON.stringify(auditWorkIds(kind,value)))!==posting.workHash)throw Error('审计事件与索引不一致');
+  if(segment.schemaVersion!==1||segment.type!=='events'||segment.kind!==kind||!Array.isArray(segment.events)||!segment.events.length||segment.events.length>50||value?.id!==posting.id||auditOrder(kind,value)!==posting.order||await digestText(JSON.stringify(value))!==posting.eventHash||await digestText(JSON.stringify(auditWorkIds(kind,value)))!==posting.workHash)throw Error('审计事件与索引不一致');
   return structuredClone(value);
  }
  return {read,lookup,postings,event,
