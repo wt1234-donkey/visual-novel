@@ -34,10 +34,12 @@ class HistoricalRuleTests(unittest.TestCase):
         (root/'config/historical-entity-rules.json').write_text(json.dumps(registry))
         with self.assertRaisesRegex(ValueError,'checksum'):load_historical_rules(root)
     def test_resealed_invalid_sequences_paths_and_unknown_schema_still_fail(self):
-        for invalid in ['duplicate','path','schema']:
+        for invalid in ['duplicate','path','duplicatePatch','patchField','schema']:
             root,registry,save,target=self.fixture();payload=registry['payload']
             if invalid=='duplicate':payload['sequences']['entityReviews']*=2
             elif invalid=='path':next(iter(payload['references'].values()))['path']='data/../outside.json'
+            elif invalid=='duplicatePatch':payload['entityPatches']*=2
+            elif invalid=='patchField':payload['entityPatches'][0]['set']['id']='different'
             else:payload['unexpected']=True
             save()
             with self.assertRaises(ValueError):load_historical_rules(root)
