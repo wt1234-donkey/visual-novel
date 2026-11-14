@@ -38,7 +38,9 @@ export async function sealCatalogueWrite(root,descriptor){
  // A confirmed duplicate never rewrites its earlier receipt or archive proof.
  for(const record of records)if(!record.receipt.auditRoot){record.receipt={...record.receipt,auditRoot:archive.pointer.root,...(batchKinds.has(record.receipt.kind)?{resultSources:sourceHashes(root,record.receipt.kind)}:{})};mkdirSync(dirname(record.file),{recursive:true});writeFileSync(record.file,JSON.stringify(record.receipt,null,2)+'\n');}
  receipt=records[0].receipt;
- await buildAuditLedger(root,{check:true});
+ // Source replay, immutable prefix/checkpoint binding, new index paths and
+ // this receipt have been checked above. The shared promotion validator runs
+ // the independent full archive/previous-generation audit before any commit.
  return {receipt,path,archive:archive.pointer};
 }
 export async function verifyCatalogueWrite(root){

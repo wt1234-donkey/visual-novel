@@ -4,6 +4,8 @@ import {createSourceGuard} from './source-lease.mjs';
 import {blobDigest} from '../storage/digests.mjs';
 import {createGitAuditAccess} from '../storage/audit-access.mjs';
 import {withDeadline} from '../storage/async-read.mjs';
+import {assertCurrentProjection} from '../storage/current-state-reader.mjs';
+import {assertSmallLegacyHistory} from '../storage/audit-access.mjs';
 export const EDIT_REPOSITORY='/repos/wt1234-donkey/visual-novel';
 const API='https://api.github.com',REPO=EDIT_REPOSITORY;
 export const HISTORY_PATH='data/work-edit-history.json';
@@ -46,19 +48,27 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
   if(scopes!==undefined&&scopes!==null)oauthScopes=scopes.split(',').map(x=>x.trim()).filter(Boolean);
   return res.status===204?{}:res.json();
  },{timeout:requestTimeout,...options});}
- async function readFile(path=historyPath,ref='main'){const file=await request(REPO+'/contents/'+path+'?ref='+encodeURIComponent(ref));const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,text:decodeContentText(blob.content)};}
+ async function readFile(path=historyPath,ref='main',{maxBytes=Infinity}={}){const file=await request(REPO+'/contents/'+path+'?ref='+encodeURIComponent(ref));if(file.size>maxBytes||(file.content||'').length>maxBytes*1.4)throw Error('旧格式当前状态超过兼容读取预算，请重新发布按需投影');const blob=file.content?file:await request(REPO+'/git/blobs/'+file.sha);return {sha:file.sha,text:decodeContentText(blob.content)};}
  const guard=createSourceGuard(request,REPO);
  const dependencies=()=>sourceLease?{...sourceLease,files:Object.fromEntries(Object.entries(sourceLease.files).filter(([path])=>path!==historyPath))}:null;
  const audit=createGitAuditAccess({readFile,gitRequest:request},fetcher);
+ async function current(kind,snapshot,options={}){const opened=await audit.open(kind,snapshot);if(!opened)throw Object.assign(Error('此版本缺少按需当前状态'),{code:'CURRENT_REQUIRED'});return assertCurrentProjection(await opened.current(options),kind);}
+ async function readCurrent(kind,{verifySource=true,head:fixedHead=null,...options}={}){
+  const head=fixedHead||(await request(REPO+'/git/ref/heads/main')).object.sha;
+  if(verifySource)await guard(head,dependencies());
+  try{const store=await current(kind,{head},options);return {head,sha:store.sourceSha,store};}
+  catch(error){if(error.code!=='CURRENT_REQUIRED'&&error.status!==404)throw error;
+   const file=await readFile(historyPath,head,{maxBytes:1024*1024}),store=validateRead(JSON.parse(file.text));assertSmallLegacyHistory(kind,store);return {head,sha:file.sha,store};}
+ }
  return {
+  readCurrent,current,
   audit:(kind,snapshot)=>audit.open(kind,snapshot),
   gitRequest:request,readFile,setSourceLease:lease=>{sourceLease=lease;},
   get commandMode(){return commandMode;},setCommandMode:mode=>{commandMode=mode;},
   async executeCommand(command){
    if(commandMode!=='trusted'||!sourceLease||historyPath!==HISTORY_PATH)throw Error('可信正式保存尚未启用');
    const result=await submitCommand(request,{...command,sourceLease:command.sourceLease||sourceLease});
-   const head=(await request(REPO+'/git/ref/heads/main')).object.sha,file=await readFile(historyPath,head);
-   return {...result,head,sha:file.sha,store:validateRead(JSON.parse(file.text))};
+   return {...result,...await readCurrent('formal',{workIds:[command.action.workId],verifySource:false})};
   },
   async connect(){
    if(!token)throw Error('请填写仅授权本仓库的 GitHub 凭证');
@@ -73,7 +83,8 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
     if(!response.ok)throw Error('读取已发布修改记录失败（HTTP '+response.status+'）');
     return {sha:null,store:validateRead(await response.json())};},{timeout:requestTimeout});
   },
-  async read({verifySource=true}={}){
+  async read({verifySource=true,...options}={}){
+   if(commandMode==='trusted'&&historyPath===HISTORY_PATH)return readCurrent('formal',{verifySource,...options});
    const head=sourceLease?(await request(REPO+'/git/ref/heads/main')).object.sha:'main';
    if(verifySource)await guard(head,dependencies());const file=await readFile(historyPath,head);
    return {head,sha:file.sha,store:validateRead(JSON.parse(file.text))};

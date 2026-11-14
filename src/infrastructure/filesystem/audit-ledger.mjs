@@ -8,6 +8,8 @@ import {validateIdentityStore} from '../../domain/catalogue/source-identities.mj
 import {AUDIT_PATH,AUDIT_SOURCES,auditEvents,auditOrder,auditWorkIds,replaceAuditEvents} from '../../domain/audit/events.mjs';
 import {readBasicJournalSync} from './basic-store.mjs';
 import {createAuditReader} from '../storage/audit-reader.mjs';
+import {appendAuditRange,setAuditMap,verifyAuditIndexes} from './audit-indexes.mjs';
+import {buildAuditCurrent,verifyAuditCurrent} from './audit-current.mjs';
 const hash=text=>createHash('sha256').update(text).digest('hex');
 const blob=text=>createHash('sha1').update('blob '+Buffer.byteLength(text)+'\0'+text).digest('hex');
 export const AUDIT_LIMITS={segmentEvents:50,segmentBytes:256*1024,indexEntries:64,indexBytes:128*1024};
@@ -30,7 +32,7 @@ function replay(kind,baseline,events){
  }
  return result;
 }
-export function packAuditKind(kind,store,source,{put}){
+export function packAuditKind(kind,store,source,{put},{isolated=false}={}){
  const events=auditEvents(kind,store),all=[],operations=[],byWork=new Map();let previous=null,active=[];
  const flush=()=>{
   if(!active.length)return;
@@ -43,7 +45,7 @@ export function packAuditKind(kind,store,source,{put}){
   previous=segment.sha256;active=[];
  };
  for(const event of events){
-  if(active.length&&(active.length>=AUDIT_LIMITS.segmentEvents||Buffer.byteLength(textOf({schemaVersion:1,type:'events',kind,previous,events:[...active,event]}))>AUDIT_LIMITS.segmentBytes))flush();
+  if(active.length&&(active.length>=(isolated?1:AUDIT_LIMITS.segmentEvents)||Buffer.byteLength(textOf({schemaVersion:1,type:'events',kind,previous,events:[...active,event]}))>AUDIT_LIMITS.segmentBytes))flush();
   active.push(event);
  }flush();
  function range(entries){
@@ -67,11 +69,11 @@ export function packAuditKind(kind,store,source,{put}){
   operations:trie(operations.sort(([a],[b])=>a<b?-1:a>b?1:0)),
   works:trie([...byWork].sort(([a],[b])=>a<b?-1:a>b?1:0).map(([id,rows])=>[id,{count:rows.length,root:range(rows)}]))};
 }
-export function auditObjectWriter(root,{check=false,files=new Map()}={}){
- return {files,put(value){const content=textOf(value),sha256=hash(content),path='data/audit-ledger/objects/'+sha256+'.json';
+export function auditObjectWriter(root,{check=false,files=new Map(),created=new Map()}={}){
+ return {files,created,put(value){const content=textOf(value),sha256=hash(content),path='data/audit-ledger/objects/'+sha256+'.json';
   const ref={path,sha:blob(content),sha256,bytes:Buffer.byteLength(content)};files.set(path,content);
   if(check){if(!existsSync(join(root,path))||readFileSync(join(root,path),'utf8')!==content)throw Error('审计归档缺失或不一致：'+path);}
-  else if(!existsSync(join(root,path))){mkdirSync(dirname(join(root,path)),{recursive:true});writeFileSync(join(root,path),content);}
+  else if(!existsSync(join(root,path))){mkdirSync(dirname(join(root,path)),{recursive:true});writeFileSync(join(root,path),content);created.set(path,content);}
   else if(readFileSync(join(root,path),'utf8')!==content)throw Error('不可改写既有审计归档：'+path);
   return ref;
  }};
@@ -86,19 +88,26 @@ export function auditSourceStores(root){
 }
 export async function restoreAuditKind(root,pointer,kind){
  const reader=createAuditReader(ref=>readFileSync(join(root,ref.path),'utf8'),{cacheSize:256}),opened=await reader.open(pointer,{kind}),descriptor=opened.descriptor;
- const rows=await reader.postings(descriptor.history,{limit:Number.MAX_SAFE_INTEGER}),events=[];let previous=null;
+ const rows=await reader.postings(descriptor.history,{limit:Number.MAX_SAFE_INTEGER}),events=[],indexed=[];let previous=null;
  // Global order is checked independently of operation/work posting lists.
  for(const posting of [...rows].reverse()){
   const segment=await reader.read(posting.segment);
   if(posting.offset===0){if(segment.previous!==previous)throw Error('审计归档链不连续');previous=posting.segment.sha256;}
-  const event=await reader.event(kind,posting);if(!event||auditOrder(kind,event)!==posting.order)throw Error('操作索引与归档不一致');events.push(event);
+  const event=await reader.event(kind,posting);if(!event||auditOrder(kind,event)!==posting.order)throw Error('操作索引与归档不一致');events.push(event);indexed.unshift({...posting,workIds:auditWorkIds(kind,event)});
  }
  const skeleton=await reader.read(descriptor.skeleton),store=replay(kind,skeleton.store,events);
  if(events.length!==descriptor.eventCount||previous!==descriptor.eventChainHead||hash(journalKey(store))!==descriptor.logicalHash)throw Error('归档回放对象不一致');
  // Rebuild all postings from event bodies: omissions, false subject lists and
  // forged alternate indexes cannot pass merely by recomputing a file digest.
- const packed=packAuditKind(kind,store,descriptor.source,auditObjectWriter(root,{check:true}));
- if(journalKey(packed)!==journalKey(descriptor))throw Error('归档索引与事件全集不一致');
+ if(descriptor.archiveFormat===2){
+  if(hash(journalKey(events))!==descriptor.eventPrefixHash||journalKey(skeleton.store)!==journalKey(checkpoint(kind,store)))throw Error('归档事件前缀或检查点不一致');
+  await verifyAuditIndexes(reader,descriptor,indexed);
+ }else{
+  const packed=packAuditKind(kind,store,descriptor.source,auditObjectWriter(root,{check:true}));
+  const {current,...legacy}=descriptor;
+  if(journalKey(packed)!==journalKey(legacy))throw Error('归档索引与事件全集不一致');
+ }
+ await verifyAuditCurrent(kind,store,descriptor.source,descriptor.current,reader,auditObjectWriter(root,{check:true}));
  return store;
 }
 export async function verifyAuditGraph(root,pointer){
@@ -127,30 +136,50 @@ export async function publishAuditLedger(source,output){
  return {pointer,objects:seen.size};
 }
 export async function buildAuditLedger(root,{check=false}={}){
- const {stores,sources}=auditSourceStores(root),writer=auditObjectWriter(root,{check}),kinds={};
- let previous=null;
- if(existsSync(join(root,AUDIT_PATH)))previous=JSON.parse(readFileSync(join(root,AUDIT_PATH),'utf8'));
- for(const [kind,store] of Object.entries(stores))kinds[kind]=packAuditKind(kind,store,sources[kind],writer);
- let oldManifest=null;
- if(previous){
-  const reader=createAuditReader(ref=>readFileSync(join(root,ref.path),'utf8'));oldManifest=await reader.read(previous.root);
-  for(const [kind,old] of Object.entries(oldManifest.kinds)){
-   if(!kinds[kind]||kinds[kind].eventCount<old.eventCount)throw Error('不能移除或截断归档事件');
-   if(kinds[kind].logicalHash===old.logicalHash)continue;
-   const original=await restoreAuditKind(root,previous.root,kind),a=auditEvents(kind,original),b=auditEvents(kind,stores[kind]);
-   if(a.some((event,i)=>journalKey(event)!==journalKey(b[i])))throw Error('不能改写既有归档事件前缀');
-   if(kind==='basic'||kind==='formal')if(journalKey(original.journal?.baseline)!==journalKey(stores[kind].journal?.baseline))throw Error('不能重置归档迁移起点');
+ const {stores,sources}=auditSourceStores(root),writer=auditObjectWriter(root),kinds={};
+ const reader=createAuditReader(ref=>readFileSync(join(root,ref.path),'utf8'),{cacheSize:256});
+ const previous=existsSync(join(root,AUDIT_PATH))?JSON.parse(readFileSync(join(root,AUDIT_PATH),'utf8')):null;
+ const oldManifest=previous?await reader.read(previous.root):null;
+ for(const kind of Object.keys(oldManifest?.kinds||{}))if(!stores[kind])throw Error('不能移除或截断归档事件');
+ for(const [kind,store] of Object.entries(stores)){
+  const old=oldManifest?.kinds[kind],events=auditEvents(kind,store);
+  if(old&&old.source.sha===sources[kind].sha){
+   kinds[kind]=!check&&kind!=='basic'&&!old.current?{...old,current:await buildAuditCurrent(kind,store,sources[kind],null,events,reader,writer,AUDIT_LIMITS)}:old;continue;
   }
+  if(check)throw Error('审计索引需要重新生成');
+  const skeleton=checkpoint(kind,store);
+  if(old){
+   if(events.length<old.eventCount)throw Error('不能移除或截断归档事件');
+   const prefix=events.slice(0,old.eventCount);
+   const originalHash=old.archiveFormat===2?old.eventPrefixHash:hash(journalKey(auditEvents(kind,await restoreAuditKind(root,previous.root,kind))));
+   if(hash(journalKey(prefix))!==originalHash)throw Error('不能改写既有归档事件前缀');
+   if(journalKey((await reader.read(old.skeleton)).store)!==journalKey(skeleton))throw Error('不能重置归档迁移起点');
+  }
+  // Verify the complete source replay without repacking/reopening every old
+  // archive/index generation. Offline --check remains an independent full audit.
+  // readBasicJournalSync has already verified the complete basic source replay.
+  if(kind!=='basic'&&journalKey(replay(kind,skeleton,events))!==journalKey(store))throw Error('归档前后逻辑状态或完整日志不一致');
+  if(!old){kinds[kind]={...packAuditKind(kind,store,sources[kind],writer,{isolated:kind!=='basic'}),archiveFormat:2,eventPrefixHash:hash(journalKey(events)),...(kind!=='basic'?{current:await buildAuditCurrent(kind,store,sources[kind],null,events,reader,writer,AUDIT_LIMITS)}:{})};continue;}
+  const added=events.slice(old.eventCount),postings=[],operations=[],byWork=new Map();let head=old.eventChainHead,active=[];
+  const flush=()=>{if(!active.length)return;const segment=writer.put({schemaVersion:1,type:'events',kind,previous:head,events:active});
+   for(const [offset,event] of active.entries()){const ids=auditWorkIds(kind,event),posting={id:event.id,order:auditOrder(kind,event),workHash:hash(JSON.stringify(ids)),eventHash:hash(JSON.stringify(event)),segment,offset};postings.push(posting);operations.push([event.id,posting]);for(const id of ids){if(!byWork.has(id))byWork.set(id,[]);byWork.get(id).push(posting);}}
+   head=segment.sha256;active=[];};
+  for(const event of added){if(await reader.lookup(old.operations,event.id))throw Error('操作ID已用于既有归档事件');if(active.length&&(active.length>=(kind==='basic'?AUDIT_LIMITS.segmentEvents:1)||Buffer.byteLength(textOf({schemaVersion:1,type:'events',kind,previous:head,events:[...active,event]}))>AUDIT_LIMITS.segmentBytes))flush();active.push(event);}flush();
+  const workUpdates=[];
+  for(const [id,rows] of byWork){const before=await reader.lookup(old.works,id);workUpdates.push([id,{count:(before?.count||0)+rows.length,root:await appendAuditRange(before?.root||null,rows,reader,writer,AUDIT_LIMITS)}]);}
+  kinds[kind]={...old,source:sources[kind],archiveFormat:2,eventPrefixHash:hash(journalKey(events)),eventCount:events.length,currentRevision:kind==='formal'?events.length:store.revision,logicalHash:hash(journalKey(store)),eventChainHead:head,
+   history:await appendAuditRange(old.history,postings,reader,writer,AUDIT_LIMITS),operations:await setAuditMap(old.operations,operations,reader,writer,AUDIT_LIMITS),works:await setAuditMap(old.works,workUpdates,reader,writer,AUDIT_LIMITS),
+   ...(kind!=='basic'?{current:await buildAuditCurrent(kind,store,sources[kind],old.current,added,reader,writer,AUDIT_LIMITS)}:{})};
  }
  const unchanged=oldManifest&&journalKey(oldManifest.kinds)===journalKey(kinds);
  const manifest=unchanged?oldManifest:{schemaVersion:1,kinds,previous:previous?.root||null};
- const rootRef=writer.put(manifest),pointer={schemaVersion:1,root:rootRef},content=textOf(pointer);
+ const rootRef=check?previous?.root:writer.put(manifest),pointer={schemaVersion:1,root:rootRef},content=textOf(pointer);
  if(check){if(!previous||journalKey(previous)!==journalKey(pointer))throw Error('审计索引需要重新生成');}
  else if(!previous||journalKey(previous)!==journalKey(pointer)){mkdirSync(dirname(join(root,AUDIT_PATH)),{recursive:true});writeFileSync(join(root,AUDIT_PATH),content);}
- for(const kind of Object.keys(kinds)){
+ if(check)for(const kind of Object.keys(kinds)){
   const restored=await restoreAuditKind(root,rootRef,kind);
   if(journalKey(restored)!==journalKey(stores[kind]))throw Error('归档前后逻辑状态或完整日志不一致');
  }
- await verifyAuditGraph(root,rootRef);
- return {pointer,kinds:Object.fromEntries(Object.entries(kinds).map(([k,v])=>[k,{events:v.eventCount,sourceSha:v.source.sha,logicalHash:v.logicalHash}])),objects:writer.files.size,changed:!unchanged};
+ if(check)await verifyAuditGraph(root,rootRef);
+ return {pointer,kinds:Object.fromEntries(Object.entries(kinds).map(([k,v])=>[k,{events:v.eventCount,sourceSha:v.source.sha,logicalHash:v.logicalHash}])),objects:writer.files.size,newObjects:writer.created.size,newBytes:[...writer.created.values()].reduce((n,text)=>n+Buffer.byteLength(text),0),changed:!unchanged};
 }

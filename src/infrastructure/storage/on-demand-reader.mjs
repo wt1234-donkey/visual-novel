@@ -1,7 +1,8 @@
 import {readReleaseManifest,readReleaseText} from './release-reader.mjs';
 import {withDeadline} from './async-read.mjs';
+import {createPublishedAuditAccess} from './audit-access.mjs';
 export function createOnDemandReader(fetcher=fetch){
- let manifest;const cache=new Map(),pending=new Map(),MAX=24;
+ let manifest;const cache=new Map(),pending=new Map(),MAX=24,audit=createPublishedAuditAccess(fetcher);
  const release=()=>manifest??=readReleaseManifest(fetcher).catch(error=>{manifest=null;throw error;});
  async function json(ref,options={}){
   const r=await withDeadline(()=>release(),options);if(!ref)throw Error('发布版本缺少按需目录，请刷新后重试');
@@ -33,5 +34,5 @@ export function createOnDemandReader(fetcher=fetch){
   const selected=slots?slots.slice(page*size,(page+1)*size):Array.from({length:Math.min(size,total-page*size)},(_,i)=>page*size+i);
   return {total,page,rows:await bulkSlots(selected,d,options)};
  }
- return {release,json,directory,formal,bulk,bulkPage,async reserved(options){const d=await directory('bulk',options);return json(d.reserved,options);},async optional(name,options){const r=await release();return json(r.catalogues?.[name],options);}};
+ return {release,json,directory,formal,bulk,bulkPage,async current(kind,options){const opened=await audit.open(kind,{release:await release()});if(!opened)throw Error('此发布尚无按需当前状态，请刷新后重试');return opened.current(options);},async reserved(options){const d=await directory('bulk',options);return json(d.reserved,options);},async optional(name,options){const r=await release();return json(r.catalogues?.[name],options);}};
 }
