@@ -4,10 +4,14 @@ import json
 import os
 import subprocess
 import unittest
+from historical_baseline_recovery import descriptor, baseline_json
 
 
 @lru_cache(maxsize=None)
 def _available(root, ref):
+    if descriptor(root,ref):
+        for path in ('data/credits.json','data/organizations.json'):baseline_json(root,ref,path)
+        return True
     # Some early commit blobs are malformed JSON; their lost local working-tree
     # snapshots cannot be recreated by fetching more Git history.
     for path in ('data/credits.json', 'data/organizations.json'):

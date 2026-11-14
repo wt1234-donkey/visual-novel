@@ -1,5 +1,6 @@
 """Verify B3 correction evidence and absence of inferred creation credits."""
 from audit_baselines import requires_baseline
+from historical_baseline_recovery import baseline_json
 import json
 import subprocess
 import unittest
@@ -14,7 +15,7 @@ def read(path):
     return load_snapshot(ROOT, path)
 
 def old(path):
-    return json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, text=True))
+    return baseline_json(ROOT, BASE, path)
 
 @requires_baseline(ROOT, BASE)
 class CreatorB3Tests(unittest.TestCase):

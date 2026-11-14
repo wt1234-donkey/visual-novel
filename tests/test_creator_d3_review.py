@@ -1,5 +1,6 @@
 """D3 registers only the sourced Broken Age original and DreamWorks identity."""
 from audit_baselines import requires_baseline
+from historical_baseline_recovery import baseline_ref
 import json
 import subprocess
 import unittest
@@ -8,7 +9,8 @@ from catalogue_snapshot import catalogue_bytes
 from creator_snapshot import load_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '46f5c48'
+ORIGINAL_BASE = '46f5c48'
+BASE = baseline_ref(ROOT, ORIGINAL_BASE)
 
 
 def read(path):

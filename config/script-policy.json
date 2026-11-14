@@ -1245,6 +1245,11 @@
       "path": "scripts/measure_android_device.mjs",
       "role": "tool",
       "basis": "R09 maintained verification capability"
+    },
+    {
+      "path": "scripts/verify_historical_baselines.py",
+      "role": "tool",
+      "basis": "Explicit frozen-source recovery and historical baseline provenance"
     }
   ]
 }
