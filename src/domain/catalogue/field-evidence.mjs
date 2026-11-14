@@ -85,7 +85,7 @@ export function applyFieldValues(row,fields,{basic=false}={}){
  const next={...row},fieldBase={},evidence={};
  for(const [key,a] of Object.entries(fields)){fieldBase[key]=copy(row[key]??null);next[key]=copy(a.value);evidence[key]=copy(a);
   if(key==='title'){fieldBase.displayTitle=row.displayTitle??null;next.displayTitle=a.value;next.titleAliases=[...new Set([...(row.titleAliases||[]),row.title,row.sourceTitle].filter(Boolean))];if(basic)next.aliases=[...new Set([...(row.aliases||[]),row.title].filter(v=>v&&v!==a.value))];}
-  if(key==='firstYear'){fieldBase.yearStatus=row.yearStatus??null;next.yearStatus=a.status==='supported'&&isPublishedYear(a.value)?'published':'unverified';if(basic){fieldBase.year=row.year??null;next.year=a.value;}}
+  if(key==='firstYear'){fieldBase.yearStatus=row.yearStatus??null;next.yearStatus=a.value===null?'unknown':a.status==='supported'?(isPublishedYear(a.value)?'published':'planned'):'unverified';if(basic){fieldBase.year=row.year??null;next.year=a.value;}}
  }
  return {...next,fieldBase,fieldEvidence:evidence};
 }

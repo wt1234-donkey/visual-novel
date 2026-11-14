@@ -4,7 +4,7 @@ import {mkdtempSync,mkdirSync,readFileSync,writeFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join,dirname} from 'node:path';
 import {spawnSync} from 'node:child_process';
-import {emptyFieldStore,applyFieldCommand,validateFieldStore,fieldProjection,fieldKey,fieldHistory,chosenFields,evidenceCsv,fieldCounts,scopeKey} from '../src/domain/catalogue/field-evidence.mjs';
+import {emptyFieldStore,applyFieldCommand,validateFieldStore,fieldProjection,fieldKey,fieldHistory,chosenFields,evidenceCsv,fieldCounts,scopeKey,applyFieldValues,choiceBase} from '../src/domain/catalogue/field-evidence.mjs';
 import {buildEffectiveCatalogue,displayTitle} from '../src/domain/catalogue/effective.mjs';
 import {buildSourceIdentityCatalogue} from '../src/domain/catalogue/source-identities.mjs';
 import {createFieldContext} from '../src/infrastructure/filesystem/field-evidence.mjs';
@@ -33,6 +33,18 @@ function selected(){return apply(seeded(),{type:'select',assertionId:'old'},'sel
 test('optional empty evidence leaves complete formal/basic projections and visible counts unchanged',()=>{
  const before=buildEffectiveCatalogue({main}),after=buildEffectiveCatalogue({main,fieldEvidence:fieldProjection(emptyFieldStore())});assert.deepEqual(after,before);
  const inputs={registry,main,store:emptyStore()};assert.deepEqual(buildCatalogueSnapshot({...inputs,fieldEvidence:fieldProjection(emptyFieldStore())}),buildCatalogueSnapshot(inputs));
+});
+test('supported future dates are planned, unknown stays unknown, and basic/formal projections preserve the source date',()=>{
+ const future=new Date().getFullYear()+1;
+ for(const [value,status,expected] of [[future,'supported','planned'],[future,'unverified','unverified'],[null,'supported','unknown'],[1990,'supported','published']]){
+  const source={...row,year:2050,yearStatus:'unverified'},fields={firstYear:assertion('date-state',value,{status})};
+  for(const basic of [false,true]){
+   const projected=applyFieldValues(source,fields,{basic});
+   assert.equal(projected.yearStatus,expected);assert.equal(projected.firstYear,value);
+   assert.equal(projected.year,basic?value:2050);assert.deepEqual(choiceBase(projected),source);
+  }
+  assert.equal(source.firstYear,1990);assert.equal(source.year,2050);
+ }
 });
 test('multiple sources coexist and later collection never silently replaces an explicit earlier choice',()=>{
  const s=selected(),raw=structuredClone(main);assert.equal(fieldCounts(s).assertions,2);assert.equal(fieldCounts(s).conflicts,1);
