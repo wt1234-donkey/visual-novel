@@ -6,6 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CHECKS = [
     ['node', 'scripts/seal_catalogue_write.mjs', '--check'],
+    ['python3', 'scripts/historical_rules.py', '--check'],
+    ['python3', 'scripts/validate_public_entries.py'],
     ['python3', 'scripts/generate_effective_views.py'],
     ['python3', 'scripts/validate_data.py'],
     ['python3', 'scripts/validate_entity_model.py'],

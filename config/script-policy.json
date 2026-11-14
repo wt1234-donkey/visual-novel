@@ -1215,6 +1215,36 @@
       "path": "scripts/write_boundary.py",
       "role": "active",
       "basis": "Python bridge to the shared write protocol"
+    },
+    {
+      "path": "scripts/historical_rules.py",
+      "role": "active",
+      "purpose": "Validate checksummed historical facts and ordered generator evidence references"
+    },
+    {
+      "path": "scripts/entity_credit_rules.py",
+      "role": "active",
+      "basis": "scoped declarative historical credit application"
+    },
+    {
+      "path": "scripts/validate_public_entries.py",
+      "role": "active",
+      "basis": "R09 maintained verification capability"
+    },
+    {
+      "path": "scripts/verify_public_displays.py",
+      "role": "active",
+      "basis": "R09 maintained verification capability"
+    },
+    {
+      "path": "scripts/verify_archive_recovery.mjs",
+      "role": "active",
+      "basis": "R09 maintained verification capability"
+    },
+    {
+      "path": "scripts/measure_android_device.mjs",
+      "role": "tool",
+      "basis": "R09 maintained verification capability"
     }
   ]
 }
