@@ -16,6 +16,7 @@ def apply_credit_rules(rules,phase,*,companies,works,releases,contents,release_e
                      ('firstYear' not in selection or r['firstYear']==selection['firstYear']) and
                      ('publisherEntity' not in selection or selection['publisherEntity'] in release_entities(r))]
         for target in targets:
+            assert all(target.get(key)==expected for key,expected in rule.get('expected',{}).items()),'Historical scoped credit precondition differs'
             wid=target['id'] if scope=='work' else target['workId']
             if rule.get('requiresOriginalRelease'):
                 assert any(r['workId']==wid and r['contentRelation']=='original' for r in releases)

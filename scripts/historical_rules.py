@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 
 REGISTRY='config/historical-entity-rules.json'
-PAYLOAD_KEYS={'namespace','baseline','constants','references','sequences','dossiers','publisherAliases','supplementalEntities','supplementalRelations','subbrandRelations','operatedBy','entityDates','creditRules'}
+PAYLOAD_KEYS={'namespace','baseline','constants','references','sequences','dossiers','publisherAliases','supplementalEntities','supplementalRelations','subbrandRelations','operatedBy','entityDates','creditRules','entityPatches'}
 
 def canonical(value):
     return json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
@@ -45,8 +45,9 @@ def load_historical_rules(root):
         if not isinstance(rules,list):raise ValueError('Historical credit rules must be ordered')
         for rule in rules:
             required={'entityId','scope','targets','role','source','note','status'}
-            if not required<=set(rule) or set(rule)-required-{'raw','requiresDossier','requiresOriginalRelease','review'} or rule['scope'] not in {'work','release','content'} or rule['role'] not in constants['ROLE_LABELS'] or rule['status'] not in {'existingDossier','existingCredit','sourceReviewed'}:
+            if not required<=set(rule) or set(rule)-required-{'raw','requiresDossier','requiresOriginalRelease','review','expected'} or rule['scope'] not in {'work','release','content'} or rule['role'] not in constants['ROLE_LABELS'] or rule['status'] not in {'existingDossier','existingCredit','sourceReviewed'}:
                 raise ValueError('Invalid scoped historical credit rule')
+            if 'expected' in rule and (rule['scope']!='release' or not rule['expected'] or set(rule['expected'])-{'publisher','year'}):raise ValueError('Invalid historical release guard')
             target=rule['targets'];kind=target.get('kind')
             allowed={'ids':{'kind','ids'},'dossierWorks':{'kind','dossier','exclude'},'records':{'kind','workIds','firstYear','publisherEntity'}}
             if kind not in allowed or set(target)-allowed[kind] or kind=='dossierWorks' and rule['scope']!='work':
@@ -60,6 +61,14 @@ def load_historical_rules(root):
                 if not re.match('https?://',source):raise ValueError('Historical credit needs a source URL')
             elif not isinstance(source,dict) or len(source)!=1 or not set(source)<={'dossierSource','workSource','targetSources'}:
                 raise ValueError('Invalid historical credit evidence selector')
+    patches=payload['entityPatches']
+    if not isinstance(patches,list) or len({r['id'] for r in patches})!=len(patches):raise ValueError('Duplicate historical entity patch')
+    for patch in patches:
+        required={'id','expected','set','append','addEntities','relations'}
+        if not required<=set(patch) or set(patch)-required-{'requiresDossier'} or set(patch['expected'])!={'type','verification'} or set(patch['set'])-{'historyNote','dates'} or set(patch['append'])-{'sources','aliases'}:
+            raise ValueError('Invalid historical entity patch')
+        for row in patch['addEntities']:
+            if set(row)!={'args','options'} or not 5<=len(row['args'])<=6 or set(row['options'])-{'note'}:raise ValueError('Invalid historical supplemental entity')
     return payload
 
 def reference_path(rules,key):
@@ -67,12 +76,26 @@ def reference_path(rules,key):
 
 def resolve_evidence(value,companies):
     if isinstance(value,dict):
+        if set(value)=={'dossierValue'}:
+            ref=value['dossierValue'];return companies[ref['id']][ref['field']]
+        if set(value)=={'concat'}:
+            return ''.join(resolve_evidence(item,companies) for item in value['concat'])
         if set(value)=={'dossierSource'}:
             return companies[value['dossierSource']]['source']
         return {key:resolve_evidence(item,companies) for key,item in value.items()}
     if isinstance(value,list):
         return [resolve_evidence(item,companies) for item in value]
     return value
+
+def apply_entity_patches(rules,companies,entities,relations,add_entity):
+    for patch in rules['entityPatches']:
+        if patch.get('requiresDossier') and patch['requiresDossier'] not in companies:continue
+        entity=entities[patch['id']]
+        assert all(entity[key]==expected for key,expected in patch['expected'].items()),'Historical entity patch precondition differs'
+        for row in patch['addEntities']:add_entity(*row['args'],**row['options'])
+        for key,value in patch['set'].items():entity[key]=resolve_evidence(value,companies)
+        for key,value in patch['append'].items():entity[key]=list(dict.fromkeys([*entity[key],*resolve_evidence(value,companies)]))
+        relations.extend(resolve_evidence(patch['relations'],companies))
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');parser.parse_args()

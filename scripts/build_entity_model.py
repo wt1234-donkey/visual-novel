@@ -1,5 +1,5 @@
 from entity_credit_rules import apply_credit_rules
-from historical_rules import load_historical_rules, reference_path, resolve_evidence
+from historical_rules import load_historical_rules, reference_path, resolve_evidence, apply_entity_patches
 """Build additive entity/credit/classification indexes without rewriting historical records."""
 import argparse
 import csv
@@ -148,14 +148,7 @@ def build():
     expected.add(r['id'])
   assert {r['id'] for r in scoped}==expected and scoped,'历史发行范围与主体订正记录不符'
   assert all(r['year']<scope['beforeYear'] for r in scoped),'不能把同名后继发行倒填旧公司'
- # The publisher and the later game label are separately evidenced for this first batch only.
- for r in allreleases:
-  if r['workId']=='banpresto-accel1':
-   assert r['publisher']=='バンダイナムコゲームス' and r['year']==2012
-   credit(game_label,'release',r['id'],'publishingBrand',
-          'https://www.4gamer.net/games/154/G015459/20120517059/',
-          raw='バンプレストレーベル',status='sourceReviewed',work_id=r['workId'],
-          note='メーカー发文明确区分発売元与厂牌，仅限定2012首批，不追溯归旧万普公司。')
+ apply_credit_rules(RULES,'publishingLabel',companies=companies,works=allworks,releases=allreleases,contents=allcontents,release_entities=None,credit=credit,credits=credits)
  # Explicit splitting rules preserve raw brands that the legacy corporate index previously flattened.
  def release_entities(r):
   scoped_resolution=next((x for x in banpresto_additions['scopedPublisherResolutions'] if x['releaseId']==r['id']),None)
@@ -247,17 +240,7 @@ def build():
   credits[-1].update(reviewId=reviewed['reviewId'],reviewRecord=audit)
   if cid:reviewed_memberships[(cid,wid)]=reviewed
  assert set(identity_reviews)<=entities.keys(),'主体订正记录未命中既有身份'
- leland=entities['entity-name-547f933b0469']
- assert leland['type']=='company' and leland['verification']=='sourceReviewed'
- leland['historyNote']='原版Dragon’s Lair II传单具名The Leland Corporation，1991年街机发行沿用g045。1988年同期Play Meter报道：1987年Tradewest收购Cinematronics资产后，业务重组为The Leland Corporation；资产交易日不等同Leland法人成立日，旧公司作品、动画合作和开发职责也不由此转归Leland。详见data/leland-audit.md。'
- leland['sources']=list(dict.fromkeys([*leland['sources'],'https://elibrary.arcade-museum.com/magazines/pm/PlayMeter-1988-06/PlayMeter-1988-06-026.pdf']))
- if 'broderbund' in companies:
-  broderbund=entities['entity-name-e0c32a99a906']
-  assert broderbund['type']=='company' and broderbund['verification']=='sourceReviewed'
-  broderbund['historyNote']=companies['broderbund']['publisherNote']
-  broderbund['sources']=list(dict.fromkeys([*broderbund['sources'],companies['broderbund']['source']]))
-  broderbund['aliases']=list(dict.fromkeys([*broderbund['aliases'],'Broderbund','Brøderbund Software']))
-  broderbund['dates']=[{'kind':'established','value':'1980','precision':'year','source':companies['broderbund']['establishedSource'],'status':'sourceReviewed'}]
+ apply_entity_patches(RULES,companies,entities,relations,add_entity)
  apply_credit_rules(RULES,'chunsoft',companies=companies,works=allworks,releases=allreleases,contents=allcontents,release_entities=release_entities,credit=credit,credits=credits)
  # Source-scoped Chunsoft catalogue additions; no developer inference from publisher.
  for reviewed in read('data/chunsoft-scoped-credits-20261029.json')['credits']:
@@ -271,15 +254,6 @@ def build():
  # Dossier memberships are separate from production assertions. Every existing member remains present.
  bywork=defaultdict(list)
  for x in credits:bywork[x['workId']].append(x)
- if 'takeru' in companies:
-  # TAKERU dossier reuses the already reviewed sales-service identity. No game creation is inferred.
-  takeru=entities['entity-name-08cbddd5e450']
-  assert takeru['type']=='brand' and takeru['verification']=='sourceReviewed'
-  takeru['historyNote']=companies['takeru']['publisherNote']+' 既有冻结核查记录原文保留；本轮新增渠道专题与限定组织关系，见data/takeru-audit.md。'
-  takeru['aliases']=list(dict.fromkeys([*takeru['aliases'],'ソフトベンダーTAKERU','武尊']))
-  brother=add_entity('brother','Brother Industries','company',['Brother Industries','ブラザー工業株式会社'],'https://global.brother/ja/digest/history/takeru','sourceReviewed',note='TAKERU系统开发及服务主体；不由终端开发推定游戏开发。')
-  relations.append({'from':takeru['id'],'to':brother,'type':'operatedBy','period':{'from':1986,'to':None,'precision':'year','openEnd':'notAsserted'},'status':'sourceReviewed','source':companies['takeru']['source'],'note':'1986年服务由Brother推出；关系只说明初始运营来源，不声称持续至今。1994年向XING移交的精确时间仍待同期原件，1997是服务结束而非Brother注销。'})
-  takeru['dates']=[{'kind':'serviceStarted','value':'1986','precision':'year','source':companies['takeru']['source'],'status':'sourceReviewed'},{'kind':'serviceEnded','value':'1997','precision':'year','source':companies['takeru']['source'],'status':'sourceReviewed'}]
  dossier_lookup={x['id']:x for x in dossiers}
  for c in coverage['companies']:
   subject=set(dossier_lookup[c['id']]['entityIds'])
