@@ -50,7 +50,7 @@ def build():
  for p in sorted(CLASSIFICATION['placements'],key=lambda p:(allworks[p['workId']]['firstYear'],p['workId'])):
   w=allworks[p['workId']];name=effective_title(w);dossiers=member[w['id']];url=f'{dossiers[0]}.html#{w["id"]}' if dossiers else 'index.html#catalogue'
   text=f'{name} {w["originalTitle"]} '+ ' '.join(w['interactionModes'])
-  body+=f'<tr class="classification-row" data-directory-kind="{p["placement"]}" data-search="{e(text,quote=True)}"><th scope="row"><a href="{url}">{e(name)}</a><small>{w["firstYear"]} · {e(w["originalTitle"])}</small></th><td>{POSITION[p["placement"]]}</td><td>{e("、".join(w["interactionModes"]))}</td><td>{e(p["reason"])}<a class="source-link" href="{e(p["source"],quote=True)}" target="_blank" rel="noopener noreferrer">现有作品依据 ↗</a></td></tr>'
+  body+=f'<tr class="classification-row" data-work-id="{w['id']}" data-directory-kind="{p["placement"]}" data-search="{e(text,quote=True)}"><th scope="row"><a href="{url}">{e(name)}</a><small>{w["firstYear"]} · {e(w["originalTitle"])}</small></th><td>{POSITION[p["placement"]]}</td><td>{e("、".join(w["interactionModes"]))}</td><td>{e(p["reason"])}<a class="source-link" href="{e(p["source"],quote=True)}" target="_blank" rel="noopener noreferrer">现有作品依据 ↗</a></td></tr>'
  body+='</tbody></table></div>';out['classification.html']=shell('作品分类审核',body)
  rows=io.StringIO();writer=csv.writer(rows,lineterminator='\n');writer.writerow(['参与记录ID','实体ID','名称','实体类型','作品ID','目标层级','目标ID','参与角色','署名原文','核查依据','来源'])
  for c in CREDITS['credits']:

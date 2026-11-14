@@ -6,6 +6,7 @@ import {readFile} from 'node:fs/promises';
 import {readFileSync,readdirSync} from 'node:fs';
 import {resolve,extname} from 'node:path';
 import {loadEffectiveCatalogueSync} from '../../src/infrastructure/filesystem/effective-catalogue.mjs';
+import {mergeFormalDatasets,displayTitle} from '../../src/domain/catalogue/effective.mjs';
 import {decodePublishedText} from '../../src/infrastructure/storage/wire-format.mjs';
 const {chromium}=createRequire(import.meta.url)(process.env.PLAYWRIGHT_MODULE||'playwright');
 const site=process.env.ATLAS_SITE_DIRECTORY&&resolve(process.env.ATLAS_SITE_DIRECTORY);
@@ -13,6 +14,7 @@ test('published organization and classification pages initialize against their a
  assert.ok(site,'Build the static artifact and set ATLAS_SITE_DIRECTORY before browser regressions');
  const release=JSON.parse(readFileSync(resolve(site,'data/catalogue-release.json'))),expected=loadEffectiveCatalogueSync(resolve(import.meta.dirname,'../..'));
  const directory=JSON.parse(await decodePublishedText(readFileSync(resolve(site,'data',release.catalogues.formal.path),'utf8')));
+ const expectedFormal=new Map(mergeFormalDatasets(expected).works.map(w=>[w.id,w]));assert.equal(directory.data.works.length,expectedFormal.size);for(const row of directory.data.works){const w=expectedFormal.get(row.id);assert.ok(w,row.id);assert.equal(displayTitle(row),displayTitle(w),row.id+' formal directory title');assert.equal(row.firstYear,w.firstYear,row.id+' formal directory year');}
  assert.equal(directory.currentStateVersion,1);assert.equal(directory.raw.history.journal,undefined);
  assert.ok(Object.values(directory.raw.history.records).every(row=>row.recent.length===0),'directory contains current values, not undo snapshots or full event journals');
  // This checks entry declarations, not merely the raw download returning 200.

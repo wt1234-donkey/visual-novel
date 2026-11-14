@@ -1,0 +1,2503 @@
+{
+  "schemaVersion": 1,
+  "sha256": "602e69025c186b2195cbff83a62caa32ab6e2bf44177077a01a89fb783788337",
+  "payload": {
+    "namespace": "narrative-entity-history",
+    "baseline": {
+      "commit": "f292491024e6403820f1c3755d7a42be384ea917",
+      "generators": {
+        "scripts/build_entity_model.py": "eadaf9fec5c95146ccfdea5dec8d23f6ee4a22e004654abf5db3f0135c1bdaa0",
+        "scripts/build_organizations.py": "b311d97803248536e25d2284415605b7a5eb3774a0dd3939136d9c4ba98b2336"
+      }
+    },
+    "constants": {
+      "BASE": "35b988136f016199d26121e41ca8d7b99d18e310",
+      "DATE": "2026-10-22",
+      "TYPE_LABELS": {
+        "company": "公司／组织",
+        "brand": "品牌",
+        "team": "制作团队",
+        "publication": "刊物／出版名义",
+        "individual": "个人",
+        "unknown": "身份待核",
+        "history": "沿革专题"
+      },
+      "ROLE_LABELS": {
+        "originalProduction": "原作制作",
+        "developer": "开发",
+        "coDeveloper": "联合制作",
+        "productionBrand": "制作品牌",
+        "originalPublishingBrand": "原作发行品牌",
+        "publisher": "发行署名",
+        "publishingBrand": "发行品牌",
+        "serviceProvider": "移动版服务提供",
+        "portDeveloper": "移植开发",
+        "localizer": "本地化",
+        "licensor": "授权合作",
+        "supervisor": "监修",
+        "copyrightCredit": "版权署名",
+        "catalogueAssociation": "专题关联（职责待核）",
+        "addedAnimation": "新增动画制作"
+      },
+      "BRANDS": [
+        "alicesoft",
+        "aniplex_exe",
+        "applique",
+        "asaproject",
+        "august",
+        "cabbage",
+        "clochette",
+        "cocktailsoft",
+        "cube",
+        "cuffs",
+        "fairytale",
+        "favorite",
+        "harukaze",
+        "hulotte",
+        "hummingbird_soft",
+        "innocent_grey",
+        "key",
+        "laplacian",
+        "leaf",
+        "macadamia",
+        "madosoft",
+        "minatosoft",
+        "minori",
+        "nanawind",
+        "overdrive",
+        "palette",
+        "sagaplanets",
+        "silkys",
+        "silkys_plus",
+        "smee",
+        "sorahane",
+        "sphere",
+        "sprite",
+        "toneworks",
+        "ultra_games",
+        "yuzusoft"
+      ],
+      "HISTORIES": [
+        "banpresto",
+        "broderbund",
+        "falcom",
+        "sierra",
+        "sierra_on_line",
+        "takeru",
+        "te_soft"
+      ],
+      "NAMES": {
+        "key": [
+          "Key"
+        ],
+        "novect": [
+          "NOVECT",
+          "Novectacle"
+        ],
+        "aniplex_exe": [
+          "ANIPLEX.EXE"
+        ],
+        "sprite": [
+          "sprite",
+          "sprite games"
+        ],
+        "madosoft": [
+          "まどそふと"
+        ],
+        "yuzusoft": [
+          "ゆずソフト"
+        ],
+        "innocent_grey": [
+          "Innocent Grey"
+        ],
+        "minori": [
+          "minori"
+        ],
+        "august": [
+          "AUGUST"
+        ],
+        "toneworks": [
+          "tone work’s",
+          "tone work's"
+        ],
+        "asaproject": [
+          "ASa Project"
+        ],
+        "elf": [
+          "ELF",
+          "エルフ"
+        ],
+        "leaf": [
+          "Leaf"
+        ],
+        "sagaplanets": [
+          "SAGA PLANETS"
+        ],
+        "smee": [
+          "SMEE"
+        ],
+        "favorite": [
+          "FAVORITE"
+        ],
+        "cuffs": [
+          "CUFFS"
+        ],
+        "cube": [
+          "CUBE"
+        ],
+        "sphere": [
+          "Sphere"
+        ],
+        "palette": [
+          "ぱれっと"
+        ],
+        "silkys": [
+          "Silky’s",
+          "Silky's"
+        ],
+        "silkys_plus": [
+          "Silky’s Plus",
+          "Silky's Plus"
+        ],
+        "alicesoft": [
+          "Alicesoft",
+          "ALICESOFT",
+          "アリスソフト"
+        ],
+        "nitroplus": [
+          "Nitroplus",
+          "NITRO PLUS"
+        ],
+        "overdrive": [
+          "OVERDRIVE"
+        ],
+        "jast": [
+          "JAST（日本）"
+        ],
+        "cocktailsoft": [
+          "Cocktail Soft",
+          "カクテルソフト",
+          "カクテル・ソフト"
+        ],
+        "macadamia": [
+          "Macadamia Soft"
+        ],
+        "fairytale": [
+          "フェアリーテール",
+          "FairyTale",
+          "FAIRYTALE"
+        ],
+        "gaina": [
+          "GAINA",
+          "BENTEN Film"
+        ],
+        "gainax": [
+          "GAINAX"
+        ],
+        "jhv": [
+          "Japan Home Video"
+        ],
+        "cabbage": [
+          "きゃべつそふと",
+          "Cabbage Soft"
+        ],
+        "hulotte": [
+          "HULOTTE"
+        ],
+        "laplacian": [
+          "Laplacian"
+        ],
+        "applique": [
+          "あっぷりけ"
+        ],
+        "clochette": [
+          "Clochette"
+        ],
+        "nanawind": [
+          "NanaWind"
+        ],
+        "harukaze": [
+          "HARUKAZE",
+          "HARU❀KAZE"
+        ],
+        "sorahane": [
+          "SORAHANE"
+        ],
+        "taito": [
+          "TAITO（太东）",
+          "TAITO"
+        ],
+        "nec_he": [
+          "NEC Home Electronics"
+        ],
+        "tokuma": [
+          "徳間書店"
+        ],
+        "sega": [
+          "世嘉",
+          "SEGA"
+        ],
+        "shopro": [
+          "小学館プロダクション"
+        ],
+        "hokubu": [
+          "北部通信工業"
+        ],
+        "konami": [
+          "Konami"
+        ],
+        "hudson": [
+          "Hudson Soft（哈德森）",
+          "Hudson Soft"
+        ],
+        "sinclair": [
+          "Sinclair Research"
+        ],
+        "cinematronics": [
+          "Cinematronics"
+        ],
+        "microsoft": [
+          "Microsoft"
+        ],
+        "enix": [
+          "Enix（艾尼克斯）",
+          "Enix"
+        ],
+        "dataeast": [
+          "Data East"
+        ],
+        "ascii": [
+          "ASCII"
+        ],
+        "melbournehouse": [
+          "Melbourne House"
+        ],
+        "koei": [
+          "光荣",
+          "KOEI"
+        ],
+        "banpresto": [
+          "Banpresto"
+        ],
+        "adventure_international": [
+          "Adventure International"
+        ],
+        "infocom": [
+          "Infocom"
+        ],
+        "sierra": [
+          "On-Line Systems",
+          "Sierra On-Line"
+        ],
+        "sierra_on_line": [
+          "Sierra On-Line"
+        ],
+        "psk": [
+          "PSK"
+        ],
+        "microcabin": [
+          "Micro Cabin",
+          "マイクロキャビン"
+        ],
+        "legend_uk": [
+          "Legend（英国）"
+        ],
+        "legend_entertainment": [
+          "Legend Entertainment"
+        ],
+        "te_soft": [
+          "T&E SOFT"
+        ],
+        "carry_lab": [
+          "Carry Lab",
+          "キャリーラボ"
+        ],
+        "champion_soft": [
+          "チャンピオンソフト",
+          "ChampionSoft",
+          "Champion Soft"
+        ],
+        "hummingbird_soft": [
+          "HummingBird Soft",
+          "ハミングバードソフト"
+        ],
+        "riverhill_soft": [
+          "Riverhill Soft",
+          "リバーヒルソフト"
+        ],
+        "falcom": [
+          "日本ファルコム",
+          "Falcom"
+        ],
+        "ibm": [
+          "IBM"
+        ],
+        "mosaic": [
+          "Mosaic Publishing"
+        ],
+        "square": [
+          "Square",
+          "スクウェア"
+        ],
+        "toho": [
+          "東宝",
+          "TOHO"
+        ],
+        "db_soft": [
+          "dB-SOFT"
+        ],
+        "comptiq": [
+          "Comptiq",
+          "コンプティーク"
+        ],
+        "minatosoft": [
+          "みなとそふと",
+          "Minato Soft"
+        ],
+        "hawkeye": [
+          "株式会社ホークアイ",
+          "Hawk Eye"
+        ],
+        "addison_wesley": [
+          "Addison-Wesley",
+          "Addison-Wesley Publishing Company"
+        ]
+      },
+      "EXTRAS": [
+        [
+          "nightwind",
+          "NightWind（ナイトウィンド）",
+          "company",
+          [
+            "株式会社ナイトウィンド",
+            "NightWind"
+          ],
+          "https://prtimes.jp/main/html/rd/p/000000001.000159011.html"
+        ],
+        [
+          "lionhead",
+          "Lionhead Studios",
+          "company",
+          [
+            "Lionhead Studios"
+          ],
+          "https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/"
+        ],
+        [
+          "obsidian",
+          "Obsidian Entertainment",
+          "company",
+          [
+            "Obsidian Entertainment"
+          ],
+          "https://www.microsoft.com/en-us/Investor/Acquisition-History"
+        ],
+        [
+          "nextninja",
+          "NextNinja",
+          "company",
+          [
+            "株式会社NextNinja"
+          ],
+          "https://web.archive.org/web/20160808133739/http://jp.apps.gree.net:80/ja/73010"
+        ],
+        [
+          "lucasfilm_games_legacy",
+          "Lucasfilm Games",
+          "team",
+          [
+            "Lucasfilm Games（1982年起游戏部门）"
+          ],
+          "https://www.lucasfilm.com/news/40-years-later-lucasfilm-games-starts-a-new-era/"
+        ],
+        [
+          "headroom",
+          "HEADROOM",
+          "team",
+          [
+            "HEADROOM",
+            "ヘッドルーム"
+          ],
+          "https://www.namura.net/xkd.com/product/graduation.html"
+        ],
+        [
+          "tenky",
+          "TENKY",
+          "company",
+          [
+            "TENKY",
+            "有限会社テンキー"
+          ],
+          "https://www.tenky.co.jp/company.html"
+        ],
+        [
+          "visualarts",
+          "VISUAL ARTS",
+          "company",
+          [
+            "VisualArt’s",
+            "VisualArts",
+            "VISUAL ARTS"
+          ],
+          "https://visual-arts.jp/blog_2024_1/"
+        ],
+        [
+          "aquaplus",
+          "AQUAPLUS",
+          "company",
+          [
+            "AQUAPLUS"
+          ],
+          "https://aquaplus.jp/sitepolicy/"
+        ],
+        [
+          "aquaplus_brand",
+          "AQUAPLUS",
+          "brand",
+          [],
+          "https://aquaplus.jp/"
+        ],
+        [
+          "aniplex",
+          "Aniplex",
+          "company",
+          [
+            "Aniplex",
+            "Aniplex Inc."
+          ],
+          "https://aniplex-exe.com/"
+        ],
+        [
+          "fandc",
+          "F&C",
+          "company",
+          [
+            "F&C",
+            "FANDC"
+          ],
+          "https://fandc.co.jp/extra/corporate"
+        ],
+        [
+          "frontwing",
+          "Frontwing",
+          "brand",
+          [
+            "Frontwing",
+            "フロントウイング"
+          ],
+          "https://aniplex-exe.com/news/?category=atri-mdm&id=52873"
+        ],
+        [
+          "makura",
+          "枕",
+          "brand",
+          [
+            "枕",
+            "Makura"
+          ],
+          "https://aniplex-exe.com/news/?category=atri-mdm&id=52873"
+        ],
+        [
+          "liarsoft",
+          "Liar-soft",
+          "brand",
+          [
+            "Liar-soft",
+            "ライアーソフト"
+          ],
+          "https://aniplex-exe.com/news/?category=aniplex-exe&id=52845"
+        ],
+        [
+          "imel",
+          "iMel",
+          "company",
+          [
+            "iMel",
+            "iMel株式会社"
+          ],
+          "https://imel.co.jp/activity/"
+        ],
+        [
+          "prototype",
+          "PROTOTYPE",
+          "company",
+          [
+            "PROTOTYPE"
+          ],
+          "https://www.prot.co.jp/switch/kanon/"
+        ],
+        [
+          "nitroplus_brand",
+          "Nitroplus",
+          "brand",
+          [],
+          "https://www.nitroplus.co.jp/company/"
+        ],
+        [
+          "nitrochiral",
+          "NITRO CHiRAL",
+          "brand",
+          [
+            "Nitro+CHiRAL",
+            "Nitro CHiRAL",
+            "NITRO CHiRAL"
+          ],
+          "https://www.nitroplus.co.jp/company/"
+        ],
+        [
+          "nitroorigin",
+          "NITRO ORIGIN",
+          "brand",
+          [
+            "NITRO ORIGIN"
+          ],
+          "https://www.nitroplus.co.jp/company/"
+        ],
+        [
+          "entergram",
+          "ENTERGRAM",
+          "company",
+          [
+            "ENTERGRAM",
+            "Entergram",
+            "エンターグラム"
+          ],
+          "https://www.entergram.co.jp/corporate.html"
+        ],
+        [
+          "mages",
+          "MAGES.",
+          "company",
+          [
+            "MAGES."
+          ],
+          "https://mages.co.jp/about/company"
+        ],
+        [
+          "5pb",
+          "5pb.",
+          "brand",
+          [
+            "5pb."
+          ],
+          "https://mages.co.jp/topics/ir/20190726/post-145"
+        ],
+        [
+          "koei_tecmo",
+          "光荣特库摩游戏（Koei Tecmo Games）",
+          "company",
+          [
+            "コーエーテクモゲームス",
+            "Koei Tecmo Games",
+            "光荣特库摩游戏（Koei Tecmo Games）"
+          ],
+          "https://www.koeitecmo.co.jp/company/group/"
+        ],
+        [
+          "hunex",
+          "HuneX",
+          "company",
+          [
+            "HuneX",
+            "ヒューネックス"
+          ],
+          "https://www.hunex.co.jp/archives/company/history"
+        ],
+        [
+          "dramaticcreate",
+          "dramatic create",
+          "brand",
+          [
+            "dramatic create"
+          ],
+          "https://www.hunex.co.jp/archives/service/dramaticcreate"
+        ],
+        [
+          "tinmachine",
+          "TinMachine",
+          "company",
+          [
+            "TinMachine"
+          ],
+          "https://tinmachine.co.jp/release.html"
+        ],
+        [
+          "yonago_gainax",
+          "米子GAINAX",
+          "company",
+          [
+            "米子GAINAX"
+          ],
+          "https://blissbrain.co.jp/pm2rg/"
+        ],
+        [
+          "blissbrain",
+          "Bliss Brain",
+          "company",
+          [
+            "Bliss Brain"
+          ],
+          "https://blissbrain.co.jp/pm2rg/"
+        ],
+        [
+          "konami_de",
+          "Konami Digital Entertainment",
+          "company",
+          [
+            "Konami Digital Entertainment",
+            "コナミデジタルエンタテインメント",
+            "株式会社コナミデジタルエンタテインメント"
+          ],
+          "https://www.konami.com/corporate/en/history/index.html"
+        ],
+        [
+          "sharrock",
+          "SharRock",
+          "brand",
+          [
+            "SharRock",
+            "Shar Rock",
+            "シャーロック"
+          ],
+          "https://www.sekonic.co.jp/company/history/"
+        ]
+      ],
+      "SUBBRANDS": [
+        [
+          "silkys_wasabi",
+          "Silky’s Plus WASABI",
+          "silkys_plus",
+          [
+            "Silky’s Plus WASABI"
+          ]
+        ],
+        [
+          "silkys_a5",
+          "Silky’s Plus A5和牛",
+          "silkys_plus",
+          [
+            "Silky’s Plus A5和牛"
+          ]
+        ],
+        [
+          "silkys_dolce",
+          "Silky’s Plus DOLCE",
+          "silkys_plus",
+          [
+            "Silky’s Plus DOLCE"
+          ]
+        ],
+        [
+          "tiare",
+          "Tiare",
+          "jast",
+          [
+            "Tiare"
+          ]
+        ],
+        [
+          "jast_purple",
+          "Purple（JAST期）",
+          "jast",
+          [
+            "Purple（JAST期）"
+          ]
+        ],
+        [
+          "angel_hearts",
+          "Angel Hearts",
+          "jast",
+          [
+            "Angel Hearts"
+          ]
+        ],
+        [
+          "pride",
+          "pride",
+          "jast",
+          [
+            "pride"
+          ]
+        ],
+        [
+          "jast_crest",
+          "クレスト（JAST）",
+          "jast",
+          [
+            "クレスト（JAST）"
+          ]
+        ],
+        [
+          "fairytale_ethix",
+          "FAIRYTALE ETHIX",
+          "fairytale",
+          [
+            "FAIRYTALE ETHIX"
+          ]
+        ],
+        [
+          "fairytale_x",
+          "FAIRYTALE/X指定",
+          "fairytale",
+          [
+            "FAIRYTALE/X指定"
+          ]
+        ],
+        [
+          "fairytale_tsuki",
+          "月星組",
+          "fairytale",
+          [
+            "月星組/フェアリーテール"
+          ]
+        ],
+        [
+          "fairytale_hana",
+          "花月組",
+          "fairytale",
+          [
+            "花月組/フェアリーテール"
+          ]
+        ],
+        [
+          "hulotte_roi",
+          "HULOTTE ROI",
+          "hulotte",
+          [
+            "HULOTTE ROI",
+            "HULOTTE Roi",
+            "ユロットロワ"
+          ]
+        ],
+        [
+          "yuzusoft_sour",
+          "ゆずソフトSOUR",
+          "yuzusoft",
+          [
+            "ゆずソフトSOUR"
+          ]
+        ],
+        [
+          "applique_imouto",
+          "あっぷりけ-妹-",
+          "applique",
+          [
+            "あっぷりけ-妹-",
+            "あっぷりけ -妹-"
+          ]
+        ],
+        [
+          "alice_blue",
+          "Alice Blue",
+          "alicesoft",
+          [
+            "Alice Blue"
+          ]
+        ],
+        [
+          "alice_noir",
+          "AliceNoir",
+          "alicesoft",
+          [
+            "AliceNoir"
+          ]
+        ],
+        [
+          "minato_carnival",
+          "みなとカーニバル",
+          "minatosoft",
+          [
+            "みなとカーニバル",
+            "Minato Carnival"
+          ]
+        ],
+        [
+          "minato_carnival_world",
+          "みなとカーニバルWorld",
+          "minatosoft",
+          [
+            "みなとカーニバルWorld"
+          ]
+        ],
+        [
+          "mirai",
+          "mirai",
+          "hawkeye",
+          [
+            "mirai"
+          ]
+        ],
+        [
+          "whale",
+          "ホエール",
+          "hawkeye",
+          [
+            "ホエール",
+            "Whale"
+          ]
+        ],
+        [
+          "microsoft_studios",
+          "Microsoft Studios",
+          "microsoft",
+          [
+            "Microsoft Studios",
+            "Microsoft Game Studios"
+          ]
+        ],
+        [
+          "xbox_game_studios",
+          "Xbox Game Studios",
+          "microsoft",
+          [
+            "Xbox Game Studios",
+            "Xbox Game Studios Publishing"
+          ]
+        ],
+        [
+          "microsoft_home",
+          "Microsoft Home",
+          "microsoft",
+          [
+            "Microsoft Home"
+          ]
+        ]
+      ]
+    },
+    "references": {
+      "PRIORITY_REVIEW": {
+        "path": "data/entity-priority-review-20261022.json",
+        "sha256": "06e68fdbf90c0294de9f7f47ec7f231a9df4a98e9e03e646e02312b922dd02df"
+      },
+      "FOLLOWUP_REVIEW": {
+        "path": "data/entity-followup-review-20261022.json",
+        "sha256": "d3351c875ae4c6108d70f1867be1524bf0666df9cd53906960be277d3ea33972"
+      },
+      "THIRD_REVIEW": {
+        "path": "data/entity-third-review-20261022.json",
+        "sha256": "c7d430f264b4bf1b68b1a90fc12c819cfe8901d088971404e1ece9d564849732"
+      },
+      "FOURTH_REVIEW": {
+        "path": "data/entity-fourth-review-20261022.json",
+        "sha256": "ea0364bdc40371a46da5c7447fccedd0ec27b92b217c47dc2224efa576c9d714"
+      },
+      "CREATOR_A_REVIEW": {
+        "path": "data/entity-creator-a-review-20261022.json",
+        "sha256": "84b0ba5d45ce97e4823a319f6a4cf672223fc23c0149e7b34658699f8fb609f6"
+      },
+      "CREATOR_A2_REVIEW": {
+        "path": "data/entity-creator-a2-review-20261022.json",
+        "sha256": "56367491c27faea2ac9b0ac77d83ac9380a7cd310b470ca024e7c38c61c6eddf"
+      },
+      "CREATOR_A3_REVIEW": {
+        "path": "data/entity-creator-a3-review-20261022.json",
+        "sha256": "13240f67a3584d7b9c95efe5b3c2be2e564e7b5c05705bf38ab0cc587b616cba"
+      },
+      "CREATOR_A4_REVIEW": {
+        "path": "data/entity-creator-a4-review-20261023.json",
+        "sha256": "dcf9e7b006da0438e187638a8ddc213ca87f7e6b9402676a6e7bbbaf8596005d"
+      },
+      "CREATOR_A5_REVIEW": {
+        "path": "data/entity-creator-a5-review-20261023.json",
+        "sha256": "0621d955885afc817f3b74f5127cb071ab99bd1787ce274cace5208ebbe19b08"
+      },
+      "CREATOR_A6_REVIEW": {
+        "path": "data/entity-creator-a6-review-20261023.json",
+        "sha256": "60e854c9aefe3314691137c18ddfc2ba7766f374d0e6c1a024abe3b69b60c5fb"
+      },
+      "CREATOR_B1_REVIEW": {
+        "path": "data/entity-creator-b1-review-20261023.json",
+        "sha256": "678e4f7f514b3961bc1c96a65f63f59ff1a726c8ea359cb8a5d582523f951347"
+      },
+      "CREATOR_B2_REVIEW": {
+        "path": "data/entity-creator-b2-review-20261023.json",
+        "sha256": "574910022dbe00c59dbd68e25b11091d54986441d51a3f03735badef9dd0fbe8"
+      },
+      "CREATOR_B3_REVIEW": {
+        "path": "data/entity-creator-b3-review-20261023.json",
+        "sha256": "b43308fd89a0c9f73f2062b1cfcf438baae5c525df8a3355847a9fe64f6d8646"
+      },
+      "CREATOR_C1_REVIEW": {
+        "path": "data/entity-creator-c1-review-20261023.json",
+        "sha256": "a987f7cb959cee9246154e85bdaf057c11d1077d33021ea7afced476fde972f2"
+      },
+      "CREATOR_C2_REVIEW": {
+        "path": "data/entity-creator-c2-review-20261023.json",
+        "sha256": "c59170384ef7e3abe13dce6d53bfe62d98bafdb7e6516d43efa084cbfe9ee012"
+      },
+      "CREATOR_C3_REVIEW": {
+        "path": "data/entity-creator-c3-review-20261023.json",
+        "sha256": "e624d45e79bc199202ddbf888054a9154cfa085a977ab910bfee4ce511fabec6"
+      },
+      "CREATOR_C4_REVIEW": {
+        "path": "data/entity-creator-c4-review-20261023.json",
+        "sha256": "639b7625fc97131cec4b0e553c8d9efce61ac7cef5af9e858c61fbc1a3eb49b5"
+      },
+      "CREATOR_D1_REVIEW": {
+        "path": "data/entity-creator-d1-review-20261023.json",
+        "sha256": "1d9506b8282e15efb2fbdba48eaa9a770daff195ae38e6dabeece1479b7d0100"
+      },
+      "CREATOR_D2_REVIEW": {
+        "path": "data/entity-creator-d2-review-20261023.json",
+        "sha256": "879e9305d4058d1dbf721451617063ffaac2727036e73d065c1991023aa2e2a2"
+      },
+      "CREATOR_D3_REVIEW": {
+        "path": "data/entity-creator-d3-review-20261023.json",
+        "sha256": "ec2a0243add580a258ca38da69f4ef7d24833fd99a60ccbf41b0caef0219ae3e"
+      },
+      "CREATOR_E1_REVIEW": {
+        "path": "data/entity-creator-e1-review-20261023.json",
+        "sha256": "dc23930bce0df9d3cdafe33c7810e9e6a5e3dd602140328fd46c1303022e49f3"
+      },
+      "CREATOR_E2_REVIEW": {
+        "path": "data/entity-creator-e2-review-20261024.json",
+        "sha256": "0bff5bce4602447da8c7bc2d80a444b353e1d0bd63584333341f210451605d6f"
+      },
+      "CREATOR_E3_REVIEW": {
+        "path": "data/entity-creator-e3-review-20261024.json",
+        "sha256": "03cde019f8005038da223a17ee3b83a4cd940e867fa15d3e33afc6263e3a7d44"
+      },
+      "CREATOR_F1_REVIEW": {
+        "path": "data/entity-creator-f1-review-20261024.json",
+        "sha256": "dad812140d8c595f20f018b53b87c391c97af47be977dd67b913695b4ceff3c3"
+      },
+      "CREATOR_F2_REVIEW": {
+        "path": "data/entity-creator-f2-review-20261024.json",
+        "sha256": "d315cd747f48515ed3cf48241f77ad19fe4c2e7bacc46b29b3270f62e927eb14"
+      },
+      "CREATOR_G1_REVIEW": {
+        "path": "data/entity-creator-g1-review-20261024.json",
+        "sha256": "259585917f3c240df46cf99e1f1451674a5cb3c198674da499727976226bddd0"
+      },
+      "CREATOR_G2_REVIEW": {
+        "path": "data/entity-creator-g2-review-20261024.json",
+        "sha256": "bef4824cd2be30c775a95ea4e4a42136c0280dfaeae83f563bd25469515eac8c"
+      },
+      "CREATOR_G3_REVIEW": {
+        "path": "data/entity-creator-g3-review-20261024.json",
+        "sha256": "b60c0797bc357ff3dfa9cf1a4291b455c25a44ca751d32101fb9b7ed41055684"
+      },
+      "CREATOR_H1_REVIEW": {
+        "path": "data/entity-creator-h1-review-20261024.json",
+        "sha256": "e2903787ecb874efd518d8f7706ebafaac9cfa1aa9733fd140bb62ab045f19ab"
+      },
+      "CREATOR_H2_REVIEW": {
+        "path": "data/entity-creator-h2-review-20261024.json",
+        "sha256": "8cb817021492b8a4d6a3551d58c96dca41c9ee09eb2c85ca41b76b2e985580a7"
+      },
+      "CREATOR_H3_REVIEW": {
+        "path": "data/entity-creator-h3-review-20261024.json",
+        "sha256": "1904fbd41f549c0df15e178fbf1d1feb806dc9c21aaa57b6ea5ee60395b06ba1"
+      },
+      "CREATOR_I1_REVIEW": {
+        "path": "data/entity-creator-i1-review-20261024.json",
+        "sha256": "cd3c24dc23657240b6d075271521ba2f067e32b28f838e762e6f0199660c22b5"
+      },
+      "CREATOR_I2_REVIEW": {
+        "path": "data/entity-creator-i2-review-20261024.json",
+        "sha256": "d7697c8d6f84158fe685da4b541fad7176bbce19f231652031e175efb18fd0bb"
+      },
+      "CREATOR_I3_REVIEW": {
+        "path": "data/entity-creator-i3-review-20261024.json",
+        "sha256": "85cf0d5115053abc5817d44d29725018c3b7bd22aa976e9ec07b57c436ef70d4"
+      },
+      "CREATOR_I4_REVIEW": {
+        "path": "data/entity-creator-i4-review-20261024.json",
+        "sha256": "bdc6e9c38f8a814e8d0235fc61a4eaa47031f5816a576e2bb7859cae779a15ee"
+      },
+      "CREATOR_J1_REVIEW": {
+        "path": "data/entity-creator-j1-review-20261024.json",
+        "sha256": "f987e5e4fc060b145f7d3803490009161ee1faf22d8be301dfc0ccc445f4017b"
+      },
+      "CREATOR_K1_REVIEW": {
+        "path": "data/entity-creator-k1-review-20261024.json",
+        "sha256": "a69e71373e3a46900a44ca1c4434565e0fe45a45090c5c55d66e0a37f779abbe"
+      },
+      "CREATOR_K2_REVIEW": {
+        "path": "data/entity-creator-k2-review-20261024.json",
+        "sha256": "e4967a17ce9065ef11195ec0341549ca201bd61bd8a3ab313611e72271782797"
+      },
+      "CREATOR_K3_REVIEW": {
+        "path": "data/entity-creator-k3-review-20261025.json",
+        "sha256": "3184de50a26542edf08f683192f39ee9e1a3915b0df8a46d5f7dd5e4d11da5f6"
+      },
+      "CREATOR_L1_REVIEW": {
+        "path": "data/entity-creator-l1-review-20261025.json",
+        "sha256": "6a0cccca643bb01679a013508f51b07d10b3c10b1acb99a5940ea353c8022ba8"
+      },
+      "CREATOR_L2_REVIEW": {
+        "path": "data/entity-creator-l2-review-20261025.json",
+        "sha256": "2741b26bcbd15908f8ecfa0bbabe655d167d7788456afe10f6066104099b0416"
+      },
+      "CREATOR_L3_REVIEW": {
+        "path": "data/entity-creator-l3-review-20261025.json",
+        "sha256": "1941a27da4a4c93facef5ece32621646f15e4a065ddaf42255d1fe56f26fb5be"
+      },
+      "CREATOR_M1_REVIEW": {
+        "path": "data/entity-creator-m1-review-20261025.json",
+        "sha256": "c897c11589cd42e4529bdb3081927238f8267dc9a72684d663d15d65d90e9120"
+      },
+      "CREATOR_M2_REVIEW": {
+        "path": "data/entity-creator-m2-review-20261025.json",
+        "sha256": "715cf0a809aa2dc9b7f817536b9cf8a745e654db74eb15c017bc2729116fe6b5"
+      },
+      "CREATOR_M3_REVIEW": {
+        "path": "data/entity-creator-m3-review-20261025.json",
+        "sha256": "5b8950f33adfd87514daada5e880fb9ffe1ec7f65255fe337fa264e3b990b7c3"
+      },
+      "CREATOR_M4_REVIEW": {
+        "path": "data/entity-creator-m4-review-20261025.json",
+        "sha256": "d541f7377334e88143fb1737edee0f971f039b2386c4501dcffdcbd1fe43a6d9"
+      },
+      "CREATOR_M5_REVIEW": {
+        "path": "data/entity-creator-m5-review-20261025.json",
+        "sha256": "adffbeda33ebcd590ca5821bbb566f5fa298774ffbe2f441f202eddd98e59f1b"
+      },
+      "CREATOR_M6_REVIEW": {
+        "path": "data/entity-creator-m6-review-20261025.json",
+        "sha256": "b8003acfcca309f13eedd872b483f704df67c3186bbbb3d73da70c524a3e5aad"
+      },
+      "CREATOR_N1_REVIEW": {
+        "path": "data/entity-creator-n1-review-20261025.json",
+        "sha256": "1fb762796c9595667ea6c22ef07c36eedf0fb1d315437591197bca9596ecc243"
+      },
+      "CREATOR_N2_REVIEW": {
+        "path": "data/entity-creator-n2-review-20261025.json",
+        "sha256": "98aaed750f383df4e368bcd44657966733d19d1953c45222dbf141202f5d4f49"
+      },
+      "CREATOR_N3_REVIEW": {
+        "path": "data/entity-creator-n3-review-20261025.json",
+        "sha256": "d838f61d6dfdea8a595ce41867dcc017f960cab90316ba481c800bcff2ff7984"
+      },
+      "CREATOR_N4_REVIEW": {
+        "path": "data/entity-creator-n4-review-20261025.json",
+        "sha256": "dcacf8c2b38782c36d9b0044af9a2cc87c23cd20ea7388f88b1b776e22b979ea"
+      },
+      "CREATOR_N5_REVIEW": {
+        "path": "data/entity-creator-n5-review-20261025.json",
+        "sha256": "5ccd1e10ab9bb9ef291521d1b97931e216dba2b92b2d93276639ebcfe8330926"
+      },
+      "CREATOR_O1_REVIEW": {
+        "path": "data/entity-creator-o1-review-20261025.json",
+        "sha256": "5004faa60ab69380054f3e8e1545e3b3f847b83bb383f2706e6d970bb4dcc9d2"
+      },
+      "CREATOR_P1_REVIEW": {
+        "path": "data/entity-creator-p1-review-20261025.json",
+        "sha256": "20f75f76c5783ff5ee8d88023b3161a3b31714b54ebdebeeaadcb59b8fb51a50"
+      },
+      "CREATOR_P2_REVIEW": {
+        "path": "data/entity-creator-p2-review-20261025.json",
+        "sha256": "25661e202d1cb93f00541cf26cfc3b7d555a53d04475b1d3e2676ce449d9dc0d"
+      },
+      "CREATOR_P3_REVIEW": {
+        "path": "data/entity-creator-p3-review-20261025.json",
+        "sha256": "c18b809ccaa70f3f0f8e98a198f9cd0f7c5d1f3c753b30155885a124eb570701"
+      },
+      "CREATOR_Q1_REVIEW": {
+        "path": "data/entity-creator-q1-review-20261025.json",
+        "sha256": "147ca374c6ee87b99422d7a537d006a1c522719bab43a0c229212afc963d1207"
+      },
+      "CREATOR_R1_REVIEW": {
+        "path": "data/entity-creator-r1-review-20261025.json",
+        "sha256": "95fbfda9f710589fda4c91498cd796062f9d7cad299331bd3e5e8d34e0be31d1"
+      },
+      "CREATOR_R2_REVIEW": {
+        "path": "data/entity-creator-r2-review-20261025.json",
+        "sha256": "fd8343b51a83d25387e9b5f6de0df5a186ce3693638a470f75f318738b8c131b"
+      },
+      "CREATOR_S1_REVIEW": {
+        "path": "data/entity-creator-s1-review-20261025.json",
+        "sha256": "8e026acce9a9d8ee79452720d1e5e6d0d0aab8365ed73d889fb45850b089c25e"
+      },
+      "CREATOR_S2_REVIEW": {
+        "path": "data/entity-creator-s2-review-20261025.json",
+        "sha256": "8bdf9e1b84577709d991e7f92d61c0fde27860b6bd7d2eee5e2cd21c9e74d34a"
+      },
+      "CREATOR_S3_REVIEW": {
+        "path": "data/entity-creator-s3-review-20261026.json",
+        "sha256": "50d8b45f38b8dfc435a41754ba7bb9f3ad454acca7df2018c45211247cc744e2"
+      },
+      "CREATOR_S4_REVIEW": {
+        "path": "data/entity-creator-s4-review-20261026.json",
+        "sha256": "e9b4e4896598388cb4c5740301b28394d92c1a1782273f69e65b18e3dde5d886"
+      },
+      "CREATOR_S5_REVIEW": {
+        "path": "data/entity-creator-s5-review-20261026.json",
+        "sha256": "6691f9a8b00d43cf0787603c64c8a87e679477c0163fb1225780ac161df3aecc"
+      },
+      "CREATOR_S6_REVIEW": {
+        "path": "data/entity-creator-s6-review-20261026.json",
+        "sha256": "0e835aee9eca7133ce62a02761d704465a5f588099f0f45eb3b68c8c57233eec"
+      },
+      "CREATOR_S7_REVIEW": {
+        "path": "data/entity-creator-s7-review-20261026.json",
+        "sha256": "c480bcdd63ac64e06e8621a624a640c07cc0815dc70e6b566dd741b76efb4196"
+      },
+      "CREATOR_S8_REVIEW": {
+        "path": "data/entity-creator-s8-review-20261026.json",
+        "sha256": "8da6788be8edb4ffd884667f59b431151bbfb29ce926140745d72cebb26ea75d"
+      },
+      "CREATOR_S9_REVIEW": {
+        "path": "data/entity-creator-s9-review-20261026.json",
+        "sha256": "3206664a8fd30f73e6d9ee238fe016d73cdd636465699c6af4cf30fc0dbcd811"
+      },
+      "CREATOR_S10_REVIEW": {
+        "path": "data/entity-creator-s10-review-20261026.json",
+        "sha256": "27ca0b74096039f538285a50c113ad79b9c2e853c93742d4497a047a6f978c57"
+      },
+      "CREATOR_S11_REVIEW": {
+        "path": "data/entity-creator-s11-review-20261026.json",
+        "sha256": "86e59a077bb575b5f0deff5adad8467e7ba7a44afeb5240d06cf27c564c6f751"
+      },
+      "CREATOR_T1_REVIEW": {
+        "path": "data/entity-creator-t1-review-20261026.json",
+        "sha256": "a73be022748b0e3d6c22406120cad8944a43e59d3cffdeb8a2592cea306971c2"
+      },
+      "CREATOR_T2_REVIEW": {
+        "path": "data/entity-creator-t2-review-20261026.json",
+        "sha256": "3ff67852735d86dd88b90400c7fb91b208c4e8145bd6399d0d53387fc7857a1d"
+      },
+      "CREATOR_T3_REVIEW": {
+        "path": "data/entity-creator-t3-review-20261026.json",
+        "sha256": "c82255ef7d70dd1e3fc6ff2d44355381ff3a3a488dab412e0f1b56ad6e37475e"
+      },
+      "CREATOR_T4_REVIEW": {
+        "path": "data/entity-creator-t4-review-20261026.json",
+        "sha256": "118fba5110cd7cf4f5145f45db7368d65de597c6ad67e8c195b27a74e5918516"
+      },
+      "CREATOR_T5_REVIEW": {
+        "path": "data/entity-creator-t5-review-20261026.json",
+        "sha256": "35c8232c0f88bc948dc22d6b9b992e13a271c874b51276d1f8982533c655f9d2"
+      },
+      "CREATOR_U1_REVIEW": {
+        "path": "data/entity-creator-u1-review-20261026.json",
+        "sha256": "63678d56e5766ec4ca6ed48b928b2ac0c14d4b0af8af28705802cefcf14ce724"
+      },
+      "CREATOR_V1_REVIEW": {
+        "path": "data/entity-creator-v1-review-20261026.json",
+        "sha256": "be4fd7027527823e9a673202554158058c8fdc69954423027f20353ac665cf8e"
+      },
+      "CREATOR_W1_REVIEW": {
+        "path": "data/entity-creator-w1-review-20261026.json",
+        "sha256": "2286b7be06e1147c54de444c864a463b90401118de8384192fc6e69621ad0fcd"
+      },
+      "CREATOR_X1_REVIEW": {
+        "path": "data/entity-creator-x1-review-20261026.json",
+        "sha256": "8f6869a671310fa5f8e00e79a301ab70e16a5f3b9bc8461b0f677c53f15eb0c5"
+      },
+      "CREATOR_Y1_REVIEW": {
+        "path": "data/entity-creator-y1-review-20261026.json",
+        "sha256": "aba498851c09d81143e8397d7960297c171a06a92e81589b343109286fa2e958"
+      },
+      "CREATOR_CF_CATCHUP_REVIEW": {
+        "path": "data/entity-creator-cf-catchup-review-20261026.json",
+        "sha256": "703f1980aaedc78d71b0e4c3a3aef6bebbdc3b9d2ed52ddd5c4dded881410ca6"
+      },
+      "CREATOR_NUMERIC_REVIEW": {
+        "path": "data/entity-creator-numeric-review-20261026.json",
+        "sha256": "db2a4f52b35746a952ca342c8d29df3b193bfdee259cb77d867545469ab0bf1d"
+      },
+      "CREATOR_A_RECHECK1_REVIEW": {
+        "path": "data/entity-creator-a-recheck1-review-20261026.json",
+        "sha256": "b61c5e0923612833df69b894c4178d60ebacc4f29af80324130052e2350d8156"
+      },
+      "FIVE_PHASE_REVIEW": {
+        "path": "data/entity-verification-five-phase-review-20261026.json",
+        "sha256": "d27340b1df72b8dceb125608c962b7796ef501409beae06400349e39feca79a4"
+      },
+      "NITROPLUS_ROLE_REVIEW": {
+        "path": "data/entity-role-nitroplus-review-20261027.json",
+        "sha256": "643673745094e0902b4dd53e007be337ac3341a0b0f981e60caa6dd992c3672a"
+      },
+      "ADVENTURE_ALICE_ROLE_REVIEW": {
+        "path": "data/entity-role-adventure-alice-review-20261027.json",
+        "sha256": "d128e3a40a8d8820fd790f25947fba9dcaa26fd30bf3be3f288b5e99e6e3ea6b"
+      },
+      "entity-organization-review-20261027": {
+        "path": "data/entity-organization-review-20261027.json",
+        "sha256": "20adb71548a3e8dff0d733e3c6f2659656609a34fc106fcaef942be567049da5"
+      },
+      "entity-jhv-review-20261027": {
+        "path": "data/entity-jhv-review-20261027.json",
+        "sha256": "7d8b9ebe03a9bd98a8b5e61d77c759bda5db31c10f1d5ade47c1817fc42b105c"
+      },
+      "entity-ultra-review-20261027": {
+        "path": "data/entity-ultra-review-20261027.json",
+        "sha256": "23c4fdfed208b03419acac6d8809d7ac535791d71e3569060b9beabc59e0c225"
+      },
+      "entity-banpresto-review-20261027": {
+        "path": "data/entity-banpresto-review-20261027.json",
+        "sha256": "6c91ac0942f3715dfa0ac3e8fc38239829f411fc9efcc232b61c3e3b70e5c8f4"
+      },
+      "takeru-history-20261027": {
+        "path": "data/takeru-history-20261027.json",
+        "sha256": "bb5ad86c5b7e634b74ef374b0d756881d0de500fbde85f69000085dd0baeba9e"
+      },
+      "tokuma-intermedia-history-20261027": {
+        "path": "data/tokuma-intermedia-history-20261027.json",
+        "sha256": "3565e81a50f8370462003e029cdf5b442bd2d6c5708215b829d92deba4685e4e"
+      },
+      "sega-history-20261027": {
+        "path": "data/sega-history-20261027.json",
+        "sha256": "4a8631e226950ee43834face64d70beec842411a8f7bfd6999b4ccd293113946"
+      },
+      "chunsoft-history-20261027": {
+        "path": "data/chunsoft-history-20261027.json",
+        "sha256": "dafd3756651ff6ade9e8ebfb2d6d2edea0f8e8a5afabf2cc180c65af1493171f"
+      },
+      "jhv-history-20261027": {
+        "path": "data/jhv-history-20261027.json",
+        "sha256": "61a4b38cc4ebe5bf5c7d1a94ebaa743b1df2ff38378ab5a9d2f65c2d731e59c6"
+      },
+      "ultra-games-history-20261027": {
+        "path": "data/ultra-games-history-20261027.json",
+        "sha256": "de61e7db43183697348fde1d58f4a2b73a70720c9752c0c130708854e0ae44c0"
+      },
+      "banpresto-history-20261027": {
+        "path": "data/banpresto-history-20261027.json",
+        "sha256": "d650ff9679e286442aac4b7758f58decd114b17c3454d012674ea62ff73e30d7"
+      },
+      "broderbund-history-20261028": {
+        "path": "data/broderbund-history-20261028.json",
+        "sha256": "45068fb27828172faa45a928a4b2cf600f8478566440597d626fbf99a55f4786"
+      },
+      "lucasarts-history-20261028": {
+        "path": "data/lucasarts-history-20261028.json",
+        "sha256": "43fe37d518bcfe93f951f59d2d932416050c150038ccc1c3035ae4a22e26040d"
+      },
+      "nec-avenue-history-20261028": {
+        "path": "data/nec-avenue-history-20261028.json",
+        "sha256": "fc12fee9498f9044ac919b06586ebaf6cefb9722a645bcd72fd895c3b1cda9c2"
+      },
+      "silkys-history-20261028": {
+        "path": "data/silkys-history-20261028.json",
+        "sha256": "8987199f1febd2f65d3a39c435e07fcf59985482316e8514556670b0e2599352"
+      },
+      "microsoft-history-20261028": {
+        "path": "data/microsoft-history-20261028.json",
+        "sha256": "b50c9af46235cc89835ef64e4f762c4f234d71c78f3952494b5d2e7ca6e6017b"
+      },
+      "nec-home-electronics-history-20261028": {
+        "path": "data/nec-home-electronics-history-20261028.json",
+        "sha256": "3bcbeee0f3f758b9cc829eba5330dad0f864d0a5bbd56d3a0122b2294e985aac"
+      },
+      "seven-dossiers-history-20261028": {
+        "path": "data/seven-dossiers-history-20261028.json",
+        "sha256": "733826030695f1e3fefe20d2d7b99fc3179d3b4c3ad07b97f30c98142ba759b2"
+      }
+    },
+    "sequences": {
+      "entityReviews": [
+        "PRIORITY_REVIEW",
+        "FOLLOWUP_REVIEW",
+        "THIRD_REVIEW",
+        "FOURTH_REVIEW",
+        "CREATOR_A_REVIEW",
+        "CREATOR_A2_REVIEW",
+        "CREATOR_A3_REVIEW",
+        "CREATOR_A4_REVIEW",
+        "CREATOR_A5_REVIEW",
+        "CREATOR_A6_REVIEW",
+        "CREATOR_B1_REVIEW",
+        "CREATOR_B2_REVIEW",
+        "CREATOR_B3_REVIEW",
+        "CREATOR_C1_REVIEW",
+        "CREATOR_C2_REVIEW",
+        "CREATOR_C3_REVIEW",
+        "CREATOR_C4_REVIEW",
+        "CREATOR_D1_REVIEW",
+        "CREATOR_D2_REVIEW",
+        "CREATOR_D3_REVIEW",
+        "CREATOR_E1_REVIEW",
+        "CREATOR_E2_REVIEW",
+        "CREATOR_E3_REVIEW",
+        "CREATOR_F1_REVIEW",
+        "CREATOR_F2_REVIEW",
+        "CREATOR_G1_REVIEW",
+        "CREATOR_G2_REVIEW",
+        "CREATOR_G3_REVIEW",
+        "CREATOR_H1_REVIEW",
+        "CREATOR_H2_REVIEW",
+        "CREATOR_H3_REVIEW",
+        "CREATOR_I1_REVIEW",
+        "CREATOR_I2_REVIEW",
+        "CREATOR_I3_REVIEW",
+        "CREATOR_I4_REVIEW",
+        "CREATOR_J1_REVIEW",
+        "CREATOR_K1_REVIEW",
+        "CREATOR_K2_REVIEW",
+        "CREATOR_K3_REVIEW",
+        "CREATOR_L1_REVIEW",
+        "CREATOR_L2_REVIEW",
+        "CREATOR_L3_REVIEW",
+        "CREATOR_M1_REVIEW",
+        "CREATOR_M2_REVIEW",
+        "CREATOR_M3_REVIEW",
+        "CREATOR_M4_REVIEW",
+        "CREATOR_M5_REVIEW",
+        "CREATOR_M6_REVIEW",
+        "CREATOR_N1_REVIEW",
+        "CREATOR_N2_REVIEW",
+        "CREATOR_N3_REVIEW",
+        "CREATOR_N4_REVIEW",
+        "CREATOR_N5_REVIEW",
+        "CREATOR_O1_REVIEW",
+        "CREATOR_P1_REVIEW",
+        "CREATOR_P2_REVIEW",
+        "CREATOR_P3_REVIEW",
+        "CREATOR_Q1_REVIEW",
+        "CREATOR_R1_REVIEW",
+        "CREATOR_R2_REVIEW",
+        "CREATOR_S1_REVIEW",
+        "CREATOR_S2_REVIEW",
+        "CREATOR_S3_REVIEW",
+        "CREATOR_S4_REVIEW",
+        "CREATOR_S5_REVIEW",
+        "CREATOR_S6_REVIEW",
+        "CREATOR_S7_REVIEW",
+        "CREATOR_S8_REVIEW",
+        "CREATOR_S9_REVIEW",
+        "CREATOR_S10_REVIEW",
+        "CREATOR_S11_REVIEW",
+        "CREATOR_T1_REVIEW",
+        "CREATOR_T2_REVIEW",
+        "CREATOR_T3_REVIEW",
+        "CREATOR_T4_REVIEW",
+        "CREATOR_T5_REVIEW",
+        "CREATOR_U1_REVIEW",
+        "CREATOR_V1_REVIEW",
+        "CREATOR_W1_REVIEW",
+        "CREATOR_X1_REVIEW",
+        "CREATOR_Y1_REVIEW",
+        "CREATOR_CF_CATCHUP_REVIEW",
+        "CREATOR_NUMERIC_REVIEW",
+        "CREATOR_A_RECHECK1_REVIEW",
+        "FIVE_PHASE_REVIEW",
+        "NITROPLUS_ROLE_REVIEW",
+        "ADVENTURE_ALICE_ROLE_REVIEW",
+        "entity-organization-review-20261027",
+        "entity-jhv-review-20261027",
+        "entity-ultra-review-20261027",
+        "entity-banpresto-review-20261027"
+      ],
+      "organizationReviews": [
+        "CREATOR_A_REVIEW",
+        "CREATOR_A2_REVIEW",
+        "CREATOR_A3_REVIEW",
+        "CREATOR_A4_REVIEW",
+        "CREATOR_A5_REVIEW",
+        "CREATOR_A6_REVIEW",
+        "CREATOR_B1_REVIEW",
+        "CREATOR_B2_REVIEW",
+        "CREATOR_B3_REVIEW",
+        "CREATOR_C1_REVIEW",
+        "CREATOR_C2_REVIEW",
+        "CREATOR_C3_REVIEW",
+        "CREATOR_C4_REVIEW",
+        "CREATOR_D1_REVIEW",
+        "CREATOR_D2_REVIEW",
+        "CREATOR_D3_REVIEW",
+        "CREATOR_E1_REVIEW",
+        "CREATOR_E2_REVIEW",
+        "CREATOR_E3_REVIEW",
+        "CREATOR_F1_REVIEW",
+        "CREATOR_F2_REVIEW",
+        "CREATOR_G1_REVIEW",
+        "CREATOR_G2_REVIEW",
+        "CREATOR_G3_REVIEW",
+        "CREATOR_H1_REVIEW",
+        "CREATOR_H2_REVIEW",
+        "CREATOR_H3_REVIEW",
+        "CREATOR_I1_REVIEW",
+        "CREATOR_I2_REVIEW",
+        "CREATOR_I3_REVIEW",
+        "CREATOR_I4_REVIEW",
+        "CREATOR_J1_REVIEW",
+        "CREATOR_K1_REVIEW",
+        "CREATOR_K2_REVIEW",
+        "CREATOR_K3_REVIEW",
+        "CREATOR_L1_REVIEW",
+        "CREATOR_L2_REVIEW",
+        "CREATOR_L3_REVIEW",
+        "CREATOR_M1_REVIEW",
+        "CREATOR_M2_REVIEW",
+        "CREATOR_M3_REVIEW",
+        "CREATOR_M4_REVIEW",
+        "CREATOR_M5_REVIEW",
+        "CREATOR_M6_REVIEW",
+        "CREATOR_N1_REVIEW",
+        "CREATOR_N2_REVIEW",
+        "CREATOR_N3_REVIEW",
+        "CREATOR_N4_REVIEW",
+        "CREATOR_N5_REVIEW",
+        "CREATOR_O1_REVIEW",
+        "CREATOR_P1_REVIEW",
+        "CREATOR_P2_REVIEW",
+        "CREATOR_P3_REVIEW",
+        "CREATOR_Q1_REVIEW",
+        "CREATOR_R1_REVIEW",
+        "CREATOR_R2_REVIEW",
+        "CREATOR_S1_REVIEW",
+        "CREATOR_S2_REVIEW",
+        "CREATOR_S3_REVIEW",
+        "CREATOR_S4_REVIEW",
+        "CREATOR_S5_REVIEW",
+        "CREATOR_S6_REVIEW",
+        "CREATOR_S7_REVIEW",
+        "CREATOR_S8_REVIEW",
+        "CREATOR_S9_REVIEW",
+        "CREATOR_S10_REVIEW",
+        "CREATOR_S11_REVIEW",
+        "CREATOR_T1_REVIEW",
+        "CREATOR_T2_REVIEW",
+        "CREATOR_T3_REVIEW",
+        "CREATOR_T4_REVIEW",
+        "CREATOR_T5_REVIEW",
+        "CREATOR_U1_REVIEW",
+        "CREATOR_V1_REVIEW",
+        "CREATOR_W1_REVIEW",
+        "CREATOR_X1_REVIEW",
+        "CREATOR_Y1_REVIEW",
+        "CREATOR_CF_CATCHUP_REVIEW",
+        "CREATOR_NUMERIC_REVIEW"
+      ],
+      "organizationMilestones": [
+        "takeru-history-20261027",
+        "tokuma-intermedia-history-20261027",
+        "sega-history-20261027",
+        "chunsoft-history-20261027",
+        "jhv-history-20261027",
+        "ultra-games-history-20261027",
+        "banpresto-history-20261027",
+        "broderbund-history-20261028",
+        "lucasarts-history-20261028",
+        "nec-avenue-history-20261028",
+        "silkys-history-20261028",
+        "microsoft-history-20261028",
+        "nec-home-electronics-history-20261028",
+        "seven-dossiers-history-20261028"
+      ]
+    },
+    "dossiers": {
+      "stableIdentities": {
+        "leland": "entity-name-547f933b0469",
+        "takeru": "entity-name-08cbddd5e450",
+        "tokuma_intermedia": "entity-name-9832231b6baa",
+        "chunsoft": "entity-name-21365baf366d",
+        "ultra_games": "entity-name-c87c2b9662fc",
+        "broderbund": "entity-name-e0c32a99a906",
+        "lucasarts": "entity-name-57509c825879",
+        "nec_avenue": "entity-name-0b22f68e63fb",
+        "dreamworks_interactive": "entity-name-4c4c2f63075a",
+        "human_entertainment": "entity-name-4f1d0851948b",
+        "impact_interactive": "entity-name-c73a46096ea7",
+        "kid": "entity-name-3a59ff4a4f09",
+        "capcom": "entity-name-7554e19bb041"
+      },
+      "entityKeys": {
+        "sierra": "sierra_company",
+        "sierra_on_line": "sierra_company"
+      },
+      "types": {
+        "novect": "team",
+        "comptiq": "publication",
+        "falcom": "unknown",
+        "te_soft": "unknown",
+        "banpresto": "unknown"
+      },
+      "names": {
+        "sierra": "Sierra On-Line（原On-Line Systems）",
+        "sierra_on_line": "Sierra On-Line（原On-Line Systems）"
+      }
+    },
+    "publisherAliases": {
+      "AQUAPLUS": "entity-aquaplus_brand",
+      "Nitroplus": "entity-nitroplus_brand",
+      "NITRO PLUS": "entity-nitroplus_brand"
+    },
+    "supplementalEntities": {
+      "game_label": [
+        "banpresto-game-label",
+        "Banpresto Game Label（バンプレストレーベル）",
+        "brand",
+        [
+          "バンプレストレーベル",
+          "Banpresto Game Label"
+        ],
+        "https://www.4gamer.net/games/154/G015459/20120517059/",
+        "sourceReviewed",
+        "2012年メーカー発表文区分発売元Bandai Namco Games与游戏厂牌。旧公司、景品公司及景品品牌各为不同身份。"
+      ],
+      "red_orb": [
+        "red-orb",
+        "Red Orb Entertainment",
+        "brand",
+        [
+          "Red Orb",
+          "Red Orb Entertainment"
+        ],
+        "https://www.wired.com/1997/06/gaming-dream-job-red-orb-seeks-warmongers/",
+        "sourceReviewed",
+        "1997同期报道明确Brøderbund游戏发行部门与厂牌；收购后仍使用该名，不等于旧Brøderbund法人继续承担全部发行。"
+      ]
+    },
+    "supplementalRelations": {
+      "redOrb": {
+        "from": "entity-red-orb",
+        "to": "entity-name-e0c32a99a906",
+        "type": "brandFamily",
+        "period": {
+          "from": 1997,
+          "to": null,
+          "precision": "year",
+          "openEnd": "notAsserted"
+        },
+        "status": "sourceReviewed",
+        "source": "https://www.wired.com/1997/06/gaming-dream-job-red-orb-seeks-warmongers/",
+        "note": "只确认1997报道时的发行部门／品牌关系；结束时间未在本关系中断定，不把1999后继版次倒推旧公司职责。"
+      }
+    },
+    "subbrandRelations": {
+      "xbox_game_studios": {
+        "from": "entity-xbox_game_studios",
+        "to": "entity-microsoft",
+        "type": "brandFamily",
+        "period": {
+          "from": 2019,
+          "to": null,
+          "precision": "year",
+          "openEnd": "notAsserted"
+        },
+        "status": "sourceReviewed",
+        "source": "https://news.xbox.com/en-us/2019/02/05/introducing-xbox-game-studios/",
+        "note": "2019-02-05公告将Microsoft Studios更名Xbox Game Studios；不追溯覆盖旧发行品牌。"
+      }
+    },
+    "operatedBy": [
+      {
+        "args": [
+          "key",
+          "visualarts",
+          "https://visual-arts.jp/blog_2024_1/",
+          "公司与品牌分开；不由当前运营关系反推所有历史版本的合同发行方。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "leaf",
+          "aquaplus",
+          {
+            "dossierSource": "leaf"
+          },
+          "依既有品牌档案记录；起止时间未核。",
+          "existingDossier"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "aquaplus_brand",
+          "aquaplus",
+          "https://aquaplus.jp/",
+          "公司与对外品牌同名，使用不同实体ID。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "aniplex_exe",
+          "aniplex",
+          "https://aniplex-exe.com/",
+          "小说游戏品牌与法人分开。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "alicesoft",
+          "champion_soft",
+          "https://www.alicesoft.com/outline/profile.html",
+          "Alicesoft品牌由Champion Soft经营；公司成立与品牌启用分开。"
+        ],
+        "options": {
+          "start": 1989
+        }
+      },
+      {
+        "args": [
+          "nitrochiral",
+          "nitroplus",
+          "https://www.nitroplus.co.jp/company/",
+          "子品牌独立，原署名不被公司别名吞并。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "nitroorigin",
+          "nitroplus",
+          "https://www.nitroplus.co.jp/company/",
+          "新品牌不追溯替换此前Nitroplus品牌署名。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "nitroplus_brand",
+          "nitroplus",
+          "https://www.nitroplus.co.jp/company/",
+          "公司与同名品牌分开。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "cocktailsoft",
+          "fandc",
+          {
+            "dossierSource": "cocktailsoft"
+          },
+          "现有品牌关系；各时期经营主体另核，不倒填1980年代发行。",
+          "existingDossier"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "fairytale",
+          "fandc",
+          {
+            "dossierSource": "fairytale"
+          },
+          "现有品牌关系；各时期经营主体另核，不倒填1980年代发行。",
+          "existingDossier"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "5pb",
+          "mages",
+          "https://mages.co.jp/topics/ir/20190726/post-145",
+          "历史5pb.品牌关系；2019统一品牌说明不追溯覆盖原署名。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "dramaticcreate",
+          "hunex",
+          "https://www.hunex.co.jp/archives/service/dramaticcreate",
+          "发行品牌与法人分开，其他品牌作品不混入。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "silkys",
+          "elf",
+          {
+            "dossierSource": "silkys"
+          },
+          "原品牌关系，不与Silky’s Plus合并。",
+          "existingDossier"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "silkys_plus",
+          "nightwind",
+          "https://prtimes.jp/main/html/rd/p/000000001.000159011.html",
+          "NightWind为Silky’s Plus品牌活动主体；2013年公司设立与2014年品牌启用分开，不追溯原Silky’s作品或权利。"
+        ],
+        "options": {
+          "start": 2014
+        }
+      },
+      {
+        "args": [
+          "macadamia",
+          "db_soft",
+          {
+            "dossierSource": "macadamia"
+          },
+          "历史品牌归属；法人起止另核。",
+          "existingDossier"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "minatosoft",
+          "hawkeye",
+          {
+            "dossierSource": "hawkeye"
+          },
+          "品牌活动起点不当作法人成立日。",
+          "existingDossier"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "mirai",
+          "hawkeye",
+          "https://www.mirai-soft.net/guide.php",
+          "官方署名mirai（株式会社ホークアイ）。"
+        ],
+        "options": {}
+      },
+      {
+        "args": [
+          "lionhead",
+          "microsoft",
+          "https://news.microsoft.com/source/2006/04/06/microsoft-game-studios-acquires-video-game-luminary-peter-molyneuxs-lionhead-studios/",
+          "2006年收购英国Lionhead；2004年Fable合作早于收购，既有作品不倒推为内部制作。"
+        ],
+        "options": {
+          "start": 2006
+        }
+      },
+      {
+        "args": [
+          "obsidian",
+          "microsoft",
+          "https://www.microsoft.com/en-us/Investor/Acquisition-History",
+          "投资者收购记录列2018-11-10；Obsidian继续独立具名开发，不将收购前发行倒填微软。"
+        ],
+        "options": {
+          "start": 2018
+        }
+      }
+    ],
+    "entityDates": {
+      "entity-champion_soft": [
+        "established",
+        "1983-01",
+        "month",
+        {
+          "dossierSource": "champion_soft"
+        }
+      ],
+      "entity-alicesoft": [
+        "brandStarted",
+        "1989",
+        "year",
+        {
+          "dossierSource": "champion_soft"
+        }
+      ],
+      "entity-fandc": [
+        "established",
+        "1997-03-31",
+        "day",
+        "https://fandc.co.jp/extra/corporate"
+      ],
+      "entity-minatosoft": [
+        "brandActivityStarted",
+        "2006",
+        "year",
+        {
+          "dossierSource": "minatosoft"
+        }
+      ],
+      "entity-gaina": [
+        "renamedBentenFilm",
+        "2025-08-01",
+        "day",
+        {
+          "dossierSource": "gaina"
+        }
+      ],
+      "entity-sierra_company": [
+        "renamedSierraOnLine",
+        "1982",
+        "year",
+        {
+          "dossierSource": "sierra_on_line"
+        }
+      ]
+    },
+    "creditRules": {
+      "initial": [
+        {
+          "entityId": "entity-lionhead",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1300"
+            ]
+          },
+          "role": "originalProduction",
+          "source": "https://news.microsoft.com/source/2008/07/14/xbox-360-unveils-gameplay-for-every-passion/",
+          "note": "逐作官方制作／开发署名；Microsoft发行品牌与实际开发团队分开。",
+          "status": "sourceReviewed",
+          "requiresOriginalRelease": true,
+          "review": {
+            "id": "MS-20261028-{workId}",
+            "record": "data/microsoft-expansion-audit-20261028.md"
+          }
+        },
+        {
+          "entityId": "entity-obsidian",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1301"
+            ]
+          },
+          "role": "originalProduction",
+          "source": "https://www.xbox.com/en-US/games/avowed/",
+          "note": "逐作官方制作／开发署名；Microsoft发行品牌与实际开发团队分开。",
+          "status": "sourceReviewed",
+          "requiresOriginalRelease": true,
+          "review": {
+            "id": "MS-20261028-{workId}",
+            "record": "data/microsoft-expansion-audit-20261028.md"
+          }
+        },
+        {
+          "entityId": "entity-key",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "key",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "key"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-leaf",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "leaf",
+            "exclude": [
+              "g159"
+            ]
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "leaf"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-innocent_grey",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "innocent_grey",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "innocent_grey"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-minori",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "minori",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "minori"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-august",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "august",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "august"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-toneworks",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "toneworks",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "toneworks"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-asaproject",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "asaproject",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "asaproject"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-sagaplanets",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "sagaplanets",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "sagaplanets"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-smee",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "smee",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "smee"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-favorite",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "favorite",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "favorite"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-cuffs",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "cuffs",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "cuffs"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-cube",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "cube",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "cube"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-sphere",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "sphere",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "sphere"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-palette",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "palette",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "palette"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-cabbage",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "cabbage",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "cabbage"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-madosoft",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "madosoft",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "madosoft"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-sprite",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "sprite",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "sprite"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-harukaze",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "harukaze",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "harukaze"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-sorahane",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "sorahane",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "sorahane"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-clochette",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "clochette",
+            "exclude": []
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "clochette"
+          },
+          "note": "依据既有品牌目录登记；创作职责和实际发行分别列示。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-key",
+          "scope": "work",
+          "targets": {
+            "kind": "dossierWorks",
+            "dossier": "key"
+          },
+          "role": "originalProduction",
+          "source": {
+            "dossierSource": "key"
+          },
+          "note": "原作制作品牌；不把外部平台发行者当作原作创作者。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-lucasfilm_games_legacy",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1288",
+              "g1289",
+              "g1290",
+              "g1291",
+              "g1292"
+            ]
+          },
+          "role": "originalProduction",
+          "source": {
+            "targetSources": {
+              "g1288": "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/",
+              "g1289": "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/",
+              "g1290": "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/",
+              "g1291": "https://www.lucasfilm.com/news/lucasfilm-games-rewind-loom/",
+              "g1292": "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/"
+            }
+          },
+          "note": "官方回顾将本作归于历史内部游戏团队；仅限原作，不延伸至后发复刻。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-name-57509c825879",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1293"
+            ]
+          },
+          "role": "originalProduction",
+          "source": "https://www.mocagh.org/lucasfilm/lucasartsarchives3-manual.pdf",
+          "note": "本作原版归历史LucasArts制作；不把后发移植与授权作品自动算作内制。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-name-57509c825879",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1294"
+            ]
+          },
+          "role": "originalProduction",
+          "source": "https://www.lucasfilm.com/news/lucasfilm-games-rewind-indiana-jones-and-the-fate-of-atlantis/",
+          "note": "本作原版归历史LucasArts制作；不把后发移植与授权作品自动算作内制。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-name-57509c825879",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1296"
+            ]
+          },
+          "role": "originalProduction",
+          "source": "https://www.lucasfilm.com/news/lucasfilm-games-rewind-the-dig/",
+          "note": "本作原版归历史LucasArts制作；不把后发移植与授权作品自动算作内制。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-silkys_plus",
+          "scope": "release",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g046-v2"
+            ]
+          },
+          "role": "developer",
+          "source": "https://moe-gameaward.com/media/2021/03/29/74/",
+          "note": "2021年《同級生リメイク》制作人访谈确认品牌承担几乎全部开发；仅限这次重制发行，不归给1992年ELF原作或原Silky’s。",
+          "status": "sourceReviewed",
+          "raw": "シルキーズプラス"
+        },
+        {
+          "entityId": "entity-frontwing",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g200"
+            ]
+          },
+          "role": "coDeveloper",
+          "source": "https://aniplex-exe.com/news/?category=atri-mdm&id=52873",
+          "note": "官方制作署名；发行品牌另列。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-makura",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g200"
+            ]
+          },
+          "role": "coDeveloper",
+          "source": "https://aniplex-exe.com/news/?category=atri-mdm&id=52873",
+          "note": "官方制作署名；发行品牌另列。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-liarsoft",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g201"
+            ]
+          },
+          "role": "originalProduction",
+          "source": "https://aniplex-exe.com/news/?category=aniplex-exe&id=52845",
+          "note": "官方制作署名；发行品牌另列。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-nitrochiral",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g622",
+              "g623",
+              "g624",
+              "g625",
+              "g626",
+              "g627",
+              "g628"
+            ]
+          },
+          "role": "productionBrand",
+          "source": {
+            "dossierSource": "nitroplus"
+          },
+          "note": "CHiRAL独立品牌，沿用既有单作资料，不倒归主品牌。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-gainax",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g812",
+              "g813",
+              "g814",
+              "g815",
+              "g816",
+              "g817",
+              "g818",
+              "g819",
+              "g820",
+              "g821",
+              "g822",
+              "g824",
+              "g825",
+              "g826",
+              "g1277"
+            ]
+          },
+          "role": "originalProduction",
+          "source": {
+            "workSource": true
+          },
+          "note": "既有GAINAX核对档案明确本社原作制作；与授权作品分开。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-gainax",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g823"
+            ]
+          },
+          "role": "catalogueAssociation",
+          "source": {
+            "workSource": true
+          },
+          "note": "现有档案中的系列合作／授权／监修关系，不声称本社开发。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-gainax",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g827"
+            ]
+          },
+          "role": "licensor",
+          "source": {
+            "workSource": true
+          },
+          "note": "现有档案中的系列合作／授权／监修关系，不声称本社开发。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-gainax",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g828"
+            ]
+          },
+          "role": "licensor",
+          "source": {
+            "workSource": true
+          },
+          "note": "现有档案中的系列合作／授权／监修关系，不声称本社开发。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-gainax",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g829"
+            ]
+          },
+          "role": "supervisor",
+          "source": {
+            "workSource": true
+          },
+          "note": "现有档案中的系列合作／授权／监修关系，不声称本社开发。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-gainax",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g927"
+            ]
+          },
+          "role": "copyrightCredit",
+          "source": {
+            "workSource": true
+          },
+          "note": "现有档案中的系列合作／授权／监修关系，不声称本社开发。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-gainax",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1276"
+            ]
+          },
+          "role": "copyrightCredit",
+          "source": {
+            "workSource": true
+          },
+          "note": "现有档案中的系列合作／授权／监修关系，不声称本社开发。",
+          "status": "existingDossier"
+        },
+        {
+          "entityId": "entity-imel",
+          "scope": "release",
+          "targets": {
+            "kind": "records",
+            "workIds": [
+              "g200",
+              "g201"
+            ],
+            "publisherEntity": "entity-imel"
+          },
+          "role": "portDeveloper",
+          "source": "https://imel.co.jp/activity/",
+          "note": "官方实绩的主机／手机移植开发；非原作剧本制作。",
+          "status": "sourceReviewed"
+        },
+        {
+          "entityId": "entity-yonago_gainax",
+          "scope": "content",
+          "targets": {
+            "kind": "records",
+            "workIds": [
+              "g821"
+            ],
+            "firstYear": 2024
+          },
+          "role": "addedAnimation",
+          "source": "https://blissbrain.co.jp/pm2rg/",
+          "note": "2024重制的新增动画，不是原GAINAX本社。",
+          "status": "sourceReviewed"
+        }
+      ],
+      "chunsoft": [
+        {
+          "entityId": "entity-name-21365baf366d",
+          "scope": "work",
+          "targets": {
+            "kind": "ids",
+            "ids": [
+              "g1284"
+            ]
+          },
+          "role": "originalProduction",
+          "source": "https://awards.cesa.or.jp/2005/prizelist/2004-2005/d.html",
+          "note": "CESA获奖资料明确发行、销售、开发均为Chunsoft；仅核本作原作制作，不扩展至其他合作、后继或集团作品。",
+          "status": "sourceReviewed",
+          "requiresDossier": "chunsoft"
+        }
+      ]
+    }
+  }
+}

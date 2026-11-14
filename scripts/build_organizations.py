@@ -1,3 +1,4 @@
+from historical_rules import load_historical_rules, reference_path
 """Build a read-only creator catalogue, preserving formal entity and credit indexes."""
 import argparse
 import json
@@ -10,6 +11,7 @@ from organization_unfinished import attach_unfinished
 from round28_corrections import corrected_coverage
 from effective_catalogue import load_effective, effective_title
 ROOT = Path(__file__).resolve().parents[1]
+RULES = load_historical_rules(ROOT)
 CREATION_ROLES = {'originalProduction', 'developer', 'coDeveloper', 'productionBrand'}
 UNRESOLVED = {'pendingRole', 'unresolved', 'pending'}
 
@@ -20,8 +22,8 @@ def build():
     effective = load_effective(ROOT)
     games, coverage = effective['main'], corrected_coverage(effective['coverage'])
     result = preview_build()
-    reviews = [read(name) for name in ['entity-creator-a-review-20261022', 'entity-creator-a2-review-20261022', 'entity-creator-a3-review-20261022', 'entity-creator-a4-review-20261023', 'entity-creator-a5-review-20261023', 'entity-creator-a6-review-20261023', 'entity-creator-b1-review-20261023', 'entity-creator-b2-review-20261023', 'entity-creator-b3-review-20261023', 'entity-creator-c1-review-20261023', 'entity-creator-c2-review-20261023', 'entity-creator-c3-review-20261023', 'entity-creator-c4-review-20261023', 'entity-creator-d1-review-20261023', 'entity-creator-d2-review-20261023', 'entity-creator-d3-review-20261023', 'entity-creator-e1-review-20261023', 'entity-creator-e2-review-20261024', 'entity-creator-e3-review-20261024', 'entity-creator-f1-review-20261024', 'entity-creator-f2-review-20261024', 'entity-creator-g1-review-20261024', 'entity-creator-g2-review-20261024', 'entity-creator-g3-review-20261024', 'entity-creator-h1-review-20261024', 'entity-creator-h2-review-20261024', 'entity-creator-h3-review-20261024', 'entity-creator-i1-review-20261024', 'entity-creator-i2-review-20261024', 'entity-creator-i3-review-20261024', 'entity-creator-i4-review-20261024', 'entity-creator-j1-review-20261024', 'entity-creator-k1-review-20261024', 'entity-creator-k2-review-20261024', 'entity-creator-k3-review-20261025', 'entity-creator-l1-review-20261025', 'entity-creator-l2-review-20261025', 'entity-creator-l3-review-20261025', 'entity-creator-m1-review-20261025', 'entity-creator-m2-review-20261025', 'entity-creator-m3-review-20261025', 'entity-creator-m4-review-20261025', 'entity-creator-m5-review-20261025', 'entity-creator-m6-review-20261025', 'entity-creator-n1-review-20261025', 'entity-creator-n2-review-20261025', 'entity-creator-n3-review-20261025', 'entity-creator-n4-review-20261025', 'entity-creator-n5-review-20261025', 'entity-creator-o1-review-20261025', 'entity-creator-p1-review-20261025', 'entity-creator-p2-review-20261025', 'entity-creator-p3-review-20261025', 'entity-creator-q1-review-20261025', 'entity-creator-r1-review-20261025', 'entity-creator-r2-review-20261025', 'entity-creator-s1-review-20261025', 'entity-creator-s2-review-20261025', 'entity-creator-s3-review-20261026', 'entity-creator-s4-review-20261026', 'entity-creator-s5-review-20261026', 'entity-creator-s6-review-20261026', 'entity-creator-s7-review-20261026', 'entity-creator-s8-review-20261026', 'entity-creator-s9-review-20261026', 'entity-creator-s10-review-20261026', 'entity-creator-s11-review-20261026', 'entity-creator-t1-review-20261026', 'entity-creator-t2-review-20261026', 'entity-creator-t3-review-20261026', 'entity-creator-t4-review-20261026', 'entity-creator-t5-review-20261026', 'entity-creator-u1-review-20261026', 'entity-creator-v1-review-20261026', 'entity-creator-w1-review-20261026', 'entity-creator-x1-review-20261026', 'entity-creator-y1-review-20261026', 'entity-creator-cf-catchup-review-20261026']]
-    reviews.append(read('entity-creator-numeric-review-20261026'))
+    reviews = [read(reference_path(RULES,key)[5:-5]) for key in RULES['sequences']['organizationReviews']]
+
     review = reviews[-1]
     reviewed_entities = [entry for batch in reviews for entry in batch['reviewedEntities']]
     assert len({entry['entityId'] for entry in reviewed_entities}) == len(reviewed_entities)
@@ -137,7 +139,7 @@ def build():
                              for wid, (w, placement, href) in works.items()}})
     result = attach_verification(result)
     # New sourced milestones do not rewrite the frozen verification ledger.
-    milestones = [event for name in ['takeru-history-20261027','tokuma-intermedia-history-20261027','sega-history-20261027','chunsoft-history-20261027','jhv-history-20261027','ultra-games-history-20261027','banpresto-history-20261027','broderbund-history-20261028','lucasarts-history-20261028','nec-avenue-history-20261028','silkys-history-20261028','microsoft-history-20261028','nec-home-electronics-history-20261028','seven-dossiers-history-20261028'] for event in read(name)['events']]
+    milestones = [event for key in RULES['sequences']['organizationMilestones'] for event in read(reference_path(RULES,key)[5:-5])['events']]
     for event in milestones:
         assert set(event['entityIds']) <= ids and event['sources'] and not event['recordIds']
     result['organizationEvents'] += milestones

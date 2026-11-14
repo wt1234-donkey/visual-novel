@@ -800,17 +800,36 @@
     {
       "id": "android-real-device",
       "required": false,
-      "condition": "需要真实设备和网络测量；尚未提供。",
+      "condition": "真实设备需要 ADB 已连接、Chrome 已运行并启用授权调试；无设备时脚本报告 unavailable，不记为通过。",
       "alternative": [
         ".github/workflows/mobile-performance.yml"
       ],
-      "limitation": "Chromium手机条件模拟和故障测试不等同Android真机测量。"
+      "limitation": "Chromium手机条件模拟和故障测试不等同Android真机测量。",
+      "command": "node scripts/measure_android_device.mjs --serial DEVICE --physical-device --report test-results/android-real-device.json"
     },
     {
       "id": "audit-growth-and-startup",
       "required": true,
       "command": "node --test tests/audit-incremental.test.mjs tests/audit-current.test.mjs",
       "history": "万条基线后连续100次追加，保持旧正文位置；三类万条非空日志的当前状态与历史分别读取；浏览器容量验证由 tests/browser/audit-startup.test.mjs 执行。"
+    },
+    {
+      "id": "all-public-entrypoints",
+      "required": true,
+      "command": "ATLAS_SITE_DIRECTORY=_site node --test tests/browser/all-entrypoints.test.mjs",
+      "condition": "每一个发布 HTML 都必须在 config/public-entrypoints.json 登记启动信号，使用真实冻结产物逐页验证；动态入口需要数据完成后的信号。"
+    },
+    {
+      "id": "effective-public-displays",
+      "required": true,
+      "command": "python3 scripts/verify_public_displays.py --site _site",
+      "condition": "实际发布包内逐条比较专题、分类、组织和 CSV 的当前选用名称／年份；发行年份保留发行层级。"
+    },
+    {
+      "id": "isolated-archive-recovery",
+      "required": true,
+      "command": "node scripts/verify_archive_recovery.mjs _site /tmp/atlas-recovery-unique",
+      "condition": "四类日志仅凭发布归档恢复逻辑存储、删除索引后重建，再次回放摘要一致；不自动晋升为写入源。"
     }
   ],
   "historicalTests": [

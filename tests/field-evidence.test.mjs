@@ -120,14 +120,15 @@ test('field page reads one hashed target bucket and never loads original source 
  const fetcher=async url=>{const path=String(url).replace(/^\.\//,'');calls.push(path);if(path.includes('basic-registry'))rawReads++;return new Response(path==='data/catalogue-release.json'?JSON.stringify(release):files.get(path));};const reader=createFieldEvidenceReader(fetcher);await reader.info();const view=await reader.store();assert.equal(view.projectionVersion,1);assert.equal(view.events,undefined);assert.equal(calls.some(path=>path.endsWith('/store.json')),false);assert.equal(calls.filter(p=>p.includes('field-targets')).length,0);const result=await reader.targets('g001');assert.equal(result.targets.length,3);assert.equal(calls.filter(p=>p.includes('field-targets')).length,1);assert.equal(rawReads,0);
  }finally{rmSync(f.root,{recursive:true,force:true});}
 });
-test('more than 50 current claims are paged, pinned selection survives each page, and CSV exports all current claims without event bodies',async()=>{
+test('300 competing claims across six pages keep the selected value pinned and isolate other fields and scopes',async()=>{
  const f=fixture();try{
-  let store=emptyFieldStore();for(let i=0;i<60;i++)store=apply(store,{type:'assert',assertion:assertion('page-'+i,1990+i%10)},'add-page-'+i);
-  store=apply(store,{type:'select',assertionId:'page-59'},'select-page-59');writeFileSync(join(f.root,'data/field-evidence.json'),JSON.stringify(store)+'\n');
+  let store=emptyFieldStore();for(let i=0;i<300;i++)store=apply(store,{type:'assert',assertion:assertion('page-'+i,1990+i%10)},'add-page-'+i);
+  for(let i=0;i<20;i++){store=apply(store,{type:'assert',assertion:assertion('name-'+i,'Name '+i,{field:'title'})},'name-'+i);store=apply(store,{type:'assert',assertion:assertion('release-'+i,1990+i%10,{scope:{type:'release',workId:'g001',id:'r1'},field:'year'})},'release-'+i);}
+  store=apply(store,{type:'select',assertionId:'page-299'},'select-page-59');writeFileSync(join(f.root,'data/field-evidence.json'),JSON.stringify(store)+'\n');
   const {buildAuditLedger}=await import('../src/infrastructure/filesystem/audit-ledger.mjs'),{createAuditReader}=await import('../src/infrastructure/storage/audit-reader.mjs');
   const built=await buildAuditLedger(f.root);let bodyReads=0;const reader=createAuditReader(ref=>{const text=readFileSync(join(f.root,ref.path),'utf8');if(JSON.parse(text).type==='events')bodyReads++;return text;}),opened=await reader.open(built.pointer.root,{kind:'field'}),ids=new Set();let page=0;
-  while(page!==null){const current=await opened.current({scope,field:'firstYear',page});assert.equal(current.candidateTotal,60);assert.equal(current.choices[fieldKey(scope,'firstYear')].assertionId,'page-59');assert.ok(current.assertions['page-59']);assert.ok(Object.keys(current.assertions).length<=51);for(const id of Object.keys(current.assertions))ids.add(id);page=current.nextPage;}
-  assert.equal(ids.size,60);const all=await opened.current({exportAll:true});assert.equal(Object.keys(all.assertions).length,60);assert.ok(evidenceCsv(all).includes('page-59'));assert.equal(bodyReads,0);await buildAuditLedger(f.root,{check:true});
+  while(page!==null){const current=await opened.current({scope,field:'firstYear',page});assert.equal(current.candidateTotal,300);assert.equal(current.choices[fieldKey(scope,'firstYear')].assertionId,'page-299');assert.ok(current.assertions['page-299']);assert.ok(Object.keys(current.assertions).length<=51);for(const id of Object.keys(current.assertions))ids.add(id);page=current.nextPage;}
+  assert.equal(ids.size,300);const all=await opened.current({exportAll:true});assert.equal(Object.keys(all.assertions).length,340);assert.ok(evidenceCsv(all).includes('page-299'));assert.equal(bodyReads,0);await buildAuditLedger(f.root,{check:true});
  }finally{rmSync(f.root,{recursive:true,force:true});}
 });
 test('ambiguous save results retain the immutable field command across reloads',async()=>{

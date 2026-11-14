@@ -15,7 +15,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
     permissions:
       contents: read
       pages: read
@@ -44,17 +44,22 @@ jobs:
           /tmp/catalogue-browser/node_modules/.bin/playwright install --with-deps chromium
       - name: Build static artifact and provenance manifest
         run: python3 scripts/build_pages_artifact.py --workspace "$RUNNER_TEMP/catalogue-build" --output _site
+      - name: Verify rendered effective values and isolated archive recovery
+        run: |
+          python3 scripts/verify_public_displays.py --site _site
+          node scripts/verify_archive_recovery.mjs _site "$RUNNER_TEMP/archive-recovery"
+          node scripts/measure_android_device.mjs
       - name: Verify editing recovery and published entrypoints in Chromium
         env:
           PLAYWRIGHT_MODULE: /tmp/catalogue-browser/node_modules/playwright
           ATLAS_SITE_DIRECTORY: _site
         run: node --test tests/browser/*.test.mjs
-      - name: Retain mobile archive-startup measurements
+      - name: Retain published-entry, recovery and mobile measurements
         if: always()
         uses: actions/upload-artifact@v5
         with:
           name: audit-startup-mobile
-          path: test-results/audit-startup-mobile.json
+          path: test-results/*.json
       - name: Upload verified Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
