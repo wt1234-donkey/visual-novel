@@ -50,12 +50,15 @@ export async function setAuditMap(ref, updates, reader, writer, limits, depth=0)
 
 export async function auditMapEntries(reader,pointer,prefix='') {
   const node=await reader.read(pointer);
+  if(node.schemaVersion!==1)throw Error('审计索引版本无效');
   if(node.type==='map') {
+   if(!node.entries||typeof node.entries!=='object'||Array.isArray(node.entries))throw Error('审计索引叶格式无效');
    const rows=Object.entries(node.entries);
+   if(rows.length>64||size(node)>128*1024)throw Error('审计索引叶超出容量');
    if(rows.some(([id])=>!hash(id).startsWith(prefix)))throw Error('审计索引键位置不一致');
    return rows;
   }
-  if(node.type!=='branch'||node.depth!==prefix.length||prefix.length>=64)throw Error('审计索引层级无效');
+  if(node.type!=='branch'||node.depth!==prefix.length||prefix.length>=64||!Object.keys(node.children).length)throw Error('审计索引层级无效');
   const result=[];
   for(const [key,ref] of Object.entries(node.children)) {
    if(!/^[a-f0-9]{2}$/.test(key))throw Error('审计索引桶无效');
@@ -64,6 +67,31 @@ export async function auditMapEntries(reader,pointer,prefix='') {
   return result;
 }
 export async function verifyAuditIndexes(reader, descriptor, postings) {
+ const ranges=new Map();
+ async function range(ref){
+  if(!ref)return null;
+  let bounds=ranges.get(ref.sha256);
+  if(!bounds){
+   const node=await reader.read(ref);if(node.schemaVersion!==1)throw Error('审计分页索引版本无效');
+   if(node.type==='range-leaf'){
+    const entries=node.entries;
+    if(!Array.isArray(entries)||!entries.length||entries.length>64||entries.some((row,i)=>!Number.isSafeInteger(row.order)||row.order<1||i>0&&row.order<=entries[i-1].order))throw Error('分页索引顺序无效');
+    bounds={min:entries[0].order,max:entries.at(-1).order,count:entries.length};
+   }else if(node.type==='range-branch'){
+    if(!Array.isArray(node.children)||!node.children.length||node.children.length>64)throw Error('分页索引分支无效');
+    const children=[];for(const child of node.children)children.push(await range(child));
+    if(children.some((child,i)=>!child||i>0&&child.min<=children[i-1].max))throw Error('分页索引顺序无效');
+    bounds={min:children[0].min,max:children.at(-1).max,count:children.reduce((n,c)=>n+c.count,0)};
+   }else throw Error('分页索引格式无效');
+   ranges.set(ref.sha256,bounds);
+  }
+  // Bounds live in the parent reference, outside the addressed child's body.
+  // Check each reference even when that body has already been verified.
+  if(ref.min!==bounds.min||ref.max!==bounds.max||ref.count!==bounds.count)throw Error('分页索引边界不一致');
+  return bounds;
+ }
+ const global=await range(descriptor.history);
+ if((global?.count||0)!==descriptor.eventCount)throw Error('分页索引事件计数不一致');
  const expected=new Map(postings.map(({workIds,...p})=>[p.id,p]));
  const operations=await auditMapEntries(reader,descriptor.operations);
  if(expected.size!==postings.length||operations.length!==expected.size||operations.some(([id,p])=>journalKey(p)!==journalKey(expected.get(id))))throw Error('归档操作索引与事件全集不一致');
@@ -72,6 +100,7 @@ export async function verifyAuditIndexes(reader, descriptor, postings) {
  const works=await auditMapEntries(reader,descriptor.works);
  if(works.length!==byWork.size)throw Error('归档作品索引与事件全集不一致');
  for(const [id,target] of works) {
+  await range(target.root);
   const rows=await reader.postings(target.root,{limit:Number.MAX_SAFE_INTEGER}), wanted=byWork.get(id);
   if(!wanted||target.count!==wanted.length||journalKey(rows)!==journalKey(wanted))throw Error('归档作品索引与事件全集不一致');
  }
