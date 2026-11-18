@@ -25,7 +25,8 @@ test('live bootstrap retains the exact Git head and source blob for bound archiv
 test('basic editor does not generate editorial proposals and requires write authorization',()=>{
  assert.doesNotMatch(editor,/makeProposal|offerEditorialProposal|basicProposalPreview|EDITORIAL_URL|送审预览|预览并送审/);
  assert.match(editor,/if\(!actor\)\{[\s\S]*?连接 GitHub 写入权限/);
- assert.match(editor,/await service\.execute\(action,reason,\{undo\}\)/);
+ assert.match(editor,/await service\.execute\(action,reason,\{undo,onProgress:/);
+ assert.match(editor,/COMMAND_PENDING/);
  assert.match(editor,/async function commit\(action,reason,undo=false\)/);
  assert.match(editor,/function merge\(ids\)/);
  assert.match(editor,/type:'merge'/);
