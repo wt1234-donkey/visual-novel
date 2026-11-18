@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 52,
+  "revision": 53,
   "additions": [],
   "records": {
     "g1028": {
@@ -1614,89 +1614,64 @@
         "yearStatus": "published"
       },
       "aliases": []
+    },
+    "vndb-v7403": {
+      "identity": {
+        "id": "vndb-v7403",
+        "indexId": "vndb-kana-bulk-20261101-r28-v7403",
+        "aliases": [],
+        "title": "[Phase Shift]",
+        "firstYear": 2009,
+        "group": "创作品牌待核",
+        "gameplay": "视觉小说",
+        "plotStyles": [],
+        "source": "https://vndb.org/v7403",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+          "at": "2026-11-18T04:56:30.253Z"
+        },
+        "group": {
+          "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+          "at": "2026-11-18T04:56:30.253Z"
+        },
+        "plotTags": {
+          "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+          "at": "2026-11-18T04:56:30.253Z"
+        },
+        "plotTagEvidence": {
+          "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+          "at": "2026-11-18T04:56:30.253Z"
+        }
+      },
+      "values": {
+        "firstYear": 2009,
+        "gameplay": "视觉小说",
+        "group": "MaiMai & Alte",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "expression": "哲思",
+          "setting": [
+            "校园",
+            "都市"
+          ],
+          "structure": "线性叙事",
+          "theme": [
+            "青春",
+            "成长"
+          ]
+        },
+        "source": "https://vndb.org/v7403",
+        "title": "[Phase Shift]",
+        "yearStatus": "published"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
-      "at": "2026-11-13T12:33:13.082Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
-          "before": {
-            "identity": {
-              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
-              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
-              "aliases": [],
-              "title": "Zork 285",
-              "firstYear": 1977,
-              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
-            "relation": {
-              "label": "Zork 285",
-              "note": "无",
-              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
-              "type": "unverified"
-            }
-          },
-          "after": {
-            "identity": {
-              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
-              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
-              "aliases": [],
-              "title": "Zork 285",
-              "firstYear": 1977,
-              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
-            "relation": {
-              "label": "Zork 285",
-              "note": "无",
-              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
-              "type": "unverified"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
-                "at": "2026-11-13T12:33:13.082Z"
-              },
-              "plotTags": {
-                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
-                "at": "2026-11-13T12:33:13.082Z"
-              },
-              "plotTagEvidence": {
-                "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
-                "at": "2026-11-13T12:33:13.082Z"
-              }
-            },
-            "values": {
-              "firstYear": 1977,
-              "gameplay": "互动小说（玩法待核）",
-              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {},
-              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
-              "title": "Zork 285",
-              "yearStatus": "unverified"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "ea5ff25a-541c-47e8-a740-b3fac4d3f7cc",
       "at": "2026-11-18T02:00:44.396Z",
@@ -1853,6 +1828,74 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+      "at": "2026-11-18T04:56:30.253Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "vndb-v7403",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "vndb-v7403",
+              "indexId": "vndb-kana-bulk-20261101-r28-v7403",
+              "aliases": [],
+              "title": "[Phase Shift]",
+              "firstYear": 2009,
+              "group": "创作品牌待核",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "source": "https://vndb.org/v7403",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+                "at": "2026-11-18T04:56:30.253Z"
+              },
+              "group": {
+                "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+                "at": "2026-11-18T04:56:30.253Z"
+              },
+              "plotTags": {
+                "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+                "at": "2026-11-18T04:56:30.253Z"
+              },
+              "plotTagEvidence": {
+                "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
+                "at": "2026-11-18T04:56:30.253Z"
+              }
+            },
+            "values": {
+              "firstYear": 2009,
+              "gameplay": "视觉小说",
+              "group": "MaiMai & Alte",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "expression": "哲思",
+                "setting": [
+                  "校园",
+                  "都市"
+                ],
+                "structure": "线性叙事",
+                "theme": [
+                  "青春",
+                  "成长"
+                ]
+              },
+              "source": "https://vndb.org/v7403",
+              "title": "[Phase Shift]",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1864,10 +1907,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r52.json",
-        "sha": "7c4efe77c59c83c28d6c1e9a22fefcbb40f91c56",
+        "path": "data/basic-catalogue-journal/events/r31-r53.json",
+        "sha": "60a95d6499dd1e55de891a18312feb18e4f4849b",
         "startRevision": 31,
-        "endRevision": 52,
+        "endRevision": 53,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1890,12 +1933,13 @@
           "67366783-d9b7-4ab9-b01c-10889f28be3f",
           "4db05386-9bbe-4617-abe3-486d8b5aaf00",
           "ea5ff25a-541c-47e8-a740-b3fac4d3f7cc",
-          "d396eaa4-d93d-45f4-abe0-7f4ca042ed47"
+          "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+          "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431"
         ],
-        "bytes": 63451
+        "bytes": 66430
       }
     ],
-    "eventCount": 22,
-    "stateHash": "b0810c9a27ba1fdde3c43879c3e1bec452e1992ae23683719cea60b79277a8a2"
+    "eventCount": 23,
+    "stateHash": "7a3249dc1a6ad888218817c55d9889d5bc42508538069de3fbd06d697508270d"
   }
 }
