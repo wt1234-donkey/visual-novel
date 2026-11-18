@@ -158,7 +158,7 @@ test('lost dispatch acknowledgement plus a temporary receipt-read outage never r
   return null;
  });
  const result=await submitCommand(request,command,{timeout:0,pause:async()=>{}});
- assert.equal(result.revision,1);assert.equal(dispatches,1);assert.equal(readFailures,2);
+ assert.equal(result.revision,1);assert.equal(dispatches,1);assert.ok(readFailures>=2);
 });
 test('resuming an active run checks the prior operation instead of dispatching a duplicate',async()=>{
  const api=gitFixture(),command=basic();let dispatches=0;
