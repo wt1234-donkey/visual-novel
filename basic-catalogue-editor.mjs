@@ -49,10 +49,11 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
     return false;
    }
    lock(true);message('正在核验并直接保存到 GitHub…');
-   const receipt=await service.execute(action,reason,{undo});
+   const stages={checking:'正在核对是否已经保存…',retrying:'GitHub 连接暂时异常，正在安全重试读取或上传…',reconciling:'正在检查上次提交的执行状态，避免重复提交…',uploading:'正在上传本次修改命令…',dispatching:'正在请求可信保存工作流…',waiting:'工作流已请求，正在等待校验与主分支提交…',confirmed:'已确认原子保存回执，正在更新页面…',refreshing:'正在读取 GitHub 最新作品信息…'};
+    const receipt=await service.execute(action,reason,{undo,onProgress:({stage})=>{if(stages[stage])message(stages[stage]);}});
    recordSavedOperation({operationId:receipt.operationId,kind:'basic',revision:receipt.revision,commit:receipt.commit});
    update();message('已提交 GitHub 主分支，当前页面数据已更新。页面的“保存与发布状态”会追踪本次操作是否已上线。');return true;
-  }catch(e){if(e.code==='SOURCE_CHANGED')readReleaseManifest(fetch,{refresh:true}).catch(()=>{});message(e.message,true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
+  }catch(e){if(e.code==='SOURCE_CHANGED')readReleaseManifest(fetch,{refresh:true}).catch(()=>{});message(e.message+(e.code==='COMMAND_PENDING'?' 再次点击保存会沿用原操作ID并核对工作流，不会直接生成新的修改。':''),true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
  async function edit(id=null){
@@ -197,7 +198,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
   }else if(b.id==='be-disconnect'){service.disconnect(clientFor(''));update();$('.be-auth summary').textContent='首次保存前：连接 GitHub 写入权限';$('.be-auth').open=true;b.disabled=true;message('已断开写入权限；当前资料仍可查看、编辑，重新授权后可保存。');}
   else if(b.id==='be-history-retry')historyRows();
   else if(b.id==='be-history-more'&&historyCursor!==null)historyRows(historyCursor,true);
-  else if(b.id==='be-refresh'){try{lock(true);await service.sync();update();message('已同步 GitHub 修改记录 r'+service.snapshot.store.revision+'。当前表单输入保留；'+(editBaseline&&editBaseline.revision!==service.snapshot.store.revision?'保存时将检查字段冲突，不会静默覆盖其他页面的新修改。':'核对后可直接保存。'));}catch(err){message(err.message,true);}finally{lock(false);}}
+  else if(b.id==='be-refresh'){try{lock(true);await service.sync();update();message('已同步 GitHub 修改记录 r'+service.snapshot.store.revision+'。当前表单输入及未确认操作ID保留；'+(editBaseline&&editBaseline.revision!==service.snapshot.store.revision?'保存时将检查字段冲突，不会静默覆盖其他页面的新修改。':'核对后可直接保存。'));}catch(err){message(err.message,true);}finally{lock(false);}}
   else if(b.dataset.delete){if(confirm('删除“'+get(b.dataset.delete)?.title+'”？可通过最近操作撤销。')){if(await commit({type:'delete',id:b.dataset.delete},'删除作品 '+get(b.dataset.delete)?.title)){close();}}}
   else if(b.dataset.detach){if(await commit({type:'detach',id:b.dataset.detach},'解除版本合并'))edit(b.dataset.detach);}
   else if(b.id==='be-undo'){if(confirm('撤销最近一次“'+service.snapshot.store.recent.at(-1)?.reason+'”？'))if(await commit(null,'撤销最近操作',true))connection();}
