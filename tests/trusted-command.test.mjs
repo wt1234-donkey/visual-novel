@@ -235,3 +235,17 @@ test('unchanged basic edits and tag removals finish before creating any GitHub c
  await assert.rejects(()=>service.execute({type:'style-update',rows:[{id:'w1',mode:'remove',tags:{theme:'科幻'}}]},'重复移除标签'),error=>error.code==='NO_CHANGES');
  assert.equal(requests.length,0);assert.equal(service.pendingOperation,null);
 });
+
+test('persistent receipt HTTP 503 quickly returns pending with original operation after bounded retries',async()=>{
+ const api=gitFixture(),command=basic();let dispatches=0,failedReads=0;
+ const request=fixtureRequest(api,(path)=>{
+  if(path.endsWith('/dispatches')){dispatches++;return {};}
+  if(dispatches&&path.includes('/contents/data/command-receipts/')){
+   failedReads++;throw Object.assign(Error('HTTP 503 simulated receipt outage'),{status:503});
+  }
+  return null;
+ });
+ await assert.rejects(()=>submitCommand(request,command,{timeout:30000,pause:async()=>{},fetchPublic:async()=>{throw Error('unexpected runs lookup');}}),
+  error=>error.code==='COMMAND_PENDING'&&error.operationId===command.operationId&&/HTTP 503/.test(error.message));
+ assert.equal(dispatches,1);assert.equal(failedReads,3);
+});
