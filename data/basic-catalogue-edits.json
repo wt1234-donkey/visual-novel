@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 54,
+  "revision": 55,
   "additions": [],
   "records": {
     "g1028": {
@@ -1728,85 +1728,65 @@
         "yearStatus": "published"
       },
       "aliases": []
+    },
+    "vndb-v5506": {
+      "identity": {
+        "id": "vndb-v5506",
+        "indexId": "vndb-kana-bulk-20261101-r22-cont1-v5506",
+        "aliases": [
+          "[text]",
+          "A Summer Story"
+        ],
+        "title": "[text] - A Summer Story",
+        "firstYear": 2009,
+        "group": "创作品牌待核",
+        "gameplay": "视觉小说",
+        "plotStyles": [],
+        "source": "https://vndb.org/v5506",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+          "at": "2026-11-18T07:39:00.816Z"
+        },
+        "group": {
+          "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+          "at": "2026-11-18T07:39:00.816Z"
+        },
+        "plotTags": {
+          "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+          "at": "2026-11-18T07:39:00.816Z"
+        },
+        "plotTagEvidence": {
+          "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+          "at": "2026-11-18T07:39:00.816Z"
+        }
+      },
+      "values": {
+        "firstYear": 2009,
+        "gameplay": "视觉小说",
+        "group": "sakevisual",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "theme": [
+            "日常",
+            "青春",
+            "成长"
+          ]
+        },
+        "source": "https://vndb.org/v5506",
+        "title": "[text] - A Summer Story",
+        "yearStatus": "published"
+      },
+      "aliases": [
+        "[text]",
+        "A Summer Story"
+      ]
     }
   },
   "recent": [
-    {
-      "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
-      "at": "2026-11-18T02:56:26.834Z",
-      "actor": "wt1234-donkey",
-      "reason": "更正基础作品资料",
-      "changes": [
-        {
-          "id": "vndb-table-20261103-v10043",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "vndb-table-20261103-v10043",
-              "indexId": "basic-vndb-table-20261103-v10043",
-              "aliases": [],
-              "title": "...in white",
-              "firstYear": 2009,
-              "group": "创作主体待核",
-              "gameplay": "Galgame（玩法待核）",
-              "plotStyles": [],
-              "source": "https://vndb.org/v10043",
-              "mainPlacement": "promoted-basic"
-            },
-            "fieldMeta": {
-              "yearStatus": {
-                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
-                "at": "2026-11-18T02:56:26.834Z"
-              },
-              "group": {
-                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
-                "at": "2026-11-18T02:56:26.834Z"
-              },
-              "gameplay": {
-                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
-                "at": "2026-11-18T02:56:26.834Z"
-              },
-              "plotTags": {
-                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
-                "at": "2026-11-18T02:56:26.834Z"
-              },
-              "plotTagEvidence": {
-                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
-                "at": "2026-11-18T02:56:26.834Z"
-              },
-              "source": {
-                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
-                "at": "2026-11-18T02:56:26.834Z"
-              }
-            },
-            "values": {
-              "firstYear": 2009,
-              "gameplay": "视觉小说",
-              "group": "ZIGZAG",
-              "plotStyles": [],
-              "plotTagEvidence": {},
-              "plotTags": {
-                "emotion": "孤独感",
-                "expression": [
-                  "意识流",
-                  "哲思"
-                ],
-                "theme": [
-                  "心理",
-                  "身份认同"
-                ],
-                "tone": "忧郁"
-              },
-              "source": "https://kaisernet.org/games/inwhite/novel.htm",
-              "title": "...in white",
-              "yearStatus": "published"
-            },
-            "aliases": []
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
       "at": "2026-11-18T04:56:30.253Z",
@@ -1946,6 +1926,75 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+      "at": "2026-11-18T07:39:00.816Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "vndb-v5506",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "vndb-v5506",
+              "indexId": "vndb-kana-bulk-20261101-r22-cont1-v5506",
+              "aliases": [
+                "[text]",
+                "A Summer Story"
+              ],
+              "title": "[text] - A Summer Story",
+              "firstYear": 2009,
+              "group": "创作品牌待核",
+              "gameplay": "视觉小说",
+              "plotStyles": [],
+              "source": "https://vndb.org/v5506",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+                "at": "2026-11-18T07:39:00.816Z"
+              },
+              "group": {
+                "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+                "at": "2026-11-18T07:39:00.816Z"
+              },
+              "plotTags": {
+                "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+                "at": "2026-11-18T07:39:00.816Z"
+              },
+              "plotTagEvidence": {
+                "id": "c4137bde-9f66-4630-8091-b9815b3da864",
+                "at": "2026-11-18T07:39:00.816Z"
+              }
+            },
+            "values": {
+              "firstYear": 2009,
+              "gameplay": "视觉小说",
+              "group": "sakevisual",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "theme": [
+                  "日常",
+                  "青春",
+                  "成长"
+                ]
+              },
+              "source": "https://vndb.org/v5506",
+              "title": "[text] - A Summer Story",
+              "yearStatus": "published"
+            },
+            "aliases": [
+              "[text]",
+              "A Summer Story"
+            ]
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1957,10 +2006,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r54.json",
-        "sha": "1cf443ba500cded85493b8ca054a693b691885ed",
+        "path": "data/basic-catalogue-journal/events/r31-r55.json",
+        "sha": "06d9b6e1e961faaa76da6c096df69f710cd3ddf5",
         "startRevision": 31,
-        "endRevision": 54,
+        "endRevision": 55,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1985,12 +2034,13 @@
           "ea5ff25a-541c-47e8-a740-b3fac4d3f7cc",
           "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
           "3f6baf4d-93ce-46d0-bd6b-50e0c06fc431",
-          "93b5264a-b197-469c-bd7e-59b0047f592d"
+          "93b5264a-b197-469c-bd7e-59b0047f592d",
+          "c4137bde-9f66-4630-8091-b9815b3da864"
         ],
-        "bytes": 69566
+        "bytes": 72417
       }
     ],
-    "eventCount": 24,
-    "stateHash": "66dce2e725c2adc0dd28b7ddce2728f596ecde2f8e1ee60ffd5191d04c6a432a"
+    "eventCount": 25,
+    "stateHash": "ec066f9cbcfaff175bd5057e72e83cfcc7d76bfe1f3e0d93d8eff51d6b2d622b"
   }
 }
