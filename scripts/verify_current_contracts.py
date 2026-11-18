@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def _git_paths(root, *arguments):
     """Read the Git index/worktree in NUL-delimited form (including staged changes)."""
     output = subprocess.check_output(['git', 'ls-files', '-z', *arguments], cwd=root)
-    return {path for path in output.decode().split('\\0') if path}
+    return {path for path in output.decode().split('\0') if path}
 
 
 def candidate_sources(root):
@@ -36,9 +36,15 @@ def candidate_sources(root):
         )
     }
     missing = {name for name in tracked if not (root / name).exists()}
+    staged_new = subprocess.check_output(
+        ['git', 'diff', '--cached', '--name-only', '--diff-filter=A', '-z'], cwd=root
+    ).decode().split('\0')
     # Only a journal segment rotation may remove a previously tracked file.
     # A replacement segment must be present (staged or untracked).
-    has_replacement = any(name.startswith(journal) for name in created)
+    has_replacement = any(
+        name.startswith(journal) and name.endswith('.json') and name not in missing
+        for name in (created | set(staged_new))
+    )
     if missing and (any(not name.startswith(journal) or not name.endswith('.json')
                         for name in missing) or not has_replacement):
         raise ValueError('Missing tracked candidate source without a replacement journal segment: '
