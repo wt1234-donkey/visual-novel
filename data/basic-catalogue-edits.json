@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": 51,
+  "revision": 52,
   "additions": [],
   "records": {
     "g1028": {
@@ -1551,61 +1551,72 @@
         "Maya, Kunoichi Gangbang Pictures",
         "-玛雅-女忍者凌辱轮奸绘卷"
       ]
+    },
+    "vndb-table-20261103-v10043": {
+      "identity": {
+        "id": "vndb-table-20261103-v10043",
+        "indexId": "basic-vndb-table-20261103-v10043",
+        "aliases": [],
+        "title": "...in white",
+        "firstYear": 2009,
+        "group": "创作主体待核",
+        "gameplay": "Galgame（玩法待核）",
+        "plotStyles": [],
+        "source": "https://vndb.org/v10043",
+        "mainPlacement": "promoted-basic"
+      },
+      "fieldMeta": {
+        "yearStatus": {
+          "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+          "at": "2026-11-18T02:56:26.834Z"
+        },
+        "group": {
+          "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+          "at": "2026-11-18T02:56:26.834Z"
+        },
+        "gameplay": {
+          "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+          "at": "2026-11-18T02:56:26.834Z"
+        },
+        "plotTags": {
+          "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+          "at": "2026-11-18T02:56:26.834Z"
+        },
+        "plotTagEvidence": {
+          "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+          "at": "2026-11-18T02:56:26.834Z"
+        },
+        "source": {
+          "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+          "at": "2026-11-18T02:56:26.834Z"
+        }
+      },
+      "values": {
+        "firstYear": 2009,
+        "gameplay": "视觉小说",
+        "group": "ZIGZAG",
+        "plotStyles": [],
+        "plotTagEvidence": {},
+        "plotTags": {
+          "emotion": "孤独感",
+          "expression": [
+            "意识流",
+            "哲思"
+          ],
+          "theme": [
+            "心理",
+            "身份认同"
+          ],
+          "tone": "忧郁"
+        },
+        "source": "https://kaisernet.org/games/inwhite/novel.htm",
+        "title": "...in white",
+        "yearStatus": "published"
+      },
+      "aliases": []
     }
   },
   "recent": [
-    {
-      "id": "67366783-d9b7-4ab9-b01c-10889f28be3f",
-      "at": "2026-11-13T12:22:57.052Z",
-      "actor": "wt1234-donkey",
-      "reason": "合并 1 部作品为关联版本",
-      "changes": [
-        {
-          "id": "ifdb-table-20261104-7so4c67b82qmnjqg",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifdb-table-20261104-7so4c67b82qmnjqg",
-              "indexId": "basic-ifdb-table-20261104-7so4c67b82qmnjqg",
-              "aliases": [],
-              "title": "Zork 285",
-              "firstYear": 1977,
-              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
-              "mainPlacement": "promoted-basic"
-            }
-          }
-        },
-        {
-          "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
-          "before": null,
-          "after": {
-            "identity": {
-              "id": "ifarchive-table-20261104-7so4c67b82qmnjqg",
-              "indexId": "basic-ifarchive-table-20261104-7so4c67b82qmnjqg",
-              "aliases": [],
-              "title": "Zork 285",
-              "firstYear": 1977,
-              "group": "Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling",
-              "gameplay": "互动小说（玩法待核）",
-              "plotStyles": [],
-              "source": "https://ifarchive.org/if-archive/games/zcode/zork_285.z5",
-              "mainPlacement": "promoted-basic"
-            },
-            "parentId": "ifdb-table-20261104-7so4c67b82qmnjqg",
-            "relation": {
-              "label": "Zork 285",
-              "note": "无",
-              "source": "https://ifdb.org/viewgame?id=7so4c67b82qmnjqg",
-              "type": "unverified"
-            }
-          }
-        }
-      ],
-      "added": []
-    },
     {
       "id": "4db05386-9bbe-4617-abe3-486d8b5aaf00",
       "at": "2026-11-13T12:33:13.082Z",
@@ -1766,6 +1777,82 @@
         }
       ],
       "added": []
+    },
+    {
+      "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+      "at": "2026-11-18T02:56:26.834Z",
+      "actor": "wt1234-donkey",
+      "reason": "更正基础作品资料",
+      "changes": [
+        {
+          "id": "vndb-table-20261103-v10043",
+          "before": null,
+          "after": {
+            "identity": {
+              "id": "vndb-table-20261103-v10043",
+              "indexId": "basic-vndb-table-20261103-v10043",
+              "aliases": [],
+              "title": "...in white",
+              "firstYear": 2009,
+              "group": "创作主体待核",
+              "gameplay": "Galgame（玩法待核）",
+              "plotStyles": [],
+              "source": "https://vndb.org/v10043",
+              "mainPlacement": "promoted-basic"
+            },
+            "fieldMeta": {
+              "yearStatus": {
+                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+                "at": "2026-11-18T02:56:26.834Z"
+              },
+              "group": {
+                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+                "at": "2026-11-18T02:56:26.834Z"
+              },
+              "gameplay": {
+                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+                "at": "2026-11-18T02:56:26.834Z"
+              },
+              "plotTags": {
+                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+                "at": "2026-11-18T02:56:26.834Z"
+              },
+              "plotTagEvidence": {
+                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+                "at": "2026-11-18T02:56:26.834Z"
+              },
+              "source": {
+                "id": "d396eaa4-d93d-45f4-abe0-7f4ca042ed47",
+                "at": "2026-11-18T02:56:26.834Z"
+              }
+            },
+            "values": {
+              "firstYear": 2009,
+              "gameplay": "视觉小说",
+              "group": "ZIGZAG",
+              "plotStyles": [],
+              "plotTagEvidence": {},
+              "plotTags": {
+                "emotion": "孤独感",
+                "expression": [
+                  "意识流",
+                  "哲思"
+                ],
+                "theme": [
+                  "心理",
+                  "身份认同"
+                ],
+                "tone": "忧郁"
+              },
+              "source": "https://kaisernet.org/games/inwhite/novel.htm",
+              "title": "...in white",
+              "yearStatus": "published"
+            },
+            "aliases": []
+          }
+        }
+      ],
+      "added": []
     }
   ],
   "journal": {
@@ -1777,10 +1864,10 @@
     },
     "shards": [
       {
-        "path": "data/basic-catalogue-journal/events/r31-r51.json",
-        "sha": "9155dca5a7b867416a01b7ce378d441bb0cbf4c0",
+        "path": "data/basic-catalogue-journal/events/r31-r52.json",
+        "sha": "7c4efe77c59c83c28d6c1e9a22fefcbb40f91c56",
         "startRevision": 31,
-        "endRevision": 51,
+        "endRevision": 52,
         "operationIds": [
           "2c6a5963-668f-451a-9e1f-b2d86a25fa1d",
           "66a0d513-b4c5-4146-9846-d2d5225b1157",
@@ -1802,12 +1889,13 @@
           "c2a6b398-23cf-4e1e-b315-389972421b47",
           "67366783-d9b7-4ab9-b01c-10889f28be3f",
           "4db05386-9bbe-4617-abe3-486d8b5aaf00",
-          "ea5ff25a-541c-47e8-a740-b3fac4d3f7cc"
+          "ea5ff25a-541c-47e8-a740-b3fac4d3f7cc",
+          "d396eaa4-d93d-45f4-abe0-7f4ca042ed47"
         ],
-        "bytes": 60073
+        "bytes": 63451
       }
     ],
-    "eventCount": 21,
-    "stateHash": "4826e39c081a01e43ef46b7cfc1c53fbf84041ee955728164b68ce0d692cade2"
+    "eventCount": 22,
+    "stateHash": "b0810c9a27ba1fdde3c43879c3e1bec452e1992ae23683719cea60b79277a8a2"
   }
 }
