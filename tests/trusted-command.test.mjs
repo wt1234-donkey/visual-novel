@@ -220,3 +220,18 @@ test('an ambiguous catalogue save retains its ID and original command across man
  assert.equal(calls[1].options.resume,true);
  assert.equal(service.pendingOperation,null);
 });
+
+test('unchanged basic edits and tag removals finish before creating any GitHub command',async()=>{
+ const store=upgradeStore(emptyStore()),requests=[];
+ const repository={
+  async connect(){return 'tester';},
+  async read(){return {store,sha:'original'};},
+  async executeCommand(command){requests.push(command);throw Error('no-op must not be dispatched');}
+ };
+ const service=createCatalogueService({base:[row],initial:store,repository,makeMeta:()=>({id:'no-op',at:'2026-11-18T00:00:00Z'})});
+ await service.connect(repository);
+ const current=service.view.byId.get('w1');
+ await assert.rejects(()=>service.execute({type:'edit',id:'w1',values:valuesOf(current)},'重复保存'),error=>error.code==='NO_CHANGES'&&error.commandNotApplied===true);
+ await assert.rejects(()=>service.execute({type:'style-update',rows:[{id:'w1',mode:'remove',tags:{theme:'科幻'}}]},'重复移除标签'),error=>error.code==='NO_CHANGES');
+ assert.equal(requests.length,0);assert.equal(service.pendingOperation,null);
+});
