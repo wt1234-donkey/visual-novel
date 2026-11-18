@@ -6,6 +6,7 @@ import {tmpdir} from 'node:os';
 import {validateCommand,validateBasicAction,commandText} from '../src/application/commands/envelope.mjs';
 import {planCommand} from '../src/application/commands/execute.mjs';
 import {submitCommand} from '../src/infrastructure/github/command-transport.mjs';
+import {createCatalogueService} from '../src/application/catalogue/service.mjs';
 import {dispatchReference} from '../scripts/execute_catalogue_command.mjs';
 import {emptyStore,upgradeStore,valuesOf} from '../src/domain/catalogue/model.mjs';
 import {editableValues} from '../work-edit-model.mjs';
@@ -114,4 +115,108 @@ test('script executor persists a replayable journal and receipt; duplicate retry
   assert.throws(()=>executeCommand(root,{...next,operationId:'invalid',expectedRevision:0},'tester'));
   assert.equal(readFileSync(join(root,'data/basic-catalogue-edits.json'),'utf8'),before);
  }finally{rmSync(root,{recursive:true,force:true});}
+});
+
+
+const fixtureRequest=(api,intercept=()=>null)=>async(path,method='GET',body)=>{
+ const handled=intercept(path,method,body);
+ if(handled!==null)return handled;
+ const response=await api.fetch('https://api.github.com'+path,{method,body:body?JSON.stringify(body):undefined});
+ if(!response.ok)throw Object.assign(Error('API '+response.status),{status:response.status});
+ return response.json();
+};
+const saveFixtureReceipt=(api,command)=>api.changeFile(receiptPath(command.operationId),JSON.stringify({
+ schemaVersion:1,operationId:command.operationId,kind:command.kind,actor:command.actor,
+ revision:1,command:commandText(command)
+}));
+
+test('transient GET and immutable blob upload are retried but dispatch is sent only once',async()=>{
+ const api=gitFixture(),command=basic(),stages=[];let reads=0,blobs=0,dispatches=0;
+ const request=fixtureRequest(api,(path,method)=>{
+  if(path.endsWith('/git/ref/heads/main')&&reads++===0)throw Object.assign(Error('temporary GET'),{status:503});
+  if(path.endsWith('/git/blobs')&&method==='POST'&&blobs++===0)throw Object.assign(Error('temporary blob'),{status:502});
+  if(path.endsWith('/dispatches')){dispatches++;saveFixtureReceipt(api,command);return {};}
+  return null;
+ });
+ const result=await submitCommand(request,command,{timeout:0,pause:async()=>{},onProgress:({stage})=>stages.push(stage)});
+ assert.equal(result.revision,1);
+ assert.equal(dispatches,1);
+ assert.equal(blobs,2);
+ assert.ok(reads>=2);
+ assert.ok(stages.includes('retrying'));
+ assert.ok(stages.includes('confirmed'));
+});
+test('lost dispatch acknowledgement plus a temporary receipt-read outage never repeats dispatch',async()=>{
+ const api=gitFixture(),command=basic();let dispatches=0,readFailures=0;
+ const request=fixtureRequest(api,(path)=>{
+  if(path.endsWith('/dispatches')){
+   dispatches++;saveFixtureReceipt(api,command);
+   throw Object.assign(Error('response lost'),{code:'NETWORK_ERROR'});
+  }
+  if(dispatches&&path.endsWith('/git/ref/heads/main')&&readFailures++<2)
+   throw Object.assign(Error('temporary GET'),{status:503});
+  return null;
+ });
+ const result=await submitCommand(request,command,{timeout:0,pause:async()=>{}});
+ assert.equal(result.revision,1);assert.equal(dispatches,1);assert.equal(readFailures,2);
+});
+test('resuming an active run checks the prior operation instead of dispatching a duplicate',async()=>{
+ const api=gitFixture(),command=basic();let dispatches=0;
+ const request=fixtureRequest(api,(path)=>{
+  if(path.endsWith('/dispatches')){dispatches++;return {};}
+  return null;
+ });
+ const fetchPublic=async()=>({ok:true,json:async()=>({workflow_runs:[{
+  path:'.github/workflows/catalogue-command.yml',display_title:'保存 '+command.operationId,status:'in_progress',conclusion:null
+ }]})});
+ await assert.rejects(()=>submitCommand(request,command,{resume:true,timeout:0,fetchPublic}),error=>error.code==='COMMAND_PENDING');
+ assert.equal(dispatches,0);
+});
+test('a confirmed failed old run can be retried with the identical operation ID',async()=>{
+ const api=gitFixture(),command=basic();let dispatches=0;
+ const request=fixtureRequest(api,(path)=>{
+  if(path.endsWith('/dispatches')){dispatches++;saveFixtureReceipt(api,command);return {};}
+  return null;
+ });
+ const fetchPublic=async()=>({ok:true,json:async()=>({workflow_runs:[{
+  path:'.github/workflows/catalogue-command.yml',display_title:'保存 '+command.operationId,status:'completed',conclusion:'failure'
+ }]})});
+ const result=await submitCommand(request,command,{resume:true,timeout:0,fetchPublic});
+ assert.equal(result.revision,1);assert.equal(dispatches,1);
+});
+test('temporary failed run-status lookup is not permission to re-dispatch',async()=>{
+ const api=gitFixture(),command=basic();let dispatches=0;
+ const request=fixtureRequest(api,(path)=>{
+  if(path.endsWith('/dispatches')){dispatches++;return {};}
+  return null;
+ });
+ await assert.rejects(()=>submitCommand(request,command,{resume:true,timeout:0,fetchPublic:async()=>({ok:false,status:503})}),error=>error.code==='COMMAND_PENDING');
+ assert.equal(dispatches,0);
+});
+test('an ambiguous catalogue save retains its ID and original command across manual sync',async()=>{
+ const initial=upgradeStore(emptyStore()),calls=[];
+ let generated=0;
+ const repository={
+  async connect(){return 'tester';},
+  async read(){return {store:initial,sha:'original'};},
+  async executeCommand(command,options){
+   calls.push({command,options});
+   if(calls.length===1)throw Object.assign(Error('not yet confirmed'),{code:'COMMAND_PENDING'});
+   return {store:initial,sha:'original',result:{revision:1,commit:'a'.repeat(40),alreadyApplied:true}};
+  }
+ };
+ const service=createCatalogueService({base:[row],initial,repository,makeMeta:()=>({id:'stable-'+(++generated),at:'2026-11-18T00:00:00Z'})});
+ await service.connect(repository);
+ const action=basic().action;
+ await assert.rejects(()=>service.execute(action,'same change'),error=>error.code==='COMMAND_PENDING');
+ assert.equal(service.pendingOperation.id,'stable-1');
+ await service.sync();
+ assert.equal(service.pendingOperation.id,'stable-1');
+ await service.execute(action,'same change');
+ assert.equal(calls.length,2);
+ assert.equal(calls[0].command.operationId,calls[1].command.operationId);
+ assert.deepEqual(calls[1].command,calls[0].command);
+ assert.equal(calls[0].options.resume,false);
+ assert.equal(calls[1].options.resume,true);
+ assert.equal(service.pendingOperation,null);
 });
