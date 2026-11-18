@@ -39,7 +39,7 @@ export function createBasicRepository(token = '', fetcher = fetch, {sourceLease=
  }
  const shard=async ref=>validateShard(ref,await reference(ref));
  return {
-  executeCommand:commandMode==='trusted'?async command=>{const result=await submitCommand(request,{...command,sourceLease});const snapshot=await snapshotAt((await request(REPO+'/git/ref/heads/main')).object.sha);return {...snapshot,result};}:undefined,
+  executeCommand:commandMode==='trusted'?async (command,options={})=>{const result=await submitCommand(request,{...command,sourceLease},options);options.onProgress?.({stage:'refreshing',operationId:command.operationId});const snapshot=await snapshotAt((await request(REPO+'/git/ref/heads/main')).object.sha);return {...snapshot,result};}:undefined,
   connect:()=>client.connect(),
   async read(){const head=(await request(REPO+'/git/ref/heads/main')).object.sha;return snapshotAt(head);},
   async readPublished(){const value=await client.readPublished();await verifySnapshot(value.store);return {...value,source:'pages'};},
