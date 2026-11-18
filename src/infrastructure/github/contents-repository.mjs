@@ -21,7 +21,7 @@ export function createEditClient(token='',fetcher=fetch,{historyPath=HISTORY_PAT
   const operation=method!=='GET'?'保存网站修改':path==='/user'?'校验 GitHub 账号':path===REPO?'读取目标仓库':'读取网站修改记录';
   let res;
   try{res=await fetcher(API+path,{method,cache:'no-store',signal,headers:{Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28',...(token?{Authorization:'Bearer '+token}:{}),...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});}
-  catch{throw Error(operation+'失败：无法连接 GitHub API，请检查网络后重试；当前填写保留。');}
+  catch(error){if(signal.aborted)throw signal.reason||error;throw Object.assign(Error(operation+'失败：无法连接 GitHub API，请检查网络后重试；当前填写保留。'),{code:'NETWORK_ERROR',cause:error});}
   if(!res.ok){
    let payload={};try{payload=(await res.json())||{};}catch{}
    const redact=value=>String(value||'').replaceAll(token||'\u0000','[凭证已隐藏]').replace(/(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]+/g,'[凭证已隐藏]');
