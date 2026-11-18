@@ -9,12 +9,52 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _git_paths(root, *arguments):
+    """Read the Git index/worktree in NUL-delimited form (including staged changes)."""
+    output = subprocess.check_output(['git', 'ls-files', '-z', *arguments], cwd=root)
+    return {path for path in output.decode().split('\0') if path}
+
+
+def candidate_sources(root):
+    """Snapshot the *post-command* candidate worktree, not the old Git index.
+
+    A trusted save can replace an event segment and add receipts/audit objects
+    before promotion. Allow only those new data files into the isolated test
+    copy, and do not silently forgive unrelated missing tracked files.
+    """
+    root = Path(root)
+    tracked = _git_paths(root, '--cached')
+    untracked = _git_paths(root, '--others', '--exclude-standard')
+    journal = 'data/basic-catalogue-journal/events/'
+    receipt = 'data/command-receipts/'
+    audit = 'data/audit-ledger/'
+    created = {
+        name for name in untracked
+        if name.endswith('.json') and (
+            name.startswith(journal) or name.startswith(receipt)
+            or name.startswith(audit)
+        )
+    }
+    missing = {name for name in tracked if not (root / name).exists()}
+    staged_new = subprocess.check_output(
+        ['git', 'diff', '--cached', '--name-only', '--diff-filter=A', '-z'], cwd=root
+    ).decode().split('\0')
+    # Only a journal segment rotation may remove a previously tracked file.
+    # A replacement segment must be present (staged or untracked).
+    has_replacement = any(
+        name.startswith(journal) and name.endswith('.json') and name not in missing
+        for name in (created | set(staged_new))
+    )
+    if missing and (any(not name.startswith(journal) or not name.endswith('.json')
+                        for name in missing) or not has_replacement):
+        raise ValueError('Missing tracked candidate source without a replacement journal segment: '
+                         + ', '.join(sorted(missing)))
+    return sorted((tracked - missing) | created)
+
+
 def verify(root=ROOT):
     root = Path(root)
-    paths = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\0')
-    paths = {name for name in paths if name}
-    # A trusted command may have just generated new immutable archive objects.
-    paths.update(str(p.relative_to(root)) for p in (root/'data/audit-ledger').rglob('*.json'))
+    paths = candidate_sources(root)
     report_root = root/'test-results';report_root.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='atlas-current-no-history-') as directory:
         target = Path(directory)
