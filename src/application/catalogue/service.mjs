@@ -50,12 +50,12 @@ export function createCatalogueService({base,initial,initialSnapshot={},reposito
    const signature=journalKey({action,reason,undo,actor});
    if(!pending||pending.signature!==signature){
     // A no-op must not create a journal event, receipt or failing GitHub workflow.
-    // This applies to the common service, including edit, deletion and tags.
+    // Recognize unchanged edits and tag batches before the shared trusted dispatch.
     if(!undo&&action?.type==='edit'){
      validateValues(action.values);
      const current=view.byId.get(action.id);
-     if(current&&editableFields.every(key=>same(valuesOf(current)[key],action.values[key])))
-      throw noChanges('作品信息与当前记录一致，无需重复保存。');
+     if(current){const before=valuesOf(current);if(editableFields.every(key=>same(before[key],action.values[key])))
+      throw noChanges('作品信息与当前记录一致，无需重复保存。');}
     }
     if(!undo&&action?.type==='style-update'){
      try{applyChange(catalogueState(snapshot.store),base,action,{id:'preview',at:new Date().toISOString(),actor:'preview',reason:'保存预检',expectedRevision:snapshot.store.revision});}
