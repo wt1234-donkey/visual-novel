@@ -68,7 +68,16 @@ export async function submitCommand(request,command,{timeout=240000,requestTimeo
   let polls=0;
   do{
    let receipt;
-   try{receipt=await read(scope);}catch(error){if(!transient(error)||scope?.aborted)throw error;}
+   try{receipt=await read(scope);}catch(error){
+    if(!transient(error)||scope?.aborted)throw error;
+    // Exhausted the bounded safe reads. Do not leave the form waiting for
+    // the entire workflow budget while GitHub's receipt endpoint stays down.
+    // The dispatch may have succeeded; retain its operation ID for later
+    // reconciliation and surface the underlying HTTP/network diagnosis.
+    throw Object.assign(Error('命令 '+command.operationId+' 的回执暂无法读取：'+error.message+'。当前输入与原操作ID已保留，稍后可继续核对。'),{
+     code:'COMMAND_PENDING',operationId:command.operationId,cause:error
+    });
+   }
    if(receipt){progress('confirmed');return receipt;}
    if(timeout===0)return null;
    if(++polls%5===0){
