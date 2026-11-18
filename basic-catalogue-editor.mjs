@@ -53,7 +53,7 @@ export function createBasicEditor(base,initial,onChange,loadDetails=async()=>new
     const receipt=await service.execute(action,reason,{undo,onProgress:({stage})=>{if(stages[stage])message(stages[stage]);}});
    recordSavedOperation({operationId:receipt.operationId,kind:'basic',revision:receipt.revision,commit:receipt.commit});
    update();message('已提交 GitHub 主分支，当前页面数据已更新。页面的“保存与发布状态”会追踪本次操作是否已上线。');return true;
-  }catch(e){if(e.code==='SOURCE_CHANGED')readReleaseManifest(fetch,{refresh:true}).catch(()=>{});message(e.message+(e.code==='COMMAND_PENDING'?' 再次点击保存会沿用原操作ID并核对工作流，不会直接生成新的修改。':''),true);if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
+  }catch(e){if(e.code==='SOURCE_CHANGED')readReleaseManifest(fetch,{refresh:true}).catch(()=>{});message(e.message+(e.code==='COMMAND_PENDING'?' 再次点击保存会沿用原操作ID并核对工作流，不会直接生成新的修改。':''),e.code!=='NO_CHANGES');if(['PERMISSION_DENIED','NOT_FOUND','INVALID_TOKEN'].includes(e.code))$('.be-auth').open=true;return false;}finally{lock(false);}
  }
  const input=(key,label,value,extra='')=>`<label>${label}<input name="${key}" value="${safe(value)}" ${extra}></label>`;
  async function edit(id=null){
