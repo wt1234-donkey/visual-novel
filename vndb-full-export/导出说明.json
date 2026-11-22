@@ -1,0 +1,16 @@
+{
+  "official_source": "https://api.vndb.org/kana/vn",
+  "stats_source": "https://api.vndb.org/kana/stats",
+  "official_record_count": 67670,
+  "scan_finished_utc": "2026-11-03T11:22:27.135274+00:00",
+  "local_meta": {
+    "works": 70110,
+    "unique_vIDs": 55417,
+    "local_sha256": "27572604f5af57767ed17bd856574ad8f98d1fb57a7f690aed42428e6a496cd5"
+  },
+  "official_linked_in_local": 55417,
+  "official_unlinked_in_local": 12253,
+  "important_note": "未关联 vID 不等于该游戏确实不存在于本地库；需审查别名和版本。",
+  "fields": "title,alttitle,aliases,titles{lang,title,latin,official,main},released,olang,devstatus,languages,platforms,developers{id,name},length_minutes,rating,votecount",
+  "csv_encoding": "UTF-8 with BOM"
+}
